@@ -5,8 +5,7 @@ ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-udf
+ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - deterministic functions
 - user-defined functions [SQL Server], deterministic
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
-ms.openlocfilehash: 2a25a75485ecfb5bae812b01f142a9650ce2933c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/17/2017
-
+ms.openlocfilehash: 0a9aeecbec7487e9d750fabb7e2374366f41678a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>Детерминированные и недетерминированные функции
   Детерминированные функции каждый раз возвращают один и тот же результат, если предоставлять им один и тот же набор входных значений и использовать одно и то же состояние базы данных. Недетерминированные функции могут возвращать каждый раз разные результаты, даже если предоставлять им один и тот же набор входных значений и использовать одно и то же состояние базы данных. Например, функция AVG всегда возвращает один результат при указанных выше условиях, а функция GETDATE, возвращающая текущие дату и время, всегда возвращает разный результат.  
@@ -73,19 +71,19 @@ ms.lasthandoff: 10/17/2017
   
 |||  
 |-|-|  
-|@@CONNECTIONS |GETDATE|  
-|@@CPU_BUSY |GETUTCDATE|  
-|@@DBTS |GET_TRANSMISSION_STATUS|  
-|@@IDLE |LAG|  
-|@@IO_BUSY |LAST_VALUE|  
-|@@MAX_CONNECTIONS |LEAD|  
-|@@PACK_RECEIVED |MIN_ACTIVE_ROWVERSION|  
-|@@PACK_SENT |NEWID|  
-|@@PACKET_ERRORS |NEWSEQUENTIALID|  
-|@@TIMETICKS |NEXT VALUE FOR|  
-|@@TOTAL_ERRORS |NTILE|  
-|@@TOTAL_READ |PARSENAME|  
-|@@TOTAL_WRITE |PERCENTILE_CONT|  
+|@@CONNECTIONS|GETDATE|  
+|@@CPU_BUSY|GETUTCDATE|  
+|@@DBTS|GET_TRANSMISSION_STATUS|  
+|@@IDLE|LAG|  
+|@@IO_BUSY|LAST_VALUE|  
+|@@MAX_CONNECTIONS|LEAD|  
+|@@PACK_RECEIVED|MIN_ACTIVE_ROWVERSION|  
+|@@PACK_SENT|NEWID|  
+|@@PACKET_ERRORS|NEWSEQUENTIALID|  
+|@@TIMETICKS|NEXT VALUE FOR|  
+|@@TOTAL_ERRORS|NTILE|  
+|@@TOTAL_READ|PARSENAME|  
+|@@TOTAL_WRITE|PERCENTILE_CONT|  
 |AT TIME ZONE|PERCENTILE_DISC|
 |CUME_DIST|PERCENT_RANK|  
 |CURRENT_TIMESTAMP|RAND|  
@@ -103,4 +101,3 @@ ms.lasthandoff: 10/17/2017
  Как и при вызове из пакета или хранимой процедуры, расширенная хранимая процедура выполняется в контексте той учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которой запущен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Владелец расширенной хранимой процедуры должен учитывать разрешения в контексте безопасности при предоставлении разрешения на выполнение этой процедуры другим пользователям.  
   
   
-

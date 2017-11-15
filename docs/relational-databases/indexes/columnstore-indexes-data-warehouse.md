@@ -5,21 +5,20 @@ ms.date: 01/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: ce5cac87f5b7e22f3f7ce0099abd7b210843ca7f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="columnstore-indexes---data-warehouse"></a>Хранилище данных для индексов columnstore
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -142,12 +141,11 @@ END TRAN
  Изоляция моментальных снимков (SI) позволяет гарантировать согласованность транзакций, а изоляция моментальных снимков с чтением фиксированных данных (RCSI) — согласованность на уровне инструкций для запросов к индексам columnstore. Это позволяет запросам выполняться без блокировки модулей записи данных. Такое неблокирующее поведение также значительно снижает вероятность взаимоблокировок в сложных транзакциях. Дополнительные сведения см. в разделе [Изоляция моментальных снимков в SQL Server](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) в библиотеке MSDN.  
   
 ## <a name="see-also"></a>См. также:  
- Руководство по индексам Columnstore   
- Загрузка данных индексов ColumnStore   
+ Руководство по индексам columnstore   
+ Загрузка данных индексов columnstore   
  Сводка функций индексов columnstore по версиям   
  [Производительность запросов индексов columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Дефрагментация индексов columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

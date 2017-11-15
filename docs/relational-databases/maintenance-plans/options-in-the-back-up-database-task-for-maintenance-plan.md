@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.maint.maintplanproperties.logbackup.f1
 - sql13.swb.maint.backup.f1
-helpviewer_keywords:
-- Back Up Database Task dialog box
+helpviewer_keywords: Back Up Database Task dialog box
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 190b77647ebce66f7cf7af006f3b817605969bae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 5cd325a83874a12581143e7bf634c3b7348c28ce
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>Возможности для плана обслуживания в задаче "Создание резервной копии базы данных"
   Используйте диалоговое окно **Задача «Резервное копирование базы данных»** , чтобы добавить задачу резервного копирования в план обслуживания. Резервное копирование баз данных важно на случай системного или аппаратного сбоя (или ошибок пользователя), которые приводят к повреждению базы данных, в таком случае база данных восстанавливается из резервной копии. Эта задача позволяет выполнять полное и разностное резервное копирование, резервное копирование файлов, файловых групп и журналов транзакций.  
@@ -142,4 +139,3 @@ ms.lasthandoff: 06/22/2017
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
   
   
-

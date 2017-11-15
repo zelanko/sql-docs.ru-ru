@@ -5,35 +5,34 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee981bee7832202a85186216a21f6f3129dfdc0a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a6f1ac20142830ba91edc3835879bead8549f797
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Работа с  путями SQL Server PowerShell
   После перехода к узлу в пути поставщика компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] можно выполнять действия или с помощью методов и свойств извлекать информацию из управляющих объектов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , связанных с этим узлом.  
   
 1.  [Перед началом](#BeforeYouBegin)  
   
-2.  **To work on a path node:**  [Listing Methods and Properties](#ListPropMeth), [Using Methods and Properties](#UsePropMeth)  
+2.  **Для работы с узлом пути:**  [список методов и свойств](#ListPropMeth), [использование методов и свойств](#UsePropMeth)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  После того как выбран узел в пути поставщика компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , можно выполнять действия двух типов.  
   
 -   Можно запускать командлеты Windows PowerShell, работающие с узлами, такие как **Rename-Item**.  
   
--   Можно вызывать методы из соответствующей модели управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например SMO. Например, если перейти в пути к узлу Databases, то можно использовать методы и свойства класса <xref:Microsoft.SqlServer.Management.Smo.Database>.  
+-   Можно вызывать методы из соответствующей модели управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , например SMO. Например, если перейти в пути к узлу Databases, то можно использовать методы и свойства класса <xref:Microsoft.SqlServer.Management.Smo.Database> .  
   
  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется для управления объектами в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Он не предназначен для работы с данными в базах данных. Если выбрана таблица или представление, нельзя использовать поставщик для выбора, вставки, обновления или удаления данных. Чтобы запросить или изменить данные в таблицах и представлениях из среды Windows PowerShell, воспользуйтесь командлетом **Invoke-Sqlcmd** . Дополнительные сведения см. в разделе [Invoke-Sqlcmd, командлет](../../powershell/invoke-sqlcmd-cmdlet.md).  
   
@@ -43,7 +42,7 @@ ms.lasthandoff: 06/22/2017
  Командлет **Get-Member** используется для просмотра методов и свойств, доступных для определенных объектов или классов объектов.  
   
 ### <a name="examples-listing-methods-and-properties"></a>Примеры: список методов и свойств  
- В этом примере задается переменная Windows PowerShell для класса <xref:Microsoft.SqlServer.Management.Smo.Database> модели SMO и перечисляются методы и свойства.  
+ В этом примере задается переменная Windows PowerShell для класса <xref:Microsoft.SqlServer.Management.Smo.Database> модели SMO и перечисляются методы и свойства:  
   
 ```  
 $MyDBVar = New-Object Microsoft.SqlServer.Management.SMO.Database  

@@ -10,27 +10,25 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.userroleproperties.f1
+f1_keywords: sql13.swb.reportserver.userroleproperties.f1
 ms.assetid: c8b22236-a8b1-4e15-b1ff-4e1909b602d3
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 8c75a610f60ff8eca7e64b7fd01d36d0a63344a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 76bd80e1fc470d9cdb998d23834d0a3473d411fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-role-properties-management-studio"></a>Свойства пользовательской роли (среда Management Studio)
   На этой странице можно просмотреть задачи, выбранные для определения роли на уровне элемента. Эту страницу также можно использовать для изменения списка задач или модификации описания роли.  
   
  Определение роли на уровне элемента является именованной коллекцией задач, выполняемых пользователем относительно определенного элемента (например, папки, отчета, ресурса или общего источника данных). Определения ролей назначаются пользователю или группе для создания назначения роли в диспетчере отчетов. Задачи в определении роли описывают, что пользователь или группа могут делать.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]включает ряд определения стандартных ролей на уровне элемента, с которыми можно работать. Определения ролей можно изменить, изменив список задач для каждого из них. Изменение определения роли влияет на все назначения ролей, включенные в ее определение.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают в себя несколько заранее заданных определений ролей на уровне элемента, с которыми может работать пользователь. Определения ролей можно изменить, изменив список задач для каждого из них. Изменение определения роли влияет на все назначения ролей, включенные в ее определение.  
   
 > [!NOTE]  
 >  Пользовательские назначения ролей применяются только на сервере отчетов, который работает в собственном режиме. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, то на этой странице отображаются сведения только для чтения о ролях и уровнях разрешений, которые определены на сайте SharePoint.  
@@ -50,10 +48,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Задачи уровня элемента](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md)   
- [Определения ролей](../../reporting-services/security/role-definitions.md)   
- [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Определение ролей](../../reporting-services/security/role-definitions.md)   
+ [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
  [Предопределенные роли](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
-

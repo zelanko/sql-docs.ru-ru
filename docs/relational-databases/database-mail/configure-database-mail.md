@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -39,23 +38,23 @@ f1_keywords:
 - sql13.swb.dbmail.manageexistingprofile.f1
 - sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: e6ae8ba71d1e424c4e295655d76ddfc0084a1a18
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-database-mail"></a>Настройка компонента Database Mail
   В этом разделе описано включение и настройка компонента Database Mail с помощью мастера настройки компонента Database Mail и создание скрипта настройки компонента Database Mail с помощью шаблонов.  
   
--   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
+-   **Перед началом:**  [Ограничения](#Restrictions), [Безопасность](#Security)  
   
--   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
+-   **Настройка компонента Database Mail с помощью:**  [Мастера настройки компонента Database Mail](#DBWizard), [С помощью шаблонов](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Используйте параметр **Расширенные хранимые процедуры компонента Database Mail** для включения компонента Database Mail на сервере. Дополнительные сведения см. в справочном разделе [Параметр конфигурации сервера "Database Mail XPs"](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) .  
@@ -165,7 +164,7 @@ ms.lasthandoff: 06/22/2017
  **Для этого сервера требуется безопасное соединение (SSL)**  
  Осуществляет шифрование связи, используя протокол SSL.  
   
- **Проверка подлинности Windows с использованием учетных данных службы ядра СУБД**  
+ **Проверка подлинности Windows с использованием учетных данных службы компонента Database Engine**  
  Соединение с SMTP-сервером выполняется с помощью учетных данных, настроенных для службы компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Обычная проверка подлинности**  
@@ -215,7 +214,7 @@ ms.lasthandoff: 06/22/2017
  **Для этого сервера требуется безопасное соединение (SSL)**  
  Осуществляет шифрование связи, используя протокол SSL.  
   
- **Проверка подлинности Windows с использованием учетных данных службы ядра СУБД**  
+ **Проверка подлинности Windows с использованием учетных данных службы компонента Database Engine**  
  Соединение с SMTP-сервером выполняется с помощью учетных данных, настроенных для службы компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] .  
   
  **Обычная проверка подлинности**  

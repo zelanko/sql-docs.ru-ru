@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.chooseitems.maintenance_tasks
 - VS.ToolboxPages.Maintenance_Tasks
-helpviewer_keywords:
-- Customize Toolbox dialog box
+helpviewer_keywords: Customize Toolbox dialog box
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9002551a59ec21f0572906f256577e7157503414
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d3b661fc344ca48b1cb1d44a40cec9f9731cafec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Выбор элементов инструментария (страница «Задачи обслуживания»)
 На этой вкладке диалогового окна **Настройка области элементов** выводится список всех компонентов задачи обслуживания, зарегистрированных на компьютере, и предоставляется возможность изменять компоненты, отображаемые на панели элементов. Диалоговое окно **Настройка области элементов** можно открыть из меню **Сервис** . Для сортировки списка компонентов выберите любой заголовок столбца.  
@@ -51,4 +48,3 @@ ms.lasthandoff: 06/22/2017
 **Версия**  
 Версия компонента.  
   
-

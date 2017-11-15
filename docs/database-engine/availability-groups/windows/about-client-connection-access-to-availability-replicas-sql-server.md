@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 29027e46-43e4-4b45-b650-c4cdeacdf552
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5fd4c6e3172fb2386e1b683153df98e526f304ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: a06ad7142fa98b0a5e0a1ab1af0a98863744fa3c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Сведения о доступе клиентского подключения к репликам доступности (SQL Server)
   В группе доступности AlwaysOn можно настроить одну или несколько реплик доступности, подключения к которой могут выполняться в режиме только для чтения, когда они являются вторичными (то есть при работе в качестве вторичной реплики). Каждую реплику доступности можно также настроить так, чтобы она разрешала или исключала соединения только для чтения во время работы под первичной ролью (т. е. во время работы в качестве первичной реплики).  
@@ -133,4 +131,3 @@ ms.lasthandoff: 08/02/2017
  [Статистика](../../../relational-databases/statistics/statistics.md)  
   
   
-

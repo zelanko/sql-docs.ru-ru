@@ -15,12 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
 ms.author: genemi
-ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 70cb071dc7b6f4ff15c5c7dee3f24bb352d6eb61
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>Новые и недавно обновленные статьи — документы по реляционным базам данных
 
@@ -156,6 +155,5 @@ ms.lasthandoff: 10/02/2017
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
-
 
 

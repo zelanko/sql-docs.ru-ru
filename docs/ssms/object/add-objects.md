@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.common.addobject.f1
+f1_keywords: sql13.swb.common.addobject.f1
 ms.assetid: 17ac0e99-8490-46b0-8515-e5012bc9e0cf
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9a29ea3a44b7566b59e0b995c2e75490e6d68736
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 21762f1398bea69542e78b663adabb91f544cfe6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-objects"></a>Добавление объектов
 Ограничивает диалоговые окна выбора объектов только нужными типами объектов.  
@@ -40,4 +37,3 @@ ms.lasthandoff: 06/22/2017
 **Все объекты, принадлежащие схеме**  
 Добавляет все объекты, принадлежащие схеме, указанной в поле **Имя схемы** . Появляется только при открытии из диалоговых окон в пределах базы данных, например **Пользователь базы данных — создание** .  
   
-

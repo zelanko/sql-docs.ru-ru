@@ -5,24 +5,21 @@ ms.date: 03/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.mds.configmanager.dbmailprofileacct.f1
+f1_keywords: sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 90062c4533d12f95c0770bf18825f646633eded0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Диалоговое окно «Создание профиля электронной почты и учетной записи базы данных»
   Используйте диалоговое окно **Создание профиля и учетной записи компонентов Database Mail** для создания профиля компонента Database Mail и учетной записи компонента Database Mail для базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Этот профиль будет использоваться для уведомления пользователей и групп по электронной почте, когда результаты проверки бизнес-правил будут отрицательными.  
@@ -66,4 +63,3 @@ ms.lasthandoff: 09/07/2017
 [Установка и настройка служб Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)
   
   
-

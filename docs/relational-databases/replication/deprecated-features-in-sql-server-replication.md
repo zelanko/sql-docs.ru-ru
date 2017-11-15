@@ -5,24 +5,21 @@ ms.date: 01/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- deprecated features [SQL Server replication]
+helpviewer_keywords: deprecated features [SQL Server replication]
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b7b76a6ce4182d20c981879c4909833a5e6b6fc5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 88516ace8eaa8fe76929ee7d15c6475a1081f030
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>Устаревшие функции репликации SQL Server
   В этом разделе описаны устаревшие компоненты репликации, по-прежнему доступные в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Не следует использовать устаревшие функции в новых приложениях.  
@@ -38,4 +35,3 @@ ms.lasthandoff: 06/22/2017
  [Обратная совместимость репликации](../../relational-databases/replication/replication-backward-compatibility.md)  
   
   
-

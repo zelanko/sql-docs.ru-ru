@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - jobs [SQL Server Agent], status
 - logs [SQL Server], jobs
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a23a522ebf0c1d506cc55ef5923a583a19b64434
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2792cbe969500bdce10b9c422f307b635c875b98
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Запись данных о состоянии задания в журнал приложений Windows
 В этом разделе описано, как настроить агент [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] для записи состояния задания в журнал событий приложений Windows с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)]или управляющих объектов SQL Server.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Для записи состояния задания в журнал приложений Windows используется:**  
   
-    [Среда Среда SQL Server Management Studio](#SSMS)  
+    [Среда SQL Server Management Studio](#SSMS)  
   
     [Управляющие объекты SQL Server](#SMO)  
   
@@ -89,4 +87,3 @@ $jb = new-object Microsoft.SqlServer.Management.Smo.Agent.Job($srv.JobServer, "T
 $jb.EventLogLevel = [Microsoft.SqlServer.Management.Smo.Agent.CompletionAction]::Always  
 ```  
   
-

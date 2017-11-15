@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,15 @@ helpviewer_keywords:
 - requesting cursors
 - cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 305a84696e0677ef3058b89e83ba73e96188607a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cursors"></a>Курсоры
   Операции в реляционной базе данных выполняются над множеством строк. Например, набор строк, возвращаемый инструкцией SELECT, содержит все строки, которые удовлетворяют условиям, указанным в предложении WHERE инструкции. Такой полный набор строк, возвращаемых инструкцией, называется результирующим набором. Приложения, особенно интерактивные, не всегда эффективно работают с результирующим набором как с единым целым. Им нужен механизм, позволяющий обрабатывать одну строку или небольшое их число за один раз. Курсоры являются расширением результирующих наборов, которые предоставляют такой механизм.  
@@ -117,7 +115,7 @@ ms.lasthandoff: 06/22/2017
 5.  Закрыть курсор.  
   
 ## <a name="related-content"></a>См. также  
- [Cursor Behaviors](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+ [Режимы работы курсоров](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [Способы реализации курсоров](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
 ## <a name="see-also"></a>См. также:  
  [DECLARE CURSOR (Transact-SQL)](../t-sql/language-elements/declare-cursor-transact-sql.md)   

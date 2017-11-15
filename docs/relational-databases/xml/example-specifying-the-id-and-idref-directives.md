@@ -5,25 +5,23 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fc36427330033bac793e8f62658b62b93c18dbf6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4b89d5f459f68a0a69c8f8aeb1f8d053efadaf0c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Пример. Указание директив ID и IDREF
   Данный пример почти совпадает с примером [Указание директивы ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . Единственная разница заключается в указании в данном запросе директив **ID** и **IDREF** . Эти директивы перезаписывают типы атрибута **SalesPersonID** в элементах <`OrderHeader`> и <`OrderDetail`>. Образуются связи внутри документа. Для просмотра перезаписанных типов необходима схема. Поэтому в запросе указывается параметр **XMLDATA** в предложении FOR XML для получения схемы.  
@@ -114,4 +112,3 @@ FOR XML EXPLICIT, XMLDATA
  [Использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   
-

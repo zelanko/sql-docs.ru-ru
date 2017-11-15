@@ -1,29 +1,25 @@
 ---
 title: "Занятие 5. Резервное копирование базы данных с помощью резервной копии моментального снимка | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dd3226cf6bf52151c94853d87b4de28e54b5d2df
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3b5e0888f00f34fc3d85f6727cc98903c66c2239
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-5-backup-database-using-file-snapshot-backup"></a>Занятие 5. Резервное копирование базы данных с помощью резервной копии моментального снимка
 На этом занятии будет выполнено резервное копирование базы данных AdventureWorks2014 в виртуальной машине Azure с помощью резервной копии снимка файла. Такой способ позволяет выполнять почти мгновенное резервное копирование с использованием моментальных снимков Azure. Дополнительные сведения о резервных копиях моментальных снимков файлов см. в разделе [Резервные копии моментальных снимков файлов для файлов базы данных в Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
@@ -85,4 +81,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - attributes [Master Data Services], free-form attributes
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 7c273d73d70d181c3505e35689b6781adf23caa3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="attributes-master-data-services"></a>Атрибуты (службы Master Data Services)
   Атрибуты — это объекты, которые содержатся в сущностях [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Значения атрибутов описывают элементы сущности. Атрибут может использоваться для описания конечного элемента, объединенного элемента или коллекции.  
@@ -104,4 +102,3 @@ ms.lasthandoff: 09/07/2017
   
 -   [Разрешения конечного элемента (службы основных данных)](../master-data-services/leaf-permissions-master-data-services.md)
   
-

@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,24 +19,23 @@ helpviewer_keywords:
 - register DAC
 - data-tier application [SQL Server], register
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af264d24411b3d384abea2723df465dd926232c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-database-as-a-dac"></a>Регистрация базы данных в качестве приложения уровня данных
   С помощью **Мастера регистрации приложения уровня данных** или скрипта Windows PowerShell создайте определение приложения уровня данных (DAC), описывающее объекты из существующей базы данных, а затем зарегистрируйте это определение в системной базе данных **msdb** (**master** в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
--   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
+-   **Перед началом работы:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   
--   **To upgrade a DAC, using:**  [The Register Data-tier Application Wizard](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
+-   **Обновление приложения уровня данных с использованием следующих средств:**  [мастер регистрации приложения уровня данных](#UsingRegisterDACWizard), [PowerShell](#RegisterDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Процесс регистрации создает определение DAC, которое определяет объекты в базе данных. Сочетание определения DAC и базы данных образует экземпляр DAC. Если база данных регистрируется как DAC на управляемом экземпляре компонента Database Engine, зарегистрированный компонент DAC будет включен в служебную программу SQL Server при следующей передаче набора элементов сбора программы с экземпляра в точку управления служебной программой. После этого приложение уровня данных появится в узле **Развернутые приложения уровня данных** в окне [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Развернутые приложения уровня данных** details page.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 06/22/2017
  [Использование мастера регистрации приложений уровня данных](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>Проверка объектов  
- **Checking**  *SchemaName* **.** *ObjectName* **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. *SchemaName***.***ObjectName* указывает, для какого объекта в данный момент выполняется проверка.  
+ **Проверка**  *SchemaName* **.** *ObjectName* **.** — отображает индикатор выполнения по мере того, как мастер проверяет зависимости полученных объектов и допустимость этих объектов для DAC. *SchemaName***.***ObjectName* указывает, для какого объекта в данный момент выполняется проверка.  
   
  **< Назад** — возврат на страницу **Задание свойств** для изменения записей.  
   
@@ -185,4 +183,3 @@ $registerunit.Register()
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   
-

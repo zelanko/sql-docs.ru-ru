@@ -5,8 +5,7 @@ ms.date: 08/24/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - replication [SQL Server], administering
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee0ddd687702068508c54ea60a533fc3c5c75b10
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a7a5005b9e2d201d8ba53e7b4e7eaa0986043eb0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-agent-administration"></a>Администрирование агента репликации
   Агенты репликации выполняют многие задачи, связанные с репликацией, включая создание копий схемы и данных, обнаружение обновлений на издателе или подписчике и распространение изменений между серверами. По умолчанию агенты репликации выполняются в рамках отдельных шагов задания агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Агенты являются обычными исполняемыми приложениями, поэтому их можно вызывать непосредственно из командной строки или пакетных скриптов. Каждый агент репликации поддерживает набор параметров исполнения, используемых для управления его работой. Эти параметры задаются в профиле агента или в командной строке.  
@@ -102,4 +101,3 @@ ms.lasthandoff: 08/03/2017
  [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
-

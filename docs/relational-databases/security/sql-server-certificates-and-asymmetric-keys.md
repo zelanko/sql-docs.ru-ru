@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- security [SQL Server], certificates and asymmetric keys
+helpviewer_keywords: security [SQL Server], certificates and asymmetric keys
 ms.assetid: 8519aa2f-f09c-4c1c-96b5-abc24811e60c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: ff3d6bcd21c301e13d39f3ce22205e879af86b85
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
-
+ms.openlocfilehash: a1175f8ea6b93440437b23c6322fe2eb8a89332c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-certificates-and-asymmetric-keys"></a>Сертификаты SQL Server и асимметричные ключи
   Криптография с открытым ключом представляет собой форму обеспечения конфиденциальности сообщений, подразумевающую создание *открытого* и *закрытого* ключей. Закрытый ключ хранится в секрете, а открытый ключ передается другим лицам. Хотя ключи математически связаны, закрытый ключ нельзя легко вычислить с помощью открытого ключа. Открытый ключ используется при шифровании данных, а закрытый ключ используется при расшифровке данных. Сообщение, зашифрованное с помощью открытого ключа, можно расшифровать только с помощью правильного закрытого ключа. Поскольку применяются два различных ключа, эти ключи *асимметричные*.  
@@ -87,4 +84,3 @@ ms.lasthandoff: 08/28/2017
  [Прозрачное шифрование данных (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   
-

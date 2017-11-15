@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.restoredb.options.f1
+f1_keywords: sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 698c8658d2a3d6779a8800c23e5c508351a05d12
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 9b4290a3e3a3a43e09dc4837542185e7256962ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restore-database-options-page"></a>Восстановление базы данных (страница «Параметры»)
   Страница **Параметры** диалогового окна **Восстановление базы данных** используется для изменения поведения и результата операции восстановления.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 06/22/2017
   
  Выбор этого параметра равнозначен использованию параметра KEEP_REPLICATION в инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .  
   
- Дополнительные сведения см. в разделе [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
+ Дополнительные сведения см. в разделе [Резервное копирование и восстановление реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Ограничить доступ к восстановленной базе данных [WITH RESTRICTED_USER]**  
  Доступ к восстановленной базе данных будет только у пользователей **db_owner**, **dbcreator**или **sysadmin**.  

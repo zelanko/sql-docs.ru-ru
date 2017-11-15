@@ -7,21 +7,19 @@ ms.prod:
 - sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 854c0b2f-02d2-46a4-a8cc-6b7a5d191cf8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: 0962e563c85f7707615486bbe87847a7988e6ed6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-sql-server-powershell"></a>Установка компонентов SQL Server PowerShell
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Программа установки автоматически настраивает компоненты PowerShell.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/08/2017
 - [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   
-

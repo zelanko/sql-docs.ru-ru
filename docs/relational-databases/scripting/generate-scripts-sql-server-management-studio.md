@@ -5,29 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9f103708c1720d7a08e2e9690e298701102c17f7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-scripts-sql-server-management-studio"></a>Формирование скриптов (среда SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет два механизма формирования скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] . Создать скрипты для нескольких объектов можно с помощью **мастера формирования и публикации скриптов**. Можно также создать скрипты для отдельных или нескольких объектов с помощью меню **Сформировать скрипт как** в **обозревателе объектов**.  
   
-1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
+1.  **Выберите метод**  [Мастер формирования и публикации скриптов](#GenPubScriptWiz), [Меню "Сформировать скрипт как" в обозревателе объектов](#OEScriptAsMenu)  
   
-2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
+2.  **Использование меню "Сформировать скрипт как"**  [Скрипт для одного объекта](#ScriptSingleObject), [Скрипт для двух объектов с помощью обозревателя объектов](#ScriptTwoObjectsOE), [Скрипт для двух объектов с помощью данных обозревателя объектов](#ScriptTwoObjectsOED)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Выберите механизм, который лучше всего соответствует имеющимся требованиям.  
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
 7.  Щелкните правой кнопкой мыши один из выделенных объектов и выберите **Создать скрипт для \<тип объекта>**.  
   
   
-

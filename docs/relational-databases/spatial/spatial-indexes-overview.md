@@ -5,24 +5,21 @@ ms.date: 09/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-spatial
+ms.technology: dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- spatial indexes [SQL Server]
+helpviewer_keywords: spatial indexes [SQL Server]
 ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5bcfa4dfbf2af7d1cd124ed16fef13eeed89bfcb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ae93cf0e3211b9068de0b3dc512f7a59a3f0fd9c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spatial-indexes-overview"></a>Общие сведения о пространственных индексах
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает пространственные данные и пространственные индексы. *Пространственный индекс* представляет собой тип расширенного индекса, позволяющий индексировать пространственные столбцы. Пространственный столбец представляет собой столбец таблицы, в котором содержатся данные пространственного типа, например **geometry** или **geography**.  
@@ -250,4 +247,3 @@ ORDER BY <SpatialColumn>.STDistance(@reference_object) [;]
  [Пространственные данные (SQL Server)](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
-

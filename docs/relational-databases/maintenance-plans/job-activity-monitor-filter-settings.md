@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.jobactivitymon.filter.f1
+f1_keywords: sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5e707f42591b1f2255735e16de9c9eda22ad7f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c6bafbf3db207d6ef185a6866de2b66015236c0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Монитор активности заданий (настройки фильтра)
   Эта страница используется для уменьшения числа строк, видимых в мониторе активности заданий. Введите критерии в одно или несколько из доступных полей для отображения только строк, удовлетворяющих заданным условиям. Для некоторых полей, например **Состояние** или **Тип блокировки** , имеется ограниченное количество возможных значений, представленных в раскрывающемся списке. Другие, например **Приложение** , позволяют вводить не только любое значение, но и любое их количество в виде списка, разделенного запятыми. Значки панели инструментов позволяют сортировать доступные поля по категориям или в алфавитном порядке. Щелкните каждый из критериев для просмотра краткого его описания.  
@@ -73,4 +70,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за активностью заданий](http://msdn.microsoft.com/library/71cb432b-631d-4b8b-9965-e731b3d8266d)  
   
   
-

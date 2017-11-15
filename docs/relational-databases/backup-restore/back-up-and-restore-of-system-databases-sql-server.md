@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - database backups [SQL Server], system databases
 - servers [SQL Server], backup
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5b2e9a63f334206750961a39403daed7e3608ce0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 5b395a8d3a828b107d9b3ba2f1c41e449a8b7a67
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>Резервное копирование и восстановление системных баз данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.lasthandoff: 06/22/2017
 |[msdb](../../relational-databases/databases/msdb-database.md)|База данных, используемая агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для планирования предупреждений и заданий и для записи операторов. База данных**msdb** также содержит такие таблицы журнала, как таблицы резервных копий и журнала восстановления.|Да|Простая (по умолчанию)|Создавайте резервную копию базы данных **msdb** после каждого ее обновления.|  
 |[Resource](../../relational-databases/databases/resource-database.md) (RDB)|База данных только для чтения, которая содержит копии всех системных объектов, поставляемых с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Нет|—|База данных **Resource** находится в файле mssqlsystemresource.mdf, в котором содержится только код. Поэтому [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может создать резервную копию базы данных **Resource** .<br /><br /> Примечание. Исходя из того, что файл mssqlsystemresource.mdf является простым двоичным файлом (EXE), а не файлом базы данных, для создания его резервной копии можно выполнить простое резервное копирование файла или диска. Нельзя использовать восстановление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для резервных копий. Восстановить резервную копию файла mssqlsystemresource.mdf можно будет только вручную; при этом следует соблюдать осторожность, чтобы не перезаписать текущую базу данных **Resource** устаревшей или потенциально небезопасной версией.|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|Рабочая область для хранения временных или промежуточных результирующих наборов. Эта база данных создается заново при каждом запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При отключении экземпляра сервера любые сведения, содержащиеся в базе данных **tempdb** , удаляются навсегда.|Нет|Простой|Создать резервную копию системной базы данных **tempdb** нельзя.|  
-|[Настройка распространения](../../relational-databases/replication/configure-distribution.md)|База данных, которая существует только в том случае, если сервер настроен как распространитель репликации. Эта база данных содержит метаданные и данные журнала для всех типов репликации, а также транзакции для репликации транзакций.|Да|Простой|Сведения о том, когда следует создавать резервные копии базы данных **distribution**, см. в статье [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
+|[Настройка распространителя](../../relational-databases/replication/configure-distribution.md)|База данных, которая существует только в том случае, если сервер настроен как распространитель репликации. Эта база данных содержит метаданные и данные журнала для всех типов репликации, а также транзакции для репликации транзакций.|Да|Простой|Сведения о том, когда следует создавать резервные копии базы данных **distribution**, см. в статье [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).|  
   
  * Дополнительные сведения о текущей модели восстановления базы данных см. в статье [Просмотр или изменение модели восстановления базы данных (SQL Server)](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) или [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   

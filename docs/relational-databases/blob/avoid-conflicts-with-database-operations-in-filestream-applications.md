@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
+helpviewer_keywords: FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 663627abeb04c63073b43337bfe795ba9bc9cd4d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: e1ec5dc72e6d3cb3f81a7db32584ca71c92e3638
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Избегание конфликтов в операциях баз данных в приложениях FILESTREAM
   Приложения, использующие функцию SqlOpenFilestream() для открытия дескрипторов файлов Win32 для считывания или записи данных FILESTREAM BLOB, могут столкнуться с конфликтами при работе с инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] , использованными в общей транзакции. Это также относится и к запросам [!INCLUDE[tsql](../../includes/tsql-md.md)] или MARS, выполнение которых занимает много времени. При разработке приложений надо уделить особое внимание предотвращению данных типов конфликтов.  

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - queries [SQL Server], results
 - printing query results
 ms.assetid: 025497d1-54a0-402c-81d8-b8b597a0de11
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 7ba40459f019675c3975b31155cbd7f3cfbfa45e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>Печать результатов запроса (визуальные инструменты для баз данных)
 Чтобы распечатать результаты запроса, необходимо скопировать содержимое [панели результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) в другую программу Windows, например в программу подготовки текстов, затем произвести в ней форматирование и распечатать результаты запроса из этой программы.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

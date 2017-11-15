@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- transactional replication, propagation methods
+helpviewer_keywords: transactional replication, propagation methods
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22e745406fe58c38e44e42395844a55efff3f57a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 27553553b3bf900a1a7207711520a2355c997941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Определение способа распространения изменений для статей транзакций
   Репликация транзакций позволяет указывать, как изменения данных распространяются от издателя к подписчикам. Для каждой опубликованной таблицы можно указать один из четырех способов, которым каждая операция (INSERT, UPDATE или DELETE) должна распространяться на подписчик:  
@@ -222,4 +219,3 @@ go
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   
-

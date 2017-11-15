@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- event classes [SQL Server], QN:Template
+helpviewer_keywords: event classes [SQL Server], QN:Template
 ms.assetid: 9f752040-5901-42e1-8fdc-105528d9960a
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 65d04a6b62876481360a1c529363df811d5726e9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3c8cb69f8146567bb93fd1892d165422b78a9bea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="qntemplate-event-class"></a>Класс событий QN: Template
   Событие QN:Template возвращает данные о внутреннем использовании шаблонов запросов. Шаблоны запросов представляют собой механизм, который компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] применяет для рассылки определений запроса, о котором будут распространяться уведомления. Эти шаблоны создаются одновременно с таблицами параметров. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает событие этого типа, когда шаблон запроса создается, применяется или разрушается.  
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
 |TextData|**ntext**|Возвращает XML-документ, содержащий сведения, специфические для этого события. Этот документ соответствует XML-схеме, доступной на странице [Схема событий приложения SQL Server Query Notification Profiler](http://go.microsoft.com/fwlink/?LinkId=63331) .|1|Да|  
   
   
-

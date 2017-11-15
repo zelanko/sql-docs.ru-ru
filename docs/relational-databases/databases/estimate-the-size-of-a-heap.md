@@ -5,8 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,23 +15,23 @@ helpviewer_keywords:
 - space [SQL Server], indexes
 - heaps
 ms.assetid: 81fd5ec9-ce0f-4c2c-8ba0-6c483cea6c75
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 67e38d5ab97529fbd912361aa16fa96587173f3e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 8980fc43f62093e3d8821a7725685e8402486485
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Оценка размера кучи
   Для оценки размера пространства, требуемого для хранения данных в куче, можно использовать следующую процедуру.  
   
 1.  Укажите количество строк в новой таблице:  
   
-     ***Num_Rows***  = количество строк в таблице  
+     ***Num_Rows***  = число строк в таблице  
   
 2.  Укажите количество столбцов с фиксированной и изменяемой длиной, а также рассчитайте необходимый размер места для их хранения.  
   
@@ -63,7 +62,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  Можно сочетать столбцы **varchar**, **nvarchar**, **varbinary**или **sql_variant** , в результате чего общая ширина определенной таблицы превысит 8060 байт. Длина каждого из этих столбцов должна быть в пределах 8000 байт для столбцов типа **varchar**, **nvarchar,****varbinary**или **sql_variant** . Тем не менее их общая ширина в таблице может превышать предел в 8 060 байт.  
   
-     Если в таблице нет столбцов переменной длины, присвойте параметру ***Variable_Data_Size*** значение 0.  
+     Если в таблице нет столбцов переменной ширины, присвойте параметру ***Variable_Data_Size*** значение 0.  
   
 5.  Вычислите общий размер строк:  
   

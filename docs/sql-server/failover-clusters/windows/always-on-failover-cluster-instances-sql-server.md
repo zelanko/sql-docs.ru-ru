@@ -5,8 +5,7 @@ ms.date: 01/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - failover clustering [SQL Server]
 - AlwaysOn [SQL Server], see failover clustering [SQL Server]
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
-caps.latest.revision: 80
+caps.latest.revision: "80"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a5de42512c1b7f5372e96f53b6332145fb99a3d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9ba9300c5bfa55b5f9968453874b29e6d8c4b179
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Экземпляры отказоустойчивого кластера AlwaysOn (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +92,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Общие диски  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба ядра СУБД  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба компонента Database Engine  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Служба агента  
   
@@ -166,4 +164,3 @@ ms.lasthandoff: 06/22/2017
 |Описывает различия в основных понятиях между узлами в экземпляре отказоустойчивого кластера и репликами внутри группы доступности, а также содержит рекомендации по использованию экземпляра отказоустойчивого кластера для размещения реплики для группы доступности.|[Отказоустойчивая кластеризация и группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   
-

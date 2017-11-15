@@ -1,13 +1,11 @@
 ---
 title: "Приложения уровня данных | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-data-tier-apps
+ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - data-tier application [SQL Server], designing
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 319f0adb5f8f537b697caa401efcb3e0054d79ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ab8a8fded3daac09e9d7b90ba3a734a46fd4cce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-tier-applications"></a>Приложения уровня данных
   Приложение уровня данных (DAC) является логической сущностью управления базой данных, которая определяет все объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например таблицы, представления и объекты экземпляров, в том числе имена входов, связанные с базой данных пользователя. Приложение уровня данных — это автономная единица развертывания базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая позволяет разработчикам уровня данных и администраторам базы данных группировать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переносимый артефакт, называемый пакетом приложения уровня данных или пакетом DAC.  
@@ -139,4 +136,3 @@ ms.lasthandoff: 06/22/2017
  [Поддержка приложений уровня данных для объектов и версий SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   
-

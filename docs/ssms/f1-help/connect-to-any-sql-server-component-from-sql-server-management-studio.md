@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - components [SQL Server], connections
 - SQL Server Management Studio [SQL Server], connections
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 567cb988769e738f414f1c2a37971a792f8a41ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7d870ebdb27bcb83de08db14653b022aaba002de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>Подключение к любому компоненту сервера SQL Server из среды SQL Server Management Studio
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] содержит функции управления всеми компонентами [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Используйте среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] для соединения со следующими компонентами и службами:  
@@ -41,9 +39,9 @@ ms.lasthandoff: 06/22/2017
 Хотя [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] позволяет работать с запросами без предварительного установления соединения с источником данных, для большинства других задач такое соединение требуется. [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] предоставляет диалоговое окно **Соединение с сервером** , в котором можно настроить свойства компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . При запуске [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] открывается диалоговое окно **Соединение с сервером** с запросом на подключение к серверу. В диалоговом окне **Соединение с сервером** запоминаются параметры, заданные во время предыдущего его использования.  
   
 > [!NOTE]  
-> Эту функцию можно отключить, чтобы отменить автоматическую установку соединения. Дополнительные сведения см. в разделе [Параметры запуска службы ядра СУБД](http://msdn.microsoft.com/en-us/d373298b-f6cf-458a-849d-7083ecb54ef5).  
+> Эту функцию можно отключить, чтобы отменить автоматическую установку соединения. Дополнительные сведения см. в разделе [Параметры запуска службы Database Engine](http://msdn.microsoft.com/en-us/d373298b-f6cf-458a-849d-7083ecb54ef5).  
   
-## <a name="saving-connections"></a>Сохранение соединений  
+## <a name="saving-connections"></a>сохранение соединений  
 Соединение с конкретными серверами можно сохранять в списке «Зарегистрированные серверы», а также в проектах, создаваемых с помощью обозревателя решений.  
   
 ### <a name="saving-connections-in-registered-servers"></a>Сохранение соединений в списке «Зарегистрированные серверы»  
@@ -56,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 [Использование среды SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
 [Обозреватель объектов](../../ssms/object/object-explorer.md)  
   
-

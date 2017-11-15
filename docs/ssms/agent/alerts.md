@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - SQL Server Agent alerts, about alerts
 - alerts [SQL Server], names
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9351cc5d4e47b418576cbff3be1884a081b5a4f7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6506dcef18d066ff7432d3e8ce9ee62255a82d89
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="alerts"></a>Предупреждения
 События, формируемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , помещаются в журнал приложений [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент считывает этот журнал и сравнивает события, которые там содержатся, с определенными пользователем предупреждениями. Как только агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обнаруживает такое соответствие, в ответ на это событие автоматически создается предупреждение. Кроме событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] может отслеживать условия производительности и события инструментария управления Windows (WMI).  
@@ -117,25 +115,25 @@ ms.lasthandoff: 06/22/2017
   
 **Создание предупреждения по номеру сообщения**  
   
--   [Среда Среда SQL Server Management Studio](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **Создание предупреждения по уровню серьезности**  
   
--   [Среда Среда SQL Server Management Studio](../../ssms/agent/create-an-alert-using-severity-level.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/create-an-alert-using-severity-level.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **Создание предупреждения по событию инструментария WMI**  
   
--   [Среда Среда SQL Server Management Studio](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/create-a-wmi-event-alert.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **Определение ответа на предупреждение**  
   
--   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
@@ -153,11 +151,10 @@ ms.lasthandoff: 06/22/2017
   
 **Отключение или повторное включение предупреждения**  
   
--   [Среда Среда SQL Server Management Studio](../../ssms/agent/disable-or-reactivate-an-alert.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/disable-or-reactivate-an-alert.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   
 ## <a name="see-also"></a>См. также:  
-[Хранимая процедура Хранимая процедура sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/bcd731b1-3c4e-4086-b58a-af7a3af904ad)  
+[Хранимая процедура sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/bcd731b1-3c4e-4086-b58a-af7a3af904ad)  
   
-

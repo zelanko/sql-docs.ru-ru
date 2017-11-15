@@ -5,22 +5,20 @@ ms.date: 08/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0e332aa4-2c48-4bc4-a404-b65735a02cea
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8bcb2add3c031a774ad768ee9540cc940d82e5be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: d1964cd48c4ab789bb95564a1595e1c6b09aeccb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-clustered-dtc-for-an-always-on-availability-group"></a>Создание кластеризованного DTC для группы доступности AlwaysOn
 В этом разделе рассматривается полная конфигурация кластеризованного ресурса DTC для группы доступности AlwaysOn SQL Server. Выполнение полной конфигурации может занять до одного часа. 
@@ -589,4 +587,3 @@ GO
 
 > [!IMPORTANT]
 > Требуется выполнить инструкцию `USE AG1` , чтобы убедиться, что контекст базы данных имеет значение `AG1`.  В противном случае выводится следующее сообщение об ошибке: "Контекст транзакции используется другим сеансом".
-

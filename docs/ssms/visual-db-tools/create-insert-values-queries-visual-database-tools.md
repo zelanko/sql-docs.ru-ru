@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - adding rows
 - table values [SQL Server]
 ms.assetid: 2d4b2f6d-cc09-434b-8a0e-ccce40628064
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c5fea6e228188ad87cc3a6f6a448bc65f04a68a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 18ad03e802b65275ba12f161f31ed5a4fd4c3329
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-insert-values-queries-visual-database-tools"></a>Создание запросов на вставку значений (визуальные инструменты для баз данных)
 Добавить новую строку в текущую таблицу можно с помощью запроса «Вставка значений». При создании запроса «Вставка значений» необходимо указать:  
@@ -76,4 +74,3 @@ VALUES   ('BU9876', 'Creating Web Pages', 'business', '1389', '29.99')
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Выполнение основных операций с запросами (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
-

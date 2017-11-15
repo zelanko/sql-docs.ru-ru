@@ -5,8 +5,7 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 - Endpoint URLs (HADR)
 ms.assetid: d7520c13-a8ee-4ddc-9e9a-54cd3d27ef1c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 054fea6b1eabbac7db7659e818c6033a6e9acc53
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 43bfc29045efc22d72becb20dbd4d4441c97baa2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-endpoint-url---adding-or-modifying-availability-replica"></a>Выбор URL-адреса конечной точки при добавлении или изменении реплики доступности
   Для размещения реплики доступности для группы доступности экземпляр сервера должен иметь конечную точку зеркального отображения базы данных. Экземпляр сервера использует эту конечную точку для прослушивания сообщений [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , получаемых от реплик доступности, размещенных на других экземплярах сервера. Чтобы определить реплику доступности для группы доступности, необходимо задать URL-адрес конечной точки экземпляра сервера, на котором размещена реплика. *URL-адрес конечной точки* определяет транспортный протокол конечной точки зеркального отображения базы данных — TCP, системный адрес экземпляра сервера и номер порта, связанный с конечной точкой.  
@@ -163,4 +161,3 @@ ms.lasthandoff: 08/02/2017
  [CREATE ENDPOINT (Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)  
   
   
-

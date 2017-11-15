@@ -5,24 +5,21 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.kbtermsbased.f1
+f1_keywords: sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93965e0267bb988b2b833701c9f193385220ff90
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: bdb1f4375ca80534e5b574d9b298fe053f2d4ec2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-term-based-relations"></a>Создание связей на основе термина
   В этом разделе описано создание связей на основе термина для домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Связь на основе термина (TBR) позволяет исправить термин, являющийся частью значения в домене. Это позволяет считать идентичными синонимами несколько значений, идентичных по написанию во всем, кроме отдельных частей. Например, вы можете задать связь на основе термина, которая изменяет термин «Inc.» на «Incorporated». Термин «Inc.» будет заменяться при каждом его появлении в домене. Экземпляры «Contoso, Inc.» будут заменяться на «Contoso, Incorporated», и эти два значения станут рассматриваться как точные синонимы.  
@@ -69,12 +66,12 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте или создайте базу знаний. Выберите операцию **Управление доменами** , а затем нажмите кнопку **Открыть** или **Создать**. Дополнительные сведения см. в разделе [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) или [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте или создайте базу знаний. Выберите операцию **Управление доменами** , а затем нажмите кнопку **Открыть** или **Создать**. Дополнительные сведения см. в разделе [Создание базы знаний](../data-quality-services/create-a-knowledge-base.md) или [Открытие базы знаний](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  Управление доменами осуществляется на странице клиента службы Data Quality Services, которая содержит пять вкладок для отдельных операций управления доменом. Это не процесс, управляемый мастером; любая операция управления может быть выполнена отдельно.  
   
-3.  В области **Список доменов** страницы **Управление доменами** выберите домен, для которого необходимо создать правило домена, или создайте новый домен. Если нужно создать новый домен, см. раздел [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  В области **Список доменов** страницы **Управление доменами** выберите домен, для которого необходимо создать правило домена, или создайте новый домен. Если нужно создать новый домен, см. раздел [Создать домен](../data-quality-services/create-a-domain.md).  
   
 4.  Перейдите на вкладку **Связи на основе термина** .  
   
@@ -108,4 +105,3 @@ ms.lasthandoff: 09/09/2017
  После создания связей на основе термина можно выполнить другие задачи управления доменами с текущим доменом, выполнить обнаружение набора знаний для добавления набора знаний к домену или добавить политику сопоставления к домену. Дополнительные сведения см. в разделах [Обнаружение набора знаний](../data-quality-services/perform-knowledge-discovery.md), [Управление доменом](../data-quality-services/managing-a-domain.md) и [Создание политики сопоставления](../data-quality-services/create-a-matching-policy.md).  
   
   
-

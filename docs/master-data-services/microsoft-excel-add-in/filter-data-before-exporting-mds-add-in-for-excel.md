@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 13a0720defc0a9e837f771a73f44bca343773ce1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 315b6f76b95bce7a0cbcdc3823890dd1172255ae
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>Фильтрация данных перед экспортом (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] можно отфильтровать данные, если нужно ограничить объем данных, экспортируемых в Excel.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/07/2017
  [Переупорядочение столбцов (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)  
   
   
-

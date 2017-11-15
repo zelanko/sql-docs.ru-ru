@@ -5,25 +5,23 @@ ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.swb.windowsazurestorage.connect.f1
 - SQL13.SWB.WINDOWSAZURESTORAGE.CONNECT.F1
 ms.assetid: 
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: ea0fbb6f0297dfdbe94974de472c7a48ce8ce831
-ms.openlocfilehash: b673559a735d3b28d6055a1440183861b3db692a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: cbb66aa6f65eb0e1c8b0de50de11a9cc3e090bc5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Подключение к службе хранилища Microsoft Azure
 Диалоговое окно **Соединение хранилища Windows Azure** позволяет указать учетную запись хранилища и проверить соединение с Windows Azure.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 07/31/2017
   
 4.  **Сохранить ключ учетной записи** — параметр позволяет сохранить пароль в зашифрованном файле.  
   
-

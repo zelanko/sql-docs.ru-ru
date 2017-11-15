@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - connecting when locked out [SQL Server]
 - locked out [SQL Server]
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f14625038501a21d4321f45471a4391d29efec9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.workload: Active
+ms.openlocfilehash: 851ca8cf8c899f5028c2de73e59186000ee93abf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Подключение к SQL Server в случае, если доступ системных администраторов заблокирован
   В этом разделе описывается, как восстановить доступ к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в качестве системного администратора. Системный администратор может утратить доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по одной из следующих причин:  

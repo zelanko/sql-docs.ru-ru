@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
+f1_keywords: VS.ToolsOptionsPages.Sql_Server_Object_Explorer.ObjectExplorerCommands
 ms.assetid: 0e5afdb3-488c-4ea9-9e38-d42085ec00b1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: da27431ddc8718e711bc4c4a0d0ced4fca1106c8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e32d7fe35d1a6322e902e07c866d952cdccb1411
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-sql-server-object-explorer---commands"></a>Параметры (обозреватель объектов SQL Server — меню "Команды")
 При щелчке правой кнопкой мыши таблицы или представления в обозревателе объектов, выводятся два следующих параметра для отображения строк в таблице:  
@@ -48,6 +45,5 @@ ms.lasthandoff: 06/22/2017
 Назначает число возвращаемых строк, указанное в создаваемом скрипте редактора запросов. Значение по умолчанию составляет 1000 строк.  
   
 ## <a name="see-also"></a>См. также:  
-[Подсистема аудита SQL Server (ядро СУБД)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
+[Подсистема аудита SQL Server (Database Engine)](http://msdn.microsoft.com/en-us/0c1fca2e-f22b-4fe8-806f-c87806664f00)  
   
-

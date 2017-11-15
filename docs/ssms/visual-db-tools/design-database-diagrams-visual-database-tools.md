@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - database diagrams [SQL Server], designing
 - diagrams [SQL Server], designing
 ms.assetid: 6d2c14e1-3d73-4d10-ae5b-7f2b5d6c4ea8
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 39d9220dc13546a5a1e9c95d034b5a5cf0ac43b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: d2e4a40c3000ddbb7f1e06c2d5826e06073fb549
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>Конструирование диаграмм баз данных (визуальные инструменты для баз данных)
 Конструктор баз данных — это визуальное средство, позволяющее конструировать и визуализировать базу данных, с которой установлено соединение. Конструктор баз данных используется для создания, редактирования и удаления таблиц, столбцов, ключей, индексов, связей и ограничений. Для визуализации базы данных можно создать одну или несколько диаграмм, иллюстрирующих некоторые или все имеющиеся в ней таблицы, столбцы, ключи и связи.  
@@ -77,4 +75,3 @@ ms.lasthandoff: 08/18/2017
 [Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
 [Работа с макетом диаграммы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   
-

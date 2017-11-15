@@ -5,8 +5,7 @@ ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - modifying execution plan display
 - custom zoom [SQL Server]
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 776af20648edd32950f222469b1b0f469a12a925
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/22/2017
-
+ms.openlocfilehash: b05bddb677c7cf707c63c003c569eb296270832d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-the-estimated-execution-plan"></a>Отображение предполагаемого плана выполнения
   В этом разделе описано создание графических предполагаемых планов выполнения с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При создании расчетных планов выполнения запросы и пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] не выполняются. Поэтому расчетный план выполнения не содержит сведений времени выполнения, таких как фактические метрики использования ресурса и предупреждения времени выполнения. Вместо этого созданный план выполнения отображает наиболее вероятный план выполнения запроса, которому следовал бы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] при фактическом выполнении запросов, а также отображает расчетное движение строк при выполнении нескольких операторов в плане.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 08/22/2017
  
  > [!NOTE] 
  > Также можно использовать [SET SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) для получения сведений о плане выполнения для каждой инструкции без ее выполнения. При использовании в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] на вкладке *Результаты* будет отображаться ссылка на план выполнения в графическом формате.   
-

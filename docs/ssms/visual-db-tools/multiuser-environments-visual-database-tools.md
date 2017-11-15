@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - version control [Visual Database Tools]
 - Visual Database Tools [SQL Server], multiuser environments
 ms.assetid: 330bd48c-9427-4967-b58e-b7c492d5ee36
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4d760b89c2f00e19bd47880dcb80978fe7efca00
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 751293d6a9993d8d68650857e62e0e589850f3bb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="multiuser-environments-visual-database-tools"></a>Многопользовательские среды (визуальные инструменты для баз данных)
 Многопользовательской называется такая среда, в которой к базе данных, с которой работает пользователь, могут подключаться и другие пользователи, которые, кроме того, могут вносить в нее изменения. В результате с некоторыми объектами базы данных могут работать одновременно несколько пользователей. Таким образом, в многопользовательской среде при внесении изменений в базу данных могут отражаться и изменения, сделанные другими пользователями.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 06/22/2017
   
 Один из способов предотвращения ошибок состоит в том, что изменения вносятся в копию базы данных, например в тестовую базу данных. Затем создается скрипт изменений, который применяет эти изменения к оригиналу после разрешения конфликтов в режиме «вне сети». Дополнительные сведения см. в разделе [Разработка, тестирование и создание баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/development-test-and-production-databases-visual-database-tools.md).  
   
-

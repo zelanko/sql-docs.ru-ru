@@ -5,8 +5,7 @@ ms.date: 09/10/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - publishing [SQL Server replication], partitioned tables
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ca19ef9e234653e490e8c9b92bcf221b2175a341
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: af0684fed880dabb06c989e9735b266b059f12b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Репликация секционированных таблиц и индексов
   Секционирование делает большие таблицы и индексы более управляемыми, так как позволяет быстро и эффективно получать доступ к подмножествам данных и управлять ими, при этом сохраняя целостность всей коллекции данных. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Репликация поддерживает секционирование, предоставляя набор свойств, которые указывают, как работать с секционированными таблицами и индексами.  
@@ -85,4 +83,3 @@ ms.lasthandoff: 06/22/2017
  [Публикация данных и объектов базы данных](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   
   
-

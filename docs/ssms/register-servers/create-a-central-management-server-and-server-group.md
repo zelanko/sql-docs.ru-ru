@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- configuration server
+helpviewer_keywords: configuration server
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 431e6a9d3345462a8ce9ac3f03feb9a0e1534b2a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 712440c9f508da793757ba2f4097eef46426df91
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>Создание центрального сервера управления и группы серверов
   В этом разделе описывается, как назначить экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в качестве сервера централизованного управления в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. На серверах централизованного управления хранится список экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , организованных в одну или несколько групп серверов централизованного управления. Действия, производимые с помощью группы серверов централизованного управления, влияют на все серверы в группе. Это включает соединение с сервером при помощи обозревателя объектов, а также выполнение инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] и применение политик управления на основе политик одновременно на нескольких серверах.  
@@ -90,4 +87,3 @@ ms.lasthandoff: 07/31/2017
  [Администрирование нескольких серверов с использованием центральных серверов управления](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   
-

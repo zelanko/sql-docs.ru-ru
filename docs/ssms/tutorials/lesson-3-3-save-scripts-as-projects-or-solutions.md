@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 72dfd37f-dbe7-4d1d-bda6-7eb54c7922d3
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 3772efa6ab55acd4087cd47f897040f782476636
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: f2e8f9470fe28427a78eb74a41c4e76c400f3761
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-3---save-scripts-as-projects-or-solutions"></a>Занятие 3–3. Сохранение скриптов в виде проектов или решений
 Разработчики, знакомые со средой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, найдут удобным обозреватель решений в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Скрипты, которые поддерживают бизнес, могут быть сгруппированы в проекты скриптов, а проектами скриптов можно одновременно управлять как решением. Когда скрипты помещены в проекты скриптов и решения, они могут быть открыты вместе как группа или сохранены вместе в системе управления версиями, например Visual SourceSafe. Проекты скриптов включают данные о соединениях, необходимые для правильного выполнения скриптов, а также могут содержать файлы других типов, такие как вспомогательные текстовые файлы.  
@@ -74,4 +71,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

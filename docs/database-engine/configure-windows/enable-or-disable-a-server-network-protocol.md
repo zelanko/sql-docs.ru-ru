@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,19 +19,18 @@ helpviewer_keywords:
 - surface area configuration [SQL Server], connection protocols
 - connections [SQL Server], enabling remote using Configuration Manager
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: e6716392a65ce797e2f0bae543f50899b9fbeb2d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: d83a336ea3d35d22ea14d6a4a66698f99890650d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# Включение или отключение сетевого протокола сервера
+# <a name="enable-or-disable-a-server-network-protocol"></a>Включение или отключение сетевого протокола сервера
   Все сетевые протоколы устанавливаются программой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но некоторые могут быть включены, а некоторые — нет. В этом разделе описано, как включить или отключить сетевой протокол сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или PowerShell. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] необходимо остановить и перезапустить, чтобы изменения вступили в силу.  
   
 > [!IMPORTANT]  
@@ -51,7 +49,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="SSMSProcedure"></a> Использование диспетчера конфигурации SQL Server  
   
-#### Включение протокола SNP  
+#### <a name="to-enable-a-server-network-protocol"></a>Включение протокола SNP  
   
 1.  В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на панели консоли раскройте **Сетевая конфигурация SQL Server**.  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 10/04/2017
   
 ##  <a name="PowerShellProcedure"></a> Использование SQL Server PowerShell  
   
-#### Включение сетевого протокола сервера с использованием PowerShell  
+#### <a name="to-enable-a-server-network-protocol-using-powershell"></a>Включение сетевого протокола сервера с использованием PowerShell  
   
 1.  Откройте командную строку с использованием разрешений администратора.  
   
@@ -99,7 +97,7 @@ ms.lasthandoff: 10/04/2017
     $Np  
     ```  
   
-#### Настройка протоколов на локальном компьютере  
+#### <a name="to-configure-the-protocols-for-the-local-computer"></a>Настройка протоколов на локальном компьютере  
   
 -   Если скрипт запускается локально и настраивает локальный компьютер, с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell можно сделать скрипт более гибким, динамически определяя имя локального компьютера. Для получения имени локального компьютера замените строку, устанавливающую переменную `$uri` , следующей строкой.  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 10/04/2017
     $uri = "ManagedComputer[@Name='" + (get-item env:\computername).Value + "']/ServerInstance[@Name='MSSQLSERVER']/ServerProtocol[@Name='Tcp']"  
     ```  
   
-#### Перезапуск компонента Database Engine с использованием SQL Server PowerShell  
+#### <a name="to-restart-the-database-engine-by-using-sql-server-powershell"></a>Перезапуск компонента Database Engine с использованием SQL Server PowerShell  
   
 -   После включения или отключения протоколов необходимо остановить и перезапустить компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] , чтобы эти изменения вступили в действие. Выполните следующие инструкции, чтобы остановить и запустить экземпляр по умолчанию с использованием [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Чтобы остановить и запустить именованный экземпляр, замените `'MSSQLSERVER'` на `'MSSQL$<instance_name>'`.  
   
@@ -134,4 +132,3 @@ ms.lasthandoff: 10/04/2017
     ```  
   
   
-

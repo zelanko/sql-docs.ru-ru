@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 511 (Database Engine error)
+helpviewer_keywords: 511 (Database Engine error)
 ms.assetid: 0c85686a-53c1-4180-ba8c-2000e68a0d63
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6f1ef308a5c84a9c0bdee065c67fcc3328798136
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4022d3e6a23d067d6b4f5ec91805d2d6ba37866b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver511"></a>MSSQLSERVER_511
   
@@ -45,4 +42,3 @@ ms.lasthandoff: 06/22/2017
   
 Если проблема может быть вызвана обновлением строки на месте, необходимо изменять таблицу в несколько этапов. Создайте новую таблицу и передайте в нее данные. Затем удалите исходную таблицу и переименуйте новую таблицу либо выполните усечение исходной таблицы, измените строки в исходной таблице, а затем переместите данные обратно в нее.  
   
-

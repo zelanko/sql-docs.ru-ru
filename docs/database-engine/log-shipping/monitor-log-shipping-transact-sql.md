@@ -5,8 +5,7 @@ ms.date: 03/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - status information [SQL Server], log shipping
 - monitoring log shipping [SQL Server]
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: dad074bfa7a777690f625fa175f631332f94e58b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: d1ed3b2823e6de0f4afe534398c40ec461e59850
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Наблюдение за доставкой журналов (Transact-SQL)
   После того, как была настроена доставка журналов, можно отслеживать данные о состоянии всех серверов доставки журналов. Журнал и состояние операций доставки журналов всегда сохраняются локально заданиями доставки журналов. Журнал и состояние операций резервного копирования сохраняются на сервере-источнике, а журнал и состояние операций копирования и восстановления сохраняются на сервере-получателе. Если был реализован удаленный сервер мониторинга, эти данные также сохраняются и на нем.  
@@ -69,4 +67,3 @@ ms.lasthandoff: 08/02/2017
  [Хранимые процедуры и таблицы доставки журналов](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
-

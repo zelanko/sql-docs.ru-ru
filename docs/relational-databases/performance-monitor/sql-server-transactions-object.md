@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:Transactions
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 642a22206b25ec2963fae4fa04e6b10a5329f0e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: a3c085266a6f4d14f0c7881289ebea15347675de
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, объект Transactions
   Объект **Transactions** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для мониторинга количества активных транзакций в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]и влияния этих транзакций на ресурсы, такие как хранилище версий строк изоляции моментальных снимков **tempdb**. Транзакции представляют собой логические блоки проделанной работы — наборы операций, которые должны либо все завершиться успешно, либо быть стертыми из базы данных, чтобы соблюсти логическую целостность данных. Все изменения данных в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляются в транзакциях.  
@@ -55,4 +53,3 @@ ms.lasthandoff: 06/22/2017
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
-

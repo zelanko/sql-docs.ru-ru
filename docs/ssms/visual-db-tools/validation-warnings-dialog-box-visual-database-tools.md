@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vdtsql.chm:65556
 - vdt.dlgbox.validationwarnings
 ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 78aac0124cb34ac7699907df89c3251559bb79f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 44d94def6c7d16fb10173035e2aad7f26fb6c3e2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>Диалоговое окно «Предупреждения проверки» (визуальные инструменты для баз данных)
 Это диалоговое окно появляется при попытке сохранить изменения с потенциально опасными побочными эффектами или в случае вероятной неудачи операции фиксации базы данных. Это диалоговое окно указывает возможные побочные эффекты или возможные причины неудачи операции фиксации. Диалоговое окно предоставляет возможность продолжить действие или отменить его.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 08/18/2017
 [Проектирование таблиц (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

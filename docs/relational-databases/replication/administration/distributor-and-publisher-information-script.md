@@ -5,24 +5,23 @@ ms.date: 03/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Publishers [SQL Server replication], information scripts
 - Distributors [SQL Server replication], information scripts
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dec278a7a34d1e6f3c056dcd6ea8ec65d0acdfc5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 247af1132f3b2df3a6b393967e1f9bef73df4705
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="distributor-and-publisher-information-script"></a>Скрипт вывода сведений о распространителе и издателе
   Этот скрипт использует системные таблицы и хранимые процедуры репликации, позволяющие получить ответы на часто задаваемые вопросы об объектах на распространителе и издателе. Скрипт может использоваться «как есть», а также может служить основой для пользовательских скриптов. Для выполнения в вашей среде, возможно, потребуется внести в скрипт два изменения:  

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - websync.log
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
-caps.latest.revision: 88
+caps.latest.revision: "88"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
   Описанные в данном разделе процедуры составляют второй этап настройки веб-синхронизации при репликации слиянием. Эти процедуры выполняют после включения веб-синхронизации для публикации. Обзор этого процесса настройки см. в разделе [Настроить веб-синхронизацию](../../relational-databases/replication/configure-web-synchronization.md). После завершения выполнения процедур, описанных в этом разделе, перейдите к третьему этапу — настройке подписки для использования веб-синхронизации. Этот этап описывается в следующих разделах:  
@@ -174,7 +172,7 @@ ms.lasthandoff: 06/22/2017
   
 8.  На странице **Доступ к каталогам** выполните следующие действия:  
   
-    1.  Нажмите кнопку **Добавить**и в диалоговом окне **Выбор пользователей или групп** добавьте учетные записи, с которыми подписчик будет подключаться к серверу IIS. Эти учетные записи указываются на странице **Данные о веб-сервере** мастера создания подписки или в качестве значения параметра *@internet_login* процедуры [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).  
+    1.  Нажмите кнопку **Добавить**и в диалоговом окне **Выбор пользователей или групп** добавьте учетные записи, с которыми подписчик будет подключаться к серверу IIS. Эти учетные записи указываются на странице **Данные о веб-сервере** мастера создания подписки или в качестве значения параметра [процедуры](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* .  
   
 9. На странице **Общий доступ к хранилищу моментальных снимков** укажите общую папку моментальных снимков. Устанавливаются соответствующие разрешения для этой общей папки, чтобы подписчики могли получить доступ к файлам моментальных снимков. Дополнительные сведения о разрешениях для общей папки см. в статье [Организация безопасности папки моментальных снимков](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
@@ -366,4 +364,3 @@ ms.lasthandoff: 06/22/2017
  [Настроить веб-синхронизацию](../../relational-databases/replication/configure-web-synchronization.md)  
   
   
-

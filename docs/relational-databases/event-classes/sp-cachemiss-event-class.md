@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SP:CacheMiss event class
+helpviewer_keywords: SP:CacheMiss event class
 ms.assetid: 82229233-f772-4558-95a0-d54584d1b1ae
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab69805ae94f8b902f2f754cf57ff713ac39ce67
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: cfad681a8b7d8162aa37264ed60f02c243bcc686
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="spcachemiss-event-class"></a>SP:CacheMiss, класс событий
   Класс событий SP:CacheMiss показывает, что процедура не обнаружена в кэше. Если класс событий SP:CacheMiss часто повторяется, это может свидетельствовать о том, что [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]требуется предоставить больший объем памяти, увеличив размер кэша процедур.  

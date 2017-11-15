@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- 'TM: Rollback Tran Starting event class'
+helpviewer_keywords: 'TM: Rollback Tran Starting event class'
 ms.assetid: 3b4d0d56-c51f-4f07-a116-5d4bd6ec1a3c
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e521bff958548ec3991b7fc3000a4767a57748d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1dbcebdc0320932306f3b79d129df9180e69dd15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tm-rollback-tran-starting-event-class"></a>Класс событий TM: Rollback Tran Starting
   Класс событий "TM:Rollback Tran Starting" указывает на начало выполнения запроса ROLLBACK TRANSACTION. Клиент направляет этот запрос через интерфейс управления транзакциями. Столбец EventSubClass указывает, будет ли начата новая транзакция после отката текущей транзакции.  

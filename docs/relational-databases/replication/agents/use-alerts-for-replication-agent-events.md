@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - displaying alerts
 - Snapshot Agent, alerts
 ms.assetid: 8c42e523-7020-471d-8977-a0bd044b9471
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 915d79db6a2c8f55443c92cb568bac8a9cc2c7d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 67c68cfcba51bcd9bd2dfb8512108766fe1240e7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Используйте предупреждения для событий агента репликации
   Среда[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] и агент [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предоставляют способ наблюдения за событиями (например, событиями агента репликации) с использованием предупреждений. Агент[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] отслеживает в журнале приложений Windows события, связанные с предупреждениями. При наступлении события агент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] автоматически реагирует на него, выполняя определенную пользователем задачу или отправляя сообщения на электронную почту или на пейджер указанного оператора. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] содержит набор стандартных предупреждений для агентов репликации, которые можно настроить для выполнения задачи или уведомления оператора. Дополнительные сведения об определении выполняемых задач см. в подразделе «Автоматизация отклика на предупреждение» этого раздела.  
@@ -97,4 +95,3 @@ deallocate hc
  [Наблюдение за репликацией](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   
-

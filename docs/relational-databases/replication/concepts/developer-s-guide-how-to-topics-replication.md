@@ -5,24 +5,21 @@ ms.date: 03/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: c6c15ae6-da52-4638-93d3-61c7242e8a0b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 288ed137e701d6cfb416d12b6ff2176c59ec0278
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 67ccf264539c01071c3dff0e0e9fc1c70f14d7e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="developer39s-guide-how-to-topics-replication"></a>Руководство разработчика. Инструкции (репликация)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,21 +48,21 @@ ms.lasthandoff: 06/22/2017
   
 -   [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)  
   
--   [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md) (Просмотр и изменение свойств статьи)  
+-   [View and Modify Article Properties (Просмотр и изменение свойств статьи)](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)  
   
--   [Delete a Publication](../../../relational-databases/replication/publish/delete-a-publication.md) (Удаление публикации)  
+-   [Delete a Publication (Удаление публикации)](../../../relational-databases/replication/publish/delete-a-publication.md)  
   
--   [Delete an Article](../../../relational-databases/replication/publish/delete-an-article.md) (Удаление статьи)  
+-   [Delete an Article (Удаление статьи)](../../../relational-databases/replication/publish/delete-an-article.md)  
   
 -   [Создание публикации из базы данных Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)  
   
 -   [Set the Expiration Period for Subscriptions](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md) (Установка срока действия подписок)  
   
--   [Specify Schema Options](../../../relational-databases/replication/publish/specify-schema-options.md) (Указание параметров схемы)  
+-   [Specify Schema Options (Указание параметров схемы)](../../../relational-databases/replication/publish/specify-schema-options.md)  
   
--   [Replicate Schema Changes](../../../relational-databases/replication/publish/replicate-schema-changes.md) (Репликация изменений схемы)  
+-   [Replicate Schema Changes (Репликация изменений схемы)](../../../relational-databases/replication/publish/replicate-schema-changes.md)  
   
--   [Manage Identity Columns](../../../relational-databases/replication/publish/manage-identity-columns.md) (Управление столбцами идентификаторов)  
+-   [Manage Identity Columns (Управление столбцами идентификаторов)](../../../relational-databases/replication/publish/manage-identity-columns.md)  
   
 -   [Set the Compatibility Level for Merge Publications](../../../relational-databases/replication/publish/set-the-compatibility-level-for-merge-publications.md) (Задание уровня совместимости для публикаций слиянием)  
   
@@ -83,7 +80,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)  
   
--   [Optimize Parameterized Row Filters](../../../relational-databases/replication/publish/optimize-parameterized-row-filters.md) (Оптимизация параметризованных фильтров строк)  
+-   [Optimize Parameterized Row Filters (Оптимизация параметризованных фильтров строк)](../../../relational-databases/replication/publish/optimize-parameterized-row-filters.md)  
   
 -   [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md) (Определение и изменение фильтра соединения между статьями публикации слиянием)  
   
@@ -105,7 +102,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [Specify the Conflict Tracking and Resolution Level for Merge Articles](../../../relational-databases/replication/publish/specify-the-conflict-tracking-and-resolution-level-for-merge-articles.md) (Указание уровня отслеживания и разрешения конфликтов для статей публикации слиянием)  
   
--   [Specify a Merge Article Resolver](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md) (Определение сопоставителя статей публикации слиянием)  
+-   [Specify a Merge Article Resolver (Определение сопоставителя статей публикации слиянием)](../../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)  
   
 -   [Specify Interactive Conflict Resolution for Merge Articles](../../../relational-databases/replication/publish/specify-interactive-conflict-resolution-for-merge-articles.md) (Указание интерактивного устранения конфликтов для статей публикации слиянием)  
   
@@ -194,4 +191,3 @@ ms.lasthandoff: 06/22/2017
 -   [Измерение задержки и проверка правильности соединений для репликации транзакций](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   
   
-

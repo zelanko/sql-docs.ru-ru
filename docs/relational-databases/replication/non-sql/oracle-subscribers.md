@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - heterogeneous Subscribers, Oracle
 - mapping data types [SQL Server replication]
 ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 473ac265f469403a52c96349a484b9fc85a572c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a7f47f316449b6048dc826dcfbf265c1bc85877e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oracle-subscribers"></a>Подписчики Oracle
   Начиная с [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает принудительные подписки Oracle через поставщик Oracle OLE DB, предоставляемый Oracle.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 06/22/2017
     |Выберите сетевой протокол.|Выберите соответствующие поддерживаемые протоколы. Большинство приложений использует протокол TCP.|  
     |Задайте сведения об узле для идентификации прослушивателя базы данных|Узел — это имя или DNS-псевдоним компьютера, на котором запущен прослушиватель Oracle. Обычно это тот же компьютер, на котором расположена база данных. Для некоторых протоколов, возможно, нужно будет указать дополнительные сведения. Например если выбрать протокол ТСР, нужно будет указать порт, который слушается прослушивателем для запросов на подключение к целевой базе данных. По умолчанию для протокола TCP используется порт 1521.|  
   
-3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Создание подписки для подписчика, отличного от подписчика SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 ### <a name="setting-directory-permissions"></a>Настройте разрешения для каталога  
  Учетной записи, под которой запускается служба [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на распространителе, должны быть предоставлены права на чтение и выполнение для каталога (и всех вложенных каталогов), где установлено клиентское сетевое программное обеспечение Oracle.  

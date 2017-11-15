@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,20 +16,18 @@ f1_keywords:
 - sql13.SWB.makemanaged.Summary.F1
 - sql13.SWB.makemanaged.progress.F1
 - sql13.SWB.makemanaged.validation.F1
-helpviewer_keywords:
-- Enroll instance
+helpviewer_keywords: Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c5bb6279f7fd96f30aa3f19628e2edc5edb5cc53
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 510cda640de67fa7aa5c9e32f8e2cd820e533f68
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
   Зарегистрируйте экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для наблюдения за его производительностью и конфигурацией как управляемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точка управления служебной программой (UCP) выполняет сбор данных о конфигурации и производительности от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые 15 минут. Эти сведения хранятся в хранилище данных управления для программы (UMDW) в UCP, имя файла UMDW — sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сравниваются с политиками с целью определения того, в каких местах отмечается нехватка ресурсов, а также возможностей консолидации.  
@@ -129,7 +126,7 @@ ms.lasthandoff: 08/03/2017
 |Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не должен быть зарегистрирован в какой-либо другой точка управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Если указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже управляется как часть существующей программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , то его нельзя будет зарегистрировать в другой точке управления служебной программой.|  
 |Экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не должен уже являться точкой управления служебной программой.|Если указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] уже является точкой управления служебной программой, отличающейся от той, с которой установлено соединение, то выполнить регистрацию в этой точке управления служебной программой будет нельзя.|  
 |На экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны быть установлены наборы элементов сбора служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Переустановите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|Наборы элементов сбора на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны быть остановлены.|Наборы элементов сбора должны быть остановлены на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если сборщик данных отключен, включите его, остановите все работающие наборы элементов сбора, а затем снова запустите правила проверки для операции создания точки управления служебной программой.<br /><br /> Включение сборщика данных:<br /><br /> В обозревателе объектов раскройте узел **Управление** .<br /><br /> Щелкните правой кнопкой мыши **Сбор данных**, затем выберите **Включить сбор данных**.<br /><br /> Остановка набора элементов сбора:<br /><br /> В обозревателе объектов разверните узел **Управление**, затем узел **Сбор данных**и узел Наборы элементов сбора системных данных.<br /><br /> Щелкните правой кнопкой мыши набор элементов сбора, который необходимо остановить, и выберите команду **Остановить набор сбора данных**.<br /><br /> Результат этого действия будет отображен в окне сообщения, а красный круг на значке набора элементов сбора означает его остановку.|  
+|Наборы элементов сбора на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должны быть остановлены.|Наборы элементов сбора должны быть остановлены на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если сборщик данных отключен, включите его, остановите все работающие наборы элементов сбора, а затем снова запустите правила проверки для операции создания точки управления служебной программой.<br /><br /> Включение сборщика данных:<br /><br /> В обозревателе объектов раскройте узел **Управление** .<br /><br /> Щелкните правой кнопкой мыши **Сбор данных**, затем выберите **Включить сбор данных**.<br /><br /> Остановка набора элементов сбора:<br /><br /> В обозревателе объектов разверните узел **Управление**, затем узел **Сбор данных**и узел &lt;ui&gt;Наборы элементов сбора системных данных&lt;/ui&gt;.<br /><br /> Щелкните правой кнопкой мыши набор элементов сбора, который необходимо остановить, и выберите команду **Остановить набор сбора данных**.<br /><br /> Результат этого действия будет отображен в окне сообщения, а красный круг на значке набора элементов сбора означает его остановку.|  
 |Служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должна быть запущена на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Запустите службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если указанный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте ручной запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В противном случае настройте автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |В точке управления служебной программой должна быть запущена служба агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Запустите службу агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в точке управления служебной программой. Если точка управления служебной программой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] является экземпляром отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , настройте ручной запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В противном случае настройте автоматический запуск службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |WMI должна быть правильно настроена.|Сведения об устранении неполадок настройки WMI см. в статье [Устранение неполадок служебной программы SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453).|  
@@ -205,4 +202,3 @@ ms.lasthandoff: 08/03/2017
  [Устранение неполадок служебной программы SQL Server](http://msdn.microsoft.com/library/f5f47c2a-38ea-40f8-9767-9bc138d14453)  
   
   
-

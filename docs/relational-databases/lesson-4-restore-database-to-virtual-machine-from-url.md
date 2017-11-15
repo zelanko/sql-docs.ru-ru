@@ -1,29 +1,25 @@
 ---
 title: "Занятие 4. Восстановление базы данных на виртуальную машину по URL-адресу | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 31d30195b648f48b149021a7bf80aba2543a14ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: f641f3df1010396d54a655beaaf982a7bff63972
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-restore-database-to-virtual-machine-from-url"></a>Занятие 4. Восстановление базы данных в виртуальной машине с URL-адреса
 На этом занятии вы восстановите базу данных AdventureWorks2014 в экземпляр SQL Server 2016 в виртуальной машине Azure.  
@@ -75,4 +71,3 @@ ms.lasthandoff: 06/22/2017
   
   
   
-

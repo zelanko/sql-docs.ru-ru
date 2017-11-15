@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - database diagrams [SQL Server], discarding changes
 - diagrams [SQL Server], discarding changes
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6bf3f6c31cb92aa86c8e2ac3d04beab51d00db13
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 7d8bca44d80234f7176c14edd55ead755ccba6eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Отмена изменений, внесенных в диаграммы (визуальные инструменты для баз данных)
 Пользователь имеет возможность отменить изменения, внесенные в диаграмму базы данных, если не хочет сохранять их в ней.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 08/18/2017
 [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Работа с таблицами в диаграммах базы данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
-

@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL Server Management Studio [SQL Server], user interface elements
 - user interface [SQL Server Management Studio]
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 233790dcaeb47f6803e8eb7f586321c880f2a3e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 72a00e52b92b48c7be310ab5aa985b81608c1bce
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="general-user-interface-elements"></a>Общие элементы пользовательского интерфейса
 Примерами базовых элементов [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] являются **Редактор**, окно **Свойства**, а также **область элементов**.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 08/18/2017
 [Использование панели элементов](../ssms/use-the-toolbox.md)  
 Описание эффективного использования **области элементов** , в том числе для добавления элементов управления в конструкторы проекта. Например, окно **Область элементов** можно использовать для добавления этапов к задаче "Обслуживание".  
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,17 +13,16 @@ f1_keywords:
 - VS.ToolsOptionsPages.Environment.SQLEnvironmentOptions
 - DevLang-TSQL
 ms.assetid: c32ccdb8-2cf8-4c78-b474-a3abd3dbbd13
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 18ee84388c584423bc7f5b416d1540d1a287a0ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7a3862d6f6b622ddd0496b23234287443e179810
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---general-page"></a>Параметры ("Среда" — "Общие")
 Диалоговое окно **Параметры** используется для настройки действий среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] при запуске, общих параметров управления окнами и других общих настроек. В меню **Сервис** выберите пункт **Параметры**, откройте папку **Среда** и выберите пункт **Общие**.  
@@ -64,4 +62,3 @@ ms.lasthandoff: 06/22/2017
 **Включать в список недавно использованных файлов n элементов**  
 Задает число недавно открывавшихся проектов и недавно использованных файлов, которые отображаются в меню **Файл** . Введите число от 1 до 24. Значение по умолчанию — 4. Это удобный способ получения недавно использованных проектов скриптов и проектов файлов и скриптов.  
   
-

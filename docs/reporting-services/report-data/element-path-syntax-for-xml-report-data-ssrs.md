@@ -14,17 +14,16 @@ helpviewer_keywords:
 - ElementPath syntax
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 121f98cb4b10c480b2f6e215c9432361f963475c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7c25d6665198e0392aa70d649ca658adec84d2de
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Синтаксис пути к элементу для XML-данных отчета (SSRS)
   В конструкторе отчетов для определения данных из источника данных XML, которые должны использоваться в отчете, указывается путь к элементу с учетом регистра. Путь к элементу — это путь по иерархическим XML-узлам в источнике XML-данных и атрибуты этих узлов. Чтобы использовать путь к элементу по умолчанию, оставьте пустым запрос набора данных или XML **ElementPath** для XML- **Query** . При получении данных из источника XML-данных узлы элементов, которые имеют текстовые значения и атрибуты узла элемента, преобразуются в столбцы результирующего набора. При выполнении запроса значения этих узлов и атрибуты преобразуются в данные строк. Эти столбцы появляются в качестве коллекции полей набора данных в области данных отчета. В этом разделе содержится информация о синтаксисе пути к элементу.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 |&#124; (вертикальная черта)|Разделяет элементы синтаксиса. Можно выбрать только один из элементов.|  
 |`[ ]` (квадратные скобки)|Необязательные элементы синтаксиса. Скобки не вводятся.|  
 |**{ }** (фигурные скобки)|Разделяют параметры элементов синтаксиса.|  
-|[**,**...*n*]|Указывает, что предыдущий элемент может повторяться  *n*  число раз. Вхождения элемента разделяются запятыми.|  
+|[**,**...*n*]|Указывает на то, что предшествующий элемент можно повторить *n* раз. Вхождения элемента разделяются запятыми.|  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -210,9 +209,8 @@ XMLLocalName :: =
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Тип соединения XML &#40; Службы SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
- [Службы Reporting Services Tutorials &#40; Службы SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Добавление, изменение и обновление полей в области данных отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
+ [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Учебники по службам Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
   
-

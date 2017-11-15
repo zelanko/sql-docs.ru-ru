@@ -5,8 +5,7 @@ ms.date: 08/05/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Invoke-Sqlcmd cmdlet
 - sqlcmd utility, PowerShell
 ms.assetid: 0c74d21b-84a5-4fa4-be51-90f0f7230044
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: 2172a7e83454030f0cee9eaec1909c0cfb019d63
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/19/2017
-
+ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd, командлет
   **Invoke-Sqlcmd** представляет собой командлет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , предназначенный для выполнения скриптов, которые содержат инструкции определенных языков ([!INCLUDE[tsql](../includes/tsql-md.md)] и XQuery) и команды, поддерживаемые служебной программой **sqlcmd** .  
@@ -157,4 +155,3 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
  [Использование программы sqlcmd](../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   
   
-

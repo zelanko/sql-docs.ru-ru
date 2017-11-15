@@ -5,28 +5,26 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Exchange Spill event class
+helpviewer_keywords: Exchange Spill event class
 ms.assetid: fb876cec-f88d-4975-b3fd-0fb85dc0a7ff
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5920469e3f0ff312ac155011300034b8d8f8de50
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill, класс событий
   Класс событий **Exchange Spill** показывает, что буфер связи в параллельном плане запроса временно записан в базу данных **tempdb** . Это происходит редко и только если план запроса содержит несколько просмотров диапазона.  
   
- Как правило, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)], формирующий такие просмотры диапазонов, содержит много операторов BETWEEN, каждый из которых выбирает диапазон строк из таблицы или индекса. Другой способ получить несколько диапазонов — использовать такое выражение, как (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Кроме того, планы запросов должны выполнять просмотр этих диапазонов исключительно в упорядоченном виде либо из-за наличия предложения ORDER BY в T.a, либо из-за того, что итератор плана обрабатывает кортежи строго в порядке сортировки.  
+ Как правило, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] , формирующий такие просмотры диапазонов, содержит много операторов BETWEEN, каждый из которых выбирает диапазон строк из таблицы или индекса. Другой способ получить несколько диапазонов — использовать такое выражение, как (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Кроме того, планы запросов должны выполнять просмотр этих диапазонов исключительно в упорядоченном виде либо из-за наличия предложения ORDER BY в T.a, либо из-за того, что итератор плана обрабатывает кортежи строго в порядке сортировки.  
   
  Если такой план запроса содержит несколько операторов **Parallelism** , то буферы связи, используемые этими операторами **Parallelism** , будут переполняться и может возникнуть ситуация, когда выполнение запроса остановится. В этом случае один из операторов **Parallelism** записывает свой буфер вывода в базу данных **tempdb** (эта операция называется *обменный сброс*), что позволяет ему обрабатывать строки из входных буферов. Постепенно сброшенные строки возвращаются обработчику по мере его готовности.  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 06/22/2017
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
-

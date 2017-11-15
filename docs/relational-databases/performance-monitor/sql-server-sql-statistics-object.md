@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLServer:SQL Statistics
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90e7987d1a367ed1c79d34640917cbacebf89ddf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 82c9a520edf0f65e3197d43ad5ef50a8e12b7068
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, объект SQL Statistics
   Объект **SQLServer: статистика SQL** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает работу счетчиков для наблюдения компиляции и типов запросов, отправляемых экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наблюдение за числом компиляций и повторных компиляций запросов и числа пакетов, полученных экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , дает представление о том, как быстро [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет запросы пользователей и насколько эффективно их обрабатывает оптимизатор запросов.  

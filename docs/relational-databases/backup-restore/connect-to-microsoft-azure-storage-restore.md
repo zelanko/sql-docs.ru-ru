@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2014
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.restore.connectstorage.f1
+f1_keywords: sql13.swb.restore.connectstorage.f1
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 22cafc591e5a4c43ecbb52abaae651a6873c49f0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 7af0d8bb6c04e30f3f7edbead37828f499a67095
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Подключение к службе хранилища Microsoft Azure (восстановление)
   Это диалоговое окно позволяет указать сведения для подключения к учетной записи хранения Windows Azure для получения файлов в учетной записи хранения. После ввода необходимой информации нажмите кнопку **Подключить** , чтобы установить соединение с хранилищем Windows Azure.  
@@ -48,4 +45,3 @@ ms.lasthandoff: 06/22/2017
  Выберите этот параметр, чтобы создать новые учетные данные, используя учетную запись хранения и ключ доступа. Введите имя учетных данных в поле **Имя учетных данных** .  
   
   
-

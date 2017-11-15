@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.designers.properties.QueryViewColumn
+f1_keywords: vdt.designers.properties.QueryViewColumn
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ddaf4ebdf84b6e269e488457ef5f1d01ec87f848
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 20acb3fa9cb3be515a7677eab69a2c1696f29d82
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>Свойства объектов (столбцов) с табличными значениями (визуальные инструменты для баз данных)
 Эти свойства отображаются при выборе столбца в табличном объекте на панели **Диаграмма** конструктора запросов и представлений.  
@@ -66,4 +63,3 @@ ms.lasthandoff: 06/22/2017
 **Размер**  
 Показывает размер в байтах, допустимых типом данных этого столбца. Например, тип данных nchar может иметь длину 10 (количество символов), однако для работы с кодировкой Юникод его длина будет равняться 20.  
   
-

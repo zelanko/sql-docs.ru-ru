@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.security.MA.f1
-helpviewer_keywords:
-- Merge Agent Security dialog box
+f1_keywords: sql13.rep.security.MA.f1
+helpviewer_keywords: Merge Agent Security dialog box
 ms.assetid: 9b86171a-4381-4b39-869a-cdc161e7cd15
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91b56fdfcd9865baf0063b15998572a228b83852
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 830d3a7d00d560c7a3360d23c7a6fe2dd4db035a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="merge-agent-security"></a>Безопасность агента слияния
   При помощи диалогового окна **Безопасность агента слияния** можно указать учетную запись Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] , под которой необходимо запускать агент слияния. Агент слияния запускается на распространителе для принудительных подписок и на подписчике для подписок по запросу. На учетную запись Windows можно также ссылаться как на *учетную запись процесса*, потому что процесс агента работает под этой учетной записью. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  

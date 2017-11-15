@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.scheduleproperties.general.f1
+f1_keywords: sql13.swb.reportserver.scheduleproperties.general.f1
 ms.assetid: 20e43966-6caf-4972-a2e2-0d9131ac8f51
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 76a45e9de841e0171a3bf5f11ad2b209100a026a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: eac0a7b5f1a8da128fc90700be9b91e9a38ad694
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="schedule-properties-general-page"></a>Свойства расписания (страница «Общие»)
   Создать или изменить общее расписание можно с помощью страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] . Общие расписания могут использоваться вместо расписаний отчетов или подписок. Изменения, внесенные в расписания, применяются после сохранения расписания. Изменение расписания не оказывает воздействия на выполняемые задания. Если какое-то расписание изменяется во время его использования, всем выполняемым в данный момент отчетам и подпискам, запущенным на основе этого расписания, будет разрешено завершение.  
@@ -70,11 +68,10 @@ ms.lasthandoff: 08/09/2017
  Указывает расписание, выполняемое один раз в заданные дату и время.  
   
 ## <a name="see-also"></a>См. также раздел  
- [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)  
   
   
-
 

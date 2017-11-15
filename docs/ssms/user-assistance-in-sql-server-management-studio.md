@@ -5,28 +5,26 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Help [SQL Server Management Studio]
 - SQL Server Management Studio [SQL Server], user assistance
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d57d3d1dcd90bfe3af4ef8b630d3f0c0a2e0ff3c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: c30d3be19643c13ba0621a948f3cca3b467cb039
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Справка и поддержка пользователей в среде SQL Server Management Studio
-Справка и поддержка пользователей в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] доступна через меню «Справка» и в электронной документации [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. В меню «Справка» в [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] предлагается несколько вариантов доступа к сведениям об [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Оно также предоставляет доступ к сообществу [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] и ресурсам интерактивной библиотеки MSDN, ранее недоступным из справочной среды. Справочная среда теперь также может быть настроена как на запуск из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , так и в собственном внешнем окне.  
+Справка и поддержка пользователей в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] доступна через меню «Справка» и в электронной документации [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . В меню «Справка» в [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] предлагается несколько вариантов доступа к сведениям об [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Оно также предоставляет доступ к сообществу [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] и ресурсам интерактивной библиотеки MSDN, ранее недоступным из справочной среды. Справочная среда теперь также может быть настроена как на запуск из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , так и в собственном внешнем окне.  
   
 ## <a name="the-help-interface"></a>Интерфейс справки  
 Вкладки **Содержимое** и **Индекс** предоставляют функции и интерфейс, уже знакомые пользователям [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] . Доступны следующие параметры.  
@@ -103,4 +101,3 @@ ms.lasthandoff: 06/22/2017
   
 2.  В поле **Отображать справку, используя** выберите **Собственное средство просмотра справки**.  
   
-

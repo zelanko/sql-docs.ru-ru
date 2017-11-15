@@ -5,8 +5,7 @@ ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-statistics
+ms.technology: dbe-statistics
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - query optimizer [SQL Server], statistics
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1c55b7b8b39e7b1ec296ee529bc66d2e14256994
-ms.openlocfilehash: 59d83fc61c1a595c1ab95515060682269eaf465e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/12/2017
-
+ms.openlocfilehash: b64fe249a6fb8d1c619f9e63ecb2cd7af4494c17
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="statistics"></a>Statistics
   Оптимизатор запросов использует статистику для создания планов запросов, которые повышают производительность запросов. Для большинства запросов оптимизатор уже создает необходимую статистику, которая позволяет сформировать высококачественный план запроса. Но в некоторых случаях для достижения наилучших результатов нужно создать дополнительные статистические данные или изменить структуру запроса. В этом разделе обсуждаются основные статистические понятия и предоставляются рекомендации по эффективному использованию статистики для оптимизации запросов.  
@@ -354,4 +352,3 @@ GO
  [Controlling Autostat (AUTO_UPDATE_STATISTICS) behavior in SQL Server](http://support.microsoft.com/help/2754171) (Управление поведением Autostat (AUTO_UPDATE_STATISTICS) в SQL Server)
   
  
-

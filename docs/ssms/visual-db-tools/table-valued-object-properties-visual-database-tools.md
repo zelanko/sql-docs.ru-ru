@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.designers.properties.TVO
+f1_keywords: vdt.designers.properties.TVO
 ms.assetid: eaf06cbf-8242-4483-894f-80ae02a4840e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e1a3aab7fc71e38e5383b8adad799ba3c2a01e4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b780f2dea124c603e24015149ab2d98b93f711f2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="table-valued-object-properties-visual-database-tools"></a>Свойства объектов с табличными значениями (визуальные инструменты для баз данных)
 Эти свойства отображаются в окне свойств при выборе табличного объекта в **конструкторе запросов и представлений**. Табличный объект может быть представлением, синонимом, производной таблицей или возвращающей табличное значение функцией. Если не указано иное, в окне **Свойства** эти свойства отображаются только для чтения.  
@@ -57,4 +54,3 @@ ms.lasthandoff: 06/22/2017
 **Список параметров**  
 Отображает параметры, определенные для выбранной возвращающей табличное значение функции. Чтобы определить значения параметров, щелкните «Список параметров», затем нажмите кнопку с многоточием (…) справа от свойства. В диалоговом окне «Параметры функции» введите значения. Это свойство доступно лишь тогда, когда выбрана возвращающая табличное значение функция.  
   
-

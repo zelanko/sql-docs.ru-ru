@@ -1,29 +1,25 @@
 ---
 title: "Устранение распространенных проблем с JSON в SQL Server | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 07/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- JSON, FAQ
+helpviewer_keywords: JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 3c55ec9bc77f499d5c97c7cd75d160547ac681d2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 40408a6c0a42882fb2c268d70ddd2959b2d627b4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Устранение распространенных проблем с JSON в SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -70,7 +66,7 @@ FOR JSON PATH
   
  Как можно избежать этого? Я хочу, чтобы `{"day":23}` возвращался в виде объекта JSON, а не escape-текста.  
   
- **Ответ.** JSON, хранящийся в столбце текста или литерале, обрабатывается как обычный текст. В связи с этим он заключается в двойные кавычки и экранируется. Если вам нужно возвратить неэкранированный объект JSON, следует передать столбец JSON в качестве аргумента функции JSON_QUERY, как показано в следующем примере.  
+ **Ответ.** JSON, хранящийся в столбце текста или литерале, обрабатывается как обычный текст. В связи с этим он заключается в двойные кавычки и экранируется. Если вам нужно возвратить неэкранированный объект JSON, следует передать столбец JSON как аргумент функции JSON_QUERY, как показано в следующем примере.  
   
 ```sql  
 SELECT col1, col2, col3, JSON_QUERY(jsoncol1) AS jsoncol1  
@@ -151,4 +147,3 @@ WHERE [key] = 'color'
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
 Много определенных решений, варианты использования и рекомендации см. в [записях блога о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) (категории SQL Server и Azure SQL Database (База данных SQL Azure), автор — руководитель программ корпорации Майкрософт Йован Попович (Jovan Popovic)).
-

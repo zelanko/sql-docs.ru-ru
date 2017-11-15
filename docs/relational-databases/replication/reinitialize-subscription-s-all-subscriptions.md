@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.reinit.all.f1
-helpviewer_keywords:
-- Reinitialize Subscription(s) dialog box
+f1_keywords: sql13.rep.reinit.all.f1
+helpviewer_keywords: Reinitialize Subscription(s) dialog box
 ms.assetid: e1122018-9f74-43e3-8489-7eae33ff23d9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c59e203ad41b511bb82c066d11575006711965d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 83cbe8c753c2a62da4b87c0c7773885de91bed94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reinitialize-subscriptions---all-subscriptions"></a>Повторная инициализация подписок — все подписки
   Диалоговое окно **Повторная инициализация подписок** позволяет пометить все подписки публикации для повторной инициализации. Повторная инициализация заключается в том, что к каждому подписчику применяется моментальный снимок; эта задача выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  
@@ -50,4 +46,3 @@ ms.lasthandoff: 06/22/2017
  [Повторная инициализация подписок](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   
-

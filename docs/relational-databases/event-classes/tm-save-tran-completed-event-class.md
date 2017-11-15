@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- 'TM: Save Tran Completed event class'
+helpviewer_keywords: 'TM: Save Tran Completed event class'
 ms.assetid: e6b37780-5ad8-4d50-89a3-d8a22496faac
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 64bcd735d0f0d78aa7883c3a79e3de6d4c498326
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 066d0e89dd12c4480c355cc8986fee7cbd19b1f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tm-save-tran-completed-event-class"></a>Класс событий TM: Save Tran Completed
   События класса TM: класс события Save Tran Completed указывает, что завершен запрос SAVE TRANSACTION. Запрос был отправлен клиентом через интерфейс управления транзакциями.  

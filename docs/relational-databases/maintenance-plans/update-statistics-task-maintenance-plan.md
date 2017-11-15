@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.maint.statistics.f1
-helpviewer_keywords:
-- Updates Statistics Task dialog box
+f1_keywords: sql13.swb.maint.statistics.f1
+helpviewer_keywords: Updates Statistics Task dialog box
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 774fe7654f9a67ae7e149b80b05e047ac958c10b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8f8f8e5ff41a47d8c0b09e570f69e0d8a3532c3c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Задача «Обновление статистики» (план обслуживания)
   Диалоговое окно **Задача «Обновление статистики»** служит для обновления сведений [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] о данных в таблицах и индексах. Эта задача осуществляет повторную выборку статистики распределения каждой пользовательской таблицы или индекса. При помощи статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирует перемещение по таблицам во время обработки инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Для автоматического сбора статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] периодически осуществляет выборку данных в соответствующей таблице по каждому индексу. Размер выборки зависит от количества строк в таблице и частоты изменения данных. Данный параметр используется для дополнительной выборки с использованием заданного процента данных в таблице. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эти сведения используются для оптимизации планов запросов.  
@@ -103,7 +99,7 @@ ms.lasthandoff: 06/22/2017
  Укажите способ проверки подлинности на сервере.  
   
  **Использовать встроенную безопасность Windows**  
- Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] c проверкой подлинности Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] c проверкой подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Использовать указанные имя пользователя и пароль**  
  Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
@@ -118,4 +114,3 @@ ms.lasthandoff: 06/22/2017
  [UPDATE STATISTICS (Transact-SQL)](../../t-sql/statements/update-statistics-transact-sql.md)  
   
   
-

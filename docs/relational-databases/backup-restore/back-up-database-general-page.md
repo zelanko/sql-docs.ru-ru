@@ -5,24 +5,21 @@ ms.date: 07/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.backupdatabase.general.f1
+f1_keywords: sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 13b0f7f81e96861fd9f18fc78cc65bce3343fed3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="back-up-database-general-page"></a>Резервное копирование базы данных (страница «Общие»)
   Страница **Общие** диалогового окна **Резервное копирование базы данных** служит для просмотра и изменения параметров резервного копирования базы данных.  
@@ -142,4 +139,3 @@ ms.lasthandoff: 08/03/2017
  [Модели восстановления (SQL Server)](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
-

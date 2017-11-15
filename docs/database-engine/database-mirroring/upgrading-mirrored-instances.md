@@ -5,8 +5,7 @@ ms.date: 02/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - database mirroring [SQL Server], upgrading system
 - rolling upgrades [SQL Server]
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: eb81c72c3640df10334bcdb108150e755e49695f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 27c4e397e7cf5dbf6b8a930badf965b293898537
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="upgrading-mirrored-instances"></a>Обновление зеркальных экземпляров
   При обновлении зеркального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установкой новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , нового пакета обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или накопительного пакета обновления, а также при установке нового пакета обновления Windows или накопительного пакета обновления Windows вы можете выполнить последовательное обновление, что позволит сократить время простоя каждой зеркальной базы данных до одного цикла перехода на другой ресурс вручную (или двух циклов перехода на другой ресурс вручную, если нужно вернуться к исходной первичной реплике). Последовательное обновление является многоэтапным процессом, который в самом простом случае заключается в обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , выступающего в роли зеркального сервера в сеансе зеркального отображения, последующем переходе на зеркальную базу данных вручную, обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , бывшего основным, и возобновлении зеркального отображения. Набор операций, фактически применяемый на практике, будет зависеть от режима работы, а также от количества и структуры сеансов зеркального отображения, активных в обновляемых экземплярах [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -170,4 +168,3 @@ ms.lasthandoff: 08/02/2017
  [Режимы работы зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   
-

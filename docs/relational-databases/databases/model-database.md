@@ -5,8 +5,7 @@ ms.date: 03/04/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - model database [SQL Server], about model databases
 - model database [SQL Server]
 ms.assetid: 4e4f739b-fd27-4dce-8be6-3d808040d8d7
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a05d89ba953bf683a992a087be8e3c87777ae9c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8a4023cf2ac4d0176d421a262f13b9a4603fcc5a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="model-database"></a>База данных model
   База данных **model** используется в качестве шаблона для всех баз данных, созданных для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Так как база данных **tempdb** создается при каждом запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , база данных **model** всегда должна существовать в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Содержимое базы данных **model** (включая параметры базы данных) полностью копируется в новую базу данных. Некоторые параметры базы данных **model** используются также при создании новой базы данных **tempdb** во время загрузки, поэтому наличие базы данных **model** в системе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обязательно.  
@@ -127,4 +125,3 @@ ms.lasthandoff: 08/03/2017
  [Перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md)  
   
   
-

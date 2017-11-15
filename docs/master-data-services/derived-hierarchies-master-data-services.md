@@ -1,13 +1,11 @@
 ---
 title: "Производные иерархии (Master Data Services) | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - hierarchies [Master Data Services], derived hierarchies
 - derived hierarchies, about derived hierarchies
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 3c29bf064f8f7c07d7b053dc08f71b443dc75dc4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.openlocfilehash: 88b0abaef115f5138beac5947af464384621e480
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="derived-hierarchies-master-data-services"></a>Производные иерархии (Master Data Services)
   Производная иерархия [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] происходит от связей атрибутов на основе домена, уже существующих между сущностями в модели.  
@@ -98,4 +95,3 @@ ms.lasthandoff: 09/07/2017
 -   [Коллекции (службы Master Data Services)](../master-data-services/collections-master-data-services.md)  
   
   
-

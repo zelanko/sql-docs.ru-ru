@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - multi-homed computer [SQL Server] configuring ports
 - firewall systems [Database Engine], multi-homed computer
 ms.assetid: ba369e5b-7d1f-4544-b7f1-9b098a1e75bc
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 61df6c613fec3d5a549f5dc1468b44affa37f047
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 153525785a354d9a730bee4fff48d0562a2e48e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Настройка многосетевого компьютера для доступа к SQL Server
   Если сервер должен предоставить соединение с двумя или более сетями или подсетями, обычно используется многосетевой компьютер. Часто этот компьютер расположен в пограничной сети (также известной как ДМЗ, демилитаризованная зона или экранированная подсеть). В этом разделе описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.  
@@ -143,7 +142,7 @@ ms.lasthandoff: 06/22/2017
 9. Чтобы настроить другие IP-адреса на многосетевом компьютере, повторите эту процедуру для каждого IP-адреса, используя другое правило.  
   
 ## <a name="see-also"></a>См. также:  
- [Служба обозревателя SQL Server (ядро СУБД и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
+ [Служба обозревателя SQL Server (компонент Database Engine и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Подключение к SQL Server через прокси-сервер (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/connect-to-sql-server-through-a-proxy-server-sql-server-configuration-manager.md)  
   
   

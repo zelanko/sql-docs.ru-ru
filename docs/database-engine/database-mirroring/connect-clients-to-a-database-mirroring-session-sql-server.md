@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: 95
+caps.latest.revision: "95"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b9bfcbc289a42960fdcb47db43a09014c37ddd4b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 6fa71b2a2dfa009bae1614942873d45309348223
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)
   Чтобы подключиться к сеансу зеркального отображения базы данных, клиент может использовать либо программу собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо поставщика данных .NET Framework для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если эти поставщики доступа к данным настроены для использования базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , то они поддерживают зеркальное отображение базы данных. Дополнительные сведения о замечаниях по программированию при использовании зеркальной базы данных см. в разделе [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Кроме того, текущий экземпляр основного сервера должен быть доступен, и имя входа клиента должно быть создано на экземпляре сервера. Дополнительные сведения см. в статье [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Клиентские соединения с сеансом зеркального отображения базы данных не задействуют экземпляр следящего сервера, если он существует.  

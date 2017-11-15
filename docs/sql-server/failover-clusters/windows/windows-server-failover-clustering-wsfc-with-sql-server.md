@@ -5,8 +5,7 @@ ms.date: 01/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - quorum [SQL Server]
 - failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: faf617519fde35e957969a98d2564821ee01e8a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 42921f4ecb7384ce13b648a67723547c85446d73
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server
   Новая *Отказоустойчивая кластеризация Windows Server* (WSFC) представляет собой группу независимых серверов, совместная работа которых позволяет повысить доступность приложений и служб. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] поддержка экземпляров отказоустойчивого кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] осуществляется с использованием служб и возможностей WSFC.  
@@ -197,4 +196,3 @@ ms.lasthandoff: 06/22/2017
  [Аварийное восстановление WSFC через принудительный кворум (SQL Server)](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
  [Windows Server 2016 поддерживает функцию локальных дисковых пространств Windows Server 2016](http://blogs.technet.microsoft.com/dataplatforminsider/2016/09/27/sql-server-2016-now-supports-windows-server-2016-storage-spaces-direct/)
   
-

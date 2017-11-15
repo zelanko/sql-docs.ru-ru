@@ -5,26 +5,22 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.externaltools
-helpviewer_keywords:
-- External Tools dialog box
+f1_keywords: vs.externaltools
+helpviewer_keywords: External Tools dialog box
 ms.assetid: d7dae88f-0781-4162-96cd-d3a3a4d82035
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2e6fbfef713c27e8cf66f63a9e6bc742f45c4159
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 07746b7c20e8bed6bb71abb3c62adb6354f921dd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="external-tools"></a>Внешние инструменты
 С помощью этого диалогового окна можно добавить в меню **Сервис** внешние инструменты, такие как диспетчер конфигурации SQL Server или "Блокнот". Добавление внешних средств позволяет легко запускать другие приложения во время работы в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. При запуске средств можно указать аргументы и рабочий каталог. Кроме того, выходные данные некоторых средств могут отображаться в окне «Вывод». Диалоговое окно **Внешние инструменты** доступно в меню **Сервис** .  
@@ -84,4 +80,3 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 > Чтобы проверить расположение соответствующих файлов на компьютере, просмотрите свойства ярлыка среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] в меню **Пуск** .  
   
-

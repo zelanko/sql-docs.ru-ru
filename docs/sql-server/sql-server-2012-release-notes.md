@@ -8,20 +8,18 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Release Notes, SQL Server
+helpviewer_keywords: Release Notes, SQL Server
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 855dc52c2d4ac7a4d28864328536de62e23ced3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.openlocfilehash: 2aa2d466fce0c67b1bf51493d986cbb43af1b166
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-2012-release-notes"></a>Заметки о выпуске SQL Server 2012
 В этих заметках о выпуске описаны известные проблемы, с которыми необходимо ознакомиться перед началом установки или устранения неполадок с Microsoft SQL Server 2012 ([щелкните здесь для скачивания](http://go.microsoft.com/fwlink/?LinkId=238647)). Этот документ «Заметки о выпуске» доступен только для загрузки в сети и постоянно обновляется. Этот документ не содержится на установочном носителе.  
@@ -637,4 +635,3 @@ SQL Server 2012 включает в себя StreamInsight 2.0. Для рабо�
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
-

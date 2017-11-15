@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 4a43451046d7cbea498941d867b235a58f56d468
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>Удаление Power Pivot для SharePoint
   Удаление установки [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] — это многоэтапная процедура, состоящая из подготовки к удалению, удаления компонентов и решений из фермы и удаления файлов программ и параметров реестра.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Для удаления функций и решений из фермы необходимо обладать правами администратора фермы SharePoint или администратора служебного приложения.  
   
--   Если также требуется удалить ядро СУБД, то необходимо быть системным администратором SQL Server и членом локальной группы администраторов.  
+-   Если также требуется удалить компонент Database Engine, то необходимо быть системным администратором SQL Server и членом локальной группы администраторов.  
   
 -   Для удаления служб Analysis Services и [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]необходимо быть администратором служб Analysis Services и членом локальной группы администраторов.  
   
@@ -197,4 +197,3 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
  [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
-

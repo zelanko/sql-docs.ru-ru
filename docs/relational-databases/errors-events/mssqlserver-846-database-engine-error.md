@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 846 (Database Engine error)
+helpviewer_keywords: 846 (Database Engine error)
 ms.assetid: ccf367eb-06b0-42b8-b4d6-2b88f4a502d3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 541151ada9220ea2f6374db6118adc5192f2bc7c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: faf3699c4f5725836290f12084d4b183abed6790
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver846"></a>MSSQLSERVER_846
   
@@ -70,4 +67,3 @@ ms.lasthandoff: 08/03/2017
   
 -   Убедитесь, что приращения, заданные с помощью параметра FILEGROWTH, велики настолько, чтобы выполняться достаточно редко. Запланируйте задание проверки доступного места на диске в базах данных, затем задайте увеличение размера базы данных в периоды наименьшей нагрузки.  
   
-

@@ -5,8 +5,7 @@ ms.date: 08/25/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - SQLServer:Availability Replica
 - Availability Groups [SQL Server], performance counters
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 297fce0c33230efa45c159807bed0a577cef804e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f02d1bce1c2c66520e382334cedd00e292c524e5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, реплика доступности
   Объект производительности **SQLServer:Availability Replica** содержит счетчики производительности, которые сообщают сведения о репликах доступности в группах доступности AlwaysOn в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Все счетчики производительности реплик доступности применяются и к первичной реплике, и к вторичным репликам, при этом счетчики отправленных и принятых данных относятся к локальной реплике. В большинстве случаев первичная реплика отправляет большую часть данных, а вторичные реплики данные получают. Однако вторичные реплики отправляют подтверждения и другой фоновый трафик в первичную реплику. Учтите, что для определенной реплики доступности некоторые счетчики будут показывать нулевое значение, что зависит от текущей роли (первичной или вторичной) локальной реплики.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/27/2017
  [Группы доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
-

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - files [SQL Server], adding
 - data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 760d6803511284da837b02f8b1474029edd5830c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: a823730915fb185a1978a4c49924c3bbabe4d86b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Добавление файлов данных или журналов в базу данных
   В этом подразделе содержатся инструкции по добавлению файлов данных или журналов в базу данных на сервере [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] при помощи [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -113,7 +112,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  На панели «Стандартная» нажмите **Создать запрос**.  
   
-3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере выполняется добавление в базу данных группы из двух файлов. В примере в базе данных `Test1FG1` создается файловая группа [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] и добавляются два файла по 5 МБ в эту файловую группу.  
+3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере выполняется добавление в базу данных группы из двух файлов. В примере в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]создается файловая группа `Test1FG1` и добавляются два файла по 5 МБ в эту файловую группу.  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   

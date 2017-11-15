@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e9b0deb3a240607b3df2612622803d62749f521
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a4b2e1ccd63ca5f7a43ada054ffde3ec018938d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>Изменение значков индикаторов и наборов индикаторов (построитель отчетов и службы SSRS)
   Стандартные наборы индикаторов, предоставляемые [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для отчетов с разбиением на страницы, могут не всегда эффективно отображать конкретные данные и хорошо работать в поставляемом отчете. В этом разделе рассматриваются процедуры изменения внешнего вида значков индикатора и изменения наборов индикаторов — с включением других значков индикаторов, представленных в большем или меньшем количестве.  

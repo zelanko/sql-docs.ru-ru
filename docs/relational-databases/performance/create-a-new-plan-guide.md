@@ -5,27 +5,24 @@ ms.date: 08/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-plan-guides
+ms.technology: dbe-plan-guides
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.designer.newplanguide.f1
+f1_keywords: sql13.swb.designer.newplanguide.f1
 helpviewer_keywords:
 - creating plan guides
 - plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0cc530e59007070fba228c06a4f8f2983faa3f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ea94e6214729ba4bf5c5e39c25cdd8119d261a3e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-new-plan-guide"></a>Создание структуры плана
 Структура плана влияет на оптимизацию запросов путем присоединения указаний запросов или фиксированного плана запросов к ним. В структуре плана указывается оператор, который нужно оптимизировать, и либо предложение OPTION, которое содержит указания запросов, которые будут использоваться, либо специальный план запроса, который используется для оптимизации запроса. Когда запрос выполняется, оптимизатор запросов сопоставляет инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] со структурой плана и либо присоединяет условие OPTION к запросу в процессе выполнения, либо использует указанный план запроса.  
@@ -106,4 +103,3 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. в разделе [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md).  
   
   
-

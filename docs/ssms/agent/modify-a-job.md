@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - modifying jobs
 - SQL Server Agent jobs, modifying
 ms.assetid: dd5e5f20-20c4-4ab9-a19a-db87577dcd43
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 34e8c912bf0499166a20fc49fd807544d2b808bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 1120638a41f670a9203310d006ebd6f26891fae4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-a-job"></a>Изменение задания
 В этом разделе описано, как изменять свойства заданий агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью среды [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], [!INCLUDE[tsql](../../includes/tsql_md.md)]или управляющих объектов SQL Server.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Для изменения задания используется:**  
   
-    [Среда Среда SQL Server Management Studio](#SSMS)  
+    [Среда SQL Server Management Studio](#SSMS)  
   
     [Transact-SQL](#TSQL)  
   
@@ -67,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-modify-a-job"></a>Изменение задания  
   
-1.  В обозревателе объектов подключитесь к экземпляру ядра СУБД и разверните его.  
+1.  В обозревателе объектов подключитесь к экземпляру компонента Database Engine и разверните его.  
   
 2.  На панели инструментов нажмите кнопку **Создать запрос**.  
   
@@ -94,4 +92,3 @@ ms.lasthandoff: 06/22/2017
   
 Воспользуйтесь классом **Job** на любом языке программирования, таком как Visual Basic, Visual C# или PowerShell. Дополнительные сведения см. в статье [Управляющие объекты SQL Server (SMO)](http://msdn.microsoft.com/library/ms162169.aspx).  
   
-
