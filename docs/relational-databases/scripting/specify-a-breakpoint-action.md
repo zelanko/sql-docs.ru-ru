@@ -5,26 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.debug.breakpt.action
+f1_keywords: vs.debug.breakpt.action
 helpviewer_keywords:
 - Transact-SQL debugger, breakpoint action
 - Transact-SQL debugger, breakpoint when hit action
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1594f724e5020c1678812ff74c55bb1fefe5bf5e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 05021a400801a1cae9edbd5e5f9443ff3bd89a63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-a-breakpoint-action"></a>Задание действия в точке останова
   Действие точки останова **При попадании** задает пользовательское действие, которое отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняет для точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
     4.  $FUNCTION возвращает имя хранимой процедуры или определяемой пользователем функции, для которой установлена точка останова. Если точка останова задана в окне редактора, $FUNCTION возвращает имя редактируемого файла скрипта.  
   
-    5.  $PID и $PNAME возвращают идентификатор и имя процесса операционной системы, выполняющего экземпляр ядра СУБД, где выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)]. $PID возвращает такой же идентификатор, что и SERVERPROPERTY("ProcessID"), за исключением того, что $PID имеет шестнадцатеричное, а SERVERPROPERTY("ProcessID") — десятичное значение.  
+    5.  $PID и $PNAME возвращают идентификатор и имя процесса операционной системы, выполняющего экземпляр компонента Database Engine, где выполняется [!INCLUDE[tsql](../../includes/tsql-md.md)] . $PID возвращает такой же идентификатор, что и SERVERPROPERTY("ProcessID"), за исключением того, что $PID имеет шестнадцатеричное, а SERVERPROPERTY("ProcessID") — десятичное значение.  
   
     6.  $TID и $TNAME возвращают идентификатор и имя потока операционной системы, в котором выполняется пакет [!INCLUDE[tsql](../../includes/tsql-md.md)] . Этот поток связан с процессом, в котором выполняется экземпляр ядра СУБД. $TID возвращает такое же значение, как и инструкция SELECT kpid FROM sys.sysprocesses WHERE spid = @@SPID, за одним исключением: $TID содержит шестнадцатеричное значение, а kpid — десятичное.  
   

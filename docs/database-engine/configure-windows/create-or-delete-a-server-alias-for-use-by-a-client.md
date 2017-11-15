@@ -5,27 +5,24 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- server alias
+f1_keywords: server alias
 helpviewer_keywords:
 - aliases [SQL Server], deleting
 - aliases [SQL Server], creating
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 559cf56887726ec4410165de70ec380b44773e97
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: e337353c65243953afa2fd94b96aad52cb9e3eef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>Создание или удаление псевдонима сервера для использования клиентом
   В этом разделе описано, как создать и удалить псевдоним сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. Псевдоним является альтернативным именем, которое можно использовать для создания соединения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Псевдонимы могут использоваться с любым клиентским приложением. После создания псевдонима сервера клиент может соединяться с несколькими серверами по разным сетевым протоколам, не указывая протокол и сведения о соединении для каждого из них. Кроме того, можно также держать постоянно включенными несколько сетевых протоколов, даже если некоторые из них используются время от времени. Если сервер настроен на прослушивание порта или именованного канала, отличных от используемых по умолчанию, и служба браузера SQL Server отключена, то можно создать псевдоним, который будет определять другой номер порта или именованный канал.  
@@ -54,4 +51,3 @@ ms.lasthandoff: 08/02/2017
 2.  На панели сведений щелкните правой кнопкой мыши псевдоним, который необходимо удалить, и выберите **Удалить**.  
   
   
-

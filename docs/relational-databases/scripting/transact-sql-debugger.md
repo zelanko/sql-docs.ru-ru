@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Transact-SQL debugger, introduction
+helpviewer_keywords: Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d5409025fee4cb80a8f7b64e8946f058635e7551
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger"></a>Отладчик Transact-SQL
   Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет находить ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] путем проверки поведения кода во время его выполнения. После перевода окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режим отладки можно приостанавливать выполнение на определенных строках кода и просматривать сведения и данные, которые используются или возвращаются соответствующими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -49,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="viewing-debugger-information"></a>Просмотр сведений отладчика  
  Каждый раз, когда отладчик приостанавливает выполнение на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , с текущим состоянием выполнения можно ознакомиться при помощи следующих окон отладчика.  
   
--   **Locals** and **Watch.** В этих окнах отображаются выделенные в данный момент выражения [!INCLUDE[tsql](../../includes/tsql-md.md)] . Выражения — это предложения [!INCLUDE[tsql](../../includes/tsql-md.md)] , значением которых является отдельное скалярное выражение. Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживает просмотр выражений, которые ссылаются на переменные, параметры или встроенные функции [!INCLUDE[tsql](../../includes/tsql-md.md)], имена которых начинаются с @@. В этих окнах также отображаются значения данных, которые назначены выражениям на текущий момент.  
+-   **Локальные значения** и **Просмотр значений** В этих окнах отображаются выделенные в данный момент выражения [!INCLUDE[tsql](../../includes/tsql-md.md)] . Выражения — это предложения [!INCLUDE[tsql](../../includes/tsql-md.md)] , значением которых является отдельное скалярное выражение. Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] поддерживает просмотр выражений, которые ссылаются на переменные, параметры или встроенные функции [!INCLUDE[tsql](../../includes/tsql-md.md)], имена которых начинаются с @@. В этих окнах также отображаются значения данных, которые назначены выражениям на текущий момент.  
   
 -   **Быстрая проверка.** Это окно отображает значение выражения [!INCLUDE[tsql](../../includes/tsql-md.md)] и позволяет сохранять это выражение в окне **Просмотр значений** .  
   
@@ -59,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **Вывод.** В этом окне отображаются различные сообщения и программные данные, например системные сообщения от отладчика.  
   
--   **Results** and **Messages.** На этих вкладках окна редактора запросов отображаются результаты ранее выполненных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+-   **Результаты** и **Сообщения** На этих вкладках окна редактора запросов отображаются результаты ранее выполненных инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ## <a name="transact-sql-debugger-tasks"></a>Задачи отладчика Transact-SQL  
   
@@ -74,4 +71,3 @@ ms.lasthandoff: 06/22/2017
  [Редакторы запросов и текста (SQL Server Management Studio)](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   
-

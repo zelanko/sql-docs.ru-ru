@@ -5,8 +5,7 @@ ms.date: 03/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - mapping data types [SQL Server replication]
 - heterogeneous Subscribers, IBM DB2
 ms.assetid: a1a27b1e-45dd-4d7d-b6c0-2b608ed175f6
-caps.latest.revision: 74
+caps.latest.revision: "74"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6fa91235b6de818646673afd4e637083c5a6660c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b9923a93650c564621e13d0e088b99d78a62a1ec
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ibm-db2-subscribers"></a>подписчики IBM DB2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      Большинство параметров в строке уникальны для настраиваемого сервера DB2, но для параметров `Process Binary as Character` и `Derive Parameters` всегда должно быть задано значение `False`. Параметр `Initial Catalog` должен иметь значение для идентификации базы данных подписки. Если создается подписка, строка соединения вводится в мастер создания подписки.  
   
-3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
+3.  Создайте публикацию моментальных снимков или публикацию транзакций, активируйте ее для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , а затем создайте принудительную подписку для подписчика. Дополнительные сведения см. в статье [Создание подписки для подписчика, отличного от подписчика SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
   
 4.  При желании можно указать пользовательский скрипт создания для одной или более статей. После публикации таблицы для нее создается скрипт `CREATE TABLE`. Для подписчиков, отличных от[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , скрипт создается на разновидности языка [!INCLUDE[tsql](../../../includes/tsql-md.md)] , а затем перед применением к подписчику преобразуется агентом распространителя в более универсальную разновидность SQL. Чтобы указать пользовательский скрипт создания, измените существующий скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] или создайте полный скрипт, который использует разновидность языка DB2 SQL. Если создается скрипт DB2, используйте директиву **bypass_translation** , чтобы агент распространителя применил скрипт к подписчику без трансляции.  
   
@@ -176,4 +175,3 @@ ms.lasthandoff: 06/22/2017
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

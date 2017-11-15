@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +19,16 @@ helpviewer_keywords:
 - filters [SQL Server replication], parameterized
 - dynamic filters [SQL Server replication]
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 8cc71572d7cc5b68293a288af4715634b615cb39
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>Параметризованные фильтры. Параметризованные фильтры строк
   Параметризованные фильтры строк (в предыдущих версиях [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]они назывались динамическими фильтрами) позволяют отсылать разным подписчикам разные секции данных, что исключает необходимость создания множества публикаций. Секция — это подмножество строк таблицы; в зависимости от настроек, выбранных при создании параметризованного фильтра строк, каждая строка в опубликованной таблице может принадлежать только одной секции (что порождает неперекрывающиеся секции) или двум и более секциям (что порождает перекрывающиеся секции).  
@@ -38,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  Параметризованные фильтры применяются к одиночной таблице и обычно комбинируются с фильтрами соединения для распространения фильтрования на связанные таблицы. Дополнительные сведения см. в статье [Join Filters](../../../relational-databases/replication/merge/join-filters.md).  
   
- Чтобы задать или изменить параметризованный фильтр строк, см. раздел [Определение и изменение параметризованного фильтра строк для статьи публикации слиянием](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
+ Чтобы задать или изменить параметризованный фильтр строк, см. раздел [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Как работают параметризованные фильтры  
  Параметризованный фильтр строк использует предложение WHERE, чтобы выбрать нужные для публикации данные. Вместо того чтобы задавать буквенное значение в предложении (как для статического фильтра строк), вы указываете одну или обе системные функции: SUSER_SNAME() и HOST_NAME(). Можно использовать и пользовательские функции, но они должны содержать в своем теле SUSER_SNAME() или HOST_NAME() либо вычислять одну из этих системных функций (например, `MyUDF(SUSER_SNAME()`). Если пользовательская функция содержит в своем теле SUSER_SNAME() или HOST_NAME(), функции невозможно передать параметры.  

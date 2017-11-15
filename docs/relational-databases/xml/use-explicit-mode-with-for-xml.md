@@ -5,8 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4195550f1810bd344c85f2be7110b039ab3f09b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4972860dbfc2eaa8d0b04da88f304a95b17a4bd6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Использование режима EXPLICIT совместно с предложением FOR XML
   Как описано в подразделе [Конструирование XML используя FOR XML](../../relational-databases/xml/for-xml-sql-server.md), режимы RAW и AUTO не предоставляют больших возможностей контроля формы XML, порождаемого из результата запроса. Однако режим EXPLICIT предоставляет наибольшую гибкость при формировании желаемого XML из результатов запроса.  
@@ -128,7 +127,7 @@ ElementName!TagNumber!AttributeName!Directive
  При указании значения *Directive*значение *AttributeName* может быть пустым. Например: ElementName!TagNumber!!Directive. В этом случае значение столбца напрямую содержится в *ElementName*.  
   
  *Directive*  
-Значение *Directive* является необязательным и может использоваться с целью предоставления дополнительных сведений для создания XML. Значение*Directive* служит двум целям.  
+ Значение*Directive* является необязательным и может использоваться с целью предоставления дополнительных сведений для создания XML. Значение*Directive* служит двум целям.  
   
  Одной из целей является кодирование значений в виде ID, IDREF и IDREFS. Можно указать ключевые слова **ID**, **IDREF**и **IDREFS** в качестве значений *Directive*. Эти директивы переопределяют типы атрибутов. Это позволяет создавать связи внутри документа.  
   

@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Query Editor [SQL Server Management Studio], regular expression searches
 - searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 11ac36bd42257b0be9a0b03166132f658d62431e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="search-text-with-regular-expressions"></a>Поиск текста с помощью регулярных выражений
   Регулярные выражения представляют компактный и гибкий формат записи условий для поиска и замены в тексте по шаблону. Определенный набор регулярных выражений может быть использован в поле **Найти** диалогового окна [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **среды** .  
@@ -142,4 +140,3 @@ ms.lasthandoff: 07/31/2017
  [Поиск текста с символами-шаблонами](../../relational-databases/scripting/search-text-with-wildcards.md)  
   
   
-

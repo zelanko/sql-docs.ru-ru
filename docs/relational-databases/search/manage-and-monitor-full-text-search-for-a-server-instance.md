@@ -1,30 +1,27 @@
 ---
 title: "Управление полнотекстовым поиском и наблюдение за ним для экземпляра сервера | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-search
+ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - full-text search [SQL Server], about
 - full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9d6f184f66b02ef2f92c9593001edc3364f4d62a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Управление и наблюдение за полнотекстовым поиском для экземпляра сервера
   С полнотекстовым администрированием нескольких экземпляров связаны следующие задачи.  
@@ -62,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
          Если полнотекстовый каталог недоступен, перестраиваются связанные полнотекстовые индексы. Этот параметр доступен только для баз данных [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] .  
   
-         **Перестроить**  
+         **Rebuild**  
          Полнотекстовые каталоги перестраиваются с помощью новых и улучшенных средств разбиения по словам. Перестроение индексов может занять длительное время, а после обновления может потребоваться значительный объем ресурсов ЦП и памяти.  
   
          **Сброс**  
@@ -117,4 +114,3 @@ ms.lasthandoff: 06/22/2017
 -   [sys.dm_fts_population_ranges (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-fts-population-ranges-transact-sql.md)  
   
   
-

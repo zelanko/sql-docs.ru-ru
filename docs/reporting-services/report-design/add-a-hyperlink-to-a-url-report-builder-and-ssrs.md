@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 5dd771760822004cf75dfb602882bb739b2e396d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)
 Вы можете узнать, как добавить действия гиперссылок в текстовые поля, изображения, диаграммы и датчики в отчеты с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]  . Ссылки могут указывать на другие отчеты, закладки в отчете либо статические или динамические URL-адреса. 
@@ -93,8 +93,7 @@ ms.lasthandoff: 08/09/2017
 7.  Для проверки ссылки нажмите кнопку **Выполнить** , чтобы выполнить предварительный просмотр отчета, а затем щелкните элемент отчета, для которого была создана ссылка.  
   
 ## <a name="see-also"></a>См. также  
- [Интерактивная сортировка, схемы документов и ссылки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Создать схему документа &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Создание схемы документа (построитель отчетов и службы SSRS)](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
   
   
-

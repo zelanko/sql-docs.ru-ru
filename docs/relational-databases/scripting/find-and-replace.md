@@ -5,28 +5,25 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
 - vs.findreplace.quickreplace
-helpviewer_keywords:
-- Find and Replace dialog box
+helpviewer_keywords: Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f5d3e50dcc4dd901255992d5aeea8c818f498de2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: af60a2ce76a9e9eeaff398d9cad94f0415ed4f83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-and-replace"></a>Найти и заменить
   Диалоговое окно **Найти и заменить** позволяет найти текст в файле и при необходимости заменить его. Версии диалогового окна **Найти и заменить** могут несколько отличаться по набору параметров в зависимости от способа вызова этого окна. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрый поиск** для открытия этого диалогового окна с параметрами поиска, но без параметров замены. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрая замена** для открытия этого диалогового окна с параметрами и поиска, и замены.  
@@ -133,4 +130,3 @@ ms.lasthandoff: 06/22/2017
  [Сочетания клавиш среды SQL Server Management Studio](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   
-

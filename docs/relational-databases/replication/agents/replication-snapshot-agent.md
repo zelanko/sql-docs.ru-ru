@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - command prompt [SQL Server replication]
 - Snapshot Agent, parameter reference
 ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b57f94d20f03f7d6d9ec0b71bba122548808c24
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 6e9a2e3f6ddba5ab3e6250d09b8f814eed1d2aad
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-snapshot-agent"></a>Агент моментальных снимков репликации
   Агент моментальных снимков репликации — это исполняемый файл, который подготавливает файлы моментальных снимков, содержащие схему, данные опубликованных таблиц и объекты базы данных, сохраняет их в папке моментальных снимков и регистрирует задания синхронизации в базе данных распространителя.  
@@ -97,7 +96,7 @@ snapshot [ -?]
  Путь к файлу определения агента. Файл определения агента содержит параметры командной строки для данного агента. Содержимое файла анализируется как для исполняемого файла. Для указания значений параметров, содержащих произвольные символы, используются двойные кавычки (").  
   
  **-Distributor** *server_name*[**\\***instance_name*]  
- Имя распространителя. Укажите *server_name* , чтобы использовать экземпляр сервера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
+ Имя распространителя. Укажите *имя_сервера* для экземпляра служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра* для именованного экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] на этом сервере.  
   
  **-DistributorDeadlockPriority** [**-1**|**0**|**1**]  
  Приоритет соединения агента моментальных снимков с распространителем при возникновении взаимоблокировки. Этот параметр указывается для разрешения взаимоблокировок, которые могут возникать между агентом моментальных снимков и пользовательскими приложениями при создании моментальных снимков.  
@@ -174,7 +173,7 @@ snapshot [ -?]
  **-LoginTimeOut** *время_ожидания_входа_в_сек*  
  Время ожидания входа в секундах. Значение по умолчанию составляет **15** секунд.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** *число_потоков*  
  Указывает число операций массового копирования, которые можно проводить параллельно. Максимальное число потоков и соединений ODBC, которые существуют одновременно, равно меньшему из **MaxBcpThreads** и числа запросов на массовое копирование, которые появляются в транзакции синхронизации в базе данных распространителя. Значение**MaxBcpThreads** должно быть больше **0** и не имеет жестко зафиксированного максимума. Значение по умолчанию равно **1**.  
   
  \- **MaxNetworkOptimization** [ **0**| **1**]  

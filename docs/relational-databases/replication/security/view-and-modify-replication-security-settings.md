@@ -5,8 +5,7 @@ ms.date: 03/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - viewing replication security settings
 - security [SQL Server replication], modifying settings
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e4e8eb9804660085223e0845adeb093511871316
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 673d8fdcdda983dd111b6c2297f2303882b8bd66
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
   В данном разделе описывается процесс просмотра и изменения параметров безопасности репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Например, может потребоваться изменение подключения агента чтения журнала к издателю для использования проверки подлинности SQL Server вместо встроенной проверки подлинности Windows, или может потребоваться изменение учетных данных для запуска задания агента при изменении пароля учетной записи Windows. Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) (Модель безопасности агента репликации).  
@@ -423,13 +422,13 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-change-all-instances-of-a-password-stored-on-a-replication-server"></a>Изменение всех экземпляров пароля, хранящихся на сервере репликации  
   
-1.  Установите соединение с сервером репликации с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с сервером репликации с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer>, используя соединение, созданное на шаге 1.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationServer> , используя соединение, созданное на шаге 1.  
   
-3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeReplicationServerPasswords%2A>. Укажите значения следующих параметров.  
+3.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeReplicationServerPasswords%2A> . Укажите значения следующих параметров.  
   
-    -   *security_mode* — значение <xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode>, указывающее тип проверки подлинности, для которой изменяются все экземпляры пароля.  
+    -   *security_mode* — значение типа <xref:Microsoft.SqlServer.Replication.ReplicationSecurityMode> , указывающее тип проверки подлинности, для которой изменяются все экземпляры пароля.  
   
     -   *login* — имя входа, для которого меняются все экземпляры пароля.  
   
@@ -445,113 +444,113 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription-to-a-transactional-publication"></a>Изменение параметров безопасности агента распространителя для принудительной подписки на публикацию транзакций  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSubscription>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
   
-3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
+3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
-5.  В экземпляре <xref:Microsoft.SqlServer.Replication.TransSubscription> задайте одно или несколько из следующих свойств безопасности:  
+5.  В экземпляре <xref:Microsoft.SqlServer.Replication.TransSubscription>задайте одно или несколько из следующих свойств безопасности.  
   
-    -   Чтобы изменить учетные данные для учетной записи Windows, с использованием которой запускается агент, установите поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>.  
+    -   Чтобы изменить учетные данные для учетной записи Windows, с которой запускается агент, установите поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>.  
   
     -   Чтобы при соединении агента с подписчиком использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с подписчиком использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **false** и укажите учетные данные входа подписчика в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Чтобы при соединении агента с подписчиком использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **false**и укажите учетные данные входа подписчика в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
-        >  Агент всегда соединяется с распространителем с использованием учетных данных Windows, указанных в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
+        >  Агент всегда соединяется с распространителем с учетными данными Windows, указанными в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
   
-6.  (Необязательно.) Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **true**, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>, чтобы зафиксировать значения на сервере. Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **false** (используется по умолчанию), изменения отправляются на сервер немедленно.  
+6.  Если для свойства **true** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription-to-a-transactional-publication"></a>Изменение параметров безопасности агента распространителя для подписки по запросу на публикацию транзакций  
   
-1.  Установите соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPullSubscription> .  
   
-3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>, а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
+3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
-5.  В экземпляре <xref:Microsoft.SqlServer.Replication.TransPullSubscription> задайте одно или несколько из следующих свойств безопасности:  
+5.  В экземпляре <xref:Microsoft.SqlServer.Replication.TransPullSubscription>задайте одно или несколько из следующих свойств безопасности.  
   
-    -   Чтобы изменить учетные данные для учетной записи Windows, с использованием которой запускается агент, установите поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.  
+    -   Чтобы изменить учетные данные для учетной записи Windows, с которой запускается агент, установите поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.  
   
     -   Чтобы при соединении агента с распространителем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с распространителем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **false** и укажите учетные данные входа распространителя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>.  
+    -   Чтобы при соединении агента с распространителем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **false**и укажите учетные данные входа распространителя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
-        >  Агент всегда соединяется с подписчиком с использованием учетных данных Windows, указанных в <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
+        >  Агент всегда соединяется с подписчиком с учетными данными Windows, указанными в <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
   
-6.  (Необязательно.) Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **true**, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>, чтобы зафиксировать значения на сервере. Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **false** (используется по умолчанию), изменения отправляются на сервер немедленно.  
+6.  Если для свойства **true** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription-to-a-merge-publication"></a>Изменение параметров безопасности агента слияния для подписки по запросу на публикацию слиянием  
   
-1.  Установите соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePullSubscription> .  
   
-3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A>, а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
+3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherName%2A>и <xref:Microsoft.SqlServer.Replication.PullSubscription.PublicationDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
-5.  В экземпляре <xref:Microsoft.SqlServer.Replication.MergePullSubscription> задайте одно или несколько из следующих свойств безопасности:  
+5.  В экземпляре <xref:Microsoft.SqlServer.Replication.MergePullSubscription>задайте одно или несколько из следующих свойств безопасности.  
   
-    -   Чтобы изменить учетные данные для учетной записи Windows, с использованием которой запускается агент, установите поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.  
+    -   Чтобы изменить учетные данные для учетной записи Windows, с которой запускается агент, установите поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.  
   
     -   Чтобы при соединении агента с распространителем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с распространителем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **false** и укажите учетные данные входа распространителя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>.  
+    -   Чтобы при соединении агента с распространителем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.DistributorSecurity%2A> значение **false**и укажите учетные данные входа распространителя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
     -   Чтобы при соединении агента с издателем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с издателем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> значение **false** и укажите учетные данные входа издателя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A>.  
+    -   Чтобы при соединении агента с издателем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> значение **false**и укажите учетные данные входа издателя в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
-        >  Агент всегда соединяется с подписчиком с использованием учетных данных Windows, указанных в <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
+        >  Агент всегда соединяется с подписчиком с учетными данными Windows, указанными в <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
   
-6.  (Необязательно.) Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **true**, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>, чтобы зафиксировать значения на сервере. Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **false** (используется по умолчанию), изменения отправляются на сервер немедленно.  
+6.  Если для свойства **true** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription-to-a-merge-publication"></a>Изменение параметров безопасности агента слияния для принудительной подписки на публикацию слиянием  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSubscription>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
   
-3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
+3.  Установите для подписки свойства <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>и <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A> , а в качестве значения для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> укажите соединение, созданное на шаге 1.  
   
-4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
+4.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, то либо на шаге 3 были неверно определены свойства подписки, либо подписка не существует.  
   
-5.  В экземпляре <xref:Microsoft.SqlServer.Replication.MergeSubscription> задайте одно или несколько из следующих свойств безопасности:  
+5.  В экземпляре <xref:Microsoft.SqlServer.Replication.MergeSubscription>задайте одно или несколько из следующих свойств безопасности.  
   
-    -   Чтобы изменить учетные данные для учетной записи Windows, с использованием которой запускается агент, установите поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.  
+    -   Чтобы изменить учетные данные для учетной записи Windows, с которой запускается агент, установите поля <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> и <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> свойства <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.  
   
     -   Чтобы при соединении агента с подписчиком использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с подписчиком использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **false** и укажите учетные данные входа подписчика в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
+    -   Чтобы при соединении агента с подписчиком использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> значение **false**и укажите учетные данные входа подписчика в полях <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> .  
   
     -   Чтобы при соединении агента с издателем использовать встроенную проверку подлинности Windows, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> значение **true**.  
   
-    -   Чтобы при соединении агента с издателем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> значение **false** и укажите учетные данные входа издателя в полях <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A>.  
+    -   Чтобы при соединении агента с издателем использовать проверку подлинности SQL Server, установите в поле <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> свойства <xref:Microsoft.SqlServer.Replication.MergeSubscription.PublisherSecurity%2A> значение **false**и укажите учетные данные входа издателя в полях <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardLogin%2A> и <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext.SqlStandardPassword%2A> .  
   
         > [!NOTE]  
-        >  Агент всегда соединяется с распространителем с использованием учетных данных Windows, указанных в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
+        >  Агент всегда соединяется с распространителем с учетными данными Windows, указанными в свойстве <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>. Эта учетная запись также используется для установления удаленных соединений с проверкой подлинности Windows.  
   
-6.  (Необязательно.) Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **true**, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>, чтобы зафиксировать значения на сервере. Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **false** (используется по умолчанию), изменения отправляются на сервер немедленно.  
+6.  Если для свойства **true** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-change-the-login-information-used-by-an-immediate-updating-subscriber-when-it-connects-to-the-transactional-publisher"></a>Изменение сведений об имени входа, используемых немедленно обновляемым подписчиком при подключении к издателю транзакций  
   
-1.  Установите соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с подписчиком с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных подписки. Присвойте <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> и значение <xref:Microsoft.SqlServer.Management.Common.ServerConnection>, полученное на шаге 1, свойству <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> для базы данных подписки. Укажите значения <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.Name%2A> и <xref:Microsoft.SqlServer.Management.Common.ServerConnection> из шага 1 в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
   
-3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает значение **false**, значит, в шаге 2 были неправильно определены свойства базы данных либо база данных подписки не существует.  
+3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает значение **false**, значит, в шаге 2 были неправильно определены свойства базы данных либо база данных подписки не существует.  
   
-4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A>:  
+4.  Вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LinkPublicationForUpdateableSubscription%2A> , передав следующие параметры.  
   
     -   *Publisher* — имя издателя.  
   
@@ -561,7 +560,7 @@ ms.lasthandoff: 06/22/2017
   
     -   *Distributor* — имя  распространителя.  
   
-    -   *PublisherSecurity* — объект <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext>, указывающий тип режима безопасности, используемого немедленно обновляемым подписчиком при соединении с издателем, и учетные данные входа для этого соединения.  
+    -   *PublisherSecurity* - A <xref:Microsoft.SqlServer.Replication.PublisherConnectionSecurityContext> , указывающий тип режима безопасности, используемого немедленно обновляемым подписчиком при соединении с издателем, и учетные данные входа для этого соединения.  
   
 ###  <a name="PShellExample"></a> Пример (объекты RMO)  
  В этом примере проверяется указанное значение имени входа и изменяются все пароли для указанного имени входа в Windows или имени входа в SQL Server, хранимые репликацией на сервере.  

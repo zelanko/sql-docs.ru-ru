@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], initializing subscriptions
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: f358f84d2dbcec345a160d9fafb660bbebc01be7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>Моментальные снимки для публикаций слиянием с параметризованными фильтрами
   Когда в публикации слиянием применяются параметризованные фильтры строк, репликация инициализирует каждую подписку с помощью моментального снимка, состоящего из двух частей. В первую очередь создается моментальный снимок схемы, содержащий все объекты, требуемые репликацией, и схемы опубликованных объектов, но не данные. Затем каждая подписка инициализируется с помощью моментального снимка, включающего объекты и схему из моментального снимка схемы, а также данные, принадлежащие секции подписки. Если несколько подписок получают заданную секцию (другими словами, они получают ту же схему и данные), моментальный снимок для этой секции создается один раз; несколько подписок инициализируются из одного и того же моментального снимка. Дополнительные сведения о параметризованных фильтрах строк см. в разделе [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
@@ -50,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   
  Рассмотрим компанию [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)], которая имеет мобильных работников, доставляющих товары в отдельные магазины. Каждый продавец на основании своего учетного имени получает подписку, в которую извлекаются данные для обслуживаемых магазинов. Администратор выбирает предварительное создание моментальных снимков и их обновление каждое воскресенье. Иногда в систему добавляется новый пользователь, и ему требуются данные для секции, которая не имеет доступного моментального снимка. Администратор также решает разрешить инициирование моментальных снимков подписчиком, чтобы исключить ситуацию, когда подписчик не может подписаться на публикацию из-за того, что моментальный снимок еще не доступен. Когда новый подписчик подключается впервые, снимок создается для указанной секции и применяется у подписчика (для создания моментального снимка у издателя должен быть запущен агент[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ).  
   
- Чтобы создать моментальный снимок публикации с параметризованными фильтрами, см. раздел [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Чтобы создать моментальный снимок публикации с параметризованными фильтрами, см. раздел [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>Настройки безопасности для агента моментальных снимков  
  Агент моментальных снимков создает моментальные снимки для каждой секции. Для предварительно созданных моментальных снимков и моментальных снимков, запрашиваемых подписчиком, агент запускается и подключается с учетными данными, указанными при создании задания агента моментальных снимков для публикации (задание создается мастером создания публикации или хранимой процедурой **sp_addpublication_snapshot**). Для изменения учетных данных используйте хранимую процедуру **sp_changedynamicsnapshot_job**. Дополнительные сведения см. в статье [sp_changedynamicsnapshot_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md).  
