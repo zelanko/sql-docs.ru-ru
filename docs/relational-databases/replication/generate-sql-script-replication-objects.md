@@ -5,31 +5,27 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.generatesqlscript.f1
-helpviewer_keywords:
-- Generate SQL Script dialog box
+f1_keywords: sql13.rep.generatesqlscript.f1
+helpviewer_keywords: Generate SQL Script dialog box
 ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9462e6b029f56ef17f9bb4a9bdf15606180a122a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8f509a25d3d3793705e164dc7bf422c751c486d3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-sql-script-replication-objects"></a>Диалоговое окно «Формирование скрипта SQL» (объекты репликации)
   Скрипт репликации содержит системные хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] , необходимые для реализации используемых в скрипте компонентов репликации, например публикации или подписки. Все компоненты репликации в топологии должны использоваться в скриптах как часть плана аварийного восстановления, а скрипты могут также использоваться для автоматизации повторяющихся задач. Для использования в сценарии объектов репликации она предоставляет два диалоговых окна.  
   
--   **Generate SQL Script**, which is available from the context menu of the **Replication** folder and all subfolders in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. С помощью этого диалогового окна в скрипт можно помещать все объекты репликации экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   **Формирование скрипта SQL**, доступ к которому осуществляется из контекстного меню папки **Репликация** и всех ее вложенных папок в среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. С помощью этого диалогового окна в скрипт можно помещать все объекты репликации экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   **Формирование скрипта SQL \<имя_объекта>**, доступ к которому осуществляется из контекстного меню публикаций и подписок. С помощью этого диалогового окна в скрипт можно помещать отдельные объекты.  
   
@@ -64,4 +60,3 @@ ms.lasthandoff: 06/22/2017
  [Создание сценариев репликации](../../relational-databases/replication/scripting-replication.md)  
   
   
-

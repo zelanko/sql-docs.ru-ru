@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Configure Management Data Warehouse Wizard
 - management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 4165c8b8e8e11b281a31e04a3b0fd402146d4e71
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Настройка хранилища данных управления (среда SQL Server Management Studio)
   В этом разделе описано, как настроить склад данных управления для поддержки хранилища данных управления на одном интерфейсе или на нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , использующих сборщик данных. Эти экземпляры могут быть на одном или на разных серверах. Здесь также приведены описания пользовательского интерфейса диалогового окна [мастера настройки хранилища данных управления](#Wizard) . Сведения о настройке сборщика данных см. в разделе [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md).  
@@ -145,4 +143,3 @@ ms.lasthandoff: 08/18/2017
  [Управление сбором данных](../../relational-databases/data-collection/manage-data-collection.md)  
   
   
-

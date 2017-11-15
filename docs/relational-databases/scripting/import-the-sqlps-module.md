@@ -5,28 +5,27 @@ ms.date: 08/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a972c56e-b2af-4fe6-abbd-817406e2c93a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 39b5b945994c9531deb3d545dbb438657b1914fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: cbd6691bf8fab45e58b41ad8e78166dd425ba605
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="import-the-sqlps-module"></a>Импорт модуля SQLPS
   Для управления сервером [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из PowerShell рекомендуется импортировать модуль **sqlps** в среду Windows PowerShell. Модуль загружает и регистрирует оснастки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и сборки управляемости.  Начиная с Windows PowerShell 3.0, модули импортируются автоматически, когда любой командлет или любая функция из модуля используются в команде. Эта возможность работает для любого модуля в каталоге, включенного в значение переменной среды PSModulePath.  Дополнительные сведения см. в разделе [Импорт модуля PowerShell](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
   
-1.  **Before You Begin:**  [Security](#Security)  
+1.  **Перед началом работы:**  [Безопасность](#Security)  
   
-2.  **To load the module:**  [Load the sqlps Module](#LoadSqlps)  
+2.  **Чтобы загрузить модуль:**  [Загрузка модуля sqlps](#LoadSqlps)  
   
 ## <a name="before-you-begin"></a>Перед началом  
  После импорта модуля **sqlps** в среду Windows PowerShell можно:  
@@ -78,4 +77,3 @@ Get-Module -ListAvailable -Name Sqlps;
  [Import-Module](https://technet.microsoft.com/library/hh849725.aspx)
   
   
-

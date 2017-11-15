@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Environment.Help.Online
+f1_keywords: VS.ToolsOptionsPages.Environment.Help.Online
 ms.assetid: 24933338-3a47-44c0-87fc-c3dca8faf4de
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 06e55fc194e5ff0a70bc2f62705bb8914041a2ad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4e48c89f058af257e0f375e4493d3066804a7e73
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="options-environment---help---online-page"></a>Параметры ("Среда" — "Справка" — страница "В сети")
 Диалоговое окно **Параметры** позволяет указать источники справки, которые используются при поиске в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] , включая справку F1. В меню **Сервис** выберите **Параметры**, разверните папку **Среда** , выберите **Справка**и щелкните **Справка в сети**. Если страница **Справка в сети** отсутствует в списке, установите флажок **Показать все параметры** в диалоговом окне **Параметры** .  
@@ -54,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 **Прочитать заявление о конфиденциальности**  
 Отображает сведения о политике конфиденциальности [!INCLUDE[msCoName](../../includes/msconame_md.md)] для использования в сети.  
   
-

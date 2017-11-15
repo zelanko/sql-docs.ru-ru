@@ -5,21 +5,20 @@ ms.date: 08/29/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6eef790f729a3270c0ba046d6a60114ae2da8dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 4c56262f4f42370d24c597a668b012fbbf64a81d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="resolve-out-of-memory-issues"></a>Устранение проблем нехватки памяти
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.lasthandoff: 06/22/2017
 2.  [Примените действие по исправлению](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md#bkmk_takeCorrectiveAction)  
   
 ###  <a name="bkmk_openDAC"></a> Откройте выделенное административное соединение  
- В Microsoft SQL Server есть выделенное административное соединение. С помощью выделенного административного соединения администратор может обращаться к запущенному экземпляру ядра СУБД SQL Server для устранения неполадок на сервере, даже если сервер не отвечает на другие клиентские соединения. Выделенные административные соединения доступны в программе `sqlcmd` и в среде SQL Server Management Studio (SSMS).  
+ В Microsoft SQL Server есть выделенное административное соединение. С помощью выделенного административного соединения администратор может обращаться к запущенному экземпляру компонента SQL Server Database Engine для устранения неполадок на сервере, даже если сервер не отвечает на другие клиентские соединения. Выделенные административные соединения доступны в программе `sqlcmd` и в среде SQL Server Management Studio (SSMS).  
   
  Рекомендации по использованию `sqlcmd` и выделенных административных соединений см. в разделе [Использование выделенного административного соединения](http://msdn.microsoft.com/library/ms189595\(v=sql.100\).aspx/css). Использование выделенного административного соединения в среде SSMS описано в статье [Как применять выделенное административное соединение с помощью среды SQL Server Management Studio](http://msdn.microsoft.com/library/ms178068.aspx).  
   
@@ -156,4 +155,3 @@ GO
  [Использование In-Memory OLTP в среде ВМ](http://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)  
   
   
-

@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- best practices
+helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20d358387ae5eb342519c3f6e388fe77279bbe26
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 80f52f422d5804a14dc3fbac86ac40a2d3a143ac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Оптимальные методы для фильтров строк на основе времени
   Пользователям приложений часто требуется подмножество данных из таблицы, относящихся к определенному времени. Например, менеджеру по продажам могут понадобиться данные заказов за последнюю неделю, или планировщику событий требуются данные о событиях на следующей неделе. Во многих случаях приложения используют для этого запросы, содержащие функцию **GETDATE()** . Рассмотрим следующую инструкцию фильтра строк:  

@@ -5,25 +5,22 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 41368 (Database Engine error)
+helpviewer_keywords: 41368 (Database Engine error)
 ms.assetid: abc71559-4c4d-4cce-a08f-3299dd167842
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 robots: noindex,nofollow
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9161b32ff6c9c2e2ee03b5909ee69db1594bbd9d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: acba8b4dd1ffc8d58b88200756eb9a25d1f91b33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver41368"></a>MSSQLSERVER_41368
   
@@ -47,6 +44,5 @@ ms.lasthandoff: 06/22/2017
 При доступе к оптимизированной для памяти таблице из явной или неявной транзакции с изоляцией READ COMMITTED, используйте для доступа к таблице моментальный снимок (SNAPSHOT). Это можно сделать с помощью табличной подсказки WITH (SNAPSHOT) (Дополнительные сведения см. в статье о [транзакциях с таблицами и процедурами в памяти](~/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)) или установив параметр MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT в значение ON (Дополнительные сведения см. в статье о [параметрах ALTER DATABASE SET (Transact-SQL)](~/t-sql/statements/alter-database-transact-sql.md)).  
   
 ## <a name="see-also"></a>См. также:  
-[Выполняющаяся в памяти OLTP &#40;оптимизация в памяти&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+[Выполняющаяся в памяти OLTP (оптимизация в памяти)](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
-

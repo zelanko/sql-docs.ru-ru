@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0133a419971cfdeeaadbc3a68b79452c20d0dafc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 2e0fe1a775a1a786234308dce7056f20edaecb63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Включение, отключение и удаление точек останова
   Для просмотра всех открытых точек останова и управления ими используется окно **Точки останова** . Используйте данное окно для просмотра сведений о точках останова, а также для выполнения таких действий, как удаление, отключение или включение точек останова.  
@@ -101,4 +99,3 @@ ms.lasthandoff: 06/22/2017
  [Переключение точки останова](../../relational-databases/scripting/toggle-a-breakpoint.md)  
   
   
-

@@ -5,25 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vs.debug.watch
-helpviewer_keywords:
-- Watch Window [Transact-SQL]
+f1_keywords: vs.debug.watch
+helpviewer_keywords: Watch Window [Transact-SQL]
 ms.assetid: 23f3baa4-14c2-4262-92f7-3f43fcfa0436
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9b0722b0bd77b33ddb170bb1c2f510f28b74dd82
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 0fd2fb6a5e923661dbcb4a406abe25c230ff506a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="transact-sql-debugger---watch-window"></a>Отладчик Transact-SQL, окно контрольных значений
   В окне **Контрольные значения** отображается информация о выбранных выражениях. Может быть открыто четыре окна контрольных значений: **Контрольные значения 1**, **Контрольные значения 2, Контрольные значения 3**и **Контрольные значения 4**. Выражения вычисляются в области текущего кадра стека вызова, который выбран в окне **Стек вызовов** . Чтобы иметь возможность контролировать значения переменных и выражений, необходимо находиться в режиме отладки.  
@@ -35,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
  **Изменение значения выражения**  
   
--   Щелкните правой кнопкой мыши выражение и выберите **Изменить значение**.  
+-   Щелкните правой кнопкой мыши выражение и выберите команду **Изменить значение**.  
   
 ## <a name="columns"></a>Столбцы  
  **Название**  

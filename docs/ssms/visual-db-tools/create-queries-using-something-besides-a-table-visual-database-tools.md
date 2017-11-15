@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - user-defined functions [SQL Server], queries
 - queries [SQL Server], creating
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 81736e0887c58abe30013ef052c7eb699c6a2c37
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: ca9ab6532c1a83be15b1b9a80c0e96ef051fac27
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>Создание запросов, использующих не только таблицу (визуальные инструменты для баз данных)
 При написании запроса разработчик указывает, какие требуются столбцы, как отбираются строки и откуда обработчик запросов получает исходные данные. Обычно исходные данные поступают из таблицы или нескольких таблиц, участвующих в соединении. Однако исходные данные могут поступать не только из таблиц. Источниками данных могут служить представления, запросы, синонимы или определяемые пользователем функции, которые возвращают таблицу.  
@@ -148,4 +146,3 @@ FROM
   
 «VPA30890F» представляет код emp_id руководителя, сведения о подчиненных которого требуется получить. Дополнительные сведения о добавлении пользовательской функции в запрос см. в разделе [Добавление таблиц в запросы (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/add-tables-to-queries-visual-database-tools.md). Подробное описание определяемых пользователем функций см. в разделе [Определяемые пользователем функции](http://msdn.microsoft.com/en-us/d7ddafab-f5a6-44b0-81d5-ba96425aada4).  
   
-

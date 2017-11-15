@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 439cfab5-c049-43a8-8617-59eaa8d24873
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: e1c61226d6dc163440bafb2d92fdbf6e04daf23f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: fdc78cbd3ca921ba16f4c68ab550f51342a87053
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Занятие 2. Создание инструкций на языке Transact-SQL
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это интегрированная среда разработки, предназначенная для создания запросов многомерных выражений, запросов расширений интеллектуального анализа данных, запросов на языках [!INCLUDE[tsql](../../includes/tsql-md.md)]и XML, а также команд SQLCMD. Учебник демонстрирует использование редактора запросов компонента ядра СУБД для создания скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
@@ -47,4 +45,3 @@ ms.lasthandoff: 07/31/2017
   
   
   
-

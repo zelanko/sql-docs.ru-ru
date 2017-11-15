@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Sort Warnings event class
+helpviewer_keywords: Sort Warnings event class
 ms.assetid: 2ee479c8-66e4-45e9-a4c9-49d418e25a72
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cf6c9f6f038f263ffe320dfee64f0fd09f9d3e76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b0f67e978040b0efbb440b1d31055ff4058c53e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sort-warnings-event-class"></a>Sort Warnings, класс событий
   Класс событий Sort Warnings указывает на то, что операции по сортировке не помещаются в памяти. Сюда не входят операции сортировки, предполагающие создание индексов, а входят только операции сортировки в запросе (например предложение ORDER BY, используемое в инструкции SELECT).  
@@ -59,4 +56,3 @@ ms.lasthandoff: 06/22/2017
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

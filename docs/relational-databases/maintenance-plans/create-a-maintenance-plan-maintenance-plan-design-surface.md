@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Maintenance Plan Design Surface
+helpviewer_keywords: Maintenance Plan Design Surface
 ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 616b2d7d823d8a273b3ac260339bb76fba65dd00
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 039e306af582e2bc56559557eea3a5d6d57ec819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Создание планов обслуживания (область конструктора планов обслуживания)
   В этом разделе описывается создание плана обслуживания одного или нескольких серверов с помощью области конструктора для плана обслуживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. **Мастер планов обслуживания** лучше подходит для создания простых планов обслуживания, а область конструктора позволяет использовать расширенные рабочие процессы.  
@@ -247,7 +244,7 @@ ms.lasthandoff: 06/22/2017
      Позволяет обновить представление выбранных журналов. При нажатии кнопки **Обновить** выбранные журналы заново считываются с целевого сервера с применением параметров фильтра.  
   
      **Фильтр**  
-     Открывает диалоговое окно, позволяющее указывать параметры фильтрации файла журнала, например **Соединение**и **Дата**или другие условия фильтра **Общие** .  
+     Открывает диалоговое окно, позволяющее указывать параметры фильтрации файла журнала, например **Соединение**и **Дата**или другие **Общие** условия фильтра.  
   
      **Поиск**  
      Позволяет найти определенный текст в файле журнала. Поиск с символами-шаблонами не поддерживается.  
@@ -280,4 +277,3 @@ ms.lasthandoff: 06/22/2017
      Имя экземпляра, к которому относится происшедшее событие. Отображается как *имя_компьютера*\\*имя_экземпляра*.  
   
   
-

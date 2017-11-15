@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - hard errors
 - failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fbc7cc9abcbfb1e0608104000bab04e56b5ea86d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Возможные неполадки при зеркальном отображении базы данных
   К сбою во время сеанса зеркального отображения базы данных могут привести различные физические неисправности, ошибки операционной системы или ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сеанс зеркального отображения базы данных не выполняет активных проверок компонентов, на которые опирается процесс Sqlservr.exe, и не контролирует правильность их работы. Однако при сбоях некоторых типов затронутый компонент сообщает приложению Sqlservr.exe об ошибке. Ошибка, о которой сообщил другой компонент, называется *постоянной ошибкой*. Чтобы обнаружить другие сбои, которые в противном случае могли быть не замечены, для зеркального отображения базы данных реализован собственный механизм ожидания. По истечении времени ожидания для зеркального отображения базы данных предполагается, что произошел сбой и объявляется *кратковременная ошибка*. Однако некоторые ошибки, которые возникают на уровне экземпляра SQL Server, не превышают времени ожидания зеркального отображения и поэтому не обнаруживаются.  

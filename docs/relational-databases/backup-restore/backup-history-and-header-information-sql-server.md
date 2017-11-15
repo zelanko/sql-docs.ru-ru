@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,16 +32,16 @@ helpviewer_keywords:
 - restore history tables [SQL Server]
 - listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a7f37ca2ef38feed107028015ce8dc6ffd60c77c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="backup-history-and-header-information-sql-server"></a>Журнал и сведения о заголовке резервной копии (SQL Server)
   Полный журнал резервных копий и операций восстановления на экземпляре сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранится в базе данных **msdb** . В этом разделе рассказывается о таблицах журнала восстановления, а также об инструкциях [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые используются для доступа к журналам резервного копирования. В этом разделе также обсуждается удобство составления списка файлов базы данных и журнала транзакций и использование данных в заголовке носителя в сравнении с использованием данных в заголовке резервной копии.  
@@ -125,7 +124,7 @@ ms.lasthandoff: 06/22/2017
  Дополнительные сведения см. далее в подразделе [Сравнение данных в заголовках носителя и резервной копии](#CompareMediaHeaderBackupHeader)далее в этом разделе.  
   
 ### <a name="which-backup-set-to-restore"></a>Резервные наборы, которые необходимо восстановить  
- Сведения из заголовка резервной копии можно использовать для определения резервного набора данных, который будет использован в процессе восстановления. Ядро СУБД нумерует каждый резервный набор данных на резервном носителе. Это позволяет выявить резервный набор данных, подлежащий восстановлению, по его положению на носителе. Например, на следующем носителе содержатся три резервных набора данных.  
+ Сведения из заголовка резервной копии можно использовать для определения резервного набора данных, который будет использован в процессе восстановления. Компонент Database Engine нумерует каждый резервный набор данных на резервном носителе. Это позволяет выявить резервный набор данных, подлежащий восстановлению, по его положению на носителе. Например, на следующем носителе содержатся три резервных набора данных.  
   
  ![Носитель данных резервных копий, содержащий резервные наборы данных SQL Server](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "Носитель данных резервных копий, содержащий резервные наборы данных SQL Server")  
   

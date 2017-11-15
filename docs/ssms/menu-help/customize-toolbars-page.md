@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.customize.toolbars
 - sql13.swb.vs.customizetool.f1
 ms.assetid: 51ce6254-5682-43ff-8beb-4116a75c652e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b9d5148aa90988ddfe763a26c1534eb7fd73640f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 3abb2b75da343e5fac166b63d969d578b067814e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="customize-toolbars-page"></a>Настройка (страница «Панели инструментов»)
 Вкладка **Панели инструментов** позволяет создавать, переименовывать, удалять и сбрасывать панели инструментов. Эту вкладку можно вызвать, выбрав пункт **Настройка** в меню **Сервис** , а затем выбрать вкладку **Панели инструментов**.  
@@ -59,4 +57,3 @@ ms.lasthandoff: 06/22/2017
 **Клавиатура**  
 Позволяет отобразить панель **Клавиатура** диалогового окна **Параметры** , позволяющую изменить и определить сочетания клавиш для команд.  
   
-

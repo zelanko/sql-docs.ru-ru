@@ -14,17 +14,16 @@ f1_keywords:
 - "10248"
 - sql13.rtp.rptdesigner.serieslabelproperties.general.f1
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: bf3c5c3a2a9603f996a2a66e51367b56669b12ff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)
 В отчете [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы точка данных является наименьшей неделимой сущностью диаграммы. Для нефигурных диаграмм представление точек данных зависит от типа диаграммы. Например, ряд графика состоит из одной или нескольких соединенных точек данных. Для фигурных диаграмм точки данных представляются отдельными срезами или сегментами, из которых состоит диаграмма. Например, для круговой диаграммы каждый из сегментов является точкой данных. Дополнительные сведения см. в разделе [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md).  
@@ -111,4 +110,3 @@ ms.lasthandoff: 08/09/2017
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

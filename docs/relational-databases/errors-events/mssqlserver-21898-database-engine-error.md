@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 21898 (Database Engine error)
+helpviewer_keywords: 21898 (Database Engine error)
 ms.assetid: 02405b21-3d4e-4c2d-b4b3-d7b1ec05edb4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fbed13bbcedcc0bb39791663ba5d13525215d84b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0390684964b318e6c2add660a54f5b3e30c61c37
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver21898"></a>MSSQLSERVER_21898
   
@@ -46,4 +43,3 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 > Запуск **sp_changedistpublisher** устранит проблему, если во время запуска **sp_adddistpublisher** на распространителе для издателя была введена неверная база данных распространителя. Однако если на удаленном издателе имеются существующие публикации из другой базы данных публикации, использующие указанную базу данных распространителя, то выполнять такое изменение не следует. Необходимо системно удалить репликацию, использующую именованную базу данных распространителя, а затем установить ее повторно с использованием базы данных распространителя первоначального издателя, чтобы стало возможным размещение на новом издателе.  
   
-

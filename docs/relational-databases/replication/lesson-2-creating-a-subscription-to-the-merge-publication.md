@@ -5,26 +5,22 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- replication [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: replication [SQL Server], tutorials
 ms.assetid: 06722baa-9065-443e-b1d5-99036cf89074
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 423ad3b42e75c70e6826e04a298c5eac4e590291
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 56379bef6879a1d5fe1e6f004cbb23ed9a23120c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Занятие 2. Создание подписки на публикацию слиянием
 На этом занятии будет создана подписка с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Затем будут установлены разрешения на базу данных подписки и вручную будет сформирован моментальный снимок отфильтрованных данных для новой подписки. Приступать к этому занятию нужно только по завершении предыдущего: [Занятие 1. Публикация данных с помощью репликации слиянием](../../relational-databases/replication/lesson-1-publishing-data-using-merge-replication.md).  
@@ -85,4 +81,3 @@ ms.lasthandoff: 06/22/2017
 [Создание подписки по запросу](../../relational-databases/replication/create-a-pull-subscription.md)  
 [Моментальные снимки для публикаций слиянием с параметризованными фильтрами](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
-

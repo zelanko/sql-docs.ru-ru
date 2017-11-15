@@ -5,8 +5,7 @@ ms.date: 01/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +15,16 @@ f1_keywords:
 - sql13.swb.availabilitygroupproperties.permission.f1
 - sql13.swb.SecurableAndEffectivePermission.f1
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
-caps.latest.revision: 39
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d591578ed239e7c6b0279ea923fc18b558d4f252
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+caps.latest.revision: "39"
+author: edmacauley
+ms.author: edmaca
+manager: cguyer
+ms.workload: Inactive
+ms.openlocfilehash: 6a79f06d97d05a29b4c7e0460c5f95931e07ef85
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="permissions-or-securables-page"></a>Страница «Разрешения» или «Защищаемые объекты»
   Страница **Разрешения** или **Защищаемые объекты** используется для просмотра или установки разрешений для защищаемых объектов. Эта страница может быть открыта из нескольких мест. Содержимое страницы может немного измениться в зависимости от того, как открыта страница и ее содержимого. Верхняя сетка страницы может быть заполнена при открытии страницы или может быть пустой. Нажмите кнопку **Поиск**для добавления элементов в верхнюю сетку. Выберите элемент в верхней сетке, затем установите нужные разрешения на вкладке **Явное** . Чтобы увидеть суммарные разрешения, используйте вкладку **Действующие** .  
@@ -79,4 +78,3 @@ ms.lasthandoff: 06/22/2017
  [Центр обеспечения безопасности для базы данных Azure SQL и SQL Server Database Engine](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
-

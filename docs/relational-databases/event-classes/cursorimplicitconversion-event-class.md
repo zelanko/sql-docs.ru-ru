@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- CursorImplicitConversion event class
+helpviewer_keywords: CursorImplicitConversion event class
 ms.assetid: 44d12e23-146a-42e6-bb38-1f2f6a035bad
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 05ab5487811e411b6c2d301703eea2bfd3bdbb79
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 0df0c49826717dbfedc3875f91e634c4ae0b8d87
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="cursorimplicitconversion-event-class"></a>CursorImplicitConversion, класс событий
   Класс событий **CursorImplicitConversion** описывает события неявного преобразования курсора, происходящие в программных интерфейсах (API) и курсорах [!INCLUDE[tsql](../../includes/tsql-md.md)] . События неявного преобразования курсора происходят, когда компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] выполняет инструкцию Transact-SQL, не поддерживаемую запрошенным типом серверных курсоров. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] возвращает ошибку, указывающую, что тип курсора изменился.  
@@ -63,4 +60,3 @@ ms.lasthandoff: 06/22/2017
  [Хранимая процедура sp_trace_setevent (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   
-

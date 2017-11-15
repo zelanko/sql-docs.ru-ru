@@ -5,24 +5,21 @@ ms.date: 03/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "установка компонентов SQL Server PowerShell, загрузка компонентов SQL Server PowerShell"
+keywords: "установка компонентов SQL Server PowerShell, загрузка компонентов SQL Server PowerShell"
 ms.assetid: 
-caps.latest.revision: 113
+caps.latest.revision: "113"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
-ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 16ca0d08413ba75b7603596e8e4c5340715cb1a3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>Загрузка модуля PowerShell (SQL Server)
 Модуль SQL Server PowerShell теперь поставляется через коллекцию PowerShell как часть выпуска SQL Server Management Studio 17.0.  В пакет установки SSMS этот модуль больше не входит. Чтобы использовать PowerShell с SSMS 17.0 и более поздних версий, необходимо дополнительно установить на компьютер модуль SQL Server.
@@ -62,4 +59,3 @@ ms.lasthandoff: 09/27/2017
 > Import-Module SqlServer -Version 21.0.17178
 
 Версии модуля SQL Server PowerShell, предоставляемые в коллекции PowerShell, поддерживают управление версиями и требуют PowerShell 5.0 или более поздней версии. Модуль SqlServer можно найти в [коллекции PowerShell](https://www.powershellgallery.com/packages/Sqlserver/) 
-

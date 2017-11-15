@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- OLEDB QueryInterface event class
+helpviewer_keywords: OLEDB QueryInterface event class
 ms.assetid: f54c9ef9-3add-497c-a09b-42c4ce3c623d
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b47d42e3d8de99ad7dc4fc508c2af42a745ca704
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a675719a1c034127bce3afc1bee730cc2221dd53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface, класс событий
   Класс событий **OLEDB QueryInterface** возникает, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вызывает функцию **QueryInterface** OLE DB при обращении к распределенным запросам и удаленным хранимым процедурам. Этот класс событий включается в трассировку, выполняющую наблюдение за проблемами, связанными с выполнением распределенных запросов и удаленных хранимых процедур.  

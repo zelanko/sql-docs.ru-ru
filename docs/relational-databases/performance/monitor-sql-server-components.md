@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c31b1ebaa449c650edfcac6e045770652d7989be
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-sql-server-components"></a>Наблюдение за компонентами SQL Server
   Важность мониторинга обусловлена динамикой среды, в которой выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данные приложений постоянно изменяются. Меняется тип доступа, который требуется пользователям. Меняется способ подключения пользователей. Может измениться даже тип приложений, обращающихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически управляет такими системными ресурсами, как память и место на диске, поэтому ручная настройка системы практически не требуется. Мониторинг позволяет администраторам следить за тенденциями изменения производительности и определять ситуации, когда требуются изменения.  
@@ -142,4 +140,3 @@ ms.lasthandoff: 08/03/2017
      Возможность воспроизведения позволяет создать копию базы данных, в которой были собраны данные, и повторить события, как будто они произошли в реальной системе. Это возможно только в программе распределенного воспроизведения или в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. События можно воспроизводить с первоначальной скоростью, с максимально возможной скоростью (чтобы загрузить систему) или пошагово (чтобы проанализировать состояние системы после каждого события). Анализ событий в тестовой среде позволяет избежать повреждений в производственной системе. Дополнительные сведения см. в статье [Воспроизведение трассировок](../../tools/sql-server-profiler/replay-traces.md).  
   
   
-

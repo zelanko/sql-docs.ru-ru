@@ -5,25 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, best practices
 - replication [SQL Server], administering
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b4e86f2eb13062223533a3994180446174f9291b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 51964c5ce8e4753147724bcd97a8c0a53a8f0c0a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="best-practices-for-replication-administration"></a>Рекомендации по администрированию репликации
   После настройки репликации важно разобраться, как следует управлять топологией репликации. В этом разделе предоставляются основные рекомендации по ряду вопросов со ссылками на дополнительные источники информации по рассматриваемым темам. Помимо рекомендаций, описываемых в этой статье, ознакомьтесь с часто встречающимися вопросами и проблемами, описанными в следующей статье: [Вопросы, часто задаваемые администраторам репликации](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md).  
@@ -68,7 +66,7 @@ ms.lasthandoff: 06/22/2017
  Реплицированные базы данных требуют особого внимания к резервному копированию и восстановлению данных. Дополнительные сведения см. в разделе [Резервное копирование и восстановление реплицируемых баз данных](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ## <a name="script-the-replication-topology"></a>Создание скрипта для топологии репликации  
- Все компоненты репликации в топологии должны использоваться в скриптах как часть плана аварийного восстановления, а скрипты могут также использоваться для автоматизации повторяющихся задач. Скрипт содержит системные хранимые процедуры [!INCLUDE[tsql](../../../includes/tsql-md.md)] , необходимые для реализации содержащихся в скрипте компонентов репликации, например публикации или подписки. Скрипты могут быть созданы с помощью мастера (например, мастера создания публикаций) или в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] после создания компонента. Скрипт можно просмотреть, изменить и запустить с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или **sqlcmd**. Скрипты могут сохраняться с файлами резервных копий для использования в случае, если необходимо перенастроить топологию репликации. Дополнительные сведения см. в статье [Создание скриптов репликации](../../../relational-databases/replication/scripting-replication.md).  
+ Все компоненты репликации в топологии должны использоваться в скриптах как часть плана аварийного восстановления, а скрипты могут также использоваться для автоматизации повторяющихся задач. Скрипт содержит системные хранимые процедуры [!INCLUDE[tsql](../../../includes/tsql-md.md)] , необходимые для реализации содержащихся в скрипте компонентов репликации, например публикации или подписки. Скрипты могут быть созданы с помощью мастера (например, мастера создания публикаций) или в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] после создания компонента. Скрипт можно просмотреть, изменить и запустить с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или **sqlcmd**. Скрипты могут сохраняться с файлами резервных копий для использования в случае, если необходимо перенастроить топологию репликации. Дополнительные сведения см. в статье [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
  Необходимо заново создать сценарий компонента, если изменились какие-либо свойства. Если с репликацией транзакций используются специальные хранимые процедуры, копия каждой процедуры должна сохраняться со скриптами. Если процедура изменяется, ее копия должна обновляться (процедуры обычно обновляются в связи с изменениями схемы или изменениями требований приложения). Дополнительные сведения о пользовательских процедурах см. в статье [Указание способа распространения изменений для статей транзакций](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
@@ -156,4 +154,3 @@ ms.lasthandoff: 06/22/2017
  [Администрирование (репликация)](../../../relational-databases/replication/administration/administration-replication.md)  
   
   
-

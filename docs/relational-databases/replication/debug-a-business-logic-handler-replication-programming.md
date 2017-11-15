@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - business logic handlers [SQL Server replication]
 - BusinessLogicModule class
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 72ca7cf7a7de06c1b0da728fa1c8541bae1f0e8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6a681d03ae06573a4837ff6b545475980633e3ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>выполнить отладку обработчика бизнес-логики (программирование репликации)
   Используйте обработчик бизнес-логики для вызова пользовательской бизнес-логики во время синхронизации подписки на публикацию слиянием. Дополнительные сведения см. в статье [Выполнение бизнес-логики при синхронизации слиянием](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  
@@ -42,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  В среде [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio создайте проект объектов RMO, который программным путем производит синхронный запуск агента слияния. Дополнительные сведения см. в статье [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md).  
   
-4.  Установите точку останова в коде обработчика бизнес-логики — в методе, проходящем отладку, или в конструкторе класса. Дополнительные сведения о методах, которые можно реализовать в обработчике бизнес-логики, см. в статье о методах <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
+4.  Установите точку останова в коде обработчика бизнес-логики — в методе, проходящем отладку, или в конструкторе класса. Дополнительные сведения о методах, которые можно реализовать в обработчике бизнес-логики, см. в разделе о методах <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
 5.  Откройте обработчик бизнес-логики в режиме отладки и произведите развертывание сборки и файла отладки (PDB) в папке, заданной на шаге 1.  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  Создайте и зарегистрируйте обработчик бизнес-логики. Дополнительные сведения см. в статье [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md).  
   
-3.  Установите точку останова в коде обработчика бизнес-логики — в методе, проходящем отладку, или в конструкторе класса. Дополнительные сведения о методах, которые можно реализовать в обработчике бизнес-логики, см. в статье о методах <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>.  
+3.  Установите точку останова в коде обработчика бизнес-логики — в методе, проходящем отладку, или в конструкторе класса. Дополнительные сведения о методах, которые можно реализовать в обработчике бизнес-логики, см. в разделе о методах <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> .  
   
 4.  Откройте обработчик бизнес-логики в режиме отладки и произведите развертывание сборки и файла отладки (PDB) на сервере, заданном на шаге 1.  
   
@@ -90,4 +88,3 @@ ms.lasthandoff: 06/22/2017
  [Implement a Business Logic Handler for a Merge Article](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)  
   
   
-

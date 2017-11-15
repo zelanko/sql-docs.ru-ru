@@ -5,24 +5,21 @@ ms.date: 04/04/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 1105 (Database Engine error)
+helpviewer_keywords: 1105 (Database Engine error)
 ms.assetid: e7f4ad02-8c7f-4bb9-9781-2c86253f2138
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6351998ecebd4a63c6fff509cb535f6107247513
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 4a76361f4aa307eeece1e57b8e2b0c9b51c07df0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mssqlserver1105"></a>MSSQLSERVER_1105
   
@@ -54,4 +51,3 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 > Когда индекс располагается в нескольких файлах, **ALTER INDEX REORGANIZE** может вернуть ошибку 1105 при заполнении одного их файлов. Процесс реорганизации блокируется, если процесс пытается переместить строки в полный файл. Чтобы обойти это ограничение, выполните **ALTER INDEX REBUILD** вместо **ALTER INDEX REORGANIZE** или увеличьте ограничение на размер файла для файлов, которые достигают этого ограничения.  
   
-

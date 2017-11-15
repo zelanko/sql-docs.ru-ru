@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - witness [SQL Server]
 - database mirroring [SQL Server], witness
 ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
-caps.latest.revision: 72
+caps.latest.revision: "72"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ee20ba03743ce6778e487fb14a6f03e793ae6ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: b5ee71219a2b6929e3ff2007530d2dd4659f9bac
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-witness"></a>Следящий сервер зеркального отображения базы данных
   Для поддержки автоматической отработки отказа сеанс зеркального отображения базы данных должен быть настроен на использование режима высокой безопасности, а также должен присутствовать третий экземпляр, называемый *следящим сервером*. Следящий сервер это дополнительный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющий зеркальному серверу в сеансе режима высокой безопасности определить, следует ли начать процедуру автоматической отработки отказа. В отличие от двух участников зеркального отображения, следящий сервер не обслуживает базу данных. Его единственная функция заключается в поддержке автоматического перехода на другой ресурс.  
@@ -88,4 +86,3 @@ ms.lasthandoff: 08/02/2017
  [Состояния зеркального отображения (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   
-

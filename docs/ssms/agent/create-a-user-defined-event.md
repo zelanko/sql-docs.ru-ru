@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - custom events [SQL Server Agent]
 - international considerations [SQL Server], alerts
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0f5aea958032436b1d9f168dafb0ad24712d0931
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 8298bbe39bcaeada19b2a5b50b87a1f14a8a5f89
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-user-defined-event"></a>Создание пользовательского события
 Можно создать пользовательское событие, если нужно производить мониторинг событий, отличных от предопределенных системой [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Можно назначить уровень серьезности для каждого пользовательского события.  
@@ -49,19 +47,19 @@ ms.lasthandoff: 06/22/2017
   
 **Создание предупреждения по номеру сообщения**  
   
--   [Среда Среда SQL Server Management Studio](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **Создание предупреждения по уровню серьезности**  
   
--   [Среда Среда SQL Server Management Studio](../../ssms/agent/create-an-alert-using-severity-level.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/create-an-alert-using-severity-level.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/d9b41853-e22d-4813-a79f-57efb4511f09)  
   
 **Определение ответа на предупреждение**  
   
--   [SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)  
   
@@ -79,11 +77,10 @@ ms.lasthandoff: 06/22/2017
   
 **Отключение или повторное включение предупреждения**  
   
--   [Среда Среда SQL Server Management Studio](../../ssms/agent/disable-or-reactivate-an-alert.md)  
+-   [Среда SQL Server Management Studio](../../ssms/agent/disable-or-reactivate-an-alert.md)  
   
 -   [Transact-SQL](http://msdn.microsoft.com/en-us/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   
 ## <a name="see-also"></a>См. также:  
-[Хранимая процедура Хранимая процедура sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
+[Хранимая процедура sp_update_alert (Transact-SQL)](http://msdn.microsoft.com/en-us/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   
-

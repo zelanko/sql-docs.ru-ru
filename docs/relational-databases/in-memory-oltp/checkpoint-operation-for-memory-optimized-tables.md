@@ -1,27 +1,24 @@
 ---
 title: "Использование контрольной точки для таблиц, оптимизированных для памяти | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04176fec3cc190cba1a89a11780d84561512431a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 06fefee35162b37e0d627afd46feba719d0e4001
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Работа контрольной точки для оптимизированных для памяти таблиц
   Контрольную точку нужно периодически обрабатывать для данных, оптимизированных для памяти, в файлах данных и разностных файлах, чтобы дополнять активную часть журнала транзакций. Контрольная точка позволяет восстанавливать таблицы, оптимизированные для памяти, до последней успешной контрольной точки, после чего применяется активная часть журнала транзакций для обновления таблиц, оптимизированных для памяти, и завершения восстановления. Процессы работы контрольной точки для таблиц на диске и оптимизированных для памяти таблиц отличаются. Ниже описываются различные сценарии и режим работы контрольной точки для таблиц на диске и таблиц, оптимизированных для памяти.  
@@ -40,4 +37,3 @@ ms.lasthandoff: 06/22/2017
  [Создание и управление хранилищем для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   
-

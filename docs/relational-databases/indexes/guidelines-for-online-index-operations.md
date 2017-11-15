@@ -15,20 +15,19 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], online operations
 - transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.suite: SQL
-ms.prod_service: database engine, sql database, sql data warehouse
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.component: indexes
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 2cf2c877207a3dfaf5c3c6ff3aa2cca0da2d9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="guidelines-for-online-index-operations"></a>Руководящие принципы для операций с индексами
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.lasthandoff: 07/31/2017
 -   Неуникальные некластеризованные индексы могут создаваться в режиме в сети, если таблица содержит типы данных больших объектов (LOB), но при этом, ни один из этих столбцов не участвует в определении индекса, ни в качестве ключевого, ни в качестве неключевого столбца.  
   
 -   Индексы локальных временных таблиц не могут создаваться, перестраиваться и удаляться в режиме в сети. Это ограничение не относится к индексам глобальных временных таблиц.
-- Индексы можно возобновить с места остановки после непредвиденного сбоя, отработки отказа базы данных или команды **PAUSE**. См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Этот компонент находится в общедоступной предварительной версии для SQL Server 2017 и базы данных SQL Azure.
+- Индексы можно возобновить с места остановки после непредвиденного сбоя, отработки отказа базы данных или команды **PAUSE**. См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 > [!NOTE]  
 >  Операции с индексами в сети доступны не во всех выпусках [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в [этой статье](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -95,7 +94,7 @@ ms.lasthandoff: 07/31/2017
 ## <a name="resumable-index-rebuild-considerations"></a>Вопросы перестроения возобновляемого индекса
 
 > [!NOTE]
-> См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). Этот компонент находится в общедоступной предварительной версии для SQL Server 2017 и базы данных SQL Azure.
+> См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 >
 
 При перестраивании возобновляемого индекса в режиме "в сети" следует учитывать следующие рекомендации:
@@ -126,4 +125,3 @@ ms.lasthandoff: 07/31/2017
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
-

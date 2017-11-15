@@ -5,24 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Oracle publishing [SQL Server replication], troubleshooting
 - troubleshooting [SQL Server replication], Oracle publishing
 ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f6b52a9fc10c8dae7a0b01a6a615076bcc257104
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2796e5af63fb0fcce047baab1895a4ac58a64f65
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Диагностика издателей Oracle
   В этой теме рассматривается ряд вопросов, которые могут возникнуть при настройке и использовании издателя Oracle.  
@@ -99,9 +98,9 @@ ms.lasthandoff: 06/22/2017
  Если вам нужно подключиться к издателю Oracle через соединение связанного сервера, создайте другое имя службы TNS и используйте его при вызове процедуры [sp_addlinkedserver (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Сведения о создании имен службы TNS см. в документации Oracle.  
   
 ## <a name="sql-server-error-21617-is-raised"></a>Ошибка SQL Server 21617  
- Публикация Oracle использует приложение Oracle SQL*PLUS для загрузки пакета вспомогательного кода издателя в базу данных Oracle. Перед попыткой настроить издатель Oracle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверяет, доступно ли приложение SQL\*PLUS по системному пути на распространителе. Если приложение SQL\*PLUS не может быть загружено, появляется следующее сообщение об ошибке:  
+ Публикация Oracle использует приложение Oracle SQL\*PLUS для загрузки пакета вспомогательного кода издателя в базу данных Oracle. Перед попыткой настроить издатель Oracle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] проверяет, доступно ли приложение SQL\*PLUS по системному пути на распространителе. Если приложение SQL\*PLUS не может быть загружено, появляется следующее сообщение об ошибке:  
   
- «Не удается запустить SQL*PLUS. Убедитесь, что на распространителе установлена текущая версия клиентской программы Oracle».  
+ «Не удается запустить SQL\*PLUS. Убедитесь, что на распространителе установлена текущая версия клиентской программы Oracle».  
   
  Попытайтесь найти SQL\*PLUS на распространителе. Для установки клиента Oracle 10g имя этого исполняемого файла — sqlplus.exe. Обычно данная программа устанавливается в каталог %ORACLE_HOME%/bin. Чтобы убедиться, что путь SQL\*PLUS содержится в системном пути, проверьте значение системной переменной **Path**:  
   

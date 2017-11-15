@@ -5,26 +5,22 @@ ms.date: 03/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.dbmmonitor.main.f1
-helpviewer_keywords:
-- Database Mirroring Monitor [SQL Server], interface
+f1_keywords: sql13.swb.dbmmonitor.main.f1
+helpviewer_keywords: Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 129958519a6115df494479c6c2237d4a611cfed5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: dbf4b3f8cec8528fc7a19acd683b5cc05ac98ba7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="database-mirroring-monitor-overview"></a>Обзор монитора зеркального отображения баз данных
   При наличии разрешения возможно использование монитора зеркального отображения баз данных для эффективного контроля любого набора зеркальных баз данных на экземпляре сервера. Процедура контроля позволяет проверить выполнение и правильность передачи данных во время сеанса зеркального отображения базы данных. Монитор зеркального отображения баз данных также полезен для диагностики причины уменьшения потока данных.  
@@ -112,4 +108,3 @@ ms.lasthandoff: 08/02/2017
  [Запуск мастера настройки безопасности зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
-

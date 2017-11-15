@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - SQL Server Agent, permissions
 - security [SQL Server], SQL Server Agent
 ms.assetid: 2e361a62-9e92-4fcd-80d7-d6960f127900
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e433dd732e153213da84aa9a1444f9255cc5a4d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 54b8039af8126551e98aef479df356f9fae137cb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-sql-server-agent"></a>Настройка агента SQL Server
 В этом разделе описывается задание некоторых параметров конфигурации для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] во время установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Доступ к полному набору параметров конфигурации агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] можно получить с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], управляющих объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] (SMO) или хранимых процедур агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
@@ -36,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
     [Ограничения](#Restrictions)  
   
-    [Безопасность](#Security)  
+    [безопасность](#Security)  
   
 -   [Настройка агента SQL Server](#SSMSProcedure)  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   В экземплярах отказоустойчивых кластеров не должен быть включен автоматический перезапуск службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
-### <a name="Security"></a>Безопасность  
+### <a name="Security"></a>безопасность  
   
 #### <a name="Permissions"></a>Permissions  
 Для выполнения своих функций агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] должен быть настроен на использование учетных данных записи, которая является членом предопределенной роли сервера **sysadmin** в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Эта учетная запись должна иметь следующие разрешения Windows.  
@@ -79,4 +77,3 @@ ms.lasthandoff: 06/22/2017
   
 6.  Повторите эту процедуру для каждого разрешения, которое нужно добавить для работы с агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . После завершения нажмите кнопку **ОК**.  
   
-

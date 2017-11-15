@@ -5,23 +5,21 @@ ms.date: 08/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-blob
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], directories
+helpviewer_keywords: FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: eb6e4560f35f1b251ee34f703be9824182bd2909
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>Работа с каталогами и путями в таблицах FileTable
   Описывает структуру каталогов, в которой файлы хранятся в таблицах FileTable.  
@@ -97,7 +95,7 @@ GO
   
 ||||  
 |-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**Поведение**|  
+|*is_directory* **значение**|*file_stream* **значение**|**Поведение**|  
 |FALSE|NULL|Это недопустимое сочетание, которое будет перехвачено системным ограничением.|  
 |FALSE|\<значение>|Этот элемент представляет файл.|  
 |TRUE|NULL|Этот элемент представляет каталог.|  
@@ -117,4 +115,3 @@ GO
  [Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
-

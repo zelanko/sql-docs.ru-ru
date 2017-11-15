@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Performance Statistics event class
+helpviewer_keywords: Performance Statistics event class
 ms.assetid: da9cd2c4-6fdd-4ada-b74f-105e3541393c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 94f6ab1826086a7c835b7a5a371f92b362727cff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c1822de581220e2544ab14622b8a5784cc9cabc7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics, класс событий
   Класс событий Performance Statistics можно использовать для наблюдения за производительностью выполняемых запросов, хранимых процедур и триггеров. Каждый из шести подклассов событий обозначает событие, относящееся ко времени существования запросов, хранимых процедур и триггеров в системе. Сочетая эти подклассы событий и связанные с ними динамические административные представления sys.dm_exec_query_stats, sys.dm_exec_procedure_stats и sys.dm_exec_trigger_stats, можно восстановить историю производительности любого заданного запроса, хранимой процедуры или триггера.  
@@ -162,4 +160,3 @@ ms.lasthandoff: 06/22/2017
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   
-

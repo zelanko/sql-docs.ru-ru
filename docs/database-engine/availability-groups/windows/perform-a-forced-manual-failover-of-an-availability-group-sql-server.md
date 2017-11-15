@@ -5,27 +5,24 @@ ms.date: 05/17/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.availabilitygroup.forcefailover.f1
+f1_keywords: sql13.swb.availabilitygroup.forcefailover.f1
 helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
-caps.latest.revision: 83
+caps.latest.revision: "83"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4bc7044919ec275a95801088d35efe2bc88bf7a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: a6365667a087ddd408925dddbdd712cb26df3d96
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)
   В этом разделе описывается выполнение принудительной отработки отказа (с возможной потерей данных) в группе доступности AlwaysOn с использованием [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Принудительная отработка отказа — это форма перехода на другой ресурс вручную, предназначенная исключительно для аварийного восстановления в случаях, когда невозможно выполнить [запланированную отработку отказа вручную](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Если выполняется принудительный переход на несинхронизированную вторичную реплику, возможна потеря данных. Поэтому мы настоятельно рекомендуем выполнять принудительную отработку отказа только в том случае, если необходимо немедленно возобновить работу группы доступности и вы готовы пойти на риск потери данных.  
@@ -297,7 +294,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [Восстановление изначальной топологии группы доступности](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Реакция на разрушительный сбой в основном центре обработки данных  
+###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
  На следующем рисунке показана последовательность действий, осуществляемых в удаленном центре обработки данных после разрушительного сбоя в основном центре обработки данных.  
   
  ![Действия по обработке сбоя в основном центре обработки данных](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "Действия по обработке сбоя в основном центре обработки данных")  
@@ -373,4 +370,3 @@ ms.lasthandoff: 08/02/2017
  [Отказоустойчивая кластеризация Windows Server (WSFC) с SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   
-

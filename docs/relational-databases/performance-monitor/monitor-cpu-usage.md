@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - CPU [SQL Server], monitoring
 - monitoring server performance [SQL Server], CPU usage
 ms.assetid: 2a02a3b6-07b2-4ad0-8a24-670414d19812
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 9ea3b676f94ee1f2cb90fd2725281d55e432248c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-cpu-usage"></a>Мониторинг использования ЦП
   Периодически контролируйте экземпляр Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы определить, находятся ли уровни загрузки ЦП в стандартных диапазонах. Постоянный высокий уровень использования ЦП может указывать на необходимость обновления ЦП или на необходимость добавления нескольких процессоров. Кроме того, высокий уровень использования ЦП может указывать на плохо настроенное или плохо разработанное приложение. Оптимизация работы приложения может снизить уровень загрузки ЦП.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 06/22/2017
  Уровни загрузки ЦП около 100 % при обработке многочисленных запросов клиентов могут указывать на то, что процессы стоят в очереди, ожидая обработки процессором, который является узким местом системы. Данная проблема может быть решена установкой более быстрых процессоров.  
   
   
-

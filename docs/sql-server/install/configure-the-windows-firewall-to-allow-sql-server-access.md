@@ -5,8 +5,7 @@ ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +22,16 @@ helpviewer_keywords:
 - ports [SQL Server], TCP
 - netsh to open firewall ports
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
-ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 672a3204c3bba22efd0d129d384980352ab2ac8d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +40,14 @@ ms.lasthandoff: 06/22/2017
 
 Системы брандмауэров предотвращают несанкционированный доступ к ресурсам компьютера. Если брандмауэр включен, но настроен неправильно, попытка соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может оказаться заблокированной.  
   
-Для доступа к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через брандмауэр необходимо настроить брандмауэр на компьютере, где работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Брандмауэр является компонентом [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Вместо него можно установить брандмауэр другой компании. В данном разделе обсуждается настройка брандмауэра Windows, однако общие принципы применимы к любым другим брандмауэрам.  
+Чтобы разрешить доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через брандмауэр, его необходимо настроить на компьютере, на котором работает [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Брандмауэр является компонентом [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. Вместо него можно установить брандмауэр другой компании. В данном разделе обсуждается настройка брандмауэра Windows, однако общие принципы применимы к любым другим брандмауэрам.  
   
 > [!NOTE]  
 >  В разделе содержатся общие сведения о настройке брандмауэра и сводные сведения, представляющие интерес для администратора [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения и официальные данные о брандмауэрах см. в документации по брандмауэру, например в разделе [Брандмауэр Windows в режиме повышенной безопасности и IPsec](http://go.microsoft.com/fwlink/?LinkID=116904).  
   
  Пользователи, хорошо знакомые с элементом **Брандмауэр Windows** на панели управления и оснасткой "Брандмауэр Windows в режиме повышенной безопасности" консоли управления (MMC) и умеющие настраивать параметры брандмауэра, могут перейти непосредственно к разделам, приведенным в списке ниже.  
   
--   [Настройка брандмауэра Windows для доступа к ядру СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
+-   [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  
   
 -   [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
@@ -109,7 +108,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Порты, используемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Следующие таблицы помогут выяснить, какие порты использует [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-###  <a name="BKMK_ssde"></a> Порты, используемые ядром СУБД  
+###  <a name="BKMK_ssde"></a> Ports Used By the Database Engine  
  В следующей таблице перечислены порты, обычно используемые компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 |Сценарий|Порт|Комментарии|  
@@ -126,7 +125,7 @@ ms.lasthandoff: 06/22/2017
 |Репликация|Соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для репликации используют порты, которые обычно использует компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] (TCP-порт 1433 для экземпляра по умолчанию и т. д.)<br /><br /> Веб-синхронизация и доступ через FTP/UNC к моментальному снимку репликации потребуют открытия в брандмауэре других портов. Передачу начальных данных и схемы из одного места в другое репликация осуществляет по протоколу FTP (TCP-порт 21) либо с помощью синхронизации через HTTP (TCP-порт 80) или общего доступа к файлам. Для общего доступа к файлам используются UDP-порты 137 и 138 и TCP-порт 139 (если используется NetBIOS). Совместное использование файлов использует TCP-порт 445.|Для синхронизации по протоколу HTTP в репликации используется конечная точка IIS (порты которой являются настраиваемыми, но порт 80 применяется по умолчанию), однако процесс IIS подключается к серверу базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через стандартные порты (1433 для экземпляра по умолчанию).<br /><br /> При веб-синхронизации через FTP-порт передача данных выполняется между службами IIS и издателем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а не между подписчиком и службами IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] отладчик|TCP-порт 135<br /><br /> См. раздел [Особые замечания относительно порта 135](#BKMK_port_135)<br /><br /> Также может потребоваться исключение [IPsec](#BKMK_IPsec) .|При использовании среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]на [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] главном компьютере в список исключений необходимо также добавить программу **Devenv.exe** и открыть TCP-порт 135.<br /><br /> При использовании среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]на [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] главном компьютере необходимо также добавить в список исключений программу **ssms.exe** и открыть TCP-порт 135. Дополнительные сведения см. в разделе [Настройка правил брандмауэра перед запуском отладчика TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   
- Пошаговые инструкции по настройке брандмауэра Windows для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] см. в разделе [Настройка брандмауэра Windows для доступа к ядру СУБД](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+ Пошаговые инструкции по настройке брандмауэра Windows для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]см. в разделе [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 ####  <a name="BKMK_dynamic_ports"></a> Динамические порты  
  По умолчанию именованные экземпляры (включая [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) используют динамические порты. Это означает, что при каждом запуске компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] находит доступный порт и занимает его. Если именованный экземпляр является единственным установленным экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , то, скорее всего, он будет использовать TCP-порт 1433. При установке других экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] они будут использовать другие TCP-порты. Поскольку выбираемый порт может меняться при каждом запуске компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , настроить брандмауэр для разрешения доступа к нужному порту сложно. Поэтому, если используется брандмауэр, рекомендуется настроить компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] на постоянное использование одного и того же порта. Такой порт называется фиксированным или статическим. Дополнительные сведения см. в разделе [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
@@ -310,7 +309,7 @@ ms.lasthandoff: 06/22/2017
   
     2.  В командной строке введите **netstat -n -a**.  
   
-         При указании параметра **-n** служебная программа **netstat** выводит адреса и номера портов активных подключений TCP в числовом виде. При наличии параметра **-a** служебная программа **netstat** выводит порты TCP и UDP, которые прослушиваются компьютером.  
+         Элемент **-n** служебная программа **netstat** выводит адреса и номера портов активных подключений TCP в числовом виде. При наличии параметра **-a** служебная программа **netstat** выводит порты TCP и UDP, которые прослушиваются компьютером.  
   
 -   Служебную программу **PortQry** можно использовать для вывода состояния портов TCP/IP (прослушивается, не прослушивается, фильтруется). В состоянии фильтрации порт может либо прослушиваться, либо не прослушиваться. Это состояние указывает, что программа не получила ответа от порта. Служебную программу **PortQry** можно скачать из [Центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=28590).  
   
@@ -319,4 +318,3 @@ ms.lasthandoff: 06/22/2017
  [Руководство. Настройка параметров брандмауэра (база данных SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)  
   
   
-

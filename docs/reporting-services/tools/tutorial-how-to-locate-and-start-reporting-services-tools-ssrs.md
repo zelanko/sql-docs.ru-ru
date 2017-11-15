@@ -1,5 +1,5 @@
 ---
-title: "Учебник: Как найти и запустить отчеты служб Tools (SSRS) | Документы Microsoft"
+title: "Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS) | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -21,19 +21,17 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Builder
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebec450636a6a0342421da7dff862481bb1da55a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e25bb9ad2ff8136d4a5ff1a234092ec730ecae37
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)
 
   В этом руководстве рассказывается о средствах, используемых для настройки сервера отчетов, управления содержимым и операциями сервера отчетов, а также создания и публикации отчетов с разбиением на страницы и мобильных отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Если вы уже знакомы с этими средствами, то можете перейти к другим руководствам, которые помогут научиться правильно использовать службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Другие учебные материалы см. в разделе [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md).  
@@ -49,13 +47,13 @@ ms.lasthandoff: 08/09/2017
 -   Настройте ключи шифрования.  
 -   Настройте автоматическую обработку отчетов и доставку отчетов по электронной почте.  
   
- **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. Дополнительные сведения см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
+ **Установка** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливается одновременно с установкой служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме. Дополнительные сведения см. в разделе [Установка сервера отчетов служб Reporting Services в собственном режиме](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4).  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Запуск диспетчера конфигурации служб Reporting Services  
   
 1.  На начальном экране Windows введите **reporting** и в результатах поиска **Приложения** выберите **Диспетчер конфигурации служб Reporting Services**.  
   
-     ![Диспетчер конфигурации при запуске служб Reporting services](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "диспетчер конфигурации при запуске служб reporting services")  
+     ![Диспетчер конфигурации служб Reporting Services при запуске](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "Диспетчер конфигурации служб Reporting Services при запуске")  
   
      **Or**  
   
@@ -67,28 +65,28 @@ ms.lasthandoff: 08/09/2017
   
      Если указан удаленный компьютер, для установления соединения нажмите кнопку **Найти** . Сервер отчетов должен быть заранее настроен для удаленного администрирования. Дополнительные сведения о подготовке сервера отчетов для удаленного администрирования см. в разделе [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md).  
   
-3.  В разделе **В разделеstance Name**выберите экземпляр служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который необходимо настроить. В списке отображаются только SQL Server 2008 и более поздних версий экземпляров сервера отчетов. Более ранние версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]настраивать нельзя.  
+3.  В разделе **В разделеstance Name**выберите экземпляр служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , который необходимо настроить. В списке отображаются только экземпляры сервера отчетов SQL Server 2008 и более поздней версии. Более ранние версии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]настраивать нельзя.  
   
 4.  Нажмите кнопку **Соединить**.  
   
 5.  Убедиться, что средство запущено, можно, сравнив полученные результаты со следующим изображением:  
   
-     ![Средство настройки служб отчетов](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "средство настройки служб Reporting Services")  
+     ![Средство конфигурации служб Reporting Services](../../reporting-services/tools/media/rs-ui-reportserverconfigkatmai.png "Средство конфигурации служб Reporting Services")  
   
  **Дальнейшие действия:** [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md) и [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
 ##  <a name="web-portal-native-mode"></a>Веб-портал (основной режим служб SSRS)  
  Используйте [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) для задания разрешений, управления подписками и расписаниями, а также для работы с отчетами. Можно также использовать веб-портал для просмотра отчетов.  
   
- **Установка**. Веб-портал устанавливается при установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме: [Установка сервера отчетов служб Reporting Services в собственном режиме](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
+ **Установка** . Веб-портал устанавливается при установке [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме: [Установка сервера отчетов служб Reporting Services в собственном режиме](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
- Для работы с веб-порталом необходимо иметь соответствующие разрешения (изначально разрешения на доступ к функциональным возможностям веб-порталом имеют только члены группы локальных администраторов). Веб-портал предоставляет различные страницы и параметры, в зависимости от назначений роли текущего пользователя. Пользователи, у которых нет разрешения, получат пустую страницу. Пользователи, которые имеют разрешения на просмотр отчетов, получат ссылки для открытия отчетов. Дополнительные сведения о разрешениях см. в разделе [Роли и разрешения (службы Reporting Services)](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
+ Для работы с веб-порталом необходимо иметь соответствующие разрешения (изначально разрешения на доступ к функциональным возможностям веб-порталом имеют только члены группы локальных администраторов). Веб-портал предоставляет различные страницы и параметры, в зависимости от назначений роли текущего пользователя. Пользователи, у которых нет разрешения, получат пустую страницу. Пользователи, которые имеют разрешения на просмотр отчетов, получат ссылки для открытия отчетов. Дополнительные сведения о разрешениях см. в разделе [Роли и разрешения &#40;службы Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
 ### <a name="to-start-the-web-portal"></a>Запуск веб-портала  
   
 1.  Откройте браузер. Сведения о поддерживаемых браузерах и версиях см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).  
   
-2.  В адресной строке браузера введите URL-адрес веб-портала. По умолчанию используется URL-адрес `http://<serverName>/reports`. Можно использовать программу настройки служб Reporting Services для подтверждения имени сервера и URL-адреса. Дополнительные сведения об URL-адресах, используемых в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
+2.  В адресной строке браузера введите URL-адрес веб-портала. URL-адрес по умолчанию — `http://<serverName>/reports`. Можно использовать программу настройки служб Reporting Services для подтверждения имени сервера и URL-адреса. Дополнительные сведения о URL-адресах, используемых в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Настройка URL-адресов сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  
   
 3.  Веб-портал откроется в окне браузера. Стартовой страницей является корневая папка. В зависимости от разрешений на стартовой странице могут быть видны дополнительные папки, гиперссылки на отчеты и файлы ресурсов. На панели инструментов расположены дополнительные кнопки и команды.  
   
@@ -101,7 +99,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  На начальном экране Windows введите **sql server** и в результатах поиска **Приложения** выберите **SQL Server Management Studio**.  
   
-     ![экран запуска Management studio из windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "экран запуска management studio из windows")  
+     ![Экран запуска Management Studio в Windows](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Экран запуска Management Studio в Windows")  
   
      **Or**  
   
@@ -132,13 +130,13 @@ ms.lasthandoff: 08/09/2017
   
 4.  В списке **Шаблоны** выберите значение **Проект сервера отчетов**. На следующей диаграмме показано, как шаблоны проекта выглядят в диалоговом окне.  
   
-     ![Новый шаблон диалогового окна](../../reporting-services/tools/media/rs-ui-newrsproject.gif "шаблон нового проекта-диалоговое окно")  
+     ![Диалоговое окно "Новый шаблон проекта"](../../reporting-services/tools/media/rs-ui-newrsproject.gif "Диалоговое окно "Новый шаблон проекта"")  
   
 5.  Введите имя и местоположение проекта или нажмите кнопку **Обзор** и выберите местоположение.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] откроется на начальной странице [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] . В обозревателе решений содержатся категории для создания отчетов и источников данных. Эти категории можно использовать для создания новых отчетов и источников данных. При создании определения отчета появляются окна со вкладками. К окнам со вкладками относятся такие окна, как «Данные», «Макет» и «Предварительный просмотр».  
   
- Чтобы приступить к работе над первым отчетом, см. раздел [Создание простого табличного отчета (учебник по службам SSRS)](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Дополнительные сведения о конструкторах запросов, которые можно использовать в конструкторе отчетов, см. в разделе [Средства проектирования запросов (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md).  
+ Чтобы приступить к работе над первым отчетом, см. раздел [Создание простого табличного отчета &#40;учебник по службам SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). Дополнительные сведения о конструкторах запросов, которые можно использовать в конструкторе отчетов, см. в разделе [Средства проектирования запросов (SSRS)](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
 ##  <a name="bkmk_report_builder"></a> [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]  
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md) — это автономное приложение, с помощью которого можно создавать отчеты с разбиением на страницы вне [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Существующие отчеты можно настраивать и обновлять независимо от того, были ли они созданы в конструкторе отчетов или в предыдущих версиях [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]. Его можно установить с веб-портала [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или из Центра загрузки Майкрософт.  
@@ -153,7 +151,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Если [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] еще не установлен на этом компьютере, выберите пункт **Get [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]**.  
   
-     или  
+     Или  
   
      [Построитель отчетов можно скачать](http://go.microsoft.com/fwlink/?LinkID=219138) из Центра загрузки Майкрософт.  
   
@@ -172,7 +170,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Если [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)] еще не установлен на этом компьютере, выберите пункт **Get [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short-md.md)]**.  
   
-     или  
+     Или  
   
      [Издатель мобильных отчетов для SQL Server можно скачать](http://go.microsoft.com/fwlink/?LinkID=733527) из Центра загрузки Майкрософт.  
   
@@ -180,13 +178,12 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Загрузите издатель мобильных отчетов SQL Server](http://go.microsoft.com/fwlink/?LinkID=733527)   
+[Издатель мобильных отчетов для SQL Server можно скачать](http://go.microsoft.com/fwlink/?LinkID=733527)   
 [Построитель отчетов можно скачать](http://go.microsoft.com/fwlink/?LinkID=219138)  
-[Скачать SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
-[Установка служб Reporting Services в режиме SharePoint](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
+[Скачивание SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714) 
+[Установка режима интеграции с SharePoint для служб Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
 [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
 [Средства проектирования запросов](../../reporting-services/report-data/query-design-tools-ssrs.md)   
-[Учебники по службам отчетов](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+[Учебники по службам Reporting Services](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -5,22 +5,20 @@ ms.date: 03/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a376ebb734dab193b9cd1118d4c1fe642dc392ab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 78d2478bd6946134cad847c653c7cdfe35e4326f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Восстановление из резервных копий в Microsoft Azure
   В данном разделе представлены вопросы восстановления базы данных с помощью резервной копии в службе хранилища больших двоичных объектов Windows Azure. Это относится к резервным копиям, созданным либо с помощью резервного копирования SQL Server на URL-адрес, либо с помощью служб [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
@@ -38,12 +36,12 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="using-sql-server-management-studio"></a>Использование среды SQL Server Management Studio  
   
--   Для восстановления базы данных из SQL Server Management Studio используется задача восстановления. На странице носителя резервных копий теперь доступен параметр **URL-адрес** для отображения файлов резервных копий, размещенных в службе хранилища больших двоичных объектов Windows Azure. Также необходимо указать учетные данные SQL, которые используются для проверки подлинности учетной записи хранения. После этого сетка **Резервные наборы данных для восстановления** заполняется всеми резервными копиями, доступными в хранилище больших двоичных объектов Windows Azure. Дополнительные сведения см. в статье [Восстановление из хранилища SQL Windows Azure с помощью среды SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
+-   Для восстановления базы данных из SQL Server Management Studio используется задача восстановления. На странице носителя резервных копий теперь доступен параметр **URL-адрес** для отображения файлов резервных копий, размещенных в службе хранилища больших двоичных объектов Windows Azure. Также необходимо указать учетные данные SQL, которые используются для проверки подлинности учетной записи хранения. После этого сетка **Резервные наборы данных для восстановления** заполняется всеми резервными копиями, доступными в хранилище больших двоичных объектов Windows Azure. Дополнительные сведения см. в статье [Restoring from Windows Azure storage Using SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS).  
   
 ### <a name="optimizing-restores"></a>Оптимизация восстановления  
  Чтобы снизить время восстановления, добавьте учетной записи пользователя SQL Server право **Выполнение задач по обслуживанию томов** . Дополнительные сведения см. в разделе [Инициализация файлов базы данных](http://go.microsoft.com/fwlink/?LinkId=271622). Если при включенной быстрой инициализации файлов операция восстановления по-прежнему идет медленно, посмотрите размер файла журнала для экземпляра, где была создана резервная копия базы данных. Если размер журнала очень большой (несколько ГБ), то ожидается, что восстановление будет идти медленно. Во время восстановления файл журнала необходимо обнулить, что занимает значительное количество времени.  
   
- Для сокращения времени восстановления, рекомендуется использовать сжатые резервные копии.  Для резервных копий, чей размер превышает 25 ГБ, используйте [служебную программу AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) для загрузки на локальный привод и для последующего выполнения восстановления. За дополнительными рекомендациями относительно резервных копий, обратитесь к [Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
+ Для сокращения времени восстановления, рекомендуется использовать сжатые резервные копии.  Для резервных копий, чей размер превышает 25 ГБ, используйте [служебную программу AzCopy](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) для загрузки на локальный привод и для последующего выполнения восстановления. За дополнительными рекомендациями относительно резервных копий, обратитесь к [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md).  
   
  Также при выполнении восстановления можно включить флаг трассировки 3051, что приведет к формированию подробного журнала. Этот файл журнала помещается в каталог журнала и получает имя формата: BackupToUrl-\<имя_экземпляра>-\<имя_БД>-action-\<идентификатор_процесса>.log. В файле журнала сохраняются сведения о каждом обмене данными с хранилищем Windows Azure, включая время операции, что может быть полезно при диагностике проблемы.  
   
@@ -62,4 +60,3 @@ ms.lasthandoff: 06/22/2017
 -   [Поэтапное восстановление (SQL Server)](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   
-

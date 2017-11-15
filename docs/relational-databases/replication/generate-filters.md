@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.newpubwizard.generatefilters.f1
+f1_keywords: sql13.rep.newpubwizard.generatefilters.f1
 ms.assetid: be28515c-5d6d-467b-b933-d7c8d97a45b4
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb5b6b1e20308a8a249e12437cdfee573899fbac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 2aa276ac1c58809cb97ef0ce002de76db32e1fa3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="generate-filters"></a>Формирование фильтров
   Диалоговое окно **Формирование фильтров** позволяет определить фильтр строк на одной таблице в публикации слиянием. Далее репликация автоматически распространяет фильтр на другие таблицы, связанные через связи внешних ключей. Например, если фильтр определяется на таблице заказчика таким образом, чтобы в результате фильтрации оставались только данные о французских заказчиках, репликация распространяет этот фильтр таким образом, что соответствующие заказы и таблицы с подробностями заказов будут содержать только данные, относящиеся к французским заказчикам.  

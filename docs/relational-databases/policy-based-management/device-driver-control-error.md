@@ -5,24 +5,21 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Best Practices [Database Engine]
+helpviewer_keywords: Best Practices [Database Engine]
 ms.assetid: 7101d77a-84ca-4c00-af1c-17679234e9fb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f7a14c7c37edb39e6ca5f9f9fe685ab57dae42d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 36f3952128e8c2b0476a3b5647263410d395561e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="device-driver-control-error"></a>Ошибка управления драйвером устройства
   Это правило проверяет журнал системных событий на наличие события с идентификатором EventId 11. Ошибка может быть вызвана повреждением драйвера устройства, проблемой оборудования, неисправностью кабельных подключений или соединения.  
@@ -35,4 +32,3 @@ ms.lasthandoff: 06/22/2017
 -   [Статья 154690 базы знаний Майкрософт](http://go.microsoft.com/fwlink/?linkid=117747)  
   
   
-

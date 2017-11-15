@@ -5,8 +5,7 @@ ms.date: 03/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +17,16 @@ helpviewer_keywords:
 - modifying replication properties, publications
 - publications [SQL Server replication], modifying
 ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25672cad6198647ca7e24eb924796740ce20c264
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 78c385fbef819baf5a3f4b1508fc6d58b6464df6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="view-and-modify-publication-properties"></a>Просмотр и изменение свойств публикации
   В данном разделе описывается процесс просмотра и изменения свойств публикации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO.  
@@ -156,27 +155,27 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-view-or-modify-properties-of-a-snapshot-or-transactional-publication"></a>Просмотр или изменение свойств публикации моментальных снимков или публикации транзакций  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication>, установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, а также установите созданное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.TransPublication> , установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
+3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли заданное значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes> свойству <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> , используется логический оператор AND (**&** в Microsoft Visual C# и **And** в Microsoft Visual Basic). С помощью операторов включающего логического OR (**|** в Visual C# и **Or** в Visual Basic) и исключающего логического OR (**^** в Visual C# и **Xor** в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение**&** свойству **And** , используется логический оператор AND ( <xref:Microsoft.SqlServer.Replication.PublicationAttributes> в Microsoft Visual C# и <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> в Microsoft Visual Basic). С помощью операторов включающего логического ИЛИ (**|** в Visual C# и **Or** в Visual Basic) и исключающего логического ИЛИ (**^** в Visual C# и **Xor** в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> в Microsoft Visual Basic).  
   
-5.  (Необязательно.) Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **true**, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>, чтобы зафиксировать значения на сервере. Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **false** (используется по умолчанию), изменения отправляются на сервер немедленно.  
+5.  Если для свойства **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 #### <a name="to-view-or-modify-properties-of-a-merge-publication"></a>Просмотр или изменение свойств публикации слиянием  
   
-1.  Установите соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
+1.  Создайте соединение с издателем с помощью класса <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication>, установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>, а также установите созданное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>.  
+2.  Создайте экземпляр класса <xref:Microsoft.SqlServer.Replication.MergePublication> , установите для публикации свойства <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> и <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> , а также установите созданное на шаге 1 соединение в качестве значения свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> .  
   
-3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A>. Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
+3.  Чтобы получить свойства объекта, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Если этот метод возвращает **false**, то либо на шаге 2 были неверно определены свойства публикации, либо публикация не существует.  
   
-4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли заданное значение <xref:Microsoft.SqlServer.Replication.PublicationAttributes> в <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>, используется логический оператор AND (**&** в Visual C# и **And** в Visual Basic). С помощью операторов включающего логического OR (**|** в Visual C# и **Or** в Visual Basic) и исключающего логического OR (**^** в Visual C# и **Xor** в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>.  
+4.  Чтобы изменить свойства, задайте новые значения для устанавливаемых свойств (необязательно). Чтобы определить, присвоено ли данное значение**&** в Visual C# и **And** , используется логический оператор AND ( <xref:Microsoft.SqlServer.Replication.PublicationAttributes> в Microsoft Visual C# и <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> в Microsoft Visual Basic). С помощью операторов включающего логического ИЛИ (**|** в Visual C# и **Or** в Visual Basic) и исключающего логического ИЛИ (**^** в Visual C# и **Xor** в Visual Basic) измените значения <xref:Microsoft.SqlServer.Replication.PublicationAttributes> для свойства <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> в Microsoft Visual Basic).  
   
-5.  (Необязательно.) Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **true**, вызовите метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>, чтобы зафиксировать значения на сервере. Если для свойства <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> вы указали значение **false** (используется по умолчанию), изменения отправляются на сервер немедленно.  
+5.  Если для свойства **P:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, то для фиксирования изменений на сервере необходимо вызвать метод <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> (необязательно). Если для свойства **false** в параметре <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (по умолчанию), изменения будут отправлены на сервер немедленно.  
   
 ###  <a name="PShellExample"></a> Примеры (объекты RMO)  
  В этом примере устанавливаются атрибуты публикации для публикации транзакций. Изменения кэшируются до тех пор, пока явно не отправляются на сервер.  

@@ -1,28 +1,25 @@
 ---
 title: "Подключение к серверу (страница входа) для ядра СУБД | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.connecttosqlserver.login.f1
+f1_keywords: sql13.swb.connecttosqlserver.login.f1
 ms.assetid: e08cfbc3-bed5-4401-a13b-1c66d902fe32
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 9c2ff0db7548aac98efa15c701bd283368512ea4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/15/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: a5d251082f7a98a075593274d34d600556dca1f3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>Соединение с сервером (страница "Вход") ядра СУБД
 Используйте эту вкладку для просмотра или задания параметров при соединении с [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)]. В большинстве случаев при подключении в поле **Имя сервера** нужно ввести имя компьютера, на котором расположена база данных, а затем нажать кнопку **Соединить**. При подключении к именованному экземпляру укажите имя компьютера, введите обратную косую черту, а затем — имя экземпляра. Например, `mycomputer\myinstance`. Если выполняется соединение с [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], введите имя компьютера, а после него — **\sqlexpress**.  
@@ -87,4 +84,3 @@ ms.lasthandoff: 08/15/2017
 Щелкните, чтобы открыть вкладки **Свойства соединения** и **Дополнительные параметры соединения**.  
    
   
-

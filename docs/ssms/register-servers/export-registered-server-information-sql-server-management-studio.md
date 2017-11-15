@@ -5,28 +5,25 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.exportregisteredservers.f1
+f1_keywords: sql13.swb.exportregisteredservers.f1
 helpviewer_keywords:
 - Registered Servers [SQL Server], exporting
 - exporting registered server information
 - transferring registered server information
 ms.assetid: b65e168f-b6bf-489c-b8ad-3b8644acf0b6
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 384095b7fc904f9e8d57cb3d71a1bd074900c86a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: e58cdf697a3bc2dc1f34eb4c3a486afcf33820e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Выполнение экспорта сведений компонента «Зарегистрированные серверы» (среда SQL Server Management Studio)
   В этом разделе описывается, как сохранить и экспортировать сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]и передать их другим сотрудникам и на другие серверы. Данную возможность экспорта можно использовать для создания согласованного пользовательского интерфейса на нескольких компьютерах.  
@@ -66,4 +63,3 @@ ms.lasthandoff: 07/31/2017
  [Создание нового зарегистрированного сервера (среда SQL Server Management Studio)](../../tools/sql-server-management-studio/create-a-new-registered-server-sql-server-management-studio.md)  
   
   
-

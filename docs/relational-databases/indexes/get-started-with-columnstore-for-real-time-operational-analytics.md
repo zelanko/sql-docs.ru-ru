@@ -1,26 +1,24 @@
 ---
 title: "Начало работы с Columnstore для получения операционной аналитики в реальном времени | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e032da9604178eb356de35448eb5d53a9d663214
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: a67a7a405fc46996a1db1f3abdee5d948d080f63
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Начало работы с Columnstore для получения операционной аналитики в реальном времени
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -206,7 +204,7 @@ CREATE NONCLUSTERED COLUMNSTORE index t_colstor_cci on t_colstor (accountkey, ac
 -   **Рабочая нагрузка со вставками и запросами**. Если основная часть рабочей нагрузки связана со вставкой и запросом данных, для параметра COMPRESSION_DELAY рекомендуется использовать значение по умолчанию — 0. Новые строки будут сжиматься после вставки 1 миллиона строк в отдельную разностную группу строк.  
     Примерами такой рабочей нагрузки являются: (а) обычные рабочие нагрузки хранилища данных, (б) анализ навигации, когда требуется проанализировать данные о щелчках мышью в веб-приложении.  
   
--   **Рабочая нагрузка OLTP** . При интенсивной рабочей нагрузке DML (например, ресурсоемком сочетании операций Update, Delete и Insert) можно определить фрагментацию индекса columnstore, проверив DMV sys. dm_db_column_store_row_group_physical_stats. Если вы видите, что более 10 % строк будут в недавно сжатых группах строк помечены как удаленные, можно использовать параметр COMPRESSION_DELAY, чтобы отсрочить сжатие этих строк. Например, если вновь вставленные для рабочей нагрузки данные остаются "горячими" (т. е. многократно обновляются), скажем, в течение 60 минут, необходимо выбрать COMPRESSION_DELAY равным 60.  
+-   **Рабочая нагрузка OLTP** . При интенсивной рабочей нагрузке DML (например, ресурсоемком сочетании операций Update, Delete и Insert) можно определить фрагментацию индекса columnstore, проверив DMV sys. dm_db_column_store_row_group_physical_stats. Если вы видите, что более 10 % строк будут в недавно сжатых группах строк помечены как удаленные, можно использовать параметр COMPRESSION_DELAY, чтобы отсрочить сжатие этих строк. Например, если вновь вставленные для рабочей нагрузки данные остаются "горячими" (т. е. многократно обновляются), скажем, в течение 60 минут, необходимо выбрать COMPRESSION_DELAY равным 60.  
   
  Предполагается, что большинству пользователей никаких действий выполнять не потребуется. Им подойдет и значение COMPRESSION_DELAY по умолчанию.  
 Опытным пользователям рекомендуется выполнить приведенный ниже запрос и собирать данные о проценте удаленных строк за последние 7 дней.  
@@ -221,7 +219,7 @@ WHERE object_id = object_id('FactOnlineSales2')
 ORDER BY created_time DESC  
 ```  
   
- Если число удаленных строк в сжатых группах строк превышает 20 %, выполнив выравнивание в старых группах строк с вариативностью менее 5 % (называются холодными), задайте COMPRESSION_DELAY равным (youngest_rowgroup_created_time — current_time). Помните, что такой подход лучше всего работает для стабильной и сравнительно однородной рабочей нагрузки.  
+ Если число удаленных строк в сжатых группах строк превышает 20 %, выполнив выравнивание в старых группах строк с вариативностью менее 5 % (называются холодными), задайте COMPRESSION_DELAY равным (youngest_rowgroup_created_time — current_time). Помните, что такой подход лучше всего работает для стабильной и сравнительно однородной рабочей нагрузки.  
   
 ## <a name="see-also"></a>См. также:  
  [Руководство по индексам columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)   
@@ -231,4 +229,3 @@ ORDER BY created_time DESC
  [Дефрагментация индексов columnstore](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
-

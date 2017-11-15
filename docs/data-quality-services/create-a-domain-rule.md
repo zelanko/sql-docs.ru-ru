@@ -5,25 +5,23 @@ ms.date: 11/08/2011
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dqs.dm.testdomainrule.f1
 - sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.openlocfilehash: edc83accaccc4eeee09c73ca8535a758fd9cd98e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-a-domain-rule"></a>Создание правила домена
   В этом разделе описывается, как создать правило домена в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Правило домена — это условие, которое используется для проверки, исправления и стандартизации значений домена. Правило домена должно выполняться в домене, чтобы значения домена были точными и соответствовали требованиям бизнеса. Правила домена могут включать правила проверки, которые используются для проверки значений домена, а не для исправления данных в проектах служб DQS. Правила включают также правила стандартизации, которые применяются в отношении допустимых данных и служат для исправления данных.  
@@ -42,12 +40,12 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Запуск клиентского приложения Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте или создайте базу знаний. Выберите операцию **Управление доменами** , а затем нажмите кнопку **Открыть** или **Создать**. Дополнительные сведения см. в разделе [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) или [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+2.  На главном экране клиента [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] откройте или создайте базу знаний. Выберите операцию **Управление доменами** , а затем нажмите кнопку **Открыть** или **Создать**. Дополнительные сведения см. в разделе [Создание базы знаний](../data-quality-services/create-a-knowledge-base.md) или [Открытие базы знаний](../data-quality-services/open-a-knowledge-base.md).  
   
     > [!NOTE]  
     >  Управление доменами осуществляется на странице клиента службы Data Quality Services, которая содержит пять вкладок для отдельных операций управления доменом. Это не процесс, управляемый мастером; любая операция управления может быть выполнена отдельно.  
   
-3.  В области **Список доменов** страницы **Управление доменами** выберите домен, для которого необходимо создать правило домена, или создайте новый домен. Если нужно создать новый домен, см. раздел [Create a Domain](../data-quality-services/create-a-domain.md).  
+3.  В области **Список доменов** страницы **Управление доменами** выберите домен, для которого необходимо создать правило домена, или создайте новый домен. Если нужно создать новый домен, см. раздел [Создать домен](../data-quality-services/create-a-domain.md).  
   
 4.  Перейдите на вкладку **Правила домена** .  
   
@@ -137,4 +135,3 @@ ms.lasthandoff: 09/09/2017
 |Значение не соответствует регулярному выражению|Допустимыми считаются только значения, которые не соответствуют регулярному выражению, указанному в операнде.|Пример операнда: [1-5]+ (строка не должна содержать только цифры от 1 до 5)<br /><br /> Допустимые значения: 456, ABC<br /><br /> Недопустимое значение: 123, 123456, 14352|  
   
   
-

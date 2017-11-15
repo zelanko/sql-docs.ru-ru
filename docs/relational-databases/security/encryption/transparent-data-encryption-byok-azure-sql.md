@@ -9,22 +9,19 @@ manager: cguyer
 editor: 
 ms.assetid: 
 ms.service: sql-database
-ms.custom:
-- security
+ms.custom: security
 ms.workload: Inactive
 ms.tgt_pltfrm: 
 ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.translationtype: HT
-ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
-ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/16/2017
-
---- 
-
+ms.openlocfilehash: 35e51899bda60ccb5b176de0a3d7fabcc86faad7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
+---
 # <a name="transparent-data-encryption-with-bring-your-own-key-support-for-azure-sql-database-and-data-warehouse"></a>Прозрачное шифрование данных с поддержкой использования собственных ключей для базы данных и хранилища данных SQL Azure
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -159,4 +156,3 @@ TDE с поддержкой BYOK обеспечивает следующие п�
 - Начините использовать поддержку BYOK для TDE: [Turn on TDE using your own key from Key Vault using PowerShell](transparent-data-encryption-byok-azure-sql-configure.md) (Включение TDE с использованием собственного ключа из Key Vault с помощью PowerShell).
 - Узнайте, как заменить средство защиты TDE сервера в соответствии с требованиями безопасности: [Rotate the Transparent Data Encryption protector Using PowerShell](transparent-data-encryption-byok-azure-sql-key-rotation.md) (Смена средства защиты прозрачного шифрования данных с помощью PowerShell).
 - Узнайте, как удалить потенциально скомпрометированное средство защиты TDE в случае угрозы безопасности, изучив [эту статью](transparent-data-encryption-byok-azure-sql-remove-tde-protector.md). 
-

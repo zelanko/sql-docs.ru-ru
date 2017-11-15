@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - failover [SQL Server], database mirroring
 - database mirroring [SQL Server], failover
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e49ab29353985dc5e3de035b7a67da9928412c23
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.openlocfilehash: 1e6c0b04fcc7b143bcdba71cb6e015f47f7f6717
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)
   В контексте сеанса зеркального отображения базы данных роли основного и зеркального серверов обычно взаимозаменяемы посредством так называемого *переключения ролей*. Во время переключения ролей зеркальный сервер играет роль *партнера по обеспечению отработки отказа* для основного сервера, принимая роль основного сервера и переводя свою копию базы данных в оперативное состояние в качестве новой основной базы данных. Когда бывший основной сервер входит в строй, он принимает роль зеркального, и его база данных становится новой зеркальной базой данных. Возможно многократное переключение ролей либо в ответ на многочисленные ошибки, либо в целях администрирования.  
@@ -325,4 +323,3 @@ ms.lasthandoff: 08/02/2017
  [Состояния зеркального отображения (SQL Server)](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
   
   
-

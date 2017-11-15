@@ -5,8 +5,7 @@ ms.date: 02/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - Distribution Agent, parameter reference
 - command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: e2e028fb7c3c1849bd65495725bcf9edf66c0a81
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="replication-distribution-agent"></a>Агент распространения репликации
   Агент распространения репликации перемещает моментальный снимок (для репликации моментальных снимков или транзакций) и транзакции, находящиеся в таблицах базы данных распространителя (для репликации транзакций), в целевые таблицы на подписчиках.  
@@ -187,7 +186,7 @@ distrib [-?]
  **-LoginTimeOut** *login_time_out_seconds*  
  Время ожидания входа в секундах. Значение по умолчанию составляет **15** секунд.  
   
- **-MaxBcpThreads** *number_of_threads*  
+ **-MaxBcpThreads** *число_потоков*  
  Указывает число операций массового копирования, которые можно проводить параллельно. Максимальное число потоков и соединений ODBC, которые существуют одновременно, равно меньшему из **MaxBcpThreads** и числа запросов на массовое копирование, которые появляются в транзакции синхронизации в базе данных распространителя. Значение**MaxBcpThreads** должно быть больше **0** и не имеет жестко запрограммированного максимума. Значение по умолчанию равно числу процессоров, умноженному на **2** . Максимальное значение равно **8**. Применение моментального снимка, созданного в издателе в режиме одновременного моментального снимка, производится в один поток, независимо от значения, указанного в параметре **MaxBcpThreads**.  
   
  **-MaxDeliveredTransactions** *number_of_transactions*  
@@ -275,7 +274,7 @@ distrib [-?]
  Определяет тип подписки для распространения. Значение **0** указывает на подписку по запросу, значение **1** — на принудительную подписку, а значение **2** — на анонимную подписку.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- Указывает интервал транзакций для регистрации журналов. Сообщение записывается в журнал, как только число зафиксированных транзакций после последней записи в журнал превысило значение этого параметра. Значение по умолчанию — 100. **0** означает бесконечное значение **TransactionsPerHistory**. See the preceding **–MessageInterval**parameter.  
+ Указывает интервал транзакций для регистрации журналов. Сообщение записывается в журнал, как только число зафиксированных транзакций после последней записи в журнал превысило значение этого параметра. Значение по умолчанию — 100. **0** означает бесконечное значение **TransactionsPerHistory**. См. предыдущий параметр **-MessageInterval**.  
   
  **-UseDTS**  
  Должен быть указан в качестве параметра для публикации, для которой разрешено преобразование данных.  
@@ -303,4 +302,3 @@ distrib [-?]
  [Администрирование агента репликации](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
-

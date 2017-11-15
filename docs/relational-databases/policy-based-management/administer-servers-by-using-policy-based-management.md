@@ -5,8 +5,7 @@ ms.date: 08/12/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - facets [Policy-Based Management], about facets
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: f980a3c0022592582d9df62fd81b179a7f1dc7a4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Администрирование серверов с помощью управления на основе политик
    Управление на основе политик — это система, основанная на политиках, для управления одним или несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте его для создания условий, содержащих выражения условия. Затем создайте политики, применяющие условия к целевым объектам базы данных.  
@@ -126,4 +124,3 @@ ms.lasthandoff: 09/27/2017
  [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   
-

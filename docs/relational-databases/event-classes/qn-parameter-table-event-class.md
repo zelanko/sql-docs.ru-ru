@@ -5,24 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- event classes [SQL Server], QN:Parameter Table
+helpviewer_keywords: event classes [SQL Server], QN:Parameter Table
 ms.assetid: 292da1ed-4c7e-4bd2-9b84-b9ee09917724
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1a75387fdf24da1eb90c09fd8603b0c67f7b067d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: e19fa279cda3a65a610d0de8d08129f27e3ab0e4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="qnparameter-table-event-class"></a>Класс событий QN:Parameter Table
   Событие QN:Parameter Table возвращает сведения об операциях, необходимых для создания, поддержания счетчиков ссылок и удаления внутренних таблиц, в которых хранятся сведения о параметрах. Это событие также возвращает сведения о внутренней активности, позволяя сбросить счетчик использования таблицы параметров.  
@@ -53,4 +50,3 @@ ms.lasthandoff: 06/22/2017
 |TextData|**ntext**|Возвращает XML-документ, содержащий сведения, специфические для этого события. Этот документ соответствует XML-схеме, доступной на странице [Схема событий приложения SQL Server Query Notification Profiler](http://go.microsoft.com/fwlink/?LinkId=63331) .|1|Да|  
   
   
-

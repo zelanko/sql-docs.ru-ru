@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parameter queries [SQL Server]
+helpviewer_keywords: parameter queries [SQL Server]
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1d7b5cf2ad2bd8c96f98892334e76b076dbb16a7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: e27bce5dd7beddbe1ed41881c311be47aaff4c78
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Запросы с параметрами (визуальные инструменты для баз данных)
 В некоторых случаях нужно создать запрос, который можно использовать многократно, на каждый раз с разными значениями. Например: можно часто запускать запрос, чтобы найти все `title_ids` , записанные одним автором, можно выполнять один запрос для каждого поиска, меняя только идентификатор автора.  
@@ -74,4 +71,3 @@ WHERE au_fname = %first name% AND
 [Поддерживаемые типы запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
-

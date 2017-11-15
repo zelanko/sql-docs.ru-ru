@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - manual joins [SQL Server]
 - joins [SQL Server], self
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a44398daffbf1ab25f52430d2b27a0e822427db1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 830f65d92ec3c8b96a57944b044f6ef61303e5b6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Создание самосоединения вручную (визуальные инструменты для баз данных)
 Самосоединение таблицы может быть создано даже в случае отсутствия рефлексивной связи таблица — база данных. Например, самосоединение может быть использовано для извлечения сведений о парах авторов, живущих в одном городе.  
@@ -133,4 +131,3 @@ Cheryl Carson       Abraham Bennet
 [Автоматическое создание самосоединения (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
 [Запросы с соединениями (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - removing tables
 - dropping tables
 ms.assetid: 11afcfa1-816b-419c-9bc7-3abf366f4c3c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f12c61a883c8a0c190a13e4b2ae35ff7188156ff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 376a4251ebf017f657da06551f51d88acf4581aa
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>Удаление таблиц из диаграмм базы данных (визуальные инструменты для баз данных)
 Можно удалить таблицу из диаграммы базы данных. Удаление таблицы не изменяет базу данных. Таблица и ее связи с другими таблицами продолжают существовать в базе данных.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/18/2017
 [Работа с диаграммами баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [Практическое руководство: удаление таблиц из базы данных (визуальные инструменты для баз данных)](http://msdn.microsoft.com/en-us/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   
-

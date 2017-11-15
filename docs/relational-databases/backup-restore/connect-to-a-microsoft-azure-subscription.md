@@ -5,22 +5,20 @@ ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-backup-restore
+ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6db65c242dc6dd9fd1c6c910d583d026f45422c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: d975f8d04025f3bcfc07b72a1437d6337f2a0bb6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Соединение с подпиской Microsoft Azure
 Параметр **Соединиться с подпиской Майкрософт** используется для регистрации существующего контейнера больших двоичных объектов в экземпляре SQL Server.  С помощью параметров, приведенных в диалоговом окне, в контейнере больших двоичных объектов будет создан подписанный URL-адрес и политика подписанных URL-адресов, после чего будут созданы учетные данные SQL Server.  Это диалоговое окно открывается при использовании задачи резервного копирования или восстановления в SQL Server Management Studio. Для выполнения операции требуется URL-адрес устройства.
@@ -49,4 +47,3 @@ ms.lasthandoff: 06/22/2017
 
 **Создать учетные данные**   
 Кнопка для создания политики подписанных URL-адресов и подписанного URL-адреса и последующего создания учетных данных SQL Server.
-

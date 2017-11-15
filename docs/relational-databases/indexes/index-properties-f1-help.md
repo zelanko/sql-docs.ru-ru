@@ -5,8 +5,7 @@ ms.date: 02/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-indexes
+ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,16 +17,16 @@ f1_keywords:
 - sql13.swb.indexproperties.options.f1
 - sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1b84819194aa25b50259293aaf56ccca9c68b1f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="index-properties-f1-help"></a>Справка F1 свойств индекса
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -175,7 +174,7 @@ ms.lasthandoff: 06/22/2017
 >  Этот параметр недоступен для XML-индексов, а также в случае, если индекс является отключенным кластеризованным индексом.  
   
  **Укажите максимальную степень параллелизма**  
- Ограничивает число процессоров, используемых в одновременном исполнении планов. При значении по умолчанию 0 используется реальное число доступных ЦП. При установке значения 1 создание параллельных планов становится невозможным; при установке значения больше 1 ограничивается максимальное число процессоров, используемых для выполнения одного запроса. Этот параметр становится доступным только в случае, если диалоговое окно находится в состоянии **Перестроение** или **Повторное создание** . Дополнительные сведения см. в статье [Задание параметра максимальной степени параллелизма для оптимальной производительности](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
+ Ограничивает число процессоров, используемых в одновременном исполнении планов. При значении по умолчанию 0 используется реальное число доступных ЦП. При установке значения 1 создание параллельных планов становится невозможным; при установке значения больше 1 ограничивается максимальное число процессоров, используемых для выполнения одного запроса. Этот параметр становится доступным только в случае, если диалоговое окно находится в состоянии **Перестроение** или **Повторное создание** . Дополнительные сведения см. в статье [Set the Max Degree of Parallelism Option for Optimal Performance](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md).  
   
 > [!NOTE]  
 >  Если задано значение, превышающее число доступных ЦП, используется фактическое число доступных ЦП.  
@@ -250,4 +249,3 @@ ms.lasthandoff: 06/22/2017
  [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
-

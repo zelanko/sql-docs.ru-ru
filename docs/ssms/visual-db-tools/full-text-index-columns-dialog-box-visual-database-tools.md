@@ -5,24 +5,21 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vdt.dlgbox.fulltextcolumn
+f1_keywords: vdt.dlgbox.fulltextcolumn
 ms.assetid: a6f41c5c-d950-4d64-9e42-d062925917b6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b88b6ec8c86c16709b9fd22f1ef93f0c32b4f10c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.openlocfilehash: 2caff225677243f4e6d8e6286268ec645ef274c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы полнотекстовых индексов» (визуальные инструменты для баз данных)
 В этом диалоговом окне приводится список столбцов, участвующих в полнотекстовом индексе для таблицы, открытой в конструкторе таблиц. Чтобы открыть это диалоговое окно, щелкните правой кнопкой мыши таблицу в конструкторе таблиц, выберите **Полнотекстовой индекс**и в диалоговом окне **Полнотекстовой индекс** выберите индекс, который нужно просмотреть или отредактировать. После этого щелкните поле **Столбцы** в сетке справа и нажмите кнопку с многоточием (**…**).  
@@ -50,4 +47,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Диалоговое окно "Полнотекстовый индекс" (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md)  
   
-

@@ -5,8 +5,7 @@ ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - server-level roles [SQL Server]
 - authentication [SQL Server], roles
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: edmacauley
 ms.author: edmaca
 manager: cguyer
 ms.workload: Active
-ms.translationtype: HT
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f4f99b8869aca02d63b5aacaa883ce501e332ea7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.openlocfilehash: 1fb77447fa5eff29fc917569d221a6897fd6106d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-level-roles"></a>Роли уровня сервера
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -60,7 +58,7 @@ ms.lasthandoff: 07/31/2017
 |**bulkadmin**|Элементы предопределенной роли сервера **bulkadmin** могут выполнять инструкцию `BULK INSERT`.|  
 |**diskadmin**|Предопределенная роль сервера **diskadmin** используется для управления файлами на диске.|  
 |**dbcreator**|Члены предопределенной роли сервера **dbcreator** могут создавать, изменять, удалять и восстанавливать любые базы данных.|  
-|**public**|Каждое имя для входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] принадлежит к роли сервера **public**. Если для участника на уровне сервера не были предоставлены или запрещены конкретные разрешения на защищаемый объект, он наследует разрешения роли public на этот объект. Разрешения роли public следует назначать только тому объекту, который будет доступен всем пользователям. Нельзя изменить членство в роли public.<br /><br /> **Примечание.** Роль **public** реализуется не так, как другие роли. В разрешениях может быть отказано, они могут предоставляться либо отменяться для предопределенных ролей public.|  
+|**public**|Каждое имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] принадлежит к роли сервера **public**. Если для участника на уровне сервера не были предоставлены или запрещены конкретные разрешения на защищаемый объект, он наследует разрешения роли public на этот объект. Разрешения роли public следует назначать только тому объекту, который будет доступен всем пользователям. Нельзя изменить членство в роли public.<br /><br /> **Примечание.** Роль **public** реализуется не так, как другие роли; разрешения могут предоставляться, запрещаться или отменяться из открытых предопределенных ролей сервера.|  
   
 ## <a name="permissions-of-fixed-server-roles"></a>Разрешения Предопределенных Ролей Сервера  
  Каждая предопределенная роль сервера обладает определенными разрешениями, назначенными ей. На следующем рисунке показаны разрешения, назначенные ролям сервера.   
@@ -106,4 +104,3 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
  [Создание роли сервера](../../../relational-databases/security/authentication-access/create-a-server-role.md)  
   
   
-

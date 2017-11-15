@@ -5,23 +5,21 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- DTCTransaction event class
+helpviewer_keywords: DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a7832dce3ed058f5ddd599fd19abd9703b20ff06
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 1141977cd68380ba94848a510a21ccf540bf8889
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction, класс событий
   Используйте класс событий **DTCTransaction** для контроля состояния транзакций компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , координируемых с помощью координатора распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Сюда входят транзакции, задействующие две или более баз данных на одном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], или распределенные транзакции, задействующие несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

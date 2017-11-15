@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - performance [SQL Server replication], merge replication
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd62d43d9f77f0baf63487c15381e07814eea63d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 6589d1fc212f1169fa645fdb9c02ac9627597ef7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="enhance-merge-replication-performance"></a>Повышение производительности репликации слиянием
   После рассмотрения советов по повышению общей производительности, описанных в разделе [Увеличение общей производительности репликации](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), ознакомьтесь с этими дополнительными сведениями, относящимися к репликации слиянием.  
@@ -152,4 +150,3 @@ ms.lasthandoff: 06/22/2017
      Для репликации слиянием монитор репликации отображает подробную статистику на вкладке **Журнал синхронизации** для каждой статьи, обработанной в процессе синхронизации, включая время, затраченное на каждую стадию обработки (передача изменений, загрузка изменений и т. д.). С помощью монитора репликации можно обнаружить особые таблицы, вызывающие замедление, к тому же, в мониторе репликации удобно устранять проблемы, связанные с производительностью подписок на публикацию слиянием. Дополнительные сведения о просмотре подробной статистики см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
   
-
