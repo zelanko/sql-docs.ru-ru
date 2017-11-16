@@ -1,14 +1,19 @@
 ---
 title: "Запросы PolyBase | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: polybase
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-polybase
+ms.suite: sql
+ms.technology:
+- database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords: PolyBase
+keywords:
+- PolyBase
 helpviewer_keywords:
 - PolyBase, import and export
 - Hadoop, import with PolyBase
@@ -16,19 +21,20 @@ helpviewer_keywords:
 - Azure blob storage, import with PolyBase
 - Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1aec3348d0df5e52f2381206966d3e5053c4c9b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d6cc1b4523bdb0b48cfc22b34b205e15613fb290
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="polybase-queries"></a>PolyBase Queries
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Здесь приведены примеры запросов, в которых применяется компонент [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md) службы SQL Server 2016. Прежде чем использовать эти запросы, следует ознакомиться с инструкциями T-SQL, необходимыми для установки PolyBase. (Дополнительные сведения см. в статье [Объекты T-SQL PolyBase](../../relational-databases/polybase/polybase-t-sql-objects.md).)  
   
@@ -68,7 +74,7 @@ ORDER BY SensorData.Speed DESC
 ### <a name="pushdown-for-selecting-a-subset-of-rows"></a>Включение выбора подмножества строк  
  Включение предиката позволяет повысить производительность для запроса, отбирающего подмножество строк из внешней таблицы.  
   
- Здесь SQL Server 2016 инициирует задание map-reduce для получения строк, соответствующих предикату customer.account_balance < 200000 в Hadoop. Поскольку запрос может быть выполнен и без сканирования всех строк в таблице, в SQL Server копируются только строки, удовлетворяющие условиям предиката. Это существенно экономит время и место для временного хранения данных, если число клиентов с балансом < 200 000 меньше числа клиентов с балансом >= 200 000.  
+ Здесь SQL Server 2016 инициирует задание map-reduce для получения строк, соответствующих предикату customer.account_balance < 200000 в Hadoop. Поскольку запрос может быть выполнен и без сканирования всех строк в таблице, в SQL Server копируются только строки, удовлетворяющие условиям предиката. Это существенно экономит время и место для временного хранения данных, если число клиентов с балансом < 200 000 меньше числа клиентов с балансом >= 200 000.  
   Copy imageCopy Code   
 SELECT * FROM customer WHERE customer.account_balance < 200000.  
   
@@ -191,3 +197,4 @@ SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'
  Дополнительные сведения об устранении неполадок см. в статье [Устранение неполадок с PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md).  
   
   
+

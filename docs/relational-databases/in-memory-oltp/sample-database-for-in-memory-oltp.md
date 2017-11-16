@@ -2,25 +2,31 @@
 title: "Пример базы данных для выполняющейся в памяти OLTP | Документация Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e133c38f2944735282d8a8eca76dbab481538105
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9f9957d4c83ce351e49224fcd2bc499a5aa777dd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>Пример базы данных для выполняющейся в памяти OLTP
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
     
 ## <a name="overview"></a>Обзор  
  Этот пример демонстрирует возможности выполняющейся в памяти OLTP. Он показывает оптимизированные для памяти таблицы и скомпилированные в собственном коде хранимые процедуры. С его помощью можно также продемонстрировать преимущества выполняющейся в памяти OLTP.  
@@ -44,7 +50,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Использование памяти и места на диске образцом](#MemoryandDiskSpaceUtilizationintheSample)  
   
-##  <a name="Prerequisites"></a> Предварительные требования  
+##  <a name="Prerequisites"></a> Prerequisites  
   
 -   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
@@ -81,7 +87,7 @@ ms.lasthandoff: 11/09/2017
   
 3.  Чтобы просмотреть примеры скриптов и рабочей нагрузки, распакуйте файл SQLServer2016CTP3Samples.zip в папку на компьютере. Инструкции по запуску рабочей нагрузки см. в файле In-Memory OLTP\readme.txt.  
   
-##  <a name="Descriptionofthesampletablesandprocedures"></a> Описание образцов таблиц и процедур  
+##  <a name="Descriptionofthesampletablesandprocedures"></a> Description of the sample tables and procedures  
  Образец создает новые таблицы для продуктов и заказов на продажу на основе существующих в базе данных AdventureWorks таблиц. Схема новых таблиц похожа на схему существующих таблиц, а несколько различий в схемах описаны далее.  
   
  Новые оптимизированные для памяти таблицы имеют суффикс «_inmem». В образце также есть соответствующие таблицы с суффиксом «_ondisk» — эти таблицы можно использовать для сравнения «один к одному» между производительностью оптимизированных для памяти таблиц и таблиц на диске в системе.  
@@ -148,7 +154,7 @@ ms.lasthandoff: 11/09/2017
   
 -   *Вычисляемые столбцы[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Вычисляемые столбцы SalesOrderNumber и TotalDue пропускаются, так как*  не поддерживает вычисляемые столбцы в оптимизированных для памяти таблицах. Новое представление Sales.vSalesOrderHeader_extended_inmem отражает столбцы SalesOrderNumber и TotalDue. Поэтому при необходимости в этих столбцах можно использовать это представление.  
 
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 вычисляемые столбцы поддерживаются в оптимизированных для памяти таблицах и индексах.
 
   
@@ -431,7 +437,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
  Рекомендуется выполнять сброс после каждого выполнения. Поскольку рабочая нагрузка состоит только из вставки, каждое выполнение будет потреблять больше памяти, поэтому необходимо выполнять сброс, чтобы не задействовать всю память. Количество используемой после запуска памяти описывается в разделе [Использование памяти после выполнения рабочей нагрузки](#Memoryutilizationafterrunningtheworkload).  
   
-###  <a name="Troubleshootingslow-runningtests"></a> Устранение неполадок тестов, которые выполняются медленно  
+###  <a name="Troubleshootingslow-runningtests"></a> Troubleshooting slow-running tests  
  Результаты теста, как правило, зависят от оборудования и уровня параллелизма во время его выполнения. Необходимо проверить несколько моментов, если результаты отличаются от ожидаемых.  
   
 -   Число одновременно выполняемых транзакций. При выполнении рабочей нагрузки в одном потоке с использованием выполняющейся в памяти OLTP производительность возрастет, скорее всего, менее чем в два раза. Конфликты кратковременных блокировок становятся большой проблемой только при высоком уровне параллелизма.  
@@ -447,7 +453,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
 ##  <a name="MemoryandDiskSpaceUtilizationintheSample"></a> Использование памяти и места на диске образцом  
  Ниже описано, что следует ожидать в отношении использования памяти и места на диске для образца базы данных. Также приводятся результаты, отмеченные на тестовом сервере с 16 логическими ядрами.  
   
-###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Использование памяти оптимизированными для памяти таблицами  
+###  <a name="Memoryutilizationforthememory-optimizedtables"></a> Memory utilization for the memory-optimized tables  
   
 #### <a name="overall-utilization-of-the-database"></a>Общее использование базы данных  
  Следующий запрос может быть использован для получения общей загрузки памяти для системы выполняющейся в памяти OLTP.  
@@ -500,7 +506,7 @@ WHERE t.type='U'
   
  Поразительнее всего здесь размер памяти, выделенной для индексов, в сравнении с размером данных таблиц. Причина этого заключается в том, что размер индексов HASH в образце задан для данных большего объема. Обратите внимание, что индексы HASH имеют фиксированный размер, поэтому их размер не будет расти вместе с размером данных в таблице.  
   
-####  <a name="Memoryutilizationafterrunningtheworkload"></a> Использование памяти после выполнения рабочей нагрузки  
+####  <a name="Memoryutilizationafterrunningtheworkload"></a> Memory utilization after running the workload  
  После вставки 10 миллионов заказов на продажу общий объем использованной памяти будет примерно таким:  
   
 ```  
@@ -770,7 +776,8 @@ ORDER BY state, file_type
  В этом случае будет две пары файлов контрольных точек в состоянии «в разработке», а это означает, что несколько пар файлов были перемещены в состояние «в разработке», вероятнее всего из-за высокого уровня параллелизма в рабочей нагрузке. Нескольким параллельным потокам одновременно потребовалась новая пара файлов, из-за чего пара была переведена из состояния «создана заранее» в состояние «в разработке».  
   
 ## <a name="see-also"></a>См. также  
- [Выполняющаяся в памяти OLTP (оптимизация в памяти)](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+ [Выполняющаяся в памяти OLTP &#40;оптимизация в памяти&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+
 

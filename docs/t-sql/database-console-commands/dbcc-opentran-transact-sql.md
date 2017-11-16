@@ -1,7 +1,7 @@
 ---
 title: "Инструкция DBCC OPENTRAN (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-opentran-transact-sql"></a>DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Инструкция DBCC OPENTRAN помогает определить активные транзакции, которые могут препятствовать усечению журнала. Инструкция DBCC OPENTRAN отображает сведения о самой старой активной транзакции и о самых старых реплицированных транзакциях, распределенных и нераспределенных, если таковые имеются в журнале транзакций указанной базы данных. Результаты отображаются только при наличии активной транзакции, которая приведена в журнале, или в случае, если в базе данных имеются сведения о репликации. Если в журнале нет активных транзакций, отображается информационное сообщение.
   

@@ -2,26 +2,31 @@
 title: "Размер строк и таблицы для таблиц, оптимизированных для памяти | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine-imoltp
+ms.suite: sql
+ms.technology:
+- database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: caa1851ca33c49b0199cfa76589d278ec8974a95
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Размер строк и таблицы для таблиц, оптимизированных для памяти
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   До выхода [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] размер данных "в строке" для таблицы, оптимизированной для памяти, не мог превышать [8060 байт](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). Но в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и более поздних версиях, а также в базе данных SQL Azure появилась возможность создать таблицу, оптимизированную для памяти, с несколькими большими столбцами (например, несколькими столбцами varbinary(8000)) и столбцами LOB (т. е. varbinary(max), varchar(max) и nvarchar(max)), и выполнять с ними операции, используя типы таблиц и модули T-SQL, скомпилированные в собственном коде. 
   
@@ -249,3 +254,4 @@ where object_id = object_id('dbo.Orders')
  [Таблицы, оптимизированные для памяти](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+
