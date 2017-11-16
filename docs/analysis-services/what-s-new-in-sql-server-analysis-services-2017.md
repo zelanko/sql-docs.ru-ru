@@ -1,9 +1,13 @@
 ---
 title: "Новые возможности служб Analysis Services SQL Server 2017 г. | Документы Microsoft"
 ms.date: 10/27/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - analysis-services
 ms.topic: article
