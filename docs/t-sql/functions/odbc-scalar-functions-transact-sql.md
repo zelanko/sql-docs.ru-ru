@@ -3,8 +3,11 @@ title: "Скалярные функции ODBC (Transact-SQL) | Документ
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -64,7 +67,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>Скалярные функции ODBC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Можно использовать [скалярные функции ODBC](http://go.microsoft.com/fwlink/?LinkID=88579) в [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции. Эти инструкции интерпретируются средой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Они могут использоваться в хранимых процедурах и других определяемых пользователем функциях. Они включают строковые, числовые и системные функции, а также функции даты, времени и интервалов.  
   

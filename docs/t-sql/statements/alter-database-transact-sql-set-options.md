@@ -1,12 +1,14 @@
 ---
 title: "ИЗМЕНИТЬ параметры SET базы данных (Transact-SQL) | Документы Microsoft"
 description: "Дополнительные сведения о том, как задать параметры базы данных, например автоматической настройки, шифрование хранилища запросов в SQL Server и базы данных SQL Azure"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +42,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL) 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   В данном разделе приведен синтаксис инструкции ALTER DATABASE, связанный с установкой параметров базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для других Синтаксис инструкции ALTER DATABASE в следующих разделах.  
   

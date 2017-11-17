@@ -1,12 +1,13 @@
 ---
 title: "FLUSHAUTHCACHE DBCC (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 07/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>FLUSHAUTHCACHE DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Очищает кэш проверки подлинности базы данных, содержащий сведения об именах входа и правила брандмауэра, для текущей базы данных пользователя в [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Этот оператор неприменим логической базе данных master, так как база данных master содержит физическое хранилище для информации об именах входа и правила брандмауэра. Пользователь, выполняющий инструкцию и других пользователей, подключенных оставались подключенными. (DBCC FLUSHAUTHCACHE в настоящее время не поддерживается для [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
  

@@ -3,8 +3,11 @@ title: "OPENQUERY (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Выполняет указанный передаваемый запрос к указанному связанному серверу. Этот сервер является источником данных OLE DB. Из предложения FROM запроса можно ссылаться на функцию OPENQUERY как на имя таблицы. На функцию OPENQUERY можно также ссылаться как на целевую таблицу инструкции INSERT, UPDATE или DELETE. Это зависит от возможностей поставщика OLE DB. Запрос может возвратить несколько результирующих наборов, но функция OPENQUERY возвращает только первый.  
   

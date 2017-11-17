@@ -3,8 +3,11 @@ title: "Предложение OUTPUT (Transact-SQL) | Документы Micros
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -43,7 +46,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="output-clause-transact-sql"></a>Предложение OUTPUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает данные из строк, изменившихся в результате выполнения инструкций INSERT, UPDATE, DELETE или MERGE, или выражения на основе этих данных. Эти результаты могут быть возвращены приложению, например для вывода подтверждающих сообщений, архивирования и т. п. Результаты также могут быть вставлены в таблицу или табличную переменную. Кроме того, можно записать результаты предложения OUTPUT во вложенных инструкциях INSERT, UPDATE, DELETE или MERGE и вставить эти результаты в целевую таблицу или представление.  
   

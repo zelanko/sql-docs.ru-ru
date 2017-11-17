@@ -3,8 +3,11 @@ title: "BREAK (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="break-transact-sql"></a>BREAK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Выполняет выход из самого внутреннего цикла в инструкции WHILE или из инструкции IF...ELSE в цикле WHILE. Выполняется любая инструкция, находящаяся сразу после ключевого слова END, обозначающего конец цикла. Часто, но не всегда, ключевое слово BREAK встречается после проверки условия инструкции IF.  
   

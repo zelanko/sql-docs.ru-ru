@@ -3,8 +3,11 @@ title: "Создание СЕЛЕКТИВНОГО XML-ИНДЕКСА (Transact-S
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-selective-xml-index-transact-sql"></a>CREATE SELECTIVE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   Создает новый селективный XML-индекс для указанной таблицы и XML-столбца. Селективные XML-индексы повышают производительность индексирования и выполнения XML-запросов, индексируя только подмножества узлов, к которым обычно выполняются запросы. Кроме того, вы можете создавать вторичные селективные XML-индексы. Сведения см. в разделе [Create, Alter и Drop вторичного селективного XML-индексы](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md).  
   

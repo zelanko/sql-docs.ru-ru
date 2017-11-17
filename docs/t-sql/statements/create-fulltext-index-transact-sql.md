@@ -3,8 +3,11 @@ title: "CREATE FULLTEXT INDEX (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 04/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает полнотекстовый индекс по таблице или индексированному представлению в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для таблицы или индексированного представления допускается только один полнотекстовый индекс, а каждый полнотекстовый индекс применяется только к одной таблице или индексированному представлению. Полнотекстовый индекс может содержать не более 1024 столбцов.  
   

@@ -3,8 +3,11 @@ title: "Инструкция RAISERROR (Transact-SQL) | Документы Micro
 ms.custom: 
 ms.date: 02/21/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -41,7 +44,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="raiserror-transact-sql"></a>Инструкция RAISERROR, Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Создает сообщение об ошибке и запускает обработку ошибок для сеанса. Инструкция RAISERROR может либо ссылаться на определенное пользователем сообщение, хранящееся в представлении каталога sys.messages динамически создавать сообщение. Это сообщение возвращается как сообщение об ошибке сервера вызывающему приложению или соответствующему блоку CATCH конструкции TRY…CATCH. Новые приложения должны использовать [THROW](../../t-sql/language-elements/throw-transact-sql.md) вместо него.  
   

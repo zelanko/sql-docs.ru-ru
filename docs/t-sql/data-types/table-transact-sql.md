@@ -3,8 +3,11 @@ title: "Table (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Специальный тип данных, который может быть использован для хранения результирующего набора для обработки в будущем. **Таблица** в основном используется для временного хранения набора строк, возвращаемых как результирующий набор функции, возвращающие табличные значения. Функции и переменные могут быть объявлены с типом **таблицы**. **Таблица** переменные могут использоваться в функциях, хранимых процедур и пакетов. При объявлении переменных типа **таблицы**, используйте [DECLARE @local_variable ](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   

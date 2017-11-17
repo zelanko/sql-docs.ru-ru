@@ -3,8 +3,11 @@ title: "InstanceOf (тип данных geometry) | Документы Microsoft
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Метод, который проверяет, может ли **geometry** экземпляра совпадает с указанным типом. Возвращает 1, если тип **geometry** экземпляра совпадает со значением указанного типа, или если указанный тип является предком типа экземпляра; в противном случае возвращает 0.
   

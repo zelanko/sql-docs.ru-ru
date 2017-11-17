@@ -3,9 +3,11 @@ title: "Создание TABLE AS SELECT (хранилище данных Azure 
 ms.custom: 
 ms.date: 10/07/2016
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>Создание TABLE AS SELECT (хранилище данных Azure SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Создание таблицы AS ВЫБЕРИТЕ (CTAS) является одним из наиболее важных функций T-SQL, которые доступны. Это полностью Параллелизованный операцию, которая создает новые таблицы, основанной на выходных данных инструкции SELECT. CTAS является простой и быстрый способ создать копию таблицы.   
  

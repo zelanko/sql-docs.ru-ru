@@ -3,8 +3,11 @@ title: "Параметры инструкции ALTER файл базы данн
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -54,7 +57,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE (Transact-SQL) файла и файловой группы 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Изменяет файлы и файловые группы, связанные с базой данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Добавляет или удаляет файлы и файловые группы из базы данных и изменяет атрибуты базы данных или ее файлов и файловых групп. Для других параметров инструкции ALTER DATABASE. в разделе [инструкции ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
   

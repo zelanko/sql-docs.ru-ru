@@ -3,8 +3,11 @@ title: "@@CURSOR_ROWS (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/18/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="x40x40cursorrows-transact-sql"></a>& #x 40; & #x 40; CURSOR_ROWS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает число выбранных строк, имеющихся в последнем открытом курсоре в данном соединении. Для повышения производительности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может выполнять заполнение большого набора ключей и статических курсоров асинхронно. @@CURSOR_ROWS можно вызвать, чтобы определить, что количество строк, определенных для курсора получено во время вызова @@CURSOR_ROWS вызывается.
   

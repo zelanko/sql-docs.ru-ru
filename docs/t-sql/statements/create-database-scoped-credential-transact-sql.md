@@ -3,8 +3,11 @@ title: "Создание учетных данных области базы д�
 ms.custom: 
 ms.date: 02/27/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>Создание учетных данных области базы данных (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Создает учетные данные базы данных. Учетные данные базы данных не сопоставляется сервера имя входа или пользователя базы данных. Учетные данные базы данных используется для доступа к внешнее расположение, каждый раз, когда выполняет операции, требующие доступа к базе данных.  
   

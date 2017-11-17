@@ -3,8 +3,11 @@ title: "Метод Modify() (тип данных xml) | Документы Micro
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="modify-method-xml-data-type"></a>Метод modify() (тип данных xml)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Изменяет содержимое XML-документа. Этот метод используется для изменения содержимого **xml** переменной или столбце типа. Этот метод использует DML-инструкцию языка XML для вставки, обновления и удаления узлов из данных XML. **Modify()** метод **xml** тип данных может использоваться только в предложении SET инструкции UPDATE.  
   

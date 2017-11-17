@@ -1,11 +1,13 @@
 ---
 title: "OPENJSON (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - dbe-json
 ms.tgt_pltfrm: 
@@ -31,7 +33,7 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 **OPENJSON** является табличная функция, которая выполняет синтаксический анализ текста JSON и возвращает объекты и свойства из входных данных JSON в виде строк и столбцов. Другими словами **OPENJSON** предоставляет представления наборов строк документа JSON. Можно явно указать столбцы в наборе строк и пути к свойствам JSON, используемый для заполнения столбцов. Поскольку **OPENJSON** возвращает набор строк, можно использовать **OPENJSON** в `FROM` предложения [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции так же, как можно использовать таблицу, представление или табличную функцию.  
   

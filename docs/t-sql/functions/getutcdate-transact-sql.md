@@ -3,8 +3,11 @@ title: "GETUTCDATE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 12/02/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Возвращает текущую отметку времени базы данных системы как **datetime** значение. Смещение часового пояса базы данных не включается. Это значение представляет текущее время в формате UTC (по Гринвичу). Это значение наследуется от операционной системы компьютера, на котором работает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

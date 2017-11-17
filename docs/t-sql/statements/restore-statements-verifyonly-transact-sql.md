@@ -3,8 +3,11 @@ title: "RESTORE VERIFYONLY (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>Инструкции - RESTORE VERIFYONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Проверяет, но не восстанавливает резервную копию, а также проверяет полноту резервного набора данных и возможность его считывания. Однако инструкция RESTORE VERIFYONLY не проверяет структуру данных, содержащихся в томах резервной копии. В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], инструкция RESTORE VERIFYONLY была расширена для проведения дополнительной проверки данных для увеличения вероятности обнаружения ошибок. Цель — приблизиться к настоящей операции восстановления, насколько это возможно. Дополнительные сведения см. в разделе «Примечания».  
   

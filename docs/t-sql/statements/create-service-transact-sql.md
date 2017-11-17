@@ -3,8 +3,11 @@ title: "Создание службы (Transact-SQL) | Документы Micros
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Создает новую службу. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] — это имя конкретной задачи или набора бизнес-задач. Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] использует имя службы для маршрутизации сообщений, доставки сообщений в нужную очередь в базе данных и принудительного соблюдения контракта для диалога.  
   

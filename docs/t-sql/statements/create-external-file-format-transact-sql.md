@@ -3,8 +3,11 @@ title: "СОЗДАЙТЕ ФОРМАТ ВНЕШНЕГО файла (Transact-SQL)
 ms.custom: 
 ms.date: 08/29/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-external-file-format-transact-sql"></a>СОЗДАЙТЕ ФОРМАТ ВНЕШНЕГО файла (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Создает определение формата внешнего файла PolyBase для внешних данных, хранящимся в Hadoop, хранилище больших двоичных объектов или хранилища Озера данных Azure. Создание формата внешних файлов является необходимым условием для создания внешней таблицы PolyBase. При создании формата внешнего файла, укажите фактическая структура данных, ссылается ли таблица внешней.  
   

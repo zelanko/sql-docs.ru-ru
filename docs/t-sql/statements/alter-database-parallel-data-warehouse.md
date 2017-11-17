@@ -3,8 +3,11 @@ title: "ALTER DATABASE (Parallel Data Warehouse) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>Инструкции ALTER DATABASE (параллельное хранилище данных)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Изменяет параметры максимальный размер для реплицированных таблиц, распределенных таблиц и журнала транзакций в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Эта инструкция предназначена для управления выделение места на диске для базы данных, как его при увеличении или уменьшении размера.  
   

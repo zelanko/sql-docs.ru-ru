@@ -3,9 +3,11 @@ title: "Создание ВНЕШНЕГО TABLE AS SELECT (Transact-SQL) | До�
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse, pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>Создание ВНЕШНЕГО TABLE AS SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Создает внешнюю таблицу и затем, в параллельном режиме, результаты экспортируются [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции SELECT в BLOB-объекта хранилища Azure или Hadoop.  
   

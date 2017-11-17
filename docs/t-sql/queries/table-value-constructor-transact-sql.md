@@ -3,8 +3,11 @@ title: "Таблицы конструктор значений (Transact-SQL) | 
 ms.custom: 
 ms.date: 08/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="table-value-constructor-transact-sql"></a>Конструктор табличных значений (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Задает набор выражений значений строк, которые будут использоваться для создания таблицы. Конструктор табличных значений [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет указать в одной инструкции DML несколько строк данных. Конструктор табличных значений могут быть указаны в предложении VALUES инструкции INSERT в использование \<исходной таблицы > Предложение инструкции MERGE и в определении производной таблицы в предложении FROM.  
   

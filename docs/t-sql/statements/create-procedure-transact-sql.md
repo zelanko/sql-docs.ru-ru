@@ -3,8 +3,11 @@ title: "CREATE PROCEDURE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 09/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -58,7 +61,7 @@ ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Создает [!INCLUDE[tsql](../../includes/tsql-md.md)] или общеязыковая среда выполнения (CLR) хранимой процедуры в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], хранилище данных SQL Azure и параллельных хранилищ данных. Хранимые процедуры похожи на процедуры из других языков программирования в том, что они могут:  
   

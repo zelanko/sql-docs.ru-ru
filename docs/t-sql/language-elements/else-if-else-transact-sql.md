@@ -3,8 +3,11 @@ title: "ELSE (IF... ELSE) (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Задает условия для выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[tsql](../../includes/tsql-md.md)] Инструкции (*sql_statement*) следующие *Boolean_expression*выполняется, если *Boolean_expression* имеет значение TRUE. Необязательное ключевое слово ELSE позволяет указать альтернативную [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, которая выполняется при *Boolean_expression* равно FALSE или NULL.  
   

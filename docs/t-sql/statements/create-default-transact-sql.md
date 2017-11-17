@@ -3,8 +3,11 @@ title: "CREATE DEFAULT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 11/25/2015
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает объект «Значение по умолчанию». Если этот объект привязан к столбцу или псевдониму типа данных, он указывает значение, которое должно вставляться в столбец (или во все столбцы в случае псевдонима типа данных), если при вставке значение не задано явно.  
   

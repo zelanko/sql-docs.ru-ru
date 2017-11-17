@@ -2,9 +2,13 @@
 title: "INSERT (SQL граф) | Документы Microsoft"
 description: "ВСТАВЬТЕ синтаксис SQL Graph узла или края таблицы."
 ms.date: 05/12/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -27,9 +31,8 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/01/2017
 
 ---
-
 # <a name="insert-sql-graph"></a>INSERT (граф SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Добавляет одну или несколько строк для `node` или `edge` в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 

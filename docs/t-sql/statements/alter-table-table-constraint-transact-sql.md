@@ -3,8 +3,11 @@ title: "table_constraint (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/05/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>Table_constraint ALTER TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Указывает первичный ключ, UNIQUE, FOREIGN KEY, ограничение CHECK или определение DEFAULT, добавляемой в таблицу с помощью свойства [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   

@@ -3,9 +3,11 @@ title: "Создание УДАЛЕННОГО TABLE AS SELECT (Parallel Data War
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: 
+ms.prod_service: pdw
 ms.reviewer: 
 ms.service: sql-data-warehouse
-ms.suite: 
+ms.component: t-sql|statements
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -24,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>Создание УДАЛЕННОГО TABLE AS SELECT (параллельное хранилище данных)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Выбирает данные из [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] базы данных и копирует их в новую таблицу в SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных на удаленном сервере. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]использует устройство, со всеми преимуществами MPP обработки запросов, чтобы выбрать данные для удаленной копии. Использовать в сценариях, требующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] функциональные возможности.  
   

@@ -3,8 +3,11 @@ title: "STIsClosed (тип данных geography) | Документы Microsof
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает 1, если начальную и конечную точки заданного **geography** экземпляра одинаковы. Возвращает значение 1 для **geography** типы коллекций, если каждый содержащийся **geography** экземпляр закрыт. Возвращает значение 0, если экземпляр является незамкнутым.  
   

@@ -3,8 +3,11 @@ title: "ToString (компонент Database Engine) | Документы Micro
 ms.custom: 
 ms.date: 7/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="tostring-database-engine"></a>ToString (компонент Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает строку с логическим представлением объекта *это*. ToString вызывается неявно при преобразовании из **hierarchyid** в строку типа происходят. Действие противоположно из [синтаксический анализ &#40; компонент Database Engine &#41;](../../t-sql/data-types/parse-database-engine.md).
   

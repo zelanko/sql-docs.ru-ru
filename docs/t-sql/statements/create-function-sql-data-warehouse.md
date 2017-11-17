@@ -3,8 +3,11 @@ title: "Создание функции (хранилище данных SQL) | 
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-function-sql-data-warehouse"></a>Создание функции (хранилище данных SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Создает определяемую пользователем функцию в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Определяемая пользователем функция является [!INCLUDE[tsql](../../includes/tsql-md.md)] подпрограмму, которая принимает параметры, выполняет действия, такие как сложные вычисления и возвращает результат этого действия в качестве значения. Возвращаемое значение должно быть скалярное значение (одно). При помощи этой инструкции можно создать подпрограмму, которую можно повторно использовать следующими способами.  
   

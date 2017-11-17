@@ -3,8 +3,11 @@ title: "CAST и CONVERT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 09/08/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -47,7 +50,7 @@ ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 Преобразует выражение одного типа данных в другой.  
 Например следующие примеры изменить входным типом данных в двух других типов данных, с разными уровнями точности.

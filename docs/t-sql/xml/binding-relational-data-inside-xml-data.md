@@ -3,8 +3,11 @@ title: "Привязка реляционных данных внутри XML-д
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -32,7 +35,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Привязка реляционных данных внутри XML-данных
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Можно указать [методы типа данных xml](../../t-sql/xml/xml-data-type-methods.md) от **xml** переменной или столбце типа данных. Например [запрос &#40; &#41; Метод &#40; тип данных xml &#41; ](../../t-sql/xml/query-method-xml-data-type.md) выполняет заданный запрос XQuery к экземпляру XML. При построении XML таким способом может понадобиться ввести значение их столбца с типом данных, отличным от XML или переменной Transact-SQL. Данный процесс называется привязкой реляционных данных внутри XML.  
   

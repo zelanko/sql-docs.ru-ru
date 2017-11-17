@@ -3,8 +3,11 @@ title: "Создание ПРОСТРАНСТВЕННОГО ИНДЕКСА (Tran
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -35,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает пространственный индекс на указанной таблице и столбце в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Индекс может быть создан до появления данных в таблице. Можно создать индексы для таблиц или представлений в другой базе данных, если указать полное имя этой базы данных. Для создания пространственного индекса необходимо, чтобы у таблицы был кластеризованный первичный ключ. Сведения о пространственных индексах см. в разделе [Общие сведения о пространственных индексах](../../relational-databases/spatial/spatial-indexes-overview.md).  
   

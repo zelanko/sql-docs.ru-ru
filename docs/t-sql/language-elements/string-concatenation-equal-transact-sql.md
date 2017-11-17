@@ -3,8 +3,11 @@ title: "+= (Объединение строк) (Transact-SQL) | Документ
 ms.custom: 
 ms.date: 12/07/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -29,7 +32,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="string-concatenation---equal-transact-sql"></a>Объединение строк — равно (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Объединяет две строки и присваивает строке результат этой операции. Например, если переменная @x равно 'Adventure', затем @x += 'Works' принимает исходное значение @x, добавляет в строку 'Works' и задает @x новое значение «AdventureWorks».  
   

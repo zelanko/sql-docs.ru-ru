@@ -3,8 +3,11 @@ title: "CUME_DIST (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="cumedist-transact-sql"></a>CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
 Вычисляет совокупное распределение значения в группе значений в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. То есть CUME_DIST вычисляет относительное положение указанного значения в группе значений. Для строки *r*, исходя из восходящего порядка сортировки, cume_dist значения *r* — количество строк со значениями, меньшими или равными значению *r*, деленный на число строк вычисляются секции или результирующем наборе запроса. Функция CUME_DIST подобна функции PERCENT_RANK.
   

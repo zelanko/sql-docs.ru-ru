@@ -3,8 +3,11 @@ title: "EVENTDATA (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -37,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="eventdata-transact-sql"></a>EVENTDATA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Возвращает сведения о событиях сервера или базы данных. Функция EVENTDATA вызывается при уведомлении о событии, а результаты ее работы возвращаются указанному компоненту Service Broker. Кроме того, ее можно использовать в теле триггера DDL или триггера входа.  
   

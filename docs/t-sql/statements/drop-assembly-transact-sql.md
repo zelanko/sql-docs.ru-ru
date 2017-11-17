@@ -1,11 +1,13 @@
 ---
 title: "DROP сборки (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Удаляет сборку и все связанные с ней файлы из текущей базы данных. Сборки создаются с помощью [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) и изменяются с помощью [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
   

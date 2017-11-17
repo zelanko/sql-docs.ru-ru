@@ -3,8 +3,11 @@ title: "Предикаты | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -34,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="predicates"></a>Предикаты
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Любое выражение, результатом которого являются значения TRUE, FALSE или UNKNOWN. Предикаты используются в условиях поиска [ГДЕ](../../t-sql/queries/where-transact-sql.md) предложений и [HAVING](../../t-sql/queries/select-having-transact-sql.md) предложений, в условиях соединения [FROM](../../t-sql/queries/from-transact-sql.md) предложений и других конструкциях, где — логическое значение Обязательно.  
   

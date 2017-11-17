@@ -3,8 +3,11 @@ title: "Типы данных (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 9/13/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -27,9 +30,8 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/27/2017
 
 ---
-
 # <a name="data-types-transact-sql"></a>Типы данных (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] у каждого столбца, локальной переменной, выражения и параметра есть определенный тип данных. Тип данных — атрибут, определяющий, какого рода данные могут храниться в объекте: целые числа, символы, данные денежного типа, метки времени и даты, двоичные строки и так далее.
   

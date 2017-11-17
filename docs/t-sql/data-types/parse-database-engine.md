@@ -3,8 +3,11 @@ title: "Parse (компонент Database Engine) | Документы Microsof
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="parse-database-engine"></a>Parse (компонент Database Engine)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Метод Parse преобразует каноническое представление строки **hierarchyid** для **hierarchyid** значение. Синтаксический анализ вызывается неявно при преобразовании из строкового типа в **hierarchyid** происходит. Действие противоположно из [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() является статическим методом.
   

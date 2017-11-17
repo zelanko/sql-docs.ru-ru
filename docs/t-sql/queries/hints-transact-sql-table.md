@@ -3,8 +3,11 @@ title: "Табличные указания (Transact-SQL) | Документы 
 ms.custom: 
 ms.date: 08/31/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -49,7 +52,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hints-transact-sql---table"></a>Указания (Transact-SQL) - таблица
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Табличные подсказки переопределяют поведение оптимизатора запросов по умолчанию на время выполнения инструкции языка обработки данных (DML) указанием способа блокировки, одного или более индексов, операции обработки запроса, например просмотра таблицы или поиска в индексе, или других параметров. Табличные указания задаются в предложении FROM инструкции DML и относятся только к таблицам и представлениям, на которые ссылается это предложение.  
   

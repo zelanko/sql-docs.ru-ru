@@ -3,8 +3,11 @@ title: "STAsText (тип данных geometry) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/03/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -30,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (тип данных geometry)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
 Возвращает представление Open Geospatial Consortium (OGC) Well-Known Text (WKT) **geometry** экземпляра. Этот текст не будет содержать значений Z (высота) и M (мера), сопровождающих экземпляр.
   

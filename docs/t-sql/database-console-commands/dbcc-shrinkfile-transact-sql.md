@@ -3,8 +3,11 @@ title: "Инструкция DBCC SHRINKFILE (Transact-SQL) | Документы
 ms.custom: 
 ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +45,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Сокращает размер указанного файла данных или журнала для текущей базы данных или освобождает файл, перемещая данные из указанного файла в другие файлы из той же файловой группы, разрешая удаление файла из базы данных. Можно сжать файл до размера, который будет меньше, чем размер, указанный во время его создания. В результате будет установлено новое значение минимального размера файла.
   

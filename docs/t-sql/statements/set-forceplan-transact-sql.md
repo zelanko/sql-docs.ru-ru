@@ -3,8 +3,11 @@ title: "Инструкция SET FORCEPLAN (Transact-SQL) | Документы M
 ms.custom: 
 ms.date: 07/26/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -36,7 +39,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="set-forceplan-transact-sql"></a>SET FORCEPLAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Если параметр FORCEPLAN установлен в значение ON, оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обрабатывает соединение в порядке появления таблиц в предложении FROM запроса. Кроме того, при установке параметра FORCEPLAN в значение ON принудительно используется вложенный цикл соединения, если для построения плана запроса не требуются другие типы соединений или же они запрашиваются с указаниями соединений или запросов.  
   

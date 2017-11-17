@@ -3,8 +3,11 @@ title: "Флаги трассировки (Transact-SQL) | Документы Mi
 ms.custom: 
 ms.date: 07/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - флаги трассировки (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Флаги трассировки используются для временной установки определенных характеристик сервера или отключения определенного режима. Например, если флаг трассировки 3205 установлен при запуске экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то отключается режим аппаратного сжатия для ленточных накопителей. Флаги трассировки часто используются для диагностики проблем, связанных с производительностью, отладки хранимых процедур или сложных компьютерных систем.
   

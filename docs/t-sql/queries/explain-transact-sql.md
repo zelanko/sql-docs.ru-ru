@@ -3,8 +3,11 @@ title: "ОБЪЯСНЯЕТСЯ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/09/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="explain-transact-sql"></a>ОБЪЯСНЯЕТСЯ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Возвращает план запроса для [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] инструкцию без выполнения инструкции. Используйте **объяснение** Предварительный просмотр операции, которые потребуется перемещение данных и просматривать предполагаемых затрат операций запроса.  
   

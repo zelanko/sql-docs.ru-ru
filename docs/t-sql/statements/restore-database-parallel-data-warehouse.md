@@ -3,8 +3,11 @@ title: "ВОССТАНОВЛЕНИЕ базы данных (Parallel Data Wareho
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>ВОССТАНОВЛЕНИЕ базы данных (параллельное хранилище данных)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Восстанавливает [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] пользовательской базы данных из резервной копии базы данных для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] устройства. База данных восстанавливается из резервной копии, ранее созданным [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] [резервной копии базы данных &#40; Параллельное хранилище данных &#41; ](../../t-sql/statements/backup-database-parallel-data-warehouse.md) команды. Для резервного копирования и восстановления для создания плана аварийного восстановления или переместить базы данных с одного устройства.  
   

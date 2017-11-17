@@ -3,8 +3,11 @@ title: "СОЗДАТЬ тип (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -39,7 +42,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает в текущей базе данных псевдоним типа данных или определяемый пользователем тип в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Реализация псевдонима типа данных основывается на собственном системном типе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Определяемый пользователем тип реализуется с помощью класса сборки в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] общеязыковая среда выполнения (CLR). Чтобы привязать определяемый пользователем тип к его реализации, сборки среды CLR, который содержит реализацию типа сначала должны быть зарегистрированы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md).  
   

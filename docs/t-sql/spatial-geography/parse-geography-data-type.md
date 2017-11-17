@@ -3,8 +3,11 @@ title: "Parse (тип данных geography) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/30/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|spatial-geography
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -28,7 +31,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="parse-geography-data-type"></a>Parse (тип данных geography)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Возвращает **geography** экземпляр из представления Open Geospatial Consortium (OGC) Well-Known Text (WKT). Эквивалентно Parse() [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), за исключением того, что предполагается идентификатор пространственной ссылки (SRID) 4326 как параметр. Входные данные могут дополнительно содержать значения Z (высота) и M (мера).
   

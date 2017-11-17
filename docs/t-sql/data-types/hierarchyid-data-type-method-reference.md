@@ -3,8 +3,11 @@ title: "HierarchyID (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 7/22/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -31,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Справочник по методам типа данных HierarchyID
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 **Hierarchyid** имеет тип данных переменной длины, системный тип данных. Используйте **hierarchyid** для представления позицию в иерархии. Столбец типа **hierarchyid** не принимает древовидную структуру автоматически. Приложение должно создать и назначить значения **hierarchyid** таким образом, чтобы они отражали требуемые связи между строками.
   

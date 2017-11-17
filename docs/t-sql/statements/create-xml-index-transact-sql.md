@@ -3,8 +3,11 @@ title: "Создание XML-ИНДЕКСА (Transact-SQL) | Документы 
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -40,7 +43,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает XML-индекс по заданной таблице. Индекс может быть создан до появления данных в таблице. XML-индексы можно создавать на основе таблиц другой базы данных — для этого нужно указать полное имя базы данных.  
   

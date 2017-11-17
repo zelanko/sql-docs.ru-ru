@@ -1,11 +1,13 @@
 ---
 title: "Создание ключа ШИФРОВАНИЯ СТОЛБЦА (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/18/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -42,7 +44,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Создает ключ шифрования столбца с начальным набором значений, зашифрованных с помощью главных ключей заданного столбца. Это операция с метаданными. Ключ CEK можно иметь до двух значений, позволяющие для смены главного ключа столбца. Создание ключа CEK необходим любого столбца в базе данных могут быть зашифрованы с помощью [постоянного шифрования &#40; компонент Database Engine &#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md) компонентов. Ключ CEK можно также создать с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Перед созданием ключа CEK, необходимо определить Главным с помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) инструкции.  
   

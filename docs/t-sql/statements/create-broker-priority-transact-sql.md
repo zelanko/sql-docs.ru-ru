@@ -3,8 +3,11 @@ title: "СОЗДАТЬ ПРИОРИТЕТ БРОКЕРА (Transact-SQL) | Док
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -38,7 +41,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Задает уровень приоритета и набор критериев для определения диалогов компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], которым нужно назначить уровень приоритета. Уровень приоритета назначается любой конечной точке диалога, который использует то же сочетание контрактов и службы, указанные в приоритете диалога. Приоритеты должны находиться в диапазоне от 1 (низкий) до 10 (высокий). Значение по умолчанию — 5.  
   

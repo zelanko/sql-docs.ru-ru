@@ -3,8 +3,11 @@ title: "Резервное копирование базы данных (Paralle
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>Резервное копирование базы данных (параллельное хранилище данных)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw_md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Создает резервную копию [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] базы данных и сохраняет отключение устройства резервного копирования в сети, определяемый пользователем. Используйте эту инструкцию с [ВОССТАНОВЛЕНИЕ базы данных &#40; Параллельное хранилище данных &#41; ](../../t-sql/statements/restore-database-parallel-data-warehouse.md) для аварийного восстановления или копирования базы данных с одного устройства.  
   

@@ -1,25 +1,31 @@
 ---
 title: "Создание связей по внешнему ключу | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-tables
+ms.suite: sql
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: relationships [SQL Server], creating
+helpviewer_keywords:
+- relationships [SQL Server], creating
 ms.assetid: 867a54b8-5be4-46e6-9702-49ae6dabf67c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: dceb390b232c2c5b074770fbfa07f420a8248097
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: f6d1acfc492d4d2c37bd4e7cfe66a2b95266a80a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="create-foreign-key-relationships"></a>Создание связей по внешнему ключу
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +55,7 @@ ms.lasthandoff: 11/09/2017
     
     -   Таблица со ссылкой внешнего ключа на саму себя по-прежнему ограничена 253 ссылками на внешние ключи.    
     
-    -   Превышение 253 ссылок на внешние ключи в настоящее время недоступно для индексов columnstore, оптимизированных для памяти таблиц или Stretch Database.    
+    -   Превышение 253 ссылок на внешние ключи в настоящее время недоступно для индексов columnstore, оптимизированных для памяти таблиц или базы данных Stretch.    
     
 -   Ограничения FOREIGN KEY не применяются к временным таблицам.    
     
@@ -137,3 +143,4 @@ ms.lasthandoff: 11/09/2017
      Дополнительные сведения см. в разделах [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md) и [table_constraint (Transact-SQL)](../../t-sql/statements/alter-table-table-constraint-transact-sql.md).    
     
   
+

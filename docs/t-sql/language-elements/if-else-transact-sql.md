@@ -3,8 +3,11 @@ title: "IF... ELSE (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/11/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|language-elements
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -33,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="ifelse-transact-sql"></a>IF...ELSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Задает условия для выполнения инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Инструкция языка [!INCLUDE[tsql](../../includes/tsql-md.md)], следующая за ключевым словом IF и его условием, выполняется только в том случае, если логическое выражение возвращает TRUE. Необязательное ключевое слово ELSE представляет другую инструкцию языка [!INCLUDE[tsql](../../includes/tsql-md.md)], которая выполняется, если условие IF не удовлетворяется и логическое выражение возвращает FALSE.  
   
