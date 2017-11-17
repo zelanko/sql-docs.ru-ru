@@ -2,26 +2,31 @@
 title: "Настройка шифрования столбцов с помощью PowerShell | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: powershell
+ms.suite: sql
+ms.technology:
+- powershell
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ac535e20c2782c81b34e33e2f1ba1afe325e821
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: d4a5651f3ef4f8d848253711ed93721f387c016a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-column-encryption-using-powershell"></a>Настройка шифрования столбцов с помощью PowerShell
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 В этой статье описаны шаги по настройке целевой конфигурации постоянного шифрования для столбцов базы данных с помощью командлета [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption) (в модуле *SqlServer* PowerShell). Командлет **Set-SqlColumnEncryption** изменяет схему целевой базы данных и данные, хранящиеся в выбранных столбцах. В зависимости от целевых параметров шифрования, указанных для столбцов и текущей конфигурации шифрования, хранящиеся в столбце данные могут быть зашифрованы, повторно зашифрованы или расшифрованы.
 Дополнительные сведения о поддержке функции Always Encrypted в модуле SqlServer PowerShell см. в статье [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md).
@@ -40,7 +45,7 @@ ms.lasthandoff: 11/09/2017
 
 При использовании режима "вне сети" целевые таблицы (и любые, относящиеся к ним таблицы, например таблицы, имеющие связь с целевой таблицей по внешнему ключу) недоступны для записи транзакций на протяжении операции. Семантика ограничений внешнего ключа (**CHECK** или **NOCHECK**) всегда сохраняется при использовании режима "вне сети".
 
-При использовании режима "в сети" (требуется модуль SqlServer PowerShell из SSMS 21 или более поздней версии) операция копирования и шифрования, расшифровки или повторного шифрования данных выполняется постепенно. Приложения могут считывать данные в целевых таблицах и записывать их в эти таблицы во время выполнения операции перемещения, за исключением последней итерации, длительность которой ограничивается параметром **MaxDownTimeInSeconds** (его можно определить). Приложения могут обнаруживать и обрабатывать изменения во время копирования данных. [Отслеживание изменений](../../track-changes/enable-and-disable-change-tracking-sql-server.md) включается с помощью командлета в целевой базе данных. Поэтому при использовании режима "в сети" на стороне сервера потребляется больше ресурсов. Операции в этом режиме также могут занять гораздо больше времени, в частности при интенсивной записи в базу данных. Режим "в сети" можно использовать для шифрования одной таблицы за раз. При этом она должна содержать первичный ключ. По умолчанию ограничения внешнего ключа создаются повторно с помощью параметра **NOCHECK**, чтобы свести к минимуму воздействие на приложения. Вы можете принудительно задать сохранение семантики ограничений внешнего ключа, указав параметр **KeepCheckForeignKeyConstraints**.
+При использовании режима "в сети" (требуется модуль SqlServer PowerShell 21.x или более поздней версии) операция копирования и шифрования, расшифровки или повторного шифрования данных выполняется постепенно. Приложения могут считывать данные в целевых таблицах и записывать их в эти таблицы во время выполнения операции перемещения, за исключением последней итерации, длительность которой ограничивается параметром **MaxDownTimeInSeconds** (его можно определить). Приложения могут обнаруживать и обрабатывать изменения во время копирования данных. [Отслеживание изменений](../../track-changes/enable-and-disable-change-tracking-sql-server.md) включается с помощью командлета в целевой базе данных. Поэтому при использовании режима "в сети" на стороне сервера потребляется больше ресурсов. Операции в этом режиме также могут занять гораздо больше времени, в частности при интенсивной записи в базу данных. Режим "в сети" можно использовать для шифрования одной таблицы за раз. При этом она должна содержать первичный ключ. По умолчанию ограничения внешнего ключа создаются повторно с помощью параметра **NOCHECK**, чтобы свести к минимуму воздействие на приложения. Вы можете принудительно задать сохранение семантики ограничений внешнего ключа, указав параметр **KeepCheckForeignKeyConstraints**.
 
 Ниже приведены рекомендации по выбору между режимом "в сети" и "вне сети".
 
@@ -154,6 +159,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 - [Настройка постоянного шифрования с помощью PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted (ядро СУБД)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+
 
 
 

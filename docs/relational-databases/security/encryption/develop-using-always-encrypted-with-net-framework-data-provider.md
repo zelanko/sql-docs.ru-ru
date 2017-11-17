@@ -2,26 +2,31 @@
 title: "Разработка с использованием постоянного шифрования с поставщиком данных .NET Framework | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-security
+ms.suite: sql
+ms.technology:
+- dbe-security
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 827e509e-3c4f-4820-aa37-cebf0f7bbf80
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1d4030aecc010d835e8452ff555322e836efde2a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de7909d5b33568c0218b7f9895d36952c7cdd3af
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Разработка с использованием постоянного шифрования с поставщиком данных .NET Framework
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 В этой статье содержатся сведения о разработке приложений .NET с помощью функции [постоянного шифрования](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) и [поставщика данных .NET Framework для SQL Server](https://msdn.microsoft.com/library/kb9s9ks0(v=vs.110).aspx).
 
@@ -573,6 +578,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 - [Always Encrypted (ядро СУБД)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Блог о постоянном шифровании](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 - [Постоянное шифрование: защита конфиденциальных данных в базе данных SQL с помощью шифрования базы данных](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+
 
 
 
