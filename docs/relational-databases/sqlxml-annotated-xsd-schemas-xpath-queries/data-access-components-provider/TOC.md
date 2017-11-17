@@ -1,4 +1,4 @@
-# [SQLXML 4.0 Data Access Components - поставщик SQLXMLOLEDB](sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)
+# [Компоненты доступа к данным SQLXML 4.0 — поставщик SQLXMLOLEDB](sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)
 
 # [Применение преобразования XSL (поставщик SQLXMLOLEDB)](applying-an-xsl-transformation-sqlxmloledb-provider.md)
 # [Выполнение запросов SQL (поставщик SQLXMLOLEDB)](executing-sql-queries-sqlxmloledb-provider.md)
@@ -6,5 +6,5 @@
 # [Выполнение шаблонов, содержащих запросы XPath (поставщик SQLXMLOLEDB)](executing-templates-that-contain-xpath-queries-sqlxmloledb-provider.md)
 # [Выполнение запросов XPath (поставщик SQLXMLOLEDB)](executing-xpath-queries-sqlxmloledb-provider.md)
 # [Выполнение запросов XPath с пространствами имен (поставщик SQLXMLOLEDB)](executing-xpath-queries-with-namespaces-sqlxmloledb-provider.md)
-# [Общие сведения о поставщике SQLXMLOLEDB (SQLXML 4.0)](introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)
+# [Введение в поставщик SQLXMLOLEDB (SQLXML 4.0)](introduction-to-the-sqlxmloledb-provider-sqlxml-4-0.md)
 # [Использование поставщика SQLXMLOLEDB (SQLXML 4.0)](using-the-sqlxmloledb-provider-sqlxml-4-0.md)

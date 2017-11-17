@@ -28,6 +28,8 @@
 ## [Подключение к каталогу служб SSIS в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Планирование выполнения пакета в Azure](lift-shift/ssis-azure-schedule-packages.md)
 ## [Подключения к источникам данных с проверкой подлинности Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
+## [Подключение к файлам и общим папкам](lift-shift/ssis-azure-files-file-shares.md)
+
 # [Установка или обновление](../integration-services/install-windows/install-integration-services.md)
 
 # [Инструменты разработки и управления](integration-services-ssis-development-and-management-tools.md)
@@ -169,3 +171,13 @@
 #### [Занятие 3-1. Копирование пакета развертывания](lesson-3-1-copying-the-deployment-bundle.md)
 #### [Занятие 3-2. Запуск мастера установки пакета](lesson-3-2-running-the-package-installation-wizard.md)
 #### [Занятие 3-3. Тестирование развернутых пакетов](lesson-3-3-testing-the-deployed-packages.md)
+
+# Ресурсы
+## Просмотреть блог
+### [Блог группы разработки служб SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## Получить справку
+### [Форум о службах SSIS на сайте MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Тег служб SSIS на сайте Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## Оставить отзыв
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+## [Получить документы на ПК](../sql-server/sql-server-help-installation.md)

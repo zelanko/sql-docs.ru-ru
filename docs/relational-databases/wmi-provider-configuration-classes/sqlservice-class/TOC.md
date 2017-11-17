@@ -3,7 +3,7 @@
 # [Свойство AdvancedProperties (класс SqlService)](advancedproperties-property-sqlservice-class.md)
 # [Свойство BinaryPath (класс SqlService)](binarypath-property-sqlservice-class.md)
 # [Свойство Clustered (класс SqlService)](clustered-property-sqlservice-class.md)
-# [Свойство dependencies (класс SqlService)](dependencies-property-sqlservice-class.md)
+# [Свойство Dependencies (класс SqlService)](dependencies-property-sqlservice-class.md)
 # [Свойство Description (класс SqlService)](description-property-sqlservice-class.md)
 # [Свойство DisplayName (класс SqlService)](displayname-property-sqlservice-class.md)
 # [Свойство ErrorControl (класс SqlService)](errorcontrol-property-sqlservice-class.md)

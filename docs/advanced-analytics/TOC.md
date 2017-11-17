@@ -153,12 +153,11 @@
 ### [Дополнительные параметры конфигурации для служб машинного обучения](r/configure-and-manage-advanced-analytics-extensions.md)
 ### [Вопросы безопасности для среды выполнения R в SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Изменение пула учетных записей пользователей для служб машинного обучения SQL Server](r/modify-the-user-account-pool-for-sql-server-r-services.md)
-### [Настройка расширений машинного обучения и управление ими](r/configure-and-manage-advanced-analytics-extensions.md)
 
 ### [Развертывание и использование моделей с помощью веб-служб](operationalization-with-mrsdeploy.md)
 ### [Управление решениями машинного обучения и их мониторинг](r/managing-and-monitoring-r-solutions.md)
 ### [Известные проблемы в службах машинного обучения](r/resource-governance-for-r-services.md)
-### [Создание пула ресурсов для R](r/how-to-create-a-resource-pool-for-r.md)
+### [Создание пула ресурсов для машинного обучения](r/how-to-create-a-resource-pool-for-r.md)
 ### [Расширенные события для служб машинного обучения](r/extended-events-for-sql-server-r-services.md)
 
 ### [Представления DMV для служб машинного обучения](r/dmvs-for-sql-server-r-services.md)
@@ -180,7 +179,7 @@
 ### [Добавление R в существующую виртуальную машину](r/installing-sql-server-r-services-on-an-azure-virtual-machine.md)
 ### [Обновление экземпляра с помощью sqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
 ### [Установка R Server из командной строки](r/install-microsoft-r-server-from-the-command-line.md)
-### [Подготовка виртуальной машины обработки и анализа данных](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
+### [Подготовка виртуальной машины обработки и анализа данных предприятия](r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 ### [Настройка средств обработки и анализа данных](r/setup-or-configure-r-tools.md)
 ### [Настройка клиента обработки и анализа данных](r/set-up-a-data-science-client.md)
 

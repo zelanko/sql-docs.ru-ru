@@ -22,7 +22,7 @@
 # Отслеживание изменений
 ## [sys.dm_tran_commit_table](change-tracking-sys-dm-tran-commit-table.md)
 
-# [Общеязыковая среда выполнения](common-language-runtime-related-dynamic-management-views-transact-sql.md)  
+# [Среда CLR](common-language-runtime-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_clr_appdomains](sys-dm-clr-appdomains-transact-sql.md)  
 ## [sys.dm_clr_loaded_assemblies](sys-dm-clr-loaded-assemblies-transact-sql.md)  
 ## [sys.dm_clr_properties](sys-dm-clr-properties-transact-sql.md)  
@@ -108,12 +108,12 @@
 ## [sys.dm_xe_session_targets](sys-dm-xe-session-targets-transact-sql.md)  
 ## [sys.dm_xe_sessions](sys-dm-xe-sessions-transact-sql.md)  
 
-# [FileStream и FileTable](filestream-and-filetable-dynamic-management-views-transact-sql.md)  
+# [Filestream и FileTable](filestream-and-filetable-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_filestream_file_io_handles](sys-dm-filestream-file-io-handles-transact-sql.md)  
 ## [sys.dm_filestream_file_io_requests](sys-dm-filestream-file-io-requests-transact-sql.md)  
 ## [sys.dm_filestream_non_transacted_handles](sys-dm-filestream-non-transacted-handles-transact-sql.md)  
 
-# [Компонент Full-Text Search и семантический поиск](full-text-and-semantic-search-dynamic-management-views-functions.md)  
+# [Семантический поиск и полнотекстовый поиск](full-text-and-semantic-search-dynamic-management-views-functions.md)  
 ## [sys.dm_fts_active_catalogs](sys-dm-fts-active-catalogs-transact-sql.md)  
 ## [sys.dm_fts_fdhosts](sys-dm-fts-fdhosts-transact-sql.md)  
 ## [sys.dm_fts_index_keywords](sys-dm-fts-index-keywords-transact-sql.md)  
@@ -128,7 +128,7 @@
 ## [sys.dm_fts_population_ranges](sys-dm-fts-population-ranges-transact-sql.md)  
 ## [sys.dm_fts_semantic_similarity_population](sys-dm-fts-semantic-similarity-population-transact-sql.md)  
 
-# [Георепликации (база данных Azure SQL)](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+# [Георепликация (база данных SQL Azure)](geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
 ## [sys.geo_replication_links (база данных SQL Azure)](sys-geo-replication-links-azure-sql-database.md)  
 ## [sys.dm_geo_replication_link_status (база данных SQL Azure)](sys-dm-geo-replication-link-status-azure-sql-database.md)  
 ## [sys.dm_continuous_copy_status (база данных SQL Azure)](sys-dm-continuous-copy-status-azure-sql-database.md)  
@@ -145,14 +145,14 @@
 ## [sys.dm_db_missing_index_groups](sys-dm-db-missing-index-groups-transact-sql.md)  
 ## [sys.dm_db_missing_index_group_stats](sys-dm-db-missing-index-group-stats-transact-sql.md)
 
-# [I, O](i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
+# [Ввод-вывод](i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
 ## [sys.dm_io_backup_tapes](sys-dm-io-backup-tapes-transact-sql.md)  
 ## [sys.dm_io_cluster_shared_drives](sys-dm-io-cluster-shared-drives-transact-sql.md)  
 ## [sys.dm_io_pending_io_requests](sys-dm-io-pending-io-requests-transact-sql.md)  
 ## [sys.dm_io_virtual_file_stats](sys-dm-io-virtual-file-stats-transact-sql.md)  
 ## [sys.dm_io_cluster_valid_path_names](sys-dm-io-cluster-valid-path-names-transact-sql.md)
 
-# [Оптимизированные для памяти таблицы](memory-optimized-table-dynamic-management-views-transact-sql.md)  
+# [Таблица, оптимизированная для памяти](memory-optimized-table-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_db_xtp_checkpoint_stats](sys-dm-db-xtp-checkpoint-stats-transact-sql.md)  
 ## [sys.dm_db_xtp_checkpoint_files](sys-dm-db-xtp-checkpoint-files-transact-sql.md)  
 ## [sys.dm_db_xtp_gc_cycle_stats](sys-dm-db-xtp-gc-cycle-stats-transact-sql.md)  
@@ -188,7 +188,7 @@
 # [регулятор ресурсов](resource-governor-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_resource_governor_configuration](sys-dm-resource-governor-configuration-transact-sql.md)  
 ## [sys.dm_resource_governor_external_resource_pool_affinity](sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
-## [представление sys.dm_resource_governor_resource_pool_affinity](sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)  
+## [sys.dm_resource_governor_resource_pool_affinity](sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)  
 ## [sys.dm_resource_governor_resource_pools](sys-dm-resource-governor-resource-pools-transact-sql.md)  
 ## [sys.dm_resource_governor_resource_pool_volumes](sys-dm-resource-governor-resource-pool-volumes-transact-sql.md)  
 ## [sys.dm_resource_governor_workload_groups](sys-dm-resource-governor-workload-groups-transact-sql.md)  
@@ -216,7 +216,7 @@
 
 # Пространственные данные
 ## [sys.dm_db_objects_disabled_on_compatibility_level_change](spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md)  
-# [Хранилище данных SQL и хранилищем Parallel Data](sql-and-parallel-data-warehouse-dynamic-management-views.md)  
+# [Хранилище данных SQL и Parallel Data Warehouse](sql-and-parallel-data-warehouse-dynamic-management-views.md)  
 ## [sys.dm_pdw_component_health_active_alerts](sys-dm-pdw-component-health-active-alerts-transact-sql.md)  
 ## [sys.dm_pdw_component_health_alerts](sys-dm-pdw-component-health-alerts-transact-sql.md)  
 ## [sys.dm_pdw_component_health_status](sys-dm-pdw-component-health-status-transact-sql.md)  
@@ -246,7 +246,7 @@
 ## [sys.dm_pdw_wait_stats](sys-dm-pdw-wait-stats-transact-sql.md)  
 ## [sys.dm_pdw_waits](sys-dm-pdw-waits-transact-sql.md)  
 
-# [Операционной системе SQL Server](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
+# [Операционные системы SQL Server](sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 ## [sys.dm_os_buffer_descriptors](sys-dm-os-buffer-descriptors-transact-sql.md)  
 ## [sys.dm_os_buffer_pool_extension_configuration](sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
 ## [sys.dm_os_child_instances](sys-dm-os-child-instances-transact-sql.md)  
@@ -261,7 +261,7 @@
 ## [sys.dm_os_memory_cache_clock_hands](sys-dm-os-memory-cache-clock-hands-transact-sql.md)  
 ## [sys.dm_os_memory_cache_counters](sys-dm-os-memory-cache-counters-transact-sql.md)  
 ## [sys.dm_os_memory_cache_entries](sys-dm-os-memory-cache-entries-transact-sql.md)  
-## [кэшей](sys-dm-os-memory-cache-hash-tables-transact-sql.md)  
+## [sys.dm_os_memory_cache_hash_tables](sys-dm-os-memory-cache-hash-tables-transact-sql.md)  
 ## [sys.dm_os_memory_clerks](sys-dm-os-memory-clerks-transact-sql.md)  
 ## [sys.dm_os_memory_nodes](sys-dm-os-memory-nodes-transact-sql.md)  
 ## [sys.dm_os_memory_objects](sys-dm-os-memory-objects-transact-sql.md)  
@@ -269,7 +269,7 @@
 ## [sys.dm_os_nodes](sys-dm-os-nodes-transact-sql.md)  
 ## [sys.dm_os_performance_counters](sys-dm-os-performance-counters-transact-sql.md)  
 ## [sys.dm_os_process_memory](sys-dm-os-process-memory-transact-sql.md)  
-## [sys.DM_OS_SCHEDULERS](sys-dm-os-schedulers-transact-sql.md)  
+## [sys.dm_os_schedulers](sys-dm-os-schedulers-transact-sql.md)  
 ## [sys.dm_os_server_diagnostics_log_configurations](sys-dm-os-server-diagnostics-log-configurations.md)  
 ## [sys.dm_os_stacks](sys-dm-os-stacks-transact-sql.md)  
 ## [sys.dm_os_sys_info](sys-dm-os-sys-info-transact-sql.md)  

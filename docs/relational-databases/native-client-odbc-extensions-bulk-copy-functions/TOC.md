@@ -1,4 +1,4 @@
-# [Расширения драйвера SQL Server - функции массового копирования](sql-server-driver-extensions-bulk-copy-functions.md)
+# [Расширения драйвера SQL Server — функции массового копирования](sql-server-driver-extensions-bulk-copy-functions.md)
 
 # [bcp_batch](bcp-batch.md)
 # [bcp_bind](bcp-bind.md)

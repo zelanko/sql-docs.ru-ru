@@ -12,6 +12,7 @@
 ## [Установка и подключение — Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [Запуск и подключение — Docker](quickstart-install-connect-docker.md)
 ## [Подготовка виртуальной машины SQL в Azure](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
+## [Запуск и подключение — облако](quickstart-install-connect-clouds.md)
 
 # Учебники
 ## [1_Миграция с Windows](sql-server-linux-migrate-restore-database.md)
@@ -77,7 +78,7 @@
 ##### [Настройка в SUSE](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Настройка в Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Эксплуатация](sql-server-linux-availability-group-failover-ha.md)
-#### [Обеспечение только масштабирования чтения]()
+#### [Создание только для чтения и масштабирования]()
 ##### [Настройка группы доступности](sql-server-linux-availability-group-configure-rs.md)
 
 ## [Безопасность](sql-server-linux-security-overview.md)

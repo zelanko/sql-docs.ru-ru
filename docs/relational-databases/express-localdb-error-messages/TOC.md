@@ -1,4 +1,4 @@
-# [SQL Server Express LocalDB ссылка - сообщения об ошибках](sql-server-express-localdb-reference-error-messages.md)
+# [Справочник по SQL Server Express LocalDB — сообщения об ошибках](sql-server-express-localdb-reference-error-messages.md)
 
 # Ошибки LOCALDB_ERROR_
 ## [LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED](localdb-error-admin-rights-required.md)

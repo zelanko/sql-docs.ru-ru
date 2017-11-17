@@ -1,6 +1,6 @@
-# [Сведения о реализации API-интерфейса ODBC](odbc-api-implementation-details.md)
+# [Подробные сведения о реализации API-интерфейсов ODBC](odbc-api-implementation-details.md)
 
-# SQL * ODBC API-интерфейсы для собственных клиентов
+# API-интерфейсы ODBC SQL * для собственных клиентов
 ## [SQLBindCol](sqlbindcol.md)
 ## [SQLBindParameter](sqlbindparameter.md)
 ## [SQLBrowseConnect](sqlbrowseconnect.md)

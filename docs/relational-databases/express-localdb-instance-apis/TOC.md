@@ -1,6 +1,6 @@
-# [SQL Server Express LocalDB - Справочник по API-интерфейсов экземпляра](sql-server-express-localdb-reference-instance-apis.md)
-# [Программа командной строки: SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
-# [SQL Server Express LocalDB заголовок и сведения о версии](sql-server-express-localdb-header-and-version-information.md)
+# [Справочник по SQL Server Express LocalDB — API экземпляра](sql-server-express-localdb-reference-instance-apis.md)
+# [Программа командной строки SqlLocalDB.exe](command-line-management-tool-sqllocaldb-exe.md)
+# [Заголовок и сведения о версии SQL Server Express LocalDB](sql-server-express-localdb-header-and-version-information.md)
 
 # Функции LocalDB
 ## [Функция LocalDBCreateInstance](localdbcreateinstance-function.md)
@@ -8,7 +8,7 @@
 ## [Функция LocalDBFormatMessage](localdbformatmessage-function.md)
 ## [Функция LocalDBGetInstanceInfo](localdbgetinstanceinfo-function.md)
 ## [Функция LocalDBGetInstances](localdbgetinstances-function.md)
-## [Функция Localdbgetversionsinfo](localdbgetversioninfo-function.md)
+## [Функция LocalDBGetVersionsInfo](localdbgetversioninfo-function.md)
 ## [Функция LocalDBGetVersions](localdbgetversions-function.md)
 ## [Функция LocalDBShareInstance](localdbshareinstance-function.md)
 ## [Функция LocalDBStartInstance](localdbstartinstance-function.md)

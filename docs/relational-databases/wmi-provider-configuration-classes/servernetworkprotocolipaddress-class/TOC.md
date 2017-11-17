@@ -1,6 +1,6 @@
-# [Свойство Enabled (класс ServerNetworkProtocolIpAddress)](enabled-property-servernetworkprotocolipaddress-class.md)
+# [Свойство Enabled (класс ServerNetworkProtocolIPAddress)](enabled-property-servernetworkprotocolipaddress-class.md)
 # [Свойство InstanceName (класс ServerNetworkProtocolIPAddress)](instancename-property-servernetworkprotocolipaddress-class.md)
-# [Свойство IpAddressName (класс ServerNetworkProtocolIPAddress)](ipaddressname-property-servernetworkprotocolipaddress-class.md)
+# [Свойство IPAddressName (класс ServerNetworkProtocolIPAddress)](ipaddressname-property-servernetworkprotocolipaddress-class.md)
 # [Свойство Properties (класс ServerNetworkProtocolIPAddress)](properties-property-servernetworkprotocolipaddress-class.md)
 # [Свойство ProtocolName (класс ServerNetworkProtocolIPAddress)](protocolname-property-servernetworkprotocolipaddress-class.md)
 # [Класс ServerNetworkProtocolIPAddress](servernetworkprotocolipaddress-class.md)

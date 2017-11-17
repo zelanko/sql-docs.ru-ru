@@ -1,6 +1,6 @@
 # [Взаимодействие с SQL Server (ODBC)](communicating-with-sql-server-odbc.md)
 # [Выделение дескриптора соединения](allocating-a-connection-handle.md)
 # [Выделение дескриптора среды](allocating-an-environment-handle.md)
-# [Соединение с источником данных (ODBC)](connecting-to-a-data-source-odbc.md)
+# [Подключение к источнику данных (ODBC)](connecting-to-a-data-source-odbc.md)
 # [Отключение от источника данных](disconnecting-from-a-data-source.md)
-# [Источники данных ODBC для собственного клиента SQL Server](sql-server-native-client-odbc-data-sources.md)
+# [Источники данных ODBC SQL Server Native Client](sql-server-native-client-odbc-data-sources.md)
