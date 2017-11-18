@@ -3,8 +3,11 @@ title: "Метод (SQLServerConnection) getAutoCommit | Документы Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,28 +30,28 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/09/2017
 
 ---
-# getAutoCommit метод (SQLServerConnection)
+# <a name="getautocommit-method-sqlserverconnection"></a>getAutoCommit метод (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Извлекает текущий режим автоматической фиксации для данного [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 public boolean getAutoCommit()  
 ```  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  **значение true,** Если включен режим автоматической фиксации, **false** Если это не так.  
   
-## Исключения  
+## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Этот метод getAutoCommit указывается с помощью метода getAutoCommit в интерфейсе java.sql.Connection.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Класс SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

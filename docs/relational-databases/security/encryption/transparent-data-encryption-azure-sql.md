@@ -16,15 +16,15 @@ ms.devlang: na
 ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
-ms.openlocfilehash: ac3ea91dc2db3d1cfb22dca2fdc341650c74b95b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 35c94a39989fda76ea023588b2d7a3aa4e463262
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/05/2017
+
 ---
 # <a name="transparent-data-encryption-for-azure-sql-database-and-data-warehouse"></a>Прозрачное шифрование данных для базы данных и хранилища данных SQL Azure
-
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 Прозрачное шифрование данных (TDE) позволяет защитить базу данных и хранилище данных SQL Azure от угрозы вредоносных действий, в реальном времени выполняя шифрование и расшифровку неактивной базы данных, связанных с ней резервных копий и файлов журнала транзакций. При этом изменение приложения не требуется.
 
@@ -135,3 +135,4 @@ SQL Server, запущенный на виртуальной машине Azure,
 - Инструкции по началу работы с TDE с поддержкой BYOK см. в руководстве [Включение прозрачного шифрования данных с использованием собственного ключа из хранилища ключей с помощью PowerShell](transparent-data-encryption-byok-azure-sql-configure.md).
 
 - Дополнительные сведения о хранилище ключей см. на [странице документации по хранилищу ключей](https://docs.microsoft.com/azure/key-vault/key-vault-secure-your-key-vault).
+

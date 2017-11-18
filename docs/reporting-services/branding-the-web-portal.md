@@ -1,7 +1,7 @@
 ---
 title: "Фирменная символика на веб-портале | Документы Microsoft"
 ms.custom: 
-ms.date: 07/02/2017
+ms.date: 11/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -9,11 +9,9 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
-caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
@@ -31,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## <a name="creating-the-brand-package"></a>Создание пакета фирменной символики  
+## <a name="creating-the-brand-package"></a>Создание пакета фирменной символики
   
 Пакет фирменной символики для служб отчетов состоит из трех элементов. Он упаковывается в ZIP-файл.   
   
@@ -41,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 Файлы должны иметь указанные выше имена. Имя ZIP-файла может быть любым.  
   
-### <a name="metadataxml"></a>metadata.xml  
+### <a name="metadataxml"></a>metadata.xml
   
 Файл metadata.xml позволяет присвоить имя пакету фирменной символики, а также содержит ссылки на файлы colors.json и logo.png.  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 08/09/2017
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### <a name="colorsjson"></a>Colors.json  
+### <a name="colorsjson"></a>Colors.json
   
 При загрузке пакета фирменной символики сервер извлекает пары имен и значений из файла colors.json и объединяет их с основной таблицей стилей LESS (brand.less). Затем он обрабатывает этот файл и передает клиенту полученный файл CSS. Все цвета сохраняются в таблице стилей в формате шестисимвольного шестнадцатеричного представления.  
   
@@ -115,13 +113,13 @@ ms.lasthandoff: 08/09/2017
   
 После этого вы сможете использовать тему для любого созданного вами мобильного отчета, даже если он расположен не на том сервере, где развернута тема.   
   
-### <a name="using-a-logo"></a>Использование логотипа  
+### <a name="using-a-logo"></a>Использование логотипа
   
 Если в ваш пакет фирменной символики включено изображение логотипа, оно будет отображаться на веб-портале вместо имени веб-портала, установленного в меню "Параметры сайта".  
   
 Файл с изображением логотипа должен иметь формат PNG. Размер файла будет отмасштабирован при отправке на сервер. Полученное изображение будет иметь размер приблизительно 290 x 60 пикселей.  
    
-## <a name="applying-the-brand-package-to-the-web-portal"></a>Применение пакета фирменной символики для веб-портала  
+## <a name="applying-the-brand-package-to-the-web-portal"></a>Применение пакета фирменной символики для веб-портала
   
 Чтобы добавить, загрузить или удалить пакет фирменной символики:  
   
@@ -141,9 +139,9 @@ ms.lasthandoff: 08/09/2017
   
 Также здесь вы можете **загрузить** или **удалить** пакет. После удаления пакета для веб-портала немедленно восстановится оформление по умолчанию.  
   
-## <a name="metadataxml-example"></a>Пример файла metadata.xml  
+## <a name="metadataxml-example"></a>Пример файла metadata.xml
   
-    \<?xml version="1.0" encoding="utf-8"?>  
+    <?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
         type="UniversalBrand"  
         version="2.0.2"  
@@ -155,7 +153,7 @@ ms.lasthandoff: 08/09/2017
         </Contents>  
     </SystemResourcePackage>  
    
-## <a name="colorsjson-example"></a>Пример файла colors.json  
+## <a name="colorsjson-example"></a>Пример файла colors.json
   
     {  
         "name":"Multicolored example brand",  

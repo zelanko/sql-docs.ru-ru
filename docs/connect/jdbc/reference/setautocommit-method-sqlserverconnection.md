@@ -3,8 +3,11 @@ title: "Метод (SQLServerConnection) setAutoCommit | Документы Micr
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -27,27 +30,27 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/09/2017
 
 ---
-# setAutoCommit метод (SQLServerConnection)
+# <a name="setautocommit-method-sqlserverconnection"></a>setAutoCommit метод (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Задает режим автоматической фиксации для данного [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) состояние данного объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 public void setAutoCommit(boolean value)  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *value*  
   
  **значение true,** для перехода в режим автоматической фиксации для соединения, **false** отключить ее.  
   
-## Исключения  
+## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Этот метод setAutoCommit указывается с помощью метода setAutoCommit в интерфейсе java.sql.Connection.  
   
  Если соединение находится в режиме автоматической фиксации, то все инструкции SQL выполняются и фиксируются как отдельные транзакции. В противном случае инструкции SQL группируются в транзакции, завершаемые вызовом либо [фиксации](../../../connect/jdbc/reference/commit-method-sqlserverconnection.md) метода или [отката](../../../connect/jdbc/reference/rollback-method-sqlserverconnection.md) метод. По умолчанию новые соединения работают в режиме автоматической фиксации.  
@@ -59,7 +62,7 @@ public void setAutoCommit(boolean value)
 > [!NOTE]  
 >  Если этот метод вызывается в ходе транзакции, эта транзакция фиксируется.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Элементы SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Класс SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

@@ -3,8 +3,11 @@ title: "Драйвер JDBC закройте открытые результир
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - drivers
 ms.tgt_pltfrm: 
@@ -22,28 +25,28 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 09/09/2017
 
 ---
-# Метод autoCommitFailureClosesAllResultSets (SQLServerDatabaseMetaData)
+# <a name="autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata"></a>Метод autoCommitFailureClosesAllResultSets (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Указывает, закрывает ли драйвер JDBC все открытые результирующие наборы, включая те, которые допускают удержание, когда при включенном режиме автоматической фиксации возникает исключение.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 public boolean autoCommitFailureClosesAllResultSets()  
 ```  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  **значение true,** в случае, если все открытые привести наборами, включая удерживаемые, закрыты при включенном автоматической фиксации и возникновении исключения. В противном случае — **false**.  
   
-## Исключения  
+## <a name="exceptions"></a>Исключения  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## Замечания  
+## <a name="remarks"></a>Замечания  
  Этот метод autoCommitFailureClosesAllResultSets указывается с помощью метода autoCommitFailureClosesAllResultSets в интерфейсе java.sql.DatabaseMetaData.  
   
-## См. также:  
+## <a name="see-also"></a>См. также:  
  [Методы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Элементы SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
