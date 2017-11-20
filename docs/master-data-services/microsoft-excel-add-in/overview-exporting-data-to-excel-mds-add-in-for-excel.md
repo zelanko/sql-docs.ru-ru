@@ -2,23 +2,28 @@
 title: "Обзор экспорта данных в Excel (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b628548b-982b-4e45-abf4-c8e83e3ab1c2
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd6dce47fbcbb506bd268466e2cec93258c9d098
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 64d63ec4e03afe5fd08ebfc74422ea59dfb5d35a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="overview-exporting-data-to-excel-mds-add-in-for-excel"></a>Overview: Exporting Data to Excel (MDS Add-in for Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]необходимо экспортировать данные из репозитория MDS в активный лист Excel, прежде чем можно будет работать с ними. Завершив работу с данными, импортируйте их в репозиторий MDS, чтобы они стали доступны другим пользователям.  
@@ -58,3 +63,4 @@ ms.lasthandoff: 11/09/2017
 -   [Безопасность (службы Master Data Services)](../../master-data-services/security-master-data-services.md)  
   
   
+

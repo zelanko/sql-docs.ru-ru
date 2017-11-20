@@ -2,9 +2,12 @@
 title: "Справочник по расширениям интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -42,7 +45,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Справочник по расширениям интеллектуального анализа данных
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Расширения интеллектуального анализа данных (DMX) — это язык, который можно использовать для создания и работы с моделями интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Расширения интеллектуального анализа данных могут использоваться для создания структуры новых моделей интеллектуального анализа данных, обучения этих моделей, а также для осуществления обзора, управления и прогнозирования по этим моделям. Расширения интеллектуального анализа данных состоят из инструкций языка определения данных (DDL), инструкций языка обработки данных (DML), а также функций и операторов.  
   

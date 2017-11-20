@@ -2,10 +2,14 @@
 title: "Разрешения для папок и файлов (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +17,17 @@ helpviewer_keywords:
 - folders [Master Data Services]
 - files [Master Data Services]
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 641155bf64d2389bc6e3cf2e297d12fc808602bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 903701b43e16fb36637d778dd468b553fd9357e0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Разрешения для папок и файлов (службы Master Data Services)
   При установке [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]папки и файлы устанавливаются по указанному для общих компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] пути установки в файловой системе. При использовании пути установки общих компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] по умолчанию, путем установки для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] будет *диск*:\Program Files\Microsoft SQL Server\130\Master Data Services. Хотя путь установки общих компонентов можно изменить, следует учитывать разрешения, наследуемые от родительской папки, а также явно заданные для [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]разрешения.  
@@ -68,3 +73,4 @@ ms.lasthandoff: 11/09/2017
  [Установка служб Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   
+

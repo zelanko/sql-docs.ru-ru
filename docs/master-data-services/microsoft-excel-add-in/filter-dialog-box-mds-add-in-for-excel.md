@@ -2,23 +2,28 @@
 title: "Диалоговое окно \"Фильтр\" (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b8771297372caa2fd0597970e85fb587c0598ec7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bb522a011c1fc2e94e5b47a5e20cdad8b121c562
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Диалоговое окно «Фильтр» (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]воспользуйтесь диалоговым окном **Фильтр** , чтобы сузить список данных, управляемых MDS, прежде чем загружать их в Excel.  
@@ -66,3 +71,4 @@ ms.lasthandoff: 11/09/2017
  [Обзор экспорта данных в Excel (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
   
+

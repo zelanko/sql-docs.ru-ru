@@ -2,24 +2,30 @@
 title: "Добавление заметки для транзакции (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: annotations [Master Data Services], for transactions
+helpviewer_keywords:
+- annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a95616f9d8e256629b63ec5b474f66dda261d5f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 8a737c436fa8db5eb10224d62fc0cb05635f47fa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Добавление заметки для транзакции (Master Data Services)
   Службы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]позволяют добавить к транзакции заметку, если необходимо предоставление дополнительных сведений о транзакции для архивных целей.  
@@ -70,3 +76,4 @@ ms.lasthandoff: 11/09/2017
  [Транзакции (службы Master Data Services)](../master-data-services/transactions-master-data-services.md)  
   
   
+

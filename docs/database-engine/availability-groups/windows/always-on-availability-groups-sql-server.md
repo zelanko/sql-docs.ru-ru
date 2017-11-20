@@ -2,10 +2,14 @@
 title: "Группы доступности AlwaysOn (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,19 +19,20 @@ helpviewer_keywords:
 - AlwaysOn [SQL Server], see Availability Groups [SQL Server]
 - Availability Groups [SQL Server]
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8879965285990b014ebabb6514b57170f9b21af3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 03997ff880842e2cb088ee5f79237a517aca9abb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/28/2017
+
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Группы доступности AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Функция [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] — это решение высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Поддержка [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], добавленная с версии [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , позволяет максимально увеличить доступность набора пользовательских баз данных для предприятия. *Группа доступности* поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как *базы данных доступности*, которые совместно выполняют переход на другой ресурс. Группа доступности поддерживает набор первичных баз данных чтения и записи и от одного до четырех наборов соответствующих вторичных баз данных. Кроме того, базы данных-получатели можно сделать доступными только для чтения или для некоторых операций резервного копирования.  
   
@@ -184,3 +189,4 @@ ms.lasthandoff: 11/09/2017
  [Обзор командлетов PowerShell для групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   
   
+

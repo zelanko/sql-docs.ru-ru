@@ -2,9 +2,12 @@
 title: "&lt;запрос источника данных&gt; | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="ltsource-data-querygt"></a>&lt;запрос источника данных&gt;
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Для обучения модели интеллектуального анализа данных и создания прогнозов на основе модели интеллектуального анализа данных, имеют доступ к данным, внешних по отношению к [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] базы данных. Вы используете \<запросом источника данных > предложение в расширений интеллектуального анализа (DMX) для определения этих внешних данных. [INSERT INTO &#40; расширений интеллектуального анализа данных &#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60; модели &#62; ПРОГНОЗИРУЕМОЕ соединение &#40; расширений интеллектуального анализа данных &#41; ](../dmx/select-from-model-prediction-join-dmx.md), и [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) все инструкции используют  **\<запросом источника данных >**.  
   

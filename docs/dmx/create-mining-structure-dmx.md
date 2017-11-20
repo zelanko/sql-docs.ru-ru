@@ -2,9 +2,12 @@
 title: "СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Создает в базе данных новую структуру интеллектуального анализа данных и при необходимости определяет обучающую и проверочную секции. После создания структуры интеллектуального анализа данных можно использовать [ALTER MINING STRUCTURE &#40; расширений интеллектуального анализа данных &#41;](../dmx/alter-mining-structure-dmx.md) инструкции для добавления моделей к структуре интеллектуального анализа данных.  
   

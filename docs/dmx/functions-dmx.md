@@ -2,9 +2,12 @@
 title: "Функции (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -33,7 +36,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="functions-dmx"></a>Функции (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   При использовании расширений интеллектуального анализа данных (DMX) для запроса объектов в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], можно использовать функции, чтобы получить дополнительные сведения, чем просто значения столбцов в модели интеллектуального анализа данных или входного набора данных. Например, с помощью запросов расширений интеллектуального анализа данных можно получить не только прогнозируемое значение столбца, но также и вероятность точности прогноза. Кроме функций расширений интеллектуального анализа данных можно использовать также функции языка Microsoft Visual Basic for Applications (VBA), Microsoft Excel, а также хранимые процедуры.  
   

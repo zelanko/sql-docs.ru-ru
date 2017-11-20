@@ -2,26 +2,31 @@
 title: "Обновление экземпляров реплики группы доступности AlwaysOn | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae69dfe35f74a8e8084c44ca4ed8614ae3ba4ae3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1783e700e516978e4eded68fa675addd8d31a234
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Обновление экземпляров реплики группы доступности AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   При обновлении группы доступности AlwaysOn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (при установке новой версии [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , нового пакета обновления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]или накопительного пакета обновления, а также при установке нового пакета обновления Windows или накопительного пакета обновления Windows) вы можете выполнить последовательное обновление. Это позволит сократить время простоя первичной реплики до одной операции перехода на другой ресурс вручную (или двух таких операций, если нужно перейти на исходную первичную реплику). При обновлении вторичная реплика будет недоступна для отработки отказа или операций только для чтения. После обновления для синхронизации между вторичной репликой и узлом первичной реплики может потребоваться некоторое время; кроме того, может отмечаться значительное увеличение сетевого трафика (в зависимости от объема действий на узле первичной реплики).  
   
@@ -37,7 +42,7 @@ ms.lasthandoff: 11/09/2017
   
 -   [Составление и тестирование плана обновления Database Engine](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md). Просмотрите заметки о выпуске и известные проблемы, связанные с обновлением, изучите контрольный список предварительных требований, а затем разработайте и протестируйте план обновления.  
   
--   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
+-   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ознакомьтесь с требованиями к ПО для установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
   
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Рекомендации по последовательному обновлению групп доступности AlwaysOn  
  Следует руководствоваться следующими рекомендациями при модернизации или обновлении сервера, чтобы минимизировать время простоя и потерю данных для групп доступности.  
@@ -172,3 +177,4 @@ ms.lasthandoff: 11/09/2017
  [Установка SQL Server 2016 из командной строки](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

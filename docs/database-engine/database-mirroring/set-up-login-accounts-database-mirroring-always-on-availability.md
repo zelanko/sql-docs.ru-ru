@@ -2,29 +2,34 @@
 title: "Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database mirroring [SQL Server], deployment
 - logins [SQL Server], database mirroring
 ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fa50e3f16255f259eacc6f9dc6adea277f0c19b2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c60e822a5a7102352927724a08c84260b66d0db9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Чтобы два экземпляра сервера могли подключиться к [конечным точкам зеркального отображения базы данных](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) друг друга, именам входа каждого экземпляра требуется доступ к другому экземпляру. Кроме того, каждой учетной записи требуется разрешение на подключение к конечной точке зеркального отображения базы данных на другом экземпляре.  
   
@@ -71,3 +76,4 @@ ms.lasthandoff: 11/09/2017
  [Поиск и устранение неисправностей конфигурации групп доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)  
   
   
+

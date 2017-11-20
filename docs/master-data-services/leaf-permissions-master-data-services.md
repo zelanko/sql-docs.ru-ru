@@ -2,10 +2,14 @@
 title: "Разрешения конечного элемента (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +19,17 @@ helpviewer_keywords:
 - leaf members [Master Data Services], attribute permissions
 - attributes [Master Data Services], leaf member attribute permissions
 ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d45a9ad9bbe5b7e6d932ab866f4bcaf01a30de72
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4b7ff5003d1d54d6668719b527402591bed9d1e2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="leaf-permissions-master-data-services"></a>Разрешения конечного элемента (службы основных данных)
   Разрешения конечного элемента применяются к значениям атрибутов для всех конечных элементов сущности.  
@@ -79,3 +84,4 @@ ms.lasthandoff: 11/09/2017
  [Атрибуты (службы Master Data Services)](../master-data-services/attributes-master-data-services.md)  
   
   
+

@@ -2,9 +2,12 @@
 title: "Зарезервированные ключевые слова (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="reserved-keywords-dmx"></a>Зарезервированные ключевые слова (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)] резервируют определенные ключевые слова для эксклюзивного использования. Эти ключевые слова не могут использоваться где-либо в инструкциях расширений интеллектуального анализа данных (DMX), кроме как в позициях, которые определены в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в справочнике по языку расширений интеллектуального анализа данных. Эти регламентируемые ключевые слова расширений интеллектуального анализа данных включают следующие элементы.  
   

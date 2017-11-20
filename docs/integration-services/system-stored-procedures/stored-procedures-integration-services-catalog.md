@@ -3,8 +3,11 @@ title: "Хранимые процедуры (каталог служб Integrati
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -25,7 +28,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="stored-procedures-integration-services-catalog"></a>Хранимые процедуры (каталог служб Integration Services)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описываются хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)], доступные для администрирования проектов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], развернутых в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

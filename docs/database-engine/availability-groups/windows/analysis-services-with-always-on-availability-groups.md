@@ -2,26 +2,31 @@
 title: "Службы Analysis Services с группами доступности AlwaysOn | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e61f61c0814d3b5a6e7691203f9da946fc211db7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d4ba885d49b16d3ef6d4796ddcef420b0dc6c149
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Службы Analysis Services с группами доступности AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Группа доступности AlwaysOn — это предопределенная коллекция реляционных баз данных SQL Server, которые при отработке отказа все вместе переключаются на другой ресурс, если создаются условия для отработки отказа в любой из них. Запросы перенаправляются в зеркальную базу данных на другом экземпляре в той же группе доступности. Если группы доступности используются для обеспечения высокой доступности, можно использовать базу данных в этой группе в качестве источника данных в табличном или многомерном решении служб Analysis Services. Если используется база данных доступности, все следующие операции службы Analysis Services работают, как ожидалось: обработка или импорт данных, прямые запросы к базе данных (с использованием хранилища ROLAP или режима DirectQuery) и обратная запись.  
   
@@ -238,3 +243,4 @@ ms.lasthandoff: 11/09/2017
  [Включение обратной записи в измерение](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
   
   
+

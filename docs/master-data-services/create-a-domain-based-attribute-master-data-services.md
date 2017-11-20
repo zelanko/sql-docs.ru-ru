@@ -1,11 +1,15 @@
 ---
 title: "Создание атрибута на основе домена (службы Master Data Services) | Документы Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 07/25/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: master-data-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +17,17 @@ helpviewer_keywords:
 - creating domain-based attributes [Master Data Services]
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9dc0168dce5aca58aa19be1adb2fb2c9240eda67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a8242d0b8f5285201c32721c793aff995d50b88d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Создание атрибута на основе домена (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибут на основе домена создается, чтобы заполнить значения атрибута элементами сущности.  
@@ -106,3 +111,4 @@ ms.lasthandoff: 11/09/2017
  [Удаление атрибута (службы Master Data Services)](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   
+

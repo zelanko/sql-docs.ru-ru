@@ -2,23 +2,28 @@
 title: "Построение модели (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b266e552701f5e786c3fc5b2a751af2bc57c5168
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 88556cf988d88fac1d9cb9a4c18dd0cfc5a1e72f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Построение модели (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]администраторы могут выполнять сокращенный набор административных функций, доступных в веб-приложении [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .  
@@ -74,3 +79,4 @@ ms.lasthandoff: 11/09/2017
 -   [Развертывание моделей (службы Master Data Services)](../../master-data-services/deploying-models-master-data-services.md)  
   
   
+

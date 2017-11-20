@@ -2,10 +2,14 @@
 title: "Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +20,20 @@ helpviewer_keywords:
 - readable secondary replicas
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
-caps.latest.revision: "80"
+caps.latest.revision: 80
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 524b80a46a12738928b757e249c01f6d852b86d4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 184067cec6269692f38b92b71cfc208bfab8256d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Активные вторичные реплики. Доступ только для чтения к вторичным репликам (группы доступности AlwaysOn)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Возможности [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] по активному доступу к вторичным репликам включают поддержку доступа только для чтения к одной или нескольким вторичным репликам (*доступным для чтения вторичным репликам*). Доступная для чтения вторичная реплика разрешает доступ только для чтения ко всем своим базам данных-получателям. Однако доступные для чтения базы данных-получатели не переводятся в режим доступа только для чтения. Они являются динамическими. Определенная база данных-получатель изменяется по мере того, как к ней применяются изменения, вносимые в данные базы данных-источника. Для большинства вторичных реплик данные, в том числе оптимизированные для памяти устойчивые таблицы, вносятся во вторичную базу данных почти в реальном времени. Более того, полнотекстовые индексы синхронизируются с базами данных-получателями. Во многих случаях задержка данных между базой данных-источником и соответствующей базой данных-получателем находится в пределах нескольких секунд.  
   
@@ -264,3 +269,4 @@ GO
  [Статистика](../../../relational-databases/statistics/statistics.md)  
   
   
+

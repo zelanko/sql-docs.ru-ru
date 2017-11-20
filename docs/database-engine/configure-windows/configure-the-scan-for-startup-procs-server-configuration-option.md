@@ -2,27 +2,33 @@
 title: "Настройка параметра конфигурации и сервера scan for startup procs | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: scan for startup procs option
+helpviewer_keywords:
+- scan for startup procs option
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d9cda100af9d3b4e0b74b2bb65b31aaff62879f5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c876b9cf1013174d9f276cabf898cf1466760ddb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>Настройка параметра конфигураци и сервера scan for startup procs
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описываются способы настройки параметра конфигурации сервера **scan for startup procs** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **scan for startup procs** предназначен для просмотра хранимых процедур, автоматически выполняемых при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если этому параметру присвоено значение 1, сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] просматривает и выполняет все автоматически запускаемые хранимые процедуры, которые определены на сервере. По умолчанию параметр **scan for startup procs** имеет значение 0 (не искать).  
   
@@ -99,3 +105,4 @@ GO
  [sp_procoption (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)  
   
   
+

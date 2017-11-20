@@ -2,26 +2,31 @@
 title: "Настройка совместимых функций SQL Server для работы с Stretch Database | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91b1b8854e56ab3fad15eb11cdc132788e0709b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: 8b3ee682de6e27014f403be32849478f9d076c84
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/30/2017
+
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Настройка совместимых функций SQL Server для работы с Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Настройте указанные ниже компоненты SQL Server для работы с Stretch Database с помощью простых действий.
 -   AlwaysOn
@@ -51,3 +56,4 @@ ms.lasthandoff: 11/09/2017
 -   Рекомендации по использованию темпоральных таблиц вместе с Stretch Database см. в разделе [Управление хранением данных журнала в темпоральных таблицах с системным управлением версиями](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md).
 -   Сведения о фильтрации переносимых строк из таблицы журнала с помощью скользящего окна см. в разделе [Выбор строк для миграции с использованием функции фильтров](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).
 -   Вы не можете включить базу данных Stretch Database для темпоральной таблицы журнала, если эта таблица является оптимизированной для памяти. Таблицы, оптимизированные для памяти, не поддерживаются.
+

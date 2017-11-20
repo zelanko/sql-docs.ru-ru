@@ -2,9 +2,12 @@
 title: "Расширения интеллектуального анализа данных (DMX) функция ссылку | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,7 +33,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Справочник по функциям расширений интеллектуального анализа данных
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживается несколько функций языка расширений интеллектуального анализа данных. С помощью функций результаты прогнозирующих запросов дополняются данными, более подробно описывающими прогноз. Функции также предоставляют дополнительные возможности управления процессом отображения результатов прогноза. В следующей таблице приводятся ссылки на ресурсы, содержащие основные сведения об использовании функций в расширениях интеллектуального анализа данных.  
   

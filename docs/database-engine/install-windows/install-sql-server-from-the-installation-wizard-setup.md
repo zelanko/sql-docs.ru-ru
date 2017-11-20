@@ -2,12 +2,14 @@
 title: "Установка SQL Server 2016 с помощью мастера установки (программа установки) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/06/2016
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: setup-install
+ms.suite: sql
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,18 +17,19 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-caps.latest.revision: "91"
+caps.latest.revision: 91
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: b97afc1f7fd9464e5ef5074e9e2b3d1ccb98d4b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/08/2017
+
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Эта статья описывает установку SQL Server с помощью мастера установки. Она относится к [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] и [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)]. Материалы по предыдущим версиям SQL Server см. в статье [Установка SQL Server 2014 с помощью мастера установки (программа установки)](http://msdn.microsoft.com/library/ms143219(SQL.120).aspx).
 
 В этом разделе приведена пошаговая процедура установки нового экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . В мастере установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] доступно единое дерево для установки всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поэтому их не требуется устанавливать по отдельности. Дополнительные сведения об установке отдельных компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Установка SQL Server](../../database-engine/install-windows/install-sql-server.md#how-to-install-individual-components).  
@@ -63,7 +66,7 @@ ms.lasthandoff: 11/09/2017
   
 1.  Мастер установки запускает центр установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы создать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите пункт **Установка** в области навигации слева, а затем выберите **Новая установка изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или добавление компонентов к существующей установке**.  
 
-1.  На странице «Ключ продукта» выберите переключатель установки бесплатного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или рабочей версии продукта с регистрационным номером продукта (PID). Дополнительные сведения см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+1.  На странице «Ключ продукта» выберите переключатель установки бесплатного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или рабочей версии продукта с регистрационным номером продукта (PID). Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
      Чтобы продолжить, нажмите кнопку **Далее**.  
 
@@ -200,3 +203,4 @@ ms.lasthandoff: 11/09/2017
  [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

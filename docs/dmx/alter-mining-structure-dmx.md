@@ -2,9 +2,12 @@
 title: "ИЗМЕНЕНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Создает новую модель интеллектуального анализа данных, основанную на уже существующей структуре интеллектуального анализа данных.  При использовании **ALTER MINING STRUCTURE** инструкцию, чтобы создать новую модель интеллектуального анализа данных, структура должна существовать. Напротив, при использовании инструкции, [CREATE MINING MODEL &#40; расширений интеллектуального анализа данных &#41;](../dmx/create-mining-model-dmx.md), создайте модель и автоматически создавать его базовой структуры интеллектуального анализа данных, в то же время.  
   

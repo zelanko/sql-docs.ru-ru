@@ -2,9 +2,12 @@
 title: "Общие функции прогнозирования (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="general-prediction-functions-dmx"></a>Общие функции прогнозирования (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Можно использовать **ВЫБЕРИТЕ** инструкции в расширений интеллектуального анализа (DMX) для создания различных типов запросов. С помощью запроса можно получить сведения о самой модели интеллектуального анализа данных, сделать новый прогноз или изменить модель путем обучения ее с помощью новых данных. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]предоставляет разнообразные специализированные функции, управляющие типом сведений, возвращаемых в запросе. Добавив эти функции к DMX-запросу, можно получить дополнительную статистику или столбцы данных. Однако каждый тип запроса и каждый тип модели поддерживает только определенные функции.  
   

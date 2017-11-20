@@ -6,17 +6,24 @@ ms.author: anshrest
 manager: jhubbard
 ms.date: 07/12/2017
 ms.topic: article
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 0b7f3946674d16066526f52684c2e98de8a5c8c1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
+ms.contentlocale: ru-ru
+ms.lasthandoff: 07/31/2017
+
 ---
 # <a name="configure-sql-server-to-send-feedback-to-microsoft"></a>Настройка SQL Server для отправки отзывов в корпорацию Майкрософт
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 ## <a name="summary"></a>Сводка
 По умолчанию Microsoft SQL Server собирает сведения о том, как пользователи используют приложение. В частности, SQL Server собирает сведения об установке, использовании и производительности. Эти сведения помогают корпорации Майкрософт улучшать продукты и удовлетворять ожидания клиентов. Например, корпорация Майкрософт собирает сведения о кодах ошибок, с которыми сталкиваются пользователи. Это помогает нам исправлять вызвавшие их проблемы, улучшать качество документации об использовании SQL Server и определять, нужно ли добавить в продукт новые возможности, которые будут полезны нашим клиентам.
@@ -164,3 +171,4 @@ AND instance_name = '_Total'
 В настройках службы можно отказаться от отправки сведений об использовании, как описано в инструкциях по изменению разделов реестра на сервере. При этом учетная запись службы не удаляется. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

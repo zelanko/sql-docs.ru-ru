@@ -6,13 +6,17 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: samples
+ms.component: 
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
+ms.prod: sample
+ms.prod_service: sql-non-specified
 ms.author: genemi
 ms.workload: sample
 ms.translationtype: MT
@@ -23,7 +27,7 @@ ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-sample-for-sql-server"></a>Новые и недавно обновленные: образец для SQL Server
-
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
 Почти каждый день корпорация Майкрософт вносит изменения в свои статьи на веб-сайте документации [Docs.Microsoft.com](http://docs.microsoft.com/). В этой статье приводятся отрывки из обновленных недавно статей, а также ссылки на новые статьи.

@@ -2,24 +2,30 @@
 title: "Создание настраиваемого рабочего процесса (службы Master Data Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: develop
 ms.reviewer: 
-ms.suite: 
-ms.technology: docset-sql-devref
+ms.suite: sql
+ms.technology:
+- docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c6011525ab0b33a19ddd392a46a2b02a20dbefe9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 290f862bc9e0295d940a832e07415831bab060bb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Создание настраиваемого рабочего процесса (службы Master Data Services)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] использует бизнес-правила для создания таких базовых решений рабочего процесса, как автоматическое обновление и проверка данных, а также отправка уведомлений по электронной почте с учетом заданных условий. Когда требуется более сложная обработка, чем та, которую обеспечивают действия встроенного рабочего процесса, используйте пользовательский рабочий процесс. Пользовательский рабочий процесс ― это создаваемая вами сборка .NET. При вызове вашей сборки рабочего процесса код может выполнять любые действия, которые требуются в данной ситуации. Если рабочему процессу требуется сложная обработка событий, например многоуровневые утверждения или сложные деревья принятия решений, можно настроить [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] на запуск пользовательского рабочего процесса, который анализирует данные и определяет, куда их отправить для утверждения.  
@@ -157,3 +163,4 @@ ms.lasthandoff: 11/09/2017
  [Описание XML настраиваемого рабочего процесса (службы Master Data Services)](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   
   
+

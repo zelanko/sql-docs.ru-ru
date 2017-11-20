@@ -1,41 +1,46 @@
 ---
-title: "Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database) | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
+title: "Мониторинг переноса данных и устранение неполадок при этой операции (база данных Stretch) | Документация Майкрософт"
+ms.custom: 
 ms.date: 06/14/2016
-ms.prod: sql-server-2016
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-stretch
+ms.suite: sql
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Stretch Database, monitoring
 - monitoring Stretch Database
 ms.assetid: 06950858-8c02-4ec6-9c59-42b787316a2d
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 185cb968c83ecaf0c3428bcaf70e708feb8b82c6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
----
-# <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Мониторинг переноса данных и устранение неполадок при этой операции (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+ms.translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91c10b51a3fec9ccc96c3aa23100abdf2a60ba81
+ms.contentlocale: ru-ru
+ms.lasthandoff: 04/11/2017
 
-  Чтобы отслеживать перенос данных в мониторе Stretch Database, следует выбрать в SQL Server Management Studio **Задачи | Stretch | Монитор** для базы данных.  
+---
+# <a name="monitor-and-troubleshoot-data-migration-stretch-database"></a>Мониторинг переноса данных и устранение неполадок при этой операции (база данных Stretch)
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+  Чтобы отслеживать перенос данных в мониторе базы данных Stretch, следует выбрать в SQL Server Management Studio **Задачи | Stretch | Монитор** для базы данных.  
   
-## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Проверка состояния переноса данных в мониторе Stretch Database  
- Чтобы открыть монитор Stretch Database и отслеживать перенос данных, в SQL Server Management Studio выберите **Задачи | Stretch | Монитор** для базы данных.  
+## <a name="check-the-status-of-data-migration-in-the-stretch-database-monitor"></a>Проверка состояния переноса данных в мониторе базы данных Stretch  
+ Чтобы открыть монитор базы данных Stretch и отслеживать перенос данных, в SQL Server Management Studio выберите **Задачи | Stretch | Монитор** для базы данных.  
   
 -   В верхней области монитора отображаются общие сведения о базе данных SQL Server с поддержкой Stretch и удаленной базе данных Azure.  
   
 -   В нижней области монитора отображается состояние переноса данных для каждой таблицы с поддержкой Stretch в базе данных.  
   
- ![Монитор Stretch Database](../../sql-server/stretch-database/media/stretch-monitor.PNG "Монитор Stretch Database")  
+ ![Монитор базы данных Stretch](../../sql-server/stretch-database/media/stretch-monitor.PNG "Монитор базы данных Stretch")  
   
 ##  <a name="Migration"></a> Проверка состояния переноса данных в динамическое административное представление  
  Откройте динамическое представление управления **sys.dm_db_rda_migration_status** , чтобы увидеть, сколько разделов и строк данных было перенесено. Дополнительные сведения см. в разделе [sys.dm_db_rda_migration_status (Transact-SQL)](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
@@ -58,6 +63,7 @@ ms.lasthandoff: 11/09/2017
  Вам может потребоваться добавить правило в параметры брандмауэра для сервера Azure, чтобы позволить SQL Server взаимодействовать с удаленным сервером Azure.  
   
 ## <a name="see-also"></a>См. также:  
- [Управление Stretch Database и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+ [Управление базой данных Stretch и устранение связанных с ней неполадок](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
   
+

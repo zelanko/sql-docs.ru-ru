@@ -2,10 +2,14 @@
 title: "Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover modes
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 378d2d63-50b9-420b-bafb-d375543fda17
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0ec5c20cc9681f9196c02fa864e4c79acf3541dc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 54450a69119f344ba40787e7ce076ad84e0b211d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="failover-and-failover-modes-always-on-availability-groups"></a>Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В контексте группы доступности роли первичной и вторичной реплик доступности обычно являются взаимозаменяемыми в ходе процесса, известного как *переход на другой ресурс или отработка отказа*. Существуют три формы перехода на другой ресурс: автоматический переход на другой ресурс (без потери данных), запланированный переход на другой ресурс вручную (без потери данных) и принудительный переход на другой ресурс вручную (с возможной потерей данных), обычно именуемый *принудительным переходом на другой ресурс*. При автоматическом и запланированном ручном переходе на другой ресурс все данные сохраняются. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Это значит, что при отработке отказа группа доступности переходит на одну из ее вторичных реплик (на текущую *цель отработки отказа*).  
   
@@ -364,3 +369,4 @@ ms.lasthandoff: 11/09/2017
  [Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности (SQL Server)](../../../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md)  
   
   
+

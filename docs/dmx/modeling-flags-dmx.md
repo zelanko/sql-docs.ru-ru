@@ -2,9 +2,12 @@
 title: "Флаги (DMX) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -34,7 +37,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="modeling-flags-dmx"></a>Флаги моделирования (расширения интеллектуального анализа данных)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Флаги моделирования можно использовать в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], чтобы включить в алгоритм интеллектуального анализа данных дополнительные сведения о данных, определенных в таблице вариантов. Алгоритм может использовать эти сведения для создания более точной модели интеллектуального анализа данных. Флаги моделирования можно задавать для столбцов структуры и модели интеллектуального анализа данных.  
   

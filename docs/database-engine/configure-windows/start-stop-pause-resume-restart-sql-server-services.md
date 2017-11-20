@@ -1,11 +1,13 @@
 ---
 title: "Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server | Документы Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 02/26/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -54,7 +56,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
  > Материал по предыдущим версиям SQL Server см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и службы браузера SQL Server](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx).
 
   В этом разделе описаны запуск, остановка, возобновление и перезапуск [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ,  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], команд **net** из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  

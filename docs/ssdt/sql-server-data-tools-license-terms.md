@@ -2,25 +2,31 @@
 title: "SQL Server Data Tools. Условия лицензии | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/19/2017
-ms.prod: sql-non-specified
+ms.prod: ssdt
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology: tools-ssdt
+ms.suite: sql
+ms.technology:
+- tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0ac5aa53-cdc3-4ced-9ab9-690be02aa951
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b9b0c22491394f224c742cbb830334b7e8cb4280
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8f84afd80acae08e3fdd0bd3c0ae27dc25df32de
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="sql-server-data-tools---license-terms"></a>SQL Server Data Tools. Условия лицензии
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 ## <a name="microsoft-software-license-terms"></a>УСЛОВИЯ ЛИЦЕНЗИОННОГО СОГЛАШЕНИЯ НА ИСПОЛЬЗОВАНИЕ ПРОГРАММНОГО ОБЕСПЕЧЕНИЯ КОРПОРАЦИИ МАЙКРОСОФТ  
   
 **СРЕДСТВА MICROSOFT SQL SERVER DATA TOOLS**  
@@ -40,7 +46,7 @@ ms.lasthandoff: 11/09/2017
 **Приняв эти условия лицензии, вы получаете перечисленные ниже права.**  
 **I.    ПРАВА НА УСТАНОВКУ И ИСПОЛЬЗОВАНИЕ.**  
   
-&nbsp;&nbsp;**а.    Установка и использование.**  
+&nbsp;&nbsp;**1.    Установка и использование.**  
   
    * Вы можете устанавливать и использовать любое количество копий программного обеспечения на ваших устройствах в целях проектирования, разработки и проверки ваших программ.  
      
@@ -48,7 +54,7 @@ ms.lasthandoff: 11/09/2017
   
 **II.    ДОПОЛНИТЕЛЬНЫЕ ТРЕБОВАНИЯ ЛИЦЕНЗИРОВАНИЯ И ПРАВА НА ИСПОЛЬЗОВАНИЕ.**  
   
-&nbsp;&nbsp;**а.    Распространяемый код.**  
+&nbsp;&nbsp;**А.    Распространяемый код.**  
   
 &nbsp;&nbsp;&nbsp;&nbsp;**1.    Право на использование и распространение. При соблюдении приведенных далее условий:**  
 * вы можете копировать и распространять форму объектного кода платформы приложений уровня данных Microsoft SQL Server ("**распространяемого кода**") в разрабатываемых вами программах;   
@@ -107,9 +113,9 @@ ms.lasthandoff: 11/09/2017
   
 **XII.   ПРИМЕНЯЕМОЕ ПРАВО.**  
   
-&nbsp;&nbsp;**а.    Соединенные Штаты Америки.** Если вы приобрели программное обеспечение в Соединенных Штатах, это соглашение подлежит толкованию в соответствии с законодательством штата Вашингтон, США. Любые претензии в связи с нарушением данного соглашения также рассматриваются в соответствии с этим законодательством независимо от принципов коллизионного права. При рассмотрении всех прочих претензий следует руководствоваться законодательством штата, в котором вы проживаете, включая претензии в рамках законодательства штата о защите прав потребителей, о нечестной конкуренции и о нарушении законных прав.  
+&nbsp;&nbsp;**1.    Соединенные Штаты Америки.** Если вы приобрели программное обеспечение в Соединенных Штатах, это соглашение подлежит толкованию в соответствии с законодательством штата Вашингтон, США. Любые претензии в связи с нарушением данного соглашения также рассматриваются в соответствии с этим законодательством независимо от принципов коллизионного права. При рассмотрении всех прочих претензий следует руководствоваться законодательством штата, в котором вы проживаете, включая претензии в рамках законодательства штата о защите прав потребителей, о нечестной конкуренции и о нарушении законных прав.  
   
-&nbsp;&nbsp;**б.    За пределами США.** Если вы приобрели программное обеспечение в любой другой стране, следует руководствоваться законодательством этой страны.  
+&nbsp;&nbsp;**2.    За пределами США.** Если вы приобрели программное обеспечение в любой другой стране, следует руководствоваться законодательством этой страны.  
   
 **XIII.   ПРАВОВЫЕ ПОСЛЕДСТВИЯ.** В настоящем соглашении описаны некоторые права, определяемые законом. Вы можете иметь другие права в соответствии с законами вашей страны. Вы можете также иметь права по отношению к стороннему поставщику, у которого вы приобрели программное обеспечение. Настоящее соглашение не изменяет ваши права, определяемые законодательством вашей страны, если таковое не допускает этого.  
   
@@ -142,3 +148,4 @@ les réclamations au titre de violation de contrat ou de garantie, ou au titre d
 Elle s’applique également même si Microsoft connaissait l'éventualité d'un tel dommage. La limitation ou exclusion ci-dessus peut également ne pas vous être applicable, car votre pays n’autorise pas l’exclusion ou la limitation de responsabilité pour les dommages indirects, accessoires ou de quelque nature que ce soit.  
   
 EFFET JURIDIQUE. Le présent contrat décrit certains droits juridiques. Vous pourriez avoir d’autres droits prévus par les lois de votre pays. Le présent contrat ne modifie pas les droits que vous confèrent les lois de votre pays si celles-ci ne le permettent pas.
+

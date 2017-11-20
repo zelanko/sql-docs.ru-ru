@@ -2,23 +2,28 @@
 title: "Использование средства проверки орфографии DQS | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a01e31bf6965cb1d7ac6bbcf183e1ce0c98fc38e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a14a9adc633e997fa9f8095d3d98a11bc9d386aa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="use-the-dqs-speller"></a>Использование средства проверки орфографии DQS
   Средство проверки орфографии [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) проверяет синтаксис, орфографию и структуру предложения для строковых значений в домене. Средство проверки орфографии — это автономная, клиентская функция, которая не имеет интеграции с серверными подсистемами и не оказывает влияния на текущие потоки или состояния. Средство проверки орфографии выявляет те строковые значения, которые в нем рассматриваются как потенциальные ошибки, а затем отмечает их подчеркиванием красной линией в том же месте, где вручную вносятся другие изменения в значениях домена. Это следующие места:  
@@ -76,3 +81,4 @@ ms.lasthandoff: 11/09/2017
  Службы DQS предоставляют подсказки для значений и в столбце **Значение** , и в столбце **Исправить на** таблицы **Значение** . После выбора подсказки в столбце **Значение** тип значения задается как **Ошибочный**, а подсказка копируется в столбец **Исправить на** , как если бы она была вставлена вручную. Если имелось существующее исправление, то оно становится подсказкой. На странице **Управление результатами и просмотр результатов** действия **Очистка** после выбора подсказки в столбце **Исправить на** службы DQS заменяют текущее выбранное значение этим выбором, а текущее выбранное значение становится подсказкой. На странице **Управление результатами и просмотр результатов** действия **Очистка** не даются никакие подсказки на уровне записи (нижняя сетка).  
   
   
+

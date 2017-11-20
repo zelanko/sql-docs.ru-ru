@@ -4,29 +4,32 @@ description: "Использование автоматического запо
 services: data-lake-analytics
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Automatic seeding [SQL Server], secondary replica
+helpviewer_keywords:
+- Automatic seeding [SQL Server], secondary replica
 ms.assetid: 
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 8c1fc9f84428fc60283d6d53bab21a90b5c4049d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/27/2017
+
 ---
 # <a name="automatic-seeding-for-secondary-replicas"></a>Автоматическое заполнение для вторичных реплик
-
-[!INCLUDE [tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В SQL Server 2012 и 2014 единственным способом инициализации вторичной реплики в группе доступности SQL Server Always On является использование операций резервного копирования, копирования и восстановления. В SQL Server 2016 появилась новая функция для инициализации вторичной реплики — *автоматическое заполнение*. Автоматическое заполнение использует транспортный поток журнала для потокового резервного копирования с помощью VDI на вторичную реплику для каждой базы данных группы доступности, применяющую настроенные конечные точки. Эту новую функцию можно использовать во время первоначального создания группы доступности или при добавлении базы данных в группу доступности. Автоматическое заполнение доступно во всех выпусках SQL Server, поддерживающих группы доступности AlwaysOn, и может использоваться как с традиционными группами доступности, так и с [распределенными группами доступности](distributed-availability-groups.md).
 
@@ -277,3 +280,4 @@ GO
 <!--Image references-->
 [1]: ./media/auto-seed-new-availability-group.png
 [2]: ./media/auto-seed-sql-server-log.png
+

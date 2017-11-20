@@ -2,9 +2,12 @@
 title: "Основные сведения о расширениях интеллектуального анализа данных инструкция Select | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -35,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="understanding-the-dmx-select-statement"></a>Общие сведения об инструкции расширения интеллектуального анализа данных SELECT
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   [ВЫБЕРИТЕ](../dmx/select-dmx.md) инструкция является основой большинства запросов, созданные с помощью расширений интеллектуального анализа (DMX) в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Она служит для выполнения множества различных видов задач, например обзора или прогноза по моделям интеллектуального анализа данных.  
   

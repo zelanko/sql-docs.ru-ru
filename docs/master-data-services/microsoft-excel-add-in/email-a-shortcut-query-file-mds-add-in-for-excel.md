@@ -2,23 +2,28 @@
 title: "Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: mds
+ms.service: 
+ms.component: microsoft-excel-add-in
 ms.reviewer: 
-ms.suite: 
-ms.technology: master-data-services
+ms.suite: sql
+ms.technology:
+- master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5d46f20a-b04a-45c7-82af-02a2baaabbd7
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2d09da8720a85513c0998057982f26ccc2748829
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6a6639138b8ce1c737934310dd33c853927fe227
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/07/2017
+
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Отправка файла ярлыка запроса по электронной почте (надстройка MDS для Excel)
   В [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]можно отправить кому-либо файл ярлыка запроса по электронной почте, если адресат должен иметь возможность работать с теми же данными, что и вы. Вместо сохранения и отправки листа по электронной почте следует предоставлять общий доступ к запросу.  
@@ -44,3 +49,4 @@ ms.lasthandoff: 11/09/2017
  [Файлы ярлыков запросов (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/shortcut-query-files-mds-add-in-for-excel.md)  
   
   
+

@@ -3,8 +3,11 @@ title: "Catalog.enable_worker_agent (база данных SSISDB) | Докум�
 ms.custom: 
 ms.date: 12/16/2016
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogenableworkeragent-ssisdb-database"></a>Catalog.enable_worker_agent (база данных SSISDB)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 Включить шкалы ожидания рабочий процесс для масштабирования ожидания базы данных Master работу с этим [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] каталога.
 

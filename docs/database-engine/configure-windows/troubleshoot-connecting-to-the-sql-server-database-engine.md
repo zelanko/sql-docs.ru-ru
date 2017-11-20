@@ -2,9 +2,12 @@
 title: "Устранение неполадок при соединении с компонентом SQL Server Database Engine | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - database-engine
 ms.tgt_pltfrm: 
@@ -26,7 +29,7 @@ ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Устранение неполадок при соединении с компонентом SQL Server Database Engine
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Здесь приводится полный список методов поиска и устранения неполадок, которые можно использовать в случае неудачных попыток соединения с компонентом SQL Server Database Engine. Порядок этих действий не соответствует последовательности, в которой решаются наиболее вероятные проблемы. Сначала указываются шаги по устранению базовых ошибок, а затем рассматриваются более сложные вопросы. При выполнении этих действий предполагается, что вы подключаетесь к SQL Server с другого компьютера по протоколу TCP/IP — такая ситуация является наиболее распространенной. Эти действия предназначены для SQL Server 2016 с SQL Server и клиентскими приложениями под управлением Windows 10. Однако с незначительными изменениями их также можно применять к другим версиям SQL Server и другим операционным системам.
 

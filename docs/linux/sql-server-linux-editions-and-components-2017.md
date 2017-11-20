@@ -1,11 +1,13 @@
 ---
 title: "Выпуски и поддерживаемых функций SQL Server 2017 ~ Linux | Документы Microsoft"
-ms.custom:
-- SQL2017_New_Updated
+ms.custom: 
 ms.date: 09/14/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - sql-linux
 - server-general

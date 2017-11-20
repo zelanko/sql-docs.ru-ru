@@ -6,20 +6,25 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: master-data-services
+ms.suite: sql
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: UpdArt.exe
+ms.custom: 
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: mds
 ms.author: genemi
 ms.workload: master-data-services-mds
+ms.translationtype: HT
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: fd51e78e4643a99df4ef88659f08ca5267ac2b11
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/02/2017
+
 ---
 # <a name="new-and-recently-updated-master-data-services-for-sql-server"></a>Новые и обновленные статьи по службам Master Data Services для SQL Server
 
@@ -122,5 +127,6 @@ ms.lasthandoff: 11/09/2017
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
+
 
 

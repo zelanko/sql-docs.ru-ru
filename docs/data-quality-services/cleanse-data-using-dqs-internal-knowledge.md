@@ -2,10 +2,14 @@
 title: "Очистка данных с использованием набора знаний служб DQS (внутренних) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,16 +18,17 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14478170a919235e9f2ca6f39926ff2f51f31406
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8aa5b0fdf2771d83310e503f2fdd8770bf9cf324
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Очистка данных с использованием набора знаний служб DQS (внутренних)
   В этом разделе описывается очистка данных с использованием проекта служб DQS в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Очистка данных выполняется для исходных данных с использованием базы знаний, построенной в DQS по набору высококачественных данных. Дополнительные сведения см. в статье [Построение базы знаний](../data-quality-services/building-a-knowledge-base.md).  
@@ -230,3 +235,4 @@ ms.lasthandoff: 11/09/2017
  Дополнительные сведения о профилировании см. в разделе [Профилирование данных и уведомления в DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
   
+

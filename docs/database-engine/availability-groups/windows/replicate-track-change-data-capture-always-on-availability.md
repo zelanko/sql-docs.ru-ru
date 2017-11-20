@@ -2,10 +2,14 @@
 title: "Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/02/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], interoperability
 - replication [SQL Server], AlwaysOn Availability Groups
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
-caps.latest.revision: "37"
+caps.latest.revision: 37
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fb94e38188176c2110646119c93bc82e9ff02548
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a3949e1463888eee5040f88ac52c6903f44eea3a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/02/2017
+
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>Репликация, отслеживание изменений, изменение данных в группах доступности AlwaysOn
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Репликация, отслеживание измененных данных (CDC) и отслеживание изменений (CT) поддерживаются в [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] помогает обеспечивать высокий уровень доступности и дополнительные возможности восстановления баз данных.  
   
@@ -268,3 +273,4 @@ ms.lasthandoff: 11/09/2017
  [sys.sp_cdc_add_job (Transact-SQL)](../../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   
+

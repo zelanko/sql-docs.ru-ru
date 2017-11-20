@@ -2,9 +2,12 @@
 title: "представлениея | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: system-views
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
@@ -23,7 +26,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="catalogexecutiondatastatistics"></a>catalog.execution_data_statistics
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Это представление отображает строку каждый раз, когда компонент потока данных передает данные в компонент, находящийся ниже в иерархии, для выполнения данного пакета. Данные в этом представлении могут быть использованы для расчета пропускной способности данных для компонента.  
   

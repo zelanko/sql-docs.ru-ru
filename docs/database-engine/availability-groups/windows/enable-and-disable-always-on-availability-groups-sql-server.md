@@ -2,10 +2,14 @@
 title: "Включение и отключение групп доступности AlwaysOn (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/30/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
-ms.technology: dbe-high-availability
+ms.suite: sql
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,19 +18,20 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], disabling
 - Availability Groups [SQL Server], enabling
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
-caps.latest.revision: "60"
+caps.latest.revision: 60
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7eb9f5ceb6d274889ffc9eebb0da478e32662201
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: daec226de4b93ae00997c07e25ba84352c5258e4
+ms.openlocfilehash: b5e469b56253649e0e23de004b3ae6de54dfb3e9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 08/31/2017
+
 ---
 # <a name="enable-and-disable-always-on-availability-groups-sql-server"></a>Включение и отключение групп доступности AlwaysOn (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Включение [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] является предварительным условием для того, чтобы экземпляр сервера мог использовать группы доступности. Перед тем как создавать и настраивать любую группу доступности, следует включить компонент [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , где будет размещаться реплика доступности для одной или нескольких групп доступности.  
   
@@ -266,4 +271,5 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
  [SERVERPROPERTY (Transact-SQL)](../../../t-sql/functions/serverproperty-transact-sql.md)  
   
   
+
 

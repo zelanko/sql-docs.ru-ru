@@ -2,25 +2,30 @@
 title: "Настройка распределенной группы доступности (группы доступности AlwaysOn) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
-caps.latest.revision: "28"
+caps.latest.revision: 28
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 335077eef51f479d55526ae47fe9b7bff3144f4e
-ms.sourcegitcommit: 284a64817d5641b5245bc70ddebef2dc51d2e558
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2017
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/20/2017
+
 ---
 # <a name="configure-distributed-availability-group"></a>Настройка распределенной группы доступности  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Для создания распределенной группы доступности необходимо создать группу доступности и прослушиватель в каждом отказоустойчивом кластере Windows (WSFC). После этого можно объединить эти группы доступности в распределенную группу доступности. Ниже представлен простой пример c Transact-SQL. В этом примере представлены не все детали создания группы доступности и прослушивателей; основное внимание уделяется ключевым требованиям. 
 
@@ -342,3 +347,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+

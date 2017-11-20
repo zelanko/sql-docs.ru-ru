@@ -2,9 +2,12 @@
 title: "Операторы сравнения (расширения интеллектуального анализа данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -28,7 +31,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="operators---comparison"></a>Операторы — сравнения
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Можно использовать операторы сравнения со скалярными значениями во всех выражениях расширений интеллектуального анализа данных (DMX) в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Результаты выполнения операторов сравнения принимают значения логического типа: TRUE или FALSE в зависимости от выполнения проверяемого условия.  
   

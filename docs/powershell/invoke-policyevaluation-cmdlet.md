@@ -2,10 +2,14 @@
 title: "Командлет Invoke-PolicyEvaluation | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
-ms.technology: database-engine
+ms.suite: sql
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +19,17 @@ helpviewer_keywords:
 - Cmdlets [SQL Server], Invoke-PolicyEvaluation
 - PowerShell [SQL Server], Invoke-PolicyEvaluation
 ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 296534b89550efde62d0c2e1dea02c06d4896f8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f5adc3571b07e3613514525f286241add73af1a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 06/22/2017
+
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation, командлет
   **Invoke-PolicyEvaluation** — это командлет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , который определяет, соответствует ли набор целей объектов SQL Server условиям, заданным в одной или нескольких политиках в системе управления на основе политик.  
@@ -87,9 +92,9 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
 ## <a name="specifying-the-target-set"></a>Указание набора целей  
  Для указания набора целевых объектов используется три параметра.  
   
--   Параметр**-TargetServerName** определяет экземпляр SQL Server, содержащий целевые объекты. Сведения можно указать в строке, для которой используется формат, определенный для свойства ConnectionString класса <xref:System.Data.SqlClient.SqlConnection> . Для построения правильно форматированной строки подключения можно использовать класс <xref:System.Data.SqlClient.SqlConnectionStringBuilder> . Можно также создать объект <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> и передать его в параметр **-TargetServer**. При передаче строки, которая содержит только имя сервера, командлет **Invoke-PolicyEvaluation** для подключения к серверу использует проверку подлинности Windows.  
+-   Параметр**-TargetServerName** определяет экземпляр SQL Server, содержащий целевые объекты. Сведения можно указать в строке, для которой используется формат, определенный для свойства ConnectionString класса <xref:System.Data.SqlClient.SqlConnection>. Для построения правильно форматированной строки подключения можно использовать класс <xref:System.Data.SqlClient.SqlConnectionStringBuilder>. Можно также создать объект <xref:Microsoft.SqlServer.Management.Sdk.Sfc.SqlStoreConnection> и передать его в параметр **-TargetServer**. При передаче строки, которая содержит только имя сервера, командлет **Invoke-PolicyEvaluation** для подключения к серверу использует проверку подлинности Windows.  
   
--   Параметр**-TargetObjects** принимает объект или массив объектов, которые представляют объекты SQL Server в наборе целей. Например, можно создать массив объектов класса <xref:Microsoft.SqlServer.Management.Smo.Database> для передачи параметру **-TargetObjects**.  
+-   Параметр**-TargetObjects** принимает объект или массив объектов, которые представляют объекты SQL Server в наборе целей. Например, вы можете создать массив объектов класса <xref:Microsoft.SqlServer.Management.Smo.Database> для использования в параметре **-TargetObjects**.  
   
 -   Параметр**-TargetExpressions** принимает строку, содержащую выражение запроса, которое определяет объекты в наборе целей. Это выражение запроса состоит из узлов, разделенных символом «/». Каждый узел имеет вид ObjectType[Filter]. Тип объекта — это один из объектов в иерархии управляющих объектов SQL Server (SMO). Фильтр — это выражение, которое фильтрует объекты в этом узле. Дополнительные сведения см. в статье [Query Expressions and Uniform Resource Names](../powershell/query-expressions-and-uniform-resource-names.md).  
   
@@ -140,6 +145,7 @@ Invoke-PolicyEvaluation -Policy "Datbase Status" -TargetServer "MYCOMPUTER" -Out
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Использование командлетов компонента Database Engine](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
+ [Использование командлетов ядра СУБД](../relational-databases/scripting/use-the-database-engine-cmdlets.md)   
   
   
+

@@ -2,24 +2,30 @@
 title: "Импорт значений проекта очистки в домен | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: data-quality-services
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dqs.kb.importprojectvalues.f1
+f1_keywords:
+- sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c08c593ddefd7b45de422630f696ba020509f052
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccbaa61727e3d3ef85c0de713bbb596cede7797a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
+
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Импорт значений проекта очистки в домен
   В службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) можно импортировать в домен знания о качестве данных, собранные в проекте очистки данных о качестве или в пакете служб Integration Services с компонентом DQS Cleansing. Это позволяет не допустить потери надежных знаний и обеспечить постоянное улучшение базы знаний.  
@@ -117,3 +123,4 @@ ms.lasthandoff: 11/09/2017
  [Преобразование "Очистка DQS"](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   
   
+

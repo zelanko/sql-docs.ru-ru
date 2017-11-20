@@ -2,24 +2,27 @@
 title: "Установка служб Data Quality Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/11/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: data-quality-services
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
-ms.technology: data-quality-services
+ms.suite: sql
+ms.technology:
+- data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
 ms.openlocfilehash: 6162b52153b29fbe1069f62361fa89eac234dc1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
-ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
+
 ---
 # <a name="install-data-quality-services"></a>Установка служб Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS) содержит два компонента: **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** и **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]**.  
@@ -103,7 +106,7 @@ ms.lasthandoff: 11/09/2017
   
     -   **dqs_kb_editor**  
   
-     По умолчанию, если учетная запись пользователя является членом предопределенной роли сервера sysadmin, этот пользователь может выполнять вход на [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с помощью клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , даже если его учетной записи не назначена ни одна из ролей служб DQS. Дополнительные сведения о трех ролях служб DQS см. в разделе [DQS Security](../../data-quality-services/dqs-security.md).  
+     По умолчанию, если учетная запись пользователя является членом предопределенной роли сервера sysadmin, этот пользователь может выполнять вход на [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] с помощью клиента [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , даже если его учетной записи не назначена ни одна из ролей служб DQS. Дополнительные сведения о трех ролях служб DQS см. в разделе [Безопасность DQS](../../data-quality-services/dqs-security.md).  
   
      Дополнительные сведения см. в статье [Предоставление ролей DQS пользователям](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md).  
   
@@ -127,3 +130,4 @@ ms.lasthandoff: 11/09/2017
  [Устранение неполадок во время установки и настройки DQS](http://social.technet.microsoft.com/wiki/contents/articles/3776.aspx)  
   
   
+

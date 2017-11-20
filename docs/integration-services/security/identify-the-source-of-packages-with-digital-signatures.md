@@ -2,9 +2,12 @@
 title: "Определение источника пакетов с помощью цифровых подписей | Документы Microsoft"
 ms.custom: 
 ms.date: 08/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
