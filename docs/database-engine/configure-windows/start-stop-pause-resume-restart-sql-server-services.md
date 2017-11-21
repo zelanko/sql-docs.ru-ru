@@ -1,15 +1,11 @@
 ---
 title: "Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server | Документы Майкрософт"
-ms.custom: 
+ms.custom: SQL2016_New_Updated
 ms.date: 02/26/2016
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- database-engine
+ms.suite: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,20 +39,19 @@ helpviewer_keywords:
 - administering SQL Server, starting and stopping services
 - Management Studio [SQL Server], starting or stopping services
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 615db091e0e81bab78154ec9ceaf81c5b94d54bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 40dd0c1438bb9102cfbc8d9daa9206f49b17b973
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Запуск, остановка, приостановка, возобновление, перезапуск служб SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
  > Материал по предыдущим версиям SQL Server см. в статье [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server и службы браузера SQL Server](https://msdn.microsoft.com/en-US/library/hh403394(SQL.120).aspx).
 
   В этом разделе описаны запуск, остановка, возобновление и перезапуск [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ,  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], команд **net** из командной строки, [!INCLUDE[tsql](../../includes/tsql-md.md)]или PowerShell.  
@@ -196,7 +191,7 @@ ms.lasthandoff: 08/02/2017
 3.  При появлении запроса о необходимости выполнения действия нажмите кнопку **Да**.  
   
 ##  <a name="CommandPrompt"></a> В окне командной строки с помощью команд net  
- Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно запустить, остановить или приостановить с помощью команд [!INCLUDE[msCoName](../../includes/msconame-md.md)] **net** Windows.  
+ Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно запустить, остановить или приостановить с помощью команд **net** [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
 ###  <a name="dbDefault"></a> Запуск экземпляра сервера по умолчанию [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -370,5 +365,4 @@ ms.lasthandoff: 08/02/2017
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
-
 

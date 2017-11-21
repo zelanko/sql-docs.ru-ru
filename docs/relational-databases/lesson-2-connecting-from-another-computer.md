@@ -5,23 +5,21 @@ ms.date: 03/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1e72554b59c7ecf738235d4c5d74f35915116b4b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Active
+ms.openlocfilehash: 3e860fc71d2f9e5efcf68324040d267d9de6fce9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Занятие 2. Соединение с другого компьютера
 В целях повышения безопасности к компоненту [!INCLUDE[ssDE](../includes/ssde-md.md)] выпусков [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer Edition, Express Edition и Evaluation Edition нельзя получить доступ с другого компьютера при первоначальной установке. В этом занятии показано, как включить протоколы, настроить порты и брандмауэр Windows для соединения, используя другие компьютеры.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 06/22/2017
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  В **диспетчере конфигурации SQL Server**разверните раздел **Сетевая конфигурация SQL Server**и щелкните элемент **Протоколы для** *<InstanceName>*.  
+2.  В **диспетчер конфигурации SQL Server**разверните раздел **Сетевая конфигурация SQL Server**и щелкните элемент **Протоколы для** *<InstanceName>*.  
   
     Экземпляр по умолчанию (неименованный экземпляр) указан в списке под именем **MSSQLSERVER**. Если был установлен именованный экземпляр, то в списке будет приведено заданное ему имя. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] устанавливается как **SQLEXPRESS**, если это имя не было изменено при установке.  
   
@@ -145,5 +143,4 @@ ms.lasthandoff: 06/22/2017
 ## <a name="return-to-tutorials-portal"></a>Возвращение к порталу учебников  
 [Учебник. Приступая к работе с компонентом Database Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
-
 

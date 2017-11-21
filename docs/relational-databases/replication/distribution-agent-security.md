@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.rep.security.DA.f1
-helpviewer_keywords:
-- Distribution Agent Security dialog box
+f1_keywords: sql13.rep.security.DA.f1
+helpviewer_keywords: Distribution Agent Security dialog box
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 99a7a8bf76bd997b85ff7b44f01733b2928b441d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 44bbfd608ad2511c95a872f07eac657ae7616e6d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="distribution-agent-security"></a>Безопасность агента распространителя
   В диалоговом окне **Безопасность агента распространителя** можно указать учетную запись Windows, с которой будет работать агент распространителя. Агент распространителя работает на распространителе для принудительных подписок и на подписчике для подписок по запросу. Учетная запись [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows также называется *учетной записью процесса*, так как с этой учетной записью работает процесс агента. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
@@ -106,4 +102,3 @@ Persist Security Info=False;Connection Pooling=True;
  [Подписка на публикации](../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

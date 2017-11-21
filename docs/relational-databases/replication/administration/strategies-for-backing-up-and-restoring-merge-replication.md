@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - restoring [SQL Server replication], merge replication
 - merge replication [SQL Server replication], backup and restore
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: c5c183c029afd8eb87a6df90e09d39b4d8c755bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Стратегия резервного копирования и восстановления из копии для репликации слиянием
   Для репликации слиянием регулярно создавайте резервные копии следующих баз данных:  
@@ -72,9 +71,9 @@ ms.lasthandoff: 06/22/2017
   
  Если выбран данный вариант, создайте новый моментальный снимок для его доставки на повторно инициализированные подписчики сразу после восстановления базы данных публикаций.  
   
- Чтобы повторно инициализировать подписку, см. раздел [Повторная инициализация подписки](../../../relational-databases/replication/reinitialize-a-subscription.md).  
+ Чтобы повторно инициализировать подписку, см. раздел [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md).  
   
- Чтобы создать и применить моментальный снимок, см. разделы [Create и Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) и [Создание моментального снимка для публикации слиянием с параметризованными фильтрами](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Чтобы создать и применить моментальный снимок, см. разделы [Create и Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) и [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>Резервное копирование и восстановление базы данных распространителя  
  При репликации слиянием база данных распространителя должна регулярно подвергаться резервному копированию, и она может быть восстановлена без дополнительных условий до тех пор, пока время, истекшее с момента создания используемой резервной копии, не превышает кратчайший срок хранения всех публикаций, использующих распространитель. Например, если есть три публикации со сроками хранения 10, 20 и 30 дней соответственно, то используемая резервная копия не должна быть старше 10 дней. База данных распространителя играет ограниченную роль в репликации слиянием: она не хранит данных, используемых для отслеживания изменений, и не служит временным хранилищем изменений репликации слиянием, которые должны пересылаться в базы данных подписок (как это делается при репликации транзакций).  

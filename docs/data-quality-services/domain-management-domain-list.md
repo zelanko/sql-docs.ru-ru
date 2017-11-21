@@ -2,30 +2,24 @@
 title: "Управление доменами: список доменов | Microsoft Docs"
 ms.custom: 
 ms.date: 11/08/2011
-ms.prod: sql-non-specified
-ms.prod_service: data-quality-services
-ms.service: 
-ms.component: data-quality-services
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.suite: 
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.dm.domainlist.f1
+f1_keywords: sql13.dqs.dm.domainlist.f1
 ms.assetid: 8df305f0-97ea-4226-811b-979ed862e1f0
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ffb0cd1bbb37aeb7c551e9d71612507aad1a3724
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="domain-management-domain-list"></a>Управление доменами: список доменов
   В этом разделе описаны элементы управления в списке «Домены» страницы **Управление доменами** в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Эта панель управления используется для выбора домена с целью выполнения операций управления. Одна панель управления используется для всех страниц с вкладками на странице **Управление доменами** .  
@@ -57,10 +51,9 @@ ms.lasthandoff: 09/09/2017
  Значения связанного домена такие же, как у домена, с которым он связан. Отличаются только имя и свойства домена. Если изменить правило домена, значение домена, ссылочный источник данных или связь на основе термина в домене, с которым установлена связь, правило домена, значение домена, ссылочная источник данных или связь на основе термина в связанном домене также изменятся. Кроме того, если изменить значение в связанном домене, изменение отразится в домене, с которым установлена связь.  
   
  **Экспортировать базу знаний**  
- Экспорт всей базы знаний в файл DQS. Эта команда отображает диалоговое окно **Экспорт в файл данных** . Для доступа к этой команде щелкните значок **Экспортировать данные базы знаний** в верхней части страницы или в разделе **Экспорт** в контекстном меню доменов на панели списка доменов. Дополнительные сведения см. в статье [Экспорт базы знаний в файл DQS.](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
+ Экспорт всей базы знаний в файл DQS. Эта команда отображает диалоговое окно **Экспорт в файл данных** . Для доступа к этой команде щелкните значок **Экспортировать данные базы знаний** в верхней части страницы или в разделе **Экспорт** в контекстном меню доменов на панели списка доменов. Дополнительные сведения см. в статье [Экспорт базы знаний в файл DQS](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md).  
   
  **Экспортировать домен**  
  Экспорт домена в файл DQS. Эта команда отображает диалоговое окно **Экспорт в файл данных** . Эта команда доступна в меню **Экспорт** на панели меню в верхней части страницы или при щелчке правой кнопки мыши в области списка доменов. Дополнительные сведения см. в статье [Экспорт домена в файл .dqs](../data-quality-services/export-a-domain-to-a-dqs-file.md).  
   
   
-

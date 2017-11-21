@@ -2,34 +2,29 @@
 title: "Устранение неполадок при соединении с компонентом SQL Server Database Engine | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
-ms.service: 
-ms.component: configure-windows
+ms.prod: sql-server-2016
 ms.reviewer: 
-ms.suite: sql
-ms.technology:
-- database-engine
+ms.suite: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - troubleshooting, connecting to Database Engine
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 33ea706474d71f9424aa724f18f2febd69ae62d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Устранение неполадок при соединении с компонентом SQL Server Database Engine
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 Здесь приводится полный список методов поиска и устранения неполадок, которые можно использовать в случае неудачных попыток соединения с компонентом SQL Server Database Engine. Порядок этих действий не соответствует последовательности, в которой решаются наиболее вероятные проблемы. Сначала указываются шаги по устранению базовых ошибок, а затем рассматриваются более сложные вопросы. При выполнении этих действий предполагается, что вы подключаетесь к SQL Server с другого компьютера по протоколу TCP/IP — такая ситуация является наиболее распространенной. Эти действия предназначены для SQL Server 2016 с SQL Server и клиентскими приложениями под управлением Windows 10. Однако с незначительными изменениями их также можно применять к другим версиям SQL Server и другим операционным системам.
 
@@ -160,5 +155,4 @@ ms.lasthandoff: 09/27/2017
     1. На клиентском компьютере в левой панели диспетчера конфигурации SQL Server разверните узел **Конфигурация** клиента **Native Client SQL версии** *версия*, а затем выберите **Клиентские протоколы**.
     2. Убедитесь, что протокол TCP/IP на правой панели включен. Если протокол TCP/IP не включен, правой кнопкой мыши щелкните **TCP/IP** и выберите команду **Включить**.
     3. Убедитесь в том, что в последовательности протоколов TCP/IP используются значения, меньше чем для протоколов именованных каналов (или протоколов VIA в более старых версиях). Обычно общая память должна быть указана как первый порядок, а TCP/IP — как второй. Общая память используется только в том случае, когда клиент и сервер SQL выполняются на том же компьютере. Все включенные протоколы опрашиваются в указанном порядке до получения успешного результата. Следует отметить, что при установке соединения с другим компьютером общая память пропускается. 
-
 
