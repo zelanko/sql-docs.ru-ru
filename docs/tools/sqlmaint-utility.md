@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 87b232709f63a1a4041a057cb5a6c275bc9835b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fbc02b1b8d89972cfd25739f4055842e303450c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqlmaint-utility"></a>Программа sqlmaint
   Программа**sqlmaint** выполняет заданный набор операций обслуживания с одной или несколькими базами данных. Программа **sqlmaint** используется для выполнения проверок DBCC, создания резервных копий базы данных и ее журнала транзакций, обновления статистики и перестроения индексов. При всех действиях по обслуживанию базы данных формируется отчет, который можно записать в указанный текстовый файл, в HTML-файл или отправить по электронной почте. Программа**sqlmaint** выполняет планы обслуживания баз данных, созданные в предыдущих версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Для запуска планов обслуживания [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] из командной строки используйте программу [dtexec utility](../integration-services/packages/dtexec-utility.md).  
@@ -279,4 +277,3 @@ sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir
  [UPDATE STATISTICS (Transact-SQL)](../t-sql/statements/update-statistics-transact-sql.md)  
   
   
-

@@ -1,10 +1,13 @@
 ---
 title: "Предварительные условия для минимального протоколирования массового импорта данных | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 50e42a9267199f6e7e00b221a548b216625f5f91
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1a9e6acfbb01944f13ebdb0ed132ac931500edd6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Предварительные условия для минимального протоколирования массового импорта данных
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В базе данных, использующей модель полного восстановления, все операции вставки строк, выполняющиеся при массовом импорте, полностью записываются в журнал транзакций. Если используется модель полного восстановления, импорт большого количества данных может привести к быстрому заполнению журнала транзакций. При использовании простой модели восстановления или модели восстановления с неполным протоколированием минимальное протоколирование операций массового импорта, напротив, снижает вероятность того, что операция массового импорта заполнит все пространство журнала. Минимальное протоколирование также более эффективно, чем полное.  
   

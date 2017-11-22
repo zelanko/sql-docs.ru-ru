@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b630c95516370e4c0352e18d1259f05649c106d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 669901a865788be20096ddedb05d15f4448a2a4b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Справочник по пользовательскому интерфейсу (MySQLToSQL)
 В этом разделе содержатся справочные сведения для SQL Server Migration Assistant (SSMA) для MySQL.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/02/2017
 |[Изменить сопоставление типа &#40; MySQLToSQL &#41;](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Используйте **изменить сопоставление типа** диалоговое окно «», чтобы создать или изменить сопоставление типов данных между исходной и целевой баз данных и объектов базы данных.|  
 |[Глобальные параметры &#40; Редактор &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Используйте страницу редактор **глобальные параметры** диалоговое окно используется для настройки параметров редактора кода.|  
 |[Глобальные параметры &#40; диалоговые окна &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Используйте диалоговые окна страницу **глобальные параметры** диалоговое окно используется для настройки по умолчанию диалоговое окно и параметры предупреждения.|  
-|[Глобальные параметры (протоколирование)](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|Используйте страницу ведения журнала **глобальные параметры** диалоговое окно «», чтобы настроить ведение журнала.|  
+|[Глобальные параметры (ведение журнала)](http://msdn.microsoft.com/en-us/0d033492-5ec3-473a-8de1-821894ec9518)|Используйте страницу ведения журнала **глобальные параметры** диалоговое окно «», чтобы настроить ведение журнала.|  
 |[Глобальные параметры &#40; окно вывода &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|Используйте **глобальные параметры** диалогового окна для настройки параметров для SSMA для интерфейса пользователя MySQL.|  
 |[Новый проект &#40; SSMA &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|Используйте **новый проект** диалоговое окно «» для создания нового SSMA для проекта MySQL.|  
 |[Параметры проекта &#40; Преобразование &#41; &#40; MySQLToSQL &#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|Используйте страницу преобразования **параметры проекта** диалоговое окно «», чтобы указать, каким образом преобразует SSMA для MySQL, функции и глобальные переменные.|  
@@ -61,4 +59,3 @@ ms.lasthandoff: 08/02/2017
 [Начало работы с SSMA для MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  
 [Миграция баз данных MySQL в SQL Server — база данных Azure SQL &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   
-

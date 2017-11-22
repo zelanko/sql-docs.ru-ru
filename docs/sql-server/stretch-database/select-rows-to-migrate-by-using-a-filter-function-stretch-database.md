@@ -1,5 +1,5 @@
 ---
-title: "Выбор строк для миграции с использованием функции фильтров (база данных Stretch) | Документация Майкрософт"
+title: "Выбор строк для миграции с использованием функции фильтров (Stretch Database) | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/27/2016
 ms.prod: stretch-database
@@ -8,8 +8,7 @@ ms.service: database-engine
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,19 +17,18 @@ helpviewer_keywords:
 - Stretch Database, inline table-valued functions
 - inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: 68a67526e9e84d62861f322b663debba754371ff
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Выбор строк для миграции с использованием функции фильтров (база данных Stretch)
+# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Выбор строк для миграции с использованием функции фильтров (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Если холодные данные хранятся в отдельной таблице, можно настроить базу данных Stretch, чтобы перенести эту таблицу целиком. С другой стороны, если таблица содержит горячие и холодные данные, строки для миграции можно выбирать с помощью предиката фильтра. Этот предикат фильтра является встроенной функцией с табличным значением. В этом разделе описывается создание встроенной функции с табличным значением для выбора строк для миграции.  
@@ -217,7 +215,7 @@ ALTER TABLE SensorTelemetry
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. Дождитесь завершения миграции. Проверить состояние можно с помощью **монитора базы данных Stretch** в SQL Server Management Studio или запросить представление **sys.dm_db_rda_migration_status** . Дополнительные сведения см. в разделе [Мониторинг переноса данных и устранение неполадок](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) или [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
+2. Дождитесь завершения миграции. Проверить состояние можно с помощью **монитораStretch Database** в SQL Server Management Studio или запросить представление **sys.dm_db_rda_migration_status** . Дополнительные сведения см. в разделе [Мониторинг переноса данных и устранение неполадок](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) или [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md).  
   
 3. Создайте функцию фильтров, которую требуется применить к таблице.  
   
@@ -623,4 +621,3 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
-

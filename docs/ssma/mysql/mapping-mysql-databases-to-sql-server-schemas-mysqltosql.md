@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Mapping, Modifying target database and schema
 - Mapping, reverting to default database and schema
 ms.assetid: 5c6fb445-92ae-4933-b77d-80230931c024
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 98cdf5f72a4c4767ac468b5c2c062e4d3b23d68b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6f6472656dbfd31ca64348d066cca19f303b4a5f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="mapping-mysql-databases-to-sql-server-schemas-mysqltosql"></a>Сопоставление баз данных MySQL в схемы SQL Server (MySQLToSQL)
 По умолчанию SSMA для MySQL выполняет миграцию всех объектов в схему, MySQL [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базы данных SQL Azure с именем схемы. Тем не менее, можно настроить сопоставление между схемами, MySQL и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или баз данных SQL Azure.  
@@ -83,4 +81,3 @@ ms.lasthandoff: 08/02/2017
 [Миграция баз данных MySQL в SQL Server — база данных Azure SQL &#40; MySQLToSql &#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Подключение к SQL Server &#40; MySQLToSQL &#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-

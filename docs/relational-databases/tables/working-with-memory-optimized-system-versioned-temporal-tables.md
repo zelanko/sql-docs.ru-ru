@@ -1,10 +1,13 @@
 ---
 title: "Работа с оптимизированными для памяти темпоральными таблицами с системным управлением версиями | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d2b2254b9ee5e3c0e041efe38580b226124c005c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 062d09f13c7d28eb84686a007b9cb9a589f6ac65
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>Работа с оптимизированными для памяти темпоральными таблицами с системным управлением версиями
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   В этом разделе обсуждается, как работа с оптимизированной для памяти темпоральной таблицей с системным управлением версиями отличается от работы с дисковой темпоральной таблицей с системным управлением версиями.  
   

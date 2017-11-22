@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Attributes Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Attributes Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - http://schemas.microsoft.com/analysisservices/2003/engine#Attributes
 - microsoft.xml.analysis.attributes
 - urn:schemas-microsoft-com:xml-analysis#Attributes
-helpviewer_keywords:
-- Attributes element
+helpviewer_keywords: Attributes element
 ms.assetid: c0393de8-44e8-46de-af78-1fd66c218521
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b0647c088e158d4ccccb42b7e6af5650f5209824
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7c1825aa25bbe0b5dac27c40b08424d88b4ab31b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attributes-element-xmla"></a>Элемент Attributes (XMLA)
   Содержит коллекцию элементов [Attribute](../../../analysis-services/xmla/xml-elements-properties/attribute-element-xmla.md) , используемых в родительской команде [Insert](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md) или [Update](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md) либо в родительском элементе [Where](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md) .  
@@ -76,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

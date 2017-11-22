@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2611012fe27e268f40f85647411dd8ad66a6651b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 512ad22b6529adcf065cacb219d1f0acc025c306
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Шаг 4: Заполнить текстовое поле сведений
 Чтобы заполнить текстовое поле сведений, создайте новый подпрограмму с именем **recFields** и вставьте следующий код:  
@@ -56,5 +54,4 @@ End Sub
   
 ## <a name="see-also"></a>См. также:  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Шаг 3: Заполнения списка полей](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
-
+ [Шаг 3. Заполнение списка полей](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

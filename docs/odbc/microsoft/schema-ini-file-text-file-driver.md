@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - schema.ini file [ODBC]
 - text file driver [ODBC], schema.ini file
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 7db96c719d22b3f6dd47a02eac2ef7724c0b6040
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 709df0de2e0191c0f03026afdad7b8e9b8480cae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="schemaini-file-text-file-driver"></a>Файл Schema.ini (драйвера текстового файла)
 При использовании драйвера текстового формата текстового файла определяется с помощью файла сведений схемы. Файл сведений схемы всегда с именем Schema.ini и всегда остается в том же каталоге, в качестве источника текстовых данных. Файл сведений схемы предоставляет IISAM сведениями об общий формат файла, имя столбца и сведения о типе данных и несколько других характеристик данных. Файл Schema.ini всегда является обязательным для доступа к данным фиксированной длины. Файл Schema.ini следует использовать, если текст таблица содержит даты и времени, денежных единиц или десятичные данные или в любое время, что требуется больший контроль над обработки данных в таблице.  
@@ -136,4 +134,3 @@ CharacterSet=ANSI
   
 > [!NOTE]  
 >  Если запись не указан, используется значение по умолчанию в панели управления Windows.
-

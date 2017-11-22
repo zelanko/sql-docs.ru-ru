@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 4d2b367f-8ac7-4534-b66f-10300ef64ebc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ac2e3e52ea52d5a317819d1f8e609cbf6899d53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 6cfc028e9d3f1e8d49395eb404c06be286ba052e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-object-selection--accesstosql"></a>Выбор дополнительных объектов (AccessToSQL)
 **Расширенный объект раздела** диалоговое окно позволяет отфильтровать объекты базы данных с помощью строки и подстроки в имени объекта, а затем выберите или отмените выделение этих объектов. SSMA выполняет преобразование и миграцию операций на выбранных объектов.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/02/2017
 **Отображаются только загруженных элементов.**  
 Переключение отображения категорий или элементов. При выборе этой кнопки SSMA показывает все элементы, которые соответствуют критериям фильтра и те, которые были ранее загружены. Если эта кнопка не установлен, SSMA показаны папки категории.  
   
-**Фильтр**  
+**Filter**  
 Введите строку, которую вы хотите использовать для фильтрации элементов. Например, чтобы найти все доступные элементы, которые содержат строку «ID», в имя элемента, введите строку «ID» в **фильтра** поле.  
   
 Если элементы условия фильтра, категории или элементы будут отображаться при вводе строки. Чтобы увидеть совпадающие элементы, рекомендуется нажать кнопку **отображаются только загрузить элементы** кнопки.  
@@ -58,4 +56,3 @@ ms.lasthandoff: 08/02/2017
 **Очистить фильтр**  
 Очищает **фильтра** поле.  
   
-

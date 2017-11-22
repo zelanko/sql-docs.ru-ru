@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7588565f-ea34-4402-8be9-331188bdb8c2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b54b8749604cd8a5a17ee219326d814dc76131c4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 260788cabb01d26215a51f0853b1b8dffc8163d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-object-tmsl"></a>Объект связи (TMSL)
 
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  Все объекты имеют общий набор свойств, включая имя, тип, описание, коллекцию свойств и заметки. **Связь** объекты также имеют следующие свойства.  
   
  isActive  
- Логическое значение, указывающее, помечена ли связь как активным или неактивным. Активная связь автоматически используется для фильтрации по таблицам. Неактивная связь может использоваться явно путем вычисления DAX с помощью функции USERELATIONSHIP.  
+ Логическое значение, указывающее, помечена ли связь как активным или неактивным. Активная связь автоматически используется для фильтрации в таблицах. Неактивная связь может использоваться явным образом в вычислениях DAX с применением функции USERELATIONSHIP.  
   
  crossFilteringBehavior  
  Указывает, как связи влияют на фильтрацию данных. В разделе [двунаправленные кросс-фильтры для табличных моделей в SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) для получения дополнительной информации. Допустимы следующие значения:  
@@ -55,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 -   (2) при объединении двух столбцов, DatePartOnly соединения только по дате.  
   
  relyOnReferentialIntegrity  
- Не используется; Зарезервировано для будущего использования.  
+ Не используется — зарезервировано для будущего использования.  
   
  отношениями securityFilteringBehavior  
  Перечисление, указывающее, как связи влияют на фильтрацию данных при вычислении выражения безопасности уровня строк. Допустимы следующие значения:  
@@ -179,4 +178,3 @@ ms.lasthandoff: 09/01/2017
  [Создание связей](../../integration-services/data-flow/transformations/create-relationships.md)  
   
   
-

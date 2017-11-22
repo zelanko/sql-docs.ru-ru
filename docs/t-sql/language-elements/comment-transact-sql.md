@@ -8,33 +8,30 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --_TSQL
 - Comment
 - --
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - nonexecuting text strings [SQL Server]
 - remarks [SQL Server]
 - -- (comment character)
 - comments [SQL Server]
 ms.assetid: 676ea8c2-52c1-4ef6-9354-320f1a091153
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: a5615aa149b6f7a36b962550fa6094d3badae0a2
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a03aff79db25c07fc828145177e29196405a9264
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="---comment-transact-sql"></a>-- (комментарий) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/01/2017
   
  Дополнительные сведения о сочетаниях клавиш см. в разделе [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
   
- Для многострочных комментариях см. в разделе [косой черты комментарий звезда &#40; Transact-SQL &#41; ](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
+ Для многострочных комментариях см. в разделе [косой черты звезда &#40; Блок комментариев &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/slash-star-comment-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере используются символы комментария --.  
@@ -85,4 +82,3 @@ GO
  [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)  
   
   
-

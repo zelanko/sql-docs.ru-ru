@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 948614ea176ef4cb4cc506272daed33ac7435ded
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c11ae09c8c6bef956333c8a9cbee62f43992f91b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationship-representation-tabular"></a>Представление связи (табличное)
   Связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах.  
@@ -236,4 +234,3 @@ private void setPKColumn(AMO.Database tabularDb, string PKTableName, string PKCo
  Однако, чтобы получить основные сведения об использовании объектов AMO для создания представлений связи и управления ими, ознакомьтесь с исходным кодом примера преобразования объектов AMO в табличную модель. Этот образец доступен на сайте Codeplex. Важное примечание о коде. Код предоставляется только для иллюстрации логических концепций, поясняемых в этом разделе. Его не следует использовать в рабочей среде или для других целей, за исключением учебных.  
   
   
-

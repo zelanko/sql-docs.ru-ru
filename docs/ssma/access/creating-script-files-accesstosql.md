@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
+ms.openlocfilehash: 2945b7fac5aeb464511d38b6130c747c8ce95abc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-script-files-accesstosql"></a>Создание файлов скрипта (AccessToSQL)
 В первую очередь перед запуском приложения консоли SSMA для создания файла сценария и при необходимости создания файла значение переменной и файла подключения сервера.  
@@ -404,4 +402,3 @@ ms.lasthandoff: 08/17/2017
 ## <a name="see-also"></a>См. также:  
 [Создание файлов значение переменной &#40; AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
-

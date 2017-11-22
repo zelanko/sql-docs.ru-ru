@@ -8,25 +8,23 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database [Master Data Services], attributes staging table
 - attributes staging table [Master Data Services]
 ms.assetid: 070681ed-be99-49ae-93bd-6402f2134ace
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 784c8656e8df1ac82afb85c31449ad754134049e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 85205881ceb730739152ea60f886723d3f3827ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="consolidated-member-staging-table-master-data-services"></a>Промежуточная таблица консолидированных элементов (службы Master Data Services)
   Промежуточная таблица консолидированных элементов (stg.name_Consolidated) используется в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для создания, обновления, деактивации и удаления консолидированных элементов. Ее также можно использовать для обновления значений атрибутов консолидированных элементов.  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/07/2017
  [Ошибки промежуточного процесса (службы Master Data Services)](../master-data-services/staging-process-errors-master-data-services.md)  
   
   
-

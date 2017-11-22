@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e95c19736c01be2f7526a3c32e52fb61cb3a0c83
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Свойства SQL Server (вкладка «Параметры запуска»)
   Используйте это диалоговое окно для добавления и удаления параметров запуска для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Параметры запуска могут сильно влиять на производительность компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Прежде чем добавлять или изменять параметры запуска, ознакомьтесь с разделом «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/02/2017
  Чтобы удалить параметр, выберите его и нажмите кнопку **Удалить**.  
   
 ## <a name="parameter-format"></a>Формат параметров  
- Не вводите разделитель между параметрами. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавит разделитель автоматически. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager обеспечивает следующие требования к параметрам.  
+ Не вводите разделитель между параметрами. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавит разделитель автоматически. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существуют следующие требования к параметрам.  
   
 -   Начальные и конечные пробелы любого параметра запуска отсекаются.  
   
@@ -85,4 +83,3 @@ ms.lasthandoff: 08/02/2017
  Дополнительные сведения о параметрах запуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в статье "Инструкции. Настройка параметров запуска сервера (диспетчер конфигурации[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
   
-

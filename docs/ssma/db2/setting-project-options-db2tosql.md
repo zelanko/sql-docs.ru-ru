@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dbcf08606316614f18bbc69beef54eea0a7569ee
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f5b71db23d56150fbc6a2f7990ba9960d83d2d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-project-options-db2tosql"></a>Настройка параметров проекта (DB2ToSQL)
 Для каждого проекта SSMA можно задать параметры проекта. Эти параметры задают преобразование объекта, объект загрузки, параметры пользовательского интерфейса и данных миграции. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь, что параметры конфигурации подходят для проекта.  
@@ -49,7 +47,7 @@ SSMA имеет пять наборов параметров проекта.
   
 -   Optimistic  
   
--   Полная  
+-   Полное  
   
 -   Другой  
   
@@ -108,4 +106,3 @@ SSMA имеет пять наборов параметров проекта.
 ## <a name="see-also"></a>См. также:  
 [Сопоставление DB2 и типов данных SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/mapping-db2-and-sql-server-data-types-db2tosql.md)  
   
-

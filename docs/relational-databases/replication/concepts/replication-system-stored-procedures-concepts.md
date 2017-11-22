@@ -2,9 +2,12 @@
 title: "Основные понятия системных хранимых процедур репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 087e962a7957768ce3b2dbf8e8e3a02aed754f20
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fb436a9666717ebae49327cb71a50c6a4744ad9f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] программный доступ ко всем настраиваемым пользователями функциональным возможностям в топологии репликации предоставляется системными хранимыми процедурами. Безусловно, хранимые процедуры могут выполняться отдельно с использованием среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или программы командной строки sqlcmd, но может оказаться более удобным написание файлов скриптов [!INCLUDE[tsql](../../../includes/tsql-md.md)], предназначенных для выполнения задач репликации в логической последовательности.  
   

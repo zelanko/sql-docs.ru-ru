@@ -8,22 +8,20 @@ ms.service:
 ms.component: master-data-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ac8fc262775d11c08cb2e30a750549fe3b0ec96b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: afc9e1fc978556d7a454319cdfc661115f373925
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="master-data-services-features-and-tasks"></a>Функции и задачи служб Master Data Services
   Сведения об использовании [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] для управления основными данными организации. Сведения о создании и обработке объектов модели, которые являются контейнерами для данных. Сведения об организации и обслуживании основных данных. Сведения об импорте и экспорте основных данных, а также о совместном использовании моделей в тестовой и рабочей средах. Наконец, сведения о разработке пользовательских приложений, обращающихся к веб-службе [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -79,4 +77,3 @@ ms.lasthandoff: 09/07/2017
 -   [Документация для разработчика служб Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)  
   
   
-

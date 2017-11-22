@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 15db78afc33fc9694c8ce8b4e56ee731ef0fb5f0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3c7d7f8162968d579f1e3e1346fb2498ebf941cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-db2-database-db2tosql"></a>Подключение к базе данных DB2 (DB2ToSQL)
 Для переноса баз данных DB2 для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], необходимо подключиться к базе данных DB2, которые требуется перенести. При подключении SSMA получает метаданные о все схемы DB2 и затем отображается в панели обозревателя метаданных DB2. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  
@@ -120,4 +118,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных DB2 в SQL Server &#40; DB2ToSQL &#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   
-

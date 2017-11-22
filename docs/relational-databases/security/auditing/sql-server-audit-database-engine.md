@@ -2,9 +2,12 @@
 title: "Подсистема аудита SQL Server (ядро СУБД) | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/21/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,16 +19,16 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: "58"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 21ccd95afcf7054c063c2e6be2b4707cc6cbfb2d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 02c5d20286c4bcf688e9570a85d58ac89e2ffd06
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-audit-database-engine"></a>Подсистема аудита SQL Server (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   *Аудит* экземпляра среды [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] или отдельной базы данных включает в себя отслеживание и протоколирование событий, происходящих в компоненте [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Аудит среды[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] позволяет проводить аудит сервера, который может включать в себя спецификации аудита сервера для событий на уровне сервера, а также спецификации аудита базы данных для событий на уровне базы данных. События аудита могут записываться в журналы событий или файлы аудита.  
   

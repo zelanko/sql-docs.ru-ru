@@ -8,20 +8,18 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b107903c83100d24f8691fba78ab9e928ee23d00
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
-ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
-ms.contentlocale: ru-ru
-ms.lasthandoff: 11/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="programming-guidelines"></a>Указания по программированию
 
@@ -41,7 +39,7 @@ ms.lasthandoff: 11/08/2017
 -   [Выполнение запросов (ODBC)](http://msdn.microsoft.com/library/ms131677.aspx)  
 -   [Обработка ошибок и сообщений](http://msdn.microsoft.com/library/ms131289.aspx)  
 -   [Проверка подлинности Kerberos](http://msdn.microsoft.com/library/cc280459.aspx)  
--   [Определяемые пользователем типы больших значений CLR (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
+-   [Определяемые пользователем типы данных больших значений CLR (ODBC)](http://msdn.microsoft.com/library/bb677316.aspx)  
 -   [Выполнение транзакций (ODBC) (за исключением распределенных транзакций)](http://msdn.microsoft.com/library/ms131706.aspx)  
 -   [Обработка результатов (ODBC)](http://msdn.microsoft.com/library/ms130812.aspx)  
 -   [Выполнение хранимых процедур](http://msdn.microsoft.com/library/ms131440.aspx)
@@ -118,4 +116,3 @@ ms.lasthandoff: 11/08/2017
 [Известные проблемы в данной версии драйвера](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes.md)
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], visual basic applications
 - Visual FoxPro data [ODBC], visual basic applications
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 545af28a6bf6f25832fba4d622755194ff9f0a55
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>С помощью драйвера ODBC для VFP FoxPro вместе с приложением Visual Basic
 Ваш Microsoft® Visual Basic® приложению взаимодействовать с данными Visual FoxPro путем создания элемента управления данными, подключается к источнику данных Visual FoxPro.  
@@ -74,4 +72,3 @@ ms.lasthandoff: 09/09/2017
     ```  
   
 8.  Запустить форму и пропустить полей идентификатор клиента из образца базы данных Visual FoxPro TasTrade с помощью элемента управления данными.
-

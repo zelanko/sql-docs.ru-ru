@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - API functions [ODBC]
 - level 2 API functions [ODBC]
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6232a890c5898bcf543df9e47c97f363e2bfca12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eb35e0e2dde90261e913ffd9ba3dc28e5859e012
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>Функции уровня 2 API-Интерфейс (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLProcedures**|Возвращает список процедур в источнике данных. Упакованные процедур имя ПРОЦЕДУРЫ столбец находится в *packagename.procedurename* формат.<br /><br /> Поскольку Oracle не предоставляет способ различать упакованных процедуры из упакованных функций, драйвер возвращает SQL_PT_UNKNOWN для столбца PROCEDURE_TYPE.|  
 |**SQLSetPos**|Задает положение курсора в набор строк. Можно использовать **SQLSetPos** с **SQLGetData** для получения строк из несвязанных столбцов после позиционирования курсора для конкретной строки в наборе строк. Строки добавляются к результирующему набору с помощью *fOption* SQL_ADD добавляются после последней строки в результирующем наборе.|  
 |**SQLSetScrollOptions**|Задает параметры, которые управляют поведением курсоров, связанные с дескриптором инструкции hstmt. Дополнительные сведения см. в разделе [типа курсора и параллелизма сочетания](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|
-

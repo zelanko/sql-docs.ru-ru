@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data types [ODBC], Paradox driver
 - Paradox driver [ODBC], data types
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e63f642f7a1921f9d65cd6f8fe665b9e83c9404c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="paradox-data-types"></a>Типы данных Paradox
 Драйвера ODBC Paradox Paradox типы данных сопоставляются с типами данных ODBC SQL. В следующей таблице перечислены все типы данных Paradox и показаны типы данных, которые они сопоставляются с ODBC SQL.  
@@ -69,4 +67,3 @@ ms.lasthandoff: 09/09/2017
 |timestamp|Если значение вставляемых в столбец отметки времени драйвером Paradox, то впоследствии, полученных из столбца, возвращенного значения могут отличаться от вставленное значение по мере 1 секунды из-за округления.|  
   
  Дополнительные ограничения на типы данных можно найти в [ограничения типа данных](../../odbc/microsoft/data-type-limitations.md).
-

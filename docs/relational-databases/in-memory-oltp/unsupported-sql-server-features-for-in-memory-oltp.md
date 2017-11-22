@@ -8,22 +8,20 @@ ms.service:
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 5a2ccc853663dd125fec186b9e9e3834f28345c7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
-ms.openlocfilehash: 85a720edefe425146e5c54613b0a0f88007765a9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/31/2017
 |Повторная сборка журнала|Повторная сборка журнала с помощью прикрепления или ALTER DATABASE не поддерживается базами данных с файловой группой MEMORY_OPTIMIZED_DATA.|  
 |Linked Server|Нельзя получить доступ к связанным серверам в том же запросе или транзакции, в которой используются оптимизированные для памяти таблицы. Дополнительные сведения см. в разделе [Связанные серверы (компонент Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |С неполным протоколированием|Вне зависимости от модели восстановления базы данных все операции в устойчивых таблицах, оптимизированных для памяти, всегда полностью протоколируются.|  
-|Минимальное протоколирование|Минимальное протоколирование не поддерживается для оптимизированных для памяти таблиц. Дополнительные сведения о минимальном ведении журнала см. в статьях [Журнал транзакций &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) и [Предварительные условия для минимального ведения журнала массового импорта данных](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
+|Минимальное протоколирование|Минимальное протоколирование не поддерживается для оптимизированных для памяти таблиц. Дополнительные сведения о минимальном протоколировании см. в статьях [Журнал транзакций &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) и [Предварительные условия для минимального протоколирования массового импорта данных](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
 |Отслеживание изменений|Отслеживание изменений можно включить для базы данных с объектами OLTP в памяти. Однако изменения в таблицах, оптимизированных для памяти, не отслеживаются.|  
 | DDL, триггеры | Триггеры DDL уровня базы данных и уровня сервера не поддерживаются для таблиц, выполняющихся в памяти OLTP, и для модулей, скомпилированных в собственном коде. |  
 | Система отслеживания измененных данных (CDC) | Систему CDC не допускается использовать с базой данных, содержащей оптимизированные для памяти таблицы, так как внутри CDC используется DDL-триггер для DROP TABLE. |  
@@ -93,4 +91,3 @@ ms.lasthandoff: 07/31/2017
 ## <a name="see-also"></a>См. также:  
 
 - [Поддержка SQL Server для In-Memory OLTP](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)
-

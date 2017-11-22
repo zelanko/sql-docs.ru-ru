@@ -1,11 +1,14 @@
 ---
 title: "Инструкция DBCC CHECKTABLE (Transact-SQL) | Документы Microsoft"
-ms.date: 07/16/2017
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.custom: 
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -13,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKTABLE_TSQL
 - DBCC CHECKTABLE
 - CHECKTABLE
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexed views [SQL Server], DBCC CHECKTABLE
 - page integrity checks [SQL Server]
@@ -25,20 +27,22 @@ helpviewer_keywords:
 - low overhead checks
 - table integrity checks [SQL Server]
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
-caps.latest.revision: 89
+caps.latest.revision: "89"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 9d6ef6adb1d9a10b93e938842de2661eb9202d16
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: af19e042e9e40bd92352a175394c442431959b0e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Проверка целостности всех страниц и структур, составляющих таблицу или индексированное представление.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+Производит проверку целостности всех страниц и структур, составляющих таблицу или индексированное представление.
+
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>Синтаксис    
@@ -160,7 +164,7 @@ DBCC CHECKTABLE
 [Просмотр или изменение уровня совместимости базы данных](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Моментальный снимок внутренней базы данных    
-Для обеспечения согласованности транзакций, необходимой для выполнения этих проверок, инструкция DBCC CHECKTABLE использует внутренний моментальный снимок базы данных. Дополнительные сведения см. в разделе [Просмотр размера разреженного файла моментального снимка базы данных & #40; Transact-SQL & #41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) и в разделе «DBCC внутренней базы данных моментальных снимков использование» [DBCC & #40; Transact-SQL & #41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+Для обеспечения согласованности транзакций, необходимой для выполнения этих проверок, инструкция DBCC CHECKTABLE использует внутренний моментальный снимок базы данных. Дополнительные сведения см. в разделе [Просмотр размера разреженного файла моментального снимка базы данных &#40; Transact-SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) и в разделе «DBCC внутренней базы данных моментальных снимков использование» [DBCC &#40; Transact-SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 Если моментальный снимок не может быть создан или указана подсказка TABLOCK, инструкция DBCC CHECKTABLE запрашивает совмещаемую блокировку таблицы, чтобы обеспечить необходимую согласованность.
     
 > [!NOTE]    
@@ -254,4 +258,3 @@ DBCC CHECKTABLE ('Production.Product',@indid);
  [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
     
   
-

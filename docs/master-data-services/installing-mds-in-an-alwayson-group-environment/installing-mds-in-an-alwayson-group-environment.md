@@ -8,8 +8,7 @@ ms.service:
 ms.component: installing-mds-in-an-alwayson-group-environment
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- master-data-services
+ms.technology: master-data-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
@@ -18,16 +17,12 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 2caabcb53e4386927b4103764c8abce34ccdefcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f5cebe2ba32765cc5f4bddc974ee62b3ed3b8915
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-
-
-
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Высокий уровень доступности и аварийное восстановление для Master Data Services
 
 **Аннотация:** в этой статье описывается решение с Master Data Service (MDS), размещенное в конфигурации группы доступности AlwaysOn. В статье рассказывается, как установить и настроить SQL 2016 Master Data Services в группе доступности SQL 2016 AlwaysOn. Основная цель этого решения — обеспечить более высокий уровень доступности и улучшить аварийное восстановление для серверных данных MDS, размещенных в базе данных SQL Server.
@@ -410,5 +405,4 @@ WSFC — это компонент, повышающий уровень дос�
 Был ли этот документ вам полезен? Чтобы оставить отзыв, щелкните ссылку **Комментарии** в верхней части статьи. 
 
 Ваши отзывы помогут нам в будущем повысить качество наших технических документов. 
-
 

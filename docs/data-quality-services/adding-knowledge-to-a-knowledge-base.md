@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: da148a7f-55bc-4990-a157-e61968b831d7
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2d9e89b8e0b25f470be7292190acc05a722c4c7b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f247bb5a8b739b1f2d35ce4e7fb08c5904ef7d50
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-knowledge-to-a-knowledge-base"></a>Добавление знаний в базу знаний
   В этом разделе описываются способы, которыми можно добавить знания в базу знаний служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Прежде чем приступать к работе со службами DQS, необходимо получить набор знаний о данных. Для этого необходимо построить и поддерживать базу знаний служб DQS, а также пополнять ее наборами знаний, связанными с соответствующими типами источников данных. База знаний является репозиторием знаний о данных, который дает представление о данных и помогает поддерживать их целостность.  
@@ -79,4 +77,3 @@ ms.lasthandoff: 09/09/2017
 -   Дополнительные сведения в документации см. в разделе [Using the DQS Default Knowledge Base](../data-quality-services/using-the-dqs-default-knowledge-base.md).  
   
   
-

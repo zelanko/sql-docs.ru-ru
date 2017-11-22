@@ -1,10 +1,13 @@
 ---
 title: "Общие сведения об индексах columnstore | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8c7238da1e8c0ad3fa46805c73f57bc2ae8e4c1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7ee09bc377beed53a4af3a43111deeec03830e98
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columnstore-indexes---overview"></a>Общие сведения об индексах columnstore
-[!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   *Индекс columnstore* — это стандарт хранения и запрашивания больших объемов данных, в которых хранятся таблицы фактов. Хранение данных и обработка запросов по индексам позволяют **до 10 раз** увеличить производительность запросов к хранилищу данных по сравнению с традиционным хранилищем, в котором данные хранятся по строкам, и уменьшить размеры данных **до 10 раз** по сравнению с несжатыми данными. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], индексы columnstore позволяют получать оперативную аналитику и анализировать рабочую нагрузку по обработке транзакций в режиме реального времени.  
   

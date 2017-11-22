@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 430ecbc0ed6814d2a626f67c3e36ab49cc930262
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 52b7a92280566258321a46ecfb2c489e81267965
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-representationtabular"></a>Представление базы данных (табличное)
   В табличном режиме базы данных — это контейнер для всех объектов в табличной модели.  
@@ -100,4 +98,3 @@ catch (Exception createDBxc)
  Чтобы получить практический опыт по использованию объектов AMO для создания и обработки представлений базы данных см. исходный код в образце Tabular AMO 2012; в частности, проверьте следующий исходный код: Database.cs. Этот образец доступен на сайте Codeplex. Образец кода приведен только для иллюстрации описываемых здесь логических концепций и не должен использоваться в рабочей среде.  
   
   
-

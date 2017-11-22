@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ffe0911f2845e7ff7e41cf41fcc4f267f7c0ad66
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4d46ec3bdad80879ddc4a931d8668a5298972e58
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>При создании экземпляра события ADO: ADO и WFC
 ADO ввода для Windows Foundation Classes (ADO и WFC) основана на модели событий ADO и предоставляет упрощенный интерфейс программирования. В общем случае ADO/WFC перехватывает события ADO, объединяет параметры события в классе событий и затем вызывает обработчик события.  
@@ -74,4 +72,3 @@ ADO ввода для Windows Foundation Classes (ADO и WFC) основана �
  [Параметры события](../../../ado/guide/data/event-parameters.md)   
  [Как работают обработчики событий](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Типы событий](../../../ado/guide/data/types-of-events.md)
-

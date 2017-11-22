@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: e770c2f2-52b9-4471-a207-0d35df41399c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 04357499b0ac47f8fa130ceb117946cbeeba1378
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c08bd0a90cc7f5820f2f1e9481f2c58c3b12f131
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma--for-sybase-client-sybasetosql"></a>Установка SSMA для Sybase клиента (SybaseToSQL)
 Клиент SSMA состоит из программных файлов, которые используются для подключения к серверу базы данных Sybase адаптивной Server Enterprise (ASE) и экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или база данных SQL Azure, преобразовать ASE объекты базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или загрузить объекты в синтаксисе базу данных SQL Azure [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базе данных SQL Azure, а затем перенесите данные [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или Azure SQLDB.  
@@ -77,4 +75,3 @@ SSMA можно загрузить из Интернета. Загрузить �
 [Установка компонентов SSMA на SQL Server &#40; SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
 [Миграция баз данных Sybase ASE в SQL Server — база данных Azure SQL &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

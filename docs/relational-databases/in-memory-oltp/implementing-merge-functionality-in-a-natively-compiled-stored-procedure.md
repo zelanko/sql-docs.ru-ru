@@ -2,9 +2,12 @@
 title: "Реализация функциональности MERGE в скомпилированной в собственном коде хранимой процедуре | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 13942f3c83b5ef971b20a5009d581ad797f45e26
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2f7af4843dbce2f547adc2ee2c47f13b22c70583
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="implementing-merge-functionality-in-a-natively-compiled-stored-procedure"></a>Реализация функциональности MERGE в скомпилированной в собственном коде хранимой процедуре
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 Образец кода Transact-SQL в этом разделе демонстрирует имитацию инструкции T-SQL MERGE в модуле, скомпилированном в собственном коде. В этом образце используется табличная переменная со столбцом identity, производится перебор строк в табличной переменной и для каждой строки выполняется обновление, если условие выполняется, или вставка, если оно не выполняется.

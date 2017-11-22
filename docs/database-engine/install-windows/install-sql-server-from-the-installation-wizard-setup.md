@@ -8,8 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +16,15 @@ helpviewer_keywords:
 - Setup [SQL Server], steps
 - SQL Server, installing
 ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
-caps.latest.revision: 91
+caps.latest.revision: "91"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 6f354a0639adf1db8e99a5f4e245f9df16211f51
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: b97afc1f7fd9464e5ef5074e9e2b3d1ccb98d4b0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Установка SQL Server с помощью мастера установки (программа установки)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +64,7 @@ ms.lasthandoff: 09/08/2017
   
 1.  Мастер установки запускает центр установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы создать экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выберите пункт **Установка** в области навигации слева, а затем выберите **Новая установка изолированного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или добавление компонентов к существующей установке**.  
 
-1.  На странице «Ключ продукта» выберите переключатель установки бесплатного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или рабочей версии продукта с регистрационным номером продукта (PID). Дополнительные сведения см. в статье [Возможности, поддерживаемые различными выпусками SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+1.  На странице «Ключ продукта» выберите переключатель установки бесплатного выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или рабочей версии продукта с регистрационным номером продукта (PID). Дополнительные сведения см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
      Чтобы продолжить, нажмите кнопку **Далее**.  
 
@@ -203,4 +201,3 @@ ms.lasthandoff: 09/08/2017
  [Установка SQL Server 2016 из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
-

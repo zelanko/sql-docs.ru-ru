@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC]
 - data types [ODBC], about data types
 ms.assetid: 981d49c3-3531-4543-aa75-5bd9e4f67000
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe3088b5a750bd47f4d9a2c8288a1cedbd87be4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a543430479a33953e087fd50c91f7f2a307fc204
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-d-data-types"></a>Приложение г. типы данных
 ODBC определяет два набора типов данных: SQL типы данных и типы данных C. Типы данных SQL указывают тип данных данные, хранящиеся в источнике данных. Типы данных C указывает тип данных данные, хранящиеся в буферы приложения.  
@@ -44,27 +42,26 @@ ODBC определяет два набора типов данных: SQL ти�
   
  Это приложение содержит следующие разделы.  
   
--   [Используя идентификаторы типа данных](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
+-   [Использование идентификаторов типов данных](../../../odbc/reference/appendixes/using-data-type-identifiers.md)  
   
 -   [Типы данных SQL](../../../odbc/reference/appendixes/sql-data-types.md)  
   
--   [Типы данных C](../../../odbc/reference/appendixes/c-data-types.md)  
+-   [Типы данных C](../../../odbc/reference/appendixes/c-data-types.md)  
   
--   [Идентификаторы типа данных и дескрипторов](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)  
+-   [Идентификаторы и дескрипторы типа данных](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md)  
   
--   [Идентификаторы псевдо типа](../../../odbc/reference/appendixes/pseudo-type-identifiers.md)  
+-   [Идентификаторы псевдотипа](../../../odbc/reference/appendixes/pseudo-type-identifiers.md)  
   
 -   [Передача данных в двоичной форме](../../../odbc/reference/appendixes/transferring-data-in-its-binary-form.md)  
   
--   [Рекомендации для интервала и числовых типов данных](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
+-   [Рекомендации по использованию интервальных и числовых типов данных](../../../odbc/reference/appendixes/guidelines-for-interval-and-numeric-data-types.md)  
   
 -   [Ограничения григорианского календаря](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md)  
   
--   [Размер столбца, десятичных цифр, длина в октетах передачи и размер экрана](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)  
+-   [Размер столбца, число десятичных разрядов, длительность октета передачи и отображаемый размер](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)  
   
--   [Преобразование данных из SQL в типы данных C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)  
+-   [Преобразование данных из SQL в типы данных C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)  
   
--   [Преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
+-   [Преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md)  
   
  Описание типов данных ODBC см. в разделе [типы данных ODBC в](../../../odbc/reference/develop-app/data-types-in-odbc.md). Сведения о типах данных драйвера SQL см. в документации драйвера.
-

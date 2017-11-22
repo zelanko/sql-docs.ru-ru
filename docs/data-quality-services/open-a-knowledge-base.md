@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dqs.kb.openkb.f1
+f1_keywords: sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 693a38d7a92f7dc6728452e721716e89b366feb9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 495047016c4ffe394214115f77ec13846b57d9db
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="open-a-knowledge-base"></a>Открытие базы знаний
   В этом разделе описано, как открыть существующую базу знаний в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) и подготовить ее для управления доменами, обнаружения знаний или добавления политики сопоставления.  
@@ -102,4 +99,3 @@ ms.lasthandoff: 09/09/2017
 -   **Политика сопоставления — результаты сопоставления**. База знаний была закрыта на странице **Политика сопоставления — результаты сопоставления** . База знаний заблокирована, и действия «Обнаружение набора знаний» и «Управление доменами» недоступны.  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - converting data from c to SQL types [ODBC], date
 - data conversions from C to SQL types [ODBC], date
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7a1efdeb745856ea7460a6719b386143d1a03819
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e5806fe1dcdbabbc27e25c0387f2d06ea25f64ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-date"></a>C в SQL: дата
 Идентификатор для типа данных ODBC C дата является:  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
  После даты C данные преобразуются в символьные данные SQL, результирующий символьных данных находится в «*гггг*-*мм*-*дд*» формата.  
   
  Драйвер не учитывает значение длины/индикатора при преобразовании данных из типа данных date C и предполагает, что размер типа данных date C размер буфера данных. Переданное значение длины/индикатора *StrLen_or_Ind* аргумент в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумент в **SQLBindParameter**. Буфер данных задается с помощью *DataPtr* аргумент в **SQLPutData** и *ParameterValuePtr* аргумент в **SQLBindParameter**.
-

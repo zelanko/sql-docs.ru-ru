@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 75047e413cbc55d5e5a9431a6c6ab7cc7b92b017
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 32a0bb0592614c496a3ceff5a3cfa82f73032d9f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="managing-a-composite-domain"></a>Управление составным доменом
   В этом разделе описывается использование составных доменов в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Иногда один домен не позволяет удовлетворительно представить данные в поле. Чтобы представить данные, необходимо группировать отдельные домены. Для этого создается составной домен. Составной домен состоит из нескольких отдельных доменов и сопоставляется с полем данных, включающим несколько связанных терминов, которые не обработаны с помощью анализа, а включены в одно составное значение. Каждый термин в значении представляется другим, отдельным доменом. Только после включения отдельных доменов в составные домены и последующего сопоставления составного домена с полем данных вы можете создать набор знаний в базе знаний о данных в этом поле с помощью создания набора знаний в отдельных доменах. Составной домен, как и отдельный домен, — это семантическое представление данных в одном поле данных.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |Создание отдельного домена и добавление набора знаний в этот домен.|[Управление доменом](../data-quality-services/managing-a-domain.md)|  
   
   
-

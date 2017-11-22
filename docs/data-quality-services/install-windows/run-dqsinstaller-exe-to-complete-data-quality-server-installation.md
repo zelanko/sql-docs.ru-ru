@@ -8,22 +8,20 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 81df7b3a331cf9ac111f0bf11a413133e0bc5a81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e61f0e79491b3c55505031e4b4e1ddef34278ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Запуск файла DQSInstaller.exe для завершения установки сервера служб DQS
   Чтобы завершить установку сервера [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] , необходимо запустить файл DQSInstaller.exe после установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. В этом разделе описан запуск файла DQSInstaller.exe на экране **Пуск** или в меню **Пуск** , в проводнике Windows и из командной строки. Для запуска файла DQSInstaller.exe можно воспользоваться любым из этих способов.  
@@ -115,4 +113,3 @@ ms.lasthandoff: 09/01/2017
  [Экспорт и импорт баз знаний DQS с помощью DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)  
   
   
-

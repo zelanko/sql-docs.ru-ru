@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a688b5d0da43f4c49e22c70bf1faf3bc1773097d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-matching"></a>Сопоставление данных
   Процесс сопоставления данных [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) позволяет сократить дублирование данных и повысить их точность в источнике данных. Сопоставление анализирует степень дублирования во всех записях одного источника данных, возвращая взвешенные вероятности совпадения между всеми наборами сравниваемых записей. Затем вы можете принять решение, какие записи совпадают, и предпринять соответствующие действия в исходных данных.  
@@ -85,4 +83,3 @@ ms.lasthandoff: 09/09/2017
 |Запуск сопоставления в проекте служб DQS|[Запуск проекта сопоставления](../data-quality-services/run-a-matching-project.md)|  
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 ms.assetid: dce0a2a3-326f-4aaf-a822-6c5549833afa
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bbeab5ffb8e0478968dd220526f38015cf865e76
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 56510bc99d0a6a7c20d18b93b22a60decdfcc2e2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-event-instantiation-visual-basic"></a>При создании экземпляра события ADO: Visual Basic
 Чтобы обработать события ADO в Microsoft® Visual Basic, необходимо объявить переменной уровня модуля с помощью **WithEvents** ключевое слово. Переменная может быть объявлен только как часть класса модуля и должен быть объявлен на уровне модуля. Это же ограничения, как кажется, однако из-за Visual Basic **формы** объектов также являются классами. Самый простой способ обработки событий ADO — объявить переменную с помощью **WithEvents**. В следующем примере показана обработка **ConnectComplete** событий для **подключения** объекта:  
@@ -74,4 +71,3 @@ End Sub
 ```  
   
  **Подключения** объект объявляется в **формы** уровня с помощью **WithEvents** ключевое слово, чтобы включить обработку событий. Обработчик событий Form_Load фактически создает объект путем назначения нового **подключения** объект *connEvent* , а затем открывает соединение. Конечно реальному приложению может потребоваться дополнительной обработки в обработчике событий Form_Load, чем показано здесь.
-

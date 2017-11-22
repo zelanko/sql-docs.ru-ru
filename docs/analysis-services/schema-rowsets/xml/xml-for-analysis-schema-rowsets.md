@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - rowsets [Analysis Services], XML for Analysis
 - XML for Analysis, schema rowsets
 - schema rowsets [Analysis Services], XML for Analysis
 - schema rowsets [XML for Analysis]
 ms.assetid: 36e3ecfd-fcc3-415a-9c43-f59921d2468a
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d0f3527abc7fcd12757b4fdc4abd02d97c79d2ac
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f0c44abd2ba4be59a86b46a9b0ff74196c570e5e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
   Поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) содержит наборы строк схемы, которые возвращают метаданные о состоянии, активности и объектах сервера. Получение метаданных необходимо, когда идет разработка клиентского приложения, подключающегося к модели служб Analysis Services, обладающей переменной структурой и характеристиками.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/01/2017
 |[Набор строк DISCOVER_MEMORYUSAGE](../../../analysis-services/schema-rowsets/xml/discover-memoryusage-rowset.md)|Возвращает статистику использования памяти для различных объектов, выделенных сервером.|  
 |[Набор строк DISCOVER_OBJECT_ACTIVITY](../../../analysis-services/schema-rowsets/xml/discover-object-activity-rowset.md)|Предоставляет сведения об использовании ресурсов каждым объектом с начала работы службы.|  
 |[Набор строк DISCOVER_OBJECT_MEMORY_USAGE](../../../analysis-services/schema-rowsets/xml/discover-object-memory-usage-rowset.md)|Предоставляет сведения об использовании ресурсов памяти объектами.|  
-|[Набор рядов Discover_partition_dimension_stat](../../../analysis-services/schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Возвращает статистику по измерению, связанному с секцией.|  
+|[Набор строк DISCOVER_PARTITION_DIMENSION_STAT](../../../analysis-services/schema-rowsets/xml/discover-partition-dimension-stat-rowset.md)|Возвращает статистику по измерению, связанному с секцией.|  
 |[Набор строк DISCOVER_PARTITION_STAT](../../../analysis-services/schema-rowsets/xml/discover-partition-stat-rowset.md)|Возвращает статистику по агрегатам в заданной секции.|  
 |[Набор строк DISCOVER_PERFORMANCE_COUNTERS](../../../analysis-services/schema-rowsets/xml/discover-performance-counters-rowset.md)|Возвращает значение одного или нескольких указанных счетчиков производительности.|  
 |[Набор строк DISCOVER_PROPERTIES](../../../analysis-services/schema-rowsets/xml/discover-properties-rowset.md)|Возвращает список сведений и значений для стандартных свойств и свойств, зависящих от конкретного поставщика, поддерживаемых поставщиком XMLA для указанного источника данных.|  
@@ -86,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [Получение метаданных из источника аналитических данных](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
-

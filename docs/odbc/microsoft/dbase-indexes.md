@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - DBase indexes [ODBC]
 - DBase driver [ODBC], indexes
 ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8681b981bfeb5f13d6fe10869b1556aecfde9311
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f2725f312691d3cb644f9a096b5f469f1356c55
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dbase-indexes"></a>Индексы dBASE
 Драйвер ODBC dBASE автоматически открывает и обновляет файлы dBASE IV индекса. Необходимо использовать **Выбор индексов** диалогового окна через администратор источников данных ODBC для связи с файлами dBASE .ndx файлы dBASE III.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
 -   Имя индекса должно соответствовать соглашению об именах dBASE индекса. dBASE III требует каждого индекса в отдельном файле, каждый из которых .ndx расширения. В dBASE IV индексы создаются как имена тегов, которые хранятся в одном MDX-файла. MDX-файла имеет такое же базовое имя файла базы данных (например, Emp.mdx является индексный файл базы данных Emp.dbf).  
   
 -   dBASE определяет уникальный индекс как элемент, где добавляется только одна запись из набора с одинаковыми значениями ключа индекса.
-

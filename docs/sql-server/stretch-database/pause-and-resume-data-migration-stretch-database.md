@@ -1,5 +1,5 @@
 ---
-title: "Приостановка и возобновление переноса данных (база данных Stretch) | Документация Майкрософт"
+title: "Приостановка и возобновление переноса данных (Stretch Database) | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/14/2016
 ms.prod: stretch-database
@@ -8,8 +8,7 @@ ms.service: database-engine
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-stretch
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - pausing Stretch Database
 - resuming Stretch Database
 ms.assetid: 65d6a990-b295-41b2-97f9-7b6bf3000e4d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0fef9c7f912cb824b3f1fcf8653a82fa99a35561
-ms.openlocfilehash: a291fd543d572fc621e7b59e968e7ca69d79552e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/11/2017
-
+ms.openlocfilehash: c3ed865c017f7a9e74e1411379fa82d4fdf383b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="pause-and-resume-data-migration-stretch-database"></a>Приостановка и возобновление переноса данных (база данных Stretch)
+# <a name="pause-and-resume-data-migration-stretch-database"></a>Приостановка и возобновление переноса данных (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Чтобы приостановить или возобновить перенос данных в Azure, выберите **Stretch** в качестве таблицы в SQL Server Management Studio, а затем — команду **Приостановить** , чтобы приостановить перенос данных, или **Возобновить** , чтобы возобновить его. Эти действия можно также выполнить с помощью Transact-SQL.  
@@ -77,7 +75,7 @@ ALTER TABLE <Stretch-enabled table name>
 ## <a name="check-whether-migration-is-active-or-paused"></a>Проверьте, активна миграция или приостановлена
 
 ### <a name="use-sql-server-management-studio-to-check-whether-migration-is-active-or-paused"></a>С помощью среды SQL Server Management Studio проверьте, активна миграция или приостановлена.
-В SQL Server Management Studio откройте **монитор базы данных Stretch** и проверьте значение в столбце **Состояние миграции** . Дополнительные сведения см. в статье [Мониторинг переноса данных и устранение неполадок](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).
+В SQL Server Management Studio откройте **монитор Stretch Database** и проверьте значение в столбце **Состояние миграции** . Дополнительные сведения см. в статье [Мониторинг переноса данных и устранение неполадок](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md).
 
 ### <a name="use-transact-sql-to-check-whether-migration-is-active-or-paused"></a>С помощью Transact-SQL проверьте, активна миграция или приостановлена.
 Запросите представление каталога **sys.remote_data_archive_tables** и проверьте значение в столбце **is_migration_paused** . Дополнительные сведения см. в разделе [sys.remote_data_archive_tables](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md).
@@ -86,4 +84,3 @@ ALTER TABLE <Stretch-enabled table name>
  [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
 [Мониторинг переноса данных и устранение неполадок](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 
   
-

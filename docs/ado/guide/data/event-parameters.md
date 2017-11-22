@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Reason parameter [ADO]
 - event parameters [ADO]
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 750def3dc0a8f2938bcdf7adb6c3a8935da5dda1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ae7ee638c8489795df8894be23ef80e63b26f07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="event-parameters"></a>Параметры события
 Каждый обработчик событий имеет состояние параметр, управляющий обработчик события. Для завершения событий этот параметр используется для указания на успешное или неуспешное выполнение операции, который создал событие. Наиболее полная события также имеют параметр ошибки для предоставления сведений о любой ошибки, возможно, произошло и один или несколько параметров объекта, которые ссылаются на объекты ADO, используемые для выполнения операции. Например [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) событий включает параметры объекта **команда**, **записей**, и **подключения** объектов связанный с событием. В следующем примере Microsoft Visual Basic®, можно увидеть командной, pRecordset и pConnection объекты, представляющие **команда**, **записей**, и **подключения** объекты, которые используются в **Execute** метод.  
@@ -99,4 +97,3 @@ End Sub
  [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [Как работают обработчики событий](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [Типы событий](../../../ado/guide/data/types-of-events.md)
-

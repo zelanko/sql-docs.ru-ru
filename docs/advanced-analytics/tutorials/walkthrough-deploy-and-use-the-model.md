@@ -5,26 +5,22 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: f28a7aac-6d08-4781-ad28-b48d18cc16a0
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f2749f0bfb3ab330a6a82fac824db245c005a819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>Развертывание модели R и использовать его в SQL
 
@@ -72,7 +68,7 @@ ms.lasthandoff: 10/07/2017
 
     + Использование инструкции SELECT для вызова хранимых модели из таблицы SQL. Модели извлекаются из таблицы как **varbinary(max)** данные, хранящиеся в переменной SQL  _@lmodel2_ и переданный в качестве параметра *mod* системе хранятся процедура [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Данные, используемые в качестве входных данных для оценки определяется как SQL-запроса и хранятся в виде строки в SQL-переменной  _@input_ . По мере извлечения данных из базы данных хранится в кадр данных называется *InputDataSet*, — просто имя по умолчанию для входных данных для [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) процедуру; можно определить другое имя переменной, при необходимости с помощью параметра  _@input \_данные\_1\_имя_.
+    + Данные, используемые в качестве входных данных для оценки определяется как SQL-запроса и хранятся в виде строки в SQL-переменной  _@input_ . По мере извлечения данных из базы данных хранится в кадр данных называется *InputDataSet*, — просто имя по умолчанию для входных данных для [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) процедуру; можно определить другое имя переменной, при необходимости с помощью параметра   *_@input_data_1_name_*  .
 
     + Для формирования оценок хранимая процедура вызывает функцию `rxPredict` из библиотеки **RevoScaleR** .
 
@@ -229,4 +225,3 @@ ms.lasthandoff: 10/07/2017
 [Учебники по SQL Server R](sql-server-r-tutorials.md)
 
 [Создание хранимой процедуры, с помощью sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
-

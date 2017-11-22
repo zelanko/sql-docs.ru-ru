@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 937b51884cd5a4b4bc06d990c65a5247822c85c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6450a75762b35816055efce444513c87e24eb3c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analyze-in-excel"></a>Анализ в Excel
   Функция анализа в Excel, в SSDT, дает разработчику табличных моделей возможность быстро выполнить анализ проекта модели во время разработки. Функция «Анализ в Excel» открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области модели, и автоматически добавляет сводную таблицу на рабочий лист. Объекты базы данных рабочей области (таблицы, столбы и меры) включаются в качестве полей в список полей сводной таблицы. Затем объекты и данные можно просмотреть в контексте действующего пользователя или роли и перспективы.  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [Перспективы](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   
   
-

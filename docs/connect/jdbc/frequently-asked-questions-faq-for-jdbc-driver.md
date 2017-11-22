@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e68c34ad2b9e444b39bf3ce8a5cfa33ad2dcd00c
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 508f8526ed13af3f7f92aa500b182e077f5bb23d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>Часто задаваемые вопросы (FAQ) для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -119,4 +117,3 @@ ms.lasthandoff: 09/09/2017
 **Можно ли драйвер обмениваться данными с помощью проверенных алгоритмов FIPS?** Драйвер Microsoft JDBC не содержит алгоритмы шифрования. Если клиент использует операционную систему, приложение и алгоритмы JVM, которые считаются приемлемыми согласно Федеральному стандарту обработки информации (FIPS), и настраивает драйвер на использование этих алгоритмов, для обмена данными драйвер будет использовать только назначенные алгоритмы.  
   
   
-

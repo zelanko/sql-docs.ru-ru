@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,17 +12,16 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 77d3bfa5-fc9f-4a72-93b4-790c7d227988
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8bfdee45f81b2b69e0d495b643878f599345edf5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7b27969d78328118f98911c68eb555357bc3118
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-1-set-up-the-visual-basic-project"></a>Шаг 1: Настройка проекта Visual Basic
 В этом сценарии предполагается наличие Microsoft Visual Basic 6.0, поставщик Microsoft OLE DB и ADO 2.5 или более поздней версии для публикаций в Интернете на компьютере. Будет сначала создайте новый проект и затем добавлять некоторые элементы управления в форму по умолчанию в проекте.  
@@ -46,5 +44,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>См. также:  
  [Сценарий публикации в Интернете](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Шаг 2: Инициализируйте главном списке](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)
-
+ [Шаг 2. Инициализация главного списка](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)

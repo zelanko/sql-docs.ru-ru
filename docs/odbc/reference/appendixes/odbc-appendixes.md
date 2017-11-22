@@ -8,37 +8,34 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3331aa89-24d0-4c0e-b377-c720c1107ad5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4ceea85e54bcc2f15f177b41a3b7fad2af468c1a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3dc97412cf62b1f60b633f301b8adedaefb24ad4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-appendixes"></a>Приложения ODBC
 Технические сведения, относящиеся к интерфейсу Microsoft ODBC содержатся в следующих приложений:  
   
--   [Приложение а. коды ошибок ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
+-   [Приложение А. Коды ошибок ODBC](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)  
   
--   [Приложение б. таблицы перехода состояний ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
+-   [Приложение Б. Таблицы перехода состояния ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)  
   
--   [Приложение в. грамматику SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
+-   [Приложение В. Грамматика SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)  
   
--   [Приложение г. типы данных](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
+-   [Приложение Г. Типы данных](../../../odbc/reference/appendixes/appendix-d-data-types.md)  
   
--   [Приложение д скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
+-   [Приложение Д. Скалярные функции](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)  
   
--   [Приложение е. библиотека курсоров ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
+-   [Приложение Е. Библиотека курсоров ODBC](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   
--   [Приложение ж драйвер рекомендации для обеспечения обратной совместимости](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)
-
+-   [Приложение Ж. Рекомендации по обеспечению обратной совместимости с драйвером](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)

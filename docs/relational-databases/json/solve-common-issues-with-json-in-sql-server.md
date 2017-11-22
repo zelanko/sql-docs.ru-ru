@@ -8,24 +8,21 @@ ms.service:
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-json
+ms.technology: dbe-json
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- JSON, FAQ
+helpviewer_keywords: JSON, FAQ
 ms.assetid: feae120b-55cc-4601-a811-278ef1c551f9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: ff6b969cec3da6f3bb6f25e0071f24ed2c68539c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 3c55ec9bc77f499d5c97c7cd75d160547ac681d2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="solve-common-issues-with-json-in-sql-server"></a>Устранение распространенных проблем с JSON в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -72,7 +69,7 @@ FOR JSON PATH
   
  Как можно избежать этого? Я хочу, чтобы `{"day":23}` возвращался в виде объекта JSON, а не escape-текста.  
   
- **Ответ.** JSON, хранящийся в столбце текста или литерале, обрабатывается как обычный текст. В связи с этим он заключается в двойные кавычки и экранируется. Если вам нужно возвратить неэкранированный объект JSON, следует передать столбец JSON в качестве аргумента функции JSON_QUERY, как показано в следующем примере.  
+ **Ответ.** JSON, хранящийся в столбце текста или литерале, обрабатывается как обычный текст. В связи с этим он заключается в двойные кавычки и экранируется. Если вам нужно возвратить неэкранированный объект JSON, следует передать столбец JSON как аргумент функции JSON_QUERY, как показано в следующем примере.  
   
 ```sql  
 SELECT col1, col2, col3, JSON_QUERY(jsoncol1) AS jsoncol1  
@@ -153,4 +150,3 @@ WHERE [key] = 'color'
  
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>Дополнительные сведения о встроенной поддержке JSON в SQL Server  
 Много определенных решений, варианты использования и рекомендации см. в [записях блога о встроенной поддержке JSON](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) (категории SQL Server и Azure SQL Database (База данных SQL Azure), автор — руководитель программ корпорации Майкрософт Йован Попович (Jovan Popovic)).
-
