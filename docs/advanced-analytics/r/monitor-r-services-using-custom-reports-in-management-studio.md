@@ -5,22 +5,20 @@ ms.date: 10/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46ed619271b56d59085b131839e65cd02e27d8fe
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 5a1990a7612eab44029c36129e73050854337930
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Наблюдение за службами обучения на компьютере с помощью пользовательских отчетов в среде Management Studio
 
@@ -120,4 +118,3 @@ ms.lasthandoff: 10/10/2017
 [Мониторинг служб R](../../advanced-analytics/r-services/monitoring-r-services.md)
 
 [Расширенные события для служб R](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
-

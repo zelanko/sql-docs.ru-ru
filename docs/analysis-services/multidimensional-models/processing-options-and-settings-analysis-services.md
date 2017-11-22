@@ -26,17 +26,16 @@ helpviewer_keywords:
 - process clear structure option [Analysis Services]
 - process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Обработка параметров и настроек (службы Analysis Services)
   При обработке объектов в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно задать параметр, определяющий тип обработки для каждого объекта. Типы обработки могут быть различными в зависимости от объекта, а также от изменений, которые произошли с объектом с момента последней обработки. Если включить в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматический выбор типа обработки, будет использоваться метод, возвращающий объект в полностью обработанном состоянии за минимальное время.  
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   
-

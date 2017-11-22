@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [ADO], provider
 - Error object [ADO], provider errors
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="provider-errors"></a>Ошибки поставщика
 В случае ошибки поставщика ошибку во время выполнения-2147467259 возвращается. При получении этой ошибки проверьте **ошибки** коллекцию активных **подключения** объекта, который будет содержать одну или несколько ошибок, описывающие, что именно произошло.  
@@ -87,4 +85,3 @@ End Function
  **Ошибка** объект также используется при возникновении ошибок, связанных с событием. Можно определить, произошла ли ошибка в процессе, который вызывает событие ADO, проверив **ошибка** объект, переданный как параметр события.  
   
  Если операция, вызывающая событие успешно, подтвердила *adStatus* обработчика событий будет присвоено *adStatusOK*. С другой стороны, если операции, вызвавшей событие был неудачным *adStatus* параметра равным *adStatusErrorsOccurred*. В этом случае *pError* будет содержать параметр **ошибка** объектом, содержащим описание ошибки.
-

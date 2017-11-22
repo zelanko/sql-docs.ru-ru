@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 441e3829-9009-4b32-a8c6-fa580663387f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2483225abebeb66fe691ee11e33f1322a3f10dc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b69a5fd295ac6107f5469966cb0b4d7329018eee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multiplicity-element-assl"></a>Элемент Multiplicity (язык ASSL)
   Указывает, относятся ли указанные атрибуты RelationshipEnd к «одной» или к «нескольким» сторонам связи.  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  Перечисление, соответствующее разрешенным значениям для **роли** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Multiplicity>.  
   
   
-

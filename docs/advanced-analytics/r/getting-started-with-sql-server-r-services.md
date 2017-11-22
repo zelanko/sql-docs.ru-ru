@@ -1,27 +1,24 @@
 ---
 title: "Приступая к работе с SQL Server машинное обучение | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+ms.custom: SQL2016_New_Updated
 ms.date: 12/07/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 5b28a663-effe-41f6-9bda-eda95f0c6943
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 734deaac0381a3c5826038e7b5e133061749319f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ea25548e0dfb3aa8a433c0fb014ad44a0f031f07
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-sql-server-machine-learning"></a>Приступая к работе с SQL Server машинное обучение
 
@@ -135,4 +132,3 @@ Machine обучения Services в SQL Server предназначен для 
 ## <a name="solutions"></a>Решения
 
 Дополнительные примеры, включая отрасли = шаблоны конкретное решение в разделе [учебники обучения машины SQL Server](../tutorials/machine-learning-services-tutorials.md).
-

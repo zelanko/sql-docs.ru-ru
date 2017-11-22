@@ -21,17 +21,16 @@ helpviewer_keywords:
 - profit charts [Analysis Services]
 - accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: bc351c7439eac3a6714181b05257bef284915f95
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)
   A *оценки точности chart* графически представляет, какое улучшение даст модель интеллектуального анализа данных по сравнению со случайным предположением, а также измеряет изменение в терминах *оценки точности* . Сравнив показатели точности прогнозов для различных моделей, можно выбрать самый оптимальный вариант. Кроме того, такой анализ позволяет определить, в какой момент прогнозы модели становятся менее полезными. Например, просмотрев диаграмму точности прогнозов, можно понять, что соответствующая рекламная кампания окажет воздействие только на 30 % ваших клиентов, и сократить охват этой кампании, исходя из полученных данных.  
@@ -134,4 +133,3 @@ ms.lasthandoff: 09/01/2017
  [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

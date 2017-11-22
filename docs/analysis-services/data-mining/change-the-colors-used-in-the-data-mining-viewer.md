@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
+f1_keywords: VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.DATA_MINING_VIEWERS
 ms.assetid: 9de2fc2a-fca5-456b-b2bd-13586e7951e6
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b20e6017b116f716309627caa50e1821a7e7d981
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 325bc785030aa4606d91e40dfa30cb51ee4b03af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>изменить цвета, используемые в средстве просмотра интеллектуального анализа данных
   Можно изменить цвета, используемые в средствах просмотра интеллектуального анализа данных, для отображения рядов данных, узлов или кластеров. Данная операция выполняется путем настройки параметров в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После изменения параметров выбранные цвета применяются ко всем моделям, просматриваемым с помощью среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Однако для отображения новых цветов необходимо закрыть среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и снова открыть модель в средстве просмотра.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/01/2017
     >  Пользовательский цвет будет представлен соответствующим значком и значениями RBG. Системный цвет или веб-цвет будет представлен соответствующим значком и названием цвета.  
   
   
-

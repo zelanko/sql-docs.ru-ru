@@ -8,22 +8,20 @@ ms.service:
 ms.component: powershell
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 7bb2a2d2-04c8-43d4-a0fc-e8339ea22138
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ec99b8511d512c068130ed7bc521f447b57d20d9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="new-powerpivotserviceapplication-cmdlet"></a>Командлет «New-PowerPivotServiceApplication»
 
@@ -115,4 +113,3 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  В этом примере создается новое приложение службы. База данных приложения службы создается на сервере баз данных с именем AdvWorks-SRV01, который был установлен в качестве именованного экземпляра [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Это является обычной конфигурацией для большинства установок [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Для создания базы данных нужно обладать разрешениями dbcreator на соответствующем экземпляре SQL Server. Необходимо также быть членом роли db_owner в базе данных конфигурации SharePoint. Поскольку это первое приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме, оно должно быть членом группы прокси-сервера по умолчанию.  
   
   
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - association rules
 - content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 25c3f04c7ae61788f10cc488e5680107fb4e9a3e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7e1bd8f5d4b6b70c0d31f1fc4a9e1c06da088e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="association-model-query-examples"></a>Примеры запросов моделей взаимосвязей
   Создаваемый запрос к модели интеллектуального анализа данных может быть запросом содержимого. Такой запрос предоставляет подробные сведения о правилах и наборах элементов, обнаруженных в процессе анализа. Можно также создавать прогнозирующие запросы. Они используют взаимосвязи, обнаруженные в данных, для создания прогнозов. Прогнозы для моделей взаимосвязей обычно основаны на правилах, и их можно использовать для рекомендаций, в то время как запросы к содержимому обычно исследуют связи между наборами элементов. Можно также получать метаданные, описывающие модель.  
@@ -250,4 +249,3 @@ ORDER BY NODE_SUPPORT DESC
  [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   
-

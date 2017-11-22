@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- FieldStatusEnum
-helpviewer_keywords:
-- FieldStatusEnum enumeration [ADO]
+f1_keywords: FieldStatusEnum
+helpviewer_keywords: FieldStatusEnum enumeration [ADO]
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a47097ccce07c5eeb5ee859b74919e36c01f6750
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 33ea3379808e818b1afd723ce9223858896ea709
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 Указывает [состояние](../../../ado/reference/ado-api/status-property-ado-field.md) из [объект поля](../../../ado/reference/ado-api/field-object.md).  
@@ -72,5 +68,4 @@ ms.lasthandoff: 09/09/2017
  Эти константы не имеют эквивалентов ADO/WFC.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Свойство Status (ADO поле)](../../../ado/reference/ado-api/status-property-ado-field.md)
-
+ [Свойство Status (объект Field ADO)](../../../ado/reference/ado-api/status-property-ado-field.md)

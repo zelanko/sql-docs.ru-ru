@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fbd3fcbe7aa757ac95f225f7da01d7d54116e10b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Настройка использования места на диске (PowerPivot для SharePoint)
   Чтобы обеспечить ускоренную перезагрузку, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint кэширует базу данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в свободном месте на диске главного компьютера. Каждая база данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , загружаемая в память, сначала кэшируется на диске, обеспечивая возможность быстрой перезагрузки при обслуживании новых запросов в будущем. По умолчанию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует свободное место на диске для кэширования баз данных, но это можно изменить, задав параметры, ограничивающие использование дискового пространства.  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

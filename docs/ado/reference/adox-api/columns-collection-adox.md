@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,20 +17,18 @@ f1_keywords:
 - Table::Columns
 - Key::Columns
 - Columns
-helpviewer_keywords:
-- Columns collection [ADOX]
+helpviewer_keywords: Columns collection [ADOX]
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 80ba9e948042538bd2b4c31724defdaf20a44aa8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 21bf59bef5782c63a272fb16ba1a07889c6fad67
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="columns-collection-adox"></a>Коллекция столбцов (ADOX)
 Содержит все [столбца](../../../ado/reference/adox-api/column-object-adox.md) объекты из таблицы, индекса или ключа.  
@@ -56,7 +53,7 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующий раздел.  
   
--   [Свойства коллекции столбцов, методы и события](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
+-   [Свойства, методы и события коллекции Columns](../../../ado/reference/adox-api/columns-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Столбцы и таблицы добавьте методы примера имя свойства (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
@@ -64,5 +61,4 @@ ms.lasthandoff: 09/09/2017
  [Ключи добавить метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule-пример свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
  [Пример свойства SortOrder (Visual Basic)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
-
+ [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

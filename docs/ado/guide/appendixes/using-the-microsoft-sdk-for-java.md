@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Java (Microsoft SDK for)
 - Microsoft SDK for Java [ADO]
 ms.assetid: 2d7cb5b5-8307-49dd-b07e-c07069bb1626
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1e176da2e8f67a61a4f38fa6867919d4c5bfbde7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7473f3a8772c53834c964071c2385736ff45cbf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="using-the-microsoft-sdk-for-java"></a>С помощью пакета Microsoft SDK для Java
 
@@ -58,5 +56,4 @@ Microsoft SDK для Java является пакет средств разра�
 3.  Чтобы использовать эти файлы, откройте проект в Visual J ++. Из **проекта** меню, выберите **добавить в проект**. Выберите **файлы**и добавить все. JAVA файлы в каталоге trustlib\msado15 проект создан.  
   
 ## <a name="see-also"></a>См. также:  
- [ADO Java классов-оболочек](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
-
+ [Классы-оболочки Java для объектов ADO](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   

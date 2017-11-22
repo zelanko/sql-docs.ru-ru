@@ -19,17 +19,16 @@ helpviewer_keywords:
 - filtering input rows [Analysis Services]
 - filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b3beab78045a254a30e398928cd262785703df4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3e32512c4cb0139b838195d3a03e8384183a11a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Применение фильтра к модели интеллектуального анализа данных
   Если структура интеллектуального анализа данных содержит вложенную таблицу, можно применить фильтр к таблице вариантов, вложенной таблице или к обеим таблицам.  
@@ -107,7 +106,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  Щелкните поле **Значение** , а затем нажмите кнопку **(...)** , чтобы построить выражение.  
   
-      **\<Имя > Фильтр** откроется диалоговое окно. Это диалоговое окно позволяет задавать условия только для текущей таблицы, которая в данном случае является вложенной таблицей.  
+     **\<Имя > Фильтр** откроется диалоговое окно. Это диалоговое окно позволяет задавать условия только для текущей таблицы, которая в данном случае является вложенной таблицей.  
   
 5.  Щелкните поле **Столбец структуры интеллектуального анализа данных** и выберите имя столбца из раскрывающихся списков столбцов вложенной таблицы.  
   
@@ -136,7 +135,6 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 ## <a name="see-also"></a>См. также  
  [Фильтры для моделей интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [удалить фильтр из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
+ [Удаление фильтра из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5faf2a9d-df39-465f-9c81-a00d5cd63f5a
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 995c0c6426f3014e58d49d61aad9a379ad5bc65e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 564e6236a13c7def4201058c443dbb802e685715
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Просмотр данных и метаданных в кубе
   Для просмотра данных куба откройте вкладку **Браузер** в конструкторе кубов. Это представление служит для просмотра структуры куба, а также для проверки данных, вычислений, форматирования и безопасности объектов базы данных. Можно быстро просмотреть куб, как его видят конечные пользователи в средствах отчетности и других клиентских приложениях. При просмотре данных куба можно видеть различные измерения, детализировать данные и получать срезы данных по измерениям.  
@@ -116,4 +115,3 @@ ms.lasthandoff: 09/01/2017
  Чтобы скрыть пустые ячейки в сетке данных, щелкните правой кнопкой мыши в любом месте на панели данных и выберите пункт **Показывать пустые ячейки**.  
   
   
-

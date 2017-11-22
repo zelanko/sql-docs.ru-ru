@@ -19,17 +19,16 @@ helpviewer_keywords:
 - testing data mining models
 - accuracy testing [data mining]
 ms.assetid: 5798fa48-ef3c-4e97-a17c-38274970fccd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 880f294f82a0aaa34904d78191d41217fecc78c9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9465d0eda4b15827cf20c4b9579a5eff672ce1d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="training-and-testing-data-sets"></a>Обучающие и проверочные наборы данных
   Разделение данных на обучающие и проверочные наборы является важной частью оценки моделей интеллектуального анализа данных. Обычно при разделении набора данных на обучающий и проверочный наборы большая часть данных используется для обучения, а меньшая — для проверки. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняют случайную выборку данных, чтобы убедиться в том, что проверочный и обучающий наборы похожи. Использование одинаковых данных для обучения и проверки позволяет свести к минимуму влияние несоответствия данных и лучше понять характеристики модели.  
@@ -123,4 +122,3 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
  [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
-

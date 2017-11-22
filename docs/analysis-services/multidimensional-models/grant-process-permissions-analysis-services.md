@@ -18,17 +18,16 @@ helpviewer_keywords:
 - permissions [Analysis Services], process
 - process permissions [Analysis Services]
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 33582b08bd8579d7c2c3318594dcbf877c186757
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7f1542d477a10e6a77e67e24d607b7086da1bb55
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Предоставление разрешений доступа (службы Analysis Services)
   В качестве администратора вы можете создать роль, предназначенную для осуществления операций обработки службы Analysis Services, которая позволит вам делегировать это отдельное задание другим пользователям или приложениям, которые используются для автоматической обработки по расписанию. Разрешения на обработку могут быть предоставлены на уровнях базы данных, куба, измерения и структуры интеллектуального анализа данных. Пока вы не работаете с очень большим кубом или табличной базой данных, мы рекомендуем вам предоставить права на обработку на уровне базы данных, включающие все объекты, включая те, которые зависят друг от друга.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Предоставление разрешений на чтение описания метаданным объекта (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   
-

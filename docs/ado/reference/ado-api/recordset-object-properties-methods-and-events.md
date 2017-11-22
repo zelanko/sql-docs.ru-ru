@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Recordset object [ADO], members
+helpviewer_keywords: Recordset object [ADO], members
 ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6917146077060e7ca9d11aeb034479dff6901e32
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e2d35cf15880ae2dfa902acaccca04cb204a6d77
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Свойства объекта набора записей, методы и события
 ## <a name="propertiescollections"></a>Свойства и коллекции  
@@ -47,7 +44,7 @@ ms.lasthandoff: 09/09/2017
   
  [Свойство CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)  
   
- [Свойства DataMember](../../../ado/reference/ado-api/datamember-property.md)  
+ [Свойство DataMember](../../../ado/reference/ado-api/datamember-property.md)  
   
  [Свойства источника данных](../../../ado/reference/ado-api/datasource-property-ado.md)  
   
@@ -55,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
  [Коллекция полей](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
- [Свойства фильтра](../../../ado/reference/ado-api/filter-property.md)  
+ [Свойство Filter](../../../ado/reference/ado-api/filter-property.md)  
   
  [Свойство Index](../../../ado/reference/ado-api/index-property.md)  
   
@@ -73,13 +70,13 @@ ms.lasthandoff: 09/09/2017
   
  [Свойство RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)  
   
- [Свойство сортировки](../../../ado/reference/ado-api/sort-property.md)  
+ [Свойство Sort](../../../ado/reference/ado-api/sort-property.md)  
   
- [Свойство Source (набора записей ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
+ [Свойство Source (объект Recordset ADO)](../../../ado/reference/ado-api/source-property-ado-recordset.md)  
   
  [State, свойство](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Свойство Status (набора записей ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
+ [Свойство Status (объект Recordset ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)  
   
  [Свойство StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)  
   
@@ -98,7 +95,7 @@ ms.lasthandoff: 09/09/2017
   
  [Метод CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
   
- [Удаление метода (набора записей ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+ [Метод Delete (объект Recordset ADO)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
  [Find-метод](../../../ado/reference/ado-api/find-method-ado.md)  
   
@@ -112,19 +109,19 @@ ms.lasthandoff: 09/09/2017
   
  [Метод NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
- [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+ [Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
   
- [Requery-метод](../../../ado/reference/ado-api/requery-method.md)  
+ [Метод Requery](../../../ado/reference/ado-api/requery-method.md)  
   
- [Метод повторной синхронизации](../../../ado/reference/ado-api/resync-method.md)  
+ [Метод Resync](../../../ado/reference/ado-api/resync-method.md)  
   
- [Save-метод](../../../ado/reference/ado-api/save-method.md)  
+ [Метод Save](../../../ado/reference/ado-api/save-method.md)  
   
- [Метод поиска](../../../ado/reference/ado-api/seek-method.md)  
+ [Метод Seek](../../../ado/reference/ado-api/seek-method.md)  
   
- [Поддерживает метод](../../../ado/reference/ado-api/supports-method.md)  
+ [Метод Supports](../../../ado/reference/ado-api/supports-method.md)  
   
- [Метод обновления](../../../ado/reference/ado-api/update-method.md)  
+ [Метод Update](../../../ado/reference/ado-api/update-method.md)  
   
  [Метод UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)  
   
@@ -144,5 +141,4 @@ ms.lasthandoff: 09/09/2017
  [WillMove и MoveComplete события](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

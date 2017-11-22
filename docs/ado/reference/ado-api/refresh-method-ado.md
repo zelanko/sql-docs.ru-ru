@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - _Collection::Refresh
 - Parameters::Refresh
 - Properties::Refresh
-helpviewer_keywords:
-- Refresh method [ADO]
+helpviewer_keywords: Refresh method [ADO]
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5e7b776b5d861403909b4856406d30109ad7c6b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 00a739b4bf90651f1e38402a8309482bf8217680
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="refresh-method-ado"></a>Обновить метод (ADO)
 Обновляет объекты в коллекции объектов, доступных из и относящиеся к поставщику.  
@@ -77,5 +74,4 @@ collection.Refresh
  [Обновить пример метода (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Обновить пример метода (VC ++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   
  [Свойство Count (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
- [Обновить метод (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
-
+ [Метод Refresh (служба удаленных рабочих столов)](../../../ado/reference/rds-api/refresh-method-rds.md)

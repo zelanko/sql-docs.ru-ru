@@ -8,8 +8,7 @@ ms.service:
 ms.component: misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - SQL Server Analysis Services, international considerations
 - Analysis Services, international considerations
 ms.assetid: e8af85ff-ef33-4659-a003-bb34578eb2a2
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6c18f5e2ab55d1cae1f57ad67d157fc3f109949b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 23602752bf7a996b66974ce3d5dcf9c8bf6389cd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Сценарии глобализации для служб Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] хранят многоязычные данные и метаданные, а также управляют ими как в табличных, так и в многомерных моделях данных. Данные хранятся в Юникоде (UTF-16), в кодировках, использующих кодировку Юникод. При загрузке данных ANSI в модель данных символы хранятся с использованием эквивалентных кодовых точек Юникода.  
@@ -83,4 +81,3 @@ ms.lasthandoff: 09/01/2017
  [Разработка универсальных приложений Windows на C# и XAML](http://www.microsoftvirtualacademy.com/training-courses/developing-universal-windows-apps-with-c-and-xaml)  
   
   
-

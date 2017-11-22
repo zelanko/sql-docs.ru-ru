@@ -1,8 +1,7 @@
 ---
 title: "Обновить метод (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -14,20 +13,18 @@ f1_keywords:
 - Refresh
 - RDS.DataControl::Refresh
 - DataControl::Refresh
-helpviewer_keywords:
-- Refresh method [RDS]
+helpviewer_keywords: Refresh method [RDS]
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bd8ba42c4e1822e5ef1fafd6ec4f3b53c2a9a363
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9710779f8ac92b4e9696ec56997c4eea43032206
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="refresh-method-rds"></a>Обновить метод (RDS)
 Вызывает повторный запрос источника данных, указанного в [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойств и обновления результатов запроса.  
@@ -52,7 +49,7 @@ DataControl.Refresh
  Рекомендуется вызывать **обновление** метод периодически при работе с данными. Если извлечение данных и оставить его на клиентский компьютер на некоторое время, вполне вероятно, станут устаревшими. Это возможно, что любые изменения, внесенные завершится ошибкой, так как кто-то другой могли измениться, запись и отправил изменения, прежде чем.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Обновить пример метода (Visual Basic)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
@@ -60,7 +57,6 @@ DataControl.Refresh
  [Адрес книги кнопки](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   
  [Метод CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)   
  [Обновить метод (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)   
- [Метод SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
+ [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

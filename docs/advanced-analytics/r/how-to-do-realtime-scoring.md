@@ -1,24 +1,22 @@
 ---
 title: "Как выполнять оценки в реальном времени или собственного оценки в SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 10/16/2017
-ms.prod: sql-server-2016
+ms.date: 11/09/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: e036310aa348437047be4f4270764b9f4c002afa
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
-ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/17/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="how-to-perform-realtime-scoring-or-native-scoring-in-sql-server"></a>Как выполнять оценки в реальном времени или собственного оценки в SQL Server
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 10/17/2017
 > В SQL Server 2017 г., рекомендуется использовать функции ПРОГНОЗИРОВАНИЯ.
 > Чтобы использовать sp\_rxPredict необходимо включить интеграцию SQLCLR. Рассмотрите влияние на безопасность, прежде чем включать этот параметр.
 
-Процесс подготовки модели и затем формировать оценки очень похож:
+Подготовка модели и затем формировать оценки идентична:
 
 1. Создайте модель с помощью поддерживаемый алгоритм.
 2. Сериализует модель с использованием специальных двоичного формата.
@@ -54,7 +52,7 @@ ms.lasthandoff: 10/17/2017
 
 ### <a name="serialization-and-storage"></a>Сериализация и хранение
 
-При использовании модели с любой из параметров быстрой оценки модели необходимо сохранить в специальном формате сериализованной, которая оптимизирована для размера и повышения эффективности.
+При использовании модели с любой из параметров быстрой оценки, сохраните модель с помощью специальных сериализованный формат, который был оптимизирован для размера и оценки эффективности.
 
 + Вызовите `rxSerializeModel` для записи поддерживаемые модели для **необработанные** формат.
 + Вызовите `rxUnserializeModel` для воссоздания модели для использования в другой код R, или для просмотра модели.
@@ -75,13 +73,13 @@ ms.lasthandoff: 10/17/2017
 
   `rxWriteObject()` Функции можно получить объекты R из источника данных ODBC, например SQL Server или записи объектов в SQL Server. API-Интерфейс моделируется простой хранилищу ключей и значений.
   
-  При использовании этой функции, убедитесь, что для сериализации модели сначала с помощью новой функции сериализации. Затем задайте *сериализации* флаг в `rxWriteObject` значение FALSE во избежание повторения шага сериализации.
+  При использовании этой функции, убедитесь, что для сериализации модели сначала с помощью новой функции сериализации. Затем задайте *сериализации* аргумент в `rxWriteObject` значение FALSE во избежание повторения шага сериализации.
 
 + Можно также сохранить модель в необработанном формате в файл и считываются из файла в SQL Server. Этот параметр может быть полезен, если выполняется перемещение или копирование моделей между средами.
 
 ## <a name="native-scoring-with-predict"></a>Оценки с PREDICT машинный код
 
-В этом примере создания модели и затем вызывать функции прогнозирования в реальном времени из T-SQL.
+В этом примере создается модель и вызов функции прогнозирования в реальном времени из T-SQL.
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Шаг 1. Подготовка и сохранить модель
 
@@ -125,7 +123,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-В следующем коде создается модель, основанную на **iris** набора данных и сохраняет его в таблицу модели.
+В следующем коде создается модель, основанную на **iris** набора данных и сохраняет его в таблицу с именем **моделей**.
 
 ```SQL
 DECLARE @model varbinary(max);
@@ -143,7 +141,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> Необходимо использовать [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel) функции RevoScaleR для сохранения модели. Стандартная R `serialize` функции не удается создать требуемый формат.
+> Обязательно используйте [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) функции RevoScaleR для сохранения модели. Стандартная R `serialize` функции не удается создать требуемый формат.
 
 Можно выполнить инструкцию, такую как следующую команду для просмотра хранимых модели в двоичном формате:
 
@@ -182,7 +180,7 @@ go
 Необходимо включить эту функцию для каждой базы данных, который требуется использовать для оценки. Администратор сервера должен программа командной строки, RegisterRExt.exe, входящий в состав пакета RevoScaleR.
 
 > [!NOTE]
-> Для оценки работы в режиме реального времени, функции SQL CLR необходимо включить в экземпляр и база данных должна быть отмечена как доверенная. При выполнении скрипта, эти действия выполняются автоматически. Тем не менее следует рассмотреть влияние на дополнительную безопасность.
+> Чтобы оценки для работы в режиме реального времени функции SQL CLR необходимо включить в экземпляре; Кроме того база данных должна быть отмечена как доверенная. При выполнении скрипта, эти действия выполняются автоматически. Однако следует помнить об обеспечении дополнительной безопасности перед этим!
 
 1. Откройте командную строку и перейдите к папке, где находится RegisterRExt.exe. При установке по умолчанию можно использовать следующий путь:
     
@@ -208,11 +206,11 @@ go
 
 > [!NOTE]
 > 
-> В SQL Server 2017 г дополнительные меры безопасности находятся в месте, чтобы предотвратить возникновение проблем с интеграцией со средой CLR. Эти меры налагаются дополнительные ограничения на использование этой хранимой процедуры.
+> В SQL Server 2017 г дополнительные меры безопасности находятся в месте, чтобы предотвратить возникновение проблем с интеграцией со средой CLR. Эти меры налагаются дополнительные ограничения на использование этой хранимой процедуры. 
 
 ### <a name="step-2-prepare-and-save-the-model"></a>Шаг 2. Подготовка и сохранить модель
 
-Двоичный формат, требуемый sp\_rxPredict является таким же, как для ПРОГНОЗА. Поэтому в коде R включают в себя вызов [rxSerializeModel](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxserializemodel)и не забудьте указать _realtimeScoringOnly_ = TRUE, как показано в примере:
+Двоичный формат, требуемый sp\_rxPredict совпадает со значением в формате, который требуется использовать функцию ПРОГНОЗИРОВАНИЯ. Поэтому в коде R включают в себя вызов [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)и не забудьте указать `realtimeScoringOnly = TRUE`, как показано в этом примере:
 
 ```R
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
@@ -227,7 +225,8 @@ model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```SQL
 DECLARE @irismodel varbinary(max)
 SELECT @irismodel = [native_model_object] from [ml_models]
-WHERE model_name = 'iris.dtree.model' AND model_version = 'v1''
+WHERE model_name = 'iris.dtree' 
+AND model_version = 'v1''
 
 EXEC sp_rxPredict
 @model = @irismodel,
@@ -255,4 +254,3 @@ EXEC sp_rxPredict
 + [Развертывание модели Python в виде веб-службы с azureml модели management sdk](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [Опубликовать как веб-службу в блоке кода R или модели в реальном времени](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [пакет mrsdeploy для R](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
-

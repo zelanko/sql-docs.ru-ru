@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ADO, events
 - event handlers [ADO]
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 43d07faf4f544ef22c2afcf9013528fd65225be6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a451023d3e3501ac60cd2724349337f30c46b689
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="handling-ado-events"></a>Обработка событий ADO
 Модель события ADO поддерживает некоторые синхронные и асинхронные ADO-операции, которые выдавать *события*, или уведомлений, перед началом операции или после его завершения. Событие — вызов подпрограмму обработчика событий, который определяется в приложении.  
@@ -43,15 +41,15 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Сводка обработчик событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
+-   [Общие сведения об обработчике событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)  
   
 -   [Типы событий](../../../ado/guide/data/types-of-events.md)  
   
 -   [Параметры события](../../../ado/guide/data/event-parameters.md)  
   
--   [Как работают обработчики событий](../../../ado/guide/data/how-event-handlers-work-together.md)  
+-   [Совместная работа обработчиков событий](../../../ado/guide/data/how-event-handlers-work-together.md)  
   
--   [Создание экземпляра события ADO по языку](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
+-   [Создание экземпляра события ADO на различных языках](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Сводка обработчик событий ADO](../../../ado/guide/data/ado-event-handler-summary.md)   
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/09/2017
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Параметры события](../../../ado/guide/data/event-parameters.md)   
  [Типы событий](../../../ado/guide/data/types-of-events.md)
-

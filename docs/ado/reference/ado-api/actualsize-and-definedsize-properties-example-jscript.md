@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
+dev_langs: JScript
 helpviewer_keywords:
 - ActualSize property [ADO], JScript example
 - DefinedSize property [ADO], JScript example
 ms.assetid: 23575e70-2304-43b4-b8be-99d9a6842589
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 400c135a7f3932fb42d7c69bcefc21795ad3d5e9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16283c21349cef342b5db63507c2729752dcb7dd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="actualsize-and-definedsize-properties-example-jscript"></a>ActualSize и пример свойства DefinedSize (JScript)
 В этом примере используется [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) и [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) свойства для отображения определенный размер и фактический размер поля. Вырежьте и вставьте следующий код в блокноте или другом текстовом редакторе и сохраните его в **ActualSizeJS.asp**.  
@@ -141,5 +138,4 @@ body {
 ## <a name="see-also"></a>См. также:  
  [Свойство ActualSize (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [Свойство DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)   
- [Объект field](../../../ado/reference/ado-api/field-object.md)
-
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)

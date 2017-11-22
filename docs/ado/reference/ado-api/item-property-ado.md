@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -45,20 +44,18 @@ f1_keywords:
 - Parameters::get_Item
 - Errors::Item
 - Procedures::get_Item
-helpviewer_keywords:
-- Item property [ADO]
+helpviewer_keywords: Item property [ADO]
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b82a73846dacf2607bdd86e3b4d75609d575ebe9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 59779714027c0ff619293d01de851daec7bbe158
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="item-property-ado"></a>Свойство Item (ADO)
 Указывает конкретный элемент коллекции по имени или порядковый номер.  
@@ -73,7 +70,7 @@ Set object = collection.Item ( Index )
  Возвращает ссылку на объект.  
   
 ## <a name="parameters"></a>Параметры  
- *Индекс*  
+ *Index*  
  Объект **Variant** выражение, результатом которого является имя или порядковый номер объекта в коллекции.  
   
 ## <a name="remarks"></a>Замечания  
@@ -90,15 +87,14 @@ collection (Index)
   
 ||||  
 |-|-|-|  
-|[Коллекция axes (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Коллекция столбцов (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Коллекция CubeDefs (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Коллекции измерений (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Коллекция ошибок (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Коллекция групп (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Коллекция hierarchies (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Коллекция индексов (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Коллекция ключей (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Коллекция уровней (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Члены коллекции (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Коллекция позиций (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Коллекция процедур (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Коллекция таблиц (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Коллекции пользователей (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Коллекции представлений (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
+|[Коллекция Axes (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Коллекция Columns (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Коллекция CubeDefs (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
+|[Коллекция Dimensions (многомерные объекты ADO)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Коллекция Errors (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)|[Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|  
+|[Коллекция Groups (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Коллекция Hierarchies (многомерные объекты ADO)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Коллекция Indexes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Коллекция Keys (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Коллекция Levels (многомерные объекты ADO)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Коллекция Members (многомерные объекты ADO)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
+|[Коллекция Parameters (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Коллекция Positions (многомерные объекты ADO)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Коллекция Procedures (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
+|[Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)|[Коллекция Tables (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|[Коллекция Users (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|  
+|[Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)|||  
   
 ## <a name="see-also"></a>См. также:  
  [Пример свойства элементов (Visual Basic)](../../../ado/reference/ado-api/item-property-example-vb.md)   
- [Пример свойства элемента (VC ++)](../../../ado/reference/ado-api/item-property-example-vc.md)   
-
+ [Пример свойства Item (Visual C++)](../../../ado/reference/ado-api/item-property-example-vc.md)   

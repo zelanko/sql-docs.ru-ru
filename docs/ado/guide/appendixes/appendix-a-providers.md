@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - service providers [ADO]
 - service components [ADO]
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1cc5846114e328cb717b8b9c6d86891e97b41ddf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 09a9ef813f1ef093456abb62fd68a28c61cfd30d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Приложение a. данных и поставщики услуг
 В этом разделе описываются три вида поставщики: поставщики данных, поставщиков услуг и службы компонентов. Поставщики делятся на две категории: те, предоставление данных, так и предоставления услуг. Объект *поставщик данных* владеет собственными данными и предоставляет доступ к нему в табличной форме в приложении. Объект *поставщика услуг* инкапсулирует службы, создания и использования данных, расширения возможностей в приложениях ADO. Поставщик услуг может также детализировать как *компонент службы*, которой должны работать вместе с другой поставщик службы или компоненты.
@@ -66,7 +64,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="service-providers"></a>Поставщики услуг
  Чтобы использовать поставщик услуг, необходимо указать ключевое слово. Также следует учитывать поставщика динамические свойства, связанные с каждым поставщиком услуг. Для каждого поставщика службы, который в настоящее время доступно представлены сведения от поставщика:
 
--   [Microsoft службы формирования данных для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
+-   [Служба формирования данных для OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)
 
 -   [Поставщик Microsoft OLE DB сохраняемости](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md)
 
@@ -82,4 +80,3 @@ ms.lasthandoff: 09/09/2017
 
 ## <a name="see-also"></a>См. также:
  [Команды объекта (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [поставщик Microsoft OLE DB для публикации в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) [поставщик Microsoft OLE DB для Microsoft Active Directory Служба](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-active-directory-service.md) [поставщик Microsoft OLE DB для службы индексирования Microsoft](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-indexing-service.md) [поставщик Microsoft OLE DB для ODBC](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-odbc.md) [поставщик Microsoft OLE DB для Oracle](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-oracle.md) [Поставщик Microsoft OLE DB для SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) [поставщик Microsoft OLE DB для Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) [коллекции свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [набора записей Объект (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [обновить метод (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)
-

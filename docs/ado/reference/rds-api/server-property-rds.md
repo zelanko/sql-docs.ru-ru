@@ -1,8 +1,7 @@
 ---
 title: "Свойства сервера (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -10,22 +9,19 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- RDS::IBindMgr21::Server
-helpviewer_keywords:
-- Server property [RDS]
+f1_keywords: RDS::IBindMgr21::Server
+helpviewer_keywords: Server property [RDS]
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1e1475b73658e9cbf5b1b1ebc393d2cf60bb6e5f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 05ff98ce99d444a9b5dfc1aac035920a29482d7c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="server-property-rds"></a>Свойства сервера (RDS)
 Указывает протокол, имя и обмен данными службы Internet Information Services (IIS).  
@@ -125,13 +121,12 @@ DataControl.Server=""
  Сервер находится где **RDS. DataControl** обработки запроса (то есть запрос или обновление). По умолчанию, все запросы обрабатываются [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) объекта, [MSDFMAP. Обработчик](../../../ado/guide/remote-data-service/datafactory-customization.md) компонента, и [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) файлу на указанном сервере. Следует помнить, что при изменении серверов для согласования параметров в старой и новой **MSDFMAP. INI** файлов. Проблемы совместимости может привести к запросы, которые завершаются успешно на одном сервере сбой на другом. Если свойство установлено в пустую строку «», эти объекты будут использоваться на локальном компьютере.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [Объект DataControl (служба удаленных рабочих столов)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Пример свойства сервера (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [Свойство (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [Свойство SQL](../../../ado/reference/rds-api/sql-property.md)   
- [Метод SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
-
+ [Метод SubmitChanges (служба удаленных рабочих столов)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 
 

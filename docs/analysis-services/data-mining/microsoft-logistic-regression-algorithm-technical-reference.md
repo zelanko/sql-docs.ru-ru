@@ -23,17 +23,16 @@ helpviewer_keywords:
 - regression algorithms [Analysis Services]
 - HOLDOUT_SEED parameter
 ms.assetid: cf32f1f3-153e-476f-91a4-bb834ec7c88d
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2cfb1b20bed865c750ed5a29ff94fd4136830c18
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1f258864aae1f2dfbc41ad822d2f7f0793378843
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Технический справочник по алгоритму логистической регрессии (Майкрософт)
   Алгоритм логистической регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой вариант алгоритма нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в котором параметр *HIDDEN_NODE_RATIO* равен 0. Эта настройка создает модель нейронной сети, которая не содержит скрытого слоя и, таким образом, эквивалентна логистической регрессии.  
@@ -168,4 +167,3 @@ WHERE NODE_TYPE = 23
  [Алгоритм нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)  
   
   
-

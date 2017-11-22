@@ -4,34 +4,31 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Stream object [ADO], members
+helpviewer_keywords: Stream object [ADO], members
 ms.assetid: 9b0eed90-c38c-4aa6-9040-5827f8c46b94
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: b16f5729754582e038b9e12f9e68014967006d2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f65f612a0175ac59cc2f7be99498d7c295fe0dd3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="stream-object-properties-methods-and-events"></a>Свойства объекта потока, методы и события
 ## <a name="properties"></a>Свойства  
  [Свойство CharSet](../../../ado/reference/ado-api/charset-property-ado.md)  
   
- [Свойство электрической ПЕРЕГРУЗКИ](../../../ado/reference/ado-api/eos-property.md)  
+ [Свойство EOS](../../../ado/reference/ado-api/eos-property.md)  
   
  [Свойство LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)  
   
@@ -39,11 +36,11 @@ ms.lasthandoff: 09/09/2017
   
  [Свойства position](../../../ado/reference/ado-api/position-property-ado.md)  
   
- [Свойство Size (поток ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
+ [Свойство Size (объект Stream ADO)](../../../ado/reference/ado-api/size-property-ado-stream.md)  
   
  [State, свойство](../../../ado/reference/ado-api/state-property-ado.md)  
   
- [Свойство Type (поток ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
+ [Свойство Type (объект Stream ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)  
   
 ## <a name="methods"></a>Методы  
  [Cancel-метод](../../../ado/reference/ado-api/cancel-method-ado.md)  
@@ -56,9 +53,9 @@ ms.lasthandoff: 09/09/2017
   
  [Loadfromfile-метод](../../../ado/reference/ado-api/loadfromfile-method-ado.md)  
   
- [Метод Open (поток ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+ [Метод Open (объект Stream ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
   
- [Read, метод](../../../ado/reference/ado-api/read-method.md)  
+ [Метод Read](../../../ado/reference/ado-api/read-method.md)  
   
  [Метод ReadText](../../../ado/reference/ado-api/readtext-method.md)  
   
@@ -68,9 +65,9 @@ ms.lasthandoff: 09/09/2017
   
  [Метод SkipLine](../../../ado/reference/ado-api/skipline-method.md)  
   
- [Stat-метод](../../../ado/reference/ado-api/stat-method.md)  
+ [Метод Stat](../../../ado/reference/ado-api/stat-method.md)  
   
- [Write, метод](../../../ado/reference/ado-api/write-method.md)  
+ [Метод Write](../../../ado/reference/ado-api/write-method.md)  
   
  [Метод WriteText](../../../ado/reference/ado-api/writetext-method.md)  
   
@@ -78,5 +75,4 @@ ms.lasthandoff: 09/09/2017
  Нет.  
   
 ## <a name="see-also"></a>См. также:  
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

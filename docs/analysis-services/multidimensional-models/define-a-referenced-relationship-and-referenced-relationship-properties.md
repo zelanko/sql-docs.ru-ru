@@ -18,17 +18,16 @@ helpviewer_keywords:
 - referenced dimension relationship
 - relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 82aefe81ab4b5229034cb88e0e4648f998373209
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>Определение ссылочной связи и свойств ссылочной связи
   Связь ссылочного измерения определяется на вкладке **Использование измерений** конструктора кубов. Связь ссылочного измерения определяется путем указания следующих параметров.  
@@ -46,4 +45,3 @@ ms.lasthandoff: 09/01/2017
  В ссылочном измерении гранулярность указывается путем идентификации атрибута, определяющего связь между ссылочным измерением и группой мер, соответствующей главной таблице измерения. Когда несколько ссылочных измерений последовательно соединены вместе, ссылки определяют связь между самым внешним измерением и группой мер.  
   
   
-

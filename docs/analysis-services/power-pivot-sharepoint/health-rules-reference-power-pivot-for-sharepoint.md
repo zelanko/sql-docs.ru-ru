@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47ae04ce-7b9d-49c2-8dbc-bafcb73d4603
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>Справочник по правилам для определения работоспособности (Power Pivot для SharePoint)
   Этот справочный раздел описывает правила определения работоспособности SharePoint, которые добавляются приложением [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint. Эти правила служат для сообщения о проблемах с работоспособностью сервера, доступностью или конфигурацией приложения службы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] или связанного с ним экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -65,4 +64,3 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: ADOMD.NET не устанавливается на автономный клиентский веб-интерфейс (WFE), настроенный для центра администрирования.|Нет|Нет|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET — это клиентская библиотека служб Analysis Services, которая поддерживает соединение с базой данных служб Analysis Services. В развертывании [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint компонент ADOMD.NET обеспечивает доступ к встроенным отчетам на панели мониторинга управления [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] в центре администрирования. Фактически встроенные отчеты — это книги [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , которые содержат внедренные данные служб Analysis Services. Панель управления использует ADOMD.NET для отправки запроса на соединение с сервером, который загружает данные, содержащиеся в книге.<br /><br /> В топологиях, где центр администрирования работает на автономном сервере клиентского веб-интерфейса, необходимо вручную установить ADOMD.NET, чтобы просматривать эти отчеты на панели управления. Дополнительные сведения можно найти в статье [Установка ADOMD.NET на веб-серверах, обслуживающих клиентские запросы, под управлением центра администрирования](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e).|  
   
   
-

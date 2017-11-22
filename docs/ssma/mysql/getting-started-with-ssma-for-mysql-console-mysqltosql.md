@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - MySQL Console, launching console
 - MySQL Console, output conventions
 ms.assetid: 218d502c-059f-4d48-9aea-61e553d74303
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 44facbd07cbc9690d374e3f6ab6ae1bc12f6934f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0b41087aeaa65c87269a34f3208a4b63d91971e7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-ssma-for-mysql-console-mysqltosql"></a>Начало работы с SSMA для MySQL консоли (MySQLToSQL)
 В этом разделе описывается, как запустить и приступить к работе с MySQL консольного приложения. Также перечислены в настоящем документе, соглашения используются в типичного окна вывода консоли SSMA.  
@@ -43,13 +41,13 @@ ms.lasthandoff: 08/02/2017
 ## <a name="procedure-for-using-the-ssma-console"></a>Процедура использования консоли SSMA  
 После консоль успешно запускается в среде Windows, можно выполнить следующие действия для работы с ней:  
   
-1.  Настройка консоли SSMA через файлы скриптов. Дополнительные сведения об этом разделе см. в разделе [Создание файлов скриптов & #40; MySQLToSQL & #41; ](../../ssma/mysql/creating-script-files-mysqltosql.md) .  
+1.  Настройка консоли SSMA через файлы скриптов. Дополнительные сведения об этом разделе см. в разделе [Создание файлов скриптов &#40; MySQLToSQL &#41; ](../../ssma/mysql/creating-script-files-mysqltosql.md) .  
   
-2.  [Создание файлов значение переменной & #40; MySQLToSQL & #41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
+2.  [Создание файлов значение переменной &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-variable-value-files-mysqltosql.md)  
   
-3.  [Создание файлов подключения сервера & #40; MySQLToSQL & #41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
+3.  [Создание файлов подключения сервера &#40; MySQLToSQL &#41;](../../ssma/mysql/creating-the-server-connection-files-mysqltosql.md)  
   
-4.  [Выполнение консоли SSMA & #40; MySQLToSQL & #41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) зависимости от потребностей проекта  
+4.  [Выполнение консоли SSMA &#40; MySQLToSQL &#41; ](../../ssma/mysql/executing-the-ssma-console-mysqltosql.md) зависимости от потребностей проекта  
   
 Дополнительные функции:  
   
@@ -76,4 +74,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Установка SSMA для MySQL](http://msdn.microsoft.com/en-us/e89b45bd-59c1-4d23-8bd7-3dafc1947448)  
   
-

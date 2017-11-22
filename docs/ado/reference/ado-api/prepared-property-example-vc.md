@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Prepared property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Prepared property [ADO], VC++ example
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e7aef05e8cead742742c3c15ee843844cf5d3bbb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66a54a6af3beff062dac448b345abaa58efae6ae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prepared-property-example-vc"></a>Пример свойства подготовленный (VC ++)
 В этом примере демонстрируется [Готово](../../../ado/reference/ado-api/prepared-property-ado.md) свойства, открыв два [команда](../../../ado/reference/ado-api/command-object-ado.md) объектов — подготовлены и не подготовлен.  
@@ -153,5 +149,4 @@ void PrintComError(_com_error &e) {
 **Подготавливается: 0.016 секунд**   
 ## <a name="see-also"></a>См. также:  
  [Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Свойства подготовленный (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
-
+ [Свойство Prepared (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)

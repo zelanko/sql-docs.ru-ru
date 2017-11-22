@@ -17,17 +17,16 @@ helpviewer_keywords:
 - multidimensional data [Analysis Services], developer's guide
 - developer's guide [Analysis Services - multidimensional data]
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fb44b74ac82e369f6dbdd29d87bd085a35144d29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4694fd3def6dea209929f99559fcc61fe833972a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-developer-documentation"></a>Документация для разработчика служб Analysis Services
 В службах Analysis Services почти для всех объектов и рабочей нагрузки можно программировать и часто является более чем одним из подходов для выбора.  Варианты написания управляемого кода, скрипта или с помощью открытых стандартах, таких как XML для Аналитики и MSOLAP, если ваш требований к решению исключают с использованием .NET framework.
@@ -85,4 +84,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>См. также:
 [Технический справочник по &#40; Службы SSAS &#41; ](../analysis-services/powershell/technical-reference-ssas.md) 
  [Запроса и справочник по языку выражений &#40; Службы Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
-

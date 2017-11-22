@@ -20,17 +20,16 @@ helpviewer_keywords:
 - members [Analysis Services], default
 - DefaultMember property
 ms.assetid: db487856-ee21-49c3-aa08-d9136e193374
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 436a1983bfee05a6deb3d998e42f2d126682dc51
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 642c8ceb45d5a756f8fad396d0fb1bf48138afb0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---define-a-default-member"></a>Атрибут свойства - определение элемента по умолчанию
   Элемент по умолчанию иерархии атрибута предназначен для вычисления выражений в том случае, если иерархия атрибутов не включена в запрос. Этот элемент не обрабатывается, если запрос содержит иерархию атрибута или пользовательскую иерархию, в которых присутствует атрибут, являющийся источником иерархии атрибута. В этом случае используется элемент, указанный в запросе.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
  [Настройка уровня "Все" для иерархий атрибутов](../../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   
-

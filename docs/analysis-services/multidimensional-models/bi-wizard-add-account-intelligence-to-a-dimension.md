@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Business Intelligence enhancements [Analysis Services], account intelligence
 - account intelligence [Analysis Services]
 ms.assetid: 36f454ae-a9f2-4a59-b19d-40310af9f901
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9507044c972401407aadf80dddfe164ec4a3617c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: defce52a3e89858c08eff6626601392066996891
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Мастер бизнес-Аналитики — Добавление операций со счетами к измерению
   Добавьте расширение интеллектуальной обработки счетов к кубу или измерению, чтобы присвоить стандартные классификации счетов, например «доходы» и «расходы», элементам атрибута «счет». Это расширение также идентифицирует типы счетов (такие как «Актив» и «Долг») и назначает соответствующую статистическую обработку каждому типу счета. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может использовать классификации для выполнения статистического вычисления во времени.  
@@ -78,4 +77,3 @@ ms.lasthandoff: 09/01/2017
 4.  В раскрывающемся окне списка **Статистическая функция** измените статистическую функцию по умолчанию для этого типа учетной записи.  
   
   
-

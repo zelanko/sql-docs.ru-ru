@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - AMO, classes
 - Analysis Management Objects, classes
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Analysis Management Objects
 - Analysis Management Objects, objects
 ms.assetid: 3b0cdf8e-46d5-4dfe-8b2c-233c27e1473e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4943e1ff3c3c18814993a85bd108bb473e644726
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="amo-concepts-and-object-model"></a>Основные понятия и модель объектов AMO
   Этот раздел содержит определения для анализа Management объекты AMO, как они связаны с другими средствами и библиотеками из архитектуры [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]и общие сведения обо всех основных объектах AMO.  
@@ -86,8 +84,8 @@ ms.lasthandoff: 09/01/2017
 |[Основные классы объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-fundamental-classes.md)|Классы, необходимые для работы с любым другим набором классов.|  
 |[Классы OLAP объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-olap-classes.md)|Классы для управления объектами OLAP в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Классы интеллектуального анализа данных объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-data-mining-classes.md)|Классы для управления объектами интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Классы безопасности AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Классы для управления доступом к другим объектам и поддержки безопасности.|  
-|[Объекты AMO другие классы и методы](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Классы и методы, помогающие администраторам OLAP и интеллектуального анализа данных выполнять свои повседневные задачи.|  
+|[Классы безопасности объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md)|Классы для управления доступом к другим объектам и поддержки безопасности.|  
+|[Другие классы и методы объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-other-classes-and-methods.md)|Классы и методы, помогающие администраторам OLAP и интеллектуального анализа данных выполнять свои повседневные задачи.|  
   
 ##  <a name="bkmk_UsingAMO"></a>С помощью объектов AMO  
  Объекты AMO особенно полезны для автоматизации часто выполняемых задач (например, для создания новых секций в группе мер при появлении новых данных в таблице фактов или для повторного обучения модели интеллектуального анализа при появлении новых данных). Обычно эти задачи, которые создают новые объекты, выполняются ежемесячно, еженедельно или ежеквартально, а приложение может легко именовать эти новые объекты на основе новых данных.  
@@ -127,4 +125,3 @@ ms.lasthandoff: 09/01/2017
  Объекты AMO не могут быть использованы для выполнения запросов к данным. Запросы к данным служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], в том числе кубам и моделям интеллектуального анализа данных, из пользовательского приложения необходимо выполнять с помощью ADOMD.NET. Дополнительные сведения см. в разделе [разработка с использованием ADOMD.NET](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md).  
   
   
-

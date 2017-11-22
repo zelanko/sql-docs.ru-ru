@@ -1,8 +1,7 @@
 ---
 title: "ADO - индекс синтаксис WFC | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
 ms.reviewer: 
@@ -14,16 +13,15 @@ helpviewer_keywords:
 - syntax indexes [ADO], ADO/WFC
 - ADO/WFC syntax index [ADO]
 ms.assetid: a14bbc36-87ec-409d-97b3-393b66b1b8e3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3c8599fd7267367a8e34664c392f04e11f8bebe7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ado---wfc-syntax-index"></a>ADO - WFC синтаксис индекса
 Справочник по языку ADO используется Microsoft Visual Basic язык программирования для демонстрации синтаксиса метода или свойства ADO. Этот индекс лучше перекрестной ссылки на разделы Справочник по языку ADO, исходя из ADO ввода для Windows Foundation Classes (ADO и WFC). В случае возникновения различия в синтаксисе, используйте сигнатур функций в этот индекс, в отличие от синтаксиса вхождений в раздел справочника по языку.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="activex-data-objects"></a>объекты данных ActiveX  
   
--   [ADO коллекций](../../../ado/reference/ado-api/collections-ado-wfc-syntax.md)  
+-   [Коллекции ADO](../../../ado/reference/ado-api/collections-ado-wfc-syntax.md)  
   
 -   [Объект команды](../../../ado/reference/ado-api/command-ado-wfc-syntax.md)  
   

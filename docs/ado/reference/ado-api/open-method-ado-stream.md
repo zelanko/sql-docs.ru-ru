@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_Open
 - _Stream::Open
-helpviewer_keywords:
-- Open method [ADO]
+helpviewer_keywords: Open method [ADO]
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2da6a07f58ab3cceb9ca9d661703603146c3e5f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dba50c39ff8c31154e52f8575a93acdf829df442
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="open-method-ado-stream"></a>Метод Open (поток ADO)
 Открывает [поток](../../../ado/reference/ado-api/stream-object-ado.md) для работы потоков двоичных или текстовых данных.  
@@ -67,7 +64,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  Помимо параметров, которые были описаны ранее, не указывая *источника*, можно создать экземпляр **поток** объект в памяти, не связывая его с базового источника. Можно динамически добавлять данные в поток, написав двоичные или текстовые данные **поток** с [записи](../../../ado/reference/ado-api/write-method.md) или [WriteText](../../../ado/reference/ado-api/writetext-method.md), или путем загрузки данных из файла с [ LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Метод Open (соединение ADO)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
@@ -75,4 +72,3 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  [Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Метод OpenSchema](../../../ado/reference/ado-api/openschema-method.md)   
  [Метод SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)
-

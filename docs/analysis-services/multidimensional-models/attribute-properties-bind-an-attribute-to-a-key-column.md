@@ -19,17 +19,16 @@ helpviewer_keywords:
 - renaming attributes
 - attributes [Analysis Services], renaming
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4f19e7ee6c46ff06cbfc8005252bab2ec1115eb3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 341d41fd9930562173fe56c343d3edeb7041b89a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Атрибут свойства - привязка атрибута к ключевому столбцу
   Данная процедура описывает изменение настройки свойства **Name** для атрибута измерения.  
@@ -48,4 +47,3 @@ ms.lasthandoff: 09/01/2017
     >  Также можно установить свойство **Name** выбранного атрибута в окне **Свойства** среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
   
-

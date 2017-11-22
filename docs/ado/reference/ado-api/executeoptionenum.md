@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- ExecuteOptionEnum
-helpviewer_keywords:
-- ExecuteOptionEnum enumeration [ADO]
+f1_keywords: ExecuteOptionEnum
+helpviewer_keywords: ExecuteOptionEnum enumeration [ADO]
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8357988f5082498114c435f899e898552fca1707
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 74248756628e892ff8a00e0e6e206b5eb7639e05
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="executeoptionenum"></a>ExecuteOptionEnum
 Указывает, каким образом поставщик должен выполнить команду.  
@@ -58,6 +54,5 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Выполнить метод (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|[Выполнить метод (соединение ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
-|[Метод Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Requery-метод](../../../ado/reference/ado-api/requery-method.md)|
-
+|[Метод Execute (объект Command ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|[Метод Execute (объект Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
+|[Метод Open (объект Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Метод Requery](../../../ado/reference/ado-api/requery-method.md)|
