@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 237354e9-25c4-4386-9d1f-ca0618d4a9a0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d76e30b140438b09b49cfe43e5b7781c078f5eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4a48daba17ddb4695f362414037615789ce8509b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="command-line-options-in-ssma-console-db2tosql"></a>Параметры командной строки в консоли SSMA (DB2ToSQL)
 Корпорация Майкрософт предоставляет широкий набор параметры командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -179,4 +177,3 @@ ms.lasthandoff: 08/02/2017
   
 3.  Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; DB2ToSQL &#41;](../../ssma/db2/troubleshooting-db2tosql.md).  
   
-

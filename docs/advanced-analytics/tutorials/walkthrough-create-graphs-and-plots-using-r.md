@@ -1,35 +1,29 @@
 ---
 title: "Создание диаграмм и графиков с помощью SQL и R (Пошаговое руководство) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/03/2017
+ms.date: 11/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: 5f70f0a6-fd4a-410f-9f44-1605503f77ec
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: e720755146e8d29ddf06ccdecdd2d744c1885013
+ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e81411ea3e59276739425e2527aca93ea1ebb0ad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/11/2017
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>Создание диаграмм и графиков с помощью SQL и R (Пошаговое руководство)
 
-В этой части пошагового руководства вы узнаете способы создания диаграмм и карт с помощью R с данными SQL Server. Чтобы получить некоторый опыт, вы создадите простую гистограмму, а затем разработаете более сложную диаграмму-карту.
+В этой части пошагового руководства вы узнаете способы создания диаграмм и карт с помощью R с данными SQL Server. Создание простых гистограмм, чтобы получить некоторый практический опыт и затем разрабатывать более сложные построения карты.
 
 ### <a name="create-a-histogram"></a>Создать гистограмму
 
@@ -56,8 +50,6 @@ ms.lasthandoff: 09/01/2017
 ### <a name="create-a-map-plot"></a>Создать диаграмму карты
 
 Как правило серверы баз данных заблокировать доступ к Интернету. Это может оказаться неудобным при использовании пакетов R, которые нужно загрузить карты или других изображений для создания графиков. Однако имеется обходной путь, который могут оказаться полезными при разработке приложения. По сути создать представление карты на стороне клиента и затем наложения на карте точек, которые хранятся в таблице SQL Server в виде атрибутов.
-
-Мы предлагаем вам через него на этом занятии.
 
 1. Определите функцию, которая создает объект R построения. Пользовательская функция *mapPlot* создает точечную диаграмму, использует расположения раскладки такси, а затем число и которые запущены от каждого расположения. Она использует пакеты **ggplot2** и  **ggmap** , которые уже должны быть установлены и загружены.
 
@@ -117,4 +109,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="previous-lesson"></a>Предыдущее занятие
 
 [Сведение данных с помощью R](/walkthrough-view-and-summarize-data-using-r.md)
-

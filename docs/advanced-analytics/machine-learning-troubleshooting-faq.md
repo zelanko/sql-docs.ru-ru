@@ -5,22 +5,19 @@ ms.date: 06/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e110a2578d6663c2c7c4c2e0dd92957744b44f4a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 6e45e8dc4df1404833fddd9000eb40cad6e5299f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="troubleshoot-machine-learning"></a>Устранение неполадок машинного обучения
 
 В этой статье содержатся сведения об устранении неполадок, связанных с установкой и настройкой машины обучения функции в SQL Server. Эти сведения включают ссылки на руководства, известные проблемы и заметки о выпуске. Другие статьи, связанные с из этой статьи, предоставляют советы по оптимизации производительности по обучению машины в SQL Server.
@@ -61,7 +58,7 @@ ms.lasthandoff: 09/08/2017
 
 Если необходимо установить машинного обучения на компьютере без подключения к Интернету, используйте ссылки в этой статье, загрузить компоненты R и Python до начала установки:
 
-+ [Установка компонентов обучения компьютер без доступа к Интернету](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
++ [Установка компонентов машинного обучения без доступа к Интернету](../advanced-analytics/r/installing-ml-components-without-internet-access.md)
 
 ### <a name="configuration"></a>Конфигурация
 
@@ -78,4 +75,3 @@ ms.lasthandoff: 09/08/2017
 + [Настройка сервера R на Виртуальной машине Azure](../advanced-analytics/r/provision-the-r-server-only-sql-server-2016-enterprise-vm-on-azure.md)
 + [Установка R Server для Windows](https://msdn.microsoft.com/microsoft-r/rserver-install-windows)
 + [Получить средства R для Visual Studio](https://www.visualstudio.com/vs/rtvs/)
-

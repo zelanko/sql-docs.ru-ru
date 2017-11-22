@@ -5,27 +5,24 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
-helpviewer_keywords:
-- Connecting to Sybase ASE
+helpviewer_keywords: Connecting to Sybase ASE
 ms.assetid: a45a2330-9175-4c9e-af38-ef920e350614
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 48cd7837f5075ad4dff65aabfbf4dff73a3b5f0e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4cbdcd08cc4186dd4fa6d7d8fcffebdfd1139799
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-sybase-ase-sybasetosql"></a>Подключение к Sybase ASE (SybaseToSQL)
 Для переноса баз данных Sybase адаптивной Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, необходимо подключиться к адаптивной сервер, содержащий базы данных, которые требуется перенести. При подключении SSMA получает метаданные обо всех базах данных на сервере адаптивной и отображает метаданные базы данных на панели обозревателя метаданных Sybase. SSMA хранит сведения о сервере базы данных, но не хранит пароли.  
@@ -130,4 +127,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных Sybase ASE в SQL Server — база данных Azure SQL &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - RecordCount property [ADO], Visual Basic example
 - Filter property [ADO], Visual Basic example
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: f76a90fdff9969b60929b25727a1ba2dd352c3ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f6f2580fbc522049cff2e271dde0f99ed2245027
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Фильтр и пример RecordCount свойства (Visual Basic)
 В этом примере откройте [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в таблице издателей в ***Pubs*** базы данных. Затем он использует [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство, чтобы ограничить число видимых записей на этих издателях, в определенной страны или региона. **RecordCount** свойство используется для отображения разницу между отфильтрованная, так и нефильтрованные наборы записей.  
@@ -125,5 +122,4 @@ Attribute VB_Name = "Filter"
 ## <a name="see-also"></a>См. также:  
  [Свойства фильтра](../../../ado/reference/ado-api/filter-property.md)   
  [Свойство RecordCount (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

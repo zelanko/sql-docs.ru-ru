@@ -5,22 +5,19 @@ ms.date: 10/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c668fc9e2d2b8ab8934ccf4bfffb8b04b998bb71
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: ed7dbf99b0f492b5ca8879bb67a7256fdfae3306
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="r-package-synchronization-for-sql-server"></a>Синхронизация пакета R для SQL Server
 
 2017 г. SQL Server включает в себя возможность синхронизировать коллекции пакетов R в файловой системе с экземпляра и базы данных использования пакетов.
@@ -137,4 +134,3 @@ rxSyncPackages(computeContext=computeContext, verbose=TRUE)
 ## <a name="related-resources"></a>Связанные ресурсы
 
 [Управление пакетами R для SQL Server](r-package-management-for-sql-server-r-services.md)
-

@@ -4,16 +4,14 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Size property [ADO], Visual Basic example
 - CommandTimeout property [ADO], Visual Basic example
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - ActiveConnection property [ADO], Visual Basic example
 - Direction property [ADO], Visual Basic example
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6ad6953a998a2167e02db51868f28e87fcc1094f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 28f637840e5d7387a800b5b2ba520d308d0a1b9a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vb"></a>ActiveConnection CommandText, CommandTimeout, CommandType, размер и направление-пример свойства (Visual Basic)
 В этом примере используется [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [размер](../../../ado/reference/ado-api/size-property-ado-parameter.md), и [направление](../../../ado/reference/ado-api/direction-property.md) свойства для выполнения хранимой процедуры.  
@@ -152,5 +149,4 @@ End Sub
  [Объект параметра](../../../ado/reference/ado-api/parameter-object.md)   
  [Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство Size (параметр ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
-
+ [Свойство Size (объект Parameter ADO)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

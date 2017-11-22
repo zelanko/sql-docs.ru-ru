@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 5525d989-024c-402d-9e84-faa4721cc5b9
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 543197f3c52cd44644061e392fc891665c703f2f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 81216f50e9db2e25e4ec1458a0657babc0522bd6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessment-report-mysqltosql"></a>Оценка отчетов (MySQLToSQL)
 Окно отчета оценки показывает результаты преобразования объектов базы данных для [!INCLUDE[tsql](../../includes/tsql_md.md)] синтаксис, и поможет оценить сложность и стоимость проектов миграции.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 08/02/2017
 |**Цель**|Показывает что преобразование [!INCLUDE[tsql](../../includes/tsql_md.md)] код для выбранного объекта и сообщения об ошибках для кода, который не был преобразован. В этой области отображается только при выборе отдельного объекта с кодом на панели слева.<br /><br />Щелкните номера строк, чтобы установить или снять закладки. Используйте кнопки в верхней части области перемещаться по коду.|  
 |**Панель сообщений**|Показывает ошибки, предупреждения и информационные сообщения, которые были созданы при создании отчета оценки. Сообщения группируются по номеру. Чтобы просмотреть код, который вызвал ошибку, нажмите кнопку **ошибки**, **предупреждения**, или **сведения**, разверните категорию сообщений и нажмите кнопку сообщения.|  
   
-

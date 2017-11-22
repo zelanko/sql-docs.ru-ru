@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset21::Index
-helpviewer_keywords:
-- Index property
+f1_keywords: Recordset21::Index
+helpviewer_keywords: Index property
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3fa23448f5942baabf364a0b02f61324d29ec7b3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9091e9a65b178806c8695faffa50f11946c6b2ca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="index-property"></a>Свойство Index
 Указывает имя индекса в настоящее время действует для [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -58,10 +54,9 @@ ms.lasthandoff: 09/09/2017
  Встроенная **индекс** свойство не относится к динамической [оптимизировать](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) свойство, несмотря на то, что оба они работают с индексами.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Поиск метода и пример свойства индекса (Visual Basic)](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)   
  [Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Метод поиска](../../../ado/reference/ado-api/seek-method.md)
-
+ [Метод Seek](../../../ado/reference/ado-api/seek-method.md)

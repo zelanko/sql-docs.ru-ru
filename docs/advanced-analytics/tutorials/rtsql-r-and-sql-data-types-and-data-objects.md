@@ -5,25 +5,23 @@ ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - R
 - SQL
 ms.assetid: 1a17fc5b-b8c5-498f-b8b1-3b7b43a567e1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 4207d26b2f38e3f13a45c21ab40293cf0dc95219
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e71e4a5d6fc6a88d0482ecd10d4238c12cd5ceaa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="r-and-sql-data-types-and-data-objects-r-in-sql-quickstart"></a>SQL и R данных типов и объектов данных (R в быстрый запуск SQL Server)
 
@@ -282,5 +280,4 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 
 На следующем шаге вы узнаете о том, как применять функции R к данным SQL Server.
 
-[С помощью функций R с данными SQL Server](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)
-
+[Использование функций R с данными SQL Server](../../advanced-analytics/tutorials/rtsql-using-r-functions-with-sql-server-data.md)
