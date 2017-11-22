@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-quality-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- data-quality-services
+ms.technology: data-quality-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Domains
+helpviewer_keywords: Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: bfe4bfd1accf4291a2e8a6cc5974c81bc669f46d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="introduction-to-data-quality-services"></a>Общие сведения о службах Data Quality Services
   Решение по обеспечению качества данных, предоставляемое [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), позволяет диспетчеру данных или ИТ-специалисту поддерживать качество данных и обеспечивать их пригодность к бизнес-использованию. DQS — это решение на основе знаний, которое обеспечивает автоматизированные и интерактивные способы управления целостностью и качеством источников данных. DQS позволяет обнаруживать знания о данных, строить наборы знаний и управлять ими. Затем эти знания вы можете использовать для выполнения очистки, сопоставления и профилирования данных. Также вы можете использовать облачные службы поставщиков эталонных данных в проекте качества данных DQS.  
@@ -94,4 +91,3 @@ ms.lasthandoff: 09/09/2017
  Службы Data Quality Services интегрированы в службы Master Data Services (MDS), что позволяет исключать дубликаты в исходных данных и основных данных в рамках надстройки Microsoft SQL Server 2014 Master Data Services для Microsoft Excel. Для выполнения сопоставления загрузите данные, управляемые службами MDS, в лист Excel, и объедините их с данными, не управляемыми службами MDS, а затем осуществите сопоставление в рамках Excel. Компоненты [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] должны устанавливаться вместе с MDS. Дополнительные сведения см. в статье  [Сопоставление качества данных в надстройке MDS для Excel](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md).  
   
   
-

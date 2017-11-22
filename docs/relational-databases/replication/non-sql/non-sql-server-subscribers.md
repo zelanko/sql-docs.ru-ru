@@ -8,8 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- replication
+ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], non-SQL Server Subscribers
 - non-SQL Server Subscribers
 ms.assetid: 831e7586-2949-4b9b-a2f3-7b0b699b23ff
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70ba5c5a367d32436aeb2a3dabdb57ded2bd08f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
-ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/30/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="non-sql-server-subscribers"></a>Подписчики, отличные от подписчиков SQL Server  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +75,7 @@ ms.lasthandoff: 08/30/2017
   
 -   Если публикация имеет подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], то публикация должна быть включена для подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], перед тем как будут созданы какие-либо подписки для подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   По умолчанию скрипты, создаваемые агентом моментальных снимков для подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используют в синтаксисе `CREATE TABLE` идентификаторы без кавычек. Поэтому опубликованная таблица с именем 'test' реплицируется как 'TEST'. Чтобы сохранить регистр символов для имени таблицы публикации, укажите для агента распространителя параметр **-QuotedIdentifier** . Параметр **-QuotedIdentifier** должен также применяться, если имена опубликованных объектов (таких как таблицы, столбцы и ограничения) содержат пробелы или слова, которые являются зарезервированными словами в той версии базы данных, которая используется на подписчике, не являющемся подписчиком[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об этом параметре см. в разделе [агент распространения репликации](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
+-   По умолчанию скрипты, создаваемые агентом моментальных снимков для подписчиков, не относящихся к [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], используют в синтаксисе `CREATE TABLE` идентификаторы без кавычек. Поэтому опубликованная таблица с именем 'test' реплицируется как 'TEST'. Чтобы сохранить регистр символов для имени таблицы публикации, укажите для агента распространителя параметр **-QuotedIdentifier** . Параметр **-QuotedIdentifier** должен также применяться, если имена опубликованных объектов (таких как таблицы, столбцы и ограничения) содержат пробелы или слова, которые являются зарезервированными словами в той версии базы данных, которая используется на подписчике, не являющемся подписчиком[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения об этом параметре см. в разделе [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md).  
   
 -   Учетная запись, под которой запускается агент распространителя, должна иметь доступ с правом на чтение к установочному каталогу поставщика OLE DB.  
   
@@ -97,7 +95,7 @@ ms.lasthandoff: 08/30/2017
   
 -   В разных базах данных значение NULL обрабатывается по-разному, что влияет на представление пустых значений, пустых строк и значений NULL. Это в свою очередь влияет на поведение значений, вставляемых в столбцы с определяемыми уникальными ограничениями. Например, СУБД Oracle допускает существование нескольких значений NULL в столбце, который считается уникальным, тогда как [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] допускает наличие только одного значения NULL в уникальном столбце.  
   
-     Дополнительным фактором, который следует учитывать, является порядок обработки значений NULL, пустых строк и пустых значений в случае, когда столбец определяется как NOT NULL. Сведения по этому вопросу для подписчиков Oracle см. в разделе [Подписчики Oracle](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
+     Дополнительным фактором, который следует учитывать, является порядок обработки значений NULL, пустых строк и пустых значений в случае, когда столбец определяется как NOT NULL. Сведения по этому вопросу для подписчиков Oracle см. в разделе [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md).  
   
 -   Связанные с репликацией метаданные (таблица последовательности транзакций) на поставщиках[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не удаляются при удалении подписки.  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 08/30/2017
  [Подписка на публикации](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
-

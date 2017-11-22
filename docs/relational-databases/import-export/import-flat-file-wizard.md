@@ -8,22 +8,19 @@ ms.service:
 ms.component: import-export
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.importflatfile.f1
+f1_keywords: sql13.swb.importflatfile.f1
 author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: d27099048dc1d89d94489898a501ebec4d39ff36
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 3180456162da02ecef897fd340663500792d4785
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Мастер импорта неструктурированных файлов в SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,5 +95,4 @@ PROSE анализирует шаблоны данных во входном ф�
 - **Дополнительные сведения об импорте из других источников**. Если вы хотите импортировать несколько неструктурированных файлов, обратитесь к разделу [Мастер импорта и экспорта SQL Server](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 - **Дополнительные сведения о подключении к неструктурированным файлам в качестве источников**. Если вам необходимы дополнительные сведения о подключении к неструктурированным файлам в качестве источников, обратитесь к разделу [Подключение к источнику данных неструктурированного файла](https://docs.microsoft.com/en-us/sql/integration-services/import-export-data/connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard).
 - **Дополнительные сведения о PROSE**. Если вам необходимы сведения об интеллектуальной платформе, которая используется этим мастером, обратитесь к разделу [Пакет SDK для PROSE](https://microsoft.github.io/prose/).
-
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: database-engine
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Database Engine [SQL Server], backward compatibility
 - deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
-caps.latest.revision: 215
+caps.latest.revision: "215"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: ea0efb1cf326d03a2b45ff6a6f2566c93afc500b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2016"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +53,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Объекты базы данных|Возможность возвращать результирующие наборы из триггеров.|None|Возврат результатов из триггера|12|  
 |Шифрование|Шифрование с использованием алгоритмов RC4 и RC4_128 является устаревшим. В следующей версии запланировано удаление его поддержки. Расшифровка с использованием алгоритмов RC4 и RC4_128 не является устаревшей.|Используйте другой алгоритм шифрования, например AES.|Устаревший алгоритм шифрования|253|  
 |Удаленные серверы|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|Замените удаленные серверы связанными серверами. Процедуру sp_addserver можно использовать только с параметром local.|sp_addremotelogin<br /><br /> sp_addserver, хранимая процедура<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> хранимая процедура sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
-|Удаленные серверы|@@remserver |Замените удаленные серверы связанными серверами.|None|None|  
+|Удаленные серверы|@@remserver|Замените удаленные серверы связанными серверами.|None|None|  
 |Удаленные серверы|SET REMOTE_PROC_TRANSACTIONS|Замените удаленные серверы связанными серверами.|SET REMOTE_PROC_TRANSACTIONS|110|  
 |Задание параметров|**SET ROWCOUNT** для инструкций **INSERT**, **UPDATE**и **DELETE** .|Ключевое слово TOP|SET ROWCOUNT|109|  
 |Табличные указания|Табличная подсказка HOLDLOCK без скобок.|Используйте HOLDLOCK со скобками.|Табличная подсказка HOLDLOCK без скобок.|167|  
@@ -159,7 +157,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ROWGUIDCOL в качестве имени столбца в инструкциях DML.|Используйте $rowguid.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|IDENTITYCOL в качестве имени столбца в инструкциях DML.|Используйте $identity.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Использование # и ## в качестве имен временной таблицы и временной хранимой процедуры.|Используйте по крайней мере один дополнительный символ.|Символы «#» и «##» в качестве имен временных таблиц и хранимых процедур|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте @, @@ или @@ в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@.|« @ » и имена, начинающиеся с « @@ » в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте @, @@ или @@ в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|Не используйте в качестве идентификаторов @, @@ или имена, начинающиеся символами @@.|«@» и имена, начинающиеся с «@@» в качестве идентификаторов [!INCLUDE[tsql](../includes/tsql-md.md)] .|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Используйте ключевое слово DEFAULT в качестве значения по умолчанию.|Не используйте слово DEFAULT в качестве значения по умолчанию.|Ключевое слово DEFAULT в качестве значения по умолчанию.|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Использование пробела в качестве разделителя табличных подсказок.|В качестве разделителя отдельных табличных подсказок используйте запятую.|Несколько табличных указаний без запятых|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|Список выбора статистического индексированного представления должен содержать функцию COUNT_BIG (*) в режиме совместимости 90.|Вместо этого следует использовать функцию COUNT_BIG.|Список выбора индексированного представления без COUNT_BIG(*)|2|  
@@ -178,5 +176,4 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [Неподдерживаемые функции ядра СУБД в SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
-
 

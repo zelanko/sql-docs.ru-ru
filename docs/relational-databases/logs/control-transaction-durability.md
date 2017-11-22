@@ -8,25 +8,23 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-transaction-log
+ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - delayed durability
 - Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: 469b8008c1697f691c56f6d8893f1d637534c989
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="control-transaction-durability"></a>Управление устойчивостью транзакций
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,7 +95,7 @@ ms.lasthandoff: 06/22/2017
     
 ## <a name="how-to-control-transaction-durability"></a>Управление устойчивостью транзакций    
     
-###  <a name="bkmk_DbControl"></a> Database level control    
+###  <a name="bkmk_DbControl"></a> Управление на уровне базы данных    
  Администратор базы данных управляет тем, могут ли пользователи использовать отложенные устойчивые транзакции в базе данных, с помощью следующей инструкции. Необходимо использовать для настройки параметра отложенной устойчивости инструкцию ALTER DATABASE.    
     
 ```tsql    
@@ -113,7 +111,7 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  **ПРИНУДИТЕЛЬНО**    
  Если выбран этот параметр, все транзакции, которые фиксируются в базе данных, являются отложенными устойчивыми. Независимо от того, указана ли транзакция как полностью устойчивая (DELAYED_DURABILITY = OFF) или данные не указаны, транзакция является отложенной устойчивой. Этот параметр полезен, если отложенная устойчивая транзакция используется для баз данных и не следует изменять код приложения.    
     
-###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
+###  <a name="CompiledProcControl"></a> Управление на уровне блока Atomic — скомпилированные в собственном коде хранимые процедуры    
  Ниже представлен код блока ATOMIC.    
     
 ```tsql    
@@ -148,7 +146,7 @@ END
 |**DELAYED_DURABILITY = OFF**|Блок ATOMIC инициирует новую полностью устойчивую транзакцию.|Блок ATOMIC создает точку сохранения в существующей транзакции, а затем начинает новую транзакцию.|    
 |**DELAYED_DURABILITY = ON**|Блок ATOMIC инициирует новую отложенную устойчивую транзакцию.|Блок ATOMIC создает точку сохранения в существующей транзакции, а затем начинает новую транзакцию.|    
     
-###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> Управление на уровне ФИКСАЦИИ —[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  Синтаксис фиксации расширен, что обеспечивает возможность принудительной реализации отложенной устойчивости транзакций. Если для DELAYED_DURABILITY задано DISABLED или FORCED на уровне базы данных (см. выше), то этот параметр фиксации не учитывается.    
     
 ```tsql    
@@ -204,7 +202,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **Резервная копия журналов**    
  В резервные копии включаются только устойчивые транзакции.    
     
-##  <a name="bkmk_DataLoss"></a> When can I lose data?    
+##  <a name="bkmk_DataLoss"></a> Когда я могу потерять данные?    
  Если вы применяете отложенную устойчивость на любой вашей таблице, вы должны понимать, что определенные обстоятельства могут привести к потере данных. Если вы не допускаете любую потерю данных, вам не следует использовать отложенную устойчивость на ваших таблицах.    
     
 ### <a name="catastrophic-events"></a>Критические события    
@@ -217,4 +215,3 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  [Транзакции с таблицами, оптимизированными для памяти](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
-
