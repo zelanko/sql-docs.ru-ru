@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - properties [ADO]
 - ADO properties
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 686684010ff1e72f61b971c2504d5634ee28f269
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-properties"></a>Свойства ADO
 |||  
@@ -62,7 +60,7 @@ ms.lasthandoff: 09/09/2017
 |[ЭЛЕКТРИЧЕСКОЙ ПЕРЕГРУЗКИ](../../../ado/reference/ado-api/eos-property.md)|Указывает, является ли текущая позиция в конце потока.|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|Указывает фильтр для данных в **записей**.|  
 |[HelpContext и файл справки](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Указывает файл справки и раздел, связанный с **ошибка** объекта.<br /><br /> **Идентификатор справки** возвращает идентификатор контекста, в виде **длинные** значение для раздела в файле справки.<br /><br /> **HelpFile** возвращает **строка** значение, результатом которого является полностью разрешенной путь к файлу справки.|  
-|[Индекс](../../../ado/reference/ado-api/index-property.md)|Указывает имя индекса в настоящее время действует для **записей** объекта.|  
+|[Index](../../../ado/reference/ado-api/index-property.md)|Указывает имя индекса в настоящее время действует для **записей** объекта.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Указывает уровень изоляции для **подключения** объекта.|  
 |[Элемент](../../../ado/reference/ado-api/item-property-ado.md)|Указывает конкретный элемент коллекции по имени или порядковый номер.|  
 |[LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md)|Указывает двоичный символ для использования в качестве разделителя строк в тексте **поток** объектов.|  
@@ -96,7 +94,7 @@ ms.lasthandoff: 09/09/2017
 |[Состояние (ADO поле)](../../../ado/reference/ado-api/status-property-ado-field.md)|Указывает состояние **поле** объекта.|  
 |[Состояние (набора записей ADO)](../../../ado/reference/ado-api/status-property-ado-recordset.md)|Указывает состояние текущей записи относительно пакетные обновления или другие массовых операций.|  
 |[StayInSync](../../../ado/reference/ado-api/stayinsync-property.md)|Указывает в иерархической **записей** объекта, является ли ссылку на основные дочерние записи (т. е *главе*) изменяется при изменения позиции родительской строки.|  
-|[Свойства потока](../../../ado/reference/ado-api/stream-property.md)|Возвращает или задает поставщика OLE DB **поток** объекта из/в **ADOStreamConstruction** объекта.|  
+|[Свойство Stream](../../../ado/reference/ado-api/stream-property.md)|Возвращает или задает поставщика OLE DB **поток** объекта из/в **ADOStreamConstruction** объекта.|  
 |[Тип](../../../ado/reference/ado-api/type-property-ado.md)|Тип рабочей тип или данные **параметр**, **поле**, или **свойство** объекта.|  
 |[Тип (поток ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Указывает тип данных, содержащихся в **поток** (двоичный файл или текст).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Показывает текущее значение в базе данных для **поле** объекта.|  
@@ -112,5 +110,4 @@ ms.lasthandoff: 09/09/2017
  [События ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Методы ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)   
- [Объекты ADO и интерфейсы](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)
-
+ [Объекты и интерфейсы ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)

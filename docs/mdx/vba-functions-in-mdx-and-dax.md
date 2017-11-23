@@ -5,22 +5,20 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
+ms.openlocfilehash: 196b8e8e49ceae58054eae3d1b74480a9f438b75
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 753380839f10fc25c4bafa4ea045c301831361a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Функции VBA в DAX и многомерных выражениях
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +72,7 @@ ms.lasthandoff: 08/02/2017
 |[FileAttr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007572&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
 |[FileDateTime](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007573&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
 |[FileLen](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007574&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
-|[Фильтр](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается|**\*\*Предупреждение \* \***  в многомерных Выражениях реализована другая функция с тем же именем, и функция FILTER (Set_Expression, Logical_Expression) возвращает набор, полученный в результате фильтрации заданного набора на основе условия поиска по заданным аргументам<br /><br /> **\*\*Предупреждение \* \***  DAX реализована другая функция с тем же именем; фильтр (\<таблицы >,\<фильтра >) функция возвращает таблицу, представляющую подмножество другой таблицы или выражения по заданным аргументам|  
+|[Filter](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается|**\*\*Предупреждение \* \***  в многомерных Выражениях реализована другая функция с тем же именем, и функция FILTER (Set_Expression, Logical_Expression) возвращает набор, полученный в результате фильтрации заданного набора на основе условия поиска по заданным аргументам<br /><br /> **\*\*Предупреждение \* \***  DAX реализована другая функция с тем же именем; фильтр (\<таблицы >,\<фильтра >) функция возвращает таблицу, представляющую подмножество другой таблицы или выражения по заданным аргументам|  
 |[Исправление](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Только многомерные выражения||  
 |[Формат (Visual Basic для приложений)](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007576&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, многомерные выражения||  
 |[FormatCurrency](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007577&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
@@ -91,7 +89,7 @@ ms.lasthandoff: 08/02/2017
 |[Час](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007588&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, многомерные выражения||  
 |[IIf](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007589&lcid=1033&NS=EXCEL.DEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Только многомерные выражения|**\*\*Предупреждение \* \***  DAX реализована аналогичная функция с именем: IF (logical_test, value_if_true, value_if_false) функции.|  
 |[IMEStatus](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007590&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
-|[Ввод](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007591&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
+|[Входные данные](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007591&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
 |[InputBox](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007592&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
 |[InStr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007593&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Только многомерные выражения||  
 |[Функция InStrRev](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007594&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
@@ -173,4 +171,3 @@ ms.lasthandoff: 08/02/2017
 |[Год](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007670&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, многомерные выражения||  
   
   
-

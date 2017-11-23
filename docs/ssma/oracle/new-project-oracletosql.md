@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 4cff2bb1f0e114bb0bf5662009866fcfba1c4770
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bcb1364b156e4730b61e66c7e64d87488a3c73d7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-project-oracletosql"></a>Новый проект (OracleToSQL)
 Используйте **новый проект** диалоговое окно «» для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** в диалоговом **файл** меню, нажмите кнопку **новый проект**.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/02/2017
   
 -   База данных Azure SQL  
   
-

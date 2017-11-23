@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - record jumping [ADO]
 - jumping to record [ADO]
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8612ee07c90c315bf5cc1eceb621082ced03d5a3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="jumping-to-a-record"></a>Переход к записи
 [Переместить](../../../ado/reference/ado-api/move-method-ado.md) метода можно перемещаться вперед или назад в **записей** указанное число записей, используя следующий синтаксис:  
@@ -49,4 +47,3 @@ oRs.Move NumRecords, Start
  При передаче закладки в *запустить* аргумента перемещения указывается относительно записи с этой закладкой, при условии, что **записей** объект поддерживает закладки. Закладки можно получить с помощью [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство. Если не указан, перемещение задается относительно текущей записи.  
   
  Если вы используете **CacheSize** свойство локально кэширование записи от поставщика, передавая *NumRecords* аргумент, который перемещает текущую позицию записей за пределами текущей группы кэшированных записей принудительно ADO, чтобы получить новую группу записи, начиная с записи назначения. **CacheSize** свойство определяет размер только что полученный группы и назначения запись является первой записи получены.
-

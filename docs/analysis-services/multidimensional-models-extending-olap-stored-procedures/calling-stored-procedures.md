@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - calling stored procedures
 - stored procedures [Analysis Services], calling
 - MDX queries [Analysis Services]
 - CALL statement
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: aa00161709980550644f07a7330198d9369b706e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e2c8656c28db458104a3793175a739d311ac379
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calling-stored-procedures"></a>Вызов хранимых процедур
   Хранимые процедуры можно вызывать на сервере или из клиентского приложения. В любом случае хранимые процедуры всегда выполняются на сервере либо в контексте сервера, либо в контексте базы данных. Для выполнения хранимой процедуры не нужны специальные разрешения. После того как хранимая процедура добавлена сборкой к контексту сервера или базы данных, любой пользователь может выполнить эту хранимую процедуру, если только роль для этого пользователя разрешает действия, выполняемые этой хранимой процедурой.  
@@ -97,4 +95,3 @@ CALL(MyVoidFunction)
  [Определение хранимых процедур](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

@@ -20,17 +20,16 @@ helpviewer_keywords:
 - monitoring performance [SQL Server], SQL Server Profiler
 - performance [SQL Server], monitoring tools
 ms.assetid: 2f0ab717-05f3-427e-b8cd-a8bdca374add
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5974fc48206fdac56cd5d6145755a611e4f5a543
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Наблюдение за экземпляром служб Analysis Services
   Производительность служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно отслеживать при помощи системного монитора [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , который иногда называют приложением **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] предоставляет возможность создания трассировок и управления ими, а также анализа и воспроизведения результатов трассировок. Системный монитор сообщает состояние сервера, индексированное посредством определенных счетчиков, которые описаны в следующем разделе.  
@@ -52,4 +51,3 @@ ms.lasthandoff: 09/01/2017
  [Счетчики производительности (службы SSAS)](../../analysis-services/instances/performance-counters-ssas.md)  
   
   
-

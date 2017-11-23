@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - Unique property [ADOX], Visual Basic example
 - PrimaryKey property [ADOX], Visual Basic example
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7a8be23faf9284ee4e2bccce79f4015f8f99973
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 66f717eee45a790016e4dc03d2f6b696f39ea365
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="primarykey-and-unique-properties-example-vb"></a>PrimaryKey и пример уникальные свойства (Visual Basic)
 В этом примере демонстрируется [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) и [Unique](../../../ado/reference/adox-api/unique-property-adox.md) свойства [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новую таблицу с двумя столбцами. **PrimaryKey** и **Unique** свойства используются для отображения один столбец первичного ключа, для которой не разрешены повторяющиеся значения.  
@@ -124,4 +121,3 @@ End Sub
  [Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Свойство PrimaryKey (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
  [Свойство Unique (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)
-

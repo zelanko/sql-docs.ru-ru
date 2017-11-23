@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,24 +12,22 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ADO for Visual C++ syntax [ADO]
 - syntax indexes [ADO], ADO for Visual C++ syntax
 - collections [ADO], ADO for Visual C++ syntax
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 58d14610c2d7cbebfddd8d9312cc218d4fd91bbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d16122393fb3a81f90b6e8d708377745a2ef1236
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="collections-ado-for-visual-c-syntax"></a>Коллекции (ADO для синтаксиса Visual C++)
 ## <a name="parameters"></a>Параметры  
@@ -45,11 +42,11 @@ Refresh(void);
   
  Дополнительные сведения см. в разделе  
   
--   [Append-метод (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+-   [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
--   [Удаление метода (коллекция параметров ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Метод Delete (коллекция Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
--   [Обновить метод (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ### <a name="properties"></a>Свойства  
   
@@ -76,11 +73,11 @@ Refresh(void);
   
  Дополнительные сведения см. в разделе  
   
--   [Append-метод (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+-   [Метод Append (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
   
--   [Удаление метода (коллекция параметров ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
+-   [Метод Delete (коллекция Parameters ADO)](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md)  
   
--   [Обновить метод (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ### <a name="properties"></a>Свойства  
   
@@ -108,7 +105,7 @@ Refresh(void);
   
 -   [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)  
   
--   [Обновить метод (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ### <a name="properties"></a>Свойства  
   
@@ -133,7 +130,7 @@ Refresh(void);
   
  Дополнительные сведения см. в разделе  
   
--   [Обновить метод (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
+-   [Метод Refresh (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ### <a name="properties"></a>Свойства  
   
@@ -152,5 +149,4 @@ get_Item(VARIANT Index, ADOProperty **ppvObject);
  [Коллекция ошибок (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
  [Коллекция Fields (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Коллекция параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Коллекция свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
-
+ [Коллекция Properties (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

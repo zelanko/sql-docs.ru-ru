@@ -1,54 +1,54 @@
 ---
-title: "Средства SQL и служебные программы для SQL Server, база данных Azure SQL и хранилище данных SQL | Документы Microsoft"
+title: "Средства и программы для SQL Server, база данных Azure SQL и хранилище данных Azure SQL SQL | Документы Microsoft"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 11/15/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 0ad2c6a833d064d7e70da281e1fdc36ae9c235e1
+ms.sourcegitcommit: c31ab3a0c47644560fd125decee4f8630da5ebdb
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: eccbe54c561e009858f6192126abc57e3399082c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/28/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/15/2017
 ---
-# <a name="tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouse"></a>Средства и служебные программы для базы данных SQL Azure, SQL Server и хранилище данных SQL
+# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Средства и программы для SQL Server, база данных Azure SQL и хранилище данных Azure SQL SQL
 
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-![](../includes/media/sql-database-tools.png)В этой статье предоставляет список доступных средств для работы с SQL Server, базы данных SQL Azure, хранилище данных SQL и приложений на основе SQL Server. 
 
-Если вы хотите перейти непосредственно в и начните создавать таблицы, выполнение запросов, по сути разработки и управления базой данных, затем [ **SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) вероятнее всего ваш главный инструмент. Среда SSMS предоставляется бесплатно и выполняется в Windows.
+## <a name="tools-to-run-queries-and-manage-databases"></a>Средства для выполнения запросов и управления базами данных  
 
-Если вы используете macOS или Linux, попробуйте [кода Visual Studio](https://code.visualstudio.com/) с [ **mssql для Visual Studio Code** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) расширения. Эти средства предназначены для разработки с широким набором функциональных возможностей Microsoft SQL Server, базы данных SQL Azure и хранилище данных SQL и также свободны. В разделе [кода Visual Studio используется для создания и выполнения скриптов Transact-SQL для SQL Server](../linux/sql-server-linux-develop-use-vscode.md).
-
-
-## <a name="sql-tools"></a>Средства SQL 
- 
 | Инструмент | Description |
 |:--|:--|
-| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Используйте SQL Server Management Studio (SSMS) для запроса, проектирования и управления SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. |
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Стать мощная среда разработки Visual Studio для SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. |
-| [Код Visual Studio](https://code.visualstudio.com/)| Код Visual Studio работает на macOS, Windows и Linux. После установки Visual Studio Code, установить [mssql расширения](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) для разработки Microsoft SQL Server, базы данных SQL Azure и хранилище данных SQL. |
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]— это бесплатная, упрощенная средство для управления базами данных везде, где они выполняются. Эта предварительная версия предоставляет возможности управления базы данных, включая расширенного редактора Transact-SQL и настраиваемые представление о работоспособности баз данных. **[!INCLUDE[name-sos](../includes/name-sos-short.md)]выполняется на Windows, Linux и macOS**.|
+| [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Используйте SQL Server Management Studio (SSMS) для запроса, проектирования и управления SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. **Среда SSMS запущена на Windows**.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Стать мощная среда разработки Visual Studio для SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. **Набор SSDT работает в Windows**.|
+| [Код Visual Studio](https://code.visualstudio.com/)| После установки Visual Studio Code, установить [mssql расширения](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) для разработки Microsoft SQL Server, базы данных SQL Azure и хранилище данных SQL. **Visual Studio код выполняется на Windows, Linux и macOS**.|
+
+
+
+## <a name="additional-tools"></a>Дополнительные средства
+
+| Инструмент | Description |
+|:--|:--|
 | [Диспетчер конфигураций](../tools/configuration-manager/sql-server-configuration-manager-help.md) | Используйте диспетчер конфигурации SQL Server для настройки служб SQL Server и настройки сетевых подключений.|
 | [Помощник по миграции SQL Server](../ssma/sql-server-migration-assistant.md) | Используйте SQL Server Migration Assistant для автоматизации миграции баз данных в SQL Server из Microsoft Access, DB2, MySQL, Oracle и Sybase.|
 | [Распределенное воспроизведение](../tools/distributed-replay/install-distributed-replay-overview.md) | Функция распределенного воспроизведения помогут оценить влияние будущих обновлений SQL Server. Также распределенного воспроизведения можно используйте для оценки влияния оборудования и обновления операционной системы и настройки SQL Server. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Программа ssbdiagnose сообщает о проблемах в диалогах компонента Service Broker или в конфигурации служб компонента Service Broker. |
 
 
-## <a name="sql-command-prompt-utilities"></a>Программы командной строки SQL
+## <a name="command-line-utilities"></a>Программы командной строки
 
-  Программы командной строки позволяют вносить в скрипт операции [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . В следующей таблице содержится список программ командной строки, поставляемых вместе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Служебные программы командной строки позволяют вносить в скрипт [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] операций. В следующей таблице содержится список программ командной строки, поставляемых вместе с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 |**Служебная программа**|**Описание**|**Установлена в**|  
 |-----------------|---------------------|----------------------|  
@@ -82,6 +82,5 @@ ms.lasthandoff: 08/28/2017
 |`monospace`|Образцы команд и программного кода.|  
 |*курсив*|Параметры, указываемые пользователем.|  
 |**полужирный**|Команды, параметры и другие элементы синтаксиса, которые должны в точности соответствовать примеру.|  
-
 
 

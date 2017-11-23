@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- TOPSUM
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- TopSum function
+f1_keywords: TOPSUM
+dev_langs: kbMDX
+helpviewer_keywords: TopSum function
 ms.assetid: e32496fd-4897-43c9-a388-4028609f4ffb
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 11d3e5e42de98eb97e392193cd7cf4e7d5a9383b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 58a7bffc672af75c52eacca28f2e83d36a56af0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="topsum-mdx"></a>TopSum (многомерные выражения)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +39,7 @@ TopSum(Set_Expression, Value, Numeric_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Value*  
+ *Значение*  
  Допустимое числовое выражение, указывающее величину, с которой сравнивается каждый кортеж.  
   
  *Numeric_Expression*  
@@ -71,7 +66,6 @@ WHERE([Product].[Product Categories].Bikes)
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по функциям многомерных Выражений &#40;Многомерные Выражения&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

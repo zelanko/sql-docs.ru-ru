@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - MoveRecord method [ADO], Visual Basic example
 - DeleteRecord method [ADO], Visual Basic example
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 681e7990c2b93364e9792937cb68e0847de6f303
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d8bc240a84112df29e3b7fe85d16f721c0da5a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deleterecord-and-moverecord-methods-example-vb"></a>Макрокоманду УдалитьЗапись и пример MoveRecord методы (Visual Basic)
 В этом примере показано, как копирование, перемещение, изменение и удаление содержимого текстового файла, опубликованных в веб-папку. Другие свойства и методы, используемые включают [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [источника](../../../ado/reference/ado-api/source-property-ado-record.md), и [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  
@@ -162,5 +159,4 @@ End Sub
  [Метод GetChildren (ADO)](../../../ado/reference/ado-api/getchildren-method-ado.md)   
  [Метод MoveRecord (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)   
  [Свойство ParentURL (ADO)](../../../ado/reference/ado-api/parenturl-property-ado.md)   
- [Свойство Source (ADO запись)](../../../ado/reference/ado-api/source-property-ado-record.md)
-
+ [Свойство Source (объект Record ADO)](../../../ado/reference/ado-api/source-property-ado-record.md)

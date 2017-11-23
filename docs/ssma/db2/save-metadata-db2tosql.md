@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 812f7c5bcbbcf297da3cc1f43802b2676c9c0697
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f0b6735caf1918cf7473c66e56fc6fd6b808c8d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="save-metadata-db2tosql"></a>Сохранение метаданных (DB2ToSQL)
 **Сохранить метаданные** диалоговом окне будет предложено загрузить метаданные в проект SSMA перед сохранением. Это позволяет иметь полный файл проекта, который можно использовать в автономном режиме и отправить другим пользователям, например, сотрудники службы технической поддержки.  
@@ -51,4 +49,3 @@ SSMA загружает метаданные в проект при необхо
 **Отмена**  
 Отменяет сохранения операции. Отсутствующие метаданные не загружается в проект.  
   
-

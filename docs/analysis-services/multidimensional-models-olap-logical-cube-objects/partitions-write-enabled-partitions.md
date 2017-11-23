@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - storage [Analysis Services], partitions
 - write-enabled partitions [Analysis Services]
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - writeback [Analysis Services], partitions
 - storing data [Analysis Services], partitions
 ms.assetid: 46e7683f-03ce-4af2-bd99-a5203733d723
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e161c0c7b9456101ae4f216a78560b1fec827686
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 87ca933c004d59a8c2e680d79e9d9499700f7e43
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="partitions---write-enabled-partitions"></a>Секции — секции, доступные для записи
   Как правило, данные в кубе доступны только для чтения. Однако для определенных сценариев может быть необходимым иметь доступ к секции с возможностью записи. Секции, доступные для записи, позволяют пользователям исследовать сценарии, изменяя значения ячеек и анализируя влияние этих изменений на данные куба. При разрешении записи в секцию клиентские приложения могут записывать изменения данных секции. Эти изменения, называющиеся данными обратной записи, сохраняются в отдельной таблице, и не перезаписывают существующие данные в группе мер. Однако они включены в результаты запросов, поскольку являются частью данных куба.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Измерения, доступные для записи](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)  
   
   
-

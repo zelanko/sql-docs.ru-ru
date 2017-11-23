@@ -5,29 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 02d4e4276953d0e9ff54ac49fda434cb2509e7f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f18a532488aaa0b40ec976ae01c96a4405d3b26f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-3-1---starting-the-dta-command-prompt-utility-and-tuning-a-workload"></a>Занятие 3-1 — начало работы с программой командной строки dta и настройка рабочей нагрузки
-Эта задача помогает запустить программу **dta**, просмотреть ее справку, а затем использовать эту программу для настройки рабочей нагрузки из командной строки. Программа использует рабочую нагрузку MyScript.sql, созданную в ходе выполнения практической работы по использованию графического пользовательского интерфейса помощника по настройке ядра СУБД [Настройка рабочей нагрузки](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+Эта задача помогает запустить программу **dta** , просмотреть ее справку, а затем использовать эту программу для настройки рабочей нагрузки из командной строки. Программа использует рабочую нагрузку MyScript.sql, созданную в ходе выполнения практической работы по использованию графического пользовательского интерфейса помощника по настройке ядра СУБД [Настройка рабочей нагрузки](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
 В учебнике используется образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . В целях повышения безопасности образцы баз данных не установлены. Дополнительные сведения об установке образцов баз данных см. в статье [Установка образцов SQL Server и образцов баз данных](http://sqlserversamples.codeplex.com).  
   
@@ -76,4 +72,3 @@ ms.lasthandoff: 08/02/2017
   
   
   
-

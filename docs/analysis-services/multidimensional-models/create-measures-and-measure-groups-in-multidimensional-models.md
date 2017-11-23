@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- measure groups [Analysis Services], defining
+helpviewer_keywords: measure groups [Analysis Services], defining
 ms.assetid: 1018bb2e-b89b-489e-aead-450dec5dca3b
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: f10c201d936a3580ca02846f43e3592ebfbacebf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8dc45f7d47484dbc3b1d5e7684f4e3a5d3075dc2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Создание мер и групп мер в многомерных моделях
   *Мера* — это агрегат значений числовых данных, например сумма, количество, минимальное, максимальное, среднее или созданное вами многомерное выражение. *Группа мер* — это контейнер для одной или нескольких мер. Все меры находятся в группе мер даже в том случае, если имеется только одна мера. Куб должен иметь как минимум одну меру и группу мер.  
@@ -96,7 +94,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Меры и группы мер](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
+ [Меры и их группы](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   
   
-

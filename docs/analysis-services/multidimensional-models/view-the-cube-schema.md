@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3a7d0c9790f0e8f624179eda86c9062d03b78887
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-the-cube-schema"></a>Просмотр схемы куба
   Панель **Представление источника данных** вкладки **Структура куба** в **Конструкторе кубов** отображает схему куба. Схема представляет собой набор таблиц, на основе которых созданы меры и измерения для куба. Каждая схема куба состоит из одной или более таблиц фактов и одной или более таблиц измерений, на которых основаны меры и измерения в кубе.  
@@ -57,4 +56,3 @@ ms.lasthandoff: 09/01/2017
 |Изменить схему представления источников данных|В меню **Представление источника данных** выберите пункт **Изменить представление источника данных**.<br /><br /> — или —<br /><br /> Щелкните правой кнопкой мыши панель **Представление источника данных** и выберите команду **Изменить представление источника данных**.|  
   
   
-

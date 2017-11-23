@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Mode property [ADO], VC++ example
 - IsolationLevel property [ADO], VC++ example
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 86c0c5ac8c417a68ecde02805a7c724166c2e8a6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4e4d8d23a4f9ffb09ca7f2048ec429752502da8b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel и пример свойства режима (VC ++)
 В этом примере используется [режим](../../../ado/reference/ado-api/mode-property-ado.md) свойства, чтобы открыть монопольное подключение и [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) свойства, чтобы открыть транзакцию, которая ведется изолированно от других транзакций.  
@@ -253,5 +250,4 @@ void PrintComError(_com_error &e) {
 **Суши, любой пользователь? -trad_cook**   
 ## <a name="see-also"></a>См. также:  
  [Свойство IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Свойство режима (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
-
+ [Свойство Mode (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

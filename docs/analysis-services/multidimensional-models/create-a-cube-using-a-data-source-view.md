@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Создание куба с использованием представления источников данных
   Этот метод служит для создания нового куба, если планируется использование существующего представления источников данных. Этот метод позволяет задать представление источника данных и выбрать таблицы фактов и таблицы измерений для использования в представлении источника данных. Затем необходимо выбрать измерения и меры для включения в куб.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  На странице **Завершение работы мастера кубов** можно просмотреть группы мер, меры и измерения в новом кубе. В поле **Имя куба** введите имя нового куба. Затем после проверки куба нажмите кнопку **Готово**. Нажмите кнопку **Назад** , чтобы вернуться к любой из предыдущих страниц мастера и исправить тот или иной параметр.  
   
   
-

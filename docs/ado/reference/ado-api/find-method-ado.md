@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::raw_Find
 - Recordset15::Find
-helpviewer_keywords:
-- Find method [ADO]
+helpviewer_keywords: Find method [ADO]
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 6cdc0c16fa0640a27c2e463d9b3ab65e5f33246b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee7c7feb630040fce10311335f414213bba4ada
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-method-ado"></a>Find-метод (ADO)
 Поиск [записей](../../../ado/reference/ado-api/recordset-object-ado.md) для строки, который удовлетворяет указанным критериям. При необходимости можно указать направление поиска, начальную строку и смещение от начала строки. При соблюдении заданных условий текущей позиции строки имеет значение на найдено записи; в противном случае — значение позиции (начала или конца) из **записей**.  
@@ -72,11 +69,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 >  При вызове метода **найти** метод набора записей и текущей позиции в наборе записей находится в последней записи или конца файла (EOF), не позволяет найти ничего. Необходимо вызвать **MoveFirst** метод, чтобы задать текущее положение/курсора в начало набора записей.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Пример метода (Visual Basic)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [Свойство Index](../../../ado/reference/ado-api/index-property.md)   
  [Оптимизировать динамические свойства (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [Метод поиска](../../../ado/reference/ado-api/seek-method.md)
-
+ [Метод Seek](../../../ado/reference/ado-api/seek-method.md)

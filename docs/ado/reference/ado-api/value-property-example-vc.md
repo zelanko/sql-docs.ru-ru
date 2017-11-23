@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- Value property [ADO], VC++ example
+dev_langs: C++
+helpviewer_keywords: Value property [ADO], VC++ example
 ms.assetid: 2a104245-56df-44f3-b9b7-b3d18643d57b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: af8d8c9342f20f08c1877ea86700348d096dfc0a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c22b67fabafdf82734222bd3a5d56e19c157c395
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="value-property-example-vc"></a>Пример значения свойства (VC ++)
 В этом примере демонстрируется [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство с [поле](../../../ado/reference/ado-api/field-object.md) и [свойство](../../../ado/reference/ado-api/property-object-ado.md) объектов путем отображения значения поля и свойства для ***сотрудников*** таблицы.  
@@ -180,5 +176,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>См. также:  
  [Объект field](../../../ado/reference/ado-api/field-object.md)   
  [Свойства объекта (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Значение свойства (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
-
+ [Свойство Value (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

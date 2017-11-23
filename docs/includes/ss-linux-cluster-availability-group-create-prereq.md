@@ -75,7 +75,7 @@ sudo systemctl restart mssql-server
 
 При необходимости вы можете включить расширенные события групп доступности AlwaysOn, что может помочь в устранении их неполадок. Выполните на каждом экземпляре SQL Server следующую команду. 
 
-```Transact-SQL
+```SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
@@ -86,7 +86,7 @@ GO
 
 Следующий сценарий Transact-SQL создает имя входа `dbm_login` и пользователя с именем `dbm_user`. Обновите сценарий, задав надежный пароль. Выполните следующую команду на всех экземплярах SQL Server, чтобы создать пользователя конечной точки с зеркальным отображением базы данных.
 
-```Transact-SQL
+```SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
 CREATE USER dbm_user FOR LOGIN dbm_login;
 ```
@@ -97,7 +97,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 Следующий сценарий Transact-SQL создает главный ключ и сертификат. Затем он создает резервную копию сертификата и защищает файл закрытым ключом. Обновите сценарий, задав надежные пароли. Подключитесь к основному экземпляру SQL Server и запустите следующий код Transact-SQL, чтобы создать сертификат:
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate WITH SUBJECT = 'dbm';
 BACKUP CERTIFICATE dbm_certificate
@@ -128,7 +128,7 @@ chown mssql:mssql dbm_certificate.*
 
 Следующий сценарий Transact-SQL создает главный ключ и сертификат из резервной копии, созданной в первичной реплике SQL Server. Эта команда также разрешает пользователю доступ к сертификату. Обновите сценарий, задав надежные пароли. Для расшифровки используется тот же пароль, что и при создании PVK-файла в предыдущем шаге. Выполните следующий сценарий на всех серверах-получателях для создания сертификата.
 
-```Transact-SQL
+```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate   
     AUTHORIZATION dbm_user
@@ -141,16 +141,13 @@ CREATE CERTIFICATE dbm_certificate
 
 ## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>Создайте конечные точки на всех репликах зеркального отображения базы данных
 
-Для передачи и получения сообщений между экземплярами серверов, участвующими в сеансах зеркального отображения базы данных или размещающих реплики доступности, в конечных точках зеркального отображения базы данных используется протокол TCP. Конечная точка зеркального отображения базы данных прослушивает порт TCP с уникальным номером. 
+Для передачи и получения сообщений между экземплярами серверов, участвующими в сеансах зеркального отображения базы данных или размещающих реплики доступности, в конечных точках зеркального отображения базы данных используется протокол TCP. Конечная точка зеркального отображения базы данных прослушивает порт TCP с уникальным номером. Прослушиватель TCP требует IP-адрес прослушивателя. IP-адрес прослушивателя должен быть адресом IPv4. Можно также использовать `0.0.0.0`. 
 
 Следующий запрос Transact-SQL создает конечную точку прослушивания с именем `Hadr_endpoint` для группы доступности. Он запускает конечную точку и предоставляет созданному вами пользователю разрешение connect. Перед выполнением данного сценария замените значения между `**< ... >**`.
 
->[!NOTE]
->В этом выпуске указать другой IP-адрес прослушивателя нельзя. Мы работаем над решением этой проблемы, но на данный момент единственное допустимое значения — "0.0.0.0".
+Обновление следующий запрос Transact-SQL для вашей среды, на всех экземплярах SQL Server: 
 
-Обновите следующий запрос Transact-SQL для своей среды на всех экземплярах SQL Server: 
-
-```Transact-SQL
+```SQL
 CREATE ENDPOINT [Hadr_endpoint]
     AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
     FOR DATA_MIRRORING (
@@ -162,10 +159,25 @@ ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
 GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
->[!IMPORTANT]
->TCP-порт в брандмауэре должен быть открыт для порта прослушивателя.
+>[!NOTE]
+>При использовании SQL Server, экспресс-выпуск на одном узле для размещения реплики только конфигурации, является единственным допустимым значением для роли `WITNESS`. Выполните следующий скрипт в SQL Server Express Edition.
+>```SQL
+CREATE ENDPOINT [Hadr_endpoint]
+    AS TCP (LISTENER_IP = (0.0.0.0), LISTENER_PORT = **<5022>**)
+    FOR DATA_MIRRORING (
+        ROLE = WITNESS,
+        AUTHENTICATION = CERTIFICATE dbm_certificate,
+        ENCRYPTION = REQUIRED ALGORITHM AES
+        );
+ALTER ENDPOINT [Hadr_endpoint] STATE = STARTED;
+GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
+```
+
+The TCP port on the firewall needs to be open for the listener port.
+
+
 
 >[!IMPORTANT]
->Для выпуска SQL Server 2017 единственный поддерживаемый способ проверки подлинности для конечной точки с зеркальным отображением базы данных — `CERTIFICATE`. Параметр `WINDOWS` будет включен в будущем выпуске.
+>For SQL Server 2017 release, the only authentication method supported for database mirroring endpoint is `CERTIFICATE`. `WINDOWS` option will be enabled in a future release.
 
-Полную информацию см. в статье [Конечная точка зеркального отображения базы данных (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).
+For complete information, see [The Database Mirroring Endpoint (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx).

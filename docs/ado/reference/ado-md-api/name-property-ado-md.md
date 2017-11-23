@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -22,20 +21,18 @@ f1_keywords:
 - Name
 - Axis::Name
 - Hierarchy::Name
-helpviewer_keywords:
-- Name property [ADO MD]
+helpviewer_keywords: Name property [ADO MD]
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a26f37e1a3911658229258857676868af179133
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8d898b2e478b9a5dfccb431d0d29088c9e8d9286
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="name-property-ado-md"></a>Свойство Name (ADO MD)
 Указывает имя объекта.  
@@ -50,13 +47,12 @@ ms.lasthandoff: 09/09/2017
   
 ||||  
 |-|-|-|  
-|[Объект Axis (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|[Объект каталога (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Объект CubeDef (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|  
-|[Объект измерения (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Объект иерархии (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[Объект уровня (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
-|[Объект члена (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
+|[Объект Axis (многомерные объекты ADO)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|[Объект Catalog (многомерные объекты ADO)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Объект CubeDef (многомерные объекты ADO)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|  
+|[Объект Dimension (многомерные объекты ADO)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Объект Hierarchy (многомерные объекты ADO)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[Объект Level (многомерные объекты ADO)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
+|[Объект Member (многомерные объекты ADO)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
   
 ## <a name="see-also"></a>См. также:  
  [Пример каталога (Visual Basic)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Свойство Caption (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   
  [Свойство Description (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)   
- [Свойство UniqueName (ADO MD)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)
-
+ [Свойство UniqueName (многомерные объекты ADO)](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)

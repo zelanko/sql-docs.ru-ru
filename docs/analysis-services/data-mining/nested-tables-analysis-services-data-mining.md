@@ -18,17 +18,16 @@ helpviewer_keywords:
 - tables [Analysis Services], nested
 - nested tables
 ms.assetid: cb192aa2-597e-4d4f-ac34-3556d037fed4
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fddc871d01fcd7559a5b7e8af251c602975720b7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ad436f2cfa5da5381ad683a1fc804468c5a40d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Вложенные таблицы (службы Analysis Services — интеллектуальный анализ данных)
   В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]данные должны подаваться на вход алгоритма интеллектуального анализа данных в виде последовательности вариантов, содержащихся в таблице вариантов. Но не все варианты можно описать одной строкой данных. Например, некоторый вариант может быть выведен на основании двух таблиц: таблицы, содержащей данные о заказчике, и таблицы, содержащей сведения о покупках заказчика. Одному заказчику из таблицы заказчиков может соответствовать несколько элементов в таблице покупок, что усложняет описание данных в одной строке. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют уникальный метод обработки таких случаев с помощью *вложенных таблиц*. Понятие вложенной таблицы демонстрируется на следующей схеме.  
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/01/2017
  [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   
-
