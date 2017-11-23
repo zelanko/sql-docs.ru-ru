@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dab72cf0-95bc-4b63-95dc-505b5cd881c1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: dcf049205f00cf10f4c8dda308911b202c3a3728
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 09a6acec0d1ee91c553d748a334733faff36bc08
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Создание секций табличной модели и управление ими
 
@@ -37,7 +36,7 @@ ms.lasthandoff: 09/01/2017
 >  Секции в табличных моделей, созданных на уровне совместимости 1400 определяются с помощью инструкции запроса M. Дополнительные сведения см. в разделе [ссылка M](https://msdn.microsoft.com/library/mt211003.aspx). 
 >
   
-## <a name="tasks"></a>Задания  
+## <a name="tasks"></a>Задачи  
  Создание секций и управление ими в развернутой базе данных с табличной моделью выполняются в диалоговом окне **Секции** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы открыть диалоговое окно **Секции** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], щелкните таблицу правой кнопкой мыши и выберите команду **Секции**.  
   
 ###  <a name="bkmk_create_new"></a> Создание новой секции  
@@ -74,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  [Обработка секций табличной модели](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   
   
-

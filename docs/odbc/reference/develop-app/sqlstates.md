@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - diagnostic information [ODBC], sqlstates
 - SQLSTATE [ODBC]
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1c45bbcbf03c4377e8ff162c3cd28ddf7128810b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlstates"></a>атрибуты SQLSTATE
 Атрибуты SQLSTATE приводятся подробные сведения о причине предупреждения или ошибки. Атрибуты SQLSTATE, в данном руководстве основаны на были найдены в спецификации ISO/IEF CLI, несмотря на то, что эти атрибуты SQLSTATE, начинающиеся с помощью мгновенных сообщений характерные для ODBC.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
  SQLSTATE HYC00 (дополнительная возможность не реализована) особенно важен, так как он является единственным способом, в котором приложение может определить, поддерживает ли драйвер конкретного атрибута инструкции или соединения.  
   
  Полный список SQLSTATE какие функции и возвращают их в разделе [коды ошибок ODBC приложение A:](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md). Подробное описание условий, при которых каждая функция может возвращать определенный SQLSTATE см. в этой функции.
-

@@ -8,24 +8,22 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - data sources [ODBC]
 - data sources [ODBC], about data sources
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.openlocfilehash: f7d67e1e67a872c33865a95619ccb1c54ef7f8f2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 179efeac4673884e615648d1ed118398132dc6f9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-sources"></a>Источники данных
 Объект *источника данных* является просто источником данных. Он может быть файл, в конкретной базе данных СУБД, или даже канал динамических данных. Данные могут быть расположены на том же компьютере, что и программа или на другом компьютере, где-нибудь в сети. Например источник данных может быть СУБД Oracle под управлением операционной системы, OS/2®, использованным Novell® Netware; СУБД IBM DB2, доступ через шлюз; Коллекция Xbase файлы в каталоге сервера. или локального файла базы данных Microsoft® Access.  
@@ -40,5 +38,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [Использование источников данных](../../odbc/reference/using-data-sources.md)  
   
--   [Пример источника данных](../../odbc/reference/data-source-example.md)
-
+-   [Образец источника данных](../../odbc/reference/data-source-example.md)

@@ -1,30 +1,31 @@
 ---
 title: "Документация по ширине World Importers | Документы Microsoft"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 17cabd9d-cb2f-436c-ad9c-ce02225808b7
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
+ms.openlocfilehash: 367581f176b148fe65f8fee44bfdbb7a6eb5e8ec
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 00c70ac3c82cc5a2e21a687a21c51739b75909ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wide-world-importers-documentation"></a>Расширенный World Importers документации
-Компания Wide World Importers — новый образец базы данных SQL Server 2016 и база данных SQL Azure. Он иллюстрирует основные возможности SQL Server 2016 и база данных SQL Azure для обработки транзакций (OLTP), хранения данных и аналитики (OLAP), а также транзакции гибридных и аналитических рабочих нагрузок обработки (HTAP).
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]Компания Wide World Importers — новый образец базы данных SQL Server 2016 и база данных SQL Azure. Он иллюстрирует основные возможности SQL Server 2016 и база данных SQL Azure для обработки транзакций (OLTP), хранения данных и аналитики (OLAP), а также транзакции гибридных и аналитических рабочих нагрузок обработки (HTAP).
 
 ## <a name="about-this-sample"></a>Об этом образце
 
@@ -69,4 +70,3 @@ Wide World Importers — образец комплексное базы данн
 ## <a name="data-generation"></a>Создание данных
 
 Описывает, как дополнительные данные могут быть созданы в образце базы данных, например Вставка продажи и покупки данных до текущей даты.
-

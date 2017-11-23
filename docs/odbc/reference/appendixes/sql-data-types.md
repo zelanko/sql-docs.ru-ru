@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], about SQL data types
 - data types [ODBC], SQL data types
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9594ce3aa76af66cccc69936677cf2d9aa682a6f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-data-types"></a>Типы данных SQL
 Каждой СУБД определяет собственные типы SQL. Каждый ODBC-драйвер предоставляет только те типы данных SQL, который определяет связанный СУБД. Сведения о сопоставление драйвер СУБД SQL типах идентификаторы типа SQL, определенных для ODBC и драйвером сопоставление типов СУБД SQL свои собственные идентификаторы типа специфические для драйвера SQL возвращается путем вызова **SQLGetTypeInfo**. Драйвер возвращает типы данных SQL, при описании типы данных столбцов и параметров с помощью вызовов **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, и **SQLSpecialColumns**.  
@@ -103,5 +101,4 @@ _INTERVAL_MINUTE_TO_SECOND [7]|ИНТЕРВАЛ МИНУТУ (*p*) в СЕКУН
   
  Пример в этом разделе.  
   
--   [Пример SQLGetTypeInfo результирующего набора](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)
-
+-   [Пример результирующего набора SQLGetTypeInfo](../../../odbc/reference/appendixes/example-sqlgettypeinfo-result-set.md)

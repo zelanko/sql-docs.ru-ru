@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- FirstDayOfWeek Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: FirstDayOfWeek Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- FirstDayOfWeek
-helpviewer_keywords:
-- FirstDayOfWeek element
+applies_to: SQL Server 2016 Preview
+f1_keywords: FirstDayOfWeek
+helpviewer_keywords: FirstDayOfWeek element
 ms.assetid: d3c92fa3-b293-43b5-806e-cd1c146a3a7c
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fb6949a52800150ec90e47e2c0bf4b2deaeed605
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: efdd49410fe74c5bfa5635a754ec1d71660ca213
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="firstdayofweek-element-assl"></a>Элемент FirstDayOfWeek (ASSL)
   Определяет первый день недели для [TimeBinding](../../../analysis-services/scripting/data-type/timebinding-data-type-assl.md) элемента.  
@@ -57,7 +51,7 @@ ms.lasthandoff: 09/01/2017
 |--------------------|-----------------|  
 |Тип данных и длина|Integer (от 1 до 7, где 1 = воскресенье, а 7 = суббота)|  
 |Значение по умолчанию|**1**|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

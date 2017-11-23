@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - time dimensions [Analysis Services]
 - quantitative dimensions [Analysis Services]
@@ -33,17 +32,16 @@ helpviewer_keywords:
 - customers dimensions [Analysis Services]
 - Type property
 ms.assetid: bd3195da-e762-4c98-b643-34c76e842343
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6484d74f95da6f17f2ff46554c5ca16fac38fc0a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5fa77532b4c674c4b5035cf6b591b973008ae6e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimension-properties---types"></a>Свойства измерения базы данных - типы
   **Тип** предоставляет сведения о содержимом измерения серверу и клиентским приложениям. В некоторых случаях **тип** параметр содержит рекомендации для клиентских приложений и является необязательным. В других случаях таких как **учетные записи** или **время** измерений, **тип** параметры свойств для измерения и его атрибутов определяет конкретные режимы, серверные и могут быть востребованы для реализации определенных режимов куба. Например **тип** свойство измерения можно присвоить значение **учетные записи** для указания для клиентских приложений, что в стандартном измерении содержатся атрибуты счетов. Дополнительные сведения о времени, счетов и измерение валюты см. в разделе [Создание измерения типа Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md), [создания учетной записи Finance измерением типа родители потомки](../../analysis-services/multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md), и [создать валюты Тип измерения](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  
@@ -60,14 +58,14 @@ ms.lasthandoff: 09/01/2017
 |Organization|Измерение, атрибуты которого представляют сведения об организации, например сотрудниках или филиалах.|  
 |Geography|Измерение, атрибуты которого представляют географические сведения, например города или почтовые индексы.|  
 |BillOfMaterials|Измерение, атрибуты которого представляют сведения по описи или производственные данные, например списки деталей для изделий.|  
-|Измерение счетов|Измерение, атрибуты которого представляют диаграмму счетов для финансовой отчетности.|  
+|Счета|Измерение, атрибуты которого представляют диаграмму счетов для финансовой отчетности.|  
 |Заказчики|Измерение, атрибуты которого представляют сведения о заказчиках или контактные данные.|  
 |Измерение продуктов|Измерение, атрибуты которого представляют сведения о продуктах.|  
 |Сценарий|Измерение, атрибуты которого представляют сведения о планах или данные о стратегическом анализе.|  
 |Количественное измерение|Измерение, атрибуты которого представляют количественные данные.|  
 |Служебная программа|Измерение, атрибуты которого представляют прочие сведения.|  
 |Измерение валют|Измерение, атрибуты которого содержат данные валюты и метаданные.|  
-|Изменения курсов|Измерение, атрибуты которого представляют данные о курсе обмена валюты.|  
+|Измерение курсов|Измерение, атрибуты которого представляют данные о курсе обмена валюты.|  
 |Channel|Измерение, атрибуты которого представляют данные о каналах.|  
 |Promotion|Измерение, атрибуты которого представляют сведения об акциях по продвижению.|  
   
@@ -76,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Измерения (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
-

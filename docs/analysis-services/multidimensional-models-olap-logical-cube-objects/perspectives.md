@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - ready-only cube view
 - OLAP objects [Analysis Services], perspectives
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - visibility [Analysis Services]
 - storage [Analysis Services], perspectives
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a892a571a70b3f5bff5fb16496c2fee5d18f151
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 798a8d872b52c21d794e3d1f21cf52e133d56277
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="perspectives"></a>Перспективы
   Перспективой называется определение, позволяющее пользователям рассматривать куб с помощью более простого способа. Перспектива — это подмножество средств куба. Перспектива позволяет администраторам создавать представление куба и помогает пользователям сосредоточиться на данных, имеющих для них наибольшую значимость. Перспектива содержит подмножества множества всех объектов куба. Перспектива не может включать элементы, которые не определены в родительском кубе.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 09/01/2017
   
 -   Группы мер  
   
--   меры  
+-   Меры  
   
 -   Ключевые показатели эффективности  
   
@@ -73,4 +71,3 @@ ms.lasthandoff: 09/01/2017
  Перспективы предназначены для использования не в качестве механизма обеспечения безопасности, а как средство улучшения качества работы пользователя в приложениях бизнес-аналитики. Все параметры безопасности перспективы наследуются из базового куба. Например, перспективы не могут обеспечить доступ к объектам куба, к которым пользователь еще не имеет доступа. Безопасность куба должна быть разрешена прежде, чем будет предоставлен доступ к объектам в кубе через перспективу.  
   
   
-

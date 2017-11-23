@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Data Mining Designer
 - data mining [Analysis Services], modifying
 ms.assetid: 2540db5b-2bf3-4b6c-87c8-79c48d71acce
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4020ae2dd9bd8fa07a97f5817a0f06969fc0bb73
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f173bca2b294cb839e542d1bc5e8a650b6d7afb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-designer"></a>конструктор интеллектуального анализа данных
   Конструктор интеллектуального анализа данных — это основная среда для работы с моделями интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Чтобы получить доступ к конструктору, выберите элемент существующей структуры интеллектуального анализа данных либо создайте новую структуру или модель интеллектуального анализа с помощью мастера интеллектуального анализа данных. Конструктор интеллектуального анализа данных можно использовать для выполнения следующих задач.  
@@ -96,4 +95,3 @@ ms.lasthandoff: 09/01/2017
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   
-

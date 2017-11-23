@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNLEVEL
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownLevel function
+f1_keywords: DRILLDOWNLEVEL
+dev_langs: kbMDX
+helpviewer_keywords: DrilldownLevel function
 ms.assetid: 47531ce5-1ac0-4aa9-a85c-824fb5d21e7c
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 1728b5db38b97209768a69450780588c3d226e95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d6f90b918cbb817154e699ac8e25bdcaf4119875
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (многомерные выражения)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +43,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Level_Expression*  
  (Необязательно.) Выражение MDX, которое явно определяет уровень, на котором следует выполнять детализацию углублением. Если выражение уровня указано, пропустите аргумент индекса ниже.  
   
- *Индекс*  
+ *Index*  
  (Необязательно.) Допустимое числовое выражение, указывающее количество иерархий, которые необходимо детализировать углублением в наборе. Вместо Level_Expression для явного определения уровня, на котором следует выполнять детализацию углублением, можно использовать уровень индекса.  
   
  *Include_Calc_Members*  
@@ -133,4 +128,3 @@ FROM [Adventure Works]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

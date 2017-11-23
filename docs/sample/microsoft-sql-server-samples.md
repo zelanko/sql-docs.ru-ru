@@ -3,33 +3,36 @@ title: "Образцы Microsoft SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
-ms.prod: sql-non-specified
+ms.prod: sample
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
 ms.technology: 
 ms.topic: article
 ms.assetid: d67e31d0-49fb-40d3-b340-95c1fe00957f
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
+ms.openlocfilehash: a8aa94cd3d28fe8516588b0c7c25811319cb4c50
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b6c0bbe97c8638f3a669f3c651d66bbdeac2f60f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-sql-server-samples"></a>Образцы Microsoft SQL Server
-В этом альбоме образцы баз данных и других продуктов Microsoft SQL, включая SQL Server и базы данных SQL Azure.   
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]В этом альбоме образцы баз данных и других продуктов Microsoft SQL, включая SQL Server и базы данных SQL Azure.   
 
 ## <a name="new-wide-world-importers-sample-database"></a>Новые функции!! Образец базы данных Wide World Importers
 
 Мы рады компонентов новый образец базы данных называется широкий World Importers (WWI), разработаны для демонстрации структуры базы данных, с помощью текущей функции, инструменты и методы разработки. Примеры включают OLTP и базы данных OLAP, который создан для работы на SQL Server 2016 и более поздней версии. 
 
 ## <a name="documentation"></a>Документация
-[WWI документации](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx) на MSDN.   
+[WWI документации](./world-wide-importers/wide-world-importers-documentation.md) на документы Microsoft.   
   
 
 ## <a name="sql-server-samples-repository"></a>Репозиторий образцы SQL Server

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 548c2c51dc0df576e5334dba2f7b17a838b19cb3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ed4254b34f570f37761001542d67e94c02e70a84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Использование детализации из средств просмотра моделей
   В зависимости от типа модели можно использовать детализацию из средств просмотра на вкладке **Средство просмотра модели интеллектуального анализа** в конструкторе интеллектуального анализа данных для изучения вариантов, используемых в модели интеллектуального анализа данных, либо для просмотра дополнительных столбцов в структуре интеллектуального анализа данных. Хотя многие типы моделей не поддерживают детализацию, поскольку шаблоны в этой модели нельзя напрямую связывать с конкретными вариантами, приведенные ниже типы моделей поддерживают детализацию.  
@@ -85,4 +84,3 @@ ms.lasthandoff: 09/01/2017
  [Детализация структур интеллектуального анализа данных](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   
-

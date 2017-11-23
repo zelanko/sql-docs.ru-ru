@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d30d7746cb49609154a9b5e82ec7a85b1a1480e8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Установка уровня изоляции транзакции
 Чтобы задать уровень изоляции транзакции, приложение использует атрибут SQL_ATTR_TXN_ISOLATION соединения. Если источник данных не поддерживает запрошенный уровень изоляции, драйверу или источнику данных можно установить более высокий уровень. Чтобы определить, какой уровень изоляции транзакции уровни источник данных поддерживает и является уровень изоляции по умолчанию, приложение вызывает **SQLGetInfo** с параметрами SQL_TXN_ISOLATION_OPTION и SQL_DEFAULT_TXN_ISOLATION соответственно.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
 -   Если скорость является более важна, чем точность и любые ошибки, скорее всего, должен быть небольшим. Предположим, что компания выполняет множество небольших продаж и редки, большие продажи. Транзакция, которая оценивает общее значение продаж всех открытых может безопасно использовать уровень изоляции Read Uncommitted. Несмотря на то, что транзакция будет включать заказы, открытие или закрытие и впоследствии откат, они бы обычно отменяют друг друга и транзакция будет намного быстрее, так как не блокируется каждый раз, чтобы он обнаруживает такие заказа.  
   
  Дополнительные сведения см. в разделе [оптимистичного параллелизма](../../../odbc/reference/develop-app/optimistic-concurrency.md).
-

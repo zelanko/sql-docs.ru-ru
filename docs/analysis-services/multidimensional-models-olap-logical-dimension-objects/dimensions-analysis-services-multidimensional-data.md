@@ -13,24 +13,22 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - OLAP objects [Analysis Services], dimensions
 - dimensions [Analysis Services]
 - Analysis Services objects, dimensions
 ms.assetid: 2b114135-2572-4479-8c81-3ccf0cfeb9f7
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ffb3b3a3ef069be26ff6d3812d52ff4d18a7dc9c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa2cc688c2fd70a212f4f44766185ae69476358a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Измерения (службы Analysis Services — многомерные данные)
   В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], измерения являются основными компонентами куба. В измерениях данные привязаны к некоторой предметной области, например заказчики, магазины или служащие. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] измерения содержат атрибуты, которые соответствуют столбцам в таблицах измерения. Эти атрибуты отображаются как иерархии атрибутов и могут быть организованы в пользовательские иерархии или определены как иерархии типа «родители-потомки» на основе столбцов базовой таблицы измерений. Эти иерархии применяются для организации мер, которые содержатся в кубе. Следующие подразделы содержат описание измерений, атрибутов и иерархий.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [Объекты куба &#40; Analysis Services — многомерные данные &#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
   
-

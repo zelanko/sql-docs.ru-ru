@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Field object [ADO], fields collection
 - Fields collection [ADO]
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ecfc7532761897cddf868dcb617c6eeb5f32bccb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2c5d81985322b03892d17875959086078defd819
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-fields-collection"></a>Коллекция полей
 **Поля** коллекция является одной из встроенных коллекций ADO. Коллекция — это упорядоченный набор элементов, которые могут ссылаться как единое целое. Дополнительные сведения о коллекциях ADO см. в разделе [объектная модель ADO](../../../ado/guide/data/ado-objects-and-collections.md).  
@@ -122,5 +120,4 @@ objField = objRecordset.Fields(0)
  Использование **добавления полей** метод отличается от **записей** объекта и **записи** объекта. Дополнительные сведения о **запись** см. в разделе [записей и потоки](../../../ado/guide/data/records-and-streams.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Fabricating иерархические наборы записей](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)
-
+ [Составление иерархических наборов записей](../../../ado/guide/data/fabricating-hierarchical-recordsets.md)

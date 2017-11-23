@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - result sets [ODBC], metadata
 - metadata [ODBC]
 ms.assetid: 70fb976c-9342-4edd-b066-1140696fd0fa
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6cb8bb35eb0e53415465b3ea003341d74e248bda
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="how-is-metadata-used"></a>Как обеспечивается метаданные используются?
 Метаданные требуются приложениям для большинства операций с результирующими наборами. Например, приложение использует тип данных столбца, чтобы определить, какую переменную привязывать к этому столбцу. Она использует байтовая длина символьного столбца, чтобы определить, сколько места требуется отобразить данные из этого столбца. Способ определения метаданных для столбца зависит от типа приложения.  
@@ -38,4 +36,3 @@ ms.lasthandoff: 09/09/2017
  Универсальные приложения, особенно тех, которые поддерживают нерегламентированные запросы, практически никогда не узнать, метаданные результирующих наборов, которые они создают. Поэтому необходимо обнаружить метаданные во время выполнения с помощью функций **SQLNumResultCols**, **SQLDescribeCol**, и **SQLColAttribute**, которые описаны в Следующий раздел [SQLDescribeCol и SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md).  
   
  Все приложения, независимо от их типа можно жестко закодировать метаданных для результирующих наборов, возвращаемых функциями каталога. Эти результирующие наборы, определяются в справочном разделе данного руководства.
-

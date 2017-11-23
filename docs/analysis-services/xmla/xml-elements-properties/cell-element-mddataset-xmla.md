@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Cell Element (MDDataSet)
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Cell Element (MDDataSet)
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.cell
 - http://schemas.microsoft.com/analysisservices/2003/engine#Cell
 - urn:schemas-microsoft-com:xml-analysis#Cell
-helpviewer_keywords:
-- Cell element
+helpviewer_keywords: Cell element
 ms.assetid: c4ea08a4-f653-4ade-be07-b91eb5b1ef32
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5f769ad3ae301d6ae8901bc34973ff7db15df6fe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b4d8e85ec05fa6fd8b3c05ee0f27f46b0a28a867
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cell-element-mddataset-xmla"></a>Элемент Cell (MDDataSet) (XML для аналитики)
   Содержит сведения об одной ячейке, содержащейся в родительском [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) элемента.  
@@ -61,7 +56,7 @@ ms.lasthandoff: 09/01/2017
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
+|Количество элементов|0–n: необязательный элемент, который может встречаться несколько раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -108,15 +103,15 @@ ms.lasthandoff: 09/01/2017
   
 |Состояние|Квартал|Продажи единиц товара|Стоимость хранения|Продажи магазинов|Количество продаж|  
 |-----------|-------------|----------------|----------------|-----------------|-----------------|  
-|California|К1|16890|14431.09|36175.2|5498|  
+|Калифорния|К1|16890|14431.09|36175.2|5498|  
 ||К2|18052|15332.02|38396.75|5915|  
 ||К3|18370|**15672.83**|**39394.05**|**6014**|  
 ||К4|21436|**18094.5**|**45201.84**|**7015**|  
-|Oregon|К1|19287|**16081.07**|**40170.29**|**6184**|  
+|Орегон|К1|19287|**16081.07**|**40170.29**|**6184**|  
 ||К2|15079|12678.96|31772.88|4799|  
 ||К3|16940|14273.78|35880.46|5432|  
 ||К4|16353|13738.68|34453.44|5196|  
-|Washington|К1|30114|25240.08|63282.86|9906|  
+|Вашингтон|К1|30114|25240.08|63282.86|9906|  
 ||К2|29479|24953.25|62496.64|9654|  
 ||К3|30538|25958.26|64997.38|10007|  
 ||К4|34235|29172.72|73016.34|11217|  
@@ -153,4 +148,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

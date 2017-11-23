@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 588f886f-d6c8-48c8-893d-c2be43a97943
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9174713e614ddbb536a06feffdcc44025771e979
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: db5196065193b9d74f5ec792914db6e3dc3b7d15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-agent-properties-advanced-tab"></a>Свойства агента SQL Server (вкладка «Дополнительно»)
   По умолчанию на вкладке **Дополнительно** присутствуют пять свойств. Если определены пользовательские свойства, они также отображаются на этой вкладке вместе со значениями.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 08/02/2017
  Указывает экземпляр, использующий эту службу.  
   
   
-

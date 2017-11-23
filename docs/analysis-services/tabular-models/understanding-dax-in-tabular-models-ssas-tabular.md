@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 73a56576091a746db0ca8c52ea2be22f60a50148
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
-ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/23/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>DAX в табличных моделях (табличные службы SSAS)
   Выражения анализа данных (DAX) — это язык формул, используемый для создания пользовательских вычислений в Analysis Services, Power BI Desktop и Power Pivot в Excel. К формулам DAX относятся функции, операторы и значения, позволяющие проводить расширенные вычисления над данными в таблицах и столбцах.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 10/23/2017
 ##  <a name="bkmk_DAX"></a> Формулы DAX в вычисляемых столбцах, мерах и фильтрах строк  
  Для табличных моделей, созданных в SSDT формулы DAX используются в вычисляемых столбцах, мерах и фильтрах строк.  
   
-### <a name="calculated-columns"></a>Вычисляемые столбцы  
+### <a name="calculated-columns"></a>вычисляемые столбцы  
  Вычисляемый столбец является столбцом, добавить в существующую таблицу (в конструкторе моделей), а затем создается формула DAX, определяющая значения столбца. 
   
 > [!NOTE]  
@@ -407,4 +406,3 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [Поддерживаемые источники данных](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
-

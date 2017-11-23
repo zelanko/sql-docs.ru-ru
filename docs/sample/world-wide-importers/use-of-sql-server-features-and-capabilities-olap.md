@@ -1,30 +1,31 @@
 ---
 title: "Использование SQL Server функций и возможностей | Документы Microsoft"
-ms.prod: sql-non-specified
-ms.technology:
-- samples
+ms.prod: world-wide-importers
+ms.prod_service: sql-non-specified
+ms.service: samples
+ms.component: 
+ms.technology: samples
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7cbfb4ef-1e61-4e65-9fe0-ed5adfb43415
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: Inactive
+ms.openlocfilehash: 1f879ed08d00acf0556c364a94162719b8906434
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 66fe9487c8b7d2189d69917fc81226a4f698af7c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="wideworldimportersdw-use-of-sql-server-features-and-capabilities"></a>Использование WideWorldImportersDW компонентов SQL Server и возможности
-WideWorldImportersDW предназначен для демонстрации многие ключевые функции SQL Server, которые подходят для хранения данных и аналитики. Ниже приведен список компонентов SQL Server и возможности и как они используются в WideWorldImportersDW описание.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]WideWorldImportersDW предназначен для демонстрации многие ключевые функции SQL Server, которые подходят для хранения данных и аналитики. Ниже приведен список компонентов SQL Server и возможности и как они используются в WideWorldImportersDW описание.
 
 ## <a name="polybase"></a>PolyBase
 
@@ -117,4 +118,3 @@ PolyBase позволяет объединять сведения о прода�
 WideWorldImportersDW использует оптимизированных для памяти таблиц SCHEMA_ONLY для промежуточных таблиц. Все `Integration.` * `_Staging` таблиц, оптимизированных для памяти таблиц SCHEMA_ONLY.
 
 Преимущество таблицы SCHEMA_ONLY — они не регистрируются и не требуют любой доступ к диску. Это повышает производительность процесса ETL. Так как эти таблицы не регистрируются, их содержимое будут потеряны, если происходит сбой. Тем не менее источник данных доступен, поэтому просто можно перезапустить процесс ETL, если происходит сбой.
-

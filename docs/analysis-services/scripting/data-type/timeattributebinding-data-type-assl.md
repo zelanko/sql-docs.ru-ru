@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- TimeAttributeBinding Data Type
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: TimeAttributeBinding Data Type
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- TimeAttributeBinding
-helpviewer_keywords:
-- TimeAttributeBinding data type
+applies_to: SQL Server 2016 Preview
+f1_keywords: TimeAttributeBinding
+helpviewer_keywords: TimeAttributeBinding data type
 ms.assetid: e8317b1c-a83a-4074-9538-400792500985
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 291187fb730a416dbc8d48cb4a90f0f94b7bf808
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5b1afa737e83436fb065a3d298346ec43e2539fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="timeattributebinding-data-type-assl"></a>Тип данных TimeAttributeBinding (ASSL)
   Определяет производный тип данных, представляющий «заполнитель» привязки для созданных элементов данных, например для ключевых столбцов атрибута в серверном измерении времени.  
@@ -75,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  
   
   
-

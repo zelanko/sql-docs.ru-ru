@@ -5,27 +5,25 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8fedc613289421e51967890e0508c44812e73b7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8951624c19b03c7630698fe08aa7987e780dc35d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="unknown-service-log-on-tab"></a>Неизвестная служба (вкладка «Вход в систему»)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager не удается идентифицировать эту службу.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не удается идентифицировать эту службу.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager получает служебные данные от поставщика инструментария WMI на компьютере, где выполняется служба. Произошла ошибка при считывании свойств службы или свойства службы являются неполными. Чтобы разрешить проблему, попытайтесь закрыть и заново открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или проверьте поставщика инструментария WMI на компьютере, где запущена служба.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает служебные данные от поставщика инструментария WMI на компьютере, где запущена служба. Произошла ошибка при считывании свойств службы или свойства службы являются неполными. Чтобы разрешить проблему, попытайтесь закрыть и заново открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или проверьте поставщика инструментария WMI на компьютере, где запущена служба.  
   
  Поставщик WMI является компонентом Windows. Сведения о том, как проверить разрешения на поставщика WMI, см. в статье "Инструкции. Настройка инструментария WMI для отображения состояния сервера в средствах SQL Server" в электронной документации по SQL Server.  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  Возобновить приостановленную работу службы.  
   
   
-

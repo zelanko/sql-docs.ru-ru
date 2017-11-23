@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
 ms.prod: sql-non-specified
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: d2baa90f-1b77-47ce-988d-1910c7c74103
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8887e545e28957601de3b4e487e2026a74625819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 511e907f3f73d3a000d35c2ba0771af0b940056d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="advanced-object-selection-sybasetosql"></a>Выбор дополнительных объектов (SybaseToSQL)
 **Расширенный объект раздела** диалоговое окно позволяет отфильтровать объекты базы данных с помощью строки и подстроки в имени объекта, а затем выберите или отмените выделение этих объектов. SSMA выполняет преобразование и миграцию операций на выбранных объектов.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 08/02/2017
 **Отображаются только загруженных элементов.**  
 Переключение отображения категорий или элементов. При выборе этой кнопки SSMA показывает все элементы, которые соответствуют критериям фильтра и те, которые были ранее загружены. Если эта кнопка не установлен, SSMA показаны папки категории.  
   
-**Фильтр**  
+**Filter**  
 Введите строку, которую вы хотите использовать для фильтрации элементов. Например, чтобы найти все доступные элементы, которые содержат строку «ID», в имя элемента, введите строку «ID» в **фильтра** поле.  
   
 Если элементы условия фильтра, категории или элементы будут отображаться при вводе строки. Чтобы увидеть совпадающие элементы, рекомендуется нажать кнопку **отображаются только загрузить элементы** кнопки.  
@@ -58,4 +56,3 @@ ms.lasthandoff: 08/02/2017
 **Очистить фильтр**  
 Очищает **фильтра** поле.  
   
-

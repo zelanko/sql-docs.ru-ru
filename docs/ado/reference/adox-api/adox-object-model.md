@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADOX, object model
+helpviewer_keywords: ADOX, object model
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4363ba002ec8b07346d2567985bd10d8cf2ebb9b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 092afd2b651b14b1a7fe34c934ff729b8b88ae6d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-object-model"></a>Объектная модель ADOX
 На следующей схеме показана как представляются и ADOX связанных объектов. Дополнительные сведения о конкретных объектов или коллекции, см. в разделе справочную или [объектов ADOX](../../../ado/reference/adox-api/adox-objects.md) и [ADOX коллекции](../../../ado/reference/adox-api/adox-collections.md).  
@@ -43,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  [Объекты ADOX](../../../ado/reference/adox-api/adox-objects.md)   
  [Свойства ADOX](../../../ado/reference/adox-api/adox-properties.md)   
  [Расширения ADO для языка описания данных и безопасности (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
-

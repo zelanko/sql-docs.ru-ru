@@ -22,17 +22,16 @@ helpviewer_keywords:
 - queries [DMX], prediction queries
 - mining models [Analysis Services], DMX
 ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b0ba57a6cff706a643e7e6edc7eaf5776bb1946
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15b23f5cbe20fd7833a02cb6cff276680c30c9fb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-mining-query-tools"></a>Средства запросов интеллектуального анализа данных
   Все запросы интеллектуального анализа данных используют язык расширений интеллектуального анализа данных (DMX). DMX-запросы используются для создания всех видов задач машинного обучения, в том числе для классификации, анализа рисков, формирования рекомендаций и линейной регрессии. Можно также написать DMX-запросы для извлечения данных о закономерностях и получения статистики, сформированной при обработке модели.  
@@ -90,7 +89,6 @@ ms.lasthandoff: 09/01/2017
  [Общие сведения об инструкции расширения интеллектуального анализа данных SELECT](../../dmx/understanding-the-dmx-select-statement.md)   
  [Структура и использовании прогнозирующих запросов расширений интеллектуального анализа данных](../../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)   
- [Создание DMX-запроса в среде SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ [Создание запроса расширений интеллектуального анализа данных в SQL Server Management Studio](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
   
-

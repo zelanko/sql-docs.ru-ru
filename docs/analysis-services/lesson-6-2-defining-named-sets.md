@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: d14d16deabb83c9eedc448e9b8e063aa56b662cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f06975fb10ab27d6087b1f46a543034aa01ca308
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Урок 6-2 - определении именованных наборов
 Именованный набор представляет собой многомерное выражение, возвращающее набор (множество) элементов измерения. Можно определять именованные наборы и сохранять их как часть определения куба, а также создавать именованные наборы в клиентских приложениях. Для создания именованных наборов используется сочетание данных куба, арифметических операторов, чисел и функций. Именованные наборы могут применяться пользователями в запросах многомерных выражений в клиентских приложениях, а также для определения наборов во вложенных кубах. Вложенный куб представляет собой коллекцию перекрестно соединенных наборов, ограничивающую для последующих инструкций пространство куба заданным подпространством. Определение ограниченного пространства куба является базовой концепцией в построении сценариев многомерных выражений.  
@@ -150,4 +147,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

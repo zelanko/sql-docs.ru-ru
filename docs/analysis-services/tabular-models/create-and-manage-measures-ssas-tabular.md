@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 3314afb5a5351b541e29d403ac4a41d98ec27263
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 19c19be451a22fef66b98ac71355b4963240767a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-manage-measures-ssas-tabular"></a>Создание мер и управление ими (табличные службы SSAS)
   Мера — это формула, которая создается специально для использования в отчете или сводной таблице (или сводной диаграмме) Excel. Меры могут быть основаны на стандартных агрегатных функциях, например COUNT или SUM, либо на пользовательских формулах на языке выражений анализа данных (DAX). Приведенные в этом разделе задачи описывают, каким образом производится создание мер и управление ими с помощью сетки мер таблицы.  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Вычисляемые столбцы (табличные службы SSAS)](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
-

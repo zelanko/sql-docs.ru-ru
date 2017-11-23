@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], types
 - functions [ODBC]
 ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0a90bbcaa40100f4d0e1f5781a819476e7a6e38d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3daf4c19908bd1d39749c589016e3f0c1704fbd5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="function-summary"></a>Сводка по функциям
 В следующих разделах приведены функции, которые используются в приложениях с поддержкой ODBC и программное обеспечение.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 -   [Сводка по функциям библиотеки DLL перевода](../../../odbc/reference/syntax/translation-dll-function-summary.md)  
   
 -   [Сводка по интерфейсу поставщика служб ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-summary.md)
-

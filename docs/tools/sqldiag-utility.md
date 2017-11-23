@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,17 +28,16 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-caps.latest.revision: 58
+caps.latest.revision: "58"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1dbfd36d6761c539176165653bd2e3484c07d5c1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 766c1292435eb11dcff94f7353d49478f554c6a7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sqldiag-utility"></a>SQLdiag, программа
   Программа **SQLdiag** — это универсальная диагностическая программа для сбора сведений, которая может выполняться как консольное приложение или как служба. Программа **SQLdiag** позволяет выполнять сбор журналов и файлов данных с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и других типов серверов, а также мониторинг серверов и устранение определенных неполадок на серверах. Программа**SQLdiag** предназначена для ускорения и упрощения сбора диагностических сведений, необходимых для службы поддержки пользователей [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
@@ -53,11 +51,11 @@ ms.lasthandoff: 08/02/2017
   
 -   журналы событий Windows;  
   
--   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]трассировки  
+-   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ;  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]сведения о блокировке  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ;  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]сведения о конфигурации  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Вы можете указать, какие типы сведений нужно собирать с помощью программы **SQLdiag** , в файле конфигурации SQLDiag.xml, который описывается в следующем разделе.  
   
@@ -363,7 +361,7 @@ SQLDIAG START /A Instance1
  Запустить несколько экземпляров программы **SQLdiag** на одном компьютере можно, указав в командной строке **/A***SQLdiag_application_name* . Это полезно для одновременного сбора различных наборов диагностических сведений для одного экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Например, именованный экземпляр **SQLdiag** можно настроить на непрерывное выполнение сбора небольшого количества данных. Тогда в случае возникновения определенной проблемы в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]можно запустить экземпляр **SQLdiag** по умолчанию, чтобы собрать диагностические данные об этой проблеме или собрать набор диагностических данных, запрошенных службами поддержки пользователей [!INCLUDE[msCoName](../includes/msconame-md.md)] для диагностики проблемы.  
   
 ## <a name="collecting-diagnostic-data-from-clustered-sql-server-instances"></a>Сбор диагностических данных из кластеризованных экземпляров SQL Server  
- Программа**SQLdiag** поддерживает сбор диагностических данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для сбора диагностических данных из кластеризованных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляров, убедитесь, что **«.»**  указан для **имя** атрибут  **\<машины >** файл SQLDiag.Xml элемента в конфигурации и не указывайте **/G** аргумент в командной строке. По умолчанию для атрибута **name** в файле конфигурации указывается символ **"."**, а аргумент **/G** отключен. Как правило, при сборе данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не нужно изменять файл конфигурации или аргументы командной строки.  
+ Программа**SQLdiag** поддерживает сбор диагностических данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Для сбора диагностических данных из кластеризованных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] экземпляров, убедитесь, что **«.»**  указан для **имя** атрибут  **\<машины >** файл SQLDiag.Xml элемента в конфигурации и не указывайте **/G** аргумент в командной строке. По умолчанию для атрибута **name** в файле конфигурации указывается символ **"."** , а аргумент **/G** отключен. Как правило, при сборе данных из кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] не нужно изменять файл конфигурации или аргументы командной строки.  
   
  Если в качестве имени компьютера указан символ **.** , то программа **SQLdiag** определяет, что она выполняется на кластере, и одновременно получает диагностические сведения для всех виртуальных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , установленных в этом кластере. Если вы хотите собрать диагностические сведения только для одного виртуального экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , на котором выполняется на компьютере, укажите этот виртуальный [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для **имя** атрибут  **\<машины >** в файле SQLDiag.Xml.  
   
@@ -371,7 +369,6 @@ SQLDIAG START /A Instance1
 >  Для сбора сведений о трассировках приложения [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] от кластеризованных экземпляров [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на кластере должны быть доступны административные общие папки (ADMIN$).  
   
 ## <a name="see-also"></a>См. также:  
- [Справочник по программе командной строки ( компонент Database Engine)](../tools/command-prompt-utility-reference-database-engine.md)  
+ [Справочник по программе командной строки (Database Engine)](../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SQLBindParameter function [ODBC], describing parameters
+helpviewer_keywords: SQLBindParameter function [ODBC], describing parameters
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0173c157981896354288cc0a2442d7acc94d05de
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d78b3b7ac10fae37bb35f88cefaf5983e0df09a4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="describing-parameters"></a>Описания параметров
 **SQLBindParameter** имеет аргументы, описывающие параметр: его тип SQL, точность и масштаб. Драйвер использует эти сведения или *метаданных,* для преобразования значения параметра типа, необходимые источнику данных. На первый взгляд может показаться, драйвер находится в более высокую позицию знать метаданные параметров, чем приложения; в конце концов драйвер можно легко определить метаданные для результирующего набора столбцов. Оказывается, это не так. Во-первых большинство источников данных предоставляет возможности для драйвера обнаружить метаданные параметров. Во-вторых, большинство приложений уже известны метаданных.  
@@ -39,4 +36,3 @@ WHERE OrderID = ?
  он может вызвать **SQLColumns** по столбцу OrderID.  
   
  Единственный случай, в котором приложение нельзя легко определить метаданные параметров — когда пользователь вводит параметризованную инструкцию. В этом случае приложение вызывает **SQLPrepare** к подготовке инструкции, **SQLNumParams** для определения количества параметров, и **SQLDescribeParam** для описания Каждый параметр. Тем не менее, как было указано ранее, большинство источников данных не позволяют обнаружить метаданные параметров, поэтому драйвер **SQLDescribeParam** широко не поддерживается.
-

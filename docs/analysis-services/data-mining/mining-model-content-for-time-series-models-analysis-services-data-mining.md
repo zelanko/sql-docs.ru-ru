@@ -18,17 +18,16 @@ helpviewer_keywords:
 - time series [Analysis Services]
 - mining model content, time series models
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8878d03ca3690fbd13d46decadc2dc9f48755db6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d399cf55c957ed129e0f37e821f23eb9379b1e5b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Содержимое модели интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)
   Во всех моделях интеллектуального анализа данных для хранения содержимого применяется одинаковая структура. Эта структура определяется в соответствии с набором строк схемы для содержимого интеллектуального анализа данных. Однако в пределах такой стандартной структуры узлы, содержащие данные, располагаются различным образом, образуя деревья различного типа. В этом разделе описываются правила упорядочения узлов и значение каждого узла в моделях интеллектуального анализа данных, основанных на алгоритме временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -336,7 +335,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
 |Forecasting|R250 Europe:Quantity|TA00000003|27|ARIMA (1,0,7)|  
 |Forecasting|R250 North America:Quantity|TA00000004|27|ARIMA (1,0,2)|  
-|Forecasting|R250 Pacific:Quantity|TA00000005|27|ARIMA (2,0,2) X (1,1,2)(12)|  
+|Прогноз|R250 Pacific:Quantity|TA00000005|27|ARIMA (2,0,2) X (1,1,2)(12)|  
 |Forecasting|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Forecasting|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
@@ -418,8 +417,8 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 |Тип узла|Attribute|Тип значения|  
 |---------------|---------------|----------------|  
-|27 (ARIMA корневой)|Intercept<br /><br /> периодичности|11|  
-|28 (периодическая структура ARIMA)|периодичности<br /><br /> Порядок авторегрессии<br /><br /> разностный порядок<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
+|27 (ARIMA корневой)|Intercept<br /><br /> Periodicity|11|  
+|28 (периодическая структура ARIMA)|периодичности<br /><br /> Порядок авторегрессии<br /><br /> Difference order<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (ARIMA с авторегрессией)|Coefficient<br /><br /> (дополнение коэффициента)|7|  
 |30 (ARIMA скользящее среднее)|Значение в момент t<br /><br /> Значение в момент t-1<br /><br /> …<br /><br /> Значение в момент t-n|7|  
   
@@ -452,4 +451,3 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
  [Технический справочник по алгоритму временных рядов (Майкрософт)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)  
   
   
-

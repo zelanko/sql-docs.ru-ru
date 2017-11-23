@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - Command Line Options, Variable Value File Option
 - Command Line Options,Script File Option
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: d62f356dec9a1392feaa0eda9a4e735b33ad779e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e6af421b33900280ddc9469ddb26411a74c55668
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>Параметры командной строки в консоли SSMA (OracleToSQL)
 Корпорация Майкрософт предоставляет широкий набор параметры командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -181,4 +179,3 @@ ms.lasthandoff: 08/02/2017
   
 -   Для устранения неполадок в консоли, в разделе [Устранение неполадок &#40; OracleToSQL &#41;](../../ssma/oracle/troubleshooting-oracletosql.md).  
   
-

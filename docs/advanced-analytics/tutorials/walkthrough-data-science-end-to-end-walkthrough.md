@@ -5,25 +5,21 @@ ms.date: 08/22/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-dev_langs:
-- R
+applies_to: SQL Server 2016
+dev_langs: R
 ms.assetid: edd76ae9-4125-45a8-bf42-47a85b9d9a32
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a49cad5bd89633841c5ff54c03e39b098fca72e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="end-to-end-data-science-walkthrough-for-r-and-sql-server"></a>Пошаговое руководство обработки и анализа данных с начала до конца R и SQL Server
 
@@ -45,8 +41,8 @@ ms.lasthandoff: 09/01/2017
 |Список разделов|Предполагаемое время|
 |-|------------------------------|
 |[Подготовка данных R Пошаговое руководство](../tutorials/walkthrough-prepare-the-data.md) <br /><br />Получение данных, используемых для создания модели. Скачивание общедоступного набора данных и его загрузка в базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|30 минут|
-|[Просмотр данных, с помощью SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Представление о данных с помощью средства SQL и сводки.|10 минут.|
-|[Сведение данных, с помощью R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Используйте R для изучения данных и создания сводки.|10 минут.|
+|[Изучение данных с использованием SQL](../tutorials/walkthrough-view-and-explore-the-data.md) <br /><br />Представление о данных с помощью средства SQL и сводки.|10 минут.|
+|[Сведение данных с помощью R](../tutorials/walkthrough-view-and-summarize-data-using-r.md) <br /><br />Используйте R для изучения данных и создания сводки.|10 минут.|
 |[Создание диаграммы с помощью R в SQL Server](../tutorials/walkthrough-create-graphs-and-plots-using-r.md) <br /><br />Создание графиков в локальной и контексты удаленных вычислений смешиванием R и SQL.|10 минут.|
 |[Создание функции данных с помощью R и T-SQL)](../tutorials/walkthrough-create-data-features.md) <br /><br />Формирование признаков с помощью пользовательских функций R и [!INCLUDE[tsql](../../includes/tsql-md.md)]. Сравнение производительности задач по добавлению признаков в R и T-SQL. |10 минут.|
 |[Построить модель R и сохранить его в SQL Server](../tutorials/walkthrough-build-and-save-the-model.md) <br /><br />Обучение и настройка модели прогнозирования. Оценка эффективности модели. В этом пошаговом руководстве создается модель классификации. Построение графика точности модели с помощью языка R.|15 минут|
@@ -71,4 +67,3 @@ ms.lasthandoff: 09/01/2017
 ## <a name="next-lesson"></a>Следующее занятие
 
 [Подготовка данных R Пошаговое руководство](../tutorials/walkthrough-prepare-the-data.md)
-

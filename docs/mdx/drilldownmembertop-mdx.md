@@ -5,28 +5,23 @@ ms.date: 03/02/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- DRILLDOWNMEMBERTOP
-dev_langs:
-- kbMDX
-helpviewer_keywords:
-- DrilldownMemberTop function
+f1_keywords: DRILLDOWNMEMBERTOP
+dev_langs: kbMDX
+helpviewer_keywords: DrilldownMemberTop function
 ms.assetid: b6575544-1fd3-4fa1-aa2e-272d307c7750
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 4c8ace970d2aaab795996220a2a9da1d7ea3e94e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da7f8a1c315d9ff3eb60c69e88726b521a59d17d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (многомерные выражения)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +42,13 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Set_Expression2*  
  Допустимое многомерное выражение, возвращающее набор.  
   
- *Count*  
+ *Счетчик*  
  Допустимое числовое выражение, указывающее количество возвращаемых кортежей.  
   
  *Numeric_Expression*  
  Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
- *Иерархия*  
+ *Hierarchy*  
  Допустимое многомерное выражение, возвращающее иерархию.  
   
  *Рекурсивные*  
@@ -95,4 +90,3 @@ WHERE [Measures].[Reseller Order Quantity]
  [Справочник по функциям многомерных Выражений &#40; Многомерные Выражения &#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
-

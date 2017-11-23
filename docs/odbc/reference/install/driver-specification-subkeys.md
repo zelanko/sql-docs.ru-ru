@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - registry entries for components [ODBC], driver specification subkeys
 - drivers subkey [ODBC]
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6a2bbfe9608fabef11b4208597f550e32e2a816d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f45130c81f9fc4f669cf95d4bde72155f519c1aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-specification-subkeys"></a>Спецификация подразделы драйверов
 Каждый драйвер, перечисленных в подразделе драйверы ODBC имеется подраздел свои собственные. Этот подраздел содержит имя, совпадающее с именем соответствующего значения в подразделе драйверов ODBC. Значения в этом подразделе перечислены полные пути драйвера и установки драйвера библиотеки DLL, значения ключевых слов драйвера, возвращенных **SQLDrivers**, а счетчик использования. Форматы значений, как показано в следующей таблице.  
@@ -75,4 +73,3 @@ Setup : REG_SZ : C:\WINDOWS\SYSTEM32\TXTSETUP.DLL
 SQLLevel : REG_SZ : 0  
 UsageCount : REG_DWORD : 0x3  
 ```
-

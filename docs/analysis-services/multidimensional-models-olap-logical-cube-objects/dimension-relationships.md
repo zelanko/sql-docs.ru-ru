@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - relationships [Analysis Services]
 - member groups [Analysis Services]
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - fact dimensions [Analysis Services]
 - relationships [Analysis Services], dimensions
 ms.assetid: de54c059-cb0f-4f66-bd70-8605af05ec4f
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: af8f55c0f3794f06873da3811642a75a590977c5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c3c2a4d5104b95b1742c4e45d9f881fe81ffbc6d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dimension-relationships"></a>Связи измерений
   Использование измерений определяет связи между измерением куба и группами мер в нем. Измерение куба представляет собой экземпляр измерения базы данных, используемый в конкретном кубе. Куб может содержать (и часто содержит) измерения, которые не связаны непосредственно с группой мер, но которые могут быть косвенно связаны с ней через другое измерение или группу мер. При добавлении базы данных измерения или группы мер в кубе, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] попытаются определить использование измерения, анализируя связи между таблицами измерений и таблицами фактов в представлении источника данных куба, а также с помощью проверки связи между атрибутами в измерениях. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматически устанавливают параметры использования измерений для связей, которые они смогли обнаружить.  
@@ -98,4 +96,3 @@ ms.lasthandoff: 09/01/2017
  [Измерения (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   
-

@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: fae1b267-0750-4dc5-9bf0-80ac4d8487a3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ba078752949c491b017ceb75546ac694eab67765
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8c0e31a8ad1269e6b6d93463f99d39490e6f52b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-command-tmsl"></a>Команды резервного копирования (TMSL)
 
@@ -63,7 +62,7 @@ ms.lasthandoff: 09/01/2017
 ||||  
 |-|-|-|  
 |**Свойство**|**Default**|**Description**|  
-|базой данных|[Обязательно]|Имя объекта базы данных для резервного копирования.|  
+|база данных|[Обязательно]|Имя объекта базы данных для резервного копирования.|  
 |файл|[Обязательно]|Имя и путь к файлу резервной копии.|  
 |password|Пустой|Пароль, используемый для шифрования файла резервной копии.|  
 |allowOverwrite|False|Логическое значение, если значение равно true, указывает, где уже существует файл резервной копии будет перезаписан. в противном случае — значение false.|  
@@ -103,4 +102,3 @@ ms.lasthandoff: 09/01/2017
  [Создание и восстановление резервных копий баз данных служб Analysis Services](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   
-

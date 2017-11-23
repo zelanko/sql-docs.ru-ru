@@ -15,12 +15,11 @@ ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: 
 ms.workload: Inactive
+ms.openlocfilehash: 07e274f33decd59287571017d8103961334f9df4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5936634cf243216f5916812bbe5ec04767932ec7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Пошаговое руководство для повышения производительности SQL Server в Linux
 
@@ -197,4 +196,3 @@ SQL Server поддерживает скомпилированных храни�
    SELECT wait_type, wait_time_ms
    FROM sys.dm_os_wait_stats;
    ```
-

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - staging area schema options [Analysis Services]
 - denormalized schemas
 ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: b996209ee964fc476f87e1b064e6cb62a585e131
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 12d62289fe08395c91eff39202b60ee0f67ff82a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-the-database-schemas"></a>Основные сведения о схемах баз данных
   Мастер формирования схем создает ненормализованную реляционную схему для предметной области базы данных на основе измерений и групп мер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Мастер создает реляционную таблицу для каждого измерения (таблица измерения), в которой хранятся данные измерений, которую называют таблицей измерения, и реляционную таблицу для каждой группы мер (таблица фактов), в которой хранятся данные фактов. При создании реляционных таблиц мастер игнорирует связанные измерения, связанные группы мер и серверные измерения времени.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 09/01/2017
  Если выбрано задание ссылочной целостности, то между таблицами измерений и таблицами фактов создаются ограничения ссылочной целостности.  
   
  Переводы  
- Мастер формирует отдельную таблицу для переведенных значений любого свойства в группе мер, для которого требуется столбец перевода. Мастер также создает отдельный столбец для каждого из требуемых языков.  
+ Мастер формирует отдельную таблицу для переведенных значений любого свойства в группе мер, для которого требуется столбец перевода.  Мастер также создает отдельный столбец для каждого из требуемых языков.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Конвертация типов данных и длины по умолчанию  
  Мастер формирования схем игнорирует типы данных во всех вариантах, за исключением столбцов, в которых используется тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **wchar** . Размер данных **wchar** преобразуется непосредственно в тип данных **nvarchar** . Если заданная длина столбца, использующего размер **wchar** , превышает 4 000 байт, то мастер формирования схем формирует ошибку.  
@@ -106,7 +105,6 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="see-also"></a>См. также  
  [Основные сведения о добавочном создании](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [Управление изменениями для представления источников данных и источники данных](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [Управление изменениями в источниках данных и представлениях источников данных](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], about transactions
 - transactions [ODBC]
 ms.assetid: b4ca861a-c164-4e87-8672-d5de15e3823c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6e6e18576f4898b6902d15ab20cc5ebfcb336835
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d11b681fa324c2c0b514bfb43aa67d51ce19a1ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="transactions-odbc"></a>Транзакции ODBC
 Объект *транзакции* является единицей работы, выполняется как одной атомарной операцией; то есть, операция успешно, или сбоя в целом. Например рассмотрим передачи деньги с одного банковского счета на другой. Это происходит в два этапа: снятия денег со счета первый и внесения его за секунду. Очень важно, что оба этапа прошло успешно; не является допустимым один шаг, для успешного выполнения, а другой — к сбою. Это гарантирует способен базы данных, которая поддерживает транзакции.  
@@ -43,7 +41,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [Транзакции в ODBC](../../../odbc/reference/develop-app/transactions-in-odbc-odbc.md)  
   
--   [Уровень изоляции транзакции](../../../odbc/reference/develop-app/transaction-isolation.md)  
+-   [Изоляция транзакций](../../../odbc/reference/develop-app/transaction-isolation.md)  
   
 -   [Управление параллелизмом](../../../odbc/reference/develop-app/concurrency-control.md)
-

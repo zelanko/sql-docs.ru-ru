@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5c8c09b1-140c-48db-9b9f-d18a051d7dbd
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Создание куба на основе шаблона без использования представления источников данных
   На первой странице мастера кубов выберите **Построить куб без использования источника данных** , чтобы создать куб, не обращаясь к представлению источника данных. Позже можно с помощью мастера формирования схем создать реляционную схему для представления источников данных на основе структуры куба и, возможно, других объектов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения о генерации схемы см. в разделе [Мастер формирования схем (службы Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
@@ -107,4 +106,3 @@ ms.lasthandoff: 09/01/2017
  На странице **Завершение работы мастера** просмотрите структуру нового куба и введите имя куба в поле **Имя куба** . Можно сразу установить флажок **Сформировать схему** , чтобы запустить мастер формирования схем. В большинстве случаев не следует устанавливать этот флажок, если запланировано создание дополнительных объектов. Можно также сформировать схему позже с помощью конструктора кубов.  
   
   
-

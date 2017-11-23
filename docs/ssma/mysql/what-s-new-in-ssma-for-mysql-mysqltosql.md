@@ -5,25 +5,23 @@ ms.custom:
 ms.date: 09/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
 ms.openlocfilehash: f895aee684d353451c263b136547c2c6ed7d976d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 11/08/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Новые возможности SSMA для MySQL (MySQLToSql)
 В этом разделе перечислены SSMA для MySQL изменения в каждом выпуске. 
@@ -183,4 +181,3 @@ V7.1 выпуск SSMA для Access содержит следующие изм�
 -   Добавлена поддержка для миграции как локального SQL Server и Azure SQL.  
   
 -   **Функция моментальный снимок:** миграции схемы и данных из MySQL таблиц и индексов и ограничений.
-

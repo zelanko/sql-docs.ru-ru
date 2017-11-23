@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - _Table::get_DateCreated
 - _Table::DateCreated
 - _Table::GetDateCreated
-helpviewer_keywords:
-- DateCreated property [ADOX]
+helpviewer_keywords: DateCreated property [ADOX]
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a9da873196a37a77cb998897522af22059683ccf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0403fbd8d7136f008a2ec3bd2ee3071f40ce2cf2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="datecreated-property-adox"></a>Свойство DateCreated (ADOX)
 Указывает дату создания объекта.  
@@ -45,9 +42,8 @@ ms.lasthandoff: 09/09/2017
   
 ||||  
 |-|-|-|  
-|[Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Объект представления (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
+|[Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [DateCreated и DateModified-пример свойства (Visual Basic)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [Свойство DateModified (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)
-

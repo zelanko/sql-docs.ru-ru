@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- descriptors [ODBC], types
+helpviewer_keywords: descriptors [ODBC], types
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7092b59719850ed514ce792c17eea32ae290b932
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="types-of-descriptors"></a>Типы дескрипторов
 Дескриптор, используемый для описания одно из следующих:  
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/09/2017
  Дескриптор можно выполнять разные роли. Различные операторы могут совместно использовать любой дескриптор, который явно выделяет приложения. Дескриптор строки в одной инструкции может служить дескриптор параметра в другом операторе.  
   
  Всегда известно, является ли дескриптор данного дескриптора приложения или дескриптор реализации даже, если дескриптор не был используется в операции базы данных. Дескрипторы, неявно выделяет реализации реализация записывает стандартные строки относительно дескриптора инструкции. Любой дескриптор, который выделяет приложения путем вызова **SQLAllocHandle** является дескриптором приложения.
-

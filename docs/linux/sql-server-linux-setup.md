@@ -4,17 +4,22 @@ description: "Установка, обновление и удаление SQL S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
+ms.workload: Active
+ms.openlocfilehash: 8d61ba8334d81c46643d15b38173b6b2dd2e1a93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
@@ -94,31 +99,82 @@ SQL Server в Linux можно установить из командной ст
 > [!NOTE]
 > Она поддерживается только может понижаться до выпуска в пределах той же основной версии, например 2017 г. SQL Server.
 
-> [!IMPORTANT]
-> Возврат к предыдущей версии поддерживаются только между RTM и версия-кандидат 2, версия-кандидат 1 в данный момент.
+## <a id="versioncheck"></a>Проверьте установленную версию SQL Server
+
+Чтобы проверить текущую версию и выпуск SQL Server в Linux, используйте следующую процедуру:
+
+1. Если еще не установлен, установите [средства командной строки SQL Server](sql-server-linux-setup-tools.md).
+
+1. Используйте **sqlcmd** для выполнения команды Transact-SQL, отображающий SQL Server версии и выпуска.
+
+   ```bash
+   sqlcmd -S localhost -U SA -Q 'select @@VERSION'
+   ```
+
+## <a id="uninstall"></a>Удаление SQL Server
+
+Чтобы удалить **mssql server** пакета в Linux, используйте один из приведенных ниже команд, в зависимости от используемой платформы:
+
+| Платформа | Команды удаления пакета |
+|-----|-----|
+| RHEL | `sudo yum remove mssql-server` |
+| SLES | `sudo zypper remove mssql-server` |
+| Ubuntu | `sudo apt-get remove mssql-server` |
+
+После удаления пакета не приводит к удалению файлов созданной базе данных. Если вы хотите удалить файлы базы данных, используйте следующую команду:
+
+```bash
+sudo rm -rf /var/opt/mssql/
+```
 
 ## <a id="repositories"></a>Настройка исходных репозиториев
 
-При установке или обновлении SQL Server, можно получить последнюю версию SQL Server из репозитория настроенных Microsoft. Это важно отметить, что существует два основных типа хранилища для каждого распределения:
+При установке или обновлении SQL Server, можно получить последнюю версию SQL Server из репозитория настроенных Microsoft.
+
+### <a name="repository-options"></a>Параметры хранилища
+
+Существует два основных типа хранилища для каждого распределения.
 
 - **Накопительный пакет обновления (CU)**: репозиторий накопительное обновление (CU) содержит пакеты для базовой версии SQL Server и исправления или улучшения версии. Накопительные пакеты обновления относятся только к версии, например 2017 г. SQL Server. Их появления в обычных ритме.
 
 - **GDR**: GDR репозитория пакетов для базовой версии SQL Server и только важные исправления и обновления для системы безопасности содержит версии. Эти обновления также добавляются в следующий выпуск CU.
 
-Каждое CU и GDR содержит полный пакет SQL Server и все последующие обновления для этого репозитория. Обновление с версии GDR на текущую версию поддерживается изменение настроенного хранилища SQL Server. Вы также можете [понизить](#rollback) для любого из выпусков в ваш основной номер версии (например: 2017 г.).
+Каждое CU и GDR содержит полный пакет SQL Server и все последующие обновления для этого репозитория. Обновление с версии GDR на текущую версию поддерживается изменение настроенного хранилища SQL Server. Вы также можете [понизить](#rollback) для любого из выпусков в ваш основной номер версии (например: 2017 г.). Обновление с накопительным пакетом обновления версии GDR не поддерживается.
 
-> [!NOTE]
-> Обновление с накопительным пакетом обновления версии GDR не поддерживается.
+### <a name="check-your-configured-repository"></a>Проверьте настроенные репозиторий
+
+Если вы хотите проверить настроен репозиторий, используйте следующие методики зависят от платформы.
+
+| Платформа | Процедура |
+|-----|-----|
+| RHEL | 1. Просматривать файлы в **/etc/yum.repos.d** каталога:`sudo ls /etc/yum.repos.d`<br/>2. Найдите файл, который настраивает каталог SQL Server, такие как **mssql server.repo**.<br/>3. Распечатать содержимое файла:`sudo cat /etc/yum.repos.d/mssql-server.repo`<br/>4. **Имя** свойство является настроенного репозитория.|
+| SLES | 1. Выполните следующую команду:`sudo zypper info mssql-server`<br/>2. **Репозитория** свойство является настроенного репозитория. |
+| Ubuntu | 1. Выполните следующую команду:`sudo cat /etc/apt/sources.list`<br/>2. Проверьте URL-адреса для сервера mssql пакета. |
+
+В конец URL-адрес репозитория проверяет тип репозитория:
+
+- **MSSQL сервера**: предварительный просмотр репозитория.
+- **MSSQL server 2017 г.**: CU репозитория.
+- **MSSQL-server-2017 г gdr**: GDR репозитория.
+
+### <a name="change-the-source-repository"></a>Измените исходный репозиторий
 
 Чтобы настроить репозитории CU или GDR, выполните следующие действия:
 
+> [!NOTE]
+> [Быстрого запуска учебники](#platforms) настройте CU репозитория. При выполнении этих учебников, выполните следующие действия, чтобы продолжить использование репозитории CU необязательно. Эти шаги необходимы только для изменения вашего настроенного репозитория.
+
 1. При необходимости удалите ранее настроенного репозитория.
 
-   | Платформа | Команда удаления репозитория |
-   |-----|-----|
-   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
-   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+   | Платформа | Хранилище | Команда удаления репозитория |
+   |---|---|---|
+   | RHEL | **все** | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | **CTP-ВЕРСИИ** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | | **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+   | | **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+   | Ubuntu | **CTP-ВЕРСИИ** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` 
+   | | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
+   | | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
 1. Для **Ubuntu только**, Импорт ключей GPG общедоступный репозиторий.
 
@@ -137,26 +193,10 @@ SQL Server в Linux можно установить из командной ст
    | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
    | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
-1. [Установка](#platforms) или [обновление](#upgrade) SQL Server на новое хранилище.
+1. [Установка](#platforms) или [обновление](#upgrade) SQL Server и все связанные пакеты из нового репозитория.
 
    > [!IMPORTANT]
-   > На этом этапе, если вы решили выполнить полную установку с помощью [по основам](#platforms), помните, что вы настроили целевой репозиторий. В учебниках по не нужно повторять этот шаг. Это особенно важно, если настроить хранилище GDR, так как статьи краткого руководства используйте CU репозитория.
-
-## <a id="uninstall"></a>Удаление SQL Server
-
-Чтобы удалить **mssql server** пакета в Linux, используйте один из приведенных ниже команд, в зависимости от используемой платформы:
-
-| Платформа | Команды удаления пакета |
-|-----|-----|
-| RHEL | `sudo yum remove mssql-server` |
-| SLES | `sudo zypper remove mssql-server` |
-| Ubuntu | `sudo apt-get remove mssql-server` |
-
-После удаления пакета не приводит к удалению файлов созданной базе данных. Если вы хотите удалить файлы базы данных, используйте следующую команду:
-
-```bash
-sudo rm -rf /var/opt/mssql/
-```
+   > На этом этапе, если вы решили использовать один из учебников по установке, такие как [по основам](#platforms), помните, что вы настроили целевой репозиторий. В учебниках по не нужно повторять этот шаг. Это особенно важно, если настроить хранилище GDR, так как статьи краткого руководства используйте CU репозитория.
 
 ## <a id="unattended"></a>Автоматическая установка
 
@@ -232,4 +272,3 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 - [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
 - [Установите на Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Запустите на Docker](quickstart-install-connect-ubuntu.md)
-

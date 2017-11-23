@@ -8,8 +8,7 @@ ms.service:
 ms.component: server-properties
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -98,17 +97,16 @@ helpviewer_keywords:
 - MemoryLimit property
 - AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c0efd9b01acb4b10a8863719a8d08c43cea4401d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 095706fc60fe06ae2a83969431b390772bee37f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="olap-properties"></a>Свойства OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают перечисленные в следующих таблицах свойства сервера OLAP. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
@@ -327,7 +325,7 @@ ms.lasthandoff: 09/01/2017
  **DimensionPropertyCacheSize**  
  Подписанное 32-разрядное целочисленное свойство, указывающее объем памяти (в байтах), используемой для сохранения в кэше тех элементов измерения, которые применяются в запросе.  
   
- Значение по умолчанию равно 4 000 000 байт (или 4 МБ) на одну иерархию атрибутов, на один активный запрос. Значение по умолчанию обеспечивает хорошо сбалансированный размер кэша для решений со стандартными иерархиями. Однако измерения с очень большим количеством элементов (которые исчисляются миллионами) или глубокие иерархии работают лучше, если увеличить это значение.  
+ Значение по умолчанию равно 4 000 000 байт (или 4 МБ) на одну иерархию атрибутов, на один активный запрос. Значение по умолчанию обеспечивает хорошо сбалансированный размер кэша для решений со стандартными иерархиями. Однако измерения с очень большим количеством элементов (которые исчисляются миллионами) или глубокие иерархии работают лучше, если увеличить это значение.  
   
  Последствия увеличение размера кэша.  
   
@@ -490,4 +488,3 @@ ms.lasthandoff: 09/01/2017
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

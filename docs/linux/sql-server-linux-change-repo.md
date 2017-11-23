@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: bf4eecc1e72f1eadcb0feeab5ca046e75155a66d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: a0d6ff0a983f1d1d1ad8fdcc7de37d9a06032025
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>Изменить репозиториев из репозитория предварительного просмотра в репозитории общедоступной версии
 
@@ -78,4 +77,3 @@ ms.lasthandoff: 10/06/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения об установке 2017 г. SQL Server в Linux см. в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
-

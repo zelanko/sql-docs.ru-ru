@@ -31,16 +31,15 @@ helpviewer_keywords:
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
 ms.assetid: 
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.openlocfilehash: 58503277d586394e329c6232ab097a2d9d9d69cd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0011a3f43860b353867852e944a0c2ab8a48f9f4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Выпуски и поддерживаемых функций 2017 г. SQL Server в Linux
 
@@ -49,7 +48,7 @@ ms.lasthandoff: 09/25/2017
 Требования для установки сильно зависят от потребностей приложения. Различные выпуски [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] удовлетворяют индивидуальным требованиям каждой организации или отдельного лица к производительности, среде выполнения и цене. Набор устанавливаемых компонентов [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] зависит от потребностей конкретного пользователя. В следующих разделах содержатся сведения, на основе которых из множества выпусков и компонентов, доступных в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], можно сделать наилучший выбор.  
 
 Актуальные заметки о выпуске и сведения о новых возможностях содержатся в следующих разделах:
-- [SQL Server в заметках о выпуске Linux](sql-server-linux-release-notes.md)
+- [Заметки о выпуске для SQL Server в Linux](sql-server-linux-release-notes.md)
 - [Новые возможности SQL Server в Linux](sql-server-linux-whats-new.md)
 
 Список функции SQL Server, недоступные в Linux см. в разделе [неподдерживаемые функции и службы](sql-server-linux-release-notes.md#Unsupported).
@@ -121,11 +120,11 @@ ms.lasthandoff: 09/25/2017
 |Зашифрованная резервная копия|Да|Да|Нет|Нет|
 |Гибридное резервное копирование в Microsoft Azure (резервное копирование на URL-адрес)|Да|Да|Нет|Нет|
   
-<sup>1</sup> в выпуске Enterprise edition, количество узлов равно максимум операционной системы. В выпуске Standard edition поддерживается для двух узлов. 
+<sup>1</sup> в выпуске Enterprise edition, количество узлов равно максимум операционной системы. В выпуске Standard поддерживается два узла. 
 
 <sup>2</sup> на Enterprise edition поддерживает до 8 вторичных реплик — включая 2 синхронные вторичные реплики. 
 
-<sup>3</sup> standard edition поддерживает основные группы доступности. Основная группа доступности поддерживает две реплики, с одной базой данных. Дополнительные сведения об основных групп доступности см. в разделе [основные группы доступности](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
+<sup>3</sup> standard edition поддерживает основные группы доступности. Базовая группа доступности поддерживает две реплики с одной базой данных. Дополнительные сведения о базовых группах доступности см. в разделе [Базовые группы доступности](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).    
 
 ##  <a name="RDBMSSP"></a> Масштабируемость и производительность реляционных СУБД  
   
@@ -229,4 +228,3 @@ ms.lasthandoff: 09/25/2017
 
   
   
-

@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS tutorial [ADO], datacontrol made usable
+helpviewer_keywords: RDS tutorial [ADO], datacontrol made usable
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 93ac89a0007223681f4844c0ecd36e4581414a6c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8f59e167dfad5ddd4b99d784b34e37556a076a2f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Шаг 5: DataControl годным внесенные (учебник служб удаленных рабочих СТОЛОВ)
 Возвращенный **записей** объект доступен для использования. Проверьте, перехода или изменить его, как и любой другой **записей**. Что делать с **записей** зависит от среды. Visual Basic и Visual C++ имеют визуальные элементы управления, которые могут использовать **записей** прямо или косвенно с помощью элемента управления Включение данных.  
@@ -54,4 +51,3 @@ Sub RDSTutorial5()
 ## <a name="see-also"></a>См. также:  
  [Шаг 6: Изменения будут отправлены на сервер (учебник служб удаленных рабочих СТОЛОВ)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [Учебник по RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
-

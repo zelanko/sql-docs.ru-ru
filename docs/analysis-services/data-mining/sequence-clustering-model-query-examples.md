@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 97b2c679b61e37cf08299fb64102392bb7ca2202
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Примеры запросов к модели кластеризации последовательностей
   К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения об информации, содержащейся в модели, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели, для прогнозирования на основе новых данных. Что касается модели кластеризации последовательностей, то запросы содержимого обычно возвращают дополнительную информацию об обнаруженных кластерах или о переходах в этих кластерах. Запрос также позволяет получить метаданные, описывающие модель.  
@@ -244,7 +243,7 @@ AS t
 |1||Велосипедная шапочка|  
 |2||Велосипедная шапочка|  
 |3||Sport-100|  
-|4||Кофта с длинными рукавами и эмблемой|  
+|4||Long-Sleeve logo Jersey|  
 |5||Half-Finger Gloves|  
 |6||Универсальная подставка для велосипеда|  
 |7||Универсальная подставка для велосипеда|  
@@ -287,4 +286,3 @@ AS t
  [Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   
-

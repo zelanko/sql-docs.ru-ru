@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining model content, logistic regression models
 - regression algorithms [Analysis Services]
 ms.assetid: 69cc0b86-e8bc-4d6c-903e-85724f5c0396
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1c49ae086aba41c6b023a1cbd395e6ddd8fc8f29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6a57348fa7e83daeb4c9df2bc8d17cd34689c4a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии
   В этом разделе приведено описание содержимого модели интеллектуального анализа данных, характерного для моделей, в которых используется алгоритм логистической регрессии (Майкрософт). Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -66,7 +65,7 @@ ms.lasthandoff: 09/01/2017
 |Граничная статистика|Пусто|  
 |Входной слой|Пусто|  
 |Входной узел|Имя входного атрибута|  
-|скрытый слой|Пусто|  
+|Скрытый слой|Пусто|  
 |Выходной слой|Пусто|  
 |Выходной узел|Имя выходного атрибута|  
   
@@ -122,7 +121,7 @@ ms.lasthandoff: 09/01/2017
 |Граничная статистика|Пусто|  
 |Входной слой|Пусто|  
 |Входной узел|Имя входного атрибута|  
-|скрытый слой|Пусто|  
+|Скрытый слой|Пусто|  
 |Выходной слой|Пусто|  
 |Выходной узел|Если выходной атрибут является непрерывным, этот узел содержит имя выходного атрибута.<br /><br /> Если выходной атрибут является дискретным или дискретизированным, этот узел содержит имя и значение атрибута.|  
   
@@ -199,4 +198,3 @@ ms.lasthandoff: 09/01/2017
  [Технический справочник по алгоритму логистической регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   
-

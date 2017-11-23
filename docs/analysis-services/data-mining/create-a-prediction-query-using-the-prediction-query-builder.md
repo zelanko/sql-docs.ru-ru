@@ -17,17 +17,16 @@ helpviewer_keywords:
 - prediction queries [Analysis Services]
 - Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e788f53ac41de8cdecdfbc88f61afacc0bfbad16
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a61c0e05e427ef4d4e693e1594598dafe85f3c2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов
   Создать прогнозирующий запрос можно при создании решения интеллектуального анализа данных в среде BI Development Studio. Можно также щелкнуть правой кнопкой мыши существующую модель интеллектуального анализа данных в среде SQL Server Management Studio и выбрать параметр **Построить прогнозирующий запрос**.  
@@ -104,4 +103,3 @@ ms.lasthandoff: 09/01/2017
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - ALTER TABLE
 - WAIT_AT_LOW_PRIORITY_TSQL
 - ALTER_COLUMN_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - columns [SQL Server], resizing
 - changing column size
@@ -61,17 +59,16 @@ helpviewer_keywords:
 - dropping columns
 - table changes [SQL Server]
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
-caps.latest.revision: 281
+caps.latest.revision: "281"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7cee79406283aa3b75d41b968370f490cb454ea5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -540,7 +537,7 @@ WITH CHECK | WITH NOCHECK
  MAXDOP = *max_degree_of_parallelism*  
  **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Переопределяет **максимальная степень параллелизма** параметр конфигурации только во время обработки. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Переопределяет **максимальная степень параллелизма** параметр конфигурации только во время обработки. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
  Используйте параметр MAXDOP для ограничения числа процессоров, применяемых при выполнении параллельных планов. Максимальное число процессоров — 64.  
   
@@ -871,7 +868,7 @@ WAIT_AT_LOW_PRIORITY
  Столбцы типа **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **текст**, **ntext**, **изображения**, **hierarchyid**, **geometry**, **geography**, или определяемых пользователем ТИПОВ CLR нельзя добавить в операцию в оперативном режиме. Столбец нельзя добавлять в сети, если в результате такой операции максимальный размер строки превысит ограничение в 8060 байт. В этом случае столбец добавляется в рамках операции вне сети.  
   
 ## <a name="parallel-plan-execution"></a>Выполнение параллельного плана  
- В [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] и более поздних версиях число процессоров, применяемых для выполнения одной инструкции ALTER TABLE ADD (на базе индекса) CONSTRAINT или DROP (кластеризованный индекс) CONSTRAINT, определяется с **максимальная степень параллелизма** конфигурации параметр и текущей рабочей нагрузки. Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, что система занята, то перед началом выполнения инструкции степень параллелизма операции автоматически понижается. Можно вручную настроить число процессоров, применяемых для запуска инструкции, указав параметр MAXDOP. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ В [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] и более поздних версиях число процессоров, применяемых для выполнения одной инструкции ALTER TABLE ADD (на базе индекса) CONSTRAINT или DROP (кластеризованный индекс) CONSTRAINT, определяется с **максимальная степень параллелизма** конфигурации параметр и текущей рабочей нагрузки. Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] определяет, что система занята, то перед началом выполнения инструкции степень параллелизма операции автоматически понижается. Можно вручную настроить число процессоров, применяемых для запуска инструкции, указав параметр MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 ## <a name="partitioned-tables"></a>Секционированные таблицы  
  Помимо выполнения операций SWITCH, затрагивающих секционированные таблицы, инструкция ALTER TABLE может использоваться для изменения состояния столбцов, ограничений и триггеров секционированной таблицы точно так же, как она используется для несекционированных таблиц. Однако данная инструкция не может использоваться для изменения способа, которым секционируется сама таблица. Для повторного секционирования секционированной таблицы, используйте [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md) и [ALTER PARTITION FUNCTION](../../t-sql/statements/alter-partition-function-transact-sql.md). Кроме того, невозможно изменить тип данных столбца секционированной таблицы.  
@@ -1859,5 +1856,4 @@ ALTER TABLE OrdersHistory SPLIT RANGE ('2005-01-01');
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 

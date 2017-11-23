@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ragged hierarchies [Analysis Services]
+helpviewer_keywords: ragged hierarchies [Analysis Services]
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: df06dbfc368310427d1359f78de557c910b94af9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b8bbadff8fa6d3679ad96976a3fe021b5085988a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Пользовательские иерархии - неоднородные иерархии
   неоднородная иерархия — это пользовательская иерархия, которая имеет нечетное количество уровней. Распространенные примеры включают организационную диаграмму, на которой менеджеры высокого уровня координируют работу как менеджеров отделов, так и их подчиненных, или географические иерархии, состоящие из страны, региона и города, которые включают города без родительского элемента штата или провинции, например Вашингтон О. К., Ватикан или Новый Дели.  
@@ -87,4 +85,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства строки подключения (службы Analysis Services)](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
   
   
-

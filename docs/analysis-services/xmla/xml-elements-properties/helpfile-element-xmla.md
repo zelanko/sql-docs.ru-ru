@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- HelpFile Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: HelpFile Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#HelpFile
 - http://schemas.microsoft.com/analysisservices/2003/engine#HelpFile
 - microsoft.xml.analysis.helpfile
-helpviewer_keywords:
-- HelpFile element
+helpviewer_keywords: HelpFile element
 ms.assetid: 537ea7a8-5064-4a31-b0cd-ab7e891fef09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ffaf04b7e71e993d926e151aa4855c4872698df2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fb363af5753b319734d39001089f4165bb131fa8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="helpfile-element-xmla"></a>Элемент HelpFile (XML для аналитики)
   Содержит путь или URL-адрес файла справки или раздела справки, в котором описывается родительский элемент [Error](../../../analysis-services/xmla/xml-elements-properties/error-element-xmla.md) .  
@@ -59,7 +54,7 @@ ms.lasthandoff: 09/01/2017
 |--------------------|-----------------|  
 |Тип данных и длина|Строковые значения|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -74,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

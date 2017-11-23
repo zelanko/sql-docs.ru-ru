@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: a32ff053-f38f-49d7-afdc-e19f59c88135
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ef443652815654b5290d9a39c090cef3af4f1f04
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2904954269f32dc80d603c3c0b045685d58bc2d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="synchronize-command-tmsl"></a>Synchronize, команда (TMSL)
 
@@ -51,7 +50,7 @@ ms.lasthandoff: 09/01/2017
 ||||  
 |-|-|-|  
 |**Свойство**|**Default**|**Description**|  
-|базой данных||Имя объекта базы данных для синхронизации.|  
+|база данных||Имя объекта базы данных для синхронизации.|  
 |источник||Строка подключения, используемая для подключения к исходному серверу.|  
 |synchronizeSecurity|skipMembership|Значение перечисления, определяющее способ восстановления определений безопасности, включая роли и разрешения. Допустимые значения включают skipMembership, copyAll, ignoreSecurity.|  
 |applyCompression|True|Логическое значение, при значении true указывает, что сжатие будет применяться при выполнении операции синхронизации; в противном случае — значение false.|  
@@ -76,4 +75,3 @@ ms.lasthandoff: 09/01/2017
  [Справочник по языку TMSL (Tabular Model Scripting Language)](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
-

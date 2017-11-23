@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Backup Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Backup Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - urn:schemas-microsoft-com:xml-analysis#Backup
 - http://schemas.microsoft.com/analysisservices/2003/engine#Backup
 - microsoft.xml.analysis.backup
-helpviewer_keywords:
-- Backup command
+helpviewer_keywords: Backup command
 ms.assetid: 5bcbc14c-9db9-45b2-99de-f3a265bcb0c4
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: ed85939848e2304cec9651245815c3848da5aa04
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c5617d1b0b62eabb945881041a795a1a699b4c41
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-element-xmla"></a>Элемент Backup (XML для аналитики)
   Создает резервную копию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных в файл резервной копии.  
@@ -66,7 +61,7 @@ ms.lasthandoff: 09/01/2017
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
+|Количество элементов|0–n: необязательный элемент, который может встречаться несколько раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -83,7 +78,7 @@ ms.lasthandoff: 09/01/2017
 |Режим хранения|Данные, попадающие в резервную копию|  
 |------------------|-----------------------------------|  
 |Многомерный OLAP (MOLAP)|Исходные данные, агрегаты и метаданные|  
-|Гибридный OLAP (HOLAP)|Агрегаты и метаданные|  
+|гибридный OLAP (HOLAP).|Агрегаты и метаданные|  
 |Реляционный OLAP (ROLAP)|Метаданные|  
   
  Во время **резервного копирования** команды, совмещаемая блокировка на [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, указанной в **объекта** элемент. Совмещаемая блокировка снимается после выполнения команды **Backup** .  
@@ -101,4 +96,3 @@ ms.lasthandoff: 09/01/2017
  [Команды &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-commands/xml-elements-commands.md)  
   
   
-

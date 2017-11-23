@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- _Stream::Charset
-helpviewer_keywords:
-- Charset property [ADO]
+f1_keywords: _Stream::Charset
+helpviewer_keywords: Charset property [ADO]
 ms.assetid: e42507cb-9b46-4ce4-8191-2948eaf14ca2
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ded981a9ed4905aa607d8b19fe010682b61b5780
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8c3f9568a04572718bb6b1a968a3bacae4520898
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="charset-property-ado"></a>Свойство CharSet (ADO)
 Указывает кодировку, в которой содержимое текстового [поток](../../../ado/reference/ado-api/stream-object-ado.md) преобразования для хранения в внутренний буфер **поток** объекта.  
@@ -46,5 +42,4 @@ ms.lasthandoff: 09/09/2017
  Пример кода см. в разделе [шаг 4: заполнить текстовое поле сведений](../../../ado/guide/data/step-4-populate-the-details-text-box.md).  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

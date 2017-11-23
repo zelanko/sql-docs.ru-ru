@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - functions [ODBC], catalog functions
 - catalog functions [ODBC], using catalog data
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c77be1b431a7f7e2cf8c040df7ceb9a9feaf321a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="uses-of-catalog-data"></a>Использует данных каталога
 Приложения используют данные каталога в различными способами. Ниже приведены некоторые распространенные варианты.  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
      Также можно использовать такие среды **SQLTables** и **SQLColumns** для создания списков, из которых программист может нужные значения. Также можно использовать эти среды **SQLPrimaryKeys** и **SQLForeignKeys** автоматически определить и Показать связи между выбранными таблицами и использовать **SQLStatistics** для определения и выделите индексированные поля, чтобы программист могут создавать эффективные запросы.  
   
 -   **Создав курсоров.** Может использовать приложения, драйвера или по промежуточного слоя, который предоставляет механизм Прокручиваемый курсор **SQLSpecialColumns** для определения, какие столбцы или столбец однозначно идентифицировать строку. Программа может собрать *ключей* содержит значения этих столбцов для каждой строки, выбранных. Когда приложение выполняет прокрутку к строке, он будет затем использовать эти значения для выборки самые последние данные для строки. Дополнительные сведения о Прокручиваемые курсоры и наборы ключей см. в разделе [Прокручиваемые курсоры](../../../odbc/reference/develop-app/scrollable-cursors.md).
-
