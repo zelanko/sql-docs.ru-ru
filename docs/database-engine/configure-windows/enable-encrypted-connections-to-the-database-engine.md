@@ -2,9 +2,12 @@
 title: "Включение зашифрованных соединений для ядра СУБД | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/11/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5454f7228a8003e04ef30be68f228c47c9f3f551
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0408459ba5ef287cb583962a536d1780fa9f6769
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В этом разделе описано, как активировать зашифрованные соединения для экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , указав сертификат для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Компьютеру сервера должен быть назначен сертификат, а компьютер клиента должен доверять корневому центру сертификации. Провизионирование — это процесс установки сертификата путем импорта сертификата в систему Windows.  
   

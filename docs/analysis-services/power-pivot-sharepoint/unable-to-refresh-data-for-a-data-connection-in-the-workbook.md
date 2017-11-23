@@ -8,22 +8,20 @@ ms.service:
 ms.component: power-pivot-sharepoint
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0f6fd52d-ac72-43e3-aa08-05a2d2bb873d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 67932080ad5ec8edc79232387a7b72df8627c076
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e92a6ac8d430b88c18ecae14c2a52771b566d39d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Не удалось обновить данные для подключения к данным в книге
   Применительно к книгам Excel, содержащим данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , службы Excel возвращают эту ошибку, если при передаче запроса на соединение серверу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] запрос завершается ошибкой.  
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/01/2017
  Одна или несколько служб могут находиться в несогласованном состоянии. В некоторых случаях решить эту проблему можно, выполнив команду IISRESET.  
   
   
-
