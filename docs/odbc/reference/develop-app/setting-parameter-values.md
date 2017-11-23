@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- parameter values [ODBC]
+helpviewer_keywords: parameter values [ODBC]
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c89f68450a7d4ffe65f5d7bc0e8697b5ac2cb1b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-parameter-values"></a>Задание значений параметров
 Чтобы задать значение параметра, приложение просто устанавливает значение переменной, привязанное к параметру. Он не имеет значения, если это значение задано, при условии, что он имеет значение перед выполнением инструкции. Приложение может задать значение, до или после привязки переменной, и его можно изменять значение столько раз, сколько необходимо. При выполнении инструкции драйвер просто возвращает текущее значение переменной. Это особенно полезно при выполнении подготовленной инструкции несколько раз; приложение задает новые значения для некоторых или всех переменных при каждом выполнении инструкции. Пример этого см. в разделе [подготовленных](../../../odbc/reference/develop-app/prepared-execution-odbc.md)ранее в этом разделе.  
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/09/2017
  [d] драйверы всегда необходимо проверить это значение ли специальные значения, такие как SQL_NULL_DATA.  
   
  Назначение драйвер со значением параметра во время выполнения зависит от драйвера. При необходимости, драйвер преобразует значение из C тип и байтовое длина данных связанной переменной типа данных SQL, точность и Масштаб параметра. В большинстве случаев драйвер затем отправляет значение в источнике данных. В некоторых случаях он форматирует значение как текст и вставляет его в инструкцию SQL перед отправкой инструкцию в источнике данных.
-

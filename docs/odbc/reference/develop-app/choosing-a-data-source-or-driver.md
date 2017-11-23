@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data sources [ODBC], selecting
 - ODBC drivers [ODBC], selecting
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 449aeb2cf24cc03df6b76c84079c88badc7b1ff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="choosing-a-data-source-or-driver"></a>Выбор данных источника или драйвер
 Источник данных или драйвер, используемых приложением иногда жестко закодирована в приложении. Например, пользовательское приложение, созданное отделом Системам для передачи данных из одного источника данных в другой будет содержать имена этих источников данных, приложение просто не будет работать с другими источниками данных. Другой пример — вертикальная приложения, например, что используется для ввода заказа. Такое приложение всегда использует же источник данных, с предварительно определенной схемой известные приложением.  
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 -   **Доступ к определенной СУБД один раз.** Например, может содержать электронную таблицу, которая получает данные путем вызова функции ODBC **ДРАЙВЕР** ключевое слово для идентификации конкретного драйвера. Поскольку имя драйвера может применяться для всех пользователей, имеющих этого драйвера, электронной таблицы может быть передана среди этих пользователей. Электронной таблицы содержится имя источника данных, каждому пользователю придется создать тот же источник данных, чтобы использовать электронную таблицу.  
   
 -   **Обзор системы для всех баз данных, доступный для конкретного драйвера.** Дополнительные сведения см. в разделе [соединение с помощью SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)далее в этом разделе.
-

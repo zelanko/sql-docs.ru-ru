@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- NamingTemplate Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: NamingTemplate Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- NamingTemplate
-helpviewer_keywords:
-- NamingTemplate element
+applies_to: SQL Server 2016 Preview
+f1_keywords: NamingTemplate
+helpviewer_keywords: NamingTemplate element
 ms.assetid: d68d765c-f012-40c1-acd4-32741ee2eadf
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e10a7edf7c8c5b1aad63f76cda140e5894402799
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38a37b2e9aa2006916e110cbdf4ba622ee742fab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="namingtemplate-element-assl"></a>Элемент NamingTemplate (ASSL)
   Определяет, как именуются уровни в иерархии родители потомки, построенным на основе [DimensionAttribute](../../../analysis-services/scripting/data-type/dimensionattribute-data-type-assl.md) родительского элемента.  
@@ -57,7 +51,7 @@ ms.lasthandoff: 09/01/2017
 |--------------------|-----------------|  
 |Тип данных и длина|Строковые значения|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -77,7 +71,7 @@ ms.lasthandoff: 09/01/2017
   
  Чтобы использовать специальный набор имен, в качестве значения элемента **NamingTemplate** задается список имен уровней, разделенных точкой с запятой. Каждое имя в списке используется в качестве имени следующего уровня. Если число уровней превышает число имен в списке, то для всех последующих имен уровней в качестве шаблона используется последнее имя в списке, к которому добавляется пробел и порядковый номер, как описано выше. Например, при использовании шаблона `Division;Group;Unit` создаются имена уровней `Division`, `Group`, `Unit`, `Unit 01`, `Unit 02`и т. д. В отличие от этого при использовании шаблона `Division;Group;Unit *` создаются имена уровней `Division`, `Group`, `Unit 03`, `Unit 04`и т. д.  
   
- Каждое имя в списке считается шаблоном, чтобы гарантировать уникальность имен уровней. Например, при использовании шаблона `Manager;Team Lead;Manager;Team Lead;Worker *` создаются имена уровней `Manager`, `Team Lead`, `Manager 01`, `Team Lead 01`, `Worker 05`, `Worker 06`.  
+ Каждое имя в списке считается шаблоном, чтобы гарантировать уникальность имен уровней. Например, при использовании шаблона `Manager;Team Lead;Manager;Team Lead;Worker *` создаются имена уровней `Manager`, `Team Lead`, `Manager 01`, `Team Lead 01`, `Worker 05`, `Worker 06`..  
   
  Используйте две звездочки (*), чтобы включить звездочку (\*) символ в имени уровня как часть шаблона именования.  
   
@@ -89,4 +83,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

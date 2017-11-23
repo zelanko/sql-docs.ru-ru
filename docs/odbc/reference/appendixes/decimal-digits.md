@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - data types [ODBC], decimal digits
 - SQL data types [ODBC], column characteristics
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1bb5222837dab705701e4a137c00f3b10867ae2a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4593b1faacfc235ce0ee5c54bc9ca70416444f5e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="decimal-digits"></a>Десятичные цифры
 *Десятичные цифры* десятичных и числовых данных типов определяется как максимальное количество цифр справа от десятичной запятой или масштаб данных. Для приблизительных с плавающей запятой числа столбцов или параметров масштаб не определен, так как количество цифр справа от десятичной запятой не Фиксировано. Для данных даты-времени или интервала, содержащего компонент секунд десятичные цифры определяется как количество цифр справа от десятичной запятой в секунды в значении данных.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
  В следующей таблице показан десятичных цифр, определенных для каждого четкими типа данных SQL.  
   
-|Тип SQL|Десятичные цифры|  
+|Тип SQL|десятичные цифры|  
 |--------------|--------------------|  
 |Символьных и двоичных типов []|н/д|  
 |SQL_DECIMAL<br />SQL_NUMERIC|Определенное число цифр справа от десятичной запятой. Например масштаб столбца, определенного как NUMERIC(10,3) — 3. Это может быть отрицательным числом для поддержки хранения очень больших чисел без использования экспоненциальное представление; Например «12000» может храниться как «12» с масштабом 3.|  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 |Все типы даты и времени|PRECISION|  
 |Все типы интервала с компонентом секунд|PRECISION|  
 |Все типы интервала с ни один компонент секунд|н/д|
-

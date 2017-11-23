@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- installing ODBC components [ODBC], setup program
+helpviewer_keywords: installing ODBC components [ODBC], setup program
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 741ccfc8e9a096b60eca94b125890d48f65eb764
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setup-program"></a>Программа установки
 > **Примечание:** начиная с Windows XP и Windows Server 2003, **ODBC включается в операционной системе Windows**. ODBC следует устанавливать только явно на более ранних версиях Windows.  
@@ -37,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  Сколько установки фактически выполняется программой установки, зависит от того, функции, которые она вызывает установщика DLL. Установщик DLL содержит функции для установки отдельных компонентов ODBC. Программа установки просто вызывает **SQLInstallDriverManager**, **SQLInstallDriverEx**, или **SQLInstallTranslatorEx** получить путь к DLL-ФАЙЛ установщика каталог, в котором компонент должен быть установлен и добавить сведения о компоненте в реестр. Эти функции фактически не копируйте файлы; Программа установки делает это, используя сведения в аргументах этих функций.  
   
  Установщик DLL также содержит функции, для удаления компонентов ODBC. Программа установки вызовет **SQLRemoveDriverManager**, **SQLRemoveDriver**, или **SQLRemoveTranslator** установщика количество DLL для уменьшения использования компонента реестр и, если новый счетчик использования компонента становится равным 0, удалите все сведения о компоненте из реестра. Эти функции фактически не удаляет файлы для компонента; Программа установки делает это, если новый счетчик использования становится равным 0.
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC drivers [ODBC], standards-compliant
 - application features are standards-compliant [ODBC]
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c62e19d2d7c2c856b358649955a5b1540a802a12
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1aba299d163aaf9ec14d86740e5d8aa91ddb7b3b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Совместимый со стандартами приложений и драйверов
 Совместимый со стандартами приложения или драйвера является запрос, который соответствует спецификации Open CAE группы «данных управления: SQL уровня вызова интерфейса (CLI)» и ISO/IEC 9075-3: 1995 интерфейс уровня вызова (E) (SQL/CLI).  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
 -   В соответствии с ISO (CLI), ODBC 3*.x* заголовочные файлы содержат псевдонимы для типы сведения, используемые в вызовах **SQLGetInfo**. Совместимый со стандартами приложения можно использовать эти псевдонимы вместо функции ODBC 3*.x* типы информации. Дополнительные сведения см. в разделе Далее [файлы заголовка](../../../odbc/reference/develop-app/header-files.md).  
   
 -   Совместимый со стандартами приложения необходимо убедиться, что он поддерживает все функции поддерживаются в программе, которая будет работать с. Присвоение атрибуту инструкции SQL_ATTR_CURSOR_SCROLLABLE SQL_SCROLLABLE и параметр атрибута инструкции SQL_ATTR_CURSOR_SENSITIVITY SQL_INSENSITIVE или SQL_SENSITIVE, возможности, которые могут использоваться в качестве дополнительных функций в стандарты но не включаются в ODBC 3*.x* Core уровень и, следовательно, может не поддерживаться все ODBC 3*.x* драйверы. Если совместимый со стандартами приложение использует эти возможности, его следует убедиться, что драйвер, который будет работать с поддерживает их.
-

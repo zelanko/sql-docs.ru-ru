@@ -8,22 +8,20 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d70e79a1-6403-49ad-8713-eda6e8aa287e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d97051190e8964c62b3f004a69976f6b9ef4abc9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 274e9cbdb1b90318ed3b3c6681409eac4b3c3ee5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-driver-for-oracle-programmer39s-reference"></a>Драйвер ODBC для Oracle программист &#39; s ссылки
 > [!IMPORTANT]  
@@ -31,23 +29,23 @@ ms.lasthandoff: 09/09/2017
   
  В этом разделе рассматриваются следующие вопросы.  
   
--   [Формат строки соединения и атрибуты](../../odbc/microsoft/connection-string-format-and-attributes.md)  
+-   [Формат и атрибуты строки подключения](../../odbc/microsoft/connection-string-format-and-attributes.md)  
   
 -   [Параметры подключения](../../odbc/microsoft/connect-options.md)  
   
 -   [Параметры инструкции](../../odbc/microsoft/statement-options.md)  
   
--   [Тип курсора и параллелизма сочетания](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)  
+-   [Сочетания типов курсора и параллелизма](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md)  
   
--   [С помощью служб компонентов Microsoft](../../odbc/microsoft/using-microsoft-component-services.md)  
+-   [Использование служб компонентов Майкрософт](../../odbc/microsoft/using-microsoft-component-services.md)  
   
--   [С помощью службы Microsoft IIS](../../odbc/microsoft/using-microsoft-internet-information-services.md)  
+-   [Использование служб Microsoft IIS](../../odbc/microsoft/using-microsoft-internet-information-services.md)  
   
--   [С помощью проверки подлинности операционной системы](../../odbc/microsoft/using-operating-system-authentication.md)  
+-   [Использование функций проверки подлинности операционной системы](../../odbc/microsoft/using-operating-system-authentication.md)  
   
 -   [Использование SQLConfigDatasource с драйвером ODBC для Oracle](../../odbc/microsoft/using-sqlconfigdatasource-with-the-odbc-driver-for-oracle.md)  
   
--   [Ограничения по использованию управляемые набором ключей курсоры](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
+-   [Ограничения на использование курсоров, управляемых ключевым набором](../../odbc/microsoft/limitations-of-using-keyset-driven-cursors.md)  
   
 -   [Драйвер ODBC для Oracle хранимых процедур](../../odbc/microsoft/stored-procedures-odbc-driver-for-oracle.md)  
   
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/09/2017
 -   [Поддерживаемые типы данных](../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
 -   [Сопоставление типов данных](../../odbc/microsoft/mapping-data-types-odbc-driver-for-oracle.md)
-

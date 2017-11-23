@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d56f2e4266bdae1a51325bc540fe38af5908721
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 52c954cb3acc87753f9ede5a0fc786bd9ed9b755
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-concurrency-control"></a>Общие сведения об управлении параллелизмом
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -54,7 +52,6 @@ ms.lasthandoff: 09/09/2017
 |Конструкция таблицы исключает курсор KEYSET или DYNAMIC|Базовая таблица не содержит уникальных ключей, чтобы включить [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] для уникальной идентификации строки.|Добавьте уникальные ключи к таблице, чтобы обеспечить уникальную идентификацию каждой строки.|  
   
 ## <a name="see-also"></a>См. также:  
- [Управление результирующими наборами с драйвером JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
+ [Управление результирующими наборами с помощью драйвера JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   
-

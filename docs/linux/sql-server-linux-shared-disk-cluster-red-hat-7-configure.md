@@ -6,15 +6,20 @@ ms.author: mikeray
 manager: jhubbard
 ms.date: 03/17/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
+ms.workload: On Demand
+ms.openlocfilehash: 1417e02a0a0c2ef56171a5dd99782cdbb4abe0e1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка кластера общего диска Red Hat Enterprise Linux для SQL Server
 
@@ -108,7 +113,10 @@ ms.lasthandoff: 10/24/2017
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>Настройка общего хранилища и перемещение файлов базы данных 
 
-Существуют различные решения для обеспечения общего хранилища. Это пошаговое руководство демонстрирует Настройка общего хранилища с помощью NFS. Рекомендуется следовать рекомендациям и использовать Kerberos для защиты NFS (можно найти в данном примере: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). Если этого не сделать, любой пользователь, можно получить доступ к сети и подмены IP-адрес узла SQL будет возможность доступа к файлам данных. Как всегда убедитесь, что вы угроз модели системы перед его использованием в рабочей среде. Другой вариант хранения данных — использовать общую папку SMB.
+Существуют различные решения для обеспечения общего хранилища. Это пошаговое руководство демонстрирует Настройка общего хранилища с помощью NFS. Рекомендуется следовать рекомендациям и использовать Kerberos для защиты NFS (можно найти в данном примере: https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/). 
+
+>[!Warning]
+>Если не защитить NFS, любой пользователь, можно получить доступ к сети и подмены IP-адрес узла SQL будет может получить доступ к файлам данных. Как всегда убедитесь, что вы угроз модели системы перед его использованием в рабочей среде. Другой вариант хранения данных — использовать общую папку SMB.
 
 ### <a name="configure-shared-storage-with-nfs"></a>Настройка общего хранилища с помощью NFS
 
@@ -391,4 +399,3 @@ NFS-сервера выполните следующие действия.
 ## <a name="next-steps"></a>Следующие шаги
 
 [Эксплуатация SQL Server в Red Hat Enterprise Linux общего диска кластера](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-

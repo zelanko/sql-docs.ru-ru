@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 56eadba88bc229b4d3f3560c60988124b54f33b9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b39bfb096e980106ecaef4e12ef9871f1a32452a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="asynchronous-execution-notification-method"></a>Асинхронное выполнение (метод уведомления)
 ODBC позволяет асинхронное выполнение операций инструкции и соединения. Это поток приложения можно вызывать функции ODBC в асинхронном режиме, или функция может вернуть, прежде чем операция будет завершена, позволяя потока приложения для выполнения других задач. В Windows 7 SDK, для асинхронного инструкции или операций соединения приложения определить, что асинхронная операция была завершения с помощью метода опроса. Дополнительные сведения см. в разделе [асинхронное выполнение (метод опроса)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). Начиная с Windows 8 SDK, можно определить, что асинхронная операция завершена с помощью метода уведомления.  
@@ -424,4 +422,3 @@ Else
     // Call the corresponding Asynchronous ODBC API to complete all processing and retrieve the return code.  
 }  
 ```
-

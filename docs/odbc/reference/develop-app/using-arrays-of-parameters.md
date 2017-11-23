@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7cfa7bcaf6c193a7abde71020d563a095ace3f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-arrays-of-parameters"></a>Использование массивов параметров
 Использование массивов параметров, приложение вызывает **SQLSetStmtAttr** с *атрибута* аргумент SQL_ATTR_PARAMSET_SIZE, чтобы указать число наборов параметров. Он вызывает **SQLSetStmtAttr** с *атрибута* аргумент SQL_ATTR_PARAMS_PROCESSED_PTR, чтобы указать адрес переменной, в котором драйвер может возвращать число наборов параметров обработки Задает, включая ошибки. Он вызывает **SQLSetStmtAttr** с *атрибута* аргумент SQL_ATTR_PARAM_STATUS_PTR, чтобы она указывала на массив, в котором для возвращения сведений о состоянии для каждой строки значений параметров. Драйвер хранит эти адреса в структуре, которую он поддерживает для инструкции.  
@@ -61,4 +59,3 @@ ms.lasthandoff: 09/09/2017
 -   Так как драйвер не интерпретирует значение в *ParameterValuePtr* аргумент **SQLBindParameter** для параметров данных во время выполнения, если приложение содержит указатель на массив,  **SQLParamData** не извлечения и возврата в приложение элемент этого массива. Вместо этого он возвращает скалярное значение приложение передано. Это означает значение, возвращаемое **SQLParamData** является недостаточно указать параметр, для которой приложение необходимо отправить данные; того, приложение должно учитывать номер текущей строки.  
   
      Когда только некоторые из элементов в массиве параметров параметров данных времени выполнения, приложение должно передать адрес массива в *ParameterValuePtr* , содержащий элементы для всех параметров. Этот массив интерпретируется обычно для параметров, которые не являются параметрами данных во время выполнения. Для параметров данных во время выполнения, а значение, **SQLParamData** предоставляет для приложения, который обычно может использоваться для определения данных, драйвер запрашивает в этом случае, это всегда адрес массива.
-

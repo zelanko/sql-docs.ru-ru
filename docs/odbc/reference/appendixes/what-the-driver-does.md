@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], cursors
 - block cursors [ODBC]
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 352c4adb445b670f0a236e16954e6dd85a63de7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e94046370f8140fdacec2cf708de0a62311a27
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-the-driver-does"></a>Что делает драйвер
 В следующей таблице перечислены какие функции и инструкции атрибутов ODBC 3*.x* для блока и Прокручиваемые курсоры следует реализовывать драйвера.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLFetch**|Возвращает следующий набор строк. Ниже приведены сведения о реализации.<br /><br /> -Драйвер извлекает размер набора строк из значения атрибута SQL_ATTR_ROW_ARRAY_SIZE инструкции.<br />-Драйвер извлекает адрес массив состояния строк из sql_attr_row_status_ptr, которое указывает атрибут инструкции.<br />-Драйвер извлекает адрес строк, загружаемых буфера из атрибута SQL_ATTR_ROWS_FETCHED_PTR инструкции.<br />-Приложения могут быть использованы смешанные вызовы между **SQLFetchScroll** и **SQLFetch**.<br />-   **SQLFetch** возвращает закладки, если привязан столбец 0.<br />-   **SQLFetch** может вызываться для возврата более одной строки.<br />-Драйвер не возвращает SQLSTATE 01S01 (ошибка в строке) для указания, что произошла ошибка во время выборки строк с помощью вызова **SQLFetch**.|  
 |**SQLFetchScroll**|Возвращает указанный набор строк. Ниже приведены сведения о реализации.<br /><br /> -Драйвер извлекает размер набора строк из атрибута SQL_ATTR_ROW_ARRAY_SIZE инструкции.<br />-Драйвер извлекает адрес массив состояния строк из sql_attr_row_status_ptr, которое указывает атрибут инструкции.<br />-Драйвер извлекает адрес строк, загружаемых буфера из атрибута SQL_ATTR_ROWS_FETCHED_PTR инструкции.<br />-Приложения могут быть использованы смешанные вызовы между **SQLFetchScroll** и **SQLFetch**.<br />-Драйвер не возвращает SQLSTATE 01S01 (ошибка в строке) для указания, что произошла ошибка во время выборки строк с помощью вызова **SQLFetchScroll**.|  
 |**SQLSetPos**|Выполняет различные позиционированных операций. Ниже приведены сведения о реализации.<br /><br /> -Это может вызываться в состояниях инструкции S6 или S7. Дополнительные сведения см. в разделе [переходы инструкции](../../../odbc/reference/appendixes/statement-transitions.md) в приложении B: ODBC состояния перехода таблицах.<br />-Если это вызывается в состоянии инструкции S5 или S6, драйвер получает размер набора строк из атрибута SQL_ATTR_ROWS_FETCHED_PTR инструкции и адрес массив состояния строк из sql_attr_row_status_ptr, которое указывает атрибут инструкции.<br />-Если это вызывается в состоянии инструкции S7, драйвер возвращает размер набора строк из атрибута инструкции SQL_ROWSET_SIZE и адрес массив состояния строк из *RowStatusArray* аргумент  **SQLExtendedFetch**.<br />-Драйвер возвращает SQLSTATE 01S01 (ошибка в строке) только для того, чтобы указать, что произошла ошибка во время выборки строк с помощью вызова **SQLSetPos** для выполнения операции массового при вызове функции в состоянии S7. Для сохранения обратной совместимости, если SQLSTATE 01S01 возвращается (ошибка в строке) **SQLSetPos**, диспетчер драйверов не упорядочивает записи состояния в очереди ошибок согласно правилам, описанным в «последовательность из состояния записей» раздел [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md).<br />-Если драйвер должны работать с ODBC 2. *x* приложения, вызывающие **SQLSetPos** с *операции* аргумент SQL_ADD, драйвер должен поддерживать **SQLSetPos** с  *Операция* аргумент SQL_ADD.|
-

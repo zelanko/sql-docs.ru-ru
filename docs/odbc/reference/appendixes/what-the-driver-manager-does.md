@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - ODBC driver manager [ODBC]
 - backward compatibility [ODBC], driver manager
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d662370f1e782edfc5f932ad26cdbc38643bcda7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c6fb04fe5c5c693da4982e1c12194bc7e42f98
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="what-the-driver-manager-does"></a>Назначение диспетчера драйверов
 В следующей таблице представлены как ODBC 3*.x* диспетчера драйверов сопоставляет вызовы ODBC 2. *x* а ODBC 3*.x* драйверы.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |**SQLFetchScroll**|Возвращает указанный набор строк. Ниже приведены сведения о реализации.<br /><br /> -Если приложение вызывает **SQLFetchScroll** в ODBC 2. *x* драйвера ODBC 3*.x* диспетчера драйверов сопоставляет его **SQLExtendedFetch**. Она использует кэшированное значение sql_attr_row_status_ptr, которое указывает атрибут инструкции для *RowStatusArray* аргумент и кэшированное значение атрибута SQL_ATTR_ROWS_FETCHED_PTR инструкции для *RowCountPtr* аргумент. Если *FetchOrientation* аргумент в **SQLFetchScroll** — SQL_FETCH_BOOKMARK, он использует кэшированное значение атрибута инструкции SQL_ATTR_FETCH_BOOKMARK_PTR для *FetchOffset*  аргумент и возвращает ошибку, если *FetchOffset* аргумент **SQLFetchScroll** — не равно 0.<br />-Если приложение вызывает это в ODBC 3*.x* драйвера ODBC 3*.x* диспетчера драйверов передает этот вызов к драйверу.|  
 |**SQLSetPos**|Выполняет различные позиционированных операций. ODBC 3*.x* диспетчера драйверов передает вызовы **SQLSetPos** драйверу, независимо от версии драйвера.|  
 |**SQLSetScrollOptions**|Когда диспетчер драйверов сопоставляет **SQLSetScrollOptions** для приложения, работа с ODBC 3*.x* драйвер, который не поддерживает **SQLSetScrollOptions**, драйвер Диспетчер задает параметр инструкции SQL_ROWSET_SIZE атрибут не SQL_ATTR_ROW_ARRAY_SIZE инструкции к *RowsetSize* аргумент в **SQLSetScrollOption**. В результате **SQLSetScrollOptions** не может использоваться приложением при их получении нескольких строк путем вызова **SQLFetch** или **SQLFetchScroll**. Он может использоваться только в том случае, если извлечение нескольких строк путем вызова **SQLExtendedFetch**.|
-

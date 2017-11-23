@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - block cursors [ODBC]
 - result sets [ODBC], block cursors
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="rowset-size"></a>Размер набора строк
 Размер набора строк зависит от приложения. На экране приложений часто выполните одно из двух стратегий. Первой задачей является установить размер набора строк на число строк, отображаемых на экране; Если пользователь изменяет размер экрана, приложение соответственным образом изменяет размер набора строк. Второй — для установки размера набора строк больше, например 100, что уменьшает количество вызовов к источнику данных. Приложение локально прокручивается в наборе строк, если это возможно и извлекает новых строк только в том случае, когда он выполняет прокрутку вне набора строк.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos** использует размер набора строк, которая действует на предшествующий ему вызов **SQLFetch** или **SQLFetchScroll**, так как **SQLSetPos** работает на набор строк, которое уже было задано. **SQLSetPos** также получают новый размер набора строк при **SQLBulkOperations** был вызван после изменения размера набора строк.  
   
 -   **SQLBulkOperations** использует размер набора строк в силе во время вызова, так как он выполняет операции с таблицей, независимо от любого извлеченных строк.
-

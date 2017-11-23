@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - compiling Unicode applications [ODBC]
 - functions [ODBC], Unicode functions
 ms.assetid: 7986c623-2792-4e77-bfee-c86cbf84f08d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a09b99c9fdf819cbc78cfe68a7d78634187f2426
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c99c74a1a294d7d43774fe9d53d169eece98d3ad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-applications"></a>Приложения на базе Юникода
 Можно перекомпилировать приложение как приложения с поддержкой Юникода в одном из двух способов:  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  Функцию можно вызвать одним из трех способов: с помощью вызова функции только для Юникода (с *W* суффикс), как вызов функции, доступные только для ANSI (с *A* суффикс), или как вызов функции ODBC без суффикса. Аргументы для трех форм функции являются идентичными. Только те функции, SQLCHAR \* и указатель SQLPOINTER аргументов, которые указывают на строки требуют формы Юникод и ANSI. Для функций, имеющие аргументы, которые могут быть объявлены как тип символа, таких как **SQLBindCol** или **SQLGetData** (у которого нет формы Юникод и ANSI), аргумент может быть объявлен как тип Юникода ANSI ввода, или в случае C аргумент SQL_C_TCHAR макрос. Дополнительные сведения см. в разделе [данных в Юникоде](../../../odbc/reference/develop-app/unicode-data.md).  
   
  Приложения могут быть написаны как Юникод приложение, даже если драйверы Юникода не доступны для работы с. Диспетчер драйверов будут сопоставлены функции и данные в Юникоде в ANSI. Существуют некоторые ограничения в Юникод, ANSI сопоставления, которые могут быть выполнены. Существование драйвер Юникода для приложения Юникода для работы с приведет к повышению производительности и приведет к удалению ограничения, присущие Юникода в ANSI сопоставления.
-

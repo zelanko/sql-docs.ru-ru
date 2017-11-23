@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - minimum SQL syntax supported [ODBC]
 - ODBC drivers [ODBC], minimum SQL syntax supported
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 655868b77b482a11145e8947e1ea81d34270ca65
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="parameter-data-types"></a>Типы данных параметров
 Несмотря на то, что каждый параметр указан с **SQLBindParameter** имеет определенный тип данных SQL с параметрами инструкции SQL с помощью имеют внутренний тип данных. Таким образом маркеры параметров может быть включено в инструкцию SQL, только в том случае, если их типы данных может быть выведен из другой операнд в инструкции. Например в арифметического выражения, такие как? + Столбец1, тип данных параметра может быть выведено из именованного столбца, представленный COLUMN1 тип данных. Приложение нельзя использовать маркер параметра, если не удается определить тип данных.  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |Значение, используемое в **IN**|То же, что выражение или первое значение, если маркер параметра в выражении|  
 |Значение шаблона, используемого с **как**|VARCHAR|  
 |Новое значение, при использовании **обновления**|То же, что обновления столбцов|
-

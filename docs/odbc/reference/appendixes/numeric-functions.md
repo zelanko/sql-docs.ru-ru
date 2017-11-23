@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], numeric functions
 - numeric functions [ODBC]
 ms.assetid: 4fa548dc-e8b0-4179-92ff-81d6a79d10c3
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="numeric-functions"></a>Числовые функции
 В следующей таблице описаны числовые функции, включенные в набор скалярные функции ODBC. Путем вызова **SQLGetInfo** с *типу информации* из SQL_NUMERIC_FUNCTIONS, приложение может определить числовые функции, которые поддерживаются драйвером.  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|Возвращает квадратный корень из *float_exp*.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|Возвращает тангенс *float_exp*, где *float_exp* угла в радианах.|  
 |**TRUNCATE (** *числовое_выражение*, *целое_выражение***)** (ODBC 2.0)|Возвращает *числовое_выражение* усекается до *целое_выражение* помещает справа от десятичной запятой. Если *целое_выражение* отрицательное, *числовое_выражение* усекается до &#124; *целое_выражение*&#124; разрядов слева от десятичной запятой.|
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - upgrading applications [ODBC], about upgrading
 - backward compatibility [ODBC], upgrading applications
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b0c0701ce83e4d1d30bd8f69f94ddc90e7a60a8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3941a679210a18b39ed201dd564b9613b48a2a58
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="writing-odbc-3x-applications"></a>Написание ODBC 3.x приложений
 Когда ODBC 2. *x* обновить приложение ODBC 3. *x*, должны быть написаны таким образом, что она работает с обоих ODBC 2. *x* и 3. *x* драйверы. Приложение должно учитываться код условия, чтобы воспользоваться всеми преимуществами ODBC 3. *x* функции.  
@@ -92,7 +90,7 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Сопоставление замены функций для обеспечения обратной совместимости приложений](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
+-   [Сопоставление замещающих функций для обеспечения обратной совместимости приложений](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
   
 -   [Вызов SQLCloseCursor](../../../odbc/reference/develop-app/calling-sqlclosecursor.md)  
   
@@ -102,7 +100,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [Операции с библиотекой курсоров](../../../odbc/reference/develop-app/cursor-library-operations.md)  
   
--   [Сопоставление типов курсоров Attributes1 сведения](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
+-   [Сопоставление типов сведений атрибутов1 курсора](../../../odbc/reference/develop-app/mapping-the-cursor-attributes1-information-types.md)  
   
--   [ЗНАЧЕНИЕ SQL_NO_DATA](../../../odbc/reference/develop-app/sql-no-data.md)
-
+-   [SQL_NO_DATA](../../../odbc/reference/develop-app/sql-no-data.md)

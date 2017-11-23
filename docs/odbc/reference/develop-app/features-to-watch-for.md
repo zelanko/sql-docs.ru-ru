@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- interoperability [ODBC], writing interoperable applications
+helpviewer_keywords: interoperability [ODBC], writing interoperable applications
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 97d25a4d641e63dd081f16601f78e48d0ec8e17b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 89e348d084f150bdcb2d74f4d4dd561816fc351f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="features-to-watch-for"></a>Компоненты, которые должны ожидать
 В этом разделе описываются некоторые функции, которые разработчики часто предпринять должное. На самом деле эти функции существенно различаться по поддержке и способ поддержки между СУБД; сбой кода для них может вызвать проблемы с возможностью взаимодействия приложений.  
@@ -36,17 +33,16 @@ ms.lasthandoff: 09/09/2017
   
 -   [Номер версии](../../../odbc/reference/develop-app/version-number.md)  
   
--   [Несколько активных инструкций и соединений](../../../odbc/reference/develop-app/multiple-active-statements-and-connections.md)  
+-   [Множественные активные инструкции и подключения](../../../odbc/reference/develop-app/multiple-active-statements-and-connections.md)  
   
 -   [Поддержка транзакций в СУБД](../../../odbc/reference/develop-app/transaction-support-in-dbmss.md)  
   
--   [Фиксации и отката](../../../odbc/reference/develop-app/commit-and-rollback-behavior.md)  
+-   [Поведение фиксации и отката](../../../odbc/reference/develop-app/commit-and-rollback-behavior.md)  
   
--   [NOT NULL в инструкции CREATE TABLE](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
+-   [NOT NULL в инструкциях CREATE TABLE](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
   
 -   [Поддерживаемые типы данных](../../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
--   [SQL-грамматику ODBC](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
+-   [Грамматика SQL (ODBC)](../../../odbc/reference/develop-app/odbc-sql-grammar.md)  
   
 -   [Пакетная обработка](../../../odbc/reference/develop-app/batch-processing.md)
-

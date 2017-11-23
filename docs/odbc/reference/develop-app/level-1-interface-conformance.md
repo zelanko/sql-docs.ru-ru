@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], interface
 - level 1 interface conformance levels [ODBC]
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 34c9b63a4abda3b510ab2b9549f90251996ec9e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="level-1-interface-conformance"></a>Соответствие интерфейс уровня 1
 Уровень соответствия уровня 1 интерфейс включает функциональные возможности уровня соответствия основной интерфейс, а также дополнительные компоненты, например транзакции, которые обычно осуществляется в реляционных СУБД с OLTP. Драйвер уровня 1 интерфейс совместимую позволяет приложению выполните следующие действия, в дополнение к возможности уровень соответствия основной интерфейс:  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |107|Использование функции ODBC вместо инструкций SQL для выполнения определенных операций базы данных: **SQLSetPos** с SQL_POSITION и SQL_REFRESH.|  
 |108|Получить доступ к содержимому несколько результирующих наборов, создаваемые пакеты и хранимые процедуры путем вызова **SQLMoreResults**.|  
 |109|Разделения транзакциях, объединяющих несколько функций ODBC с true атомарность и возможность указывать SQL_ROLLBACK в **SQLEndTran**.|
-

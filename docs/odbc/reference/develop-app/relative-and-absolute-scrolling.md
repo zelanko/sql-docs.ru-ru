@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 32782c2fe59aaf36fa8741870a798163d923a3a1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="relative-and-absolute-scrolling"></a>Относительных и абсолютных прокрутки
 Большинство параметров прокрутки в **SQLFetchScroll** курсор относительно текущей позиции или абсолютной позиции. **SQLFetchScroll** поддерживает выборку следующего, предыдущего, первого и последнего набора строк, как хорошо, как относительной (набора строк,  *n*  строк от начала текущего набора строк) и абсолютной (fetch набор строк, начиная со строки  *n* ). Если  *n*  имеет отрицательное значение при абсолютной выборке, то строки отсчитываются с конца результирующего набора. Таким образом абсолютная выборка строки -1 означает, что для выборки строк, который начинается с последней строки в результирующем наборе.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
  Число строк в курсоре, размер результирующего задано, то доступны в качестве поля SQL_DIAG_CURSOR_ROW_COUNT диагностики заголовка. Это значение в этом поле указывается только после **SQLExecute**, **SQLExecDirect**, или **SQLMoreResult** был вызван. Этот счетчик может иметь приблизительное число или точное число, в зависимости от возможностей драйвера. Поддержка драйверов можно определить путем вызова **SQLGetInfo** с типы информации атрибуты курсора и проверки, возвращаются ли бит SQL_CA2_CRC_APPROXIMATE или SQL_CA2_CRC_EXACT для типа курсора.  
   
  Подсчет точных строк никогда не поддерживается для динамических курсоров. Для других типов курсоров драйвер может поддерживать либо количество строк точное или приблизительное, но не оба. Если драйвер поддерживает точное ни приблизительное количество строк для определенного типа курсора, поле SQL_DIAG_CURSOR_ROW_COUNT содержит количество строк, пока будут выбраны. Независимо от того, какой драйвер поддерживает **SQLFetchScroll** с *операции* SQL_FETCH_LAST вызовет поле SQL_DIAG_CURSOR_ROW_COUNT будет содержать число точных строк.
-

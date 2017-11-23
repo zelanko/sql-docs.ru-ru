@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - ODBC [ODBC], SQL
 - embedded SQL [ODBC]
 ms.assetid: 8eee3527-f225-4aa2-bd18-a16bd3ab0fb7
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 12d0e4edc34ceb02f9b902016eb82b489c4ca71d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7e27c80832143ff9907878ffc35c9479ce39ce1e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 Внедренные первый метод для отправки инструкций SQL в СУБД SQL. Поскольку SQL не используют переменные и инструкции управления потоком, он часто используется в качестве диалекте базы данных, который может быть добавлен к программе на языке обычной языке программирования, например C или COBOL. Это центра общее представление о embedded SQL: помещение инструкций SQL в программе на языке узел языка программирования. Коротко говоря следующие методы, используемые для внедрения инструкций SQL в основного языка.  
@@ -46,11 +44,10 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Пример Embedded SQL](../../odbc/reference/embedded-sql-example.md)  
+-   [Образец Embedded SQL](../../odbc/reference/embedded-sql-example.md)  
   
 -   [Компиляция программы Embedded SQL](../../odbc/reference/compiling-an-embedded-sql-program.md)  
   
 -   [Статический SQL](../../odbc/reference/static-sql.md)  
   
 -   [Динамический SQL](../../odbc/reference/dynamic-sql.md)
-

@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.workload: Inactive
+ms.openlocfilehash: ed87490e0aedfd0953c8c77715ddc7e843aefd2c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5ad4620cf4972aa060844dfc8477e3e9c022ebf2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Работать кластеров общих дисков Red Hat Enterprise Linux для SQL Server
 
@@ -84,7 +83,7 @@ sudo crm_mon
    ip addr show
    ```
 
-3. Новый узел должен уникальное имя, которое составляет 15 символов или меньше. По умолчанию в Red Hat Linux — имя компьютера `localhost.localdomain`. Это имя по умолчанию не может быть уникальным и имеет слишком большую длину. Задайте имя компьютера на новый узел. Задайте имя компьютера, добавив его в `/etc/hosts`. Следующий сценарий позволяет редактировать `/etc/hosts` с `vi`. 
+3. Новый узел должен уникальное имя, которое составляет 15 символов или меньше. По умолчанию в Red Hat Linux — имя компьютера `localhost.localdomain`. Это имя по умолчанию не может быть уникальным и имеет слишком большую длину. Задайте имя компьютера на новый узел. Задайте имя компьютера, добавив его в `/etc/hosts`. Следующий сценарий позволяет изменить `/etc/hosts` с помощью `vi`. 
 
    ```bash
    sudo vi /etc/hosts
@@ -281,5 +280,4 @@ pacemaker: active/enabled
 ## <a name="next-steps"></a>Следующие шаги
 
 [Настройка кластера общего диска Red Hat Enterprise Linux для SQL Server](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
-
 

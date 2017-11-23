@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactions [ODBC], concurrency control
 - concurrency control [ODBC]
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d40d92b6771aa27a0fbfbdbfefd485496b10984c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a10dc30810a1ea71bd4e2c9d823ed010f7f611d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="concurrency-control"></a>Управление параллелизмом
 *Параллелизм* является возможность использовать те же данные одновременно две операции и транзакции изоляции обычно появилась снижению степени параллелизма. Это так, как уровень изоляции транзакции обычно реализуется блокировки строк, и как дополнительные строки будут заблокированы, меньшее количество транзакций может быть выполнено без ее блокировки временно в заблокированной строке. Хотя снижению степени параллелизма признается обычно является компромиссом для более высоких уровней изоляции транзакций, необходимых для поддержания целостности базы данных, он может стать проблемой в интерактивных приложений с высокой чтение и запись действия, которое использовать курсоры.  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
 -   [Типы параллелизма](../../../odbc/reference/develop-app/concurrency-types.md)  
   
 -   [Оптимистический параллелизм](../../../odbc/reference/develop-app/optimistic-concurrency.md)
-

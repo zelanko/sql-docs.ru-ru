@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - virtual applications [ODBC]
 - generic applications [ODBC]
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 07ea2d2f08fb0d31ed141281b195742462350a5b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ba4e9a05f3dba74a973bf2b8b8a83a52ef78811
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="applications"></a>Приложения
 *Приложения* — программа, которая вызывает API ODBC для доступа к данным. Несмотря на то, что возможны несколько типов приложений, большинство делятся на три категории, которые используются в качестве примеров в этом руководстве.  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/09/2017
 -   Отключение от источника данных.  
   
  Поскольку большинство данных доступа осуществляются с помощью SQL, основная задача, для которой приложения используют ODBC является отправлять инструкции SQL и получение результатов (если таковые имеются) при выполнении этих инструкций. Другие задачи, для которых приложения используют ODBC включают определение и настройка для возможности драйверов и просмотра каталога базы данных.
-

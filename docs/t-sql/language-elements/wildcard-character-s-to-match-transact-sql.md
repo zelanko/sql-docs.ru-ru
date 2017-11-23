@@ -1,5 +1,5 @@
 ---
-title: "(Шаблон — символ(ы) для сопоставления) (Transact-SQL) | Документы Microsoft"
+title: "[] (Шаблон — символ(ы) для сопоставления) (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 12/06/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,26 +16,24 @@ f1_keywords:
 - wildcard
 - '[ ]'
 - '[_]_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[ ] (wildcard - character(s) to match)'
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ee043b18eebafdc86b0d2d6e6a34afc0fc865c2f
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 18688c96cd0369905844d79a1a109f4e5032bce3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="wildcard---characters-to-match-transact-sql"></a>(Шаблон — символ(ы) для сопоставления) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="--wildcard---characters-to-match-transact-sql"></a>\[\] (Подстановочный знак — знаков для совпадения) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Соответствует любому одиночному символу в пределах указанного диапазона или набора, указывается в квадратных скобках `[ ]`. Эти символы-шаблоны можно использовать при сравнении строк, которые задействуют соответствие шаблону, таких как `LIKE` и `PATINDEX`.  
   
@@ -87,9 +84,8 @@ EmployeeID      FirstName      LastName      PostalCode
 ## <a name="see-also"></a>См. также:  
  [КАК &#40; Transact-SQL &#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)   
-  [% (Шаблон — символ(ы) для сопоставления)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
- [&#91; ^ &#93; (Шаблон — символ(ы) должны совпасть)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
- [_ (Шаблон — совпадение одного символа)](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
+  [% &#40; Подстановочный знак — символ &#40; s &#41; для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
+ [&#91; ^ &#93; &#40; Подстановочный знак — символ &#40; s &#41; Не для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
+ [\_&#40; Шаблон — совпадение одного символа &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)  
     
   
-

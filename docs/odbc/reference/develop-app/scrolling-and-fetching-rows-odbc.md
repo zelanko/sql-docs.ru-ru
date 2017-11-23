@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - scrolling rows [ODBC]
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9bf6624c5c5a814c1b290fec1d4f717e66dd5e46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5b5a9aefccf51cc4b3aac1aeba02c7878c6dceed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Прокрутка и выборка строк (ODBC)
 При использовании прокручиваемого курсора, вызовите приложений **SQLFetchScroll** позицию строки курсора и fetch. **SQLFetchScroll** поддерживает прокрутку относительных (следующего, предыдущего и относительно  *n*  строк), абсолютный прокрутки (имя, Фамилия, а строку  *n* ), и позиционирование по закладке. *FetchOrientation* и *FetchOffset* аргументов в **SQLFetchScroll** укажите какие набора строк для выборки, как показано на следующих диаграммах.  
@@ -49,4 +47,3 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Прокрутка поддерживается в ODBC 2. *x* драйверы с **SQLExtendedFetch**. Дополнительные сведения см. в разделе [блочных курсоров, Прокручиваемые курсоры и обратной совместимости](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)в приложении G: драйвер рекомендации для обеспечения обратной совместимости.
-

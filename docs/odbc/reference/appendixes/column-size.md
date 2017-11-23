@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - SQL data types [ODBC], column characteristics
 - column size of data types [ODBC]
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d7c760c40bfdde79f13285270be5038d67096c09
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 13a50475602b7f71a7da33ebaaecb4c09eeaf534
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="column-size"></a>Размер столбца
 Размер столбца (или параметров) из числовых типов данных определяется как максимальное количество разрядов, используемое точность данных или тип данных столбца или параметра. Для символьных типов это длина в символах данных. для двоичных типов данных размер столбца определяется как длина данных в байтах. Время, отметка времени и все типы данных интервала это число символов в символьном представлении данных. В следующей таблице показан размер столбца, определенных для каждого четкими типа данных SQL.  
@@ -75,4 +73,3 @@ ms.lasthandoff: 09/09/2017
 |Все числовые типы|PRECISION|  
 |Все типы даты и времени и интервала|LENGTH|  
 |SQL_BIT|LENGTH|
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - Visual FoxPro ODBC driver [ODBC], installing
 - FoxPro ODBC driver [ODBC], installing
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2e623e7aee2942ce2f105c54bad3f3fced859709
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-up-the-visual-foxpro-odbc-driver"></a>Настройка драйвера ODBC Visual FoxPro
 Сведения о загрузке и установке драйвера Visual FoxPro ODBC см. в разделе [драйвера ODBC для Visual FoxPro](http://go.microsoft.com/fwlink/?LinkId=121318) на загрузки MSDN.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 -   Удалите все ранее установленные компоненты.  
   
  После установки драйвер на компьютере, программа установки компонентов установленного драйвера распознает и предоставляются дополнительные диалоговые окна, позволяющие изменять конфигурацию драйвера.
-

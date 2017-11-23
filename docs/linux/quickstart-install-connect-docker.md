@@ -4,17 +4,22 @@ description: "Этого краткого руководства показан�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/12/2017
+ms.date: 10/31/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
+ms.workload: Active
+ms.openlocfilehash: acd47bd1e2104027610f7ee38c9b135a785429e5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
-ms.openlocfilehash: 99d9395898c4a3ff55bb34278749ec0ea2fae77b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/14/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Запускать образ контейнера 2017 г. SQL Server с помощью Docker
 
@@ -25,7 +30,7 @@ ms.lasthandoff: 10/14/2017
 Этот образ состоит из SQL Server на основании Ubuntu 16.04 Linux. Он может использоваться с подсистемой Dосker 1.8 + на Linux или Docker для Mac и Windows.
 
 > [!NOTE]
-> В этом кратком руководстве особое внимание уделяется с помощью образа mssql-server-linux. Непокрытые образа Windows, но Дополнительные сведения о нем на [Docker Hub страница windows для сервера mssql](https://hub.docker.com/r/microsoft/mssql-server-windows/).
+> В этом кратком руководстве особое внимание уделяется с помощью mssql-server -**linux** изображения. Непокрытые образа Windows, но Дополнительные сведения о нем на [страницы Docker Hub mssql-server-windows разработчика](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
 
 ## <a id="requirements"></a> Предварительные требования
 
@@ -61,23 +66,27 @@ ms.lasthandoff: 10/14/2017
 1. Образ контейнера Linux 2017 г. SQL Server по запросу из Docker Hub.
 
    ```bash
-   docker pull microsoft/mssql-server-linux:2017-latest
-   ```
-
-   > [!TIP]
-   > Для Linux, в зависимости от конфигурации системы или пользователя, может потребоваться в начале каждого `docker` с `sudo`.
-
-   > [!NOTE]
-   > Выше команда извлекает последнюю образ контейнера 2017 г. SQL Server. Если вы хотите запросить конкретный образ, добавлении двоеточие и имя тега (например, `microsoft/mssql-server-linux:2017-GA`). Для просмотра всех доступных образов, в разделе [страница концентратора Docker mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
-
-1. Чтобы запустить образ контейнера с помощью Docker, можно использовать следующую команду в оболочке bash (Linux/macOS) или командную строку PowerShell. Единственное различие заключается в одинарные и двойные кавычки.
-
-   ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
+   sudo docker pull microsoft/mssql-server-linux:2017-latest
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
+   docker pull microsoft/mssql-server-linux:2017-latest
+   ```
+
+   Предыдущая команда извлекает последнюю образ контейнера 2017 г. SQL Server. Если вы хотите запросить конкретный образ, добавлении двоеточие и имя тега (например, `microsoft/mssql-server-linux:2017-GA`). Для просмотра всех доступных образов, в разделе [страница концентратора Docker mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+
+1. Чтобы запустить образ контейнера с помощью Docker, можно использовать следующую команду в оболочке bash (Linux/macOS) или командную строку PowerShell.
+
+   ```bash
+   sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+      -p 1401:1433 --name sql1 \
+      -d microsoft/mssql-server-linux:2017-latest
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+      -p 1401:1433 --name sql1 `
+      -d microsoft/mssql-server-linux:2017-latest
    ```
 
    > [!NOTE]
@@ -96,6 +105,10 @@ ms.lasthandoff: 10/14/2017
 1. Чтобы просмотреть в контейнеры Docker, используйте `docker ps` команды.
 
    ```bash
+   sudo docker ps -a
+   ```
+
+   ```PowerShell
    docker ps -a
    ```
 
@@ -127,6 +140,10 @@ SELECT @@SERVERNAME,
 1. Используйте `docker exec -it` команду, чтобы запустить интерактивный bash оболочки внутри вашей запущенного контейнера. В следующем примере `sql1` задается имя `--name` параметр при создании контейнера.
 
    ```bash
+   sudo docker exec -it sql1 "bash"
+   ```
+
+   ```PowerShell
    docker exec -it sql1 "bash"
    ```
 
@@ -246,9 +263,25 @@ SELECT @@SERVERNAME,
 - [Код Visual Studio](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-develop-use-ssms.md)
 
+## <a name="remove-your-container"></a>Удаление контейнера
+
+Если вы хотите удалить контейнер SQL Server, используемые в этом учебнике, выполните следующие команды:
+
+```bash
+sudo docker stop sql1
+sudo docker rm sql1
+```
+
+```PowerShell
+docker stop sql1
+docker rm sql1
+```
+
+> [!WARNING]
+> Остановка и удаление контейнера окончательно удаляет все данные SQL Server в контейнере. Если необходимо сохранить данные, [создайте и скопируйте файл резервной копии из контейнера](tutorial-restore-backup-in-sql-server-container.md) или использовать [контейнера данных сохраняемости метод](sql-server-linux-configure-docker.md#persist).
+
 ## <a name="next-steps"></a>Следующие шаги
 
-Другие сценарии, например для запуска несколько контейнеров данных сохраняемости и устранение неполадок, в статье [образов контейнеров Настройка 2017 г SQL Server на Docker](sql-server-linux-configure-docker.md).
+Учебник по восстановлению файлов резервной копии базы данных в контейнер, в разделе [восстановление базы данных SQL Server в контейнер Linux Docker](tutorial-restore-backup-in-sql-server-container.md). Другие сценарии, например для запуска несколько контейнеров данных сохраняемости и устранение неполадок, в статье [образов контейнеров Настройка 2017 г SQL Server на Docker](sql-server-linux-configure-docker.md).
 
 Кроме того, ознакомьтесь [mssql docker репозитории GitHub](https://github.com/Microsoft/mssql-docker) ресурсы, отзывы и известные проблемы.
-

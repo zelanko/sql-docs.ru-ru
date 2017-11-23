@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - network database access [ODBC]
 - standardizing database access [ODBC], network
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 920de8b36ee55357eebde9ad844bfe569773f74e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5220da346aea15e2dc56224001b0d803c90e0047
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="network-database-access"></a>Сетевой доступ к базе данных
 Доступ к базе данных по сети требуется ряд компонентов, каждый из которых не зависит от и находится под интерфейс программирования. На следующем рисунке показаны эти компоненты.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 -   **Механизм обмена данными между процессами** механизм межпроцессного взаимодействия (IPC) — это процесс, с помощью которого один процесс взаимодействует с другим. Например, именованные каналы, сокеты TCP/IP и сокеты DECnet. Выбор механизма межпроцессного Взаимодействия ограничивается операционной системы и сети.  
   
 -   **Сетевой протокол** сетевой протокол, используемый для передачи потока данных по сети. Его можно считать направляющее принтерам поддерживает IPC механизмы, используемые для реализации данных и потока протокола, а также поддержка основные сетевые операции, такие как передачи файлов. Сетевые протоколы NetBEUI, TCP/IP, DECnet и SPX/IPX и специфичны для каждой сети.
-

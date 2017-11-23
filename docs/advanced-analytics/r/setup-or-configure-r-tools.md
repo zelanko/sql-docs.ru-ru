@@ -1,80 +1,64 @@
 ---
-title: "Установка или настройка средств R | Документация Майкрософт"
+title: "Средства R, входящий в состав программы установки SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 01/20/2017
-ms.prod: sql-server-2016
+ms.date: 10/31/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c04ae30-d391-4369-9742-d2b275e14c0d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 37910463066855d8929d554cb7f850c410dac4a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a3baf97a960d7e8f950bb6e9cd251550f4c4b942
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="setup-or-configure-r-tools"></a>Установка или настройка средств R
-  Microsoft R Server предоставляет все базовые библиотеки R, набор пакетов ScaleR и стандартные средства R, необходимые для разработки и тестирования кода R. Кроме того, также доступны средства, в том числе бесплатные, и для выделенной среды разработки R.  
-  
-## <a name="basic-r-tools"></a>Базовые средства R  
- При установке Microsoft R Server дополнительные средства не требуются, так как все стандартные средства R, включенные в *базовую установку* R, устанавливаются по умолчанию.
+# <a name="r-tools-included-with-sql-server-setup"></a>Средства R, входящий в состав программы установки SQL Server
 
--   **RTerm** — средство командной строки для выполнения скриптов R. 
-  
--   **RGui.exe** — простой интерактивный редактор для R. Аргументы командной строки для RGui.exe и RTerm одни и те же. 
-  
--   **RScript** — средство командной строки для выполнения скриптов R в пакетном режиме.  
+Если вы устанавливаете R с SQL Server, вы получаете те же средства R, которые устанавливаются вместе с любой **базового** установки r, например RGui, Rterm и т. д. Поэтому с технической точки зрения, у вас все средства, необходимые для разработки и тестирования кода R.
 
-Чтобы найти эти средства, необходимо найти расположение библиотеки R. Установленные средства зависят от того, установили ли вы только службы R SQL Server или еще и R Server (изолированную версию). Дополнительные сведения см. в разделе [Устанавливаемые компоненты и расположение пакетов R](https://msdn.microsoft.com/library/mt695941(sql.130).aspx#Anchor_1).
-
-Затем поищите в папке `..\R_SERVER\bin\x64`.  
-
-> [!TIP]  
->  Нужна помощь со средствами R? В папках программы установки `C:\Program Files\Microsoft SQL Server\R_SERVER\doc` и `C:\Program Files\Microsoft SQL Server\R_SERVER\doc\manual` содержится документация по использованию средств R.  
->   
->  Или вы можете просто открыть **RGui**, щелкнуть **Справка**, а затем выбрать какой-либо из вариантов.  
-
-## <a name="microsoft-r-client"></a>Microsoft R Client
-
-Microsoft R Client можно скачать бесплатно. Он позволяет разрабатывать решения R, легко выполняющиеся на Microsoft R Server или в службах R SQL Server. Он предусмотрен, чтобы помочь специалистам по обработке и анализу данных, у которых нет доступа к службам R Server (доступным в Enterprise Edition), разрабатывать решения, использующие ScaleR. 
-
-Если вы используете другую среду разработки R, например средства R для Visual Studio или RStudio, то чтобы использовать ScaleR, вы должны указать, что Microsoft R Client будет использоваться в качестве исполняемого объекта R. Это предоставит полный доступ к пакету RevoScaleR и другим функциям Microsoft R Server, но производительность будет ограничена.
-
-Вы также можете использовать средства в R Client, например RGui и RTerm, для запуска скриптов или написания и выполнения нерегламентированного кода R.
-
-[Установка Microsoft R Client](https://msdn.microsoft.com/microsoft-r/r-client-install)
-  
-##  <a name="bkmk_RTools"></a>Средства R для Visual Studio  
-
- Чтобы было удобно работать с базами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] в качестве среды разработки. [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] — это бесплатная надстройка для Visual Studio, которая поддерживается во всех выпусках. Visual Studio также поддерживает интеграцию языков Python и F#.  
-
- Инструкции по установке см. в разделе [установке средств R для Visual Studio](https://docs.microsoft.com/visualstudio/rtvs/installation).
+В этом разделе перечислены средства, включенные в установку.
 
 > [!TIP]
-> Прежде чем установить какие-либо новые пакеты, проверьте, какая среда выполнения R используется по умолчанию. Если этого не сделать, вы сможете очень просто установить новые пакеты R в расположение библиотеки по умолчанию, но не сможете найти их с помощью R Server.
+> 
+> Обычно это упрощает отладку и тестирование кода R с помощью среды разработки выделенный. Вам будет проще выполнять код R в SQL Server, если вы тестируете его заранее из внешнего средства, чтобы можно было читать подробные сообщения об ошибках и отладки решения.
+> 
+> См. в этой статье список инструментов, которые можно использовать для разработки решений R и настройке их для работы с SQL Server: [Настройка клиента обработки и анализа данных](set-up-a-data-science-client.md)
 
+**Применяется к:** служб R SQL Server 2016 (в базе данных) и Microsoft R Server (изолированный); SQL Server 2017 г машинного обучения службы (в базе данных) и машинного обучения Server (изолированный)
 
-## <a name="rstudio"></a>RStudio
+## <a name="r-tools-included-with-installation"></a>Средства R, входящий в состав установки
 
-Если вы предпочитаете RStudio, для использования библиотек RevoScaleR вам потребуется выполнить некоторые дополнительные действия.
-- Установите Microsoft R Server или Microsoft R Client, чтобы получить необходимые пакеты и библиотеки.
-- Укажите в пути к R среду выполнения R Server.
+Следующие стандартные средства R включены в *базовые установки* r и поэтому устанавливаются по умолчанию.
 
-Дополнительные сведения см. в разделе о [настройке интегрированной среды разработки](https://msdn.microsoft.com/microsoft-r/r-client-get-started#step-2-configure-your-ide).
++ **RTerm**: терминал командной строки для выполнения скриптов R
 
++ **RGui.exe** — простой интерактивный редактор для R. Аргументы командной строки для RGui.exe и RTerm одни и те же.
 
-## <a name="see-also"></a>См. также:  
- [Создание изолированного сервера R Server](../../advanced-analytics/r-services/create-a-standalone-r-server.md)   
- [Приступая к работе с изолированным сервером Microsoft R Server](../../advanced-analytics/r-services/getting-started-with-microsoft-r-server-standalone.md)  
-  
-  
++ **RScript** — средство командной строки для выполнения скриптов R в пакетном режиме.
 
+Чтобы найти эти средства, определите R библиотеки, в которой была установлена при установке SQL Server или автономный машинного обучения функции. Например по умолчанию при установке средств R находятся в этих папках:
+
++ Службы SQL Server 2016 R:`~\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64`
++ Изолированный сервер Microsoft R:`~\Program Files\Microsoft R\R_SERVER\bin\x64`
++ Машины SQL Server 2017 г. изучение служб:`~\Program Files\Microsoft SQL Server\MSSQL14.<instancename>\R_SERVICES\bin\x64`
++ Машинное обучение Server (изолированный):`~\Program Files\Microsoft\ML Server\R_SERVER\bin\x64`
+
+Если вам нужна помощь с помощью средств R, просто откройте **RGui**, нажмите кнопку **справки**, а затем выберите один из вариантов.
+
+## <a name="introducing-microsoft-r-client"></a>Знакомство с Microsoft R клиента
+
+Клиент Microsoft R можно бесплатно загрузить, предоставляющая доступ к пакетам RevoScaleR для целей разработки. Установка клиента R, можно создать решения R, которые могут выполняться во всех контекстах поддерживаемых вычислений, включая анализа в базе данных SQL Server и распределенных вычислений в Hadoop, Spark или Linux с помощью сервера обучения Machine R.
+
+Если вы уже установили другой среды разработки R, например RStudio, не забудьте изменить параметры среды для использования библиотек и исполняемых файлов, предоставляемые Microsoft R клиента. В результате можно использовать все возможности пакета RevoScaleR, несмотря на то, что производительности будет ограничен.
+
+Дополнительные сведения см. в разделе [что такое клиент Microsoft R?](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)

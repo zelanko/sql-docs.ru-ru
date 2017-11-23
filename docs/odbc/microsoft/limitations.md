@@ -8,34 +8,32 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - desktop database drivers [ODBC], limitations
 - ODBC desktop database drivers [ODBC], limitations
 ms.assetid: b8d71c2a-23c8-4e9b-b5f7-aca51c5a4721
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 05f969f344ef69777d0586c18aba76cf7630bfd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 034a4065615c3b0c298de110cd2501bd392a9704
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="limitations"></a>Ограничения
 В этом разделе описываются ограничения драйверов ODBC системной базы данных с учетом следующих разделах:  
   
 |Функции|Инструкции|Предложения, типы и т. д|  
 |---------------|----------------|-------------------------------|  
-|[Агрегатная функция](../../odbc/microsoft/aggregate-function-limitations.md)|[Инструкции ALTER TABLE](../../odbc/microsoft/alter-table-statement-limitations.md)|[Имя столбца](../../odbc/microsoft/column-name-limitations.md)|  
+|[Агрегатная функция](../../odbc/microsoft/aggregate-function-limitations.md)|[Инструкция ALTER TABLE](../../odbc/microsoft/alter-table-statement-limitations.md)|[Имя столбца](../../odbc/microsoft/column-name-limitations.md)|  
 |[Скалярная функция](../../odbc/microsoft/scalar-function-limitations.md)|[Оператор CALL](../../odbc/microsoft/call-statement-limitations.md)|[Тип данных](../../odbc/microsoft/data-type-limitations.md)|  
-|[Функции наборов](../../odbc/microsoft/set-functions-limitations.md)|[Создание инструкции ИНДЕКСА](../../odbc/microsoft/create-index-statement-limitations.md)|[Дата арифметические операции](../../odbc/microsoft/date-arithmetic-limitations.md)|  
+|[Функции наборов](../../odbc/microsoft/set-functions-limitations.md)|[Инструкция CREATE INDEX](../../odbc/microsoft/create-index-statement-limitations.md)|[Арифметические операции с датами](../../odbc/microsoft/date-arithmetic-limitations.md)|  
 |[Сортировка](../../odbc/microsoft/sorting-limitations.md)|[Инструкция CREATE TABLE](../../odbc/microsoft/create-table-statement-limitations.md)|[Идентификаторы](../../odbc/microsoft/identifiers-limitations.md)|  
 |[Функция CONVERT](../../odbc/microsoft/convert-function-limitations.md)|[Инструкция DELETE](../../odbc/microsoft/delete-statement-limitations.md)|[Index Name](../../odbc/microsoft/index-name-limitations.md)|  
 ||[Инструкция DROP INDEX](../../odbc/microsoft/drop-index-statement-limitations.md)|[Параметризованный запрос](../../odbc/microsoft/parameterized-query-limitations.md)|  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/09/2017
 |||[ГДЕ предложения](../../odbc/microsoft/where-clause-limitations.md)|  
 |||[ГДЕ ТЕКУЩЕГО предложения](../../odbc/microsoft/where-current-of-clause-limitations.md)|  
 |||[Строковые значения](../../odbc/microsoft/string-limitations.md)|
-

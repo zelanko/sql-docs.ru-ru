@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - result sets [ODBC], about result sets
 - bind offsets [ODBC]
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0f669180407ed626ae9235bd666068b6889060b8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 85ee85c9bb44f32d33cee622c60c677f22b0ba7c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="retrieving-results-advanced"></a>Извлечение результатов (Дополнительно)
 Приложение может указать, что смещение добавляется связанный адреса буфер данных и соответствующие длины/индикатора буфера адреса при **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, или **SQLSetPos** вызывается. Результаты этих дополнений определения адреса, используемые в этих операциях.  
@@ -47,5 +45,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [Библиотека курсоров ODBC](../../../odbc/reference/develop-app/the-odbc-cursor-library.md)  
   
--   [Несколько результатов](../../../odbc/reference/develop-app/multiple-results.md)
-
+-   [Множественные результаты](../../../odbc/reference/develop-app/multiple-results.md)

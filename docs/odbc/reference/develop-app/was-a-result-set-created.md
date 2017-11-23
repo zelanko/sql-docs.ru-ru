@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- result sets [ODBC], determining if created
+helpviewer_keywords: result sets [ODBC], determining if created
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e2777ca00cf9535e1c3ddb41eee11f0c5ba6eb5f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4c38b613ed4c2e6efb5737118030905ab9de60b1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="was-a-result-set-created"></a>Была результирующий набор, созданный?
 В большинстве случаев разработчики приложений знать, будет ли создавать результирующий набор инструкций, который выполняет свое приложение. Это происходит, если приложение использует жестко запрограммированных инструкциях SQL, написанной программистом. Он ситуация обычно возникает, когда приложение инструкций SQL во время выполнения: программист может легко включить код, который помечает ли **ВЫБЕРИТЕ** инструкции или **вставить** , инструкция такую же структуру. В некоторых ситуаций программист не знает, возможно ли инструкция будет создать результирующий набор. Это значение true, если приложение позволяет пользователю вводить и выполнять инструкции SQL. Он также имеет значение true, если приложение создает инструкцию во время выполнения для выполнения процедуры.  
@@ -35,4 +32,3 @@ ms.lasthandoff: 09/09/2017
  Приложение может вызвать **SQLNumResultCols** в любое время после подготовки или выполнения инструкции. Тем не менее, так как некоторые источники данных не может легко описывать результирующих наборов, которые будут создаваться с подготовленными инструкциями, снижение производительности при **SQLNumResultCols** вызывается после подготовки инструкции, но перед его выполнением.  
   
  Некоторые источники данных также поддерживают определение числа строк, возвращаемых в результирующем наборе инструкции SQL. Чтобы сделать это, приложение вызывает **SQLRowCount**. Только что представляет число строк обозначается SQL_DYNAMIC_CURSOR_ATTRIBUTES2, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2, SQL_KEYSET_CURSOR_ATTRIBUTES2 или SQL_STATIC_CURSOR_ATTRIBUTES2 параметра (в зависимости от типа курсора) возвращается путем вызова **SQLGetInfo**. Указывает для каждого типа курсора, является ли точно, приблизительное число строк, возвращаемое этой битовой маске или доступна не во всех. Количество строк для статических ли изменения, внесенные на затронутые управляемые набором ключей курсоры **SQLBulkOperations** или **SQLSetPos**, или позиционированного обновления или инструкций delete, зависит от других bits Возвращает те же аргументы параметра с перечисленными выше. Дополнительные сведения см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) описание функции.
-

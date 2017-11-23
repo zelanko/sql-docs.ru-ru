@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-caps.latest.revision: 206
+caps.latest.revision: "206"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 827840a7aa7e221edaad60060fb51972460808ed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: bd65725237fd625c40f8755e636bb4f6fa2c55ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Заметки о выпуске для драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -133,7 +131,7 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
   
  Поддержка высокого уровня доступности и аварийного восстановления для группы доступности AlwaysOn в [!INCLUDE[ssSQL11](../../includes/sssql11_md.md)]. В разделе [драйвер JDBC поддерживает высокий уровень доступности и аварийного восстановления](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md) для получения дополнительной информации.  
   
- **С помощью встроенной проверки подлинности Kerberos для подключения к SQL Server**  
+ **Использование встроенной проверки подлинности Kerberos для соединения с SQL Server**  
   
  Поддержка типа 4 встроенной проверки подлинности Kerberos для приложений для подключения к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных. Дополнительные сведения см. в разделе [с помощью встроенной проверки подлинности Kerberos для подключения к SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). (Kerberos типа 2 доступна встроенной проверки подлинности в [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] версии до 4.0.)  
   
@@ -157,4 +155,3 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

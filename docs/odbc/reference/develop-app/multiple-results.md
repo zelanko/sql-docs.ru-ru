@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - result sets [ODBC], multiple results
 - SQLGetInfo function [ODBC], multiple results
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c6e9f4cb753a7849e87c8b4725e7e0fad0e953ca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="multiple-results"></a>Несколько результатов
 Объект *результат* что-нибудь возвращается источником данных после выполнения инструкции. ODBC имеет два типа результатов: результирующие наборы и количества строк. *Счетчики строк* , количество строк, с помощью инструкции update, delete или insert инструкции. Разделы, описанные в [пакеты инструкций SQL](../../../odbc/reference/develop-app/batches-of-sql-statements.md), можно создать несколько результатов.  
@@ -61,4 +59,3 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  Он зависит от драйвера ли инструкция весь пакет выполняется перед доступны все результаты. В некоторых реализациях это условие выполняется; в других вызов **SQLMoreResults** вызывает выполнение следующей инструкции в пакете.  
   
  В случае сбоя одного из инструкций в пакете **SQLMoreResults** вернет значение SQL_ERROR или SQL_SUCCESS_WITH_INFO. Если пакет был прерван при выполнении инструкции возникла ошибка или сбой инструкция была последней инструкцией в пакете, **SQLMoreResults** вернет значение SQL_ERROR. Если пакет не был прерван при выполнении инструкции возникла ошибка и неудачных инструкция была последней инструкцией в пакете, **SQLMoreResults** будет возвращено значение SQL_SUCCESS_WITH_INFO. SQL_SUCCESS_WITH_INFO указывает, по крайней мере один результирующий набор, или по количеству был создан и пакет не был прерван.
-

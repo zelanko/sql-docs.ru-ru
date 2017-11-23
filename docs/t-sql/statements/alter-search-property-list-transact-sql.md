@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,24 +18,22 @@ f1_keywords:
 - ALTER SEARCH PROPERTY
 - ALTER_SEARCH_TSQL
 - ALTER SEARCH
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], search property lists
 - search property lists [SQL Server], altering
 - ALTER SEARCH PROPERTY LIST statement
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: b56d1ae0be7a8aaef93011d6ecfde378a3e8fe91
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c93a8382bec0746ae3cfb8f43485da53a06184f0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +145,7 @@ WHERE CONTAINS( PROPERTY( column_name, 'new_search_property' ),
 GO   
 ```  
   
- Чтобы запустить полное заполнение, воспользуйтесь следующим [ALTER FULLTEXT INDEX & #40; Transact-SQL & #41; ](../../t-sql/statements/alter-fulltext-index-transact-sql.md) инструкции:  
+ Чтобы запустить полное заполнение, воспользуйтесь следующим [ALTER FULLTEXT INDEX &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-fulltext-index-transact-sql.md) инструкции:  
   
 ```  
 USE database_name;  
@@ -186,7 +183,7 @@ GO
  В следующем примере добавляется несколько свойств — `Title`, `Author` и `Tags` — к списку свойств с именем `DocumentPropertyList`.  
   
 > [!NOTE]  
->  Пример, который создает `DocumentPropertyList` список свойств см. в разделе [CREATE SEARCH PROPERTY LIST & #40; Transact-SQL & #41; ](../../t-sql/statements/create-search-property-list-transact-sql.md).  
+>  Пример, который создает `DocumentPropertyList` список свойств см. в разделе [CREATE SEARCH PROPERTY LIST &#40; Transact-SQL &#41; ](../../t-sql/statements/create-search-property-list-transact-sql.md).  
   
 ```  
 ALTER SEARCH PROPERTY LIST DocumentPropertyList  
@@ -218,13 +215,12 @@ DROP 'Comments' ;
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [СОЗДАТЬ список СВОЙСТВ поиска & #40; Transact-SQL & #41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
- [Удаление СПИСКА СВОЙСТВ поиска & #40; Transact-SQL & #41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
- [sys.registered_search_properties & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
- [sys.registered_search_property_lists & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
- [sys.dm_fts_index_keywords_by_property & #40; Transact-SQL & #41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
+ [СОЗДАТЬ список СВОЙСТВ поиска &#40; Transact-SQL &#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
+ [Удаление СПИСКА СВОЙСТВ поиска &#40; Transact-SQL &#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
+ [sys.registered_search_properties &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   
+ [sys.registered_search_property_lists &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md)   
+ [sys.dm_fts_index_keywords_by_property &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-property-transact-sql.md)   
  [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)  
   
   
-

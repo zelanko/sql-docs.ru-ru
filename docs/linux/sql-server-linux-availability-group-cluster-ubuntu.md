@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
+ms.openlocfilehash: cc6eee565499d696c4f634d6eedc562547bc8253
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7aa90eb3fd0a0ea66ea4b4fa09bd17d3e6887d7e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Настройка кластера Ubuntu и ресурс группы доступности
 
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/02/2017
    sudo apt-get install pacemaker pcs fence-agents resource-agents
    ```
 
-2. Задайте пароль для пользователя по умолчанию, который создается при установке пакетов Pacemaker и Corosync. Используйте тот же пароль на всех узлах. 
+2. Задайте пароль для пользователя по умолчанию, который создается при установке пакетов Pacemaker и Corosync. Используйте на всех узлах один и тот же пароль. 
 
    ```bash
    sudo passwd hacluster
@@ -104,7 +103,7 @@ sudo systemctl enable pacemaker
 
    Выполнение «ПК apt get установки sudo» устанавливает pacemaker, corosync и ПК в то же время и начинает работать все три службы.  Запуск corosync создает шаблон "/ etc/cluster/corosync.conf" файла.  Возможность успешного выполнения этот файл дальнейшие действия не должно существовать —, необходимо остановить pacemaker / corosync и удалите "/ etc/cluster/corosync.conf", и затем дальнейшие действия будут завершены успешно. «уничтожить кластер ПК» делает то же самое, и его можно использовать как временной этап установки исходного кластера.
    
-   Следующая команда удаляет все существующие файлы конфигурации кластера и останавливает все службы кластеров. Это окончательно удаляет кластера. Запустите его в качестве первого шага в предварительной рабочей среде. Обратите внимание что «компьютеры кластера уничтожить» отключены pacemaker служба и необходимо повторно включать. Выполните следующую команду на всех узлах.
+   Следующая команда удаляет все существующие файлы конфигурации кластера и останавливает все службы кластеров. Это окончательно удаляет кластера. Запустите его в качестве первого шага в предварительной рабочей среде. Обратите внимание что «компьютеры кластера уничтожить» отключены pacemaker служба и необходимо повторно включать. Выполните на всех узлах следующую команду.
    
    >[!WARNING]
    >Команда приведет к удалению любые существующие ресурсы кластера.
@@ -124,7 +123,7 @@ sudo systemctl enable pacemaker
    See "systemctl status corosync.service" and "journalctl -xe" for details.
    ```
   
-Следующая команда создает трех узлов кластера. Перед выполнением скрипта замените значения между `**< ... >**`. Выполните следующую команду на основном узле. 
+Следующая команда создает трех узлов кластера. Перед выполнением данного сценария замените значения между `**< ... >**`. Выполните следующую команду на основном узле. 
 
    ```bash
    sudo pcs cluster auth **<node1>** **<node2>** **<node3>** -u hacluster -p **<password for hacluster>**
@@ -234,5 +233,4 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ## <a name="next-steps"></a>Следующие шаги
 
 [Работать с высокой ДОСТУПНОСТИ группы доступности](sql-server-linux-availability-group-failover-ha.md)
-
 

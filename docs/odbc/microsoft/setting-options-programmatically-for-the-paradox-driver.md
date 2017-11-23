@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], Paradox driver
 - Jet-based ODBC drivers [ODBC], Paradox driver
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0c4b822a41f18250e92ed9fe4475507fef01127b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c353ec7cca4744a4189891a4123eaf6263b8fd51
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Настройка параметров программным образом с целью драйвера Paradox
 |Параметр|Description|Метод|  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |Выберите каталог|Отображает диалоговое окно, где можно выбрать каталог, содержащий файлы, которым требуется доступ.<br /><br /> При определении каталога источника данных укажите каталог, где наиболее часто используемых файлов находятся. Драйвер ODBC использует этот каталог в качестве каталога по умолчанию. Скопируйте в эту папку, другие файлы, если часто используются. Кроме того можно указывать имена файлов в инструкции SELECT с именем каталога:<br /><br /> ВЫБЕРИТЕ \* ИЗ C:\MYDIR\EMP<br /><br /> Или можно указать новый каталог по умолчанию с помощью **SQLSetConnectOption** функцию с параметром SQL_CURRENT_QUALIFIER.|Чтобы задать этот параметр динамически, используйте **его значения** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Выбор сетевого каталога|Полный путь к каталогу, содержащему Paradox блокировки базы данных, так как она содержит файл Pdoxusrs.net (в Paradox 4. *x*) или в файле Paradox.net (на Paradox 5. *x*). Если каталог не содержит ни одного из этих файлов, создается драйвером Paradox. Дополнительные сведения об этих файлах см. в документации Paradox.<br /><br /> Перед выбором сетевого каталога, необходимо ввести имя пользователя Paradox в **имя пользователя** текстовое поле. Нажмите кнопку **Выбор сетевого каталога** для выбора сетевого каталога.|Чтобы задать этот параметр динамически, используйте **PARADOXNETPATH** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Имя пользователя|Имя пользователя Paradox. Это имя отображается для других пользователей файлов Paradox, когда встречается блокировка.|Чтобы задать этот параметр динамически, используйте **PARADOXUSERNAME** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|
-

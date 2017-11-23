@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Jet-based ODBC drivers [ODBC], Access driver
 - desktop database drivers [ODBC], Access driver
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ed08d24f96b66b69bbff409cbc2c9e203526041b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1bc2426cdceebcd3537815e9bb1238eba160729f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Настройка параметров программным образом с целью драйвер доступа
 |Параметр|Description|Метод|  
@@ -44,4 +42,3 @@ ms.lasthandoff: 09/09/2017
 |Системная база данных|Полный путь к системной базы данных Microsoft Access для использования с базой данных Microsoft Access, необходимо получить доступ к.<br /><br /> Нажмите кнопку **системной базы данных** кнопку и выберите системную базу данных для использования. Драйвер ODBC Microsoft Access пользователю ввести имя и пароль. Имя по умолчанию — администратора и пароль по умолчанию в Microsoft Access для пользователя Admin является пустой строкой.<br /><br /> Для повышения безопасности базы данных Microsoft Access, создайте нового пользователя для замены пользователя Admin и удалите учетную запись пользователя Admin или изменения объектов, к которым у пользователя Admin есть доступ.|Чтобы задать этот параметр динамически, используйте **SYSTEMDB** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Потоки|Число фоновых потоков, используемых механизмом. Для драйвера Microsoft Access это значение по умолчанию — 3, но могут быть изменены. Пользователь может потребоваться увеличить число потоков, если имеется большое число операций в базе данных.<br /><br /> Этот параметр включен в **Дополнительные параметры** диалоговое окно драйвером Microsoft Access.|Чтобы задать этот параметр динамически, используйте **ПОТОКОВ** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |UserCommitSync|Определяет, является ли драйвером Microsoft Access асинхронно выполнения явные транзакции, определяемых пользователем. Это значение изначально установлено значение «Да», это означает, что драйвер Microsoft Access будет ожидать передачи в пользовательской транзакции должны завершаться.<br /><br /> Установка этого параметра в значение False, может привести к непредсказуемым результатам в многопользовательской среде.|Чтобы задать этот параметр динамически, используйте **USERCOMMITSYNC** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|
-

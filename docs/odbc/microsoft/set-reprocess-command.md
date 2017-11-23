@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- SET REPROCESS command [ODBC]
+helpviewer_keywords: SET REPROCESS command [ODBC]
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c8e907d01b79c314603ba87c8195e56c8710bd10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-reprocess-command"></a>Повторная ОБРАБОТКА команды SET
 Указывает, сколько раз или как long, чтобы заблокировать файлы и записи после блокировки после неудачной попытки.  
@@ -62,4 +59,3 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>Замечания  
  Первая попытка блокировка файла или записи не всегда успешно. Как правило запись или файл заблокирован другим пользователем в сети. УСТАНОВИТЬ повторно ОБРАБОТАТЬ определяет ли Visual FoxPro дополнительных предпринимает попытки блокировка файла или записи, при начальной не удалось. Можно указать либо сколько раз дополнительных попыток выполняются или выполняются как долго попыток. Обработчика ОШИБОК ON влияет как неудачных блокировки, обрабатываются попыток.
-

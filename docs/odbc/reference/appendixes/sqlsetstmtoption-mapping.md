@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - mapping deprecated functions [ODBC], SQLSetStmtOption
 - SQLSetStmtOption function [ODBC], mapping
 ms.assetid: 6a9921aa-8a53-4668-9b13-87164062f1e5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8e70f226277b3ad4932756095a8ebc2f3121ee0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3aba3d69d8bbb90b1296bf821b6552d25a05b7b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlsetstmtoption-mapping"></a>Сопоставление SQLSetStmtOption
 Если приложение вызывает **SQLSetStmtOption** через ODBC 3*.x* драйвера, вызов  
@@ -64,4 +62,3 @@ SQLSetStmtOption(StatementHandle, fOption, vParam)
  Если приложение вызывает **SQLSetStmtAttr** присваивается SQL_UB_ON в ODBC 3 SQL_ATTR_USE_BOOKMARKS*.x* драйвера атрибута инструкции SQL_ATTR_USE_BOOKMARKS задано значение SQL_UB_FIXED. SQL_UB_ON является одной константе как SQL_UB_FIXED. Диспетчер драйверов передает SQL_UB_FIXED через драйвер. В ODBC 3 является устаревшим SQL_UB_FIXED*.x*, а ODBC 3*.x* драйвер должен реализовывать его для работы с ODBC 2. *x* приложений, использующих закладки фиксированной длины.  
   
  Для ODBC 3*.x* драйвера, диспетчер драйверов больше не проверяет *параметр* — между SQL_STMT_OPT_MIN и SQL_STMT_OPT_MAX или больше, чем SQL_CONNECT_OPT_DRVR_START.
-

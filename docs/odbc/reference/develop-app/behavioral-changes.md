@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - behavioral changes [ODBC]
 - compatibility [ODBC], behavioral changes
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3941b8cdc2a53cb0f9fe3ad2b94f2ef972ad3775
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5709d3ef8d186d0dcc0fb56f27829298f74e2b0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="behavioral-changes"></a>Изменения поведения
 Изменения поведения являются эти изменения, для которого *синтаксис* интерфейса остается тем же, но *семантику* были изменены. Прежде чем эти изменения функции, используемые в ODBC 2. *x* ведет себя иначе, чем те же функциональные возможности в ODBC 3. *x*.  
@@ -54,5 +52,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [Сопоставления SQLSTATE](../../../odbc/reference/develop-app/sqlstate-mappings.md)  
   
--   [Изменение типов данных даты и времени](../../../odbc/reference/develop-app/datetime-data-type-changes.md)
-
+-   [Изменения в типе данных Datetime](../../../odbc/reference/develop-app/datetime-data-type-changes.md)

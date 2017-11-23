@@ -3,17 +3,18 @@ title: "время (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 6/7/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|data-types
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - time_TSQL
 - time
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - time [SQL Server], data types
 - time [SQL Server]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - data types [SQL Server], date and time
 - time data type [SQL Server]
 ms.assetid: 30a6c681-8190-48e4-94d0-78182290a402
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 4a5a46eee481e9da3f388f88e982d705dbe150ea
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
-ms.openlocfilehash: fc0a9e68c9dc3ad664a4f091b73b073038c7f4c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/05/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Определяет время дня. Время без учета часового пояса в 24-часовом формате.  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 10/05/2017
 |Синтаксис|**время** [(*долей второй шкалы*)]|  
 |Использование|ОБЪЯВИТЕ @MyTime **time(7)**<br /><br /> CREATE TABLE Таблица1 (Столбец1 **time(7)** )|  
 |*Масштаб для долей секунды*|Задает число знаков для долей секунды.<br /><br /> Может быть целым числом от 0 до 7. Для Informatica это может быть целое число от 0 до 3.<br /><br /> Доли масштаб по умолчанию является 7 (100 нс).|  
-|Формат строковых литералов по умолчанию<br /><br /> (используется для клиента нижнего уровня)|чч [.ннннннн] (чч [.Ннн] для Informatica)<br /><br /> Дополнительные сведения см. в подразделе «Обратная совместимость для клиентов низкого уровня» следующего раздела.|  
+|Формат строковых литералов по умолчанию<br /><br /> (используется для клиента нижнего уровня)|чч [.ннннннн] Informatica)<br /><br /> Дополнительные сведения см. в подразделе «Обратная совместимость для клиентов низкого уровня» следующего раздела.|  
 |Диапазон|00:00:00.0000000 через 23:59:59.9999999 (00:00:00.000 через 23:59:59.999 для Informatica)|  
 |Диапазоны элементов|Обозначение чч состоит из двух цифр, представляющих час, и принимает значения от 0 до 23.<br /><br /> Обозначение мм состоит из двух цифр, представляющих минуты, и принимает значения от 0 до 59.<br /><br /> Обозначение сс состоит из двух цифр, представляющих секунды, и принимает значения от 0 до 59.<br /><br /> n\*— от нуля до семи цифр, от 0 до 9999999, представляющее доли секунды. Для Informatica n\* — от нуля до трех цифр, в диапазоне от 0 до 999.|  
 |Длина в символах|минимально 8 позиций (ЧЧ) до 16 максимально (чч:мм:сс.ннннннн). Для Informatica максимальное — 12 (hh:mm:ss.nnn).|  
@@ -277,4 +277,3 @@ SELECT
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   
-

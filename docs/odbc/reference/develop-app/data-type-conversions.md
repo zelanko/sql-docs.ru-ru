@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - converting data types [ODBC]
 - C data types [ODBC], conversions
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7742b8f95ba8fef61777e2cb106b6df12285ee3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2369b39ff415a5387205ce62811594fe08a9f324
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-type-conversions"></a>Преобразование типов данных
 Данные могут преобразовываться из одного типа в другой на одном из четырех раз: когда данные передаются из переменной одного приложения в другую (C по C) при отправке данных в переменную приложения к параметру инструкции (для SQL C), при возврате данных в столбец результирующего набора в переменную приложения (SQL в C), а при передаче данных из столбца источника данных на другой (SQL на SQL).  
@@ -41,4 +39,3 @@ ms.lasthandoff: 09/09/2017
  ODBC определяет способ преобразования данных между каждого типа данных SQL и C. По сути ODBC, поддерживающий преобразования всех разумного, таких как символ, целое число со знаком и целое число, число с плавающей запятой и не поддерживает неверно преобразования, такие как число с плавающей запятой до даты. Необходимые драйверы для поддержки для каждого типа данных SQL, которые они поддерживают все преобразования. Полный список преобразований между типами данных SQL и C см. в разделе [преобразование данных из SQL в типы данных C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) и [преобразование данных из C в типы данных SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) в типах данных приложение D:.  
   
  ODBC также определяет скалярную функцию для преобразования данных из одного типа данных SQL в другой. **Преобразовать** скалярная функция сопоставлен драйвером базовой скалярной функции или функции, определенные для выполнения преобразования в источнике данных. Так как эта функция сопоставлен с функциями СУБД, ODBC не определяет, как работают эти преобразования или какие преобразования должен поддерживаться. Приложение обнаруживает какие преобразования поддерживаемых конкретного драйвера и источник данных по элементам SQL_CONVERT **SQLGetInfo**. Дополнительные сведения о **преобразовать** скалярной функции в разделе [Escape-последовательности ODBC в](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) и [явную функцию преобразования типа данных](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).
-

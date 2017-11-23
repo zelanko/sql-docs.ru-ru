@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - cursor library [ODBC], searched statements
 - SQL statements [ODBC], searched statements
 ms.assetid: e429254c-c43f-4fbf-98b2-5f1ed53501ff
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: c7b989547fa41d187ac33efe65050bc09add3a0f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 90464acc97539252ae24aa6f959c16f58465d715
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="constructing-searched-statements"></a>Создав поиск инструкций
 > [!IMPORTANT]  
@@ -55,4 +53,3 @@ ms.lasthandoff: 09/09/2017
 -   **Укажите ненулевой длины буферов для двоичных данных C.** Библиотека курсоров выделяет буферы длины в его кэша, только если *StrLen_or_IndPtr* аргумент в **SQLBindCol** отлично от null. Когда *TargetType* аргумент SQL_C_BINARY, библиотека курсоров требуется длина двоичных данных для создания **ГДЕ** предложения из данных. Если имеется не буфер длины для столбца SQL_C_BINARY и приложение вызывает **SQLGetData** или пытается выполнить позиционированного обновления или delete, инструкция возвращает библиотеки курсоров SQL_ERROR и SQLSTATE SL014 (позиционированные запрос был выдан и были буфер не все поля число столбцов).  
   
 -   **Укажите буферы ненулевой длины для столбцов со значением NULL.** Библиотека курсоров выделяет буферы длины в его кэша, только если *StrLen_or_IndPtr* аргумент в **SQLBindCol** отлично от null. Поскольку SQL_NULL_DATA хранится в буфер длины, библиотеку курсоров считает любой столбец, буфер задается для длина не допускают значение NULL. Если столбец не длину задан для столбца значения NULL, создает библиотеку курсоров **ГДЕ** предложение, которое использует значение данных для столбца. Это предложение не будет правильно идентифицировать строку.
-

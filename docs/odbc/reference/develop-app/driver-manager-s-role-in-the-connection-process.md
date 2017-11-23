@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - connecting to driver [ODBC], driver manager
 - ODBC driver manager [ODBC]
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 797d3439b378cb5caef62af019352ff6797fdb43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Диспетчер драйверов &#39; s роль в процессе подключения
 Помните, что приложения не вызывают функции драйверов напрямую. Вместо этого они вызывают функции диспетчера драйверов с тем же именем, и диспетчер драйверов вызывает функции драйвера. Как правило это происходит почти мгновенно. Например, приложение вызывает **SQLExecute** диспетчера драйверов и после нескольких проверок ошибок, диспетчер драйверов вызывает **SQLExecute** в драйвере.  
@@ -48,4 +46,3 @@ ms.lasthandoff: 09/09/2017
  Диспетчер драйверов заблокирует дескриптора среды (*henv*) перед вызовом драйвер **SQLAllocHandle** и **SQLFreeHandle** при *HandleType* равно **SQL_HANDLE_DBC**.  
   
  Когда приложение вызывает **SQLDisconnect**, диспетчер драйверов вызывает **SQLDisconnect** в драйвере. Тем не менее оно оставляет драйвер загружен в случае, если приложение подключается к драйверу. Когда приложение вызывает **SQLFreeHandle** с параметром SQL_HANDLE_DBC, диспетчер драйверов вызывает **SQLFreeHandle** в драйвере. Если драйвер не используется для любых других соединений, диспетчер драйверов вызывает **SQLFreeHandle** в драйвере с SQL_HANDLE_ENV параметр и выгружает драйвер.
-

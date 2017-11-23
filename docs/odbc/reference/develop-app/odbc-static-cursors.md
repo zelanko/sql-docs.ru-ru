@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - cursors [ODBC], static
 - static cursors [ODBC]
 ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b8073bd935f010a91c9dde8863e1731ab3032a7e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: aaddef08bfea9e1a1820727743e5212557d823d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-static-cursors"></a>Статические курсоры ODBC
 Статический курсор является одним появится результирующий набор будет статическим. Он обычно обнаруживает изменения, внесенные в членство, порядок или значения результирующего набора, после открытия курсора. Например предположим, статический курсор извлекает строки и другое приложение, а затем обновляет этой строки. Если статический курсор refetches строки, значения, которые видит не изменяются, несмотря на изменения, внесенные другим приложением.  
@@ -36,4 +34,3 @@ ms.lasthandoff: 09/09/2017
  Массив состояния строк, заданного атрибутом sql_attr_row_status_ptr, которое указывает оператор может содержать SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO или SQL_ROW_ERROR для любой строки. Возвращает SQL_ROW_UPDATED, SQL_ROW_DELETED или SQL_ROW_ADDED для строк, обновленных, удалены или вставлены курсором, при условии, что курсор может обнаружить такие изменения.  
   
  Статические курсоры обычно реализованы блокировку строк в результирующем наборе, либо путем создания копии или моментального снимка, результирующего набора. Несмотря на то, что блокировка строк — достаточно просто, он имеет недостаток значительно снижает параллелизма. Создание копии обеспечивает больше параллелизма и позволяет курсор для отслеживания свои собственные обновления, удаления и вставляет путем изменения копии. Однако копии является более высокая стоимость сделать и может отличаться от базовых данных при изменении данных другими пользователями.
-

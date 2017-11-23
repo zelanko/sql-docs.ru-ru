@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - database access [ODBC]
 - standardizing database access [ODBC], using ODBC
 ms.assetid: 34b80790-e010-4b90-8eaa-03189f5d8986
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 806bc94a3807dbdd658cf710c0d22e2b6116d27b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-odbc-solution"></a>Решение ODBC
 Ответ на запрос, такое как ODBC стандартизировать системные базы данных access Существует два архитектурные требования:  
@@ -64,4 +62,3 @@ ms.lasthandoff: 09/09/2017
      Приложение может определить, какие возможности драйвера и СУБД, ODBC предоставляет две функции (**SQLGetInfo** и **SQLGetFunctions**), которые возвращают Общие сведения о драйвера и СУБД драйвер поддерживает возможности и список функций. ODBC также определяет API и SQL уровни соответствия грамматики, определяющие широкий диапазон возможностей, поддерживаемых драйвером. Дополнительные сведения см. в разделе [уровни соответствия](../../odbc/reference/develop-app/conformance-levels.md).  
   
      Важно помнить, что ODBC определяет общий интерфейс для всех функций, которые она предоставляет. По этой причине приложения содержат определенные функции код, не зависящие от СУБД и могут использовать драйверы, которые предоставляют эти возможности. Является одним из преимуществ этого приложения не обязательно будут обновляться при улучшены возможности, поддерживаемые СУБД; Вместо этого при установке обновленного драйвера, приложение автоматически использует возможности потому что его код определенные функции, не относящиеся к драйверу или СУБД.
-

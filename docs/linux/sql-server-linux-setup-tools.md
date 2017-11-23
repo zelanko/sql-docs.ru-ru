@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
+ms.openlocfilehash: 8d97ba08eae758a22195250521935268aadb770e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 130da2409070f0acfda0bf78fcf2c4326bbeec92
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установите sqlcmd и bcp средства командной строки SQL Server в Linux
 
@@ -207,7 +206,7 @@ brew install --no-sandbox mssql-tools
 
 В следующей таблице приведены расположение для последних пакетов средств:
 
-| Пакет средств | Версия | Загрузить |
+| Пакет средств | Version | Загрузить |
 |-----|-----|-----|
 | Пакет средств Red Hat об/мин | 14.0.5.0-1 | [пакет средств MSSQL об/мин](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | Пакет средств SLES об/мин | 14.0.5.0-1 | [пакет средств MSSQL об/мин](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -216,7 +215,7 @@ brew install --no-sandbox mssql-tools
 
 Эти пакеты зависят от **msodbcsql**, который необходимо сначала установить. **Msodbcsql** пакет также имеет зависимость от либо **unixODBC devel** (RPM) или **unixodbc-dev** (Debian). Расположение **msodbcsql** пакетов, перечислены в следующей таблице:
 
-| пакет msodbcsql | Версия | Загрузить |
+| пакет msodbcsql | Version | Загрузить |
 |-----|-----|-----|
 | Пакет msodbcsql Red Hat RPM | 13.1.6.0-1 | [пакет RPM msodbcsql](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | Пакет SLES RPM msodbcsql | 13.1.6.0-1 | [пакет RPM msodbcsql](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
@@ -270,4 +269,3 @@ brew install --no-sandbox mssql-tools
 - [Запустите на Docker](quickstart-install-connect-ubuntu.md)
 
 Пример использования **bcp** для массового импорта и экспорта данных, в разделе [массового копирования данных в SQL Server в Linux](sql-server-linux-migrate-bcp.md).
-

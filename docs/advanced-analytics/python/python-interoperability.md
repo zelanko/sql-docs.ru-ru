@@ -1,31 +1,26 @@
 ---
-title: "Взаимодействие Python | Документы Microsoft"
+title: "Python взаимодействие с SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: ee7187d490c8da80c66fb27156b2726e71782238
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="python-interoperability"></a>Взаимодействие с Python
+# <a name="python-interoperability-with-sql-server"></a>Python взаимодействие с SQL Server
 
 В этом разделе описаны компоненты Python, которые будут установлены, если включена функция **службы обучения машины (в базе данных)** и выберите в качестве языка Python.
-
-> [!NOTE]
-> Поддержка Python — это функция предварительной версии и еще находится в стадии разработки.
 
 ## <a name="python-components"></a>Компоненты Python
 
@@ -35,11 +30,11 @@ ms.lasthandoff: 09/01/2017
 
 Например если вы установили службы обучения машины с параметром Python на экземпляре по умолчанию, найдите его в разделе:
 
-`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER`
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES`
 
 Установка служб SQL Server 2017 г машины обучения добавляет распределение Anaconda Python. В частности используются установщики Anaconda 3, основании Anaconda 4.3 ветви. Ожидаемый уровень Python для SQL Server 2017 г. — Python 3.5.
 
-## <a name="new-in-this-release"></a>В этом выпуске
+## <a name="new-python-packages-in-this-release"></a>Новые пакеты Python в этом выпуске
 
 Список пакетов, поддерживаемых дистрибутив Anaconda, см. на сайте компания Continuum analytics: [Anaconda список пакетов](https://docs.continuum.io/anaconda/pkg-docs)
 
@@ -47,9 +42,9 @@ ms.lasthandoff: 09/01/2017
 
 Эта библиотека предоставляет следующие функциональные возможности, эквивалентное значению **RevoScaleR** пакет для Microsoft R. Другими словами, поддерживает создание контекстах удаленных вычислений, а также различными моделей масштабируемой машинного обучения, такие как **rxLinMod**. Дополнительные сведения о RevoScaleR см. в разделе [распределенных и параллельных вычислений с ScaleR](https://msdn.microsoft.com/microsoft-r/scaler-distributed-computing).
 
-Поскольку поддержки для Python — это функция предварительной версии и находится в разработке, **revoscalepy** библиотека в настоящее время содержит только подмножество функциональных возможностей RevoScaleR. 
+[Microsoftml для Python](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) пакет устанавливается как часть машинного обучения SQL Server при добавлении Python в установку. Этот пакет содержит много алгоритмов машинного обучения, оптимизированные для скорость и точность, а также строки преобразования для работы с текстом и изображениями. Дополнительные сведения см. в разделе [с помощью пакета MicrosoftML с SQL Server](https://docs.microsoft.com/sql/advanced-analytics/using-the-microsoftml-package).
 
-Может включать последующих добавлений [Когнитивных набор средств Microsoft](https://www.microsoft.com/research/product/cognitive-toolkit/). Прежнее название — CNTK, эта библиотека поддерживает различные модели нейронной сети, включая convolutional сетей (CNN), повторяющемся сетей (RNN) и Long короткий памяти термин сетей (LSTM).
+Microsoftml и revoscalepy тесно связаны; Источники данных в microsoftml определяются как revoscalepy объектов. Вычисление ограничения контекста в операцию передачи revoscalepy microsoftml. А именно все функциональные возможности доступны для локальных операций, но при переключении контекста удаленных вычислений необходим RxInSqlServer.
 
 ## <a name="using-python-in-sql-server"></a>С помощью Python в SQL Server
 
@@ -76,5 +71,4 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="see-also"></a>См. также:
 
-[Библиотеки Python и типы данных](python-libraries-and-data-types.md)
-
+[Библиотеки и типы данных Python](python-libraries-and-data-types.md)

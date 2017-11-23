@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - statement handles [ODBC]
 - handles [ODBC], statement
 ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: dedc2ece9c73c0be4e9bbab61e231ab8e2d3060a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 64c949c8b3b3c794d6089ff159e597aeec02cfed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="statement-handles"></a>Дескрипторы инструкций
 Объект *инструкции* проще всего воспринимать как инструкция SQL, таких как **ВЫБЕРИТЕ \* сотрудника из**. Однако оператор является не просто инструкцией SQL, оно содержит все сведения, связанные с этой инструкции SQL, таких как все результирующие наборы, созданного с помощью инструкции и параметров, используемых при выполнении инструкции. Оператор даже не нужно иметь инструкции SQL, определяемые приложением. Например, при каталога функции например **SQLTables** выполняется в операторе, он выполняет существующую инструкцию SQL, который возвращает список имен таблиц.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
  Дескрипторы инструкций используются в большинстве функций ODBC. В частности, они используются в функциях привязать параметры и привести столбцы набора (**SQLBindParameter** и **SQLBindCol**), Подготовка и выполнение инструкций (**SQLPrepare** **SQLExecute**, и **SQLExecDirect**), извлечь метаданные (**SQLColAttribute** и **SQLDescribeCol**), fetch результаты (**SQLFetch**) и получения диагностических (**SQLGetDiagField** и **SQLGetDiagRec**). Они также используются в функции каталогов (**SQLColumns**, **SQLTables**и так далее) и ряд других функций.  
   
  Дескрипторы инструкций выделяются с **SQLAllocHandle** и освобождается с помощью **SQLFreeHandle**.
-

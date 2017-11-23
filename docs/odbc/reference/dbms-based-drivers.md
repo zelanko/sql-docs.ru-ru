@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - DBMS-based drivers [ODBC]
 - ODBC architecture [ODBC], drivers
 ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7b806f4c887af3f1ba80ee3321820e97dd336fad
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dbms-based-drivers"></a>Драйверов на основе DBMS
 Драйверов на основе СУБД используются с источниками данных, например Oracle или SQL Server, предоставляющие изолированный компонент database engine для использования драйвера. Эти драйверы физических данных обращаться из автономного обработчика. то есть они отправлять инструкции SQL и получить результаты из ядра.  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
  На следующем рисунке три различные конфигурации для драйверов на основе DBMS. В первой конфигурации драйвера и источник данных находятся на том же компьютере. Во втором драйвер и источник данных находятся на разных компьютерах. В третьем драйвер и источник данных находятся на разных компьютерах и шлюз располагается между ними, размещенный на компьютере еще один.  
   
  ![Три конфигурации для СУБД &#45; на основе драйверы](../../odbc/reference/media/pr07.gif "pr07")
-

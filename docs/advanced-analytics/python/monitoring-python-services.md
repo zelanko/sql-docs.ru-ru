@@ -1,31 +1,25 @@
 ---
 title: "Наблюдение за службами Python | Документы Microsoft"
 ms.custom: 
-ms.date: 04/18/2017
-ms.prod: sql-server-2016
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
+ms.openlocfilehash: 2ceb39953380f2742f8a845f540b378a60d8200b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 79165746d00ad0f381cd702ef9ac31358f4e136d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-python-services"></a>Наблюдение за службами Python
 
 Этот раздел находится в стадии разработки.
 
-> [!NOTE]
-> Поддержка Python — это новая функция в SQL Server 2017 г. и в предварительной версии. Искать дополнительные сведения в ближайшее время.
-
 Как правило вы можете отслеживать любого внешнего сценария, в том числе, обрабатывающий Python, с помощью того же платформы, предоставленный для выполнения скриптов R в SQL Server 2016. Дополнительные сведения см. в разделе [мониторинг служб R](../r/monitoring-r-services.md).
-

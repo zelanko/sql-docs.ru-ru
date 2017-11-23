@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQL grammar [ODBC]
 - ODBC drivers [ODBC], SQL grammar
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 72efaedb35351454fbf464ed1a2c941239ff9c58
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9f021092afb3cf4f404b066a476270feac321869
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Дополнительные поддерживаемые SQL-грамматику ODBC
 Драйверы ODBC полностью поддерживают грамматики минимум 2,5 ODBC и следующие предложения в грамматике основные и расширенные 2.5 ODBC. Дополнительные сведения могут быть отображены за счет перехода [инструкции ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [корреляционные имена](../../odbc/microsoft/correlation-names.md), и [вызова процедуры](../../odbc/microsoft/procedure-invocation.md) разделы.  
@@ -43,21 +41,21 @@ ms.lasthandoff: 09/09/2017
   
 -   [МЕЖДУ предикат](../../odbc/microsoft/between-predicate.md) (Core)  
   
--   [Создание инструкции ИНДЕКСА](../../odbc/microsoft/create-index-statement.md)  
+-   [Инструкция CREATE INDEX](../../odbc/microsoft/create-index-statement.md)  
   
--   [Дата арифметические операции](../../odbc/microsoft/date-arithmetic.md)  
+-   [Арифметические операции с датами](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet: Даты, времени и отметок времени литералы](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet: литералы даты, времени и отметок времени](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [Инструкция DROP INDEX](../../odbc/microsoft/drop-index-statement.md)  
   
--   [Текстовый файл с фиксированной шириной](../../odbc/microsoft/fixed-width-text-file.md)  
+-   [Текстовый файл фиксированной ширины](../../odbc/microsoft/fixed-width-text-file.md)  
   
--   [GROUP BY-список выражений](../../odbc/microsoft/group-by-expression-list.md)  
+-   [Список выражений GROUP BY](../../odbc/microsoft/group-by-expression-list.md)  
   
--   [ORDER BY-список выражений](../../odbc/microsoft/order-by-expression-list.md)  
+-   [Список выражений ORDER BY](../../odbc/microsoft/order-by-expression-list.md)  
   
--   [ORDER BY с предложением GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
+-   [Использование ORDER BY с GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
 -   Предикат EXISTS (Core)  
   
@@ -72,4 +70,3 @@ ms.lasthandoff: 09/09/2017
 -   [Скалярные функции](../../odbc/microsoft/scalar-functions.md)  
   
 -   [Имена таблиц](../../odbc/microsoft/table-names.md)
-

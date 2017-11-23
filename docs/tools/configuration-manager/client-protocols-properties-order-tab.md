@@ -5,26 +5,23 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- client protocols [SQL Server]
+helpviewer_keywords: client protocols [SQL Server]
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2c3e253853ebcaec3217634605e573d9a96bd063
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e92bac20c6f709964dabf08710c2b18b5db0c1e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# Свойства клиентских протоколов (вкладка «Порядок»)
+# <a name="client-protocols-properties-order-tab"></a>Свойства клиентских протоколов (вкладка «Порядок»)
   Используйте страницу **Порядок**диалогового окна **Свойства клиентских протоколов** для просмотра и включения клиентских протоколов.  
   
  Щелкните протокол, а затем выберите команду **Включить** или **Выключить** для перемещения выбранного протокола в список **Отключенные протоколы** или **Включенные протоколы** .  
@@ -34,7 +31,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Эти настройки не используются клиентом [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET SqlClient. В порядке протоколов для клиента .NET SqlClient первым идет протокол TCP, а затем именованные каналы. Этот порядок нельзя изменить.  
   
-## Параметры  
+## <a name="options"></a>Параметры  
  **Отключенные протоколы**  
  Содержит список установленных, но не используемых в данный момент протоколов.  
   
@@ -59,8 +56,7 @@ ms.lasthandoff: 08/02/2017
 > [!NOTE]  
 >  Если протокол определен через префикс или как часть строки соединения, то попытка подключения будет происходить только через определенный протокол.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выбор сетевого протокола](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   
   
-

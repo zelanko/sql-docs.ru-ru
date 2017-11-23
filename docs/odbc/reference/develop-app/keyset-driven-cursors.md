@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - keyset-driven cursors [ODBC]
 - cursors [ODBC], key-set driven
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="keyset-driven-cursors"></a>Управляемые набором ключей курсоры
 Курсор, управляемый набором ключей находится в диапазоне от статического и динамического курсора в ее способности обнаруживать изменения. Как статический курсор он не всегда обнаруживает изменения в членство и порядок результирующего набора. Как динамический курсор обнаруживать изменения значений строк в результирующем наборе (в зависимости от уровня изоляции транзакции, задаваемое при помощи атрибута SQL_ATTR_TXN_ISOLATION соединения).  
@@ -42,4 +40,3 @@ ms.lasthandoff: 09/09/2017
  Управляемые набором ключей курсоры обычно реализуются путем создания временной таблицы, содержащий ключи для каждой строки в результирующем наборе. Поскольку курсор необходимо также определить, выполнялось ли обновление строк, эта таблица обычно содержит столбец с сведений об управлении версиями строк.  
   
  Для прокрутки на исходном результирующем наборе курсора, управляемого набором ключей открывает статический курсор над временной таблицы. Для получения строки в исходном результирующем наборе, курсор сначала извлекает соответствующий ключ из временной таблицы, а затем получает текущие значения строки. При использовании блочных курсоров курсор должен получить несколько ключей и строк.
-

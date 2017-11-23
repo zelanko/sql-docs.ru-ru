@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a900a32cbaca2337930f7bb84aafcb634dcb508e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5e4cbbfc9d2b73d0a7c79ebc2791f588a7c8f862
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Использование инструкций с драйвером JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -47,7 +45,7 @@ ms.lasthandoff: 09/09/2017
 |[Использование инструкций в SQL](../../connect/jdbc/using-statements-with-sql.md)|Описывает, как использовать инструкции SQL с драйвером JDBC для работы с данными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
 |[Использование инструкций с хранимыми процедурами](../../connect/jdbc/using-statements-with-stored-procedures.md)|Описывает использование хранимых процедур с драйвером JDBC для работы с данными в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] базы данных.|  
 |[Использование нескольких результирующих наборов](../../connect/jdbc/using-multiple-result-sets.md)|Описывает использование драйвера JDBC для извлечения данных из нескольких результирующих наборов.|  
-|[С помощью Escape-последовательностей SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Описывает использование escape-последовательностей SQL, таких как литералы даты и времени и функции.|  
+|[Использование escape-последовательностей SQL](../../connect/jdbc/using-sql-escape-sequences.md)|Описывает использование escape-последовательностей SQL, таких как литералы даты и времени и функции.|  
 |[Использование автоматически сформированных ключей](../../connect/jdbc/using-auto-generated-keys.md)|Описывает использование автоматически формируемых ключей.|  
 |[Выполнение пакетных операций](../../connect/jdbc/performing-batch-operations.md)|Описывает использование драйвера JDBC для выполнения пакетных операций.|  
 |[Обработка сложных инструкций](../../connect/jdbc/handling-complex-statements.md)|Описывает использование драйвера JDBC для выполнения сложных инструкций, выполняющих несколько заданий и могущих вернуть различные типы данных.|  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

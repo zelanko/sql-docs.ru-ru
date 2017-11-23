@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - transaction isolation [ODBC]
 - transactions [ODBC], isolation
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e4db2f357942eb7bab34a17e8f9c03e442731055
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 192962491095f8c6b8fb212ab7789cb74b609897
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Прокручиваемые курсоры и транзакции изоляции
 В следующей таблице перечислены факторы, управляющие видимостью изменений.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/09/2017
  S: сериализуемые  
   
  [b] зависит от реализации курсора. Является ли курсор может обнаружить такие изменения передается через параметр SQL_STATIC_SENSITIVITY в **SQLGetInfo**.
-

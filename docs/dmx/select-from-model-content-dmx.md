@@ -17,23 +17,21 @@ f1_keywords:
 - SELECT
 - FROM
 - Content
-dev_langs:
-- DMX
+dev_langs: DMX
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
 - SELECT FROM <model>.CONTENT statement
 ms.assetid: a270b33f-77be-41fa-9340-2f6cb0dd75e5
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
+ms.openlocfilehash: 7eaccd559a0898e489bf7befead782c7d3387245
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d4a5f64e297e59d612be82f99e14f89df081be12
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;модели&gt;. СОДЕРЖИМОЕ (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +77,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |MODEL_SCHEMA|Свободное имя схемы. Имеет значение NULL, если поставщик не поддерживает схемы.|  
 |MODEL_NAME|Имя модели. Этот столбец не может содержать значение NULL.|  
 |ATTRIBUTE_NAME|Имя атрибута, соответствующего этому узлу.|  
-|NODE_NAME|Имя узла.|  
+|NODE_NAME|Тип узла.|  
 |NODE_UNIQUE_NAME|Уникальное имя узла внутри модели.|  
 |NODE_TYPE|Целое число, представляющее тип узла. .|  
 |NODE_GUID|Идентификатор GUID узла. Имеет значение NULL, если идентификатор GUID отсутствует.|  
@@ -168,4 +166,3 @@ WHERE NODE_TYPE = 26
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
   
   
-

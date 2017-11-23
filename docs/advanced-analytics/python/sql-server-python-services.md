@@ -1,27 +1,23 @@
 ---
-title: "Службы R SQL Server | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/22/2017
-ms.prod: sql-server-2016
+title: "Машинного обучения служб с помощью Python | Документы Microsoft"
+ms.date: 11/03/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- r-services
+ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba1dea65-40ea-484a-b767-53680c954934
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
+ms.openlocfilehash: af81754d0e6b87546432ea864098da4615522670
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 140885b86f0f6fa1a56119246c859f143f596726
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="machine-learning-services-with-python"></a>Машинного обучения служб с Python
 
@@ -33,11 +29,11 @@ Python — это язык, который обеспечивает большу
 
 Можно установить все необходимое для начала работы с Python в программе установки SQL Server 2017 г.:
 
-+ **Службы обучения машины (в базе данных):** установить этот компонент, а также ядро базы данных SQL Server, чтобы обеспечить безопасное выполнение скриптов R на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компьютера.
++ **Службы обучения машины (в базе данных):** установить этот компонент, а также ядро базы данных SQL Server, чтобы обеспечить безопасное выполнение сценариев Python в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компьютера.
   
      При выборе этого компонента, расширения устанавливаются в компоненте database engine, чтобы поддерживать выполнение сценариев Python и создается новая служба, [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], чтобы управлять взаимодействием между средой выполнения Python и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра.
 
-+ **Машины обучения Server (изолированный):** при интеграции SQL Server не требуется, установите этот компонент, чтобы получить поддержку Python в Microsoft R Server. Это дает возможность ввода в эксплуатацию решений Python с помощью **mrsdeploy**.
++ **Машины обучения Server (изолированный):** при интеграции SQL Server не требуется, установите этот компонент для получения поддержки Python и R для распределенных машинного обучения. Можно также развернуть решение Python в веб-службы с помощью **mrsdeploy**.
   
      Не устанавливайте этот компонент на том же компьютере, на котором выполняется служб SQL Server машины обучения.
 
@@ -47,4 +43,3 @@ Python — это язык, который обеспечивает большу
 [Настройка Python машинного обучения службы в базе данных](setup-python-machine-learning-services.md)
 
 [Учебники Python](../tutorials/sql-server-python-tutorials.md)
-

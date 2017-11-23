@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - error messages [ODBC], diagnostic messages
 - diagnostic messages [ODBC]
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5a242628af9898a3a437ec11000de626135e9d79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ddec8b5d5f658e4f6119c1962d785232bf44d985
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="diagnostic-messages"></a>Диагностические сообщения
 Диагностическое сообщение возвращается с каждой SQLSTATE. Часто же SQLSTATE возвращается с количеством разные сообщения. Например для большинства ошибок в синтаксисе SQL возвращается SQLSTATE 42000 (синтаксическая ошибка или нарушение доступа). Однако каждый синтаксическая ошибка, вероятно описываться разные сообщения.  
@@ -59,4 +57,3 @@ ms.lasthandoff: 09/09/2017
  [1] в этом случае драйвер используется в качестве драйвер и источником данных.  
   
  Квадратные скобки (**[]**) должны быть включены в сообщение и не указывает необязательные элементы.
-

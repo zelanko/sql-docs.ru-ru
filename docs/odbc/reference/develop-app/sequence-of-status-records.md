@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - status records [ODBC]
 - diagnostic records [ODBC]
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 29c8fb3232abfc81eb41e9e3ec67ceb7e96de7ea
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sequence-of-status-records"></a>Последовательность записей состояния
 Если две или более записей состояния возвращаются, диспетчер драйверов и драйвер ранжировать согласно следующим правилам. Запись с высшего ранга является первой записью. Источник записи (диспетчера драйверов, драйвер, шлюза и т. д.) не учитываются при ранжирование записей.  
@@ -39,4 +37,3 @@ ms.lasthandoff: 09/09/2017
 -   **Предупреждения** низким рангом имеют состояние записи, описывающие предупреждения (класс 01). Если же условие предупреждения, предупреждение SQLSTATE, определенных в спецификации Open CLI группы описаны две или более записей outrank SQLSTATE, определенных для ODBC и определяемым драйвером.  
   
  Если два или более записи с высшего ранга, не определено, какая запись является первой записью. Не определен порядок других записей. В частности так как предупреждения появляются перед ошибок, приложения должен проверять все записи состояния при функция возвращает значение, отличное от SQL_SUCCESS.
-

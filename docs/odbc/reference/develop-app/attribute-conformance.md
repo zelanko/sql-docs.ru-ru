@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - conformance levels [ODBC], attribute
 - attribute conformance levels [ODBC]
 ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7859fbb5483acd09dd99f4f27be77d5874e7b992
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="attribute-conformance"></a>Соответствие атрибутов
 Следующая таблица указывает уровень соответствия каждого атрибута среды ODBC, это не определен правильно.  
@@ -110,4 +108,3 @@ ms.lasthandoff: 09/09/2017
  [2] на соответствие интерфейс уровня 2 драйвер должен поддерживать SQL_CONCUR_READ_ONLY и хотя бы одно значение.  
   
  [3] на соответствие интерфейс уровня 1 драйвер должен поддерживать SQL_CURSOR_FORWARD_ONLY и хотя бы одно значение. Для соответствия интерфейс уровня 2 драйвер должен поддерживать все значения, определенные в этом документе.
-

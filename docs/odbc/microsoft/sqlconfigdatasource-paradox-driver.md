@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Paradox Driver
 - Paradox driver [ODBC], SQLConfigDataSource
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 18d184fa68e1b8a9d87f6c4e86e5059c7f7a118d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (драйвер Paradox)
 > [!NOTE]  
@@ -52,4 +50,3 @@ ms.lasthandoff: 09/09/2017
 |PWD|Пароль.<br /><br /> Необязательное ключевое слово и никогда не должны записываться в файл драйвера. Он используется при обращении к **SQLDriverConnect** от защищенные паролем файлы Paradox. Пароль, используемый допустимы при каждом открытии таблицы. Если пароль не передается в строке подключения, пароль не было установлено для этой таблицы. Если таблицы содержат разные пароли, несколько не удается открыть в том же сеансе, а также можно объединить таблицы.|  
 |READONLY|Значение TRUE, чтобы сделать файл доступным только для чтения; Значение FALSE, чтобы сделать файл не только для чтения.<br /><br /> Таким образом задается один и тот же параметр как **только для чтения** в диалоговом окне программы установки.|  
 |ПОТОКИ|Число фоновых потоков, используемых механизмом. Это значение равно 3 и не может быть изменено.<br /><br /> Таким образом задается один и тот же параметр как **потоков** в диалоговом окне программы установки.|
-

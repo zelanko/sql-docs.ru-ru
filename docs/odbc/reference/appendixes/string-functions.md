@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - functions [ODBC], string functions
 - string functions [ODBC]
 ms.assetid: 270f669e-8aab-4db0-95a4-f2b3c69538b3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="string-functions"></a>Строковые функции
 В следующей таблице перечислены функции обработки строк. Приложение может определить, какие строковые функции поддерживаются драйвером путем вызова **SQLGetInfo** с *типу информации* из SQL_STRING_FUNCTIONS.  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/09/2017
 |**ПРОБЕЛ (** *число* **)** (ODBC 2.0)|Возвращает символьную строку, состоящую из *число* пробелы.|  
 |**SUBSTRING (** *строковое_выражение*, *запустить*, длина**)** (ODBC 1.0)|Возвращает строку символов, который является производным от *строковое_выражение*, начиная с позиции, указанной параметром *запустить* для *длина* символов.|  
 |**UCASE (** *строковое_выражение* **)** (ODBC 1.0)|Возвращает строку, в *строковое_выражение*, со всеми нижний регистр, переведенную в верхний регистр.|
-
