@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - Recordset15::UpdateBatch
 - Recordset15::raw_UpdateBatch
-helpviewer_keywords:
-- UpdateBatch method [ADO]
+helpviewer_keywords: UpdateBatch method [ADO]
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1522f6165e08a2a45cbd35e0b66d996ad93c1c4c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 57c85b6ed83792e2e489eb91dab59bd0da598939
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="updatebatch-method"></a>Метод UpdateBatch
 Записывает все ожидающие пакетных обновлений на диск.  
@@ -65,7 +62,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  Порядок выполнения отдельных обновлений пакета в источнике данных не обязательно является таким же, как порядок, в котором они были выполнены на локальном **записей**. Порядок обновления зависит от поставщика. Это учитывать при программировании обновлений, которые связаны друг с другом, например ограничения внешнего ключа для вставки или обновления.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также:  
  [UpdateBatch и пример CancelBatch методы (Visual Basic)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
@@ -73,5 +70,4 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  [Метод CancelBatch (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)   
  [Метод Clear (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [Свойство LockType (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [Метод обновления](../../../ado/reference/ado-api/update-method.md)
-
+ [Метод Update](../../../ado/reference/ado-api/update-method.md)

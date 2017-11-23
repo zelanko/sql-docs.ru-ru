@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0f818532f51fa5fbbec6b6688709173849eae063
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 25b142831c6b4cb1dd1afaa25734f0b0435de18c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Указание столбца, который будет использоваться в модели в качестве регрессора
   Модель линейной регрессии представляет значение прогнозируемого атрибута как результат формулы, в которой входные данные комбинируются таким образом, чтобы они как можно ближе соответствовали предполагаемой линии регрессии. Этот алгоритм принимает только числовые значения и автоматически обнаруживает входные данные, которые обеспечивают наиболее близкое соответствие.  
@@ -75,4 +74,3 @@ ms.lasthandoff: 09/01/2017
  [Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   
-

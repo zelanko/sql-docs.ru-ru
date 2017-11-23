@@ -24,17 +24,16 @@ helpviewer_keywords:
 - user access rights [Analysis Services]
 - granting permissions [Analysis Services], users
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8bc4a8f86ade20312789199c7a762951763000eb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5cf85cd6bb5c32e9c8151fa87aa41fcefb7033f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Предоставление доступа к объектам и операциям (Analysis Services)
   Доступ неадминистративных пользователей к кубам, измерениям и моделям интеллектуального анализа данных внутри базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляется посредством включения пользователя в одну или несколько ролей базы данных. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Администраторы создают указанные роли базы данных, предоставляют разрешения на чтение или чтение и запись объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , а затем добавляют к каждой роли пользователей и группы Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   
-

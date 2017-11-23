@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0dc4f526fa88d678305afdf5c21623b19aaa5190
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11a88bc42863076381cf2798a9bbc7c4a73f070e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tables---key-performance-indicator-representation"></a>Таблицы - представление ключевого показателя эффективности
   KPI служит показателем производительности значения, определяемого базовой мерой, относительно целевого значения  
@@ -235,4 +233,3 @@ private void addStaticKPI(object sender, EventArgs e)
  Чтобы получить представление об использовании объектов AMO для создания и управления ключевой показатель эффективности представлений см. исходный код объектов AMO в образец «Tabular»; в частности, проверьте следующий исходный код: AddKPIs.cs. Этот образец доступен на сайте Codeplex. Важное примечание о коде. Код предоставляется только для иллюстрации логических концепций, поясняемых в этом разделе. Его не следует использовать в рабочей среде или для других целей, за исключением учебных.  
   
   
-

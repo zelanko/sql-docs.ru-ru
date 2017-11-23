@@ -19,17 +19,16 @@ helpviewer_keywords:
 - connections [Analysis Services]
 - sessions [Analysis Services]
 ms.assetid: 3b0145a2-f21d-4dd0-a09e-83afeb2ff4a9
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a147bc9deee4d199e2e90d5f0b006ad3317f4f38
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb53b656c14090ada93184d8453ad79ab1ff706c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Отключение пользователей и сеансов на сервере служб Analysis Services
   Администратору служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может понадобиться завершить пользовательские операции в процессе управления рабочей нагрузкой. Это производится путем отмены сеансов и соединений. Сеансы могут формироваться автоматически при запуске запроса (неявно) или именоваться в момент создания администратором (явно). Соединения представляют собой открытые каналы, по которым запускаются запросы. Как сеансы, так и соединения можно завершать, пока они активны. Например, администратору может потребоваться прекратить обработку для сеанса, если эта обработка продолжается слишком долго или возникли сомнения в правильности написания выполняемой команды.  
@@ -88,4 +87,3 @@ ms.lasthandoff: 09/01/2017
  [Элемент Session &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-headers/session-element-xmla.md)  
   
   
-

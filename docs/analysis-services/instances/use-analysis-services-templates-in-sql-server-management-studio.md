@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9775571e489c2f950bf50fb3c62386fba13e90dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ff4058fd2827698cee28b1a9d6b759719688a212
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Использование шаблонов служб Analysis Services в среде SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет набор шаблонов, которые помогают быстро создавать скрипты XML для аналитики, многомерные или DMX-запросы, ключевые показатели эффективности в кубе или табличной модели, формировать скрипты для резервного копирования и восстановления, а также выполнять много других задач. Шаблоны расположены в **обозревателе шаблонов** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -241,4 +240,3 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
  [Службы Analysis Services Scripting Language &#40; ASSL для XMLA &#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)  
   
   
-

@@ -8,27 +8,23 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SQLServerDatabaseMetaData.getColumns
-apilocation:
-- sqljdbc.jar
+apiname: SQLServerDatabaseMetaData.getColumns
+apilocation: sqljdbc.jar
 apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8d13702e93a5979c53a9bf8fa7e6d7beec161f83
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 75d9ab3fb70f854e56df0c659275a2983a8487ff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Метод getColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -86,7 +82,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |DECIMAL_DIGITS|**smallint**|Масштаб столбца.|  
 |NUM_PREC_RADIX|**smallint**|Основание системы счисления столбца.|  
 |NULLABLE|**smallint**|Указывает, допускает ли столбец значения NULL. Может иметь одно из следующих значений.<br /><br /> columnNoNulls (0)<br /><br /> columnNullable (1)|  
-|REMARKS|**Строковые значения**|Примечания, связанные со столбцом.<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает значение null для этого столбца.  |  
+|REMARKS|**Строковые значения**|Примечания, связанные со столбцом.<br /><br /> **Примечание:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] всегда возвращает значение null для этого столбца.|  
 |COLUMN_DEF|**Строковые значения**|Значение по умолчанию для столбца.|  
 |SQL_DATA_TYPE|**smallint**|Значение типа данных SQL в том же виде, что и в поле TYPE дескриптора. Этот столбец содержит то же значение, что и столбец DATA_TYPE, за исключением типа данных datetime и типа данных SQL-92 interval. Этот столбец всегда возвращает значение.|  
 |SQL_DATETIME_SUB|**smallint**|Код подтипа для datetime и интервальных типов данных SQL-92. Для других типов данных этот столбец возвращает значение NULL.|  
@@ -218,4 +214,3 @@ public class c1 {
  [Класс SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  
   
   
-

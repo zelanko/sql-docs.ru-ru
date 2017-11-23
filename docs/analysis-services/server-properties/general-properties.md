@@ -8,8 +8,7 @@ ms.service:
 ms.component: server-properties
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -41,17 +40,16 @@ helpviewer_keywords:
 - StatisticsStoreSize property
 - RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f855fdbc56dee39c971448dd5e764c5490fb176e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="general-properties"></a>Общие свойства
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают свойства сервера, перечисленные в следующих таблицах. В этом разделе описываются свойства сервера из файла msmdsrv.ini, которые не отнесены к тому или иному определенному разделу, например Security (безопасность), Network (сеть) или ThreadPool (пул потоков). Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
@@ -165,7 +163,7 @@ ms.lasthandoff: 09/01/2017
  **Порт**  
  Целочисленное свойство, определяющее номер порта, на котором сервер прослушивает соединения клиентов. Если это свойство не задано, то сервер динамически находит первый неиспользуемый порт.  
   
- Значение этого свойства по умолчанию равно нулю (0), то есть по умолчанию используется порт 2383. Дополнительные сведения о настройке порта см. в разделе [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+ Значение этого свойства по умолчанию равно нулю (0), то есть по умолчанию используется порт 2383. Дополнительные сведения о настройке порта см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
  **ServerTimeout**  
  Целое число, определяющее время ожидания в секундах для запросов. Значение по умолчанию равно 3600 секундам (или 60 минутам). Нуль (0) означает, что время ожидания запросов не истекает.  
@@ -185,4 +183,3 @@ ms.lasthandoff: 09/01/2017
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

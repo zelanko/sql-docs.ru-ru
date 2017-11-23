@@ -3,17 +3,18 @@ title: "СОДЕРЖИТ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINS_TSQL
 - CONTAINS
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - CONTAINS predicate (Transact-SQL)
@@ -34,20 +35,19 @@ helpviewer_keywords:
 - inflectional forms [full-text search]
 - prefix searches [full-text search]
 ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
-caps.latest.revision: 117
+caps.latest.revision: "117"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 317b65134ca49dc3305fe03871a88b5c1ad3fadc
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67d85ab09ac28beca984372e3df2bd6a1ca0bfa3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Производит поиск точных или нечетких (менее точных) совпадений с отдельными словами и фразами, слов на определенном расстоянии друг от друга или взвешенных совпадений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS — предикат, используемый в [предложение WHERE](../../t-sql/queries/where-transact-sql.md) из [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции SELECT для выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстового поиска в полнотекстовых индексированных столбцах, содержащим типы символьных данных.  
   
@@ -178,7 +178,7 @@ CONTAINS (
  \<*contains_search_condition*>  
  Задает текст для поиска в *column_name* и условия соответствия.  
   
-*\<contains_search_condition >* — **nvarchar**. Если в качестве входных данных используется другой тип символьных данных, производится неявное преобразование. В следующем примере переменная `@SearchWord`, тип которой определен как `varchar(30)`, вызывает неявное преобразование в предикате `CONTAINS`.
+*\<contains_search_condition >* — **nvarchar**. Если в качестве входных данных используется другой тип символьных данных, производится неявное преобразование. Большой строки данных типа nvarchar(max) и varchar(max) не может использоваться. В следующем примере переменная `@SearchWord`, тип которой определен как `varchar(30)`, вызывает неявное преобразование в предикате `CONTAINS`.
   
 ```sql  
 USE AdventureWorks2012;  
@@ -556,4 +556,3 @@ GO
  [Поиск свойств документа с помощью списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
   
-

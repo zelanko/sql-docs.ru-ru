@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- Analysis Management Objects, programming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: Analysis Management Objects, programming
 ms.assetid: 91d846cf-704d-409a-9198-87674a8fb49a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e585db13b3c3562cd454ef41fdbb7d60bbd94c26
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 55e99f0c8abe8a0527af77d06a2fd4ab863a8491
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>Программирование административных задач с помощью объектов AMO
   Объекты AMO — это библиотека программирования, используемая из клиентских приложений для управления службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В этом разделе описывается программирование с использованием объектов AMO.  
@@ -41,10 +38,10 @@ ms.lasthandoff: 09/01/2017
 |-------------|--------------|  
 |[Программирование фундаментальных объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-fundamental-objects.md)|Описывает программирование объектов Server, Database, DataSource и DataSourceView. Сюда включен также объект AMOException.|  
 |[Программирование основных объектов AMO OLAP](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-basic-objects.md)|Описывает программирование объектов Dimension, Cube, MeasureGroup, Partition и Aggregation.|  
-|[Программирование объектов AMO расширенных объектов OLAP](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)|Описывает программирование объектов Action, KPI, Perspective, ProactiveCaching и Translation.|  
+|[Программирование расширенных объектов AMO OLAP](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-olap-advanced-objects.md)|Описывает программирование объектов Action, KPI, Perspective, ProactiveCaching и Translation.|  
 |[Программирование объектов интеллектуального анализа данных AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-data-mining-objects.md)|Описывает программирование объектов MiningStructure и MiningModel.|  
 |[Программирование объектов безопасности AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-security-objects.md)|Описывает программирование объектов Roles, Members и Permissions.|  
-|[Программирование объектов AMO дополнительных классов и методов](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-complementary-classes-and-methods.md)|Описывает программирование объекта Assembly, методов Backup и Restore, класса Trace, а также класса CaptureLog и атрибута CaptureXML.|  
+|[Программирование дополнительных классов и методов объектов AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/programming-amo-complementary-classes-and-methods.md)|Описывает программирование объекта Assembly, методов Backup и Restore, класса Trace, а также класса CaptureLog и атрибута CaptureXML.|  
   
 ## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices>   
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Объекты базы данных &#40; Analysis Services — многомерные данные &#41;](../../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

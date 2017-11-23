@@ -23,17 +23,16 @@ helpviewer_keywords:
 - pass orders [MDX]
 - expressions [MDX], solve orders
 ms.assetid: 7ed7d4ee-4644-4c5d-99a4-c4b429d0203c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7e1f07fa57c0c4c16dd1cbbeeac504b59a250912
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8f690c0226a15794d36b70a72d679972a5f34918
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>Манипулирование данными MDX - основные сведения о проходе порядок вычисления и порядке разрешения
   В ходе вычисления куба в скрипте многомерных выражений вычисление происходит за несколько шагов, в зависимости от того, для какой цели используются те или иные вычислительные функции. Каждый из этих шагов называется этапом вычисления.  
@@ -229,4 +228,3 @@ FROM [Adventure Works]
  [Манипулирование данными (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   
-

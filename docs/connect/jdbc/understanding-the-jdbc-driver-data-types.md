@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1c9599a6e71ee0fbf171ba9c8619cafac8332cc5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1cd9f516a8d72aabf8b10d25b9553cf35a3be3bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Основные сведения о типах данных драйвера JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,10 +37,10 @@ ms.lasthandoff: 09/09/2017
 |Раздел|Description|  
 |-----------|-----------------|  
 |[Использование базовых типов данных](../../connect/jdbc/using-basic-data-types.md)|Описывает базовые типы данных JDBC. Включает примеры работы с типами данных при помощи результирующих наборов, параметризованных запросов и хранимых процедур.|  
-|[Настройка способа отправки значений java.sql.Time сервера](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)|Описывает создание дат драйвером JDBC.|  
+|[Настройка способа отправки значений java.sql.Time на сервер](../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)|Описывает создание дат драйвером JDBC.|  
 |[Использование расширенных типов данных](../../connect/jdbc/using-advanced-data-types.md)|Описывает расширенные типы данных JDBC.|  
-|[Основные сведения о различиях типов данных](../../connect/jdbc/understanding-data-type-differences.md)|Описывает отличия между различными типами данных драйвера JDBC.|  
-|[Основные сведения о преобразованиях типов данных](../../connect/jdbc/understanding-data-type-conversions.md)|Описывает преобразование типов данных при использовании методов считывания и задания.|  
+|[Общие сведения о различиях типов данных](../../connect/jdbc/understanding-data-type-differences.md)|Описывает отличия между различными типами данных драйвера JDBC.|  
+|[Общие сведения о преобразованиях типов данных](../../connect/jdbc/understanding-data-type-conversions.md)|Описывает преобразование типов данных при использовании методов считывания и задания.|  
 |[Поддержка национального набора символов](../../connect/jdbc/national-character-set-support.md)|Описывает поддержку типов наборов национальных символов.|  
 |[Поддержка XML-данных](../../connect/jdbc/supporting-xml-data.md)|Описывает интерфейс SQLXML. Также описывает, как для чтения и записи XML-данных из реляционной базы данных с **SQLXML** типа данных.|  
 |[Оболочки и интерфейсы](../../connect/jdbc/wrappers-and-interfaces.md)|Описываются интерфейсы, имеющие [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] методы и константы, которые позволяют серверу приложений создать прокси-класса, а также обсуждается поддержка интерфейса java.sql.Wrapper.|  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
  [Общие сведения о драйвере JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
-

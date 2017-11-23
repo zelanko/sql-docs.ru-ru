@@ -18,17 +18,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], columns
 - column names [Analysis Services]
 ms.assetid: c80ebe66-a8f8-4f24-9fe8-8288de9d13bc
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6a7480eb1c35dc878bec2dccd13fcbd552da1193
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a49c5aac7289573631a3ed50349c98690c28212d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-an-alias-for-a-model-column"></a>создать псевдоним для столбца модели
   В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]для столбца модели можно создать псевдоним. Необходимость в этом может возникнуть, если имя структуры интеллектуального анализа данных имеет слишком большую длину и с ним неудобно работать, или если необходимо присвоить столбцу другое имя, более точно описывающее его содержимое или назначение в модели. Например, если создается копия столбца структуры, а затем дискретизация столбца выполняется различно для конкретной модели, можно переименовать столбец, чтобы его имя более точно отражало его содержимое.  
@@ -50,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-properties.md)  
   
   
-

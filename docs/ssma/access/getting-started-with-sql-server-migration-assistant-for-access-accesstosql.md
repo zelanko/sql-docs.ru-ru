@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 08/15/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - user interface
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: On Demand
+ms.openlocfilehash: 5a2959f1904fb878f497eecfc6fe93802bee0941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 846d08c9226e6a34e0d0b3bbd5efab8c2548a469
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Приступая к работе с SQL Server Migration Assistant для Access (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) для доступа позволяет быстро преобразовывать объекты базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты базы данных SQL Azure, передать полученные объекты в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базу данных SQL Azure, и перенести данные с доступом к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базу данных SQL Azure. При необходимости можно также связать доступа к таблицам для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или таблиц базы данных SQL Azure, чтобы продолжить использовать существующие приложения Access переднего плана с [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или базу данных SQL Azure.  
@@ -142,4 +140,3 @@ SSMA содержит следующие меню:
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

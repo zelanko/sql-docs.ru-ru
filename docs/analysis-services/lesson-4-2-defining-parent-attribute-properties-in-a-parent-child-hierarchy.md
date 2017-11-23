@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: e742a280ac4828cd708a3702545e9168cf8b0f73
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e369924d45fe9cc718103cf1e763340e2c03c018
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Занятие 4-2-Определение свойств родительского атрибута в иерархии родители потомки
 Иерархия типа «родители-потомки» представляет собой иерархию в измерении, которая основана на двух столбцах таблицы. Вместе эти столбцы определяют иерархическую связь между элементами измерения. Первый столбец, называемый *ключевым столбцом элемента*, идентифицирует каждый элемент измерения. Второй столбец, называемый *родительским столбцом*, идентифицирует родителя для каждого из элементов измерения. Свойство **NamingTemplate** родительского атрибута определяет имя каждого уровня в иерархии типа "родители-потомки", а свойство **MembersWithData** — будут ли отображаться данные для родительских элементов.  
@@ -122,4 +119,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

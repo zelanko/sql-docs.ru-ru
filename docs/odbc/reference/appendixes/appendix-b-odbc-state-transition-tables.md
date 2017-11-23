@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - transitioning states [ODBC], about state transitions
 - state transitions [ODBC], about state transitions
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 775c3d0464443d11b833a230591b94293343086b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Приложение б. таблицы перехода состояний ODBC
 В таблицах в этом приложении показано, как функции ODBC вызывают переходы среды, подключения, инструкции и дескриптора состояний. Состояние среды, подключения, инструкции и дескриптора обычно указывает, когда можно вызывать функции, использующие соответствующий тип дескриптора (среды, соединения, оператор или дескриптор). Состояния среды, подключения, инструкции и дескриптора перекрываться примерно, как показано на следующем рисунке. Например точное совпадение подключение состояния C5 и C6 и инструкция подтверждает, что S1 через S12 является данных зависит от источника, с момента начала транзакции в различные моменты времени в разных источниках данных и зависит от состояния дескриптор D1i (неявно выделить дескриптор) на состоянии инструкции, с которой связан дескриптор при этом состояние D1e (явно выделить дескриптор) — независимо от состояния любого оператора. Описание каждого состояния см. в разделе [среда переходит](../../../odbc/reference/appendixes/environment-transitions.md), [переходы подключения](../../../odbc/reference/appendixes/connection-transitions.md), [переходы инструкции](../../../odbc/reference/appendixes/statement-transitions.md), и [переходы дескриптора ](../../../odbc/reference/appendixes/descriptor-transitions.md)далее в этом приложении.  
@@ -98,11 +96,10 @@ ms.lasthandoff: 09/09/2017
   
  Это приложение содержит следующие разделы.  
   
--   [Среда переходит](../../../odbc/reference/appendixes/environment-transitions.md)  
+-   [Переходы среды](../../../odbc/reference/appendixes/environment-transitions.md)  
   
 -   [Переходы подключения](../../../odbc/reference/appendixes/connection-transitions.md)  
   
--   [Инструкция переходов](../../../odbc/reference/appendixes/statement-transitions.md)  
+-   [Переходы инструкций](../../../odbc/reference/appendixes/statement-transitions.md)  
   
--   [Дескриптор переходов](../../../odbc/reference/appendixes/descriptor-transitions.md)
-
+-   [Переходы дескрипторов](../../../odbc/reference/appendixes/descriptor-transitions.md)

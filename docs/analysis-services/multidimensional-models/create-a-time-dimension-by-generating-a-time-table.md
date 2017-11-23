@@ -23,17 +23,16 @@ helpviewer_keywords:
 - calendars [Analysis Services]
 - table-based time dimensions [Analysis Services]
 ms.assetid: 58303326-1361-4c0e-9f3d-642ce69c4f6a
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 023c54c55fde8b75af335f29c20d9d0135c905c0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c4302e55bd6b91daf8d3d1073be96fe35501af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Создание измерения времени посредством формирования таблицы времени
   Чтобы создать измерение времени в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]при отсутствии таблиц времени в базе данных-источнике, можно использовать мастер измерений среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . С этой целью на странице **Выбор метода создания** выберите один из следующих параметров.  
@@ -68,7 +67,6 @@ ms.lasthandoff: 09/01/2017
  [Создание измерения типа Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
  [Свойства измерений базы данных](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Создание измерения путем формирования в источнике данных таблицы не содержащую время](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Создание измерения путем формирования в источнике данных таблицы, отличной от таблицы времени](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   
-

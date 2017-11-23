@@ -1,11 +1,14 @@
 ---
 title: "Обратная совместимость служб аналитики SQL Server 2017 г. | Документы Microsoft"
 ms.date: 07/11/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: misc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- analysis-services
+ms.suite: sql
+ms.custom: 
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,12 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 57a03d325a7415f08fd073ea805e022935f3fce7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
-ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Обратная совместимость служб Analysis (SQL 2017 г.)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -62,7 +64,7 @@ ms.lasthandoff: 10/03/2017
 |Multidimensional|Связанные измерения|
 |Инструменты|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Средства|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
-|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> — настройка трассировки:  Microsoft.SqlServer.Management.XEvent;<br />— чтение трассировки: Microsoft.SqlServer.XEvent.Linq;<br />— воспроизведение трассировки: отсутствует.|  
+|Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> -Настройка трассировки: Microsoft.SqlServer.Management.xevent;<br />-Чтение трассировки: Microsoft.SqlServer.xevent.Linq.<br />— воспроизведение трассировки: отсутствует.|  
 
 ## <a name="breaking-changes"></a>Критические изменения
 Объект *критическое изменение* вызывает функцию, модели данных, код приложения или сценария к прекращению работы после обновления до текущего выпуска.
@@ -77,4 +79,3 @@ ms.lasthandoff: 10/03/2017
 
 ## <a name="see-also"></a>См. также:
 [Обратная совместимость служб Analysis (SQL Server 2016)](analysis-services-backward-compatibility.md)
-

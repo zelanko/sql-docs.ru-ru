@@ -13,26 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- http://schemas.microsoft.com/analysisservices/2003/engine#
+applies_to: SQL Server 2016 Preview
+f1_keywords: http://schemas.microsoft.com/analysisservices/2003/engine#
 helpviewer_keywords:
 - methods [XML for Analysis]
 - XML for Analysis, methods
 - XMLA, methods
 ms.assetid: c6768dd4-ca06-4a85-93b7-5fd5700886ad
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7adec520de671a643eed87a5fcda9419b9f6bfa5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d7e9b7f9ee860b8ff65664d15b17ca9ebe182e15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---methods"></a>Элементы XML - методы
   Протокол XML для аналитики (XMLA) используется два метода, **Discover** и **Execute**, которые предлагают стандартный способ для приложений для доступа к данным в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Поскольку эти методы вызываются при помощи протокола SOAP, они получают входные данные и предоставляют результаты в формате XML. В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] реализованы оба метода в соответствии со спецификацией XML для аналитики 1.1.  
@@ -51,4 +48,3 @@ ms.lasthandoff: 09/01/2017
  [XML-элементы &#40; XML для Аналитики &#41;](http://msdn.microsoft.com/library/40ab2360-efb6-4ba6-bf23-e84964e51008)  
   
   
-

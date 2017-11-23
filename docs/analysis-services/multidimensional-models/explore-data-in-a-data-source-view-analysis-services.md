@@ -19,17 +19,16 @@ helpviewer_keywords:
 - data source views [Analysis Services], exploring data
 - viewing source data
 ms.assetid: 2c922c35-fbcb-45b2-96b1-c7a846d8b419
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 93d6fedcfe7b1e94d8a46b98ade2c73c637612e5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: de15507d7fedd1f582e158e85d1f6245972cf27b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Просмотр данных в представлении источника данных (службы Analysis Services)
   Диалоговое окно **Просмотр данных** конструктора представлений источников данных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] служит для просмотра данных таблицы, представления или именованного запроса в представлении источника данных. При просмотре данных в конструкторе представлений источника данных можно видеть содержимое каждого столбца данных в выбранной таблице, представлении или именованном запросе. Просмотр содержимого помогает определить, все ли столбцы нужны (если именованные вычисления требуются для повышения удобства для пользователя) и возвращают ли существующие именованные вычисления и именованные запросы ожидаемые результаты.  
@@ -62,4 +61,3 @@ ms.lasthandoff: 09/01/2017
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

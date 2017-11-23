@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.tablebehavior.f1
+f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
 ms.assetid: 1386aae0-1d73-4a50-9c69-ae12405d855c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 95a50d5ed10e8714b50e33ac4e182ff208c4c840
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View — Настройка свойств работы таблицы для отчетов
   Если для [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]в качестве модели интеллектуального анализа данных используется табличная модель, то можно настроить свойства поведения таблицы, содержащие строки более гранулярного уровня. Задание свойств поведения таблицы изменяет групповую обработку строк и обеспечивает более эффективное размещение идентификационной информации (имен, фотографий, логотипов и т. д.) в мозаичном, карточном или диаграммном виде.  
@@ -147,4 +145,3 @@ ms.lasthandoff: 09/01/2017
  После вычисления таблиц в модели и установки свойств работы таблицы для строк с подробными сведениями, которые должны всегда отображаться как отдельные объекты, можно и дальше оптимизировать модель при помощи дополнительных свойств или настроек.  
   
   
-

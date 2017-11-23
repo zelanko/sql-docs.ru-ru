@@ -8,22 +8,20 @@ ms.service:
 ms.component: instances
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- setup-install
+ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 6c782994144077979f52eaa732618277b57c42ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: aa577404c035753f7173546aff32fe0f8d1ee7a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint
   Ни одна из операций установки или восстановления [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] не завершена без прохождения проверочного теста, который подтверждает работоспособность служб и данных. В этой статье рассказывается о том, как выполнить эти шаги с помощью Windows PowerShell. Каждому шагу посвящен отдельный подраздел с тем, чтобы можно было перейти непосредственно к конкретным задачам. Например, выполните скрипт, приведенный в подразделе [Базы данных](#bkmk_databases) этого раздела для проверки имени приложения службы и баз данных содержимого, если необходимо запланировать их для обслуживания или резервного копирования.  
@@ -583,4 +581,3 @@ write-host -foregroundcolor DarkGray EndTime $time
 ```  
   
   
-

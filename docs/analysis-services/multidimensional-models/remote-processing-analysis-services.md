@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d58bcb3c-0b3f-4ab0-81eb-4fdcc86153af
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 59113cc41bf1e7805b033ff0af68ee2c1accda3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f32eb86f0d4b18ac576df77a28885c7f2053d962
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="remote-processing-analysis-services"></a>Удаленная обработка (службы Analysis Services)
   Можно выполнять запланированную или автоматическую обработку на удаленном экземпляре [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , при этом запрос на обработку приходит с одного компьютера, но выполняется на другом компьютере из той же сети.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
 -   На удаленном сервере должна быть включена функция **Разрешить удаленные соединения с данным компьютером** , а учетная запись, выдающая запрос на обработку, должна быть в списке разрешенных пользователей.  
   
--   Правила брандмауэра Windows должны разрешать входящие соединения с [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Проверьте возможность подключения к удаленному экземпляру [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. См. раздел [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
+-   Правила брандмауэра Windows должны разрешать входящие соединения с [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Проверьте возможность подключения к удаленному экземпляру [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. См. раздел [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
 -   Устраните все ошибки локальной обработки перед попыткой проведения удаленной обработки. Проверьте, чтобы при получении локального запроса на обработку данные успешно извлекались из внешнего реляционного источника данных. Инструкции по настройке учетных данных для получения данных см. в разделе [Задание параметров олицетворения (службы SSAS — многомерные)](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md).  
   
@@ -108,4 +107,3 @@ ms.lasthandoff: 09/01/2017
  [Обработка объектов &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   
-

@@ -13,31 +13,26 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- Location Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: Location Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 f1_keywords:
 - microsoft.xml.analysis.location
 - urn:schemas-microsoft-com:xml-analysis#Location
 - http://schemas.microsoft.com/analysisservices/2003/engine#Location
-helpviewer_keywords:
-- Location element
+helpviewer_keywords: Location element
 ms.assetid: cea5e776-f435-425a-9bce-812d727a2b71
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 95080cae1f3740bef465197491bc7e2ce18a5915
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 57d724e1ed2aeae526077af50700e9fad504d29a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="location-element-xmla"></a>Элемент Location (XML для аналитики)
   Содержит сведения об удаленном сервере для родительской [резервного копирования](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md), [восстановить](../../../analysis-services/xmla/xml-elements-commands/restore-element-xmla.md), или [Synchronize](../../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md) команды.  
@@ -102,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  
   
   
-

@@ -14,25 +14,23 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.roledesignerdialog.cubes.f1
+f1_keywords: sql13.asvs.roledesignerdialog.cubes.f1
 helpviewer_keywords:
 - user access rights [Analysis Services], cubes
 - cubes [Analysis Services], security
 - read/write permissions
 - permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: b57c8f78162dbfcfe414ed8bc4fcdcedd04c85d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbde1e75c0ff22e0d2c426c04f2f4e3756536923
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Предоставление разрешений кубу или модели (службы Analysis Services)
   Куб или табличная модель являются основным объектом запроса в модели данных службы Analysis Service. При подключении к многомерным или табличным данным из Excel для просмотра данных ad hoc, пользователи обычно начинают с выбора определенного куба или табличной модели в качестве структуры данных Сводного объекта отчета. Данная тема объясняет, как предоставить необходимые разрешения для доступа к кубу или табличным данным.  
@@ -116,4 +114,3 @@ ms.lasthandoff: 09/01/2017
  [Предоставление разрешений объекту источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   
-

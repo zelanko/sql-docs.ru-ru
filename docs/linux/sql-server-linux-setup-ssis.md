@@ -15,12 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
+ms.openlocfilehash: d265d1c4fa25f10c58e321cef06cf293fdce5ac5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка SQL Server Integration Services (SSIS) для Linux
 
@@ -136,4 +135,3 @@ dtexec /F <package name> /DE <protection password>
 ## <a name="next-steps"></a>Следующие шаги
 
 Дополнительные сведения об использовании служб SSIS в Linux для извлечения, преобразования и загрузки данных см. в разделе [извлечения, преобразования и загрузки данных для SQL Server в Linux с помощью служб SSIS](sql-server-linux-migrate-ssis.md).
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - content queries [DMX]
 - neural network model [Analysis Services]
 ms.assetid: 81b06183-620f-4e0c-bc10-532e6a1f0829
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 13781c0cce77831d0a33553fec137f61761e5d7d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16343214615687c3a2ac39c9083c867c6d1e91c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="neural-network-model-query-examples"></a>Примеры запросов к модели нейронной сети
   К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, в которых используются закономерности, содержащиеся в модели, для прогнозирования новых данных. Например, запрос содержимого для модели нейронной сети может вернуть метаданные модели — в частности, число скрытых слоев. Или же прогнозирующий запрос может дать сведения для классификации на основе входа и, по желанию, предоставить значения вероятности для каждой классификации.  
@@ -237,4 +236,3 @@ NATURAL PREDICTION JOIN
  [Занятие 5: Создание нейронной сети и модели логистической регрессии &#40; учебник по интеллектуальному анализу данных — средний &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   
-

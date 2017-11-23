@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d074eb99de5c97bb9df38d6f2305fb906370f64a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Настройка сбора данных об использовании с PowerPivot для SharePoint
   Сбор данных об использовании — это функция SharePoint на уровне фермы. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует и дополняет эту систему для создания отчетов на информационной панели управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые показывают, как используются данные и службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . В зависимости от способа установки SharePoint сбор данных об использовании для фермы может быть отключен. Для создания данных об использовании, которые будут отображаться на информационной панели управления [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , администратор фермы должен включить ведение журнала использования.  
@@ -204,4 +203,3 @@ ms.lasthandoff: 09/01/2017
  [Сбор данных об использовании Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   
   
-

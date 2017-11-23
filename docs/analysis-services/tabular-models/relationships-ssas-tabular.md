@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec09d62c989f8a01c3984491ab4aa187e1eea654
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="relationships-ssas-tabular"></a>Связи (табличные службы SSAS)
   В табличных моделях связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах. Например, таблица «Customers» и таблица «Orders» могут быть связаны, чтобы отображалось имя клиента, соответствующее каждому заказу.  
@@ -182,7 +181,7 @@ ms.lasthandoff: 09/01/2017
   
 |Раздел|Description|  
 |-----------|-----------------|  
-|[Создать связь между двумя таблицами](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Содержит описание того, как вручную создать связь между двумя таблицами.|  
+|[Создание связи между двумя таблицами](../../analysis-services/tabular-models/create-a-relationship-between-two-tables-ssas-tabular.md)|Содержит описание того, как вручную создать связь между двумя таблицами.|  
 |[Удаление связей](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Содержит описание того, как удалить связь, а также последствий удаления отношений.|  
 |[Двунаправленные кросс-фильтры для табличных моделей в службах SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|Содержит описание двунаправленной кросс-фильтрации для связанных таблиц. Если таблицы связаны и определены двунаправленные кросс-фильтры, контекст фильтра одной связи таблиц можно использовать для запросов ко второй связи таблиц.|  
   
@@ -191,4 +190,3 @@ ms.lasthandoff: 09/01/2017
  [Импорт данных](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   
-

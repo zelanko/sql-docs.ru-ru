@@ -8,22 +8,20 @@ ms.service:
 ms.component: tabular-models
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e67f88f5-9f0c-4f19-ab09-558c56ca9335
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 28ff4ea7472597ae86b426ec0a15de399f56d14f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Переводы в табличных моделях (службы Analysis Services)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Добавляет поддержку строки перевода для табличных моделей. Одиночный объект в модели может иметь несколько переводов имени или описания, что позволяет поддерживать несколько языков в определении модели.  
@@ -123,4 +121,3 @@ ms.lasthandoff: 09/01/2017
  [Анализ в Excel (табличные службы SSAS)](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   
-

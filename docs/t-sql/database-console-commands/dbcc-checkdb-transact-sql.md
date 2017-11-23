@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKDB_TSQL
 - DBCC CHECKDB
 - CHECKDB
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - CHECKDB [DBCC statement]
 - database objects [SQL Server], checking
@@ -37,17 +35,16 @@ helpviewer_keywords:
 - checking database objects
 - page count accuracy [SQL Server]
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
-caps.latest.revision: 144
+caps.latest.revision: "144"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0960e000c4ba1d798228445720e39db0f627f9b1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -180,7 +177,7 @@ DBCC CHECKDB
  MAXDOP  
  **Применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
     
- Переопределяет **максимальная степень параллелизма** параметр конфигурации **sp_configure** для инструкции. MAXDOP может превысить значение, настроенное с помощью хранимой процедуры sp_configure. Если MAXDOP превышает значение, настроенное с помощью регулятора ресурсов [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] использует значение MAXDOP регулятора ресурсов, описанное в [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Переопределяет **максимальная степень параллелизма** параметр конфигурации **sp_configure** для инструкции. MAXDOP может превысить значение, настроенное с помощью хранимой процедуры sp_configure. Если MAXDOP превышает значение, настроенное с помощью регулятора ресурсов [!INCLUDE[ssDEnoversion](../../includes/ssDEnoversion_md.md)] использует значение MAXDOP регулятора ресурсов, описанное в [ALTER WORKLOAD GROUP](../../t-sql/statements/alter-workload-group-transact-sql.md). Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
  
 > [!WARNING] 
 > Если MAXDOP равно нулю, то SQL Server выбирает максимальную степень параллельности для использования.    
@@ -219,7 +216,7 @@ DBCC CHECKDB завершается со сбоем при запуске для
 При частом использовании на рабочих системах рекомендуется указывать параметр PHYSICAL_ONLY. Использование параметра PHYSICAL_ONLY может сильно сократить время выполнения инструкции DBCC CHECKDB для больших баз данных. Также рекомендуется периодически выполнять инструкцию DBCC CHECKDB без параметров. Насколько часто необходимо это делать, зависит от факторов, индивидуальных для каждого предприятия и каждой рабочей среды.
     
 ## <a name="checking-objects-in-parallel"></a>Проверка объектов в параллельном режиме    
-По умолчанию инструкция DBCC CHECKDB выполняет параллельную проверку объектов. Степень параллелизма определяется автоматически обработчиком запросов. Максимальная степень параллелизма настраивается так же, как и в параллельных запросах. Чтобы ограничить максимальное количество процессоров, доступных для проверки DBCC, используется [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Параллельную проверку можно отключить с помощью флага трассировки 2528. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
+По умолчанию инструкция DBCC CHECKDB выполняет параллельную проверку объектов. Степень параллелизма определяется автоматически обработчиком запросов. Максимальная степень параллелизма настраивается так же, как и в параллельных запросах. Чтобы ограничить максимальное количество процессоров, доступных для проверки DBCC, используется [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Параллельную проверку можно отключить с помощью флага трассировки 2528. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
     
 > [!NOTE]
 > Эта функция поддерживается не во всех выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе Управление СУРБД проверка согласованности параллелизма [функции, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).    
@@ -406,5 +403,4 @@ GO
 [Просмотр размера разреженного файла снимка базы данных (Transact-SQL)](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
 [Системные таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
-
 

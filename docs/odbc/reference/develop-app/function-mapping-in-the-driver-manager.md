@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - driver manager [ODBC], function mapping
 - functions [ODBC], Unicode functions
 ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 63c908b668e4cecd93cc9930f638ccde9173b563
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4ea01836108b8cf2524aa52001927bef852ce2a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Сопоставление функции диспетчера драйверов
 Диспетчер драйверов поддерживает две точки входа для функции, принимающие строковые аргументы. Объявление функции (**SQLDriverConnect**) — форма ANSI функции. Форма Юникода снабжен *W* (**SQLDriverConnectW**.)  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
  Диспетчер драйверов Юникод внутренним образом. В результате оптимальной производительности достигается при работе с драйвером Юникода приложения с поддержкой Юникода так, как диспетчер драйверов просто передает функции Юникода с помощью драйвера. При работе с драйвером ANSI приложение ANSI, диспетчер драйверов необходимо преобразовать строк из ANSI в Юникод при обработке некоторых функций, таких как **SQLDriverConnect**. После обработки функция, диспетчер драйверов необходимо затем преобразовать строку в кодировке Юникод ANSI перед отправкой функция драйвер ANSI.  
   
  Приложение нельзя изменить или чтения буфера привязанного параметра, когда драйвер возвращает SQL_STILL_EXECUTING или SQL_NEED_DATA. Диспетчер драйверов оставляет буферами, которые привязаны к ANSI, пока драйвер возвращает SQL_SUCCESS, SQL_SUCCESS_WITH_INFO или SQL_ERROR. Многопоточные приложения не должен получать доступ ко всем значениям связанных параметров, которые другого потока выполнение инструкции SQL на. Диспетчер драйверов преобразует данные из Юникода в ANSI «на месте» и другой поток может считать данных ANSI в этих буферах, а драйвер продолжает обрабатывать инструкции SQL. Приложения с привязкой данных в Юникоде ANSI драйвер не должен выполнить привязку двух разных столбцов в тот же адрес.
-

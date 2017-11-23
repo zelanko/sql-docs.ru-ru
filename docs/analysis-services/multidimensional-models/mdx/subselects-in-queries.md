@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="subselects-in-queries"></a>Подзапросы выборки в запросах
   Выражения подзапросов выборки являются вложенными выражениями SELECT, которые используются для ограничения пространства куба, из которого вычисляется внешнее выражение SELECT. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
@@ -362,4 +361,3 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 -   По умолчанию вычисляемые элементы не допускаются в подзапросах выборки; Тем не менее, это ограничение можно изменить, в сеансам, путем присвоения значения для **вложенные запросы** свойство строки подключения в <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или **DBPROP_MSMD_SUBQUERIES** свойство в [ Поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). Дополнительные сведения о поведении вычисляемых элементов в зависимости от значений свойства [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) или **DBPROP_MSMD_SUBQUERIES** см. в разделе **Вычисляемые элементы в подзапросах выборки и вложенных кубах**.  
   
   
-

@@ -13,20 +13,18 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 871a6d98-85bf-4200-8343-137543029512
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7435de185c6a8cb54d9fc55ea53d9c8d66214033
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: dae8eace8a062bb296e172ce5d547eaf7768fa42
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="multidimensional-model-programming"></a>Программирование многомерной модели
   Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют несколько API-интерфейсов, которые используются для программирования экземпляра служб Analysis Services и многомерных баз данных, к которым он предоставляет доступ. В этом разделе описаны подходы, доступные разработчикам, создающим пользовательские приложения, в которых используются многомерные решения служб Analysis Services. Эти сведения помогут выбрать интерфейс программирования, лучше всего подходящий для конкретного проекта. Проекты разработки для служб Analysis Services могут быть основаны на управляемом или неуправляемом коде, запускаемом на платформе Windows или других платформах с поддержкой доступа по протоколу HTTP.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/01/2017
   
  [Разработка объектов управления аналитикой (объекты AMO)](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
- [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
  [Разработка на языке ASSL (язык ASSL)](../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/01/2017
  [Программирование интеллектуального анализа данных](../../analysis-services/data-mining-programming.md)  
   
   
-

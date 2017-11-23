@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7768246432f2711f7e3d99c046493e39b7e4ecf9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 15aeda3b7b6ecb758aa2a0c0f3b8b2b85368dbf0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="analysis-services-instance-management"></a>Управление экземплярами служб Analysis Services
   Экземпляр служб Analysis Services — это копия исполняемого файла **msmdsrv.exe** , который запускается как служба операционной системы. Каждый экземпляр полностью независим от других экземпляров на том же сервере и обладает собственной конфигурацией, разрешениями, портами, стартовыми учетными записями, областью хранения файлов и свойствами режима сервера.  
@@ -71,4 +70,3 @@ ms.lasthandoff: 09/01/2017
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   
-

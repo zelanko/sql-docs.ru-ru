@@ -19,17 +19,16 @@ helpviewer_keywords:
 - named sets [Analysis Services]
 - members [Analysis Services], named sets
 ms.assetid: 03cf97a4-1a18-45f3-acb0-35123bd619be
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e4e1de3862587caab033e7d7178508ac4680b218
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a98318cc28f79ab24af1ecce382b0b39a78dfab
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-named-sets"></a>Создание именованных наборов
   Именованный набор — это набор элементов измерения или выражение набора, которые создаются для многократного использования, например в запросах на языке многомерных выражений. Для создания именованных наборов может использоваться сочетание данных куба, арифметических операторов, чисел и функций. Например, можно создать именованный набор с именем Top Ten Factories, содержащий десять элементов измерения Factories с наибольшими значениями показателя Production. Затем набор Top Ten Factories можно использовать в запросах конечных пользователей. Например, конечный пользователь помещает набор Top Ten Factories на одну ось, а измерение меры, включая Production, — на другую ось. Дополнительные сведения см. в разделах [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md) и [Построение именованных наборов в многомерных выражениях](../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md).  
@@ -59,4 +58,3 @@ ms.lasthandoff: 09/01/2017
  [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

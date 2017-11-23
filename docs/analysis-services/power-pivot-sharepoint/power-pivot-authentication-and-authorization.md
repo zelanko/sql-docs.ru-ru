@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5cd7b1025e2fce908d67d7e0af505dfb8c6fbd6f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Проверка подлинности и авторизация PowerPivot
   Развертывание [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, работающее в пределах фермы SharePoint 2010, использует подсистему проверки подлинности и модель авторизации, предоставляемые серверами SharePoint. Инфраструктура безопасности SharePoint распространяется на содержимое и операции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , поскольку все содержимое [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]хранится в базах данных содержимого SharePoint, а все операции, связанные с [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], выполняются общими службами [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме. Перед запросом книги, содержащей данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , пользователь должен пройти проверку подлинности с помощью удостоверения пользователя SharePoint, которое основано на учетных данных пользователя Windows. Разрешения на просмотр книги определяют, возможно ли выполнение запроса.  
@@ -127,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Архитектура безопасности PowerPivot](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   
-

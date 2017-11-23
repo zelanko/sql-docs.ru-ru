@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 9382d0d6-2d4b-49ad-a0eb-35970f0f3afb
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0407755cbe3b8608c1b88dad1c85eef4fdba18a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 369bf544360d50c061314f45c04e8fb55784184c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="model-object-tmsl"></a>Объект модели (TMSL)
 
@@ -44,10 +43,10 @@ ms.lasthandoff: 09/01/2017
  Все объекты имеют общий набор свойств, включая имя, тип, описание, коллекцию свойств и заметки. **Модель** объекты также имеют следующие свойства.  
   
  storageLocation  
- Расположение на диске, чтобы поместить модель.  
+ Место на диске, где размещается модель.  
   
  defaultMode  
- Метод по умолчанию для предоставления данных в секции.  
+ Метод по умолчанию для предоставления доступа к данным в секции.  
   
  defaultDataView  
  Для моделей в режиме DirectQuery это свойство определяет, какие разделы используются для выполнения запросов к модели.  Допустимые значения: Full и образец.  
@@ -56,7 +55,7 @@ ms.lasthandoff: 09/01/2017
  Язык и региональные параметры для форматирования.  
   
  collation  
- Порядок сортировки. В разделе [сценарии глобализации для служб Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) для получения дополнительной информации.  
+ Последовательность параметров сортировки. В разделе [сценарии глобализации для служб Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md) для получения дополнительной информации.  
   
  таблицы  
  Полная коллекция таблиц в модели, включая секции, столбцы, меры, ключевые показатели эффективности и заметки. В разделе [таблиц объект &#40; TMSL &#41; ](../../analysis-services/tabular-models-scripting-language-objects/tables-object-tmsl.md) подробные сведения.  
@@ -106,4 +105,3 @@ ms.lasthandoff: 09/01/2017
  [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   
-

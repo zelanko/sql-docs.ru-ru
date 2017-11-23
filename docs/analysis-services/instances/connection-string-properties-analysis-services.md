@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e939bafc911fd5d8b09b28754aeb6c8f028de6b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connection-string-properties-analysis-services"></a>Свойства строки подключения (службы Analysis Services)
   В этом разделе описываются свойства строки подключения, которые можно задать в конструкторе или одном из средств управления. Также эти свойства есть в строках подключения, созданных клиентскими приложениями, которые подключаются и запрашивают данные служб Analysis Services. Описывается только подмножество доступных свойств. Полный список содержит множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения независимо от того, как экземпляр или база данных настроены на сервере.  
@@ -207,4 +206,3 @@ ms.lasthandoff: 09/01/2017
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

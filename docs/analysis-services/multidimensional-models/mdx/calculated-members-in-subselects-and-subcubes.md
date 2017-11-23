@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a2dc70e91783283b2b57fe6737c558375bb47f8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
   Вычисляемый элемент — это элемент измерения, значение которого вычисляется из выражения во время выполнения и может использоваться в подзапросах выборки и вложенных кубах, чтобы более точно определить пространство куба запроса.  
@@ -138,4 +137,3 @@ Where [Measures].[Reseller Sales Amount]
  [Поддерживаемые свойства XMLA &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - scheduled data refresh [Analysis Services with SharePoint]
 - data refresh [Analysis Services with SharePoint]
 ms.assetid: ac8358a3-ee71-44c7-8ee6-ac7afe3ebaa4
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4c5bc570e1f4f72fe932a8e5b2d0fa08c32f7949
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1e7ea7d3193394c3fd337a3ee3211473472e43b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="power-pivot-data-refresh"></a>Обновление данных Power Pivot
   После создания книги, содержащей данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , их придется периодически обновлять путем повторного выполнения запроса или команды, чтобы получать новые данные из источников, которые использовались при создании книги. Этот процесс называется **обновлением данных**. Обновление данных может производиться по запросу [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]или как запланированная операция путем запуска процесса служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на сервере приложений фермы SharePoint. Дополнительные сведения см. в разделе:  
@@ -51,4 +50,3 @@ ms.lasthandoff: 09/01/2017
 > -   [Обновление книг и запланированное обновление данных (SharePoint 2013 )](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   
-

@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34e2d508-7b64-4503-a4f0-c6c6ad5f8a44
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 8ff4bf9de4a232561d813ae304aa3ae660ff9041
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 770ce419a167c71914334ea6fa1b3fd397566b34
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Выбор типа данных столбца (табличные службы SSAS)
   При импорте данных или вставке данных в модель конструктор модели автоматически обнаруживает и применяет типы данных. После добавления данных в модель можно вручную изменить тип данных столбца, чтобы изменить способ хранения данных. Если необходимо только изменить формат отображения данных, не изменяя способ их хранения, так и сделайте.  
@@ -89,4 +88,3 @@ ms.lasthandoff: 09/01/2017
  [Поддерживаемые типы данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)  
   
   
-

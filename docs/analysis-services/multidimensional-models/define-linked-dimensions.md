@@ -18,17 +18,16 @@ helpviewer_keywords:
 - dimensions [Analysis Services], linked
 - linked dimensions [Analysis Services]
 ms.assetid: d5ad5eae-5dde-46a6-91c3-c8766d016dec
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 261ba3bea0256789df5f6ad72cff553c6ed253f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d7830d5075da8ab4b741ecb31bbdefb3acdf6cb9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="define-linked-dimensions"></a>Определите связанные измерения
   Связанное измерение основано на измерении, созданном и хранящемся в другой базе данных служб Analysis Services с той же версией и уровнем совместимости. С помощью связанного измерения можно создавать, хранить и поддерживать измерения в одной базе данных, при этом данное измерение будет доступно для пользователей нескольких баз данных. Для пользователей связанное измерение ничем не отличается от других измерений.  
@@ -88,7 +87,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>См. также  
  [Уровень совместимости многомерной базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Связанные группы мер](../../analysis-services/multidimensional-models/linked-measure-groups.md)   
- [Связей измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+ [Связи измерений](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   
-

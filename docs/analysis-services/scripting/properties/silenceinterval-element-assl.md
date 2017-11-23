@@ -13,29 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-apiname:
-- SilenceInterval Element
-apilocation:
-- http://schemas.microsoft.com/analysisservices/2003/engine
+apiname: SilenceInterval Element
+apilocation: http://schemas.microsoft.com/analysisservices/2003/engine
 apitype: Schema
-applies_to:
-- SQL Server 2016 Preview
-f1_keywords:
-- SilenceInterval
-helpviewer_keywords:
-- SilenceInterval element
+applies_to: SQL Server 2016 Preview
+f1_keywords: SilenceInterval
+helpviewer_keywords: SilenceInterval element
 ms.assetid: c22060a9-99ca-4b81-9df3-89b020b4d1d4
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a9588511776a2b4b11bab58278fab0cd77c47295
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 30bbd09b3f1aca93cb900fc4cdc4f703fc3185ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="silenceinterval-element-assl"></a>Элемент SilenceInterval (ASSL)
   Определяет минимальное количество времени, экземпляр [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] останавливается перед началом Многомерный OLAP (MOLAP) процесса создания образа.  
@@ -73,4 +67,3 @@ ms.lasthandoff: 09/01/2017
  [Свойства &#40; ASSL &#41;](../../../analysis-services/scripting/properties/properties-assl.md)  
   
   
-

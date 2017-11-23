@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], prepared execution
 - SQL statements [ODBC], executing
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bde6eb0d06e99a9a7e08aeb4d4179bcbb9a5bff2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prepared-execution-odbc"></a>Подготовленное выполнение ODBC
 Подготовленное выполнение является эффективным способом выполнение инструкции несколько раз. Инструкция первой компиляции, или *подготовлен,* в плане доступа. План доступа — то выполняются один или более раз через некоторое время. Дополнительные сведения о планах доступа см. в разделе [обработки инструкции SQL](../../../odbc/reference/processing-a-sql-statement.md).  
@@ -100,4 +98,3 @@ while (GetPrice(&PartID, &Price)) {
  Если драйвер не может эмулировать подготовке инструкции, он содержит инструкцию при **SQLPrepare** вызывается и передает его для выполнения при **SQLExecute** вызывается.  
   
  Так как подготовка эмулированной инструкции не является идеальным, **SQLExecute** может возвращать ошибки, возвращенные обычно **SQLPrepare**.
-

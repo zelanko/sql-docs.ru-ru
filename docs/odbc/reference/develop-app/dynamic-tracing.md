@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - tracing options [ODBC], dynamic
 - dynamic tracing [ODBC]
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 52d7526610d7488fda27bba0a592eb976dce0897
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: af9d893b751e085361b50259f1d751cdeded3b39
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dynamic-tracing"></a>Отслеживание
 Трассировку можно включить или отключить в любой момент запуска приложения. Это позволяет приложению для любого количества вызовов функции трассировки.  
@@ -34,4 +32,3 @@ ms.lasthandoff: 09/09/2017
  Переменная **ODBCSharedTraceFlag** устанавливается для включения трассировки динамически. Эта переменная используется совместно все работающие копии диспетчера драйверов. Любое приложение присваивает этой переменной, включена ли трассировка для всех приложений ODBC, которые в настоящее время запущен. Чтобы включить трассировку off при включении динамической трассировки, приложение вызывает **SQLSetConnectAttr** SQL_ATTR_TRACE присваивается SQL_TRACE_OFF. Этот вызов станет выключение трассировки только для этого приложения. Приложения, которые связаны с библиотекой Odbc32.lib можно изменять использование этой переменной. Данные трассировки могут отображаться в окне, в режиме реального времени, вместо файла трассировки, который должен быть открыт после сеанса ODBC. Элементы управления можно добавить на экран приложения, чтобы включить или отключить трассировку на будут.  
   
  Трассировки, библиотеки DLL, поставляемых с ODBC 3*.x* не является потокобезопасным. Не гарантируется, что файл журнала записывается правильно при включенной трассировке глобальные (переменная **ODBCSharedTraceFlag** задано) и более чем одним приложением записывает в файл трассировки в то же время. Это условие не возвращает ошибку.
-

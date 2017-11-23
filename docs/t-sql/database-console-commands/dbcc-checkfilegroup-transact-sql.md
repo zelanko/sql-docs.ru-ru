@@ -1,13 +1,14 @@
 ---
 title: "Инструкция DBCC CHECKFILEGROUP (Transact-SQL) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 07/16/2017
+ms.custom: 
+ms.date: 11/14/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|database-console-commands
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -15,8 +16,7 @@ f1_keywords:
 - DBCC_CHECKFILEGROUP_TSQL
 - DBCC CHECKFILEGROUP
 - CHECKFILEGROUP
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - DBCC CHECKFILEGROUP statement
 - database objects [SQL Server], checking
@@ -26,20 +26,19 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e3ee32ac764afd0e350fe094eb8e18a24589026e
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c6e5335bd6685e1c547361d931938134becaac84
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]В проверке распределения и структурной целостности всех таблиц и индексированных представлений в указанной файловой группе текущей базы данных.
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]В проверке распределения и структурной целостности всех таблиц и индексированных представлений в указанной файловой группе текущей базы данных.
 ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Синтаксис  
@@ -99,7 +98,7 @@ DBCC CHECKFILEGROUP
  MAXDOP  
  **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
- Переопределяет **максимальная степень параллелизма** параметр конфигурации **sp_configure** для инструкции. MAXDOP может превысить значение, настроенное с помощью хранимой процедуры sp_configure. Если MAXDOP превышает значение, настроенное с помощью регулятора ресурсов, компонент Database Engine использует значение MAXDOP регулятора ресурсов, описанное в инструкцию ALTER WORKLOAD GROUP (Transact-SQL). Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Переопределяет **максимальная степень параллелизма** параметр конфигурации **sp_configure** для инструкции. MAXDOP может превысить значение, настроенное с помощью хранимой процедуры sp_configure. Если MAXDOP превышает значение, настроенное с помощью регулятора ресурсов, компонент Database Engine использует значение MAXDOP регулятора ресурсов, описанное в инструкцию ALTER WORKLOAD GROUP (Transact-SQL). Все семантические правила, используемые параметром конфигурации max degree of parallelism, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!CAUTION]  
 >  Если значение MAXDOP равно нулю, то сервер выбирает максимальную степень параллелизма.  
@@ -120,7 +119,7 @@ DBCC CHECKFILEGROUP
 >  При выполнении инструкции DBCC CHECKFILEGROUP в базе данных tempdb не выполняется никакой проверки выделенных ресурсов, а для выполнения проверки таблиц необходимо получить совмещаемую блокировку таблицы. Это обусловлено тем, что по соображениям, связанным с производительностью, моментальные снимки базы данных недоступны для базы данных tempdb. Это означает, что нельзя достичь требуемой согласованности транзакций.  
   
 ## <a name="checking-objects-in-parallel"></a>Проверка объектов в параллельном режиме  
-По умолчанию инструкция DBCC CHECKFILEGROUP выполняет параллельную проверку объектов. Степень параллелизма определяется автоматически обработчиком запросов. Максимальная степень параллелизма настраивается так же, как и в параллельных запросах. Чтобы ограничить максимальное количество процессоров, доступных для проверки DBCC, используется [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+По умолчанию инструкция DBCC CHECKFILEGROUP выполняет параллельную проверку объектов. Степень параллелизма определяется автоматически обработчиком запросов. Максимальная степень параллелизма настраивается так же, как и в параллельных запросах. Чтобы ограничить максимальное количество процессоров, доступных для проверки DBCC, используется [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
 Параллельную проверку можно отключить с помощью флага трассировки 2528. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
   
 ## <a name="nonclustered-indexes-on-separate-filegroups"></a>Некластеризованные индексы для отдельных файловых групп  
@@ -241,4 +240,3 @@ WITH ESTIMATEONLY;
 [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)
   
   
-

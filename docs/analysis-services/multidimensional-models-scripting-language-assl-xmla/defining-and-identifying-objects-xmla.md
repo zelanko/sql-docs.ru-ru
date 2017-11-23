@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - objects [XML for Analysis]
 - identifying objects [XML for Analysis]
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - object definitions [XML for Analysis]
 - XMLA, objects
 ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 5f04bf324a3434c9806f27ab15a32e3c53d962d7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 136679f6596d7e0bf3c33eca51461af13a9fa6d0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Определение и идентификация объектов (XMLA)
   В командах XML для аналитики (XMLA) объекты указываются при помощи идентификаторов и ссылок на объекты, а определяются при помощи элементов языка ASSL команд XMLA.  
@@ -53,7 +51,6 @@ ms.lasthandoff: 09/01/2017
  [Элемент ParentObject &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-properties/parentobject-element-xmla.md)   
  [Исходный элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-properties/source-element-xmla.md)   
  [Целевой элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-properties/target-element-xmla.md)   
- [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

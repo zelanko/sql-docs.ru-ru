@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 6b535c1eba06e7f023ef9a1f7b00476e7be39eb4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4763973d0ea4bf905b1c38ace337667c92186e3a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tabular-model-data-access"></a>Доступ к данным табличной модели
   К табличным шаблонам базы данных в службах Analysis Services можно получить доступ с помощью большинства тех же клиентов, интерфейсов и языков, которые используются для извлечения данных или метаданных из многомерной модели. Дополнительные сведения см. в разделе [Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -140,4 +139,3 @@ ms.lasthandoff: 09/01/2017
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   
-

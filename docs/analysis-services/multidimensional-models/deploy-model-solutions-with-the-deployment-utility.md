@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Microsoft.AnalysisServices.Deployment utility
 - Analysis Services deployments, command prompt
 ms.assetid: 584f78ac-5f18-41e0-b292-d1949ec05196
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: a14f483af32bdef3383020b48e858e6b26280809
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6bd590943c8922087164bd4759faaf7e39af720b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Развертывание решений моделей с использованием программы развертывания
   Программа **Microsoft.AnalysisServices.Deployment** позволяет запустить механизм развертывания служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из командной строки. В качестве входных файлов программа использует выходные XML-файлы, сформированные при построении проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Входные файлы можно легко изменять для настройки развертывания проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Сформированный скрипт развертывания можно затем либо сразу запустить, либо сохранить и запустить позднее.  
@@ -99,4 +98,3 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
  [Справочник по программе командной строки (Database Engine)](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   
-

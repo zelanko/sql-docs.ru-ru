@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - desktop database drivers [ODBC], performance
 - Jet-based ODBC drivers [ODBC], performance
 ms.assetid: 1a4c4b7e-9744-411f-9b6e-06dfdad92cf7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: beb888ab7920bdac942c60d26980a71a34a54800
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a1bcedc8266132bf617fe35e78d3a73de10f7876
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="desktop-database-driver-performance-issues"></a>Проблемы производительности драйвера для настольных баз данных
 Чтобы обеспечить совместимость с существующими приложениями ANSI, типы данных SQL_WCHAR, SQL_WVARCHAR и SQL_WLONGVARCHAR предоставляется как SQL_CHAR, SQL_VARCHAR и SQL_LONGVARCHAR Microsoft Access 4.0 или более источников данных. Источники данных не возвращают CHAR РАСШИРЕННЫХ типов данных, но данные по-прежнему должны отправляться Jet в форме широкий Char. Важно понимать, что преобразование будет выполнено при передаче SQL_C_CHAR параметра или результата привязанного столбца с типом данных SQL_CHAR в приложении ANSI.  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
  При обновлении приложения с помощью базы данных Jet 3.5 через Microsoft драйверов ODBC базы данных до версии 4.0, может возникнуть некоторое снижение производительности и увеличения размера рабочего множества. Это, поскольку при наличии версии 3. *x* открыть базу данных с помощью нового драйвера версии 4.0, он загружает Jet 4.0. При открытии базы данных Jet 4.0 и видит, что базы данных равно 3. *x* версии, он загружает драйвер устанавливаемый ISAM, эквивалентно загрузке ядро Jet 3.5. Чтобы удалить снижение производительности и размер, Jet 3. *x* следует сжатие базы данных в формат базы данных Jet 4.0. Это устранить загрузке два ядра Jet и свести к минимуму код пути к данным.  
   
  Кроме того ядро Jet 4.0 — это механизм Юникода. Все строки хранения и управления данными в Юникоде. Приложение ANSI при доступе к Jet 3. *x* базы данных с помощью ядра Jet 4.0, данные преобразуются из ANSI в Юникод и обратно в ANSI. Если база данных обновляется до формата версии 4.0, строки преобразуются в Юникод, удаление одного уровня преобразование строк, а также к минимуму код пути к данным через только одно ядро Jet.
-

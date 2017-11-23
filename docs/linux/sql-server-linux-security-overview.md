@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ms.workload: Inactive
+ms.openlocfilehash: 6564447c9b07bbf8147ca256d2898c535199c7f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 45f88572804d236c209ab86884fc0fcbc432bc62
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Ограничения безопасности для SQL Server в Linux
 
@@ -39,4 +38,3 @@ SQL Server в Linux в настоящее время имеет следующи
 
 Для типовых задач безопасности в разделе [приступить к работе со средствами безопасности SQL Server в Linux](sql-server-linux-security-get-started.md).   
 Скрипт для изменения TCP порт номер каталогов SQL Server и настроить флага трассировки или параметров сортировки см. в разделе [Настройка SQL Server в Linux с mssql conf](sql-server-linux-configure-mssql-conf.md).
-

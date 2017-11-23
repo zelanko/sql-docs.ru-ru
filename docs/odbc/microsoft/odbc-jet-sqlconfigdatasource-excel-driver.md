@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SQLConfigDataSource function [ODBC], Excel Driver
 - Excel driver [ODBC], SqlConfigDataSource
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: effe050fd61aded486c86f8551e4e3b1377222c5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a4d5d0b2feb0a09aafeb441c6b33260e4f0738b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet SQLConfigDataSource (драйвер Excel)
 > [!NOTE]  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
 |MAXSCANROWS|Число строк для просмотра при задании типа данных столбца на основе существующих данных.<br /><br /> Можно ввести число от 1 до 16 для строк для сканирования. По умолчанию используется значение 8. Если свойство имеет значение 0, просматриваются все строки. (Число за пределами ограничение будет возвращена ошибка.)<br /><br /> Таким образом задается один и тот же параметр как **строк для просмотра** в диалоговом окне программы установки.|  
 |READONLY|Значение TRUE, чтобы сделать файл доступным только для чтения; Значение FALSE, чтобы сделать файл не только для чтения.<br /><br /> Таким образом задается один и тот же параметр как **только для чтения** в диалоговом окне программы установки.|  
 |ПОТОКИ|Число фоновых потоков, используемых механизмом. Для драйвера Microsoft Access это значение по умолчанию — 3, но могут быть изменены. DBASE MicrosoftExceldriver это значение равно 3 и не может быть изменено.<br /><br /> Таким образом задается один и тот же параметр как **потоков** в диалоговом окне программы установки.|
-

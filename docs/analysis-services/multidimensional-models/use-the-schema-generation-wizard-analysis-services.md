@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Schema Generation Wizard, steps
 - relational schema [Analysis Services], Schema Generation Wizard
 ms.assetid: 8c710745-d41d-4c31-b6a2-2956229df75a
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 8df428eef937514ff96276bc0ebea1964ffb8773
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Использование мастера формирования схем (службы Analysis Services)
   На стадии формирования мастер формирования схем требует ограниченный объем сведений. Большая часть данных, необходимых мастеру формирования схем для формирования реляционных схем, извлекается из кубов и измерений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , уже созданных в проекте. Кроме того, можно настроить то, каким образом будет создана предметная область и как будут именоваться объекты схемы.  
@@ -70,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  На странице **Контекст именования** мастера можно определить контекст именования, которые мастер формирования схем использует при формировании определенных объектов в базе данных предметной области. Дополнительные сведения о параметрах на странице **Соглашения о наименовании** см. в разделе [Указание контекста именования (мастер формирования схем) (службы Analysis Services — многомерные данные)](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b).  
   
   
-

@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ADO, Visual C++
 - Visual C++ [ADO]
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 2cb1c9de2672077e98b930b18b8e1bc382feb5a2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3d9065ef0ee22ce415fa764a8572ec4effdb3c61
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="visual-c-extensions-header"></a>Заголовок расширений Visual C++
 Следующий заголовок **icrsint.h**, интерфейс, который позволяет клиентам извлекать поля из сведений о **записей** в переменные, определенные в классе, производном от **CADORecordBinding**. Необходимо указать макрос ADO привязки для каждого поля, которое необходимо будет получить доступ.  
@@ -218,4 +215,3 @@ public:
 ## <a name="see-also"></a>См. также:  
  [Пример расширения Visual C++](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Использование расширений Visual C++](../../../ado/guide/appendixes/using-visual-c-extensions.md)
-

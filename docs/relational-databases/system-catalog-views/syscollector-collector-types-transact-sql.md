@@ -1,0 +1,74 @@
+---
+title: "syscollector_collector_types (Transact-SQL) | Документы Microsoft"
+ms.custom: 
+ms.date: 06/10/2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: system-catalog-views
+ms.reviewer: 
+ms.suite: sql
+ms.technology: database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- syscollector_collector_types
+- syscollector_collector_types_TSQL
+dev_langs: TSQL
+helpviewer_keywords:
+- data collector view
+- syscollector_collector_types view
+ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
+caps.latest.revision: "20"
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 9fc7ec14a669ad20e5d044b237875d9575ed2f6c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
+---
+# <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  Предоставляет сведения о типе сборщика для элемента сбора.  
+  
+||  
+|-|  
+|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+  
+|Имя столбца|Тип данных|Description|  
+|-----------------|---------------|-----------------|  
+|**Аргумент collector_type_uid**|**uniqueidentifer**|Идентификатор GUID типа сбора. Не допускает значение NULL.|  
+|**name**|**sysname**|Имя данного типа сбора. Не допускает значение NULL.|  
+|**parameter_schema**|**xml**|Схема XML, описывающая конфигурацию заданного типа сборщика. Данная схема XML используется для проверки действительной XML-конфигурации, связанной с конкретным экземпляром элемента сбора. Допускает значение NULL.|  
+|**parameter_formatter**|**xml**|Определяет шаблон, применяемый для преобразования XML с целью его использования на странице свойств набора сбора. Допускает значение NULL.|  
+|**collection_package_id**|**uniqueidentifer**|Идентификатор GUID пакета сбора. Не допускает значение NULL.|  
+|**collection_package_path**|**nvarchar(4000)**|Предоставляет путь к пакету сбора. Допускает значение NULL.|  
+|**collection_package_name**|**sysname**|Имя пакета сбора. Не допускает значение NULL.|  
+|**upload_package_id**|**uniqueidentifer**|Идентификатор GUID пакета передачи. Не допускает значение NULL.|  
+|**upload_package_path**|**nvarchar(4000)**|Предоставляет путь к пакету передачи. Допускает значение NULL.|  
+|**upload_package_name**|**sysname**|Имя пакета передачи. Не допускает значение NULL.|  
+|**is_system**|**bit**|Включен (1) или off (0), чтобы указать, если тип сборщика был поставлен со сборщиком данных или если он был добавлен пользователем позже **dc_admin**. Данный тип сбора может являться пользовательским типом собственной или сторонней разработки. Не допускает значение NULL.|  
+  
+## <a name="permissions"></a>Permissions  
+ Необходимо разрешение SELECT для **dc_operator**, **dc_proxy**.  
+  
+## <a name="change-history"></a>Журнал изменений  
+  
+|Обновленное содержимое|  
+|---------------------|  
+|Обновить **collection_type_uid** имя столбца, чтобы **аргумент collector_type_uid**.|  
+|Исправлено описание для **parameter_schema** столбец для указания, что он допускает значения NULL.|  
+|Добавлен **parameter_formatter** столбца.|  
+|Исправлен тип данных для **collection_package_path** столбца, обновлено описание, чтобы указать, что он допускает значения NULL.|  
+|Исправлен тип данных для **upload_package_path** столбца, обновлено описание, чтобы указать, что он допускает значения NULL.|  
+  
+## <a name="see-also"></a>См. также:  
+ [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Представления сборщика данных (Transact-SQL)](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
+ [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
+  
+  

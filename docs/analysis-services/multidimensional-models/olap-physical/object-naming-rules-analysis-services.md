@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- objects [Analysis Services], naming
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: objects [Analysis Services], naming
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1493d5236d4c44fe4a496a67a2c435aab703daa8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 116ee643ee52c3bdb8c5b6188ba5198afc24265d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="object-naming-rules-analysis-services"></a>Правила именования объектов (службы Analysis Services)
   В этом разделе описываются соглашения об именовании объектов. В нем также приведены зарезервированные слова и символы, которые нельзя использовать в именах объектов, в коде или в скриптах в службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -104,4 +101,3 @@ ms.lasthandoff: 09/01/2017
  [XML для аналитики соответствия &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-for-analysis-compliance-xmla.md)  
   
   
-

@@ -14,20 +14,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.asvs.bidtoolset.renametableorcolumn.f1
+f1_keywords: sql13.asvs.bidtoolset.renametableorcolumn.f1
 ms.assetid: 88061a39-c5aa-403d-a52b-7fdb365fc235
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: edfd1fe4e353f74f9729325b40865905a1907dc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5a560b70416ed73945db053249a51508635b50ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Переименование таблицы или столбца (табличные службы SSAS)
   Имя таблицы можно изменить во время импорта, указав **Понятное имя** на странице **Выбор таблиц и представлений** **мастера импорта таблиц**. Имена таблицы и столбцов также можно изменить, если данные импортируются с помощью запроса на странице **Указание SQL-запроса** **мастера импорта таблиц**.  
@@ -71,4 +69,3 @@ ms.lasthandoff: 09/01/2017
  [Импорт из служб Analysis Services](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)  
   
   
-

@@ -26,17 +26,16 @@ helpviewer_keywords:
 - system requirements [Analysis Services]
 - availability [Analysis Services]
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Требования и вопросы, связанные с развертыванием служб Analysis Services
   Производительность и доступность решения зависят от многих факторов, среди которых мощность оборудования, топология серверов, характеристики решения (например, использование секций, распределенных на нескольких серверах, или хранилища ROLAP, которому требуется прямой доступ к реляционному механизму), соглашения на уровне служб, а также сложность модели данных.  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/01/2017
 -   Если при низкой производительности запросов невозможно увеличить ресурсы процессора и памяти на локальном сервере, то следует рассмотреть возможность развертывания проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на одном или нескольких рабочих серверах. Затем для объединения серверов в один кластер можно использовать функцию балансировки нагрузки сети (NLB). В кластере NLB запросы автоматически распространяются на несколько серверов, входящих в кластер NLB.  
   
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,20 +18,18 @@ f1_keywords:
 - _Column::NumericScale
 - _Column::put_NumericScale
 - _Column::get_NumericScale
-helpviewer_keywords:
-- NumericScale property [ADOX]
+helpviewer_keywords: NumericScale property [ADOX]
 ms.assetid: 573ee5d1-57c7-4a27-be79-a0e12944ad9b
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 719c0164cd33f3d88f07c77414f7105e17b2477d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a5f943223be304de56e52f54510bd6d27bac6d15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="numericscale-property-adox"></a>Свойство NumericScale (ADOX)
 Указывает шкалу числовых значений в столбце.  
@@ -46,9 +43,8 @@ ms.lasthandoff: 09/09/2017
  **NumericScale** доступно только для чтения для [столбца](../../../ado/reference/adox-api/column-object-adox.md) объектов уже добавлен в коллекцию.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
 ## <a name="see-also"></a>См. также:  
  [ADOX кода примерах: NumericScale и точности свойства (Visual Basic)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Свойство Type (столбец) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
-
+ [Свойство Type (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

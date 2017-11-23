@@ -3,17 +3,18 @@ title: "FREETEXT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 10/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - FREETEXT
 - FREETEXT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - full-text search [SQL Server], meaning matches
 - meaning matches [full-text search]
@@ -21,20 +22,19 @@ helpviewer_keywords:
 - words in predicate [full-text search]
 - column searches [full-text search]
 ms.assetid: 2f199d3c-440e-4bcf-bdb5-82bb3994005d
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9c7475e73cbd5022bf5c243fbd4e7a35dc115cf0
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 48c7ce4788a0c5da0b22e80ab1dc366091c25f97
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Предикат, используемый в [!INCLUDE[tsql](../../includes/tsql-md.md)] [предложение WHERE](../../t-sql/queries/where-transact-sql.md) из [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции SELECT для выполнения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] полнотекстового поиска в полнотекстовых индексированных столбцах, содержащим типы символьных данных. Этот предикат выполняет поиск значений, которые соответствуют условию поиска по смыслу, а не написанию. Когда используется предикат FREETEXT, ядро полнотекстовых запросов автоматически выполняет следующие действия над *freetext_string*, присваивает вес каждому терму, а затем ищет совпадения:  
   
@@ -76,7 +76,7 @@ FREETEXT ( { column_name | (column_list) | * }
   
  Использование функций WEIGHT, FORMSOF, символов шаблонов, NEAR, а также других синтаксических элементов запрещено. *freetext_string* wordbroken и пропускается через тезаурус.  
   
- *freetext_string* — **nvarchar**. Если в качестве входных данных используется другой тип символьных данных, производится неявное преобразование. В следующем примере переменная `@SearchWord`, тип которой определен как `varchar(30)`, вызывает неявное преобразование в предикате `FREETEXT`.  
+ *freetext_string* — **nvarchar**. Если в качестве входных данных используется другой тип символьных данных, производится неявное преобразование. Большой строки данных типа nvarchar(max) и varchar(max) не может использоваться. В следующем примере переменная `@SearchWord`, тип которой определен как `varchar(30)`, вызывает неявное преобразование в предикате `FREETEXT`.  
   
 ```  
   
@@ -176,4 +176,3 @@ GO
  [ГДЕ &#40; Transact-SQL &#41;](../../t-sql/queries/where-transact-sql.md)  
   
   
-

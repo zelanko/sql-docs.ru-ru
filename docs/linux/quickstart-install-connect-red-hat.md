@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.workload: Active
+ms.openlocfilehash: 213cabec248c9f293944904a1909f51484fcdf4a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: d5f7a249e43619e0730da0a30fd5597788441bb8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Установка SQL Server и создать базу данных в Red Hat
 
@@ -121,4 +120,3 @@ ms.lasthandoff: 10/21/2017
 > **Sqlcmd** — лишь один инструмент для подключения к SQL Server для выполнения запросов и выполнять задачи управления и разработки. Другие средства включают в себя [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) и [кода Visual Studio](sql-server-linux-develop-use-vscode.md).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
-

@@ -18,17 +18,16 @@ helpviewer_keywords:
 - drillthrough [Analysis Services]
 - drillthrough [DMX]
 ms.assetid: 246c784b-1b0c-4f0b-96f7-3af265e67051
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 41a3c89638b1fc9cc7e95fa13baeac93eb20c683
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1cb15acfcc31572a34c6bf2fe6c3ec75101a9fd0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="drillthrough-queries-data-mining"></a>Запросы детализации (интеллектуальный анализ данных)
   *Запрос детализации* позволяет извлекать сведения из базовых вариантов или данных структуры, отсылая запрос в модель интеллектуального анализа данных. Детализация применяется в том случае, если нужно просмотреть варианты, использованные для обучения модели, в отличие от вариантов, которые используются для ее проверки, либо чтобы просмотреть дополнительных сведения из данных варианта.  
@@ -112,4 +111,3 @@ ms.lasthandoff: 09/01/2017
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)  
   
   
-

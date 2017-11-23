@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - NextRecordset
 - Recordset15::NextRecordset
 - Recordset15::raw_NextRecordset
-helpviewer_keywords:
-- NextRecordset method [ADO]
+helpviewer_keywords: NextRecordset method [ADO]
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 524957fe66debad97fc9c1512cc9e3c70153d216
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e7650cb3516311f3eb93e93304ba9d20ec874466
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="nextrecordset-method-ado"></a>Метод NextRecordset (ADO)
 Очищает текущий [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта и возвращает следующий **записей** с помощью перемещения через ряд команд.  
@@ -68,9 +65,8 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
  Тем не менее других поставщиков может выполните следующую команду в инструкции только после вызова NextRecordset. Для этих поставщиков, если явно закрыть **записей** объекта перед проходить через инструкцию всей команды ADO никогда не выполняет остальные команды.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Пример метода NextRecordset (Visual Basic)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
- [Пример метода NextRecordset (VC ++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   
-
+ [Пример метода NextRecordset (Visual C++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

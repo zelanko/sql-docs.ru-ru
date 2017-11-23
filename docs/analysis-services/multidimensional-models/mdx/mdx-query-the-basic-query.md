@@ -21,17 +21,16 @@ helpviewer_keywords:
 - SELECT statement [MDX]
 - cubes [Analysis Services], SELECT statement
 ms.assetid: 4fa5a95a-fec9-4584-875c-dbf030c53e82
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
+ms.openlocfilehash: 46373fffaba2935a6faa9efa6deddebd6ce66ceb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: d8d80527166b6b6a1d49cbd4f3735689c429020e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-query---the-basic-query"></a>Запрос многомерных Выражений — базовый запрос
   Базовый запрос многомерных выражений — это инструкция SELECT, наиболее частый запрос в многомерных выражениях. Чтобы получить основательные знания о применении многомерных выражений для запроса многомерных данных, необходимо понять, как в инструкции многомерных выражений SELECT определяется результирующий набор, синтаксис инструкции SELECT и как с ее помощью создавать простые запросы.  
@@ -123,4 +122,3 @@ WHERE ( [Sales Territory].[Southwest] )
  [Инструкция SELECT &#40; Многомерные Выражения &#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   
-

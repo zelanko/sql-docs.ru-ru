@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5cd35e0-3d8f-4784-9172-93d60c730321
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: c8fc14fc26221bedd8d97af5e4f478de99535b74
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9e98f38071c044aab967690ffafffa6ada634141
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Создание и настройка коллекции Power Pivot
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Коллекция — это специальный тип библиотеки документов SharePoint. Она предлагает широкие возможности для просмотра опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , и управления ими.  
@@ -163,4 +162,3 @@ ms.lasthandoff: 09/01/2017
  [Удаление коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
   
   
-

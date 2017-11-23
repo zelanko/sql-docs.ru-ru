@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_CopyTo
 - _Stream::CopyTo
-helpviewer_keywords:
-- CopyTo method [ADO]
+helpviewer_keywords: CopyTo method [ADO]
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3e9f5d99069108e452c4ba4038d166ae3a59ef20
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c0dd6b935b73ee6841118533d322eb092e77b7cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="copyto-method-ado"></a>CopyTo-метод (ADO)
 Копирует заданное число символов или байтов (в зависимости от [тип](../../../ado/reference/ado-api/type-property-ado-stream.md)) в [поток](../../../ado/reference/ado-api/stream-object-ado.md) в другой **поток** объекта.  
@@ -59,5 +56,4 @@ Stream.CopyTo DestStream, NumChars
  **CopyTo** следует использовать для копирования данных в назначение **поток** того же типа, как источник **поток** (их **тип** заданы оба Свойства**adTypeText** или оба **adTypeBinary**). Для текста **поток** объектов, можно изменить [Charset](../../../ado/reference/ado-api/charset-property-ado.md) значение свойства назначения **поток** для преобразования из одной кодировки в другую. Кроме того, текст **поток** объекты можно успешно скопированы в двоичное **поток** объектов, но двоичный файл **поток** объекты нельзя скопировать в текстовый **потока**  объектов.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
-
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

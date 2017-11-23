@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - registering assemblies
 - database assemblies [Analysis Services]
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - stored procedures [Analysis Services], creating
 - assemblies [Analysis Services]
 ms.assetid: a12ff02f-6d0b-4488-9846-3609fc0d0554
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2a18ccef8d4e2e79f5a88e43def0bf13b683e266
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1212037722863a4dc72ddb99387308cf2e33fc33
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="creating-stored-procedures"></a>Создание хранимых процедур
   Для использования любой хранимой процедуры необходимо, чтобы она была связана с классом среды CLR или модели COM. Класс должен быть установлен на сервере, обычно в виде [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® библиотеки динамической компоновки (DLL) и зарегистрирован как сборка на сервере или в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных.  
@@ -128,4 +126,3 @@ ms.lasthandoff: 09/01/2017
  [Определение хранимых процедур](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

@@ -19,17 +19,16 @@ helpviewer_keywords:
 - moving databases
 - operations [Analysis Services - multidimensional data]
 ms.assetid: fa644e5d-e276-445e-98d9-673afcfb83fe
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e43e1cb11224884cf5c068c91beb3a606b51d8e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 73d410fdb16765b5ae1022362f11be8e918140fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="move-an-analysis-services-database"></a>Перемещение базы данных служб Analysis Services
   Часто возникают ситуации, когда администратору баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо переместить базу данных для многомерной или табличной модели в другое место. Такие ситуации часто обусловлены потребностями предприятия, например необходимостью переместить базу данных на другой диск для повышения производительности, освободить место для увеличения размера базы данных или при обновлении какого-либо продукта.  
@@ -161,4 +160,3 @@ ms.lasthandoff: 09/01/2017
  [Элемент DbStorageLocation](../../analysis-services/xmla/xml-elements-properties/dbstoragelocation-element.md)  
   
   
-

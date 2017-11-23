@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - debugging stored procedures [Analysis Services]
 - stored procedures [Analysis Services], debugging
 ms.assetid: 34f51b85-02b3-40dd-bf93-375a9e522385
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 7e8a7802551181de7292650ec806eeb85a06140c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a2bec11c4a5d374c7e4dc2b9cc5a264c69402853
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="debugging-stored-procedures"></a>Отладка хранимых процедур
   Хранимые процедуры служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в реальности представляют собой библиотеки CLR или COM (обычно DLL), написанные на языке C# (или на любом другом языке CLR или COM). Таким образом, отладка хранимой процедуры практически аналогична отладке любого другого приложения в среде отладки Visual Studio. Отладка хранимых процедур в среде разработки Visual Studio производится с использованием интегрированных функций отладки. Они позволяют осуществлять остановку процедуры в определенных местах, контролировать значения в памяти и регистрах, изменять переменные, следить за трафиком сообщений и подробно анализировать работу кода.  
@@ -67,4 +65,3 @@ ms.lasthandoff: 09/01/2017
  [Определение хранимых процедур](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   
-

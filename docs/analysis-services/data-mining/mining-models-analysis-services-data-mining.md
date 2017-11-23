@@ -21,17 +21,16 @@ helpviewer_keywords:
 - mining models [Analysis Services], about data mining models
 - architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 91d1787e568c49d528cc030125ffdb73c0e00b28
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
   *Модель интеллектуального анализа данных* создается путем применения алгоритма к данным. Но это больше, чем алгоритм или контейнер метаданных: это набор данных, статистик и шаблонов, которые можно применять к новым данным для формирования прогнозов и вывода взаимосвязей.  
@@ -147,8 +146,8 @@ ms.lasthandoff: 09/01/2017
 |Задача|Ссылка|  
 |----------|----------|  
 |Добавление и удаление моделей интеллектуального анализа данных|[добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [удалить модель интеллектуального анализа данных из структуры интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
-|Работа со столбцами модели интеллектуального анализа данных|[исключить столбец из модели интеллектуального анализа данных](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [создать псевдоним для столбца модели](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [изменить дискретизацию столбца в модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Указание столбца, который будет использоваться в модели в качестве регрессора](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Изменение свойств модели интеллектуального анализа данных|[Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [Применение фильтра к модели интеллектуального анализа данных](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [удалить фильтр из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [включить детализацию для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [Просмотр или изменение параметров алгоритма](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
+|Работа со столбцами модели интеллектуального анализа данных|[исключить столбец из модели интеллектуального анализа данных](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [Создание псевдонима для столбца модели](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [изменить дискретизацию столбца в модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Указание столбца, который будет использоваться в модели в качестве регрессора](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Изменение свойств модели интеллектуального анализа данных|[Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [Применение фильтра к модели интеллектуального анализа данных](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [Удаление фильтра из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [Включение детализации для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [Просмотр или изменение параметров алгоритма](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
 |Копирование, перемещение и управление моделями|[создать копию модели интеллектуального анализа данных](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [Копирование представления модели интеллектуального анализа данных](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT (расширения интеллектуального анализа данных)](../../dmx/export-dmx.md)<br /><br /> [IMPORT (расширения интеллектуального анализа данных)](../../dmx/import-dmx.md)|  
 |Заполнение моделей данными и обновление данных в модели|[обработать модель интеллектуального анализа данных](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |Работа с моделями OLAP|[создать измерение интеллектуального анализа данных](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
@@ -157,4 +156,3 @@ ms.lasthandoff: 09/01/2017
  [Объекты баз данных (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

@@ -13,25 +13,23 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - programming [AMO]
 - Analysis Management Objects, OLAP
 - OLAP [AMO]
 - AMO, OLAP
 ms.assetid: ad1c970e-c0cb-4687-9563-56ab62c2db5f
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: bebff2d4f64f26f0f1824042512534c5459f2872
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eaca145753958228bdecae9b7bdcb2ebcdb8b6cb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Программирование основных объектов AMO OLAP
   Процесс создания сложных объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] является простым и понятным, но требует внимания к деталям. В этом разделе подробно описывается программирование базовых объектов OLAP. Этот раздел состоит из следующих подразделов.  
@@ -582,4 +580,3 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  [Установка образцов данных и проектов для служб Analysis Services многомерное моделирование учебник](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
-

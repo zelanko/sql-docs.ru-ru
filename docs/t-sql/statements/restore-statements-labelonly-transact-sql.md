@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,23 +16,21 @@ f1_keywords:
 - RESTORE_LABELONLY_TSQL
 - LABELONLY_TSQL
 - RESTORE LABELONLY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - RESTORE LABELONLY statement
 - backup media [SQL Server], content information
 ms.assetid: 7cf0641e-0d55-4ffb-9500-ecd6ede85ae5
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 972a51eca37afca09042608b3bfcc767ec6ece27
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9f69efb096931108fdaea084b337fcb319f7cfb6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>Инструкции - RESTORE LABELONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   Возвращает результирующий набор, содержащий сведения о носителях резервного копирования, которые определяются данным устройством резервного копирования.  
   
 > [!NOTE]  
->  Описания аргументов см. в разделе [аргументы инструкции RESTORE & #40; Transact-SQL & #41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+>  Описания аргументов см. в разделе [аргументы инструкции RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -79,7 +76,7 @@ FROM <backup_device>
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Описания аргументов инструкции RESTORE LABELONLY см. в разделе [аргументы инструкции RESTORE & #40; Transact-SQL & #41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+ Описания аргументов инструкции RESTORE LABELONLY см. в разделе [аргументы инструкции RESTORE &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
 ## <a name="result-sets"></a>Результирующие наборы  
  Результирующий набор инструкции RESTORE LABELONLY состоит из единственной строки со следующими сведениями.  
@@ -124,4 +121,3 @@ FROM <backup_device>
  [Журнал и сведения о заголовке резервной копии (SQL Server)](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   
-

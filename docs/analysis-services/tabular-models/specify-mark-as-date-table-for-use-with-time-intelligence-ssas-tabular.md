@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 1b8d4a4ab8b48b8d18a32023902b24132831b97c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c23ab7153ce90c55c9858dde6a0f0083bc92def7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Указание таблицы дат для использования с логики операций со временем
   Для использования функции логики операций со временем в формулах DAX, необходимо указать таблицу дат и столбец уникальных идентификаторов (datetime) типа данных Date. После указания в таблице дат столбца в качестве уникального идентификатора можно создавать связи между столбцами таблицы дат и любых таблиц фактов.  
@@ -65,4 +64,3 @@ ms.lasthandoff: 09/01/2017
  [Функции логики операций со временем (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)  
   
   
-

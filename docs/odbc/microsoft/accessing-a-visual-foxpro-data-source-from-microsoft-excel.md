@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - Visual FoxPro data [ODBC], accessing
 - Visual FoxPro ODBC driver [ODBC], Excel
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6c4b4932d4a39ed36809547cd4a7ab029b4ac052
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Доступ к источникам данных Visual FoxPro из Microsoft Excel
 Если у вас установлен Microsoft Query, можно создать источник данных в Microsoft Excel, который подключается к данным Visual FoxPro.  
@@ -56,4 +54,3 @@ ms.lasthandoff: 09/09/2017
 8.  Вариант.  
   
  Теперь можно добавить таблицы, чтобы открыть запрос. Дополнительные сведения о построении запроса см. в разделе [импорта данных в Microsoft Excel из базы данных Visual FoxPro](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md).
-

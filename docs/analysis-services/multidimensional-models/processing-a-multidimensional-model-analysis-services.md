@@ -26,17 +26,16 @@ helpviewer_keywords:
 - project mode [Analysis Services]
 - cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0813f6d0947927d93a44519c5cbe8eeeb6a5719c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb063d1667fc3cd3824f2577784278fa46308960
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Обработка многомерной модели (службы Analysis Services)
   Обработка ― это шаг или последовательность шагов, в которых службы Analysis Services загружают данные из реляционного источника данных в многомерную модель. Для объектов, использующих режим хранения MOLAP, данные сохраняются на диске в папке файла базы данных. Для режима хранения ROLAP обработка происходит по запросу, в ответ на запрос многомерных выражений к объекту. Для объектов, использующих режим хранения ROLAP, обработка относится к обновлению кэш-памяти до возврата результатов запроса.  
@@ -93,4 +92,3 @@ ms.lasthandoff: 09/01/2017
  [Объекты баз данных (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   
-

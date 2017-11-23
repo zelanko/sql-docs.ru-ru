@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Active
+ms.openlocfilehash: 3cf5b554da4a01fd52aa2ae0766b1379bab1acfb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
-ms.openlocfilehash: ea8a0eb15a17cb7bc0032cf951c3fce0830761ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/21/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Установка SQL Server и создать базу данных на Ubuntu
 
@@ -128,4 +127,3 @@ ms.lasthandoff: 10/21/2017
 > **Sqlcmd** — лишь один инструмент для подключения к SQL Server для выполнения запросов и выполнять задачи управления и разработки. Другие средства включают в себя [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) и [кода Visual Studio](sql-server-linux-develop-use-vscode.md).
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
-

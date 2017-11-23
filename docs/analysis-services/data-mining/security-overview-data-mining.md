@@ -13,20 +13,18 @@ ms.technology:
 - analysis-services/data-mining
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- security [Analysis Services - data mining], about security
+helpviewer_keywords: security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e41132d9c98186073c67799bea6e9d677f5b3c82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="security-overview-data-mining"></a>Общие сведения о безопасности (интеллектуальный анализ данных)
   Защита служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] выполняется на нескольких уровнях. Необходимо защитить каждый экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и его источники данных, чтобы убедиться, что только авторизованные пользователи имеют разрешения на чтение или на чтение и запись в выбранных измерениях, моделях интеллектуального анализа данных и источниках данных. Необходимо также обезопасить базовые источники данных, чтобы предотвратить несанкционированный доступ к конфиденциальным бизнес-данным. Процесс защиты экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] описывается в следующих разделах.  
@@ -68,4 +66,3 @@ ms.lasthandoff: 09/01/2017
  [Роли и разрешения (службы Analysis Services)](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
-

@@ -19,17 +19,16 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 2c6a984d44c17375d1bd33482ec6c1f26fcb29ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 83259b46fd10b45e25e032dfdb692fd654c67260
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Конфигурация ошибок для кубов, секций и обработка измерения
   Свойства конфигурации ошибок для кубов, секций и объектов измерения определяют реакцию сервера на возникновение ошибок целостности данных во время обработки. Обычно такие ошибки вызваны повторяющимися или отсутствующими ключами и значения NULL в ключевом столбце. Хоть запись с ошибкой и не будет добавлена в базу данных, можно задать свойства, которые определят дальнейшую реакцию на ошибку. По умолчанию обработка останавливается. Однако во время разработки куба желательно продолжить обработку при возникновении ошибки для тестирования поведения куба с импортированным данными, даже если они не будут полными.  
@@ -188,11 +187,10 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_next"></a> Следующий шаг  
  Определитесь, будут ошибки прерывать обработку или же пропускаться. Помните, что пропускается только сама ошибка. Запись, приведшая к ошибке, не пропускается; она отбрасывается либо преобразуется в неизвестный элемент. Записи, нарушающие правила целостности данных, никогда не добавляются в базу данных. По умолчанию обработка прерывается при возникновении первой ошибки, но это поведение можно изменить, увеличив предельное количество ошибок. При разработке кубов может быть полезно сделать правила конфигурации ошибок менее строгими, чтобы разрешить продолжение обработки и собрать данные для тестирования.  
   
- Определитесь, следует ли изменить стандартные правила обработки значений NULL. По умолчанию значения NULL в строковом столбце обрабатываются как пустые значения, а NULL в числовом столбце — как нуль. Инструкции по установке правил обработки значений NULL для атрибута см. в разделе [Определение свойств Unknown Member и Null Processing](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
+ Определитесь, следует ли изменить стандартные правила обработки значений NULL. По умолчанию значения NULL в строковом столбце обрабатываются как пустые значения, а NULL в числовом столбце — как нуль. Инструкции по установке правил обработки значений NULL для атрибута см. в разделе [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
   
 ## <a name="see-also"></a>См. также  
  [Свойства журнала](../../analysis-services/server-properties/log-properties.md)   
  [Определение неизвестного элемента и свойств обработки значений Null](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
   
-

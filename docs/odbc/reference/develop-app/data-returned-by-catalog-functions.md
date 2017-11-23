@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - catalog functions [ODBC], result sets
 - functions [ODBC], catalog functions
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 46b8a628b6b8e6ad9a2eb3164e6935f3f3401ec8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-returned-by-catalog-functions"></a>Данные, возвращаемые функциями каталога
 Каждая функция каталога возвращает данные в виде результирующего набора. Этот результирующий набор ничем не отличается от результирующего набора. Обычно формируется путем стандартных, параметризованные **ВЫБЕРИТЕ** инструкции, которая жестко запрограммированы в драйвере или хранимой процедуры в источнике данных. Сведения о способах получения данных из результирующего набора. в разделе [был результирующий набор создан?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  
@@ -46,4 +44,3 @@ SELECT "Customer Name" FROM "Accounts Payable"
  Функции каталогов основаны на модель SQL-подобного авторизации, в котором устанавливается соединение на основе имени пользователя и пароль и возвращаются только данные, для которых пользователь имеет права доступа. Защита паролем отдельных файлов, который не помещается в эту модель, определяемым драйвером.  
   
  Результирующие наборы, возвращаемые функциями каталога практически никогда не являются обновляемыми и приложения не должен ожидать иметь возможность изменить структуру базы данных, изменение данных в эти результирующие наборы.
-

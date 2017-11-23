@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bitwise
 - '&'
 - '&_TSQL'
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - AND, bitwise AND
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 20275755-4fa7-47b1-a9be-ac85606d63b0
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: d249ca1552197a5fb7e53540c40e70c864d134bb
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e862f742a97f0ea66edcfe32d28224c6fbbeff70
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="amp-bitwise-and-transact-sql"></a>&amp;(Побитовое и) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +60,7 @@ expression & expression
  **tinyint** Если входные значения имеют **tinyint** или **бит**.  
   
 ## <a name="remarks"></a>Замечания  
-  **&**  Побитовый оператор выполняет побитовую логическую операцию и между двумя выражениями, последовательно обрабатывая соответствующие биты для двух выражений. Значение результирующих битов устанавливается равным 1 только в том случае, если оба бита (для текущего разрешаемого бита) в переданных выражениях имеют значение 1; в остальных случаях значение результирующего бита устанавливается равным 0.  
+ **&**  Побитовый оператор выполняет побитовую логическую операцию и между двумя выражениями, последовательно обрабатывая соответствующие биты для двух выражений. Значение результирующих битов устанавливается равным 1 только в том случае, если оба бита (для текущего разрешаемого бита) в переданных выражениях имеют значение 1; в остальных случаях значение результирующего бита устанавливается равным 0.  
   
  Если левое и правое выражения имеют разные целочисленные типы данных (например, влево *выражение* — **smallint** и правом *выражение* —  **int**), аргумент более короткого типа данных преобразуется в тип данных большего размера. В этом случае **smallint***выражение* преобразуется в **int**.  
   
@@ -113,10 +110,9 @@ GO
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Побитовые операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)   
- [& = &#40; Побитовое и равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
+ [& = &#40; Присваивание побитового и &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)   
  [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
   
   
-
 
 

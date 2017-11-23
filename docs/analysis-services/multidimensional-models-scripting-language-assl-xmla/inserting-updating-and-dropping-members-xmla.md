@@ -13,8 +13,7 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - inserting dimension members
 - XML for Analysis, members
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - deleting dimension members
 - dimensions [Analysis Services], XML for Analysis
 ms.assetid: bba922b5-8b88-4051-9506-ff055248182a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: d98ad262e92a1da61c6ac3dda67aaac871dabd1e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cb089245a47a70890bb45ed2499bdf6e852d3ef6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="inserting-updating-and-dropping-members-xmla"></a>Вставка, обновление и удаление элементов (XMLA)
   Можно использовать [вставить](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [обновление](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), и [Drop](../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) команды XML для аналитики (XMLA) чтобы соответственно вставлять, обновления или удаления элементов из измерения, доступные для записи. Дополнительные сведения о записи измерений см. в разделе [измерениях](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md).  
@@ -125,7 +123,6 @@ ms.lasthandoff: 09/01/2017
  [Вставить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md)   
  [Обновить элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)   
  [Определение и идентификация объектов &#40; XML для Аналитики &#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmla.md)   
- [Разработка с использованием XML для Аналитики в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
+ [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   
   
-

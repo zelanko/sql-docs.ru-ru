@@ -13,31 +13,29 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - commands [XML for Analysis]
 - XML for Analysis, commands
 - XMLA, commands
 ms.assetid: c8a93ea6-8eb5-4204-b037-69cb442a0082
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 19644de3ba240e417faa3d787360686d7b5c835f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64577ef2799fd56cc4e404a42fc351be8ece6baa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-elements---commands"></a>Элементы XML - команды
   В этом разделе справки содержит XML для аналитики (XMLA) элементов, которые могут использоваться в **команда** во время выполнения **Execute** вызова метода.  
   
 |Элемент|Description|  
 |-------------|-----------------|  
-|[Элемент ALTER (XML для Аналитики)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) для изменения объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
+|[Элемент Alter (XML для аналитики)](../../../analysis-services/xmla/xml-elements-commands/alter-element-xmla.md)|Содержит элементы языка сценариев служб Analysis Services (ASSL), используемые методом [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) для изменения объектов в экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Элемент BACKUP](../../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)|Создает резервную копию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных в файл резервной копии.|  
 |[Элемент Batch](../../../analysis-services/xmla/xml-elements-commands/batch-element-xmla.md)|Выполняет один или несколько XML для аналитики (XMLA) команды как пакетная операция последовательно или параллельно на экземпляре [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
 |[Элемент BeginTransaction](../../../analysis-services/xmla/xml-elements-commands/begintransaction-element-xmla.md)|Начинает транзакцию в текущем сеансе с экземпляром служб Analysis Services.|  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/01/2017
 |[Элемент UpdateCells](../../../analysis-services/xmla/xml-elements-commands/updatecells-element-xmla.md)|Обновляет ячейки в кубе, доступном для записи.|  
   
   
-

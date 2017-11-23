@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 5d98bab3-3577-4143-b737-5196444a36ac
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 29c7d1c38dc4703cdbd3db1bcbf5fd07fcfa10c3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5c933a78cedb5bf0169bd18efba310676a4cde7a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Занятие 2 – 5 – развертывание проекта служб Analysis Services
 Чтобы просмотреть куб и данные измерения для объектов куба «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] » проекта «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] », необходимо развернуть проект на указанном экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , а затем выполнить обработку куба и его измерений. В процессе*развертывания* проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project creates the defined objects in проекта служб instпроекта службce of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]создаются определенные объекты. При*обработке* объектов в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] данные из базовых источников данных копируются в объекты кубов. Дополнительные сведения см. в разделах [Развертывание проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) и [Настройка свойств проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)создаются определенные объекты.  
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/01/2017
   
   
   
-

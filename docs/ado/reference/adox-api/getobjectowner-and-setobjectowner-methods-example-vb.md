@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - SetObjectOwner method [ADOX], Visual Basic example
 - GetObjectOwner method [ADOX], Visual Basic example
 ms.assetid: e44ec3d4-42ae-447d-aaed-bdea53cb0cca
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: fe26808c74e56a961fedb17c27955a961066ab9f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65254f67ef864418a4c75e9e3f2b035c610e594e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="getobjectowner-and-setobjectowner-methods-example-vb"></a>GetObjectOwner и пример SetObjectOwner методы (Visual Basic)
 В этом примере демонстрируется [GetObjectOwner](../../../ado/reference/adox-api/getobjectowner-method-adox.md) и [SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md) методы. В этом коде предполагается существование группы учета (см. [группы и добавление пользователей, ChangePassword методы пример (Visual Basic)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md) чтобы узнать, как добавить эту группу в систему). Владелец таблицы Categories присваивается учета.  
@@ -73,4 +70,3 @@ End Sub
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Метод GetObjectOwner (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)   
  [Метод SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)
-

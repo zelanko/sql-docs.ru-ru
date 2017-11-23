@@ -8,22 +8,20 @@ ms.service:
 ms.component: power-pivot-sharepoint
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 882a0dca2f6c2c443507bc5b4d54820711e55ae7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f400a5513fcd16ea5344157e451d06b8fe103796
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Эта книга содержит один или несколько запросов на обновление внешних данных
   Для книг Excel, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , службы Excel Services отображают это предупреждение при обнаружении сведений о подключении и предлагают включить или отключить запросы для этой книги.  
@@ -62,4 +60,3 @@ ms.lasthandoff: 09/01/2017
  Или можно создать новое надежное местоположение для сайтов, содержащих книги [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , а затем изменить параметры конфигурации только для этого сайта. Дополнительные сведения см. в разделе [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
   
-

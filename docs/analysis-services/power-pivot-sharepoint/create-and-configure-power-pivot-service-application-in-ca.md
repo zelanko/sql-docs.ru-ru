@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e5693e-4af3-453f-83f3-07481ab1ac6a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 27d009450f9bdfac7eeff0f1bc9e1909d8968f01
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 343e3ed597e892e7b9e332d35acb6719e5b27aee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Создание и настройка приложения службы PowerPivot в ЦС
   Приложение службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это общий экземпляр системной службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Каждое приложение службы имеет свое удостоверение, параметры настройки, свойства и внутреннее хранилище данных.  
@@ -166,4 +165,3 @@ ms.lasthandoff: 09/01/2017
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   
-

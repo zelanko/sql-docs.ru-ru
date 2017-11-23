@@ -21,17 +21,16 @@ helpviewer_keywords:
 - tables [Analysis Services], data source views
 - partitions [Analysis Services], named queries
 ms.assetid: 60c2a018-1299-4915-b60e-e73316524def
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e7ef8b35a810411ed5f035e8cc7ba69d737bf8df
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6913e8639e482442c1af4da942ddae8a4089c877
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services"></a>Замена таблицы или именованного запроса в представлении источника данных (службы Analysis Services)
   В конструкторе представлений источников данных можно заменить таблицу, представление или именованный запрос в представлении источника данных на другую таблицу или представление из того же или из другого источника данных или на именованный запрос, определенный в представлении источника данных. При замене таблицы все другие объекты в базе данных или проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] со ссылками на эту таблицу продолжают ссылаться на таблицу, так как идентификатор объекта для таблицы в представлении источника данных не изменился. Любые связи по-прежнему остаются действительными (на основе соответствия имен и типа столбцов). Если таблица удаляется, а затем добавляется, то ссылки и связи также удаляются, поэтому их необходимо создавать повторно.  
@@ -77,4 +76,3 @@ ms.lasthandoff: 09/01/2017
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   
-

@@ -13,23 +13,21 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - functionality [ADOMD.NET]
 - ADOMD.NET, functionality
 ms.assetid: 0f5e16a1-dc2d-4c87-8551-985921bf069b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 4573834d025c7afb066c4e363c476e8fb18c4ab7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: 0a1047fbccf3e9437c3160891f502f9e2838c34a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adomdnet-client-functionality"></a>Функциональные возможности клиента ADOMD.NET
   Как и другие поставщики данных платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ADOMD.NET выступает в качестве моста между приложением и источником данных. Однако ADOMD.NET отличается от остальных поставщиком данных платформы .NET Framework тем, что он работает с аналитическими данными. Для этого компонент ADOMD.NET обладает функциями, которые в значительной степени отличаются от функций других поставщиков данных платформы .NET Framework. ADOMD.NET позволяет получать не только данные, но и метаданные, а также изменять структуру источника аналитических данных.  
@@ -76,4 +74,3 @@ ms.lasthandoff: 10/24/2017
  [Программирование клиента ADOMD.NET](../../analysis-services/multidimensional-models-adomd-net-client/adomd-net-client-programming.md)  
   
   
-

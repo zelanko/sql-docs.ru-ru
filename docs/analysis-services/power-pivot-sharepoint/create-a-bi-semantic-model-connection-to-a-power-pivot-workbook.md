@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 111dd53e993bc5797e8fae34ee9b02eee707aa3b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f5171b30d867a9e2bd676ff1895ad992b56c5e96
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot
   Сведения, приведенные в этом разделе, помогут настроить подключение семантической модели бизнес-аналитики с перенаправлением на книгу [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в той же ферме.  
@@ -109,7 +108,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>См. также  
  [Соединение семантической модели бизнес-аналитики PowerPivot (BISM-файлы)](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [Использовать соединение семантической модели бизнес-Аналитики в Excel или Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
- [Создание соединения семантической модели бизнес-аналитики с табличным шаблоном базы данных](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Создание подключения между семантической моделью бизнес-аналитики и книгой PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   
-

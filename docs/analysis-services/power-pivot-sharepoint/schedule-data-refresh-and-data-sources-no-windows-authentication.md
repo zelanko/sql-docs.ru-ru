@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d8d875bc-7823-46b7-a939-867cefd4de12
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64cd9d5e1b628da9f4ceff1ac75663fb558238f4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Обновление данных расписания и источники данных - без проверки подлинности Windows
   В этом разделе рассматривается рабочий процесс планирования обновления данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, в котором могут использоваться источники данных, **НЕ** поддерживающие аутентификацию Windows. В качестве примера можно назвать источники данных Oracle или IDM DB2. На рисунках и в процедурах, которые приведены в этом разделе, речь идет об источниках данных Oracle, но тот же рабочий процесс применим к другим источникам данных.  
@@ -180,4 +179,3 @@ ms.lasthandoff: 09/01/2017
 -   См. подраздел "Плановое обновление данных" раздела [Обновление данных PowerPivot с SharePoint 2013 и SQL Server 2012 SP1 (службы Analysis Services)](http://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   
   
-

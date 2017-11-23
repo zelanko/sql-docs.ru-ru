@@ -14,17 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="prediction-queries-data-mining"></a>Прогнозирующие запросы (интеллектуальный анализ данных)
   Целью стандартного проекта интеллектуального анализа данных является создание прогнозов с помощью моделей интеллектуального анализа данных. Например, пользователю может потребоваться спрогнозировать возможное время простоя определенного кластера серверов либо сформировать оценку, показывающую вероятность отклика покупателей из разных сегментов на рекламную кампанию. Чтобы выполнить все это, следует создать прогнозирующий запрос.  
@@ -161,4 +160,3 @@ FROM
  [Запросы, определяющие данные (интеллектуальный анализ данных)](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
   
-

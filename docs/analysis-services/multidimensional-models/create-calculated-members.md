@@ -20,17 +20,16 @@ helpviewer_keywords:
 - members [Analysis Services], calculated
 - calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 526186a2a5942b777c22fd7da7b5dad5326133da
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-calculated-members"></a>Создание вычисляемых элементов
   Можно создать пользовательские меры или элементы измерения, называемые вычисляемыми элементами, с помощью комбинации данных куба, арифметических операторов, чисел и функций. Например, можно создать вычисляемый элемент со значением «Евро», конвертирующий доллары в евро с помощью умножения меры доллара на коэффициент конвертации. Затем можно в отдельной строке или столбце отобразить значение в евро для конечных пользователей.  
@@ -94,4 +93,3 @@ ms.lasthandoff: 09/01/2017
  [Вычисления в многомерных моделях](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   
-

@@ -8,14 +8,11 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- sql13.TSQLExpandPortal.f1
-dev_langs:
-- TSQL
+f1_keywords: sql13.TSQLExpandPortal.f1
+dev_langs: TSQL
 helpviewer_keywords:
 - conventions [SQL Server]
 - Applies to section in Transact-SQL topics
@@ -30,20 +27,19 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 12291b23c9204aaf030c3a8f093fe05bf4712721
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9a1c60d865d1b18eae1cd89ea226e91e8e7b5b9e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="transact-sql-syntax-conventions-transact-sql"></a>Transact-SQL синтаксис соглашения Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="transact-sql-syntax-conventions-transact-sql"></a>Синтаксические обозначения в Transact-SQL (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   В следующей таблице перечислены и описаны соглашения, которые используются в синтаксисе в справочнике по [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -130,6 +126,5 @@ ms.lasthandoff: 09/01/2017
  [Справочник по Transact-SQL (компонент Database Engine)](../../t-sql/transact-sql-reference-database-engine.md)  
   
   
-
 
 

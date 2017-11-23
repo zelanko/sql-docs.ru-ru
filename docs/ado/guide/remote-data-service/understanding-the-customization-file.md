@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- customization file in RDS [ADO]
+helpviewer_keywords: customization file in RDS [ADO]
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 52cd707a4c9c82cb3740f79f36a5b0578d2379f3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: cadf89ac579b11ab829ecd288fec77df81eb0603
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-the-customization-file"></a>Основные сведения о настройке файла
 Заголовок каждого раздела в файле настройки состоит из квадратных скобок (**[]**) содержащего типа и параметров. Типы четыре раздела обозначаются строковых литералов **подключения**, **sql**, **userlist**, или **журналы**. Параметр является символьная строка, значение по умолчанию, пользовательским идентификатором или ничего.  
@@ -82,7 +79,6 @@ identifier
  [Настройка DataFactory](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [Параметры клиента](../../../ado/guide/remote-data-service/required-client-settings.md)   
  [Запись собственного настраиваемого обработчика](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
 
 
 

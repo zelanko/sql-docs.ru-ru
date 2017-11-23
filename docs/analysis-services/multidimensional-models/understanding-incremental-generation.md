@@ -19,17 +19,16 @@ helpviewer_keywords:
 - Schema Generation Wizard, incremental generation
 - relational schema [Analysis Services], incremental generation
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9e2b3bcd255c35dc0085266ea40c23bd705bbb1e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="understanding-incremental-generation"></a>Основные сведения о добавочном создании
   После первоначального формирования схемы при помощи среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно изменить определения куба и измерений, а затем вновь запустить мастер формирования схем. Мастер обновляет схему в базе данных предметной области и в соответствующем представлении источника данных для отражения изменений при сохранении данных, присутствующих в текущий момент в таблицах, подлежащих повторному формированию. При изменении таблиц после первоначального формирования мастер формирования схем по возможности сохраняет эти изменения, используя следующие правила.  
@@ -98,4 +97,3 @@ ms.lasthandoff: 09/01/2017
  [Мастер формирования схем (службы Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   
   
-

@@ -14,12 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
+ms.openlocfilehash: e4e783017d594e07c35e33cc6ac1485abad4af4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: cfdf9fd32226dd94c244c1523380de67c280a892
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-failover-cluster-instance---nfs---sql-server-on-linux"></a>Настроить экземпляр отказоустойчивого кластера — NFS - SQL Server в Linux
 
@@ -259,4 +258,3 @@ NFS или сетевой файловой системы является ра�
 [2]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/10-mountnoswitches.png
 [3]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/20-createtestdatabase.png
 [4]: ./media/sql-server-linux-shared-disk-cluster-configure-nfs/15-createtestdatabase.png
-

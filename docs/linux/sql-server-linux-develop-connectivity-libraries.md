@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
 ms.workload: Inactive
+ms.openlocfilehash: 765fb054ab4fb5332df7b2f9d2e202188f621b67
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f692639531a133652787dfe818fe25847c0d910b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Библиотек подключений и платформы для Microsoft SQL Server
 
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/27/2017
 
 ## <a name="related-links"></a>Связанные ссылки
 - [Драйверы для SQL Server](http://msdn.microsoft.com/library/mt654049.aspx) для подключение из клиентских приложений
-

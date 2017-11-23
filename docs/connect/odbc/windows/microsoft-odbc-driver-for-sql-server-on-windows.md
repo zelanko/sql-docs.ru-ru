@@ -8,22 +8,20 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b10cfc22-6a2c-4707-a456-0dcec317982b
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: e32deba2343ac385175760685e50ab10a156017a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: be37bf73c0fe662b15c8ad26210ed243b5ca317c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="microsoft-odbc-driver-for-sql-server-on-windows"></a>Драйвер Microsoft ODBC для SQL Server в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -59,8 +57,7 @@ Microsoft ODBC Driver 13.1, 13 и 11 for [!INCLUDE[ssNoVersion](../../../include
   
 ## <a name="see-also"></a>См. также:  
 - [Основные сведения об SQL Server Native Client](https://msdn.microsoft.com/sqlserver/ff658532.aspx)   
-- [Построение приложений с использованием собственного клиента SQL Server](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
+- [Построение приложений с использованием SQL Server Native Client](../../../relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md)   
 - [SQL Server Native Client: вопросы и ответы](https://msdn.microsoft.com/sqlserver/aa937707.aspx)   
 - [Справочник по программированию ODBC](../../../odbc/reference/odbc-programmer-s-reference.md)   
-- [Собственный клиент SQL Server (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  
-
+- [SQL Server Native Client (ODBC)](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)  

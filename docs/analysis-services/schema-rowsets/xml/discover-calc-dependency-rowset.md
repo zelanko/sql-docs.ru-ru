@@ -13,22 +13,19 @@ ms.technology:
 - docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- DISCOVER_CALC_DEPENDENCIES rowset
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: DISCOVER_CALC_DEPENDENCIES rowset
 ms.assetid: f39dde72-fa5c-4c82-8b4e-88358aa2e422
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 0926c2eef3b0b733d9d334a5ed59a96a24826c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 86f0ed45ced35aba884f05284f886334d250694d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="discovercalcdependency-rowset"></a>Набор строк DISCOVER_CALC_DEPENDENCY
   Сообщает о зависимостях между вычислениями и об объектах, упоминаемых в этих вычислениях. Эти сведения можно использовать в клиентском приложении для сообщения о проблемах со сложными формулами и предупреждения об удалении или изменении связанных объектов. Этот набор строк можно использовать для извлечения выражений расширений интеллектуального анализа данных, используемых в мерах или вычисляемых столбцах.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 09/01/2017
 |**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Да|Указывает имя базы данных, содержащей объект, для которого запрошен анализ зависимостей. Если отсутствует, используется текущая база данных.<br /><br /> Набор строк **DISCOVER_DEPENDENCY_CALC** можно ограничить с помощью этого столбца.|  
 |**OBJECT_TYPE**|**DBTYPE_WSTR**|Да|Указывает тип объекта, для которого запрошен анализ зависимостей. Объект должен принадлежать к одному из следующих типов:<br /><br /> **ACTIVE_RELATIONSHIP**: активная связь.<br /><br /> **CALC_COLUMN**: вычисляемый столбец.<br /><br /> **HIERARCHY**: иерархия.<br /><br /> **MEASURE**: мера.<br /><br /> **RELATIONSHIP**: связь.<br /><br /> **KPI**: ключевой показатель эффективности (KPI).<br /><br /> <br /><br /> Обратите внимание, что **DISCOVER_DEPENDENCY_CALC** строк может быть ограничен с помощью этого столбца.|  
 |**ЗАПРОС**|**DBTYPE_WSTR**|Да|В табличные модели, созданные в [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)], вы можете включить запрос или выражение DAX, чтобы отобразить диаграмму зависимостей для этого запроса или выражения. Ограничение QUERY дает клиентским приложениям возможность определить, какие объекты используются запросом DAX.<br /><br /> Ограничение **QUERY** можно указывать в XMLA или в предложении WHERE запроса динамического административного представления. Дополнительные сведения см. в разделе «Примеры».|  
-|**ТАБЛИЦА**|**DBTYPE_WSTR**||Имя таблицы, содержащей объект, для которого создаются сведения о зависимостях.|  
+|**TABLE**|**DBTYPE_WSTR**||Имя таблицы, содержащей объект, для которого создаются сведения о зависимостях.|  
 |**ОБЪЕКТ**|**DBTYPE_WSTR**||Имя объекта, для которого создаются сведения о зависимостях. Если объект является мерой или вычисляемым столбцом, используйте имя меры. Если объект является связью, используйте имя таблицы (или измерение куба), где находится столбец, участвующий в связи.|  
 |**ВЫРАЖЕНИЕ**|**DBTYPE_WSTR**||Формула, содержащая объект, для которого выполняется поиск зависимостей.|  
 |**REFERENCED_OBJECT_TYPE**|**DBTYPE_WSTR**||Возвращает тип объекта, зависимого от упоминаемого объекта. Возвращаемые объекты могут принадлежать к следующим типам:<br /><br /> **CALC_COLUMN**: вычисляемый столбец.<br /><br /> **COLUMN**: столбец данных.<br /><br /> **MEASURE**: мера.<br /><br /> **RELATIONSHIP**: связь.<br /><br /> **KPI**: ключевой показатель эффективности (KPI).|  
@@ -139,4 +136,3 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
  [Используйте динамические административные представления &#40; динамических административных представлений &#41; для мониторинга служб Analysis Services](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
-

@@ -22,17 +22,16 @@ helpviewer_keywords:
 - MAXIMUM_OUTPUT_ATTRIBUTES parameter
 - MAXIMUM_STATES parameter
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 812ca4b26ed14645bbd84094077f24f44d8784cd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91e15d1d56b8d548651c316d3169fc36b4a7fd04
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Технический справочник по упрощенному алгоритму Байеса (Майкрософт)
   Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом классификации, предоставляемым службами [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозном моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
@@ -113,4 +112,3 @@ ms.lasthandoff: 09/01/2017
  [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   
-

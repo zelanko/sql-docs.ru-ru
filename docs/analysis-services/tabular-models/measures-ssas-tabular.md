@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 38b7467cd4ad765d651ea0ebe4ad57c278c987a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="measures"></a>меры
   В табличных моделях мера представляет собой вычисление, созданное при помощи формулы DAX, специально созданной для использования в клиенте отчетов. Меры оцениваются на основании полей, фильтров и срезов, которые пользователи выбирают в клиентском приложении создания отчетов.  
@@ -104,4 +103,3 @@ Sum of TotalProfit: =SUM([TotalProfit])
  [Вычисляемые столбцы](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   
   
-

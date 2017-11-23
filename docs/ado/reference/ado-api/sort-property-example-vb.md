@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Sort property [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Sort property [ADO], Visual Basic example
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 653f50c01ba6850da1984b5c3bb307ce2580adcd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 04432fa17ae9f8073dfaa7060a2d32035b4897dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sort-property-example-vb"></a>Пример свойства сортировки (Visual Basic)
 В этом примере используется [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта [сортировки](../../../ado/reference/ado-api/sort-property.md) свойство для изменения порядка строк **записей** производными ***авторы*** таблицы ***Pubs*** базы данных. Вторичный служебной процедуры выводит каждую строку.  
@@ -119,5 +115,4 @@ Attribute VB_Name = "Sort"
   
 ## <a name="see-also"></a>См. также:  
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Свойство сортировки](../../../ado/reference/ado-api/sort-property.md)
-
+ [Свойство Sort](../../../ado/reference/ado-api/sort-property.md)

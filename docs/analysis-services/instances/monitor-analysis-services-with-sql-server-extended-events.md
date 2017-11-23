@@ -21,17 +21,16 @@ f1_keywords:
 - Sql13.ssms.XeASNewEventSession.Targets.f1
 - Sql13.ssms.XeASNewEventSession.Advanced.f1
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 7857edc132bbf7e82b749b752fafa72c78e9e890
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cec6da660c202dfde5a1169dd34397fca5c51207
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-analysis-services-with-sql-server-extended-events"></a>Мониторинг служб Analysis Services с помощью расширенных событий SQL Server
   Расширенные события (*xEvents*) — это упрощенная система трассировки и мониторинга производительности, которая использует очень небольшое количество системных ресурсов. Это делает систему идеальным средством для диагностики проблем как на производственных, так и на тестовых серверах. Система также характеризуется высокой масштабируемостью и возможностями настройки. В SQL Server 2016 ее использование упрощено благодаря поддержке новых встроенных средств. В SQL Server Management Studio для подключений к экземплярам служб Analysis Services можно настроить, запустить и отслеживать динамическую трассировку так же, как и при использовании приложения SQL Server Profiler. Добавление улучшенных средств не только делает xEvents более рациональной заменой SQL Server Profiler, но и позволяет упорядочить диагностику проблем в ядре СУБД и рабочих нагрузках служб Analysis Services.  
@@ -178,4 +177,3 @@ ms.lasthandoff: 09/01/2017
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  
   
   
-

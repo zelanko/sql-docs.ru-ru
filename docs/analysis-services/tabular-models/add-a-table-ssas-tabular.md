@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 95113c2053b0e37cc4ee3d94d2baf0ed64d71d57
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d68422844c6c5692ebfe362cb6e6d44400e705b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="add-a-table-ssas-tabular"></a>Добавление таблицы (табличные службы SSAS)
   В этом разделе описывается добавление таблицы из источника данных, из которого ранее выполнялся импорт данных в модель. Чтобы добавить таблицу из того же источника данных, можно использовать существующее соединение с источником данных. Рекомендуется всегда использовать одно соединение для импорта любого количества таблиц из одного источника данных.  
@@ -53,4 +52,3 @@ ms.lasthandoff: 09/01/2017
  [Удаление таблицы (табличные службы SSAS)](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   
-

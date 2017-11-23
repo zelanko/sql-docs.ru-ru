@@ -1,5 +1,5 @@
 ---
-title: "* = (Равно с умножением) (Transact-SQL) | Документы Microsoft"
+title: "* = (Присваивание умножения) (Transact-SQL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,33 +8,33 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - '*=_TSQL'
 - '*='
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators, *=
+- assignment operators, *=
+- augmented operators, *=
 - '*= (multiply equals)'
+- '*= (multiplication assignment)'
 ms.assetid: 816ff5dc-9a40-4c07-8351-39c194dbc079
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d430048203348e4f249d9866d76a5e02964deac5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bb629e9f025a96a8f4272c97557dd2637bd3422a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
-# <a name="-multiply-equals-transact-sql"></a>*= (РАВНО с умножением) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="-multiplication-assignment-transact-sql"></a>* = (Присваивание умножения) (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Умножает два числа и присваивает значению результат этой операции. Например, если переменная @x равно 35, @x * = 2 принимает исходное значение @x, умножает на 2 и задает @x новое значение (70).  
   
@@ -54,7 +54,7 @@ expression *= expression
  Возвращает результат типа данных аргумента с более высоким приоритетом. Дополнительные сведения см. в разделе [Приоритет типов данных (Transact-SQL)](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="remarks"></a>Замечания  
- Дополнительные сведения см. в разделе [&#42; &#40; Умножьте &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/multiply-transact-sql.md).  
+ Дополнительные сведения см. в разделе [&#42; &#40; Умножение &#41; &#40; Transact-SQL &#41; ](../../t-sql/language-elements/multiply-transact-sql.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Составные операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
@@ -62,4 +62,3 @@ expression *= expression
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
-

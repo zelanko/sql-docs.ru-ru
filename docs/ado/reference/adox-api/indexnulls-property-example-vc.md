@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- IndexNulls property [ADOX], VC++ example
+dev_langs: C++
+helpviewer_keywords: IndexNulls property [ADOX], VC++ example
 ms.assetid: ee407e03-4889-4a22-b031-ca542d637c96
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6da5a87dc80fb32da7994031c1698861fcd4875a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 61caac6dfa023dfb7dacfcfa6db002d81df0d745
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="indexnulls-property-example-vc"></a>Пример свойства IndexNulls (VC ++)
 В этом примере демонстрируется [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) свойство [индекса](../../../ado/reference/adox-api/index-object-adox.md). Код создает новый индекс и задает значение **IndexNulls** на основе ввода пользователя. Затем **индекс** добавляется к **сотрудников** [таблицы](../../../ado/reference/adox-api/table-object-adox.md) в *Northwind* [каталога](../../../ado/reference/adox-api/catalog-object-adox.md). Новый **индекс** применяется к [записей](../../../ado/reference/ado-api/recordset-object-ado.md) на основе **сотрудников** таблицы и **записей** открыт. Новая запись добавляется в **сотрудников** таблицы, с **Null** значение индексированного поля. Вывод этой новой записи зависит от настройки **IndexNulls** свойство.  
@@ -199,4 +195,3 @@ void IndexNullsX(_bstr_t strSel) {
          m_pCatalog = NULL;  
 }  
 ```
-

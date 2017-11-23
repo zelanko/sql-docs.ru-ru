@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - intervals [ODBC], converting
 - year-month intervals [ODBC]
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 4acd46374597b19849abfaa7cb547c8b6af23bd9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 991dd021935617a9c0bfbe87ecf7be35d35938c9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL, чтобы интервалы год месяц C:
 Идентификаторы типа данных ODBC SQL interval год месяц следующие:  
@@ -54,4 +52,3 @@ _C_BINARY|Байтовая длина данных < = *BufferLength*<br /><br /
  [b] Если точности интервала одно поле (один год или месяц), можно преобразовать интервал тип SQL для любой точное числовое значение (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_USHORT, SQL_C_SHORT, SQL_C_SLONG, SQL_C_ULONG или SQL_C_NUMERIC).  
   
  Преобразования по умолчанию интервала тип SQL — соответствующие типы данных C интервал. Затем приложение привязывает столбца или параметра (или задает поле SQL_DESC_DATA_PTR в соответствующей записи Отменить) для указания инициализированный SQL_INTERVAL_STRUCT структуры (или передает указатель в качестве структуруSQL_INTERVAL_STRUCT*TargetValuePtr* аргумента в вызове **SQLGetData**).
-

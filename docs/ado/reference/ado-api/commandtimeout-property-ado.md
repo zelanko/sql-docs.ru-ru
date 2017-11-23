@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Command15::CommandTimeout
-helpviewer_keywords:
-- CommandTimeout property [ADO]
+f1_keywords: Command15::CommandTimeout
+helpviewer_keywords: CommandTimeout property [ADO]
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 908ca954d2165b92287fe6ae3c2cba5eb927a0fd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e88345e295d38872522b1dfc155d90ad139d8e31
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="commandtimeout-property-ado"></a>Свойство CommandTimeout (ADO)
 Указывает время ожидания при выполнении команды перед прекращением попытки и созданием ошибки.  
@@ -47,11 +43,10 @@ ms.lasthandoff: 09/09/2017
   
 |||  
 |-|-|  
-|[Объект команды (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
+|[Объект Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [ActiveConnection CommandText, CommandTimeout, CommandType, размер и направление-пример свойства (Visual Basic)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection CommandText, CommandTimeout, CommandType, размер и направление примере свойства (VC ++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, размер и направление-пример свойства (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   
  [Свойство ConnectionTimeout (ADO)](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)
-
