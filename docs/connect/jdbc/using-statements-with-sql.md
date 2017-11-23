@@ -8,22 +8,20 @@ ms.service:
 ms.component: jdbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e672add8738558615d01d6d402bec5cbe34dc295
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 5cba782d32a60b2bbdcf61276db6a1989f82c50b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="using-statements-with-sql"></a>Использование инструкций в SQL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,13 +39,12 @@ ms.lasthandoff: 09/09/2017
   
 |Раздел|Description|  
 |-----------|-----------------|  
-|[С помощью инструкции SQL без параметров](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|Описывает порядок использования инструкций SQL, которые не содержат параметров.|  
-|[С помощью инструкции SQL с параметрами](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|Описывает порядок использования инструкций SQL, которые содержат параметры.|  
-|[С помощью инструкции SQL для изменения объектов базы данных](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|Описывает порядок использования инструкций SQL для изменения объектов базы данных.|  
-|[Изменение данных с помощью инструкции SQL](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|Описывает порядок использования инструкций SQL для изменения данных в базе данных.|  
+|[Использование инструкции SQL без параметров](../../connect/jdbc/using-an-sql-statement-with-no-parameters.md)|Описывает порядок использования инструкций SQL, которые не содержат параметров.|  
+|[Использование инструкции SQL с параметрами](../../connect/jdbc/using-an-sql-statement-with-parameters.md)|Описывает порядок использования инструкций SQL, которые содержат параметры.|  
+|[Использование инструкции SQL для изменения объектов баз данных ](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md)|Описывает порядок использования инструкций SQL для изменения объектов базы данных.|  
+|[Использование инструкции SQL для изменения данных](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)|Описывает порядок использования инструкций SQL для изменения данных в базе данных.|  
   
 ## <a name="see-also"></a>См. также:  
  [Использование инструкций с драйвером JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  
   
   
-

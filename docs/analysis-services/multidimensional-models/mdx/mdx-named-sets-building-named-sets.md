@@ -22,17 +22,16 @@ helpviewer_keywords:
 - queries [MDX], named sets
 - set expressions [MDX]
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 382c4f44f40ad89266a26695109111a185719b2d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b9239f7ee621cec3032c42d10b70c75702b58db6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mdx-named-sets---building-named-sets"></a>Многомерные Выражения именованных наборов - построение именованных наборов
   Выражение набора может быть длинной и сложной декларацией, которую трудно проследить и понять. Или выражение набора может использоваться настолько часто, что его повторное определение может стать утомительным. Чтобы облегчить работу с длинными, сложными или часто используемыми выражениями, в многомерных выражениях можно определить такое выражение, как *именованный набор*.  
@@ -55,4 +54,3 @@ ms.lasthandoff: 09/01/2017
  [Основные принципы запросов многомерных выражений (службы Analysis Services)](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   
-

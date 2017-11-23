@@ -8,12 +8,10 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - dates [SQL Server]
@@ -23,17 +21,16 @@ helpviewer_keywords:
 - functions [SQL Server], date and time
 - time [SQL Server], functions
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
-caps.latest.revision: 79
+caps.latest.revision: "79"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 05ce8f3240590e1be28722ded5a526ad2dd2d6df
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 7ce3baac7ec87ff3cad771234ab1196fb0a3855e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>Типы данных и функции даты и времени (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -85,18 +82,18 @@ ms.lasthandoff: 09/06/2017
 |Функция|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
 |[CURRENT_TIMESTAMP](../../t-sql/functions/current-timestamp-transact-sql.md)|CURRENT_TIMESTAMP|Возвращает **datetime** значение, содержащее дату и время компьютера, на котором экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущена. Смещение часового пояса не включается.|**datetime**|Недетерминированная|  
-|[ФУНКЦИЯ GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|Возвращает **datetime** значение, содержащее дату и время компьютера, на котором экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущена. Смещение часового пояса не включается.|**datetime**|Недетерминированная|  
+|[GETDATE](../../t-sql/functions/getdate-transact-sql.md)|GETDATE ( )|Возвращает **datetime** значение, содержащее дату и время компьютера, на котором экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущена. Смещение часового пояса не включается.|**datetime**|Недетерминированная|  
 |[GETUTCDATE](../../t-sql/functions/getutcdate-transact-sql.md)|GETUTCDATE ( )|Возвращает **datetime** значение, содержащее дату и время компьютера, на котором экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запущена. Дата и время возвращаются в формате UTC (время по Гринвичу).|**datetime**|Недетерминированная|  
   
 ###  <a name="GetDateandTimeParts"></a>Функции, получающие компоненты даты и времени
   
 |Функция|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |--------------|------------|------------------|----------------------|-----------------|  
-|[ФУНКЦИЯ DATENAME](../../t-sql/functions/datename-transact-sql.md)|Функция DATENAME ( *datepart* , *даты* )|Возвращает символьную строку, представляющий указанный *datepart* указанной даты.|**nvarchar**|Недетерминированная|  
+|[DATENAME](../../t-sql/functions/datename-transact-sql.md)|Функция DATENAME ( *datepart* , *даты* )|Возвращает символьную строку, представляющий указанный *datepart* указанной даты.|**nvarchar**|Недетерминированная|  
 |[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *даты* )|Возвращает целое число, представляющее указанную *datepart* указанного *даты*.|**int**|Недетерминированная|  
-|[ДЕНЬ](../../t-sql/functions/day-transact-sql.md)|ДЕНЬ ( *даты* )|Возвращает целое число, представляющее день указанной *даты*.|**int**|Детерминированное|  
-|[МЕСЯЦ](../../t-sql/functions/month-transact-sql.md)|МЕСЯЦ ( *даты* )|Возвращает целое число, представляющее месяц указанной даты *даты*.|**int**|Детерминированное|  
-|[ГОД](../../t-sql/functions/year-transact-sql.md)|ГОД ( *даты* )|Возвращает целое число, представляющее год указанной даты *даты*.|**int**|Детерминированное|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|ДЕНЬ ( *даты* )|Возвращает целое число, представляющее день указанной *даты*.|**int**|Детерминированное|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|МЕСЯЦ ( *даты* )|Возвращает целое число, представляющее месяц указанной даты *даты*.|**int**|Детерминированное|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|ГОД ( *даты* )|Возвращает целое число, представляющее год указанной даты *даты*.|**int**|Детерминированное|  
   
 ###  <a name="fromParts"></a>Функции, получающие значения даты и времени из их компонентов
   
@@ -113,14 +110,14 @@ ms.lasthandoff: 09/06/2017
   
 |Функция|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
-|[ФУНКЦИЯ DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Возвращает количество даты или времени *datepart* границы, пересекаемых между двумя указанными датами.|**int**|Детерминированное|  
+|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|Возвращает количество даты или времени *datepart* границы, пересекаемых между двумя указанными датами.|**int**|Детерминированное|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|Возвращает количество даты или времени *datepart* границы, пересекаемых между двумя указанными датами.|**bigint**|Детерминированное|  
   
 ###  <a name="ModifyDateandTimeValues"></a>Функции, которые изменяют значения даты и времени
   
 |Функция|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
-|[ФУНКЦИЯ DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|Функция DATEADD (*datepart* , *номер* , *даты* )|Возвращает новый **datetime** значения путем добавления интервала к указанной *datepart* указанного *даты*.|Тип данных *даты* аргумент|Детерминированное|  
+|[DATEADD](../../t-sql/functions/dateadd-transact-sql.md)|Функция DATEADD (*datepart* , *номер* , *даты* )|Возвращает новый **datetime** значения путем добавления интервала к указанной *datepart* указанного *даты*.|Тип данных *даты* аргумент|Детерминированное|  
 |[EOMONTH](../../t-sql/functions/eomonth-transact-sql.md)|EOMONTH ( *start_date* [, *month_to_add* ])|Возвращает последний день месяца, содержащего указанную дату, с необязательным смещением.|Тип возвращаемого значения — это тип *start_date* или **даты**.|Детерминированное|  
 |[SWITCHOFFSET](../../t-sql/functions/switchoffset-transact-sql.md)|КОММУТАТОР*СМЕЩЕНИЕ* (*DATETIMEOFFSET* , *time_zone*)|КОММУТАТОР*СМЕЩЕНИЕ* изменяет смещение часового пояса для значения DATETIMEOFFSET и сохраняет значение UTC.|**DateTimeOffset** с точностью в долях *DATETIMEOFFSET*|Детерминированное|  
 |[TODATETIMEOFFSET](../../t-sql/functions/todatetimeoffset-transact-sql.md)|TODATETIMEOFFSET (*выражение* , *time_zone*)|TODATETIMEOFFSET преобразует значение типа datetime2 в значение типа datetimeoffset. Значение datetime2 преобразуется в местное время для указанного time_zone.|**DateTimeOffset** с точностью в долях *datetime* аргумент|Детерминированное|  
@@ -129,10 +126,10 @@ ms.lasthandoff: 09/06/2017
   
 |Функция|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
-|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST|Возвращает текущее значение параметра SET DATEFIRST для сеанса.|**tinyint**|Недетерминированная|  
+|[@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md)|@@DATEFIRST |Возвращает текущее значение параметра SET DATEFIRST для сеанса.|**tinyint**|Недетерминированная|  
 |[SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)|SET DATEFIRST { *номер* &#124;  **@**  *number_var* }|Устанавливает первый день недели в виде числа от 1 до 7.|Неприменимо|Неприменимо|  
 |[SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md)|SET DATEFORMAT { *формат* &#124;  **@**  *format_var* }|Задает порядок составляющих даты (месяц/день/год) для ввода **datetime** или **smalldatetime** данных.|Неприменимо|Неприменимо|  
-|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE|Возвращает название используемого в данный момент языка. @@LANGUAGE не является функцией даты или времени. Однако на данные, выводимые функциями даты, могут повлиять настройки языка.|Неприменимо|Неприменимо|  
+|[@@LANGUAGE](../../t-sql/functions/language-transact-sql.md)|@@LANGUAGE |Возвращает название используемого в данный момент языка. @@LANGUAGE не является функцией даты или времени. Однако на данные, выводимые функциями даты, могут повлиять настройки языка.|Неприменимо|Неприменимо|  
 |[УСТАНОВИТЬ ЯЗЫК](../../t-sql/statements/set-language-transact-sql.md)|SET LANGUAGE {[N] **"***язык***"** &#124;  **@**  *language_var* }|Устанавливает языковую среду сеанса и системных сообщений. SET LANGUAGE не является функцией даты или времени. Однако на данные, выводимые функциями даты, влияет параметр языка.|Неприменимо|Неприменимо|  
 |[sp_helplanguage](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md)|**sp_helplanguage** [[  **@language =** ] **"***язык***"** ]|Возвращает сведения о формате даты всех поддерживаемых языков. **sp_helplanguage** не является дата или время хранимой процедуры. Однако на данные, выводимые функциями даты, влияет параметр языка.|Неприменимо|Неприменимо|  
   
@@ -140,7 +137,7 @@ ms.lasthandoff: 09/06/2017
   
 |Функция|Синтаксис|Возвращаемое значение|Тип возвращаемых данных|Детерминизм|  
 |---|---|---|---|---|
-|[ФУНКЦИЯ ISDATE](../../t-sql/functions/isdate-transact-sql.md)|Функция ISDATE ( *выражение* )|Определяет, является ли **datetime** или **smalldatetime** входное выражение является допустимым значением даты или времени.|**int**|Функция ISDATE детерминирована, только если используется совместно с функцией CONVERT и если заданный параметр стиля CONVERT не равен 0, 100, 9 или 109.|  
+|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|Функция ISDATE ( *выражение* )|Определяет, является ли **datetime** или **smalldatetime** входное выражение является допустимым значением даты или времени.|**int**|Функция ISDATE детерминирована, только если используется совместно с функцией CONVERT и если заданный параметр стиля CONVERT не равен 0, 100, 9 или 109.|  
   
 ##  <a name="DateandTimeRelatedTopics"></a>Дата и время см. также 
   
@@ -156,4 +153,3 @@ ms.lasthandoff: 09/06/2017
 [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
   
   
-

@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Unicode [ODBC], functions
 - functions [ODBC], Unicode functions
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5b8d2ee5be47e77fe639299da0851029494d88c4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: ff461881ea10c904ceefd1c51a364984ca10971b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="unicode-function-arguments"></a>Аргументы функции Юникода
 Диспетчер драйверов ODBC 3.5 (или более поздней версии) поддерживает версии ANSI или Юникод все функции, принимающие указатели на символьные строки или указатель SQLPOINTER в качестве аргумента. Функции Юникода реализованы в виде функции (с помощью суффикса *W*), а не как макросы. Функции ANSI (который можно вызывать с или без суффикса *A*) идентичны функциям API-интерфейса ODBC.  
@@ -81,5 +79,4 @@ ms.lasthandoff: 09/09/2017
   
 -   [Драйверы Юникода](../../../odbc/reference/develop-app/unicode-drivers.md)  
   
--   [Сопоставление функции диспетчера драйверов](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)
-
+-   [Сопоставление функции в диспетчере драйверов](../../../odbc/reference/develop-app/function-mapping-in-the-driver-manager.md)

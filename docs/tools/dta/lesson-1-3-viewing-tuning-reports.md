@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- tuning reports [SQL Server]
+applies_to: SQL Server 2016
+helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a395ca1faceb1465c1ce7dc8fc43215dae31c8be
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Занятие 1-3 - Просмотр отчетов настройки
 В предыдущей практической работе этого учебника были рассмотрены скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые создают или сбрасывают объекты базы данных в рекомендациях помощника по настройке ядра СУБД, которые были созданы в сеансе настройки MySession. Сеанс настройки MySession был создан в разделе [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
@@ -53,8 +49,7 @@ ms.lasthandoff: 08/02/2017
 Изучена вкладка **Отчеты** графического интерфейса помощника по настройке ядра СУБД для сеанса настройки MySession. Выполните эти шаги, чтобы ознакомиться с отчетами, созданными для сеанса настройки EvaluateMySession. Дважды щелкните сеанс **EvaluateMySession** на панели **Монитор сеансов** .  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 3: С помощью программы командной строки dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Занятие 3. Использование программы командной строки dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
   
-

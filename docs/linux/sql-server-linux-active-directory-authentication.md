@@ -6,16 +6,20 @@ ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: linux
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords:
-- Linux, AAD authentication
+helpviewer_keywords: Linux, AAD authentication
+ms.workload: On Demand
+ms.openlocfilehash: ab9be968e11688a960e4306f82cf7ca47666f688
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Проверка подлинности Active Directory с SQL Server в Linux
 
@@ -144,8 +148,13 @@ ms.lasthandoff: 10/10/2017
    > Если появится сообщение об ошибке, «не установлены необходимые пакеты», то следует установить эти пакеты с помощью диспетчера пакетов дистрибутив Linux, перед запуском `realm join` еще раз.
    >
    > Если появляется сообщение об ошибке «Недостаточно разрешений на присоединение к домену» будет необходимо проконсультироваться с администратором домена, что разрешения достаточны для присоединения к домену компьютеры Linux.
+   
+   > SQL Server использует SSSD и NSS для сопоставления идентификаторов безопасности (SID) учетных записей пользователей и групп. SSSD должна быть настроена и запущена в порядке для SQL Server для создания имен входа AD успешно. Realmd обычно это необходимо сделать автоматически в рамках присоединения к домену, но в некоторых случаях необходимо сделать это отдельно.
+   >
+   > См. ниже, чтобы настроить [SSSD вручную](https://access.redhat.com/articles/3023951), и [Настройка NSS для работы с SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
-1. Убедитесь, что теперь можно собрать сведения о пользователе из домена и что можно получить билет Kerberos, что и пользователь.
+  
+5. Убедитесь, что теперь можно собрать сведения о пользователе из домена и что можно получить билет Kerberos, что и пользователь.
 
    We will use **id**, **[kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html)** and **[klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html)** commands for this.
 
@@ -297,4 +306,3 @@ ms.lasthandoff: 10/10/2017
 
 > [!div class="nextstepaction"]
 >[Шифрование соединений с SQL Server в Linux](sql-server-linux-encrypted-connections.md)
-

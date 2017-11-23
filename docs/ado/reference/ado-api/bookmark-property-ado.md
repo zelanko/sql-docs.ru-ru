@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,22 +12,19 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-f1_keywords:
-- Recordset15::Bookmark
-helpviewer_keywords:
-- Bookmark property [ADO]
+f1_keywords: Recordset15::Bookmark
+helpviewer_keywords: Bookmark property [ADO]
 ms.assetid: 481dcc93-487b-490e-ac58-a1e9b2ebfd43
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1b1446203cf866562026219059f7520042b3b25b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0e98d0519652cc5d28723e635672815629ce1621
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bookmark-property-ado"></a>Свойство закладка (ADO)
 Указывает закладка, которая однозначно определяет текущую запись в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта или задает текущую запись **записей** объект для записи, определяемый допустимую закладку.  
@@ -49,10 +45,9 @@ ms.lasthandoff: 09/09/2017
 >  **Удаленное использование службы данных** при использовании на стороне клиента **записей** объекта, **закладки** свойство доступна всегда.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
 ## <a name="see-also"></a>См. также:  
  [BOF EOF и пример свойства закладки (Visual Basic)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
  [BOF EOF и пример свойства закладки (VC ++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
- [Поддерживает метод](../../../ado/reference/ado-api/supports-method.md)
-
+ [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

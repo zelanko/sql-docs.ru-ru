@@ -5,22 +5,20 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f03ef5e1-66e6-4c84-ada2-252dd5ada82f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
+ms.openlocfilehash: 45e86a66d67fdfdcbc3fe259caf5f358b048193e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e32dfd7db190884d20ae97c8b00d57a7b6683c30
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Тестирование перенесенные объекты базы данных (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Помощник по миграции для тест-инженера Oracle (SSMA тестировщик) автоматически проверяет преобразования объекта базы данных и переноса данных, внесенных SSMA. После завершения всех шагов миграции SSMA используйте тест-инженер SSMA для проверки, преобразованные объекты работать так же, как и все данные были перемещены должным образом.  
@@ -70,4 +68,3 @@ ms.lasthandoff: 08/02/2017
 [Установка компонентов SSMA на SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
 [Параметры проекта &#40; Преобразование &#41; &#40; OracleToSQL &#41;](../../ssma/oracle/project-settings-conversion-oracletosql.md)  
   
-

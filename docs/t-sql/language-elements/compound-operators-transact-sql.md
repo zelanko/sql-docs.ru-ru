@@ -8,30 +8,27 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server (starting with 2008)
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - compound operators
 - compound operators, described
 ms.assetid: 5072fe91-02d3-42a7-831f-756eff714a17
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: fb178876814b5b83f839dda1d2a266948c43d8d2
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e5fde8cd4265359722f33400d834b0a301718ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="compound-operators-transact-sql"></a>Составные операторы (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,14 +39,14 @@ ms.lasthandoff: 09/01/2017
   
 |Оператор|Ссылка на дополнительные сведения|Действие|  
 |--------------|------------------------------|------------|  
-|+=|[+= &#40; Добавить равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Добавляет некоторое значение к исходному значению и задает исходной величине значение результата.|  
-|-=|[-= &#40; Вычесть равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|Вычитает определенное значение из исходного значения и задает исходной величине значение результата.|  
-|*=|[&#42; = &#40; Умножить равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|Умножает исходное значение на определенное значение и задает исходной величине значение результата.|  
-|/=|[&#40; разделить равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|Делит исходное значение на определенное значение и задает исходной величине значение результата.|  
-|%=|[Остаток от деления равно &#40; Transact-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|Делит исходное значение на определенное значение и задает исходной величине значение остатка от деления.|  
-|&=|[& = &#40; Побитовое и равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Выполняет операцию побитового И и задает исходной величине значение результата.|  
-|^=|[^ = &#40; Побитовое исключающее или равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|Выполняет операцию побитового исключающего ИЛИ и задает исходной величине значение результата.|  
-|&#124;=|[&#124; = &#40; Побитовый оператор или равно &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|Выполняет операцию побитового исключающего И и задает исходной величине значение результата.|  
+|+=|[+= &#40; Добавление назначения &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/add-equals-transact-sql.md)|Добавляет некоторое значение к исходному значению и задает исходной величине значение результата.|  
+|-=|[-= &#40; Вычитание назначения &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)|Вычитает определенное значение из исходного значения и задает исходной величине значение результата.|  
+|*=|[&#42; = &#40; Умножьте назначения &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/multiply-equals-transact-sql.md)|Умножает исходное значение на определенное значение и задает исходной величине значение результата.|  
+|/=|[&#40; присваивания деления &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/divide-equals-transact-sql.md)|Делит исходное значение на определенное значение и задает исходной величине значение результата.|  
+|%=|[Назначение модуля &#40; Transact-SQL &#41;](../../t-sql/language-elements/modulo-equals-transact-sql.md)|Делит исходное значение на определенное значение и задает исходной величине значение остатка от деления.|  
+|&=|[& = &#40; Присваивание побитового и &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-and-equals-transact-sql.md)|Выполняет операцию побитового И и задает исходной величине значение результата.|  
+|^=|[^ = &#40; Побитовое исключающее или назначения &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-exclusive-or-equals-transact-sql.md)|Выполняет операцию побитового исключающего ИЛИ и задает исходной величине значение результата.|  
+|&#124;=|[&#124; = &#40; Побитовый оператор или назначения &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-or-equals-transact-sql.md)|Выполняет операцию побитового исключающего И и задает исходной величине значение результата.|  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -111,4 +108,3 @@ SELECT @x8 AS Bitwise_OR;
  [Побитовые операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/bitwise-operators-transact-sql.md)  
   
   
-

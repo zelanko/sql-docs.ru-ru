@@ -8,22 +8,20 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 678d44bb439804246b84a7f8d60f59be45a6dce0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7b7b550bd24788f30926aaee5ae42a8de79a59c9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Разработка драйвера ODBC, поддерживающие пула соединений
 В этом разделе приведены подробные сведения о разработке драйвер ODBC, который содержит сведения о драйвере следует служб пулов подключений.  
@@ -156,4 +154,3 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>См. также:  
  [Организация пулов соединений с учетом драйвера](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
  [Справочник по интерфейсу службы доступа (SPI) ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md)
-

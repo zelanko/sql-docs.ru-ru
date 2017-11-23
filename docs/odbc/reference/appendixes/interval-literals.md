@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - interval literals [ODBC]
 - interval data type [ODBC], literals
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="interval-literals"></a>Интервал литералы
 ODBC требует, что все драйверы поддерживают преобразование типа данных SQL_CHAR или SQL_VARCHAR для всех типов данных C интервал. Если в источнике данных не поддерживает типы данных интервала, тем не менее, драйвер необходимо знать правильный формат значение в поле SQL_CHAR для поддержки этих преобразований. Аналогичным образом ODBC требует у любого ODBC C тип преобразовываться SQL_CHAR или SQL_VARCHAR, поэтому необходимо знать, какой формат интервала, содержащегося в поле символ драйвера. В этом разделе описывается синтаксис интервал литералы, которые записи драйвер должен использовать для проверки во время преобразования в или из типов данных C интервал SQL_CHAR поля.  
@@ -102,4 +100,3 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{ИНТЕРВАЛ «223.16"ВТОРОЙ}<br /><br /> {ИНТЕРВАЛ "223" YEAR}|Поскольку начальные точности не указан, по умолчанию 2, который является слишком мал для хранения в указанном литерале.|  
 |{ИНТЕРВАЛ «22.1234567"ВТОРОЙ}|Точность секунды не указан, поэтому по умолчанию равно 6. Литерал имеет семь цифр после десятичной запятой.|  
 |{ИНТЕРВАЛ "163-13' YEAR(3) МЕСЯЦУ}<br /><br /> {ИНТЕРВАЛ "163 65' DAY(3) ЧАС}<br /><br /> {DAY(3) "163 62:39» ИНТЕРВАЛ ДО МИНУТЫ}<br /><br /> {DAY(3) "163 12:125:59.163» ИНТЕРВАЛ ДЛЯ SECOND(3)}<br /><br /> {ИНТЕРВАЛ «163:144» HOUR(3) ДО МИНУТЫ}<br /><br /> {ИНТЕРВАЛ «163:567:234.163» HOUR(3) ДЛЯ SECOND(4)}<br /><br /> {ИНТЕРВАЛ «163:591.163» MINUTE(3) ДЛЯ SECOND(5)}|Конечные поля не соответствует правилам григорианского календаря.|
-

@@ -23,17 +23,16 @@ helpviewer_keywords:
 - series [Analysis Services]
 - regression algorithms [Analysis Services]
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 48758d40983835289854223aa45399379f57341f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 93df14efa013e5f8768db94184aaf2f4203a62ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-time-series-algorithm"></a>Алгоритм временных рядов (Майкрософт)
   Алгоритм временных рядов ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) предоставляет несколько алгоритмов, оптимизированных для прогноза непрерывных значений, таких как продажи продуктов, во времени. В отличие от других алгоритмов [!INCLUDE[msCoName](../../includes/msconame-md.md)] , таких как деревья принятия решений, модель временных рядов не требует дополнительных столбцов новых сведений, чтобы прогнозировать тренд. С помощью модели временных рядов можно прогнозировать тенденции на основе только исходного набора данных, использованного для создания модели. При прогнозировании можно вводить в модель новые данные и автоматически задействовать их при анализе тенденций.  
@@ -169,4 +168,3 @@ ms.lasthandoff: 09/01/2017
  [Содержимое моделей интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   
-

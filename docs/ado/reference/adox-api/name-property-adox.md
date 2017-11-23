@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -41,20 +40,18 @@ f1_keywords:
 - _User25::put_Name
 - _Index::GetName
 - _User25::GetName
-helpviewer_keywords:
-- Name property [ADOX]
+helpviewer_keywords: Name property [ADOX]
 ms.assetid: 81b92baf-b6b9-4f4e-9f33-4503795518cd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 47d95403232ef3b5a13fc5f7c30854591f837bab
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 96a4d83770ee986c781efb9859eb071d197b112c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="name-property-adox"></a>Свойство Name (ADOX)
 Указывает имя объекта.  
@@ -76,12 +73,11 @@ ms.lasthandoff: 09/09/2017
   
 ||||  
 |-|-|-|  
-|[Объект столбца (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Объект группы (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Объект индекса (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[Объект ключа (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Объект процедуры (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Свойства объекта (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-|[Объект таблицы (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Объект пользователя (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[Объект представления (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
+|[Объект Column (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Объект Group (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Объект Index (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
+|[Объект Key (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Объект Procedure (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Объект Property (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
+|[Объект Table (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[Объект User (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[Объект View (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [Столбцы и таблицы добавьте методы примера имя свойства (Visual Basic)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Ключи добавить метод, тип ключа, RelatedColumn, RelatedTable и UpdateRule-пример свойства (Visual Basic)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Пример свойства ParentCatalog (Visual Basic)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
-

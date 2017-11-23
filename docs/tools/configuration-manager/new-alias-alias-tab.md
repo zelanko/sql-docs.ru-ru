@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f5179285d3be63f166773dab8fd7dee99292d416
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988ee74394f53d5275a8b8e1cc3772702792a4f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-alias-alias-tab"></a>Создание псевдонима (вкладка «Псевдоним»)
   Псевдоним является альтернативным именем, которое можно использовать для создания соединения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Используйте страницу **Псевдоним** в диалоговом окне **Псевдоним — новый**, чтобы задать элементы строки подключения для псевдонима. Сведения об изменении строки подключения существующего псевдонима см. в разделе [Свойства &#60;Псевдоним&#62; (вкладка "Псевдоним")](../../tools/configuration-manager/alias-properties-alias-tab.md).  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 ### <a name="examples"></a>Примеры  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает установленный по умолчанию порт TCP/IP под номером 1433, поэтому необходимо использовать строку соединения с другим номером порта.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает установленный по умолчанию порт TCP/IP под номером 1433, поэтому необходимо использовать строку подключения с другим номером порта.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает именованный канал по умолчанию, поэтому необходимо использовать строку соединения с другим именем канала.  
   
@@ -55,9 +53,8 @@ ms.lasthandoff: 08/02/2017
   
 -   [Создание допустимой строки соединения с использованием протокола общей памяти](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
--   [Создание допустимой строки соединения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+-   [Создание допустимой строки подключения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
--   [Создание допустимой строки соединения с использованием именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+-   [Создание допустимой строки соединения, использующей протокол именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   
-

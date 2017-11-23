@@ -8,24 +8,21 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- functions [ODBC], listed by task
+helpviewer_keywords: functions [ODBC], listed by task
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: bce96e014e56a783f4f367120f1ba6f911d91ed5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9441a955eaa4a9001b7acd655f7753e32f49e68e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odbc-function-summary"></a>Сводка по функциям ODBC
 В следующей таблице перечислены функции ODBC, сгруппированные по типу задачи и включает обозначение соответствия и краткое описание назначения каждой функции. Дополнительные сведения о совместимости назначения в разделе [ODBC и стандартная CLI](../../../odbc/reference/odbc-and-the-standard-cli.md). Дополнительные сведения о синтаксисе и семантику для каждой функции см. в разделе [Справочник по API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md).  
@@ -89,4 +86,3 @@ ms.lasthandoff: 09/09/2017
 ||[SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md)|интерфейс ODBC|Отменяет обработку на инструкции или соединения.|  
 ||[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|ISO-92|Фиксирует или откатывает транзакцию.|  
 |Завершение подключения|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)|ISO-92<br /><br /> ISO-92|Закрывает соединение.<br /><br /> Освобождает дескриптор среды, соединения, оператор или дескриптора.|
-

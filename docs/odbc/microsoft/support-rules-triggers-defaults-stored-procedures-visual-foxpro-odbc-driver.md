@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - FoxPro ODBC driver [ODBC], stored procedures
 - Visual FoxPro commands and functions [ODBC]
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f1592db374d02534121ed75cfe8e07429f1aacac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e11b18afb96c7e5c1dc6ef6c23fc56cd3a75548e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Поддержка для правила, триггеры, значения по умолчанию и хранимые процедуры (Visual FoxPro драйвер ODBC)
 Не удается создать правила Visual FoxPro, триггеры, значения по умолчанию или хранимых процедур с помощью драйвера ODBC для Visual FoxPro. Тем не менее приложения могут взаимодействовать с существующие правила, триггеры, значения по умолчанию или хранимых процедур, как создаются, обновляет или удаляет Visual FoxPro данные, хранящиеся в базе данных.  
@@ -292,4 +290,3 @@ ms.lasthandoff: 09/09/2017
 ||||  
 |-|-|-|  
 |Команда ZAP|||
-

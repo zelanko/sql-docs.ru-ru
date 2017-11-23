@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - ADO MD, properties
 - properties [ADO MD]
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 48c27fa950a31a0121bb5253fe9b94ba5893bae3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 83aeba7f67a49fb6ef149ad6f5723dd7cf3d74ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-md-properties"></a>Свойства ADO MD
 |||  
@@ -64,5 +62,4 @@ ms.lasthandoff: 09/09/2017
  [ADO MD перечисляемые константы](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
  [Методы ADO MD](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [Объектная модель ADO MD](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [Объекты ADO MD](../../../ado/reference/ado-md-api/ado-md-objects.md)
-
+ [Многомерные объекты ADO](../../../ado/reference/ado-md-api/ado-md-objects.md)

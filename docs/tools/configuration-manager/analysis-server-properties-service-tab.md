@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8dbe4bc5-6aa9-48ee-857e-0b4ea764b9cb
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 8c87e7964ebdc5fda49b1a0d902e92e3cbc72cc3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b8d2da25a920e0d5e25f9b7fa72ce48529fa6686
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="analysis-server-properties-service-tab"></a>Свойства сервера анализа данных (вкладка «Службы»)
   Эта служба представляет собой службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Она должна быть запущена для правильной работы служб [!INCLUDE[ssAS](../../includes/ssas-md.md)] . Значения свойств, окрашенные в светло-серый цвет, нельзя изменить при помощи этого приложения.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 08/02/2017
  Отображает номер, используемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows для отслеживания процессов этой программы.  
   
  **Тип службы SQL**  
- Отображает тип службы, предоставленной для вызывающих процессов. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает несколько служб.  
+ Отображает тип службы, предоставленной для вызывающих процессов. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливает несколько служб.  
   
  **Режим запуска**  
  Установите для этой службы один из следующих вариантов:  
@@ -60,4 +58,3 @@ ms.lasthandoff: 08/02/2017
  Указывает, была ли служба запущена, остановлена или отключена.  
   
   
-

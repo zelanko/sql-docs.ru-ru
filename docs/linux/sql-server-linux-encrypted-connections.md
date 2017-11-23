@@ -14,15 +14,13 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords:
-- Linux, encrypted connections
+helpviewer_keywords: Linux, encrypted connections
 ms.workload: Inactive
+ms.openlocfilehash: f2f0792202d3af6be0e24ff8b24532598c8d0c84
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
-ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/07/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Шифрование соединений с SQL Server в Linux
 
@@ -138,4 +136,3 @@ TLS используется для шифрования подключения 
 |Неверное имя целевого субъекта.  |Убедитесь, что соответствие поля Общее имя сертификата SQL Server имя сервера, указанное в строке подключения клиента. |  
 |существующее соединение было принудительно завершено удаленным узлом. |Эта ошибка может возникать, когда клиент не поддерживает версию протокола TLS, необходимые для SQL Server. Например если [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] настроен на требуется TLS 1.2, убедитесь, что ваши клиенты также поддерживают протокол TLS 1.2. |
 | | |   
-

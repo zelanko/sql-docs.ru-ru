@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL statements [ODBC], constructing
 - SQL statements [ODBC], building at run time
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 76c05e6d7148ac11e25783caca575bee034dd872
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>Инструкции SQL, сформированные во время выполнения
 Приложения, которые часто выполнять нерегламентированный анализ построения инструкций SQL во время выполнения. Например электронной таблицы могут разрешить пользователю выбирать столбцы для извлечения данных из:  
@@ -81,4 +79,3 @@ int main() {
  Приложения, создания инструкций SQL во время выполнения можно указывать значительную гибкость для пользователя. Как видно из предыдущего примера, даже не поддерживали таких общих операций, как **ГДЕ** предложений, **ORDER BY** предложений или соединения, создание инструкций SQL во время выполнения намного сложнее, чем жесткое программирование инструкции. Кроме того тестирование таких приложений, затруднительно, поскольку они могут создавать произвольное число инструкций SQL.  
   
  Создание инструкций SQL во время выполнения потенциальных недостаток заключается в том, что он принимает гораздо больше времени для создания инструкции не использовать оператор, жестко. К счастью эта проблема редко. Такие приложения, как правило, интенсивно использующих пользовательского интерфейса, а также время, затраченное на приложение Создание инструкций SQL обычно небольшие по сравнению с временем, пользователь проводит ввод критериев.
-

@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Supports method [ADO], Visual Basic example
+dev_langs: VB
+helpviewer_keywords: Supports method [ADO], Visual Basic example
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 09f47061d9b99569b13ee3d5c57c713c4d0f56a8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9be77a25c92ac849b8481d3c880d01831fe715e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supports-method-example-vb"></a>Поддерживает пример метода (Visual Basic)
 В этом примере используется [поддерживает](../../../ado/reference/ado-api/supports-method.md) метод для отображения параметров, поддерживаемых по набору записей, открытой с различные типы курсоров. Процедура DisplaySupport является обязательным для выполнения этой процедуры.  
@@ -171,5 +167,4 @@ End Sub
   
 ## <a name="see-also"></a>См. также:  
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Поддерживает метод](../../../ado/reference/ado-api/supports-method.md)
-
+ [Метод Supports](../../../ado/reference/ado-api/supports-method.md)

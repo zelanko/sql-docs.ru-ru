@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Field::Status
 - Field::get_Status
 - Field::GetStatus
-helpviewer_keywords:
-- Status property [ADO Field]
+helpviewer_keywords: Status property [ADO Field]
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: b6db998d81ce756eb68633fb5778c4e8f3633c05
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 65acf492f0364b26fa6a12240fbbd49c7d1dfed3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="status-property-ado-field"></a>Свойство Status (ADO поле)
 Указывает состояние [поле](../../../ado/reference/ado-api/field-object.md) объекта.  
@@ -53,9 +50,8 @@ ms.lasthandoff: 09/09/2017
  Примет значение **поле** объекта в коллекции полей либо [записей](../../../ado/reference/ado-api/recordset-object-ado.md) кэшируются до объекта [обновление](../../../ado/reference/ado-api/update-method.md) вызывается метод. В этот момент, если изменение значения поля вызвала ошибку, OLE DB вызывает ошибку **DB_E_ERRORSOCCURRED** (2147749409). Свойство Status любого **поле** объекты в **поля** коллекции, который вызвал ошибку будет находиться в диапазоне от [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) описывающая причину проблема.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект field](../../../ado/reference/ado-api/field-object.md)  
+ [Объект Field](../../../ado/reference/ado-api/field-object.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Пример свойства состояния (поле) (Visual Basic)](../../../ado/reference/ado-api/status-property-example-field-vb.md)   
- [Пример свойства состояния (VC ++)](../../../ado/reference/ado-api/status-property-example-vc.md)   
-
+ [Пример свойства Status (Visual C++)](../../../ado/reference/ado-api/status-property-example-vc.md)   

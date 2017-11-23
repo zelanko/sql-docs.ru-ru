@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - converting data from SQL to C types [ODBC], timestamp
 - data conversions from SQL to C types [ODBC], timestamp
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70bef5a2817b0a7bbdd24b01ca07f357b9c5237d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-to-c-timestamp"></a>SQL с отметкой времени C:
 Идентификатор для типа данных ODBC SQL timestamp является:  
@@ -58,4 +56,3 @@ _C_TYPE_TIMESTAMP|Часть долей секунды отметки време
  [f] это размер соответствующие типы данных C.  
   
  При преобразовании в символьный C данных timestamp SQL результирующая строка находится в «*гггг*-*мм*-*дд* *hh* :*мм*:*ss*[. *f...* ]» формат, где можно использовать до девяти цифр для долей секунды. Этот формат не влияют настройки Windows® страны. (За исключением десятичного разделителя и долей секунды, весь формат должно использоваться, независимо от того, точность типа данных timestamp SQL.)
-

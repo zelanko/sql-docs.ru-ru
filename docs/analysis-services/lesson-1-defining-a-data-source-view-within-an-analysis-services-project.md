@@ -8,24 +8,21 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: a8a8a672919d2ee1fde9497dbdd9260362e3b537
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 22c30f82afe518a11758ec27868d8883c0b85483
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Занятие 1. Определение представления источников данных в проекте служб Analysis Services
 Разработка приложения бизнес-аналитики в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] начинается с создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В этом проекте будут определены все элементы решения, начиная с представления источников данных.  
@@ -56,4 +53,3 @@ ms.lasthandoff: 09/01/2017
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
 [Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
-

@@ -8,24 +8,21 @@ ms.service:
 ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Driver Manager, installing
+helpviewer_keywords: Driver Manager, installing
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 0a866499618569023ba6839148dd73844d0ddaed
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7ca46eb4fbb6203191a7aace3946daad8361b224
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="installing-the-driver-manager"></a>Установка диспетчера драйверов
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -59,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 5.  Когда вы готовы к установке, а ваш компьютер имеет доступ к внешнему узлу по протоколу FTP, выполните следующую команду: **./build_dm.sh**.
 
-Если компьютер не может получить доступ к внешнему узлу по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Вы можете получить `unixODBC-2.3.0.tar.gz` из [http://www.unixodbc.org](http://www.unixodbc.org/). Нажмите кнопку **загрузки** ссылку в левой части страницы, чтобы перейти на страницу загрузки. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). unixODBC-2.3.1 не поддерживается в этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh--URL-адрес загрузки = file://unixODBC-2.3.0.tar.gz**.  
+Если компьютер не может получить доступ к внешнему узлу по протоколу FTP, получите `unixODBC-2.3.0.tar.gz`. Вы можете получить `unixODBC-2.3.0.tar.gz` из [http://www.unixodbc.org](http://www.unixodbc.org/). Нажмите кнопку **загрузки** ссылку в левой части страницы, чтобы перейти на страницу загрузки. Щелкните соответствующую ссылку для скачивания unixODBC-2.3.0 (не unixODBC-2.3.1). UnixODBC-2.3.1 не поддерживается в этом выпуске [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]. Выполните следующую команду, чтобы начать установки диспетчера драйверов unixODBC: **./build_dm.sh--URL-адрес загрузки = file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Тип **Да** Чтобы приступить к распаковке файлов. Эта часть процесса может занять около 5 минут.  
 
@@ -97,4 +94,3 @@ ms.lasthandoff: 09/09/2017
 [Известные проблемы в данной версии драйвера](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
 [Заметки о выпуске](../../../connect/odbc/linux-mac/release-notes.md)
-

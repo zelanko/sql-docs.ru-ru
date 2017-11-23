@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADO, reference
+helpviewer_keywords: ADO, reference
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 76618b7bc7a8eef4e9eb77182c94598a62853ad3
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ado-api-reference"></a>Справочник по API ADO
 В этом разделе документации по ADO разделы для каждого ADO объекта, коллекции, свойств динамических свойств, методов, событий и перечисления. Кроме того он содержит список индексов ADO синтаксис для использования с Microsoft Visual C++ и классов Windows Foundation (WFC).  
@@ -34,9 +31,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [Объектная модель ADO](../../../ado/reference/ado-api/ado-object-model.md)  
   
--   [Объекты ADO и интерфейсы](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)  
+-   [Объекты и интерфейсы ADO](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)  
   
--   [ADO коллекций](../../../ado/reference/ado-api/ado-collections.md)  
+-   [Коллекции ADO](../../../ado/reference/ado-api/ado-collections.md)  
   
 -   [Свойства ADO](../../../ado/reference/ado-api/ado-properties.md)  
   
@@ -46,9 +43,9 @@ ms.lasthandoff: 09/09/2017
   
 -   [События ADO](../../../ado/reference/ado-api/ado-events.md)  
   
--   [ADO перечисляемые константы](../../../ado/reference/ado-api/ado-enumerated-constants.md)  
+-   [Перечисляемые константы ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)  
   
--   [Синтаксис индексов ADO](../../../ado/reference/ado-api/ado-syntax-indexes.md)  
+-   [Индексы синтаксиса ADO](../../../ado/reference/ado-api/ado-syntax-indexes.md)  
   
 -   [Примеры кода ADO](../../../ado/reference/ado-api/ado-code-examples.md)  
   
@@ -57,5 +54,4 @@ ms.lasthandoff: 09/09/2017
  [Объекты данных Microsoft ActiveX (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Приложение в. Программирование с использованием ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [Поставщики приложение A:](../../../ado/guide/appendixes/appendix-a-providers.md)   
- [Журнал ADO](../../../ado/guide/ado-history.md)
-
+ [Журнал объектов ADO](../../../ado/guide/ado-history.md)

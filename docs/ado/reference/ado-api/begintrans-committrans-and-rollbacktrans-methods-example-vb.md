@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - RollbackTrans method [ADO], Visual Basic example
 - CommitTrans method [ADO], Visual Basic example
 - BeginTrans method [ADO], Visual Basic example
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 95e490863b80fa226e5f310560f0b1a197227620
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b2c434a90d90ff2e84456b67a10c9a36370fe9a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans CommitTrans и пример RollbackTrans методы (Visual Basic)
 В этом примере изменяется тип книги все книги по психологии в ***заголовки*** таблицы базы данных. После [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод запускает транзакцию, которая изолирует все изменения, внесенные в ***заголовки*** таблицы, [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод сохраняет изменения. Можно использовать [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод, чтобы отменить изменения, которые были сохранены с помощью [обновление](../../../ado/reference/ado-api/update-method.md) метод.  
@@ -141,5 +138,4 @@ End Sub
   
 ## <a name="see-also"></a>См. также:  
  [BeginTrans CommitTrans и методы RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
-
+ [Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

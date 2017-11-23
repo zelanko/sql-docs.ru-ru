@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - concurrency control [ODBC]
 - optimistic concurrency [ODBC]
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 422f16155f79b61a7cc46516d8a4e7deb2fe19f9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3ae017de17892595dac94a0dd4bbb843d6d5f658
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="optimistic-concurrency"></a>Оптимистический параллелизм
 *Оптимистический параллелизм* наследует его имя от оптимистичный допущения, редко возникает конфликтов между транзакциями; конфликта имен говорят, что когда другая транзакция обновляет или удаляет строку данных доступной для чтения в промежутке Текущая транзакция и время он обновляется или удаляется. Это противоположность *пессимистичный параллелизм* или блокировки, в котором разработчик приложения считается, что такие конфликты распространены.  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
  Если само приложение реализует оптимистичного параллелизма, атрибута инструкции SQL_ATTR_CONCURRENCY устанавливает SQL_CONCUR_READ_ONLY для чтения строки. Если он будет сравнить версии строк и неизвестно, в столбец версий строк, он вызывает метод **SQLSpecialColumns** с параметром SQL_ROWVER, чтобы определить имя этого столбца.  
   
  Приложение обновляет или удаляет строку путем увеличения параллелизма для SQL_CONCUR_LOCK (Чтобы получить доступ на запись к строке) и выполнения **обновление** или **удаление** инструкции с **ГДЕ**  была предложение, которое указывает версию или значений в строке, когда приложение его чтение. Если строка была изменена после этого, инструкция завершится ошибкой. Если **ГДЕ** предложение для уникальной идентификации строки, инструкция также может обновить или удалить другие строки; версии строк всегда уникальной идентификации строк, но значения строк уникальной идентификации строк только в том случае, если они содержат первичный ключ.
-

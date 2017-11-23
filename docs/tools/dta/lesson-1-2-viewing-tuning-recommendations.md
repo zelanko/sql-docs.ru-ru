@@ -5,26 +5,22 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- dbe-query-tuning
+ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
-helpviewer_keywords:
-- Database Engine [SQL Server], tutorials
+applies_to: SQL Server 2016
+helpviewer_keywords: Database Engine [SQL Server], tutorials
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 8cb1639a291bbef1dd50ada615ef5eb61c4b226f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Занятие 1-2 - просмотра рекомендаций по настройке
 В этой задаче используется сеанс настройки, который был создан в разделе [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md). После завершения настройки базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] с использованием скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] с именем MyScript.sql помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] отобразит результаты настройки на вкладке **Рекомендации** . В следующей задаче рассматривается назначение вкладки **Рекомендации** графического пользовательского интерфейса по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и работа с предоставляемыми сведениями о результатах сеанса настройки.  
@@ -65,4 +61,3 @@ ms.lasthandoff: 10/24/2017
   
   
   
-

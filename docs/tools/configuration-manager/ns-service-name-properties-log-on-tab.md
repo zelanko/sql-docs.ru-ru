@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e916d7824401f06606d8c1eef5b10f8c2acda7b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 46e784c7a83044249dcaf9ddc696be51f5b383a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;имя службы&gt; свойства (на вкладка журнала)
   Используйте вкладку **Вход** диалогового окна **Свойства служб Notification Services** для указания учетной записи, используемой службами [!INCLUDE[ssNS](../../includes/ssns-md.md)] , а также для запуска и остановки службы.  
@@ -30,7 +28,7 @@ ms.lasthandoff: 08/02/2017
  Укажите локальную системную учетную запись, для которой не требуется пароль. Однако локальная системная учетная запись может ограничить взаимодействие служб с другими серверами, это зависит от прав доступа, предоставленных этой учетной записи.  
   
  **Эта учетная запись**  
- Укажите локальную или доменную учетную запись пользователя, использующую проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)]Корпорация Майкрософт рекомендует использовать учетную запись пользователя домена с минимальными правами для службы. Дополнительные сведения о выборе учетной записи см. в разделе «Настройка учетных записей служб Windows» электронной документации.  
+ Укажите локальную или доменную учетную запись пользователя, использующую проверку подлинности [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать доменную учетную запись пользователя с минимальными правами. Дополнительные сведения о выборе учетной записи см. в разделе «Настройка учетных записей служб Windows» электронной документации.  
   
  **Имя учетной записи**  
  Укажите имя локальной или доменной учетной записи.  
@@ -54,4 +52,3 @@ ms.lasthandoff: 08/02/2017
  Возобновить приостановленную работу службы.  
   
   
-

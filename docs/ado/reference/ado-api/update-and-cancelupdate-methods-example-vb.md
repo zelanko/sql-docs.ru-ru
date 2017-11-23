@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - CancelUpdate method [ADO]
 - Update method [ADO], Visual Basic example
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 7233b7b8832ff0f8b479b2e57e1a1387ec6de581
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dcbfb39cd89804277d60bee7962d211d90569e0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Обновление и пример CancelUpdate методы (Visual Basic)
 В этом примере демонстрируется [обновление](../../../ado/reference/ado-api/update-method.md) в сочетании с [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) метод.  
@@ -131,5 +128,4 @@ Attribute VB_Name = "Update"
 ## <a name="see-also"></a>См. также:  
  [Метод CancelUpdate (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Метод обновления](../../../ado/reference/ado-api/update-method.md)
-
+ [Метод Update](../../../ado/reference/ado-api/update-method.md)

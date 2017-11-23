@@ -8,25 +8,23 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - DBase driver [ODBC], SQLConfigDataSource
 - SQLConfigDataSource function [ODBC], dBASE Driver
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 17b90ca3ab230aadaa764b58f3399172686502af
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4db30f9e0c291151409d5af6a63226c0c2292bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (драйвера dBASE)
 > [!NOTE]  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
 |READONLY|Значение TRUE, чтобы сделать файл доступным только для чтения; Значение FALSE, чтобы сделать файл не только для чтения.<br /><br /> Таким образом задается один и тот же параметр как **только для чтения** в диалоговом окне программы установки.|  
 |STATISTICS|Для драйвера dBASE определяет, округляются ли статистика размер таблицы. Обратите внимание, что этот параметр применяется ко всем источникам данных, использующие драйвер ODBC.<br /><br /> Таким образом задается один и тот же параметр как **приблизительное число строк** в диалоговом окне программы установки.|  
 |ПОТОКИ|Число фоновых потоков, используемых механизмом. Это значение равно 3 и не может быть изменено.<br /><br /> Таким образом задается один и тот же параметр как **потоков** в диалоговом окне программы установки.|
-

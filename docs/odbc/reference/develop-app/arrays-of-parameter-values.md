@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - arrays of parameter values [ODBC]
 - parameter arrays [ODBC]
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 814d148b6e542e94254ddd13eebfc7974c4a3ac2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7a0bb497044e9800461b60021fc9a6c8db4e9cca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="arrays-of-parameter-values"></a>Массивы значений параметров
 Часто бывает полезна для приложений, для передачи массивов параметров. Например, при использовании массивов параметров и параметризованную **вставить** инструкции, приложение можно вставить несколько строк за один раз. Существует несколько преимуществ использования массивов. Во-первых сокращает сетевой трафик, поскольку данные для многих инструкций отправляются в одном пакете (если источник данных поддерживает массивы параметров в собственном коде). Во-вторых некоторые источники данных можно выполнять инструкции SQL, использование массивов быстрее, чем выполнение одинаковое число отдельных инструкций SQL. Наконец, когда данные хранятся в виде массива, как это часто бывает в случае данные экрана, приложение можно привязать все строки в определенном столбце с помощью одного вызова **SQLBindParameter** и обновлять их, выполнив одну инструкцию.  
@@ -35,7 +33,6 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Привязка массивы параметров](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)  
+-   [Привязка массивов параметров](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)  
   
 -   [Использование массивов параметров](../../../odbc/reference/develop-app/using-arrays-of-parameters.md)
-

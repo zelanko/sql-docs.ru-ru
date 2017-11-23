@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - scrollable cursors [ODBC]
 - cursors [ODBC], scrollable
 ms.assetid: 2c8a5f50-9b37-452f-8160-05f42bc4d97e
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 07e868f5798e759a9b84e9c28d2c1fa82bb34c4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="scrollable-cursors"></a>Прокручиваемые курсоры
 В современных приложениях на экране пользователь выполняет прокрутку назад и вперед по данным. Для таких приложений для возврата к ранее выбранной строки является проблемой. Один из вариантов — закрыть и снова открыть курсор и затем выборки строк, пока не достигнет курсор необходимые строки. Другой вариант — чтение результирующего набора, локальное кэширование и реализовать прокрутку в приложении. Обе возможности работы подходит только с небольшими результирующими наборами, а последний вероятность трудно реализовать. Лучшим решением является использование *Прокручиваемый курсор* которого можно Переход вперед и назад в результирующем наборе.  
@@ -43,11 +41,10 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел содержит следующие подразделы.  
   
--   [Типы Прокручиваемый курсор](../../../odbc/reference/develop-app/scrollable-cursor-types.md)  
+-   [Типы прокручиваемых курсоров](../../../odbc/reference/develop-app/scrollable-cursor-types.md)  
   
--   [С помощью Прокручиваемые курсоры](../../../odbc/reference/develop-app/using-scrollable-cursors.md)  
+-   [Использование прокручиваемых курсоров](../../../odbc/reference/develop-app/using-scrollable-cursors.md)  
   
--   [Относительных и абсолютных прокрутки](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
+-   [Относительная и абсолютная прокрутка](../../../odbc/reference/develop-app/relative-and-absolute-scrolling.md)  
   
 -   [Закладки](../../../odbc/reference/develop-app/bookmarks-odbc.md)
-

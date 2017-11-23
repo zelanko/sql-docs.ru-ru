@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - diagnostic information [ODBC], SqlGetDiagRec
 - retrieving diagnostic information [ODBC]
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f8a6df52b7dfdcc2fb4e47bb6d19afefe1fb4655
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: abd9c6e0b7d4a56f55e854dda6c61fe216a84ad5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>С помощью SQLGetDiagRec и SQLGetDiagField
 Приложения вызывают **SQLGetDiagRec** или **SQLGetDiagField** получения диагностических сведений. Эти функции принимают дескриптор среды, соединения, оператор или дескриптор и возвращают диагностики из функции, которая последний раз этот дескриптор. Диагностики, войти в систему определенного дескриптора удаляются, когда новая функция вызывается с помощью данного дескриптора. Если функция вернула нескольких диагностических записей, приложение вызывает эти функции несколько раз. Общее число записей состояния извлекается путем вызова **SQLGetDiagField** записи в заголовке (запись 0) с параметром SQL_DIAG_NUMBER.  
@@ -66,4 +64,3 @@ if ((rc1 == SQL_SUCCESS) || (rc1 == SQL_SUCCESS_WITH_INFO)) {
    // Process statement results, if any.  
 }  
 ```
-

@@ -5,24 +5,21 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Licensing SSMA
+helpviewer_keywords: Licensing SSMA
 ms.assetid: d5d4903d-e296-4bbf-8780-63674c4d62d5
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
+ms.openlocfilehash: b8673a22cb3c26beeb4fe118bdc403ac62464fa8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95df7aa997168b8bb5ad15987cfba27ca33dbbb2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Установка SSMA для клиента Oracle (OracleToSQL)
 SSMA клиента состоит из файлов программы, которые выполняют следующие задачи:  
@@ -88,4 +85,3 @@ SSMA можно загрузить из Интернета. Загрузить �
 [Установка компонентов SSMA на SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)  
 [Миграция баз данных Oracle в SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   
-

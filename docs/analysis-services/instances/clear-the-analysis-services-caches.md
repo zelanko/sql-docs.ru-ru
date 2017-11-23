@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6bf66fdd-6a03-4cea-b7e2-eb676ff276ff
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 811735d222f76b910d75e87505f075c83bba902c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 67ea43179411006e5e549c44b13d4a3fa1d6074f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="clear-the-analysis-services-caches"></a>Очистка кэша служб Analysis Services
   Службы Analysis Services кэшируют данные для повышения производительности запросов. В этом разделе приводятся рекомендации по использованию команды XMLA ClearCache для очистки кэшей, созданных в ответ на запрос многомерных выражений. Эффекты выполнения команды ClearCache различаются в зависимости от используемой модели (табличной или многомерной).  
@@ -101,4 +100,3 @@ ms.lasthandoff: 09/01/2017
  [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
   
-

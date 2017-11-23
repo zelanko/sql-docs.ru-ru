@@ -5,8 +5,7 @@ ms.date: 09/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,17 +26,16 @@ helpviewer_keywords:
 - file importing [SQL Server]
 - column exporting [SQL Server]
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: b08d2a27a911c625c8d2b8ad5aa4e27fa8841bd6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: d6c9588690a1848e022fd12bf8fa338f258338ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/06/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="bcp-utility"></a>Программа bcp
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +148,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 |*code_page*|Определенный номер кодовой страницы, например 850.<br /><br /> Версии раньше 13 ([!INCLUDE[ssSQL15](../includes/sssql15-md.md)]) не поддерживают кодовую страницу 65001 (кодировка UTF-8). Начиная с версии 13, кодировку UTF-8 можно импортировать в более ранние версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
   
  **-d** ***database_name***<a name="d"></a>   
- Указывает базу данных, с которой надо соединиться. По умолчанию программа bcp.exe соединяется с пользовательской базой данных по умолчанию. Если указан параметр **-d** *database_name* и имя, состоящее из трех частей (*database_name.schema.table*, переданное в качестве первого параметра в bcp.exe), произойдет ошибка, так как нельзя указать имя базы данных дважды. Если аргумент *database_name* начинается с дефиса (-) или прямой косой черты (/), не добавляйте пробел между **-d** и именем базы данных.  
+ Указывает базу данных, с которой надо соединиться. По умолчанию программа bcp.exe соединяется с пользовательской базой данных по умолчанию. Если указан параметр **-d** *database_name* и имя, состоящее из трех частей (*database_name.schema.table*, passed as the first parameter to bcp.exe) is specified, an error will occur because you cannot specify the database name twice.Если указан параметр *database_name* начинается с дефиса (-) или прямой косой черты (/), не добавляйте пробел между **-d** и именем базы данных.  
   
  **-e** ***err_file***<a name="e"></a>  
  Указывает полный путь к файлу ошибок, используемому для хранения строк, которые служебная программа **bcp** не может передать из файла в базу данных. Сообщения об ошибках команды **bcp** поступают на рабочую станцию пользователя. Если этот параметр не используется, то файл ошибок не создается.  
@@ -621,4 +619,3 @@ bcp.exe MyTable out "D:\data.csv" -T -c -C 65001 -t , ...
  [Файлы форматирования для импорта или экспорта данных (SQL Server)](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
   
-

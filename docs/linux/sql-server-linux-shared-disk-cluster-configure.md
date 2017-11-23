@@ -15,12 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.workload: Inactive
+ms.openlocfilehash: 66c3fe5f03ab597826c8ba0101aaa1cd0b54d2b7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 11b7c2e6a782a2e1215a75e746c6def1b42f90a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Настроить экземпляр отказоустойчивого кластера — SQL Server для Linux (RHEL)
 
@@ -299,4 +298,3 @@ FCI будут создаваться в группе ресурсов. Это �
 - [Работать экземпляр отказоустойчивого кластера — SQL Server в Linux](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->
-

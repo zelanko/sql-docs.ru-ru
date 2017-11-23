@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - long data [ODBC]
 - sending long data [ODBC]
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6fdd0c7da1074a5f6a1d86a941fd29330145f07c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sending-long-data"></a>Отправка данных Long
 Определение СУБД *длинных данных* как любой символьных или двоичных данных через определенный размер, например 254 символов. Не может быть невозможно сохранить весь элемент больших объемов данных в памяти, например когда этот элемент представляет собой длинный текст документа или точечный рисунок. Поскольку такие данные не могут храниться в одиночный буфер, источник данных отправляет его драйвер в частях с **SQLPutData** при выполнении инструкции. Параметры, для которых данные передаются во время выполнения, называются *параметров данных времени выполнения*.  
@@ -53,4 +51,3 @@ ms.lasthandoff: 09/09/2017
  После **SQLExecute** или **SQLExecDirect** возвращает SQL_NEED_DATA и перед данных полностью отправлен для последнего параметра данных времени выполнения, инструкция находится в состоянии необходимые данные. Хотя инструкция находится в состоянии требуются данные, приложение может вызвать только **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, или **SQLGetDiagRec**; все остальные функции возвращают SQLSTATE HY010 (функция ошибка последовательности). Вызов **SQLCancel** отменяет выполнение инструкции и возвращает его предыдущее состояние. Дополнительные сведения см. в разделе [приложение б: ODBC состояния перехода таблицы](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Пример отправки данных во время выполнения см. в разделе [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) описание функции.
-

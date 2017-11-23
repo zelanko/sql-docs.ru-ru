@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - SQL Server, connecting to
 - SQL Server, reconnecting
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f282c03b5492ea05fefe3d65b968d42ce146333c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e9f2633151345d57fbba2fe7c40b3ca52b492e68
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>Подключение к SQL Server (AccessToSQL)
 Для переноса базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], необходимо подключиться к целевому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. При подключении SSMA получает метаданные о базах данных в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и отображает метаданные базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обозреватель метаданных. SSMA хранит сведения о какой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] подключены, но не хранит пароли.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
     -   При подключении к именованному экземпляру введите имя компьютера, обратную косую черту и имя экземпляра. Например: Сервер\экземпляр.  
   
-    -   Для подключения к активному экземпляру пользователя [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], подключение по именованным каналам протокола и указав имя канала, такие как \\ \\.\pipe\sql\query. Дополнительные сведения см. в разделе [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)] документации.  
+    -   Для подключения к активному экземпляру пользователя [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], подключение по именованным каналам протокола и указав имя канала, такие как \\ \\.\pipe\sql\query. Дополнительные сведения см. в документации по [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
   
 3.  Если ваш экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] настроен на прием подключений через порт не по умолчанию, введите номер порта, используемый для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] подключения в **порт сервера** поле. Для экземпляра по умолчанию [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], по умолчанию используется порт 1433. Для именованных экземпляров SSMA будет пытаться получить номер порта от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] служба браузера.  
   
@@ -134,4 +132,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
   
-

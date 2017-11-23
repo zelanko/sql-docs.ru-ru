@@ -20,17 +20,16 @@ helpviewer_keywords:
 - Data Mining Designer
 - properties [data mining]
 ms.assetid: c5194619-8b31-42be-a95f-585711462945
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: e0db49dabb3cb3af93a065b5e13a3f33dfd7c883
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1fa45b604df0a118936f903491e707bd09d58295
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mining-model-properties"></a>Свойства модели интеллектуального анализа данных
   Модели интеллектуального анализа данных имеют следующие типы свойств.  
@@ -74,7 +73,6 @@ ms.lasthandoff: 09/01/2017
  [Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Создание реляционной структуры интеллектуального анализа данных](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [создать псевдоним для столбца модели](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+ [Создание псевдонима для столбца модели](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   
-

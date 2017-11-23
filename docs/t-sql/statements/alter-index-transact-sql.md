@@ -3,17 +3,18 @@ title: "Инструкция ALTER INDEX (Transact-SQL) | Документы Mic
 ms.custom: 
 ms.date: 08/07/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -43,20 +44,19 @@ helpviewer_keywords:
 - ALLOW_PAGE_LOCKS option
 - page locks [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: 222
+caps.latest.revision: "222"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 39f0a539906f192c39599dda94dfa150c13fdeca
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: f61b6469e40ba303cbff14db9bde15161b225ca7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Изменяет существующий индекс таблицы или представления (реляционного или XML) посредством отключения, перестройки или реорганизации либо посредством настройки индексных параметров.  
   
@@ -191,7 +191,7 @@ ALTER INDEX { index_name | ALL }
 |РЕОРГАНИЗАЦИЯ РАЗДЕЛА = *partition_number*|Несекционированный, пространственный, отключенный индекс или XML-индекс|  
 |IGNORE_DUP_KEY = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс ColumnStore: **применяется к:** (начиная с SQL Server 2012) SQL Server и базы данных SQL Azure.|  
 |ONLINE = ON|XML-индекс<br /><br /> Пространственный индекс<br /><br /> Индекс ColumnStore: **применяется к:** (начиная с SQL Server 2012) SQL Server и базы данных SQL Azure.|
-| ВОЗОБНОВЛЯЕМЫЕ = ON  | Возобновляемые индексы не поддерживаются с **все** ключевое слово. <br /><br /> **Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии) |   
+| ВОЗОБНОВЛЯЕМЫЕ = ON  | Возобновляемые индексы не поддерживаются с **все** ключевое слово. <br /><br /> **Применяется к**: начиная с SQL Server 2017 г. и Azure базы данных SQL |   
   
 > [!WARNING]
 >  Дополнительные сведения об операциях с индексами, которые можно выполнить в сети см. в разделе [рекомендации по сети с индексами](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
@@ -436,7 +436,7 @@ FILLFACTOR = *fillfactor*
 
 ВОЗОБНОВЛЯЕМЫЕ  **=**  {ON | **OFF**}
 
-**Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)  
+**Применяется к**: начиная с SQL Server 2017 г. и Azure базы данных SQL   
 
  Указывает, является ли операция с индексами возобновляемые.
 
@@ -446,7 +446,7 @@ FILLFACTOR = *fillfactor*
 
 MAX_DURATION  **=**  *время* [**МИНУТ**] используется с **RESUMABLE = ON** (требует **ONLINE = ON**).
  
-**Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)  
+**Применяется к**: начиная с SQL Server 2017 г. и Azure базы данных SQL 
 
 Показывает время (целочисленное значение, указанное в минутах), возобновляемые сети операцию index выполняется до приостановки. 
 
@@ -604,33 +604,33 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
  RESUME 
  
-**Применяется к**: начиная с SQL Server 2017 г. (компонент находится в общедоступной предварительной версии)
+**Применяется к**: начиная с SQL Server 2017 г.  
 
 Возобновите операции индекса, приостановлена вручную или из-за сбоя.
 
 Использовать MAX_DURATION с **RESUMABLE = ON**
 
  
-**Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)
+**Применяется к**: начиная с SQL Server 2017 г. и Azure базы данных SQL
 
 Время (целочисленное значение, указанное в минутах) возобновляемые индексами при выполнении после возобновления. После истечения этого срока, возобновление операции приостановлена, если оно все еще выполняется.
 
 Использовать WAIT_AT_LOW_PRIORITY с **RESUMABLE = ON** и **ONLINE = ON**.  
   
-**Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)
+**Применяется к**: начиная с SQL Server 2017 г. и Azure базы данных SQL 
   
  Возобновление перестроения индекса в сети после паузы должно ожидать операции блокировки в этой таблице. **WAIT_AT_LOW_PRIORITY** указывает, что операция перестроения индекса в сети будет ожидать блокировки с низким приоритетом, позволяя другим операциям продолжить, время ожидания операции оперативного построения индекса. Пропуск **WAIT AT LOW PRIORITY** параметр эквивалентен `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`. Дополнительные сведения см. в разделе [WAIT_AT_LOW_PRIORITY](alter-index-transact-sql.md). 
 
 
 ПРИОСТАНОВКА
  
-**Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)
+**Применяется к**: начиная с SQL Server 2017 г. и Azure базы данных SQL 
   
 Приостановите операцию восстановления возобновляемые индексами в сети.
 
 ПРЕРЫВАНИЕ
 
-**Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)   
+**Применяется к**: начиная с SQL Server 2017 г. и Azure базы данных SQL   
 
 Прерывания работы или приостановки операции с индексами, объявленного как возобновляемые. Необходимо явно выполнить **ПРЕРВАТЬ** операция перестроения возобновляемые индекс прекращение выполнения команды. Сбой или приостановка и операции с индексами возобновляемые не прекращает его выполнения. Вместо этого он сохраняет Пауза неопределенное состояние операции.
   
@@ -712,7 +712,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 
 ### <a name="resumable-index-operations"></a>Возобновляемые индекса
 
-**Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)
+**Применяется к**: начиная с SQL Server 2017 г. и Azure базы данных SQL 
 
 ПЕРЕСТРОЕНИЕ ИНДЕКСА ONLINE указывается как возобновляемые с помощью RESUMABLE = на параметр. 
 -  ВОЗОБНОВЛЯЕМЫЕ параметр не сохраняется в метаданных для указанного индекса и применяется только к на время выполнения текущей инструкции DDL. Таким образом, RESUMABLE = ON предложения должен быть явно указан для включения resumability.
@@ -786,7 +786,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
   
 -   Индексы ColumnStore недоступны до версии SQL Server 2012. 
 
--  Операции с индексами возобновляемые доступных в 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии) |   
+-  Операции с индексами возобновляемые доступных в 2017 г. SQL Server и базы данных SQL Azure   
   
 ## <a name="basic-syntax-example"></a>Пример простого синтаксиса:   
   
@@ -1135,7 +1135,7 @@ GO
  
 ### <a name="j-online-resumable-index-rebuild"></a>К. Перестроение индекса в сети возобновляемые
 
-**Применяется к**: начиная с 2017 и Azure SQL базы данных SQL Server (компонент находится в общедоступной предварительной версии)    
+**Применяется к**: начиная с SQL Server 2017 г. и Azure базы данных SQL   
 
  Следующие примеры показывают, как использовать перестроение индекса в сети возобновляемые. 
 
@@ -1188,6 +1188,5 @@ GO
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   
-
 
 

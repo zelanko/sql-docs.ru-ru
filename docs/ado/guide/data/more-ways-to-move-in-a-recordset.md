@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - Recordset object [ADO], moving
 - MovePrevious method [ADO]
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1165b694dbbdedb73fded1178bbc568cbcf0a467
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Дополнительные способы перемещения в наборе записей
 Следующие четыре метода используются для перемещения или перемещения, в **записей**: [MoveFirst, MoveLast, MoveNext и MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Некоторые из этих методов будут недоступны на однонаправленные курсоры).  
@@ -63,4 +61,3 @@ If oRs.BOF Then oRs.MoveFirst
  Например, если средство чтения находится в определенной строке посередине **записей** и вызывать **удалить** и затем вызвать **MoveNext**, теперь расположены на запись сразу после удаленной записи. Но вызывающий **MovePrevious** запись предшествующей удалены текущей записи, поскольку удалена запись больше не учитывается в активной членство **записей**.  
   
  Особенно сложно определить семантику перемещения согласованных во всех поставщиках для методов, которые перемещаются по отношению к текущей записи — **MovePrevious**, **MoveNext**, и **переместить** — в случае изменения данных в текущей записи. Например, при работе с отсортированное фильтровать **записей**и изменение данных в текущей записи, чтобы он указывается перед другими записями, но измененные данные также больше не соответствует фильтру, не совсем понятно, где **MoveNext** операции займет у вас. Безопасный заключение происходит, относительный перемещения в пределах **записей** — опаснее, чем абсолютное перемещения (например, с помощью **MoveFirst** или **MoveLast**) при данных Изменение во время редактирования записи добавлены или удалены. Сортировка и фильтрация должны основываться на первичный ключ или идентификатор, так как этот тип значения не следует изменять.
-

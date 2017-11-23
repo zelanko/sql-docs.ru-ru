@@ -24,17 +24,16 @@ helpviewer_keywords:
 - Microsoft Association Rules Viewer
 - dependencies [Analysis Services]
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 41ef2091d63d1a4e5f2f3bf294e590be5cd173e7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8145dd87dd2c1e09663a8b6f6c0cea6dcb1ae7f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)
   Средство просмотра правил взаимосвязи [!INCLUDE[msCoName](../../includes/msconame-md.md)] в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, которые построены с помощью алгоритма ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] ― это алгоритм установления взаимосвязей для использования при создании моделей интеллектуального анализа данных, которые можно использовать для анализа покупательского поведения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
@@ -100,4 +99,3 @@ ms.lasthandoff: 09/01/2017
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   
-

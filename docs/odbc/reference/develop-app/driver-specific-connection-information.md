@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - connecting to data source [ODBC], SQLConnect
 - connecting to driver [ODBC], driver-specific information
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e027eb6b5c5afdf361854892a22ad5dd69a9d646
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="driver-specific-connection-information"></a>Сведения о соединении драйвера
 **SQLConnect** предполагается, что имя источника данных, идентификатор пользователя и пароль достаточны для подключения к источнику данных и что все прочие сведения о соединении могут храниться в системе. Это часто не так. Например драйвер требуются идентификатор пользователя и пароль для входа на сервер, другой идентификатор пользователя и пароль для входа в СУБД. Поскольку **SQLConnect** принимает идентификатор одного пользователя и пароль, это означает, что идентификатор пользователя и пароль должны храниться с источника данных в системе если **SQLConnect** будет использоваться. Это потенциальные нарушения безопасности, следует избегать, если он зашифрован.  
@@ -50,4 +48,3 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  Пар «ключевое_слово значение» в **SQLDriverConnect** должны отвечать определенным правилам синтаксиса. Ключевые слова и их значения не должны содержать **[] {} (),? \*=! @** символов. Значение **DSN** ключевое слово не может состоять только из пробелов и не должно содержать начальные пробелы. Из-за грамматики реестра ключевые слова и имена источников данных не может содержать обратную косую черту (\\) символов. Не допускаются пробелы вокруг знака равенства в паре «ключевое_слово значение».  
   
  **FILEDSN** ключевое слово может использоваться в вызове **SQLDriverConnect** для указания имени файла, содержащего сведения об источнике данных (в разделе [подключение с помощью файловых источников данных](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)далее в этом разделе). **SAVEFILE** ключевое слово может использоваться для указания имени DSN с файла, в котором выполнены пары «ключевое слово значение», успешное подключение при помощи вызова **SQLDriverConnect** будут сохранены. Дополнительные сведения о файловых источников данных см. в разделе [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) описание функции.
-

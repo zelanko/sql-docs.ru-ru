@@ -5,22 +5,20 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 6bcc86e62683e85d7da88686953a17d743e19b3b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4dde3f4735a42553155d7f58a310963ad599c374
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Свойства SQL Server (вкладка «Вход в систему»)
   Используйте вкладку **Вход** в диалоговом окне **Свойства SQL Server** для указания учетной записи, используемой службой сервера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы изменить пароль учетной записи и запустить или остановить службу. Изменение пароля учетной записи вступает в силу немедленно.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="options"></a>Параметры  
  **Встроенная учетная запись**  
- **Локальная система.**  
+ **Локальная система**  
  -   Укажите учетную запись локальной системы. Для этой учетной записи пароль не нужен. Однако локальная системная учетная запись может препятствовать взаимодействию служб с другими серверами, в зависимости от прав доступа, предоставленных этой учетной записи.  
   
  **Локальная служба.**  
@@ -72,4 +70,3 @@ ms.lasthandoff: 08/02/2017
 >  При запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ошибка инструментария WMI, содержащая фразу «не реализовано [0x80004001]», может указывать на то, что на целевом компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не установлен.  
   
   
-

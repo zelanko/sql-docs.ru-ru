@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -13,20 +12,18 @@ ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
-helpviewer_keywords:
-- InvokeService [RDS]
+helpviewer_keywords: InvokeService [RDS]
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: be188df1a61cfd398644ba42af5d32605d501919
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 20e7b09600a0ec96b089322a1bd4d55e75eb9acf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
 Возвращает указатель на запрошенный интерфейс на более производительные версию объекта.  
@@ -61,10 +58,9 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
  Реализация ядра курсора служб удаленных рабочих СТОЛОВ **InvokeService** принимает входной набор строк (или несколько объектов результатов), заполняет ядро курсора из входного набора строк и затем возвращает указатель на себя.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Интерфейс IRDSService (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
+ [Интерфейс IRDSService (служба удаленных рабочих столов)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Методы служб удаленных рабочих СТОЛОВ](../../../ado/reference/rds-api/rds-methods.md)
-
+ [Методы службы удаленных рабочих столов](../../../ado/reference/rds-api/rds-methods.md)
 
 

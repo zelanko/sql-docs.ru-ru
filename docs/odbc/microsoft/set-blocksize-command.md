@@ -8,24 +8,21 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- set blocksize command [ODBC]
+helpviewer_keywords: set blocksize command [ODBC]
 ms.assetid: 0c11580f-37f5-4a8e-99be-9fb9c44bb433
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3bcb1e8da857fb4c0b45fce99da189e228e0a53d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d0c98afd9479e1a7de4f7a14834909962f274f1e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-blocksize-command"></a>BLOCKSIZE команды SET
 Задает распределение места на диске для хранения поля типа memo.  
@@ -43,4 +40,3 @@ SET BLOCKSIZE TO nBytes
   
 ## <a name="remarks"></a>Замечания  
  ЗАДАЙТЕ размер блока по умолчанию — 64. Чтобы сбросить размер блока другое значение, после создания файла, присваивается новое значение и создать новую таблицу с помощью команды Копировать. Новая таблица имеет размер указанного блока.
-

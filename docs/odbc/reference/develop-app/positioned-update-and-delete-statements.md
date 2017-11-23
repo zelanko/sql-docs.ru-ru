@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - positioned updates [ODBC]
 - updating data [ODBC], positioned update or delete
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a35d57aaa00f7f2406b779f987c4dd07e694f737
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45bb604f0226ac05eab0fd99bdbef41704cc8de8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="positioned-update-and-delete-statements"></a>Позиционированное обновление и удаление операторов
 Приложения могут обновить или удалить текущую строку в результирующем наборе с позиционированного обновления или инструкция delete. Располагается update и delete операторы поддерживаются некоторые источники данных, но не все из них. Чтобы определить, является ли поддерживает источник данных расположен инструкции update и delete, приложение вызывает **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ ATTRIBUTES1 или SQL_STATIC_CURSOR_ATTRIBUTES1 *свойство* (в зависимости от типа курсора). Обратите внимание, что библиотека курсоров ODBC имитирует располагается инструкции update и delete.  
@@ -159,4 +157,3 @@ while (GetAction(&Action, &RowNum)) {
 // Close the cursor.  
 SQLCloseCursor(hstmtCust);  
 ```
-

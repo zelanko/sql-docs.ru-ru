@@ -20,17 +20,16 @@ helpviewer_keywords:
 - data source views [Analysis Services], schema updates
 - data sources [Analysis Services], schema updates
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: 9d7e5aebbe0777d35918c8c68cd23767a8f02c0c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3b1913d392467f4ba78976d9ab73919e7ac06051
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Управление изменениями в источниках данных и представлениях источников данных
   При повторном запуске мастера формирования схем он повторно использует тот же источник данных и представление источника данных, которые он использовал при первоначальном формировании. При добавлении источника данных или представления источников данных мастер не использует их. При удалении оригинального источника данных или представления источников данных после первоначального формирования мастер необходимо запустить с самого начала. Все предыдущие настройки мастера также удаляются. Любые существующие объекты в основной базе данных, связанные с удаленным источником данных или представлением источника данных, при следующем запуске мастера формирования схем воспринимаются как объекты, созданные пользователем.  
@@ -43,4 +42,3 @@ ms.lasthandoff: 09/01/2017
  [Основные сведения о добавочном создании](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   
-

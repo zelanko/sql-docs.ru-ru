@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- hellodata sample application [ADO]
+helpviewer_keywords: hellodata sample application [ADO]
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: adda58b0be044229cc4efc26c65b1af1c4ca3dc0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="comments-on-hellodata"></a>Комментарии к HelloData
 Приложения HelloData пошаговое выполнение основных операций типичного приложения ADO: начало, проверки, изменение и обновление данных. При запуске приложения, нажмите первую кнопку, **получение данных**. Будет запущен **GetData** подпрограммы.  
@@ -82,4 +79,3 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="formunload"></a>Form_Unload  
  **Form_Unload** подпрограммы важно по следующим причинам. Во-первых поскольку это образец приложения, Form_Unload очищает изменения, внесенные в базу данных до завершения приложения. Во-вторых, в коде показано, как команда может быть выполнена напрямую из открытого **подключения** объектов с помощью **Execute** метод. Наконец он приведен пример выполнения не — возвращение строки запроса (запрос на обновление) в источнике данных.
-

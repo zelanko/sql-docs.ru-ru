@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - ODBC driver for Oracle [ODBC], functions
 - API functions [ODBC]
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 5f9508c1c2b6d366e9180a86563c9fa5c45a4b47
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 3671b82eaa3281ff682314943209eb50273eb9dd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="api-functions-odbc-driver-for-oracle"></a>Функции API-Интерфейс (драйвер ODBC для Oracle)
 > [!IMPORTANT]  
@@ -40,4 +38,3 @@ ms.lasthandoff: 09/09/2017
 -   [Уровень 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) соответствия предоставляет функциональные возможности основной интерфейс уровня, а также дополнительные функции, такие как транзакции.  
   
 -   [Уровень 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) соответствия предоставляет функциональные возможности уровня 1, а также дополнительные функции, такие как закладки, динамических параметров и асинхронное выполнение функции ODBC.
-

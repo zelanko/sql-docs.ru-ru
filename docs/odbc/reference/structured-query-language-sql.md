@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - SQL [ODBC], about SQL
 - ODBC [ODBC], SQL
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: e2145a720c1fd9cfedeafe123ac24e7e5ac77173
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9a8464fb7ff4e971c1d67d270ffa021d0dca1910
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="structured-query-language-sql"></a>язык SQL
 Типичные СУБД дает пользователям возможность хранения, доступ и изменение данных упорядоченную, эффективным способом. Первоначально пользователей СУБД были программистов. Доступ к сохраненных данных требуется написать программу на языке программирования, таких как COBOL. Хотя эти программы часто были написаны для создания понятного интерфейса нетехнический пользователю, доступ к данным самого обязательно служб опытных программистов. Несанкционированного доступа к данным не практические.  
@@ -57,7 +55,6 @@ ms.lasthandoff: 09/09/2017
   
 -   [Embedded SQL](../../odbc/reference/embedded-sql.md)  
   
--   [SQL модули](../../odbc/reference/sql-modules.md)  
+-   [Модули SQL](../../odbc/reference/sql-modules.md)  
   
 -   [Интерфейсы уровня вызова](../../odbc/reference/call-level-interfaces.md)
-

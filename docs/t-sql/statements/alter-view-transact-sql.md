@@ -8,32 +8,29 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER_VIEW_TSQL
 - ALTER VIEW
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - indexed views [SQL Server], modifying
 - views [SQL Server], modifying
 - modifying views
 - ALTER VIEW statement
 ms.assetid: 03eba220-13e2-49e3-bd9d-ea9df84dc28c
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: 79d889411d7e974a6ddabd6a753b45f332f1f62a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 006b9fce1e13833c977d26d4bc0f13a602f2c96c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -89,7 +86,7 @@ AS select_statement
   
  Для представлений, созданных с применением предложения VIEW_METADATA, метаданные режима обзора возвращают имя представления, а не имена базовых таблиц при описании столбцов из представления в результирующем наборе.  
   
- При создании представления с предложением WITH VIEW_METADATA, все ее столбцы, за исключением **timestamp** столбца, поддерживают обновление, если триггеры UPDATE INSTEAD OF или INSERT имеет представление. Дополнительные сведения см. в разделе «Примечания» в [CREATE VIEW & #40; Transact-SQL & #41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ При создании представления с предложением WITH VIEW_METADATA, все ее столбцы, за исключением **timestamp** столбца, поддерживают обновление, если триггеры UPDATE INSTEAD OF или INSERT имеет представление. Дополнительные сведения см. в разделе «Примечания» в [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
   
  AS  
  Действия, которые должны быть выполнены в представлении.  
@@ -101,7 +98,7 @@ AS select_statement
  Заставляет все инструкции изменения данных, выполняемых для представления критериям, заданным в *select_statement*.  
   
 ## <a name="remarks"></a>Замечания  
- Дополнительные сведения об инструкции ALTER VIEW см. в заметках [CREATE VIEW & #40; Transact-SQL & #41; ](../../t-sql/statements/create-view-transact-sql.md).  
+ Дополнительные сведения об инструкции ALTER VIEW см. в заметках [CREATE VIEW &#40; Transact-SQL &#41; ](../../t-sql/statements/create-view-transact-sql.md).  
   
 > [!NOTE]  
 >  Если предыдущее определение представления было создано с использованием предложения WITH ENCRYPTION или CHECK OPTION, эти параметры будут действовать только в том случае, если они включены в инструкцию ALTER VIEW.  
@@ -144,11 +141,10 @@ GO
 ## <a name="see-also"></a>См. также:  
  [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE VIEW (Transact-SQL)](../../t-sql/statements/create-view-transact-sql.md)   
- [УДАЛИТЬ ПРЕДСТАВЛЕНИЕ & #40; Transact-SQL & #41;](../../t-sql/statements/drop-view-transact-sql.md)   
+ [УДАЛИТЬ ПРЕДСТАВЛЕНИЕ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-view-transact-sql.md)   
  [Создание хранимой процедуры](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
  [Внесение изменений в схемы баз данных публикации](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)  
   
   
-

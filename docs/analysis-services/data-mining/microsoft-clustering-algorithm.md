@@ -24,17 +24,16 @@ helpviewer_keywords:
 - datasets [Analysis Services]
 - clustering algorithms [Analysis Services]
 ms.assetid: 92a1e67e-f46e-4960-99b2-4d20f6192fbd
-caps.latest.revision: 62
+caps.latest.revision: "62"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
+ms.openlocfilehash: 2d569cea784548d1e6869868f3f2e0030927b96e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7210acf3d0fa168c7bea0decd573995e4703b94d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-clustering-algorithm"></a>Алгоритм кластеризации (Майкрософт)
   Алгоритм кластеризации [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом *сегментации* или *кластеризации* , который выполняет итерацию вариантов в наборе данных, чтобы сгруппировать их в кластеры, содержащие подобные характеристики. Такие группирования полезно использовать для просмотра данных, выявления в них аномалий и создания прогнозов.  
@@ -97,4 +96,3 @@ ms.lasthandoff: 09/01/2017
  [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
   
-

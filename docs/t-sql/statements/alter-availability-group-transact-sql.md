@@ -1,12 +1,14 @@
 ---
 title: "ALTER AVAILABILITY GROUP (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/16/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-database
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,28 +16,26 @@ f1_keywords:
 - ALTER_AVAILABILITY_TSQL
 - ALTER AVAILABILITY GROUP
 - ALTER AVAILABILITY
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], availability replicas
 - ALTER AVAILABILITY GROUP statement
 - Availability Groups [SQL Server], configuring
 - Availability Groups [SQL Server], Transact-SQL statements
 ms.assetid: f039d0de-ade7-4aaf-8b7b-d207deb3371a
-caps.latest.revision: 152
+caps.latest.revision: "152"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ef1d68317c2e288a13d7b07d559b5de45e29cd28
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Изменяет в существующей группы доступности Always On [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Большинство аргументов ALTER AVAILABILITY GROUP поддерживаются только в текущей первичной реплике. Однако аргументы JOIN, FAILOVER и FORCE_FAILOVER_ALLOW_DATA_LOSS поддерживаются только во вторичных репликах.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```  
+```SQL  
   
 ALTER AVAILABILITY GROUP group_name   
   {  
@@ -81,7 +81,7 @@ ALTER AVAILABILITY GROUP group_name
   <server_instance> WITH  
     (  
        ENDPOINT_URL = 'TCP://system-address:port',  
-       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT },  
+       AVAILABILITY_MODE = { SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT | CONFIGURATION_ONLY },  
        FAILOVER_MODE = { AUTOMATIC | MANUAL }   
        [ , <add_replica_option> [ ,...n ] ]  
     )   
@@ -227,7 +227,7 @@ ALTER AVAILABILITY GROUP group_name
 
  
  REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT   
- Появился в SQL Server CTP 2.2 — 2017 г. Позволяет задать минимальное число синхронных вторичных реплик, необходимые для фиксации, прежде чем основной фиксирует транзакцию. Гарантирует, что транзакции SQL Server будет ожидать до момента журналы транзакций будут обновлены на минимальное число вторичных реплик. Значение по умолчанию — 0, что дает то же поведение, что SQL Server 2016. Минимальное значение — 0. Максимальное значение — количество реплик минус 1. Этот параметр относится к репликам в режиме синхронной фиксации. Когда реплики находятся в режиме синхронной фиксации, операций записи на первичной реплике ждать до записи на вторичных репликах синхронной фиксации в журнал транзакций базы данных реплики. Если SQL Server, на котором размещена вторичная реплика перестает отвечать, SQL Server, на котором размещена первичная реплика отметит, вторичная реплика не СИНХРОНИЗИРОВАНЫ и продолжить. При отвечать на запросы база данных переходит в оперативный режим будет в состоянии «не синхронизировано» и реплика помечается как имеющий неполадки до основного можно вновь сделать ее синхронной. Данный параметр гарантирует, что первичная реплика не продолжится до минимальное число реплик, которые были зафиксированы каждой транзакции. Если минимальное число реплик недоступен фиксации на сервере-источнике завершится ошибкой. Этот параметр применяется к группам доступности с типом кластера `WSFC` и `EXTERNAL`. Для типа кластера `EXTERNAL` параметр изменяется при добавлении группы доступности для ресурса кластера. В разделе [высокий уровень доступности и защиты данных в конфигурации группы доступности](../../linux/sql-server-linux-availability-group-ha.md).
+ Появился в SQL Server 2017 г. Позволяет задать минимальное число синхронных вторичных реплик, необходимые для фиксации, прежде чем основной фиксирует транзакцию. Гарантирует, что транзакции SQL Server будет ожидать до момента журналы транзакций будут обновлены на минимальное число вторичных реплик. Значение по умолчанию — 0, что дает то же поведение, что SQL Server 2016. Минимальное значение — 0. Максимальное значение — количество реплик минус 1. Этот параметр относится к репликам в режиме синхронной фиксации. Когда реплики находятся в режиме синхронной фиксации, операций записи на первичной реплике ждать до записи на вторичных репликах синхронной фиксации в журнал транзакций базы данных реплики. Если SQL Server, на котором размещена вторичная реплика перестает отвечать, SQL Server, на котором размещена первичная реплика отметит, вторичная реплика не СИНХРОНИЗИРОВАНЫ и продолжить. При отвечать на запросы база данных переходит в оперативный режим будет в состоянии «не синхронизировано» и реплика помечается как имеющий неполадки до основного можно вновь сделать ее синхронной. Данный параметр гарантирует, что первичная реплика не продолжится до минимальное число реплик, которые были зафиксированы каждой транзакции. Если минимальное число реплик недоступен фиксации на сервере-источнике завершится ошибкой. Для типа кластера `EXTERNAL` параметр изменяется при добавлении группы доступности для ресурса кластера. В разделе [высокий уровень доступности и защиты данных в конфигурации группы доступности](../../linux/sql-server-linux-availability-group-ha.md).
   
  Добавление базы данных *имя_базы_данных*  
  Задает список из одной или нескольких пользовательских баз данных, которые нужно добавить в группу доступности. Эти базы данных должны размещаться в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], где размещается текущая первичная реплика. Можно указать несколько баз данных для группы доступности, но каждая база данных может принадлежать только к одной группе доступности. Сведения о типе баз данных, которые могут поддерживаться группой доступности см. в разделе [условия, ограничения и рекомендации для групп доступности AlwaysOn &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md). Чтобы узнать, какие локальные базы данных уже принадлежит к группе доступности, в разделе **replica_id** столбца в [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) представления каталога.  
@@ -284,7 +284,7 @@ ALTER AVAILABILITY GROUP group_name
  *port*  
  Номер порта, связанный с конечной точкой зеркального отображения экземпляра сервера (для параметра ENDPOINT_URL), или номер порта, используемый компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] в экземпляре сервера (для параметра READ_ONLY_ROUTING_URL).  
   
- AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT НЕ БОЛЕЕ ЧЕМ}  
+ AVAILABILITY_MODE  **=**  {SYNCHRONOUS_COMMIT | ASYNCHRONOUS_COMMIT НЕ БОЛЕЕ ЧЕМ | CONFIGURATION_ONLY}  
  Указывает, должна ли первичная реплика ждать подтверждения фиксации (записи) записей журнала на диск от вторичной реплики перед тем, как фиксировать транзакцию в указанной базе данных. Фиксация транзакций в других базах данных, расположенных в этой первичной реплике, может выполняться независимо.  
   
  SYNCHRONOUS_COMMIT  
@@ -292,7 +292,16 @@ ALTER AVAILABILITY GROUP group_name
   
  ASYNCHRONOUS_COMMIT  
  Указывает, что первичная реплика фиксирует транзакции без ожидания записи журнала на данной вторичной реплике (режим доступности синхронной фиксации). Вы можете указать ASYNCHRONOUS_COMMIT не более чем для пяти реплик доступности, включая первичную реплику.  
-  
+
+ CONFIGURATION_ONLY указывает, что первичная реплика синхронно фиксировать метаданные конфигурации группы доступности к базе данных master в этой реплике. Реплика не будет содержать данные пользователя. Этот параметр:
+
+- Может размещаться в любом выпуске SQL Server, включая экспресс-выпуск.
+- Требуется реплики CONFIGURATION_ONLY должен иметь тип конечной точки зеркального отображения данных `WITNESS`.
+- Не может быть изменен.
+- Не является допустимым при `CLUSTER_TYPE = WSFC`. 
+
+   Дополнительные сведения см. в разделе [конфигурации реплицируют только](../../linux/sql-server-linux-availability-group-ha.md).
+    
  AVAILABILITY_MODE обязательно требуется в предложении ADD REPLICA ON и является необязательным в предложении MODIFY REPLICA ON. Дополнительные сведения см. в статье [Режимы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  FAILOVER_MODE  **=**  {АВТОМАТИЧЕСКОГО | ВРУЧНУЮ}  
@@ -600,7 +609,7 @@ ALTER AVAILABILITY GROUP group_name
 ###  <a name="Join_Secondary_Replica"></a> A. Присоединение вторичной реплики к группе доступности  
  В следующем примере рассматривается присоединение вторичной реплики, с которой установлено соединение, к группе доступности `AccountsAG`.  
   
-```  
+```SQL  
 ALTER AVAILABILITY GROUP AccountsAG JOIN;  
 GO  
 ```  
@@ -608,7 +617,7 @@ GO
 ###  <a name="Force_Failover"></a> Б. Принудительный переход на другой ресурс группы доступности  
  В следующем примере выполняется принудительный переход группы доступности `AccountsAG` на вторичную реплику, с которой установлено соединение.  
   
-```  
+```SQL
 ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
 GO  
 ```  
@@ -624,4 +633,3 @@ GO
  [Прослушиватели групп доступности, возможность подключения клиентов и отработка отказа приложений (SQL Server)](../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
-

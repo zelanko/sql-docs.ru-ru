@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - ird [ODBC]
 - application row descriptor [ODBC]
 ms.assetid: 7741035c-f3e7-4c89-901e-fe528392f67d
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 44f8593c55579c40854190c8710fdfde0b753d0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 99b1b3dc2eabd38aea148ad5ba946d7dd0da857d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="descriptor-handles"></a>Дескриптора
 Объект *дескриптор* — это коллекция метаданных, описывающих параметры инструкции SQL или столбцы результирующего набора, как видно, приложения или драйвера (также известный как *реализацию*). Таким образом дескриптор можно заполнить все четыре роли:  
@@ -54,4 +52,3 @@ ms.lasthandoff: 09/09/2017
  Большинство операций в ODBC могут выполняться без явного использования дескрипторов приложением. Тем не менее дескрипторы предоставляют более удобным способом для некоторых операций. Например предположим, что приложение хочет вставлять данные из двух разных наборов буферов. Чтобы использовать первый набор буферов, многократно вызовет **SQLBindParameter** для их привязки к параметрам в **вставить** инструкции и затем выполните инструкцию. Чтобы использовать второй набор буферов, он будет повторить этот процесс. Кроме того его Настройка привязок для первого набора из буферов в один дескриптор и второй набор буферов в другом дескрипторе. Для переключения между наборами привязок приложение просто вызвала бы **SQLSetStmtAttr** и связать правильный дескриптор с помощью инструкции в дескрипторе параметра приложения.  
   
  Дополнительные сведения о дескрипторах см. в разделе [типы дескрипторов](../../../odbc/reference/develop-app/types-of-descriptors.md).
-

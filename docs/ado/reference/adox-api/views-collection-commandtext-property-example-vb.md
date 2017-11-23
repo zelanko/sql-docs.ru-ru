@@ -4,31 +4,28 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
+dev_langs: VB
 helpviewer_keywords:
 - CommandText property [ADOX]
 - Views collection [ADOX], Visual Basic example
 ms.assetid: a05a0190-352d-44ff-9488-0c94e9fb656e
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 0f69fa396c4040c901f0609e42a1d2fcc9ff8d46
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 45e92a822f8a8acc6abbab756a44668bb4c966c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="views-collection-commandtext-property-example-vb"></a>Коллекция представлений, пример свойства CommandText (Visual Basic)
 Следующий код демонстрирует использование [команда](../../../ado/reference/adox-api/command-property-adox.md) свойство обновление текста представления.  
@@ -89,5 +86,4 @@ End Sub
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Свойство команды (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Объект представления (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Коллекции представлений (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

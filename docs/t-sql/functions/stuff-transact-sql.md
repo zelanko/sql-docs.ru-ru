@@ -1,19 +1,20 @@
 ---
 title: "STUFF (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 11/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|functions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - STUFF
 - STUFF_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - deleting characters
 - STUFF function
@@ -23,20 +24,19 @@ helpviewer_keywords:
 - characters [SQL Server], replacing
 - inserting data
 ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: Active
+ms.openlocfilehash: db5876abd95b4eb9b21d91deeeb6bc0f1a242303
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: df9a3d019f22ec8a0ba610f2dd694e45a8bd9da3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Функция STUFF вставляет одну строку в другую. Она удаляет указанное количество символов первой строки в начальной позиции и вставляет на их место вторую строку.  
   
@@ -53,11 +53,11 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
   
  *Запуск*  
- Целочисленное значение, определяющее место начала удаления и вставки. Если *запустить* или *длина* имеет отрицательное значение, возвращается пустая строка. Если *запустить* длиннее, чем первый *character_expression*, возвращается пустая строка. *Запуск* может иметь тип **bigint**.  
+ Целочисленное значение, определяющее место начала удаления и вставки. Если *запустить* является отрицательным, или ноль, возвращается пустая строка. Если *запустить* длиннее, чем первый *character_expression*, возвращается пустая строка. *Запуск* может иметь тип **bigint**.  
   
  *length*  
- Целочисленное выражение, которое определяет, какое количество символов следует удалить. Если *длина* длиннее, чем первый *character_expression*, удаление выполняется до до последнего символа в последнем *character_expression*. *Длина* может иметь тип **bigint**.  
-  
+ Целочисленное выражение, которое определяет, какое количество символов следует удалить. Если *длина* имеет отрицательное значение, возвращается пустая строка. Если *длина* длиннее, чем первый *character_expression*, удаление выполняется до до последнего символа в последнем *character_expression*.  Если *длина* равен нулю, вставка не производится до первого символа в строке. *Длина* может иметь тип **bigint**.
+
  *replaceWith_expression*  
  — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьных данных. *character_expression* может быть константой, переменной или столбцом символьных или двоичных данных. Это выражение заменяет *длина* символов *character_expression* начиная *запустить*. Предоставление `NULL` как *replaceWith_expression*, удаляет знаки без вставки ничего.   
   
@@ -92,4 +92,3 @@ aijklmnef
 ## <a name="see-also"></a>См. также:  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-

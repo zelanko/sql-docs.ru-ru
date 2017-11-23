@@ -1,33 +1,28 @@
 ---
 title: "Создание базы данных (хранилище данных Azure SQL) | Документы Microsoft"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 03/14/2017
+ms.custom: 
+ms.date: 10/16/2017
 ms.prod: 
+ms.prod_service: sql-data-warehouse
 ms.reviewer: 
-ms.service: sql-warehouse
-ms.suite: 
-ms.technology:
-- database-engine
+ms.service: sql-data-warehouse
+ms.component: t-sql|statements
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- TSQL
-ms.assetid: 42819b93-b757-4b2c-8179-d4be3c512c19
-caps.latest.revision: 20
+dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a178756610f0d0e463c21a2a62a287ada6c863a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>Создание базы данных (хранилище данных Azure SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx_md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 Создает новую базу данных.  
   
@@ -36,9 +31,19 @@ ms.lasthandoff: 09/01/2017
 ```  
 CREATE DATABASE database_name [ COLLATE collation_name ]  
 (  
-    [ MAXSIZE = { 250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 | 153600 | 204800 | 245760 } GB ,]  
+    [ MAXSIZE = { 
+          250 | 500 | 750 | 1024 | 5120 | 10240 | 20480 | 30720 
+        | 40960 | 51200 | 61440 | 71680 | 81920 | 92160 | 102400 
+        | 153600 | 204800 | 245760 
+      } GB ,
+    ]  
     EDITION = 'datawarehouse',  
-    SERVICE_OBJECTIVE = { 'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' }  
+    SERVICE_OBJECTIVE = { 
+         'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
+        | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
+        | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
+    }  
 )  
 [;]  
 ```  
@@ -56,10 +61,18 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 Указывает уровень службы базы данных. Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] использовать «хранилище данных».  
   
 *ПАРАМЕТР MAXSIZE*  
-Максимальный размер базы данных может увеличиваться до. Установка этого значения предотвращает роста размера базы данных, кроме размера. Значение по умолчанию *MAXSIZE* при его отсутствии 10240 ГБ (10 ТБ).  Другие возможные значения в диапазоне от 250 ГБ до 240 ТБ.  
+Значение по умолчанию — базе 10240 ГБ (10 ТБ).  
+
+**Применяется к:** оптимизирован для эластичности уровня производительности
+
+Максимально допустимый размер для базы данных. Базы данных не превысит значение MAXSIZE. 
+
+**Применяется к:** , обеспечивающее уровень производительности вычислений
+
+Максимально допустимый размер базы данных rowstore. Данные, хранящиеся в таблицы rowstore deltastore индекс columnstore и некластеризованный индекс в кластеризованный индекс columnstore не может увеличиваться за пределами MAXSIZE.  Данные, сжатые в формате columnstore не имеет ограничение на размер и не ограничивается MAXSIZE.
   
 SERVICE_OBJECTIVE  
-Определяет уровень производительности. Дополнительные сведения о цели обслуживания для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], в разделе [масштабирования производительности в хранилище данных SQL](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-performance-scale/).  
+Определяет уровень производительности. Дополнительные сведения о цели обслуживания для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], в разделе [уровни производительности](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
 ## <a name="general-remarks"></a>Общие замечания  
 Используйте [DATABASEPROPERTYEX &#40; Transact-SQL &#41; ](../../t-sql/functions/databasepropertyex-transact-sql.md) для просмотра свойств базы данных.  
@@ -108,5 +121,4 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
  [Создание таблицы &#40; Хранилище данных Azure SQL &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)  
  [Удалить базы данных &#40; Transact-SQL &#40;](../../t-sql/statements/drop-database-transact-sql.md) 
   
-
 

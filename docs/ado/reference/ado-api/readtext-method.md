@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,20 +15,18 @@ apitype: COM
 f1_keywords:
 - _Stream::raw_ReadText
 - _Stream::ReadText
-helpviewer_keywords:
-- ReadText method [ADO]
+helpviewer_keywords: ReadText method [ADO]
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1d3628847bc62ad45781442f227e709e87f52c42
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b134e064cc3d1dfa06c5d948d74e49f643756bd1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="readtext-method"></a>Метод ReadText
 Считывает указанное число символов из текстового [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -57,8 +54,7 @@ String = Stream.ReadText ( NumChars)
  Запросы, которые приводят к большой объем XML-данные возвращенные с помощью **ReadText** Если это делается в компонент COM +, из которой вызывается метод объекта потока объектов данных ActiveX (ADO) может занять немало времени для выполнения; ASP-страницы, сеанс пользователя может истечь время ожидания. ADO преобразует поток объекта данные из кодировки UTF-8 в Юникоде. перераспределение часто памяти, участвующие в преобразовании такой большой объем данных за один раз — довольно много времени. Чтобы решить, выполнять повторяющиеся вызовы к **ReadText** метод ADO объект команды и укажите меньшее число символов. Тесты показали, значение которого эквивалентно значению 128 КБ (131,072) является оптимальной. Время отклика уменьшается, как уменьшить это значение. Дополнительные сведения см. в статье базы знаний 280067, «PRB: получения очень больших XML-документов из SQL Server 2000 с помощью метода ReadText объекта ADO потока может быть медленным», в базе знаний Майкрософт на http://support.microsoft.com.  
   
 ## <a name="applies-to"></a>Объект применения  
- [Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>См. также:  
- [Read, метод](../../../ado/reference/ado-api/read-method.md)
-
+ [Метод Read](../../../ado/reference/ado-api/read-method.md)

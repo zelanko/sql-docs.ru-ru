@@ -1,19 +1,20 @@
 ---
 title: "SELECT (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/09/2017
+ms.date: 10/24/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|queries
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SELECT_TSQL
 - SELECT
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - retrieving rows
 - SELECT statement [SQL Server]
@@ -24,20 +25,19 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3cebbb09ffbc437ebdb4c0d0f5fdc5cf5a59adea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Извлекает строки из базы данных и позволяет делать выборку одной или нескольких строк или столбцов из одной или нескольких таблиц в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Полный синтаксис инструкции SELECT сложен, однако основные предложения можно вкратце описать следующим образом:  
   
@@ -138,7 +138,12 @@ SELECT <select_criteria>
 9. DISTINCT  
 10. ORDER BY  
 11. В начало  
-  
+
+> [!WARNING]
+> Предыдущей последовательности обычно верно. Однако существуют редких случаях, где последовательности может отличаться.
+>
+> Предположим, у вас есть кластеризованный индекс в представлении и представлении исключает некоторые строки таблицы и список ВЫБИРАЕМЫХ столбцов в представлении использует ПРЕОБРАЗОВАНИЯ, который изменяет тип данных из *varchar* для *целое*. В этом случае ПРЕОБРАЗОВАНИЯ, может выполняться перед выполняет предложение WHERE. Нередко на самом деле. Часто имеется возможность изменить представление во избежание различные последовательности, если он имеет значение в случае. 
+
 ## <a name="permissions"></a>Permissions  
  Для выборки данных требуется разрешение **SELECT** на таблицу или представление, которое может быть унаследовано из области более высокого уровня, например разрешение **SELECT** на схему или разрешение **CONTROL** на таблицу. Или членство в **db_datareader** или **db_owner** предопределенных ролей базы данных или **sysadmin** предопределенной роли сервера. Создание новой таблицы с помощью **SELECTINTO** также необходимы **CREATETABLE** разрешение и **ALTERSCHEMA** на схему, которой принадлежит новая таблица.  
   
@@ -266,5 +271,4 @@ ORDER BY OrderDateKey;
  [ВЫБЕРИТЕ примеры &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [Указания &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
   
-
 

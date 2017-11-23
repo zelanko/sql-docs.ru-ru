@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - bit data type [ODBC]
 - data conversions from C to SQL types [ODBC], bit
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a3d5291538d2f37b037888935be7f93bec8a7865
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8e7232773b97a66fc0b1b047e3fb8cc4212754f0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="c-to-sql-bit"></a>C в SQL: бит
 Идентификатор для типа данных bit ODBC C —:  
@@ -43,4 +41,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_BIT|Нет|н/д|  
   
  Драйвер не учитывает значение длины/индикатора при преобразовании данных из типа данных bit C и предполагает, что размер типа данных bit C размер буфера данных. Переданное значение длины/индикатора *StrLen_or_Ind* аргумент в **SQLPutData** и в указанный буфер с *StrLen_or_IndPtr* аргумент в **SQLBindParameter**. Буфер данных задается с помощью *DataPtr* аргумент в **SQLPutData** и *ParameterValuePtr* аргумент в **SQLBindParameter**.
-

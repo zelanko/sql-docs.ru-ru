@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - BeginTrans method [ADO], VC++ example
 - RollbackTrans method [ADO], VC++ example
 - CommitTrans method [ADO], VC++ example
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 807aaf72d48c7eec13a3dff96281206206f2d295
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 80a319b5d3edd7f8b2c901b928e1321e068ac46e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans CommitTrans и примере методы RollbackTrans (VC ++)
 В этом примере изменяется тип книги все книги по психологии в ***заголовки*** таблицы базы данных. После [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод запускает транзакцию, которая изолирует все изменения, внесенные в ***заголовки*** таблицы, [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод сохраняет изменения. Можно использовать [отката](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод, чтобы отменить изменения, которые были сохранены с помощью [обновление](../../../ado/reference/ado-api/update-method.md) метод.  
@@ -276,5 +273,4 @@ void PrintProviderError(_ConnectionPtr pConnection) {
   
 ## <a name="see-also"></a>См. также:  
  [BeginTrans CommitTrans и методы RollbackTrans (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [Метод обновления](../../../ado/reference/ado-api/update-method.md)
-
+ [Метод Update](../../../ado/reference/ado-api/update-method.md)

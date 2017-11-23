@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - connection attributes [ODBC]
 - connecting to driver [ODBC], connection attributes
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 930a0dba9eacdf828cff97fe464f7a6c8a41dc52
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: d62657134276621442c58639d1ef1c7f2a4b63e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connection-attributes"></a>Атрибуты соединения
 Атрибуты соединения, характеристики соединения. Например, поскольку транзакции выполняются на уровне соединения, уровень изоляции транзакции является атрибутом соединения. Аналогичным образом время ожидания входа, то число секунд ожидания при попытке подключения до истечения времени ожидания, является атрибутом соединения.  
@@ -45,4 +43,3 @@ ms.lasthandoff: 09/09/2017
  После подключения необходимо указать атрибуты соединения преобразования (SQL_ATTR_TRANSLATE_DLL и SQL_ATTR_TRANSLATE_OPTION).  
   
  Все остальные атрибуты соединения можно задать в любое время. Дополнительные сведения см. в разделе [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) описание функции. (Атрибуты соединения не может задаваться на уровне среды вызов **SQLSetEnvAttr**.)
-

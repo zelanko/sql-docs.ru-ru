@@ -8,25 +8,23 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - named parameters [ODBC]
 - binding parameters by name [ODBC]
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 54298b1c08235452f5717888754569d55442a47a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: b3047d17ff1e9785e203b6be0ab48c7c27fd88d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Привязка параметров по имени (именованные параметры)
 Некоторые СУБД позволяют приложению задать параметры для хранимой процедуры по имени, а не по позиции в вызове процедуры. Такие параметры называются *именованных параметров*. ODBC поддерживает использование именованных параметров. В ODBC именованные параметры используются только в вызовах хранимых процедур и не может использоваться в других инструкциях SQL.  
@@ -65,4 +63,3 @@ SQLSetDescField(hIpd, 1, SQL_DESC_NAME, "@quote", SQL_NTS);
 // execute.  
 SQLExecute(hstmt);  
 ```
-

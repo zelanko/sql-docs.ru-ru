@@ -8,22 +8,20 @@ ms.service:
 ms.component: python
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: cbf629eb140f10bf36cb8fdfa961f64a7cfe411e
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 48bd0dcdc73b8f9095d782e61eaf9f4e994fb8d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="python-sql-driver"></a>Драйвер Python SQL
 
@@ -50,4 +48,3 @@ ms.lasthandoff: 09/09/2017
 * [Начало работы с Python для Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
 * [Начало работы с Python в Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
 * [Начало работы с Python в SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)
-

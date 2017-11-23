@@ -4,32 +4,29 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - Bookmark property [ADO], VC++ example
 - EOF property [ADO], VC++ example
 - BOF property [ADO], VC++ example
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 89f4d1ec303bf7ad22895678d89aebb482e1749b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 16971f63d266e9a40a888387049bd3b941a3c4d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF EOF и пример свойства закладки (VC ++)
 Первая функция в этом примере используется [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) и [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) свойства для отображения сообщения, если пользователь пытается перейти на первую или последнюю запись [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Она использует [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство, чтобы позволить пользователю флаг записи в **записей** и вернуться к нему позднее.  
@@ -216,5 +213,4 @@ Authors with 25 percent royalty
 ## <a name="see-also"></a>См. также:  
  [BOF, свойства EOF (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
  [Свойство закладка (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md)   
- [Объект набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
+ [Объект Recordset (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

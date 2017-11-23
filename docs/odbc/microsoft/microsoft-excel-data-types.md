@@ -8,8 +8,7 @@ ms.service:
 ms.component: microsoft
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - ODBC desktop database drivers [ODBC], Excel driver
 - Excel driver [ODBC], data types
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ecd939c775b18efd2f08d4d34b7ee393c6146ccb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: eeb2bc72ce34141eb3dbdca3f952dca0c476c2dd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-excel-data-types"></a>Типы данных Microsoft Excel
 Следующая таблица показывает сопоставление типов данных драйвера Microsoft Excel в типы данных ODBC SQL. Драйвер Microsoft Excel назначает эти типы данных столбцов в таблицы Microsoft Excel на основе данных в столбце.  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |TEXT|Если строки столбца содержат более одного типа данных Microsoft Excel, драйвер ODBC Microsoft Excel присваивает столбцу типа данных SQL_VARCHAR. Есть одно исключение: Если столбец содержит только двух-трех типов данных даты и времени (даты, времени и даты и времени), драйвер ODBC Microsoft Excel присваивает тип данных SQL_TIMESTAMP столбцу.<br /><br /> Создание ТЕКСТОВОГО столбца, равную нулю или неизвестной длины фактически возвращает столбец 255 байт.<br /><br /> Символьного литерала могут содержать любой символ ANSI (1-255 в десятичном формате). Используйте две стоящие рядом одинарные кавычки ("") для представления символ одинарной кавычки (').<br /><br /> Вставка значения NULL в столбец с типом данных, отличный от SQL_VARCHAR вызовет тип данных столбца, который следует изменить на SQL_VARCHAR.|  
   
  Дополнительные ограничения на типы данных можно найти в [ограничения типа данных](../../odbc/microsoft/data-type-limitations.md).
-

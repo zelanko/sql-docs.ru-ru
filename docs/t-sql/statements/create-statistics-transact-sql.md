@@ -3,10 +3,12 @@ title: "СОЗДАТЬ СТАТИСТИКУ (Transact-SQL) | Документы 
 ms.custom: 
 ms.date: 08/10/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: t-sql|statements
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -14,8 +16,7 @@ f1_keywords:
 - STATISTICS_TSQL
 - CREATE STATISTICS
 - CREATE_STATISTICS_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - query optimization statistics [SQL Server], creating
 - indexed views [SQL Server], statistics
@@ -25,20 +26,19 @@ helpviewer_keywords:
 - creating statistics [SQL Server]
 - NORECOMPUTE clause
 ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
-caps.latest.revision: 105
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: "105"
+author: edmacauley
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 3e1f234dc76b6b231fc3f1d0f258937e70035a65
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2e09604deac2b823243515c10398dc27c75941bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Создает статистику оптимизации запросов на один или несколько столбцов таблицы, индексированного представления или внешней таблицы. Для большинства запросов оптимизатор уже создает достаточно статистики для формирования высококачественного плана запроса, но в некоторых случаях для повышения производительности запросов нужно создать дополнительные статистические данные с помощью инструкции CREATE STATISTICS или изменить структуру запроса.  
   
@@ -163,7 +163,7 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = {ON | {OFF}  
  Когда **ON**, статистики будут сохранять процента создания выборки для последующих обновлений, которые явно не указан процент выборки. Когда **OFF**, Процент выборки статистика будет сброшен для выборки по умолчанию при последующих обновлениях, которые явно не указан процент выборки. Значение по умолчанию — **OFF**. 
  
- **Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4.  
+ **Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4) через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1).    
   
  STATS_STREAM  **=**  *stats_stream*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -317,5 +317,4 @@ ON DimCustomer (CustomerKey, EmailAddress) WITH SAMPLE 50 PERCENT;
  [sys.stats_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)  
   
   
-
 

@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|language-elements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CURSOR_TSQL
 - DECLARE CURSOR
 - CURSOR
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - DECLARE CURSOR statement
 - cursors [SQL Server], attributes
@@ -27,17 +25,16 @@ helpviewer_keywords:
 - Transact-SQL cursors, attributes
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 0641f87c36d3dbed886dc7bb81aa1f179148a8cd
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: b0b48a95c9eee3cf2ca77d532deb716c874523b7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -166,10 +163,10 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
 |Системные хранимые процедуры.|Description|  
 |------------------------------|-----------------|  
-|**Хранимая процедура sp_cursor_list**|Возвращает список курсоров, доступных для соединения в настоящий момент времени, а также их атрибуты.|  
-|**процедура sp_describe_cursor**|Описывает атрибуты курсора, например имеет ли он тип «forward-only» или «scrolling».|  
+|**sp_cursor_list**|Возвращает список курсоров, доступных для соединения в настоящий момент времени, а также их атрибуты.|  
+|**sp_describe_cursor**|Описывает атрибуты курсора, например имеет ли он тип «forward-only» или «scrolling».|  
 |**sp_describe_cursor_columns**|Описывает атрибуты столбцов результирующего набора.|  
-|**процедура sp_describe_cursor_tables**|Описывает базовые таблицы, к которым курсор получает доступ.|  
+|**sp_describe_cursor_tables**|Описывает базовые таблицы, к которым курсор получает доступ.|  
   
  Переменные могут использоваться как часть *select_statement* , в котором объявлен курсор. Значения переменных курсора после его объявления не изменяются.  
   
@@ -267,4 +264,3 @@ DEALLOCATE vendor_cursor;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
-

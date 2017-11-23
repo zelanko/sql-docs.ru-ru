@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- ADOX, fundamentals
+helpviewer_keywords: ADOX, fundamentals
 ms.assetid: 954476fc-5f72-4ada-ace5-d9acb27d18f8
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 22ef8c10cbc4cec9024b311297e3853790687bc2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: dbc8d415e4dfcaeb4bf7e6a489bd407e87335874
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="adox-fundamentals"></a>Принципы работы ADOX
 Модули Microsoft® ActiveX® данных объекты для языка определения данных и безопасности (ADOX) — это расширение объектов ADO и модель программирования. ADOX включает объекты для создания схем и изменения, а также безопасности. Поскольку объектно ориентированный подход для операций со схемой, можно написать код, который будет работать с различными данными источников независимо от различий в их собственном синтаксисов.  
@@ -60,5 +57,4 @@ ms.lasthandoff: 09/09/2017
  [Объекты ADOX](../../../ado/reference/adox-api/adox-objects.md)   
  [Свойства ADOX](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO (многомерные данные) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Руководство программиста ADO](../../../ado/guide/ado-programmer-s-guide.md)
-
+ [Руководство по программированию объектов ADO](../../../ado/guide/ado-programmer-s-guide.md)

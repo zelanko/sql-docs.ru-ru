@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - cursors [ODBC], scrollable
 - cursors [ODBC], creating
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 45a3003ac39e806dbd012b79b974160f3530fc32
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 19a9e44523e1dc550b593bc83589177c03d8a842
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Характеристики курсора и тип курсора
 Приложение может указать характеристики курсора вместо указания типа курсора (однонаправленные, статические, управляемые набором ключей или динамического). Для этого приложение выбирает курсор прокрутки (путем установки атрибута инструкции SQL_ATTR_CURSOR_SCROLLABLE) и чувствительности (путем установки атрибута инструкции SQL_ATTR_CURSOR_SENSITIVITY) перед открытием курсора на инструкции дескриптор. Драйвер выбирает тип курсора, который наиболее эффективно предоставляет характеристики, запрошенное приложение.  
@@ -57,4 +55,3 @@ ms.lasthandoff: 09/09/2017
 |SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_FORWARD_ONLY|Значением параметра SQL_ATTR_CURSOR_SCROLLABLE SQL_NONSCROLLABLE.|  
 |SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_KEYSET_DRIVEN|SQL_ATTR_SCROLLABLE для SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED или SQL_SENSITIVE (в соответствии с определяемым драйвером критерии, если не SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY).|  
 |SQL_ATTR_CURSOR_TYPE для SQL_CURSOR_STATIC|SQL_ATTR_SCROLLABLE для SQL_SCROLLABLE.<br /><br /> SQL_ATTR_SENSITIVITY для SQL_INSENSITIVE (если SQL_ATTR_CONCURRENCY SQL_CONCUR_READ_ONLY).<br /><br /> SQL_ATTR_SENSITIVITY SQL_UNSPECIFIED или SQL_SENSITIVE (если SQL_ATTR_CONCURRENCY не SQL_CONCUR_READ_ONLY).|
-

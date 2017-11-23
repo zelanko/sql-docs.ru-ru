@@ -4,30 +4,26 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- VB
-helpviewer_keywords:
-- Append method [ADOX]
+dev_langs: VB
+helpviewer_keywords: Append method [ADOX]
 ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: e297d5927cdd504c1c0aebd39d3dac9320965d60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6c4672189074eb65e4220bcdbeacbd471c4d7911
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="views-append-method-example-vb"></a>Представления Append пример метода (Visual Basic)
 Следующий код демонстрирует использование [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [представления](../../../ado/reference/adox-api/views-collection-adox.md) коллекции [Append](../../../ado/reference/adox-api/append-method-adox-views.md) метод, чтобы создать новое представление в базовом источнике данных.  
@@ -74,5 +70,4 @@ End Sub
  [Append-метод (ADOX представления)](../../../ado/reference/adox-api/append-method-adox-views.md)   
  [Объект каталога (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Объект представления (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Коллекции представлений (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
-
+ [Коллекция Views (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

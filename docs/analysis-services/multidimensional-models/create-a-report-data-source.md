@@ -15,17 +15,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
+ms.openlocfilehash: f30b38b27a56bf3af10c4f39681b160feec34fd5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-report-data-source"></a>Создание источника данных отчета
   Для подключения Power View к многомерной модели необходимо создать определение общего источника данных отчета (файл с расширением RSDS) в библиотеке SharePoint. Файл RSDS задает имя экземпляра сервера служб Analysis services, тип соединения, строку подключения и учетные данные, используемые для подключения к многомерной модели. Когда пользователь щелкает RSDS, в браузере открывается новый пустой отчет Power View (файл RDLX).  
@@ -84,4 +83,3 @@ ms.lasthandoff: 09/01/2017
 8.  Выберите **Включить этот источник данных** , если он должен быть активным. Если источник данных настроен, но не активен, пользователи получат сообщение об ошибке при попытке создать отчет.  
   
   
-

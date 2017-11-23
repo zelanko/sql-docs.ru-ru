@@ -4,28 +4,25 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- RDS API reference [ADO]
+helpviewer_keywords: RDS API reference [ADO]
 ms.assetid: ca9fa99e-1a9f-4deb-80d4-6942555fb22a
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: a2880835faa2db42439d6ddb8862c6351fd72c60
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 7207a7dc640edb709e4d2f91a3b03777d82385c3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rds-api-reference"></a>Справочник по API служб удаленных рабочих СТОЛОВ
 > [!IMPORTANT]
@@ -33,15 +30,14 @@ ms.lasthandoff: 09/09/2017
   
  Этот раздел документации по ADO содержит справочные разделы для каждого объекта служб удаленных рабочих СТОЛОВ, свойство, метод и примеры кода события, а также служб удаленных рабочих СТОЛОВ:  
   
--   [Объекты служб удаленных рабочих СТОЛОВ](../../../ado/reference/rds-api/rds-objects.md)  
+-   [Объекты службы удаленных рабочих столов](../../../ado/reference/rds-api/rds-objects.md)  
   
--   [Свойства служб удаленных рабочих СТОЛОВ](../../../ado/reference/rds-api/rds-properties.md)  
+-   [Свойства службы удаленных рабочих столов](../../../ado/reference/rds-api/rds-properties.md)  
   
--   [Методы служб удаленных рабочих СТОЛОВ](../../../ado/reference/rds-api/rds-methods.md)  
+-   [Методы службы удаленных рабочих столов](../../../ado/reference/rds-api/rds-methods.md)  
   
--   [События служб удаленных рабочих СТОЛОВ](../../../ado/reference/rds-api/rds-events.md)  
+-   [События службы удаленных рабочих столов](../../../ado/reference/rds-api/rds-events.md)  
   
--   [Примеры кода для служб удаленных рабочих СТОЛОВ](../../../ado/reference/rds-api/rds-code-examples.md)
-
+-   [Примеры коды службы удаленных рабочих столов](../../../ado/reference/rds-api/rds-code-examples.md)
 
 

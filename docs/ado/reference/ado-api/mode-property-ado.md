@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: reference
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -17,20 +16,18 @@ f1_keywords:
 - Connection15::Mode
 - _Stream::Mode
 - _Record::Mode
-helpviewer_keywords:
-- Mode property [ADO]
+helpviewer_keywords: Mode property [ADO]
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 71b8bbcaa20e10791f8e3d684655b47e3dd1441a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 9ee4463749e231b6ecd48a1fa24af1a72b3766ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="mode-property-ado"></a>Свойство режима (ADO)
 Указывает имеющиеся права на изменение данных в [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [запись](../../../ado/reference/ado-api/record-object-ado.md), или [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -52,9 +49,8 @@ ms.lasthandoff: 09/09/2017
   
 ||||  
 |-|-|-|  
-|[Объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект записи (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Объект потока (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
+|[Объект Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Объект Record (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Объект Stream (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
 ## <a name="see-also"></a>См. также:  
  [IsolationLevel и пример свойства режима (Visual Basic)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [IsolationLevel и пример свойства режима (VC ++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
-

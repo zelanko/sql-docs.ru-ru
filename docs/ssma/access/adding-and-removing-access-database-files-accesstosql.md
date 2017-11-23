@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -32,17 +31,16 @@ helpviewer_keywords:
 - scanning for database files
 - searching for database files
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: db0c8970cb9a4cd47da5982d0ecc8c1e81a5ccbc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 24d93c5851e2d4192a32e0684a53b7939cc4c371
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Добавление и удаление базы данных Access (AccessToSQL)
 Для переноса данных Access [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, необходимо добавить один или несколько баз данных Access в проект SSMA. Эти базы данных должны быть Access 97 или более поздней версии. При наличии баз данных из более ранней версии Access, необходимо преобразовать базы данных до более новой версии. Это делается путем открытия и сохранения баз данных Microsoft Access 97 или более поздней версии, прежде чем добавлять их SSMA.  
@@ -143,4 +141,3 @@ ms.lasthandoff: 08/02/2017
 [Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/en-us/76a3abcf-2998-4712-9490-fe8d872c89ca)  
 [Создание и управление проектами](http://msdn.microsoft.com/en-us/f2d1f0b0-5394-4adb-b3f3-abd71eb68ca7)  
   
-

@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - client-side cursors [ADO]
 - cursors [ADO], server-side
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 541b0195abbe4a37c3a2090add0b0cf5dbbeb568
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="the-significance-of-cursor-location"></a>Значимость положения курсора
 Каждый курсор использует временные ресурсы для хранения своих данных. Эти ресурсы можно память, файл подкачки на диске, временные файлы или даже временного хранения в базе данных. Курсор называется *клиентского* курсора, если эти ресурсы размещены на клиентском компьютере. Курсор называется *серверные* курсора, если эти ресурсы размещены на сервере.  
@@ -46,4 +44,3 @@ ms.lasthandoff: 09/09/2017
  Однако важно отметить, что является серверный курсор, временно — использование ресурсов ценное сервера для каждого активного клиента. Необходимо запланировать соответствующим образом Убедитесь, что оборудование сервера управления все серверные курсоры, запрашиваемые активных клиентов. Кроме того, серверный курсор может быть медленным, так как он предоставляет доступ только на одну строку — нет пакета курсора.  
   
  Серверные курсоры полезны при вставке, обновлении или удалении записей. С курсорами на стороне сервера может иметь несколько активных инструкций для одного соединения.
-

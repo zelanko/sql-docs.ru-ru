@@ -5,25 +5,23 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
 - Azure SQL Database
 - SQL Server
 ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: ae77c759c4856ecb3b74cbaeb36f0123398c2e16
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9683542427256511b961ad8f6ffd74af43eb23d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="assessing-sybase-ase-database-objects-for-conversion-sybasetosql"></a>Оценка объекты Sybase ASE базы данных для преобразования (SybaseToSQL)
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, следует определить быть сложность миграции и о том, сколько времени займет миграции. SSMA можно создать отчет об оценки, который показывает процент объектов и процедуры, которые будут успешно преобразованы в [!INCLUDE[tsql](../../includes/tsql_md.md)]. SSMA также позволяет просматривать конкретные проблемы, которые приведет к ошибкам преобразования.  
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/02/2017
 ## <a name="see-also"></a>См. также:  
 [Миграция баз данных Sybase ASE в SQL Server — база данных Azure SQL &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
-

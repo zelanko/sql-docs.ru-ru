@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - ODBC cursor library [ODBC], positioned update or delete
 - cursor library [ODBC], statement processing
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 9061ad8221537eaa00eb40fab56fa10d3357198d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 367062f5e671b366771b1a04f129b8e312f48cca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>Обработка располагается инструкции Update и Delete
 > [!IMPORTANT]  
@@ -51,4 +49,3 @@ ms.lasthandoff: 09/09/2017
 -   Если драйвер поддерживает только одну активную инструкцию, выборки библиотеки курсора до конца результат набор и затем refetches текущего набора строк из своего кэша до начала выполнения позиционированных инструкцией обновления или удаления. Если затем приложение вызывает функцию, которая возвращает метаданные в результирующем наборе (например, **SQLNumResultCols** или **SQLDescribeCol**), библиотеку курсоров возвращает сообщение об ошибке.  
   
 -   Если для столбца таблицы, содержащей столбец типа timestamp, автоматически обновляются при каждом выполнении обновления выполняется позиционированного обновления или инструкции delete, все последующие позиционированного обновления или инструкций delete завершится ошибкой, если столбец отметки времени привязки. Это происходит потому, что поисковое обновление или удаление инструкцию, которая создает библиотеку курсоров не точно определяет обновляемой строки. Значение, в которой выполняется поиск инструкции для столбца отметки времени не будет соответствовать автоматически измененное значение в столбец отметки времени.
-

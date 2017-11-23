@@ -5,8 +5,7 @@ ms.custom:
 ms.date: 01/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- sql-ssma
+ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - Uninstalling, Extension pack
 - Uninstalling, SSMA for MySQL client
 ms.assetid: 87cdbd49-a0c9-4b00-8a93-34188b18d11a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 688f17b4f133dbbd47e9930e812bf20459f153e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 765696847ddb1abd44dfac3463fdfd75f9a5c97a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/02/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="removing-the-ssma-for-mysql-components-mysqltosql"></a>Удаление SSMA для MySQL компонентов (MySQLToSql)
 После завершения миграции баз данных MySQL для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], может потребоваться удалить компоненты SSMA. Клиентские компоненты можно удалить в любое время. Однако при удалении пакета расширения из [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , затем SSMA больше не будет поддерживать переноса данных из MySQL в целевую базу данных (SQL Server или SQL Azure) с использованием механизма серверных данных миграции.  
@@ -67,6 +65,5 @@ SSMA можно удалить с помощью **Установка и уда�
   
 ## <a name="see-also"></a>См. также:  
 [Установка SSMA для клиента MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  
-[Установка компонентов SSMA на SQL Server](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
+[Установка компонентов SSMA в SQL Server](http://msdn.microsoft.com/en-us/6772d0c5-258f-4d7b-afb0-b5f810e71af1)  
   
-

@@ -8,8 +8,7 @@ ms.service:
 ms.component: reference
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - backward compatibility [ODBC], SQLGetInfo
 - SQLGetInfo function [ODBC], support
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: f862c55c67fca4c14b5c8d3ede20c6a9ec4ca791
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: fb9afa5b40ffa7628e04ee85e5ddc4f752e98935
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sqlgetinfo-support"></a>Поддержка SQLGetInfo
 Когда ODBC 2. *x* приложение вызывает **SQLGetInfo** ODBC 3*.x* драйвера, *свойство* должен поддерживаться аргументы в следующей таблице.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 09/09/2017
  ODBC 3*.x* приложения, работа с ODBC 3*.x* драйвер не должен вызывать **SQLGetInfo** с *свойство* аргументы описано в Приведенный выше таблице, но следует использовать функции ODBC 3*.x* *свойство* аргументы, перечисленные в следующем абзаце. Не существует однозначного соответствия между *свойство* аргументы, используемые в ODBC 2. *x* и тех, которые используются в ODBC 3*.x*. ODBC 3*.x* приложения, работа с ODBC 2. *x* драйвера, с другой стороны, следует использовать *свойство* аргументы, описанные выше.  
   
  Некоторые типы сведений в приведенной выше таблице устарели и были заменены типами сведения атрибуты курсора. Эти устаревшие сведения типы: SQL_FETCH_DIRECTION, SQL_LOCK_TYPES, SQL_POS_OPERATIONS, SQL_POSITIONED_STATEMENTS, SQL_SCROLL_CONCURRENCY и SQL_STATIC_SENSITIVITY. Новые типы атрибуты курсора, SQL_XXX_CURSOR_ATTRIBUTES2 SQL_XXX_CURSOR_ATTRIBUTES1and, где XXX равно динамический, FORWARD_ONLY, KEYSET_DRIVEN или СТАТИЧЕСКИЙ. Каждый новый тип указывает возможности драйверов для типа одного курсора. Дополнительные сведения об этих параметрах см. в разделе [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) описание функции.
-

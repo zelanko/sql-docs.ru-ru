@@ -3,24 +3,25 @@ title: "Драйвер Microsoft JDBC для SQL Server Support Matrix | Док�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: jdbc
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- drivers
+ms.suite: sql
+ms.technology: drivers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 9867704e5fe3b5522d22c70cc1b79b495de1bfa5
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 35747cff6a18c79a828e5269d7085c710338bf18
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Матрица поддержки драйвера Microsoft JDBC Driver for SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
 |Имя драйвера|Версия пакета драйверов|Применимые JAR(s)|Конец Основная фаза поддержки|
 |-|-|-|-|  
-|6.2 драйвер Microsoft JDBC для SQL Server|6.2|MSSQL jdbc-6.2.1.jre8.jar<br> MSSQL jdbc-6.2.1.jre7.jar|30 июня 2022|    
+|Microsoft JDBC Driver 6.2 для SQL Server|6.2|MSSQL jdbc-6.2.2.jre8.jar<br> MSSQL jdbc-6.2.2.jre7.jar|30 июня 2022|    
 |Microsoft JDBC Driver 6.0 для SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 июля 2021|    
 |Microsoft JDBC Driver 4.2 for SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 августа 2020 г.|  
 |Microsoft JDBC Driver 4.1 for SQL Server|4.1|sqljdbc41.jar|12 декабря 2019 г.|  
@@ -55,20 +56,20 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="sql-version-compatibility"></a>Совместимость с версиями SQL  
   
-|Версия драйвера|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|База данных SQL Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|  
-|-|-|-|-|-|-|-|-| 
-|6.2|Да|Да|Да|Да|Да|Да|Да|  
-|6.1|Да|Да|Да|Да|Да|Да|Да|  
-|6.0|Да|Да|Да|Да|Да|Да|Да|  
-|4.2|Да|Да|Да|Да|Да|Да|Да|  
-|4.1|Да|Да|Да|Да|Да|Да|Да|  
-|4.0|Да|Да|Да|Да|Да|Да|Да|  
-|3.0|Да|Да|Y<sup>1</sup>|Y<sup>2</sup>|Нет|Y<sup>5</sup>|Нет|  
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|  
-|1.2|Y<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|  
-|1.1|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
-|1.0|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
-|2000|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
+|Версия драйвера|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|База данных SQL Azure|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|  
+|-|-|-|-|-|-|-|-|-| 
+|6.2|Да|Да|Да|Да|Да|Да|Да|Да|  
+|6.1|Да|Да|Да|Да|Да|Да|Да|Нет|  
+|6.0|Да|Да|Да|Да|Да|Да|Да|Нет|  
+|4.2|Да|Да|Да|Да|Да|Да|Да|Нет|  
+|4.1|Да|Да|Да|Да|Да|Да|Да|Нет|  
+|4.0|Да|Да|Да|Да|Да|Да|Да|Нет|  
+|3.0|Да|Да|Y<sup>1</sup>|Y<sup>2</sup>|Нет|Y<sup>5</sup>|Нет|Нет|  
+|2.0|Y<sup>3</sup>|Y<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|  
+|1.2|Y<sup>3</sup>|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
+|1.1|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
+|1.0|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
+|2000|Нет|Нет|Нет|Нет|Нет|Нет|Нет|Нет|  
   
  <sup>1</sup>драйвера JDBC версии 3.0 для Microsoft SQL Server можно подключиться к SQL Server 2012 в качестве клиента нижнего уровня.  
   
@@ -106,4 +107,3 @@ ms.lasthandoff: 09/09/2017
  Драйвер Microsoft JDBC Driver for SQL Server тестируется на совместимость с различными серверами приложений.  Обратитесь к поставщику вашего сервера приложений, чтобы узнать, какая версия драйвера совместима с их продуктом.  
   
   
-
