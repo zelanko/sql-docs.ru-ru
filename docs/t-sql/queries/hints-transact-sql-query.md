@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - NOLOCK_TSQL
 - MAXDOP_TSQL
 - USE_HINT_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - REPORT PLAN query hint
 - FORCE ORDER query hint
@@ -57,17 +55,16 @@ helpviewer_keywords:
 - EXTERNALPUSHDOWN query hint
 - USE HINT query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-caps.latest.revision: 136
+caps.latest.revision: "136"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: 88d4de294e7fa31b7334b9b03cc127d479d6628a
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b866e3ab0ee44c8b65a7b5064f0feb1e4f52aff9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) - запросов
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +84,7 @@ ms.lasthandoff: 09/01/2017
   
  [UPDATE](../../t-sql/queries/update-transact-sql.md)  
   
- [СЛИЯНИЕ](../../t-sql/statements/merge-transact-sql.md)  
+ [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -201,7 +198,7 @@ ms.lasthandoff: 09/01/2017
  MAXDOP *номер*  
  **Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Переопределяет **максимальная степень параллелизма** параметр конфигурации **sp_configure** и регулятора ресурсов для запросов, указывающих этот параметр. Указание запроса MAXDOP может превысить значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью регулятора ресурсов [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует значение MAXDOP регулятора ресурсов, описанное в [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Все семантические правила, используемые **максимальная степень параллелизма** параметра конфигурации, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
+ Переопределяет **максимальная степень параллелизма** параметр конфигурации **sp_configure** и регулятора ресурсов для запросов, указывающих этот параметр. Указание запроса MAXDOP может превысить значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью регулятора ресурсов [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует значение MAXDOP регулятора ресурсов, описанное в [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Все семантические правила, используемые **максимальная степень параллелизма** параметра конфигурации, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]  
 >  Если значение MAXDOP равно нулю, то сервер выбирает максимальную степень параллелизма.  
@@ -220,7 +217,7 @@ ms.lasthandoff: 09/01/2017
   
  Запрещает оператора очередей в планы запроса (за исключением планы, когда требуется гарантировать обновление допустимым обновлением семантику spool). В некоторых сценариях оператор буферизации может снизить производительность. Например эта очередь использует базу данных tempdb и база данных tempdb может возникать, если имеется нескольких параллельных запросов с операциями очередей.  
   
- Подсказка OPTIMIZE FOR (  *@variable_name*  {Неизвестный | = *значение literal_constant}* [ **,** ... *n* ] )  
+ Подсказка OPTIMIZE FOR (  *@variable_name*  {Неизвестный | = *значение literal_constant}* [ **,** ...*n* ] )  
  Указывает оптимизатору, что при компиляции и оптимизации запросов нужно использовать конкретное значение для локальной переменной. Значение используется только в процессе оптимизации запроса, но не в процессе выполнения.  
   
  *@variable_name*  
@@ -294,7 +291,7 @@ ms.lasthandoff: 09/01/2017
  USE PLAN N**"***xml_plan***"**  
  Заставляет оптимизатор запросов использовать существующий план запроса для запроса, который задается параметром **"***xml_plan***"**. Подсказку USE PLAN нельзя указывать в инструкциях INSERT, UPDATE MERGE и DELETE.  
   
-ТАБЛИЧНАЯ ПОДСКАЗКА **(***exposed_object_name* [ **,** \<table_hint > [[**,** ]...  *n*  ]] **)** Применяет заданную табличную подсказку в таблицу или представление, которое соответствует *exposed_object_name*. Мы рекомендуем использовать табличную подсказку в качестве указания запроса только в контексте [плана](../../relational-databases/performance/plan-guides.md).  
+ТАБЛИЧНАЯ ПОДСКАЗКА **(***exposed_object_name* [ **,** \<table_hint > [[**,** ]... *n*  ]] **)** Применяет заданную табличную подсказку в таблицу или представление, которое соответствует *exposed_object_name*. Мы рекомендуем использовать табличную подсказку в качестве указания запроса только в контексте [плана](../../relational-databases/performance/plan-guides.md).  
   
  *exposed_object_name* может принимать одно из следующих ссылок:  
   
@@ -563,4 +560,3 @@ GO
  [Флаги трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
   
   
-

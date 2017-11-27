@@ -4,8 +4,7 @@ ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
 ms.component: guide
-ms.technology:
-- drivers
+ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
@@ -16,17 +15,16 @@ helpviewer_keywords:
 - OLE DB provider for ODBC [ADO]
 - providers [ADO], OLE DB provider for ODBC
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 2b7fe46a54848d16b94919be4ee2ce8987ba167b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 6b3753748a9e76d24dc968983fa358b5d0050f41
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Поставщик Microsoft OLE DB для ODBC Обзор
 Программисту ADO или служб удаленных рабочих СТОЛОВ идеальном мире бы одно данных каждый источник предоставляет интерфейс OLE DB, чтобы вызвать ADO непосредственно в источник данных. Несмотря на то, что все чаще других поставщиков базы данных реализует интерфейсы OLE DB, некоторые источники данных не еще доступны таким образом. Однако большинство систем DBMS в настоящее время доступны через ODBC.
@@ -95,7 +93,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
  Можно также указать имя учетной записи пользователя (**UID =**) и пароль для учетной записи пользователя (**PWD =**) в параметры, относящиеся к ODBC или в стандарте определяемых ADO *пользователя* и *пароль* параметров.
 
- Несмотря на то что **DSN** определение уже содержит имя базы данных, можно указать ** *базы данных* параметр в дополнение к **DSN** для подключения с другой базой данных. Рекомендуется всегда включать ** *базы данных* параметр при использовании **DSN**. Это обеспечит подключение к правильной базе данных, если другой пользователь изменил параметр по умолчанию базы данных с момента последней проверки **DSN** определения.
+ Несмотря на то что **DSN** определение уже содержит имя базы данных, можно указать *базы* *данных* параметр в дополнение к **DSN** для подключения с другой базой данных. Рекомендуется всегда включать *базы* *данных* параметр при использовании **DSN**. Это обеспечит подключение к правильной базе данных, если другой пользователь изменил параметр по умолчанию базы данных с момента последней проверки **DSN** определения.
 
 ## <a name="provider-specific-connection-properties"></a>Свойства подключения для конкретного поставщика
  Поставщик OLE DB для ODBC добавляет несколько параметров для [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекцию **подключения** объекта. Ниже перечислены эти свойства с именем соответствующего свойства OLE DB в круглые скобки.
@@ -440,4 +438,3 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 
 ## <a name="see-also"></a>См. также:
  [Команды объекта (ADO)](../../../ado/reference/ado-api/command-object-ado.md) [свойства CommandText (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md) [объект соединения (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) [свойство ConnectionString (ADO)](../../../ado/reference/ado-api/connectionstring-property-ado.md) [выполнение Метод (команда ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md) [Open-метод (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) [коллекцию параметров (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md) [коллекции свойств (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md) [Свойство поставщика (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) [объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) [поддерживает метод](../../../ado/reference/ado-api/supports-method.md)
-

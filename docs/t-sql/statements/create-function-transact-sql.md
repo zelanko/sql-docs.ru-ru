@@ -8,8 +8,7 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -17,8 +16,7 @@ f1_keywords:
 - CREATE FUNCTION
 - CREATE_FUNCTION_TSQL
 - FUNCTION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - invoking functions
 - extended stored procedures [SQL Server], functions
@@ -38,17 +36,16 @@ helpviewer_keywords:
 - scalar-valued functions
 - functions [SQL Server], invoking
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
-caps.latest.revision: 162
+caps.latest.revision: "162"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
+ms.openlocfilehash: e570da6faf04bb8aef58829911cdf19e7f5951c9
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
-ms.openlocfilehash: c74e3a3322dcc2268fa8e386fda5d55f59be98c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -369,9 +366,9 @@ RETURNS return_data_type
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [ ,... *n*  ]) Определяет тип данных таблицы для [!INCLUDE[tsql](../../includes/tsql-md.md)] функции. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц. Таблица всегда помещается в первичную файловую группу.  
+ *\<*table_type_definition *>*  ({ \<column_definition > \<column_constraint > | \<computed_column_definition >}    [ \<table_constraint >] [,... *n*  ]) Определяет тип данных таблицы для [!INCLUDE[tsql](../../includes/tsql-md.md)] функции. Объявление таблицы включает определения столбцов, а также ограничений для столбцов и таблиц. Таблица всегда помещается в первичную файловую группу.  
   
- \<clr_table_type_definition > ({ *column_name**data_type* } [ ,... *n*  ]) **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
+ \<clr_table_type_definition > ({ *column_name**data_type* } [,... *n*  ]) **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Предварительная версия в некоторых регионах](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)). |  
   
  Определяет табличные типы данных для функции CLR. Объявление таблицы включает только имена столбцов и типы данных. Таблица всегда помещается в первичную файловую группу.  
   
@@ -541,7 +538,7 @@ RETURNS return_data_type
   
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ссылаться на нужный метод, если он переопределен в классе, метод указанным в \<method_specifier >, должен иметь следующие характеристики: 
   
--   Получают одинаковое число параметров, которое указано в [ ,...*n* ].  
+-   Получают одинаковое число параметров, которое указано в [,...*n* ].  
   
 -   Принимать все параметры по значению, а не по ссылке.  
   
@@ -828,5 +825,4 @@ GO
  [СОЗДАТЬ ПОЛИТИКУ безопасности &#40; Transact-SQL &#41;](../../t-sql/statements/create-security-policy-transact-sql.md)  
   
  
-
 

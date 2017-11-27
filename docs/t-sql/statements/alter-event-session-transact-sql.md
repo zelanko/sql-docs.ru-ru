@@ -8,31 +8,28 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER EVENT SESSION
 - ALTER_EVENT_SESSION_TSQL
-dev_langs:
-- TSQL
+dev_langs: TSQL
 helpviewer_keywords:
 - event sessions [SQL Server]
 - extended events [SQL Server], Transact-SQL
 - ALTER EVENT SESSION statement
 ms.assetid: da006ac9-f914-4995-a2fb-25b5d971cd90
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
+ms.openlocfilehash: 593be40520403888b5ad2584515820f1935bb270
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: b6fd062bf55bb2630c436d452d2bab05a2f2d53d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="alter-event-session-transact-sql"></a>ALTER EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +130,7 @@ ON SERVER
 |Добавить СОБЫТИЕ \<event_specifier >|Связывает событие, обозначенное \<event_specifier > с сеансом событий.|
 |[*event_module_guid*]*. event_package_name.event_name*|Имя события в пакете событий, где:<br /><br /> -   *event_module_guid* — это GUID для модуля, содержащего событие.<br />-   *event_package_name* — пакет, который содержит объект действия.<br />-   *имя_события* — объект события.<br /><br /> События отображаются в представлении sys.dm_xe_objects со значением object_type, равным «event».|  
 |ЗНАЧЕНИЕ { *event_customizable_attribute*= \<значение > [,...*n*] }|Указывает настраиваемые атрибуты для события. Настраиваемые атрибуты отображаются в представлении sys.dm_xe_object_columns со значением column_type, равным «customizable» и object_name = *имя_события*.|  
-|ДЕЙСТВИЕ ({[*event_module_guid*]*. event_package_name.action_name* [ **,**... *n*] } )|Действие, связанное с сеансом событий, где:<br /><br /> -   *event_module_guid* — это GUID для модуля, содержащего событие.<br />-   *event_package_name* — пакет, который содержит объект действия.<br />-   *имя_действия* — объект действия.<br /><br /> Действия отображаются в представлении sys.dm_xe_objects со значением object_type, равным «action».|  
+|ДЕЙСТВИЕ ({[*event_module_guid*]*. event_package_name.action_name* [ **,**...*n*] } )|Действие, связанное с сеансом событий, где:<br /><br /> -   *event_module_guid* — это GUID для модуля, содержащего событие.<br />-   *event_package_name* — пакет, который содержит объект действия.<br />-   *имя_действия* — объект действия.<br /><br /> Действия отображаются в представлении sys.dm_xe_objects со значением object_type, равным «action».|  
 |ГДЕ \<predicate_expression >|Задает выражение предиката, используемое, чтобы определить необходимость обработки события. Если \<predicate_expression > имеет значение true, то обработка события продолжается действиями и целями сеанса. Если \<predicate_expression > имеет значение false, то событие удаляется сеансом прежде, чем обрабатываются с действиями и целями сеанса. Выражения предиката ограничены 3000 символами, что является пределом для строковых аргументов.|
 |*event_field_name*|Имя поля события, которое идентифицирует источник предиката.|  
 |[event_module_guid].event_package_name.predicate_source_name|Имя глобального источника предиката, где:<br /><br /> -   *event_module_guid* — это GUID для модуля, содержащего событие.<br />-   *event_package_name* является пакет, содержащий объект предиката.<br />-   *predicate_source_name* определяется в представлении sys.dm_xe_objects как object_type 'pred_source'.|  
@@ -186,4 +183,3 @@ GO
  [sys.dm_xe_object_columns (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-xe-object-columns-transact-sql.md)  
   
   
-
