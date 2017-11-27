@@ -5,8 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,17 +24,16 @@ helpviewer_keywords:
 - Service Broker, ssbdiagnose utility
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
 ms.openlocfilehash: 1649bfe2e52102242f8850b343c1e5616666c0f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/24/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
   Программа **ssbdiagnose** сообщает о проблемах в диалогах [!INCLUDE[ssSB](../../includes/sssb-md.md)] или в конфигурации службы [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.  
@@ -205,7 +203,7 @@ WHERE database_id = DB_ID();
  Идентификаторы диалогов отображаются в столбце **conversation_id** представления каталога **sys.conversation_endpoints** .  
   
  **-TIMEOUT** *timeout_interval*  
- Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени ожидания. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
+ Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени**-**ожидания. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
   
  **\<runtimeconnectionoptions >**  
  Задает сведения для соединения с базой данных, где содержатся службы, связанные с отслеживаемыми элементами диалога. Если все службы расположены в одной базе данных, нужно указать только одно предложение **CONNECT TO** . Если службы находятся в разных базах данных, то предложение **CONNECT TO** необходимо указать для каждой базы данных. Если параметры **runtimeconnectionoptions** не указаны, то **ssbdiagnose** использует сведения о подключении из **baseconnectionoptions**.  
@@ -292,7 +290,7 @@ WHERE database_id = DB_ID();
   
  В список не включаются элементы, находящиеся в базах данных, которые не указаны в параметрах соединения. Например, предположим, что в параметре **-ID** указан идентификатор диалога, а предложение **runtimeconnectionoptions** задано для базы данных инициатора и не задано для целевой базы данных. Программа**ssbdiagnose** не включит дескриптор целевого диалога в свой список идентификаторов. В список будет включен только идентификатор диалога и дескриптор инициатора диалога.  
   
- Программа**ssbdiagnose** наблюдает за событиями [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] в базах данных, охватываемых **runtimeconnectionoptions** и **baseconnectionoptions**. Она выполняет поиск событий [!INCLUDE[ssSB](../../includes/sssb-md.md)] , указывающих на ошибку, обнаруженную одним или несколькими идентификаторами [!INCLUDE[ssSB](../../includes/sssb-md.md)] в списке времени выполнения. Программа **ssbdiagnose[!INCLUDE[ssSB](../../includes/sssb-md.md)], кроме того, выполняет поиск событий ошибок**  системного уровня, не связанных ни с одной из групп диалогов.  
+ Программа**ssbdiagnose** наблюдает за событиями [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] в базах данных, охватываемых **runtimeconnectionoptions** и **baseconnectionoptions**. Она выполняет поиск событий [!INCLUDE[ssSB](../../includes/sssb-md.md)] , указывающих на ошибку, обнаруженную одним или несколькими идентификаторами [!INCLUDE[ssSB](../../includes/sssb-md.md)] в списке времени выполнения. Программа **ssbdiagnose[!INCLUDE[ssSB](../../includes/sssb-md.md)], кроме того, выполняет поиск событий ошибок ** системного уровня, не связанных ни с одной из групп диалогов.  
   
  Если программа **ssbdiagnose** обнаружит ошибки диалога, то предпримет попытку выяснить их первопричину, запустив отчет о конфигурации. Программа**ssbdiagnose** на основе метаданных баз данных определяет, какие экземпляры, идентификаторы [!INCLUDE[ssSB](../../includes/sssb-md.md)] , базы данных, службы и контракты используются в диалоге. Затем запускается отчет о конфигурации, учитывающий все доступные сведения.  
   
@@ -452,21 +450,20 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
   
 ## <a name="see-also"></a>См. также:  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
- [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [СОЗДАТЬ ПРИОРИТЕТ БРОКЕРА &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
+ [BEGIN DIALOG CONVERSATION & #40; Transact-SQL & #41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
+ [СОЗДАТЬ ПРИОРИТЕТ БРОКЕРА & #40; Transact-SQL & #41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
  [CREATE CERTIFICATE (Transact-SQL)](../../t-sql/statements/create-certificate-transact-sql.md)   
- [Создание КОНТРАКТА &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
+ [Создание КОНТРАКТА & #40; Transact-SQL & #41;](../../t-sql/statements/create-contract-transact-sql.md)   
  [CREATE ENDPOINT (Transact-SQL)](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md)   
- [Создание ТИПА сообщений &#40; Transact-SQL &#41;](../../t-sql/statements/create-message-type-transact-sql.md)   
+ [Создание ТИПА сообщений & #40; Transact-SQL & #41;](../../t-sql/statements/create-message-type-transact-sql.md)   
  [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)   
  [CREATE REMOTE SERVICE BINDING (Transact-SQL)](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)   
  [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)   
- [ПОЛУЧИТЬ &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
- [sys.transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.conversation_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
+ [ПОЛУЧИТЬ & #40; Transact-SQL & #41;](../../t-sql/statements/receive-transact-sql.md)   
+ [sys.transmission_queue & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
+ [sys.conversation_endpoints & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.conversation_groups & #40; Transact-SQL & #41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   
-
