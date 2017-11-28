@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="bkmk_addtype"></a> Добавление типа содержимого в библиотеку документов  
  Чтобы добавлять и настраивать тип содержимого, необходимо разрешение не ниже «Управление списками». Это разрешение встроено в разрешения уровня «Создание» и выше.  
   
- Веб-сайт, содержащий библиотеку документов, должен иметь активацию компонентов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Дополнительные сведения см. в статье [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ Веб-сайт, содержащий библиотеку документов, должен иметь активацию компонентов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Дополнительные сведения см. в статье [Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
 1.  Откройте библиотеку документов, для которой необходимо включить тип содержимого «Соединение семантической модели бизнес-аналитики».  
   
