@@ -27,6 +27,7 @@
 ## [Учебник: развертывание, запуск и отслеживание пакета в Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
 ## [Подключение к каталогу служб SSIS в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
 ## [Планирование выполнения пакета в Azure](lift-shift/ssis-azure-schedule-packages.md)
+## [Проверка пакетов, развертываемых в Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Подключения к источникам данных с проверкой подлинности Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Подключение к файлам и общим папкам](lift-shift/ssis-azure-files-file-shares.md)
 
