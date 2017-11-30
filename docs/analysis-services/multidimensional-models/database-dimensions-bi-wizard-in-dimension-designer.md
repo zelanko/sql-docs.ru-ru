@@ -28,7 +28,7 @@ ms.contentlocale: ru-RU
 ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-dimensions---bi-wizard-in-dimension-designer"></a>Измерения — мастер бизнес-Аналитики в конструкторе измерений базы данных
-  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you create custom rollup operators and custom member formulas and configure dimensions for writeback by using the Business В службахtelligence Wizard or Dimension Designer. Мастер бизнес-аналитики можно запустить из обозревателя решений или из конструктора кубов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Доступ к конструктору измерений можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создаются операторы пользовательской свертки и нестандартные формулы элементов, а также настраиваются измерения для обратной записи с использованием мастера бизнес-аналитики или конструктора измерений. Мастер бизнес-аналитики можно запустить из обозревателя решений или из конструктора кубов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Доступ к конструктору измерений можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-start-the-business-intelligence-wizard"></a>Запуск мастера бизнес-аналитики  
   

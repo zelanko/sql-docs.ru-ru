@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="set-processing-permissions-on-a-data-mining-structure"></a>Установка разрешений на обработку на интеллектуальный анализ данных  
  Вы можете создать роль, передав разрешение на обработку интеллектуального анализа данных. В том числе на обработку всех моделей интеллектуального анализа данных.  
   
- Разрешения**Детализация** и **Чтение определения** permissions used for browsing a mining model и structure are atomic и can be added to the same role, or separated out into a different role.  
+ Разрешения **Детализация** и **Чтение определения**, используемые для просмотра модели и структуры интеллектуального анализа данных, могут быть назначены как одной и той же роли, так и двум разным ролям.  
   
 1.  В службе [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключитесь к экземпляру службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], откройте папку Базы данных и выберите базу данных.  
   

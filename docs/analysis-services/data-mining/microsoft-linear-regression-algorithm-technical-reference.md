@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
 |Прогнозируемый атрибут|Continuous, Cyclical и Ordered|  
   
 > [!NOTE]  
->  Типы содержимого**Cyclical** и **Ordered** content types are supported, but the algorithm treats them as discrete values и does not perform special processing.  
+>  Типы содержимого**Cyclical** и **Ordered** поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
 ## <a name="see-also"></a>См. также  
  [Алгоритм линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   

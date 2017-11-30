@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
  [Добавление типа содержимого потока данных в любую библиотеку](#addtolib)  
   
 ##  <a name="prereq"></a> Предварительные требования  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если шаблон библиотеки потоков данных недоступен, то это предварительное условие, вероятнее всего, не было выполнено. Дополнительные сведения см. в статье [Activate Power Pivot Feature Integration for Site Collections in Central Administration](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Если шаблон библиотеки потоков данных недоступен, то это предварительное условие, вероятнее всего, не было выполнено. Дополнительные сведения см. в статье [Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md).  
   
  Создавать библиотеку на сайте может только его владелец.  
   
