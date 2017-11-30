@@ -2,11 +2,13 @@
 title: "Добавление улучшенной отработки отказа базы данных в группу доступности (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-high-availability
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
+ms.reviewer: mikeray
+ms.suite: sql
+ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +20,14 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
-ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-
-# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Добавление улучшенной отработки отказа базы данных в группу доступности (SQL Server)
+# <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Добавление улучшенной отработки отказа базы данных в группу доступности (SQL Server)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 В SQL Server 2012 и 2014 в случае, если база данных, участвующая в группе доступности в первичной реплике, теряет возможность записывать транзакции, она не сможет запустить отработку отказа, даже если реплики синхронизированы и настроены на автоматическую отработку отказа.
 
@@ -44,7 +45,7 @@ SQL Server 2016 представляет новую функцию под наз
 
 Группа доступности настраивается между экземпляром А и экземпляром В, содержащим две базы данных с именами DB1 и DB2. В качестве режима доступности устанавливается синхронная фиксация с автоматическим переходом в режим отработки отказа и активируется улучшенная отработка отказа базы данных. Доступ к диску, содержащему данные DB2 и файлы журнала транзакций, будет утерян. При обнаружении проблемы группа доступности будет автоматически переведена на экземпляр B.
 
-## <a name="configuring-and-viewing-the-enhanced-database-failover-option"></a>Настройка и просмотр параметра улучшенной отработки отказа базы данных
+## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Настройка и просмотр параметра улучшенной отработки отказа базы данных
 
 Улучшенную отработку отказа базы данных можно настроить с помощью SQL Server Management Studio или Transact-SQL. Командлеты PowerShell пока не дают такой возможности. По умолчанию улучшенная отработка отказа базы данных отключена.
 
@@ -63,17 +64,18 @@ SQL Server 2016 представляет новую функцию под наз
 ### <a name="transact-sql"></a>Transact-SQL
 
 Для настройки поведения улучшенной отработки отказа базы во время создания группы доступности необходимо задать для параметра DB_FAILOVER значение ON следующим образом:
-```
+
+```SQL
 CREATE AVAILABILITY GROUP [AGNAME]
 WITH ( DB_FAILOVER = ON)
 ...
 ```
 Чтобы добавить это поведение после настройки группы доступности, используйте команду ALTER AVAILABILITY GROUP:
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ```
 Чтобы отключить это поведение, выполните следующую команду ALTER AVAILABILITY GROUP:
-```
+```SQL
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>Динамическое административное представление
@@ -88,5 +90,4 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 - [Использование диалогового окна "Создание группы доступности" (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Создание группы доступности с помощью Transact-SQL](create-an-availability-group-transact-sql.md)
-
 

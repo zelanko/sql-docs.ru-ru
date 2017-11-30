@@ -1,29 +1,30 @@
 ---
 title: "Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL | Документация Майкрософт"
 ms.custom: 
-ms.date: 04/12/2017
-ms.prod: sql-server-2016
+ms.date: 10/23/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: in-memory-oltp
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
-ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
   В этом разделе содержится список компонентов контактной зоны T-SQL и поддерживаемых функций в тексте модулей, скомпилированных в собственном коде T-SQL, например хранимых процедур ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), скалярных определяемых пользователем функций, встроенных функций с табличными значениями и триггеров.  
@@ -195,8 +196,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Битовые операторы ~, &, |, и ^  
 
 -   APPLY, оператор
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 оператор APPLY поддерживается в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], оператор APPLY поддерживается в модулях, скомпилированных в машинном коде.
 
 ##  <a name="bfncsp"></a> Встроенные функции в модулях, скомпилированных в собственном коде  
  В ограничениях таблиц, оптимизированных для памяти, и в модулях, скомпилированных в собственном коде T-SQL, поддерживаются следующие функции.  
@@ -206,8 +207,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции для работы с датами: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME и YEAR.  
 
 -   Строковые функции: LEN, LTRIM, RTRIM и SUBSTRING.  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], также поддерживаются следующие встроенные функции: TRIM, TRANSLATE и CONCAT_WS.  
 
 -   Функции идентификации: SCOPE_IDENTITY.  
 
@@ -216,8 +217,8 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Функции уникальных идентификаторов: NEWID и NEWSEQUENTIALID  
 
 -   Функции JSON  
-    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
-      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 функции JSON поддерживаются в модулях, скомпилированных в собственном коде.
+    - **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].  
+      Начиная с версии [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], функции JSON поддерживаются в модулях, скомпилированных в машинном коде.
 
 -   Функции обработки ошибок: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY и ERROR_STATE.  
 
@@ -307,6 +308,5 @@ GO
 ## <a name="see-also"></a>См. также  
  [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
-
 
 

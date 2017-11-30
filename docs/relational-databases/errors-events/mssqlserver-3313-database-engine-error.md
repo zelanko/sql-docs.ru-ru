@@ -8,24 +8,21 @@ ms.service:
 ms.component: errors-events
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-helpviewer_keywords:
-- 3313 (Database Engine error)
+helpviewer_keywords: 3313 (Database Engine error)
 ms.assetid: a244227b-8553-42df-9435-034f906c4c74
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6e8b07b5a12de6b011ee581e0d869c4ec30427e3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: de26c9d0961ebcbe5494a1d31006a14f8d7a308a
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="mssqlserver3313"></a>MSSQLSERVER_3313
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="user-action"></a>Действие пользователя  
 Эта ошибка может вызываться временным состоянием, существовавшим в системе во время данной попытки запуска экземпляра сервера или восстановления базы данных. Эта ошибка может быть также вызвана неустранимым сбоем, который возникает при каждой попытке запуска базы данных. Для выяснения причины проверьте журнал событий Windows, в котором должна содержаться предшествующая ошибка, которая указывает на конкретный сбой.  
   
-Следует отметить, что при возникновении этой ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно создает три файла в папке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG**. Файл SQLDump*nnnn*.txt содержит дополнительные данные диагностики, относящиеся к сбоям, включая сведения о транзакции и о странице, на которой возникла проблема. Эти сведения обычно используются группой поддержки продукта для анализа причины сбоя.  
+Следует отметить, что при возникновении этой ошибки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обычно создает три файла в папке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **LOG**. Файл SQLDump*nnnn*.txt содержит дополнительные данные диагностики, относящиеся к сбоям, включая сведения о транзакции и странице, на которой возникла проблема. Эти сведения обычно используются группой поддержки продукта для анализа причины сбоя.  
   
 Чтобы получить сведения о причине возникновения ошибки 3313, изучите в журнале событий Windows предшествующее сообщение об ошибке, в котором указан конкретный сбой. Соответствующее действие пользователя зависит от того, что указывают сведения в журнале событий Windows: ошибка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] была вызвана временным состоянием или неустранимым сбоем. Сведения о действиях пользователя по устранению ошибки 3313 приведены в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -60,4 +57,3 @@ ms.lasthandoff: 06/22/2017
 [MSSQLSERVER_824](~/relational-databases/errors-events/mssqlserver-824-database-engine-error.md)  
 [sys.databases &#40;Transact-SQL&#41;](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   
-

@@ -1,29 +1,30 @@
 ---
 title: "Новые возможности в ядре СУБД SQL Server 2017 | Документация Майкрософт"
 ms.custom: 
-ms.date: 09/11/2017
-ms.prod: sql-server-2017
+ms.date: 10/24/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-engine
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: eddd1edd812d9224e151960788f8f510f809fb27
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
-ms.openlocfilehash: 6cc679441602d4aa1d125c2f61f9d538e3b716a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>Новые возможности в ядре СУБД SQL Server 2017
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 В этом разделе описаны усовершенствования, внесенные в [!INCLUDE[ssdenoversion-md](../includes/ssdenoversion-md.md)] для [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]. Для перехода к дополнительным сведениям по каждому элементу щелкайте ссылки.
 
@@ -67,7 +68,7 @@ ms.lasthandoff: 10/12/2017
     - В модули, скомпилированные в машинном коде, добавлен оператор`CROSS APPLY` .   
 - Добавлены новые строковые функции [CONCAT_WS](../t-sql/functions/concat-ws-transact-sql.md), [TRANSLATE](../t-sql/functions/translate-transact-sql.md) и [TRIM](../t-sql/functions/trim-transact-sql.md).   
 - Предложение `WITHIN GROUP` теперь поддерживается для функции [STRING_AGG](../t-sql/functions/string-agg-transact-sql.md).
-- Добавлены два новых семейства параметров сортировки для японского языка (Japanese_Bushu_Kakusu_140 и Japanese_XJIS_140). Для использования в японских параметрах сортировки добавлен параметр Variation-selector-sensitive (_VSS). Подробные сведения см. в разделе [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).   
+- Добавлены два новых семейства параметров сортировки для японского языка (Japanese_Bushu_Kakusu_140 и Japanese_XJIS_140). Для использования в новых японских параметрах сортировки добавлен параметр Variation-selector-sensitive (_VSS). Кроме того, все новые параметры сортировки автоматически поддерживают дополнительные символы без необходимости указания параметра _SC. Подробные сведения см. в разделе [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md).   
 - Новые параметры группового доступа ([BULK INSERT](../t-sql/statements/bulk-insert-transact-sql.md) и [OPENROWSET(BULK...)](../t-sql/functions/openrowset-transact-sql.md)) обеспечивают доступ к данным непосредственно из CSV-файлов и из файлов в хранилище BLOB-объектов Azure посредством нового параметра `BLOB_STORAGE` [EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md).
 - Добавлен уровень совместимости базы данных **COMPATIBILITY_LEVEL** 140.   Клиенты, использующие его, получат доступ к самым новым возможностям языков и режимам оптимизатора запросов. Сюда входят изменения, вносимые корпорацией Майкрософт в каждую предварительную версию.
 - Улучшен способ вычисления пороговых значений для обновления добавочной статистики (требуется режим совместимости 140).
@@ -86,5 +87,4 @@ ms.lasthandoff: 10/12/2017
 - Новые разрешения: `DATABASE SCOPED CREDENTIAL` теперь является классом защищаемого объекта, поддерживающим разрешения `CONTROL`, `ALTER`, `REFERENCES`, `TAKE OWNERSHIP`и `VIEW DEFINITION` . `ADMINISTER DATABASE BULK OPERATIONS`, который ограничен базой данных SQL, теперь отображается в `sys.fn_builtin_permissions`.   
 - Добавлено динамическое административное представление [sys.dm_os_host_info](../relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md), предоставляющее сведения об операционной системе как для Windows, так и для Linux.   
 - Роли базы данных создаются с помощью служб R Services для управления разрешениями, связанными с пакетами. Дополнительные сведения см. в разделе [Управление пакетами R для SQL Server](../advanced-analytics/r-services/r-package-management-for-sql-server-r-services.md).
-
 
