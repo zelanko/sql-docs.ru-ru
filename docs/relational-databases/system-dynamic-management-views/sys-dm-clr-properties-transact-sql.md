@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ede97a8012bf4dbdbd312f7ae5179bb794378c1e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cb5c73dafd26f9ddd4da885b77c8649df13c3d2d
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,10 +36,6 @@ ms.lasthandoff: 11/17/2017
   Возвращает строку для каждого свойства, связанного с интеграцией со средой CLR программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], включая версию и состояние внутрипроцессной среды CLR. Внутрипроцессная среда CLR инициализируется запуском [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md), или [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) инструкций или путем выполнения любой подпрограммы, типа или триггера среды CLR. **Sys.dm_clr_properties** представления не указывает, включены ли выполнение пользовательского кода CLR на сервере. Выполнение пользовательского кода CLR включается с помощью [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) хранимую процедуру с [включена среда clr](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) присвоено значение 1.  
   
  **Sys.dm_clr_properties** представление содержит **имя** и **значение** столбцов. Каждая строка в этом представлении содержит подробные сведения о свойстве внутрипроцессной среды CLR. Это представление используется для сбора информации о внутрипроцессной среде CLR, например о каталоге установки, версии и текущем состоянии этой среды. Оно помогает определить, вызвана ли неработоспособность кода интеграции со средой CLR проблемами установки CLR на серверном компьютере.  
-  
-||  
-|-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)). [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].|  
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  

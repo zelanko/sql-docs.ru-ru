@@ -4,7 +4,7 @@ description: "В этом разделе содержатся заметки о 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/25/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: e7fb6ac444679477c6cbc0b66c59b7ea1c9775f1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
-ms.translationtype: MT
+ms.openlocfilehash: f625cbf53c25dd097efb6619a47069be7873320f
+ms.sourcegitcommit: d122a41cc953ba3e269c8709a18aa84f7c17982c
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
@@ -51,14 +51,11 @@ ms.lasthandoff: 11/20/2017
 
 | Выпуск | Version | Дата выпуска |
 |-----|-----|-----|
+| [НАКОПИТЕЛЬНЫМ ОБНОВЛЕНИЕМ 2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [ГЛОБАЛЬНЫЙ АДМИНИСТРАТОР](#GA) | 14.0.1000.169 | 10-2017 |
 
-## <A id="CU1"></a>Накопительный пакет обновления 1 (октябрь 2017 г.)
-
-Это накопительный пакет обновления 1 (CU1) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3006.16. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
-
-### <a name="installation"></a>Установка
+## <a name="how-to-install-cumulative-updates"></a>Как установить накопительные пакеты обновления
 
 Если вы настроили репозиторий накопительный пакет обновления, то будут получены последнее накопительное обновление пакетов SQL Server при выполнении новых установок. Накопительный пакет обновления репозитория значение по умолчанию для всех статей пакет установки для SQL Server в Linux. Дополнительные сведения о настройке хранилища см. в разделе [источника репозиториев](sql-server-linux-setup.md#repositories).
 
@@ -68,6 +65,24 @@ ms.lasthandoff: 11/20/2017
 - [Установить пакет Full-text Search](sql-server-linux-setup-full-text-search.md)
 - [Установить пакет агента SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+
+## <A id="CU2"></a>Накопительный пакет обновления 2 (ноябрь 2017 г.)
+
+Это накопительный пакет обновления 2 (CU2) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3008.27. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/help/4052574](https://support.microsoft.com/help/4052574).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вне сети или вручную можно загрузить пакеты RPM и Debian с информацией в таблице ниже:
+
+| Пакет | версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 14.0.3008.27-1 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm)</br>[Пакет служб SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Пакет SLES RPM | 14.0.3008.27-1 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3008.27-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3008.27-1.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3008.27-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3008.27-1.x86_64.rpm) | 
+| Пакет Debian Ubuntu 16.04 | 14.0.3008.27-1 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3008.27-1_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3008.27-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3008.27-1_amd64.deb)</br>[Пакет Debian SQL Server, агент](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3008.27-1_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+
+## <A id="CU1"></a>Накопительный пакет обновления 1 (октябрь 2017 г.)
+
+Это накопительный пакет обновления 1 (CU1) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3006.16. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/help/4038634](https://support.microsoft.com/help/4038634).
 
 ### <a name="package-details"></a>Сведения о пакете
 

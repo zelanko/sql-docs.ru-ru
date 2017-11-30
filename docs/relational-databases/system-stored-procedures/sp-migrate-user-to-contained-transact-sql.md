@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1b6a0b15ff483647a3c102d481d8300ff460ce8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3920b0bc483dffb115211a0fe8837bd1bdb0d11e
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +34,6 @@ ms.lasthandoff: 11/21/2017
   Преобразует пользователя базы данных, сопоставленного с именем входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в пользователя автономной базы данных с паролем. В автономной базе данных эта процедура позволяет удалить зависимости от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на котором установлена база данных. **sp_migrate_user_to_contained** отделяет пользователя от исходного [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] входа, чтобы параметры, такие как язык по умолчанию и пароль могут осуществляться отдельно для автономной базы данных. **sp_migrate_user_to_contained** можно применить перед переносом автономной базы данных другой экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Чтобы устранить зависимости от текущего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра имена входа.  
   
  **Примечание** Эта процедура используется только в автономной базе данных. Дополнительные сведения см. в разделе [Contained Databases](../../relational-databases/databases/contained-databases.md).  
-  
-||  
-|-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 ## <a name="syntax"></a>Синтаксис  
   

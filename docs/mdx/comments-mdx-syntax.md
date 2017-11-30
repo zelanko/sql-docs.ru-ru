@@ -2,9 +2,12 @@
 title: "Комментарии (синтаксис многомерных Выражений) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: analysis-services
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -22,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: ae121078796ea2b95d7fae08d17770f8a6562ba6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 249a9628375c2cfadd079253d28d3f16015e3c63
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="comments-mdx-syntax"></a>Комментарии (синтаксис многомерных выражений)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Комментарии — это невыполняемые строки кода программы (их также называют пометками). Комментарии используются для документирования кода или временного отключения фрагментов инструкций и скриптов многомерных выражений для отладки. Документирование кода при помощи комментариев упрощает его дальнейшее обслуживание. Комментарии часто используют, чтобы записать имя программы, имя автора и даты основных изменений кода. Кроме того, комментарии можно использовать для пояснения сложных вычислений и описания метода программирования.  
   

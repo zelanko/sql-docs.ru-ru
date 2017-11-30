@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ffaf0f200c33a5a2ed35a138bfc6da663b9b002e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e1b54d3955dd250a3d3799170e4ad15a7312802f
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,10 +42,6 @@ ms.lasthandoff: 11/17/2017
  Большое количество повторных попыток указывает на проблему с параллелизмом. Обратитесь в службу поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  Дополнительные сведения об оптимизированных для памяти некластеризованных индексах см. в разделе [Обзор SQL Server In-Memory OLTP внутренние компоненты](http://t.co/T6zToWc6y6), страница 17.  
-  
-||  
-|-|  
-|**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  

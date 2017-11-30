@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95933929fa649826db77771cba137499f1df52b3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,10 +38,6 @@ ms.lasthandoff: 11/17/2017
  Существует несколько типов управляемых объектов CLR для баз данных. Общие сведения об этих объектах см. в разделе [построение объектов базы данных с интеграцией Common Language Runtime (CLR)](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md). Каждый раз, когда эти объекты выполняются, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает **AppDomain** под его можно загружать и выполнять требуемый код. Уровень изоляции для **AppDomain** — один **AppDomain** каждой базы данных владельца. То есть все объекты среды CLR, принадлежащие пользователю всегда выполняются в том же **AppDomain** каждой базы данных (если пользователь регистрирует объекты базы данных среды CLR в разных базах данных, базы данных среды CLR, объекты, работают в разных доменах приложений). **AppDomain** не уничтожается после завершения выполнения кода. Вместо этого он кэшируется в памяти для последующего использования. Это улучшает производительность.  
   
  Дополнительные сведения см. в разделе [домены приложений](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
-  
-||  
-|-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299659)).|  
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  

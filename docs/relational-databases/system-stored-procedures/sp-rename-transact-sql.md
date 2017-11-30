@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0092bd724345f8e70faa9c84636d56206ecdcc8b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,10 +39,6 @@ ms.lasthandoff: 11/21/2017
   
 > [!CAUTION]  
 >  Изменение любой части имени объекта может разрушить скрипты и хранимые процедуры. Не рекомендуется использовать эту инструкцию для переименования хранимых процедур, триггеров, определяемых пользователем функций или представлений; следует удалить объект и создать его повторно с новым именем.  
-  
-||  
-|-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -201,10 +197,6 @@ CK_Employee_SickLeaveHours            HumanResources     CHECK_CONSTRAINT
   
 ### <a name="f-renaming-statistics"></a>Е. Переименование статистики  
  В следующем примере создается объект статистики, с именем contactMail1 и затем переименовывается в NewContact с помощью хранимой процедуры sp_rename. При переименовании объекта статистики его имя должно быть указано в формате schema.table.statistics_name.  
-  
-||  
-|-|  
-|**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).|  
   
 ```  
 CREATE STATISTICS ContactMail1  

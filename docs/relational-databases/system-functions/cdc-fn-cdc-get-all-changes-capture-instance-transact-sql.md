@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 523d6a9be5164ad77b32b9c012aefa7b1038217d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 111fab345e7679745e72ebe874dabcca3bed62fb
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>CDC.fn_cdc_get_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +35,6 @@ ms.lasthandoff: 11/17/2017
   Возвращает одну строку для каждого изменения в исходной таблице в заданном диапазоне номеров LSN. Если за истекший период исходная строка претерпевала несколько изменений, в результирующем наборе отображается каждое из них. Помимо данных об изменениях, результирующий набор содержит четыре столбца метаданных, предоставляющих информацию, необходимую для применения изменений к другим источникам данных. Параметры фильтрации строк управляют как содержимым столбцов метаданных, так и строк, возвращаемых в результирующем наборе. Если параметру фильтрации строк присвоено значение «all», то каждое изменение фиксируется в виде отдельной строки. Если указан параметр «all update old», операции обновления представлены в виде двух строк: одна содержит значения отслеживаемых столбцов до обновления, другая содержит значения отслеживаемых столбцов после обновления.  
   
  Данная функция перечисления создается, если для исходной таблицы включена система отслеживания измененных данных. Имя функции является производным и использует формат **cdc.fn_cdc_get_all_changes_***capture_instance* где *capture_instance* представляет значение, заданное для сбора данных экземпляр при включении исходной таблицы для отслеживания измененных данных.  
-  
-||  
-|-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

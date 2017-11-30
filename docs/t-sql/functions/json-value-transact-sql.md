@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5762af5115dd65b819bc74c3585cfc8275a516b1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab4c14769dc51c6d5b97a6ad2fe6f0cb06fad4e0
+ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="jsonvalue-transact-sql"></a>JSON_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -107,10 +107,13 @@ SET @jsonInfo=N'{
 ## <a name="examples"></a>Примеры  
   
 ### <a name="example-1"></a>Пример 1  
- В следующем примере значения свойств JSON `town` и `state` в результатах запроса. Поскольку **JSON_VALUE** сохраняет параметры сортировки источника, порядок сортировки результатов зависит от параметров сортировки `jsonInfo` столбца.  
+ В следующем примере значения свойств JSON `town` и `state` в результатах запроса. Поскольку **JSON_VALUE** сохраняет параметры сортировки источника, порядок сортировки результатов зависит от параметров сортировки `jsonInfo` столбца. 
+
+> [!NOTE]
+> (В этом примере предполагается, что имя таблицы `Person.Person` содержит `jsonInfo` столбец текста JSON, а этот столбец имеет структуру, показанному ранее в обсуждение нестрогой и строгий режим. В образце базы данных AdventureWorks `Person` таблица на самом деле не содержать `jsonInfo` столбца.)
   
 ```sql  
-SELECT FirstName,LastName,
+SELECT FirstName, LastName,
  JSON_VALUE(jsonInfo,'$.info.address[0].town') AS Town
 FROM Person.Person
 WHERE JSON_VALUE(jsonInfo,'$.info.address[0].state') LIKE 'US%'
