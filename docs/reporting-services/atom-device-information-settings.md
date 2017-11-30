@@ -1,5 +1,5 @@
 ---
-title: "Настройки сведений об устройстве ATOM | Документы Microsoft"
+title: "Настройки сведений об устройстве ATOM | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe4a56a4-5552-423c-85c1-895e2e212fee
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 847b387a04f302c731ed3cb1d2c31df57e202680
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 26921ea102ffa0f0aa293bf91eeaf580a505b536
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="atom-device-information-settings"></a>Настройки сведений об устройстве ATOM
   Настройки сведений об устройстве для модуля подготовки отчетов Atom включают параметры отправки имени веб-канала Atom и используемую кодировку.  
@@ -35,9 +34,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Передача настроек сведений об устройстве для модулей подготовки отчетов](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Настройка параметров модуля подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [Технический справочник по &#40; Службы SSRS &#41;](../reporting-services/technical-reference-ssrs.md)  
+ [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Технический справочник (службы SSRS)](../reporting-services/technical-reference-ssrs.md)  
   
   
-

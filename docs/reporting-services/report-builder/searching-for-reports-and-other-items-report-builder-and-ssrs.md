@@ -1,5 +1,5 @@
 ---
-title: "Поиск отчетов и других элементов (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Поиск отчетов и других элементов (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: e3c41db09cbe1387545b72fd2942e4b30e71d1fd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 88576d1bab512cb0d8567ef95e6b7ef3a1db124a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Поиск отчетов и других элементов (построитель отчетов и службы SSRS)
   Можно использовать диспетчер отчетов для поиска на сервере отчетов заданных элементов по имени или описанию. Можно искать опубликованные отчеты, модели отчетов, папки, общие источники данных и ресурсы. Нельзя искать расписания, владельцев, назначения ролей, определенные моментальные снимки в журнале отчета или в подписках. Поиск выполняется в базе данных сервера отчетов, в которой хранятся элементы.  
@@ -39,10 +38,9 @@ ms.lasthandoff: 09/27/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>См. также  
- [Поиск и просмотр отчетов в диспетчере отчетов &#40; Построитель отчетов и службы SSRS &#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
- [С помощью «Мои отчеты» &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
+ [Поиск и просмотр отчетов в диспетчере отчетов (построитель отчетов и службы SSRS)](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)   
+ [Использование папки "Мои отчеты" (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Откройте и закройте отчет &#40; Диспетчер отчетов &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [Открытие и закрытие отчетов (диспетчер отчетов)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
   
   
-

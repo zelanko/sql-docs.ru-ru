@@ -1,26 +1,24 @@
 ---
-title: "Карты в мобильные отчеты служб Reporting Services | Документы Microsoft"
+title: "Карты в мобильных отчетах служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dcac784ffea9845be91f35f03fb45e2ca6a6e530
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 975ad199788370f01686c50d5dcc05f093c31f50
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 Карты — это отличный способ визуализировать географические данные. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] есть три разных типа визуализации карт, а также доступны встроенные карты континентов и некоторых отдельных странах. Вы также можете [передавать и использовать пользовательские карты](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
 1. В левом верхнем углу выберите вкладку **Данные** .  
   
-2. Выберите **добавлять данные**, затем либо **локальный файл Excel** или **сервера SSRS**.  
+2. Выберите **Добавить данные**, а затем — **Локальный файл Excel** или **Сервер SSRS**.  
   
    > **Совет**. Убедитесь, что данные имеют [подходящий для мобильных отчетов формат](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
@@ -89,4 +87,3 @@ ms.lasthandoff: 08/09/2017
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
   
   
-

@@ -1,28 +1,26 @@
 ---
-title: "Добавление навигаторы мобильных отчетов Reporting Services | Документы Microsoft"
+title: "Добавление навигаторов в мобильные отчеты служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e141f50e-49a9-46c6-983c-f656013aa07c
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 712a4e62ebee6d175b5e9945d74a06d32f2cb324
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Добавление навигаторы мобильных отчетов Reporting Services
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 В [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]добавленные *навигаторы* позволяют фильтровать данные в визуализациях по времени или по выбору. 
 
 Навигаторы похожи на срезы в Power BI и сводных таблицах Excel, но они также обладают рядом уникальных характеристик.
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/09/2017
 Как следует из названия, навигаторы по времени используются для фильтрации диапазона данных, ограниченных диапазоном времени.   
   
 ![SSMRP_TimeNav](../../reporting-services/mobile-reports/media/ssmrp-timenav.png)  
-*Четырех графиках в левой части задаются в предустановок диапазона времени. График справа — это фильтр.*  
+*Четыре графика в левой части заданы с предустановленными значениями диапазона времени. График справа является фильтром.*  
   
 При просмотре отчета в режиме предварительного просмотра или на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] перетащите стрелки в навигаторе по времени, чтобы отфильтровать оставшуюся часть отчета.  
   
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/09/2017
 * [Visualizations in Reporting Services mobile reports (Визуализации в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Gauges in Reporting Services mobile reports (Датчики в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
 * [Data grids in Reporting Services mobile reports (Сетки данных в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)  
-

@@ -1,5 +1,5 @@
 ---
-title: "Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4bfe6d58d3ffc735c47359b94f1c368a1a6c3683
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Выделение данных диаграммы путем добавления полосковых линий (построитель отчетов и службы SSRS)
   Полосковые линии, или полосы, представляют собой горизонтальные или вертикальные области, которые оттеняют фон диаграммы через регулярные или заданные пользователем интервалы. Полосковые линии используют, чтобы:  
@@ -67,9 +66,8 @@ ms.lasthandoff: 08/09/2017
 >  По умолчанию свойство Interval установлено в значение Auto. Оно означает, что диаграмма не будет вычислять интервал для пользовательских полосковых линий. Диаграмма вычисляет интервалы для полосковых линий, только если задано значение интервала.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование меток оси на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление скользящего среднего в диаграмму &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
+ [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Добавление скользящего среднего в диаграмму (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   
-

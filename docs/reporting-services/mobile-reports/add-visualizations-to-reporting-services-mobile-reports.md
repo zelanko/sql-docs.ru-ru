@@ -1,28 +1,26 @@
 ---
-title: "Добавление визуализаций в мобильные отчеты служб Reporting Services | Документы Microsoft"
+title: "Добавление визуализаций в мобильные отчеты Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/26/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 41c6b6c84fba9f3f45795bb953af65aebbf35bb8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Добавление визуализаций в мобильные отчеты служб Reporting Services
+# <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Добавление визуализаций в мобильные отчеты Reporting Services
 Диаграммы являются неотъемлемой частью визуализации данных. Здесь приведены сведения о диаграммах, которые можно использовать в мобильных отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в разных ситуациях. 
 
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-long.md)] имеет три основных типа диаграмм: временная, диаграмма по категориям и диаграмма итоговых значений. Эти типы диаграмм имеют соответствующие сравнительные диаграммы, которые удобно использовать для сравнения двух различных наборов рядов.  
@@ -67,11 +65,11 @@ ms.lasthandoff: 08/09/2017
 
 2. По умолчанию это линейчатая диаграмма с накоплением. Это можно изменить в разделе **Визуализация ряда**.
 
-3. Если диаграмме нужны данные, которых еще нет в отчете, откройте вкладку **Данные** и выберите **Добавить данные** для [получения данных из Excel или общего набора данных](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
+3. Если диаграмме требуются данные, которых еще нет в отчете, откройте вкладку **Данные** и выберите **Добавить данные** для [получения данных из Excel или общего набора данных](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md).
 
 3. В области **Свойства данных** в поле **Основной ряд** выбран вариант **SimulatedTable**. Щелкните стрелку в поле и выберите таблицу.
 
-5. Если для параметра **Структура данных** задано значение **По столбцам** (на вкладке **Макет**, область **Свойства визуальных элементов**), то в области **Свойства данных** можно выбрать несколько столбцов числовых значений.
+5. Если для параметра **Структура данных** задано значение **По столбцам** (на вкладке **Макет** в области **Свойства визуальных элементов**), то в области **Свойства данных** можно выбрать несколько столбцов числовых значений.
 
    Если для параметра **Структура данных** задано значение **По строкам**, то в области **Свойства данных** можно выбрать **Поле имени ряда** и один столбец числовых значений.
    
@@ -200,5 +198,4 @@ ms.lasthandoff: 08/09/2017
 * [Data grids in Reporting Services mobile reports (Сетки данных в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md)
 * [Gauges in Reporting Services mobile reports (Датчики в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)
   
-
 

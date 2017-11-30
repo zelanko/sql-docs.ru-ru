@@ -1,5 +1,5 @@
 ---
-title: "Публикация источников данных и отчеты | Документы Microsoft"
+title: "Публикация источников данных и отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - publishing reports [Reporting Services]
 - data sources [Reporting Services], managing
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 593f339656de155d133534e6776283c8a2e1bd92
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3b34fc1fac9a7586410c844435aacfbabb6f1c94
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="publishing-data-sources-and-reports"></a>Публикация источников данных и отчетов
   До публикации отчета его следует просмотреть, чтобы проверить его внешний вид. Макет отчета можно изменять, пока не будут достигнуты нужные результаты.  
@@ -41,17 +40,16 @@ ms.lasthandoff: 08/09/2017
  [Публикация отчетов на сервере отчетов](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
  Описывает процесс публикации отчета на сервере отчетов.  
   
- [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме интеграции с SharePoint &#40; Службы SSRS &#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [Примеры URL-адресов для элементов опубликованного отчета на сервере отчетов в режиме SharePoint (службы SSRS)](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Описывает процесс публикации отчета на сайте SharePoint.  
   
 ## <a name="see-also"></a>См. также  
  [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Макет страницы и визуализации &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Макет страницы и отрисовка (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Поиск, просмотр и управление отчетами &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Печать отчетов &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
+ [Печать отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
   
   
-

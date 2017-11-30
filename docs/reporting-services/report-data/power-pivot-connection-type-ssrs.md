@@ -1,5 +1,5 @@
 ---
-title: "Тип соединения PowerPivot (SSRS) Power | Документы Microsoft"
+title: "Тип подключения к Power Pivot (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a104c3c7-f118-4d02-9a0f-6859f1469d11
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7a8fe1f1b6dd44f468095502b924c432032cf11d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>Тип соединения PowerPivot (SSRS)
   Для извлечения данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , опубликованной в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сайте SharePoint, можно использовать модуль обработки данных служб SQL Server Analysis Services.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
  Используйте тип источника данных отчета **Microsoft SQL Server Analysis Services**.  
   
 ## <a name="connection-string"></a>Строка подключения  
- Строка подключения является URL-адрес [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книг, опубликованных на SharePoint в [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] коллекции или другой библиотеке, например, `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
+ Строкой подключения является URL-адрес для книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], опубликованной на сайте SharePoint в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или другой библиотеке, например `http://contoso-srv/subsite/PowerPivotLibrary/ContosoSales.xlsx`.  
   
 ## <a name="credentials"></a>Учетные данные  
  Укажите учетные данные, необходимые для доступа к книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и сайту SharePoint, например данные для проверки подлинности Windows (встроенная безопасность). Дополнительные сведения см. в разделах [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) и [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
@@ -70,7 +69,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

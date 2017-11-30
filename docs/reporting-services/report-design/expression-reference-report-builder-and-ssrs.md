@@ -1,5 +1,5 @@
 ---
-title: "Справочник выражений (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Справочник выражений (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: df29e7308bc0992a9de611b2606b2bb2e624597d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Справочник выражений (построитель отчетов и службы SSRS)
   Выражения отчета поддерживают различные ссылки на встроенные функции и встроенные коллекции. Чтобы отчет можно было опубликовать или обработать, выражения должны иметь допустимый синтаксис [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .  
@@ -58,4 +57,3 @@ ms.lasthandoff: 08/09/2017
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "С помощью внешнего набора данных со службами Reporting Services | Документы Microsoft"
+title: "Использование внешнего набора данных со службами Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,32 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - DataSet objects [Reporting Services]
 - data processing extensions [Reporting Services], custom DataSet objects
 - custom DataSet objects [Reporting Services]
 - external DataSet objects [Reporting Services]
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: add18839976ae919686cbd488385531de3bf684e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 179c1ecb3641a848561c49489d1d23a51c1b6ff8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Использование внешнего набора данных со службами Reporting Services
-  **DataSet** является центральным элементом поддержки разъединенных распределенных сценариев данных в [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. **DataSet** объекта является находящихся в памяти представлением данных, обеспечивающим согласованную реляционную программную модель независимо от источника данных. Он может использоваться с несколькими различными источниками данных, XML-данными или для управления данными, локальными по отношению к приложению. **DataSet** объект представляет полный набор данных, включая связанные таблицы, ограничения и связи между таблицами. Из-за **DataSet** объекта обладает высокой гибкостью хранения и представления данных, данные могут часто обрабатываются и преобразуются в **DataSet** объекта перед созданием отчетов по этим данным.  
+  Объект **DataSet** является центральным элементом поддержки разъединенных распределенных сценариев данных в [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Объект **DataSet** является находящимся в оперативной памяти представлением данных, обеспечивающим согласованную реляционную программную модель, независимо от источника данных. Он может использоваться с несколькими различными источниками данных, XML-данными или для управления данными, локальными по отношению к приложению. Объект **DataSet** представляет полный набор данных, включая связанные таблицы, ограничения и связи между таблицами. В связи с тем, что объект **DataSet** обладает высокой гибкостью хранения и представления данных, данные пользователя могут быть преобразованы в объект **DataSet** перед созданием отчетов по этим данным.  
   
- С [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] модулей обработки данных, можно интегрировать любые пользовательские **DataSet** объекты, созданные внешними приложениями. Чтобы сделать это, создайте пользовательский модуль обработки данных в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] который действует как мост между вашей **DataSet** объект и на сервере отчетов. Большая часть кода для обработки данного **DataSet** объект содержится в **DataReader** создаваемого класса.  
+ При использовании модулей обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] можно интегрировать любые пользовательские объекты **DataSet**, созданные внешними приложениями. Этого можно достичь, создав в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] пользовательский модуль обработки данных, который будет служить посредником между пользовательским объектом **DataSet** и сервером отчетов. Большая часть кода, используемого для обработки данного объекта **DataSet**, хранится в созданном пользователем классе **DataReader**.  
   
- Первым шагом в представлении вашей **DataSet** объекта на сервер отчетов является реализация характерного для поставщика метода в вашей **DataReader** класс, который может заполнить **набора данных** объекта. В следующем примере показано, как загрузить статические данные в **DataSet** объекта с помощью метода поставщика в вашей **DataReader** класса.  
+ Первым шагом в представлении пользовательского объекта **DataSet** на сервере отчетов является реализация характерного для поставщика метода в пользовательском классе **DataReader**, который может заполнить объект **DataSet**. В следующем примере демонстрируется, как можно загрузить статические данные в объект **DataSet** с использованием в пользовательском классе **DataReader** метода, характерного для поставщика.  
   
 ```vb  
 'Private members of the DataReader class  
@@ -168,12 +166,11 @@ public int GetOrdinal(string name)
 }  
 ```  
   
- После создания или получения набора данных, можно использовать **DataSet** объекта в реализации методов **чтения**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType**, и **FieldCount** члены **DataReader** класса.  
+ После того как набор данных был создан или получен, объект **DataSet** будет возможно использовать в реализациях членов **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType** и **FieldCount** класса **DataReader**.  
   
 ## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Реализация модуля обработки данных](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Библиотека модулей Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

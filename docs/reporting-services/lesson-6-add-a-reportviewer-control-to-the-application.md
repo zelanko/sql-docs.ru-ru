@@ -1,28 +1,25 @@
 ---
-title: "Урок 6: Добавление элемента управления ReportViewer в приложение | Документы Microsoft"
+title: "Занятие 6. Добавление в приложение элемента управления ReportViewer | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f9492a97-5609-4059-ae76-0fba111d4968
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 914d8abf2ad7b72b5ce1035da2867c47b67dfa14
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 64116570a9d0ecf381ee184ccf3a2bf05f202bef
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Урок 6. Добавление в приложение элемента управления ReportViewer
 После завершения проектирования дочернего отчета с помощью мастера отчетов далее необходимо добавить в приложение веб-сайта элемент управления ReportViewer. Если вы используете веб-сайт отчетов ASP.NET, элемент управления ReportViewer будет добавлен на страницу default.aspx.   
@@ -48,5 +45,4 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-task"></a>Следующая задача  
 Тем самым в приложение веб-сайта был успешно добавлен элемент управления ReportViewer. Затем необходимо добавить операцию детализации в родительский отчет. См. [Занятие 7. Добавление операции детализации к родительскому отчету](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md).  
   
-
 

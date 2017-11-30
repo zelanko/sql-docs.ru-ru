@@ -1,5 +1,5 @@
 ---
-title: "Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление рамки границы в диаграмму (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a14ce29863b00c01cb77f837c369256a1096f65
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: cd04a33dda250309bb7f4463bca2f91eb5bd6861
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-border-frame-to-a-chart-report-builder-and-ssrs"></a>Добавление границы рамки в диаграмму (построитель отчетов и службы SSRS)
   Чтобы улучшить визуальное восприятие диаграммы, можно использовать границы рамки. Границу рамки можно выбрать в диалоговом окне **Свойства диаграммы** или в панели свойств. Границы рамки диаграммы нельзя применить ни к какой другой области данных.  
@@ -52,9 +51,8 @@ ms.lasthandoff: 08/09/2017
 7.  Если выбран тип «Рамка», укажите стиль и цвет рамки (необязательно). Список **Цвет заливки рамки** содержит распространенные цвета.  
   
 ## <a name="see-also"></a>См. также  
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Добавление стилей рельефа, приподнятости и текстуры стили диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Добавление в диаграмму стилей рельефа, приподнятости и текстуры &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Предоставление разрешений для пользователей и оповещение администраторов | Документы Microsoft"
+title: "Предоставление разрешений для пользователей и оповещение администраторов | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 166808e1-ada7-48d2-bda8-8f7c017fb3aa
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: fd7b39c2600bc683a37f6cec43041ccf8ebb009f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 939400cecf41e9da66cff3a369fa963419d8908f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="grant-permissions-to-users-and-alerting-administrators"></a>Предоставление разрешений для пользователей и оповещение администраторов
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 08/17/2017
 Чтобы создавать, изменять, удалять и просматривать предупреждения данных, пользователи и администраторы предупреждений должны иметь разрешения SharePoint. Специальных разрешений для функции предупреждений об изменении данных в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] нет, для этого используются встроенные разрешения SharePoint.
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
 **Информационные работники**. Разрешения должны включать разрешения SharePoint на создание предупреждений и просмотр элементов. Встроенные уровне разрешений SharePoint — «Создание», «Участие», «Чтение» и «Только просмотр» — включают разрешения SharePoint на создание предупреждений и просмотр элементов. Также можно создать собственный уровень разрешений, включающий разрешения, необходимые для поддержки пользователей, создающих, изменяющих, запускающих и просматривающих предупреждения данных.
 
@@ -60,8 +59,7 @@ ms.lasthandoff: 08/17/2017
 
 ## <a name="see-also"></a>См. также
 
-[Задание разрешений для элементов сервера отчетов на сайте SharePoint &#40; Службы Reporting Services в SharePoint интегрированная режим &#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

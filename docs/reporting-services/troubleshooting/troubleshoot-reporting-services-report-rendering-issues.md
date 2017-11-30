@@ -1,5 +1,5 @@
 ---
-title: "Устранение неполадок отчетов служб Reporting Services проблемах обработки | Документы Microsoft"
+title: "Устранение неполадок при подготовке отчетов служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1e0fb399-4c16-438a-92cb-db3e877896d0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 91629c6d86f1616b19026cbc0e670fff51553dda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5bd1f634ba25711137db413e2069cd7d9ae328cf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-report-rendering-issues"></a>Устранение неполадок при подготовке отчетов служб Reporting Services
 После объединения данных и макета отчета скомпилированный отчет отправляется в средство подготовки отчета к просмотру. Например, при локальном просмотре отчета используется средство подготовки данных к просмотру в HTML-формате для просмотра скомпилированных отчетов. Материал этого раздела используется для устранения проблем, связанных с подготовкой отчета к просмотру.   
@@ -80,5 +79,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

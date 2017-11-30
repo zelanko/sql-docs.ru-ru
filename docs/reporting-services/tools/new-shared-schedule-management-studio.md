@@ -1,5 +1,5 @@
 ---
-title: "Создание общего расписания (среда Management Studio) | Документы Microsoft"
+title: "Создание общего расписания (среда Management Studio) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.newschedule.f1
+f1_keywords: sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7d6032fde5bdfba4ba74330d162e25da8e5d8f75
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 37e0b1a6b2e64de4d63456050b094113e288c434
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="new-shared-schedule-management-studio"></a>Создание общего расписания (среда Management Studio)
   Используйте эту страницу для создания общего расписания для выполнения опубликованных отчетов и подписок. Общие расписания могут использоваться вместо расписаний отчетов или подписок. Двумя основными особенностями, которые отличают общие расписания от расписаний, относящихся к конкретным элементам, являются централизация данных расписания и возможность приостанавливать и возобновлять запланированные операции.  
@@ -70,11 +68,10 @@ ms.lasthandoff: 08/09/2017
  Этот параметр выбирается для создания расписания, выполняющегося только один раз, в определенную дату и в определенное время.  
   
 ## <a name="see-also"></a>См. также  
- [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
- [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
-

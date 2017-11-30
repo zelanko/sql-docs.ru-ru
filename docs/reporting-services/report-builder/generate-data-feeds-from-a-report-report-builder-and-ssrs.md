@@ -1,5 +1,5 @@
 ---
-title: "Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,22 +11,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e68baae2-9f2a-4f13-9179-9ac7f29111c5
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b49b80de8516e14972b05d7ae91f4f72e765803a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8a7c1175f67ba636a71d6afa42679c45b5295ea2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Формирование веб-каналов данных из отчета (построитель отчетов и службы SSRS)
 
-Можно создать Atom совместимые потоки данных из отчетов с разбиением на страницы и затем использовать потоки данных в приложениях, таких как Power Pivot и Power BI, который может использовать данные веб-каналов.  
+Можно формировать Atom-совместимые веб-каналы данных из отчетов с разбиением на страницы, а затем применять эти веб-каналы в приложениях, например Power Pivot или Power BI, которые могут использовать веб-каналы данных.  
   
  Модуль Atom подготовки отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] формирует сервисный документ канала Atom, в котором перечислены потоки данных, доступные в отчете. Этот документ содержит сведения по меньшей мере об одном потоке данных для каждой области данных отчета. В зависимости от типа области данных и самих данных, которые отображает эта область, службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут сформировать из нее несколько потоков данных.  
   
@@ -93,5 +91,4 @@ ms.lasthandoff: 08/09/2017
 
 [Экспорт отчетов](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

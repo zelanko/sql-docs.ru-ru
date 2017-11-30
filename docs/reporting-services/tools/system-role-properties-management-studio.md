@@ -1,5 +1,5 @@
 ---
-title: "Свойства системной роли (среда Management Studio) | Документы Microsoft"
+title: "Свойства ролей системы (Management Studio) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.systemroleproperties.f1
+f1_keywords: sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 68038228fd6fb7b2af8dd6f1bb5ae50b7f63daac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9b8c79918ee560fc34ed7f642e54dd39e57a1264
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="system-role-properties-management-studio"></a>Свойства системной роли (среда Management Studio)
   Страница «Системные роли» используется для просмотра определений системных ролей, определенных в настоящее время для сервера отчетов. Определение системной роли содержит именованную коллекцию задач, которые выполняются применительно ко всему сайту, а не к отдельному объекту. Определения ролей присваиваются пользователям или группам для создания назначения ролей. Задачи в определении ролей задают, какие действия может выполнять пользователь или группа.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]есть две стандартные системные роли: **системный администратор** и **Системный пользователь**. Можно изменять эти определения ролей, изменяя список задач, или создать новую системную роль, поддерживающую другую комбинацию задач. Изменение определения роли влияет на все назначения ролей, включенные в ее определение.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] есть две стандартные системные роли: **Системный администратор** и **Системный пользователь**. Можно изменять эти определения ролей, изменяя список задач, или создать новую системную роль, поддерживающую другую комбинацию задач. Изменение определения роли влияет на все назначения ролей, включенные в ее определение.  
   
 > [!NOTE]  
 >  Назначения системных ролей используются только на сервере отчетов, который работает в собственном режиме. Если сервер отчетов настроен для интеграции с SharePoint, эта страница недоступна.  
@@ -47,10 +45,9 @@ ms.lasthandoff: 08/09/2017
  Выводит сведения по каждой из задач. Нельзя изменять описания задач.  
   
 ## <a name="see-also"></a>См. также раздел  
- [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Задачи системного уровня](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   
  [Предопределенные роли](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
-

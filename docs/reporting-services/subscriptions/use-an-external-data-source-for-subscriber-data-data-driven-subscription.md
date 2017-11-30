@@ -1,5 +1,5 @@
 ---
-title: "Использование внешнего источника данных для данных подписчика (управляемая данными подписка) | Документы Microsoft"
+title: "Использование внешнего источника данных подписчика (управляемая данными подписка) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - data-driven subscriptions
 - data sources [Reporting Services], subscriptions
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b09ee93e701bb9555fcd022e10cede4fde4d4174
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Использование внешнего источника данных подписчика (управляемая данными подписка)
   В управляемой данными подписке динамические данные подписки определяются запросом или командой, которые получают данные из внешнего источника данных. Данные подписки могут быть получены из любого поддерживаемого источника данных, который удовлетворяет требованиям обработки управляемой данными подписки. Запрос или синтаксис команды должны быть верными для модуля обработки данных, установленного на сервере отчетов.  
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>Передача значений параметров из базы данных подписчика в отчет  
  При создании управляемой данными подписки для параметризованного отчета, можно использовать значения переменных параметров для настройки выхода каждого отчета. Например, база данных подписчика может содержать идентификационные номера служащих, даты принятия на работу, названия должностей, а также сведения о расположении офиса, которые могут использоваться для применения фильтра к данным отчета. Если отчет принимает параметры, основанные на тех или иных доступных данных столбца, можно сопоставить параметр с соответствующим столбцом.  
   
- При сопоставлении полей подписчика и параметров отчета убедитесь в том, что типы данных и длины столбцов совместимы между собой. При несоответствии типов данных во время обработки подписки возникнет ошибка. Дополнительные сведения об использовании данных подписчика в параметризованных отчетах см. в разделе [Создание управляемой данными подписки &#40; Учебник по службам SSRS &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ При сопоставлении полей подписчика и параметров отчета убедитесь в том, что типы данных и длины столбцов совместимы между собой. При несоответствии типов данных во время обработки подписки возникнет ошибка. Дополнительные сведения об использовании данных подписчика в параметризованном отчете см. в разделе [Создание управляемой данными подписки (учебник по службам SSRS)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>Изменение источника данных подписчика  
  Предотвратить выполнение подписок могут следующие изменения источника данных подписчика:  
@@ -87,7 +86,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>См. также  
  [Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   
-

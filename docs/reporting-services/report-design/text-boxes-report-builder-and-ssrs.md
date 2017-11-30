@@ -1,5 +1,5 @@
 ---
-title: "Текстовые поля (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Текстовые поля (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.textproperties.general.f1
 - sql13.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 932f2277845e4e47032baf80443c0d339cb45ea7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Текстовые поля (построитель отчетов и службы SSRS)
   Часто под термином "текстовое поле" подразумевается изолированное поле с текстом, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. В отчетах с разбиением на страницы некоторые текстовые поля такие же и могут отображать статический текст для заголовков, определений и меток или динамический текст, основанный на выражениях [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Каждая ячейка в таблице или матрице (области данных табликса) содержит текстовое поле, которое можно форматировать аналогично изолированным текстовым полям в отчете.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
  Чтобы отобразить повторяющийся текст в макете свободной формы, создайте область данных списка и поместите в нее текстовое поле. Используйте список, если нужно повторить форму для нескольких значений, например счет-фактуру, которая повторяется один раз для каждого заказчика. Узнайте больше о [создании счетов-фактур и форм со списками](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
- Используйте прямоугольный контейнер, если нужно управлять макетом текстового поля и пробельным пространством ниже последнего текстового поля. Дополнительные сведения см. в разделе [прямоугольники и линии &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
+ Используйте прямоугольный контейнер, если нужно управлять макетом текстового поля и пробельным пространством ниже последнего текстового поля. Дополнительные сведения см. в разделе [Прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
   
  Выражение в текстовом поле может содержать литеральный текст, указывать на поле базы данных или вычислять данные. Все выражения отображаются в виде текста заполнителя, что позволяет форматировать числа, цвета и другие свойства отображения. Кроме того, можно совмещать заполнители с литеральным текстом в одном текстовом поле.  
   
@@ -72,7 +71,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Форматирование чисел и дат &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   
-

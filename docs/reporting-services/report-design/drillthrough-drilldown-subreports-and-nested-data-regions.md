@@ -1,5 +1,5 @@
 ---
-title: "Детализация, Углубленная детализация, вложенные отчеты и вложенные области данных | Документы Microsoft"
+title: "Детализация, углубленная детализация, вложенные отчеты и вложенные области данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b727d0fd866b14e5ac8ff2f383e2cdc7b53a9bde
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Детализация, углубленная детализация, вложенные отчеты и вложенные области данных
   Данные можно организовать различными способами, чтобы показать отношение общего к частному.  Можно вложить все данные в отчет, но скрыть их до тех пор, пока пользователь не раскроет подробное представление; это действие называется *углубленной детализацией* . Можно отобразить данные в области данных, например таблице или диаграмме, которая *вложена* в другую область данных, например таблицу или матрицу. Можно отобразить данные во *вложенном отчете* , который содержится полностью в основном отчете. Либо можно вложить подробные данные в отчеты с *углубленной детализацией* , то есть отдельные отчеты, которые отображаются при нажатии пользователем ссылки.  
@@ -105,4 +104,3 @@ ms.lasthandoff: 08/09/2017
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
-

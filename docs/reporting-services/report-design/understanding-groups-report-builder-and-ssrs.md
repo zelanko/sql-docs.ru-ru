@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения о группах (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Основные сведения о группах (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 51a3e06f0a4c3ab0dfd26af525a11b52c2d84afb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Основные сведения о группах (построитель отчетов и службы SSRS)
   В отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] группа является именованным набором данных из набора данных отчета, привязанного к области данных. В основном, группа организует представление набора данных отчета. Все группы в области данных задают различные представления одного набора данных отчета.  
@@ -85,7 +84,7 @@ ms.lasthandoff: 08/09/2017
   
      При создании группы для области данных построитель отчетов и конструктор отчетов автоматически добавляют строки и столбцы в область данных и используют эти строки или столбцы для отображения данных группы.  
   
--   **Группы рекурсивной иерархии** Группы рекурсивной иерархии организуют данные из одного набора данных отчета, который содержит несколько уровней. Например, группа рекурсивной иерархии может отобразить иерархию организации, например [Сотрудник], который отчитывается перед [Сотрудник]. Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют свойства групп и встроенные функции, которые позволяют создать группы для данных отчетов этого типа. Дополнительные сведения см. в разделе [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+-   **Группы рекурсивной иерархии** Группы рекурсивной иерархии организуют данные из одного набора данных отчета, который содержит несколько уровней. Например, группа рекурсивной иерархии может отобразить иерархию организации, например [Сотрудник], который отчитывается перед [Сотрудник]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют свойства групп и встроенные функции, которые позволяют создать группы для данных отчетов этого типа. Дополнительные сведения см. в разделе [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
  В следующем списке приведена сводка способов работы с данными каждой области данных:  
   
@@ -105,11 +104,10 @@ ms.lasthandoff: 08/09/2017
  Ячейки в строке или столбце области данных табликса могут принадлежать к нескольким группам строк или столбцов. При определении выражения в текстовом поле ячейки, которая использует агрегатную функцию (например, `=Sum(Fields!FieldName.Value`), по умолчанию область группы для ячейки — самая внутренняя дочерняя группа, к которой она принадлежит. Если ячейка принадлежит как группам строк, так и столбцов, то областью являются обе самые внутренние группы. Можно также записать выражения, которые вычисляют статистические подытоги, отнесенные к группе относительно другого набора данных. Например, можно вычислить процент группы относительно группы столбца или всех данных области данных (такой, как `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). Дополнительные сведения см. в разделах [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) и [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Добавление или удаление группы в области данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Добавление итога для группы или области данных Табликса &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [Сортировка данных в области данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Действие углубленной детализации &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Добавление или удаление группы в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [Добавление итога в группу или область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [Сортировка данных в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [Действие детализации (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

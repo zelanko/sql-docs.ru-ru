@@ -1,29 +1,26 @@
 ---
-title: "Мобильные отчеты SQL Server: руководство по применению конца в конец | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 03/30/2017
+title: "Мобильные отчеты SQL Server: руководство по использованию | Документы Майкрософт"
+ms.custom: SQL2016_New_Updated
+ms.date: 11/07/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: dde88a1ef8453a7a45410163e8c79bc20fe2df5d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по применению конца в конец
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
 
 Мобильные отчеты можно создавать в области конструктора с настраиваемыми строками и столбцами сетки, а также гибкими элементами мобильных отчетов. Подключайтесь к различным локальным источникам данных или передавайте книги Excel для создания мобильных отчетов. Затем сохраняйте отчеты на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] и просматривайте их в браузере или мобильных приложениях Power BI.  
@@ -38,11 +35,11 @@ ms.lasthandoff: 09/27/2017
 ## <a name="before-we-start"></a>Действия перед началом работы  
 Для начала вам потребуются такие продукты:  
   
-* Для создания источников данных и ключевых показателей эффективности и публиковать наборы данных и мобильные отчеты, необходим доступ к [! ВКЛЮЧИТЬ[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
-* Чтобы [создавать общие наборы данных](../install-windows/install-report-builder.md).  
+* Для создания источников данных и ключевых показателей эффективности, а также для публикации наборов данных и мобильных отчетов нужен доступ к [!INCLUDE[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md).  
+* [Создание общих наборов данных](../install-windows/install-report-builder.md).  
 * Для создания мобильных отчетов [установите издатель мобильных отчетов для Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=717766).  
-* [Сценарии и образцы баз данных AdventureWorks](http://msftdbprodsamples.codeplex.com/).  
-*  OR: World Wide Importers образца базы данных, доступных из [образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md) страницы.
+* [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
+*  ИЛИ образец базы данных World Wide Importers, доступный на странице [Образцы Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Для просмотра результата: 
   *   [зарегистрируйтесь в службе Power BI](http://go.microsoft.com/fwlink/?LinkID=513879) и
   *  [скачайте мобильное приложение Power BI](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) на устройство под управлением iOS, Windows 10 или телефон с Android.  
@@ -50,12 +47,12 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="create-a-shared-data-source"></a>Создание общего источника данных  
   
-Вы можете создать общий источник данных для мобильных отчетов из любого источника данных, поддерживаемого службами Reporting Services. В разделе [список поддерживаемых источников данных](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+Вы можете создать общий источник данных для мобильных отчетов из любого источника данных, поддерживаемого службами Reporting Services. См. [список поддерживаемых источников данных](../report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 1. На веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] щелкните **Создать** > **Источник данных**.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. Введите данные для источника данных > **ОК**.  
+3. Введите сведения об источнике данных и нажмите кнопку **OК**.  
   
     По умолчанию источники данных не отображаются на портале.    
    
@@ -99,7 +96,7 @@ ms.lasthandoff: 09/27/2017
    
 Теперь можно использовать набор данных как основу для ключевых показателей эффективности и мобильных отчетов.  Вы можете создать несколько наборов данных в одном источнике данных. Кроме того, вы можете создать несколько ключевых показателей эффективности и мобильных отчетов на основе этих общих наборов данных.   
   
-## <a name="create-KPI">Создать ключевой показатель Эффективности</a>  
+## <a name="create-KPI">Создание ключевых показателей эффективности</a>  
 Вы можете создавать ключевые показатели эффективности непосредственно на веб-портале [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] .    
   
 1. В правом верхнем углу экрана веб-портала щелкните **Создать** > **Создать ключевой показатель эффективности**.   
@@ -236,7 +233,7 @@ ms.lasthandoff: 09/27/2017
   
 Создав визуальные элементы в разметке образца, вы можете теперь создать мобильный отчет с использованием макета, оптимизированного непосредственно для ваших пользователей телефона.    
   
-1. В правом верхнем углу, щелкните значок Холст > **Phone**.  
+1. В правом верхнем углу щелкните значок холста, а затем элемент **Телефон**.  
   
 2. На вкладке "Макет" в разделе **Control Instances**(Управление экземплярами) отображаются две созданные вами диаграммы.   
   
@@ -313,5 +310,4 @@ ms.lasthandoff: 09/27/2017
 -  См. статью [Просмотр ключевых показателей эффективности и мобильных отчетов Reporting Services в мобильном приложении Power BI для Windows 10](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/).    
   
    
-
 

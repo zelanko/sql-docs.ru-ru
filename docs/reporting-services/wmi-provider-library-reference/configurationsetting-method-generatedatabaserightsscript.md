@@ -1,5 +1,5 @@
 ---
-title: "Метод GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting) | Документы Microsoft"
+title: "Метод GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: GenerateDatabaseRightsScript (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- GenerateDatabaseRightsScript method
+helpviewer_keywords: GenerateDatabaseRightsScript method
 ms.assetid: f2e6dcc9-978f-4c2c-bafe-36c330247fd0
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2e7e3d80d7e67b3a6e0924f04600860039086c94
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9657229fa2bbdb3e7be35fd385162bf8debb53c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---generatedatabaserightsscript"></a>Метод ConfigurationSetting - GenerateDatabaseRightsScript
+# <a name="configurationsetting-method---generatedatabaserightsscript"></a>Метод ConfigurationSetting — GenerateDatabaseRightsScript
   Создает скрипт SQL, с помощью которого пользователям могут предоставляться права доступа к базе данных сервера отчетов и другим базам данных, необходимым для работы сервера отчетов. Ожидается, что участник соединится с базой данных сервера отчетов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выполнит скрипт.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -72,7 +68,7 @@ out Int32 HRESULT);
 ## <a name="remarks"></a>Замечания  
  Если параметр *DatabaseName* пуст, *IsRemote* пропускается и значение файла конфигурации сервера отчетов используется в качестве имени базы данных.  
   
- Если *IsWindowsUser* задано значение **true**, *UserName* должно быть в формате \<домена >\\< имя пользователя\>.  
+ Если параметр *IsWindowsUser* имеет значение **true**, то параметр *UserName* должен иметь вид \<домен>\\<имя_пользователя\>.  
   
  Если параметр *IsWindowsUser* имеет значение **true**, то созданный скрипт предоставляет пользователю права для входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], при этом база данных сервера отчетов задается в качестве используемой по умолчанию, а также пользователю присваивается роль **RSExec** в базе данных сервера отчетов, во временной базе данных сервера отчетов, в базе данных master и в системной базе данных MSDB.  
   
@@ -82,12 +78,12 @@ out Int32 HRESULT);
   
 |Переведенная учетная запись/идентификатор безопасности|Общее имя|Удаленное имя|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Локальная система|\<Домен >\\< имя_компьютера\>$|  
-|.\LocalSystem|Локальная система|\<Домен >\\< имя_компьютера\>$|  
-|ComputerName\LocalSystem|Локальная система|\<Домен >\\< имя_компьютера\>$|  
-|локальная система;|Локальная система|\<Домен >\\< имя_компьютера\>$|  
-|(S-1-5-20)|Сетевая служба.|\<Домен >\\< имя_компьютера\>$|  
-|NT AUTHORITY\NetworkService|Сетевая служба.|\<Домен >\\< имя_компьютера\>$|  
+|(S-1-5-18)|Локальная система|\<Домен>\\<имя_компьютера\>$|  
+|.\LocalSystem|Локальная система|\<Домен>\\<имя_компьютера\>$|  
+|ComputerName\LocalSystem|Локальная система|\<Домен>\\<имя_компьютера\>$|  
+|локальная система;|Локальная система|\<Домен>\\<имя_компьютера\>$|  
+|(S-1-5-20)|Сетевая служба.|\<Домен>\\<имя_компьютера\>$|  
+|NT AUTHORITY\NetworkService|Сетевая служба.|\<Домен>\\<имя_компьютера\>$|  
 |(S-1-5-19)|Локальная служба.|Ошибка — см. ниже.|  
 |NT AUTHORITY\LocalService|Локальная служба.|Ошибка — см. ниже.|  
   
@@ -103,9 +99,9 @@ out Int32 HRESULT);
 |“(local)”||  
 |“LOCAL”||  
 |localhost||  
-|\<Имя_компьютера >|testlab14|  
-|\<MachineFQDN >|example.redmond.microsoft.com|  
-|\<IP-адрес >|180.012.345,678|  
+|\<Имя_компьютера>|testlab14|  
+|\<Полное_доменное_имя_компьютера>|example.redmond.microsoft.com|  
+|\<IP-адрес>|180.012.345,678|  
   
  Если параметр *IsWindowsUser* имеет значение **true**, то поставщик WMI вызывает метод LookupAccountName для получения идентификатора безопасности для учетной записи, а затем вызывает метод LookupAccountSID, чтобы получить имя для вставки в скрипт [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это гарантирует, что имя учетной записи успешно пройдет проверку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -120,8 +116,7 @@ out Int32 HRESULT);
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Управление запущенным процессом | Документы Microsoft"
+title: "Управление запущенным процессом | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -28,17 +28,16 @@ helpviewer_keywords:
 - displaying jobs
 - subscriptions [Reporting Services], running processes
 ms.assetid: 473e574e-f1ff-4ef9-bda6-7028b357ac42
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 103472f5003235e0e08c65c40999545ff4d864ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 805c1ba338d75d49e6dbd48fb6f1d8af2f5e5701
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="manage-a-running-process"></a>Управление запущенным процессом
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] наблюдают за состоянием заданий, работающих на сервере отчетов. Через регулярные интервалы времени сервер отчетов просматривает внутрипроцессные задания и записывает сведения о состоянии в базу данных сервера отчетов или в базы данных приложения служб для режима интеграции с SharePoint. Задание находится в процессе выполнения, если запущены следующие процессы: выполнение запроса на удаленном или локальном сервере базы данных, обработка отчета и подготовка отчета к просмотру.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Стандартные подписки, принадлежащие отдельным пользователям.  
   
- Отмена задания означает лишь остановку процессов, работающих на сервере отчетов. Поскольку сервер отчетов не управляет обработкой данных на других компьютерах, необходимо вручную остановить процессы запросов, потерянные при этом на других системах. Можно указать значения времени ожидания запросов, чтобы автоматически закрыть те запросы, для выполнения которых требуется слишком много времени. Дополнительные сведения см. в разделе [значения параметра времени ожидания для отчетов и обработки общего набора данных &#40; Службы SSRS &#41; ](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Дополнительные сведения о временной остановке обработки отчета см. в разделе [Отключение или приостановка обработки отчетов и подписок](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
+ Отмена задания означает лишь остановку процессов, работающих на сервере отчетов. Поскольку сервер отчетов не управляет обработкой данных на других компьютерах, необходимо вручную остановить процессы запросов, потерянные при этом на других системах. Можно указать значения времени ожидания запросов, чтобы автоматически закрыть те запросы, для выполнения которых требуется слишком много времени. Дополнительные сведения см. в разделе [Задание значений времени ожидания при обработке отчетов и общих наборов данных (SSRS)](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md). Дополнительные сведения о временной остановке обработки отчета см. в разделе [Отключение или приостановка обработки отчетов и подписок](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md).  
   
 > [!NOTE]  
 >  В исключительном случае для остановки процесса, возможно, придется перезапустить сервер. Для режима интеграции с SharePoint может потребоваться перезапуск пула приложений, в котором размещается приложение служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в статье [Запуск и остановка службы сервера отчетов](../../reporting-services/report-server/start-and-stop-the-report-server-service.md).  
@@ -126,11 +125,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Отмена заданий сервера отчетов (среда Management Studio)](../../reporting-services/tools/cancel-report-server-jobs-management-studio.md)   
- [Задание свойств &#40; Среда Management Studio &#41;](../../reporting-services/tools/job-properties-management-studio.md)   
- [Изменение файла конфигурации служб Reporting Services &#40; Файл RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Свойства задания (среда Management Studio)](../../reporting-services/tools/job-properties-management-studio.md)   
+ [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Мониторинг производительности сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)  
   
   
-

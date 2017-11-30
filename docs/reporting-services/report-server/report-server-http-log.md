@@ -1,5 +1,5 @@
 ---
-title: "Отчет журнала HTTP сервера | Документы Microsoft"
+title: "Журнал HTTP-запросов сервера отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- HTTP [Reporting Services]
+helpviewer_keywords: HTTP [Reporting Services]
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bea168c6ad15828b44ea5f77f5c7bd3fa05cfb9d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90732a6f209640298ec1776fd5368b26fd2526fc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-http-log"></a>Журнал HTTP-запросов сервера отчетов
   В файле журнала HTTP сервера отчетов хранится информация для каждого HTTP-запроса и ответа, обработанного сервером отчетов. Сообщения об ошибках, связанных с переполнением очереди запросов и временем ожидания, не достигают сервера отчетов, поэтому не регистрируются в файле журнала.  
@@ -35,8 +33,8 @@ ms.lasthandoff: 08/09/2017
   
 |||  
 |-|-|  
-|Имя файла|По умолчанию имя файла — ReportServerService_HTTP_\<timestamp >. журнала. Можно задать другой префикс имени файла, изменив атрибут HttpTraceFileName в файле конфигурации ReportingServicesService.exe.config. Отметки времени создаются на основе времени по Гринвичу (UTC).|  
-|Размещение файла|Этот файл расположен в \Microsoft SQL Server\\*\<экземпляр SQL Server >*\Reporting Services\LogFiles.|  
+|Имя файла|По умолчанию этот файл имеет имя ReportServerService_HTTP_\<отметка_времени>.log. Можно задать другой префикс имени файла, изменив атрибут HttpTraceFileName в файле конфигурации ReportingServicesService.exe.config. Отметки времени создаются на основе времени по Гринвичу (UTC).|  
+|Размещение файла|Этот файл расположен в папке \Microsoft SQL Server\\*\<экземпляр SQL Server>*\Reporting Services\LogFiles.|  
 |Формат файла|Этот файл имеет формат EN-US. Он представляет собой текстовый ASCII-файл.|  
 |Создание и хранение файла|Журнал HTTP создается после его включения в файле конфигурации, перезапуска службы и обработки сервером отчетов HTTP-запроса. Если необходимые параметры были настроены, но файл журнала отсутствует, откройте какой-либо отчет или запустите одно из приложений сервера отчетов (например, диспетчер отчетов), чтобы был сформирован HTTP-запрос для создания этого файла.<br /><br /> После каждого перезапуска службы и последующего HTTP-запроса на сервер отчетов создается новый экземпляр файла журнала.<br /><br /> По умолчанию размер журналов трассировки ограничен 32 МБ, а срок их хранения — 14 дней.|  
   
@@ -86,8 +84,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также раздел  
  [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md)   
- [Службы Reporting Services файлы и источники журналов](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [Ошибки и ссылок на события &#40; Службы Reporting Services &#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
+ [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   
-

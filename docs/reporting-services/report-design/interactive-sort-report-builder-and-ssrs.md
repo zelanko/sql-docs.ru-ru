@@ -1,5 +1,5 @@
 ---
-title: "Интерактивная сортировка (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Интерактивная сортировка (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8b5a259bbe965efc86a9f11ad377525455bdfbd5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6aa4a5385bfa8c67d1a1d95bba84e5991026377d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Интерактивная сортировка (построитель отчетов и службы SSRS)
   Чтобы пользователи могли менять порядок сортировки строк в таблице либо строк и столбцов в матрице с возрастающего на убывающий и обратно, можно добавить кнопки интерактивной сортировки. Чаще всего используемый метод интерактивной сортировки состоит в добавлении кнопки сортировки в заголовок каждого столбца. Затем пользователь может выбрать столбец, по которому будет выполнена сортировка.  
@@ -64,8 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также раздел  
  [Сортировка данных в области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Добавление интерактивной сортировки в таблицу или матрицу (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
   
-

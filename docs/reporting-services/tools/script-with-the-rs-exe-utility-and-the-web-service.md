@@ -1,5 +1,5 @@
 ---
-title: "Создать скрипт rs.exe, программы и веб-службы | Документы Microsoft"
+title: "Создание скриптов с помощью программы rs.exe и веб-службы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - Report Server Web service, scripts
 - scripts [Reporting Services], Web service
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41e0843d517f4fe24c16c6071ba8a1921be68502
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6c01ecec4f909ff4e5cbe445b1685b6dd07a750
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Создание скриптов с помощью программы rs.exe и веб-службы
   Разработчики и администраторы сервера отчетов могут выполнять на сервере отчетов операции с помощью программы **rs** (RS.exe). Эта программа позволяет управлять сервером отчетов программно с помощью скриптов на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
@@ -36,15 +35,14 @@ ms.lasthandoff: 08/09/2017
   
  Примеры скриптов см. в:  
   
- [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+ [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
- [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889)  
   
 ## <a name="see-also"></a>См. также  
  [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [Веб-службы сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Технический справочник по &#40; Службы SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Служебная программа RS.exe &#40; Службы SSRS &#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [веб-служба сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Технический справочник (службы SSRS)](../../reporting-services/technical-reference-ssrs.md)   
+ [Служебная программа RS.exe (SSRS)](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   
-

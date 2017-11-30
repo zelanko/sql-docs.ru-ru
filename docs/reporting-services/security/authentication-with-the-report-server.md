@@ -1,5 +1,5 @@
 ---
-title: "Проверка подлинности на сервере отчетов | Документы Microsoft"
+title: "Проверка подлинности с использованием сервера отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -17,18 +17,16 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - Forms authentication
 ms.assetid: 753c2542-0e97-4d8f-a5dd-4b07a5cd10ab
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c38fc293a297544710b77b52d054fae58273340e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="authentication-with-the-report-server"></a>Проверка подлинности с использованием сервера отчетов
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) предлагает несколько настраиваемых параметров для проверки подлинности клиентов и клиентских приложений для сервера отчетов. По умолчанию сервер отчетов использует встроенную проверку подлинности Windows и предполагает доверительные связи, когда клиент и сетевые источники находятся в одном и том же домене или в надежном домене. В зависимости от топологии сети и потребностей организации можно задать протокол проверки подлинности, который применяется для встроенного средства проверки подлинности Windows, использовать обычную проверку подлинности или модуль проверки подлинности на основе пользовательских форм. Каждый способ проверки подлинности можно включать и отключать отдельно. Можно включить одновременно несколько типов проверки подлинности, если сервер отчетов должен принимать запросы разных типов.
@@ -52,9 +50,9 @@ ms.lasthandoff: 08/09/2017
 |Метод проверки подлинности|Объяснение|  
 |---------------------------|-----------------|  
 |Анонимная проверка подлинности|Сервер отчетов не принимает запросы без проверки подлинности от анонимного пользователя, за исключением конфигураций развертывания, которые включают нестандартные модули проверки подлинности.<br /><br /> Построитель отчетов принимает запросы без проверки подлинности в том случае, если разрешен доступ к построителю отчетов на сервере отчетов, настроенном для обычной проверки подлинности.<br /><br /> Для всех остальных случаев анонимные запросы будут отвергнуты с ошибкой «HTTP 401: Отказано в доступе» еще до того, как запрос дойдет до [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Получив ошибку «HTTP 401: Отказано в доступе«, клиент должен переформулировать запрос, указав допустимый тип проверки подлинности.|  
-|Технологии единого входа (SSO)|Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не обеспечивают собственную поддержку для технологий единого входа. Для использования этих технологий необходимо создание нестандартного модуля проверки подлинности.<br /><br /> Среда размещения сервера отчетов не поддерживает ISAPI-фильтры. Если используемая технология SSO реализована в виде фильтра ISAPI, попробуйте воспользоваться встроенной поддержкой сервера ISA для протокола RSASecueID или RADIUS. В противном случае можно создать сервер ISAPI ISA или HTTPModule для RS, однако рекомендуется использовать сервер ISA напрямую.|  
-|Паспорт|Не поддерживается в SQL Server Reporting Services.|  
-|Дайджест|Не поддерживается в SQL Server Reporting Services.|  
+|Технологии единого входа (SSO)|Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]не обеспечивают собственную поддержку для технологий единого входа. Для использования этих технологий необходимо создание нестандартного модуля проверки подлинности.<br /><br /> Среда размещения сервера отчетов не поддерживает ISAPI-фильтры. Если используемая технология SSO реализована в виде фильтра ISAPI, попробуйте воспользоваться встроенной поддержкой сервера ISA для протокола RSASecueID или RADIUS. В противном случае можно создать сервер ISAPI ISA или HTTPModule для RS, однако рекомендуется использовать сервер ISA напрямую.|  
+|Паспорт|Не поддерживается в службах SQL Server Reporting Services.|  
+|Дайджест|Не поддерживается в службах SQL Server Reporting Services.|  
   
 ## <a name="configuration-of-authentication-settings"></a>Параметры проверки подлинности  
  При резервировании URL-адреса для сервера отчетов для проверки подлинности настраивается уровень безопасности по умолчанию. Если в процессе настройки этих параметров допущены какие-либо ошибки, то для HTTP-запросов, подлинность которых не может быть проверена, сервер отчетов вернет ошибку «HTTP 401: Отказано в доступе». Чтобы правильно выбрать тип проверки подлинности, необходимо понимать, каким образом проверка подлинности Windows поддерживается в конкретной сети. Должен быть указан как минимум один тип проверки подлинности. Для RSWindows может быть задано несколько типов проверки подлинности. Типы проверки подлинности RSWindows (то есть **RSWindowsBasic**, **RSWindowsNTLM**, **RSWindowsKerberos**и **RSWindowsNegotiate**) и Custom являются взаимоисключающими.  
@@ -70,9 +68,9 @@ ms.lasthandoff: 08/09/2017
   
 -   [Настройка проверки подлинности Windows на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
   
--   [Настройка обычной проверки подлинности на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
+-   [Настройка обычной аутентификации на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
   
--   [Настройка нестандартной проверки подлинности или проверки подлинности форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+-   [Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
   
@@ -88,12 +86,12 @@ ms.lasthandoff: 08/09/2017
 [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[Укажите учетные данные и сведения о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+[Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
 [Реализация модуля безопасности](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
-[Настройка соединений SSL для сервера отчетов в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
-[Настройка доступа к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
+[Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
+[настроить доступ к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
 [Общие сведения о модулях безопасности](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   
 [Проверка подлинности в службах Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)   
 [Авторизация в службах Reporting Services](../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,5 +1,5 @@
 ---
-title: "Вопросы безопасности для расширений | Документы Microsoft"
+title: "Рекомендации по обеспечению безопасности модулей | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,31 +10,29 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], extensions
 - extensions [Reporting Services], security
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 1d7c7d5f46e1340de1fca0422ff91f64c910a32d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 002356fd21ed4124c9bf49d915081bf0902d71f4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="security-considerations-for-extensions"></a>Вопросы безопасности для модулей
   Все приложения, предназначенные для работы в среде CLR, должны взаимодействовать с системой безопасности этой среды. Такое приложение после вызова на выполнение автоматически проверяется средой CLR и получает от CLR набор разрешений. В зависимости от полученных разрешений приложение либо продолжает свою работу, либо вырабатывает исключение безопасности. Разрешения для кода, получаемые сборкой, определяются локальными параметрами безопасности и политиками в файлах конфигурации политики безопасности для конкретного сервера отчетов.  
   
  Прежде чем запрашивать разрешения, необходимо определить, какие ресурсы и защищенные операции намечено использовать в коде модуля, а также знать о том, какие разрешения применяются для защиты этих ресурсов и операций. Кроме того, необходимо следить за всеми ресурсами, доступ к которым получают любые методы библиотеки классов, вызываемые компонентами модуля. Дополнительные сведения см. в разделе «Запрос на разрешения» документа «Руководство разработчика [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]».  
   
- Модули, развернутые на сервере отчетов необходимо запустить как полностью доверенные это означает, что модуль должен быть частью группы кода, который предоставляется **FullTrust** набор разрешений. Это также означает, что модуль может иметь доступ к определенным ресурсам и операциям сервера, предоставляемым средой CLR, в зависимости от того, какой пользователь прошел проверку подлинности для работы с конкретным отчетом. Дополнительные сведения о группах и пользователях см. в разделе [управления доступом для кода в службах Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
+ Модули, развернутые на сервере отчетов, должны использоваться как полностью доверенные, а это означает, что модуль должен входить в состав группы кода, которой предоставлен набор разрешений **FullTrust**. Это также означает, что модуль может иметь доступ к определенным ресурсам и операциям сервера, предоставляемым средой CLR, в зависимости от того, какой пользователь прошел проверку подлинности для работы с конкретным отчетом. Дополнительные сведения о группах кода и модулях см. в статье [Управление доступом для кода в службах Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md).  
   
 > [!IMPORTANT]  
 >  В службе [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принудительно применяется режим безопасности [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] для всех собственных модулей.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
 -   Изменять файлы политики безопасности и включать управление доступом для модуля разрешается только привилегированным пользователям.  
   
- Дополнительные сведения о безопасности доступа к коду в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], в разделе [разработки безопасного &#40; Службы Reporting Services &#41; ](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+ Дополнительные сведения о безопасном управлении доступом для кода в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Безопасная разработка (службы Reporting Services)](../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
   
  Дополнительные сведения о средствах безопасности [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе «Безопасность .NET Framework» документа «Руководство разработчика [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]».  
   
@@ -55,8 +53,7 @@ ms.lasthandoff: 08/12/2017
  При первоначальной загрузке сервером отчетов модулей в память в них используются учетные данные этой службы, поскольку некоторым сборкам модулей требуются специальные разрешения для доступа к системным ресурсам, чтения файлов конфигурации и загрузки других, зависимых сборок. Но после загрузки и инициализации сборки все последующие вызовы сборок модуля осуществляются с использованием учетных данных пользователя, который в данный момент зарегистрирован в системе.  
   
 ## <a name="see-also"></a>См. также:  
- [Модули служб Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
- [Библиотека служб Reporting Services расширения](../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [модули служб Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
+ [Библиотека модулей Reporting Services](../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

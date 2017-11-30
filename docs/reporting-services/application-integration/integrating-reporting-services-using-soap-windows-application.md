@@ -1,5 +1,5 @@
 ---
-title: "С помощью API-Интерфейс SOAP в приложении Windows | Документы Microsoft"
+title: "Использование API SOAP в приложении Windows | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,28 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - rendered reports [Reporting Services]
 - Windows applications [Reporting Services]
 - Windows Forms [Reporting Services]
 - SOAP [Reporting Services], Windows applications
 ms.assetid: e4804792-20cd-4df2-9257-fb958ff447b4
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 7dd1e6d2ddd35132ab1a9f297621218aab268e39
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: a577d15cbc8f3e11ea3672dd3fb6afe823f3bc35
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="integrating-reporting-services-using-soap---windows-application"></a>Интеграция служб Reporting Services с использованием SOAP - приложения Windows
-  С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов. Поскольку API SOAP является веб-службой, к нему легко получить доступ, чтобы предоставить для пользовательских бизнес-приложений функции создания отчетов в масштабе предприятия. Чтобы получить доступ к веб-службе в приложении Windows, можно просто написать код, который вызывает службу. С помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], можно создать класс-посредник, который предоставляет свойства и методы веб-службы и позволяет использовать привычную инфраструктуру и средства для построения бизнес-приложений, построенных на [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] технологии.  
+# <a name="integrating-reporting-services-using-soap---windows-application"></a>Интеграция служб Reporting Services с использованием протокола SOAP — приложения Windows
+  С помощью API SOAP служб Reporting Services можно получить доступ ко всем функциональным возможностям сервера отчетов. Поскольку API SOAP является веб-службой, к нему легко получить доступ, чтобы предоставить для пользовательских бизнес-приложений функции создания отчетов в масштабе предприятия. Чтобы получить доступ к веб-службе в приложении Windows, можно просто написать код, который вызывает службу. С помощью платформы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] можно создать класс-посредник, который делает доступными свойства и методы веб-службы и позволяет воспользоваться привычной инфраструктурой и программными средствами для построения бизнес-приложений на основе технологии служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
 ## <a name="integrating-report-management-functionality-using-windows-forms"></a>Интеграция функций управления отчетами с помощью Windows Forms  
  В отличие от доступа по URL-адресу, API SOAP дает доступ к полному набору функций управления, доступных на сервере отчетов. Это значит, что все административные функции диспетчера отчетов становятся доступными для разработчиков по протоколу SOAP. Таким образом, с помощью Windows Forms можно разработать законченное средство по управлению и администрированию. Например, в приложении Windows может понадобиться разрешить пользователям получать содержимое пространства имен для сервера отчетов. Чтобы вывести список всех элементов в базе данных сервера отчетов, можно использовать метод веб-службы <xref:ReportService2010.ReportingService2010.ListChildren%2A>, а затем представить эти элементы пользователям в списке, в поле со списком или в элементе управления иерархического представления. С помощью следующего кода веб-службы можно получить текущий список доступных отчетов в пользовательской папке My Reports, когда пользователь нажимает кнопку на форме:  
@@ -97,7 +95,7 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
   
  Однако метод <xref:ReportExecution2005.ReportExecutionService.Render%2A> API SOAP позволяет готовить отчеты к просмотру и сохранять их в различных выходных форматах программным образом. Такая возможность дает преимущество над доступом по URL-адресу, для которого необходимо участие пользователя. С помощью метода <xref:ReportExecution2005.ReportExecutionService.Render%2A> API SOAP отчет можно подготовить к просмотру в любом из поддерживаемых выходных форматов.  
   
- Можно также использовать свободно распространяемые элементы управления ReportViewer, включенные в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Элементы управления ReportViewer упрощают внедрение функций служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения. Элементы управления ReportViewer предназначены для разработчиков, которым нужно встроить в приложения заранее спроектированные отчеты. Например, приложение, предназначенное для управления веб-сайтом, может содержать отчеты, отображающие анализ посещений различных разделов веб-сайта компании. Элементы управления, внедряемые в приложение, служат простой альтернативой включению серверных компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на этапе развертывания приложения. Эти элементы управления обеспечивают функциональные возможности отчетов, но не поддерживают дополнительные возможности создания, публикации, распространения и доставки отчетов, доступные в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Также можно использовать свободно распространяемые элементы управления ReportViewer, входящие в состав среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]. Элементы управления ReportViewer упрощают внедрение функций служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в пользовательские приложения. Элементы управления ReportViewer предназначены для разработчиков, которым нужно встроить в приложения заранее спроектированные отчеты. Например, приложение, предназначенное для управления веб-сайтом, может содержать отчеты, отображающие анализ посещений различных разделов веб-сайта компании. Элементы управления, внедряемые в приложение, служат простой альтернативой включению серверных компонентов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на этапе развертывания приложения. Эти элементы управления обеспечивают функциональные возможности отчетов, но не поддерживают дополнительные возможности создания, публикации, распространения и доставки отчетов, доступные в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Существует две версии элементов управления ReportViewer: одна предназначена для многофункциональных клиентских приложений Windows, а вторая — для приложений [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]. Элементы управления поддерживают режимы локальной и удаленной обработки. В режиме локальной обработки приложение предоставляет определения отчетов, наборы данных и триггерную обработку отчетов. В режиме удаленной обработки получение данных и обработка отчетов выполняется на сервере отчетов, а элементы управления используются для отображения и навигации по отчету. Такая модель позволяет разрабатывать мощные, легкомасштабируемые приложения.  
   
@@ -106,7 +104,6 @@ private void listReportsButton_Click(object sender, System.EventArgs e)
 ## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью веб-службы и .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Интеграция служб Reporting Services в приложения](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [С помощью API-Интерфейс SOAP для веб-приложения](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  
+ [Использование API SOAP в веб-приложении](../../reporting-services/application-integration/integrating-reporting-services-using-soap-web-application.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Счетчики производительности MSRS 2011 SharePoint режим производительности объектов | Документы Microsoft"
+title: "Счетчики производительности для MSRS 2011 в режиме интеграции с SharePoint, объекты производительности | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,19 +18,18 @@ helpviewer_keywords:
 - Scheduling and Delivery Processor performance object [Reporting Services]
 - performance [Reporting Services]
 ms.assetid: 70bf6980-7845-4ab5-8b2a-ebf526d811a6
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 78bd4357f5e6de5706a536c44bddac7f3e33ade6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 299a0dfb30834898a9efc59d80add9e1906c5f0e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Счетчики производительности MSRS 2011 SharePoint режим производительности объектов
+# <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>Счетчики производительности для MSRS 2011 в режиме интеграции с SharePoint, объекты производительности
   В этой статье рассматриваются счетчики производительности для объектов производительности **MSRS 2011 Web Service SharePoint Mode** и **MSRS 2011 Windows Service SharePoint Mode** , которые принадлежат к числу компонентов развертывания служб [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] в режиме SharePoint.  
   
 > [!NOTE]  
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
  Объекты производительности доступны в системном мониторе Windows (**Perfmon.exe**). Дополнительные сведения см. в документации по Windows. [Профилирование времени выполнения](http://msdn.microsoft.com/library/w4bz2147.aspx) (http://msdn.microsoft.com/library/w4bz2147.aspx).  
   
- Сведения о счетчиках производительности и серверов отчетов в собственном режиме см. в разделе [счетчики производительности для веб-службы MSRS 2011 г. и объектов к производительности службы Windows MSRS 2011 г. &#40; Основной режим &#41; ](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) [Счетчики производительности для MSRS 2011 Windows Service SharePoint режим объектов производительности (режим SharePoint) и MSRS 2011 Web Service SharePoint Mode](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
+ Сведения о счетчиках производительности и серверах отчетов в собственном режиме см. в разделах [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) и [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 в режиме интеграции с SharePoint (режим интеграции с SharePoint)](../../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
  В этом разделе:  
   
@@ -126,7 +125,7 @@ ms.lasthandoff: 08/09/2017
 |**Всего обновлений моментальных снимков**|Общее число обновлений моментальных снимков состояния выполнения отчета.|  
   
 ##  <a name="bkmk_powershell"></a> Использование командлетов PowerShell для возврата списков  
- ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое, связанное с PowerShell")следующий скрипт Windows PowerShell Возвращает наборы счетчиков в которых CounterSetName начинается с «msr»  
+ ![Содержимое, связанное с PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")Следующий скрипт Windows PowerShell возвращает наборы счетчиков, в которых CounterSetName начинается с "msr":  
   
 ```  
 get-counter -listset msr*  
@@ -143,8 +142,7 @@ CounterSetName     : MSRS 2011 Web Service SharePoint Mode
   
 ## <a name="see-also"></a>См. также  
  [Наблюдение за производительностью сервера отчетов](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [Счетчики производительности для веб-службы MSRS 2011 г. и объектов к производительности службы Windows MSRS 2011 г. &#40; Основной режим &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [Счетчики производительности для объектов производительности ReportServer:Service и ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Устранение неполадок публикация или просмотр отчета на сервер отчетов в собственном режиме | Документы Microsoft"
+title: "Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в собственном режиме | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df7720a1-d178-45bb-8d6f-63e208cae7fe
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c0c974553c7c05fdbf853be1a2028c30eaffc3b2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 723b88c6d0bc077cf47b6a83346c274c0ecbeef5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server"></a>Устранение неполадок с публикацией и просмотром отчетов на сервере отчетов, работающем в основном режиме
   
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
  ## <a name="nothing-happens-when-i-toggle-items-in-my-published-report"></a>Ничего не происходит при переключении элементов в опубликованном отчете  
   При просмотре отчета в локальном окне предварительного просмотра можно переключать элементы в отчете, отображать и скрывать эти элементы. А при просмотре того же отчета после его публикации на сервере отчетов переключаемые элементы больше не работают.   
   
-\<Имя сервера отчетов > содержит символ подчеркивания (_)  
+\<Имя сервера отчетов> содержит символ подчеркивания (_)  
   
 Если отчет выполняется без ошибок, но не работают переключаемые элементы (например, при щелчке значка развертывания (+) ничего не происходит), проверьте имя компьютера, на котором установлен сервер отчетов. Если имя компьютера содержит символ подчеркивания, переключаемые элементы работать не будут. Это известная проблема и решить ее невозможно.   
   
@@ -66,5 +65,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

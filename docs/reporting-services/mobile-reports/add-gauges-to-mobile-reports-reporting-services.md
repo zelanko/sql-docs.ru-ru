@@ -1,26 +1,24 @@
 ---
-title: "Добавление датчиков в мобильные отчеты | Службы Reporting Services | Документы Microsoft"
+title: "Добавление датчиков в мобильные отчеты | Службы Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ec1f4cee1318947e3c1ab730b3e4f7eaa16dd333
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 156402a49bd7c72f32b548d37707acf8a0aadef2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Добавление датчиков в мобильные отчеты | Службы Reporting Services
 Датчики представляют собой самые простые и широко используемые визуальные элементы в мобильных отчетах. Они отображают одно значение в наборе данных — просто значение или значение, сравниваемое с целью.
@@ -29,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
 *Визуализация в виде датчиков на вкладке "Макет"*  
   
-Все датчики на SQL Server Mobile Report Publisher имеют по крайней мере одно свойство общий: основной значение числового поля в одной из таблиц данных мобильного отчета.  
+В издателе мобильных отчетов для SQL Server все датчики имеют по меньшей мере одно общее свойство: основное значение, заданное в числовом поле в одной из таблиц данных в мобильном отчете.  
 
 Все датчики, за исключением датчика "Число", могут отображать значение для сравнения или *разностное*значение — связь между основным и сравниваемым значениями. Значение сравнения часто является целью, а датчик — визуальным индикатором хода достижения этой цели или разностным значением между фактическим и целевым значениями.
 
@@ -95,4 +93,3 @@ ms.lasthandoff: 08/09/2017
 * [Navigators in Reporting Services mobile reports (Навигаторы в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizations in Reporting Services mobile reports (Визуализации в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Data grids in Reporting Services mobile reports (Сетки данных в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 
-

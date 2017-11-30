@@ -1,5 +1,5 @@
 ---
-title: "Как: развертывание модуля обработки данных на сервере отчетов | Документы Microsoft"
+title: "Практическое руководство. Развертывание модуля обработки данных на сервере отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: a60c685ebdfd9d549e100cf5b5eda0ab056c1c46
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 8c3d55bab5e4f3c1fed041920e6a341620e8c062
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="deploying-a-data-processing-extension-to-a-report-server"></a>Развертывание модуля обработки данных на сервере отчетов
   Серверы отчетов используют модули обработки данных для получения и обработки данных в отчетах, готовых для просмотра. Сборка модуля обработки данных развертывается на сервере отчетов как закрытая сборка. Нужно также внести запись в файл конфигурации сервера отчетов RSReportServer.config.  
@@ -35,12 +33,12 @@ ms.lasthandoff: 08/12/2017
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Развертывание сборки модуля обработки данных  
   
-1.  Скопируйте сборку из промежуточной папки в каталог bin сервера отчетов, на котором будет использоваться модуль обработки данных. Расположение по умолчанию каталог bin сервера отчетов располагается в %ProgramFiles%\Microsoft SQL Server\MSRS10_50. \< *Имя экземпляра*> \Reporting Services\ReportServer\bin.  
+1.  Скопируйте сборку из промежуточной папки в каталог bin сервера отчетов, на котором будет использоваться модуль обработки данных. По умолчанию каталог bin сервера отчетов располагается по пути %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*имя_экземпляра*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
     >  Этот шаг предотвратит обновление до более нового экземпляра SQL Server. Дополнительные сведения см. в разделе [Upgrade and Migrate Reporting Services](../../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
-2.  Скопировав файл сборки, откройте файл RSReportServer.config. Файл RSReportServer.config расположен в каталоге ReportServer. Необходимо внести запись в этот файл конфигурации для файла сборки развертываемого модуля обработки данных. Файл конфигурации можно открыть в Visual Studio или простого текстового редактора, например «Блокнот».  
+2.  Скопировав файл сборки, откройте файл RSReportServer.config. Файл RSReportServer.config расположен в каталоге ReportServer. Необходимо внести запись в этот файл конфигурации для файла сборки развертываемого модуля обработки данных. Файл конфигурации можно открыть с помощью среды Visual Studio или простого текстового редактора (такого как Блокнот).  
   
 3.  Найдите в файле RSReportServer.config элемент **Data** . Запись для вновь созданного модуля обработки данных необходимо создать в месте, указанном ниже.  
   
@@ -52,15 +50,15 @@ ms.lasthandoff: 08/12/2017
     </Extensions>  
     ```  
   
-4.  Добавьте запись для развертываемого модуля обработки данных. Новую запись должен входить **расширения** со значениями **имя** и **типа** и может выглядеть следующим образом:  
+4.  Добавьте запись для развертываемого модуля обработки данных. В новую запись должен входить элемент **Extension** со значениями параметров **Name** и **Type**. Запись может выглядеть следующим образом:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, MyExtensionAssembly" />  
     ```  
   
-     Значение для **имя** уникальное имя модуля обработки данных. Значение для **тип** является список с разделителями запятыми, который содержит запись для полного пространства имен, класса, который реализует <xref:Microsoft.ReportingServices.Interfaces.IExtension> и <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> интерфейсы, за которым следует имя сборки (не включая расширение DLL для файла). По умолчанию модули обработки данных являются видимыми. Чтобы скрыть модуль в таких пользовательских интерфейсах, как диспетчер отчетов, добавьте атрибут **Visible** к элементу **Extension** и задайте для него значение **false**.  
+     По умолчанию **Name** — это уникальное имя модуля обработки данных. Значение параметра **Type** представляет собой список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейсы <xref:Microsoft.ReportingServices.Interfaces.IExtension> и <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection>, а затем имя сборки (без расширения DLL). По умолчанию модули обработки данных являются видимыми. Чтобы скрыть модуль в таких пользовательских интерфейсах, как диспетчер отчетов, добавьте атрибут **Visible** к элементу **Extension** и задайте для него значение **false**.  
   
-5.  Добавьте группу кода для пользовательской сборки, которая предоставляет **FullTrust** разрешение для модуля. Это можно сделать, добавив группу кода в файл rssrvpolicy.config, расположенный в %ProgramFiles%\Microsoft SQL Server по умолчанию\\< MSRS10_50.\< *Имя экземпляра*> \Reporting Services\ReportServer. Пример группы кода показан ниже.  
+5.  Добавьте для пользовательской сборки группу кода, которая предоставляет разрешение **FullTrust** вашему модулю. Это можно сделать, добавив группу кода в файл rssrvpolicy.config, который по умолчанию находится в каталоге %ProgramFiles%\Microsoft SQL Server\\<MSRS10_50.\<*имя_экземпляра*>\Reporting Services\ReportServer. Пример группы кода показан ниже.  
   
     ```  
     <CodeGroup class="UnionCodeGroup"  
@@ -75,16 +73,15 @@ ms.lasthandoff: 08/12/2017
     </CodeGroup>  
     ```  
   
- URL-членство — это лишь одно из множества условий членства, которые могут быть заданы для модуля обработки данных. Дополнительные сведения о безопасности доступа к коду в [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], в разделе [разработки безопасного &#40; Службы Reporting Services &#41; ](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
+ URL-членство — это лишь одно из множества условий членства, которые могут быть заданы для модуля обработки данных. Дополнительные сведения об управлении доступом для кода в [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] см. в разделе [Безопасная разработка (службы Reporting Services)](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md).  
   
 ## <a name="verifying-the-deployment"></a>Проверка развертывания  
- Проверить, успешно ли был развернут модуль обработки данных на сервере отчетов, можно с помощью метода веб-службы <xref:ReportService2010.ReportingService2010.ListExtensions%2A>. Можно также открыть диспетчер отчетов и убедиться, что модуль включен в список доступных источников данных. Дополнительные сведения о службах Reporting Services и источниках данных см. в статье [Создание, изменение и удаление общих источников данных (службы SSRS)](../../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ Проверить, успешно ли был развернут модуль обработки данных на сервере отчетов, можно с помощью метода веб-службы <xref:ReportService2010.ReportingService2010.ListExtensions%2A>. Можно также открыть диспетчер отчетов и убедиться, что модуль включен в список доступных источников данных. Дополнительные сведения о диспетчере отчетов и источниках данных см. в разделе [Создание, изменение и удаление общих источников данных (службы SSRS)](../../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Развертывание модуля обработки данных](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Реализация модуля обработки данных](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Библиотека модулей Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

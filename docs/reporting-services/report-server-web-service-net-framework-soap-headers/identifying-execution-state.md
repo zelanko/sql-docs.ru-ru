@@ -1,5 +1,5 @@
 ---
-title: "Определение состояния выполнения | Документы Microsoft"
+title: "Определение состояния выполнения | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,25 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - session states [Reporting Services]
 - lifetimes [Reporting Services]
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 83cdd4165f745bd6f2e42e65c8638328c1d41bd3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="identifying-execution-state"></a>Определение состояния выполнения
   Протокол HTTP является протоколом без установления соединения и без сохранения состояния. Это означает, что он не может автоматически определить, что различные запросы получены от одного клиента или что один экземпляр браузера продолжает активно просматривать страницу или веб-сайт. Сеансы создают логическое соединение, чтобы сохранять состояние между сервером и клиентом по протоколу HTTP. Сведения конкретного пользователя, относящиеся к определенному сеансу, называются «состоянием сеанса».  
@@ -47,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
  На следующей диаграмме показаны пути обработки отчетов и подготовки их к просмотру.  
   
- ![Путь обработки или подготовки отчетов](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "путь обработки или подготовки отчетов")  
+ ![Путь обработки или отрисовки отчета](../../reporting-services/report-server-web-service-net-framework-soap-headers/media/rs-render-process-diagram.gif "Путь обработки или отрисовки отчета")  
   
  Для поддержки описанных выше функций текущий метод Render протокола SOAP был разбит на несколько методов, которые представляют этапы инициализации объекта выполнения, обработки и подготовки к просмотру.  
   
@@ -67,8 +65,7 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>См. также:  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
- [Технический справочник по &#40; Службы SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)   
- [Использование службы Reporting Services заголовки SOAP](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
+ [Технический справочник (службы SSRS)](../../reporting-services/technical-reference-ssrs.md)   
+ [Использование заголовков SOAP в службах Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   
-

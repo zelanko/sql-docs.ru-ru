@@ -1,5 +1,5 @@
 ---
-title: "Методы веб-службы сервера отчетов | Документы Microsoft"
+title: "Методы веб-службы сервера отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Report Server Web service, methods
 - Web service [Reporting Services], methods
@@ -20,23 +19,22 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f99a0c09bfbe96062b078c07f86295b34069d9cf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 89804c5a980a3fed4869dca8de1603d42e7b481a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-server-web-service-methods"></a>Методы веб-службы сервера отчетов
-  Веб-службы сервера отчетов содержат различные категории методов, основанных на функциях компонентов. Эти методы доступны через несколько конечных точек веб-служб (три для управления отчетами и одна для их выполнения), которые в свою очередь доступны как члены классов <xref:ReportService2010.ReportingService2010> и <xref:ReportExecution2005.ReportExecutionService>. Эти классы можно формировать с помощью средство класс прокси-сервера, например wsdl.exe, которая входит в состав [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] SDK. Дополнительные сведения о веб-сервера отчетов служб и [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], в разделе [построение приложений с помощью веб-службы и .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+  Веб-службы сервера отчетов содержат различные категории методов, основанных на функциях компонентов. Эти методы доступны через несколько конечных точек веб-служб (три для управления отчетами и одна для их выполнения), которые в свою очередь доступны как члены классов <xref:ReportService2010.ReportingService2010> и <xref:ReportExecution2005.ReportExecutionService>. Эти классы можно создать автоматически с помощью средства создания класса-посредника, например средства wsdl.exe, включенного в пакет SDK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Дополнительные сведения об использовании веб-служб сервера отчетов и [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] см. в разделе [Построение приложений с помощью веб-службы и платформы .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 ## <a name="endpoints-and-methods"></a>Конечные точки и методы  
- В следующей таблице указаны конечные точки веб-службы сервера отчетов и категории методов, предоставленные конечной точкой <xref:ReportService2010.ReportingService2010>. Сведения о методах, доступных в других конечных точек см. в разделе [Технический справочник по &#40; Службы SSRS &#41; ](../../../reporting-services/technical-reference-ssrs.md).  
+ В следующей таблице указаны конечные точки веб-службы сервера отчетов и категории методов, предоставленные конечной точкой <xref:ReportService2010.ReportingService2010>. Дополнительные сведения о методах, доступных в других конечных точках, см. в разделе [Технический справочник (службы SSRS)](../../../reporting-services/technical-reference-ssrs.md).  
   
 |Раздел|Description|  
 |-----------|-----------------|  
@@ -53,10 +51,9 @@ ms.lasthandoff: 08/12/2017
 |[Методы связанных отчетов](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Описывает методы создания связанных отчетов и управления ими.|  
   
 ## <a name="see-also"></a>См. также:  
- [Доступ к API-Интерфейс SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
+ [Доступ к API SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [Создание приложений с помощью веб-службы и .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Технический справочник по &#40; Службы SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Веб-служба сервера отчетов](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Технический справочник (службы SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

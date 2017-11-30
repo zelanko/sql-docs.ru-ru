@@ -1,5 +1,5 @@
 ---
-title: "Интерактивные возможности - различных модулей подготовки отчетов | Документы Microsoft"
+title: "Интерактивные возможности различных модулей подготовки отчетов к просмотру | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4e91731abe741a802252475bb054c826454ee2a0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="interactive-functionality---different-report-rendering-extensions"></a>Интерактивные возможности - различных модулей подготовки отчетов
+# <a name="interactive-functionality---different-report-rendering-extensions"></a>Интерактивные возможности различных модулей подготовки отчетов к просмотру
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет функции для взаимодействия с отчетом с разбиением на страницы во время выполнения. Не все выходные форматы отчета поддерживают полный диапазон интерактивных возможностей. Чтобы понять, как интерактивные возможности работают с конкретными выходными форматами, воспользуйтесь приведенной ниже таблицей.  
   
 > [!NOTE]  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
 |-------------------|-------------------------|  
 |Просмотр/средство просмотра отчетов, HTML|Пользователи щелкают значки «Развернуть» или «Свернуть» для отображения или сворачивания разделов отчета.|  
 |PDF|Сервер отчетов экспортирует в формат PDF текущее состояние видимости отчета. Интерактивное переключение не поддерживается|  
-|Excel|Ссылки и элементы углубленной детализации, которые могут быть переключены, представляются в Excel как свертываемые структуры. В отчете, экспортированном в формате Excel, разделы можно разворачивать и сворачивать. Дополнительные сведения об ограничениях, налагаемых в Excel см. в разделе [Экспорт в Microsoft Excel &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
+|Excel|Ссылки и элементы углубленной детализации, которые могут быть переключены, представляются в Excel как свертываемые структуры. В отчете, экспортированном в формате Excel, разделы можно разворачивать и сворачивать. Дополнительные сведения о налагаемых Excel ограничениях см. в разделе [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|Сервер отчетов экспортирует в формат PDF текущее состояние видимости отчета. Интерактивное переключение не поддерживается|  
 |Другое|Недоступно в форматах MHTML, XML или CSV. При экспорте в формат изображения сервер отчетов учитывает параметры отображения или скрытия, относящиеся к экспорту отчета в формат PDF. Интерактивное переключение не поддерживается.|  
   
@@ -116,10 +115,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Интерактивная сортировка, схемы документов и ссылки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

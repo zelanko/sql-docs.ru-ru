@@ -1,5 +1,5 @@
 ---
-title: "Доставка электронной почты в службах Reporting Services | Документы Microsoft"
+title: "Доставка электронной почтой в службах Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - e-mail [Reporting Services]
 - mail [Reporting Services]
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 1698558dcfe2a7d31b6050295e714337dbe66b01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Доставка электронной почтой в службах Reporting Services
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки электронной почты, что дает возможность доставлять по электронной почте отчеты отдельным пользователям или группам пользователей. Чтобы отправить отчет по электронной почте, следует настроить сервер отчетов для доставки по электронной почте и определить либо стандартную подписку, либо управляемую данными подписку. Одна подписка не может доставить несколько отчетов в одном электронном сообщении. Однако можно создать несколько подписок.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 09/27/2017
  Для сервера отчетов в основном режиме модуль доставки электронной почты настраивается с помощью диспетчера конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] основного режима и путем изменения файлов конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Для сервера отчетов в режиме SharePoint модуль доставки электронной почты настраивается с помощью страниц управления SharePoint и сценариев PowerShell.  
   
  
- Сведения о настройке сервера отчетов в собственном режиме см. в разделе [параметры - электронной почты, режиме собственного Reporting Services (диспетчер конфигурации)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
+ Дополнительные сведения о настройке сервера отчетов в основном режиме см. в разделе [Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).
  
  
  Дополнительные сведения о настройке сервера отчетов в режиме интеграции с SharePoint см. в следующих разделах:  
@@ -102,4 +101,3 @@ ms.lasthandoff: 09/27/2017
  [Назначения ролей](../../reporting-services/security/role-assignments.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Настройка служб Reporting Services для использования альтернативного имени субъекта | Документы Microsoft"
+title: "Настройка использования альтернативного имени субъекта в Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,26 +14,25 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: f1ead2884fe5826814d79e869c4c345cbf3d5b6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Настройка служб Reporting Services для использования альтернативного имени субъекта
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Настройка использования альтернативного имени субъекта в Reporting Services
 
-В этом разделе описывается Настройка Reporting Services (SSRS) для использования альтернативного имени субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.
+В этом разделе объясняется, как настроить службы Reporting Services (SSRS) так, чтобы в них использовалось альтернативное имя субъекта (SAN), изменив файл rsreportserver.config и используя средство Netsh.exe.
 
 Инструкции применяются к URL-адресу службы отчетов, а также URL-адресу веб-службы.
 
 Чтобы использовать SAN, SSL-сертификат должен быть зарегистрирован на сервере, подписан и иметь закрытый ключ. Самозаверяющий сертификат использовать невозможно.  
   
- URL-адреса в службах Reporting Services можно настроить для использования сертификата SSL. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса SSL. SAN — это дополнительное поле в сертификате, которое позволяет службе SSL прослушивать многих URL-адресов и совместно использовать порт SSL с другими приложениями. SAN выглядит `www.s2.com`.  
+ URL-адреса в службах Reporting Services можно настроить для использования SSL-сертификата. Обычно сертификат имеет только имя субъекта, которое позволяет ему использовать только один URL-адрес для сеанса SSL. SAN — это дополнительное поле в сертификате, которое позволяет службе SSL прослушивать множество URL-адресов, а также совместно использовать порт SSL с другими приложениями. SAN выглядит следующим образом: `www.s2.com`.  
   
- Дополнительные сведения о параметрах протокола SSL для служб Reporting Services см. в разделе [Настройка соединений SSL для сервера отчетов в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Дополнительные сведения о параметрах SSL для служб Reporting Services см. в разделе [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
-## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка SSRS для использования альтернативного имени субъекта для URL веб-службы
+## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Настройка SSRS для использования альтернативного имени субъекта для URL-адреса веб-службы
   
 1.  Запустите диспетчер конфигурации служб Reporting Services.  
   
@@ -41,13 +40,13 @@ ms.lasthandoff: 10/06/2017
   
 2.  Выберите на странице **URL-адрес веб-службы** порт SSL и SSL-сертификат.  
   
-     ![Диспетчер конфигурации служб Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "диспетчер конфигурации служб Reporting Services")  
+     ![Диспетчер конфигурации служб Reporting Services](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Диспетчер конфигурации служб Reporting Services")  
   
      Диспетчер конфигурации зарегистрирует SSL-сертификат для порта.  
   
 3.  Откройте файл rsreportserver.config.  
   
-     Для служб SSRS в собственном режиме файл расположен в папке по умолчанию:  
+     Файл для служб SSRS в собственном режиме находится в следующей папке по умолчанию:  
   
     ```  
     \Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\ReportServer  
@@ -55,7 +54,7 @@ ms.lasthandoff: 10/06/2017
   
 4.  Скопируйте раздел URL-адреса для приложения веб-службы сервера отчетов.  
   
-     Например следующий исходный раздел URL-адрес будет:  
+     Например, следующий исходный раздел URL-адреса:  
   
     ```  
         <URL>  
@@ -66,7 +65,7 @@ ms.lasthandoff: 10/06/2017
   
     ```  
   
-     Имеет следующий измененный раздел URL-адрес:
+     Следующий измененный раздел URL-адреса:
   
     ```  
     <URL>  
@@ -132,4 +131,3 @@ ms.lasthandoff: 10/06/2017
  [Настройка URL-адресов сервера отчетов](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

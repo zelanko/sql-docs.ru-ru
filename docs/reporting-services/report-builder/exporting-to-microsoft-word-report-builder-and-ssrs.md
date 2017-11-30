@@ -1,5 +1,5 @@
 ---
-title: "Экспорт в Microsoft Word (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Экспорт в Microsoft Word (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,24 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: fa120c78f7b443eb0dc6078a5444b79b20bbda8c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Экспорт в Microsoft Word (построитель отчетов и службы SSRS)
 
   Модуль подготовки отчетов Word подготавливает отчеты с разбиением на страницы в формате  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (DOCX). Используется формат Office Open XML.  
   
  Содержимое файлов, создаваемых этим модулем подготовки, имеет тип **application/vnd.openxmlformats-officedocument.wordprocessingml.document** , а файлы имеют расширение DOCX.  
   
- В разделе [экспортировать отчеты &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) подробные сведения о том, как экспортировать в Word.  
+ Дополнительные сведения об экспорте в Word см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
  После экспорта отчета в документ Word можно изменить содержимое отчета и спроектировать отчеты в стиле документа, такие как наклейки для почтовой рассылки, заказы на покупку или стандартные письма.  
   
@@ -161,13 +160,13 @@ ms.lasthandoff: 08/09/2017
   
  Предыдущая версия модуля подготовки отчетов Word, совместимая с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, переименована в Word 2003. По умолчанию доступен только модуль подготовки отчетов Word. Чтобы получить доступ к модулю подготовки отчетов Word 2003, необходимо обновить файлы конфигурации служб Reporting Services. Модуль подготовки Word 2003 создает содержимое файлов типа **application/vnd.ms-word** , имена файлов имеют расширение DOC.  
   
- В службах SQL Server Reporting Services модуль подготовки отчетов Word по умолчанию имеет версию, которая отображается в виде [!INCLUDE[ofprword](../../includes/ofprword-md.md)] формат (.docx). Это параметр **Word** , содержащийся в меню **Экспорт** на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и в списке SharePoint. Более ранняя версия, совместимая только с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, теперь называется Word 2003 и содержится в меню под этим именем. Пункт меню **Word 2003** не отображается по умолчанию, но администратор может сделать его видимым, обновив файл конфигурации RSReportServer. Для экспорта отчетов из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с помощью модуля подготовки отчетов Word 2003 необходимо обновить файл конфигурации RSReportDesigner. Однако настройка видимости модуля подготовки отчетов Word 2003 не обеспечивает его доступность во всех сценариях. Поскольку файл конфигурации RSReportServer хранится на сервере отчетов, для обеспечения возможности чтения файла конфигурации средства и продукты, хранящиеся в целевом местоположении экспорта отчетов, должны быть подключены к серверу отчетов. При использовании средств или продуктов в отключенном или локальном режиме модуль подготовки отчетов Word 2003 недоступен. Пункт меню **Word 2003** по-прежнему будет недоступен. Если сделать модуль подготовки отчетов Word 2003 видимым, изменив файл конфигурации RSReportDesigner, пункт меню **Word 2003** будет всегда доступен в режиме предварительного просмотра отчета в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
+ В SQL Server Reporting Services стандартный модуль подготовки отчетов Word имеет версию, которая создает формат [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (DOCX). Это параметр **Word** , содержащийся в меню **Экспорт** на веб-портале [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и в списке SharePoint. Более ранняя версия, совместимая только с [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003, теперь называется Word 2003 и содержится в меню под этим именем. Пункт меню **Word 2003** не отображается по умолчанию, но администратор может сделать его видимым, обновив файл конфигурации RSReportServer. Для экспорта отчетов из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с помощью модуля подготовки отчетов Word 2003 необходимо обновить файл конфигурации RSReportDesigner. Однако настройка видимости модуля подготовки отчетов Word 2003 не обеспечивает его доступность во всех сценариях. Поскольку файл конфигурации RSReportServer хранится на сервере отчетов, для обеспечения возможности чтения файла конфигурации средства и продукты, хранящиеся в целевом местоположении экспорта отчетов, должны быть подключены к серверу отчетов. При использовании средств или продуктов в отключенном или локальном режиме модуль подготовки отчетов Word 2003 недоступен. Пункт меню **Word 2003** по-прежнему будет недоступен. Если сделать модуль подготовки отчетов Word 2003 видимым, изменив файл конфигурации RSReportDesigner, пункт меню **Word 2003** будет всегда доступен в режиме предварительного просмотра отчета в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
  Пункт меню **Word 2003** не отображается в следующих случаях.  
   
 -   Построитель отчетов работает в отключенном режиме и используется для предварительного просмотра отчетов.  
   
--   Веб-часть средства просмотра отчетов работает в локальном режиме, а ферма SharePoint не интегрирована с сервером отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [сравнение локального режима. Отчеты, созданные в подключенном режиме, в средстве просмотра отчетов &#40;службы Reporting Services в режиме интеграции с SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
+-   Веб-часть средства просмотра отчетов работает в локальном режиме, а ферма SharePoint не интегрирована с сервером отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Отчеты, созданные в локальном режиме и Отчеты, созданные в подключенном режиме, в средстве просмотра отчетов &#40;службы Reporting Services в режиме интеграции с SharePoint&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  Если пункт меню модуля подготовки отчетов **Word 2003** видим, то в следующих сценариях будут доступны параметры **Word** и **Word 2003** :  
   
@@ -198,9 +197,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 [Разбиение на страницы в службах Reporting Services](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
-[Поведение отрисовки](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+[Поведение при отрисовке](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
 [Интерактивные возможности различных модулей подготовки отчетов](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
 [Подготовка к просмотру элементов отчета](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
 [Таблицы, матрицы и списки](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,5 +1,5 @@
 ---
-title: "Преобразование источников данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Преобразование источников данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - data sources [Reporting Services], embedded
 - data sources [Reporting Services], shared
 ms.assetid: 0e099c7e-8c03-43eb-9ea3-76e52d9ebbe3
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da3cd9531b90536283153b68642da9de01486a9b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d189fc88b7f6e0ed609e1c54cdc88cbf115bc6b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="convert-data-sources-report-builder-and-ssrs"></a>Преобразование источников данных (построитель отчетов и службы SSRS)
   Каждый источник данных в области данных отчета является внедренным и привязанным к определенному отчету либо общим. В построителе отчетов общий источник данных указывает на опубликованный общий источник данных на сервере отчетов или сайте SharePoint. В конструкторе отчетов общий источник данных указывает на общий источник данных в папке **Общие источники данных** в обозревателе решений.  
@@ -72,4 +71,3 @@ ms.lasthandoff: 08/09/2017
  [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   
-

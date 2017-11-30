@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения о модулях обработки данных | Документы Microsoft"
+title: "Общие сведения о модулях обработки данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,34 +10,31 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- data processing extensions [Reporting Services], about extensions
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 11e8c43eb7b717227cf5a624f6a18a424b598967
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-processing-extensions-overview"></a>Общие сведения о модулях обработки данных
-  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]модули обработки данных моделируются подмножество [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] интерфейсов поставщиков данных.  
+  Модули обработки данных в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] позволяют соединяться с источником данных и получать данные. Они также служат мостом между источником данных и набором данных. Модули обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] построены на наборе интерфейсов поставщиков данных платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  В следующей таблице перечисляются модули обработки данных, включенные в службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
 |Модуль обработки данных|Description|  
 |-------------------------------|-----------------|  
-|Модуль обработки данных для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Использует поставщик данных .NET Framework для SQL Server для подключения и извлечения данных из [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
-|Модуль обработки данных OLE DB|Использует поставщик данных .NET Framework для OLE DB. С помощью данного модуля сервер отчетов может осуществлять запрос к любым источникам данных с поставщиком OLE DB.|  
-|Модуль обработки данных для Oracle|Использует поставщик данных .NET Framework для Oracle. С этим модулем сервер отчетов может обращаться к источникам данных Oracle через клиентское ПО Oracle.|  
-|Модуль обработки данных для ODBC|Использует поставщик данных .NET Framework для ODBC. С этим модулем сервер отчетов может обращаться к данным в базе данных, для которой имеется драйвер ODBC.|  
+|Модуль обработки данных для служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Использует поставщик данных платформы .NET Framework для SQL Server с целью подключения и получения данных из [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)].|  
+|Модуль обработки данных OLE DB|Использует поставщик данных платформы .NET Framework для OLE DB. С помощью данного модуля сервер отчетов может осуществлять запрос к любым источникам данных с поставщиком OLE DB.|  
+|Модуль обработки данных для Oracle|Использует поставщик данных платформы .NET Framework для Oracle. С этим модулем сервер отчетов может обращаться к источникам данных Oracle через клиентское ПО Oracle.|  
+|Модуль обработки данных для ODBC|Использует поставщик данных платформы .NET Framework для ODBC. С этим модулем сервер отчетов может обращаться к данным в базе данных, для которой имеется драйвер ODBC.|  
   
  Можно использовать API-интерфейс обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] для добавления на сервер отчетов пользовательской обработки данных.  
   
@@ -48,7 +45,7 @@ ms.lasthandoff: 08/12/2017
   
  Можно разработать модули обработки данных для собственных источников данных, или можно использовать интерфейсы для добавления дополнительного уровня обработки данных в общие инфраструктуры баз данных. Можно выполнить развертывание пользовательских модулей обработки данных для гладкой интеграции данных в существующие серверы отчетов в организации. Их также можно использовать как часть пользовательского пакета составления отчетов, предоставляемого клиентам.  
   
- ![Архитектура модуля обработки данных](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "архитектура модуля обработки данных")  
+ ![Архитектура модуля обработки данных](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Архитектура модуля обработки данных")  
 Архитектура модуля обработки данных служб Reporting Service  
   
  Преимущества реализации пользовательского модуля обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] заключаются в следующем.  
@@ -62,7 +59,7 @@ ms.lasthandoff: 08/12/2017
 ## <a name="data-extension-process-flow"></a>Поток процесса модуля обработки данных  
  Перед разработкой пользовательского модуля обработки данных необходимо понять, как сервер отчетов использует модули данных для обработки данных. Необходимо также понимать конструкторы и методы, которые вызываются сервером отчетов.  
   
- ![Поток для модуля обработки данных](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "поток для модуля обработки данных")  
+ ![Поток процесса для модуля обработки данных](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Поток процесса для модуля обработки данных")  
 Пошаговый поток процесса модуля обработки данных, вызываемого сервером отчетов  
   
  На рисунке показана следующая последовательность событий.  
@@ -78,17 +75,16 @@ ms.lasthandoff: 08/12/2017
   
 -   Компьютер развертывания с установленным конструктором отчетов или сервером отчетов.  
   
--   С компьютера разработчика [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] или более поздней версии, или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Software Development Kit (SDK) установлен.  
+-   Компьютер для разработки с установленной средой [!INCLUDE[vsprvsext](../../../includes/vsprvsext-md.md)] или более поздней версии или пакетом средств разработки программного обеспечения (SDK) для [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
 -   Глубокое понимание функций и возможностей служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
--   Углубленное понимание [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] архитектуры, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] поставщики данных, объектов ADO.NET DataSet и общих [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] интерфейсов.  
+-   Глубокое понимание архитектуры [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], поставщиков данных платформы [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], объектов ADO.NET DataSet и общих интерфейсов [!INCLUDE[vstecado](../../../includes/vstecado-md.md)].  
   
--   Процесс разработки в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] язык, такой как [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
+-   Опыт разработки на языке [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], например [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET.  
   
 ## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
- [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Библиотека модулей Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

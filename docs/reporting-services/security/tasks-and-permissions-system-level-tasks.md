@@ -1,5 +1,5 @@
 ---
-title: "Задачи системного уровня | Документы Microsoft"
+title: "Задачи уровня системы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- system-level tasks [Reporting Services]
+helpviewer_keywords: system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8f8eac1d05b8bdd034879cb2eba1c4fc867fce66
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3c8a3edfbeafe5ab2f417e514e011899c528c283
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="tasks-and-permissions---system-level-tasks"></a>Задачи и разрешения - задачи системного уровня
+# <a name="tasks-and-permissions---system-level-tasks"></a>Задачи и разрешения — задачи на уровне системы
   Задача системного уровня представляет собой коллекцию разрешений, касающихся операций, применяемых ко всему сайту сервера отчетов в целом. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают также задачи уровня элемента, которые относятся к конкретным элементам. Дополнительные сведения см. в разделе [Задачи уровня элемента](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md). Дополнительные сведения о задачах и правах в целом см. в разделе [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
   
 > [!NOTE]  
@@ -50,4 +48,3 @@ ms.lasthandoff: 08/09/2017
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

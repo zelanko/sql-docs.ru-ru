@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Parallel Data Warehouse тип соединения (SSRS) | Документы Microsoft"
+title: "Тип соединения с SQL Server Parallel Data Warehouse (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,23 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 2b4cc5365a0d351304f0e4939b20425fec0f97db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6b968bb97c484834915f2fdfb9b0ac294243810a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Тип соединения с параллельным хранилищем данных SQL Server (SSRS)
 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] является виртуальным устройством масштабируемого хранилища данных, которое обеспечивает производительность и масштабируемость посредством расширенной параллельной обработки. [!INCLUDE[ssDW](../../includes/ssdw-md.md)]использует базы данных SQL Server для распределенной обработки и хранения данных.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] является виртуальным устройством масштабируемого хранилища данных, которое обеспечивает производительность и масштабируемость посредством расширенной параллельной обработки. [!INCLUDE[ssDW](../../includes/ssdw-md.md)] использует базы данных SQL Server для распределенной обработки и хранения данных.  
   
- Устройство секции большие таблицы базы данных по нескольким физическим узлам, причем каждый узел работает свой собственный экземпляр SQL Server. При подключении отчета к [!INCLUDE[ssDW](../../includes/ssdw-md.md)] для извлечения данных он подключается к узлу, управляющему обработкой запросов в устройстве [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . После создания подключения никаких различий между работой с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который находится либо не находится в среде [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , не будет.  
+ Устройство разбивает большие таблицы базы данных на секции по нескольким физическим узлам. При этом на каждом узле выполняется свой экземпляр SQL Server. При подключении отчета к [!INCLUDE[ssDW](../../includes/ssdw-md.md)] для извлечения данных он подключается к узлу, управляющему обработкой запросов в устройстве [!INCLUDE[ssDW](../../includes/ssdw-md.md)] . После создания подключения никаких различий между работой с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который находится либо не находится в среде [!INCLUDE[ssDW](../../includes/ssdw-md.md)] , не будет.  
   
  Чтобы включить данные из [!INCLUDE[ssDW](../../includes/ssdw-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных типа параллельного хранилища данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот встроенный тип источника данных основан на модуле обработки данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parallel Data Warehouse. Используйте этот тип источника данных для подключения и извлечения данных из [!INCLUDE[ssDW](../../includes/ssdw-md.md)].  
   
@@ -79,7 +78,7 @@ HOST=<IP address>; database= CustomerSales; port=<port>
   
 -   [Текст](#QueryText)  
   
- Вы используете [!INCLUDE[DWsql](../../includes/dwsql-md.md)] с [!INCLUDE[ssDW](../../includes/ssdw-md.md)] и [!INCLUDE[tsql](../../includes/tsql-md.md)] с SQL Server. Две эти разновидности языка SQL очень похожи. Запросы, написанные для типа соединения с источником данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , обычно могут быть использованы и для типа соединения с источником данных [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] .  
+ [!INCLUDE[DWsql](../../includes/dwsql-md.md)] используется вместе с [!INCLUDE[ssDW](../../includes/ssdw-md.md)], а [!INCLUDE[tsql](../../includes/tsql-md.md)] — вместе с SQL Server. Две эти разновидности языка SQL очень похожи. Запросы, написанные для типа соединения с источником данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , обычно могут быть использованы и для типа соединения с источником данных [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] .  
   
  Запрос, извлекающий данные отчета из большой базы данных, включая хранилище данных, например [!INCLUDE[ssDW](../../includes/ssdw-md.md)], может формировать результирующий набор, который будет иметь очень большое количество строк, если пользователь не упорядочит данные и не уменьшит количество строк, возвращаемых запросом. Запросы, включающие агрегаты и группирование, можно написать при помощи графического или текстового конструктора запросов.  
   
@@ -141,7 +140,7 @@ WHERE EmployeeID = (@EmpID)
   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Добавление фильтра для набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Добавление фильтра к набору данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
 ##  <a name="Related"></a> См. также  
@@ -153,13 +152,13 @@ WHERE EmployeeID = (@EmpID)
  [Подключения к данным, источники данных и строки подключения в построителе отчетов](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
  Предоставляет сведения о подключениях к данным и источникам данных.  
   
- [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Предоставляет сведения об общих и внедренных наборах данных.  
   
- [Коллекция полей набора данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Коллекция полей набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  Предоставляет сведения о коллекции полей набора данных, создаваемой запросом.  
   
- [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации к [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ [Источники данных, поддерживаемые службами Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md), см. в документации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в [электронной документации](http://go.microsoft.com/fwlink/?linkid=121312) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
 
 ## <a name="next-steps"></a>Следующие шаги
@@ -168,4 +167,4 @@ WHERE EmployeeID = (@EmpID)
 [Фильтрация, группирование и сортировка данных](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [Выражения](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

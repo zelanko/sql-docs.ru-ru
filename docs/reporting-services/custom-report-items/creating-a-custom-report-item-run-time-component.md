@@ -1,5 +1,5 @@
 ---
-title: "Создание компонента пользовательского элемента отчета времени выполнения | Документы Microsoft"
+title: "Создание компонента времени выполнения пользовательского элемента отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,33 +10,30 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, creating
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: c8da0d4ac6024281315dc2e8b0b398904c8a1e6c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 3f5bb5fdb3975ca40083aa63aca18d9ec32220d1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Создание компонента времени выполнения пользовательского элемента отчета
-  Реализован в виде компонента пользовательского элемента отчета времени выполнения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] компонента с помощью любого CLS-совместимом языке и вызывается обработчиком отчетов во время выполнения. Свойства компонента времени выполнения в среде разработки задаются настройкой соответствующего компонента времени разработки пользовательского элемента отчета.  
+  Компонент времени выполнения пользовательского элемента отчета реализуется как компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] с помощью любого CLS-совместимого языка и вызывается обработчиком отчетов во время выполнения. Свойства компонента времени выполнения в среде разработки задаются настройкой соответствующего компонента времени разработки пользовательского элемента отчета.  
   
- Образец полностью реализованного пользовательского элемента отчета см. в разделе [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Образец полностью реализованного пользовательского элемента отчета см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="definition-and-instance-objects"></a>Объекты определения и объекты экземпляра  
- Перед реализацией пользовательского элемента отчета важно понимать разницу между *объекты определения* и *объектов экземпляра*. Объекты определения обеспечивают представление пользовательских элементов отчета на языке определения отчетов, а объекты экземпляра являются версиями объектов определения с вычисленными выражениями. У каждого элемента отчета есть только один объект определения. При доступе к свойствам объекта определения, содержащего выражения, возвращается невычисленная строка выражения. Объекты экземпляра содержат вычисленные версии объектов определения и могут находиться в связи «один ко многим» с объектом определения элемента. Например, если в отчете есть область данных <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix>, которая содержит элемент <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> в строке детализации, объект определения будет только один, но у каждой строки в этой области данных будет свой объект экземпляра.  
+ При разработке пользовательских элементов отчета важно понимать разницу между *объектами определения* и *объектами экземпляра*. Объекты определения обеспечивают представление пользовательских элементов отчета на языке определения отчетов, а объекты экземпляра являются версиями объектов определения с вычисленными выражениями. У каждого элемента отчета есть только один объект определения. При доступе к свойствам объекта определения, содержащего выражения, возвращается невычисленная строка выражения. Объекты экземпляра содержат вычисленные версии объектов определения и могут находиться в связи «один ко многим» с объектом определения элемента. Например, если в отчете есть область данных <xref:Microsoft.ReportingServices.OnDemandReportRendering.Tablix>, которая содержит элемент <xref:Microsoft.ReportingServices.OnDemandReportRendering.CustomReportItem> в строке детализации, объект определения будет только один, но у каждой строки в этой области данных будет свой объект экземпляра.  
   
 ## <a name="implementing-the-icustomreportitem-interface"></a>Реализация интерфейса ICustomReportItem  
- Для создания **CustomReportItem** компонент времени выполнения, необходимо реализовать <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem> интерфейс, который определен в динамической библиотеке Microsoft.ReportingServices.ProcessingCore.dll:  
+ Чтобы создать компонент времени выполнения **CustomReportItem**, необходимо реализовать интерфейс <xref:Microsoft.ReportingServices.OnDemandReportRendering.ICustomReportItem>, определенный в динамической библиотеке Microsoft.ReportingServices.ProcessingCore.dll:  
   
 ```csharp  
 namespace Microsoft.ReportingServices.OnDemandReportRendering  
@@ -140,10 +137,9 @@ namespace Microsoft.Samples.ReportingServices
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Архитектура пользовательского элемента отчета](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
- [Создание компонента пользовательского элемента отчета времени разработки](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
- [Библиотеки классов элемента пользовательского отчета](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
- [Как: развертывание пользовательского элемента отчета](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
+ [Архитектура пользовательских элементов отчета](../../reporting-services/custom-report-items/custom-report-item-architecture.md)   
+ [Создание компонента времени разработки пользовательского элемента отчета](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)   
+ [Библиотеки классов пользовательских элементов отчета](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)   
+ [Развертывание пользовательского элемента отчета](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
-

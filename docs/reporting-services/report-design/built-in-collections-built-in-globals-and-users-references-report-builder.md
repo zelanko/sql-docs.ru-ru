@@ -1,5 +1,5 @@
 ---
-title: "Встроенные глобальные значения и ссылки на пользователей (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Встроенные глобальные значения и ссылки на пользовательские поля (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: db369d1d9cd1e8767da8dc25a2a2487f138044d5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Встроенные коллекции - встроенные глобальные значения и ссылки на (построитель отчетов)
+# <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Встроенные коллекции — глобальные значения и ссылки на пользовательские поля (построитель отчетов)
   Коллекция "Встроенные поля", включающая как коллекцию **Глобальные переменные** , так и коллекцию **Пользователь** , представляет глобальные значения, предоставленные службами Reporting Services при обработке отчета. Коллекция **Globals** предоставляет такие значения, как имя отчета, время начала обработки отчета и текущее количество страниц для верхнего или нижнего колонтитула отчета. Коллекция **User** предоставляет идентификатор пользователя и параметры языка. Эти значения можно использовать в выражениях для фильтрации результатов отчета.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>Использование коллекции Globals  
- Коллекция **Globals** содержит глобальные переменные отчета. В области конструктора эти переменные появляются с префиксом с & (амперсанд), например, `[&ReportName]`. Следующая таблица описывает элементы коллекции **Globals** .  
+ Коллекция **Globals** содержит глобальные переменные отчета. В области конструктора эти переменные отображаются с префиксом & (амперсандом), например `[&ReportName]`. Следующая таблица описывает элементы коллекции **Globals** .  
   
 |**Член**|**Тип**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>Использование коллекции User  
- Коллекция **User** содержит данные о пользователе, выполняющем отчет. Эту коллекцию можно использовать для фильтрации данных, появляющихся в отчете; например, можно отобразить только данные текущего пользователя или отобразить идентификатор пользователя, к примеру, в заголовке отчета. В области конструктора эти переменные появляются с префиксом с & (амперсанд), например, `[&UserID]`.  
+ Коллекция **User** содержит данные о пользователе, выполняющем отчет. Эту коллекцию можно использовать для фильтрации данных, появляющихся в отчете; например, можно отобразить только данные текущего пользователя или отобразить идентификатор пользователя, к примеру, в заголовке отчета. В области конструктора эти переменные отображаются с префиксом & (амперсандом), например `[&UserID]`.  
   
  Следующая таблица описывает элементы коллекции **User** .  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Диалоговое окно «Выражение» &#40; Построитель отчетов &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [Типы данных в выражениях &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Форматирование чисел и дат &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Диалоговое окно "Выражение" (построитель отчетов)](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

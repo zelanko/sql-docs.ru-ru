@@ -1,7 +1,6 @@
 ---
-title: "Поддержка браузера для служб Reporting Services и Power View | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Поддержка браузера для служб Reporting Services и Power View | Документы Майкрософт"
+ms.custom: SQL2016_New_Updated
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -21,30 +20,29 @@ helpviewer_keywords:
 - components [Reporting Services], browsers
 - Web browsers [Reporting Services]
 ms.assetid: 48a75bbb-0029-4c43-891d-dc8f4fc0ebe1
-caps.latest.revision: 121
+caps.latest.revision: "121"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f6dcf1d4b0423517113345f9ed6532fb6baf07e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="browser-support-for-reporting-services-and-power-view"></a>Поддержка браузера для служб Reporting Services и Power View
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Дополнительные сведения о обозревателя для версии поддерживаются управление и Просмотр SQL Server Reporting Services, элементы управления ReportViewer и Power View.
+Узнайте, какие версии браузера поддерживаются для просмотра служб SQL Server Reporting Services, элементов управления ReportViewer и Power View и управления ими.
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
-## <a name="browser-requirements-for-the-web-portal"></a>Требования к браузеру для веб-портала
+## <a name="browser-requirements-for-the-web-portal"></a>Требования веб-портала к браузеру
 
-Ниже приведен текущий список браузеров, поддерживаемых веб-портала.
+Далее приведен текущий список поддерживаемых браузеров для веб-портала.
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -155,12 +153,11 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Поиск и просмотр отчетов в веб-портале](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+[Поиск и просмотр отчетов на веб-портале](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Инструментальные средства служб Reporting Services](../reporting-services/tools/reporting-services-tools.md)  
 [Веб-портал (основной режим служб SSRS)](http://msdn.microsoft.com/en-us/7349e626-6ed5-4d21-b05f-cf042ad9ad70)  
 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)  
 [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
 

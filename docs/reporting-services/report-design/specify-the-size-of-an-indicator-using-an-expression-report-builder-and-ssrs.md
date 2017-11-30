@@ -1,5 +1,5 @@
 ---
-title: "Указание размера индикатора с помощью выражения (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Указание размера индикатора с помощью выражения (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 50bf03c9ad36de5e98451705aaae5c0afa79c70b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: eecb47d77b7e8b484071ea33e5111b0326f6fed2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>Указание размера индикатора с помощью выражения (построитель отчетов и службы SSRS)
   Помимо цвета, направления и формы, для изменения визуального представления индикатора можно использовать его размер.  
@@ -70,4 +69,3 @@ ms.lasthandoff: 08/09/2017
  [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

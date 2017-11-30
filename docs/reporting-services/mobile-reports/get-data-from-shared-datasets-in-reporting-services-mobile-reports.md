@@ -1,32 +1,29 @@
 ---
-title: "Получение данных из общих наборов данных в мобильных отчетов Reporting Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Получение данных из общих наборов данных в мобильных отчетах служб Reporting Services | Документы Майкрософт"
+ms.custom: SQL2016_New_Updated
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0b846451-c8d0-412c-802d-a42bb1ff8c63
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f021de7ca981504a180b555b338e056342eafcf4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="get-data-from-shared-datasets-in-reporting-services-mobile-reports"></a>Get data from shared datasets in Reporting Services mobile reports
-Помимо [загрузка данных из файлов Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), SQL Server Mobile Report Publisher можно также доступ к данным практически из любого источника. Доступ к данным требуется общий источник данных, настроенный на веб-портал служб Reporting Services. Узнайте больше о [создании общих источников данных](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) и [создании общих наборов данных](../../reporting-services/report-data/manage-shared-datasets.md).  
+Помимо [загрузки данных из файлов Excel](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md), издатель мобильных отчетов для SQL Server также может получать доступ к данным практически из любого источника. Для доступа к данным требуется общий источник данных, настроенный на веб-портале служб Reporting Services. Узнайте больше о [создании общих источников данных](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) и [создании общих наборов данных](../../reporting-services/report-data/manage-shared-datasets.md).  
   
-После общие источники данных и общие наборы данных настроены на сервере служб отчетов, их можно использовать в мобильных отчетах, создаваемых в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].   
+После того как общие источники данных и общие наборы данных настроены на сервере служб Reporting Services, вы можете использовать их в мобильных отчетах, создаваемых в [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)].   
   
 После того, как установлено подключение к серверу [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] из [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)], соединение мобильного отчета с общим набором данных является простым процессом.   
   
@@ -36,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Если это первое подключение к серверу, введите имя сервера, а также свое имя и пароль. Укажите имя сервера в поле "Адрес сервера" в следующем формате:  
   
-    \<«имя_сервера» > /reports/  
+    \<"имя_сервера">/reports/  
   
     В данном примере:  
        
@@ -67,12 +64,11 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="see-also"></a>См. также:  
 - [Создание и публикация мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [Веб-портал (основной режим служб SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
+-  [Веб-портал (собственный режим служб SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPad](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI для iOS).  
 -  См. статью [Просмотр мобильных отчетов SQL Server и ключевых показателей эффективности в приложении для iPhone](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI для iOS).  
   
   
   
   
-
 

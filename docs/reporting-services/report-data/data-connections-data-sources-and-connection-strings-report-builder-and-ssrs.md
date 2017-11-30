@@ -1,5 +1,5 @@
 ---
-title: "Подключения к данным, источники данных, построитель отчетов строки соединения-SSRS | Документы Microsoft"
+title: "Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
@@ -14,12 +14,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: a0930e4f060379be894870fe6ac22b85cd225283
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: da4de81a8839049df0b5005a7d38f21e166ce3d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)
 
@@ -27,7 +26,7 @@ ms.lasthandoff: 09/21/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-  Для включения данных в отчет с разбиением на страницы [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] или  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] прежде всего следует создать *источники данных* и *наборы данных*. Данная тема объясняет типы источников данных, как создать источники данных и предоставляет важную информацию, относящуюся к учетным данным источника данных. Источник данных включает в себя тип источника данных, информацию о подключении и используемый тип учетных данных. Существует два типа источников данных отчета: внедренные и общие. Внедренный источник данных определяется в отчете и используется только этим отчетом. Общий источник данных определяется независимо от отчета и может использоваться несколькими отчетами. Дополнительные сведения см. в разделе [внедренные и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
+  Для включения данных в отчет с разбиением на страницы [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] или  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] прежде всего следует создать *источники данных* и *наборы данных*. Данная тема объясняет типы источников данных, как создать источники данных и предоставляет важную информацию, относящуюся к учетным данным источника данных. Источник данных включает в себя тип источника данных, информацию о подключении и используемый тип учетных данных. Существует два типа источников данных отчета: внедренные и общие. Внедренный источник данных определяется в отчете и используется только этим отчетом. Общий источник данных определяется независимо от отчета и может использоваться несколькими отчетами. Дополнительные сведения см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
 
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
@@ -51,16 +50,16 @@ ms.lasthandoff: 09/21/2017
   
 |Description|Внедренный<br /><br /> Источник данных|Shared<br /><br /> Источник данных|  
 |-----------------|------------------------------|----------------------------|  
-|Подключение к данным внедрено в определение отчета.|![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")||  
-|Указатель на подключение к данным на сервере ответов внедрен в определение отчета.||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")|  
-|Управляется на сервере отчетов|![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")|![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")|  
-|Необходим для общих наборов данных||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")|  
-|Необходим для компонентов||![Доступные](../../reporting-services/report-data/media/greencheck.gif "доступен")|  
+|Подключение к данным внедрено в определение отчета.|![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")||  
+|Указатель на подключение к данным на сервере ответов внедрен в определение отчета.||![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")|  
+|Управляется на сервере отчетов|![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")|![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")|  
+|Необходим для общих наборов данных||![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")|  
+|Необходим для компонентов||![Доступно](../../reporting-services/report-data/media/greencheck.gif "Доступно")|  
   
 ##  <a name="bkmk_DataConnections"></a> Встроенные модули обработки данных  
  Модули обработки данных по умолчанию [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают в себя следующие типы подключений к данным:  
   
--   База данных SQL Microsoft SQL Server и Microsoft Azure
+-   Microsoft SQL Server и База данных SQL Microsoft Azure
   
 -   Службы Microsoft SQL Server Analysis Services  
   
@@ -114,19 +113,19 @@ ms.lasthandoff: 09/21/2017
 |База данных SQL Server на локальном сервере|`data source="(local)";initial catalog=AdventureWorks`|Задайте тип источника данных **Microsoft SQL Server**. Дополнительные сведения см. в разделе [Тип соединения SQL Server (службы SSRS)](../../reporting-services/report-data/sql-server-connection-type-ssrs.md).|  
 |Экземпляр SQL Server<br /><br /> базой данных|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|Задайте тип источника данных **Microsoft SQL Server**.|  
 |База данных SQL Server Express|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|Задайте тип источника данных **Microsoft SQL Server**.|  
-|База данных SQL Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Задайте тип источника данных **базы данных SQL Microsoft Azure**. Дополнительные сведения см. в разделе [Тип соединения SQL Azure (службы SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
+|База данных SQL Azure|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|Задайте тип источника данных **База данных SQL Microsoft Azure**. Дополнительные сведения см. в разделе [Тип соединения SQL Azure (службы SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).|  
 |Параллельное хранилище данных SQL Server|`HOST=<IP address>;database= AdventureWorks; port=<port>`|Задайте тип источника данных **Microsoft SQL Server Parallel Data Warehouse**. Дополнительные сведения см. в разделе [Тип соединения с параллельным хранилищем данных SQL Server (службы SSRS)](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md).|  
-|База данных служб Analysis Services на локальном сервере|`data source=localhost;initial catalog=Adventure Works DW`|Задайте тип источника данных **Microsoft SQL Server Analysis Services**. Дополнительные сведения см. в разделе [тип соединения служб Analysis Services для многомерных Выражений &#40; Службы SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) или [тип соединения служб аналитики для расширений интеллектуального анализа данных &#40; Службы SSRS &#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
+|База данных служб Analysis Services на локальном сервере|`data source=localhost;initial catalog=Adventure Works DW`|Задайте тип источника данных **Microsoft SQL Server Analysis Services**. Дополнительные сведения см. в разделе [Тип соединения служб Analysis Services для многомерных выражений (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) или [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Табличный шаблон базы данных служб Analysis Services с торговым представителем|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|Задайте тип источника данных **Microsoft SQL Server Analysis Services**. Укажите имя перспективы в параметре cube=. Дополнительные сведения см. в разделе [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md).|  
-|Источник данных — модель отчета на сервере отчетов, сконфигурированном в собственном режиме|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Укажите URL-адрес сервера отчетов или библиотеки документов, а также путь к опубликованной модели в пространстве имен папки сервера отчетов или папки библиотеки документов. Дополнительные сведения см. в разделе [соединение с моделью отчета &#40; Службы SSRS &#41; ](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
+|Источник данных — модель отчета на сервере отчетов, сконфигурированном в собственном режиме|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Укажите URL-адрес сервера отчетов или библиотеки документов, а также путь к опубликованной модели в пространстве имен папки сервера отчетов или папки библиотеки документов. Дополнительные сведения см. в разделе [Соединение с моделью отчета (службы SSRS)](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
 |Источник данных — модель отчета на сервере отчетов, сконфигурированном в режиме интеграции с SharePoint|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Укажите URL-адрес сервера отчетов или библиотеки документов, а также путь к опубликованной модели в пространстве имен папки сервера отчетов или папки библиотеки документов.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Сервер служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2000|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Задайте тип источника данных **Поставщик OLE DB для служб OLAP 8.0**.<br /><br /> Задав для свойства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ConnectTo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] значение **8.0** , можно добиться более быстрого соединения с источниками данных служб **2000**. Чтобы установить это свойство, воспользуйтесь диалоговым окном **Свойства соединения** на вкладке **Дополнительные свойства** .|  
 |Сервер Oracle|`data source=myserver`|Задайте тип источника данных **Oracle**. Клиентские средства Oracle должны быть установлены на том компьютере, где работает конструктор отчетов, и на сервере отчетов. Дополнительные сведения см. в разделе [Тип соединения Oracle (службы SSRS)](../../reporting-services/report-data/oracle-connection-type-ssrs.md).|  
 |Источник данных SAP NetWeaver BI|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Задайте тип источника данных **SAP NetWeaver BI**. Дополнительные сведения см. в разделе [Тип соединения SAP NetWeaver BI (службы SSRS)](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md).|  
 |Источник данных Hyperion Essbase|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Задайте тип источника данных **Hyperion Essbase**. Дополнительные сведения см. в разделе [Тип соединения Hyperion Essbase (службы SSRS)](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md).|  
-|Источник данных типа Teradata|`data source=`\<NNN >. \<NNN >. \<NNN >. \<NNN >`;`|Задайте тип источника данных **Teradata**. Строка подключения представляет собой IP-адрес в виде четырех полей, каждое из которых содержит от одного до трех числовых разрядов. Дополнительные сведения см. в разделе [тип соединения Teradata &#40; Службы SSRS &#41; ](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
-|Источник данных типа Teradata|`Database=`*\<database name>* `; data source=` *\<NN*N*>.\< NNN >. \<NNN>. \<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Установите для источника данных тип **Teradata**аналогично предыдущему примеру. Используйте только базу данных по умолчанию, указанную в теге Database, и не выполняйте автоматическое обнаружение связей данных.|  
-|Источник XML-данных, веб-служба|`data source=http://adventure-works.com/results.aspx`|Задайте тип источника данных **XML**. Строка подключения является URL-адресом веб-службы, поддерживающей язык определения веб-служб (язык WSDL). Дополнительные сведения см. в разделе [тип соединения XML &#40; Службы SSRS &#41; ](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
+|Источник данных типа Teradata|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Задайте тип источника данных **Teradata**. Строка подключения представляет собой IP-адрес в виде четырех полей, каждое из которых содержит от одного до трех числовых разрядов. Дополнительные сведения см. в разделе [Тип соединения Teradata (службы SSRS)](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
+|Источник данных типа Teradata|`Database=` *\<имя базы данных>* `; data source=` *\<NN*N*>.\<NNN>.\<NNN>.\<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|Установите для источника данных тип **Teradata**аналогично предыдущему примеру. Используйте только базу данных по умолчанию, указанную в теге Database, и не выполняйте автоматическое обнаружение связей данных.|  
+|Источник XML-данных, веб-служба|`data source=http://adventure-works.com/results.aspx`|Задайте тип источника данных **XML**. Строка подключения является URL-адресом веб-службы, поддерживающей язык определения веб-служб (язык WSDL). Дополнительные сведения см. в разделе [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |Источник XML-данных, XML-документ|`http://localhost/XML/Customers.xml`|Задайте тип источника данных **XML**. Строкой соединения является URL-адрес XML-документа.|  
 |Источник XML-данных, внедренный XML-документ|*Пустой*|Задайте тип источника данных **XML**. XML-данные внедрены в определение отчета.|  
 |SharePoint|`data source=http://MySharePointWeb/MySharePointSite/`|Задайте в качестве типа источника данных **Список SharePoint**.|  
@@ -165,8 +164,7 @@ ms.lasthandoff: 09/21/2017
 
 [Создание, изменение и удаление общих источников данных](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
 [Создание и изменение внедренных источников данных](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
-[Задание свойства развертывания](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Определение свойств развертывания](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [Определение учетных данных и сведениях о подключении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

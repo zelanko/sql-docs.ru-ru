@@ -1,5 +1,5 @@
 ---
-title: "Метод DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting) | Документы Microsoft"
+title: "Метод DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: DeleteEncryptedInformation (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DeleteEncryptedInformation method
+helpviewer_keywords: DeleteEncryptedInformation method
 ms.assetid: c14ed187-bdd9-4304-88e3-72072f03c21b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 88991ec2c7787264253df79626b7df1f9edece45
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 09025d87ac3684fa6cbd7bdf36c24bfaa74b307a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---deleteencryptedinformation"></a>Метод ConfigurationSetting - DeleteEncryptedInformation
+# <a name="configurationsetting-method---deleteencryptedinformation"></a>Метод ConfigurationSetting — DeleteEncryptedInformation
   Удаляет зашифрованные данные из базы данных сервера отчетов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -69,8 +65,7 @@ public void DeleteEncryptedInformation(out Int32 HRESULT, out string[] ExtendedE
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

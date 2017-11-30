@@ -1,5 +1,5 @@
 ---
-title: "Изменить значение по умолчанию модуль доставки служб Reporting | Документы Microsoft"
+title: "Изменение модуля доставки отчетов Reporting Services по умолчанию | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Report Manager [Reporting Services], default delivery extension
+helpviewer_keywords: Report Manager [Reporting Services], default delivery extension
 ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f4eefd89797559f2ea8e6bfbb2b7c2a2b83b70e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e46c81c5c96bc3c71eef8a2ca48a89c177ca1700
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Изменение модуля доставки отчетов служб Reporting Services по умолчанию
   Вы можете изменить настройки конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , чтобы сменить модуль доставки по умолчанию, который отображается в списке **Доставлено** , на странице определения подписки. Например, можно изменить конфигурацию так, чтобы при создании пользователями новой подписки по умолчанию выбиралась доставка в общую папку, а не доставка по почте. Можно также изменить порядок модулей доставки в пользовательском интерфейсе.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="default-native-mode-report-server-configuration"></a>Настройка сервера отчетов в собственном режиме по умолчанию  
  Порядок, в котором модули доставки отображаются в списке **Доставлено** в диспетчере отчетов, основан на порядке записей модулей доставки в файле **RSReportServer.config** . Например, на следующем рисунке электронная почта находится вначале в списке, и она выбрана по умолчанию.  
   
- ![по умолчанию список модулей доставки](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "по умолчанию список модулей доставки")  
+ ![заданный по умолчанию список модулей доставки](../../reporting-services/subscriptions/media/ssrs-default-delivery.png "заданный по умолчанию список модулей доставки")  
   
  Ниже приведен раздел **RSReportServer.config** по умолчанию, управляющий модулем доставки по умолчанию и порядком отображения модулей в диспетчере отчетов. Обратите внимание, что электронная почта отображается в файле первой и выбрана как параметр по умолчанию.  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 08/09/2017
   
      Откройте файл RSReportServer.config в текстовом редакторе. Дополнительные сведения о файле конфигурации см. в разделе [RsReportServer.config Configuration File](../../reporting-services/report-server/rsreportserver-config-configuration-file.md). После изменения конфигурации пользовательский интерфейс будет выглядеть как на следующем рисунке:  
   
-     ![изменен список модулей доставки](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "изменил список модулей доставки")  
+     ![измененный список модулей доставки](../../reporting-services/subscriptions/media/ssrs-modified-delivery.png "измененный список модулей доставки")  
   
 2.  Измените раздел DeliveryUI, как в следующем примере, и обратите внимание на основные изменения.  
   
@@ -121,8 +119,7 @@ ms.lasthandoff: 08/09/2017
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Доставка отчетов в общие папки с помощью служб Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   
- [Работы с электронной почтой в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
+ [Доставка по электронной почте в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Настройка сервера отчетов для работы с электронной почтой (диспетчер конфигурации служб Reporting Services)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)  
   
   
-

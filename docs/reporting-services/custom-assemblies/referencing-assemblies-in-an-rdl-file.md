@@ -1,5 +1,5 @@
 ---
-title: "Ссылки на сборки в RDL-файле | Документы Microsoft"
+title: "Ссылки на сборки в RDL-файле | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - RDL [Reporting Services], referencing assemblies
 - referencing custom assemblies
@@ -19,21 +18,21 @@ helpviewer_keywords:
 - Report Definition Language, referencing assemblies
 - report definition files [Reporting Services]
 ms.assetid: 9a48e552-7d47-4243-9be1-894990c506d9
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: fb34fd3f73b8b7451d52c9794697e4a6c3f8b82e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 9fd80c818f13972434b72a72ce306e2f494cf56f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="referencing-assemblies-in-an-rdl-file"></a>Ссылки на сборки в RDL-файле
-  Поддерживает использование сборки с пользовательским кодом в файлах определения отчета, два элемента языка определения отчетов (RDL), включенных в спецификацию языка: **CodeModules** элемент и **классы** элемента.  
+  Для поддержки использования сборок с пользовательским кодом в файлах определения отчета в спецификацию языка определения отчетов были включены два элемента: **CodeModules** и **Classes**.  
   
- **CodeModules** элемент позволяет ссылаться на сборки управляемого кода в выражениях отчета. **CodeModules** — это элемент верхнего уровня, который содержит ссылку на сборку, использовать в файлах определения отчета для вызова специализированных функций. Запись в определении отчета, поддерживающая использование пользовательской сборки, может выглядеть следующим образом:  
+ Элемент **CodeModules** позволяет ссылаться на сборки с управляемым кодом в выражениях отчета. Элемент высокого уровня **CodeModules** содержит ссылку на сборку, используемую в файлах определения отчета для вызова специализированных функций. Запись в определении отчета, поддерживающая использование пользовательской сборки, может выглядеть следующим образом:  
   
 ```  
 <CodeModules>  
@@ -41,9 +40,9 @@ ms.lasthandoff: 08/12/2017
 </CodeModules>  
 ```  
   
- Вместо вызова метода <xref:System.Reflection.Assembly.Load%2A> в пользовательском коде зарегистрировать пользовательские сборки, либо вручную, добавив **CodeModule** элементов в RDL-файл или с помощью **ссылки** вкладке **свойства отчета** диалогового окна. Дополнительные сведения см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Вместо вызова метода <xref:System.Reflection.Assembly.Load%2A> в пользовательском коде пользовательские сборки можно зарегистрировать либо вручную, добавив элементы **CodeModule** в RDL-файл, либо использовав вкладку **Ссылки** в диалоговом окне **Свойства отчета**. Дополнительные сведения см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- **Классы** элемент поддерживает использование членов экземпляров в определении отчета. **Классы** — это элемент верхнего уровня, который содержит ссылку на имя класса и имя экземпляра. Запись в определении отчета, поддерживающая использование членов экземпляров может выглядеть следующим образом:  
+ Элемент **Classes** поддерживает использование членов экземпляров в определении отчета. **Classes** — это высокоуровневый элемент, содержащий ссылку на имя класса и имя экземпляра. Запись в определении отчета, поддерживающая использование членов экземпляров может выглядеть следующим образом:  
   
 ```  
 <Classes>  
@@ -54,7 +53,7 @@ ms.lasthandoff: 08/12/2017
 </Classes>  
 ```  
   
- Дополнительные сведения см. в разделе [доступ к Custom Assemblies Through Expressions](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
+ Дополнительные сведения о доступе к коду см. в разделе [Доступ к пользовательским сборкам посредством выражений](../../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Использование пользовательских сборок с отчетами](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  

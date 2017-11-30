@@ -1,5 +1,5 @@
 ---
-title: "Методы журнала отчета | Документы Microsoft"
+title: "Методы журнала отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - report history [Reporting Services], methods
 - historical data [Reporting Services]
 - methods [Reporting Services], report history
 ms.assetid: ebfb4834-5445-480c-9a51-6868c60308af
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: f7dc9b4a2dcda53da58431ccf9746b4986b61738
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: c8259dc3f456729ff58ce9e0ff980c84098f7e26
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-history-methods"></a>Методы журнала отчета
   Эти методы позволяют создавать моментальные снимки журнала элементов и управлять ими.  
@@ -44,9 +42,8 @@ ms.lasthandoff: 08/12/2017
   
 ## <a name="see-also"></a>См. также:  
  [Создание приложений с помощью веб-службы и .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
- [Веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Методы веб-службы для сервера отчетов](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
- [Технический справочник по &#40; Службы SSRS &#41;](../../../reporting-services/technical-reference-ssrs.md)  
+ [Веб-служба сервера отчетов](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
+ [Методы веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   
+ [Технический справочник (службы SSRS)](../../../reporting-services/technical-reference-ssrs.md)  
   
   
-

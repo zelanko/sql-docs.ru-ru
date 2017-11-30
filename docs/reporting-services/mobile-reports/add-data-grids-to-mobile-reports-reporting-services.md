@@ -1,26 +1,24 @@
 ---
-title: "Добавлять таблицы данных для мобильных отчетов | Службы Reporting Services | Документы Microsoft"
+title: "Добавление сеток данных в мобильные отчеты | Службы Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c51169b12265eea7e6d57e0daa7539322e338851
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6ec3aeacbac833427f6aba9042345c7abe3d355b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Добавление сеток данных в мобильные отчеты | Службы Reporting Services
 Иногда лучшая визуализация — это сами данные. Рассмотрим три вида *сеток данных*(или таблиц) для отображения данных в [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:
@@ -90,4 +88,3 @@ ms.lasthandoff: 08/09/2017
 * [Gauges in Reporting Services mobile reports (Датчики в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-gauges-to-mobile-reports-reporting-services.md)  
  
   
-

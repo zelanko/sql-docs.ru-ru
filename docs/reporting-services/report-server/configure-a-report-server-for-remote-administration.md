@@ -1,5 +1,5 @@
 ---
-title: "Настройка сервера отчетов для удаленного администрирования | Документы Microsoft"
+title: "Настройка сервера отчетов для удаленного администрирования | Документы Майкрософт"
 ms.date: 09/14/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 9c2bf31935e821aff995fead3f8aa0478114424e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>настроить сервер отчетов для удаленного администрирования
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]экземпляры сервера отчетов можно настраивать локально или удаленно. Чтобы настроить удаленный экземпляр сервера отчетов, можно использовать программу настройки служб Reporting Services. Также можно написать пользовательский код, который будет использовать поставщик инструментария управления Windows (WMI) служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Программа настройки служб Reporting Services предоставляет графический интерфейс поставщика WMI, поэтому такая настройка сервера отчетов не требует написания кода. При запуске программы можно указать, к какому удаленному серверу необходимо подключаться.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
   
 9. Введите имя учетной записи пользователя и нажмите кнопку **ОК**.  
   
-10. В **разрешения для \<пользователь или группа >**в **Разрешить** выберите **удаленный запуск** и **Удаленная активация**и нажмите кнопку **ОК**.  
+10. В разделе **Разрешения для \<пользователь или группа>** в столбце **Разрешить** выберите **Удаленный запуск** и **Удаленная активация**, а затем нажмите кнопку **OК**.  
   
 ### <a name="to-set-permissions-on-the-report-server-wmi-namespace-for-non-administrators"></a>Настройка разрешений пространства имен WMI сервера отчетов для пользователей, не обладающих правами администратора  
   
@@ -145,7 +145,6 @@ ms.lasthandoff: 08/09/2017
 13. В столбце **Разрешить** установите флажки **Включить учетную запись**, **Включить удаленно**и **Прочесть безопасность**, затем нажмите кнопку **ОК**.  
   
 ## <a name="see-also"></a>См. также  
- [Службы Reporting Services Configuration Manager &#40; Основной режим &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
-

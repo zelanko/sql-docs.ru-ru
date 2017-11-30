@@ -1,5 +1,5 @@
 ---
-title: "Метод ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting) | Документы Microsoft"
+title: "Метод ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- ReencryptSecureInformation method
+helpviewer_keywords: ReencryptSecureInformation method
 ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e7b57564600c568095ec999cf1db805437f8e630
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5b24878393154d0ba16d552a7fc09b9aece11bf3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---reencryptsecureinformation"></a>Метод ConfigurationSetting - ReencryptSecureInformation
+# <a name="configurationsetting-method---reencryptsecureinformation"></a>Метод ConfigurationSetting — ReencryptSecureInformation
   Создает новый ключ шифрования и повторно зашифровывает с его помощью всю защищенную информацию в каталоге.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -65,8 +61,7 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

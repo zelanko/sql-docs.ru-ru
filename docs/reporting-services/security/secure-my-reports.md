@@ -1,5 +1,5 @@
 ---
-title: "Защита «Мои отчеты» | Документы Microsoft"
+title: "Защита папки \"Мои отчеты\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,30 +17,29 @@ helpviewer_keywords:
 - security [Reporting Services], My Reports folder
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 162f43fc4f81c228d90839c75d1959d71eff9322
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8c612e899a4ec7be7879d16f03f2a9528addb316
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-my-reports"></a>Обеспечение безопасности «Моих отчетов»
   В компоненте «Мои отчеты» представлено управляемое пользователем рабочее пространство для работы с отчетами. Чтобы обеспечить соответствие своему назначению, для папки «Мои отчеты» требуются более широкие права доступа, чем для других папок, доступных для общего пользования. Пользователям, имеющим разрешения в других папках только на просмотр и запуск отчетов, могут потребоваться дополнительные разрешения для управления их папками My Reports и содержимым, которое им принадлежит. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет для этого специальный механизм назначения и определения ролей.  
   
 > [!NOTE]  
->  Доступ к папке «Мои отчеты» возможен только в диспетчере отчетов. Она недоступна в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+>  Доступ к папке «Мои отчеты» возможен только в диспетчере отчетов. Она недоступна в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## <a name="role-assignment-for-my-reports"></a>Назначение роли для папки «Мои отчеты»  
  Назначение роли для папки «Мои отчеты» имеет стандартные элементы и создается автоматически для каждого пользователя, активирующего папку «Мои отчеты». Для организаций, широко использующих папку «Мои отчеты», особенно удобно иметь автоматически назначаемую защиту сервера отчетов, так как администраторы не обязаны разрешать доступ каждому пользователю папкой «Мои отчеты».  
   
  Назначение роли папки **Мои отчеты** включает следующие элементы:  
   
--   Пользователя «Мои отчеты», который находится в папках пользователей\\*\<имя пользователя >*\My папку «отчеты».  
+-   пользовательская папка "Мои отчеты", находящаяся в папке "Папки пользователей\\*\<имя_пользователя>*\Мои отчеты";  
   
 -   учетная запись пользователя, определяемая при активации папки «Мои отчеты». Папка активируется при щелчке пользователем папки «Мои отчеты» в диспетчере отчетов или при публикации отчета в папке «Мои отчеты» из конструктора отчетов. Эта папка также активируется при запросе пользователем свойств по ссылке «Мои отчеты»;  
   
@@ -62,8 +61,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md)   
- [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md)   
+ [Защита папок](../../reporting-services/security/secure-folders.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-

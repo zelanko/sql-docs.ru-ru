@@ -1,5 +1,5 @@
 ---
-title: "Реализация класса Connection для модуля обработки данных | Документы Microsoft"
+title: "Реализация класса Connection для модуля обработки данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,56 +10,53 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - connections [Reporting Services], data processing extensions
 - Connection class
 - data processing extensions [Reporting Services], connections
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 19f059c0041cc9effc48e0db9c4b5ef1a504d020
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: d4089db694ff8639b44819625c3fa54a04588195
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="implementing-a-connection-class-for-a-data-processing-extension"></a>Реализация класса Connection для модуля обработки данных
-  **Подключения** представляет подключение к базе данных или аналогичному ресурсу и является отправной точкой для пользователей [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] модуль обработки данных. Он представляет подключения к серверам баз данных, но любая сущность с похожим поведением может быть предоставлен как **соединения**.  
+  Объект **Connection** представляет подключение к базе данных или аналогичному ресурсу. Он является начальной точкой для пользователей модуля обработки данных служб [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Он представляет собой соединения с серверами баз данных, хотя, в принципе, любая сущность с похожим поведением может быть представлена как **Connection**.  
   
- Для реализации **подключения** объекта, можно создать класс, реализующий <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> и при необходимости реализует <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
+ Для реализации объекта **Connection** следует создать класс, реализующий интерфейс <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> и (необязательно) интерфейс <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>.  
   
  Перед выполнением команд в реализации следует убедиться, что соединение было создано и открыто. Следует убедиться, что реализация требует от клиентов явного открытия и закрытия соединений, а не выполняет данные операции самостоятельно. После установки соединения следует выполнить проверки безопасности. Настройка необходимости наличия установленного соединения в других классах модуля обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] поможет обеспечить обязательное выполнение проверок безопасности при работе с источником данных.  
   
  Свойства необходимого соединения представлены в виде строки соединения. Рекомендуется, чтобы в модулях обработки данных служб [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] поддержка свойства <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection.ConnectionString%2A> осуществлялась с использованием системы пар «имя-значение», определенной в OLE DB.  
   
 > [!NOTE]  
->  **Подключение** объектов часто требуется много ресурсов для получения, поэтому необходимо учитывать организации пула соединений или другие методы для решения этой проблемы.  
+>  Получение объектов **Connection** связано с затратами ресурсов; для компенсации рекомендуется использовать метод организации пула соединений или другие методики.  
   
  Интерфейс <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> наследуется от интерфейса <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension> следует реализовать в качестве части реализации класса соединения. Интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension> позволяет классу реализовать локализованное имя модуля и обрабатывать характерные для модуля сведения о конфигурации, хранимые в файле конфигурации служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
- Ваш **подключения** объект содержит <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A> свойства через его реализацию <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Рекомендуется обеспечить поддержку свойства <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A> и модуле обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Это позволит пользователям видеть знакомое локализованное имя модуля в пользовательском интерфейсе (например, в диспетчере отчетов).  
+ Объект **Connection** содержит свойство <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A> из-за реализации интерфейса <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Рекомендуется обеспечить поддержку свойства <xref:Microsoft.ReportingServices.Interfaces.IExtension.LocalizedName%2A> и модуле обработки данных служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Это позволит пользователям видеть знакомое локализованное имя модуля в пользовательском интерфейсе (например, в диспетчере отчетов).  
   
- <xref:Microsoft.ReportingServices.Interfaces.IExtension>также позволяет вашей **подключения** объекта для получения и обработки данных пользовательской конфигурации в файле RSReportServer.config. Дополнительные сведения об обработке данных пользовательской конфигурации см. в описании метода <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
+ Интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension> также позволяет объекту **Connection** получать и обрабатывать данные пользовательской конфигурации, хранимые в файле RSReportServer.config. Дополнительные сведения об обработке данных пользовательской конфигурации см. в описании метода <xref:Microsoft.ReportingServices.Interfaces.IExtension.SetConfiguration%2A>.  
   
- Класс, реализующий интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension>, не выгружается из памяти при выгрузке остальных классов модуля обработки данных. Таким образом, можно использовать ваш **расширения** для хранения сведений о нескольких соединений или для хранения данных, который может быть кэширован в памяти. Ваш **расширения** класс остается в памяти при условии, что сервер отчетов запущен.  
+ Класс, реализующий интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension>, не выгружается из памяти при выгрузке остальных классов модуля обработки данных. В связи с этим класс **Extension** можно использовать для хранения данных о состоянии, действительных для нескольких соединений, или для хранения данных, которые могут быть кэшированы в памяти. Класс **Extension** остается в памяти, пока запущен сервер отчетов.  
   
- Вы можете расширить вашей **подключения** класс для поддержки учетных данных в [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] путем реализации <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>. При реализации <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>, <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A>, и <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> свойства <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> включить интерфейс, **встроенной безопасности** флажок и **Username** и **пароль** текстовые поля **источника данных** диалоговое окно в конструкторе отчетов. Это позволяет конструктору отчетов сохранять и получать учетные данные для источников данных, поддерживающих проверку подлинности. Учетные данные хранятся в безопасном месте и используются при подготовке отчетов в режиме предварительного просмотра.  
+ Класс **Connection** можно расширить, добавив в службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] поддержку учетных данных, реализовав интерфейс <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension>. При реализации свойств <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.IntegratedSecurity%2A>, <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.UserName%2A> и <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension.Password%2A> интерфейса <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> в диалоговом окне **Источник данных** в конструкторе отчетов включается поле для флажка **Интегрированная безопасность** и текстовые поля **Имя пользователя** и **Пароль**. Это позволяет конструктору отчетов сохранять и получать учетные данные для источников данных, поддерживающих проверку подлинности. Учетные данные хранятся в безопасном месте и используются при подготовке отчетов в режиме предварительного просмотра.  
   
 > [!NOTE]  
 >  Для скрытой реализации интерфейса <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> необходимо реализовать члены интерфейсов <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> и <xref:Microsoft.ReportingServices.Interfaces.IExtension>.  
 >   
->  Образец **подключения** реализации класса см. в разделе [SQL Server Reporting Services Product Samples](http://go.microsoft.com/fwlink/?LinkId=177889).  
+>  Образец реализации класса **Connection** см. в разделе [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="see-also"></a>См. также:  
  [Модули служб Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Реализация модуля обработки данных](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Библиотека служб Reporting Services расширения](../../../reporting-services/extensions/reporting-services-extension-library.md)  
+ [Библиотека модулей Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
-

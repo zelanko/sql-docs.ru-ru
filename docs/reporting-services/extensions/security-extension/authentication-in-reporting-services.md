@@ -1,5 +1,5 @@
 ---
-title: "Проверка подлинности в службах Reporting Services | Документы Microsoft"
+title: "Проверка подлинности в службах Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - security [Reporting Services], authentication
 - forms-based authentication [Reporting Services]
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: a01267851f882bdafcfced0cee200ff3af01cdcf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 6926d7787a715ab9183763939ca78ed192d0e251
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authentication-in-reporting-services"></a>Проверка подлинности в службах Reporting Services
   Проверка подлинности — это процесс определения прав пользователя на удостоверение. Чтобы проверить подлинность, можно использовать много методов. Самым распространенным является использование паролей. Например, если разрабатывается проверка подлинности с помощью форм, необходима реализация, которая запрашивает у пользователей учетные данные (обычно с помощью интерфейса, который запрашивает имя и пароль), а затем проверяет пользователей по хранилищу данных, которым может быть таблица, база данных или файл конфигурации. Если не удается проверить учетные данные, то процесс проверки подлинности завершается неуспешно и для пользователя принимается анонимное удостоверение.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/12/2017
 ## <a name="custom-authentication-in-reporting-services"></a>Нестандартная проверка подлинности в службах Reporting Services  
  Операционная система Windows в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] выполняет проверку подлинности пользователей с помощью встроенной безопасности Windows или путем явного получения и проверки учетных данных пользователя. В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] можно разработать нестандартную проверку подлинности, чтобы обеспечить поддержку дополнительных схем проверки подлинности. Это возможно с помощью интерфейса модуля безопасности <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>. Все модули, развертываемые и используемые на сервере отчетов, наследуют базовый интерфейс <xref:Microsoft.ReportingServices.Interfaces.IExtension>. Интерфейсы <xref:Microsoft.ReportingServices.Interfaces.IExtension> и <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> входят в пространство имен <xref:Microsoft.ReportingServices.Interfaces>.  
   
- Основным способом проверки подлинности на сервере отчетов в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] служит метод <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Этот элемент веб-службы Reporting Services можно использовать для передачи учетных данных пользователя на сервер отчетов для проверки. Ваш базовый модуль безопасности реализует **IAuthenticationExtension2.LogonUser** которого содержит код нестандартной проверки подлинности. В образце проверки подлинности форм **LogonUser**, который выполняет проверку подлинности для предоставленных учетных данных и хранилищу пользователей в базе данных. Пример реализации **LogonUser** выглядит следующим образом:  
+ Основным способом проверки подлинности на сервере отчетов в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] служит метод <xref:ReportService2010.ReportingService2010.LogonUser%2A>. Этот элемент веб-службы Reporting Services можно использовать для передачи учетных данных пользователя на сервер отчетов для проверки. Пользовательский базовый модуль безопасности реализует метод **IAuthenticationExtension2.LogonUser**, который содержит код нестандартной проверки подлинности. В образце проверки подлинности с помощью форм метод **LogonUser** выполняет проверку подлинности по переданным учетным данным и хранилищу пользователей в базе данных. Пример реализации метода **LogonUser** имеет следующий вид:  
   
 ```  
 public bool LogonUser(string userName, string password, string authority)  
@@ -103,19 +102,19 @@ internal static bool VerifyPassword(string suppliedUserName,
 ```  
   
 ## <a name="authentication-flow"></a>Поток проверки подлинности  
- Служба веб-служб Reporting Services предоставляет нестандартные модули проверки подлинности для включения проверки подлинности форм с веб-портала и на сервере отчетов.  
+ Веб-служба Reporting Services предоставляет нестандартные модули проверки подлинности, позволяющие реализовать проверку подлинности с помощью форм на веб-портале и на сервере отчетов.  
   
  Метод <xref:ReportService2010.ReportingService2010.LogonUser%2A> веб-службы Reporting Services позволяет отправлять учетные данные на сервер отчетов для проверки подлинности. Веб-служба использует заголовки HTTP для передачи билета проверки подлинности (называемого куки-файлом) с сервера на клиент для проверяемых запросов входа в систему.  
   
  На следующем рисунке представлен метод проверки подлинности пользователей в веб-службе, где приложение развернуто на сервере отчетов, настроенном для использования нестандартного модуля проверки подлинности.  
   
- ![Поток проверки подлинности служб Reporting](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "поток проверки подлинности служб Reporting Services")  
+ ![Схема проверки подлинности служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Схема проверки подлинности служб Reporting Services")  
   
  На рис. 1 процесс проверки подлинности представлен следующим образом.  
   
 1.  Клиентское приложение вызывает метод <xref:ReportService2010.ReportingService2010.LogonUser%2A> веб-службы для проверки подлинности пользователя.  
   
-2.  Веб-служба вызывает метод <xref:ReportService2010.ReportingService2010.LogonUser%2A> метод расширения безопасности, в частности, класс, реализующий **IAuthenticationExtension2**.  
+2.  Веб-служба вызывает метод <xref:ReportService2010.ReportingService2010.LogonUser%2A> в модуле безопасности, а именно — в классе, где реализован интерфейс **IAuthenticationExtension2**.  
   
 3.  Реализация метода <xref:ReportService2010.ReportingService2010.LogonUser%2A> проверяет имя пользователя и пароль в хранилище пользователей или в центре безопасности.  
   

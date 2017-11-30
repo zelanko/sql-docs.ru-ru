@@ -1,5 +1,5 @@
 ---
-title: "Диспетчер предупреждений данных для администраторов предупреждений | Документы Microsoft"
+title: "Диспетчер предупреждений данных для оповещения администраторов | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - managing, alerts
 - managing, data alerts
 ms.assetid: 32fd968f-1c0c-4ba8-851c-8a3b5e1fbbf2
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9df65141967b8e9e0ab4e1f7115986b19674d341
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="data-alert-manager-for-alerting-administrators"></a>Диспетчер предупреждений данных для оповещения администраторов
 
@@ -32,12 +31,12 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
-SQL Server Reporting Services предоставляет диспетчер предупреждений данных для оповещения администраторов SharePoint управлять предупреждениями об изменении данных. Администраторы предупреждений могут просматривать сведения обо всех предупреждениях, сохраненных на сайте, и удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений SharePoint в диспетчере предупреждений об изменении данных.
+Службы SQL Server Reporting Services предоставляют диспетчер предупреждений об изменении данных, позволяющий администраторам предупреждений SharePoint управлять предупреждениями об изменении данных. Администраторы предупреждений могут просматривать сведения обо всех предупреждениях, сохраненных на сайте, и удалять предупреждения. На следующем рисунке показаны функции, предоставляемые администраторам предупреждений SharePoint в диспетчере предупреждений об изменении данных.
 
-![Диспетчер предупреждений для администраторов сайта SharePoint](../reporting-services/media/rs-alertmanagersite.gif "диспетчер предупреждений для администраторов сайта SharePoint")
+![Диспетчер предупреждений для администраторов сайта SharePoint](../reporting-services/media/rs-alertmanagersite.gif "Диспетчер предупреждений для администраторов сайта SharePoint")
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
  Если на веб-сайте включены предупреждения об изменении данных, то создаются две страницы SharePoint, MyDataAlerts.aspx и SiteDataAlerts.aspx и добавляются к сайту SharePoint. Страница SiteDataAlerts.aspx представляет собой диспетчер предупреждений об изменении данных для администраторов предупреждений. Администраторы предупреждений могут открывать диспетчер предупреждений об изменении данных со страницы «Настройки сайта» SharePoint. Администраторы предупреждений должны иметь разрешение на управление предупреждениями SharePoint для запуска диспетчера предупреждений об изменении данных.  
   
@@ -51,7 +50,7 @@ SQL Server Reporting Services предоставляет диспетчер пр
 ##  <a name="ViewingAlerts"></a> Просмотр сведений о предупреждениях об изменении данных  
  Если службы Reporting Services установлены и настроены в SharePoint, то на странице «Настройка сайта SharePoint» будут параметры **Службы Reporting Services** . Чтобы открыть диспетчер предупреждений об изменении данных, администратор предупреждений должен нажать кнопку **Управление предупреждениями об изменении данных** в службе Reporting Service. На следующем рисунке показано, как открыть диспетчер предупреждений об изменении данных со страницы «Настройки сайта».  
   
- ![Раздел «настройки сайта» служб Reporting](../reporting-services/media/rs-sitesettings.gif "раздел «настройки сайта» служб Reporting Services")  
+ ![Раздел служб Reporting Services на странице "Параметры сайта"](../reporting-services/media/rs-sitesettings.gif "Раздел служб Reporting Services на странице "Параметры сайта"")  
   
  Диспетчер предупреждений об изменении данных содержит таблицу, в которой перечисляются имя предупреждения, имя отчета, имя владельца отчета, сколько раз предупреждающее сообщение было отправлено, время последнего запуска предупреждения, время последнего изменения определения предупреждения, а также состояние сообщения с предупреждением. Если предупреждение не удалось создать или отправить, в столбце «Состояние» содержатся сведения об ошибке, которые помогают устранить проблему. Дополнительные сведения см. в статье [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
   
@@ -61,7 +60,7 @@ SQL Server Reporting Services предоставляет диспетчер пр
 |----------------|-----------------|----------------|-----------------|--------------|-------------------|------------|  
 |SalesQTR|SalesByTerritoryAndQTR|Лорен Джонсон|4|6/12/2011|6/1/2011|Последнее предупреждение выполнено успешно; предупреждение было отправлено.|  
 |UnitsSold|ProductsSalesByQTR|Michael Blythe|2|7/1/2011|6/28/2011|Последнее предупреждение выполнено успешно, но данные остались без изменения и предупреждение не было отправлено.|  
-|InventoryCount|StockStatusByQTR|Лорен Джонсон|7|7/10/2011|7/2/2011|\<сообщение об ошибке > файл журнала содержит подробные сведения об ошибке. Ссылается запись журнала с идентификатором: \<GUID >.|  
+|InventoryCount|StockStatusByQTR|Лорен Джонсон|7|7/10/2011|7/2/2011|\<сообщение об ошибке>Файл журнала содержит подробные сведения об ошибке. Ссылается на запись журнала с идентификатором \<GUID>.|  
 |TopPromotion|PromotionTracking|Cristian Petculescu|0||5/23/2011|Предупреждение создано.|  
   
  Дополнительные сведения см. в статье [Управление всеми предупреждениями данных на сайте SharePoint в диспетчере предупреждений данных](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md).  
@@ -86,5 +85,4 @@ SQL Server Reporting Services предоставляет диспетчер пр
 
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

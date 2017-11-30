@@ -1,5 +1,5 @@
 ---
-title: "Отображают те же данные в матрице и на диаграмме (построитель отчетов) | Документы Microsoft"
+title: "Отображение одних и тех же данных в матрице и на диаграмме (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1262f283-9fc2-4bc1-9c79-457f7642abc7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 41f3fa70514ca6c359bbbe01a228d52273406c6a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf125e2438d3d79662920c8fbc93faab8e8024d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-the-same-data-on-a-matrix-and-a-chart-report-builder"></a>Отображение одних и тех же данных в матрице и на диаграмме (построитель отчетов)
   Если нужно отобразить одинаковые данные в матрице и на диаграмме, необходимо установить свойства в обеих областях данных таким образом, чтобы они ссылались на один и тот же набор данных, а также на одни и те же выражения фильтров, групп, сортировки и данных.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  Чтобы использовать значения группы столбцов матрицы в качестве условных обозначений диаграммы, необходимо задать цвета для рядов данных диаграммы, а затем использовать те же цвета для заливки фона текстовых полей в ячейках матрицы, в которых отображаются эти значения группы. Дополнительные сведения см. в разделе [Указание согласованных цветов для нескольких фигурных диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md).  
   
- Во время выполнения отчет может выглядеть загроможденным, если в определениях групп имеется слишком много значений. Возможно, придется фильтровать значения, объединять группы или настраивать пороговые значения диаграммы для объединения групп. Дополнительные сведения см. в разделе [Linking Multiple Data Regions to the Same Dataset &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
+ Во время выполнения отчет может выглядеть загроможденным, если в определениях групп имеется слишком много значений. Возможно, придется фильтровать значения, объединять группы или настраивать пороговые значения диаграммы для объединения групп. Дополнительные сведения см. в разделе [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -101,9 +101,9 @@ ms.lasthandoff: 08/09/2017
 25. Просмотрите результаты. Группы строк и столбцов матрицы отображают те же данные, что и группы рядов и категорий диаграммы.  
   
 ## <a name="see-also"></a>См. также  
- [Связывание нескольких областей данных к тому же набору данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Добавление фильтров набора данных, фильтров области данных и фильтры групп &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

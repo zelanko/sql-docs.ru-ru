@@ -1,5 +1,5 @@
 ---
-title: "Пользовательский код и ссылок на сборки в выражениях в конструкторе (SSRS) отчетов | Документы Microsoft"
+title: "Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -20,17 +20,16 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-caps.latest.revision: 77
+caps.latest.revision: "77"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: d53894c807b9d9e80be441aa13fb442ea98f5819
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Пользовательский код и ссылок на сборки в выражениях в конструкторе отчетов (службы SSRS)
   Можно добавлять ссылки на пользовательский код, внедренный в отчет, или пользовательские сборки, построенные и сохраненные на компьютере и развернутые на сервере отчетов. Используйте внедренный код для пользовательских констант, сложных функций или функций, которые используются в одном отчете несколько раз. Сборки с пользовательским кодом используйте для сохранения кода в одном месте и его общего использования в нескольких отчетах. Пользовательский код может включать новые пользовательские константы, переменные, функции или подпрограммы. Можно включать ссылки, доступные только для чтения, во встроенные коллекции, например коллекцию Parameters. Однако эти наборы значений данных отчета невозможно передать пользовательским функциям (в частности, не поддерживаются пользовательские статистические вычисления).  
@@ -197,12 +196,11 @@ End Function
  Поскольку содержимое коллекций *Fields* и *ReportItems* может динамически изменяться во время выполнения, доступ к нему не следует производить посредством вызовов пользовательской сборки (например, в переменной члена). Та же самая рекомендация применяется обычно для всех встроенных коллекций.  
   
 ## <a name="see-also"></a>См. также  
- [Добавьте код в отчет &#40; Службы SSRS &#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [Добавление кода в отчет (службы SSRS)](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Использование пользовательских сборок с отчетами](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [Добавьте ссылку на сборку в отчет &#40; Службы SSRS &#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Службы Reporting Services Tutorials &#40; Службы SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Добавление в отчет ссылки на сборку (службы SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Учебники по службам Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Образцы отчетов (построитель отчетов и службы SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   
-

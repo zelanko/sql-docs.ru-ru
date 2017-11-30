@@ -1,5 +1,5 @@
 ---
-title: "Как: развертывание пользовательского элемента отчета | Документы Microsoft"
+title: "Развертывание пользовательского элемента отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
@@ -10,29 +10,26 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom report items, deploying
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom report items, deploying
 ms.assetid: 80e97b0d-e355-4240-aebd-08cbc84089ed
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 742e80b96e6887188620b4f2a7ab3808475ceda2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: fdb4225367a54cf9468536ba37b2ee4822aee969
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="how-to-deploy-a-custom-report-item"></a>Развертывание пользовательского элемента отчета
   Чтобы развернуть пользовательский элемент отчета в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], нужно изменить файлы конфигурации сервера отчетов и скопировать сборки времени разработки и времени выполнения в соответствующие папки приложений для конструктора отчетов и сервера отчетов.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>Развертывание пользовательского элемента отчета  
   
-1.  Произведите редактирование файла Rsreportdesigner.config, настроив компоненты времени разработки и компоненты времени выполнения, принадлежащие пользовательскому элементу отчета, для использования в конструкторе.  Обратите внимание, что **ReportItemName** запись должна соответствовать **CustomReportItemAttribute** атрибут, используемый в вашей **CustomReportItemDesigner** класса. Например:  
+1.  Произведите редактирование файла Rsreportdesigner.config, настроив компоненты времени разработки и компоненты времени выполнения, принадлежащие пользовательскому элементу отчета, для использования в конструкторе.  Обратите внимание на то, что запись **ReportItemName** должна соответствовать атрибуту **CustomReportItemAttribute**, используемому в классе **CustomReportItemDesigner**. Например:  
   
     ```  
     <ReportItems>  
@@ -54,7 +51,7 @@ ms.lasthandoff: 08/12/2017
     </ReportItems>  
     ```  
   
-3.  Отредактируйте файл Rsssrvpolicy.config, чтобы добавить **CodeGroup** , предоставляет разрешения, необходимые для пользовательского элемента отчета. Например:  
+3.  Отредактируйте файл Rsssrvpolicy.config, добавив запись **CodeGroup**, предоставляющую соответствующие разрешения для пользовательского элемента отчета. Например:  
   
     ```  
     <CodeGroup   
@@ -74,8 +71,7 @@ ms.lasthandoff: 08/12/2017
 5.  Скопируйте динамическую библиотеку компонента времени разработки пользовательского элемента отчета в каталог %ProgramFiles%\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 ## <a name="see-also"></a>См. также:  
- [Файлы конфигурации служб отчетов](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Библиотеки классов элемента пользовательского отчета](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
+ [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Библиотеки классов пользовательских элементов отчета](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
   
   
-

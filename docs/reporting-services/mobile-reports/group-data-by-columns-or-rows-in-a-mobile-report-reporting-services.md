@@ -1,25 +1,24 @@
 ---
-title: "Сгруппировать данные по столбцам или по строкам в мобильном отчете | Службы Reporting Services | Документы Microsoft"
+title: "Группирование данных в мобильном отчете по столбцам или строкам | Службы Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b9ebd36c-a337-47ae-83e5-6c2f2144eb52
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: de6eddf3b9338ac15f5036c2065df2f82f0c9bab
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1c1b584f5a88af5055ffac67932fd94a37734bfd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="group-data-by-columns-or-rows-in-a-mobile-report--reporting-services"></a>Группирование данных в мобильном отчете по столбцам или строкам | Службы Reporting Services
 Во многих типах диаграмм в [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]данные можно группировать по столбцам или строкам. Для этого выполните описанные ниже действия.
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 
    ![mobile-report-properties-columns](../../reporting-services/mobile-reports/media/mobile-report-properties-columns.png)
 
-   Аналогичным образом для **ряд для сравнения** -- **Comparison1** через **Comparison5** выбраны.
+   Для поля **Ряд сравнения** выбраны параметры **Сравнение1** -- **Сравнение5**.
    
 4. Выберите **Предварительный просмотр**.
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 
 6. На вкладке **Макет** в области **Свойства визуальных элементов** изменение значение **По столбцам** в поле **Структура данных** на значение **По строкам**.  
 
-7. Выберите вкладку **Данные** . Теперь в таблице SimulatedTable наряду со столбцами **Метрика** и **Сравнение** отображается столбец **Категория** , содержащий категории от А до E. 
+7. Выберите вкладку **Данные** . Теперь в таблице SimulatedTable наряду со столбцами **Метрика** и **Сравнение** отображается столбец **Категория**, содержащий категории от А до E. 
 
    ![mobile-report-data-group-rows](../../reporting-services/mobile-reports/media/mobile-report-data-group-rows.png)
 

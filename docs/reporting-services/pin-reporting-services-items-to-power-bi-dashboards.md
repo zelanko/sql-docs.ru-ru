@@ -1,13 +1,11 @@
 ---
-title: "Закрепление элементов служб Reporting Services на информационных панелях Power BI | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Закрепление элементов служб Reporting Services на информационных панелях Power BI | Документы Майкрософт"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/16/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +15,16 @@ helpviewer_keywords:
 - powerbi
 - power bi integration
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: dd135be2158839966a453cb1fef05aa05d9e56c8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Закрепление элементов служб Reporting Services на информационных панелях Power BI
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] позволяют пользователям закрепить элементы [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] из панели инструментов средства просмотра отчетов на информационной панели [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] в качестве новой плитки.   Для этого администратор должен сначала интегрировать сервер отчетов с Azure Active Directory и [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)].  
@@ -42,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
      ![ssRS_Report_PowerBI](../reporting-services/media/ssrs-report-powerbi.png)  
   
--   Закрепление с [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] средство просмотра отчетов в t[!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]он, например `http://myserver/Reports`.  Невозможно закрепить элемент из [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], из конструктора отчетов в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]или с URL-адреса сервера отчетов.  Например `http://myserver/ReportServer`.  
+-   Элемент закрепляется из средства просмотра отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], например `http://myserver/Reports`.  Невозможно закрепить элемент из [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)], из конструктора отчетов в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]или с URL-адреса сервера отчетов.  Например: `http://myserver/ReportServer`.  
   
 -   В браузере необходимо разрешить всплывающие окна на сайте сервера отчетов.  
   
@@ -81,7 +78,7 @@ ms.lasthandoff: 08/09/2017
   
 4. Выберите элемент отчета, чтобы закрепить его в [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Одновременно можно закрепить только один элемент.  Средство просмотра отчетов отображает затененное представление отчета. Элементы отчета, которые вы можете закрепить, будут выделены, а элементы, которые невозможно закрепить, будут затенены.  
   
-    **(1)** Выберите группу, содержащую панель мониторинга, на которой нужно закрепить элемент; **(2)** выберите панель мониторинга, на которой требуется закрепить элемент; и **(3)** выберите частоту обновления плитки на этой панели мониторинга.   ![Примечание](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "Примечание") обновления управляется [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] подписки и после закрепления элемента можно изменить подписку и настроить другое расписание обновления.  
+    **(1)** Выберите группу, содержащую панель мониторинга, на которой нужно закрепить элемент; **(2)** выберите панель мониторинга, на которой требуется закрепить элемент; и **(3)** выберите частоту обновления плитки на этой панели мониторинга.   ![примечание](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "примечание") Обновлением управляют подписки служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], а после закрепления элемента можно изменить подписку и настроить другое расписание обновления.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   
@@ -136,7 +133,7 @@ ms.lasthandoff: 08/09/2017
   
         PowerBI Delivery error: dashboard: SSRS items, visual: Image1, error: Error: Report item 'Image1' cannot be found.  
   
-     Кроме того, можно изменить свойства подписки и изменить **визуальное имя отчета** на соответствующее имя элемента отчета. ![Изменение визуальных используются для обновления бизнес-аналитики power](../reporting-services/media/ssrs-powerbi-subscription-visual.png "изменить визуальный элемент для обновления power bi")  
+     Кроме того, можно изменить свойства подписки и изменить **визуальное имя отчета** на соответствующее имя элемента отчета. ![изменение визуального элемента, используемого для обновления power bi](../reporting-services/media/ssrs-powerbi-subscription-visual.png "изменение визуального элемента, используемого для обновления power bi")  
   
 -   **Удаление плитки**. При удалении плитки в [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]связанная подписка не будет удалена в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и на странице **Мои подписки**и появится сообщение об ошибке следующего вида. Вы можете удалить подписку.  
   
@@ -153,5 +150,4 @@ ms.lasthandoff: 08/09/2017
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 

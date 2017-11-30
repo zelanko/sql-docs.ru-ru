@@ -1,5 +1,5 @@
 ---
-title: "Управление элементами отчета | Документы Microsoft"
+title: "Управление элементами отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41947b4c-8ecf-4e4f-b30e-66e1d6692b74
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="managing-report-parts"></a>Управление элементами отчета
   Элементы отчета могут повторно использоваться в отчетах с разбиением на страницы несколькими пользователями и в нескольких отчетах. Пользователи могут искать элементы отчета на сервере и добавлять их в отчет.  Пользователи могут также получать уведомления об обновлениях для элемента отчета на сервере и заново публиковать новые версии элемента отчета. Права доступа служб отчетов могут влиять на действия по созданию отчетов, а также позволяют управлять ими.  В этом разделе рассматриваются свойства и режимы работы для элементов отчетов после их появления на сервере.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/09/2017
  Если элементы отчетов публикуются из такого приложения для создания отчетов, как построитель отчетов, на сервере отчетов, работающем в режиме интеграции с SharePoint, также происходит обновление каталога сервера отчетов, а результаты поиска в галерее точно отражают новый или обновленный элемент отчета.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Непосредственная передача элементов отчетов в папку SharePoint  
- Если элемент отчета загружается напрямую в папку документов SharePoint (а не публикуется из приложения создания отчета), каталог сервера отчетов не обновляется. Поиск в галерее элементов отчетов не позволяет найти такой переданный элемент отчета. Чтобы обеспечить постоянную синхронизацию папок SharePoint и каталога сервера отчетов, можно активировать функцию синхронизации файлов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере SharePoint. Дополнительные сведения см. в статье [Активация функции синхронизации файлов сервера отчетов](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
+ Если элемент отчета загружается напрямую в папку документов SharePoint (а не публикуется из приложения создания отчета), каталог сервера отчетов не обновляется. Поиск в галерее элементов отчетов не позволяет найти такой переданный элемент отчета. Чтобы обеспечить постоянную синхронизацию папок SharePoint и каталога сервера отчетов, можно активировать функцию синхронизации файлов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на сервере SharePoint. Дополнительные сведения см. в статье [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md).  
   
  Файлы также можно синхронизировать, вызвав некоторые API-интерфейсы управления службами отчетов (например, GetProperties и SetProperties).  
   
@@ -96,9 +95,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Элементы отчета и наборы данных в построителе отчетов](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Управление содержимым сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Устранение неполадок в элементах отчета (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Элементы отчета в конструкторе отчетов &#40; Службы SSRS &#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [Элементы отчетов в конструкторе отчетов (SSRS)](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
   
-

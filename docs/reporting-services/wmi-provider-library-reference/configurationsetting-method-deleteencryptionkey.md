@@ -1,5 +1,5 @@
 ---
-title: "Метод DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting) | Документы Microsoft"
+title: "Метод DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: DeleteEncryptionKey (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- DeleteEncryptionKey method
+helpviewer_keywords: DeleteEncryptionKey method
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 06775389935ba0b9cf072fc8f417cfb52eac7811
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: af4082207a3add7572850672798990a0941035a2
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---deleteencryptionkey"></a>Метод ConfigurationSetting - DeleteEncryptionKey
+# <a name="configurationsetting-method---deleteencryptionkey"></a>Метод ConfigurationSetting — DeleteEncryptionKey
   Удаляет ключи шифрования из базы данных сервера отчетов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -64,8 +60,7 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

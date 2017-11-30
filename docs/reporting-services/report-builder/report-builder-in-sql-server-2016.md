@@ -1,5 +1,5 @@
 ---
-title: "Построитель отчетов в SQL Server 2016 | Документы Microsoft"
+title: "Построитель отчетов в SQL Server 2016 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords:
-- "10428"
+f1_keywords: "10428"
 helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: bc8ac3d0ed00a6fda642ab09bf2a28e705a6b419
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Построитель отчетов в SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio.  Во время проектирования отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчеты можно предварительно просмотреть из [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , откуда его смогут запустить другие пользователи.  
@@ -99,5 +97,4 @@ ms.lasthandoff: 08/09/2017
  [Сочетания клавиш (построитель отчетов)](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
  Описываются клавиши, которые можно использовать для навигации и проектирования отчетов в [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)].  
   
-
 

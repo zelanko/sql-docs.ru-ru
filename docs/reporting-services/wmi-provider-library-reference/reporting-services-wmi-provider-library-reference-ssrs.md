@@ -1,5 +1,5 @@
 ---
-title: "Справочник по библиотеке поставщика WMI (SSRS) служб Reporting Services | Документы Microsoft"
+title: "Справочник по библиотеке поставщика WMI служб Reporting Services (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- Reporting Services WMI Provider Library
-apilocation:
-- reportingservices.mof
-helpviewer_keywords:
-- WMI provider [Reporting Services], library
+apiname: Reporting Services WMI Provider Library
+apilocation: reportingservices.mof
+helpviewer_keywords: WMI provider [Reporting Services], library
 ms.assetid: 17ba711d-7eff-4423-9168-63dc425a3428
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce7657f048154ab0cf68c8e160bf1e5e6d15c210
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5f95187b454a9ed4546a237847146346b1e34e2e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-wmi-provider-library-reference-ssrs"></a>Справочник по библиотеке поставщика WMI служб Reporting Services (SSRS)
   Поставщик WMI служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживает операции WMI, позволяющие создавать скрипты и код для изменения параметров сервера и диспетчера отчетов.  
@@ -44,8 +40,7 @@ ms.lasthandoff: 08/09/2017
  Дополнительные сведения об операциях WMI см. в документации по пакету SDK WMI, который поставляется вместе с пакетом SDK для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к поставщику WMI служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
- [Технический справочник по &#40; Службы SSRS &#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [Доступ к поставщику WMI для служб Reporting Services](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)   
+ [Технический справочник (службы SSRS)](../../reporting-services/technical-reference-ssrs.md)  
   
   
-

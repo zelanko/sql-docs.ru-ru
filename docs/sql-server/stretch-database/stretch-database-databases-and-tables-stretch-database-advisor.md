@@ -1,13 +1,14 @@
 ---
-title: "Базы данных и таблицы Stretch — помощник базы данных Stretch | Документация Майкрософт"
-ms.custom:
-- SQL2016_New_Updated
-ms.date: 06/14/2016
-ms.prod: sql-server-2016
+title: "Определение баз данных и таблиц для базы данных Stretch Database с помощью Data Migration Assistant | Документы Майкрософт"
+ms.custom: 
+ms.date: 10/30/2017
+ms.prod: stretch-database
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-stretch
+ms.suite: sql
+ms.technology: dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,63 +17,62 @@ helpviewer_keywords:
 - identifying databases for Stretch Database
 - identifying tables for Stretch Database
 ms.assetid: 81bd93d8-eef8-4572-88d7-5c37ab5ac2bf
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 7e8acd180029f247e7a975c7f2525100ad56ebef
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: 59608301d353d99eb710a956389fd9f8d8948dfe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/29/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="stretch-database-databases-and-tables---stretch-database-advisor"></a>Базы данных и таблицы Stretch — помощник базы данных Stretch
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+# <a name="identify-databases-and-tables-for-stretch-database-with-data-migration-assistant"></a>Определение баз данных и таблиц для базы данных Stretch Database с помощью Data Migration Assistant
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Чтобы указать базы данных и таблицы, подходящие для базы данных Stretch, скачайте помощник по обновлению SQL Server 2016 и запустите помощник базы данных Stretch. Кроме того, помощник базы данных Stretch обнаруживает критические препятствия.  
+  Чтобы определить базы данных и таблицы, подходящие для Stretch Database, а также возможные проблемы блокировки, скачайте и запустите Microsoft Data Migration Assistant.
   
-## <a name="download-and-install-upgrade-advisor"></a>Скачивание и установка помощника по обновлению  
- Скачайте и установите помощник по обновлению, перейдя по [ссылке](https://www.microsoft.com/en-us/download/details.aspx?id=53595). Этот инструмент не входит в комплект на установочном носителе [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] .  
+## <a name="get-data-migration-assistant"></a>Получение Data Migration Assistant
+ Скачайте и установите помощник по миграции данных [здесь](https://www.microsoft.com/download/details.aspx?id=53595). Этот инструмент не входит в комплект на установочном носителе SQL Server.  
   
-## <a name="run-the-stretch-database-advisor"></a>Запуск помощника базы данных Stretch  
+## <a name="run-data-migration-assistant"></a>Запуск Data Migration Assistant  
   
-1.  Запустите помощник по обновлению.  
-  
-2.  Выберите **Сценарии**и щелкните **RUN STRETCH DATABASE ADVISOR**(ЗАПУСТИТЬ ПОМОЩНИК БАЗЫ ДАННЫХ STRETCH).  
-  
-3.  В колонке **Run Stretch Database Advisor** (Запустить помощник базы данных Stretch) щелкните **SELECT DATABASES TO ANALYZE**(ВЫБРАТЬ БАЗЫ ДАННЫХ ДЛЯ АНАЛИЗА).  
-  
-4.  В колонке **Выбор базы данных** введите или выберите имя сервера и данные для проверки подлинности. Нажмите кнопку **Соединить**.
+1.  Запустите Microsoft Data Migration Assistant.  
 
-5.  Откроется список баз данных на выбранном сервере. Выберите базу данных для анализа. Нажмите кнопку **Выбрать**.  
-  
-6.  В колонке **Run Stretch Database Advisor** (Запустить помощник базы данных Stretch) щелкните **Запустить**,  чтобы начать анализ.  
-  
+2.  Создайте новый проект с типом **Оценка** и присвойте ему имя.
+
+3.  Выберите **SQL Server** в качестве значений параметров **Тип исходного сервера** и **Тип целевого сервера**.
+
+4.  Выберите **Создать**. 
+
+5. На странице **Параметры** (шаг 1) выберите **Новые рекомендуемые возможности**. При необходимости снимите флажок **Проблемы совместимости**.
+
+6.  На странице **Выберите источники** (шаг 2) подключитесь к серверу, выберите базу данных и затем нажмите кнопку **Добавить**.
+
+7.  Щелкните **Запустить оценку**.
+
 ## <a name="review-the-results"></a>Просмотр результатов  
   
-1.  По завершении анализа выберите в колонке **Помощник базы данных Stretch** одну из баз данных, чтобы отобразить колонку **Результаты анализа** .  
-  
-     В колонке **Результаты анализа** перечислены рекомендуемые таблицы в выбранной базе данных, соответствующие критериям рекомендаций по умолчанию. 
-  
-2.  В списке таблиц колонки **Результаты анализа** выберите одну из рекомендуемых таблиц, чтобы отобразить колонку **Результаты для таблицы** .  
-  
-     Если есть проблемы блокировки, в колонке **Результаты для таблицы** перечислены критические препятствия для выбранной таблицы. Сведения о критических препятствиях, обнаруженных помощником базы данных Stretch, см. в статье [Ограничения для базы данных Stretch](../../sql-server/stretch-database/limitations-for-stretch-database.md).  
-  
-3.  В списке проблем блокировки в колонке **Результаты для таблицы** выберите одну из проблем, чтобы отобразить дополнительные сведения о проблеме и предлагаемые шаги по ее устранению. Выполните предложенные шаги по устранению, если вы хотите настроить выбранную таблицу для базы данных Stretch.  
+1.  После завершения анализа на странице **Просмотр результатов** (шаг 3) выберите параметр **Рекомендуемые возможности**, а затем откройте вкладку **Хранилище**.
+
+2.  Просмотрите рекомендации, связанные со Stretch Database. Каждая рекомендация содержит список таблиц, для которых может подходить использование Stretch Database, а также перечень возможных проблем блокировки.
+
+## <a name="historical-note"></a>Историческое примечание
+Помощник по Stretch Database был ранее доступен в качестве компонента "Помощник по обновлению SQL Server 2016". Его было необходимо выбирать и запускать как отдельное действие.
+
+После выпуска Data Migration Assistant, который заменяет помощника по обновлению и расширяет его возможности, функциональность помощника по Stretch Database включена в это новое средство. Чтобы получить рекомендации, связанные со Stretch Database, не требуется выбирать никаких параметров. При выполнении оценки в Data Migration Assistant результаты, связанные со Stretch Database, отображаются на вкладке **Хранилище** окна **Рекомендуемые возможности**.
   
 ## <a name="next-step"></a>Следующий шаг  
- Включите базу данных Stretch.  
+ Включите Stretch Database.  
   
 -   Сведения о включении базы данных Stretch для **базы данных**см. в разделе [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
 -   Сведения о включении базы данных Stretch для другой **таблицы**см. в разделе [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md). 
   
 ## <a name="see-also"></a>См. также:  
- [Ограничения для базы данных Stretch](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
+ [Ограничения для Stretch Database](../../sql-server/stretch-database/limitations-for-stretch-database.md)   
  [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Настройка базы данных Stretch для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
-

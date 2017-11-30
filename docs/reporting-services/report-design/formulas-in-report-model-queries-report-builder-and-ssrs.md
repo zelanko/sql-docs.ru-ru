@@ -1,5 +1,5 @@
 ---
-title: "Формулы в отчете к моделям запросов (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Формулы в запросах модели отчета (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10151"
+f1_keywords: "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310d2eefcf253371e488f9e6fe5707a89b6f7ab6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Формулы в запросах модели отчета (построитель отчетов и службы SSRS)
   Формулы — это вычисления, производимые над значениями в отчете и использующие модель отчета в качестве источника данных. Формулы задаются в диалоговом окне **Определение формулы** конструктора запросов моделей отчетов при определении запроса к источнику данных модели отчета. Формула может содержать функции, операторы, константы и ссылки на поля или сущности. Формулы позволяют комбинировать, статистически вычислять, фильтровать и оценивать как числовые, так и текстовые данные. Можно создавать и сохранять формулы для новых полей или изменять формулы существующих полей.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  Функции могут использоваться для выполнения простых или сложных вычислений. Структура функции начинается с ее имени, за которым следуют открывающая скобка, аргументы данной функции, разделяемые запятыми, и закрывающая скобка.  
   
- ![Пример функции. ] (../../reporting-services/report-design/media/functionexample.gif "Пример функции.")  
+ ![Пример функции.](../../reporting-services/report-design/media/functionexample.gif "Пример функции.")  
   
  Аргументы могут быть ссылками на поле, числами, текстом и логическими значениями, например **TRUE** или **FALSE**. Аргументы могут так же быть константами, формулами или другими функциями. Вводимые аргументы должны быть допустимыми значениями для этого аргумента. К примеру, если в формуле выполняется умножение двух целых чисел, в результате не может быть получена текстовая строка.  
   
@@ -82,4 +80,3 @@ ms.lasthandoff: 08/09/2017
 |Текстовые функции|**CONCAT**, **FIND**, **LEFT**, **LENGTH**, **LOWER**, **LTRIM**, **REPLACE**, **RIGHT**, **RTRIM**, **SUBSTRING**, **UPPER**|  
   
   
-

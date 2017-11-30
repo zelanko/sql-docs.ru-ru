@@ -1,5 +1,5 @@
 ---
-title: "Настройка нестандартной проверки подлинности или проверки подлинности форм на сервере отчетов | Документы Microsoft"
+title: "Настройка нестандартной проверки подлинности или проверки подлинности с помощью форм на сервере отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/18/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - Forms authentication, configuring
 - custom authentication [Reporting Services]
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 325b7d6f1015b6e5e81565df37d1c02d20e5802f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Настройка нестандартной проверки подлинности или проверку подлинности с помощью форм на сервере отчетов
 
@@ -34,7 +33,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 >  Чтобы создать нестандартный модуль проверки подлинности, необходимо написать определенный код и хорошо разбираться в системе безопасности [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Если не нужно создавать нестандартный модуль проверки подлинности, можно использовать группы и учетные записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory, но это связано со значительным уменьшением области развертывания сервера отчетов. Дополнительные сведения о нестандартной проверке подлинности см. в разделе [Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md).
 
-Кроме того Если вы хотите использовать проверку подлинности форм или нестандартный модуль проверки подлинности в среде SQL Server Reporting Services, интегрированных с продуктами SharePoint, необходимо настроить сайт SharePoint на использование выбранного метода проверки подлинности. Дополнительные сведения о настройке проверки подлинности в SharePoint см. в разделе [Authentication Samples](http://go.microsoft.com/fwlink/?LinkId=115575) в библиотеке MSDN [!INCLUDE[msCoName](../../includes/msconame-md.md)] .
+Кроме того, если нужно использовать проверку подлинности с помощью форм или нестандартный модуль проверки подлинности в среде служб SQL Server Reporting Services, интегрированной с продуктом SharePoint, то необходимо настроить сайт SharePoint на использование выбранного метода проверки подлинности. Дополнительные сведения о настройке проверки подлинности в SharePoint см. в разделе [Authentication Samples](http://go.microsoft.com/fwlink/?LinkId=115575) в библиотеке MSDN [!INCLUDE[msCoName](../../includes/msconame-md.md)] .
 
 
 
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 
 1.  Откройте файл конфигурации RSReportServer.config в текстовом редакторе.
 
-2.  Найти \< **проверки подлинности**>.
+2.  Найдите параметр \<**Authentication**>.
 
 3.  Скопируйте следующую структуру XML:
 
@@ -55,7 +54,7 @@ ms.lasthandoff: 08/09/2017
     </Authentication>
     ```
 
-4.  Вставьте его поверх существующих записей для \< **проверки подлинности**>.
+4.  Вставьте ее на место существующих элементов параметра \<**Authentication**>.
 
      Следует заметить, что **Custom** нельзя использовать с другими типами проверки подлинности.
 
@@ -74,7 +73,7 @@ ms.lasthandoff: 08/09/2017
     ```
     <identity impersonate = "false" />  
     ```
-9. Добавьте элемент структуры **PassThroughCookies** к файлу конфигурации. Дополнительные сведения см. в разделе [настроить веб-портал для передачи файлов cookie проверки подлинности пользовательского](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
+9. Добавьте элемент структуры **PassThroughCookies** к файлу конфигурации. Дополнительные сведения см. в разделе [Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
   
 10. Сохраните файл.  
   
@@ -85,9 +84,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>См. также
 
 [Реализация модуля безопасности](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
-[Пользовательский модуль безопасности образец Reporting Services (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
-[Проверка подлинности на сервере отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
+[Пример настраиваемой безопасности служб Reporting Services (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
+[Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   
 [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Настройка обычной проверки подлинности на сервере отчетов](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
-[Настройка проверки подлинности Windows на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
-Дополнительные вопросы? [Повторите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+[Настройка аутентификации Windows на сервере отчетов](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,5 +1,5 @@
 ---
-title: "Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4597b87876b52b41810f62423a59fef7b45394b8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>Добавление индикаторов и датчиков на панель датчиков (построитель отчетов и службы SSRS)
   Панель датчиков — это контейнер верхнего уровня, который содержит один или несколько датчиков и индикаторов. Индикаторы могут быть встроены в датчики или помещены рядом с ними на панели датчиков.  
@@ -109,4 +108,3 @@ ms.lasthandoff: 08/09/2017
  [Индикаторы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-

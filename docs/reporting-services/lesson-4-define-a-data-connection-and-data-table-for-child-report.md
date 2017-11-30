@@ -1,28 +1,25 @@
 ---
-title: "Урок 4: Определение подключения к данным и таблицы данных для дочернего отчета | Документы Microsoft"
+title: "Занятие 4. Определение подключения к данным и таблицы данных для дочернего отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a6aa2c56-227c-43c5-a28e-c7104131ac5e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 214067875871c249aa56d0ed191f787a08b3ed7b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0c717fecbc14933bdfaac30e64faa2b8a9ff2940
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета
 После проектирования родительского отчета далее необходимо создать подключение к данным и таблицу данных для дочернего отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  
@@ -63,7 +60,7 @@ ms.lasthandoff: 08/09/2017
     SELECT PurchaseOrderID, PurchaseOrderDetailID, OrderQty, ProductID, ReceivedQty, RejectedQty, StockedQty FROM Purchasing.PurchaseOrderDetail  
     ```  
   
-    Для создания запроса также можно щелкнуть **Построитель запросов**, а затем проверить запрос, нажав кнопку **Выполнить запрос** . Если запрос не возвращает ожидаемые данные, возможно, используется более ранняя версия AdventureWorks. Дополнительные сведения о получении образца базы данных **AdventureWorks2014** см. на странице [Образцы баз данных Microsoft SQL Server](http://msftdbprodsamples.codeplex.com/).  
+    Для создания запроса также можно щелкнуть **Построитель запросов**, а затем проверить запрос, нажав кнопку **Выполнить запрос** . Если запрос не возвращает ожидаемые данные, возможно, используется более ранняя версия AdventureWorks. Дополнительные сведения о получении образца базы данных **AdventureWorks2014** см. на странице [Образцы баз данных AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
   
 10. На странице **Выбор методов для автоматического создания** снимите флажок **Создать методы для отправки обновлений непосредственно в базу данных (GenerateDBDirectMethods)**, а затем нажмите кнопку **Готово**.  
   
@@ -79,5 +76,4 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-task"></a>Следующая задача  
 Тем самым были успешно созданы подключение к данным и таблица данных для дочернего отчета. Затем необходимо спроектировать дочерний отчет с использованием мастера отчетов. См. [Занятие 5. Проектирование родительского отчета с использованием мастера отчетов](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md).  
   
-
 

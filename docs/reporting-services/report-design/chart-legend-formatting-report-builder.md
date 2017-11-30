@@ -1,5 +1,5 @@
 ---
-title: "Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -28,22 +28,21 @@ f1_keywords:
 - sql13.rtp.rptdesigner.legendtitleproperties.general.f1
 - sql13.rtp.rptdesigner.legendproperties.font.f1
 ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 37ae409b2c0d9d703c0bce162bc607c9f571cd29
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 4bae3ff2a5111c020fdfaa20c3c3e4fc0d905558
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="chart-legend---formatting-report-builder"></a>Условные обозначения диаграммы - форматирование (построитель отчетов)
+# <a name="chart-legend---formatting-report-builder"></a>Условные обозначения диаграммы — форматирование (построитель отчетов)
   Условные обозначения диаграммы содержат описание каждой категории на диаграмме. Условные обозначения всегда содержат один или несколько элементов, каждый из которых состоит из цветного прямоугольника, представляющего ряд, и текстовую строку, описывающую этот ряд, как показано на следующем рисунке.  
   
- ![Схема условных обозначений диаграммы](../../reporting-services/report-design/media/rs-legenddiagram.gif "схема условных обозначений диаграммы")  
+ ![Схема условных обозначений на диаграмме](../../reporting-services/report-design/media/rs-legenddiagram.gif "Схема условных обозначений на диаграмме")  
   
  Элемент условных обозначений связан с отдельным рядом на диаграмме, за исключением фигурных диаграмм, в которых условные обозначения связаны с конкретными точками данных. Диаграмма автоматически добавляет элементы в условные обозначения на основе ряда, сформированного из данных.  
   
@@ -86,12 +85,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Диалоговое окно "Свойства условных обозначений"  — "Общие" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
- [Изменение текста элемента условных обозначений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
- [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Форматирование цветов для рядов на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Скрытие элементов условных обозначений на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
+ [Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
+ [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Скрытие элементов условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)   
  [Задание цветов диаграммы с помощью палитры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Средства разработки (SSRS) запросов | Документы Microsoft"
+title: "Средства проектирования запросов (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -21,17 +21,16 @@ helpviewer_keywords:
 - semantic queries [Reporting Services]
 - Report Model Query Designer
 ms.assetid: a8139a9d-4aeb-4e64-96f3-564edf60479f
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cb010d0c545e0ff6031a07ff0d4439f5d9dc8116
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f185e21b61d68b2f3e5c66ff355fcea54a5a1d0f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="query-design-tools-ssrs"></a>Средства проектирования запросов (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] содержат различные средства проектирования запросов, которые можно использовать для создания запросов набора данных в конструкторе отчетов. Некоторые конструкторы запросов поддерживают альтернативные режимы работы, что позволяет выбирать между работой в визуальном режиме или непосредственно на языке запросов. В этом разделе представлено каждое из этих средств и описаны типы источников данных, поддерживаемых каждым средством. В этом разделе описаны следующие средства.  
@@ -64,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **По поддержке указания схемы в именах объектов базы данных.** Если источник данных использует указание схемы в идентификаторе объекта базы данных, она должна указываться в запросе для всех имен, имеющих схему, отличную от схемы по умолчанию. Например, `SELECT FirstName, LastName FROM [Person].[Person]`.  
   
--   **По поддержке параметров запроса.** Поставщики данных поддерживают параметры запросов по-разному. Некоторые из них поддерживают именованные параметры, например: `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Другие поддерживают неименованные параметры, например: `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. Идентификаторы параметров могут различаться для разных поставщиков данных. Так, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется символ " @ ", а в Oracle — двоеточие (:). Некоторые поставщики данных вообще не поддерживают параметров.  
+-   **По поддержке параметров запроса.** Поставщики данных поддерживают параметры запросов по-разному. Некоторые из них поддерживают именованные параметры, например: `SELECT Col1, Col2 FROM Table WHERE <parameter identifier><parameter name> = <value>`. Другие поддерживают неименованные параметры, например: `SELECT Col1, Col2 FROM Table WHERE <column name> = ?`. Идентификаторы параметров могут различаться для разных поставщиков данных. Так, в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] используется символ "@", а в Oracle — двоеточие (:). Некоторые поставщики данных вообще не поддерживают параметров.  
   
 -   **По возможности импортировать запросы.** Например, для источника данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно импортировать запросы из файла определения отчета (RDL) или из SQL-файла.  
   
@@ -85,33 +84,33 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="Model"></a> конструктор запросов моделей отчетов  
  Конструктор запросов моделей отчетов используется для создания и изменения запросов, выполняемых по модели отчета SMDL, опубликованной на сервере отчетов. Отчеты, выполняемые для моделей, поддерживают просмотр данных с дополнительной информацией. Запрос определяет путь для просмотра данных во время выполнения. Ниже приведена иллюстрация конструктора запросов модели отчета.  
   
- ![Пользовательский Интерфейс конструктора запросов семантической модели](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "пользовательский Интерфейс конструктора запросов семантической модели")  
+ ![Пользовательский интерфейс конструктора запросов на языке семантических моделей](../../reporting-services/report-data/media/rsqd-dsawmodel-smql.gif "Пользовательский интерфейс конструктора запросов на языке семантических моделей")  
   
  Чтобы использовать конструктор запросов моделей отчетов, необходимо определить источник данных, указывающий на опубликованную модель. При определении набора данных для источника данных можно открыть запрос набора данных в конструкторе запросов моделей отчетов. Конструктор запросов моделей отчетов поддерживает работу в графическом и текстовом режимах. Можно переключаться между графическим конструктором запросов и текстовым конструктором запросов с помощью кнопки **Изменить как текст** на панели инструментов. Дополнительные сведения см. в статье [Report Model Query Designer User Interface](../../reporting-services/report-data/report-model-query-designer-user-interface.md).  
   
 ##  <a name="MDX"></a> Конструктор запросов многомерных выражений  
  Конструктор запросов многомерных выражений (MDX) используется для создания или изменения запросов, выполняемых к источнику данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с многомерными кубами. Ниже приведена иллюстрация конструктора запросов многомерных выражений после определения запроса и фильтра.  
   
- ![Конструктор запросов многомерных Выражений служб Analysis, конструкторе](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "конструктор запросов многомерных Выражений служб Analysis Services, режим конструктора")  
+ ![Конструктор запросов многомерных выражений служб Analysis Services, режим конструктора](../../reporting-services/report-data/media/rsqd-dsawas-mdx-designmode.gif "Конструктор запросов многомерных выражений служб Analysis Services, режим конструктора")  
   
  Для использования конструктора запросов многомерных выражений необходимо определить источник данных, для которого доступен допустимый и обработанный куб служб Analysis Services. При определении набора данных для источника данных можно открыть запрос в конструкторе запросов многомерных выражений. При необходимости используйте кнопки «MDX» и «DMX» на панели инструментов для переключения между режимами многомерных выражений (MDX) и расширения интеллектуального анализа данных (DMX). Дополнительные сведения см. в статье [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
   
 ##  <a name="DMX"></a> Конструктор DMX-запросов  
  Конструктор запросов выражений прогноза интеллектуального анализа данных (DMX-запросов) используется для создания и изменения запросов для источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с моделями интеллектуального анализа. Ниже приведена иллюстрация конструктора DMX-запросов расширений интеллектуального анализа данных после выбора модели и входных таблиц.  
   
- ![Конструктор запросов расширений интеллектуального анализа данных служб анализа, конструктор](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "конструктор запросов расширений интеллектуального анализа данных Analysis Services, режим конструктора")  
+ ![Конструктор DMX-запросов служб Analysis Services, режим конструктора](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Конструктор DMX-запросов служб Analysis Services, режим конструктора")  
   
  Чтобы использовать конструктор DMX-запросов, необходимо определить источник данных, для которого доступна допустимая модель интеллектуального анализа данных. При определении набора данных для источника данных можно открыть запрос в конструкторе DMX-запросов. При необходимости используйте кнопки «MDX» и «DMX» на панели инструментов для переключения между режимами многомерных выражений (MDX) и расширения интеллектуального анализа данных (DMX). После выбора модели можно создавать запросы прогноза интеллектуального анализа данных, предоставляющие данные для отчета. Дополнительные сведения см. в статье [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
   
 ##  <a name="SAPBW"></a> Конструктор запросов BI Sap NetWeaver  
  Конструктор запросов [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] используется для получения данных из базы данных [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] . Для использования этого конструктора запросов необходим источник данных [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] , для которого определен хотя бы один запрос InfoCube, MultiProvider или запрос на основе веб-интерфейса. Ниже приведена иллюстрация конструктора запросов [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] . Дополнительные сведения см. в статье [SAP NetWeaver BI Query Designer User Interface](../../reporting-services/report-data/sap-netweaver-bi-query-designer-user-interface.md).  
   
- ![Конструктор запросов с использованием многомерных Выражений в режиме конструктора](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "конструктор запросов с использованием многомерных Выражений в режиме конструктора")  
+ ![Конструктор запросов с использованием многомерных выражений в режиме конструктора](../../reporting-services/report-data/media/rsqd-dssapbw-mdx-designmode.gif "Конструктор запросов с использованием многомерных выражений в режиме конструктора")  
   
 ##  <a name="Hyperion"></a> конструктор запросов Hyperion Essbase  
  Конструктор запросов [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] используется для получения данных из баз данных и приложений [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] . Ниже приведена иллюстрация конструктора запросов [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
   
- ![Конструктор запросов для источника данных Hyperion Essbase](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "конструктор запросов для источника данных Hyperion Essbase")  
+ ![Конструктор запросов для источника данных Hyperion Essbase](../../reporting-services/report-data/media/rsqd-dshyperionessbase-mdx-designmode.gif "Конструктор запросов для источника данных Hyperion Essbase")  
   
  Для использования этого конструктора запросов необходим источник данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] , который располагает хотя бы одной базой данных.  
   
@@ -121,9 +120,8 @@ ms.lasthandoff: 08/09/2017
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Службы Reporting Services Tutorials &#40; Службы SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Источники данных, поддерживаемые службами Reporting Services &#40; Службы SSRS &#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [Создать внедренный или общий источник данных &#40; Службы SSRS &#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
+ [Учебники по службам Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [Создание внедренного или общего источника данных (службы SSRS)](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Доступ к API-Интерфейс SOAP | Документы Microsoft"
+title: "Доступ к интерфейсу API SOAP | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - XML Web service [Reporting Services], WSDL
 - Web service [Reporting Services], SOAP
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - Report Server Web service, WSDL
 - referencing WSDL
 ms.assetid: 63bb870a-4dbf-46bd-8921-78f8ebe5fd75
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 6a5e70f353771fb763029f8fa3306ce04067f3e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9519a04820618fc8f3a59c16b8282b6be1cb0146
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="accessing-the-soap-api"></a>Доступ к API-интерфейсу SOAP
   Веб-служба сервера отчетов использует протокол SOAP по протоколу HTTP и выступает в роли интерфейса связи между клиентскими программами и сервером отчетов. Веб-служба предоставляет две конечные точки — одну для выполнения отчетов и другую для управления отчетами. Веб-служба состоит из методов и набора объектов сложного типа, которые можно использовать для доступа ко всем функциональным возможностям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Для вызова службы следует создать ссылку на язык описания веб-служб (WSDL) служб Reporting Services.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 -   Конечная точка <xref:ReportExecution2005> позволяет разработчикам программным образом обрабатывать и подготавливать к просмотру отчеты на сервере отчетов. Обратиться к WSDL-файлу данной конечной точки можно по адресу `ReportExecution2005.asmx?wsdl`  
   
- WSDL, которые могут использоваться средствами разработки, поддерживающими SOAP и веб-служб, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ WSDL-файл может использоваться пакетами разработки, поддерживающими SOAP и веб-службы, например пакетом SDK [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
  В следующем примере показывается формат URL-адреса управляющего WSDL-файла служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
@@ -61,9 +59,9 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
 |Элемент URL-адреса|Description|  
 |-----------------|-----------------|  
-|*сервер*|Имя сервера, на котором развернут сервер отчетов.|  
-|*ReportServer*|Имя папки, в которой содержится веб-служба XML. Данный элемент настраивается во время установки.|  
-|*\<Имя конечной точки > .asmx*|Имя конечной точки веб-службы.|  
+|*server*|Имя сервера, на котором развернут сервер отчетов.|  
+|*reportserver*|Имя папки, в которой содержится веб-служба XML. Данный элемент настраивается во время установки.|  
+|*\<имя конечной точки>.asmx*|Имя конечной точки веб-службы.|  
   
  Дополнительные сведения о формате WSDL см. в спецификации языка WSDL консорциума World Wide Web (W3C) по адресу http://www.w3.org/TR/wsdl.  
   
@@ -72,4 +70,3 @@ http://server/reportserver/ReportService2010.asmx?wsdl
  [Веб-службы сервера отчетов](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

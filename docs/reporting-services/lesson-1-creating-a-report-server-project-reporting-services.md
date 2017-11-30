@@ -1,30 +1,28 @@
 ---
-title: "Урок 1: Создание проекта сервера отчетов (службы Reporting Services) | Документы Microsoft"
+title: "Занятие 1. Создание проекта сервера отчетов (службы Reporting Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/30/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 6292a812cb1456892a6dad78408d0d64ce0b1a9e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 3968a5183de7cc1ee81c7ee09faba79d06990884
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)
 
- > Содержимое, связанное с предыдущих версий SQL Server, в разделе [занятия 1: Создание проекта сервера отчетов (службы Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
+ > Содержимое, связанное с предыдущими версиями SQL Server, см. в статье [Занятие 1. Создание проекта сервера отчетов (службы Reporting Services)](https://msdn.microsoft.com/en-US/library/ms167559(SQL.120).aspx).
 
 На этом занятии вы создадите *проект сервера отчетов* и *RDL-файл определения отчета* в [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] в среде Visual Studio. 
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/27/2017
   
 1.  Откройте среду [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)].  
   
-2.  На **файл** меню > **New** > **проекта**.  
+2.  В меню **Файл** выберите **Создать** > **Проект**.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 09/27/2017
 
 5. Щелкните **Проект сервера отчетов** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Примечание**: Если вы не видите **бизнес-аналитики** или **проекта сервера отчетов** параметры, необходимо обновить SSDT с помощью шаблонов бизнес-аналитики. См. страницу [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
+   >**Примечание.** Если элемент **Business Intelligence** (Бизнес-аналитика) или **Проект сервера отчетов** отсутствует, необходимо обновить шаблоны бизнес-аналитики SQL Server Data Tools. См. страницу [Скачать SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 5.  В поле **Имя**введите **Руководство**.  
 
@@ -81,10 +79,9 @@ ms.lasthandoff: 09/27/2017
     Данные определяются в области **Данные отчета** . Макет отчета определяется в представлении **Конструктор** . Отчет можно выполнить и посмотреть, как он выглядит, в представлении **Предварительный просмотр** .  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. В разделе [уроке 2: Указание сведений о соединении &#40; Службы Reporting Services &#41; ](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
+Создание проекта отчета с именем «Учебник» и добавление в него файла определения отчета (с расширением RDL) успешно завершено. Далее требуется определить источник данных, который будет использован в отчете. См. раздел [Занятие 2. Задание информации о соединении (службы Reporting Services)](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   
-
 

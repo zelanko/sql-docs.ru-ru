@@ -1,5 +1,5 @@
 ---
-title: "Расписания | Документы Microsoft"
+title: "Расписания | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/01/2016
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], scheduling
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c4e737163256ada2f5b9188b31deb2671eeb5a6b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="schedules"></a>Расписания
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют **общие расписания** и **расписания отчетов** , что позволяет управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.
@@ -140,11 +139,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Создание, изменение и удаление моментальных снимков в журнале отчетов](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
- [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [Кэширование отчетов &#40; Службы SSRS &#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [Управление содержимым сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
-

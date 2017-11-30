@@ -1,5 +1,5 @@
 ---
-title: "Метод SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting) | Документы Microsoft"
+title: "Метод SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
-apilocation:
-- reportingservices.mof
+apiname: SetUnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting Class)
+apilocation: reportingservices.mof
 apitype: MOFDef
-helpviewer_keywords:
-- SetUnattendedExecutionAccount method
+helpviewer_keywords: SetUnattendedExecutionAccount method
 ms.assetid: 1ba6be6f-b05c-4ea0-af98-cd0780290b70
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1c94627129ed2e6706112aad013a3395c4a1e68a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 15c1691b8df3fe640043dab183973dc20cc0c7c7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="configurationsetting-method---setunattendedexecutionaccount"></a>Метод ConfigurationSetting - SetUnattendedExecutionAccount
+# <a name="configurationsetting-method---setunattendedexecutionaccount"></a>Метод ConfigurationSetting — SetUnattendedExecutionAccount
   Задает учетную запись для автоматического выполнения отчетов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -66,8 +62,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

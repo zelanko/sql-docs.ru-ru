@@ -1,5 +1,5 @@
 ---
-title: "Источники данных и ссылки на коллекцию наборов данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Ссылки на коллекции DataSources и DataSets (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f951a4aa-da55-4e43-8579-4a5d4480d11f
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a1e556a8c6ac712d61d262c4d96993a9ab3ecf11
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 557ea9ee2c43822c699d6c2d855d5ab6c1a980ea
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Встроенные коллекции - ссылок DataSources и DataSets (построитель отчетов)
+# <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Встроенные коллекции — ссылки на DataSources и DataSets (построитель отчетов)
   Коллекция **DataSources** представляет все источники данных, используемые в отчете. Точно так же коллекция **DataSets** представляет все наборы данных для источников данных в отчете. Для иерархического просмотра наборов данных отчета, организованных в источнике данных, на который они ссылаются, используйте область **Данные отчета** . Если в эти коллекции включаются ссылки, то при предварительном просмотре отчета значения не будут видимыми. Эти коллекции доступны только после публикации отчета на сервере отчетов.  
   
 > [!NOTE]  
@@ -49,8 +48,7 @@ ms.lasthandoff: 08/09/2017
  В выражениях можно определить запрос, содержащийся в наборе данных. Эту функцию можно использовать для создания отчетов, в которых запрос изменяется в зависимости от пользовательского ввода, данных в других наборах или других переменных. Дополнительные сведения о запросах см. в разделе [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   
-

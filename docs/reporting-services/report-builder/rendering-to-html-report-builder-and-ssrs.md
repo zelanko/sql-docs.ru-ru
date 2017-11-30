@@ -1,5 +1,5 @@
 ---
-title: "Подготовка к просмотру в формате HTML (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf559b0a-499a-4d74-b520-b382b87e0b17
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a431b5b8c988b981f217353c366bbbe1f1f68699
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 13d54a271ce3889f0fe3e9c86c2a44b9889529c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате HTML подготавливает отчет с разбиением на страницы к просмотру в HTML-формате. Модуль подготовки отчетов также позволяет создавать полностью сформированные HTML-страницы или фрагменты HTML для внедрения в другие HTML-страницы. Все документы HTML создаются в кодировке UTF-8.  
@@ -81,13 +80,13 @@ ms.lasthandoff: 08/09/2017
  Метки схемы документа отображаются, и к ним можно перемещаться с помощью схемы документа в элементах управления средства просмотра. Метки для пропущенных заголовков области данных выводятся в первой дочерней ячейке. Если дочерних ячеек нет, метка выводится на предшествующем дочернем элементе.  
   
 ### <a name="bookmarks"></a>Закладки  
- Ссылки на закладки отображаются в виде гиперссылок. Цели закладок отображаются, и к ним можно перемещаться, щелкнув ссылки закладок. При щелчке ссылки закладки отчет переходит на первое вхождение целевой метки закладки, и браузер по возможности прокручивает окно так, чтобы ссылка закладки оказалась в его верхней части. Привязки HTML (\<>) позволяют цели закладок помечаются тегами.  
+ Ссылки на закладки отображаются в виде гиперссылок. Цели закладок отображаются, и к ним можно перемещаться, щелкнув ссылки закладок. При щелчке ссылки закладки отчет переходит на первое вхождение целевой метки закладки, и браузер по возможности прокручивает окно так, чтобы ссылка закладки оказалась в его верхней части. Цели закладок помечаются тегами привязки HTML (\<a>).  
   
 ### <a name="interactive-sorting"></a>Интерактивная сортировка  
  Если в текстовом поле определена интерактивная сортировка, модуль подготовки отчетов в формате HTML выводит значки сортировки в текстовом поле, справа от содержимого. Если отчет содержит текстовое поле с определенной пользовательской сортировкой, в подготовленный отчет включается код JavaScript, посылающий запрос к серверу при нажатии на значок сортировки.  
   
 ### <a name="hyperlinks-and-drillthrough"></a>Гиперссылки и детализация  
- Гиперссылки и ссылки детализации преобразуются в гиперссылки в элементах отчета, с помощью привязки HTML (\<>) в теги элементов, на котором они определены.  
+ Гиперссылки и ссылки детализации выводятся в элементах отчета как гиперссылки с помощью тегов привязки HTML (\<a>), окружающих элемент, для которого они определены.  
   
 ### <a name="search"></a>Поиск  
  Функция поиска позволяет пользователям искать в отчете строку текста.  
@@ -100,11 +99,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>См. также  
- [Разбиение на страницы в службах Reporting Services &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение отрисовки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных подготовки отчетов к просмотру расширения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

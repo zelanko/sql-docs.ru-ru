@@ -1,5 +1,5 @@
 ---
-title: "Развертывание и поддержка версий в SQL Server Data Tools (SSDT) | Документы Microsoft"
+title: "Развертывание и поддержка версий в SQL Server Data Tools (SSDT) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/06/2017
-
+ms.openlocfilehash: 02dc4f34643ca904f04c0f2c1b88fc3bdc202904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Развертывание и поддержка версий в SQL Server Data Tools (SSDT)
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>Развертывание и поддержка версий в SQL Server Data Tools (SSDT)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] поддерживает следующие сценарии:  
   
 -   Открытые определения отчетов (*RDL) и проекты сервера отчетов (\*RPTPROJ).  
@@ -47,7 +46,7 @@ ms.lasthandoff: 09/06/2017
   
 -   OutputPath — свойство сборки, показывающее путь к папке для хранения определения отчета, используемого при проверке сборки, развертывании и просмотре отчетов.  
   
--   ErrorLevel — свойство сборки, отображающее серьезность проблем сборки, помечаемых как ошибки. Проблемы, степень серьезности которых меньше значения ErrorLevel или равна ему, выводятся как ошибки. В противном случае они помечаются как предупреждения. Дополнительные сведения см. В подразделе «Отчет проверки и уровни ошибок» [разработка отчетов с использованием конструктора отчетов &#40; Службы SSRS &#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
+-   ErrorLevel — свойство сборки, отображающее серьезность проблем сборки, помечаемых как ошибки. Проблемы, степень серьезности которых меньше значения ErrorLevel или равна ему, выводятся как ошибки. В противном случае они помечаются как предупреждения. Дополнительные сведения см. в подразделе "Проверка отчета и уровни ошибок" раздела [Разработка отчетов с использованием конструктора отчетов (SSRS)](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
 -   TargetServerVersion — это свойство развертывания, задающее ожидаемую версию служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которая установлена на целевом сервере отчетов, указанном в свойстве TargetServerURL.  
   
@@ -58,7 +57,7 @@ ms.lasthandoff: 09/06/2017
 ##  <a name="bkmk_SupportedVersions"></a> Поддерживаемые версии  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], 32-разрядная среда разработки для проектов сервера отчетов, не может работать [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-компьютерах и не установлен на [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-серверов на основе. Однако имеется поддержка среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для компьютеров с архитектурой x64.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], которая является 32-разрядной версией среды разработки для проектов сервера отчетов, не предназначена для работы на компьютерах архитектуры [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] и не устанавливается на серверах с архитектурой [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]. Однако имеется поддержка среды [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] для компьютеров с архитектурой x64.  
   
  В приведенной ниже таблице описаны поддерживаемые версии для создания и публикации отчетов в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -79,4 +78,3 @@ ms.lasthandoff: 09/06/2017
  [Публикация источников данных и отчетов](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
-

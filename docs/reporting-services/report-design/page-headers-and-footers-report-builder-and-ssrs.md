@@ -1,5 +1,5 @@
 ---
-title: "Верхние и нижние колонтитулы (построитель отчетов и службы SSRS) страницы | Документы Microsoft"
+title: "Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -24,17 +24,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)
   Отчет может содержать верхний и нижний колонтитулы, которые располагаются в верхней и нижней части каждой страницы соответственно. Верхние и нижние колонтитулы могут содержать статический текст, изображения, линии, прямоугольники, границы, цвет фона, фоновые изображения и выражения. Выражения включают ссылки на поля набора данных для отчетов, имеющих один и только один набор данных, а также вызовы агрегатных функций, которые включают набор данных в качестве области.  
@@ -133,8 +132,7 @@ ms.lasthandoff: 08/09/2017
  Дополнительные сведения см. в разделе [Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Внедрение изображения в отчет &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Прямоугольники и линии &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
+ [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   
   
-

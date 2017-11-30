@@ -1,5 +1,5 @@
 ---
-title: "Добавление пользовательских местоположений карты (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление на карту пользовательских местоположений (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
+f1_keywords: MICROSOFT.REPORTDESIGNER.MAPPOINT.POINTTEMPLATE
 ms.assetid: 7d36faae-5bcc-446a-9eba-f42349cafacb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c78f99c32d37e36986c4ea8bac20c12f87d4d568
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 394d7d0f914f7b86ffc042a6e7bcde269c8e6b12
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-custom-locations-to-a-map-report-builder-and-ssrs"></a>Добавление на карту пользовательских местоположений (построитель отчетов и службы SSRS)
   После добавления карты в отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в нее можно добавлять собственные точечные местоположения.  
@@ -67,4 +65,3 @@ ms.lasthandoff: 08/09/2017
  [Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Области данных Табликса (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Область данных табликса (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cbe2dd936369c89b52302b1d244829dcb12744bc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 49d872c920e735ffa2b1891f09c16e2738518b69
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Область данных табликса (построитель отчетов и службы SSRS)
   В [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]область данных табликса представляет собой обобщенный элемент макета отчета, в котором данные отчета отображаются в ячейках, упорядоченных в виде столбцов и строк. Данные отчета могут быть как подробными данными в том виде, в котором они были получены из источника данных, так и статистическими подробными данными, организованными в определенные группы. Каждая ячейка табликса может содержать любой элемент отчета, включая текстовое поле, изображение или другую область данных (например, область табликса, диаграмму или датчик). Чтобы добавить в ячейку несколько элементов отчета, сначала необходимо добавить прямоугольник, который будет выполнять роль контейнера. Затем в прямоугольник можно добавить элементы отчета.  
@@ -68,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
  Ячейки в разделе «Угол табликса» создаются автоматически при определении обоих групп строк и столбцов. В этих ячейках могут отображаться метки, либо можно выполнить их слияние и создать заголовок.  
   
- Дополнительные сведения см. в разделе [Области данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Области данных табликса &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-static-and-dynamic-rows-and-columns"></a>Основные сведения о статических и динамических строках и столбцах  
  В области данных табликса ячейки упорядочены в строки и столбцы, связанные с группами. Структура групп строк идентична структуре групп столбцов. В этом примере используются группы строк, но эти же принципы можно применить к группам столбцов.  
@@ -84,10 +83,9 @@ ms.lasthandoff: 08/09/2017
  Функция «Добавить итог» автоматически создает строку за пределами текущей группы, в которой отображаются значения, относящиеся к группе. Можно также вручную добавлять статические и динамические строки. Визуальные индикаторы помогают определить, какие строки являются статическими, а какие — динамическими. Дополнительные сведения см. в разделе [Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Связывание нескольких областей данных к тому же набору данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Управление отображением области данных Табликса на странице отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Изучение возможностей области данных Табликса &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [Управление отображением области данных табликса на странице отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
+ [Изучение возможностей области данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

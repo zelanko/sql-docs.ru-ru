@@ -1,7 +1,6 @@
 ---
-title: "Ссылка на параметр доступа URL-адрес | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Справочник по параметрам доступа по URL-адресу | Документы Майкрософт"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/09/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -15,17 +14,16 @@ helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c66dbaaaadcfc00cf52520f19f341ab7cd3b3c2b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="url-access-parameter-reference"></a>Ссылка на параметр доступа по URL-адресу
   Чтобы настроить внешний вид отчетов служб [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)], можно использовать приведенные здесь параметры как часть URL-адреса. В этом разделе перечислены основные параметры. Параметры не учитывают регистр символов и начинаются с префикса параметра *rs:* , если направлены на сервер отчетов, и с префикса параметра *rc:* , если направлены в средство просмотра HTML-страниц. Также можно указать конкретные параметры устройств или модулей подготовки отчетов. Дополнительные сведения о параметрах, определяемых устройством, см. в разделе [Указание настройки сведений об устройстве в URL-адресе](../reporting-services/specify-device-information-settings-in-a-url.md).  
@@ -233,7 +231,7 @@ ms.lasthandoff: 08/09/2017
   
      Значение по умолчанию — **HTML5**. Дополнительные сведения см. в разделе [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md).  
   
-     Полный список см. в разделе  **\<отрисовки >** раздел расширения файла rsreportserver.config сервера отчетов.  Дополнительные сведения о расположении этого файла см. в разделе [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
+     Полный список см. в разделе расширения **\<Render>** файла конфигурации сервера отчетов rsreportserver.config.  Дополнительные сведения о расположении этого файла см. в разделе [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md).  
   
      Пример, как получить копию отчета в формате PDF прямо с сервера отчетов, работающего в режиме **Native** :  
   
@@ -384,4 +382,3 @@ ms.lasthandoff: 08/09/2017
  [Экспорт отчета с помощью URL-адресов](../reporting-services/export-a-report-using-url-access.md)  
   
   
-

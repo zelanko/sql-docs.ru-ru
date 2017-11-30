@@ -1,5 +1,5 @@
 ---
-title: "Приостановка и возобновление общих расписаний | Документы Microsoft"
+title: "Приостановка и возобновление общих расписаний | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - schedules [Reporting Services], resuming
 - schedules [Reporting Services], pausing
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 71dcd66394cf96bd6994e40de76b10a519f32a74
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Приостановка и возобновление общих расписаний
   Можно приостановить и возобновить общее расписание, используемое в данное время. Приостановка выполнения общего расписания позволяет временно приостановить действие расписания, инициирующего обработку отчетов и подписок. Приостанавливать и возобновлять можно только общие расписания. Расписания конкретных отчетов приостанавливать нельзя.  
@@ -71,8 +70,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>См. также  
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
  [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [Изменение часовых поясов и настроек часов на сервере отчетов](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [Изменение часовых поясов и параметров часов на сервере отчетов](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
  [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   
-

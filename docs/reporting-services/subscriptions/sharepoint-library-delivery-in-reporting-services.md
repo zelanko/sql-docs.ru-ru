@@ -1,5 +1,5 @@
 ---
-title: "Доставка библиотек SharePoint в службах Reporting Services | Документы Microsoft"
+title: "Доставка библиотек SharePoint в службах Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - delivering reports [Reporting Services]
 - subscriptions [Reporting Services], SharePoint library delivery
 ms.assetid: cb4e4f71-f2d5-475a-9284-ea324c93c7de
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b269676875edbb4a250a9bfd1e45c894239282
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Доставка библиотек SharePoint в службах Reporting Services
   Сервер отчетов, настроенный на работу в режиме интеграции с SharePoint, располагает модулем доставки, с помощью которого можно отправить отчет в библиотеку SharePoint.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 08/09/2017
  Указывает необязательное свойство **Title** для отчета в целевой библиотеке. Это стандартное свойство для всех элементов, хранящихся в библиотеке. Пользователь определяет, отобразить или скрыть это свойство при просмотре содержимого библиотеки на сайте SharePoint.  
   
  Путь  
- Указывает полный URL-адрес библиотеки SharePoint, включая имя сайта и веб-приложения SharePoint. Например: `http://mySharePointWeb/MySite/MyDocLib`; где `http://mySharePointWeb` указывает веб-приложение, «Сайт» — сайт SharePoint, а «Библиотека» — библиотеку SharePoint, где доставить отчет.  
+ Указывает полный URL-адрес библиотеки SharePoint, включая имя сайта и веб-приложения SharePoint. Например, `http://mySharePointWeb/MySite/MyDocLib`, где `http://mySharePointWeb` — веб-приложение, "MySite" — сайт SharePoint, а "MyDocLib" — библиотека SharePoint, в которую должен быть доставлен отчет.  
   
  Нельзя указать страницу, сайт или список. Целевым контейнером должна быть библиотека, расположенная на том же сайте или в той же ферме.  
   
@@ -91,9 +90,8 @@ ms.lasthandoff: 08/09/2017
  Эта функция позволяет автоматически копировать последнюю версию файла в несколько мест. Файл копируется в том случае, если включен режим **Заменить** . В режимах **Автоувеличение** и **Нет**доставка завершается ошибкой **rsDeliveryError** .  
   
 ## <a name="see-also"></a>См. также  
- [Создание и управление подписками для серверов отчетов в режиме интеграции с SharePoint](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Укажите учетные данные и сведения о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Определение учетных данных и сведениях о подключении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
-

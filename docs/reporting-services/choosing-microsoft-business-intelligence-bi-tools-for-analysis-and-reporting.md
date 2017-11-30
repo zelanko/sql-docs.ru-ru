@@ -1,5 +1,5 @@
 ---
-title: "Выбор средства Microsoft Business Intelligence (BI) для анализа и отчетов | Документы Microsoft"
+title: "Выбор средства бизнес-аналитики Майкрософт для анализа и отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/12/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: d0e16108-7123-4788-87b3-05db962dbc94
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: a9684685e218cb0f2dd1fe01c11606ce750c66a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 70d7be18434e610fa3ed3a6d237a0a7b676e3274
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Выбор средства Microsoft Business Intelligence (BI) для анализа и отчетности
 Выбор подходящего средства бизнес-аналитики может оказывать огромное влияние. Вы можете ознакомиться с дополнительными сведениями о различных предложениях Майкрософт и выбрать то из них, которое наилучшим образом соответствует вашим потребностям.
@@ -39,10 +38,10 @@ ms.lasthandoff: 09/27/2017
 |Самостоятельное выполнение прогнозной аналитики||||||[Надстройки интеллектуального анализа данных для Excel](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 поддерживается)|  
 |Визуализация и анализ данных||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [Трехмерные карты](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |Формирование вопросов с помощью запросов на естественном языке|||||[ВОПРОСЫ И ОТВЕТЫ](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр < файлы 10 МБ)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(с использованием Power BI для мобильных устройств)|  
+|Доступ к отчетам с помощью мобильных устройств||||[HTML 5 (поддерживает просмотр файлов размером до 10 МБ)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(с использованием Power BI для мобильных устройств)|  
 |Совместная работа и общий доступ|||[Веб-сайты SharePoint](http://go.microsoft.com/fwlink/?LinkId=391849)|[Сайтов групп SharePoint](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**Корпоративная бизнес-аналитика**|IT Pro||||||  
-|Создавайте многомерные или табличные корпоративные модели||||||[службы Analysis Services](../analysis-services/analysis-services.md);|  
+|Создавайте многомерные или табличные корпоративные модели||||||[службы Analysis Services](../analysis-services/analysis-services.md)|  
 |Создавайте специальные визуализации данных|||[Power View для SharePoint](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |Создавайте панели мониторинга|||[Панели мониторинга SharePoint](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [Службы PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||[Панели мониторинга в Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |Создавайте рабочие отчеты||||||*[Службы Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
@@ -54,4 +53,3 @@ ms.lasthandoff: 09/27/2017
  *Службы Reporting Services имеют несколько функций, поддерживающих доставку современных и разбитых на страницы отчетов.  
   
   
-

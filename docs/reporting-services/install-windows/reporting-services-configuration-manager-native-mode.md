@@ -1,12 +1,11 @@
 ---
-title: "Диспетчер конфигурации (собственный режим) служб Reporting Services | Документы Microsoft"
+title: "Использование диспетчера конфигурации служб Reporting Services (собственный режим) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,14 +17,12 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: c9aa72267460ed2d52ae3e2d42a73071b4d7a0f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/21/2017
-
+ms.openlocfilehash: e693575acb5c2eef31231a434dc25ee90b3ade36
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="reporting-services-configuration-manager-native-mode"></a>Использование диспетчера конфигурации служб Reporting Services (собственный режим)
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
@@ -54,7 +51,7 @@ ms.lasthandoff: 09/21/2017
   
 -   Настройка электронной почты сервера отчетов. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают модуль доставки электронной почты сервера отчетов, в котором для доставки отчетов или уведомлений об обработке отчетов по электронной почте используется протокол SMTP. С помощью диспетчера конфигурации служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно указать SMTP-сервер или сетевой шлюз, который используется для доставки электронной почты.  
   
- Программа настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не предназначена для управления содержимым сервера отчетов, включения дополнительных компонентов или предоставления доступа к серверу. Полное развертывание требует также использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] включить дополнительные компоненты или изменить значения по умолчанию и веб-портале, чтобы предоставить пользователю доступ к серверу.
+ Программа настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не предназначена для управления содержимым сервера отчетов, включения дополнительных компонентов или предоставления доступа к серверу. Для полного развертывания также необходимо в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] включить дополнительные компоненты или изменить значения по умолчанию, а также веб-портал, чтобы предоставить пользователю доступ к серверу.
 
 ##  <a name="bkmk_requirements"></a> Требования
 
@@ -70,13 +67,13 @@ ms.lasthandoff: 09/21/2017
 
 - Перед подключением к удаленному экземпляру сервера отчетов для его настройки необходимо обеспечить пропускание удаленных вызовов инструментария управления Windows (WMI) через брандмауэр Windows. Дополнительные сведения см. в разделе [Настройка сервера отчетов для удаленного администрирования](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
 
-Диспетчер конфигурации служб Reporting Services устанавливается автоматически при установке SQL Server Reporting Services.
+Диспетчер конфигурации служб Reporting Services устанавливается автоматически при установке служб SQL Server Reporting Services.
 
 ##  <a name="bkmk_start_configuration_manager"></a> Запуск диспетчера конфигурации служб Reporting Services
 
 1.  Следующий шаг должен соответствовать версии ОС Microsoft Windows.
 
-    - На начальном экране Windows введите **отчетов** и выберите **диспетчер конфигурации служб Reporting Services** в результатах поиска.
+    - На начальном экране Windows введите **Отчеты** и в результатах поиска выберите **Диспетчер конфигурации служб Reporting Services**.
 
     - Нажмите кнопку **Пуск**и последовательно наведите указатель на пункты **Все программы**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]и **Средства настройки**.
 
@@ -103,4 +100,3 @@ ms.lasthandoff: 09/21/2017
 [Настройка и администрирование сервера отчетов](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

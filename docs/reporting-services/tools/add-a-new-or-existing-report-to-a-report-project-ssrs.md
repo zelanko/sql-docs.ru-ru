@@ -1,5 +1,5 @@
 ---
-title: "Добавление нового или существующего отчета в проект отчета (SSRS) | Документы Microsoft"
+title: "Добавление нового или существующего отчета в проект отчета (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- reports [Reporting Services], creating
+helpviewer_keywords: reports [Reporting Services], creating
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6edee3df21691e6f9e53a167bb1bd1bce502e76a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Добавление в проект отчета новый или существующий отчет (службы SSRS)
   В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно добавить в проект новый отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы либо с помощью мастера отчетов, либо добавив пустой отчет. Кроме того, можно добавить в проект существующий отчет. После добавления отчета его имя появляется в папке **Отчеты** проекта.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  В обозревателе решений щелкните правой кнопкой мыши папку "Отчеты" и выберите пункт **Добавить новый отчет**. Открывается диалоговое окно **Мастер отчетов** .  
   
-     Мастер позволяет создать источник данных, создание набора данных с помощью запроса, определить группы, задать макет и создания отчетов. Эти шаги включают:  
+     Мастер позволяет создать источник данных, создать набор данных с использованием запроса, определить группы, задать макет и в завершение создать отчет. Эти шаги включают:  
   
     -   **Выбор источника данных.** Первым шагом создания отчета является определение источника данных. Помимо отображения списка всех общих источников данных, содержащихся в проекте отчета, мастер отчетов даст возможность создать новый источник данных.  
   
@@ -67,7 +65,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
- Дополнительные вопросы? [Повторите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

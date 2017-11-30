@@ -1,30 +1,61 @@
 ---
 title: "Журнал изменений для SQL Server Data Tools (SSDT) | Документация Майкрософт"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 10/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssdt
+ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Active
+ms.openlocfilehash: 64583be5bd94e71a52b894c5babd3d29107c56dc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: e3901423d7f9e2a8f8a6c3753c284c1727644829
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
   
 Подробные сведения о новых и измененных возможностях см. в [блоге группы разработчиков SSDT](https://blogs.msdn.microsoft.com/ssdt/).
+
+
+## <a name="ssdt-for-visual-studio-2017-1540-preview"></a>SSDT для Visual Studio 2017 (предварительная версия 15.4.0)
+Номер сборки: 14.0.16134.0
+  
+### <a name="whats-new"></a>Новые возможности
+
+В этом выпуске представлен автономный веб-установщик для проектов баз данных SQL Server, Analysis Services, Reporting Services и Integration Services в Visual Studio 2017 15.4 и более поздних версиях.
+
+### <a name="installer"></a>Установщик
+
+- Пользователь может задавать псевдоним при установке нового экземпляра SSDT для VS2017.
+- Скрытие флажков выбора компонентов установщика, если не выбрано ни одного экземпляра VS.
+- Уточнены некоторые сообщения установщика на основе отзывов пользователей.
+- Устранена проблема, связанная с тем, что установщик не поддерживает обновление.
+
+
+### <a name="ssis"></a>Службы SSIS
+
+- Устранена проблема, связанная с тем, что мастер импорта и экспорта данных не может указывать источник данных, если установлен пакет дополнительных компонентов Azure.
+- Устранена проблема, связанная с тем, что при редактировании задачи процесса служб Analysis Services SSIS возникает исключение при переключении соединения.
+- Устранена проблема, связанная с нарушением работы компонентов CDC после применения исправления SQL, которое добавляет столбец __$command_id.
+- Устранена проблема, связанная с невозможностью изменения и выполнения стороннего пакета при использовании прежней версии SQL Server в качестве целевой платформы.
+- Устранена проблема, связанная с неправильным отображением диалогового окна настройки источника неструктурированного файла при двойном щелчке DTSWizard.exe и выбора источника неструктурированного файла.
+- Устранена проблема, связанная с невозможностью выполнения пакета, содержащего компонент или задачу пакета дополнительных компонентов Azure при выборе SQL Server 2017 в качестве целевой платформы.
+
+
+**Известные проблемы**
+
+- Установщик не локализован.
+- Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр *ExecuteOutOfProcess* имеет значение True. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
+
 
 ## <a name="ssdt-173-for-visual-studio-2015"></a>SSDT 17.3 для Visual Studio 2015
 Номер сборки: 14.0.61709.290
@@ -550,4 +581,3 @@ Console.WriteLine(result.DeploymentReport);
 [Новые возможности в службах Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)  
 [Новые возможности служб Integration Services в SQL Server 2016](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
-

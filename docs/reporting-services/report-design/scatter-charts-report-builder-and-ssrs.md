@@ -1,5 +1,5 @@
 ---
-title: "Точечные диаграммы (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Точечные диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2b035836c2357feecf8f0a3763c9a3b2ba566b6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5eb49311bbab2bd0cdade3f1541507581ad860d9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>Точечные диаграммы (построитель отчетов и службы SSRS)
-  В точечной диаграмме ряды отображаются как наборы точек. Значения представлены расположением точки на плоскости диаграммы. Категории представлены различными маркерами. Точечные диаграммы обычно используются для сравнения агрегированных значений разных категорий. Дополнительные сведения о добавлении данных в точечные диаграммы см. в разделе [Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+  В точечной диаграмме ряды отображаются как наборы точек. Значения представлены расположением точки на плоскости диаграммы. Категории представлены различными маркерами. Точечные диаграммы обычно используются для сравнения агрегированных значений разных категорий. Дополнительные сведения о добавлении данных в точечные диаграммы см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
  На следующем рисунке показан пример точечной диаграммы.  
   
- ![Точечная диаграмма](../../reporting-services/report-design/media/rs-scatterchart.gif "точечной диаграммы")  
+ ![Точечная диаграмма](../../reporting-services/report-design/media/rs-scatterchart.gif "Точечная диаграмма")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -52,10 +51,9 @@ ms.lasthandoff: 08/09/2017
 -   По умолчанию на точечных диаграммах точки данных выводятся в виде точек. Если на точечной диаграмме необходимо вывести несколько рядов, рекомендуется использовать маркеры разной формы — треугольные, квадратные, ромбические или иные.  
   
 ## <a name="see-also"></a>См. также раздел  
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Типы диаграмм &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [Форматирование диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [Графики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)  
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [Графики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)  
   
   
-

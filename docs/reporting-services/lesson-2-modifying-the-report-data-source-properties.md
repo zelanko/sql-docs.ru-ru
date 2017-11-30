@@ -1,27 +1,25 @@
 ---
-title: "Занятие 2: Изменение данных отчета свойства источника данных | Документы Microsoft"
+title: "Занятие 2. Изменение свойств источника данных отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/23/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 9a2e755b3aa71ba3792b5be5aa72367a0e218215
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 На этом занятии учебника по службам [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с помощью веб-портала будет выбран отчет, который необходимо доставить получателям. Управляемая данными подписка, которую вы создадите, будет распространять отчет **Заказ на продажу** , созданный при работе с учебником [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  В последующих шагах будут изменены сведения о соединении с источником данных, используемые в отчете для получения данных. Только отчеты, использующие **сохраненные учетные данные** для доступа к источнику данных для отчета, могут распространяться с помощью управляемой данными подписки. Сохраненные учетные данные нужны для автоматической обработки отчета.  
@@ -113,7 +111,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="bkmk_redeploy"></a>Повторное развертывание отчета  
   
-1.  Повторно разверните отчет, с тем чтобы конфигурация подписки, которая будет создана на следующем занятии, могла использовать изменения, внесенные на этом занятии. Дополнительные сведения о свойствах проекта, используемая в этом учебнике таблицы, см в разделе «Публикация отчета на сервере отчетов (необязательно)» для [Lesson 6: Добавление группирования и итогов &#40; Службы Reporting Services &#41; ](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+1.  Повторно разверните отчет, с тем чтобы конфигурация подписки, которая будет создана на следующем занятии, могла использовать изменения, внесенные на этом занятии. Дополнительные сведения о свойствах проекта, использованных в учебнике по таблицам, см. в разделе "Публикация отчета на сервере отчетов (необязательно)" [занятия 6 "Добавление группирования и итогов" (службы Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  На панели инструментов щелкните **Построить** , а затем ― **Развернуть учебник**.  
   
@@ -129,5 +127,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

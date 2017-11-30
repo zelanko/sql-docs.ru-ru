@@ -1,12 +1,11 @@
 ---
-title: "Сведения о резервировании URL-адрес и регистрации (диспетчер конфигурации служб SSRS) | Документы Microsoft"
+title: "Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/18/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
 ms.openlocfilehash: 63fd65591432fecc75ec5af5dd7cde2954ef4930
-ms.contentlocale: ru-ru
-ms.lasthandoff: 11/07/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Сведения о резервировании и регистрации URL-адресов (диспетчер конфигурации служб SSRS)
   URL-адреса для приложений служб Reporting Services определяются в качестве резервирований URL-адресов в компоненте HTTP.SYS. Резервирование URL-адресов определяет синтаксис конечной точки URL-адреса к веб-приложению. При настройке приложений на сервере отчетов резервирование URL-адресов задается как для веб-службы сервера отчетов, так и для диспетчера отчетов. Резервирование URL-адресов создается автоматически при настройке URL-адресов в программе установке или программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -66,7 +64,7 @@ ms.lasthandoff: 11/07/2017
 |Резервирование URL-адресов в компоненте HTTP.SYS|URL-адрес|Объяснение|  
 |---------------------------------|---------|-----------------|  
 |`http://+:80/reportserver`|`http://<computername>/reportserver`<br /><br /> `http://<IPAddress>/reportserver`<br /><br /> `http://localhost/reportserver`|Для резервирования URL-адресов указывается шаблон (+) и номер порта 80. Этот запрос помещает в очередь сервера запросов все входящие запросы по порту 80, предназначенные любому узлу, который соответствует компьютеру сервера отчетов. Обратите внимание, что при таком резервировании URL-адресов для доступа к серверу отчетов может быть использовано любое число URL-адресов.<br /><br /> Это резервирование URL-адресов действует по умолчанию для служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в большинстве операционных систем.|  
-|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|Такое резервирование URL-адресов точно задает IP-адрес и поэтому является значительно более ограниченным, чем резервирование URL-адресов по шаблону. Только URL-адреса, включающие данный IP-адрес, могут подключаться к серверу отчетов. Учитывая это резервирование URL-адрес, запрос на сервер отчетов в `http://<computername>/reportserver` или `http://localhost/reportserver` завершится ошибкой.|  
+|`http://123.45.67.0:80/reportserver`|`http://123.45.67.0/reportserver`|Такое резервирование URL-адресов точно задает IP-адрес и поэтому является значительно более ограниченным, чем резервирование URL-адресов по шаблону. Только URL-адреса, включающие данный IP-адрес, могут подключаться к серверу отчетов. С учетом этого резервирования URL-адреса запрос к серверу отчетов в `http://<computername>/reportserver` или `http://localhost/reportserver` завершится ошибкой.|  
   
 ##  <a name="DefaultURLs"></a> URL-адреса по умолчанию  
  При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию программа установки резервирует URL-адреса для веб-службы сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. При определении резервирования URL-адресов в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] можно также принять значения по умолчанию. URL-адреса по умолчанию включают имя экземпляра, если устанавливается выпуск [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] либо если службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливаются как именованный экземпляр.  
@@ -105,9 +103,9 @@ ms.lasthandoff: 11/07/2017
  Анонимный доступ отключен, поскольку по умолчанию действует уровень безопасности **RSWindowsNegotiate**. Для доступа через интрасеть в URL-адресах сервера отчетов используются сетевые имена компьютеров. Настройка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для работы через Интернет выполняется иначе. Дополнительные сведения о проверке подлинности RSWindowsNTLM и RSWindowsBasic см. в разделе [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLlocalAdmin"></a> URL-адреса для локального администрирования  
- Можно использовать `http://localhost/reportserver` или `http://localhost/reports` Если строгие или слабые шаблоны для резервирования URL-адреса.  
+ Если для резервирования URL-адреса указаны строгие или слабые шаблоны, можно использовать `http://localhost/reportserver` или `http://localhost/reports`.  
   
- `http://localhost` URL-адрес будет считаться `http://127.0.0.1`. Если резервирование URL-адресов ограничено до имени компьютера или точного IP-адреса, localhost указывать можно только в том случае, если при этом создается дополнительное резервирование на локальном компьютере по адресу 127.0.0.1. Аналогичным образом, если localhost или адрес 127.0.0.1 на данном компьютере запрещены, использовать такой URL-адрес будет нельзя.  
+ URL-адрес `http://localhost` будет интерпретироваться как `http://127.0.0.1`. Если резервирование URL-адресов ограничено до имени компьютера или точного IP-адреса, localhost указывать можно только в том случае, если при этом создается дополнительное резервирование на локальном компьютере по адресу 127.0.0.1. Аналогичным образом, если localhost или адрес 127.0.0.1 на данном компьютере запрещены, использовать такой URL-адрес будет нельзя.  
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] и более поздних версий имеют новые средства безопасности, позволяющие свести к минимуму риск случайного запуска программ с повышенными правами доступа. Для этих операционных систем придется выполнить ряд дополнительных шагов для разрешения локального администрирования. Дополнительные сведения см. в разделе [Настройка сервера отчетов, работающего в основном режиме, для локального администрирования (службы SSRS)](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
@@ -116,4 +114,3 @@ ms.lasthandoff: 11/07/2017
  [Синтаксис резервирования URL-адресов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
-

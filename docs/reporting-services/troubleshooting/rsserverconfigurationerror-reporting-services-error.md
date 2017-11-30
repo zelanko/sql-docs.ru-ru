@@ -1,5 +1,5 @@
 ---
-title: "rsServerConfigurationError - ошибка службы Reporting Services | Документы Microsoft"
+title: "rsServerConfigurationError — ошибка служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- rsServerConfigurationError
+helpviewer_keywords: rsServerConfigurationError
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78d4fd567ce57dba6d78c45a543a68725742d686
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b10e27361b75891fda0501b218ce6d634d52103e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError - Ошибка службы Reporting Services
     
@@ -53,13 +51,12 @@ ms.lasthandoff: 08/09/2017
 ## <a name="user-action"></a>Действие пользователя  
  Если эта ошибка возникла после того, как файл конфигурации был изменен вручную, удалите внесенные изменения, вернув прежние значения, либо, при наличии резервной копии, восстановите предыдущую версию файла.  
   
- Чтобы просмотреть дополнительные сведения об ошибке, сопровождающее **rsServerConfiguration** ошибки, просмотрите файлы сервера отчетов трассировки журналов, которые можно найти в папке \Microsoft SQL Server\MSRS12.\< instancename > \Reporting Services\LogFiles. Дополнительные сведения см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Дополнительные сведения об ошибке, связанные с ошибкой **rsServerConfiguration**, см. в файлах журналов трассировки сервера отчетов, которые находятся в папке \Microsoft SQL Server\MSRS12.\<имя_экземпляра>\Reporting Services\LogFiles. Дополнительные сведения см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Только для внутреннего использования  
   
 ## <a name="see-also"></a>См. также  
- [Файлы конфигурации служб отчетов](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Изменение файла конфигурации служб Reporting Services &#40; Файл RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+ [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
   
   
-

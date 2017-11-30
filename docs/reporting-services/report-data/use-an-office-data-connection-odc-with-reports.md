@@ -1,5 +1,5 @@
 ---
-title: "Использование подключения данных Office (ODC) в отчетах | Документы Microsoft"
+title: "Использованные подключения к данным Office (ODC) в отчетах | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], shared data sources
 - .odc files
 ms.assetid: e8d6896d-f886-4390-8b5d-96f0a50c250c
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7df29304e469a78f64a8b81198d7991f956953fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 2d6f6fa222bb8d4c5c9cd53a560c093c814ccd01
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>использовать в отчетах ODC-файл подключения к данным Office
   В некоторых случаях для предоставления в отчет служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сведений о соединении можно использовать существующий ODC-файл. ODC-файл может быть использован вместо RSDS-файла при создании общего источника данных. Сервер отчетов использует ODC-файл так же, как и RSDS-файлы. Он считывает из файла тип источника данных, строку соединения и сведения об учетных данных.  
@@ -102,7 +101,7 @@ ms.lasthandoff: 08/09/2017
   
 12. Выделите только что переданный ODC-файл.  
   
-13. Чтобы выбрать файл и сохранить изменения, дважды нажмите кнопку **ОК******.  
+13. Нажмите кнопку **ОК** для выберите файл, а затем нажмите кнопку **ОК** для сохранения изменений.  
   
      Если представленные выше шаги применяются к образцу базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , необходимо иметь в виду, что полной совместимостью с ODC-файлом обладает только отчет Company Sales. Другие образцы отчетов включают в себя параметры и функции запросов, не совместимые с поставщиком OLE DB. Однако указанные отчеты можно преобразовать с помощью конструктора отчетов, после чего их можно будет использовать с поставщиком OLE DB.  
   
@@ -110,4 +109,3 @@ ms.lasthandoff: 08/09/2017
  [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
   
   
-

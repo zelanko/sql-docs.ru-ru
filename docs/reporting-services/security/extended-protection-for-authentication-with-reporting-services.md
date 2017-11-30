@@ -1,5 +1,5 @@
 ---
-title: "Расширенная защита для проверки подлинности со службами Reporting Services | Документы Microsoft"
+title: "Расширенная защита для проверки подлинности с использованием служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,35 +11,33 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Расширенная защита для проверки подлинности служб Reporting Services
 
   Расширенная защита — это набор усовершенствований, внесенных в последние версии операционной системы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. С помощью расширенной защиты приложения могут лучше защищать учетные данные и проверку подлинности. Сама эта функция не обеспечивает защиту от определенных атак, например, таких как переадресация учетных данных, однако она предоставляет таким приложениям, как службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , инфраструктуру для ввода в действие расширенной защиты проверки подлинности.  
   
  Основными улучшениями процесса проверки подлинности, которые входят в расширенную защиту, являются привязка службы и привязка канала. Для привязки канала используется токен привязки канала (CBT), позволяющий удостовериться в целостности канала, установленного между двумя конечными точками. При привязке службы для проверки пункта назначения токенов проверки подлинности используются имена участников-служб (SPN). Дополнительные сведения о расширенной защите см. в разделе [Интегрированная проверка подлинности Windows с расширенной защитой](http://go.microsoft.com/fwlink/?LinkId=179922).  
   
-Службы SQL Server Reporting Services (SSRS) поддерживают и поощряют использование расширенной защиты, включенной в операционной системе и настроенной в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. По умолчанию [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимает запросы, в которых указана проверка подлинности Negotiate или NTLM, что позволяет ему пользоваться поддержкой расширенной защиты в операционной системе и функциями расширенной защиты в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+Службы SQL Server Reporting Services поддерживают и поощряют использование расширенной защиты, включенной в операционной системе и настроенной в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. По умолчанию [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимает запросы, в которых указана проверка подлинности Negotiate или NTLM, что позволяет ему пользоваться поддержкой расширенной защиты в операционной системе и функциями расширенной защиты в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 > [!IMPORTANT]  
 >  По умолчанию расширенная защита в Windows отключена. Дополнительные сведения о включении расширенной защиты в Windows см. в разделе [Расширенная защита для проверки подлинности](http://go.microsoft.com/fwlink/?LinkID=178431). Для успешного прохождения проверки подлинности и операционная система, и стек проверки подлинности клиента должны поддерживать расширенную защиту. При использовании старых операционных систем для реализации на компьютере расширенной защиты может потребоваться установка нескольких обновлений. Сведения о последних изменениях, внесенных в расширенную защиту, см. в статье [Новые сведения о расширенной защите](http://go.microsoft.com/fwlink/?LinkId=183362).  
 
 ## <a name="reporting-services-extended-protection-overview"></a>Общие сведения о расширенной защите служб Reporting Services
 
-Службы SSRS, поддерживают и поощряют использование расширенной защиты, который был включен в операционной системе. Если операционная система не поддерживает расширенную защиту или если эта функция в операционной системе отключена, то функция расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не сможет провести проверку подлинности. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также требуется сертификат SSL. Дополнительные сведения см. в разделе [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+Службы SSRS поддерживают и вводят в действие расширенную защиту, включенную в операционной системе. Если операционная система не поддерживает расширенную защиту или если эта функция в операционной системе отключена, то функция расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не сможет провести проверку подлинности. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также требуется сертификат SSL. Дополнительные сведения см. в разделе [Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 > [!IMPORTANT]  
->  По умолчанию в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] расширенная защита отключена. Эту функцию можно включить, изменив файл конфигурации **rsreportserver.config** или обновив этот файл с помощью средств WMI API. Службы SSRS не предоставляет пользовательский интерфейс для изменения или просмотра параметров расширенной защиты. Дополнительные сведения см. в разделе с описанием [параметров конфигурации](#ConfigurationSettings) в этой главе.  
+>  По умолчанию в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] расширенная защита отключена. Эту функцию можно включить, изменив файл конфигурации **rsreportserver.config** или обновив этот файл с помощью средств WMI API. В службах SSRS нет пользовательского интерфейса для изменения или просмотра параметров расширенной защиты. Дополнительные сведения см. в разделе с описанием [параметров конфигурации](#ConfigurationSettings) в этой главе.  
   
  Обычные проблемы, возникающие из-за изменений параметров расширенной защиты или неверно заданных настроек, не сопровождаются понятными сообщениями об ошибках или диалоговыми окнами. Проблемы, связанные с конфигурацией расширенной защиты и совместимостью, ведут к возникновению сбоев при проверке подлинности и ошибок в журналах трассировки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="upgrade"></a>Обновление  
   
--   Обновление [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] server до SQL Server 2016 добавляются параметры конфигурации со значениями по умолчанию **rsreportserver.config** файла. Если настройки уже имелись, установки SQL Server 2016 они будут сохранены в **rsreportserver.config** файла.  
+-   При обновлении сервера служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] до версии SQL Server 2016 в файл **rsreportserver.config** добавляются параметры конфигурации со значениями по умолчанию. Если параметры уже имелись, то при установке SQL Server 2016 они будут сохранены в файле **rsreportserver.config**.  
   
 -   По умолчанию при добавлении параметров конфигурации в файл конфигурации **rsreportserver.config** функция расширенной защиты служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отключена. Ее необходимо включить, следуя описанной в этой главе процедуре. Дополнительные сведения см. в разделе с описанием [параметров конфигурации](#ConfigurationSettings) в этой главе.  
   
@@ -179,4 +177,4 @@ ms.lasthandoff: 08/09/2017
 [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [Метод SetExtendedProtectionSettings (WMI MSReportServer_ConfigurationSetting)](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

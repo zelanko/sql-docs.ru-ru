@@ -1,5 +1,5 @@
 ---
-title: "Примеры выражений (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Примеры выражений (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/06/2017
 ms.prod: sql-server-2016
@@ -26,20 +26,19 @@ helpviewer_keywords:
 - dates [Reporting Services], expressions
 - expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
-caps.latest.revision: 101
+caps.latest.revision: "101"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e76028d17363d05047531dd11da6021d766d59bd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
-Выражения часто используются в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для управления содержимым и внешним видом отчета. Выражения записываются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], и в них можно использовать встроенные функции, пользовательский код, переменные отчета, групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типах ссылок, которые можно включить в разделе [выражения используются в отчетах &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), и [добавить выражение &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
+Выражения часто используются в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для управления содержимым и внешним видом отчета. Выражения записываются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], и в них можно использовать встроенные функции, пользовательский код, переменные отчета, групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типах ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  При включении функции «песочницы» для языка определения отчетов только определенные типы и элементы смогут использовать в тексте выражения во время публикации отчета. Дополнительные сведения см. в статье [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md).  
@@ -68,13 +67,13 @@ ms.lasthandoff: 08/09/2017
   
 -   [Ссылки на коллекции переменных отчета и группы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
-Дополнительные сведения о простых и сложных выражениях, о местах, где можно использовать выражения, и о типах ссылок, которые можно включать в выражения, см. в подразделах в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Дополнительные сведения о контексте, в котором вычисляются выражения для вычисления статистических функций см. в разделе [область выражения для итогов, статистические выражения и встроенных коллекций &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+Дополнительные сведения о простых и сложных выражениях, о местах, где можно использовать выражения, и о типах ссылок, которые можно включать в выражения, см. в подразделах в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md). Дополнительные сведения о контексте, в котором выражения оцениваются для вычисления статистических выражений, см. в разделе [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 О написании выражений, в которых используются многие из функций и операторов, также используемых в примерах выражений в этом разделе, но в контексте создания отчета, см. в разделе [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md).  
 
   
 ## <a name="functions"></a>Функции  
- Многие выражения в отчете содержат вызовы функций. Они позволяют форматировать данные, применять логические операции и производить доступ к метаданным отчета. Можно написать выражения, использующие функции из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] библиотеки времени выполнения и из <xref:System.Convert> и <xref:System.Math> пространства имен. Можно добавить ссылки на функции из других сборок или пользовательский код. Можно также использовать классы из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в том числе <xref:System.Text.RegularExpressions>.  
+ Многие выражения в отчете содержат вызовы функций. Они позволяют форматировать данные, применять логические операции и производить доступ к метаданным отчета. В выражениях можно использовать функции из библиотеки времени выполнения [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], а также из пространств имен <xref:System.Convert> и <xref:System.Math>. Можно добавить ссылки на функции из других сборок или пользовательский код. Можно также использовать классы из [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], в том числе <xref:System.Text.RegularExpressions>.  
   
 ##  <a name="VisualBasicFunctions"></a> Функции языка Visual Basic  
  Функции языка [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] позволяют управлять данными, отображаемыми в текстовых полях, или используются в параметрах, свойствах и других областях отчета. В этом разделе приведены примеры, демонстрирующие применение некоторых из этих функций. Дополнительные сведения см. в разделе [Компоненты библиотеки времени выполнения Visual Basic](http://go.microsoft.com/fwlink/?LinkId=198941) в MSDN.  
@@ -103,7 +102,7 @@ ms.lasthandoff: 08/09/2017
     =Today()  
     ```  
   
--   Используйте **DateInterval** функции, чтобы выдвинуть определенной части даты. Ниже приведены некоторые допустимые **DateInterval** параметры:
+-   Для извлечения определенной части даты используйте функцию **DateInterval**. Вот некоторые допустимые параметры **DateInterval**:
 
     -   DateInterval.Second
     -   DateInterval.Minute
@@ -116,7 +115,7 @@ ms.lasthandoff: 08/09/2017
     -   DateInterval.Quarter
     -   DateInterval.Year
 
-    Например это выражение отобразится номер недели в текущем году для текущей даты:
+    Например, это выражение выводит номер недели в текущем году для текущей даты:
   
     ```  
     =DatePart(DateInterval.WeekOfYear, today()) 
@@ -170,7 +169,7 @@ ms.lasthandoff: 08/09/2017
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Первая функция &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), который является Агрегатная функция, возвращает первое значение SellStartDate в DataSet1 и первое значение lastreceiptdate в DataSet2.  
+-   Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Функция First (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-first-function.md), являющаяся агрегатной функцией, возвращает первое значение SellStartDate в DataSet1 и первое значение LastReceiptDate в DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -222,7 +221,7 @@ ms.lasthandoff: 08/09/2017
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     Следующее выражение вызовет то же значение, что и предыдущий, используя члены [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> вместо класса [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] функции:  
+     Следующее выражение возвращает то же значение, что и предыдущее, только вместо функций [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] используются члены класса [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String>:  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -486,7 +485,7 @@ ms.lasthandoff: 08/09/2017
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
-     Дополнительные сведения см. в разделе [гиперссылку на URL-адрес &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
+     Дополнительные сведения см. в разделе [Добавление гиперссылки на URL-адрес (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 -   Следующее выражение в зависимости от определенных условий управляет добавлением URL-адреса в текстовое поле. Это выражение зависит от параметра `IncludeURLs` , который позволяет пользователю решать, включать ли в отчет активные URL-адреса. Это выражение установлено в качестве действия для текстового поля. Установив параметр в значение False и просматривая затем отчет, можно экспортировать отчет Microsoft Excel без гиперссылок.  
   
@@ -519,7 +518,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ##  <a name="CustomCode"></a> Пользовательский код  
- В отчете можно использовать пользовательский код. Он либо внедряется в отчет, либо хранится в используемой отчетом пользовательской сборке. Дополнительные сведения о пользовательском коде см. в разделе [пользовательского кода и ссылок на сборки в выражениях в конструкторе отчетов &#40; Службы SSRS &#41; ](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ В отчете можно использовать пользовательский код. Он либо внедряется в отчет, либо хранится в используемой отчетом пользовательской сборке. Дополнительные сведения о пользовательском коде см. в разделе [Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>Использование групповых переменных для нестандартного статистического выражения  
  Можно инициализировать значение групповой переменной, которая является локальной в области определенной группы, а затем включать в выражения ссылку на эту переменную. Одним из способов использования групповой переменной в пользовательском коде является реализация нестандартного статистического выражения. Дополнительные сведения см. в разделе [Использование групповых переменных в службах Reporting Services 2008 для нестандартного статистического выражения](http://go.microsoft.com/fwlink/?LinkId=128714).  
@@ -561,10 +560,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Примеры выражений групп &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Использование выражений в отчетах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Часто используемые фильтры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
-

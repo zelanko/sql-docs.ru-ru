@@ -1,5 +1,5 @@
 ---
-title: "Добавление или удаление верхнего или нижнего колонтитула (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление или удаление верхнего или нижнего колонтитула страницы (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72988623-fee8-4a05-9f72-8fcb8e668576
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 551fbc941b9d0aaf5c2a4cbd9a7d0b2a7828096e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Добавление или удаление верхнего или нижнего колонтитула страницы (построитель отчетов и службы SSRS)
   К верхним или нижним колонтитулам страниц можно добавить статический текст, изображения, линии, прямоугольники и границы. Если в заголовке или нижнем колонтитуле необходимо разместить переменные или вычисляемые данные, поместите выражения и связанные с данными изображения в текстовом поле.  
@@ -72,4 +71,3 @@ ms.lasthandoff: 08/09/2017
  [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
-

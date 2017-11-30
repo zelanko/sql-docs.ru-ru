@@ -1,12 +1,11 @@
 ---
-title: "Резервное копирование и восстановление служб Reporting Services ключи шифрования | Документы Microsoft"
+title: "Резервное копирование и восстановление ключей шифрования служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,24 +14,23 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a4344a31ac18bc128845935fa2dce6223dab5710
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Ключи шифрования служб SSRS — резервное копирование и восстановление ключей шифрования
+# <a name="ssrs-encryption-keys---back-up-and-restore-encryption-keys"></a>Ключи шифрования служб SSRS — резервное копирование и восстановление ключей шифрования
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Одним из важных аспектов конфигурирования сервера отчетов является создание резервной копии симметричного ключа, используемого для шифрования конфиденциальных данных. Резервная копия ключа требуется для выполнения многих распространенных операций и позволяет повторно использовать базу данных существующего сервера отчетов в новом сервере.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Собственный режим | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Режим SharePoint  
   
  Восстанавливать резервную копию ключа шифрования нужно в ответ на любое из следующих событий:  
   
@@ -115,4 +113,3 @@ ms.lasthandoff: 08/09/2017
  [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
-

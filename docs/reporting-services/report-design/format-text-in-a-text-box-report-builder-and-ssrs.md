@@ -1,5 +1,5 @@
 ---
-title: "Форматирование текста в текстовом поле (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Форматирование текста в текстовом поле (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df0794b5-96b0-4034-bd17-1be7f31e29db
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 7df7cc81cc2f3f19b6ce326d11db6114deeeb907
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ab1c264ec07230bd81769ab2886177552095e636
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>Форматирование текста в текстовом поле (построитель отчетов и службы SSRS)
   Любую часть текста в текстовом поле можно отформатировать отдельно, при этом в одном текстовом поле можно объединить текст заполнителя и статический текст. Такая возможность смешивания форматов и добавления текста заполнителей позволяет создавать в отчете объединенные адреса электронной почты или создавать шаблоны текста. С помощью заполнителя можно определить и по отдельности отформатировать любое выражение.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  В текстовое поле перетащите поле из набора данных. Для поля создается заполнитель.  
   
-5.  Для базового форматирования выделите текст заполнителя и выберите один из параметров форматирования из группы **Шрифт** на вкладке **Корневая папка** . Например, нажмите кнопку **Полужирный** .  
+5.  Для базового форматирования выделите текст заполнителя и выберите один из параметров форматирования из группы **Шрифт** на вкладке **Корневая папка** . Например, нажмите кнопку **Полужирный**.  
   
      Для доступа к дополнительным параметрам форматирования щелкните правой кнопкой мыши текст заполнителя и выберите **Свойства заполнителя**.  
   
@@ -71,13 +71,13 @@ ms.lasthandoff: 08/09/2017
  Список повторяется по одному разу для каждого значения в поле, а заполнитель *FieldName* будет каждый раз заменяться значением данного поля в наборе данных.  
   
 ## <a name="see-also"></a>См. также  
- [Текстовые поля &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [Форматирование текста и заполнителей &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Использование выражений в отчетах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Добавление HTML в отчет &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Форматирование чисел и дат &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Диалоговое окно «Свойства заполнителя», общие &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
+ [Текстовые поля (построитель отчетов и службы SSRS)](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Добавление HTML в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Диалоговое окно "Свойства заполнителя" — "Общие" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)  
   
   

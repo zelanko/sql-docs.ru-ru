@@ -1,5 +1,5 @@
 ---
-title: "Создание, удаление и изменение ролей (среда Management Studio) | Документы Microsoft"
+title: "Создание, удаление и изменение ролей (среда Management Studio) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,24 +19,23 @@ helpviewer_keywords:
 - roles [Reporting Services], deleting
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 42f66d05b179ee5f00c3322a2eb2943439936bcb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7b5b8d11868d108447e1a3109bff28abcef2de33
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="role-definitions---create-delete-or-modify"></a>Определения ролей - создать, изменить или удалить
+# <a name="role-definitions---create-delete-or-modify"></a>Создание, удаление или изменение определений ролей
   Службы Reporting Services предоставляют стандартные роли, определяющие уровень доступа к серверу отчетов. Каждый пользователь или группа, которым требуется доступ к серверу отчетов, получают его с помощью роли, описывающей задачи, которые может выполнять пользователь или группа. Роли определяются для сервера отчетов в целом. Нельзя изменить определение роли для конкретной части сервера отчетов или указать, что роль будет использоваться в зависимости от обстоятельств.  
   
  Чтобы создать, изменить или удалить роль используется среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Можно удалять только те роли, которые не используются.  
   
- Присвоить пользователю или группе созданную роль можно с помощью диспетчера отчетов. Дополнительные сведения см. в разделе [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+ Присвоить пользователю или группе созданную роль можно с помощью диспетчера отчетов. Дополнительные сведения см. в статье [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
   
 > [!NOTE]  
 >  Если сервер отчетов настроен для работы в режиме интеграции с SharePoint и установлено соединение с веб-сайтом SharePoint, с которым интегрирован диспетчер отчетов, можно просматривать и изменять уровни разрешений, управляющие доступом к содержимому и операциям сервера отчетов.  
@@ -83,8 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Создание и изменение назначений ролей](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Службы Reporting Services в SQL Server Management Studio &#40; Службы SSRS &#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Службы Reporting Services в среде SQL Server Management Studio (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   
-

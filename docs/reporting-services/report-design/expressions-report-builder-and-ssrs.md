@@ -1,5 +1,5 @@
 ---
-title: "Выражения (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Выражения (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 05e319f4bf6beac579eb768accbc447645277a65
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 326b542108214956c9ef51bc370d7ee36212a40d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Выражения (построитель отчетов и службы SSRS)
   Выражения часто используются в отчетах с разбивкой на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] для получения, вычисления, отображения, группирования, сортировки, параметризации и форматирования данных. 
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Простое.** Простое выражение содержит ссылку на единственный элемент во встроенной коллекции, например поле набора данных, параметр или встроенное поле. В области конструктора простое выражение отображается в скобках. Например, `[FieldName]` соответствует базовому выражению `=Fields!FieldName.Value`. Простые выражения создаются автоматически по мере создания макета отчета и перетаскивания элементов из панели данных отчета на панель конструктора. Дополнительные сведения о символах, представляющих различные встроенные коллекции, см. в разделе [Основные сведения о символах префиксов в простых выражениях](#DisplayText).  
   
--   **Сложные.** Сложные выражения содержат ссылки на несколько встроенных ссылок, операторов и вызовов функций. Сложное выражение отображается как <\<Expr >> при значение выражения включает больше, чем простую ссылку. Для просмотра выражения наведите на него курсор и воспользуйтесь подсказкой. Чтобы изменить выражение, откройте его в диалоговом окне **Выражение** .  
+-   **Сложные.** Сложные выражения содержат ссылки на несколько встроенных ссылок, операторов и вызовов функций. Сложное выражение отображается как <\<Выраж>>, если значение выражения включает больше, чем простую ссылку. Для просмотра выражения наведите на него курсор и воспользуйтесь подсказкой. Чтобы изменить выражение, откройте его в диалоговом окне **Выражение** .  
   
  На следующем рисунке показаны типичные простые и сложные выражения как для текстовых полей, так и для текста заполнителя.  
   
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
 |[Операторы](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)|Описывает операторы, которые можно использовать для объединения ссылок в выражении. Например, оператор **&** используется для объединения строк.|`="The report ran at: " & Globals!ExecutionTime & "."`|  
 |[Встроенные коллекции](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)|Описывает встроенные коллекции, которые можно включить в выражение, например `Fields`, `Parameters`и `Variables`.|`=Fields!Sales.Value`<br /><br /> `=Parameters!Store.Value`<br /><br /> `=Variables!MyCalculation.Value`|  
 |[Встроенные функции отчета и агрегатные функции](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)|Описывает встроенные функции, такие как `Sum` и `Previous`, к которым можно получить доступ из выражения.|`=Previous(Sum(Fields!Sales.Value))`|  
-|[Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Описывает, как получить доступ к встроенным классам среды CLR из пространства имен <xref:System.Math> и <xref:System.Convert>, другим классам среды CLR, функциям библиотеки времени выполнения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] или методам из внешней сборки.<br /><br /> Описывает, как получить доступ к пользовательскому коду, внедренному в отчет или скомпилированному и установленному в виде пользовательской сборки на клиент отчета и сервер отчетов.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
+|[Пользовательский код и ссылки на сборки в выражениях в конструкторе отчетов (службы SSRS)](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)|Описывает, как получить доступ к встроенным классам среды CLR <xref:System.Math> и <xref:System.Convert>, другим классам среды CLR, функциям библиотеки времени выполнения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] или методам из внешней сборки.<br /><br /> Описывает, как получить доступ к пользовательскому коду, внедренному в отчет или скомпилированному и установленному в виде пользовательской сборки на клиент отчета и сервер отчетов.|`=Sum(Fields!Sales.Value)`<br /><br /> `=CDate(Fields!SalesDate.Value)`<br /><br /> `=DateAdd("d",3,Fields!BirthDate.Value)`<br /><br /> `=Code.ToUSD(Fields!StandardCost.Value)`|  
    
 ##  <a name="Valid"></a> Проверка выражений  
  При создании выражения для определенного свойства элемента отчета типы ссылок, которые могут быть включены в выражение, зависят от значений, которые может принимать свойство элемента отчета, и от области, в которой это свойство вычисляется. Например:  
@@ -125,4 +124,3 @@ ms.lasthandoff: 08/09/2017
 -   [Учебник. Общие сведения о выражениях](Tutorial:%20Introducing%20Expressions.md)
 -   [Образцы отчетов (построитель отчетов и службы SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
-

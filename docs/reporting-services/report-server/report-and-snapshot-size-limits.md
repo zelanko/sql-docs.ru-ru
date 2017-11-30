@@ -1,5 +1,5 @@
 ---
-title: "Предельные размеры отчетов и моментальных снимков | Документы Microsoft"
+title: "Максимальные размеры отчетов и моментальных снимков | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - reports [Reporting Services], size
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0016b55ab5b7a72b8e231a943df6db191bf8b6c3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="report-and-snapshot-size-limits"></a>Максимальные размеры отчетов и моментальных снимков
   Администраторы, которые управляют развертыванием служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , могут использовать этот раздел, чтобы получить основные сведения об ограничениях максимального размера отчета при публикации на сервере отчетов, о подготовке к просмотру во время выполнения и сохранении в файловой системе. В этом разделе содержатся практические рекомендации по определению размера базы данных сервера отчетов, а также описывается влияние размера моментальных снимков на производительность сервера.  
@@ -87,8 +86,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>См. также  
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
- [База данных сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Обработка больших отчетов](../../reporting-services/report-server/process-large-reports.md)  
   
   
-

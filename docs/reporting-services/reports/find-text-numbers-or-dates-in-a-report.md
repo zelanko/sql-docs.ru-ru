@@ -1,5 +1,5 @@
 ---
-title: "Поиск текста, чисел и дат в отчете | Документы Microsoft"
+title: "Поиск текста, чисел и дат в отчете | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- searching reports
+helpviewer_keywords: searching reports
 ms.assetid: 309dffe5-00f5-404f-bb63-9e6046253ae0
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 75e9c44d9cb75cef338ff2cd684c38969aa1751f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 3a486b11b5b64244e5e68086ee9290c634215839
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="find-text-numbers-or-dates-in-a-report"></a>Поиск текста, числа и даты в отчете
   Можно искать содержимое в отчете, введя слово или фразу, которую нужно найти (максимальная длина искомого термина составляет 256 знаков). Поиск является техникой навигации, которая ищет совпадающее значение и устанавливает фокус на часть отчета, содержащую это значение.  
@@ -52,4 +50,3 @@ ms.lasthandoff: 08/09/2017
  [Добавление веб-части средства просмотра отчетов на веб-страницу (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   
-

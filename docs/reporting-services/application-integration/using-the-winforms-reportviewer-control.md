@@ -1,5 +1,5 @@
 ---
-title: "Использование элемента управления WinForms ReportViewer | Документы Microsoft"
+title: "Использование элемента управления WinForms ReportViewer | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/06/2016
 ms.prod: sql-server-2016
@@ -10,49 +10,46 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- ReportViewer controls
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b8a315338fec870de62e1705f84c1396d1570520
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Использование элемента управления WinForms ReportViewer
   Для просмотра отчетов, развернутых на сервере отчетов, и отчетов, существующих в локальной файловой системе, можно использовать элемент управления WinForms ReportViewer для подготовки отчетов к просмотру в приложении Windows.  
   
 ## <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>Добавление элемента управления ReportViewer в приложение Windows  
   
-1.  Создание нового приложения Windows с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+1.  Создайте новое приложение Windows с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-Или -  
+     \- - или -  
   
      Открыть существующий проект приложения Windows и добавить новую форму.  
   
-2.  Найдите элемент управления ReportViewer в **элементов**. Если **элементов** — не отображается, его можно открыть из **представление** меню, выбрав **элементов**.  
+2.  Укажите элемент управления ReportViewer в окне **Панель элементов**. Если окно **Панель элементов** не отображается, к нему можно получить доступ из меню **Вид**, выбрав пункт **Панель элементов**.  
   
-     ![Выбор элемента управления ReportViewer](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "элемента управления ReportViewer, выбор")  
+     ![Выбор элемента управления ReportViewer](../../reporting-services/application-integration/media/windowsapp-toolboxreportviewer.png "Выбор элемента управления ReportViewer")  
   
 3.  Перетащите элемент управления ReportViewer в область конструктора Windows Form.  
   
      В форму будет добавлен элемент управления ReportViewer с именем reportViewer1.  
   
- После добавления элемента управления в форму **задачи ReportViewer** смарт-тег отображается и вам будет предложено выбрать отчет.  
+ После добавления элемента управления в форму появляется смарт-тег **Задачи ReportViewer** и выводится приглашение выбрать отчет.  
   
- Если нужно просмотреть отчет был развернут на сервере отчетов, выберите  **\<серверный отчет >** меню **выберите отчет** раскрывающегося списка. После  **\<серверный отчет >** был выбран, появятся два дополнительных свойства: **URL-адрес сервера отчетов** и **путь к отчету**. **URL-адрес сервера отчетов** является адресом сервера отчетов и **путь к отчету** полный путь для подготовки отчета к просмотру.  
+ Если требуемый отчет развернут на сервере отчетов, выберите параметр **\<Отчет по серверу>** из раскрывающегося списка **Выбор отчета**. После выбора параметра **\<Отчет по серверу>** на экране появляются два свойства : **URL-адрес сервера отчетов** и **Путь к отчету**. Свойство **URL-адрес сервера отчетов** задает адрес сервера отчетов, а свойство **Путь к отчету** задает полный путь к подготавливаемому к просмотру отчету.  
   
  ![Выбор отчета сервера](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Выбор отчета сервера")  
   
- Если отчет, который требуется просмотреть отчет в локальном режиме, выберите **создается новый отчет** для запуска конструктора отчетов или выбрать отчет, который уже является частью существующего проекта.  
+ Если просматриваемый отчет является отчетом в локальном режиме, выберите параметр **Создать новый отчет** для запуска конструктора отчетов или отчет, который уже является частью существующего проекта.  
   
  ![Выбор локального отчета](../../reporting-services/application-integration/media/windowsapp-localreportsettings.png "Выбор локального отчета")  
   
@@ -157,30 +154,30 @@ End Class
   
 1.  Открыть проект Windows, в который будет добавлен отчет.  
   
-2.  Из **проекта** последовательно выберите пункты **Добавление существующего элемента**.  
+2.  В меню **Проект** выберите пункт **Добавить существующий элемент**.  
   
 3.  Перейти в папку, в которой были установлены проекты образцов отчетов [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-     Загрузка образцов отчетов перейдите к [образцов отчетов AdventureWorks 2012 г.](http://go.microsoft.com/fwlink/?LinkId=404153)  
+     Чтобы скачать примеры отчетов, перейдите в раздел [Примеры отчетов AdventureWorks 2012](http://go.microsoft.com/fwlink/?LinkId=404153).  
   
-4.  Выберите файл Sales Order Detail.rdl и нажмите кнопку **добавить** кнопки.  
+4.  Выберите файл Sales Order Detail.rdl и нажмите кнопку **Добавить**.  
   
      Файл «Сведения о заказе на продажу.rdl» теперь станет частью проекта.  
   
-     ![Подробный отчет о заказах на продажу](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "подробный отчет о заказах на продажу")  
+     ![Отчет со сведениями о заказах на продажу](../../reporting-services/application-integration/media/windowsapp-salesorderdetailreport.png "Отчет со сведениями о заказах на продажу")  
   
-5.  Щелкните правой кнопкой мыши файл Sales Order Detail.rdl в обозревателе решений и выберите **переименование**. Переименуйте отчет в **заказе на продажу.RDLC** и нажмите клавишу ВВОД.  
+5.  Щелкните правой кнопкой мыши файл Sales Order Detail.rdl в обозревателе решений и выберите команду **Переименовать**. Переименуйте отчет в **Сведения о заказах на продажу.rdlc** и нажмите клавишу ВВОД.  
   
-     Если обозреватель решений не отображается, его можно открыть из **представление** меню, выбрав **обозревателе решений**.  
+     Если обозреватель решений не отображается, его можно открыть из меню **Вид**, выбрав пункт **Обозреватель решений**.  
   
     > [!NOTE]  
     >  Переименование расширения из rdl в rdlc позволит редактировать отчет при помощи конструктора отчетов для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)].  
   
-6.  После переименования отчета выберите файл и перейдите в окно «Свойства». Изменение **Копировать в выходной каталог** свойства **копировать, если новее**.  
+6.  После переименования отчета выберите файл и перейдите в окно «Свойства». Для свойства **Копировать в выходной каталог** задайте значение **Копировать более новые**.  
   
-     ![Настройка копирования в выходной параметр](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Настройка копирования в выходной параметр")  
+     ![Настройка параметра "Копировать в выходной каталог"](../../reporting-services/application-integration/media/windowsapp-copytooutputsetting.png "Настройка параметра "Копировать в выходной каталог"")  
   
-     Если **свойства** окно не отображается, его можно открыть из **представление** меню, выбрав **окно свойств**.  
+     Если окно **Свойства** не отображается, можно открыть его из меню **Вид**, выбрав **Окно "Свойства"**.  
   
  В следующем примере кода создается набор данных для данных о заказе на продажу, а затем подготавливается к просмотру отчет «Сведения о заказе на продажу» в локальном режиме.  
 
@@ -515,4 +512,3 @@ End Class
  [Интеграция служб Reporting Services с помощью элементов управления ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   
-

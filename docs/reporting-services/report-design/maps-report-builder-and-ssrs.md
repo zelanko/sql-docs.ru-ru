@@ -1,5 +1,5 @@
 ---
-title: "Карты (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Карты (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ f1_keywords:
 - "10500"
 - sql13.rtp.rptdesigner.maptitleproperties.general.f1
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 64fd4ab25d7328a649e6629d16c88538c6bee6e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 46d27d3ff4f777c42ef3c9e79bf43d80edf3b1e0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Карты (построитель отчетов и службы SSRS)
   Для визуализации бизнес-данных в географическом контексте можно добавить в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] карту. Выбранный тип карты будет зависеть от того, какую информацию следует взять из отчета. Можно добавить карту, которая отображает только местоположения, или пузырьковую карту, которая изменяет размер пузырьков в зависимости от количества домов в области, или карту с отметками, которая изменяет стиль маркера в зависимости от наиболее доходного продукта в каждом магазине, или линейную карту, которая отображает маршруты между магазинами.  
@@ -78,7 +77,7 @@ ms.lasthandoff: 08/09/2017
 #### <a name="sources-of-spatial-data"></a>Источники пространственных данных  
  Поддерживаются следующие источники пространственных данных.  
   
--   **Отчеты галереи карт.** Пространственные данные внедряются в отчеты, находящиеся в коллекции карт. По умолчанию Галерея карт устанавливается в  *\<диска >*: \MapGallery \Program Files\Microsoft SQL Server\Report Builder.  
+-   **Отчеты галереи карт.** Пространственные данные внедряются в отчеты, находящиеся в коллекции карт. По умолчанию коллекция карт устанавливается в папку *\<диск>*:\Program Files\Microsoft SQL Server\Report Builder\MapGallery.  
   
     > [!NOTE]  
     >  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют данные из файлов фигур TIGER/Line, поставляемых с разрешения Бюро переписи населения США ([http://www.census.gov/](http://www.census.gov/)). Файлы фигур TIGER/Line содержат выборочную географическую и картографическую информацию из базы данных Census MAF/TIGER. Файлы фигур TIGER/Line бесплатно распространяются Бюро переписи населения США. Дополнительные сведения о шейп-файлах TIGER/Line можно получить на странице [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Информация о границах в шейп-файлах TIGER/Line может использоваться только для сбора и табулирования статистических данных. Их описание и использование в статистических целях не может повлечь изменения юридических полномочий или прав собственности. Они не являются законными описаниями земель. Census TIGER и TIGER/Line являются охраняемыми товарными знаками Бюро переписи населения США.  
@@ -261,4 +260,3 @@ ms.lasthandoff: 08/09/2017
  [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   
-

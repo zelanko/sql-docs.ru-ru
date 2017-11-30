@@ -1,5 +1,5 @@
 ---
-title: "Программа rsconfig (SSRS) | Документы Microsoft"
+title: "Программа rsconfig (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - command prompt utilities [Reporting Services]
 - command prompt utilities [SQL Server], rsconfig
 ms.assetid: 84e45a2f-3ca6-4c16-8259-c15ff49d72ad
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 68b5e38f2b4e71298fbf7b6ec6970fc7824c3cde
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 47b99aefb0d115ba9310e6c2e53b1b6f261c3338
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="rsconfig-utility-ssrs"></a>Программа rsconfig (SSRS)
   Программа **rsconfig.exe** шифрует значения подключения и учетной записи и сохраняет их в файле RSReportServer.config. Зашифрованные значения включают сведения о подключении к базе данных сервера отчетов и значения учетной записи, используемые для автоматической обработки отчетов.  
@@ -61,7 +60,7 @@ rsconfig {-?}
 |**-i**  *имя_экземпляра*|Обязателен, если используются именованные экземпляры.|Если для размещения базы данных сервера отчетов используется именованный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в этом значении указывается именованный экземпляр.|  
 |**-d**  *имя_базы_данных*|Обязательный.|Указывает имя базы данных сервера отчетов.|  
 |**-a**  *метод_проверки_подлинности*|Обязательный.|Указывает метод проверки подлинности, используемый сервером отчетов для подключения к базе данных сервера отчетов. Допустимы значения **Windows** или **SQL** (при указании этого аргумента регистр символов не учитывается).<br /><br /> Значение**Windows** указывает, что сервер отчетов использует проверку подлинности Windows.<br /><br /> Значение**SQL** указывает, что сервер отчетов использует проверку подлинности SQL Server.|  
-|**-u***[домена\\] имя пользователя* |Обязателен с **-e** , необязателен с **-c**.|Указывает учетную запись пользователя, используемую для соединения с базой данных сервера отчетов, или автоматическую учетную запись.<br /><br /> Для **rsconfig**-e этот аргумент обязателен. Это должна быть учетная запись пользователя домена.<br /><br /> Для **rsconfig -c** и **-a SQL**этот аргумент должен содержать имя для входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Для **rsconfig -c** и **-a Windows**этот аргумент может указывать пользователя домена, встроенную учетную запись или учетные данные учетной записи службы. При указании учетной записи домена укажите *домен* и *имя пользователя* в формате *домен\имя_пользователя*. Если используется встроенная учетная запись, этот аргумент является необязательным. Если предполагается использовать учетные данные учетной записи службы, не указывайте этот аргумент.|  
+|**-u**  *[домен\\]имя_пользователя*|Обязателен с **-e** , необязателен с **-c**.|Указывает учетную запись пользователя, используемую для соединения с базой данных сервера отчетов, или автоматическую учетную запись.<br /><br /> Для **rsconfig**-e этот аргумент обязателен. Это должна быть учетная запись пользователя домена.<br /><br /> Для **rsconfig -c** и **-a SQL**этот аргумент должен содержать имя для входа в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Для **rsconfig -c** и **-a Windows**этот аргумент может указывать пользователя домена, встроенную учетную запись или учетные данные учетной записи службы. При указании учетной записи домена укажите *домен* и *имя пользователя* в формате *домен\имя_пользователя*. Если используется встроенная учетная запись, этот аргумент является необязательным. Если предполагается использовать учетные данные учетной записи службы, не указывайте этот аргумент.|  
 |**-p**  *пароль*|Обязателен, если указан ключ **-u** .|Указывает пароль, используемый с аргументом *имя_пользователя* . Для этого аргумента можно установить пустое значение, если учетная запись не требует пароля. Это значение учитывает регистр для учетных записей домена.|  
 |**-t**|Необязательно.|Выводит сообщения об ошибках в журнал трассировки. Этот аргумент не принимает значения. Дополнительные сведения см. в статье [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).|  
   
@@ -128,13 +127,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Настройка подключения к базе данных сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Настройка учетной записи автоматического выполнения &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Отчеты служб отчетов сервера &#40; Основной режим &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Хранение зашифрованных данных сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Файлы конфигурации служб отчетов](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Программы командной строки сервера отчетов &#40; Службы SSRS &#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Хранение зашифрованных данных сервера отчетов &#40;диспетчер конфигурации служб SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Программы командной строки сервера отчетов (службы SSRS)](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Службы Reporting Services, безопасность и защита | Документы Microsoft"
+title: "Защита и обеспечение безопасности служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - security [Reporting Services]
 - Reporting Services, security
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 217bd93631e96dae0b75532d73c14ade4355be6d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 827bc656d6bdd4dc5b955a83c01cb8e072db3772
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reporting-services-security-and-protection"></a>Защита и обеспечение безопасности служб Reporting Services
   Этот раздел содержит сведения о средствах безопасности служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В разделе также объясняются модели авторизации и поставщики проверки подлинности, поддерживаемые в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -44,4 +43,3 @@ ms.lasthandoff: 08/09/2017
 |Настройка протокола Socket Layer (SSL) для защиты клиентских подключений к серверу отчетов.|[Настройка соединений SSL для сервера отчетов, работающего в собственном режиме](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
   
   
-

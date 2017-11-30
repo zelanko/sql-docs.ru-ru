@@ -1,5 +1,5 @@
 ---
-title: "Устранение неполадок подключения базы данных со службами Reporting Services серверу и | Документы Microsoft"
+title: "Устранение неполадок с подключением к серверу и базе данных в Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/28/2016
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1b901ec323ee3aa021d9e581cb8a1aedbde3116b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e7dddbd58335ffc0ad9d4f44fa6fab633ba4da43
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Устранение неполадок подключения базы данных служб Reporting Services серверу и
+# <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Устранение неполадок с подключением к серверу и базе данных в Reporting Services
 Используйте этот раздел, чтобы решать проблемы, возникающие при подключении к серверу отчетов. Также в этом разделе описываются сообщения о непредвиденных ошибках. Дополнительные сведения о настройке источников данных и настройке данных о подключении сервера отчетов см. в разделах [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) и [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 ## <a name="cannot-create-a-connection-to-data-source-datasourcename-rserroropeningconnection"></a>Невозможно создать соединение с источником данных «имя_источника_данных». (rsErrorOpeningConnection)  
@@ -63,7 +62,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="wmi-error-when-connecting-to-a-report-server-in-management-studio"></a>Ошибка инструментария WMI при соединении с сервером отчетов в среде Management Studio  
 По умолчанию среда Management Studio использует инструментарий управления Windows (WMI) служб Reporting Services, чтобы установить соединение с сервером отчетов. Если поставщик WMI установлен неправильно, при попытке установить соединение с сервером отчетов возникнет следующая ошибка.  
   
-Не удается подключиться к \<имя сервера >. Поставщик WMI служб Reporting Services не установлен или не настроен (Microsoft.SqlServer.Management.UI.RSClient)».  
+Невозможно установить соединение с \<имя_сервера>. Поставщик WMI служб Reporting Services не установлен или не настроен (Microsoft.SqlServer.Management.UI.RSClient)».  
   
 Чтобы устранить эту ошибку, необходимо переустановить программное обеспечение. В других случаях в качестве временного решения можно соединиться с сервером отчетов через конечную точку SOAP.  
   
@@ -127,5 +126,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

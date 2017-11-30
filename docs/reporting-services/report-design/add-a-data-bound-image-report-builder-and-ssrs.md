@@ -1,5 +1,5 @@
 ---
-title: "Добавление привязки к данным изображения (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление привязанного к данным изображения (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: df4c38d4-bfcc-41c4-aa6d-952ca6fd7a2e
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 17aa516d14553478e2659b96fe8108d7b985b42e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 253d3abfffae056d6300e2203623e7af023a2476
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-data-bound-image-report-builder-and-ssrs"></a>Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)
   Отчет может включать ссылку на изображение, хранящееся в базе данных. Такое изображение называется *изображением, привязанным к данным*. Примерами изображений, привязанных к данным, служат картинки, выводящиеся вместе с наименованиями товаров в списке товаров.  
@@ -52,10 +52,10 @@ ms.lasthandoff: 08/09/2017
   
      В области конструктора отчета появится заполнитель изображения.  
   
-## <a name="see-also"></a>См. также:  
- [Образы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [Внедрение изображения в отчет &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
- [Добавление внешнего изображения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
- [Диалоговое окно «Свойства изображения», общие &#40; Построитель отчетов и службы SSRS &#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
+## <a name="see-also"></a>См. также  
+ [Изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
+ [Внедрение изображения в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Добавление внешнего изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
+ [Диалоговое окно "Свойства изображения" — "Общие" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

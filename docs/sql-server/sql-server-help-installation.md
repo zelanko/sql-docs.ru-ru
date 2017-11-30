@@ -2,10 +2,13 @@
 title: "Окно справки и автономное содержимое для SQL Server | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/27/2017
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to:
@@ -13,19 +16,19 @@ applies_to:
 - SQL Server 2016
 - SQL Server 2017
 ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 1a5e7fb01cd74ccafb3a324dbd79bd849bef0bca
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: b8e93b7afb8845398e23ca52c5c3f3bf3901898c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/08/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="help-viewer-and-offline-content-for-sql-server"></a>Окно справки и автономное содержимое для SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
   
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 09/08/2017
   
    >[!IMPORTANT] 
    >В SQL Server Management Studio и Visual Studio окно справки может перестать отвечать на запросы во время добавления документации. Чтобы устранить эту проблему, выполните указанные ниже действия. Сведения об этой проблеме см. в разделе [Окно справки Visual Studio зависает](https://msdn.microsoft.com/library/mt654096.aspx).  
-   >>Откройте файл %LOCALAPPDATA%\Microsoft\HelpViewer2.2\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio14_en-US.settings в Блокноте и измените дату в приведенном ниже коде на какую-либо дату в будущем. Этот файл доступен на локальном компьютере, только если на нем установлена Visual Studio. 
+   >>Откройте файл %LOCALAPPDATA%\Microsoft\HelpViewer2.3\HlpViewer_SSMS16_en-US.settings | HlpViewer_VisualStudio15_en-US.settings в Блокноте и измените дату в приведенном ниже коде на какую-либо дату в будущем. Этот файл доступен на локальном компьютере, только если на нем установлена Visual Studio. 
    >>>Последнее обновление кэша: "12/31/2017 00:00:00".  
   
     Содержание в левой области автоматически обновится для добавления выбранной вами документации.  
@@ -139,7 +142,5 @@ ms.lasthandoff: 09/08/2017
 Кроме того, окно справки не поддерживает параметры прокси-сервера и формат ISO. 
 
 ## <a name="additional-information"></a>Дополнительные сведения
-[Средство просмотра справки (Microsoft)](https://msdn.microsoft.com/library/hh580782.aspx)
-
+[Окно справки (Майкрософт)](/visualstudio/ide/microsoft-help-viewer)  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
-

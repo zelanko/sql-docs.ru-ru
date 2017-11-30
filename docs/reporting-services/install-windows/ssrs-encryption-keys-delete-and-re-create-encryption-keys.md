@@ -1,12 +1,11 @@
 ---
-title: "Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS) | Документы Microsoft"
+title: "Удаление и повторное создание ключей шифрования (диспетчер конфигурации служб SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,19 +16,18 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b042bef86620c773f39f81ea16a62b3d9c4c2a6a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 57b918ecf448e9498c95b679843ccc857b75b92f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Ключи шифрования служб SSRS — удаление и повторное создание ключей шифрования
+# <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Ключи шифрования служб SSRS — удаление и повторное создание
   Удаление и повторное создание ключей шифрования — действия, которые выходят за пределы обычного обслуживания ключа шифрования. Эти задачи выполняются в ответ на определенную угрозу серверу отчетов или как последнее средство спасения, когда больше нельзя получить доступ к базе данных сервера отчетов.  
   
 -   Создайте повторно симметричный ключ, если есть основания полагать, что существующий симметричный ключ скомпрометирован. Также можно регулярно создавать повторно ключ для наибольшей эффективности системы безопасности.  
@@ -121,8 +119,7 @@ ms.lasthandoff: 08/09/2017
 4.  Для подписок, которые используют зашифрованные данные (это включает модуль доставки в общую папку и любые сторонние расширения доставки, использующие шифрование), откройте каждую подписку и повторно введите учетные данные. Подписки, которые используют доставку по электронной почте сервера отчетов, не используют зашифрованные данные и не затрагиваются изменением ключа.  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка и управление ключами &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Хранение зашифрованных данных сервера отчетов &#40; Диспетчер конфигурации служб SSRS &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   
-

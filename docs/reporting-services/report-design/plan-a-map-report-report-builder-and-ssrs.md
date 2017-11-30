@@ -1,5 +1,5 @@
 ---
-title: "Планирование отчета-карты (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Планирование отчета-карты (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 138021b238290bf881bd1bd6291c11db958f1653
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Планирование отчета-карты (построитель отчетов и службы SSRS)
 Хорошее представление сведений в отчетах может помочь их пониманию и выполнению действий. Для представления аналитических данных в отчете, например данных о продажах или демографических данных по географическим районам, можно добавить в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] карту. Карта может содержать несколько уровней, каждый уровень содержит элементы карты, определенные в конкретном типе пространственных данных: точки, представляющие расположение, линии, представляющие маршруты, или многоугольники, представляющие области. Можно соотнести аналитические данные с каждым элементом карты на каждом уровне.  
@@ -156,9 +156,9 @@ ms.lasthandoff: 08/09/2017
  Чтобы использовать динамические пространственные данные, следует расположить источник пространственных данных на сервере отчетов. Если отчет конструируется в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], источники пространственных данных могут быть добавлены в проект и опубликованы на сервере отчетов вместе с определением отчета. Если же для создания отчета используется построитель отчетов, следует сперва передать пространственные данные на сервер отчетов, а затем в мастере или в свойствах слоя указать источник пространственных данных для слоя карты.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка данных и отображения карты или слоя карты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Учебник: Сопоставьте отчета &#40; Построитель отчетов &#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
- [Maps &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [Устранение неполадок в отчетах: Сопоставление отчеты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [Учебник. Отчет-карта (построитель отчетов)](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "Командлеты PowerShell для режима SharePoint службы Reporting Services | Документы Microsoft"
+title: "Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,33 +14,32 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5ab2078266bb130e80b0919c2a4f19e8cf45a671
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: be7fe550a03d527e3189adf029f183bbb3af517b
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Командлеты PowerShell для режима SharePoint службы Reporting Services
+# <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Командлеты PowerShell для режима интеграции служб Reporting Services с SharePoint
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-При установке SQL Server 2016 Reporting Services SharePoint режим, будут установлены командлеты PowerShell для поддержки серверов отчетов в режиме интеграции с SharePoint. Командлеты охватывают три категории функциональных возможностей.  
+При установке служб SQL Server 2016 Reporting Services в режиме интеграции с SharePoint устанавливаются командлеты PowerShell для поддержки серверов отчетов в режиме интеграции с SharePoint. Командлеты охватывают три категории функциональных возможностей.  
   
--   Установка служб Reporting Services SharePoint общей службы и прокси-сервера.  
+-   Установка общей службы и прокси-сервера Reporting Services для SharePoint.  
   
--   Управление служб Reporting Services и подготовки службы приложений и связанные учетные записи-посредники.  
+-   Подготовка приложений служб Reporting Services и связанных с ними прокси-серверов и управление ими.  
   
--   Управление компонентов служб Reporting Services, для примера расширения и ключей шифрования.  
+-   Управление компонентами служб Reporting Services, например расширениями и ключами шифрования.  
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
 ## <a name="cmdlet-summary"></a>Обзор командлетов
 
- Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](http://technet.microsoft.com/library/hh847814.aspx). В следующих сводках о командлетах ссылки на службы приложения «базы данных», указывают на все базы данных, созданные и используемые приложением службы Reporting Services. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
+ Для выполнения командлетов необходимо открыть консоль управления SharePoint. Можно также использовать редактор графического пользовательского интерфейса, который включен в Microsoft Windows, **интегрированная среда скриптов Windows PowerShell (ISE)**. Дополнительные сведения см. в разделе [Запуск Windows PowerShell на Windows Server](http://technet.microsoft.com/library/hh847814.aspx). В следующих сводках по командлетам упоминания "баз данных" приложения службы относятся ко всем базам данных, созданным и используемым приложением службы Reporting Services. Это включает базы данных конфигурации, предупреждений и временные базы данных.  
   
  Если при вводе примеров PowerShell отображается сообщение об ошибке следующего вида:  
   
@@ -49,7 +48,7 @@ ms.lasthandoff: 10/06/2017
   
  Возникает одна из следующих проблем.  
   
--   Службы Reporting Services SharePoint не установлен режим и таким образом не установлены командлеты служб Reporting Services.  
+-   Режим интеграции служб Reporting Services с SharePoint не установлен, поэтому не установлены командлеты Reporting Services.  
   
 -   Команда PowerShell была выполнена в Windows PowerShell или Windows PowerShell ISE, а не в оболочке управления SharePoint. Используйте оболочку управления SharePoint или добавьте оснастку SharePoint к окну Windows PowerShell с помощью следующей команды:  
   
@@ -59,7 +58,7 @@ ms.lasthandoff: 10/06/2017
   
  Дополнительные сведения см. в разделе [Использование Windows PowerShell для управления SharePoint 2013](http://technet.microsoft.com/library/ee806878.aspx).  
   
-### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Откройте консоль управления SharePoint и выполнение командлетов
+### <a name="open-the-sharepoint-management-shell-and-run-cmdlets"></a>Открытие командной консоли SharePoint и выполнение командлетов
   
 1.  Нажмите кнопку **Пуск** .  
   
@@ -71,40 +70,40 @@ ms.lasthandoff: 10/06/2017
   
  `Get-Help Get-SPRSServiceApplicationServers`  
   
-##  <a name="shared-service-and-proxy-cmdlets"></a>Общие командлеты службы и прокси-сервера
+##  <a name="shared-service-and-proxy-cmdlets"></a>Командлеты общей службы и прокси-серверов
 
- Следующая таблица содержит командлеты PowerShell для служб Reporting Services SharePoint совместно.  
+ В приведенной ниже таблице содержатся командлеты PowerShell для общих служб Reporting Services, интегрированных с SharePoint.  
   
 |Командлет|Description|  
 |------------|-----------------|  
-|Install-SPRSService|Устанавливает и регистрирует или удаляет общей службы Reporting Services. Это можно сделать только на компьютере, где установлен экземпляр служб SQL Server Reporting Services в режиме интеграции с SharePoint. При установке выполняются две операции.<br /><br /> — Служба Reporting Services устанавливается в ферме.<br /><br /> -Экземпляр службы Reporting Services устанавливается на текущем компьютере.<br /><br /> При удалении выполняются две операции.<br /><br /> — Служба Reporting Services удаляются с текущего компьютера.<br /><br /> -Службы Reporting Services удаляются из фермы.<br /><br /> <br /><br /> Если присутствуют другие компьютеры фермы, на которых установлена служба Reporting Services, или если не все приложения службы Reporting Services, работающих в ферме, отображается предупреждающее сообщение.|  
+|Install-SPRSService|Устанавливает и регистрирует либо удаляет общие службы Reporting Services. Это можно сделать только на компьютере, где установлены службы SQL Server Reporting Services в режиме интеграции с SharePoint. При установке выполняются две операции.<br /><br /> — Службы Reporting Services устанавливаются в ферме.<br /><br /> — Экземпляр служб Reporting Services устанавливается на текущем компьютере.<br /><br /> При удалении выполняются две операции.<br /><br /> — Службы Reporting Services удаляются с текущего компьютера.<br /><br /> — Службы Reporting Services удаляются из фермы.<br /><br /> <br /><br /> Если в ферме имеются другие компьютеры, на которых установлены службы Reporting Services, или если в ферме все еще выполняются приложения служб Reporting Services, будет выведено предупреждающее сообщение.|  
 |Install-SPRSServiceProxy|Устанавливает и регистрирует или удаляет прокси-сервер службы Reporting Services на ферме SharePoint.|  
 |Get-SPRSProxyUrl|Возвращает URL-адреса для доступа к службе Reporting Services.|  
-|Get-SPRSServiceApplicationServers|Возвращает все серверы в локальной ферме SharePoint, на которых имеется общая установка службы Reporting Services. Этот командлет полезен для обновления служб Reporting Services, чтобы определить, каких серверах выполняется общая служба, поэтому необходимо обновить.|  
+|Get-SPRSServiceApplicationServers|Возвращает все серверы в локальной ферме SharePoint, на которых имеется общая установка службы Reporting Services. Этот командлет полезен при обновлении служб Reporting Services для определения того, на каких серверах выполняется общая служба, в связи с чем требуется обновление.|  
   
-## <a name="service-application-and-proxy-cmdlets"></a>Командлеты приложения и прокси-службы
+## <a name="service-application-and-proxy-cmdlets"></a>Командлеты приложения службы и прокси-серверов
 
- Следующая таблица содержит командлеты PowerShell для приложений службы Reporting Services и их связанные учетные записи-посредники.  
+ В приведенной ниже таблице содержатся командлеты PowerShell для приложений служб Reporting Services и связанных с ними прокси-серверов.  
   
 |командлет|Description|  
 |------------|-----------------|  
-|Get-SPRSServiceApplication|Возвращает один или несколько объектов приложения службы Reporting Services.|  
+|Get-SPRSServiceApplication|Возвращает один или несколько объектов приложений служб Reporting Services.|  
 |New-SPRSServiceApplication|Создание нового приложения службы Reporting Services и связанных баз данных.<br /><br /> Параметр LogonType указывает, использует ли сервер отчетов учетную запись пула приложений служб SSRS или имя входа SQL Server для доступа к базе данных сервера отчетов. Допустимые значения:<br /><br /> 0 Проверка подлинности Windows<br /><br /> 1 SQL Server<br /><br /> 2 Учетная запись пула приложений (по умолчанию)|  
 |Remove-SPRSServiceApplication|Удаляет указанное приложение службы Reporting Services. Также будут удалены связанные базы данных.|  
 |Set-SPRSServiceApplication|Изменяет свойства существующего приложения службы Reporting Services.|  
 |New-SPRSServiceApplicationProxy|Создание прокси-сервера приложения службы Reporting Services.|  
 |Get-SPRSServiceApplicationProxy|Возвращает одно или несколько существующих приложений службы Reporting Services.|  
-|Dismount-SPRSDatabase|Выполняет размонтирование баз данных приложения для приложения службы Reporting Services.|  
-|Remove-SPRSDatabase|Удаление баз данных приложения для приложения службы Reporting Services.|  
-|Set-SPRSDatabase|Задает свойства баз данных, связанных с приложением службы Reporting Services.|  
-|Mount-SPRSDatabase|Присоединяет базы данных для приложения службы Reporting Services.|  
-|New-SPRSDatabase|Создайте новые базы данных приложения службы для указанного приложения службы Reporting Services.|  
-|Get-SPRSDatabaseCreationScript|Генерирует скрипт создания базы данных на экране для приложения службы Reporting Services. Затем скрипт можно запустить в среде SQL Server Management Studio.|  
+|Dismount-SPRSDatabase|Отключает базы данных для приложения служб Reporting Services.|  
+|Remove-SPRSDatabase|Удаляет базы данных для приложения служб Reporting Services.|  
+|Set-SPRSDatabase|Задает свойства баз данных, связанных с приложением служб Reporting Services.|  
+|Mount-SPRSDatabase|Подключает базы данных для приложения служб Reporting Services.|  
+|New-SPRSDatabase|Создает базы данных приложения службы для указанного приложения служб Reporting Services.|  
+|Get-SPRSDatabaseCreationScript|Выводит на экран скрипт создания базы данных для приложения служб Reporting Services. Затем скрипт можно запустить в среде SQL Server Management Studio.|  
 |Get-SPRSDatabase|Возвращает одну или несколько баз данных приложения службы Reporting Services. Используйте команду для получения идентификатора базы данных служебного приложения, чтобы вы могли использовать Set-SPRSDatabase comdlet для изменения параметров, например `querytimeout`. Смотрите примеры в разделе [Получение и задание свойств базы данных приложения служб Reporting Services](#bkmk_example_db_properties).|  
-|Get-SPRSDatabaseRightsScript|Выводит скрипт определения прав базы данных на экране для приложения службы Reporting Services. Запрашивает необходимые сведения о пользователе и базе данных, а затем возвращает код Transact-SQL, который можно выполнить для изменения разрешений. Затем этот скрипт можно запустить в среде SQL Server Management Studio.|  
-|Get-SPRSDatabaseUpgradeScript|Выводит скрипт обновления базы данных на экран. Скрипт произведет обновление баз данных приложения службы Reporting Services версии базы данных текущей установки служб Reporting Services.|  
+|Get-SPRSDatabaseRightsScript|Выводит на экран скрипт определения прав базы данных для приложения служб Reporting Services. Запрашивает необходимые сведения о пользователе и базе данных, а затем возвращает код Transact-SQL, который можно выполнить для изменения разрешений. Затем этот скрипт можно запустить в среде SQL Server Management Studio.|  
+|Get-SPRSDatabaseUpgradeScript|Выводит скрипт обновления базы данных на экран. Скрипт обновит базы данных приложения служб Reporting Services до версии текущей установки служб Reporting Services.|  
   
-## <a name="reporting-services-custom-runctionality-cmdlets"></a>Командлеты служб Reporting Services пользовательские runctionality
+## <a name="reporting-services-custom-runctionality-cmdlets"></a>Командлеты пользовательской функциональности служб Reporting Services
   
 |Командлет|Description|  
 |------------|-----------------|  
@@ -120,7 +119,7 @@ ms.lasthandoff: 10/06/2017
   
 ## <a name="basic-samples"></a>Простые примеры
 
- Возвращает список командлетов, содержащих в названии строку «SPRS». Это будет полный список командлетов служб Reporting Services.  
+ Возвращает список командлетов, содержащих в названии строку «SPRS». Это будет полный список командлетов для служб Reporting Services.  
   
 ```  
 Get-command –noun *SPRS*  
@@ -132,7 +131,7 @@ Get-command –noun *SPRS*
 Get-command -noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
 ```  
   
- Установите службы Reporting Services SharePoint и прокси-сервера службы.  
+ Установка служб Reporting Services для SharePoint и прокси-сервера службы.  
   
 ```  
 Install-SPRSService  
@@ -142,7 +141,7 @@ Install-SPRSService
 Install-SPRSServiceProxy  
 ```  
   
- Запуск службы Reporting Services  
+ Запуск служб Reporting Services  
   
 ```  
 get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
@@ -166,7 +165,7 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  Добавьте прокси-сервер в группу прокси-серверов по умолчанию  
   
-3.  Предоставьте приложению службы доступ к порту 80 базы данных содержимого веб-приложения. В скрипте предполагается сайта `http://sitename` уже существует.  
+3.  Предоставьте приложению службы доступ к порту 80 базы данных содержимого веб-приложения. В скрипте предполагается, что сайт `http://sitename` уже существует.  
   
 ```  
 # Create service application and service application proxy  
@@ -220,7 +219,7 @@ Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server 
 get-sprsserviceapplication –Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
 ```  
   
-### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>Получение и задание свойств базы данных приложения службы отчетов
+### <a name="get-and-set-properties-of-the-reporting-service-application-database"></a>Получение и задание свойств для базы данных приложения Reporting Services
 
  Следующий пример сначала возвращает список баз данных и параметров, чтобы вы могли определить guid базы данных (идентификатор), который вы затем предоставите для настройки команды. Полный список параметров смотрите в `Get-SPRSDatabase | format-list`.  
   
@@ -254,7 +253,7 @@ Get-SPRSDatabase –identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, q
   
 ### <a name="list-reporting-services-data-extensions"></a>Список модулей обработки данных Reporting Services
 
- Следующий пример просматривает каждое приложение службы Reporting Services и список текущих данных модулей обработки для каждого.  
+ В примере ниже циклически опрашивается каждое приложение служб Reporting Services и выводится список текущих модулей обработки данных для каждого приложения.  
   
 ```  
 $apps = Get-SPRSServiceApplication  
@@ -291,13 +290,12 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
   
 ### <a name="change-and-list-reporting-services-subscription-owners"></a>Изменение и перечисление владельцев подписок Reporting Services
 
- В разделе [изменение и перечисление владельцев подписок служб Reporting Services и запуска подписки с помощью PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+ См. раздел [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ## <a name="next-steps"></a>Следующие шаги
 
-[Изменение и перечисление владельцев подписок служб Reporting Services и запуска подписки с помощью PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[Контрольный список: Использование PowerShell для проверки PowerPivot для SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[Получить справку по SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
+[Контрольный список. Использование PowerShell для проверки Power Pivot для SharePoint](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[Получение справки по SQL Server PowerShell](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

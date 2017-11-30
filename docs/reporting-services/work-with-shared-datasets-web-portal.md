@@ -1,28 +1,26 @@
 ---
-title: "Работа с общими наборами данных (веб-портал) | Документы Microsoft"
+title: "Работа с общими наборами данных (веб-портал) | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c51b1f46f86980d2f756a2a2244c80468b5c28f9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>Работа с общими наборами данных — веб-портала
+# <a name="work-with-shared-datasets---web-portal"></a>Работа с общими наборами данных (веб-портал)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]
 > Если общий набор данных не отображается в папке, убедитесь, что вы просматриваете наборы данных. Выберите **Вид** в строке меню в правом верхнем углу веб-портала. Убедитесь, что установлен флажок **Наборы данных** .  
   
-1.  Выберите **кнопку с многоточием (...)**  для набора данных, которым требуется управлять.  
+1.  Щелкните **многоточие (…)** рядом с набором данных, которым требуется управлять.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
@@ -111,5 +109,4 @@ ms.lasthandoff: 08/09/2017
   
 Затем можно **изменить** или **удалить** планы из списка. Параметр **Новый на основе существующего** доступен, когда выбран один и только один план обновления кэша. При выборе этого параметра создаваемый план обновления будет скопирован из исходного плана. Страница плана обновления кэша открывается предварительно заполненная подробными сведениями выбранного плана. Затем можно изменить параметры плана обновления и сохранить план с новым описанием.  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

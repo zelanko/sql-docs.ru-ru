@@ -1,5 +1,5 @@
 ---
-title: "Создание журнала отчета (службы Reporting Services в режиме интеграции с SharePoint) | Документы Microsoft"
+title: "Создание журнала отчета (службы Reporting Services в режиме интеграции с SharePoint) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- report history [Reporting Services], SharePoint
+helpviewer_keywords: report history [Reporting Services], SharePoint
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3e1388fba5963d5571d293f2d995c73bb3d83d3b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b9f013e1fd6d614e9b4c8767c00feebea1da8ad8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>создать журнал отчета (службы Reporting Services в режиме интеграции с SharePoint)
   Журнал отчета — это коллекция моментальных снимков отчета, созданных на протяжении определенного времени. Каждый моментальный снимок представляет собой копию отчета в том виде, в котором он был создан. Он включает в себя макет и данные, являвшиеся текущими во время создания моментального снимка. Сведения о подготовке к просмотру не хранятся вместе с моментальным снимком. При открытии моментального снимка журнала отчета, он открывается в виде HTML-документа в веб-части «Средство просмотра отчетов». После завершения подготовки к просмотру отчет можно экспортировать в форматы других приложений.  
@@ -62,4 +60,3 @@ ms.lasthandoff: 08/09/2017
  [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
   
-

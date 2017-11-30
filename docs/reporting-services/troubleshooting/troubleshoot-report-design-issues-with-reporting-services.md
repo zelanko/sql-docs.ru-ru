@@ -1,5 +1,5 @@
 ---
-title: "Устранение проблем проектирования отчетов со службами Reporting Services | Документы Microsoft"
+title: "Устранение проблем с проектированием отчетов в Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0d103da-5a3e-475c-a71a-9e23476095e2
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7646ed9709e6d293b3e72a0255efc2f3bc17eebf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6d9a5cbd4b8065a7344eeec2d7cd495e656ec941
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-report-design-issues-with-reporting-services"></a>Устранение проблем проектирования отчетов с помощью служб Reporting Services
 Проблемы проектирования отчетов могут возникать при создании макета отчета с помощью конструктора в приложении разработки отчетов. Этот раздел помогает устранять эти проблемы.   
@@ -68,5 +67,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

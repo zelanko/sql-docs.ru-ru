@@ -1,5 +1,5 @@
 ---
-title: "Изменение файла конфигурации Reporting Services (RSreportserver.config) | Документы Microsoft"
+title: "Изменение файла конфигурации служб Reporting Services (RSreportserver.config) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -11,20 +11,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 958ef51f-2699-4cb2-a92e-3b4322e36a30
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f5862f4faec4784aac678d578c155ac5992a55f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2cea3ba2d8e2a303a61a6af8bc4f7da4802cc88
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Изменение файла конфигурации служб Reporting Services (RSreportserver.config)
-  Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложения в наборе файлов конфигурации. Программа установки создает файлы конфигурации для каждого устанавливаемого экземпляра сервера отчетов. Значения в каждом файла задаются либо во время установки, либо при использовании средств и приложений для настройки сервера и подготовки его к работе. В некоторых случаях приходится изменять непосредственно сам файл, чтобы добавить дополнительные параметры или настроить их. Параметры конфигурации задаются либо как элементы XML, либо как атрибуты. Если вы знакомы с XML и файлами конфигурации, то можете использовать редактор текста или кода для настройки пользовательских параметров.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сохраняют параметры приложения в наборе файлов конфигурации. Программа установки создает файлы конфигурации для каждого устанавливаемого экземпляра сервера отчетов. Значения в каждом файла задаются либо во время установки, либо при использовании средств и приложений для настройки сервера и подготовки его к работе. В некоторых случаях приходится изменять непосредственно сам файл, чтобы добавить дополнительные параметры или настроить их. Параметры конфигурации задаются либо как элементы XML, либо как атрибуты. Если вы знакомы с XML и файлами конфигурации, то можете использовать редактор текста или кода для настройки пользовательских параметров.  
   
  Некоторые параметры конфигурации можно задать только с помощью средств. Параметры, которые содержат зашифрованные значения, должны изменяться с помощью программы настройки служб Reporting Services, программы установки или программы командной строки **rsconfig** . Чтобы иметь возможность запускать эти средства, необходимо членство в локальной группе «Администраторы».  
   
@@ -79,7 +78,7 @@ ms.lasthandoff: 08/09/2017
     -   Файл**RSReportServerServices.exe.config** находится в следующей папке:  
     
         > [!NOTE] 
-        > Эта возможность недоступна с января 2017 г. Техническая Предварительная версия Power BI отчеты в SQL Server Reporting Services.
+        > Он недоступен в технической версии отчетов Power BI (январь 2017 г.) в службах SQL Server Reporting Services.
   
         ```  
         C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin  
@@ -97,11 +96,11 @@ ms.lasthandoff: 08/09/2017
   
 4.  Введите элемент или значение, которое необходимо добавить или использовать. Элементы вводятся с учетом регистра. При добавлении элемента следите за правильным использованием букв верхнего и нижнего регистра. При настройке модуля подготовки отчетов, модуля проверки подлинности или модулей обработки данных можно руководствоваться конкретными инструкциями по изменению файлов конфигурации:  
   
-    -   [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)  
+    -   [Аутентификация с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)  
   
     -   [Настройка передачи файлов cookie для пользовательской аутентификации на веб-портале](../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)
   
-    -   [Настройка параметров модуля подготовки отчетов в RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+    -   [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
 5.  Сохраните файл.  
   
@@ -114,7 +113,6 @@ ms.lasthandoff: 08/09/2017
  [Развертывание модуля обработки данных](../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Развертывание модуля доставки](../../reporting-services/extensions/delivery-extension/deploying-a-delivery-extension.md)   
  [Развертывание модуля подготовки отчетов](../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)   
- [Файлы конфигурации служб отчетов](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+ [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
   
   
-

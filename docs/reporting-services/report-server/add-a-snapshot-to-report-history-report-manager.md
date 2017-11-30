@@ -1,5 +1,5 @@
 ---
-title: "Добавить моментальный снимок к журналу отчета (диспетчер отчетов) | Документы Microsoft"
+title: "Добавление моментального снимка к журналу отчета (диспетчер отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - adding snapshots to report history
 - report snapshots [Reporting Services], adding
 ms.assetid: 3aafb183-789e-46ac-966c-881dc549b31d
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5d340621db8dc12cd981d75939babeff40e590f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e0a70aba28016a7649a6b793581fe653649aef96
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>добавить моментальный снимок к журналу отчета (диспетчер отчетов)
   Журнал отчета — это коллекция моментальных снимков отчета, созданных на протяжении определенного времени. Моментальный снимок отчета — это отчет, содержащий сведения о макете и результаты запроса, полученные в определенный момент времени. В отличие от отчетов по требованию, при открытии которых производится получение актуальных, действительных на текущий момент данных, моментальные снимки отчета выполняются по расписанию и сохраняются на сервере отчетов. Если для просмотра выбирается моментальный снимок отчета, сервер отчетов извлекает сохраненный отчет из базы данных сервера отчетов и отображает макет и данные, которые были действительны на момент создания моментального снимка.  
@@ -79,10 +78,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Настройка свойств выполнения для отчета (диспетчер отчетов)](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Откройте и закройте отчет &#40; Диспетчер отчетов &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Ограничение размеров журнала отчета &#40; Диспетчер отчетов &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
+ [Открытие и закрытие отчетов (диспетчер отчетов)](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
+ [Ограничение размеров журнала отчета (диспетчер отчетов)](../../reporting-services/reports/limit-report-history-report-manager.md)   
  [Расписания](../../reporting-services/subscriptions/schedules.md)   
- [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [Диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   
-

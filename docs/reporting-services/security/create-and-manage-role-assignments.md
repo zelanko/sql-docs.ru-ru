@@ -1,5 +1,5 @@
 ---
-title: "Создание и Управление назначениями ролей | Документы Microsoft"
+title: "Создание назначений ролей и управление ими | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,16 +17,15 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-role-assignments"></a>Создание назначений ролей и управление ими
   *Назначение ролей* представляет собой политику безопасности, определяющую, может ли пользователь или группа получить доступ к определенному элементу сервера отчетов или выполнить над ним операцию. Назначение ролей состоит из одного имени учетной записи пользователя или группы пользователей и одного или более определений роли.  
@@ -69,10 +68,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [Изменить или удалить назначение ролей &#40; Диспетчер отчетов &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Назначения ролей](../../reporting-services/security/role-assignments.md)   
- [Определения ролей](../../reporting-services/security/role-definitions.md)   
- [Предопределенные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Определение ролей](../../reporting-services/security/role-definitions.md)   
+ [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

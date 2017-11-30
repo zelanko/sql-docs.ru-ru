@@ -1,5 +1,5 @@
 ---
-title: "Устранение неполадок подписки и доставки служб Reporting Services | Документы Microsoft"
+title: "Устранение неполадок с подписками и доставкой служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/31/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae1775f7-9919-48ca-8bd7-cc16df274e2c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c3031036636e8c2ba2e2a0487ea2092c882c3e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: ab2dfe5e8abdc1cb3f168ae2b5e146e08ed3e5bc
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-reporting-services-subscriptions-and-delivery"></a>Устранение неполадок, связанных с подписками и доставкой служб Reporting Services
   
@@ -52,7 +51,7 @@ ms.lasthandoff: 08/09/2017
 Если приложение электронной почты использует протокол POP3 в системе Microsoft Windows Server 2003, отправка отчетов через локальный POP3-сервер может оказаться невозможной. Если на сервере отчетов настроена отправка электронной почты с помощью локального сервера POP3 и создана подписка, отправляющая отчет, то может возвращаться следующее сообщение об ошибке:  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Failure sending mail: <error message>`  
   
-где \<сообщение об ошибке > заменяется дополнительными сведениями об ошибке сообщение возвращается из объектов данных совместной работы (CDO).  
+здесь \<сообщение_об_ошибке> заменяется дополнительными сведениями об ошибке, возвращенными объектами данных совместной работы (CDO).  
   
 ### <a name="to-resolve-this-problem"></a>Чтобы разрешить эту проблему:  
 * Установите значение элемента `SendUsing` в файле **RSReportServer.config** равным 1.  
@@ -84,5 +83,4 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 

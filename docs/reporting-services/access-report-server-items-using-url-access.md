@@ -1,5 +1,5 @@
 ---
-title: "Доступ к элементам сервера отчетов с использованием URL-адрес | Документы Microsoft"
+title: "Доступ к элементам сервера отчетов с использованием URL-адресов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,19 @@ helpviewer_keywords:
 - referencing URL items for report server access
 - URL access [Reporting Services], report servers
 ms.assetid: a58b4ca6-129d-45e9-95c7-e9169fe5bba4
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 010d16c1114ea7b8d7a1c7c0274aba2ecd44b8d4
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 475435073cef3f748e26a2a71c31a55fa7e6304d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="access-report-server-items-using-url-access"></a>Доступ к элементам сервера отчетов с использованием URL-адреса
-  Описывается способ доступа к элементам каталога различных типов в отчете server базовый или на сайте SharePoint с помощью *rs: команда*=*значение*. Указывать эту строку параметра не обязательно. Если она не указана, сервер отчетов оценивает тип элемента и выбирает подходящее значение параметра автоматически. Однако использование строки *rs:Command*=*Value* в URL-адресе улучшает производительность сервера отчетов.  
+  В этом разделе описываются методы доступа к элементам каталога различных типов в базе данных сервера отчетов или на сайте SharePoint с использованием строки *rs:Command*=*Value*. Указывать эту строку параметра не обязательно. Если она не указана, сервер отчетов оценивает тип элемента и выбирает подходящее значение параметра автоматически. Однако использование строки *rs:Command*=*Value* в URL-адресе улучшает производительность сервера отчетов.  
   
  Обратите внимание на синтаксис прокси `_vti_bin` в приведенных далее примерах. Дополнительные сведения об использовании этого синтаксиса см. в разделе [URL Access Parameter Reference](../reporting-services/url-access-parameter-reference.md).  
   
@@ -79,6 +79,5 @@ ms.lasthandoff: 08/09/2017
  Отображаемый пользовательский интерфейс аналогичен режиму просмотра каталогов, используемому на сервере [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS. Номер версии сервера отчетов, включая номер построения, также выводится под списком папок.  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к URL-адрес &#40; Службы SSRS &#41;](../reporting-services/url-access-ssrs.md)   
- [Ссылка на параметр доступа URL-адрес](../reporting-services/url-access-parameter-reference.md) 
-
+ [Доступ по URL-адресу (службы SSRS)](../reporting-services/url-access-ssrs.md)   
+ [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md) 

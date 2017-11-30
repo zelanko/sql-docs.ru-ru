@@ -1,27 +1,25 @@
 ---
-title: "Учебник: Добавление линейчатую диаграмму к отчету (построитель отчетов) | Документы Microsoft"
+title: "Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/15/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e05e6893c50dc0976b873dbd96caaf30d3dc76f6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)
 В этом учебнике с помощью мастера в [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] будет создана линейчатая диаграмма в отчете [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. Затем вы добавите фильтр и расширите возможности диаграммы. 
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
  
 > [!NOTE]  
-> В этом учебнике шаги работы с мастером объединены в одну процедуру. Пошаговые инструкции о том, как перейти к серверу отчетов, создать набор данных, и выберите источник данных, см. в первом учебнике этой серии: [учебник: создание простого табличного отчета &#40; Построитель отчетов &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> В этом учебнике шаги работы с мастером объединены в одну процедуру. Пошаговые инструкции по переходу к серверу отчетов, созданию набора данных и выбору источника данных см. в первом учебнике этой серии: [Учебник. Создание простого табличного отчета (построитель отчетов)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Предполагаемое время для выполнения заданий этого учебника: 15 минут.  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/09/2017
   
      Откроется диалоговое окно **Приступая к работе** .  
   
-     ![Построитель отчетов начать](../reporting-services/media/rb-getstarted.png "начать построителя отчетов")  
+     ![Окно "Приступая к работе" в построителе отчетов](../reporting-services/media/rb-getstarted.png "Окно "Приступая к работе" в построителе отчетов")  
   
      Если диалоговое окно **Приступая к работе** не отображается, щелкните **Файл** >**Создать**. Диалоговое окно **Создать отчет или набор данных** содержит большую часть того же содержимого, что и диалоговое окно **Приступая к работе** . 
       
@@ -220,7 +218,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Щелкните горизонтальную ось в нижней части диаграммы, чтобы выбрать ее.  
   
-3.  На **Главная** вкладка > **номер** группы > **валюты**. Метки на горизонтальной оси изменятся на валюту.  
+3.  На вкладке **Главная** в группе **Число** нажмите кнопку **Денежный**. Метки на горизонтальной оси изменятся на валюту.  
   
 3.  (Необязательно) Удалите десятичные знаки. Рядом с кнопкой **Денежный** дважды нажмите кнопку **Уменьшить число десятичных разрядов** .  
   
@@ -308,5 +306,4 @@ ms.lasthandoff: 08/09/2017
 [Учебники по построителю отчетов](../reporting-services/report-builder-tutorials.md)  
 [Построитель отчетов в SQL Server 2016](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
-
 

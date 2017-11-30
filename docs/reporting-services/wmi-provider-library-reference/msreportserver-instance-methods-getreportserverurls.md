@@ -1,5 +1,5 @@
 ---
-title: "Метод GetReportServerUrls (WMI MSReportServer_Instance) | Документы Microsoft"
+title: "Метод GetReportServerUrls (WMI MSReportServer_Instance) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/09/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- GetReportServerUrls method
+helpviewer_keywords: GetReportServerUrls method
 ms.assetid: 4865e32c-0114-465a-be8c-be223a7bc09e
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a4b7067d9e6360902bf76b1bfe27c7ed6541f481
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 310a7195267cb538eec621163b5d752a557df982
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="msreportserverinstance-methods---getreportserverurls"></a>Методы MSReportServer_Instance - GetReportServerUrls
+# <a name="msreportserverinstance-methods---getreportserverurls"></a>Методы MSReportServer_Instance — GetReportServerUrls
   Возвращает список URL-адресов, которые пользователи могут использовать для доступа к серверу отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -61,8 +59,7 @@ public void GetReportServerUrls(out string[] applicationName,
 ## <a name="requirements"></a>Требования  
  **Пространство имен:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

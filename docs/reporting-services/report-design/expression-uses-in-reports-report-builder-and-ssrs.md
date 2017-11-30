@@ -1,5 +1,5 @@
 ---
-title: "Выражения используются в отчетах (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Использование выражений в отчетах (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,23 +10,21 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- expressions [Reporting Services], about expressions
+helpviewer_keywords: expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 040dc71113e8db518b1e98420241e1e6f2c3ba19
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Использование выражений в отчетах (построитель отчетов и службы SSRS)
-В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы выражения используются в определении отчета для указания или вычисления значений параметров, запросов, фильтров, свойств элементов отчета, группирования и сортировки определений, свойств текстовых полей, закладок, схем документов, динамического содержимого верхних и нижних колонтитулов страницы, изображений и динамических определений источников данных. В данном разделе приводится множество примеров использования выражений для внесения разнообразия в содержимое или внешний вид отчета. Этот список не является исчерпывающим. Выражение для любого свойства можно задать в диалоговом окне, отображающий выражение (**fx**) кнопку или в раскрывающемся списке, отображающего  **\<выражение... >**.  
+В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы выражения используются в определении отчета для указания или вычисления значений параметров, запросов, фильтров, свойств элементов отчета, группирования и сортировки определений, свойств текстовых полей, закладок, схем документов, динамического содержимого верхних и нижних колонтитулов страницы, изображений и динамических определений источников данных. В данном разделе приводится множество примеров использования выражений для внесения разнообразия в содержимое или внешний вид отчета. Этот список не является исчерпывающим. Выражение для любого свойства можно задать в диалоговом окне, содержащем кнопку выражения (**fx**), или в раскрывающемся списке, содержащем **\<выражение...>**.  
   
  Выражения бывают простыми и сложными. *Простое выражение* содержит ссылку на одно поле набора данных, параметр или встроенное поле. Сложные выражения могут содержать несколько встроенных ссылок, операторов и вызовов функций. Например, сложное выражение может включать функцию Sum, применяемую к полю Sales.  
   
@@ -65,7 +63,7 @@ ms.lasthandoff: 08/09/2017
 |Форматировать данные в текстовом поле в зависимости от их значения.|Цвет для заполнителя в текстовом поле, помещаемом в строку детализации для табликса. Используйте диалоговое окно **Свойства текстового поля — Шрифт**.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |Вычислить значение один раз для использования в любом месте отчета.|Значение для переменной отчета. Используйте диалоговое окно **Свойства отчета — Переменные**.|`=Variables!MyCalculation.Value`|  
 |Включить в набор данных конкретные значения нескольких полей.|Уравнение фильтра для группы в табликсе. Используйте диалоговое окно **Свойства табликса — Фильтры**.|В качестве типа данных выберите **Boolean**.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|Спрятать текстовое поле в области конструктора, переключая его видимость с помощью параметра логического типа с именем *Show*.|Hiddenproperty для текстового поля. Используйте диалоговое окно **Свойства текстового поля — Видимость**.|`=Not Parameters!`*Показать\<логического параметра >*`.Value`|  
+|Спрятать текстовое поле в области конструктора, переключая его видимость с помощью параметра логического типа с именем *Show*.|Hiddenproperty для текстового поля. Используйте диалоговое окно **Свойства текстового поля — Видимость**.|`=Not Parameters!` *Показать\<логический параметр>* `.Value`|  
 |Динамически задать содержимое верхнего или нижнего колонтитулов страницы.|Значение для заполнителя в текстовом поле, расположенном в верхнем или нижнем колонтитуле страницы.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |Динамически задать источник данных с помощью параметра.|Строка подключения источника данных. Используйте диалоговое окно **Свойства источника данных — Общие**.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |Задать все значения для многозначного параметра, выбранного пользователем.|Значение для заполнителя в текстовом поле. Используйте диалоговое окно **Свойства табликса — Фильтры**.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -75,14 +73,13 @@ ms.lasthandoff: 08/09/2017
 |Объединить строку с числом в формате процента с двумя десятичными разрядами.|Значение для заполнителя в текстовом поле, расположенном в области данных. Используйте диалоговое окно **Свойства текстового поля — Общие**.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
 ## <a name="see-also"></a>См. также  
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Примеры уравнений фильтра &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Верхние и нижние колонтитулы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Форматирование текста и заполнителей &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Скрыть элемент &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Примеры уравнений фильтра (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Скрытие элемента (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   
-

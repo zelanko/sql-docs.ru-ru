@@ -1,5 +1,5 @@
 ---
-title: "Отображение на диаграмме ряда с несколькими диапазонами данных | Документы Microsoft"
+title: "Отображение на диаграмме ряда с несколькими диапазонами данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e37adf58a9b3c953eedb9b1815d980addbe4b4d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9c0660a8680dd6b87dacd035d69068764a0b2570
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart"></a>Отображение на диаграмме ряда с несколькими диапазонами данных
 
   Диаграмма использует минимальное и максимальное значения ряда для вычисления масштаба оси диаграммы. Если ряд, выводимый на диаграмме, содержит несколько диапазонов данных, точки данных могут перекрываться, и на диаграмме будут отчетливо видны лишь некоторые из них. Допустим, в отчете содержатся данные о ежедневных продажах за 30 дней.  
   
- ![Диаграмма с несколькими диапазонами данных](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "диаграмма с несколькими диапазонами данных")  
+ ![Диаграмма с несколькими диапазонами данных](../../reporting-services/report-design/media/rs-multipledatarangeschart.gif "Диаграмма с несколькими диапазонами данных")  
   
  Для большинства месяцев показатели продаж колеблются между 10 и 40. Однако в начале апреля в рамках маркетинговой кампании была проведена недельная распродажа и суммы продаж внезапно выросли. Это изменение показателей продажи влечет за собой неравномерное распределение точек данных, снижающее общую читаемость диаграммы.  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="displaying-multiple-data-ranges-using-scale-breaks"></a>Вывод нескольких диапазонов данных с использованием разрывов шкалы  
  При включении разрыва шкалы, диаграмма вычисляет местоположение пересекающей линии. Изобразить разрыв шкалы можно, когда зазор между диапазонами достаточно велик. По умолчанию, разрыв шкалы можно добавить только в случае, когда зазор между диапазонами составляет не менее 25% диаграммы.  
   
- ![Диаграмма с разрывом шкалы](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "диаграмма с разрывом шкалы")  
+ ![Диаграмма с разрывом шкалы](../../reporting-services/report-design/media/rs-multipledatarangeschart-scalebreak.gif "Диаграмма с разрывом шкалы")  
   
 > [!NOTE]  
 >  Нельзя задать положение разрыва шкалы на диаграмме. Однако способ вычисления разрыва шкалы можно изменить, как описано далее в этом разделе.  
@@ -66,16 +64,15 @@ ms.lasthandoff: 08/09/2017
   
 -   Диаграмма относится к одному из следующих типов: полярная, круговая, воронкообразная, пирамидальная или любая диаграмма с накоплением.  
   
- Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о загрузке этого образца и других отчетов см. в разделе [примеры отчетов построителя отчетов и конструктора отчетов](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ Пример диаграммы с разрывами шкалы доступен в виде образца отчета. Дополнительные сведения о скачивании этого и других примеров отчетов см. в статье [Report Builder and Report Designer sample reports](http://go.microsoft.com/fwlink/?LinkId=198283).  
 
 ## <a name="next-steps"></a>Следующие шаги
 
 [Несколько рядов на диаграмме](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
 [Форматирование диаграммы](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
-[Объемные эффекты рельефа, объемные и другие эффекты в диаграмме](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
+[Объемные эффекты, рельеф и другие эффекты на диаграмме](../../reporting-services/report-design/chart-effects-3d-bevel-and-other-report-builder.md)   
 [Диаграммы](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
-[Диалоговое окно «Свойства оси», параметры оси](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
-[Сбор мелких срезов на круговой диаграмме](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
+[Диалоговое окно "Свойства оси" — "Параметры оси"](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+[Объединение мелких срезов на круговой диаграмме](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

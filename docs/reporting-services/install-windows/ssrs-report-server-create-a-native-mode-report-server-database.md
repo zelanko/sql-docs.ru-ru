@@ -1,30 +1,28 @@
 ---
-title: "Создание базы данных сервера отчетов собственного режима (диспетчер конфигурации служб SSRS) | Документы Microsoft"
+title: "Создание базы данных сервера отчетов, работающего в собственном режиме (диспетчер конфигураций служб SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - report servers [Reporting Services], databases
 - databases [Reporting Services], creating
 ms.assetid: 81b9f4ad-800b-4688-8b47-a5a83dc8ff10
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: e51657eabce531ab1f7c44b88c8e5ff13c94fce0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1458fe51bc43c24904be30c5484f8829f8b45ebc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="create-a-native-mode-report-server-database"></a>Создание базы данных сервера отчетов, работающего в собственном режиме
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
@@ -87,7 +85,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  Соединитесь с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который будет использоваться для создания и размещения базы данных сервера отчетов.  
   
-    1.  Введите имя экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Мастер отобразит локальный компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] , выполняемый в качестве экземпляра по умолчанию, если таковой имеется. Если же такого экземпляра нет, необходимо ввести имена сервера и экземпляра, которые будут использоваться. Именованные экземпляры указываются в следующем формате: \<имя_сервера >\\< имя_экземпляра\>.  
+    1.  Введите имя экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Мастер отобразит локальный компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] , выполняемый в качестве экземпляра по умолчанию, если таковой имеется. Если же такого экземпляра нет, необходимо ввести имена сервера и экземпляра, которые будут использоваться. Именованные экземпляры указываются в формате \<имя_сервера>\\<имя_экземпляра\>.  
   
     2.  Введите учетные данные, используемые для одноразового соединения с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)] с целью создания баз данных сервера отчетов. Дополнительные сведения о методах использования этих учетных данных см. в подразделе [Перед началом работы](#rsdbrequirements) настоящего раздела.  
   
@@ -156,7 +154,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>Следующие шаги
 
 [Настройка подключения к базе данных сервера отчетов](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[Управление сервером отчетов служб Reporting собственный режим служб](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Управление сервером отчетов служб Reporting Services в собственном режиме](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-Остались вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

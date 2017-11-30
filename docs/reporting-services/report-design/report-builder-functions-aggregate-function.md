@@ -1,5 +1,5 @@
 ---
-title: "Агрегатная функция (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Агрегатная функция (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,18 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 02925fc98b0fd4cc866ba7d1ea609243936906e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 463b78943e8e98f58eed3fe8e559ae0a800c807d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-builder-functions---aggregate-function"></a>Функции построителя отчетов - Агрегатная функция
+# <a name="report-builder-functions---aggregate-function"></a>Функции построителя отчетов — агрегатная функция
   Возвращает пользовательские статистические данные заданного выражения в соответствии с определением поставщика данных.  
   
 > [!NOTE]  
@@ -73,7 +72,7 @@ Aggregate(expression, scope)
  Дополнительные сведения о рекурсивных агрегатах см. в разделе [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="comparing-the-aggregate-and-sum-functions"></a>Сравнение функций Aggregate и Sum  
- Функция **Aggregate** отличается от числовых агрегатных функций, например **Sum** , тем, что функция **Aggregate** возвращает значение, вычисленное поставщиком данных или модулем обработки данных. Числовые агрегатные функции, например **Sum** , возвращают значение, вычисляемое обработчиком отчетов из набора данных, определенного параметром *scope* . Дополнительные сведения см. описание агрегатных функций, указанных в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Функция **Aggregate** отличается от числовых агрегатных функций, например **Sum** , тем, что функция **Aggregate** возвращает значение, вычисленное поставщиком данных или модулем обработки данных. Числовые агрегатные функции, например **Sum** , возвращают значение, вычисляемое обработчиком отчетов из набора данных, определенного параметром *scope* . Дополнительные сведения см. в списке агрегатных функций в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="example"></a>Пример  
  В приведенном ниже примере кода показано выражение, получающее серверное статистическое значение для поля `LineTotal`. Выражение добавляется в ячейку строки, принадлежащей группе `GroupbyOrder`.  
@@ -83,10 +82,9 @@ Aggregate(expression, scope)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Использование выражений в отчетах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [Примеры выражений &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Типы данных в выражениях &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Область выражения для итогов, статистические выражения и встроенных коллекций &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   
-

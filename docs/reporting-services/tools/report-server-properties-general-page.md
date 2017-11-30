@@ -1,5 +1,5 @@
 ---
-title: "Свойства сервера (страница «Общие») | Документы Microsoft"
+title: "Свойства сервера (страница \"Общие\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/08/2016
 ms.prod: sql-server-2016
@@ -10,22 +10,20 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.swb.reportserver.serverproperties.general.f1
+f1_keywords: sql13.swb.reportserver.serverproperties.general.f1
 ms.assetid: 23537d52-4356-450f-a671-5921cef2431f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: dbd2d63c8698cb9e33361c12980aa6abdeaaae7b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7ca680b434f4b483fb2f3cc3d99df5598a0766f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="report-server-properties-general-page"></a>Свойства сервера отчетов (страница «Общие»)
+# <a name="report-server-properties-general-page"></a>Свойства сервера отчетов (страница "Общие")
   Данная страница позволяет просмотреть или изменить заголовок, используемый в диспетчере отчетов, включить или отключить папку «Мои отчеты», выбрать определение роли для защиты папки «Мои отчеты», а также включить или отключить клиентское средство управления печатью.  
   
  **Чтобы открыть эту страницу:**
@@ -59,12 +57,11 @@ ms.lasthandoff: 08/09/2017
 
   
 ## <a name="see-also"></a>См. также раздел  
- [Настройка свойств сервера отчетов &#40; Среда Management Studio &#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [Установка свойств сервера отчетов (среда Management Studio)](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [Включение и отключение «Мои отчеты»](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
- [Сервер отчетов в Справка F1 среды Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [Включение и отключение папки "Мои отчеты"](../../reporting-services/report-server/enable-and-disable-my-reports.md)   
+ [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Защита рабочего пространства "Мои отчеты"](../../reporting-services/security/secure-my-reports.md)  
   
   
-
 

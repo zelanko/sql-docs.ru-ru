@@ -1,7 +1,6 @@
 ---
-title: "Настройки сведений об устройстве для подготовки к просмотру расширения (службы Reporting Services) | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services) | Документы Майкрософт"
+ms.custom: SQL2016_New_Updated
 ms.date: 09/15/2015
 ms.prod: sql-server-2016
 ms.reviewer: 
@@ -12,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8a5618026c0a8e3714eb33725195f5d891c3e467
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services)
   В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]настройки сведений об устройстве используются для передачи параметров подготовки к просмотру модуля подготовки отчетов. Каждый модуль подготовки отчетов принимает определенный набор параметров.  
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/09/2017
  [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
-

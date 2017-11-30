@@ -1,5 +1,5 @@
 ---
-title: "Сочетания клавиш (построитель отчетов) | Документы Microsoft"
+title: "Сочетания клавиш (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: f8a493830a49bbd083fdea72aa215bd2d084c9a8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Сочетания клавиш (построитель отчетов)
   При создании и редактировании отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в построителе отчетов имеется доступ ко всем сочетаниям клавиш для перемещения по документам, имеющимся в среде Windows. На выбор доступны несколько стандартных схем раскладки клавиатуры.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Представление конструктора отчетов &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Глоссарий &#40; Построитель отчетов &#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
+ [Представление конструктора отчетов (построитель отчетов)](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [Глоссарий (построитель отчетов)](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   

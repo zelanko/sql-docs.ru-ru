@@ -1,5 +1,5 @@
 ---
-title: "Класс MSReportServer_ConfigurationSetting | Документы Microsoft"
+title: "Класс MSReportServer_ConfigurationSetting | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,26 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- MSReportServer_ConfigurationSetting Class
-apilocation:
-- reportingservices.mof
+apiname: MSReportServer_ConfigurationSetting Class
+apilocation: reportingservices.mof
 apitype: MOFDef
 helpviewer_keywords:
 - WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
 - MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 5fafb0a0252f8aa4f39a4ada65f1b22490690f95
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting, класс
   Представляет установочные параметры и параметры времени выполнения для экземпляра сервера отчетов. Эти параметры хранятся в файле конфигурации для сервера отчетов.  
@@ -50,7 +47,7 @@ public class MSReportServer_ConfigurationSetting
  Все открытые статические (**Shared** в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) элементы этого типа можно использовать в многопотоковых операциях. Для элементов экземпляра потокобезопасность не гарантируется.  
   
 ## <a name="example"></a>Пример  
- Чтобы запустить следующий код, добавьте имя сервера на место каждого местозаполнителя \< *servername*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. Приведенный ниже пример кода проходит по всем свойствам класса *MSReportServer_ConfigurationSetting* и выводит на консоль имя каждого свойства и его значение.  
+ Чтобы запустить приведенный ниже код, добавьте имя сервера вместо каждого местозаполнителя \<*имя_сервера*>. Путь обновления должен указывать на фактическое расположение установки, если оно отличается от расположения по умолчанию. Приведенный ниже пример кода проходит по всем свойствам класса *MSReportServer_ConfigurationSetting* и выводит на консоль имя каждого свойства и его значение.  
   
 ```vb  
 Imports System  
@@ -183,4 +180,3 @@ class Class1
  [Элементы MSReportServer_ConfigurationSetting](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
-

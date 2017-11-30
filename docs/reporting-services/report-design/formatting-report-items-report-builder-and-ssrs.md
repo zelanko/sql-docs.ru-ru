@@ -1,5 +1,5 @@
 ---
-title: "Форматирование элементов отчета (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Форматирование элементов отчета (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -10,20 +10,18 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- "10444"
+f1_keywords: "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 01cf1b8dd539eeb7abc2311e765788dbb9655cff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Форматирование элементов отчета (построитель отчетов и службы SSRS)
   Форматирование элементов отчета делает отчет более привлекательным и упрощает его восприятие. В режиме конструктора отчетов можно форматировать текстовые поля и отдельные элементы в их составе, изображения, выражения и данные.  
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/09/2017
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
-

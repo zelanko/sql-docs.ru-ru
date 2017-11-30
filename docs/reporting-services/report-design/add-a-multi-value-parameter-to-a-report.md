@@ -1,5 +1,5 @@
 ---
-title: "Добавление многозначного параметра в отчет | Документы Microsoft"
+title: "Добавление в отчет параметра с несколькими значениями | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 44d81cbf6e89d5e3a387f3660417195fdb17c7dd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/12/2017
-
+ms.openlocfilehash: dd7b6d4607b86ec03f2c84fe1f7f8a05d1035885
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Добавление в отчет параметра с несколькими значениями
   В отчет можно добавить параметр, который позволит пользователю выбирать несколько значений для этого параметра.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 09/12/2017
   
 2.  Щелкните правой кнопкой мыши набор данных отчета и выберите пункт **Свойства набора данных**.  
   
-3.  Добавьте переменную в запрос к набору данных, либо изменив текст запроса в поле **Запрос** , либо добавив фильтр с помощью конструктора запросов. Дополнительные сведения см. в разделе [построение запроса в конструкторе реляционных запросов &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
+3.  Добавьте переменную в запрос к набору данных, либо изменив текст запроса в поле **Запрос** , либо добавив фильтр с помощью конструктора запросов. Дополнительные сведения см. в статье [Построение запроса в конструкторе реляционных запросов (построитель отчетов и службы SSRS)](../../reporting-services/report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
     ```  
     WHERE  
@@ -58,11 +57,10 @@ ms.lasthandoff: 09/12/2017
   
      Список допустимых значений ограничивает значения, которые может выбрать пользователь, набором допустимых значений. В случае нескольких значений в верхней позиции списка будет расположено значение **Выделить все** , предоставляя пользователю возможность выбрать или очистить все значения одним щелчком. Если значения, доступные для параметра отчета, выбираются из запроса к набору данных, следует выбрать набор данных, который не содержит переменной запроса, которая связана с тем же параметром запроса.  
   
-     Дополнительные сведения см. в разделе [Добавление, изменение или удаление допустимых значений параметра отчета &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+     Дополнительные сведения см. в разделе [Добавление, изменение и удаление допустимых значений параметра отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
 
 ## <a name="see-also"></a>См. также:  
  [Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   
   
-

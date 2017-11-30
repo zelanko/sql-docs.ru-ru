@@ -1,5 +1,5 @@
 ---
-title: "Обработка моментального снимка журнала отчета с использованием URL | Документы Microsoft"
+title: "Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - snapshots [Reporting Services], URL access
 - snapshots [Reporting Services], rendering report history
 ms.assetid: 3f87f82d-0e61-4492-9c4b-f5238c39e8cd
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38237ef30d403dab78f8fedd00caa97ebdaf0b29
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f52059e27008b5a29bd14f95f6a20d1a1d64d207
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="render-a-report-history-snapshot-using-url-access"></a>Обработка моментального снимка журнала отчета с использованием доступа по URL-адресу
   Подготовить отчет к просмотру можно с помощью моментального снимка журнала отчета. Для этого необходимо указать параметр *rs:Snapshot* и присвоить ему значение допустимого идентификатора моментального снимка. Значение параметра должно указываться в формате ГГГГ-ММ-ДДТЧЧ:ММ:СС согласно стандарту Международной организации по стандартизации (ISO) 8601.  
@@ -42,8 +41,7 @@ http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Доступ к URL-адрес &#40; Службы SSRS &#41;](../reporting-services/url-access-ssrs.md)   
- [Ссылка на параметр доступа URL-адрес](../reporting-services/url-access-parameter-reference.md)  
+ [Доступ по URL-адресу (службы SSRS)](../reporting-services/url-access-ssrs.md)   
+ [Ссылка на параметр доступа по URL-адресу](../reporting-services/url-access-parameter-reference.md)  
   
   
-

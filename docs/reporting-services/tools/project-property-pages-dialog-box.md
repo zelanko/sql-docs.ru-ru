@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно страниц свойств проекта | Документы Microsoft"
+title: "Диалоговое окно страниц свойств проекта | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -10,27 +10,23 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- sql13.rpt.rptdesigner.projectpropertypages.general.f1
-helpviewer_keywords:
-- Project Property Pages dialog box
+f1_keywords: sql13.rpt.rptdesigner.projectpropertypages.general.f1
+helpviewer_keywords: Project Property Pages dialog box
 ms.assetid: 209d9e22-37fc-418f-8739-83adcf447d3f
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 62b7abef277143c52d2431e97420812b595347d0
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="project-property-pages-dialog-box"></a>Диалоговое окно страниц свойств проекта
 
-  Страницы свойств проекта позволяют настраивать свойства развертывания проекта сервера отчетов. Чтобы открыть это диалоговое окно, в **проекта** меню, нажмите кнопку  *\<имя проекта отчета >***свойства**.  
+  Страницы свойств проекта позволяют настраивать свойства развертывания проекта сервера отчетов. Чтобы открыть это диалоговое окно, в меню **Проект** щелкните *\<Имя проекта отчета***Свойства**.  
   
  После определения свойств настройки можно выбрать конфигурацию из раскрывающегося списка **Конфигурации решений** на панели инструментов.  
 
@@ -93,8 +89,7 @@ ms.lasthandoff: 08/09/2017
 
 [Публикация отчетов](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[Задание свойств развертывания &#40; Службы Reporting Services &#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
-[Справка F1 конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)  
+[Задание свойства развертывания (службы Reporting Services)](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[Справка F1 по использованию конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

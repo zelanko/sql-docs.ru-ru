@@ -1,5 +1,5 @@
 ---
-title: "Изменить или удалить назначение ролей (диспетчер отчетов) | Документы Microsoft"
+title: "Изменение или удаление назначения ролей (диспетчер отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,19 +17,18 @@ helpviewer_keywords:
 - modifying role assignments
 - deleting role assignments
 ms.assetid: 523bdd32-92cb-4b48-a3a9-d58b2385bde7
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1a0db8452d082dddf6f5ffc39c1a9bd5802bf114
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7d4a89bd4ab25ed62e8add7d6290f0a51954aab3
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="role-assignments---modify-or-delete"></a>Назначения ролей - изменение или удаление
+# <a name="role-assignments---modify-or-delete"></a>Изменение или удаление назначений ролей
   Назначение ролей сопоставляет учетную запись группы или пользователя со стандартным определением роли, включающим задачи, которые могут быть выполнены. Оно определяет типы операций, которые пользователь может выполнять с папками, отчетами, моделями и другим типом содержимого. Чтобы создать, изменить или удалить назначения ролей, используется диспетчер отчетов. После создания назначения ролей для конкретного пользователя или группы ее можно изменить, выбрав другую роль. Если нужно отменить разрешения на сервер отчетов, можно удалить на нем назначение ролей.  
   
  В зависимости от цели работы можно использовать другие методы. Например, настроить определение ролей или создать новое либо изменить членство учетной записи группы в Active Directory.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="to-modify-or-delete-a-system-role-assignment"></a>Удаление или изменение назначения системной роли  
   
-1.  Запустите [диспетчер отчетов (службы SSRS в собственном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Запустите [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
   
 2.  Щелкните элемент **Настройки сайта**.  
   
@@ -69,10 +68,9 @@ ms.lasthandoff: 08/09/2017
 6.  Чтобы удалить назначение ролей, установите флажок рядом с пользователем или группой, а затем нажмите кнопку **Удалить**.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и изменение назначений ролей](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Назначения ролей](../../reporting-services/security/role-assignments.md)   
- [Страницы параметров &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
- [Создание назначений системной роли: Изменение страницы назначения роли системы &#40; Диспетчер отчетов &#41;](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
+ [Страница "Параметры сайта" (диспетчер отчетов)](http://msdn.microsoft.com/library/4d67a01c-eae4-49ba-a6e8-8e983c0248f5)   
+ [Страница "Создание назначения системной роли": "изменение назначения системных ролей" (диспетчер отчетов)](http://msdn.microsoft.com/library/62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a)  
   
   
-

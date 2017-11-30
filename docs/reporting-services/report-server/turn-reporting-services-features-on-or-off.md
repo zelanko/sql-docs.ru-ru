@@ -1,5 +1,5 @@
 ---
-title: "Включение функции служб Reporting Services или отключение | Документы Microsoft"
+title: "Включение и отключение компонентов Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - Reporting Services, configuration
 - security [Reporting Services], strategies
 ms.assetid: b69db02a-43a7-4fdc-ad9b-438d817a7f83
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a9cb113f44e01052d03fc5354c2cff6da4afb460
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 1df708ed8e384371ea97b683b97733e0bcacb6e8
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>включать и отключать компоненты служб Reporting Services
   Неиспользуемые функции сервера отчетов можно отключить в рамках блокирующей стратегии, позволяющей снизить риск атак на рабочий сервер отчетов. В большинстве случаев рекомендуется использовать функции служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] параллельно; это позволит использовать все функциональные возможности, предоставляемые службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Однако в зависимости от используемой модели развертывания можно отключить неиспользуемые функции. Например, если вся обработка отчетов производится с использованием операций по расписанию, то можно разрешить только фоновую обработку. Подобным же образом можно ограничиться запуском веб-службы сервера отчетов, если необходимо только интерактивное получение отчетов по требованию.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [Веб-портал](#WebPortal)  
   
--   [построитель отчетов](#ReportBuilder)  
+-   [Построитель отчетов](#ReportBuilder)  
   
 -   [встроенная безопасность Windows для источников данных для отчетов](#WinIntSec)  
   
@@ -45,7 +44,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>Включение или выключение веб-службы сервера отчетов методом изменения конфигурации  
   
-1.  Откройте файл `RsReportServer.config` в текстовом редакторе. Дополнительные сведения см. в статье [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Откройте файл `RsReportServer.config` в текстовом редакторе. Дополнительные сведения см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Для включения веб-службы сервера отчетов установите для свойства **IsWebServiceEnabled** значение **true**.  
   
@@ -81,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>Включение или выключение запланированных событий и доставки методом изменения конфигурации  
   
-1.  Откройте файл RsReportServer.config в текстовом редакторе. Дополнительные сведения см. в статье [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+1.  Откройте файл RsReportServer.config в текстовом редакторе. Дополнительные сведения см. в разделе [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 2.  Чтобы включить запланированные операции по обработке и доставке отчетов, присвойте значение **IsSchedulingService**свойствам **IsNotificationService**, **IsEventService** и **true**:  
   
@@ -123,9 +122,9 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  Фоновую обработку нельзя отключить полностью, поскольку она обеспечивает функциональные возможности обслуживания базы данных, необходимые для операций сервера.  
   
-##  <a name="WebPortal"></a>Веб-портал
+##  <a name="WebPortal"></a> Веб-портал
   
-В предыдущих версиях диспетчер отчетов может отключить, задав **IsReportManagerEnabled** значение false. **IsReportManagerEnabled** рекомендуется к использованию на момент служб SQL Server 2016 Reporting накопительное обновление 2. Всегда будет включено на веб-портале.
+В предыдущих версиях диспетчер отчетов можно было отключить, присвоив свойству **IsReportManagerEnabled** значение false. Свойство **IsReportManagerEnabled** считается нерекомендуемым начиная с версии SQL Server 2016 Reporting Services с накопительным пакетом обновления 2. Веб-портал всегда будет включен.
   
 ##  <a name="ReportBuilder"></a> построитель отчетов  
   
@@ -161,7 +160,6 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Диспетчер конфигурации служб Reporting Services (службы Reporting Services в собственном режиме)](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
- Дополнительные вопросы? [Повторите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
+ Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
-

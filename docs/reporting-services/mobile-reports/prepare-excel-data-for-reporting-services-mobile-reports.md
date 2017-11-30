@@ -1,27 +1,24 @@
 ---
-title: "Подготовка данных в Excel для мобильных отчетов Reporting Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Подготовка данных Excel для мобильных отчетов служб Reporting Services | Документы Майкрософт"
+ms.custom: SQL2016_New_Updated
 ms.date: 02/08/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16698f8d-bfc7-4eca-9e97-82c99d8bc08e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c057de4b56529de08385a1e13e1a119550632eda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0403dcd2f622f6bd6c8cbc88d12a4f8a955d8605
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="prepare-excel-data-for-reporting-services-mobile-reports"></a>Подготовка данных в Excel для мобильных отчетов службы отчетов
   
@@ -83,7 +80,7 @@ ms.lasthandoff: 08/09/2017
   
     2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
   
-После преобразования ячейки нужно отформатировать как даты. Для этого выделите все ячейки или весь столбец, а затем откройте **контекстное меню** > **Формат ячеек** > **Дата** в списке **Категория**. Также можно использовать мастер преобразования текста Excel, который преобразует ячейки с текстом в правильно отформатированные даты.  
+После преобразования ячейки нужно отформатировать как даты. Для этого выделите все ячейки или весь столбец, а затем откройте **контекстное меню** и выберите **Формат ячеек** > **Дата** в списке **Категория**. Также можно использовать мастер преобразования текста Excel, который преобразует ячейки с текстом в правильно отформатированные даты.  
   
 ## <a name="unsupported"></a>Не поддерживается  
   
@@ -103,5 +100,4 @@ ms.lasthandoff: 08/09/2017
   
   
   
-
 

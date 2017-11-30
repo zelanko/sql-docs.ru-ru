@@ -1,13 +1,11 @@
 ---
-title: "Установка режима интеграции с SharePoint служб Reporting Services | Документы Microsoft"
-ms.custom:
-- SQL2016_New_Updated
+title: "Установка служб Reporting Services в режиме интеграции с SharePoint | Документы Майкрософт"
+ms.custom: SQL2016_New_Updated
 ms.date: 06/01/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-sharepoint
+ms.technology: reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -15,17 +13,16 @@ helpviewer_keywords:
 - installing Reporting Services, SharePoint integrated mode
 - installation options [Reporting Services]
 ms.assetid: ac6cba68-2665-4a39-8fa3-cb7d7e6723c0
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: 0579de9d264d5b81713fd47b25feeb1fb817b8e6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="install-reporting-services-sharepoint-mode"></a>Установка режима интеграции с SharePoint для служб Reporting Services
 
@@ -33,10 +30,10 @@ ms.lasthandoff: 10/06/2017
 
 [!INCLUDE [ssrs-previous-versions](../../includes/ssrs-previous-versions.md)]
 
-Отчет SQL Server Reporting Services в SharePoint, позволяет создавать и просматривать в библиотеках документов, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] подписки доставки отчетов по электронной почте [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], предупреждения об изменении данных и функции управления отчета, в развертывание на основе [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. Дополнительные сведения о функциях в режиме интеграции с SharePoint, см в разделе «Поддержка функций и поведение различия в режимах сервера» [сервера отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).
+Службы SQL Server Reporting Services в SharePoint позволяют создавать и просматривать отчеты в библиотеках документов, доставлять по электронной почте отчеты из подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], а также использовать [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], предупреждения об изменении данных и функции управления отчетами. Все это можно выполнять в развертывании на основе [!INCLUDE[msCoName](../../includes/msconame-md.md)] SharePoint. Дополнительные сведения о функциях в режиме интеграции с SharePoint см. в подразделе "Поддержка функций и различия в поведении в режимах сервера" раздела [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md).
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
 Существует два основных компонента [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которые будут установлены для [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint.  
 
@@ -71,4 +68,3 @@ ms.lasthandoff: 10/06/2017
  [Диспетчер предупреждений данных для оповещения администраторов](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

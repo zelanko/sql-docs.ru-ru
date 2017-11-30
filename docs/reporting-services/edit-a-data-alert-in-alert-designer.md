@@ -1,5 +1,5 @@
 ---
-title: "Изменить предупреждение в конструкторе предупреждений | Документы Microsoft"
+title: "Изменение предупреждения о данных в конструкторе предупреждений | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
@@ -16,17 +16,16 @@ helpviewer_keywords:
 - editing, alerts
 - updating, alerts
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f2e052aec58464a761713a1a2fd2341415955786
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 74be156217a78fa56212760321c2c62212b93bff
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>изменить предупреждение в конструкторе предупреждений
 
@@ -37,11 +36,11 @@ ms.lasthandoff: 08/09/2017
 Если вы хотите изменить определение предупреждения об изменении данных, его следует открыть в диспетчере предупреждений об изменении данных. Изменить определение предупреждения может только пользователь, который его создал. Дополнительные сведения об открытии диспетчера предупреждений данных см. в разделе [Управление предупреждениями данных в диспетчере предупреждений данных](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md).
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
  На следующем рисунке показано контекстное меню предупреждения об изменении данных в диспетчере предупреждений об изменении данных.  
   
- ![Откройте конструктор предупреждений об изменении данных, щелкнув Изменить](../reporting-services/media/rs-alertmanageriwopendesigner.gif "открыть конструктор предупреждений об изменении данных, нажав кнопку Правка")  
+ ![Открытие конструктора предупреждений об изменении данных нажатием кнопки "Правка"](../reporting-services/media/rs-alertmanageriwopendesigner.gif "Открытие конструктора предупреждений об изменении данных нажатием кнопки "Правка"")  
   
  Следующая процедура включает в себя шаги по открытию определения предупреждения для изменения в конструкторе предупреждений об изменении данных из диспетчера предупреждений об изменении данных.  
   
@@ -66,5 +65,4 @@ ms.lasthandoff: 08/09/2017
 [Диспетчер предупреждений данных для оповещения администраторов](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
 [Предупреждения об изменении данных в службах Reporting Services](../reporting-services/reporting-services-data-alerts.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

@@ -1,5 +1,5 @@
 ---
-title: "Задание разрешений для операций сервера отчетов в веб-приложении SharePoint | Документы Microsoft"
+title: "Определение разрешений для работы сервера отчетов в веб-приложении SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -18,17 +18,16 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a872862355624b84fe792cfccc892f26bf9e3433
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Задание разрешений для работы сервера отчетов в веб-приложении SharePoint
   Для сервера отчетов, работающего в режиме интеграции с SharePoint, настройки безопасности, определенные на сайте SharePoint, определяют также, каким образом производится просмотр и управление отчетами, моделями отчетов и общими источниками данных. Если используются группы SharePoint, уровни разрешений и назначения разрешений по умолчанию, то работать с отчетами и другими документами можно с использованием текущих настроек безопасности.  
@@ -57,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  При использовании стандартных уровней разрешений никаких действий не требуется, потому что указанные разрешения уже включены в разрешения «Полный доступ», «Создание», «Участие», «Чтение» и «Ограниченный доступ». Однако при создании нестандартных уровней разрешений или изменении разрешений, назначенных определенному пользователю или группе, необходимо добавить это разрешение вручную.  
   
- Разрешение «Просмотр сведений о пользователях» позволяет серверу отчетов возвращать сведения о создателе элемента, а также о последнем пользователе, изменившем элемент. Если это разрешение отсутствует, сервер отчетов возвращает следующие ошибки. Для операций просмотра ошибка является такой: "Сервер отчетов обнаружил ошибку SharePoint. ---> System.UnauthorizedAccessException: отказано в доступе". Для операций публикации, ошибка: «разрешения, предоставленные пользователю '\<домена >\\< пользователя\>"недостаточны для выполнения этой операции.»  
+ Разрешение «Просмотр сведений о пользователях» позволяет серверу отчетов возвращать сведения о создателе элемента, а также о последнем пользователе, изменившем элемент. Если это разрешение отсутствует, сервер отчетов возвращает следующие ошибки. Для операций просмотра ошибка является такой: "Сервер отчетов обнаружил ошибку SharePoint. ---> System.UnauthorizedAccessException: отказано в доступе". Для операций публикации ошибка является такой: "Разрешения, предоставленные пользователю "\<домен>\\<пользователь\>", недостаточны для выполнения данной операции".  
   
 ##  <a name="permissionReports"></a> Разрешения для просмотра и управления отчетами  
  Разрешения для определений отчетов определяются через список разрешений на библиотеку, которая содержит отчет, но можно назначить разрешения для отдельных отчетов, если требуется ограничить доступ. В следующей таблице приведен список задач и разрешения, которые поддерживают каждую из них.  
@@ -139,9 +138,8 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Сравнение ролей и задач в службах Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Использование встроенных средств безопасности служб Windows SharePoint Services, для элементов сервера отчетов](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   
-

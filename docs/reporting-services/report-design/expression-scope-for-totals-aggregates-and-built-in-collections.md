@@ -1,5 +1,5 @@
 ---
-title: "Область выражения для итогов, статистических функций и встроенных коллекций | Документы Microsoft"
+title: "Область выражения для суммирования, агрегатных функций и встроенных коллекций | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: 238c0537821da0ab64a6eb27121a9f98d29ad9bf
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: d713c0c3cf84bb17e0a2bd318a2b59179fa5edf9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Область выражения для суммирования, агрегатных функций и встроенных коллекций
   Термин *область* используется в нескольких контекстах, что становится понятно при написании выражений. Область может указывать на данные, используемые для вычисления выражений, набор текстовых полей на подготавливаемой странице, набор элементов отчета, которые могут отображаться или быть скрытыми. Термин *область* используется в разделах о вычислении выражений, синтаксисе агрегатных функций, условной видимости и в сообщениях об ошибках, связанных с этими темами. Ниже приводится описание различий в употреблении термина *область* .  
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Именованная область** Имя набора данных, области данных или группы области данных, входящих в область выражения. Для статистического вычисления можно указать включающую область. Нельзя в одном выражении указать именованную область как для групп строк, так и для групп столбцов. Нельзя указать включенную область, если выражение не используется для вложенной статистической обработки.  
   
-     Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Первая функция &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), который является Агрегатная функция, возвращает первое значение SellStartDate в DataSet1 и первое значение lastreceiptdate в DataSet2.  
+     Следующее выражение создает годы интервала между SellStartDate и LastReceiptDate. Эти поля находятся в разных наборах данных — DataSet1 и DataSet2. [Функция First (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-first-function.md), являющаяся агрегатной функцией, возвращает первое значение SellStartDate в DataSet1 и первое значение LastReceiptDate в DataSet2.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  В некоторых местах отчетах необходимо указать область. Например, для текстового поля в области конструктора необходимо указать имя используемого набора данных: `=Max(Fields!Sales.Value,"Dataset1")`. В других местах это будет неявно заданная область по умолчанию. Например, если для текстового поля в области группы не будет задан агрегат, будет использована статистическая функция First.  
   
- Во всех разделах по агрегатным функциям указаны области, допустимые для их использования. Дополнительные сведения см. в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Во всех разделах по агрегатным функциям указаны области, допустимые для их использования. Дополнительные сведения см. в разделах [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
 ##  <a name="Examples"></a> Примеры статистических выражений для табличной области данных  
  Для написания выражений, которые задают области, не являющиеся областями по умолчанию, требуется практика. Сведения о различных областях приведены на следующем рисунке и таблице. На рисунке показана каждая ячейка в таблице данных по продажам, показывающей количество всех проданных товаров за год и за квартал по месту продажи. Обратите внимание на визуальные метки на дескрипторах строки и столбца, которые отображают структуру групп строк и столбцов, указывая вложенные группы. Таблица имеет следующую структуру:  
@@ -114,14 +114,14 @@ ms.lasthandoff: 08/09/2017
 |C07|Внешняя группа строк "Cat"|[Cat]<br /><br /> [Sum(Qty)]|`=Fields!Cat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C08|Совпадает с C07|||  
 |C09|Внешняя группа строк "Cat" и внутренняя группа столбцов "Qtr"|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C10|Совпадает с C07|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
-|C11|Внешняя группа строк "Cat" и группа столбцов "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
+|C10|Совпадает с C07|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  
+|C11|Внешняя группа строк "Cat" и группа столбцов "Territory"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Territory"),0) & " of " & Sum(Fields!Qty.Value,"Territory")`|  
 |C12|Внутренняя группа строк "Subcat"|[Subcat]<br /><br /> [Sum(Qty)]|`=Fields!SubCat.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C13|Внутренняя группа строк "Subcat" и внутренняя группа столбцов "Qtr"|[Sum(Qty)]|`=Sum(Fields!Qty.Value)`|  
-|C14|Внутренняя группа строк "Subcat"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
-|C15|Внутренняя группа строк "Subcat" и группа столбцов "Territory"|<\<Expr >>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C14|Внутренняя группа строк "Subcat"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Sum(Fields!Qty.Value)/Sum(Fields!Qty.Value,"Cat"),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
+|C15|Внутренняя группа строк "Subcat" и группа столбцов "Territory"|<\<Expr>>|`=Sum(Fields!Qty.Value) & ": " & FormatPercent(Code.CalcPercentage(Sum(Fields!Qty.Value),Sum(Fields!Qty.Value,"Cat")),0) & " of " & Sum(Fields!Qty.Value,"Cat")`|  
   
- Дополнительные сведения об интерпретации визуальных различий в областях данных табликса см. в разделе [Ячейки, строки и столбцы области данных табликса (построитель отчетов) и службы SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Дополнительные сведения об области данных табликса см. в разделе [ячейки области данных Табликса, строк и столбцов &#40; Построитель отчетов &#41; и службы SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Дополнительные сведения о выражениях и статистических функциях см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) и [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
+ Дополнительные сведения об интерпретации визуальных различий в областях данных табликса см. в разделе [Ячейки, строки и столбцы области данных табликса (построитель отчетов) и службы SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Дополнительные сведения об области данных табликса см. в разделе [Ячейки, строки и столбцы области данных табликса (построитель отчетов) и службы SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md). Дополнительные сведения о выражениях и статистических функциях см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) и [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
   
   
 ##  <a name="Sparklines"></a> Синхронизация шкал для sparkline-графиков  
@@ -166,9 +166,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Примеры выражений групп &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Создание групп рекурсивной иерархии &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Форматирование текста и заполнителей &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Примеры выражений групп &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Создание групп рекурсивной иерархии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Форматирование текста и заполнителей (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

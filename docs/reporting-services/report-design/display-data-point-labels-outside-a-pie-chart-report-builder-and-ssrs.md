@@ -1,5 +1,5 @@
 ---
-title: "Метки точек данных отображаемое за пределами круговой диаграммы (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 959b7574-cf43-470b-b592-4944d8a9948f
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2faa5b4e48f86c331ee45913844dc50c54c89e63
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 199c77966ac02e8a7c293c0b9245b6e0249e3ac7
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs"></a>Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]присваивание меток круговой диаграммы оптимизируется для отображения меток только для некоторых срезов данных. Метки могут перекрываться, если круговая диаграмма содержит слишком много срезов. Решением проблемы является отображение меток за пределами круговой диаграммы, что создает больше пространства для нанесения дальнейших меток данных. Если метки все еще перекрывают друг друга, можно создать для них больше места путем включения объемных эффектов. Это снижает диаметр круговой диаграммы, создавая больше пространства вокруг диаграммы.  
@@ -60,9 +59,8 @@ ms.lasthandoff: 08/09/2017
 4.  Если необходимо предоставить большее пространство для меток в диаграмме, при этом оставив ее двухмерной, то в поле **Вращение** и **Наклон** установите свойства на значение **0**.  
   
 ## <a name="see-also"></a>См. также  
- [Круговые диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
- [Сбор мелких срезов на круговой диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Отображение процентных значений на круговой диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
+ [Круговые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
+ [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
   
-

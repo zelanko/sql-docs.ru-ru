@@ -1,5 +1,5 @@
 ---
-title: "Создание и управление подписками для серверов отчетов в собственном режиме | Документы Microsoft"
+title: "Создание и администрирование подписок для серверов отчетов в собственном режиме | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,16 @@ helpviewer_keywords:
 - standard subscriptions [Reporting Services]
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 6a7fcc5f8b3d9e64990327a6709b5e36cfd23904
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками
   Стандартная подписка — это подписка, созданная конкретным пользователем, который хочет получать отчет по электронной почте или в общую папку. В этом подразделе содержатся сведения о стандартных подписках, создаваемых и управляемых отдельными пользователями. К подпискам, управляемым данными, предъявляются другие требования, и они содержат другие шаги, обсуждаемые в отдельном подразделе. Дополнительные сведения см. в разделе [Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -60,7 +59,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Перейдите к отчету, на который хотите подписаться. Выберите меню отчета и щелкните пункт **Подписка**.  
   
-     ![меню «отчет»](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "меню «отчет»")  
+     ![меню отчета](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "меню отчета")  
   
 3.  **Описание**: введите описание отчета (не более 512 символов).  
   
@@ -72,13 +71,13 @@ ms.lasthandoff: 08/09/2017
   
 7.  **Добавить расширение при создании файла**: этот параметр позволяет добавлять трехсимвольное расширение к имени файла. Расширение имени файла определяется выбранным форматом вывода отчета.  
   
-8.  **Путь**: Введите путь соглашения об универсальных именах (UNC) к существующей папке, где нужно записывать отчеты (например, \\ \\< имя_сервера\>\\< мои_отчеты\>). Путь должен начинаться с двух символов обратной косой черты. Вводить обратную косую черту после пути не нужно.  
+8.  **Путь**: введите путь в формате UNC к существующей папке, в которую нужно записывать отчеты (например, \\\\<имя_сервера\>\\<мои_отчеты\>). Путь должен начинаться с двух символов обратной косой черты. Вводить обратную косую черту после пути не нужно.  
   
-     ![файл подписки общей папки](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "файл подписки общей папки")  
+     ![Подписка для доставки в общую папку](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "Подписка для доставки в общую папку")  
   
 9. **Формат отображения**: выберите выходной формат отчета для доставки файла. Выберите формат, соответствующий приложению, которым будут открывать данный отчет. Избегайте применения форматов, которые не подготавливают отчет для просмотра в виде единого потока или требуют применения интерактивных средств, которые не могут поддерживаться в статическом файле (например, HTML 4.0).  
   
-10. **Учетные данные**: выберите учетную запись общего файлового ресурса либо учетные данные пользователя Windows. **Используется учетная запись общей папки** : параметр будет отключен, если администратор отчетов не настроил учетную запись общего файлового ресурса. Дополнительные сведения см. в разделе [Параметры подписки и учетная запись общей папки (диспетчер конфигураций)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). В **имя пользователя** и **пароль** текстовых полей, укажите учетные данные, необходимые для доступа к общей папке, в формате  *\<домена >*\\*\<имя пользователя >* для имени пользователя.  
+10. **Учетные данные**: выберите учетную запись общего файлового ресурса либо учетные данные пользователя Windows. **Используется учетная запись общей папки** : параметр будет отключен, если администратор отчетов не настроил учетную запись общего файлового ресурса. Дополнительные сведения см. в разделе [Параметры подписки и учетная запись общей папки (диспетчер конфигураций)](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md). В текстовых полях **Имя пользователя** и **Пароль** укажите учетные данные для доступа к общей папке. Имя пользователя должно быть в формате *\<домен>*\\*\<имя пользователя>*.  
   
 11. **Режим перезаписи**.  
   
@@ -107,7 +106,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Перейдите к отчету, на который хотите подписаться. Выберите меню отчета и щелкните пункт **Подписка**.  
   
-     ![меню «отчет»](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "меню «отчет»")  
+     ![меню отчета](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "меню отчета")  
   
 3.  **Описание**: введите описание отчета (не более 512 символов).  
   
@@ -120,7 +119,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  В зависимости от предоставленных разрешений можно получить возможность ввести адрес электронной почты, по которому хотите доставить отчет. При указании нескольких адресов разделяйте их точкой с запятой (;). Можно также указать дополнительные адреса электронной почты в текстовых полях **Копия**, **Скрытая копия**и **Обратный адрес** . Для этого необходимо иметь разрешение на управление всеми подписками.  
   
-7.  **Тема**: по умолчанию — "@ReportName выполнен во @ExecutionTime». Можно изменить тему, но Обратите внимание, что @ReportName и @ExecutionTime только глобальные переменные, поддерживаемые в **субъекта** поля.  
+7.  **Тема**: по умолчанию имеет значение "@ReportName был выполнен в @ExecutionTime". Вы можете изменить тему, но в поле **Тема** поддерживаются только две глобальные переменные: @ReportName и @ExecutionTime.  
   
 8.  Выберите следующие параметры доставки.  
   
@@ -177,7 +176,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  Откройте меню отчета и щелкните пункт **Удалить**.  
   
-     ![меню «отчет»](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "меню «отчет»")  
+     ![меню отчета](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "меню отчета")  
   
  Информацию об отмене подписки, которая в настоящее время обрабатывается на сервере отчетов, см. в разделе [Управление запущенным процессом](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
@@ -187,11 +186,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Использование PowerShell для смены и перечисления владельцев подписок служб Reporting Services и запуска подписки](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [&#40; подписки и доставки Службы Reporting Services &#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Диспетчер отчетов &#40; Собственный режим служб SSRS &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Использовать Мои подписки &#40; Сервер отчетов в собственном режиме &#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [Использование страницы "Мои подписки" (сервер отчетов в собственном режиме)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   
-

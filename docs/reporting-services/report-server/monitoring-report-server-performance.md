@@ -1,5 +1,5 @@
 ---
-title: "Наблюдение за производительностью сервера | Документы Microsoft"
+title: "Наблюдение за производительностью сервера отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - performance [Reporting Services]
 - Reporting Services, performance
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
-caps.latest.revision: 64
+caps.latest.revision: "64"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6e9aed18a938de82189349d9e3eaa4dcb8e720b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c128a907232f734195944219aa358bae4c3514db
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="monitoring-report-server-performance"></a>Наблюдение за производительностью сервера отчетов
   Для наблюдения за производительностью сервера отчетов используются средства наблюдения за производительностью, позволяющие оценить активность сервера, наблюдать тренды, диагностировать узкие места системы и собирать данные, помогающие определить адекватность текущей конфигурации системы. Для настройки производительности сервера можно задать частоту очистки домена приложений сервера отчетов. Дополнительные сведения см. в разделе [Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -99,8 +98,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
- [Отчеты служб отчетов сервера &#40; Основной режим &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  
   
   
-

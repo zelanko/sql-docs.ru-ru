@@ -1,5 +1,5 @@
 ---
-title: "Локальный режим и отчеты в подключенном режиме в средстве просмотра отчетов | Документы Microsoft"
+title: "Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,13 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
-ms.openlocfilehash: 5f8342550dc105fb6d3544e1d8bd65fcd660ff64
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/06/2017
-
+ms.openlocfilehash: cbf47d2ec1105b105ea2d2c8102bcd9b71cb2a1a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Локальный режим и отчеты в подключенном режиме в средстве просмотра отчетов
+# <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -30,7 +29,7 @@ ms.lasthandoff: 10/06/2017
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] отчеты можно настроить для запуска либо в *локальном режиме* , либо в *режиме соединения*, который использует сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Вместо этого можно использовать средство просмотра отчетов для подготовки отчетов напрямую из SharePoint, если модуль обработки данных поддерживает локальный режим составления отчетов. Такой подход называется *локальным режимом*. В предыдущих версиях [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]ферма серверов SharePoint требовала подключения к серверу отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , настроенному в режиме SharePoint, чтобы элемент управления просмотром отчетов мог их создавать. Данный подход называется *удаленным режимом* или *режимом соединения*.  
 
 > [!NOTE]
-> Интеграция служб Reporting Services с SharePoint больше не доступны после SQL Server 2016.
+> Интеграция служб Reporting Services с SharePoint больше не доступна после выхода SQL Server 2016.
 
  В *локальном режиме* нет сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Необходимо установить дополнение [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для продуктов SharePoint, сервер отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] не требуется. В локальном режиме пользователи могут просматривать отчеты, но не имеют доступа к функциям на стороне сервера, например подпискам и предупреждениям об изменении данных.  
 
@@ -53,7 +52,7 @@ ms.lasthandoff: 10/06/2017
 > [!NOTE]  
 >  Как и в предыдущих версиях, нельзя внедрять имена пользователей и пароли в RSDS-файл.  
   
-## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>Настройка локальной службы, режимом и доступом в SharePoint 2013
+## <a name="configure-local-mode-and-access-services-with-sharepoint-2013"></a>Настройка локального режима и доступ к службам в SharePoint 2013
 
  Можно настроить ферму SharePoint 2013 для поддержки существующих сетевых баз данных Access 2010 и локального режима [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Установка и настройка служб Access 2010 для баз данных в сети SharePoint Server 2013](http://technet.microsoft.com/library/ee748653\(office.15\).aspx).  
   
@@ -65,7 +64,7 @@ ms.lasthandoff: 10/06/2017
   
 -   [Основные задачи для приложения Access](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
-## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Настройка локального режима отчетности в SharePoint 2010
+## <a name="configure-local-mode-reporting-with-sharepoint-2010"></a>Настройка локального режима отчетности в SharePoint 2010
 
  Для локального режима требуется состояние сеанса ASP.NET. Установка служб доступа обеспечит предоставление состояний сеансов ASP.Net. Кроме того, можно включить использование PowerShell.  
   
@@ -92,4 +91,3 @@ ms.lasthandoff: 10/06/2017
  [Источники данных, поддерживаемые службами Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 
 Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).
-

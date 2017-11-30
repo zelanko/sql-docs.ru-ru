@@ -1,27 +1,24 @@
 ---
-title: "Работа с ключевыми показателями эффективности в службах Reporting Services | Документы Microsoft"
+title: "Работа с ключевыми показателями эффективности в службах Reporting Services | Документы Майкрософт"
 ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a28cf500-6d47-4268-a248-04837e7a09eb
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 099142ae9ac45dae0a207fe896f496dc8d4afa6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="working-with-kpis-in-reporting-services"></a>Работа с ключевыми показателями эффективности в службах Reporting Services
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
@@ -75,7 +72,7 @@ ms.lasthandoff: 08/09/2017
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2.  Выберите **кнопку с многоточием (...)**  в поле данных. Появится экран **Выбор набора данных** .  
+2.  Щелкните **многоточие (...)** в поле данных. Появится экран **Выбор набора данных** .  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -97,7 +94,7 @@ ms.lasthandoff: 08/09/2017
   
 Чтобы удалить ключевой показатель эффективности, сделайте следующее:  
   
-1.  Выберите **кнопку с многоточием (...)**  ключевого показателя Эффективности, необходимо удалить. Щелкните **Управление**.  
+1.  Щелкните **многоточие (...)** для ключевого показателя эффективности, который требуется удалить. Щелкните **Управление**.  
   
     ![rsRemoveKPI1](../reporting-services/media/rsremovekpi1.png)  
   
@@ -107,12 +104,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="refreshing-a-kpi"></a>Обновление ключевого показателя эффективности  
   
-Чтобы обновить ключевой показатель Эффективности, необходимо будет настроить кэширование для общего набора данных. Дополнительные сведения о кэше планах обновления см. в разделе [работы с наборами данных общих](../reporting-services/work-with-shared-datasets-web-portal.md).  
+Чтобы обновить ключевой показатель эффективности, необходимо настроить кэширование для общего набора данных. Дополнительные сведения о планах обновления кэша см. в разделе [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="next-steps"></a>Следующие шаги
   
 [Веб-портал](../reporting-services/web-portal-ssrs-native-mode.md)  
 [Работа с общими наборами данных](../reporting-services/work-with-shared-datasets-web-portal.md)
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

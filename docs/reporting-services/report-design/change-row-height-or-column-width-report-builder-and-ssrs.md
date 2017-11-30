@@ -1,5 +1,5 @@
 ---
-title: "Изменение высоты строки или ширины столбца (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Изменение высоты строки или ширины столбца (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f061c204-5cd5-4467-9a9c-8a12803d93ba
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 085a86b5ae97ea07a33049c0755af2677a3c5217
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 6b1a6cf8ee0f04929c645854c5f162d30ce04405
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>Изменение высоты строки или ширины столбца (построитель отчетов и службы SSRS)
   При установке высоты строк указывается максимальная высота строки в готовом для просмотра отчете. Но по умолчанию текстовые поля в строке расширяются в вертикальном направлении, чтобы вместить все данные во время выполнения отчета, поэтому строка может расширяться по высоте за заданные пределы. Чтобы установить фиксированную высоту строки, необходимо изменить свойства текстового поля так, чтобы они не расширялись автоматически.  
@@ -45,11 +44,11 @@ ms.lasthandoff: 09/27/2017
   
 1.  В режиме конструктора щелкните по ячейке в строке таблицы.  
   
-     ![Выбранные ячейки в таблице](../../reporting-services/report-design/media/table-selectcell.png "выбранные ячейки в таблице")  
+     ![Выделенная ячейка в таблице](../../reporting-services/report-design/media/table-selectcell.png "Выделенная ячейка в таблице")  
   
 2.  На отображаемой вкладке **Свойства** , измените свойство **Высота** , а затем щелкните где-нибудь за пределами вкладки **Свойства** .  
   
-     ![Панель свойств для выбранной ячейки таблицы](../../reporting-services/report-design/media/cell-propertiespane.png "панель свойств для выбранной ячейки таблицы")  
+     ![Панель свойств для выбранной ячейки таблицы](../../reporting-services/report-design/media/cell-propertiespane.png "Панель свойств для выбранной ячейки таблицы")  
   
 ### <a name="to-prevent-a-row-from-automatically-expanding-vertically"></a>Отключение автоматического расширения строки по вертикали  
   
@@ -71,12 +70,11 @@ ms.lasthandoff: 09/27/2017
 3.  Щелкните, чтобы захватить край столбца, и перетащите его вправо или влево на нужное расстояние.  
   
 ## <a name="see-also"></a>См. также:  
- [Области данных Табликса (построитель отчетов и службы SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
- [Ячейки области данных Табликса, строк и столбцов (построитель отчетов) и службы SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Область данных табликса (построитель отчетов и службы SSRS)](tablix-data-region-report-builder-and-ssrs.md)   
+ [Ячейки, строки и столбцы области данных табликса (построитель отчетов и службы SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
  [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
  [Матрицы (построитель отчетов и службы SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
  [Списки (построитель отчетов и службы SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

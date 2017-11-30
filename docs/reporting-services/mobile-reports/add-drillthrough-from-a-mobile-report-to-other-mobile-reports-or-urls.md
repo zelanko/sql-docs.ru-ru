@@ -1,26 +1,24 @@
 ---
-title: "Добавить детализацию из мобильного отчета в других мобильных отчетов или URL-адреса | Документы Microsoft"
+title: "Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/20/2016
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 9133e86862ec5cf234b87e598d152811dced75c9
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса
 Детализацию по любому датчику, графику или сетке данных в мобильном отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавить в любой другой мобильный отчет или пользовательский URL-адрес. 
@@ -87,6 +85,5 @@ ms.lasthandoff: 08/09/2017
  
 * [Добавление параметров в мобильный отчет служб Reporting Services](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [Веб-портал (основной режим служб SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
-
+* [Веб-портал (собственный режим служб SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
 

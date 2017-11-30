@@ -1,31 +1,29 @@
 ---
-title: "Пользовательские карты в мобильные отчеты служб Reporting Services | Документы Microsoft"
+title: "Пользовательские карты в мобильных отчетах Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 59a4ebad-587a-4770-afcd-c69216b8afd9
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 410863a8fc12424addbc8edba0196066fd1daf79
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 580594ae5766b31bb18cdefc5682bda8e3a5ee15
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-# <a name="custom-maps-in-reporting-services-mobile-reports"></a>пользовательских картах в мобильных отчетах служб Reporting Services
-Географические карты в SQL Server Mobile Report Publisher определяются в формате, известном как *ШЕЙП-файлы*.  
+# <a name="custom-maps-in-reporting-services-mobile-reports"></a>Custom maps in Reporting Services mobile reports
+Географические карты в издателе мобильных отчетов для SQL Server определяются в формате, известном как *файлы фигур ESRI*.  
   
-Этот формат, первоначально разработанный частной компанией, теперь является широко распространенным частично открытым форматом, используемым во многих приложениях GIS. В соответствии с этим форматом издателя мобильных отчетов требует два файла, чтобы определить карту:  
+Этот формат, первоначально разработанный частной компанией, теперь является широко распространенным частично открытым форматом, используемым во многих приложениях GIS. В соответствии с этим форматом для издателя мобильных отчетов требуется два файла, чтобы определить карту:  
   
 - SHP-файл для контуров фигур  
 - DBF-файл для метаданных  
@@ -63,4 +61,3 @@ ms.lasthandoff: 08/09/2017
   
   
   
-

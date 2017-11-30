@@ -1,5 +1,5 @@
 ---
-title: "Синтаксис запроса XML для XML-данных отчета (SSRS) | Документы Microsoft"
+title: "Синтаксис запроса XML для XML-данных отчета (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a2505ed537c92255f1291e4f800a49bb070f1149
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Синтаксис запроса XML для XML-данных отчета (SSRS)
-  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно создавать наборы данных для источников XML-данных. После определения источника данных можно создать запрос для получения набора данных. В зависимости от типа XML-данных, на которые указывает источник данных, этот запрос создается путем включения либо элемента XML **Query** , либо пути к элементу. XML **запроса** начинается с  **\<запроса >** теги и включает пространства имен и XML-элементы, которые зависят от источника данных. Путь к элементу не зависит от пространства имен и указывает необходимые узлы и атрибуты узлов в базовых XML-данных при помощи XPath-подобного синтаксиса. Дополнительные сведения о путях к элементу см. в разделе [Синтаксис пути к элементу для XML-данных отчета (SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
+  В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]можно создавать наборы данных для источников XML-данных. После определения источника данных можно создать запрос для получения набора данных. В зависимости от типа XML-данных, на которые указывает источник данных, этот запрос создается путем включения либо элемента XML **Query** , либо пути к элементу. Элемент XML **Query** начинается с тега **\<Query>** и включает пространства имен и XML-элементы, зависящие от источника данных. Путь к элементу не зависит от пространства имен и указывает необходимые узлы и атрибуты узлов в базовых XML-данных при помощи XPath-подобного синтаксиса. Дополнительные сведения о путях к элементу см. в разделе [Синтаксис пути к элементу для XML-данных отчета (службы SSRS)](../../reporting-services/report-data/element-path-syntax-for-xml-report-data-ssrs.md).  
   
  Источник данных XML можно создать для следующих типов XML-данных:  
   
@@ -69,7 +68,7 @@ ms.lasthandoff: 08/09/2017
 |XML-документ, использующий значения по умолчанию.|*No query*.<br /><br /> Путь к элементу определяется на основе самого XML-документа и не зависит от пространства имен.|  
   
 > [!NOTE]  
->  Первый пример веб-службы перечисляет содержимое сервера отчетов, применяющего метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Для выполнения этого запроса, необходимо создать новый источник данных и задайте строку подключения `http://localhost/reportserver/reportservice2006.asmx`. Метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> имеет два параметра: **Item** и **Recursive**. Для **Item** установите значение по умолчанию **/** , а для параметра **Recursive** — значение **1**.  
+>  Первый пример веб-службы перечисляет содержимое сервера отчетов, применяющего метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> . Для выполнения этого запроса необходимо создать новый источник данных и задать строку подключения: `http://localhost/reportserver/reportservice2006.asmx`. Метод <xref:ReportService2006.ReportingService2006.ListChildren%2A> имеет два параметра: **Item** и **Recursive**. Для **Item** установите значение по умолчанию **/** , а для параметра **Recursive** — значение **1**.  
   
 ## <a name="specifying-namespaces"></a>Указание пространств имен  
  Для указания пространств имен, используемых XML-данными из источника данных, используется элемент XML **Query** . Следующий XML-запрос использует пространство имен **sales**. Узлы XML **ElementPath** для элементов `sales:LineItems` и `sales:LineItem` используют пространство имен **sales**.  
@@ -93,7 +92,7 @@ ms.lasthandoff: 08/09/2017
   
 |Элемент XML-запроса|Полученные в результате поля набора данных|  
 |-----------------------|-------------------------------------|  
-|\<Запрос / >|Значение A:`http://schemas.microsoft.com/...`<br /><br /> Значение б.`http://schemas.microsoft.com/...`<br /><br /> Значение C:`http://schemas.microsoft.com/...`|  
+|\<Query/>|Значение A: `http://schemas.microsoft.com/...`<br /><br /> Значение B: `http://schemas.microsoft.com/...`<br /><br /> Значение C: `http://schemas.microsoft.com/...`|  
 |`<xmldp:Query xmlns:xmldp="http://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="http://schemas.microsoft.com/...">`<br /><br /> `<xmldp:ElementPath>Root {}/ns:Element2/Node</xmldp:ElementPath>`<br /><br /> `</xmldp:Query>`|Значение D<br /><br /> Значение E<br /><br /> Значение F|  
   
 #### <a name="xml-document-dpnamespacexml"></a>XML-документ: DPNamespace.xml  
@@ -115,8 +114,7 @@ ms.lasthandoff: 08/09/2017
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Тип соединения XML &#40; Службы SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Учебники по службам Reporting Services (SSRS)](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   
-

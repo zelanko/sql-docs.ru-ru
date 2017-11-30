@@ -1,5 +1,5 @@
 ---
-title: "Экспорт в CSV-файл (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Экспорт в CSV-файл (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: e63d1c2405029118064144d99fc092ec6f4f139a
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Экспорт в CSV-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате с разделителями-запятыми (CSV) готовит отчеты с разбиением на страницы для просмотра в виде плоских представлений данных стандартизованного текстового вида. Этот формат легко читается и может использоваться для обмена со многими приложениями.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 08/09/2017
     > [!NOTE]  
     >  В качестве разделителя полей можно задать любой символ, в том числе символ табуляции. Для этого нужно изменить настройки сведений об устройстве. Дополнительные сведения см. в разделе [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
--   Строка разделителя записи — возврат каретки и перевода строки (\<cr >\<lf >).  
+-   Строка разделителя записи — возврат каретки и перевод строки (\<cr>\<lf>).  
   
 -   Ограничитель текста — кавычка (").  
   
@@ -150,11 +149,10 @@ ms.lasthandoff: 08/09/2017
   
   
 ## <a name="see-also"></a>См. также  
- [Разбиение на страницы в службах Reporting Services &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Поведение отрисовки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Интерактивные возможности различных подготовки отчетов к просмотру расширения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Подготовка к просмотру элементов отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Подготовка к просмотру элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
-

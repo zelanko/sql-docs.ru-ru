@@ -1,5 +1,5 @@
 ---
-title: "Авторизация в службах Reporting Services | Документы Microsoft"
+title: "Авторизация в службах Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,24 +10,22 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- authorization [Reporting Services]
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: authorization [Reporting Services]
 ms.assetid: 15fc1c7b-560c-4737-b126-e0d428a1b530
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: bd7ecdc8e792fe11810affa362ff681bfdf267f1
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 10fbded684af5a1d17a6491d28a3524acbb2759a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="authorization-in-reporting-services"></a>Авторизация в службах Reporting Services
-  Авторизация является процессом определения, должен ли быть предоставлен идентификатору запрошенный тип доступа к конкретному ресурсу в базе данных сервера отчетов. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют архитектуру авторизации на основе ролей, которая предоставляет пользователю доступ к конкретному ресурсу на основании назначенной этому пользователю роли в данном приложении. Модули безопасности для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат реализацию компонента авторизации, который используется для предоставления доступа пользователям после прохождения ими проверки подлинности на сервере отчетов. Авторизация вызывается, когда пользователь пытается выполнить операцию в системе или на элементе сервера через API-интерфейс SOAP, либо посредством доступа по URL-адресу. Это стало возможным благодаря интерфейсу модуля безопасности **IAuthorizationExtension2**. Как указывалось выше, все развертываемые модули наследуют от базового интерфейса **IExtension** . **IExtension** и **IAuthorizationExtension2** являются членами **Microsoft.ReportingServices.Interfaces** пространства имен.  
+  Авторизация является процессом определения, должен ли быть предоставлен идентификатору запрошенный тип доступа к конкретному ресурсу в базе данных сервера отчетов. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] используют архитектуру авторизации на основе ролей, которая предоставляет пользователю доступ к конкретному ресурсу на основании назначенной этому пользователю роли в данном приложении. Модули безопасности для служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] содержат реализацию компонента авторизации, который используется для предоставления доступа пользователям после прохождения ими проверки подлинности на сервере отчетов. Авторизация вызывается, когда пользователь пытается выполнить операцию в системе или на элементе сервера через API-интерфейс SOAP, либо посредством доступа по URL-адресу. Это стало возможным благодаря интерфейсу модуля безопасности **IAuthorizationExtension2**. Как указывалось выше, все развертываемые модули наследуют от базового интерфейса **IExtension** . Интерфейсы**IExtension** и **IAuthorizationExtension2** являются членами пространства имен **Microsoft.ReportingServices.Interfaces**.  
   
 ## <a name="checking-access"></a>Проверка доступа  
  При авторизации необходимым условием пользовательской реализации безопасности является проверка доступа, реализованная в методе <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>. Метод <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> вызывается при каждой попытке пользователя выполнить операцию на сервере отчетов. Метод <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> перегружается для всех типов операций. Для операций с папками пример проверки доступа может выглядеть следующим образом:  
@@ -77,7 +75,7 @@ public bool CheckAccess(
 ### <a name="authorization-flow"></a>Поток авторизации  
  Авторизация служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] управляется модулем безопасности, настроенным в настоящее время для выполнения на сервере. Авторизация основана на ролях и ограничена разрешениями и операциями, предоставляемыми архитектурой безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. На следующей диаграмме показан процесс авторизации пользователей для работы с элементами в базе данных сервера отчетов.  
   
- ![Поток авторизации служб Reporting](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "поток авторизации служб Reporting Services")  
+ ![Поток авторизации служб Reporting Services](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthorizationflow.gif "Поток авторизации служб Reporting Services")  
   
  Как показано на этой диаграмме, авторизация выполняется в следующей последовательности.  
   

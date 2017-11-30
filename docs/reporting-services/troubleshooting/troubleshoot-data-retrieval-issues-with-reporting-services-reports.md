@@ -1,5 +1,5 @@
 ---
-title: "Устранение неполадок извлечения данных с помощью отчетов служб Reporting Services | Документы Microsoft"
+title: "Устранение неполадок с извлечением данных с помощью отчетов служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/27/2016
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3f801ab4a8033d7f457aad0483ead5cb080fd8ed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 8986a6212c34cfcaea56669e96d04384191c2e6f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services
 Первым этапом обработки отчета является получение данных отчета для каждого набора данных при помощи выполнения запроса набора данных. При локальном просмотре отчета соединения с источниками данных и учетные данные должны использовать разрешения, достаточные для извлечения данных в компьютер. При выполнении отчета на сервере отчетов соединения с источниками данных и учетные данные должны использовать разрешения, достаточные для извлечения данных на сервере отчетов. Материал этого раздела используется для устранения проблем, связанных с получением данных отчета.   
@@ -73,7 +72,6 @@ ms.lasthandoff: 08/09/2017
   
 
 [!INCLUDE[feedback_stackoverflow_msdn_connect](../../includes/feedback-stackoverflow-msdn-connect.md)]
-
 
 
 

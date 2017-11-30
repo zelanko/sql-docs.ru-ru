@@ -1,5 +1,5 @@
 ---
-title: "Регистрация поставщика данных стандартного кода .NET Framework (SSRS) | Документы Microsoft"
+title: "Регистрация стандартного поставщика данных .NET Framework (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/18/2017
 ms.prod: sql-server-2016
@@ -18,21 +18,21 @@ helpviewer_keywords:
 - data retrieval [Reporting Services]
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a868e10ae26c69711a7ce3852e0f9ffe56dc3ae8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 765da01c8f05b276e5f6e5cc4af55eb96fb5374c
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Регистрация стандартного поставщика данных .NET Framework (службы SSRS)
   Чтобы набор данных отчета служб [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] получал данные с помощью поставщика данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сторонней разработки, необходимо развернуть и зарегистрировать сборку поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] в двух местах: на клиенте, используемом для разработки отчета, и на сервере отчетов. На клиенте поставщик данных должен быть зарегистрирован в качестве типа источника данных и связан с конструктором запросов. После этого этот поставщик может быть выбран в качестве типа источника данных при создании набора данных для отчета. При этом откроется связанный конструктор запросов, помогающий создавать запросы для этого типа источников данных. На сервере отчетов поставщик данных необходимо зарегистрировать в качестве типа источника данных. После этого может производиться обработка опубликованных отчетов, которые в качестве источника данных используют этот поставщик.  
   
- Поставщикам данных сторонней разработки не обязательно обеспечивать все функции, реализуемые модулями обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Дополнительные сведения о расширении функциональных возможностей.[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Реализация модуля обработки данных](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Поставщикам данных сторонней разработки не обязательно обеспечивать все функции, реализуемые модулями обработки данных служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md). Дополнительные сведения о расширении функций поставщика данных платформы[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Реализация модуля обработки данных](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Для установки и регистрации поставщиков данных необходимы учетные данные администратора.  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-server"></a>Установка сборки поставщика данных на сервер отчетов  
   
-1.  Перейдите в каталог bin по умолчанию сервера отчетов, на котором планируется использование поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . По умолчанию каталог bin сервера отчетов находится  *\<диска >*: \Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
+1.  Перейдите в каталог bin по умолчанию сервера отчетов, на котором планируется использование поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . По умолчанию каталог bin сервера отчетов находится в папке *\<диск>*:\Program Files\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\Reporting Services\ReportServer\bin.  
   
 2.  Скопируйте сборку из промежуточной папки в каталог bin сервера отчетов. Можно также загрузить сборку в глобальный кэш сборок (GAC). Дополнительные сведения см. в разделе [Работа со сборками и глобальным кэшем сборок](http://go.microsoft.com/fwlink/?linkid=63912) в документации по пакету SDK платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на веб-узле MSDN.  
   
@@ -107,14 +107,14 @@ ms.lasthandoff: 08/09/2017
  Членство URL — это лишь одно из множества условий членства, которые должны быть заданы для поставщика данных.  
   
 ### <a name="verifying-the-deployment-and-registration"></a>Проверка развертывания и регистрация  
- Успешность развертывания поставщика данных на сервере отчетов можно проверить по его наличию в списке источников данных, открыв диспетчер отчетов. Дополнительные сведения о службах Reporting Services и источниках данных см. в статье [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
+ Успешность развертывания поставщика данных на сервере отчетов можно проверить по его наличию в списке источников данных, открыв диспетчер отчетов. Дополнительные сведения о диспетчере отчетов и источниках данных см. в разделе [Создание, изменение и удаление общих источников данных (службы SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
 ## <a name="registering-a-net-framework-data-provider-on-the-report-designer-client"></a>Регистрация поставщика данных .NET Framework на клиенте конструктора отчетов  
  Для разработки отчетов, которые используют в качестве источника данных поставщик данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , необходимо установить сборку на клиентский компьютер, на котором запускается конструктор отчетов. Необходимо изменить два файла конфигурации. Измените файл RSReportDesigner.config для регистрации поставщика данных как источника данных и использования обычного конструктора запросов. Чтобы предоставить права доступа к коду сборки, измените файл RSPreviewPolicy.config.  
   
 #### <a name="to-install-a-data-provider-assembly-on-the-report-designer-client"></a>Установка сборки поставщика данных на клиенте конструктора отчетов  
   
-1.  Перейдите в каталог по умолчанию PrivateAssemblies на клиенте конструктора отчетов, на котором будет использоваться поставщик данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Расположение по умолчанию каталог PrivateAssemblies  *\<диска >*: \Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
+1.  Перейдите в каталог по умолчанию PrivateAssemblies на клиенте конструктора отчетов, на котором будет использоваться поставщик данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . По умолчанию каталог PrivateAssemblies расположен в папке *\<диск>*:\Program Files\Microsoft Visual Studio 9.0\Common7\IDE\PrivateAssemblies.  
   
 2.  Скопируйте сборку из промежуточной папки в каталог PrivateAssemblies клиента конструктора отчетов. Можно также загрузить сборку в глобальный кэш сборок (GAC). Дополнительные сведения см. в разделе [Работа со сборками и глобальным кэшем сборок](http://go.microsoft.com/fwlink/?linkid=63912) в документации по пакету SDK платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] на веб-узле MSDN.  
   
@@ -201,14 +201,14 @@ ms.lasthandoff: 08/09/2017
 ## <a name="platform-considerations"></a>Замечания о платформе  
  На 64-разрядной (x64) платформе среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] выполняется в 32-разрядном режиме WOW. При разработке отчетов на платформе x64, для обеспечения их просмотра на клиенте конструктора отчетов необходимо установить 32-разрядную версию поставщика данных. Если отчет публикуется в той же системе, необходимо установить поставщики данных x64 для просмотра отчетов с помощью диспетчера отчетов.  
   
- Среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не поддерживается платформами на базе [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] не поддерживается платформами на базе [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)].  
   
- Модули обработки данных, установленные в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , должны быть скомпилированы для каждой из платформ и установлены в соответствующие каталоги. Если регистрируется пользовательский или стандартный поставщик данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , то он должен быть скомпилирован для целевой платформы и установлен в соответствующий каталог. При работе на 32-разрядной платформе поставщик данных должен быть скомпилирован для 32-разрядной платформы, а при работе на 64-разрядной платформе — для 64-разрядной платформы. 32-разрядный поставщик данных с 64-разрядными интерфейсами на 64-разрядной платформе использовать нельзя. Сведения о работоспособности на установленной платформе поставщика данных сторонней разработки см. в документации по этому программному обеспечению. Дополнительные сведения о поставщиках данных и поддержке платформ см. в разделе [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Модули обработки данных, установленные в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , должны быть скомпилированы для каждой из платформ и установлены в соответствующие каталоги. Если регистрируется пользовательский или стандартный поставщик данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] , то он должен быть скомпилирован для целевой платформы и установлен в соответствующий каталог. При работе на 32-разрядной платформе поставщик данных должен быть скомпилирован для 32-разрядной платформы, а при работе на 64-разрядной платформе — для 64-разрядной платформы. 32-разрядный поставщик данных с 64-разрядными интерфейсами на 64-разрядной платформе использовать нельзя. Сведения о работоспособности на установленной платформе поставщика данных сторонней разработки см. в документации по этому программному обеспечению. Дополнительные сведения о поставщиках данных и поддержке платформ см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Настройка и администрирование сервера отчетов &#40; Собственный режим служб SSRS &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
+ [Настройка и администрирование сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Реализация модуля обработки данных](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [Файлы конфигурации служб отчетов](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Файлы конфигурации служб Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Управление доступом для кода в службах Reporting Services](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  
   
   

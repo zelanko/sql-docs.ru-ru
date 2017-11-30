@@ -1,5 +1,5 @@
 ---
-title: "Удаление построителя отчетов | Документы Microsoft"
+title: "Удаление построителя отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,19 +11,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 009538c6-4941-4393-b14b-9144cffdbdaf
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: ebfb5781c80cac35936dfdb9ad2e434ee5ca7f9e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 87d8e248cb143322c06570092ca3afc380827356
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="uninstall-report-builder"></a>Удаление построителя отчетов
 
 Изолированную версию построителя отчетов можно удалить с помощью панели управления или из командной строки.
@@ -38,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  На панели управления щелкните элемент **Программы и компоненты**.  
   
-3.  Найдите [!INCLUDE[msCoName](../../includes/msconame-md.md)] построитель отчетов SQL Server 2016 в **имя** и щелкните его.  
+3.  Найдите построитель отчетов [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 2016 в списке **Имя** и щелкните его.  
   
 4.  Нажмите кнопку **Удалить**.  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  В меню **Пуск** выберите команду **Выполнить**.  
   
-2.  В текстовом поле **Открыть** введите **cmd**.  
+2.  В текстовом поле **Открыть** введите **cmd.**  
   
 3.  В окне командной строки перейдите к папке, содержащей файл ReportBuilder3_x86.msi.  
   
@@ -66,5 +64,4 @@ ms.lasthandoff: 08/09/2017
 
 [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

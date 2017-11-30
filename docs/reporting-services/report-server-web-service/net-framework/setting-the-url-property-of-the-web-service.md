@@ -1,5 +1,5 @@
 ---
-title: "Задание свойства URL-адрес веб-службы | Документы Microsoft"
+title: "Определение свойства URL-адреса веб-службы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Url property
 - Report Server Web service, proxies
@@ -20,20 +19,19 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 3a367a9ca2d9a8c9b51d0b55a9fedc006a6fa621
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.openlocfilehash: 9f48fb74d52fbea6aa0990bd1cb72354fa5dd0f5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Задание свойства Url для веб-службы
-  В любое время в вашей [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] приложения, можно изменить базовый URL-адрес веб-сервера отчетов службы, к которой приложение настроено в настоящее время. Чтобы сделать это, просто установите **URL-адрес** свойство объекта службы. Например:  
+  В приложениях [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] можно в любое время изменить базовый URL-адрес веб-службы сервера отчетов, для использования которой приложение настроено в настоящее время. Для этого необходимо просто задать свойство **Url** объекта службы. Например:  
   
 ```vb  
 Dim rs As New ReportingService2010()  
@@ -112,7 +110,7 @@ class Sample
 }  
 ```  
   
- Дополнительные сведения о создании первоначальной прокси веб-службы см. в разделе [создание прокси веб-службы](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
+ Дополнительные сведения о создании исходного прокси для веб-службы см. в разделе [Создание учетной записи-посредника веб-службы](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
 ## <a name="see-also"></a>См. также:  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
@@ -121,4 +119,3 @@ class Sample
  [Веб-службы сервера отчетов](../../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   
-

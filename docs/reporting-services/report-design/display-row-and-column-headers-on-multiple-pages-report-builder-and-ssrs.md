@@ -1,5 +1,5 @@
 ---
-title: "Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,17 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 97fe2b81898c3172db4d387afbac3be4086fac11
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 7035884be08ffca7f4bd266d82f2b5696fb402d6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Отображение заголовков строк и столбцов на нескольких страницах (построитель отчетов и службы SSRS)
   Пользователь может указать, следует ли повторять заголовки строк и столбцов на каждой странице отчета [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы для области данных табликса (таблица, матрица или список), которая занимает несколько страниц.
@@ -73,9 +72,8 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>См. также раздел  
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [Управление разрывы страниц, заголовками, столбцов и строк &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
- [Отображение верхних и нижних колонтитулов группы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Управление разрывами страниц, заголовками, столбцами и строками (построитель отчетов и службы SSRS)](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Отображение верхних и нижних колонтитулов в группе (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
  [Сохранение заголовков видимыми при прокрутке отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
   
-

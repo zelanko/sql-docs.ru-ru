@@ -1,5 +1,5 @@
 ---
-title: "Круговые диаграммы (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Круговые диаграммы (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,23 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 536efa9c-c6fb-4cdd-b41f-ff5382910bd7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dfa24b2135c34e95dae65e0a6fee4bf5da6b3d16
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: b7f623c58e745f8509f27adc21076c1b15d36f53
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Круговые диаграммы (построитель отчетов и службы SSRS)
-  Круговые и кольцевые диаграммы отображают данные в виде пропорциональных долей целого. Круговые диаграммы обычно используются для сравнения групп. Круговые и кольцевые диаграммы, наряду с пирамидальными и воронкообразными диаграммами, относятся к группе так называемых фигурных диаграмм. Фигурные диаграммы не имеют осей. После перетаскивания числового поля на фигурную диаграмму в этой диаграмме вычисляется процентная доля каждого значения в общей сумме. Дополнительные сведения о фигурных диаграммах см. в разделе [фигурные диаграммы &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
+  Круговые и кольцевые диаграммы отображают данные в виде пропорциональных долей целого. Круговые диаграммы обычно используются для сравнения групп. Круговые и кольцевые диаграммы, наряду с пирамидальными и воронкообразными диаграммами, относятся к группе так называемых фигурных диаграмм. Фигурные диаграммы не имеют осей. После перетаскивания числового поля на фигурную диаграмму в этой диаграмме вычисляется процентная доля каждого значения в общей сумме. Дополнительные сведения о фигурных диаграммах см. в разделе [Фигурные диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md).  
   
  На следующей иллюстрации показана трехмерная круговая диаграмма с метками данных, отформатированными как процентные доли.  Условные обозначения размещены справа, по центру.  
   
- ![Круговая диаграмма](../../reporting-services/report-design/media/piechart.gif "круговой диаграммы")  
+ ![Круговая диаграмма](../../reporting-services/report-design/media/piechart.gif "Круговая диаграмма")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -64,14 +63,14 @@ ms.lasthandoff: 08/09/2017
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>Применение стилей рисования к круговой диаграмме  
  Чтобы усилить визуальное впечатление, к круговой диаграмме можно добавлять специальные стили рисования. Стили рисования включают эффекты применения скошенных и вогнутых участков. Эти эффекты доступны только на двумерной круговой диаграмме. На следующей иллюстрации показаны примеры стилей рисования с применением скошенных и вогнутых участков на круговой диаграмме.  
   
- ![Круговые стили рисования](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "круговые стили рисования")  
+ ![Стили отображения круговой диаграммы](../../reporting-services/report-design/media/rs-piedrawingeffects-concave2.gif "Стили отображения круговой диаграммы")  
   
  Дополнительные сведения см. в разделе [Добавление в диаграмму стилей рельефа, приподнятости и текстуры (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>Отображение процентных значений на круговой диаграмме  
  Как и другие фигурные диаграммы, круговые диаграммы представляют процентные доли от суммарного количества. Поэтому обычно метки круговой диаграммы форматируются в процентах. Но чтобы обеспечить согласованность с диаграммами других типов, на круговой диаграмме по умолчанию метки процентов не отображаются. Дополнительные сведения об отображении на диаграмме значений в виде процентных долей см. в разделе [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Дополнительные сведения о форматировании числовых значений в виде процентных долей в отчете см. в разделе [Форматирование чисел и дат (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
- ![Круговая диаграмма с данными точки метки в виде процентов](../../reporting-services/report-design/media/rs-piechartpercentages.gif "метки в процентах точек круговая диаграмма с данными")  
+ ![Круговая диаграмма с метками точек данных, заданными в процентах](../../reporting-services/report-design/media/rs-piechartpercentages.gif "Круговая диаграмма с метками точек данных, заданными в процентах")  
   
 ## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>Предотвращение перекрытия меток на круговой диаграмме  
  Если круговая диаграмма содержит много точек данных, метки данных будут перекрываться. Существует несколько способов предотвратить перекрытие меток.  
@@ -93,12 +92,11 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Отображение меток точек данных за пределами круговой диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
- [Сбор мелких срезов на круговой диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Отображение процентных значений на круговой диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Сбор мелких срезов на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Отображение процентных значений на круговой диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Учебник. Добавление круговой диаграммы к отчету &#40;построитель отчетов&#41;](../../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
- [Форматирование условных обозначений на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [NULL и пустые точки данных в диаграммах &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Форматирование условных обозначений на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [Точки данных со значением NULL и пустые точки в диаграммах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)  
   
   
-

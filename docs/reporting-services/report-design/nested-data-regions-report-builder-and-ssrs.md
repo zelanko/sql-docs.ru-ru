@@ -1,5 +1,5 @@
 ---
-title: "Вложенные области данных (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Вложенные области данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: c8c0ce2fe9fcbdeb417770aba60e356ef889b667
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3a2829591b4024a9423c83b057ed1462c6762255
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Вложенные области данных (построитель отчетов и службы SSRS)
   Одни области данных, например диаграмма, могут быть вложены в другие, например в матрицу. Обычно это делается для выведения сводок данных в кратком и понятном виде, или для визуального представления данных, дополняющего табличное или матричное представление.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **Тело табликса.** Это данные в самой внутренней группе данных, образованной пересечением групп строк и групп столбцов, после применения выражений фильтрации и сортировки для набора данных, внешнего табликса и групп столбцов и строк.  
   
- Дополнительные сведения см. в разделе [Области данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Дополнительные сведения см. в разделе [Области данных табликса &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
 ## <a name="nesting-a-chart-sparkline-or-data-bar-in-a-tablix"></a>Добавление вложенных диаграмм, спарклайн-диаграмм или гистограмм в табликс  
  При добавлении диаграммы (включая спарклайн-диаграмму или гистограмму) в строку верхнего или нижнего колонтитула группы столбцов табликса или в тело ячейки табликса данные, передаваемые в диаграмму, ограничиваются подмножеством данных для этой ячейки. По умолчанию при добавлении диаграммы в ячейку табликса размеры диаграммы увеличиваются для заполнения ячейки.  
@@ -88,13 +88,13 @@ ms.lasthandoff: 08/09/2017
  Дополнительные сведения см. в разделах [Основные сведения о группах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md) и [Добавление, перемещение или удаление таблицы, матрицы или списка (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Фильтр, группы и сортировка данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Таблицы, матрицы и списки &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Диаграммы &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [Датчики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
- [Выражения &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [Форматирование элементов отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Учебник: Добавление ключевого показателя Эффективности в отчет &#40; Построитель отчетов &#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
- [Форматирование шкал на датчике &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
+ [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

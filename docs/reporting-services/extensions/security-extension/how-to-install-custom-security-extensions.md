@@ -1,5 +1,5 @@
 ---
-title: "Как установить настраиваемые модули безопасности | Документы Microsoft"
+title: "Как установить настраиваемые модули безопасности | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/10/2017
 ms.prod: sql-server-2016
@@ -11,38 +11,36 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
-ms.openlocfilehash: 58cfeef7d74e0641b965c307551f0fba4a7ff09c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: c3a035503b98ba0dec235b9d7f402947b35d1fe5
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="how-to-install-custom-security-extensions"></a>Как установить настраиваемые модули безопасности
 
 [!INCLUDE[ssrs-appliesto](../../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../../includes/ssrs-appliesto-pbirs.md)]
 
-Службы Reporting Services 2016 появился новый веб-портал для размещаются новые интерфейсы API Odata и также новых рабочих нагрузок отчета, например мобильные отчеты и ключевые показатели Эффективности. Новый портал использует более новыми технологиями и изолирован от знакомый ReportingServicesService, выполнив в отдельном процессе. Этот процесс не является приложением ASP.NET в размещенных и таким образом разбивает данные, полученные с существующие пользовательские модули безопасности. Кроме того, не разрешать имеющиеся интерфейсы настраиваемых модулей безопасности для любого внешнего контекста передан в систему, оставляя исполнители, с единственным вариантом для проверки хорошо известных объектов глобальных ASP.NET всю необходимую внести некоторые изменения в интерфейсе.
+В службах Reporting Services 2016 появился новый веб-портал для размещения новых API-интерфейсов Odata и новых рабочих нагрузок отчетов, например мобильных отчетов и ключевых показателей эффективности. На новом портале используются современные технологии, и он изолирован от известной службы Reporting Services, выполняясь в отдельном процессе. Этот процесс не является размещенным приложением ASP.NET и поэтому не подтверждает предположение относительно существующих пользовательских модулей безопасности. Кроме того, имеющиеся интерфейсы настраиваемых модулей безопасности не разрешают передачу внешнего контекста, поэтому у исполнителей остается только один вариант для проверки хорошо известных глобальных объектов ASP.NET, требующий внесения некоторых изменений в интерфейс.
 
 ## <a name="what-changed"></a>Что изменилось?
 
-Появился новый интерфейс, может быть реализован предоставляющий IRSRequestContext, обеспечивая более общих свойств, используемых расширения для принятия решений, связанных с проверкой подлинности.
+Появился новый доступный для реализации интерфейс, предоставляющий IRSRequestContext с дополнительными общими свойствами, используемыми модулями для принятия решений относительно проверки подлинности.
 
-В предыдущих версиях диспетчер отчетов был внешнего интерфейса и могут быть настроены собственную настраиваемую страницу входа. В службы Reporting Services 2016 только на одной странице, размещенной reportserver поддерживается и выполняет проверку подлинности для обоих приложений.
+В предыдущих версиях диспетчер отчетов был интерфейсным и мог быть настроен с собственной страницей входа. В службах Reporting Services 2016 поддерживается только одна страница, размещенная на сервере отчетов, которая должна проходить проверку подлинности в обоих приложениях.
 
 ## <a name="implementation"></a>Реализация
 
-В предыдущих версиях расширения могли полагаться на общие предположения, что ASP.NET объекта будут доступны. Так как новый портал не работает в ASP.NET, расширение может достигнут проблемы с объектами, значение NULL.
+В предыдущих версиях расширения могли полагаться на общие предположения, что объекты ASP.NET будут доступны. Так как новый портал не работает в ASP.NET, у модуля могут возникать проблемы с объектами, имеющими значение NULL.
 
-Наиболее общий пример обращается к HttpContext.Current прочитать сведения о запросе, такие как заголовки и файлы cookie. Чтобы разрешить расширения принимать те же решения, мы представили новый метод в модуле, который предоставляет сведения о запросе и вызывается при проверке подлинности на портале. 
+Наиболее общим примером является доступ к HttpContext.Current для чтения сведений о запросе, таких как заголовки и файлы cookie. Чтобы модули могли принимать те же решения, мы представили новый метод в модуле, который предоставляет сведения о запросе и вызывается при проверке подлинности на портале. 
 
-Расширения, придется реализовать <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2> интерфейс для использования этого. Расширения, должен реализовывать обе версии <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo%2A> метод называется контекстом reportserver и других используемых в процессе webhost. В следующем примере показан один из простых реализаций для портала, где используется удостоверение разрешаемым reportserver.
+Для поддержки этого подхода модулям необходимо реализовать интерфейс <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension2>. Модули должны реализовать обе версии метода <xref:Microsoft.ReportingServices.Interfaces.IAuthenticationExtension.GetUserInfo%2A>, так как он вызывается контекстом сервера отчетов, используемого в процессе webhost. В приведенном ниже примере показана одна из простых реализаций для портала, где используется удостоверение, разрешенное сервером отчетов.
 
 ``` 
 public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIdentity, out IntPtr userId)
@@ -58,23 +56,23 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 }
 ```
 
-## <a name="deployment-and-configuration"></a>Развертывание и настройка
+## <a name="deployment-and-configuration"></a>Развертывание и конфигурация
 
-Основные конфигурации, необходимые для настраиваемого модуля безопасности совпадают с предыдущими выпусками. Изменения необходимы для web.config и rsreportserver.config: Дополнительные сведения см. в разделе [Настройка нестандартной проверки подлинности или проверки подлинности форм на сервере отчетов](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
+Основные конфигурации, необходимые для настраиваемого модуля безопасности, совпадают с конфигурациями из предыдущих выпусков. Необходимо внести изменения в web.config и rsreportserver.config. Дополнительные сведения см. в разделе [Настройка нестандартной проверки подлинности или проверки подлинности с помощью форм на сервере отчетов](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md).
 
-Больше не отдельный файл web.config для диспетчера отчетов, портала будут наследовать те же параметры, как конечная точка reportserver.
+Больше нет отдельного файла web.config для диспетчера отчетов, портал будет наследовать те же параметры, что и конечная точка сервера отчетов.
 
 ## <a name="machine-keys"></a>Ключи компьютера
 
-В случае проверки подлинности форм, в которой требуется расшифровка файла cookie проверки подлинности оба процесса необходимо настроить с помощью того же ключа машины алгоритма расшифровки. Это было шаг знакомы, которые раньше установки Reporting Services для работы в средах с горизонтальным масштабированием, но теперь является обязательным, даже для развертывания на одном компьютере.
+При использовании проверки подлинности на основе форм, когда требуется расшифровка файла cookie проверки подлинности, оба процесса необходимо настроить с помощью того же ключа компьютера и алгоритма расшифровки. Это действие было знакомо пользователям, которые раньше устанавливали службы Reporting Services для работы в средах с горизонтальным масштабированием. Сейчас это обязательное требование даже для развертываний на одном компьютере.
 
-Следует использовать определенный ключа проверки развертывания вы, существует несколько средств для формирования ключей, как и диспетчер служб Internet Information (IIS). Другие средства можно найти в Интернете.
+Следует использовать ключ проверки, соответствующий вашему развертыванию. Существует несколько средств для формирования ключей, например диспетчер служб IIS. Другие средства можно найти в Интернете.
 
-### <a name="sql-server-reporting-services-2017-and-later"></a>SQL Server Reporting Services 2017 и более поздние версии
+### <a name="sql-server-reporting-services-2017-and-later"></a>Службы SQL Server Reporting Services 2017 и более поздние версии
 
 **\ReportServer\rsReportServer.config**
 
-Добавьте под `<configuration>`.
+Добавьте в `<configuration>`.
 
 ```
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
@@ -84,7 +82,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 **\ReportServer\web.config**
 
-Добавьте под `<system.web>`.
+Добавьте в `<system.web>`.
     
 ```
     <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
@@ -92,7 +90,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 **\RSWebApp\Microsoft.ReportingServices.Portal.WebHost.exe.config**
 
-Добавьте под `<configuration>`.
+Добавьте в `<configuration>`.
 
 ```
     <system.web>
@@ -102,19 +100,19 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ### <a name="power-bi-report-server"></a>Сервер отчетов Power BI
 
-Эта функция доступна начиная с выпуска июня 2017 г. (сборка 14.0.600.301).
+Доступен начиная с выпуска в июне 2017 г. (сборка 14.0.600.301).
 
 **\ReportServer\rsReportServer.config**
 
-Добавьте под `<configuration>`.
+Добавьте в `<configuration>`.
 
 ```
 <machineKey validationKey="[YOUR KEY]" decryptionKey=="[YOUR KEY]" validation="AES" decryption="AES" />
 ```
 
-## <a name="configure-passthrough-cookies"></a>Настройка транзитных файлы cookie
+## <a name="configure-passthrough-cookies"></a>Настройка транзитных файлов cookie
 
-Новый портал и reportserver обмениваться данными с использованием внутренней soap API-интерфейсы для некоторых операций (аналогично предыдущей версии диспетчера отчетов). При дополнительных куки-файлов необходимо передать на сервер с портала свойства PassThroughCookies по-прежнему доступен. Дополнительные сведения см. в разделе [настроить веб-портал для передачи файлов cookie проверки подлинности пользовательского](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
+Взаимодействие нового портала и сервера отчетов осуществляется через внутренние API-интерфейсы SOAP (аналогично предыдущей версии диспетчера отчетов). Если с портала на сервер необходимо передать дополнительные файлы cookie, можно по-прежнему воспользоваться свойствами PassThroughCookies. Дополнительные сведения см. в разделе [Настройка передачи файлов cookie для пользовательской проверки подлинности на веб-портале](../../../reporting-services/security/configure-the-web-portal-to-pass-custom-authentication-cookies.md).
 
 ```
 <UI>
@@ -128,8 +126,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 
 ## <a name="next-steps"></a>Следующие шаги
 
-[Настройка нестандартной проверки подлинности или проверки подлинности форм на сервере отчетов](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
-[Настройка диспетчера отчетов для передачи файлов cookie нестандартной проверки подлинности](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
+[Настройка нестандартной аутентификации или аутентификации с помощью форм на сервере отчетов](../../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
+[Настройка передачи файлов cookie для пользовательской проверки подлинности в диспетчере отчетов](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

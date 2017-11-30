@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - Make Table query
 - adding tables
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ade1713f239c5933160ac5b33b8453a7ee859b16
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: b7d5fa6a7c13d6a10ecd8d21fbff4981260617eb
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Создание запроса на создание таблицы (визуальные инструменты для баз данных)
 При помощи запросов на создание таблицы в новую таблицу можно копировать строки, что может оказаться полезным для создания подмножества данных и копирования содержимого таблиц из одной базы данных в другую. Запрос на создание таблицы похож на запрос на вставку результатов, но создает новую таблицу, в которую затем копируются строки.  
@@ -44,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 -   Параметры группировки для случаев, когда нужно скопировать только сводные данные.  
   
-Например следующий запрос создает новую таблицу с именем `uk`_`customers` и копирует в нее данные из таблицы `customers` :  
+Например, следующий запрос создает новую таблицу с именем `uk_customers` и копирует в нее данные из таблицы `customers`:  
   
 ```  
 SELECT *   
@@ -90,4 +89,3 @@ WHERE country = 'UK'
 [Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Типы запросов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
-

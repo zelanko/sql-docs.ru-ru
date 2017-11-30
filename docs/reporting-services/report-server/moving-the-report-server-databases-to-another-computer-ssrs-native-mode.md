@@ -1,5 +1,5 @@
 ---
-title: "Перемещение базы данных сервера отчетов на другой компьютер (собственный режим SSRS) | Документы Microsoft"
+title: "Перемещение баз данных сервера отчетов на другой компьютер (службы SSRS в собственном режиме) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -11,24 +11,22 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 90dc9bb5624c19c282d34782909fb5e168b4a695
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
-
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Перемещение баз данных сервера отчетов на другой компьютер (собственный режим служб SSRS)
 
   Базы данных сервера отчетов, используемые в установке, можно переместить на экземпляр компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] , находящийся на другом компьютере. Базы данных reportserver и reportservertempdb должны перемещаться или копироваться вместе. Установка служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] требует наличия обеих баз данных. База данных reportservertempdb должна быть связана по имени с перемещаемой базой данных reportserver.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в основном режиме.  
   
  Перемещение базы данных не влияет на запланированные операции, определенные в данный момент для элементов сервера отчетов.  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 08/09/2017
 >  Шаги, описанные в этом подразделе, следует выполнять только в том случае, если перемещение базы данных сервера отчетов является единственным изменением, которое вносится в текущую установку. При миграции всей установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (то есть для перемещения базы данных и изменения удостоверения службы Windows сервера отчетов, которая использует эту базу данных) необходима повторная настройка соединения и сброс ключа шифрования.  
   
 ## <a name="detaching-and-attaching-the-report-server-databases"></a>Отсоединение и присоединение баз данных сервера отчетов  
- Если сервер отчетов может быть переведен в режим «вне сети», можно отсоединить базы данных, чтобы переместить их на тот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который требуется использовать. При таком подходе разрешения в базах данных сохраняются. При использовании базы данных SQL Server, необходимо переместить его на другой экземпляр SQL Server. После перемещения баз данных следует заново настроить соединение сервера отчетов с базой данных сервера отчетов. Если при масштабном развертывании запущено несколько серверов отчетов, необходимо заново настроить подключение к базе данных сервера отчетов для каждого сервера отчетов, входящего в конфигурацию.  
+ Если сервер отчетов может быть переведен в режим «вне сети», можно отсоединить базы данных, чтобы переместить их на тот экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , который требуется использовать. При таком подходе разрешения в базах данных сохраняются. Если используется база данных SQL Server, необходимо переместить ее на другой экземпляр SQL Server. После перемещения баз данных следует заново настроить соединение сервера отчетов с базой данных сервера отчетов. Если при масштабном развертывании запущено несколько серверов отчетов, необходимо заново настроить подключение к базе данных сервера отчетов для каждого сервера отчетов, входящего в конфигурацию.  
   
  Для перемещения баз данных выполните следующие шаги:  
   
@@ -232,8 +230,7 @@ GO
 [Настройка учетной записи автоматического выполнения](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
 [Диспетчер конфигурации служб Reporting Services](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
 [Программа rsconfig](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
-[Настройка и управление ключами шифрования](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[Настройка ключей шифрования и управление ими](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
 [База данных сервера отчетов](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
 
-Дополнительные вопросы? [Попробуйте задать вопрос на форуме служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+Остались вопросы? [Посетите форум служб Reporting Services](http://go.microsoft.com/fwlink/?LinkId=620231).

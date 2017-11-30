@@ -1,5 +1,5 @@
 ---
-title: "Диалоговое окно свойств набора данных, параметры | Документы Microsoft"
+title: "Диалоговое окно \"Свойства набора данных\" — \"Параметры\" (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,17 +15,16 @@ f1_keywords:
 - sql13.rtp.rptdesigner.datasetproperties.parameters.f1
 - "10023"
 ms.assetid: 43b00aab-e2c3-4e85-abe1-a2b5a21efeed
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4e4a62f8a01d973063370df81bfef5af1fc929c1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: a45216068522ad248d850af14224976a8c91cadd
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="dataset-properties-dialog-box-parameters"></a>Диалоговое окно «Свойства набора данных» — «Настройки»
   Для добавления, изменения и удаления параметров запроса, включая те, которые связаны с параметрами отчета, используется вкладка **Параметры** диалогового окна **Свойства набора данных** .  
@@ -59,4 +58,3 @@ ms.lasthandoff: 08/09/2017
  [Изменение порядка параметров отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
   
-

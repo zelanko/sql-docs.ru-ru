@@ -1,5 +1,5 @@
 ---
-title: "Форматирование шкал на датчике (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Форматирование шкал на датчике (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dd65945-3b74-46a6-a794-b33585d565d2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 2b35ef78ab099933bd7d86bab2818734d1f93836
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>Форматирование шкал на датчике (построитель отчетов и службы SSRS)
   В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы шкала датчика представляет собой отображаемый на датчике диапазон чисел, ограниченный максимальным и минимальным значениями. Обычно шкала датчика содержит метки и деления, что упрощает считывание показаний указателя датчика. Шкала датчика обычно связана с одним или несколькими указателями. На одном и том же датчике может быть несколько шкал.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
  Радиус шкалы представляет собой расстояние от центра датчика до середины линейки шкалы. Значение радиуса шкалы измеряется в процентах от диаметра датчика. Рекомендуется использовать радиусы шкалы, не превышающие 35. Для больших радиусов шкала, скорее всего, будет нарисована за пределами границ датчика. На рисунке показано, как измеряется радиус шкалы относительно диаметра датчика, на линейке шкалы.  
   
- ![Радиус шкалы относительно диаметра датчика](../../reporting-services/report-design/media/scaleradiusdiagram.gif "радиус шкалы относительно диаметра датчика")  
+ ![Радиус шкалы относительно диаметра датчика](../../reporting-services/report-design/media/scaleradiusdiagram.gif "Радиус шкалы относительно диаметра датчика")  
   
  Начальный угол — это угол поворота, в диапазоне от 0 до 360 градусов, на котором начинается шкала. Нулевая (0) позиция находится в нижней точке датчика, а начальный угол отсчитывается по часовой стрелке. Например, шкала с начальным углом, равным 90 градусов, будет начинаться там, где на циферблате часов располагается цифра 9.  
   
@@ -84,10 +84,10 @@ ms.lasthandoff: 08/09/2017
 -   1% от наименьшего из значений высоты или ширины для линейного датчика.  
   
 ## <a name="see-also"></a>См. также  
- [Форматирование диапазонов на датчике &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
- [Форматирование указателей на датчике &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [Форматирование меток оси в виде даты или валюты &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Форматирование меток оси на диаграмме &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Датчики &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
+ [Форматирование указателей на датчике &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Форматирование меток оси в виде значений даты или валюты &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

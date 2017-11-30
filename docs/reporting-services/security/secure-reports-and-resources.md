@@ -1,5 +1,5 @@
 ---
-title: "Защищенные отчеты и ресурсы | Документы Microsoft"
+title: "Защищенные отчеты и ресурсы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,16 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: f94e761021f97653e77eaf18a3825db869f8133e
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="secure-reports-and-resources"></a>Защищенные отчеты и ресурсы
   Можно управлять степенью предоставляемого пользователям доступа к отдельным отчетам и ресурсам. По умолчанию только пользователи, являющиеся членами встроенной группы **Администраторы** , могут выполнять отчеты, просматривать ресурсы, изменять свойства и удалять элементы. Остальные пользователи должны иметь созданные для них назначения ролей, предоставляющие доступ к отчету или ресурсу.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Отчет публикуется на сервере отчетов или делается доступным другим образом, при этом значением параметра отчета можно управлять через URL-адрес веб-страницы.  
   
-3.  Злоумышленник создает ссылку на веб-страницу или сервер отчетов, указывая значение параметра в виде «javascript:\<вредоносный_скрипта >» и отправляет эту ссылку кому-либо при атаке с заманиванием.  
+3.  Злоумышленник создает ссылку на веб-страницу или сервер отчетов, указывая значение параметра в виде "javascript:\<вредоносный_скрипт>" и отправляет эту ссылку кому-либо еще, выполняя атаку с заманиванием.  
   
 ## <a name="mitigating-script-injection-attacks-in-a-hyperlink-in-a-published-report-or-document"></a>Противодействие атакам путем внедрения скриптов в гиперссылки в опубликованном отчете или документе  
  Отчеты могут содержать внедренные гиперссылки в значении свойства Action элемента отчета или части элемента отчета. Гиперссылки могут быть привязаны к данным, извлекаемым из внешнего источника данных при обработке отчетов. Если злоумышленник изменит базовые данные, возникает опасность использования гиперссылки для атаки с помощью уязвимости в реализации обработки сценариев. Когда пользователь щелкает ссылку в опубликованном или экспортированном отчете, может выполниться скрипт злоумышленника.  
@@ -80,11 +79,10 @@ ms.lasthandoff: 08/09/2017
  Отчеты, содержащие конфиденциальные данные, следует защищать на уровне доступа к данным, требуя от пользователей, чтобы они предоставили учетные данные, дающие право на доступ к этим данным. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Кроме того, можно защитить папку, сделав ее недоступной для неавторизованных пользователей. Дополнительные сведения см. в подразделе [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание и изменение назначений ролей](../../reporting-services/security/create-and-manage-role-assignments.md)   
- [Настройка доступа к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
+ [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
+ [настроить доступ к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Защита совместно используемых элементов источника данных](../../reporting-services/security/secure-shared-data-source-items.md)   
- [Хранить учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
+ [Сохраненные учетные данные в источнике данных Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
-

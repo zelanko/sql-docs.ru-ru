@@ -5,8 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tools-ssms
+ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - reconciling changes made by multiple users
 - modifications made by multiple users
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
+ms.openlocfilehash: 8b20829937e6ad532b4ce4a42e2fe42c6c70375f
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Согласование изменений, внесенных несколькими пользователями (визуальные инструменты для баз данных)
 В многопользовательской среде изменение одного и того же объекта могут выполнять одновременно несколько пользователей. Это происходит при работе над структурой объекта в конструкторе таблиц или конструкторе диаграмм баз данных либо при изменении значений, когда они возвращаются в панели результатов конструктора запросов и представлений. Это может приводить к конфликтам, которые придется разрешать.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 08/18/2017
   
 -   Нажмите кнопку **Да** — таблица будет сохранена, а в базу данных будут записаны новые значения, указанные в списке.  
   
-    Это действие может повлиять на таблицы, совместно использующие одни и те же объекты базы данных. Например, предположим, что изменяется столбец `au`_`id` в таблице `titleauthors` , а в это время другой пользователь работает в таблице `authors` , связанной с таблицей `titleauthors` столбцом `au`\_`id` . Сохранение одной таблицы повлияет на другую. Точно так же, допустим, что другой пользователь задал проверочное ограничение для столбца `qty` в таблице `sales` . Удаление столбца `qty` и сохранение таблицы `sales` коснется проверочного ограничения другого пользователя.  
+    Это действие может повлиять на таблицы, совместно использующие одни и те же объекты базы данных. Например, предположим, что изменяется столбец `au_id` в таблице `titleauthors`, а в это время другой пользователь работает в таблице `authors`, связанной с таблицей `titleauthors` столбцом `au_id`. Сохранение одной таблицы повлияет на другую. Точно так же, допустим, что другой пользователь задал проверочное ограничение для столбца `qty` в таблице `sales` . Удаление столбца `qty` и сохранение таблицы `sales` коснется проверочного ограничения другого пользователя.  
   
 -   Нажмите кнопку **Нет** — сохранение будет отменено.  
   
@@ -65,4 +64,3 @@ ms.lasthandoff: 08/18/2017
 ## <a name="see-also"></a>См. также:  
 [Диалоговое окно "Обнаружены изменения базы данных" (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
-

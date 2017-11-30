@@ -1,5 +1,5 @@
 ---
-title: "Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS) | Документы Microsoft"
+title: "Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,16 +11,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
+ms.workload: On Demand
+ms.openlocfilehash: a0d28c5a5210eef5f2f6eea857f9361bbe434ad6
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)
   Каскадирование параметров предоставляет способ управления большими объемами данных отчета. Можно определить набор связанных параметров таким образом, чтобы список значений для одного параметра зависел от значения, выбранного в другом параметре. Например, первый параметр является независимым и может представлять список категорий продуктов. При выборе пользователем категории второй параметр зависит от значения первого параметра. Эти значения обновляются списком подкатегорий выбранной категории. При просмотре пользователем отчета значения параметров категорий и подкатегорий используются для фильтрации данных отчета.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- При создании каскадирования параметров сначала определяется запрос набора данных и для каждого необходимого каскадного параметра включается параметр запроса. Для обеспечения доступных значений также необходимо создать отдельный набор данных для каждого каскадного параметра. Дополнительные сведения см. в разделе [Добавление, изменение или удаление допустимых значений параметра отчета &#40; Построитель отчетов и службы SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
+ При создании каскадирования параметров сначала определяется запрос набора данных и для каждого необходимого каскадного параметра включается параметр запроса. Для обеспечения доступных значений также необходимо создать отдельный набор данных для каждого каскадного параметра. Дополнительные сведения см. в разделе [Добавление, изменение и удаление допустимых значений параметра отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  Для каскадирования параметров важен порядок следования, поскольку запрос набора данных для параметра, расположенного дальше в списке, включает ссылки на каждый параметр, находящийся в списке раньше его. Во время выполнения порядок параметров в области данных отчета определяет порядок появления запросов параметров в отчете и, таким образом, порядок выбора пользователем каждого последующего значения параметра.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/09/2017
 6.  Нажмите кнопку **Запустить** (**!**). После включения параметров запроса и запуска запроса параметры отчета, соответствующие параметрам запроса, создаются автоматически.  
   
     > [!NOTE]  
-    >  Порядок параметров запроса при первом запуске запроса определяет порядок их создания в отчете. Чтобы изменить порядок, в разделе [изменение порядка параметров отчета &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
+    >  Порядок параметров запроса при первом запуске запроса определяет порядок их создания в отчете. Способ изменения порядка см. в разделе [Изменение порядка параметров отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 08/09/2017
     WHERE (Category = @Category)  
     ```  
   
-     В предложении WHERE Category — это имя поля из \<таблицы > и @Category — это параметр запроса. Эта инструкция возвращает список подкатегорий для категории, указанной в @Category. Во время выполнения данное значение будет заполнено значением, которое выбирает пользователь для параметра отчета с тем же именем.  
+     В предложении WHERE Category — это имя поля из \<table>, а @Category — параметр запроса. Эта инструкция возвращает список подкатегорий для категории, указанной в параметре @Category. Во время выполнения данное значение будет заполнено значением, которое выбирает пользователь для параметра отчета с тем же именем.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -160,10 +160,10 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Добавление, изменение или удаление параметра отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Параметры отчета &#40; Построитель отчетов и конструктор отчетов &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [Учебник: Добавление параметра к отчету &#40; Построитель отчетов &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Учебник. Добавление параметра к отчету (построитель отчетов)](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Учебники по построителю отчетов](../../reporting-services/report-builder-tutorials.md)   
- [Добавление фильтров набора данных, фильтров области данных и фильтры групп &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Отчет внедренные наборы данных и общие наборы данных &#40; Построитель отчетов и службы SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

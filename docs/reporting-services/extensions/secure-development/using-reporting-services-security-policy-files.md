@@ -1,5 +1,5 @@
 ---
-title: "Использование службы Reporting Services Security Policy Files | Документы Microsoft"
+title: "Использование файлов политики безопасности служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-server-2016
@@ -10,8 +10,7 @@ ms.technology:
 - reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - code groups [Reporting Services]
 - CodeGroup elements
@@ -21,22 +20,22 @@ helpviewer_keywords:
 - security configuration files [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
+ms.openlocfilehash: 7e007886cadd8cfe9775ebda2c2271f3fd66b17d
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
 ms.translationtype: HT
-ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
-ms.openlocfilehash: 490f32a022606157376f7c8402d11cd8f027bc04
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/12/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Использование файлов политики безопасности служб Reporting Services
-  Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] хранят сведения о политике безопасности компонентов в реестре и файлах конфигурации, которые копируются в файловую систему при установке. В этих файлах конфигурации хранится сочетание внутренней и пользовательской политики безопасности для сборок программного кода в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Три файла конфигурации соответствуют трем защищаемым компонентам [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: сервер отчетов и службы Windows, диспетчера отчетов веб-приложения и окна предварительного просмотра конструктора отчетов.  
+  Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] хранят сведения о политике безопасности компонентов в реестре и файлах конфигурации, которые копируются в файловую систему при установке. В этих файлах конфигурации хранится сочетание внутренней и пользовательской политики безопасности для сборок программного кода в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Три файла конфигурации соответствуют трем защищаемым компонентам служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: сервер отчетов и служба Windows, веб-приложение диспетчер отчетов и окно предварительного просмотра конструктора отчетов.  
   
 > [!NOTE]  
->  Существует два режима предварительного просмотра конструктора отчетов: на вкладке предварительного просмотра и всплывающее окно предварительного просмотра, открывающегося при запуске проекта отчета в **DebugLocal** режим. **Предварительного просмотра** tab не является защищаемым компонентом и не применяются параметры политики безопасности. Окно предварительного просмотра предназначено для имитации функциональной возможности сервера отчетов и поэтому имеет файл конфигурации политики безопасности, который необходимо изменить, если используются пользовательские сборки или пользовательские модули в конструкторе отчетов.  
+>  Для конструктора отчетов предусмотрено два режима предварительного просмотра: вкладка предварительного просмотра и всплывающее окно предварительного просмотра, которое вызывается при запуске проекта отчета в режиме **DebugLocal**. Вкладка **Просмотр** не является защищаемым компонентом, к ней не применяются параметры политики безопасности. Окно предварительного просмотра предназначено для имитации функциональной возможности сервера отчетов и поэтому имеет файл конфигурации политики безопасности, который необходимо изменить, если используются пользовательские сборки или пользовательские модули в конструкторе отчетов.  
   
  Файлы конфигурации политики безопасности содержат сведения класса безопасности, некоторые именованные наборы разрешений по умолчанию и группы программного кода для сборки в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Файлы конфигурации политики безопасности служб [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] напоминают файл Security.config, который определяет иерархию группы кода и наборы разрешений, связанные с политиками на уровне компьютера и предприятия в [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Этот файл находится в C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\CONFIG\security.config.  
   

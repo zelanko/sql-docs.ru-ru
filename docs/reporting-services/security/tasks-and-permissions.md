@@ -1,5 +1,5 @@
 ---
-title: "Задачи и разрешения | Документы Microsoft"
+title: "Задачи и разрешения | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -19,17 +19,16 @@ helpviewer_keywords:
 - predefined tasks [Reporting Services]
 - tasks [Reporting Services]
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/09/2017
-
+ms.openlocfilehash: 0d2ea7df496e47ec31b79557d238fd564a4e7128
+ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/09/2017
 ---
 # <a name="tasks-and-permissions"></a>Задачи и разрешения
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]под *задачами* понимаются действия, которые может выполнить пользователь или администратор. Набор задач предопределен заранее. Создавать пользовательские задачи или изменять существующие задачи нельзя ни программным способом, ни с помощью инструментальных средств. Всего существует двадцать пять задач. Они охватывают весь набор операций, доступных в рамках безопасности, основанной на ролях. В качестве примеров задач можно привести «Просмотр отчетов», «Управление отчетами», «Управление свойствами сервера отчетов».  
@@ -38,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
  Задача может быть выполнена только в том случае, если она является частью роли, а эта роль включена в назначение ролей. Таким образом, если задача «Просмотр моделей» не включена в роль либо если эта роль не включена в назначение ролей, пользователи не могут просматривать модели отчетов. Следующая диаграмма показывает, каким образом разрешения объединяются в задачи, а задачи — в роли, которые могут быть использованы для конкретных назначений ролей.  
   
- ![Диаграмма разрешений и задач](../../reporting-services/security/media/report-securityobjects.gif "диаграмма разрешений и задач")  
+ ![Диаграмма разрешений и задач](../../reporting-services/security/media/report-securityobjects.gif "Диаграмма разрешений и задач")  
 Диаграмма разрешений и задач  
   
 ## <a name="system-and-item-level-tasks"></a>Задачи системного уровня и задачи уровня элемента  
@@ -50,9 +49,8 @@ ms.lasthandoff: 08/09/2017
 |[Задачи системного уровня](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)|Действия, выполняемые на уровне системы (например, управление заданиями или общими расписаниями), которые могут использоваться со многими элементами. Задачи системного уровня выполняются вне пространства имен папок сервера отчетов.|  
   
 ## <a name="see-also"></a>См. также  
- [Определения ролей](../../reporting-services/security/role-definitions.md)   
- [Предопределенные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [Определение ролей](../../reporting-services/security/role-definitions.md)   
+ [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-
