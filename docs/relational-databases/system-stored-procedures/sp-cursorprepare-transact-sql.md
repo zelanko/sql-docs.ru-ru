@@ -22,20 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 87d9a5eb64f10e07549a282dc77dc21d219b6584
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b588770141c5d5593ef209e190203354c0ae4891
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Компилирует инструкцию или пакет курсора в план выполнения, но не создает курсор. Скомпилированная инструкция может позже использоваться процедурой sp_cursorexecute. Эта процедура в сочетании с sp_cursorexecute, делает то же самое, что процедура sp_cursoropen, но обработка разбита на два этапа. sp_cursorprepare вызывается указанием ID = 3 в пакете потока табличных данных.  
-  
-||  
-|-|  
-|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -126,7 +122,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="examples"></a>Примеры  
  Когда *stmt* параметризован и *scrollopt* значение PARAMETERIZED_STMT равно ON, имеет следующий формат строки:  
   
- {  *\<имя локальной переменной >**\<тип данных >* } [,...*n* ]  
+ {  *\<имя локальной переменной >**\<тип данных >* } [ ,...*n* ]  
   
 ## <a name="see-also"></a>См. также:  
  [sp_cursorexecute &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

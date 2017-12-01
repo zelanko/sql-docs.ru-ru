@@ -1,7 +1,7 @@
 ---
 title: "СОЗДАЙТЕ ВНЕШНЮЮ ТАБЛИЦУ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 11/27/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 802122cb7c0902c731b0fcc7d8522901ad7ea044
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
-ms.translationtype: MT
+ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="create-external-table-transact-sql"></a>СОЗДАЙТЕ ВНЕШНЮЮ ТАБЛИЦУ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -138,12 +138,16 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [schema_name]. | schema_name. ] *имя_таблицы*  
  Одно для трех - часть имя создаваемой таблицы. Для внешней таблицы только метаданные таблицы хранятся в SQL вместе с базовую статистику о файл или папку, указанную в хранилище больших двоичных объектов Azure или Hadoop. Никакие данные перемещается или хранящихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<column_definition > [,... *n*  ] Одно или несколько определений столбца позволяет создать ВНЕШНЮЮ ТАБЛИЦУ. CREATE EXTERNAL TABLE и CREATE TABLE используется тот же синтаксис для определения столбца. Исключение, нельзя использовать ограничение по умолчанию во внешних таблицах. Подробная информация о определения столбцов и их типы данных, в разделе [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) и [создание таблицы в базе данных Azure SQL](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition > [ ,... *n*  ] Одно или несколько определений столбца позволяет создать ВНЕШНЮЮ ТАБЛИЦУ. CREATE EXTERNAL TABLE и CREATE TABLE используется тот же синтаксис для определения столбца. Исключение, нельзя использовать ограничение по умолчанию во внешних таблицах. Подробная информация о определения столбцов и их типы данных, в разделе [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) и [создание таблицы в базе данных Azure SQL](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Определения столбцов, включая типы данных и количество столбцов должны соответствовать данным во внешних файлах. В случае несоответствия при запросе фактические данные будут отклонены строки файла.  
   
- Определения столбцов и тип для внешних таблиц, на которые ссылаются файлы во внешних источниках данных, необходимо сопоставить точное схемы внешнего файла. При определении типов данных, которые ссылаются на данные, хранящиеся в Hadoop или Hive, используйте следующие сопоставления типов данных SQL и Hive и приведение типа в тип данных SQL, при выборе из него. Типы включают все версии Hive, если не указано иное.  
-  
+ Определения столбцов и тип для внешних таблиц, на которые ссылаются файлы во внешних источниках данных, необходимо сопоставить точное схемы внешнего файла. При определении типов данных, которые ссылаются на данные, хранящиеся в Hadoop или Hive, используйте следующие сопоставления типов данных SQL и Hive и приведение типа в тип данных SQL, при выборе из него. Типы включают все версии Hive, если не указано иное.
+
+> [!NOTE]  
+>  SQL Server не поддерживает куст _бесконечность_ значения данных во время преобразования. PolyBase, будут завершаться ошибку преобразования типов данных.
+
+
 |Тип данных SQL|Тип данных .NET|Тип данных Hive|Hadoop типа данных|Комментарии|  
 |-------------------|--------------------|--------------------|----------------------------|--------------|  
 |tinyint|Byte|tinyint|ByteWritable|Для чисел без знака только.|  
