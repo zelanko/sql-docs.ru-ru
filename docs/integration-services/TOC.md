@@ -177,7 +177,7 @@
 ## Просмотреть блог
 ### [Блог группы разработки служб SSIS](https://blogs.msdn.microsoft.com/ssis/)
 ## Получить справку
-### [Форум о службах SSIS на сайте MSDN](https://social.msdn.microsoft.com/Forums/en-us/home?forum=sqlintegrationservices)
+### [Форум о службах SSIS на сайте MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Тег служб SSIS на сайте Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
 ## Оставить отзыв
 ### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
