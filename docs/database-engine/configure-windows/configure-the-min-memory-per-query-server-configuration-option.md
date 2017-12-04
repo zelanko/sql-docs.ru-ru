@@ -1,7 +1,7 @@
 ---
 title: "Настройка параметра конфигурации сервера \"min memory per query\" | Документы Майкрософт"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -22,16 +22,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 18458fbe7a7008c23516d372e15979e9dfc7decc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05c59d21bfa00c9d32ef740f4a1ef7acfcf178d8
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="configure-the-min-memory-per-query-server-configuration-option"></a>Настройка параметра конфигурации сервера min memory per query
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  В этом разделе описываются способы настройки параметра конфигурации сервера **min memory per query** в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **min memory per query** определяет минимальный объем памяти (в килобайтах), выделяемый для выполнения запроса. Например, если параметру **min memory per query** присвоено значение, равное 2048 КБ, запрос гарантированно получит указанный объем памяти. Значение по умолчанию — 1 024 КБ. Минимальное значение — 512 КБ, максимальное — 2 147 483 647 KB (2 ГБ).  
+  В этом разделе описываются способы настройки параметра конфигурации сервера **min memory per query** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Параметр **min memory per query** определяет минимальный объем памяти (в килобайтах), выделяемый для выполнения запроса. Например, если параметру **min memory per query** присвоено значение, равное 2048 КБ, запрос гарантированно получит указанный объем памяти. Значение по умолчанию — 1 024 КБ. Минимальное значение — 512 КБ, максимальное — 2 147 483 647 KB (2 ГБ).  
   
  **В этом разделе**  
   
@@ -55,13 +55,15 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Restrictions"></a> Ограничения  
   
--   Параметр min memory per query имеет преимущество перед параметром [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md). Если изменяются оба параметра и значение параметра index create memory меньше значения min memory per query, то в системе отобразится предупреждающее сообщение, но это значение будет установлено. При выполнении запроса будет выдано еще одно аналогичное предупреждение.  
+-   Параметр min memory per query имеет приоритет над параметром [index create memory](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md). Если изменяются оба параметра и значение параметра index create memory меньше значения min memory per query, то в системе отобразится предупреждающее сообщение, но это значение будет установлено. При выполнении запроса будет выдано еще одно аналогичное предупреждение.  
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
 -   Этот параметр является дополнительным и его следует изменять только опытным администраторам баз данных или сертифицированным техническим специалистам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Обработчик запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается определить оптимальный объем памяти, выделяемой запросу. Параметр min memory per query позволяет администратору указать минимальный размер памяти, который получает каждый запрос. Запросы обычно получают объем памяти больше указанного значения, если выполняют хэширование или сортировку больших объемов данных. Увеличение значения параметра min memory per query может повысить производительность для малых и средних запросов, однако это может привести к повышению конкуренции за память. Параметр min memory per query включает память, выделенную для сортировки.  
+-   Обработчик запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается определить оптимальный объем памяти, выделяемой запросу. Параметр min memory per query позволяет администратору указать минимальный размер памяти, который получает каждый запрос. Запросы обычно получают объем памяти больше указанного значения, если выполняют хэширование или сортировку больших объемов данных. Увеличение значения параметра min memory per query может повысить производительность для малых и средних запросов, однако это может привести к повышению конкуренции за память. Параметр min memory per query включает память, выделяемую для операций сортировки.  
+
+-    Не следует задавать слишком большое значение для параметра конфигурации min memory per query, особенно в случае высоконагруженных систем. Тогда выполнение запроса задерживается до момента освобождения необходимого объема памяти либо истечения времени ожидания, указанного в параметре конфигурации query wait. В случае доступности объема памяти, превышающего заданное для запроса минимальное значение, запросу могут быть выделены дополнительные ресурсы при условии их эффективного использования. 
   
 ###  <a name="Security"></a> Безопасность  
   
@@ -98,8 +100,7 @@ GO
 EXEC sp_configure 'min memory per query', 3500 ;  
 GO  
 RECONFIGURE;  
-GO  
-  
+GO    
 ```  
   
 ##  <a name="FollowUp"></a> Продолжение: после настройки параметра min memory per query  
