@@ -22,7 +22,7 @@ ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 11/09/2017
 ---
-# <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>Add Empty Points to a Chart (Report Builder and SSRS)
+# <a name="add-empty-points-to-a-chart-report-builder-and-ssrs"></a>Добавление пустых точек на диаграмму (построитель отчетов и службы SSRS)
 Значения NULL отображаются на диаграмме в виде пустых мест или промежутков между точками данных в ряде. В отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы пустые точки представляют собой точки данных, которые можно вставить в пустые места, созданные значениями NULL.  
   
  По умолчанию пустые точки вычисляются как среднее значение предыдущей и последующей точек данных, содержащих значения. Это поведение можно изменить, чтобы вместо пустых точек вставлялись значения нуля.  
