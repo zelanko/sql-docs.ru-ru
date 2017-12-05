@@ -2,29 +2,30 @@
 title: "Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/25/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: blob
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-blob
+ms.suite: sql
+ms.technology: dbe-blob
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- FileTables [SQL Server], accessing files with file APIs
+helpviewer_keywords: FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 726ad4c57ce295c4317132333f50867d9466151a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Доступ к таблицам FileTable с помощью API-интерфейсов ввода-вывода файлов
-  Описание работы файловой системы ввода-вывода с таблицами FileTable.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Описывает работу ввода-вывода файловой системы с таблицами FileTable.  
   
 ##  <a name="accessing"></a> Начало использования API-интерфейсов файлового ввода-вывода с таблицами FileTable  
  Предполагается, что таблицы FileTable в первую очередь будут использоваться через файловую систему Windows и API-интерфейсы файлового ввода-вывода. Таблицы FileTable поддерживают нетранзакционный доступ с помощью широкого набора API-интерфейсов файлового ввода-вывода.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="delete"></a> Удаление файлов и каталогов в таблице FileTable  
  При удалении файла или каталога применяется вся семантика API-интерфейсов файлового ввода-вывода Windows.  
   
--   При удалении каталога происходит сбой, если каталог содержит файлы и вложенные каталоги.  
+-   При удалении каталога происходит сбой, если каталог содержит файлы или вложенные каталоги.  
   
 -   При удалении файла или каталога удаляется соответствующая строка из таблицы FileTable. Это эквивалентно удалению этой строки с помощью операции [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
@@ -136,4 +137,3 @@ ms.lasthandoff: 06/22/2017
  [Инструкции FileTable языка DDL, функции, хранимые процедуры и представления](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
-

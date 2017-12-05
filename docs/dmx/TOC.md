@@ -1,5 +1,5 @@
 # [Обзор](data-mining-extensions-dmx-reference.md)  
-# [Новые и недавно обновленные статьи](new-updated-dmx.md)
+# [Новые и обновленные Статьи](new-updated-dmx.md)
 
 # [Инструкции расширения интеллектуального анализа данных — определение данных](dmx-statements-data-definition.md)  
 ## [CREATE MINING STRUCTURE](create-mining-structure-dmx.md)  

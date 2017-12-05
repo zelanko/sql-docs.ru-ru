@@ -2,31 +2,32 @@
 title: "Регулятор ресурсов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Resource Governor, overview
 - Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b1d9225d46e1331a4dfc62ef20fcd91a6e0f52ef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor"></a>Регулятор ресурсов
-  Регулятор ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] — это компонент, предназначенный для управления рабочей нагрузкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использованием системных ресурсов. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource Governor — это компонент, предназначенный для управления рабочей нагрузкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и использованием системных ресурсов. Регулятор ресурсов позволяет задать ограничения на загрузку ЦП, физических средств ввода-вывода и использование памяти, которые доступны для входящих запросов приложений.  
   
 ## <a name="benefits-of-resource-governor"></a>Преимущества регулятора ресурсов  
  Регулятор ресурсов позволяет управлять рабочими нагрузками и ресурсами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] путем задания лимитов на потребление ресурсов входящими запросами. В контексте регулятора ресурсов рабочая нагрузка представляет собой набор запросов приблизительно одинакового размера, которые могут и должны обрабатываться как единая сущность. Это не жесткое требование, но чем однообразнее выглядит шаблон использования ресурсов рабочей нагрузки, тем больше преимуществ можно извлечь из регулятора ресурсов. Ограничения на ресурсы можно перенастроить в режиме реального времени, при этом воздействие на выполняемую рабочую нагрузку остается минимальным.  
@@ -98,4 +99,3 @@ ms.lasthandoff: 06/22/2017
  [Экземпляры компонента Database Engine (SQL Server)](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   
-

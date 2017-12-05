@@ -2,31 +2,32 @@
 title: "Пример. Запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- dbe-xml
+ms.suite: sql
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - RAW mode, requesting schema example
 - RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bca71096e7e34aa6a72c84f065fd7df76eb6462f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 06/22/2017
-
+ms.openlocfilehash: b00e028bcc0c14b803aad5203f0b5e88aecceea3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>Пример: запросы к схемам как к результатам с помощью параметров XMLDATA и XMLSCHEMA
-  В следующем запросе возвращается схема XML-DATA, описывающая структуру документа.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Следующий запрос возвращает схему XML-DATA, которая описывает структуру документа.  
   
 ## <a name="example"></a>Пример  
   
@@ -57,7 +58,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`> задается в качестве пространства имен. Во избежание конфликтов пространств имен при запросе нескольких схем XML-Data различными запросами FOR XML идентификатор пространства имен (в этом примере это `Schema1` ) изменяется при каждом выполнении запроса. Идентификатор пространства имен определяется как **Schema*n*** , где ***n*** является целым числом.  
+>  <`Schema`> задается в качестве пространства имен. Во избежание конфликтов пространств имен при запросе нескольких схем XML-Data различными запросами FOR XML идентификатор пространства имен (в этом примере это `Schema1` ) изменяется при каждом выполнении запроса. Идентификатор пространства имен определяется как **Schema*n***, где ***n*** является целым числом.  
   
  Задавая параметр `XMLSCHEMA` , можно произвести запрос XSD-схемы документа.  
   
@@ -132,4 +133,3 @@ GO
  [Использование с RAW Mode для FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   
-

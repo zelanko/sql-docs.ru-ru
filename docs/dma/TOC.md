@@ -1,6 +1,7 @@
 # [Общие сведения о Data Migration Assistant](dma-overview.md)
 
 # [Новые возможности Data Migration Assistant](dma-whatsnew.md)
+# [Новые и обновленные Статьи](new-updated-dma.md)
 # [Оценка миграции SQL Server](dma-assesssqlonprem.md)
 # [Объединение отчетов с оценкой](dma-consolidatereports.md)
 # [Отчеты Power BI для консолидированных оценок](dma-powerbiassesreport.md)

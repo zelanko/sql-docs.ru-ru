@@ -1,27 +1,28 @@
 ---
 title: "Импорт и экспорт данных в SQL Server и базе данных SQL Azure | Microsoft Docs"
 ms.custom: 
-ms.date: 10/17/2017
-ms.prod: sql-server-2016
+ms.date: 10/27/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- database-engine
+ms.suite: sql
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
+ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/18/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Импорт и экспорт данных в SQL Server и базе данных SQL Azure
-Для импорта и экспорта данных в SQL Server и базе данных SQL Azure доступны разнообразные методы. Сюда входят инструкции Transact-SQL, программы командной строки и мастеры.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Вы можете использовать в SQL Server и базе данных SQL Azure различные методы импорта и экспорта данных. Сюда входят инструкции Transact-SQL, программы командной строки и мастеры.
 
 Кроме того, вы можете импортировать и экспортировать данные в разных форматах. Эти форматы включают неструктурированные файлы, файлы Excel, основные типы реляционных баз данных и форматы различных облачных служб.
 
@@ -35,6 +36,7 @@ ms.lasthandoff: 10/18/2017
 
 ### <a name="use-the-import-flat-file-wizard"></a>Использование мастера импорта неструктурированных файлов
 Если вам не нужны все параметры конфигурации, доступные в окне мастера экспорта и импорта (а также другие средства), вы можете импортировать текстовый файл в SQL Server с помощью **мастера импорта неструктурированных файлов** в SQL Server Management Studio (SSMS). Дополнительные сведения см. в следующих статьях:
+- [Мастер импорта неструктурированных файлов в SQL](import-flat-file-wizard.md)
 - [Новые возможности SQL Server Management Studio 17.3](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
 - [Общие сведения о новом мастере импорта неструктурированных файлов в SSMS 17.3](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
@@ -65,4 +67,3 @@ ms.lasthandoff: 10/18/2017
 
 ## <a name="next-steps"></a>Следующие шаги
 Если вы не знаете, с чего начать импорт или экспорт, попробуйте запустить мастер импорта и экспорта SQL Server. Краткие сведения см. в разделе [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md).
-

@@ -1,5 +1,5 @@
 # [Скачивание SSDT](download-sql-server-data-tools-ssdt.md)
-# [Новые и недавно обновленные статьи](new-updated-ssdt.md)
+# [Новые и обновленные Статьи](new-updated-ssdt.md)
 # [Журнал изменений для SSDT](changelog-for-sql-server-data-tools-ssdt.md)
 # [Условия лицензии Data-Tier Application Framework](data-tier-application-framework-license-terms.md)
 # [Предыдущие выпуски SSDT и SSDT-BI](previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)

@@ -3,7 +3,7 @@
 # Обзор
 ## [Заметки о выпуске](sql-server-linux-release-notes.md)
 ## [Новые возможности в этом выпуске](sql-server-linux-whats-new.md)
-## [Новые и недавно обновленные статьи](new-updated-linux.md)
+## [Новые и обновленные Статьи](new-updated-linux.md)
 ## [Выпуски и поддерживаемые функции](sql-server-linux-editions-and-components-2017.md)
 
 # Краткие руководства

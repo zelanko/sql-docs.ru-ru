@@ -1,5 +1,5 @@
 # [Обзор](database-features.md)
-# [Новые и недавно обновленные статьи](new-updated-relational-databases.md)
+# [Новые и обновленные Статьи](new-updated-relational-databases.md)
 
 # [Руководства по SQL Server](sql-server-guides.md)
 ## Руководство по мониторингу и устранению неполадок в группах доступности AlwaysOn

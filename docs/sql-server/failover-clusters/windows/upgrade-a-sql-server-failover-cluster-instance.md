@@ -2,9 +2,12 @@
 title: "Обновление экземпляра отказоустойчивого кластера SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/01/2017
-ms.prod: sql-server-2017
+ms.prod: failover-clusters
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7edcc0b0142562d998d3c7c1b2774b47716a4a06
-ms.sourcegitcommit: fa030c0d644bae31f9688b1cc3523f60834f13c5
+ms.openlocfilehash: b4cc4c589c9b30d3ae05ec4c273e5376da29dbcd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance"></a>Обновление экземпляра отказоустойчивого кластера SQL Server
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает обновление отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] при установке новой версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], нового пакета обновления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]или накопительного пакета обновления, а также при установке нового пакета обновлений Windows или накопительного пакета обновлений Windows отдельно на все отказоустойчивые кластеры. Это позволяет сократить время простоя до одной операции перехода на другой ресурс вручную (или двух таких операций, если нужно перейти на исходную первичную реплику).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает обновление отказоустойчивого кластера [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] до новой версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], нового пакета обновления или накопительного пакета обновления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], а также установку нового пакета обновлений или накопительного пакета обновлений Windows на все узлы отказоустойчивых кластеров по-отдельности. При этом время простоя будет ограничено только переходом на другой ресурс вручную (или двумя такими переходами при восстановлении на первичную реплику).  
   
  Обновление операционной системы Windows, в которой размещен отказоустойчивый кластер, не поддерживается для операционных систем, предшествующих [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)]. Сведения об обновлении узла кластера под управлением [!INCLUDE[winblue-server-2-md](../../../includes/winblue-server-2-md.md)] или более поздней версии см. в разделе [Выполнение последовательного обновления](#perform-a-rolling-upgrade-or-update).  
   

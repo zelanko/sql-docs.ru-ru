@@ -2,9 +2,12 @@
 title: "Загрузка SQL Server Data Tools (SSDT) | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
+ms.prod: ssdt
+ms.prod_service: sql-non-specified
+ms.service: ssdt
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 39a840f8a28c40b9bea33608f754532954f5db7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eb7f31d4af338702182bed66cc7053fb3cefb784
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Скачать SQL Server Data Tools (SSDT)
-
-**[SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** — это современное средство разработки ПО, которое можно бесплатно скачать для создания реляционных баз данных SQL Server, баз данных SQL Azure, пакетов служб Integration Services, моделей данных служб Analysis Services и отчетов служб Reporting Services. С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в Visual Studio. 
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** — это современное средство разработки, позволяющее создавать реляционные базы данных SQL Server, базы данных SQL Azure, пакеты Integration Services, модели данных Analysis Services и отчеты Reporting Services. Вы можете скачать его бесплатно. С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в Visual Studio. 
 
 Сейчас доступна версия SSDT для Visual Studio 2017 (предварительная версия 15.4.0). В этом выпуске появилась поддержка автономной установки с веб-интерфейсом для проектов баз данных SQL Server, Analysis Services, Reporting Services и Integration Services в Visual Studio 2017 15.4 и более поздних версиях.
 

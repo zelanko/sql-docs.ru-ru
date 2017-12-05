@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 SELECT <model column list>, StructureColumn('<structure column name') FROM <modelname>.CASES  
 ```  
   
- Дополнительные сведения об использовании запросов DMX для возвращения данных по вариантам см. в разделах [SELECT FROM <модель>.CASES (расширения интеллектуального анализа данных)](../../dmx/select-from-model-cases-dmx.md) и [SELECT FROM <структура>.CASES](../../dmx/select-from-structure-cases.md).  
+ Дополнительные сведения об использовании запросов DMX для возвращения данных по вариантам см. в разделах [SELECT FROM &#60;модель&#62;.CASES &#40;расширения интеллектуального анализа данных&#41;](../../dmx/select-from-model-cases-dmx.md) и [SELECT FROM &#60;структура&#62;.CASES](../../dmx/select-from-structure-cases.md).  
   
 ## <a name="examples"></a>Примеры  
  Например, приведенный ниже DMX-запрос возвращает варианты для конкретной линейки продуктов в модели временных рядов. Этот запрос также возвращает столбец **Amount**, который не был использован в модели, но доступен в структуре интеллектуального анализа данных.  

@@ -2,9 +2,12 @@
 title: "Руководства по SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2c9938f54717ccf38f849a55d6629375f568e5f8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9e7eec3322fecf2df16624ce63f0188c526108d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tutorials-for-sql-server"></a>Руководства по SQL Server
-
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] предоставляет руководства, которые помогут вам изучить новые технологии и возможности. Руководства по более ранним версиям обычно подходят и к более поздним. При упоминании новой функции в руководстве также указывается минимальная необходимая версия.  
      
 -   Если в руководстве используется одна из баз данных [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)], необходимо загрузить и использовать последнюю версию из CodePlex. Дополнительные сведения см. в статье [Примеры баз данных и сценариев AdventureWorks для SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502).    

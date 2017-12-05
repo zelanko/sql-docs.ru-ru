@@ -1,5 +1,6 @@
 # Об этом выпуске
 ## [Новые возможности](whats-new-analytics-platform-system.md)
+## [Новые и обновленные Статьи](new-updated-analytics-platform-system.md)
 
 # Architecture
 ## [Общие сведения о хранилище Parallel Data Warehouse](parallel-data-warehouse-overview.md)
