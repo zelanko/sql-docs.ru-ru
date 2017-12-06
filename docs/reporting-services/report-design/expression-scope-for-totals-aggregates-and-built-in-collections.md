@@ -2,9 +2,12 @@
 title: "Область выражения для суммирования, агрегатных функций и встроенных коллекций | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 238c0537821da0ab64a6eb27121a9f98d29ad9bf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d92b185585539d38e1282b649c767fd16f74a0d5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Область выражения для суммирования, агрегатных функций и встроенных коллекций
   Термин *область* используется в нескольких контекстах, что становится понятно при написании выражений. Область может указывать на данные, используемые для вычисления выражений, набор текстовых полей на подготавливаемой странице, набор элементов отчета, которые могут отображаться или быть скрытыми. Термин *область* используется в разделах о вычислении выражений, синтаксисе агрегатных функций, условной видимости и в сообщениях об ошибках, связанных с этими темами. Ниже приводится описание различий в употреблении термина *область* .  

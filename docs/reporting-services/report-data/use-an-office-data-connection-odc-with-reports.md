@@ -2,9 +2,12 @@
 title: "Использованные подключения к данным Office (ODC) в отчетах | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 2d6f6fa222bb8d4c5c9cd53a560c093c814ccd01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: c146c2fe80f27ace8a8f03ce2767efd9751acf48
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-an-office-data-connection-odc-with-reports"></a>использовать в отчетах ODC-файл подключения к данным Office
   В некоторых случаях для предоставления в отчет служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сведений о соединении можно использовать существующий ODC-файл. ODC-файл может быть использован вместо RSDS-файла при создании общего источника данных. Сервер отчетов использует ODC-файл так же, как и RSDS-файлы. Он считывает из файла тип источника данных, строку соединения и сведения об учетных данных.  
@@ -101,7 +104,7 @@ ms.lasthandoff: 11/09/2017
   
 12. Выделите только что переданный ODC-файл.  
   
-13. Нажмите кнопку **ОК** для выберите файл, а затем нажмите кнопку **ОК** для сохранения изменений.  
+13. Чтобы выбрать файл и сохранить изменения, дважды нажмите кнопку **[!INCLUDE[ssISnoversion](../Token/ssISnoversion_md.md)]** **ОК**.  
   
      Если представленные выше шаги применяются к образцу базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , необходимо иметь в виду, что полной совместимостью с ODC-файлом обладает только отчет Company Sales. Другие образцы отчетов включают в себя параметры и функции запросов, не совместимые с поставщиком OLE DB. Однако указанные отчеты можно преобразовать с помощью конструктора отчетов, после чего их можно будет использовать с поставщиком OLE DB.  
   
