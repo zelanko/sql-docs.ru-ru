@@ -2,9 +2,12 @@
 title: "Создание, удаление и изменение ролей (среда Management Studio) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 7b5b8d11868d108447e1a3109bff28abcef2de33
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5fb32b134be7425c12573c6971c0e537a6c0e7d8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Создание, удаление или изменение определений ролей
   Службы Reporting Services предоставляют стандартные роли, определяющие уровень доступа к серверу отчетов. Каждый пользователь или группа, которым требуется доступ к серверу отчетов, получают его с помощью роли, описывающей задачи, которые может выполнять пользователь или группа. Роли определяются для сервера отчетов в целом. Нельзя изменить определение роли для конкретной части сервера отчетов или указать, что роль будет использоваться в зависимости от обстоятельств.  

@@ -2,9 +2,12 @@
 title: "Настройка проверки подлинности Windows на сервере отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ caps.latest.revision: "25"
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e5fc00ad32e130ce1eb47dfde98791d8e4f65cd2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Настройка проверки подлинности Windows на сервере отчетов
   По умолчанию службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] принимают запросы, в которых определена проверка подлинности Negotiate или NTLM. Если в развертывание входят клиентские приложения и браузеры, в которых используются поставщики безопасности, то можно использовать значения по умолчанию без дополнительной настройки. Если нужно использовать другого поставщика безопасности для встроенной безопасности Windows (например, требуется применять протокол Kerberos напрямую) или если значения по умолчанию были изменены, и нужно восстановить первоначальные настройки, то можно использовать сведения данного раздела, чтобы указать настройки проверки подлинности на сервере отчетов.  

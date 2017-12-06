@@ -2,9 +2,12 @@
 title: "Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: cbf47d2ec1105b105ea2d2c8102bcd9b71cb2a1a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 89b3483e851e892e1a58f6fd1ff08662b60b5bfc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="local-mode-vs-connected-mode-reports-in-the-report-viewer"></a>Отчеты, созданные в локальном и подключенном режимах в средстве просмотра отчетов
 
@@ -86,7 +89,7 @@ ms.lasthandoff: 11/09/2017
 
  Последние сведения об использовании расширения ADS в [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] режиме соединения см. в разделе [Отчет служб Access на сайте SharePoint выводит ошибку в расширении данных "ADS"](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Источники данных, поддерживаемые службами Reporting Services](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
 

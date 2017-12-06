@@ -2,9 +2,12 @@
 title: "Текстовые поля (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 932f2277845e4e47032baf80443c0d339cb45ea7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1ce0598ac285cd55a0a7541c367c6bdcce9f1672
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Текстовые поля (построитель отчетов и службы SSRS)
   Часто под термином "текстовое поле" подразумевается изолированное поле с текстом, например [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. В отчетах с разбиением на страницы некоторые текстовые поля такие же и могут отображать статический текст для заголовков, определений и меток или динамический текст, основанный на выражениях [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Каждая ячейка в таблице или матрице (области данных табликса) содержит текстовое поле, которое можно форматировать аналогично изолированным текстовым полям в отчете.  

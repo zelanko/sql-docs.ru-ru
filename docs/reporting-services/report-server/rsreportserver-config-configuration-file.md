@@ -2,9 +2,12 @@
 title: "Файл конфигурации RsReportServer.config | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 68a812ca454de6c9ee1784d33cfb5e0730957fbd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5f01391991a8e57d09da1888c541183962e488e5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>Файл конфигурации RsReportServer.config
 В файле [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**RsReportServer.config** хранятся параметры, которые используются веб-службой сервера отчетов и для фоновой обработки. Все приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] работают в одном процессе, который считывает параметры конфигурации, хранящиеся в файле RSReportServer.config. Серверы отчетов, работающие в собственном режиме и в режиме интеграции с SharePoint, используют файл RSReportServer.config, однако в этих режимах используются разные параметры из этого файла конфигурации. Версия файла для режима интеграции с SharePoint имеет меньший размер, поскольку многие параметры для этого режима хранятся не в файле, а в базах данных конфигурации SharePoint. В этом разделе описывается файл конфигурации по умолчанию, который устанавливается для собственного режима и для режима интеграции с SharePoint, а также некоторые важные параметры и варианты работы, которые управляются файлом конфигурации.  

@@ -2,9 +2,12 @@
 title: "Тип подключения к Hyperion Essbase (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b04a9b00e87526b4ea030ff6359d0969e84f11cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d89029ffc521d08ea3152ca164d3985de4644a32
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Тип соединения Hyperion Essbase (службы SSRS)
   Чтобы включить данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], позволяющего извлекать многомерные данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  

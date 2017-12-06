@@ -2,9 +2,12 @@
 title: "Примеры выражений (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 04/06/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -31,11 +34,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: e76028d17363d05047531dd11da6021d766d59bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 860bf17283de6fc522c956ed0c9f4ee26497be8b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Примеры выражений (построитель отчетов и службы SSRS)
 Выражения часто используются в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы для управления содержимым и внешним видом отчета. Выражения записываются на языке [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], и в них можно использовать встроенные функции, пользовательский код, переменные отчета, групповые переменные и определяемые пользователем переменные. Выражения начинаются со знака равенства (=). Дополнительные сведения о редакторе выражений и типах ссылок, которые могут быть включены, см. в разделах [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) и [Добавление выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  

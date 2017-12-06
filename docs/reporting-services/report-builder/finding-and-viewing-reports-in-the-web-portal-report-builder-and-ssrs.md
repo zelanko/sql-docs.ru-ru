@@ -2,9 +2,12 @@
 title: "Поиск и просмотр отчетов на веб-портале (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7ee4e423989bca7db3e23d7791b3f089c0ab1721
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a39e08df689767b289bbe319b3de65f053303ae8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Поиск и просмотр отчетов на веб-портале (построитель отчетов и службы SSRS)
   Диспетчер отчетов — это веб-инструмент, включающее в себя функции просмотра отчетов и управления ими. Он устанавливается как часть сервера отчетов. Чтобы открыть диспетчер отчетов, введите в окне браузера его URL-адрес. Дополнительные сведения о требованиях к браузеру см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Для получения дополнительных сведений о настройке URL-адреса диспетчера отчетов на сервере отчетов свяжитесь с системным администратором. Дополнительные сведения см. в разделе [Настройка диспетчера отчетов (собственный режим)](../../reporting-services/report-server/configure-report-manager-native-mode.md).  

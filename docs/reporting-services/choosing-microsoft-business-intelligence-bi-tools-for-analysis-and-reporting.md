@@ -2,9 +2,12 @@
 title: "Выбор средства бизнес-аналитики Майкрософт для анализа и отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/12/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 70d7be18434e610fa3ed3a6d237a0a7b676e3274
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7ef1064afe9efed32630e411d234d358aaa27d10
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>Выбор средства Microsoft Business Intelligence (BI) для анализа и отчетности
 Выбор подходящего средства бизнес-аналитики может оказывать огромное влияние. Вы можете ознакомиться с дополнительными сведениями о различных предложениях Майкрософт и выбрать то из них, которое наилучшим образом соответствует вашим потребностям.

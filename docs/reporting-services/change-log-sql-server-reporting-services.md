@@ -2,7 +2,7 @@
 title: "Журнал изменений для SQL Server Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/07/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,11 +14,11 @@ author: casualoak
 ms.author: deliant
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 267476e515fb91399d313bb3b334f490dfcbcad2
-ms.sourcegitcommit: ec5f7a945b9fff390422d5c4c138ca82194c3a3b
+ms.openlocfilehash: ef823d2e633438262bd0f2dbbe19337d0e1fa4ef
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>Журнал изменений для SQL Server Reporting Services
 
@@ -33,6 +33,7 @@ ms.lasthandoff: 11/11/2017
 
   - *Версия 14.0.600.451. Дата выпуска: 30 сентября 2017 г.* 
     - Начальный выпуск
+
 ## <a name="next-steps"></a>Следующие шаги
 
 [Новые возможности служб Reporting Services (SSRS)](what-s-new-in-sql-server-reporting-services-ssrs.md)   

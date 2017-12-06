@@ -2,9 +2,12 @@
 title: "Разрешение расширения или сжатия для текстового поля (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1bdcf9e8abfc51cf514bcc57b8591186a4768ac2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 821458f2eac2a87cd05a4070b60983957c745bd0
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Разрешение расширения или сжатия для текстового поля (построитель отчетов и службы SSRS)
   В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы текстовые поля являются не просто изолированными полями в области конструктора отчета. Каждая ячейка в таблице или матрице (области данных табликса) содержит текстовое поле, которое можно форматировать аналогично изолированным текстовым полям в отчете. По умолчанию текстовые поля имеют фиксированный размер. Можно задать параметры, позволяющие текстовому полю расширяться или сжиматься в соответствии с содержимым. Эти параметры соответствуют свойствам **CanGrow** и **CanShrink** на панели свойств.  

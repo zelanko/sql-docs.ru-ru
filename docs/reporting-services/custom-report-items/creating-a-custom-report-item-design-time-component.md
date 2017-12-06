@@ -2,9 +2,12 @@
 title: "Создание компонента времени разработки для пользовательского элемента отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-report-items
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 829a00acf7b22870fe185cd6c2c0a37338dee938
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 746ca3586d58f561278eb25ad9459e6102b8b55a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Создание компонента времени разработки пользовательского элемента отчета
   Компонент времени разработки пользовательского элемента отчета ― это элемент управления, который может быть использован в конструкторе отчетов среды Visual Studio. Компонент времени разработки пользовательского элемента отчета предоставляет активную область конструктора, поддерживающую операции перетаскивания, интеграцию с браузером свойств среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] и возможность использования пользовательских редакторов свойств.  
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]  
 >  Компонент времени разработки для пользовательского элемента отчета реализуется в виде компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. В этом документе приводится описание реализации, характерной для компонента времени разработки пользовательского элемента отчета. Дополнительные сведения о разработке компонентов с использованием платформы [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе [Компоненты в Visual Studio](http://go.microsoft.com/fwlink/?LinkId=116576) библиотеки MSDN.  
   
- Образец полностью реализованного пользовательского элемента отчета см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
+ Образец полностью реализованного пользовательского элемента отчета см. на странице [Образцы продуктов служб SQL Server Reporting Services](http://go.microsoft.com/fwlink/?LinkId=177889).  
   
 ## <a name="implementing-a-design-time-component"></a>Реализация компонента времени разработки  
  Основной класс компонента времени разработки для пользовательского элемента отчета наследуется от класса **Microsoft.ReportDesigner.CustomReportItemDesigner**. Помимо стандартных атрибутов, используемых для элемента управления [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], класс компонента также должен определять атрибут **CustomReportItem**. Этот атрибут должен соответствовать имени пользовательского элемента отчета, определенному в файле reportserver.config. Список атрибутов [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] см. в разделе «Атрибуты» документации по SDK [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  

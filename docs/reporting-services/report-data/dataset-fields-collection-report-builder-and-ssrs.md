@@ -2,9 +2,12 @@
 title: "Коллекция полей набора данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b477015bd06f3af1e8d8ce43194dd9274000f8cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dfd2de97c1ed49e559ae4b991b6fc1b6ecfc05ff
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Коллекция полей набора данных (построитель отчетов и службы SSRS)
   Поля набора представляют данные из соединения с данными. Поле может использоваться для представления как числовых, так и нечисловых данных. Примеры включают в себя следующее: объемы продаж, итоговые суммы продаж, имена клиентов, идентификаторы баз данных, URL-адреса, изображения, пространственные данные и адреса электронной почты. В области конструктора поля отображаются в виде выражений в элементах отчета, таких как текстовые поля, таблицы и диаграммы.  

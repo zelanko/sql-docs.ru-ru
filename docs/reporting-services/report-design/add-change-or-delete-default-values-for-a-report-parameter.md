@@ -2,9 +2,12 @@
 title: "Добавление, изменение или удаление значений по умолчанию для параметра отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 101d85101333edda1e44ad01f04cf1a330f1f4a5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 16e4329c6d6162ebaf43d36051e9c5a1eaea47ca
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>добавить, изменить или удалить значения по умолчанию для параметра отчета
   После создания параметров отчета можно предоставить список значений по умолчанию. Если все параметры имеют допустимые значения по умолчанию, отчет запускается автоматически при первом просмотре.  

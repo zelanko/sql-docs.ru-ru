@@ -2,9 +2,12 @@
 title: "Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -29,11 +32,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e36c4f041d79b343e372b3bc9eb87ed2e3e7ec56
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a5b230522d04db42f66884acfcd110e1f1594df5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)
   Отчет может содержать верхний и нижний колонтитулы, которые располагаются в верхней и нижней части каждой страницы соответственно. Верхние и нижние колонтитулы могут содержать статический текст, изображения, линии, прямоугольники, границы, цвет фона, фоновые изображения и выражения. Выражения включают ссылки на поля набора данных для отчетов, имеющих один и только один набор данных, а также вызовы агрегатных функций, которые включают набор данных в качестве области.  

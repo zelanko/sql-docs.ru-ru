@@ -2,9 +2,12 @@
 title: "Подключение веб-части \"Фильтр\" или \"Документы\" к веб-части \"Средство просмотра отчетов\" служб Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 31ec7cc7f67428d578e2ce2a057f5d38f69261c9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a0a4ab94f4c52687d80f1758254f0f4fb794c484
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="connect-filter-or-documents-web-part-with-a-reporting-services-report-viewer-web-part"></a>Подключение веб-части "Фильтр" или "Документы" к веб-части "Средство просмотра отчетов" служб Reporting Services
 
@@ -81,7 +84,7 @@ ms.lasthandoff: 11/09/2017
   
 11. Проверьте изменения и сохраните страницу.  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Добавление веб-части "Средство просмотра отчетов" на страницу](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
  [Веб-часть "Средство просмотра отчетов" на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   

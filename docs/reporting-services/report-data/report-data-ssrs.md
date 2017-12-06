@@ -2,9 +2,12 @@
 title: "Данные отчета (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: d5cac8267c1a38401eee78758a6e34adcbdd06ce
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d1581775de3bf36ecfd3153918ff4457b8d6dde7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-data-ssrs"></a>Данные отчета (SSRS)
   Данные отчета могут поступать из нескольких источников данных в организации. Первым шагом при разработке отчета является создание источников и наборов данных, из которых берутся базовые данные отчета. Каждый источник данных содержит сведения о подключении к данным. У каждого набора данных есть команда запроса, определяющая набор полей для использования в качестве данных из источника данных. Для визуализации данных из каждого набора данных, добавьте область данных, например таблицу, матрицу, диаграмму или карту. При обработке отчета в источнике базы данных выполняются запросы и каждая область данных расширяется настолько, насколько требуется для отображения результатов для набора данных.  

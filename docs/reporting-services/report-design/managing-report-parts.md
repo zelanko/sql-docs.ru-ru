@@ -2,9 +2,12 @@
 title: "Управление элементами отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 0da7716913ecd9cebeb7262ac1641ff49b01a83d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff3a13d79ec0f7d3e4d4b9452b817bc804d04574
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="managing-report-parts"></a>Управление элементами отчета
   Элементы отчета могут повторно использоваться в отчетах с разбиением на страницы несколькими пользователями и в нескольких отчетах. Пользователи могут искать элементы отчета на сервере и добавлять их в отчет.  Пользователи могут также получать уведомления об обновлениях для элемента отчета на сервере и заново публиковать новые версии элемента отчета. Права доступа служб отчетов могут влиять на действия по созданию отчетов, а также позволяют управлять ими.  В этом разделе рассматриваются свойства и режимы работы для элементов отчетов после их появления на сервере.  

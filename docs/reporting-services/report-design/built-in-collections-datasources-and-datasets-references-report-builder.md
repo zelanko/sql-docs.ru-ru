@@ -2,9 +2,12 @@
 title: "Ссылки на коллекции DataSources и DataSets (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 557ea9ee2c43822c699d6c2d855d5ab6c1a980ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2c53184707c6d19b0cd9ac01c566bcb5dafe7b00
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>Встроенные коллекции — ссылки на DataSources и DataSets (построитель отчетов)
   Коллекция **DataSources** представляет все источники данных, используемые в отчете. Точно так же коллекция **DataSets** представляет все наборы данных для источников данных в отчете. Для иерархического просмотра наборов данных отчета, организованных в источнике данных, на который они ссылаются, используйте область **Данные отчета** . Если в эти коллекции включаются ссылки, то при предварительном просмотре отчета значения не будут видимыми. Эти коллекции доступны только после публикации отчета на сервере отчетов.  

@@ -2,9 +2,12 @@
 title: "Учебник. Создание отчета в свободной форме (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/02/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -15,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: eeb53cfbcf47af7c3580cb75b34acaf0f140810d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 33d2dfa08fcc9b3cbf41a80642e9d67bab8d2b3f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Учебник. Создание отчета в свободной форме (построитель отчетов)
 В этом учебнике вы создадите отчет с разбивкой на страницы в качестве информационного бюллетеня. На каждой странице выводится статический текст, сводные визуальные элементы и образец подробных данных по продажам.

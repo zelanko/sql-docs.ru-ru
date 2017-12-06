@@ -2,9 +2,12 @@
 title: "Отправка документов в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint) | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 881176a95e11243a65711edacf4e87cbd19d5968
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 955bdb159350ead0def109cb7909121a018dbd85
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Отправка документов в библиотеку SharePoint (службы Reporting Services в режиме интеграции с SharePoint)
 
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/09/2017
   
  Отчет может содержать параметры, поэтому пользователи могут фильтровать данные. Можно настроить параметры на использование конкретных значений или изменить способ их представления для пользователя. Дополнительные сведения см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Публикация общего источника данных в библиотеку SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   

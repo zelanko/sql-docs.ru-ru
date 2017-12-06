@@ -2,9 +2,12 @@
 title: "Детализация, углубленная детализация, вложенные отчеты и вложенные области данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b727d0fd866b14e5ac8ff2f383e2cdc7b53a9bde
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d4e87d6484f1a04e61907939bd2fa69d93dff426
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Детализация, углубленная детализация, вложенные отчеты и вложенные области данных
   Данные можно организовать различными способами, чтобы показать отношение общего к частному.  Можно вложить все данные в отчет, но скрыть их до тех пор, пока пользователь не раскроет подробное представление; это действие называется *углубленной детализацией* . Можно отобразить данные в области данных, например таблице или диаграмме, которая *вложена* в другую область данных, например таблицу или матрицу. Можно отобразить данные во *вложенном отчете* , который содержится полностью в основном отчете. Либо можно вложить подробные данные в отчеты с *углубленной детализацией* , то есть отдельные отчеты, которые отображаются при нажатии пользователем ссылки.  

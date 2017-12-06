@@ -2,9 +2,12 @@
 title: "Программа rskeymgmt (SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -27,11 +30,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5e71c6c5cb692355df51b2d9b7e2caa8c330f5b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f6d98e612a8f2033cb72ab59caa6eaab94ed5754
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Программа rskeymgmt (SSRS)
   Извлекает, восстанавливает, создает и удаляет симметричный ключ, используемый для защиты важных данных сервера отчетов от несанкционированного доступа. Эта программа также используется для соединения экземпляров сервера отчетов в конфигурацию с масштабным развертыванием. *Конфигурация сервера отчетов с масштабным развертыванием* означает множество экземпляров сервера отчетов, которые совместно используют одну базу данных сервера отчетов.  

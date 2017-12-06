@@ -2,9 +2,12 @@
 title: "Добавление итога в группу или область данных табликса (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 7230bdd4dad3d442dd0c950cc542f76a1e134c93
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 63b61913ff8df9f2f822e83e5722f0a8895395bd
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>Добавление итога в группу или область данных табликса (построитель отчетов и службы SSRS)
  В отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавлять итоги к области данных табликса или ко всей области данных. По умолчанию итогом считается сумма данных с числовыми значениями, отличными от NULL, в группе или в области данных, вычисленная после применения фильтров. Чтобы добавить итоги к группе, выберите пункт **Добавить итоги** в контекстном меню для группы на панели «Группирование». Для добавления итогов в отдельную ячейку области тела табликса нужно в контекстном меню для этой ячейки выбрать пункт **Добавить итог** . Команда **Добавить итог** чувствительна к контексту и доступна только для числовых полей. В зависимости от выбранной ячейки табликса можно добавить итог для одной ячейки, выбрав эту ячейку в области тела табликса, или для всей группы, выбрав ячейку в области группы строк либо в области группы столбцов табликса. Дополнительные сведения об областях табликса см. в разделе [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  

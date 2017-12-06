@@ -2,9 +2,12 @@
 title: "Экспорт в CSV-файл (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e63d1c2405029118064144d99fc092ec6f4f139a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: a41d99b7087463d5583e9cbb194175118dcab583
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Экспорт в CSV-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате с разделителями-запятыми (CSV) готовит отчеты с разбиением на страницы для просмотра в виде плоских представлений данных стандартизованного текстового вида. Этот формат легко читается и может использоваться для обмена со многими приложениями.  

@@ -2,9 +2,12 @@
 title: "Настройка параметров модулей подготовки отчетов в RSReportServer.Config | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a04703eb04c9745fd5a1de0a5378b29210f61b65
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: febad00785c6baad2d1b0dbe7bc620295f7b8546
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>Настройка параметров модулей подготовки отчетов в RSReportServer.Config
   В файле конфигурации RSReportServer можно указать параметры модулей подготовки отчетов, чтобы изменить заданный по умолчанию способ подготовки к просмотру отчетов, запускаемых на сервере отчетов служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Изменять параметры модуля подготовки отчетов можно для достижения следующих целей.  

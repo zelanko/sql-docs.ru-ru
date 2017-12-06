@@ -2,9 +2,12 @@
 title: "Занятие 4. Определение подключения к данным и таблицы данных для дочернего отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c717fecbc14933bdfaac30e64faa2b8a9ff2940
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e46012de6473dcbfec2ff03ec16150fe6a81230a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-4-define-a-data-connection-and-data-table-for-child-report"></a>Занятие 4. Определение подключения к данным и таблицы данных для родительского отчета
 После проектирования родительского отчета далее необходимо создать подключение к данным и таблицу данных для дочернего отчета. В этом учебнике в качестве источника подключения к данным используется база данных AdventureWorks2014.  

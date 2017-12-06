@@ -2,9 +2,12 @@
 title: "Настройка веб-части \"Средство просмотра отчетов\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/25/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server-sharepoint
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 57d2bb85c011e8a70255b5dd07080a77da757286
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e1b43b9caff7c01c9e95249a18a2fe5c13bdbf3b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Настройка веб-части "Средство просмотра отчетов"
 
@@ -104,7 +107,7 @@ ms.lasthandoff: 11/09/2017
   
  Область «Параметры» предоставляет поля для ввода значений перед выполнением отчета. Она используется только в том случае, если определение отчета содержит параметры. Если отображается любая из областей "Параметры" или "Учетные данные", то представление отчета занимает оставшуюся ширину веб-части. Вы можете задать свойства веб-части, чтобы настроить ширину области "Параметры". Можно также определить метки, которые появляются рядом с конкретными параметрами страницы. Дополнительные сведения об изменении меток параметров см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Веб-часть "Средство просмотра отчетов" на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Добавление на страницу веб-части средства просмотра отчетов](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  

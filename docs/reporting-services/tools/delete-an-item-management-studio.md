@@ -2,9 +2,12 @@
 title: "Удаление элемента (Management Studio) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 454b2f64f2f2ae1e4fdbda0d34b0da058855aef3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 188e4a44b6fa36a097d1133da35600e9129f89d7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="delete-an-item-management-studio"></a>удалить элемент (среда Management Studio)
   При подключении к экземпляру сервера отчетов в среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]можно удалять определения ролей и общие расписания. Нельзя удалять отчеты, модели и другие элементы на сервере отчетов. Для удаления содержимого сервера отчетов используется диспетчер отчетов. Если сервер отчетов настроен для работы в режиме интеграции с SharePoint, используйте функции управления в библиотеке SharePoint, в которой хранится нужное содержимое.  

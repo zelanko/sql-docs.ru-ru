@@ -1,9 +1,13 @@
 ---
 title: "Настройка сервера отчетов для удаленного администрирования | Документы Майкрософт"
 ms.date: 09/14/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
+ms.custom: 
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9c2bf31935e821aff995fead3f8aa0478114424e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: aea0b5ff0ec119cc19744220442761ae74e9bf86
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>настроить сервер отчетов для удаленного администрирования
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]экземпляры сервера отчетов можно настраивать локально или удаленно. Чтобы настроить удаленный экземпляр сервера отчетов, можно использовать программу настройки служб Reporting Services. Также можно написать пользовательский код, который будет использовать поставщик инструментария управления Windows (WMI) служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Программа настройки служб Reporting Services предоставляет графический интерфейс поставщика WMI, поэтому такая настройка сервера отчетов не требует написания кода. При запуске программы можно указать, к какому удаленному серверу необходимо подключаться.  

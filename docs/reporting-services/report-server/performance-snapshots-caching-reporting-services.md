@@ -2,9 +2,12 @@
 title: "Производительность, моментальные снимки, кэширование (службы Reporting Services) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: ce09fbdbcb4002312ec1167ffaea3c4440c8594b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e981eef39a9406ee38b73acf2abb17eac791dfb3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="performance-snapshots-caching-reporting-services"></a>Производительность, моментальные снимки, кэширование (службы Reporting Services)
   Производительность сервера отчетов зависит от сочетания факторов, которые включают оборудование, количество пользователей, одновременно обращающихся к отчетам, объем данных в отчетах и формат вывода. Чтобы понять, какие факторы производительности характерны для конкретной установки, и какие меры позволят достичь требуемых результатов, необходимо получить базовые данные и выполнить тесты. Дополнительные сведения о средствах и рекомендациях см. в следующих публикациях MSDN: [Reporting Services Performance Optimization](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) (Оптимизация производительности служб Reporting Services) и [Using Visual Studio 2005 to Perform Load Testing on a SQL Server 2005 Reporting Services Report Server](http://go.microsoft.com/fwlink/?LinkID=77519)(Нагрузочное тестирование сервера отчетов служб Reporting Services SQL Server 2005 в среде Visual Studio 2005).  

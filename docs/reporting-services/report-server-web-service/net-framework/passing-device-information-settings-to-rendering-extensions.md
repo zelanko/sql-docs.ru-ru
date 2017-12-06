@@ -2,9 +2,12 @@
 title: "Передача параметров сведений об устройстве для модулей подготовки отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server-web-service
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6b6cc90094264f60def0532fa758e48cd55c1820
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: af193124f65e1189d787cadb5d3deeab44d7def4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру
   В службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]настройки сведений об устройстве используются для передачи параметров подготовки к просмотру модуля подготовки отчетов. Настройки веб-службы сервера отчетов передаются как XML-элемент **DeviceInfo** и обрабатываются сервером отчетов. Поскольку у настроек сведений об устройстве есть значения по умолчанию, в процессе подготовки к просмотру эти аргументы являются необязательными. Однако настройки сведений об устройстве можно использовать для настройки процесса подготовки к просмотру и переопределения значений по умолчанию, передаваемых сервером.  

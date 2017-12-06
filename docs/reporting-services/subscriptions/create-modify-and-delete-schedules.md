@@ -2,9 +2,12 @@
 title: "Создание, изменение и удаление расписаний | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: subscriptions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 86ca460b5fe669e9fe9e9c0130c883325f988b50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 32fe1afefa899880710a818c56eef4079fe90622
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-modify-and-delete-schedules"></a>Создание, изменение и удаление расписаний
   В этом подразделе представлены сведения о создании, изменении и удалении общих расписаний [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Для управления общими расписаниями для собственного режима используйте страницу "Расписания" на веб-портале или папку "Общие расписания" в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Для режима интеграции с SharePoint используйте страницы управления для приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

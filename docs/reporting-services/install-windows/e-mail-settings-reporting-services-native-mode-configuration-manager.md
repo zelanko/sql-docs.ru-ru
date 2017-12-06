@@ -2,9 +2,12 @@
 title: "Параметры электронной почты — собственный режим служб Reporting Services (диспетчер конфигураций) | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/01/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 6ecaee1ba9757745e7d1e884067fa9c06632c6e4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 4f4a978424825e4f54596ec2485818b47ce4d0c9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="e-mail-settings---reporting-services-native-mode-configuration-manager"></a>Настройки электронной почты — основной режим служб Reporting Services (диспетчер конфигураций)
 Службы Reporting Services включают модуль доставки по электронной почте, позволяющий распространять отчеты с помощью электронной почты. В зависимости от того, каким образом определена электронная подписка, рассылка может включать уведомление, ссылку, вложение или внедренный отчет. Модуль доставки по электронной почте работает с существующими технологиями почтовых серверов. Почтовый сервер должен быть либо SMTP-сервером, либо перенаправителем. Сервер отчетов соединяется с SMTP-сервером через объекты данных совместной работы (библиотека cdosys.dll), предоставляемых операционной системой.

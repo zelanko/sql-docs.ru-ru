@@ -2,9 +2,12 @@
 title: "Создание мобильного отчета с вкладками с помощью детализации | Мобильные отчеты Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/30/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 465c9c79016cf6a4770074bbfdab2b9fbd0a0e41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8e98ac9b363cc9be3b252b699ba2c7206e5c4278
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-tabbed-mobile-report-by-using-drillthrough"></a>Создание мобильного отчета со вкладками с помощью детализации
 Вы можете научиться создавать мобильных отчет [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , который выглядит и работает как отчет с вкладками, с помощью детализации и параметров.
@@ -102,7 +105,7 @@ ms.lasthandoff: 11/09/2017
 
    ![06-Mobile-Report-Web-Viewer-Transportation](../../reporting-services/mobile-reports/media/06-mobile-report-web-viewer-transportation.png)
 
-### <a name="see-also"></a>См. также:
+### <a name="see-also"></a>См. также
     
 * [Добавление параметров в мобильный отчет](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [Добавление детализации из мобильного отчета в другие мобильные отчеты или URL-адреса](../../reporting-services/mobile-reports/add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls.md)

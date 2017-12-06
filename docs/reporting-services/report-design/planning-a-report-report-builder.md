@@ -2,9 +2,12 @@
 title: "Планирование отчета (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 3d055e667ad01ff047e38aa3588205c84ad8d231
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ed5e5031c00a8a4f638f3d3226ae331896e4a35d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="planning-a-report-report-builder"></a>Планирование отчета (построитель отчетов)
   Построитель отчетов позволяет создавать отчеты с разбиением на страницы нескольких видов. Например, можно создавать отчеты, которые отображают сводку подробных данных о продажах, тенденции в маркетинге и продажах, рабочие отчеты или панели мониторинга. Можно также создавать отчеты, в которых используются преимущества текста со сложным форматированием, например заказы на продажу, каталоги продукции или стандартные письма. Все эти отчеты создаются с использованием различных сочетаний одних и тех же строительных блоков в построителе отчетов. Чтобы создать полезный, легкочитаемый отчет, рекомендуется сначала составить план. Перед началом работы полезно рассмотреть следующие вопросы.  

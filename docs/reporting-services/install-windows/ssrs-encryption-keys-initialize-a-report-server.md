@@ -2,9 +2,12 @@
 title: "Инициализация сервера отчетов (диспетчер конфигурации служб SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/31/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 1f915a96de6567369146030cefa4f126e74a53f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0044c6f4f52ebe89dea2efb3902d0f5be30cf768
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>Ключи шифрования служб SSRS — инициализация сервера отчетов
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]инициализированный сервер — это сервер, способный шифровать и дешифровать данные в базе данных сервера отчетов. Инициализация является необходимым условием функционирования сервера отчетов. Инициализация происходит, когда служба сервера отчетов запускается впервые. Она также происходит, когда сервер отчетов соединяется с уже развернутой системой или когда вручную повторно создаются ключи как часть процесса восстановления. Дополнительные сведения о том, как и почему использовать ключи шифрования, см. в разделах [Настройка ключей шифрования и управление ими (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) и [Хранение зашифрованных данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md).  

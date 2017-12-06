@@ -2,9 +2,12 @@
 title: "Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -24,11 +27,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b1ac3cd31061a749a035c9f4feb6ceef8bdebcd3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6dfe5a9c884008b2e5e5e744e2b2169356c6442f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint
   В этом разделе приводится сравнение функции авторизации на основе ролей и задач служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , работающих в собственном режиме, со средствами безопасности из продуктов SharePoint. В нем сравнивается терминология и характеристики ролей, задач, групп SharePoint, уровней разрешений и самих разрешений.  

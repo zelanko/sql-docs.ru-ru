@@ -2,9 +2,12 @@
 title: "Настройка свойств выполнения для отчета (диспетчер отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 17a12495002c7a243ea410d26b8a4ad6cafaac3e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5964bc338f54a2c506df4edcc545d8e28429880c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Настройка свойств выполнения для отчета (диспетчер отчетов)
   Параметры обработки отчета можно настроить для указания получения данных для отчета. Планирование обработки данных для отчета становится целесообразным, если обновление внешнего источника данных происходит в определенные моменты времени (пример: хранилище данных, которое обновляется ежедневно или еженедельно) и необходимо избежать издержек, связанных с выборкой одних и тех же данных при каждом запросе отчета. Планирование обработки данных становится также необходимым, если требуется управлять рабочей нагрузкой сервера внешней базы данных или обеспечить предоставление согласованных результатов для многочисленных пользователей, которым приходится работать с идентичными наборами данных. Для быстро изменяющихся данных отчеты по требованию могут каждую минуту выдавать различные результаты. Моментальный снимок отчета, напротив, позволяет сопоставить данные различных отчетов и средств аналитики, действительные на один и тот же момент времени.  

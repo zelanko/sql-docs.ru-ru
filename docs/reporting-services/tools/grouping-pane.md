@@ -2,9 +2,12 @@
 title: "Панель группировки | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -20,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 509fa346013874f26225d6e8263b4e6b9baf0caf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0c5a114b5a85a635bb36f3d5eb81785931b82773
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="grouping-pane"></a>Панель группировки
 Во время конструирования отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] на панели группировки отображаются группы строк и столбцов для текущей области данных табликса. Панель группирования недоступна для областей данных диаграммы и датчика. Панель группирования состоит из панелей «Группы строк» и «Группы столбцов». Панель группировки: по умолчанию и расширенный. В режиме по умолчанию отображается иерархическое представление динамических элементов групп строк и столбцов. В расширенном режиме отображаются как динамические, так и статические элементы групп строк и столбцов. Группа – это именованный набор данных из набора данных отчета, который отображается в области данных. Группы организованы в иерархии, включающие динамические и статические элементы. Дополнительные сведения см. в разделе [Основные сведения о группах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  

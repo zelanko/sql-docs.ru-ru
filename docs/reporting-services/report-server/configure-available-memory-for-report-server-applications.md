@@ -2,9 +2,12 @@
 title: "Настройка доступной памяти для приложений сервера отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -19,11 +22,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 4291b3defc7fede8059bfb70f66406c87e9f804f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f444ed7b1c875ed523a690d0a13629a1b190f381
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Настройка доступной памяти для приложений сервера отчетов
   Хотя службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] могут использовать всю доступную память, можно переопределить поведение по умолчанию, настроив верхний предел ресурсов памяти, выделяемых серверным приложениям служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Можно также задать пороговые значения, которые изменяют способ назначения приоритета и обработки запросов сервером отчетов в зависимости от дефицита свободной памяти. При малом дефиците свободной памяти сервер отчетов назначает чуть более высокий приоритет интерактивной обработке отчетов или обработке отчетов по запросу. При серьезном дефиците свободной памяти сервер отчетов использует многочисленные приемы, чтобы сохранить работоспособность в условиях ограниченных доступных ресурсов.  

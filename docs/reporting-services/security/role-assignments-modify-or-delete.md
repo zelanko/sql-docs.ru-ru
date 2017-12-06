@@ -2,9 +2,12 @@
 title: "Изменение или удаление назначения ролей (диспетчер отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7d4a89bd4ab25ed62e8add7d6290f0a51954aab3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 96d6e228e158ec7c00c212e2e29a11279afe42fa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="role-assignments---modify-or-delete"></a>Изменение или удаление назначений ролей
   Назначение ролей сопоставляет учетную запись группы или пользователя со стандартным определением роли, включающим задачи, которые могут быть выполнены. Оно определяет типы операций, которые пользователь может выполнять с папками, отчетами, моделями и другим типом содержимого. Чтобы создать, изменить или удалить назначения ролей, используется диспетчер отчетов. После создания назначения ролей для конкретного пользователя или группы ее можно изменить, выбрав другую роль. Если нужно отменить разрешения на сервер отчетов, можно удалить на нем назначение ролей.  

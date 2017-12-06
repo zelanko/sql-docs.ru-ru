@@ -2,9 +2,12 @@
 title: "Кэширование отчета (диспетчер отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: fe7f91a706a0b65920b3f32bd4fabde48cba31fe
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: eade0d555ad4e5d8495048a8605b5a441fc220bc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="cache-a-report-report-manager"></a>кэшировать отчет (диспетчер отчетов)
   Один из способов повышения производительности состоит в настройке свойств кэширования для отчета. При кэшировании отчета копия отчета, подготовленного для хранения, сохраняется на короткий промежуток времени. Первый пользователь, запросивший этот отчет, должен ожидать, пока не закончится вся обработка, прежде чем сможет просмотреть отчет. Последующие пользователи, запрашивающие тот же отчет в пределах времени кэширования, могут сразу же просмотреть его, поскольку обработка уже выполнена.  

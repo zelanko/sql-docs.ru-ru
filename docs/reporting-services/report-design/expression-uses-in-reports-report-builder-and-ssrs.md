@@ -2,9 +2,12 @@
 title: "Использование выражений в отчетах (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 040dc71113e8db518b1e98420241e1e6f2c3ba19
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 55c99fec659eaeffa55efee403bd336a20f9ccab
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Использование выражений в отчетах (построитель отчетов и службы SSRS)
 В отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы выражения используются в определении отчета для указания или вычисления значений параметров, запросов, фильтров, свойств элементов отчета, группирования и сортировки определений, свойств текстовых полей, закладок, схем документов, динамического содержимого верхних и нижних колонтитулов страницы, изображений и динамических определений источников данных. В данном разделе приводится множество примеров использования выражений для внесения разнообразия в содержимое или внешний вид отчета. Этот список не является исчерпывающим. Выражение для любого свойства можно задать в диалоговом окне, содержащем кнопку выражения (**fx**), или в раскрывающемся списке, содержащем **\<выражение...>**.  

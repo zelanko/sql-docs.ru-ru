@@ -2,9 +2,12 @@
 title: "Журнал трассировки для службы сервера отчетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a0410f4feb1525ca103d852b601145ec2585dc47
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 643bbac27a2db99f611a164e97da36c6e5204dbf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-service-trace-log"></a>Журнал трассировки службы сервера отчетов
   Журналы трассировки сервера отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] представляют собой текстовый файл ASCII, содержащий подробные сведения об операциях службы сервера отчетов.  Файл содержит сведения об операциях, выполняемых веб-службой сервера отчетов, веб-порталом и процессом фоновой обработки. Файл журнала трассировки содержит избыточные сведения, которые записываются в другие файлы журналов, а также дополнительные сведения, недоступные иным способом. Данные журнала трассировки могут оказаться полезными при отладке приложения, содержащего сервер отчетов, либо при изучении конкретной проблемы, зафиксированной в журнале событий или журнале выполнения. Например, при устранении неполадок с подписками.  

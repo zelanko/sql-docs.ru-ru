@@ -2,9 +2,12 @@
 title: "Конструктор запросов к спискам SharePoint (построитель отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 80e18350f83053841f3525d2b959272a54d8cd06
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b1426e5e1de818317a391101149b3285c0b133bf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Конструктор запросов к спискам SharePoint (построитель отчетов)
   Построитель и конструктор отчетов предоставляют как графический, так и текстовый конструктор запросов, которые помогают создавать запросы, указывающие, какие данные следует получить с сайта SharePoint для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных списка SharePoint, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, для его изменения или ввода команд запроса. Также можно импортировать существующий запрос из файла или отчета.  

@@ -2,9 +2,12 @@
 title: "Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: b58eb34183d3ec9c1aaafaacb802a4507395d262
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f135c5a6221af8c169c59e65f5ff47a64ac3d430
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Внедренные и общие наборы данных отчета (построитель отчетов и службы SSRS)
   Набор данных указывает данные, которые надо извлечь через соединение с данными. Набор данных основывается на подключении к данным, сохраненном в отчете как внедренный источник данных или как ссылка на общий источник данных на сервере отчетов. Набор данных включает в себя запрос, указывающий на набор полей. При перетаскивании этих полей в область конструктора создаются выражения, значением которых при выполнении отчета являются фактические данные.  

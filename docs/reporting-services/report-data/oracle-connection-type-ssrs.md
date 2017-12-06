@@ -2,9 +2,12 @@
 title: "Тип подключения к Oracle (службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/11/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: bc2ae6d1f9078bd2d783212d4a893c430586a255
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e23dd513ce595760035bb9b96ef48eea7fbce80d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="oracle-connection-type-ssrs"></a>Тип соединения Oracle (службы SSRS)
 Чтобы использовать в отчете данные из базы данных Oracle, необходимо иметь набор данных, основанный на источнике данных Oracle. Этот встроенный тип источника данных напрямую использует поставщик .NET Framework для Oracle и требует наличия клиентского программного обеспечения Oracle.
@@ -29,7 +32,7 @@ ms.lasthandoff: 11/09/2017
  
 1.  Перейдите на [сайт загрузки Oracle](http://www.oracle.com/us/products/tools/index-090165.html).
 2.  Скачайте ODAC 12c 4 выпуска (12.1.0.2.4) для Windows (64-разрядная версия для сервера, 32-разрядная версия для инструментов).
-3.  Установите поставщик данных Oracle для .NET 4.
+3.  Установите поставщик данных Oracle для .NET 4.
   
  Используйте сведения в этом разделе для создания источника данных. Пошаговые инструкции см. в разделе [Добавление и проверка подключения к данным (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   

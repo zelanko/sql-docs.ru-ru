@@ -2,9 +2,12 @@
 title: "Защита папки \"Мои отчеты\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8c612e899a4ec7be7879d16f03f2a9528addb316
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ff08b3c8e78fb337a97cbdf491a745157d52fd53
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="secure-my-reports"></a>Обеспечение безопасности «Моих отчетов»
   В компоненте «Мои отчеты» представлено управляемое пользователем рабочее пространство для работы с отчетами. Чтобы обеспечить соответствие своему назначению, для папки «Мои отчеты» требуются более широкие права доступа, чем для других папок, доступных для общего пользования. Пользователям, имеющим разрешения в других папках только на просмотр и запуск отчетов, могут потребоваться дополнительные разрешения для управления их папками My Reports и содержимым, которое им принадлежит. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет для этого специальный механизм назначения и определения ролей.  

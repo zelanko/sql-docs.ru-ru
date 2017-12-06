@@ -2,9 +2,12 @@
 title: "Основные сведения о политиках безопасности | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -28,11 +31,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f93b2af7e677bd82cc947b1db3e1f32066cdb9ea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5d24b824fcb87d7eca888f4dbc7c4c142e2c71de
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="understanding-security-policies"></a>Основные сведения о политиках безопасности
   Любой код, выполняемый сервером отчетов, должен быть частью конкретной политики управления доступом для кода. Такие политики безопасности состоят из групп кода, которые сопоставляют свидетельство с множеством именованных наборов разрешений. Группы кода часто бывают связаны с именованным набором разрешений, который задает допустимые разрешения для кода в этой группе. Во время выполнения используется удостоверение, предоставленное доверенным узлом или загрузчиком, для определения того, к какой группе принадлежит код и какие разрешения с учетом этого должны быть предоставлены коду. Службы [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] придерживаются этой архитектуры политики безопасности, определенной средой CLR платформы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. В следующих разделах приведено описание различных типов кода в службах [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] и связанных с ними правил политики.  

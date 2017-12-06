@@ -2,9 +2,12 @@
 title: "Экспорт в XML (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-builder
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 808305386a58360dc09ad17acfd4c3e519cc95f4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 450aab8382de0a22729a65b7fe506b2db41d9fc2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Экспорт в XML (построитель отчетов и службы SSRS)
   Модуль подготовки XML-отчета возвращает отчет в XML-формате с разбиением на страницы. Схема для XML-документа, используемого в отчете, создается специально для этого отчета и содержит только данные. Данные макета не обрабатываются модулем подготовки XML-отчета, и разбивка на страницы не сохраняется. XML-документ, сформированный данным модулем, можно импортировать в базу данных, использовать как сообщение XML-данных или отправить пользовательскому приложению.  

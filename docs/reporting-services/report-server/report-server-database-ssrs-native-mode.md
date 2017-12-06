@@ -2,9 +2,12 @@
 title: "База данных сервера отчетов (службы SSRS в собственном режиме) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 477c4bfb55742102aa08da46a1fa08bf2686b4cf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 03acb388a2fe0b5eb75821379d0299460707c042
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>База данных сервера отчетов (службы Reporting Services в собственном режиме)
   Сервер отчетов — это сервер без сохранения состояния, который использует компонент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] для хранения метаданных и определений объектов. При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме используются две базы данных, чтобы реализовать различные требования к постоянному и временному хранилищу. Эти базы данных создаются одновременно и связываются по именам. По умолчанию эти базы данных имеют имена **reportserver** и **reportservertempdb**.  

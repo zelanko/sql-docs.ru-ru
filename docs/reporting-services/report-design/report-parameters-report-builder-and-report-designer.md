@@ -2,9 +2,12 @@
 title: "Параметры отчета (построитель отчетов и конструктор отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 10/17/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -23,11 +26,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 08a65ad0d4d65c7461862757f9a9bf1f8bac651b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 2daf7d7d92e9e0fe3163a06a08d85f5710a8606f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Параметры отчета (Построитель отчетов и Конструктор отчетов)
   В этом разделе описываются распространенные варианты применения параметров отчета [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , доступные свойства и многое другое. Параметры отчета позволяют управлять данными отчета, объединять связанные отчеты и изменять внешний вид отчетов. Параметры отчета можно использовать в отчетах с разбиением на страницы, создаваемых с помощью таких средств, как [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] и конструктор отчетов, а также в мобильных отчетах, которые создаются, используя [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long-md.md)]. Дополнительные сведения о параметрах отчета см. в разделе [Понятия параметров отчета](../../reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs.md).  

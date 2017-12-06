@@ -2,9 +2,12 @@
 title: "Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 691f319ecd8b3b9bf6788ff4ac8ea9df469f433f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3b887ca39b5198b02294c8e09de765e61ffe5a0e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Форматирование цветов для рядов на диаграмме (построитель отчетов и службы SSRS)
   В службах Reporting Services предоставляется несколько встроенных палитр для диаграмм, а также предусмотрена возможность определить пользовательскую палитру. По умолчанию в диаграммах используется встроенная цветовая палитра **Pacific** для заливки каждого ряда. Эти цвета появляются также в условных обозначениях. При добавлении к диаграмме нескольких рядов происходит присваивание каждому ряду на диаграмме цветов в том порядке, в каком цвета определены в палитре.  

@@ -2,9 +2,12 @@
 title: "Создание счета-фактуры и формы со списками (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 0a856a2cd47641a0bf906de517813e9d41ae3ea1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 08630eac8299c1086e75338cc6354bf4ba926622
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>Создание счета-фактуры и формы со списками (построитель отчетов и службы SSRS)
   Область списка данных повторяется с каждой группой или строкой набора данных отчета с разбиением на страницы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Список может использоваться для создания отчетов произвольного формата, таких как счета, либо совместно с другими областями данных. Можно определять списки, содержащие любое количество элементов отчета. Список может быть вложен  

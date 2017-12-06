@@ -2,9 +2,12 @@
 title: "Добавление визуализаций в мобильные отчеты Reporting Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: mobile-reports
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 41c6b6c84fba9f3f45795bb953af65aebbf35bb8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7c068430c44eaad1df894fc5c67849ff438ffcbc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Добавление визуализаций в мобильные отчеты Reporting Services
 Диаграммы являются неотъемлемой частью визуализации данных. Здесь приведены сведения о диаграммах, которые можно использовать в мобильных отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] в разных ситуациях. 

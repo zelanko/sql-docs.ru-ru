@@ -1,10 +1,13 @@
 ---
 title: "Сохранение учетных данных в источнике данных Reporting Services | Документы Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/23/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 93885081e436e3ca4afec2e80caf1d6026fa5f90
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 86fde4ff91ad9f2cf8ba680f0b1bdedb963dde02
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Сохраненные учетные данные в источнике данных Reporting Services
   Сохраненные учетные данные, используемые сервером отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно настроить для получения доступа к внешним данным отчета. Сохраненные учетные данные используются, если отчет запускается автоматически, например, подписка [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , которая публикует отчет как электронное письмо. Сервер отчетов возвращает и использует учетные данные при планировании или запуске обработки отчета. В этом разделе описывается настройка сохраненных учетных данных для серверов отчетов как в собственном режиме, так и в режиме интеграции с SharePoint.  

@@ -2,9 +2,12 @@
 title: "Создание журнала отчета (службы Reporting Services в режиме интеграции с SharePoint) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -17,11 +20,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b9f013e1fd6d614e9b4c8767c00feebea1da8ad8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e81318dc5b8c62796347b8412ccef4ecb3ee6d6d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>создать журнал отчета (службы Reporting Services в режиме интеграции с SharePoint)
   Журнал отчета — это коллекция моментальных снимков отчета, созданных на протяжении определенного времени. Каждый моментальный снимок представляет собой копию отчета в том виде, в котором он был создан. Он включает в себя макет и данные, являвшиеся текущими во время создания моментального снимка. Сведения о подготовке к просмотру не хранятся вместе с моментальным снимком. При открытии моментального снимка журнала отчета, он открывается в виде HTML-документа в веб-части «Средство просмотра отчетов». После завершения подготовки к просмотру отчет можно экспортировать в форматы других приложений.  

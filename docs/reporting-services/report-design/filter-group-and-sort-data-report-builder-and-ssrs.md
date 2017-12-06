@@ -2,9 +2,12 @@
 title: "Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -25,11 +28,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: e9e31e800ebadc67463c8b209ad16a592e85027c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f765c32963d149c42bda40849f67e9206a1ff3b2
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)
   Выражения в отчетах используются для управления, организации и сортировки данных отчетов. По умолчанию по мере создания наборов данных и разработки макета отчета свойства элементов отчета задаются автоматически выражениями, исходя из полей набора данных, параметров и других элементов, появляющихся на панели данных отчета. Можно также добавить кнопку интерактивной сортировки к таблице или ячейке матрицы, чтобы пользователь мог в интерактивном режиме изменять порядок сортировки рядов для групп или строк внутри групп.  

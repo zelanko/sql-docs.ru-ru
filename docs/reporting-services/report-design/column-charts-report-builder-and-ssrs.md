@@ -2,9 +2,12 @@
 title: "Гистограммы (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7a978e4fd6fb181e72db458b49a6d3cc96699d96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7f962314d1c4b4c3c3c342c668979081d8c7305c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Гистограммы (построитель отчетов и службы SSRS)
   Гистограмма отображает ряды в виде набора вертикальных прямоугольников, сгруппированных по категориям. Гистограммы удобны для показа изменения данных за период времени и для наглядного сравнения элементов. Простая гистограмма очень похожа на линейчатую диаграмму, которая отображает ряды в виде наборов горизонтальных прямоугольников, и гистограмму диапазонов, которая показывает ряды как наборы вертикальных прямоугольников с различными начальными и конечными точками. Дополнительные сведения см. в разделах [Линейчатые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) и [Диаграммы диапазонов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  

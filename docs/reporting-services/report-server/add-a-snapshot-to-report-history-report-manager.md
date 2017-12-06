@@ -2,9 +2,12 @@
 title: "Добавление моментального снимка к журналу отчета (диспетчер отчетов) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e0a70aba28016a7649a6b793581fe653649aef96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9f98aa2f856f8db03b751db35433b4bf341b819a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>добавить моментальный снимок к журналу отчета (диспетчер отчетов)
   Журнал отчета — это коллекция моментальных снимков отчета, созданных на протяжении определенного времени. Моментальный снимок отчета — это отчет, содержащий сведения о макете и результаты запроса, полученные в определенный момент времени. В отличие от отчетов по требованию, при открытии которых производится получение актуальных, действительных на текущий момент данных, моментальные снимки отчета выполняются по расписанию и сохраняются на сервере отчетов. Если для просмотра выбирается моментальный снимок отчета, сервер отчетов извлекает сохраненный отчет из базы данных сервера отчетов и отображает макет и данные, которые были действительны на момент создания моментального снимка.  

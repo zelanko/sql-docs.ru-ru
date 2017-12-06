@@ -2,9 +2,12 @@
 title: "Задание свойства развертывания (службы Reporting Services) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: tools
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -21,11 +24,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 555497ecba823a6c13babbbfd1958bf293bd1f9b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3485cc9a08bb868a16c731ccf3d2d684a110e46e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Задание свойства развертывания (службы Reporting Services)
   В[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]необходимо задать сервер отчетов. Можно также указать папки для отчетов и общие источники данных, что позволит публиковать элементы в проекте "Сервер отчетов" на сервере отчетов. Свойства и значения, необходимые среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для построения, предварительного просмотра и развертывания отчетов, хранятся в конфигурациях проектов в проекте "Сервер отчетов". Можно создать несколько именованных наборов для этих свойств проекта, чтобы можно было просто переключаться с одного набора свойств на другой. Каждый набор свойств представляет собой конфигурацию. Например, может существовать одна конфигурация для публикации отчетов на тестовом сервере и другая конфигурация для публикации отчетов на рабочем сервере.  

@@ -2,9 +2,12 @@
 title: "Реализация интерфейса IRenderingExtension | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: extensions
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -20,11 +23,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 230c2e5ad4ffb61eb6d3b4d94db4e376b1f04d66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1ab9ad6c035783017ff0a4eb2a2ebe2710c2c0f9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Реализация интерфейса IRenderingExtension
   Модуль подготовки отчетов извлекает результаты из определения отчета, объединенного с реальными данными, и преобразует результирующие данные в формат, готовый к применению. Преобразование объединенных данных и форматирование осуществляется при помощи класса среды CLR, который реализует интерфейс <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Модель объекта преобразуется в формат вывода, который предназначен для средства просмотра, принтера или другого приложения вывода.  
