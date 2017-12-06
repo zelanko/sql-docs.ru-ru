@@ -1,8 +1,8 @@
 ---
 title: "Использование языка R в базе данных Azure SQL | Документы Microsoft"
 ms.custom: 
-ms.date: 11/16/2017
-ms.prod: sql-server-2017
+ms.date: 12/04/2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,20 +13,20 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
-ms.openlocfilehash: 4562dc3490f4790a31b4b32e06b9e5133a151c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ef6573ca1d682ae4b4f4336ad6f809f1e094e9fc
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="using-r-in-azure-sql-database"></a>Использование языка R в базе данных Azure SQL
 
-В октябре 2017 г. группа разработчиков SQL Server объявила для поддержки выполнения R код в базе данных с помощью хранимых процедур, аналогично R Services в SQL Server 2016.
+В октябре 2017 г. группа разработчиков SQL Server объявила для поддержки выполнения R код в базе данных с помощью хранимых процедур, аналогично R Services в SQL Server 2016. Этот компонент находится в стадии разработки.
+
+Поддерживать актуальность на общедоступный выпуск расписания и события, в разделе [в блоге SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/) или [блог Microsoft R Server](https://blogs.msdn.microsoft.com/rserver/).
 
 > [!IMPORTANT]
-> Начальной предварительной версии, которая было объявлено предназначена для тестирования и только для просмотра. В настоящее время средство, **отключена** в базе данных SQL Azure для дальнейшей поддержки разработки. 
-
-Чтобы поддерживать актуальность на открытые выпуске расписание и узнать о предстоящих событиях см. в разделе [в блоге SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/) или [блог Microsoft R Server](https://blogs.msdn.microsoft.com/rserver/).
+> Начальной предварительной версии, которая было объявлено предназначена для тестирования и только для просмотра. В настоящее время функция доступна в базе данных SQL Azure в ограниченной области только и функции будут ограничены по сравнению с возможностей, поддерживаемых в SQL Server 2016 или 2017 г.
 
 **Ресурсы Azure**
 

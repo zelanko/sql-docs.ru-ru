@@ -1,10 +1,13 @@
 ---
 title: "Работа с SSMA для доступа к консоли (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-access
 ms.custom: 
 ms.date: 08/17/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: e09d438a0e53eaba4f461cfdf14b7447b85cf4ba
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 1abb9d9a59151cabf70b5a9ae8192b12d2363dda
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Работа с SSMA для доступа к консоли (AccessToSQL)
 Microsoft SQL Server миграции Assistant (SSMA) для доступа теперь доступен с помощью консольного приложения командной строки. Файлы скриптов образуют входных данных для приложения, для выполнения команд. В консольном приложении SSMA включает взаимодействия на уровне сценария, уменьшает цикл миграции и масштабирует усилий миграции.  
@@ -44,6 +47,6 @@ Microsoft SQL Server миграции Assistant (SSMA) для доступа т�
 |[Создание отчетов &#40; AccessToSQL &#41;](../../ssma/access/generating-reports-accesstosql.md)|Список команд для создания отчетов.|  
 |[Устранение неполадок &#40; AccessToSQL &#41;](../../ssma/access/troubleshooting-accesstosql.md)|Предоставляет краткие сведения о решении проблем миграции.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Начало работы с SSMA для доступа к консоли](http://msdn.microsoft.com/8585ec16-7e0a-483a-b250-adab9b9232a3)  
   

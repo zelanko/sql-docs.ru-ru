@@ -2,9 +2,12 @@
 title: "Настройка параметров средств и макета | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d497ec1f8b0d7c557c6d802328ddbbb4360a988
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>Занятие 1-2-Настройка параметров средств и макета
-Чтобы повысить удобство работы с помощником по настройке ядра СУБД, можно настроить параметры, влияющие на вид графического интерфейса пользователя помощника при запуске и применяемый шрифт, а также воспользоваться другими возможностями этого средства. Выполнение практических заданий на этой странице позволит изучить эти параметры и способ их настройки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Можно настроить параметры, отображается при запуске, шрифт, который его использует, помощник по настройке ядра СУБД графический пользовательский интерфейс (GUI) и другими возможностями этого средства для оптимально подходит поддерживать ее использование. Выполнение практических заданий на этой странице позволит изучить эти параметры и способ их настройки.  
   
 ### <a name="set-the-tool-options"></a>Настройка параметров средства  
   

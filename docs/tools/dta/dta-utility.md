@@ -2,9 +2,12 @@
 title: "dta, программа | Документы Microsoft"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3600ea7d01e3dfd7963198433c37ad05a9b68315
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 192a28c8833fb801e19d1dee7485b667ea56128d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="dta-utility"></a>dta, программа
-  Программа **dta** — это версия помощника по настройке ядра СУБД для командной строки. Программа **dta** предназначена для использования функций помощника по настройке ядра СУБД в приложениях и скриптах.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Dta** программа — версия ядра СУБД для командной строки. Программа **dta** предназначена для использования функций помощника по настройке ядра СУБД в приложениях и скриптах.  
   
  Как и помощник по настройке ядра СУБД, программа **dta** производит анализ рабочей нагрузки и выдает рекомендации по изменению структур физического проектирования для улучшения производительности сервера при данной рабочей нагрузке. Рабочей нагрузкой может выступать кэш планов, файл трассировки или таблица  приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] либо скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] . Структуры физического проектирования включают в себя индексы, индексированные представления и секционирование. После проведения анализа рабочей нагрузки программа **dta** выдает рекомендации по изменению физической структуры баз данных и может сформировать необходимый скрипт для внесения этих изменений. Рабочие нагрузки можно указать из командной строки с помощью аргумента **-if** или **-it** . Кроме того, можно указать из командной строки входной XML-файл с помощью аргумента **-ix** . В этом случае рабочая нагрузка указывается во входном XML-файле.  
   

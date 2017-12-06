@@ -2,7 +2,7 @@
 title: "Устранение неполадок при сборе данных для машинного обучения — SQL Server"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f8a476372f97251ae3cf075e69cf7baf55ba0649
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8ebbf404640ab909c500cd5ef39bd5b2b7653a15
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Устранение неполадок при сборе данных для машинного обучения
 
@@ -155,7 +155,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 * Во время установки выбрать службы R (в базе данных) и R Server (изолированный). 
 * Установки клиента Microsoft R в дополнение к SQL Server.
-* Другой набор библиотек R была установлена с помощью средства R для Visual Studio, R Studio, Microsoft R клиента или другого интерфейса IDE r..
+* Другой набор библиотек R была установлена с помощью средства R для Visual Studio, R Studio, Microsoft R клиента или другого интерфейса IDE r.
 * Компьютер содержит несколько экземпляров SQL Server и более одного экземпляра с применением машинного обучения.
 
 Применяются те же условия Python.
@@ -339,6 +339,6 @@ SQL Server создает отдельные файлы журналов для 
 * [Создание хранимой процедуры для кода R с помощью пакета sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 * [Создание хранимой процедуры с помощью sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Устранение неполадок машинного обучения в SQL Server](machine-learning-troubleshooting-faq.md)

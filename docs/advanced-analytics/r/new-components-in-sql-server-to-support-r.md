@@ -2,7 +2,7 @@
 title: "Компоненты SQL Server для поддержки R | Документы Microsoft"
 ms.custom: 
 ms.date: 04/05/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,17 +14,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3a6387f16e567c09c233cfd2c4de71d567f2ce7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 7159ee64e1119ef4147a70f3309dc1e05691bef4
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="components-in-sql-server-to-support-r"></a>Компоненты SQL Server для поддержки R
 
 В SQL Server 2016 и 2017 г. компонент database engine включает дополнительные компоненты, поддерживающие расширяемости для внешнего сценария языков, включая R и Python. Была добавлена поддержка языка R в SQL Server 2016; Поддержка Python был добавлен в службах SQL Server 2017 г машины обучения.
 
-В этом разделе описываются новые компоненты, которые работают в частности, с помощью языка r.. Описание принципов работы этих компонентов с открытым исходным кодом R см. в разделе [взаимодействие R](r-interoperability-in-sql-server.md)
+В этом разделе описываются новые компоненты, которые работают в частности, с помощью языка r. Описание принципов работы этих компонентов с открытым исходным кодом R см. в разделе [взаимодействие R](r-interoperability-in-sql-server.md)
 
 ## <a name="components-and-providers"></a>Компоненты и поставщиков
 

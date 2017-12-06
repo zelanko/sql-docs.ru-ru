@@ -2,9 +2,12 @@
 title: "Просмотр отчетов настройки | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: dta
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a3fca4cfcb035c48e37c455e72b03a76474a3cd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d270a34d882cbe4c5ffd458e52a9033db1b16c26
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Занятие 1-3 - Просмотр отчетов настройки
-В предыдущей практической работе этого учебника были рассмотрены скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые создают или сбрасывают объекты базы данных в рекомендациях помощника по настройке ядра СУБД, которые были созданы в сеансе настройки MySession. Сеанс настройки MySession был создан в разделе [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В предыдущей практической на этом занятии вы просмотрели [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипты, создающие или удаляющие объекты базы данных в рекомендациях по настройке ядра СУБД, которые были созданы в результате сеанс настройки MySession. Сеанс настройки MySession был создан в разделе [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
   
 Хотя очень полезно рассмотреть скрипты, которые можно использовать для применения результатов настройки, помощник по настройке ядра СУБД также предоставляет много полезных отчетов. Эти отчеты содержат сведения о существующих структурах физического проектирования в настраиваемой базе данных, а также о рекомендуемых структурах. Отчеты настройки можно просмотреть, перейдя на вкладку **Отчеты** , как описано в следующей практической работе. В этой практической работе используются сеансы настройки MySession и EvaluateMySession, которые были созданы упражнениях разделов [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md) и [Viewing Tuning Recommendations](../../tools/dta/lesson-1-2-viewing-tuning-recommendations.md).  
   

@@ -5,7 +5,7 @@ ms.date: 10/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cacdf2de6c6e85c8afd0723f4dae21feab0c71cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7131eec581f973738d1cacb45dd355e2b7168aeb
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Высокий уровень доступности и защиты данных в конфигурации группы доступности
 
@@ -161,7 +161,7 @@ SQL Server 2017 г CTP-версии 1.4 добавлена `sequence_number` д�
 
 Вы можете переопределить поведение по умолчанию и предотвратить параметр группы доступности `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` автоматически.
 
-Следующий скрипт задает `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 0 для группы доступности с именем `<**ag1**>`. Прежде чем выполнять замену `<**ag1**>` с именем группы доступности.
+Следующий скрипт задает `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` 0 для группы доступности с именем `<**ag1**>`. Прежде чем выполнять переход, замените `<**ag1**>` на имя группы доступности.
 
 ```bash
 sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=0
@@ -176,7 +176,7 @@ sudo pcs resource update <**ag1**> required_synchronized_secondaries_to_commit=
 >[!NOTE]
 >При выполнении предыдущей команды основной временно переводится в режим получателей, затем повторно повышается. Обновление ресурсов приводит все реплики остановить и перезапустить. Новое значение`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` устанавливается только после перезапуска реплики, а не мгновенно.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Группы доступности в Linux](sql-server-linux-availability-group-overview.md)
 

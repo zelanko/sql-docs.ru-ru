@@ -2,9 +2,12 @@
 title: "Свойства сервера анализа данных (вход в систему) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: configuration-manager
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5219e96dc9f0d198322aeb359ed608238a7fe84
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0206adf0e7e21f5674339f1f36bc546f77d5d726
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="analysis-server-properties-log-on-tab"></a>Свойства сервера анализа данных (вкладка «Вход в систему»)
-  Используйте вкладку **Вход** в диалоговом окне **Свойства сервера анализа данных** , чтобы указать учетную запись, используемую службами [!INCLUDE[ssAS](../../includes/ssas-md.md)] , и запустить или остановить службу.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Используйте **вход в систему** вкладке **свойства сервера анализа данных** для указания учетной записи, используемой [!INCLUDE[ssAS](../../includes/ssas-md.md)] , а также для запуска и остановки службы.  
   
 > [!NOTE]  
 >  Для изменения параметра **Имя учетной записи** , используемого службой в кластеризованном экземпляре, новая учетная запись должна быть членом группы домена, заданной во время установки изменяемой службы, или должно иметься разрешение на добавление членов в эту группу. Если нет разрешения на изменение состава группы, свяжитесь с администратором домена.  

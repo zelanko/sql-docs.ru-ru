@@ -1,10 +1,13 @@
 ---
 title: "Обновление из базы данных (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssma-db2
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: sql-ssma
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a1d5da102b2d357b20e08bbb25269ae7ec7ca78c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8fa3c91de2468da1ba9a7d67f597a2eae716632c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="refresh-from-database-db2tosql"></a>Обновление из базы данных (DB2ToSQL)
 **Обновление из базы данных** диалоговое окно позволяет выбрать объекты, которые нужно обновить в базе данных DB2. Строки в диалоговом окне отображаются цветовые обозначения, исходя из состояния метаданных:  
