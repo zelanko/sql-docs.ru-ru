@@ -9,17 +9,17 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: acd47bd1e2104027610f7ee38c9b135a785429e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Запускать образ контейнера 2017 г. SQL Server с помощью Docker
 
@@ -35,31 +35,9 @@ ms.lasthandoff: 11/20/2017
 ## <a id="requirements"></a> Предварительные требования
 
 - Подсистема docker 1.8 + для какого-либо поддерживается дистрибутив Linux или Docker для Mac и Windows. Дополнительные сведения см. в разделе [установить Docker](https://docs.docker.com/engine/installation/).
-- Менее 4 ГБ места на диске
-- Не менее 4 ГБ ОЗУ
+- Минимум 2 ГБ места на диске
+- Минимум 2 ГБ ОЗУ
 - [Требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> По умолчанию в Docker для Mac и Docker для Windows является 2 ГБ для виртуальной Машины Moby, поэтому следует изменить его до 4 ГБ. Если на компьютере Mac или Windows используйте следующие процедуры увеличить размер памяти.
-
-### <a name="increase-docker-memory-to-4-gb-mac"></a>Увеличьте объем памяти Docker 4 ГБ (Mac)
-
-Следующие шаги увеличить объем памяти для Docker для Mac на 4 ГБ.
-
-1. Щелкните эмблему Docker в строке состояния top.
-1. Выберите **предпочтения**.
-1. Переместите индикатор памяти в 4 ГБ или более.
-1. Нажмите кнопку **перезапустите** кнопку в кнопке экрана.
-
-### <a name="increase-docker-memory-to-4-gb-windows"></a>Увеличьте объем памяти Docker 4 ГБ (Windows)
-
-Следующие шаги увеличить объем памяти для Docker для Windows до 4 ГБ.
-
-1. Щелкните правой кнопкой мыши значок Docker из панели задач.
-1. Нажмите кнопку **параметры** в соответствующее меню.
-1. Нажмите кнопку **Advanced** вкладки.
-1. Переместите индикатор памяти в 4 ГБ или более.
-1. Нажмите кнопку **применить** кнопки.
 
 ## <a name="pull-and-run-the-container-image"></a>По запросу, а затем запускать образ контейнера
 

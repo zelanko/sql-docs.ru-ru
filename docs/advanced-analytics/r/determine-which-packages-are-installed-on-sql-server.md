@@ -2,7 +2,7 @@
 title: "Определить, какие пакеты R установлены на сервере SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 10/09/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63e5b575bb9f1894470b615bc975cd84fb0bffff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: d2404680ce5c3ddccc0ac65a3b49c905a1fc30a8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>Определить, какие пакеты R установлены на сервере SQL Server
 
@@ -78,6 +78,6 @@ sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=m
 sqlPackages <- rxInstalledPackages(computeContext = sqlServerCompute)
 sqlPackages
 ```
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Установка дополнительных пакетов R в SQL Server](install-additional-r-packages-on-sql-server.md)

@@ -22,16 +22,16 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec112810e691aceac5085f3ded941564331f74b9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 3752ac2db3a8687fd44fc43c2e29f24526db7ca1
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Открывает курсор. sp_cursoropen определяет инструкцию SQL, связанную с курсором или параметрами курсора, а затем производит заполнение курсора. эквивалентно комбинации sp_cursoropenis [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE_CURSOR и OPEN. Для вызова этой процедуры необходимо задать ID =2 в пакете потока табличных данных (TDS).  
+  Открывает курсор. sp_cursoropen определяет инструкцию SQL, связанную с курсором или параметрами курсора, а затем производит заполнение курсора. sp_cursoropen эквивалентно комбинации [!INCLUDE[tsql](../../includes/tsql-md.md)] DECLARE_CURSOR и OPEN. Для вызова этой процедуры необходимо задать ID =2 в пакете потока табличных данных (TDS).  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

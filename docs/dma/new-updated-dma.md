@@ -1,31 +1,27 @@
 ---
-title: "Обновлено - образцы для SQL Server docs | Документы Microsoft"
-description: "Отображение фрагментов обновленное содержимое для последних измененных в документации, образец для Microsoft SQL Server."
+title: "Обновлено - DMA для документации по SQL Server | Документы Microsoft"
+description: "Отображение фрагментов обновленное содержимое для последних измененных в документации, для данных миграции Assistant (DMA) для Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: 
-ms.component: samples
-ms.suite: sql
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.date: 12/02/2017
 ms.author: genemi
-ms.workload: sample
-ms.openlocfilehash: 363cb5dde93c628317a977082fe8697af890d51c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.workload: dma-data-migration-assistant
+ms.openlocfilehash: 3d542535f92107266e841f72168257cc9a64a9b4
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/04/2017
 ---
-# <a name="new-and-recently-updated-sample-for-sql-server"></a>Новые и недавно обновленные: образец для SQL Server
+# <a name="new-and-recently-updated-data-migration-assistant-dma-for-sql-server"></a>Новые и недавно обновленные: данных помощник по миграции (DMA) для SQL Server
 
 
 
@@ -38,7 +34,7 @@ ms.lasthandoff: 12/05/2017
 
 
 - *Диапазон обновлений дат:* &nbsp; **2017 г-09-28** &nbsp; - в - &nbsp; **2017 г-12-02**
-- *Предметной области:* &nbsp; **образец для SQL Server**.
+- *Предметной области:* &nbsp; **данных миграции Assistant (DMA) для SQL Server**.
 
 
 
@@ -76,49 +72,13 @@ ms.lasthandoff: 12/05/2017
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [Каталог базы данных WideWorldImporters](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-wideworldimporters-database-catalogworld-wide-importersdatabase-catalog-oltpmd"></a>1. &nbsp;[Каталог базы данных WideWorldImporters](world-wide-importers/database-catalog-oltp.md)
-
-*Обновлено: 2017 г-11-20* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 136.  ms.author= "barbkess".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 c055d0483699f06b8766ac2c999101934c14c55c 6975d5a3d1ade7b0ce34bd165bc0e9ef49299ba2  (PR=4032  ,  Filename=database-catalog-oltp.md  ,  Dirpath=docs\sample\world-wide-importers\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
-
-
-
-Во всех возможных случаях база данных collocates таблицы, которые часто запрашиваются вместе в той же схеме, чтобы свести к минимуму сложности соединения.
-
-Схема базы данных была в код создан на основе ряда таблицы метаданных в другой базе данных WWI_Preparation. Это дает WideWorldImporters очень высокой степенью согласованности проектирования, именования согласованность и полноты. Подробные сведения о том, как была создана схема исходного кода: [расширенных world-importers/wwi скриптов базы данных](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
-
-**Конструктор таблиц**
-
-
-- Все таблицы имеют один столбец первичного ключа для простоты соединения.
-- Все схемы, таблицы, столбцы, индексы и проверочные ограничения имеют описание расширенное свойство, которое можно использовать для определения назначения объект или столбец. Оптимизированные для памяти таблицы являются исключением это так, как они не поддерживают в настоящее время расширенные свойства.
-- Все внешние ключи автоматически индексируются, если нет другого некластеризованный индекс, имеющий один и тот же компонент слева.
-- Автоматическая нумерация таблиц основан на последовательности. Эти последовательности легче работать с всех связанных серверов и похожих средах от столбцов ИДЕНТИФИКАТОРОВ. Оптимизированные для памяти таблицы использования столбцов ИДЕНТИФИКАТОРОВ, поскольку они не поддерживают в SQL Server 2016.
-- Одну последовательность (TransactionID) используется для этих таблиц: CustomerTransactions, SupplierTransactions и StockItemTransactions. Этот пример демонстрирует, как набор таблиц, может иметь одну последовательность.
-- Некоторые столбцы имеют соответствующие значения по умолчанию.
-
-**Схемы безопасности**
-
-
-Для безопасности WideWorldImporters не разрешать внешние приложения прямой доступ к схем данных. Чтобы изолировать доступ, WideWorldImporters использует схемы доступа, которые не содержат данных, но содержит представления и хранимые процедуры. Внешние приложения для извлечения данных, они могут просматривать использовать схемы безопасности.  Таким образом, пользователи могут запускать только представлений и хранимых процедур в схемах безопасного доступа
-
+***Ни одна из статей в этой предметной области за последнее время изменениям не подвергалась.***
 
 
 

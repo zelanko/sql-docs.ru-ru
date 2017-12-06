@@ -4,26 +4,22 @@ description: "Отображение фрагментов обновленное
 services: na
 documentationcenter: 
 author: MightyPen
-manager: kfile
+manager: jhubbard
 editor: 
-ms.service: 
-ms.component: misc
-ms.suite: sql
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: 
+ms.custom: UpdArt.exe
 ms.workload: analysis-services
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 53124d807c0573263041389e1c879f4da10c06e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6de674b8fb63908964538339410a66db6918a16a
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>Новые и недавно обновленные: службы Analysis Services для SQL Server
 
@@ -37,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **11.09.2017**&nbsp;–&nbsp;**27.09.2017**
+- *Диапазон обновлений дат:* &nbsp; **2017 г-09-28** &nbsp; - в - &nbsp; **2017 г-12-02**
 - *Предметной области:* &nbsp; **служб Analysis Services для SQL Server**.
 
 
@@ -50,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-***На данный момент новых статей нет.***
+1. [Импорт данных с помощью машинного запроса](tabular-models/ssas-import-query.md)
 
 
 
@@ -76,65 +72,13 @@ ms.lasthandoff: 11/17/2017
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [Какой &#39; новые возможности служб Analysis Services SQL Server 2017 г.](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-what39s-new-in-sql-server-2017-analysis-serviceswhat-s-new-in-sql-server-analysis-services-2017md"></a>1. &nbsp;[Что &#39; новые возможности служб Analysis Services SQL Server 2017 г.](what-s-new-in-sql-server-analysis-services-2017.md)
-
-*Обновлено: 2017 г-09-22* &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; 
-
-<!-- Source markdown line 143.  ms.author= "owend".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 c8d75883f07e6e32859728d09139920eb9bf65c5 d206e83413d15a6e6116120e4a98dda9c8ce81d8  (PR=3278  ,  Filename=what-s-new-in-sql-server-analysis-services-2017.md  ,  Dirpath=docs\analysis-services\  ,  MergeCommitSha40=656e62f36446db4ef5b232129130a0253d2aebdf) -->
-
-
-
-**Безопасность на уровне объекта**
-
-В этом выпуске вводится [безопасность на уровне объекта--... / analysis-services/tabular-models/object-level-security.md) для таблиц и столбцов. Помимо ограничения доступа к данным таблицы и столбца, можно защитить конфиденциальные имена таблиц и столбцов. Благодаря этому злоумышленник не сможет узнать о существовании этих таблиц.
-
-Безопасность на уровне объекта необходимо задать, используя метаданные на основе JSON, табличных языка скриптов модели (TMSL) или табличной модели объектов (TOM).
-
-Например, приведенный ниже код позволяет защитить таблицу Product в образце табличной модели Adventure Works путем присвоения свойству **MetadataPermission** класса **TablePermission** значения **None**.
-
-```
-//Find the Users role in Adventure Works and secure the Product table
-ModelRole role = db.Model.Roles.Find("Users");
-Table productTable = db.Model.Tables.Find("Product");
-if (role != null && productTable != null)
-{
-    TablePermission tablePermission;
-    if (role.TablePermissions.Contains(productTable.Name))
-    {
-        tablePermission = role.TablePermissions[productTable.Name];
-    }
-    else
-    {
-        tablePermission = new TablePermission();
-        role.TablePermissions.Add(tablePermission);
-        tablePermission.Table = productTable;
-    }
-    tablePermission.MetadataPermission = MetadataPermission.None;
-}
-db.Update(UpdateOptions.ExpandFull);
-```
-
-**Динамические административные представления (DMV)**
-
-[Динамических административных представлений--... / analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md) запросы в SQL Server Profiler, которые возвращают сведения о локальных операциях сервера и исправности сервера.
-Этот выпуск включает усовершенствования для [динамические административные представления](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) для табличных моделей на уровне совместимости 1200 и 1400.
-
+***Ни одна из статей в этой предметной области за последнее время изменениям не подвергалась.***
 
 
 
@@ -146,36 +90,40 @@ db.Update(UpdateOptions.ExpandFull);
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
     Then run Run-533-*.BAT
+    2017-12-02  23:00pm
 -->
 
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новые + обновленные (0+1): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (0+1): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Новые + обновленные (4+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (17+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (3+0): **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (1+1): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (2+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новый + обновленные (3 + 14): **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (1+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (87 + 0): **Analytics Platform System для SQL** документы](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Новый + обновленные (5 + 4): **подключение к SQL** документы](../connect/new-updated-connect.md)
+- [Новый + обновленные (0 + 1): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
+- [Новый + обновленные (2 + 2): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
+- [Новый + обновленные (10 + 9): **Linux для SQL** документы](../linux/new-updated-linux.md)
+- [Новый + обновленные (2 + 4): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
+- [Новый + обновленные (4 + 2): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
+- [Новый + обновленные (0 + 1): **образцы для SQL** документы](../sample/new-updated-sample.md)
+- [Новый + обновленные (21 + 0): **операций SQL Studio** документы](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новый + обновленные (5 + 1): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+1): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новый + обновленные (1 + 0): **SQL Server Migration Assistant (SSMA)** документы](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (0+1): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новый + обновленные (0 + 2): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
+- [Новый + обновленные (0 + 0): **данных миграции Assistant (DMA) для SQL** документы](../dma/new-updated-dma.md)
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): **Подключение к SQL**](../connect/new-updated-connect.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
-- [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
-- [Новые + обновленные (0+0): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 

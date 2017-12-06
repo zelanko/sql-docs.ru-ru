@@ -2,7 +2,7 @@
 title: "Расширенные события для служб R SQL Server | Документация Майкрософт"
 ms.custom: SQL2016_New_Updated
 ms.date: 11/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0b4d65cd2812fea830bbdd7127b8f47569979e94
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 76350c58a9ef7dc52eaf1a260ec04a231f362872
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="extended-events-for-sql-server-r-services"></a>Расширенные события для служб R SQL Server
   Службы[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] содержат набор расширенных событий, используемых при операциях по устранению неполадок, связанных с [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] , или в заданиях R, отправленных на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

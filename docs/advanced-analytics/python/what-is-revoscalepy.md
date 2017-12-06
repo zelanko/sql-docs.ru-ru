@@ -2,7 +2,7 @@
 title: "Знакомство с revoscalepy | Документы Microsoft"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -11,11 +11,11 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 65a9924c70cdcdc86ce855b62caa23d19b72dc6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ad525f173ad6082f587324b41af768816077e371
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="introducing-revoscalepy"></a>Знакомство с приложением revoscalepy
 
@@ -89,7 +89,7 @@ SQL Server и Python используют разные типы данных в 
 |`rx_predict` | Создание прогнозов из обученной модели|`rx_predict_ex`в CTP 2.0.|
 |`rx_summary` | Сформировать сводку о модели||
 
-Версия Python также предоставляются новые алгоритмы машинного обучения [MicrosoftML](https://docs.microsoft.com/en-us/r-server/python-reference/microsoftml/microsoftml-package):
+Версия Python также предоставляются новые алгоритмы машинного обучения [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
 | Функция| Description|
 | ------ | ------ |

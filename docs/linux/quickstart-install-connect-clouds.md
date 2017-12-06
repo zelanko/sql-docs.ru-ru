@@ -6,14 +6,16 @@ ms.author: annashres
 manager: jhubbard
 ms.date: 10/25/2017
 ms.topic: article
-ms.prod: sql-linux
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.component: sql-linux
 ms.technology: database-engine
 ms.assetid: 
-ms.openlocfilehash: 0bc304b50930f8c8de5d244ea0b606add5f24d2f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 5a7ea24d7563a7256c93dbfaa052bfb4041f9aa0
+ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="run-the-sql-server-2017-in-the-cloud"></a>Запустите 2017 г. SQL Server в облаке
 
@@ -25,7 +27,7 @@ ms.lasthandoff: 11/09/2017
     > If you choose to run a paid edition of SQL Server then you need to bring your own license (BYOL)
 
 ## <a name="amazon-web-services"></a>Веб-службы Amazon
-1.  Создайте Linux AMI с по крайней мере 3,25 ГБ памяти в Marketplace 
+1.  Создайте по крайней мере 2 ГБ памяти в Marketplace Linux AMI 
     * [RHEL 7.3 +](https://aws.amazon.com/marketplace/pp/B00KWBZVK6)
     * [SLES версии 12 с пакетом обновления 2](https://aws.amazon.com/marketplace/pp/B00PMM99PI)
     * [Ubuntu 16.04](https://aws.amazon.com/marketplace/pp/B01JBL2M0O)
@@ -43,7 +45,7 @@ ms.lasthandoff: 11/09/2017
     
 ## <a name="digital-ocean"></a>Цифровая подпись Аквамарин
 1. Имя входа для [панели управления](https://cloud.digitalocean.com/login) и нажмите кнопку Создание дроплета
-1. Выберите по меньшей мере 3,25 ГБ памяти Ubuntu 16.04 дроплета
+1. Выберите по крайней мере 2 ГБ памяти Ubuntu 16.04 дроплета
 1. Соединиться с дроплет ssh
 1. Выполните [Ubuntu краткое руководство](quickstart-install-connect-ubuntu.md)
 1. Настройка для удаленных соединений.
@@ -51,7 +53,7 @@ ms.lasthandoff: 11/09/2017
     * Добавьте правило входящего трафика, разрешающее трафик через порт, который SQL Server прослушивает (по умолчанию порт TCP 1433)
     
 ## <a name="google-cloud-platform"></a>Google облачной платформы
-1.  Создание образа Linux с по крайней мере 3,25 ГБ памяти, из облака запуска 
+1.  Создание образа Linux с по крайней мере 2 ГБ памяти, из облака запуска 
     * [RHEL 7.3 +](https://console.cloud.google.com/launcher/details/rhel-cloud/rhel-7)
     * [SLES версии 12 с пакетом обновления 2](https://console.cloud.google.com/launcher/details/suse-cloud/sles-12)
     * [Ubuntu 16.04](https://console.cloud.google.com/launcher/details/ubuntu-os-cloud/ubuntu-xenial)

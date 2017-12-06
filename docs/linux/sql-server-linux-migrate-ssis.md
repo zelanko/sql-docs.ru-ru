@@ -10,16 +10,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 71e082bf6c2f7c5bad518f7c521767172e6265bd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b09251cae6b89dd742d685f9405155a7b674a3d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS
 
@@ -83,7 +83,7 @@ Microsoft SQL Server Integration Services (SSIS) — это платформа �
 
 Чтобы приступить к работе со службами SSIS, загрузите последнюю версию [SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 - [Дополнительные сведения о SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) разработки и средства управления](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services, учебники](../integration-services/integration-services-tutorials.md)

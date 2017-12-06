@@ -2,7 +2,7 @@
 title: "Безопасность SQL Server машинного обучения и R | Документы Microsoft"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f694cca3286b5f1a9f738a08919f4fe8214fa770
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 23c84c803d0d0c871d01d2f9e3a28f5d72fa2b0e
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="security-for-sql-server-machine-learning-and-r"></a>Безопасность SQL Server машинного обучения и R
 
@@ -93,6 +93,6 @@ ms.lasthandoff: 11/09/2017
  
 Если вы являетесь администратором компьютера, вы можете просмотреть каталоги, созданные для каждого процесса. Каждый каталог определяется собственным идентификатором GUID сеанса.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Обзор архитектуры для SQL Server машинного обучения](../../advanced-analytics/r/architecture-overview-sql-server-r.md)

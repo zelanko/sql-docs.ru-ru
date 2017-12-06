@@ -9,16 +9,16 @@ ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
-ms.component: linux
+ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: a1b63756bbf257709b1888caf2af7bad2ddf5e74
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35a8e5ef7b08530b54d751636c122c6455971faf
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Восстановление базы данных SQL Server в контейнер Linux Docker
 
@@ -36,12 +36,9 @@ ms.lasthandoff: 11/20/2017
 ## <a name="prerequisites"></a>Предварительные требования
 
 * Подсистема docker 1.8 + для какого-либо поддерживается дистрибутив Linux или Docker для Mac и Windows. Дополнительные сведения см. в разделе [установить Docker](https://docs.docker.com/engine/installation/).
-* Менее 4 ГБ места на диске
-* Не менее 4 ГБ ОЗУ
+* Минимум 2 ГБ места на диске
+* Минимум 2 ГБ ОЗУ
 * [Требования к системе для SQL Server в Linux](sql-server-linux-setup.md#system).
-
-> [!IMPORTANT]
-> По умолчанию в Docker для Mac и Docker для Windows является 2 ГБ для виртуальной Машины Moby, поэтому следует изменить его до 4 ГБ. Если на компьютере Mac или Windows увеличить параметры памяти, с помощью [инструкциям Краткого руководства Docker](quickstart-install-connect-docker.md).
 
 ## <a name="pull-and-run-the-container-image"></a>По запросу, а затем запускать образ контейнера
 

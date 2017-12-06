@@ -2,7 +2,7 @@
 title: "Конфигурации SQL Server для служб R | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -14,11 +14,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 486c0d2772660d4a549e3ebdf29e2cd54ace3d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 6bb91c23d7890fdd92cbe949e468cbad5d1dc143
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Конфигурация SQL Server для использования с помощью R
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/09/2017
 
 Скорость диска, на котором хранится файл подкачки, также влияет на производительность. Вы можете улучшить ее, если сохраните файл подкачки на диске SSD или если будете использовать файлы подкачки на нескольких дисках SSD.
 
-Сведения об изменении размера файла подкачки см. в разделе [способ определения соответствующего файла подкачки для 64-разрядных версий Windows](https://support.microsoft.com/en-us/kb/2860880).
+Сведения об изменении размера файла подкачки см. в разделе [способ определения соответствующего файла подкачки для 64-разрядных версий Windows](https://support.microsoft.com/kb/2860880).
 
 ## <a name="optimizations-at-instance-or-database-level"></a>Оптимизация на уровне экземпляра или базы данных
 
@@ -167,7 +167,7 @@ FROM sys.dm_os_memory_clerks
 
 **Другие ресурсы:**
 
-+ [Программная архитектура NUMA в SQL Server](https://docs.microsoft.com/en-us/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [Программная архитектура NUMA в SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
     
     Как соответствия программной архитектуры NUMA нескольким процессорам
 

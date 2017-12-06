@@ -2,7 +2,7 @@
 title: "Шаг 6: Ввода в эксплуатацию модели Python, с помощью SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: python-services
@@ -17,11 +17,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 7dcda2d17413e6c660510498c4b3ea770bb0b09d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: da38ad56ff82d836fa34e42d3505d3a588344cfa
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="step-6-operationalize-the-python-model-using-sql-server"></a>Шаг 6: Ввода в эксплуатацию модели Python, с помощью SQL Server
 
@@ -371,6 +371,6 @@ GO
 
 [Шаг 5: Обучение и сохранить модель Python](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Машинного обучения служб с Python](../python/sql-server-python-services.md)

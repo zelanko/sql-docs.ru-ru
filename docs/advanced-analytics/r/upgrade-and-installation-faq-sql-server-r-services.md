@@ -1,7 +1,7 @@
 ---
 title: "Часто задаваемые вопросы по SQL Server машинного обучения обновлению и установке | Документы Microsoft"
 ms.date: 10/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
 ms.technology: r-services
@@ -13,11 +13,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 3c4fb79f04daeff6d98856b521fa1602a2334cdd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: f0c6aac38001506b51ff7d14307f23b461334eb7
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning"></a>Часто задаваемые вопросы по SQL Server машинного обучения обновлению и установке
 
@@ -183,7 +183,7 @@ ms.lasthandoff: 11/09/2017
 
 Как правило мы рекомендуем выполнять установку служб R (в базе данных) и R Server (изолированного) на том же компьютере. Тем не менее при условии, что сервер имеет емкость, достаточную, может оказаться изолированный сервер R может быть полезен в качестве средства разработки. Другим возможным вариантом является необходимость использовать возможности R Server ввода в эксплуатацию, но также требуется для доступа к данным SQL Server без перемещения данных.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
  [Приступая к работе с SQL Server R Services](../r/getting-started-with-sql-server-r-services.md)
 

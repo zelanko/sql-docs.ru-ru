@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b171317170d9144edb71dfb29b36940ce6d7ee31
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
+ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -282,12 +282,12 @@ GO
 |FT_RESTART_CRAWL |Имеет место в случае, когда требуется перезапуск полнотекстового сканирования с последней надежной точки для восстановления после временного сбоя. Ожидание позволяет рабочим задачам, работающим в данный момент над этим заполнением, завершиться или завершить текущий этап.| 
 |FULLTEXT GATHERER |Имеет место в процессе синхронизации полнотекстовых операций.| 
 |GDMA_GET_RESOURCE_OWNER |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|GHOSTCLEANUP_UPDATE_STATS |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GHOSTCLEANUPSYNCMGR |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|GLOBAL_QUERY_CANCEL |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|GLOBAL_QUERY_CANCEL |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GLOBAL_QUERY_CLOSE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|GLOBAL_QUERY_CONSUMER |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
-|GLOBAL_QUERY_PRODUCER |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|GLOBAL_QUERY_CONSUMER |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|GLOBAL_QUERY_PRODUCER |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GLOBAL_TRAN_CREATE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GLOBAL_TRAN_UCS_SESSION |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |GUARDIAN |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| 
@@ -346,9 +346,9 @@ GO
 |HADR_TDS_LISTENER_SYNC |Внутренняя система Always On или в кластере будет запрашивать запуска или остановки прослушиватели. Обработка этого запроса всегда выполняется асинхронно, и существует механизм для удаления избыточных запросов. Существуют также моменты, когда этот процесс приостанавливается из-за изменений в конфигурации. Все ожидания, связанные с этим механизмом синхронизации прослушивателей, используют этот тип ожидания. Только для внутреннего использования., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |Используется в конце всегда в инструкции Transact-SQL, требует запуска или остановки anavailability прослушиватель группы. Поскольку операция запуска или остановки выполняется асинхронно, пользовательский поток будет блокировать, с помощью этот тип ожидания, пока не известен ситуации с прослушивателем., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
-|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
-|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|HADR_THROTTLE_LOG_RATE_LOG_SIZE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_SEEDING |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TIMER_TASK |Ожидание получения блокировки на объект задачи таймера. Используется также для реализации фактического ожидания между моментами времени, когда выполняется работа. Например, для задачи, которая выполняется каждые 10 секунд после одного выполнения групп доступности AlwaysOn ожидает около 10 секунд задачу в расписание, и это ожидание задается здесь., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TRANSPORT_DBRLIST |Ожидание доступа к списку реплик базы данных транспортного уровня. Используется для Спин-блокировка, которая предоставляет доступ к нему., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TRANSPORT_FLOW_CONTROL |Ожидание, пока число необработанных неподтвержденные сообщений AlwaysOn, находится на внешней пороговое значение управления потоком. Это на основе реплики к реплике доступности (не на основе базы данных для базы данных)., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -471,9 +471,9 @@ GO
 |MD_AGENT_YIELD |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |MD_LAZYCACHE_RWLOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |MEMORY_ALLOCATION_EXT |Происходит при выделении памяти из внутреннего пула памяти SQL Server или операционной системы., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|MEMORY_GRANT_UPDATE |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|MEMORY_GRANT_UPDATE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |METADATA_LAZYCACHE_RWLOCK |TBD <br /> **Применяется к**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] только. |  
-|MIGRATIONBUFFER |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|MIGRATIONBUFFER |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |ДОПОЛНИТЕЛЬНО |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| 
 |ДОПОЛНИТЕЛЬНО |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| 
 |MSQL_DQ |Имеет место, когда задача ожидает завершения операции распределенного запроса. Это используется для выявления потенциальных взаимоблокировок приложений MARS. Ожидание окончится по завершении вызова распределенного запроса.| 
@@ -733,12 +733,12 @@ GO
 |PWAIT_MD_RELATION_CACHE |Имеет место в процессе внутренней синхронизации в метаданных для таблицы или индекса., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_MD_SERVER_CACHE |Имеет место в процессе внутренней синхронизации в метаданных на связанных серверах., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_MD_UPGRADE_CONFIG |Имеет место в процессе внутренней синхронизации при обновлении конфигурации уровня сервера., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|PWAIT_PREEMPTIVE_APP_USAGE_TIMER |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_PREEMPTIVE_AUDIT_ACCESS_WINDOWSLOG |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_QRY_BPMEMORY |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_REPLICA_ONLINE_INIT_MUTEX |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_RESOURCE_SEMAPHORE_FT_PARALLEL_QUERY_SYNC |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|PWAIT_SBS_FILE_OPERATION |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|PWAIT_SBS_FILE_OPERATION |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_XTP_FSSTORAGE_MAINTENANCE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |PWAIT_XTP_HOST_STORAGE_WAIT |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_ASYNC_CHECK_CONSISTENCY_TASK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -752,7 +752,7 @@ GO
 |QDS_DB_DISK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_DYN_VECTOR |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_EXCLUSIVE_ACCESS |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|QDS_HOST_INIT |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|QDS_HOST_INIT |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_LOADDB |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_PERSIST_TASK_MAIN_LOOP_SLEEP |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QDS_QDS_CAPTURE_INIT |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -777,12 +777,12 @@ GO
 |QUERY_OPTIMIZER_PRINT_MUTEX |Имеет место в процессе синхронизации диагностического выхода оптимизатора запросов. Этот тип ожидания происходит только в том случае, если были включены настройки диагностики под руководством службы технической поддержки Майкрософт.| 
 |QUERY_TASK_ENQUEUE_MUTEX |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |QUERY_TRACEOUT |Указано только в ознакомительных целях. Не поддерживается. Совместимость с будущими версиями не гарантируется.| 
-|RBIO_WAIT_VLF |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|RBIO_WAIT_VLF |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |RECOVER_CHANGEDB |Имеет место в процессе синхронизации состояния базы данных в режиме «горячего» резервирования.| 
 |RECOVERY_MGR_LOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_PENDING_WORK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REDO_THREAD_SYNC |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|REMOTE_BLOCK_IO |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|REMOTE_BLOCK_IO |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REMOTE_DATA_ARCHIVE_MIGRATION_DMV |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_DMV |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |REMOTE_DATA_ARCHIVE_SCHEMA_TASK_QUEUE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -812,12 +812,12 @@ GO
 |SATELLITE_CARGO |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SATELLITE_SERVICE_SETUP |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SATELLITE_TASK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|SBS_DISPATCH |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
-|SBS_RECEIVE_TRANSPORT |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
-|SBS_TRANSPORT |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|SBS_DISPATCH |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|SBS_RECEIVE_TRANSPORT |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|SBS_TRANSPORT |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SCAN_CHAR_HASH_ARRAY_INITIALIZATION |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SEC_DROP_TEMP_KEY |Имеет место после неудачной попытки удаления временного ключа безопасности перед повторной попыткой.| 
-|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|SECURITY_CNG_PROVIDER_MUTEX |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SECURITY_CRYPTO_CONTEXT_MUTEX |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SECURITY_DBE_STATE_MUTEX |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SECURITY_KEYRING_RWLOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -852,7 +852,7 @@ GO
 |SNI_HTTP_WAITFOR_0_DISCON |Происходит при завершении работы SQL Server, во время ожидания завершения имеющихся HTTP соединений.| 
 |SNI_LISTENER_ACCESS |Имеет место при ожидании обновления изменения состояния узлов доступа к неоднородной памяти (NUMA). Доступ к изменению состояния сериализован.| 
 |SNI_TASK_COMPLETION |Имеет место при ожидании завершения всех задач во время изменения состояния узла NUMA.| 
-|SNI_WRITE_ASYNC |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|SNI_WRITE_ASYNC |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |SOAP_READ |Имеет место при ожидании завершения операции чтения HTTP-данных из сети.| 
 |SOAP_WRITE |Имеет место при ожидании завершения операции записи HTTP-данных по сети.| 
 |SOCKETDUPLICATEQUEUE_CLEANUP |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -903,7 +903,7 @@ GO
 |TDS_INIT |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |TDS_PROXY_CONTAINER |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |TEMPOBJ |Имеет место при синхронизации удалений временных объектов. Этот тип ожидания является редким и имеет место только в случае, если задача запросила монопольный доступ на удаление таблиц temp.| 
-|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|TEMPORAL_BACKGROUND_PROCEED_CLEANUP |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |TERMINATE_LISTENER |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |THREADPOOL |Имеет место, когда задача ожидает запуска исполнителем. Это ожидание может указывать на недостаточное число исполнителей или на то, что выполнение пакетов занимает слишком много времени, поэтому число доступных исполнителей уменьшилось из-за необходимости обработки других пакетов.| 
 |TIMEPRIV_TIMEPERIOD |Имеет место при выполнении внутренней синхронизации таймера расширенных событий.| 
@@ -933,13 +933,13 @@ GO
 |WAIT_FOR_RESULTS |Имеет место при ожидании срабатывания триггера уведомления запроса.| 
 |WAIT_SCRIPTDEPLOYMENT_REQUEST |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_SCRIPTDEPLOYMENT_WORKER |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XLOGREAD_SIGNAL |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|WAIT_XLOGREAD_SIGNAL |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_ASYNC_TX_COMPLETION |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_AGENT_WAKEUP |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_CLOSE |Имеет место при ожидании завершения контрольной точки., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_ENABLED |Происходит, когда назначение контрольных точек отключена и система ожидает назначения контрольных точек должно быть включено., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_CKPT_STATE_LOCK |Происходит при синхронизации проверки состояния контрольной точки., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XTP_COMPILE_WAIT |TBD <br /> **ПРИМЕНЯЕТСЯ к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|WAIT_XTP_COMPILE_WAIT |TBD <br /> **Область применения**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_GUEST |Происходит, когда необходимо прекратить получение уведомлений о нехватке памяти выделения памяти базы данных., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_HOST_WAIT |Происходит, когда ожидание активации компонентом database engine и реализуемых основным приложением., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_OFFLINE_CKPT_BEFORE_REDO |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -947,7 +947,7 @@ GO
 |WAIT_XTP_OFFLINE_CKPT_NEW_LOG |Происходит, когда автономная контрольная точка ожидает новых записей журнала для проверки., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_PROCEDURE_ENTRY |Происходит, когда процедура удаления ожидает завершения всех текущих выполнений этой процедуры для выполнения., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_RECOVERY |Возникает при ожидании восстановления оптимизированных для памяти объектов, чтобы завершить восстановление базы данных., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|WAIT_XTP_SERIAL_RECOVERY |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_SWITCH_TO_INACTIVE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_TASK_SHUTDOWN |Имеет место при ожидании завершения потока OLTP в памяти., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |WAIT_XTP_TRAN_DEPENDENCY |Имеет место при ожидании зависимостей транзакции., <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -996,10 +996,10 @@ GO
 |XE_TIMER_TASK_DONE |TBD| 
 |XIO_CREDENTIAL_MGR_RWLOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XIO_CREDENTIAL_RWLOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|XIO_EDS_MGR_RWLOCK |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
-|XIO_EDS_RWLOCK |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
-|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
-|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **Применяется к**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до текущей.| 
+|XIO_EDS_MGR_RWLOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|XIO_EDS_RWLOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|XIO_IOSTATS_BLOBLIST_RWLOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|XIO_IOSTATS_FCBLIST_RWLOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XIO_LEASE_RENEW_MGR_RWLOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XTP_HOST_DB_COLLECTION |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |XTP_HOST_LOG_ACTIVITY |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -1020,7 +1020,7 @@ GO
   
  Матрицу совместимости блокировок см [sys.dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
     
  [Относящиеся к операционной системе SQL Server динамические административные представления &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
