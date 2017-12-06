@@ -1,10 +1,13 @@
 ---
 title: "Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services) | Документы Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 09/15/2015
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 8a5618026c0a8e3714eb33725195f5d891c3e467
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: dffc0db9598a8f31690cebfe6a7ecb8c6b52cfbc
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services)
   В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]настройки сведений об устройстве используются для передачи параметров подготовки к просмотру модуля подготовки отчетов. Каждый модуль подготовки отчетов принимает определенный набор параметров.  

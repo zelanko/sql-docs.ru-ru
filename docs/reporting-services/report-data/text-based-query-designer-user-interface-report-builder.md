@@ -2,9 +2,12 @@
 title: "Пользовательский интерфейс текстового конструктора запросов (построитель отчетов) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-data
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -18,11 +21,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e9baa6389cd217cbd32950b1c2855878db82e214
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fdb2de3aefff54bd7350a6b1831ccea8f7a71721
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс текстового конструктора запросов (построитель отчетов)
   Текстовый конструктор запросов предназначен для ввода запроса на языке запросов, поддерживаемом источником данных, его выполнения и просмотра результатов во время разработки. Можно указать несколько инструкций, запросов или команд языка [!INCLUDE[tsql](../../includes/tsql-md.md)] для создания собственных модулей обработки данных, а также указать запросы, заданные как выражения. Поскольку текстовый конструктор запросов не выполняет предварительную обработку запроса и позволяет использовать любой синтаксис запросов, он представляет собой стандартное средство конструктора запросов для источников данных многих типов.  

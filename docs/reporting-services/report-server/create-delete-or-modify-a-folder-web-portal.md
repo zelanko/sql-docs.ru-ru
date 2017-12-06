@@ -2,9 +2,12 @@
 title: "Создание, удаление и изменение папки (веб-портал) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: report-server
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +17,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 278a3b929f798352c0431aa34f142c9b4a8b3042
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b63e0216cec22889d3856fd891fbdc2947a7eb9c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Создание, удаление и изменение папки (веб-портала)
   Для упорядочения элементов и управления элементами, публикуемыми на сервере отчетов, можно создать папки. Создание папок поможет пользователям находить интересующие их отчеты. Для диспетчеров содержимого папки обеспечивают инфраструктуру для применения разрешений. Можно создать назначения ролей для определенных папок, чтобы ограничить доступ к отчетам, которые находятся на стадии разработки или не подлежат широкому распространению.  

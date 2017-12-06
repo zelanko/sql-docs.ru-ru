@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b8479ec695d01cfc6963fd6b57c55a8605e25d16
-ms.sourcegitcommit: 19e1c4067142d33e8485cb903a7a9beb7d894015
+ms.openlocfilehash: 224731f2d3c4bfa4b1bfd9884a3daf374d813bb5
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="json-data-sql-server"></a>Данные JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -279,7 +279,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
 -   Если файлы JSON с разбивкой на строки хранятся в хранилище BLOB-объектов Azure или в файловой системе Hadoop, вы можете загрузить текст JSON с помощью Polybase, проанализировать его в коде Transact-SQL и загрузить в таблицы.  
   
 ## <a name="test-drive-built-in-json-support"></a>Проверка встроенной поддержки JSON  
- **Проверка встроенной поддержки JSON с образцом базы данных AdventureWorks.** Чтобы получить образец базы данных AdventureWorks, скачайте по крайней мере файл базы данных и примеры сценариев [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=49502). После восстановления образца базы данных в экземпляре SQL Server 2016 распакуйте файлы образца и откройте файл JSON Sample Queries procedures views and indexes.sql в папке JSON. Выполните сценарии в этом файле, чтобы переформатировать некоторые данные как данные JSON, запустите образцы запросов и отчеты по данным JSON, индексируйте данные JSON, а затем импортируйте и экспортируйте JSON.  
+ **Проверка встроенной поддержки JSON с образцом базы данных AdventureWorks.** Чтобы получить образец базы данных AdventureWorks, скачайте по крайней мере файл базы данных и примеры сценариев [здесь](https://www.microsoft.com/download/details.aspx?id=49502). После восстановления образца базы данных в экземпляре SQL Server 2016 распакуйте файлы образца и откройте файл JSON Sample Queries procedures views and indexes.sql в папке JSON. Выполните сценарии в этом файле, чтобы переформатировать некоторые данные как данные JSON, запустите образцы запросов и отчеты по данным JSON, индексируйте данные JSON, а затем импортируйте и экспортируйте JSON.  
   
  Вот, что делать с помощью скриптов, включенных в файл.  
   

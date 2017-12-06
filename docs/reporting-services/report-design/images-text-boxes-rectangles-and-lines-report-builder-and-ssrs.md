@@ -2,9 +2,12 @@
 title: "Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7f03108d7806d126efca5db70465565ba1ae6d01
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ea493c80dba54d0c9b497c7c41423d24764a9533
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)
   Помимо областей данных, таких как таблицы, матрицы и диаграммы, в отчетах [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы используются другие элементы (например, изображения, текстовые поля и прямоугольники), добавляющие визуальные эффекты, выделяющие ключевые сведения и предоставляющие связанные данные. Форматирование элемента отчета можно изменить. Например, можно добавить границу или заполнение, изменить первоначальную видимость или направление, а также указать точный размер и местоположение элемента отчета.  

@@ -2,9 +2,12 @@
 title: "Настройка URL-адреса (диспетчер конфигураций служб SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/26/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Active
-ms.openlocfilehash: 1c356b28e675e824b1a6b6a4b434f27c4fe81de8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: bfb7f618f6927c79392d13953dfd4daf5aa84290
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Настройка URL-адреса (диспетчер конфигурации служб SSRS)
   Приступать к использованию [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] или веб-службы сервера отчетов можно лишь после настройки как минимум одного URL-адреса для каждого приложения. Настройка URL-адресов является обязательной в случае установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в режиме "только файлы" (иначе говоря, если на странице "Параметры установки" сервера отчетов в мастере установки выбран параметр **Установить, но не настраивать сервер** ). При установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в конфигурации по умолчанию URL-адреса настраиваются автоматически для каждого приложения.  

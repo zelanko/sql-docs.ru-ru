@@ -2,9 +2,12 @@
 title: "Развертывание пользовательской сборки | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: custom-assemblies
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - docset-sql-devref
 - reporting-services-native
@@ -22,11 +25,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 96df35b9463c6138a817a24686422eadfba40864
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 9a1cd6857c0ded8b2acecc502e7632224f1ad73e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deploying-a-custom-assembly"></a>Развертывание пользовательской сборки
   Чтобы развернуть пользовательскую сборку в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], поместите сборку в папки приложения и конструктора отчетов, и сервера отчетов. По умолчанию пользовательским сборкам в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляется разрешение **Выполнение**. Чтобы предоставить пользовательским сборкам права доступа, кроме разрешения на выполнение, необходимо изменить файл конфигурации rssrvpolicy.config для сервера отчетов и файл конфигурации rspreviewpolicy.config для окна предварительного просмотра конструктора отчетов. Также можно установить пользовательскую сборку в глобальный кэш сборок.  

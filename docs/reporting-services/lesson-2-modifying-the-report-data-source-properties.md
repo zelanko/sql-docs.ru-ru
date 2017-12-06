@@ -2,9 +2,12 @@
 title: "Занятие 2. Изменение свойств источника данных отчета | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 9a2e755b3aa71ba3792b5be5aa72367a0e218215
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: ba7880d9cc6f316b7ce06b73dda896becd892797
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 На этом занятии учебника по службам [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с помощью веб-портала будет выбран отчет, который необходимо доставить получателям. Управляемая данными подписка, которую вы создадите, будет распространять отчет **Заказ на продажу** , созданный при работе с учебником [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  В последующих шагах будут изменены сведения о соединении с источником данных, используемые в отчете для получения данных. Только отчеты, использующие **сохраненные учетные данные** для доступа к источнику данных для отчета, могут распространяться с помощью управляемой данными подписки. Сохраненные учетные данные нужны для автоматической обработки отчета.  

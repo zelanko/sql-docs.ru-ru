@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a3264d10535196e245ca9f5e0e59366667cf3fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5ea8b666dead9d4a23255fe9eecda64258a9f8a
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Форматирование результатов запроса как JSON с помощью предложения FOR JSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ FOR JSON AUTO
     -   Небольшой результирующий набор может содержать одну строку.
     -   Большой результирующий набор разбивает длинную строку JSON по нескольким строкам.
         -   По умолчанию SQL Server Management Studio (SSMS) сцепляет результаты в одну строку, если выходной параметр **В виде сетки**. В строке состояния SSMS отображается действительное число строк.
-        -   В других клиентских приложениях может потребоваться внести код, который будет перераспределять большой объем результатов в одну общую допустимую строку JSON, объединяя содержимое множества записей. Пример этого кода в приложении C# см. в разделе [Использование выходных данных FOR JSON в клиентском приложении C#](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app).
+        -   В других клиентских приложениях может потребоваться внести код, который будет перераспределять большой объем результатов в одну общую допустимую строку JSON, объединяя содержимое множества записей. Пример этого кода в приложении C# см. в разделе [Использование выходных данных FOR JSON в клиентском приложении C#](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md#use-for-json-output-in-a-c-client-app).
   
      ![Пример выходных данных FOR JSON](../../relational-databases/json/media/forjson-example2.png)  
   

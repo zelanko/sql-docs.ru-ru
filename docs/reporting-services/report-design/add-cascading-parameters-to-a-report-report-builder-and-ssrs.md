@@ -2,9 +2,12 @@
 title: "Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: a0d28c5a5210eef5f2f6eea857f9361bbe434ad6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 361c21a666dfceb91604309c9fc5ded425b21a05
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Добавление каскадных параметров в отчет (построитель отчетов и службы SSRS)
   Каскадирование параметров предоставляет способ управления большими объемами данных отчета. Можно определить набор связанных параметров таким образом, чтобы список значений для одного параметра зависел от значения, выбранного в другом параметре. Например, первый параметр является независимым и может представлять список категорий продуктов. При выборе пользователем категории второй параметр зависит от значения первого параметра. Эти значения обновляются списком подкатегорий выбранной категории. При просмотре пользователем отчета значения параметров категорий и подкатегорий используются для фильтрации данных отчета.  

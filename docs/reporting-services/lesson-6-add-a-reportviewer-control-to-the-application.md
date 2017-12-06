@@ -2,9 +2,12 @@
 title: "Занятие 6. Добавление в приложение элемента управления ReportViewer | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/18/2016
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
+ms.service: 
+ms.component: reporting-services
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology: reporting-services-native
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +18,11 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 64116570a9d0ecf381ee184ccf3a2bf05f202bef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0afe8c7db4005463c06840fad95db2e57ea6b71f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-6-add-a-reportviewer-control-to-the-application"></a>Урок 6. Добавление в приложение элемента управления ReportViewer
 После завершения проектирования дочернего отчета с помощью мастера отчетов далее необходимо добавить в приложение веб-сайта элемент управления ReportViewer. Если вы используете веб-сайт отчетов ASP.NET, элемент управления ReportViewer будет добавлен на страницу default.aspx.   

@@ -2,9 +2,12 @@
 title: "Отрисовка данных (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: reporting-services
+ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.service: 
+ms.component: report-design
 ms.reviewer: 
-ms.suite: 
+ms.suite: pro-bi
 ms.technology:
 - reporting-services-sharepoint
 - reporting-services-native
@@ -16,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f3f2e9c9028e434482e8eadeb8f8e06ccce82987
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 83ad2d8d8bba96569a31860baf2270433b896a3a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>Подготовка данных к просмотру (построитель отчетов и службы SSRS)
   При использовании шаблонных модулей подготовки отчета, таких как HTML, MHTML, Word, Excel, PDF или изображения, данные и их организация не меняются. При экспорте в формате модуля подготовки отчетов, например в формате значений, разделенных запятыми (CSV) или в формате XML, визуальные элементы макета не отображаются. Модули подготовки в форматах CSV и XML при подготовке отчета обрабатывают его текст по определенным правилам. Правила определяют, как отображаются данные в этих форматах.  
