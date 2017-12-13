@@ -2,12 +2,12 @@
 title: "Добавление модели интеллектуального анализа данных к существующей структуре интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 07a1f5deb7fc82fbe6021691417addf00414b3a0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 79d2c8b506cd42bd04ae4fb95f28fa2b3a07f613
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных
-  После определения первой модели к структуре интеллектуального анализа данных можно добавить еще несколько моделей интеллектуального анализа данных. В каждой модели должны содержаться столбцы, существующие в структуре, но использование столбцов можно определять отдельно для каждой модели интеллектуального анализа данных. Дополнительные сведения об определении столбцов моделей интеллектуального анализа данных см. в разделе [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После первой модели, можно добавить несколько моделей интеллектуального анализа данных к структуре интеллектуального анализа данных. В каждой модели должны содержаться столбцы, существующие в структуре, но использование столбцов можно определять отдельно для каждой модели интеллектуального анализа данных. Дополнительные сведения об определении столбцов моделей интеллектуального анализа данных см. в разделе [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md).  
   
 ### <a name="to-add-a-mining-model-to-the-structure"></a>Добавление модели интеллектуального анализа данных к структуре  
   

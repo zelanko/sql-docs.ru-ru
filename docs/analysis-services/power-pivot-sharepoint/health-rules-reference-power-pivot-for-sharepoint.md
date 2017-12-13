@@ -2,12 +2,12 @@
 title: "Справочник (Power Pivot для SharePoint) правил работоспособности | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da1a6f30d5a94efd5aaf9a5fecc5bd4435a49bfd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e1e98142c2234fc680daa8311cf35cbd8057bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="health-rules-reference-power-pivot-for-sharepoint"></a>Справочник по правилам для определения работоспособности (Power Pivot для SharePoint)
-  Этот справочный раздел описывает правила определения работоспособности SharePoint, которые добавляются приложением [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint. Эти правила служат для сообщения о проблемах с работоспособностью сервера, доступностью или конфигурацией приложения службы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] или связанного с ним экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Этот справочный раздел описывает правила определения работоспособности SharePoint, которые были добавлены с [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для установки SharePoint. Эти правила служат для сообщения о проблемах с работоспособностью сервера, доступностью или конфигурацией приложения службы [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] или связанного с ним экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
  В следующей таблице правила перечислены в порядке, соответствующем порядку правил на странице «Определения правил анализатора исправности» в центре администрирования SharePoint. Настраиваемыми называются правила, для которых можно изменять пороговые значения, вызывающие срабатывание правила. Дополнительные сведения см. в разделе [Настройка правил определения работоспособности PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md). В столбце «Автоматическое восстановление» показано, существует ли встроенное решение проблемы, доступное со страницы «Отчеты о проблемах».  
   

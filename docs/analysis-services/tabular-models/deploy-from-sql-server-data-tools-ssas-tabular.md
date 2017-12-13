@@ -2,12 +2,12 @@
 title: "Развертывание из SQL Server Data Tools (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c8fb6f353bfe4cb3d116da7fa9cab5edaad3d4f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1c74177752bf4a880f6857b987abfdc050a2f252
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Развертывание из SQL Server Data Tools
-  Используйте задачи в этом разделе для развертывания решения табличной модели с помощью команды «развертывание» в SSDT.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Используйте задачи в этом разделе для развертывания решения табличной модели с помощью команды «развертывание» в SSDT.  
   
 ##  <a name="bkmk_deploy"></a> Настройка параметров свойств «Параметры развертывания» и «Сервер развертывания»  
  Перед развертыванием решения табличной модели прежде всего необходимо указать параметры развертывания и свойства сервера развертывания. Дополнительные сведения о свойствах развертывания и параметрах см. в разделе [развертывание решений табличной модели](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  

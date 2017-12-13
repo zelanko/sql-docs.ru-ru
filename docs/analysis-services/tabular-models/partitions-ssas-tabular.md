@@ -2,12 +2,12 @@
 title: "Секции (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ceaff43e4f0f5d2b1901c98b026d37af9ba89383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d0f9c22476a7005ed5eee055c6c95f078e743f90
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="partitions"></a>Секции
-  Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, созданные с помощью диалогового окна «секции», в SSDT во время создания модели применяются к базе данных рабочей области модели. При развертывании модели секции, определенные для базы данных рабочей области модели, дублируются в развернутом шаблоне базы данных. После этого можно создать и управлять секции для развернутой модели базы данных с помощью диалогового окна «секции», в среде SSMS.  В этом разделе описываются секций, создаваемых во время создания модели с помощью диалогового окна диспетчера секций в SSDT. Сведения о создании и управлении секциями в развернутой модели см. в разделе [Создание и управление секций табличной модели](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, созданные с помощью диалогового окна «секции», в SSDT во время создания модели применяются к базе данных рабочей области модели. При развертывании модели секции, определенные для базы данных рабочей области модели, дублируются в развернутом шаблоне базы данных. После этого можно создать и управлять секции для развернутой модели базы данных с помощью диалогового окна «секции», в среде SSMS.  В этом разделе описываются секций, создаваемых во время создания модели с помощью диалогового окна диспетчера секций в SSDT. Сведения о создании и управлении секциями в развернутой модели см. в разделе [Создание и управление секций табличной модели](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md).  
   
 ##  <a name="bkmk_benefits"></a> Преимущества  
  Секции в табличной модели делят таблицу на объекты логических секций. Затем каждая секция может обрабатываться независимо от других секций. Например, таблица может включать определенные наборы строк, содержащих данные, которые редко изменяются, однако другие наборы строк могут содержать, напротив, часто изменяющиеся данные. В этом случае нет необходимости обрабатывать все данные, если на самом деле нужно обработать только их часть. Секции позволяют разделить данные, обрабатываемые часто, и данные, которые обрабатываются реже.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |[Создание секций и управление ими в базе данных рабочей области](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|Описывает создание и управление секциями в базе данных рабочей области модели с помощью диспетчера секций в SSDT.|  
 |[Обработка секций в базе данных рабочей области](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)|Описывает, как обрабатывать (обновлять) секции в базе данных рабочей области модели.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Режим DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Обработка данных](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   

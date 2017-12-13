@@ -2,12 +2,12 @@
 title: "Олицетворение в табличных моделях служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ad8bc6b19ab93a75a62134b8b8b9ec51cdb5fdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="impersonation"></a>Олицетворение 
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  В этом разделе авторы табличных моделей представление о том, как учетные данные для входа используются службами Analysis Services при подключении к источнику данных для импорта и обработки данных (Обновить).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе авторы табличных моделей представление о том, как учетные данные для входа используются службами Analysis Services при подключении к источнику данных для импорта и обработки данных (Обновить).  
 
 ##  <a name="bkmk_conf_imp_info"></a>Настройка олицетворения  
  Где и в каком контексте модель существует определяет, как настроить сведения об олицетворении. При создании нового проекта модели, олицетворения при подключении к источнику данных для импорта данных настраивается в SQL Server Data Tools (SSDT). После развертывания модели можно настроить олицетворения в свойстве строки соединения модели базы данных с помощью SQL Server Management Studio (SSMS). Для табличных моделей в службах Analysis Services Azure можно использовать SSMS или **просмотреть в виде: сценарий** режим в конструкторе на основе браузера для редактирования файла Model.bim в формате JSON.
@@ -92,7 +89,7 @@ ms.lasthandoff: 11/17/2017
   
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Режим DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Источники данных](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [Развертывание решений табличной модели](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

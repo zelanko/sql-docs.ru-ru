@@ -1,12 +1,12 @@
 ---
 title: "Службы Analysis Services учебники (службы SSAS) | Документы Microsoft"
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 69e97b3571679a523bbd1033ce33fd2491a20ecc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f0a5c233e9789f8f4228f90f85b71c5bfe3b8cbc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Учебники по службам Analysis Services (SSAS)
-Этот раздел содержит учебники для служб SQL Server Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Этот раздел содержит учебники для служб SQL Server Analysis Services.  
   
 [Табличное моделирование (учебник по Adventure Works)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 Этот учебник содержит уроки по созданию табличной модели для служб Analysis Services для вымышленной компании Adventure Works с помощью SQL Server Data Tools (SSDT).  

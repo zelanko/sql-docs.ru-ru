@@ -2,12 +2,12 @@
 title: "Тестирование и проверка (интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -37,14 +37,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 38ef15322528bfae0dbd1b134d80fb7d1a56a734
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e20e18e5f2a41150a74b54575b582fd4e9dc3492
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="testing-and-validation-data-mining"></a>Тестирование и проверка (интеллектуальный анализ данных)
-  Проверка представляет собой процесс оценки соответствия моделей интеллектуального анализа данных фактическим данным. Важно выяснить качество и характеристики моделей интеллектуального анализа данных до их развертывания в рабочей среде.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Проверка — это процесс оценки соответствия моделей интеллектуального анализа данных фактическим данным. Важно выяснить качество и характеристики моделей интеллектуального анализа данных до их развертывания в рабочей среде.  
   
  В данном разделе представлены основные понятия, связанные с качеством модели, а также приведены сведения о стратегиях оценки моделей, предусмотренных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Общие сведения о том, как проверка моделей применяется в процессах интеллектуального анализа данных большего масштаба, см. в разделе [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md).  
   

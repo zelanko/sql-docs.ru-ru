@@ -2,12 +2,12 @@
 title: "Содержимое элемента (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98f996bf7b1b274afed0313ef326596f3e88d5f2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7385e2307a9cafcf761c8ac160e1d46175daaad3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="content-element-assl"></a>Элемент Content (ASSL)
-  Описывает содержимое столбца в [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает содержимое столбца в [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   

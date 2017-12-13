@@ -2,12 +2,12 @@
 title: "Расположение хранилища базы данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6e5e0399f0025b434ff2a972b47ca3a7608fb1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 56b8fe6b370864f52e5f497b93bb3939fa1c6543
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-storage-location"></a>Место хранения базы данных
-  Часто администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо расположить определенную базу данных вне папки данных сервера. Обычно это связано с производственной необходимостью (например, чтобы повысить производительность или расширить хранилище). В такой ситуации свойство **DbStorageLocation** базы данных позволяет администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] указать расположение базы данных на локальном или сетевом диске.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Часто возникают ситуации при [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] администратору базы данных (dba) необходимо определенной базы данных должна находиться вне папки данных сервера. Обычно это связано с производственной необходимостью (например, чтобы повысить производительность или расширить хранилище). В такой ситуации свойство **DbStorageLocation** базы данных позволяет администратору базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] указать расположение базы данных на локальном или сетевом диске.  
   
 ## <a name="dbstoragelocation-database-property"></a>Свойство DbStorageLocation базы данных  
  Свойство **DbStorageLocation** базы данных указывает папку, в которой службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают и хранят все файлы данных и метаданных, входящие в базу данных. Все файлы метаданных хранятся в папке **DbStorageLocation** , за исключением файла метаданных базы данных, который хранится в папке данных сервера. При изменении свойства **DbStorageLocation** базы данных следует руководствоваться следующими двумя важными соображениями.  

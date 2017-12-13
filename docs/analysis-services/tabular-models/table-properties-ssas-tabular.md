@@ -1,12 +1,12 @@
 ---
 title: "Свойства (табличные службы SSAS) таблицы | Документы Microsoft"
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 695089ef33e005c2fec56afb3401b10a7dc81403
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d94c318d63f68b3fe23d903526bad398fff438e5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="table-properties-ssas-tabular"></a>Свойства таблицы (табличные службы SSAS)
-  В этом разделе описаны свойства табличной модели. Описанные здесь свойства отличаются от свойств таблицы в диалоговом окне «Изменение свойств таблицы», которые определяют, какие столбцы из источника нужно импортировать.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе описаны свойства табличной модели. Описанные здесь свойства отличаются от свойств таблицы в диалоговом окне «Изменение свойств таблицы», которые определяют, какие столбцы из источника нужно импортировать.  
   
  Разделы данной темы:  
   

@@ -2,12 +2,12 @@
 title: "Уровень совместимости для табличных моделей в службах Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 385d9a062dfa723e4e73317ffca6984b18f22c47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d194cdfa2771b96f2ae1880f474b8a0107e0b67c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Уровень совместимости для табличных моделей служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   *Уровень совместимости* ссылается на поведения конкретного выпуска в ядро служб Analysis Services. Например DirectQuery и метаданные табличных объектов имеют разные реализации в зависимости от уровня совместимости. В целом, следует выбирать последний уровень совместимости, поддерживаемых вашими серверами.
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  Это свойство указывает наивысший уровень совместимости базы данных, которая будет выполняться на сервере. Поддерживаемый уровень совместимости доступен только для чтения. Его нельзя изменить.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровень совместимости многомерной базы данных](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Новые возможности служб Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Создание нового проекта табличной модели](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  

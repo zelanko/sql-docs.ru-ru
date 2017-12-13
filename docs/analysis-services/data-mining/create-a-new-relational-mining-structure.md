@@ -2,12 +2,12 @@
 title: "Создать новую структуру интеллектуального анализа реляционных данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ea2feced212b0af6a9cf67a2eccc0445b9bee74f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b692e96ec58398536111d08df759bf31ee92b3d1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-new-relational-mining-structure"></a>создать новую реляционную структуру интеллектуального анализа данных
-  Создайте в мастере интеллектуального анализа данных новую структуру интеллектуального анализа данных, используя данные из реляционной базы данных или другого источника, а затем сохраните структуру и связанные с ней модели в базе данных служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Используйте мастер интеллектуального анализа данных для создания новой структуры интеллектуального анализа данных, с использованием данных из реляционной базы данных или другого источника, а затем сохраните структуру и все связанные с ней модели для [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных.  
   
 ## <a name="to-create-a-relational-mining-structure"></a>Создание реляционной структуры интеллектуального анализа данных  
   

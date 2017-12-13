@@ -2,12 +2,12 @@
 title: "Свойства сервера в службах Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4ca49040080552d3492b98510daef87df75781c6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6da7af04e852c5fff10a6d33e1ab69723d79e014
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="server-properties-in-analysis-services"></a>Свойства сервера в службах Analysis Services
-  Администратор служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может изменить по умолчанию свойства конфигурации сервера для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . У всех экземпляров имеются собственные свойства конфигурации, которые можно задать независимо от других экземпляров на том же сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Администратор может изменить свойства конфигурации сервера по умолчанию из [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра. У всех экземпляров имеются собственные свойства конфигурации, которые можно задать независимо от других экземпляров на том же сервере.  
   
  Для настройки сервера используйте среду SQL Server Management Studio или измените файл msmdsrv.ini соответствующего экземпляра.  
  

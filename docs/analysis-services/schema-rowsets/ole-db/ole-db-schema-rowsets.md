@@ -2,12 +2,12 @@
 title: "Наборы строк схемы OLE DB | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 240b1fff05adb7bc528ba8a53f54d59a7b1af854
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10a60e9e3696076a4e3672e7bcb5037f362f161b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="ole-db-schema-rowsets"></a>Наборы строк схемы OLE DB
-  Поддерживаются следующие наборы строк схемы OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика. Используйте **DISCOVER_ENUMERATORS** набора строк с [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод для проверки, поддерживает ли конкретный поставщик источника данных набор строк.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Поддерживаются следующие наборы строк схемы OLE DB [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика. Используйте **DISCOVER_ENUMERATORS** набора строк с [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод для проверки, поддерживает ли конкретный поставщик источника данных набор строк.  
   
  Подробные сведения об этих наборах строк также можно найти путем поиска см. в разделе «Наборы строк схемы» в части Справочник программиста OLE DB в библиотеке MSDN® на [!INCLUDE[msCoName](../../../includes/msconame-md.md)] веб-сайта.  
   

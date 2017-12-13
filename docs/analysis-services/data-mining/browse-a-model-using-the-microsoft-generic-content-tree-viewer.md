@@ -2,12 +2,12 @@
 title: "Просмотр модели с помощью средства просмотра деревьев содержимого Microsoft Generic | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 32b4ed8b3b8c440fc6f8ca276c4f0e27d5fbc5d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dde53f8f124ece496278cb77229f740344e1f06a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-generic-content-tree-viewer"></a>Просмотр модели в средстве просмотра деревьев содержимого общего вида (Майкрософт)
-  Средство просмотра содержимого общего вида модели интеллектуального анализа данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] предоставляет подробные сведения о закономерностях, обнаруженных алгоритмом интеллектуального анализа данных, а также доступ к различной статистической информации, созданной в процессе анализа. Объем и тип этих сведений зависит от использованного алгоритма, но может включать в себя следующие категории:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Универсального просмотра содержимого модели интеллектуального анализа данных предоставляет подробные сведения о закономерностях, обнаруженных алгоритмом интеллектуального анализа данных, а также предоставляет доступ к различной статистики, созданной в процессе анализа. Объем и тип этих сведений зависит от использованного алгоритма, но может включать в себя следующие категории:  
   
 -   сегменты данных и их характеристики;  
   

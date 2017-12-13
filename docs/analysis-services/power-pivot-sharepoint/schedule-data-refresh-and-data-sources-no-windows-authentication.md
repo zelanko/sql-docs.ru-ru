@@ -2,12 +2,12 @@
 title: "Обновление данных расписания и источники данных - без проверки подлинности Windows | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa765a3c088d9559495b20f60f5f062bb5c9184f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c165409874271ef7ab60428976f74212a3b3f431
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Обновление данных расписания и источники данных - без проверки подлинности Windows
-  В этом разделе рассматривается рабочий процесс планирования обновления данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, в котором могут использоваться источники данных, **НЕ** поддерживающие аутентификацию Windows. В качестве примера можно назвать источники данных Oracle или IDM DB2. На рисунках и в процедурах, которые приведены в этом разделе, речь идет об источниках данных Oracle, но тот же рабочий процесс применим к другим источникам данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе рассматривается рабочий процесс [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint планирования обновления данных, можно использовать данные источники, **не** поддерживают проверку подлинности Windows. В качестве примера можно назвать источники данных Oracle или IDM DB2. На рисунках и в процедурах, которые приведены в этом разделе, речь идет об источниках данных Oracle, но тот же рабочий процесс применим к другим источникам данных.  
   
 ||  
 |-|  

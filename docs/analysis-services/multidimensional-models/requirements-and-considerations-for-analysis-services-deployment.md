@@ -2,12 +2,12 @@
 title: "Требования и рекомендации для анализа служб развертывания | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa49c67746a2c2e9da22e8e2b18ae9af06eb6c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca6771f8ea74bdff21f67704a1d45915b6d73cf6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Требования и вопросы, связанные с развертыванием служб Analysis Services
-  Производительность и доступность решения зависят от многих факторов, среди которых мощность оборудования, топология серверов, характеристики решения (например, использование секций, распределенных на нескольких серверах, или хранилища ROLAP, которому требуется прямой доступ к реляционному механизму), соглашения на уровне служб, а также сложность модели данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Производительность и доступность решения зависит от многих факторов, включая возможности оборудования, топология развертывания сервера, характеристики решения (например, при использовании секций, распределенных на несколько серверов или с использованием хранилища ROLAP, которому требуется прямой доступ к реляционному механизму), соглашения об уровне обслуживания, а также сложность модели данных.  
   
 ## <a name="memory-and-processor-requirements"></a>Требования к памяти и процессору  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в следующих случаях требуется больше ресурсов памяти и процессора:  

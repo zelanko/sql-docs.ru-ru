@@ -2,12 +2,12 @@
 title: "Импорт из Power Pivot (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ddea709433a76faae800615c0a974ad14d153c8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 66ca9811b808ac3ef6b282479972482e78a083e9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-from-power-pivot-ssas-tabular"></a>Импорт из Power Pivot (табличные службы SSAS)
-  В данном разделе описано создание нового проекта табличной модели при помощи импорта метаданных и данных из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] с использованием шаблона проекта "Импорт из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] " в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе описывается создание нового проекта табличной модели путем импорта метаданных и данных из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги с помощью функции импорта из [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] шаблона проекта в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="create-a-new-tabular-model-from-a-power-pivot-for-excel-file"></a>Создание новой табличной модели из файла Power Pivot для Excel  
  Метаданные, импортируемые из книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] при создании нового проекта табличной модели и определяющие структуру книги, используются для создания и определения структуры проекта табличной модели в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Такие объекты, как таблицы, столбцы, меры и связи, сохраняются, а затем появляются в проекте табличной модели, как в книге [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Изменения в файл книги XLSX не вносятся.  

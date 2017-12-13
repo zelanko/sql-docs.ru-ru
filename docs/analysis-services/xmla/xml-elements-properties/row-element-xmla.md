@@ -2,12 +2,12 @@
 title: "Строка Element (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b38517cea700ac5fab6cdccbef77aaeea0dc969
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 31ce205d17095d2a6df40adb7ce0be64f883b5f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="row-element-xmla"></a>Элемент row (XML для аналитики)
-  Содержит одну строку данных для [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, который содержит табличные данные, возвращенные [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит одну строку данных для [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, который содержит табличные данные, возвращенные [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) или [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) вызова метода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0–n: необязательный элемент, который может встречаться несколько раз.|  
+|Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

@@ -2,12 +2,12 @@
 title: "Программирование интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 93e263ee6ed7e8b3eb5bdf0f6596f5ddf636f199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7deb7ccd395a6dda75ac443f17f4e2b516b99c11
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-programming"></a>Программирование интеллектуального анализа данных
-  Если встроенные инструменты и средства просмотра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не соответствуют требованиям, их можно расширить, создав собственные программные расширения служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. При таком подходе имеются два варианта.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Если выяснится, что встроенные инструменты и средства просмотра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не удовлетворяет требованиям, можно расширить возможности [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , разработав собственные модули. При таком подходе имеются два варианта.  
   
 -   **XML для аналитики**  
   

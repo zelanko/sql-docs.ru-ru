@@ -2,12 +2,12 @@
 title: "Сценарий учебника по службам аналитики | Документы Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: deb268dde13782f6ffe6d3481e004d6b8cae17b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 332b9e9e84ac25637186655de533624449ac3a01
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Сценарий учебника по службам Analysis Services
-Этот учебник основывается на вымышленной организации [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] — крупная транснациональная производственная компания, производящая и реализующая металлические и композитные велосипеды на рынках Северной Америки, Европы и Азии. Штаб-квартира компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] находится в городе Боселл, штат Вашингтон. В ней работают 500 сотрудников компании. Кроме того, компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] имеет в своем составе несколько групп сбыта на региональных рынках.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Этот учебник основывается на [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], вымышленной компании. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] — крупная транснациональная производственная компания, производящая и реализующая металлические и композитные велосипеды на рынках Северной Америки, Европы и Азии. Штаб-квартира компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] находится в городе Боселл, штат Вашингтон. В ней работают 500 сотрудников компании. Кроме того, компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] имеет в своем составе несколько групп сбыта на региональных рынках.  
   
 В последние годы компания [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] приобрела небольшой завод под названием Importadores Neptuno, расположенный в Мексике. Предприятие Importadores Neptuno производит несколько важных компонентов для производственной линии компании [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Эти компоненты поставляются в Боселл для окончательной сборки продукции. В 2005 году Importadores Neptuno стала единоличным производителем и поставщиком туристических велосипедов.  
   

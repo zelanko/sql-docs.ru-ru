@@ -2,12 +2,12 @@
 title: "Включить детализацию для модели интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: edebec5e4362f9446ea7f3aeaf4ba3b886336a7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 46e501f0c67ee041beeb504af46629cdbe6e1def
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>включить детализацию для модели интеллектуального анализа данных
-  Если в модели интеллектуального анализа данных включена детализация, то при просмотре модели можно извлекать подробные сведения о вариантах, использованных при создании модели. Для просмотра этой информации необходимо иметь соответствующие разрешения. Структура к моменту просмотра должна быть уже обработана.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если при просмотре модели, можно получить подробные сведения о вариантах, которые использовались для создания модели включена детализация для модели интеллектуального анализа данных. Для просмотра этой информации необходимо иметь соответствующие разрешения. Структура к моменту просмотра должна быть уже обработана.  
   
  **Разрешения** . Чтобы пользователь мог детализировать данные модели или структуры, он должен быть членом роли, имеющей разрешения [AllowDrillThrough](../../analysis-services/scripting/properties/allowdrillthrough-element-assl.md) в отношении такой модели или структуры интеллектуального анализа данных. Разрешения на детализацию устанавливаются отдельно для структуры и для модели.  
   

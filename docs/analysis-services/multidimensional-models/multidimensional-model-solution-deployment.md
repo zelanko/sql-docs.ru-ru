@@ -2,12 +2,12 @@
 title: "Развертывание решений многомерных моделей | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cba427cba20a443179621758dabc8d56b1104152
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4ea62c1e36451be1c18362073bd917e2376e1e51
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-solution-deployment"></a>Развертывание решений многомерных моделей
-  После завершения разработки проекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базу данных можно развернуть на сервере служб Analysis Services. Службы Analysis Services предоставляют шесть возможных методов развертывания, которые могут быть использованы для перемещения базы данных на тестовый или рабочий сервер. Ниже эти методы перечислены в порядке приоритетности: автоматизация объектов AMO, XML для аналитики, мастер развертывания, программа развертывания, мастер синхронизации, резервное копирование и восстановление.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После завершения разработки [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта базы данных можно развернуть на сервере служб Analysis Services. Службы Analysis Services предоставляют шесть возможных методов развертывания, которые могут быть использованы для перемещения базы данных на тестовый или рабочий сервер. Ниже эти методы перечислены в порядке приоритетности: автоматизация объектов AMO, XML для аналитики, мастер развертывания, программа развертывания, мастер синхронизации, резервное копирование и восстановление.  
   
  Этот раздел включает следующие подразделы:  
   

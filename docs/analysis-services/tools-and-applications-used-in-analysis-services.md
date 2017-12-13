@@ -2,12 +2,12 @@
 title: "Средств и приложений, используемых в службах Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2d286657c8264cc0b1fa82b87a2978cd60387506
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cedca243acc9608e2d3855b2ee7ee2aa183c1d73
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Средства и приложения, использующиеся в службах Analysis Services
-  Найдите средства и приложения, которые понадобятся для создания моделей Analysis Services и управление развертывания базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Найдите средства и приложения, которые понадобятся для создания моделей Analysis Services и управление развертывания базы данных.  
   
 ## <a name="analysis-services-model-designers"></a>Конструкторы моделей Analysis Services  
  Модели создаются с помощью шаблонов проектов в SQL Server Data Tools (SSDT), оболочка Visual Studio. Шаблоны проектов предоставляют конструкторы моделей для создания объектов модели данных, составляющих решение Analysis Services. Средство SSDT доступно для бесплатной загрузки обновляется ежемесячно.

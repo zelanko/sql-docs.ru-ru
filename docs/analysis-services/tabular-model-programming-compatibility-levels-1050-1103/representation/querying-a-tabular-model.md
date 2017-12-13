@@ -2,12 +2,12 @@
 title: "Запросы к табличной модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6bf0f912ecc01127cc8cf1f6f347141440792911
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8e413fe7d6d56d3b79637eb2b263abd8c06f23e1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="querying-a-tabular-model"></a>Отправка запроса для табличной модели
-  Разработчик, запросы к табличной модели означает для извлечения данных из табличной базы данных. для достижения этой цели можно использовать два варианта: использовать запросы к таблицам в DAX или многомерных Выражений и получения данных, как оно содержались в кубе. Однако, в зависимости от базового режима табличной модели может существовать ограничение на использование только табличных запросов DAX. В режиме DirectQuery можно использовать только табличные запросы DAX.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Разработчик, запросы к табличной модели означает для извлечения данных из табличной базы данных. для достижения этой цели можно использовать два варианта: использовать запросы к таблицам в DAX или многомерных Выражений и получения данных, как оно содержались в кубе. Однако, в зависимости от базового режима табличной модели может существовать ограничение на использование только табличных запросов DAX. В режиме DirectQuery можно использовать только табличные запросы DAX.  
   
 ## <a name="querying-with-adomdnet"></a>Отправка запросов с помощью ADOMD.Net  
  Использовать ADOMD.Net для отправки запросов для табличной модели просто и удобно. Для получения результатов можно отправлять как многомерные выражения, так и табличные выражения запроса из DAX на сервер.  

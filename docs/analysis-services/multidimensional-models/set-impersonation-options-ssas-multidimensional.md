@@ -2,12 +2,12 @@
 title: "Задание параметров олицетворения (службы SSAS — многомерные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b448d78a897c6e7c6aa6973b6e61b92ff7a9aade
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Задание параметров олицетворения (службы SSAS — многомерные)
-  При создании объекта **data source** в модели служб Analysis Services одним из параметров, которые необходимо настроить, является параметр олицетворения. Этот параметр определяет, действуют ли службы Analysis Services под удостоверением определенной учетной записи пользователя Windows при выполнении локальных операций, связанных с соединением, например загрузки поставщика данных OLE DB или разрешения данных профиля пользователя в средах, поддерживающих перемещаемые профили.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании **источника данных** объекта в модели служб Analysis Services, один из параметров, которые необходимо настроить, является параметр олицетворения. Этот параметр определяет, действуют ли службы Analysis Services под удостоверением определенной учетной записи пользователя Windows при выполнении локальных операций, связанных с соединением, например загрузки поставщика данных OLE DB или разрешения данных профиля пользователя в средах, поддерживающих перемещаемые профили.  
   
  Для соединений, использующих проверку подлинности Windows, параметр олицетворения также определяет удостоверение пользователя, от имени которого выполняются запросы к внешнему источнику данных. Например, если параметр олицетворения установлен в значение **contoso\dbuser**, то запросы, используемые для получения данных при обработке, выполняются на сервере баз данных как **contoso\dbuser** .  
   

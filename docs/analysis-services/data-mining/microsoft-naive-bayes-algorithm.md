@@ -2,12 +2,12 @@
 title: "Алгоритма Байеса (Майкрософт) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b5a187447c2e2c222996fd59b5b673a8a68974e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3ec33ea83457850aed338c46534ca3cb85d53c61
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Упрощенный алгоритм Байеса (Майкрософт)
-  Упрощенный алгоритм Байеса ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) — это алгоритм классификации, основанный на теоремах Байеса, который можно использовать как для изучения данных, так и для прогнозного моделирования. Слово «упрощенный» в его названии указывает на то, что алгоритм использует методы Байеса, но не учитывает возможные зависимости.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Упрощенный алгоритм Байеса — это алгоритм классификации, на основании теоремах Байеса и может использоваться для произвольного и прогнозирующего моделирования. Слово «упрощенный» в его названии указывает на то, что алгоритм использует методы Байеса, но не учитывает возможные зависимости.  
   
  Данный алгоритм требует меньшего количества вычислений, чем другие алгоритмы [!INCLUDE[msCoName](../../includes/msconame-md.md)] , и может применяться для быстрого формирования моделей интеллектуального анализа данных для обнаружения отношений между входными и прогнозируемыми столбцами. Этот алгоритм можно использовать для первоначального исследования данных, а затем применить результаты для создания дополнительных моделей интеллектуального анализа с другими алгоритмами, требующими большего количества вычислений и являющимися более точными.  
   

@@ -2,12 +2,12 @@
 title: "Создание одноэлементного запроса в конструкторе интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cd960d2d0f0628e2c8a8c568cf7e5bb065caa2a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a311450bae77c533860c09c06f53497dbba4035e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Создание одноэлементного запроса в конструкторе интеллектуального анализа данных
-  Одноэлементный запрос используется при необходимости создать прогноз для одного объекта. Дополнительные сведения об одноэлементных запросах см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Одноэлементный запрос полезно в том случае, если вы хотите создать прогноз для одного варианта. Дополнительные сведения об одноэлементных запросах см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md).  
   
  На вкладке **Прогноз модели интеллектуального анализа данных** конструктора интеллектуального анализа данных можно создавать много различных типов запросов. Запросы можно создавать с помощью конструктора, либо путем ввода инструкций расширения интеллектуального анализа данных (DMX-инструкций). Кроме того, можно начать работу с конструктором, а затем изменить созданный в нем запрос путем изменения DMX-инструкций или путем добавления предложений WHERE или ORDER BY.  
   

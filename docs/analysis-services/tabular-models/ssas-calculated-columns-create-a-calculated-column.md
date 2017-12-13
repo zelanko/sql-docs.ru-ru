@@ -2,12 +2,12 @@
 title: "Создание вычисляемого столбца | Документы Microsoft"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98b426c49d86a3bb54a5fdaa1736c2c92990ad29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2ab67c3c9e10312cd220013787619e15a8c1f89d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-calculated-column"></a>Создание вычисляемого столбца
-  Вычисляемые столбцы позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Значения для каждой из строк вычисляемого столбца вычисляются и распространяются после создания допустимой формулы и нажатия клавиши ВВОД. После этого можно добавлять вычисляемый столбец в аналитическое приложение или приложение для создания отчетов, как и любой другой столбец данных. В этом разделе показано, как создать вычисляемый столбец с помощью строки формул DAX в конструкторе моделей.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Вычисляемые столбцы позволяют добавлять новые данные в модель. Вместо вставки или импорта значений в столбец создается формула DAX, которая определяет значения уровня строк для столбца. Значения для каждой из строк вычисляемого столбца вычисляются и распространяются после создания допустимой формулы и нажатия клавиши ВВОД. После этого можно добавлять вычисляемый столбец в аналитическое приложение или приложение для создания отчетов, как и любой другой столбец данных. В этом разделе показано, как создать вычисляемый столбец с помощью строки формул DAX в конструкторе моделей.  
   
 #### <a name="to-create-a-new-calculated-column"></a>Создание вычисляемого столбца  
   

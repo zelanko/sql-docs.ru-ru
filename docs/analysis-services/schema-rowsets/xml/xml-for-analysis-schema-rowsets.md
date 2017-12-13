@@ -2,12 +2,12 @@
 title: "Наборы строк схемы анализа XML для | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d0f3527abc7fcd12757b4fdc4abd02d97c79d2ac
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2f5cb613a916f2cff4ec8aca3bb67fc9c14d1b10
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="xml-for-analysis-schema-rowsets"></a>XML for Analysis Schema Rowsets
-  Поставщик [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) содержит наборы строк схемы, которые возвращают метаданные о состоянии, активности и объектах сервера. Получение метаданных необходимо, когда идет разработка клиентского приложения, подключающегося к модели служб Analysis Services, обладающей переменной структурой и характеристиками.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщик содержит наборы строк схемы, которые возвращают метаданные о состоянии сервера, действия и объекты. Получение метаданных необходимо, когда идет разработка клиентского приложения, подключающегося к модели служб Analysis Services, обладающей переменной структурой и характеристиками.  
   
  Наборы строк схемы также дают представление о внутренних процессах и операциях, что помогает в наблюдении за сервером и устранении неполадок. Для поддержки нерегламентированных административных задач можно выполнить запрос динамического административного представления к большинству наборов строк схемы. Запросы динамического административного представления возвращают результаты в удобном для чтения табличном формате. Их можно просматривать в среде [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)].  
   

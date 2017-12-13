@@ -2,12 +2,12 @@
 title: "Набор строк DISCOVER_LOCKS | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c65b85a3a9d48afea4db7993bdc31699fe573996
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: df185344ea5af92a66c019c29b7a385ff309522b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverlocks-rowset"></a>Набор строк DISCOVER_LOCKS
-  Предоставляет сведения о текущих установленных блокировках на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет сведения о текущих установленных блокировках на сервере.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_LOCKS** содержит следующие столбцы.  

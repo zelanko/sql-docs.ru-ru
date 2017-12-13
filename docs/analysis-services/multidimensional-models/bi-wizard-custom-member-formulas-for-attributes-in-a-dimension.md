@@ -2,12 +2,12 @@
 title: "Настройка нестандартных формул элементов для атрибутов в измерении | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f6cd6ca41dab2aa9d213281de94882c03f50db2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10b6f8e3daf8a5b13bee1bef87454dfc40096804
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---custom-member-formulas-for-attributes-in-a-dimension"></a>Мастер бизнес-Аналитики — нестандартных формул элементов для атрибутов в измерении
-  Добавьте расширение нестандартных формул элементов к кубу или измерению, чтобы заменить статистическое вычисление по умолчанию, связанное с элементом измерения, результатами многомерного выражения. (Это расширение устанавливает свойство **CustomRollupColumn** для указанного атрибута в измерении.)  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Добавление расширения нестандартной формулы элемента к кубу или измерению, чтобы заменить агрегат по умолчанию, связанный с элементом измерения с результатами выражения многомерных выражений (MDX). (Это расширение устанавливает свойство **CustomRollupColumn** для указанного атрибута в измерении.)  
   
 > [!NOTE]  
 >  Нестандартная формула элемента доступна только для измерений, основанных на существующих источниках данных. Для измерений, созданных без использования источника данных, необходимо запустить мастер формирования схем, чтобы создать представление источника данных перед тем, как добавить нестандартную формулу элемента.  

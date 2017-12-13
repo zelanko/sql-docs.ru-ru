@@ -2,12 +2,12 @@
 title: "Интеллектуальный анализ данных наборов строк схемы (службы SSAs) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afa0eedc469956d5b3e8886775feaf8f61a36328
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 23f8b63c593e1269624905caf8809ac5afefd1d5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>Наборы строк схемы интеллектуального анализа данных (SSAS)
-  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]многие существующие наборы строк схемы интеллектуального анализа данных OLE DB доступны в виде набора системных таблиц, к которым можно выполнять запросы с помощью инструкций расширений интеллектуального анализа данных. Путем создания запросов к наборам строк схемы интеллектуального анализа данных можно определить доступные службы, получить последние сведения о состоянии моделей и структур и выяснить подробности о содержимом или параметрах модели. Описание наборов строк схемы интеллектуального анализа данных см. в разделе [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]многие существующие схемы интеллектуального анализа данных OLE DB, наборы строк, представляются как набор системных таблиц, которые можно запрашивать с помощью инструкций расширений интеллектуального анализа данных (DMX). Путем создания запросов к наборам строк схемы интеллектуального анализа данных можно определить доступные службы, получить последние сведения о состоянии моделей и структур и выяснить подробности о содержимом или параметрах модели. Описание наборов строк схемы интеллектуального анализа данных см. в разделе [Data Mining Schema Rowsets](../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md).  
   
 > [!NOTE]  
 >  Кроме того, можно выполнить запрос к этому набору строк схемы интеллектуального анализа данных с помощью XMLA. Дополнительные сведения о выполнении этого действия в среде SQL Server Management Studio см. в разделе [Создание запроса интеллектуального анализа данных с помощью XMLA](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md).  

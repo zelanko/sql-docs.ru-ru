@@ -2,12 +2,12 @@
 title: "Анализ в Excel (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 937b51884cd5a4b4bc06d990c65a5247822c85c5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4910c2033fa0ae50cad8b31f90bd023aa18d219f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analyze-in-excel"></a>Анализ в Excel
-  Функция анализа в Excel, в SSDT, дает разработчику табличных моделей возможность быстро выполнить анализ проекта модели во время разработки. Функция «Анализ в Excel» открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области модели, и автоматически добавляет сводную таблицу на рабочий лист. Объекты базы данных рабочей области (таблицы, столбы и меры) включаются в качестве полей в список полей сводной таблицы. Затем объекты и данные можно просмотреть в контексте действующего пользователя или роли и перспективы.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Функция анализа в Excel, в SSDT, дает разработчику табличных моделей возможность быстро выполнить анализ проекта модели во время разработки. Функция «Анализ в Excel» открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области модели, и автоматически добавляет сводную таблицу на рабочий лист. Объекты базы данных рабочей области (таблицы, столбы и меры) включаются в качестве полей в список полей сводной таблицы. Затем объекты и данные можно просмотреть в контексте действующего пользователя или роли и перспективы.  
   
  Материал этого раздела предполагает, что читатель умеет работать с Microsoft Excel, сводными таблицами и диаграммами. Дополнительные сведения об использовании Excel см. в справке по Excel.  
   

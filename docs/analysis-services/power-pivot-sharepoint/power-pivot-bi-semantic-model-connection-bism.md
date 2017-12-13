@@ -2,12 +2,12 @@
 title: "Питание соединение семантической модели бизнес-Аналитики Pivot (bism) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 48c902ba8427101083d1f9e6d012fb15a86d9491
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3cfc29f3a8c23252afdbcee1a1487f32c2aa88f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-bi-semantic-model-connection-bism"></a>Соединение семантической модели бизнес-аналитики Power Pivot (BISM-файлы)
-  Соединение семантической модели бизнес-аналитики (BISM-файл) — это переносимое соединение, связывающее отчеты Excel или Power View с базой данных табличной модели Analysis Services или экземпляром служб Analysis Services в многомерном режиме. Определение и использование BISM-файлов в определенной степени аналогично файлам подключения к данным Оffice (ODC).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Соединение семантической модели бизнес-Аналитики (bism-файл) — это переносимое соединение, который подключается Excel или отчетов Power View для базы данных табличной модели служб Analysis Services или экземпляр служб Analysis Services в многомерном режиме. Определение и использование BISM-файлов в определенной степени аналогично файлам подключения к данным Оffice (ODC).  
   
  Создание семантической модели бизнес-аналитики и доступ к ней через SharePoint. Создание соединения семантической модели бизнес-аналитики позволяет использовать команды быстрого запуска соединения семантической модели с библиотекой. Команды быстрого запуска открывают новую книгу Excel или параметры файла соединения. При установке служб Reporting Services также появится команда для создания отчета [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
   

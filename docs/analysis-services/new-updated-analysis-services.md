@@ -6,7 +6,9 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: 
-ms.service: na
+ms.service: 
+ms.component: 
+ms.suite: pro-bi
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
@@ -14,15 +16,17 @@ ms.workload: analysis-services
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.author: genemi
-ms.openlocfilehash: 6de674b8fb63908964538339410a66db6918a16a
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
-ms.translationtype: HT
+ms.openlocfilehash: cdd23d500e664253926cec6567e4da674897d033
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="new-and-recently-updated-analysis-services-for-sql-server"></a>Новые и недавно обновленные: службы Analysis Services для SQL Server
-
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
 
 
 Почти каждый день корпорация Майкрософт вносит изменения в свои статьи на веб-сайте документации [Docs.Microsoft.com](http://docs.microsoft.com/). В этой статье приводятся отрывки из обновленных недавно статей, а также ссылки на новые статьи.

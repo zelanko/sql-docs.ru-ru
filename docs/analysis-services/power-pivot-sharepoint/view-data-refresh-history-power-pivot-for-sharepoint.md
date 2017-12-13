@@ -2,12 +2,12 @@
 title: "Просмотр журнала (Power Pivot для SharePoint) обновления данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 43dce2aa27cfda6251eeca52eba4f74f722f4ced
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c2347b4bf7a02f61599f0a318ab1660dff50e4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Просмотр журнала обновления данных (PowerPivot для SharePoint)
-  В журнале обновления данных регистрируются все действия обновления данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в книге Excel. Операции обновления данных выполняются на экземпляре сервера служб Analysis Services на ферме SharePoint по заданному пользователем расписанию. По умолчанию журнал обновления данных хранится в течение одного года. Однако администратор фермы может задать другую политику сохранения для журнала использования и событий, которая будет определять срок хранения записей обновления данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Журнал обновления данных представляет собой запись всех действий обновления данных для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данных в книге Excel. Операции обновления данных выполняются на экземпляре сервера служб Analysis Services на ферме SharePoint по заданному пользователем расписанию. По умолчанию журнал обновления данных хранится в течение одного года. Однако администратор фермы может задать другую политику сохранения для журнала использования и событий, которая будет определять срок хранения записей обновления данных.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
   

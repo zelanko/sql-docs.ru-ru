@@ -2,12 +2,12 @@
 title: "Введите элемент (MeasureGroup) (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3f813f56d71197003e040bb3e46145576130cc47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3827f2438ad74f2b5188d241d74a0b659cfccaf3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="type-element-measuregroup-assl"></a>Элемент Type (MeasureGroup) (ASSL)
-  Указывает тип [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Указывает тип [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Тип данных и длина|String (перечисление)|  
 |Значение по умолчанию|*Обычный*|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

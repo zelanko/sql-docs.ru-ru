@@ -2,12 +2,12 @@
 title: "Настройка набора полей по умолчанию для отчетов Power View (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b357d75c87cc9a2a086382bbbf65079b31b59b52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e5a36f650081d5932e7100abc923b627a4aa47c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View — Настройка набора полей по умолчанию для отчетов
-  Набор полей по умолчанию представляет собой предустановленный список столбцов и мер, которые автоматически добавляются на лист отчета [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] при выборе таблицы из списка полей отчета. Автор табличной модели может создавать наборы полей по умолчанию, чтобы удалить лишние шаги для создателей отчетов, которые используют модель данных для своих отчетов. Например, если известно, что большинство авторов отчетов, работающих с контактными сведениями клиентов, хотят видеть имя, основной номер телефона, адрес электронной почты и название компании, можно сделать предварительный выбор этих столбцов так, чтобы они всегда добавлялись на лист отчета, если автор щелкает таблицу «Сведения о клиентах».  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Набор полей по умолчанию представляет собой предустановленный список столбцов и мер, которые автоматически добавляются в [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] холст отчета при выборе таблицы в списке полей отчета. Автор табличной модели может создавать наборы полей по умолчанию, чтобы удалить лишние шаги для создателей отчетов, которые используют модель данных для своих отчетов. Например, если известно, что большинство авторов отчетов, работающих с контактными сведениями клиентов, хотят видеть имя, основной номер телефона, адрес электронной почты и название компании, можно сделать предварительный выбор этих столбцов так, чтобы они всегда добавлялись на лист отчета, если автор щелкает таблицу «Сведения о клиентах».  
   
 > [!NOTE]  
 >  Набор полей по умолчанию применим только к табличной модели, которая используется в качестве модели данных в [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]. Наборы полей по умолчанию не поддерживаются в сводных отчетах Excel.  

@@ -2,12 +2,12 @@
 title: "Изменение таблиц, столбцов и сопоставления фильтров строк (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a88238ef377de669f3100852272c9cdbee8987c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 055b4415c1b7c60a1f22047d8e7ac95c7bc0e8cb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Изменение сопоставлений фильтров таблиц, столбцов и строк (табличные службы SSAS)
-  В этом разделе описано, как изменить сопоставления таблиц, столбцов или фильтров строк в диалоговом окне **Изменение свойств таблицы** в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе описывается изменение таблицы, столбца или сопоставления фильтров строк с помощью **изменение свойств таблицы** диалоговое окно в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
  Параметры в диалоговом окне **Изменение свойств таблицы** различаются в зависимости от способа импорта данных — путем выбора таблиц из списка или с помощью SQL-запроса. Если первоначальный импорт данных в таблицу был выполнен выбором из списка, то диалоговое окно **Изменение свойств таблицы** отображается в режиме предварительного просмотра таблицы. В этом режиме отображается только подмножество данных, ограниченное первыми 50 строками исходной таблицы. Если первоначальный импорт данных в таблицу был выполнен с помощью инструкции SQL, то диалоговое окно **Изменение свойств таблицы** содержит только инструкцию SQL. Используя инструкцию запроса SQL, можно получить подмножество строк, создав фильтр или вручную изменив инструкцию SQL.  
   

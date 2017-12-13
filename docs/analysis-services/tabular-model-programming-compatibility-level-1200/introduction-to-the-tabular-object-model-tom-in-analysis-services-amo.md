@@ -2,12 +2,12 @@
 title: "Общие сведения о табличной объектной модели (TOM) в Analysis Services AMO | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4511f34d149494cd48a0ee52a94cc668bfdd8960
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3f8399c5430cf34d947e881586bacef5ade46587
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Общие сведения о табличной объектной модели (TOM) в службах Analysis Services объектов AMO
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Модели табличных объектов (TOM) — это расширение клиентской библиотеки управление объектов служб Analysis Services (AMO), созданный для поддержки сценариев программирования для табличных моделей, построенных на уровне совместимости 1200 и выше. С помощью объектов AMO, TOM предоставляет программный способ обработки административных функций, таких как создание моделей, Импорт и обновление данных и назначение роли и разрешения.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Модели табличных объектов (TOM) — это расширение клиентской библиотеки управление объектов служб Analysis Services (AMO), созданный для поддержки сценариев программирования для табличных моделей, построенных на уровне совместимости 1200 и выше. С помощью объектов AMO, TOM предоставляет программный способ обработки административных функций, таких как создание моделей, Импорт и обновление данных и назначение роли и разрешения.  
   
 TOM предоставляет собственный табличных метаданных, таких как **модель**, **таблиц**, **столбцы**, и **связи** объектов.  Высокоуровневое представление дерева модели объектов, представленных ниже показано, как связаны элементы компонента.  
   

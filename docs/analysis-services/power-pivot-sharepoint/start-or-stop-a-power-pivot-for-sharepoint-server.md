@@ -2,12 +2,12 @@
 title: "Запуск или остановка службы PowerPivot для SharePoint Server | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a262f8ac21748942f36a74773eab898ee321ae57
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cceb9ce47e059750e1d4cb8dc3fe3b1d45444f82
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Запуск и остановка службы PowerPivot для SharePoint Server
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] и экземпляр службы [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] работают совместно на одном и том же локальном сервере приложений, обеспечивая поддержку согласованной обработки запросов и данных на ферме SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Системная служба и [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] экземпляр работают совместно на одном локальном сервере приложений для поддержки согласованной запросов и обработки данных в ферме SharePoint.  
   
  Этот раздел состоит из следующих подразделов.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
 |---------------|-----------------|  
 |Существующие запросы|Запросы, выполняемые на сервере Analysis Services, будут немедленно остановлены. Пользователь получит сообщение об ошибке «Данные не обнаружены» или «Соединение с источником данных отсутствует».|  
 |Существующие задания обновления данных, обрабатываемые в данные момент|Задания, выполняемые на текущем сервере Analysis Services, будут немедленно остановлены. Обновление данных завершится с ошибкой, и в журнале обновления данных появится запись об ошибке.<br /><br /> Перед остановкой службы можно просмотреть состояние текущих заданий, используя страницу проверки состояния задания в центре администрирования SharePoint.<br /><br /> Даже если известно, какие задания выполняются в данный момент, невозможно посмотреть саму очередь, чтобы узнать, какие другие задания будут вскоре запущены.|  
-|Существующие данные обновляют запросы в очереди|Запросы на обновление данных по расписанию остаются в очереди на обработку на протяжении всего цикла расписания (т. е. они остаются в очереди до следующего запуска). Если к тому времени системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не перезапущена, запрос на обновление данных будет удален и в журнале будет сделана запись об ошибке.|  
+|Существующие данные обновляют запросы в очереди|Запросы на обновление данных по расписанию остаются в очереди на обработку на протяжении всего цикла расписания (т. е. они остаются в очереди до следующего запуска). Если к тому времени системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не перезапущена, запрос на обновление данных будет удален и в журнале будет сделана запись об ошибке.|  
 |Новые запросы на данные или обновление данных|Если на ферме только один сервер [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и он останавливается, новые запросы для данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не будут обрабатываться и при попытке запросить данные будет выдаваться ошибка "Данные не найдены".<br /><br /> Если есть дополнительные серверы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, запрос будет передан на один из доступных серверов.|  
 |Данные об использовании|Когда службы остановлены, данные об использовании не собираются.|  
   

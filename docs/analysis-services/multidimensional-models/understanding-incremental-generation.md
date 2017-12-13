@@ -2,12 +2,12 @@
 title: "Основные сведения о добавочном создании | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 11cb339bf60a4a2758a8c43592d7374eef5391ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c9a3cd3a86660e9c5ed818a0751deef36218a812
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="understanding-incremental-generation"></a>Основные сведения о добавочном создании
-  После первоначального формирования схемы при помощи среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]можно изменить определения куба и измерений, а затем вновь запустить мастер формирования схем. Мастер обновляет схему в базе данных предметной области и в соответствующем представлении источника данных для отражения изменений при сохранении данных, присутствующих в текущий момент в таблицах, подлежащих повторному формированию. При изменении таблиц после первоначального формирования мастер формирования схем по возможности сохраняет эти изменения, используя следующие правила.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После первоначального формирования схемы, можно изменить определения куба и измерения с помощью [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], а затем снова запустите мастер формирования схем. Мастер обновляет схему в базе данных предметной области и в соответствующем представлении источника данных для отражения изменений при сохранении данных, присутствующих в текущий момент в таблицах, подлежащих повторному формированию. При изменении таблиц после первоначального формирования мастер формирования схем по возможности сохраняет эти изменения, используя следующие правила.  
   
 -   Если таблица была ранее сформирована мастером, то она перезаписывается. Можно предотвратить перезаписывание таблицы, сформированной мастером, путем изменения свойства **AllowChangesDuringGeneration** для таблицы в представлении источника данных на **false**. При управлении таблицей она воспринимается как любая другая определенная пользователем таблица и ее не затрагивает повторное формирование. После удаления таблицы из формирования можно изменить свойство **AllowChangesDuringGeneration** этой таблицы в представлении источника данных на **true** и вновь открыть таблицу для изменений мастером. Дополнительные сведения см. в разделе [Изменение свойств в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md).  
   

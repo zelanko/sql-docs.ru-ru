@@ -2,12 +2,12 @@
 title: "Настройка использования места на диске (PowerPivot для SharePoint) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fa14e2c53a35ba1d8abe32766c6378d637a665ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f279adc22305b40d0207b6256e29d42b9b32ef65
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Настройка использования места на диске (PowerPivot для SharePoint)
-  Чтобы обеспечить ускоренную перезагрузку, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint кэширует базу данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в свободном месте на диске главного компьютера. Каждая база данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , загружаемая в память, сначала кэшируется на диске, обеспечивая возможность быстрой перезагрузки при обслуживании новых запросов в будущем. По умолчанию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует свободное место на диске для кэширования баз данных, но это можно изменить, задав параметры, ограничивающие использование дискового пространства.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] развертывания для SharePoint использует место на диске главного компьютера кэш [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] баз данных для обеспечения ускоренной перезагрузки. Каждая база данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , загружаемая в память, сначала кэшируется на диске, обеспечивая возможность быстрой перезагрузки при обслуживании новых запросов в будущем. По умолчанию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует свободное место на диске для кэширования баз данных, но это можно изменить, задав параметры, ограничивающие использование дискового пространства.  
   
  В этом разделе описано, как установить ограничения на использование места на диске.  
   

@@ -2,12 +2,12 @@
 title: "Элемент MiningStructurePermission (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f0e1ece5a8a03ccd66d2fa93f925d52f3a946b2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 56d22082d2e948881de36ae0a834ff68be2ad4be
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="miningstructurepermission-element-assl"></a>Элемент MiningStructurePermission (язык ASSL)
-  Определяет разрешения членов элемента [роли](../../../analysis-services/scripting/objects/role-element-assl.md) имеют для отдельных [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет разрешения членов элемента [роли](../../../analysis-services/scripting/objects/role-element-assl.md) имеют для отдельных [MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Тип данных и длина|[Разрешение](../../../analysis-services/scripting/data-type/permission-data-type-assl.md)|  
 |Значение по умолчанию|None|  
-|Количество элементов|0–n: необязательный элемент, который может встречаться несколько раз.|  
+|Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

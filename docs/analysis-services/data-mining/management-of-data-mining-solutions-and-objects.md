@@ -2,12 +2,12 @@
 title: "Управление решениями интеллектуального анализа данных и объектами | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41239f58ecdcea9f5d60e1ebdd83bc010b2c3bdd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4a3f1f0dc49296c7b2b4182de5eb69abbb720f1b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Управление решениями и объектами интеллектуального анализа данных
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит клиентские средства, предназначенные для управления структурами и моделями интеллектуального анализа данных. В этом разделе описаны операции управления, которые могут выполняться с помощью каждой из сред.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] содержит клиентские средства, которые можно использовать для управления существующей структуры интеллектуального анализа данных и моделей интеллектуального анализа данных. В этом разделе описаны операции управления, которые могут выполняться с помощью каждой из сред.  
   
  Кроме этого, управление объектами интеллектуального анализа данных может осуществляться программно через объекты AMO или путем соединения с базами данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из других клиентов, например надстройки интеллектуального анализа данных для [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007.  
   

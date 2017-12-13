@@ -2,12 +2,12 @@
 title: "Обзор логической архитектуры (службы Analysis Services — многомерные данные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 356eff5190638e3ac2086b1839649b99dc788699
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Обзор логической архитектуры (службы Analysis Services — многомерные данные)
-  Службы Analysis Services работают в режиме развертывания сервера, который определяет архитектуру памяти и среду выполнения, используемую моделями Analysis Services различных типов. Режим сервера определяется во время установки. **Многомерный и интеллектуальный анализ данных режим** поддерживает традиционные OLAP и интеллектуального анализа данных. **Табличный режим** поддерживает табличные модели. **Режим интеграции с SharePoint** ссылается на экземпляр служб Analysis Services, который был установлен как [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, используемый для загрузки и запросов к Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] моделей данных в книге.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Службы Analysis Services работает в режиме развертывания сервера, который определяет среду памяти архитектуры и среды выполнения используются различных типов моделей служб Analysis Services. Режим сервера определяется во время установки. **Многомерный и интеллектуальный анализ данных режим** поддерживает традиционные OLAP и интеллектуального анализа данных. **Табличный режим** поддерживает табличные модели. **Режим интеграции с SharePoint** ссылается на экземпляр служб Analysis Services, который был установлен как [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, используемый для загрузки и запросов к Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] моделей данных в книге.  
   
  В этом разделе рассматривается основная архитектура служб Analysis Services, применяемая в режиме многомерных данных и интеллектуального анализа данных. Дополнительные сведения о других режимах см. в разделе [табличных моделей &#40; Службы SSAS &#41; ](../../../analysis-services/tabular-models/tabular-models-ssas.md) и [сравнение табличных и многомерных решений &#40; Службы SSAS &#41; ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

@@ -2,12 +2,12 @@
 title: "Вложенные таблицы (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1a46bece83240a564845fe55c2a674d45aa668ee
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
-ms.translationtype: HT
+ms.openlocfilehash: e561111342531d5e390111282d1ca64f0b05fe17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Вложенные таблицы (службы Analysis Services — интеллектуальный анализ данных)
-  В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]данные должны подаваться на вход алгоритма интеллектуального анализа данных в виде последовательности вариантов, содержащихся в таблице вариантов. Но не все варианты можно описать одной строкой данных. Например, некоторый вариант может быть выведен на основании двух таблиц: таблицы, содержащей данные о заказчике, и таблицы, содержащей сведения о покупках заказчика. Одному заказчику из таблицы заказчиков может соответствовать несколько элементов в таблице покупок, что усложняет описание данных в одной строке. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют уникальный метод обработки таких случаев с помощью *вложенных таблиц*. Понятие вложенной таблицы демонстрируется на следующей схеме.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], данные должны подаваться на вход алгоритма интеллектуального анализа данных как ряд вариантов, содержащихся в таблице вариантов. Но не все варианты можно описать одной строкой данных. Например, некоторый вариант может быть выведен на основании двух таблиц: таблицы, содержащей данные о заказчике, и таблицы, содержащей сведения о покупках заказчика. Одному заказчику из таблицы заказчиков может соответствовать несколько элементов в таблице покупок, что усложняет описание данных в одной строке. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют уникальный метод обработки таких случаев с помощью *вложенных таблиц*. Понятие вложенной таблицы демонстрируется на следующей схеме.  
   
  ![Объединить две таблицы с помощью вложенной таблицы](../../analysis-services/data-mining/media/nested-tables.gif "двух таблиц объединяются с помощью вложенной таблицы")  
   

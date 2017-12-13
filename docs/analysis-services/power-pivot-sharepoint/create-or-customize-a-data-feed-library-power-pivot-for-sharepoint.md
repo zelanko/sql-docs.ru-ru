@@ -2,12 +2,12 @@
 title: "Создание или Настройка библиотеки веб-каналов данных (Power Pivot для SharePoint) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 678847e195c1b75744569088049cb957dacc46fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4304b6b25595bab37df01bdada4a046411cc3f4d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-or-customize-a-data-feed-library-power-pivot-for-sharepoint"></a>Создание или настройка библиотеки веб-каналов данных (PowerPivot для SharePoint)
-  *Библиотека каналов данных* — это специализированная библиотека SharePoint, которая позволяет регистрировать сервисные документы данных Atom (ATOMSVC) и предоставлять к ним общий доступ. Эти документы предоставляют потоки XML-данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или других клиентских приложений, поддерживающих формат веб-каналов данных Atom. Библиотека веб-каналов данных отличается от других библиотек SharePoint, поскольку она позволяет выполнять следующее:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект *библиотека потоков данных* — это библиотека SharePoint специального назначения, которая позволяет регистрировать и совместно использовать документы службы данных Atom (.atomsvc). Эти документы предоставляют потоки XML-данных для книг [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или других клиентских приложений, поддерживающих формат веб-каналов данных Atom. Библиотека веб-каналов данных отличается от других библиотек SharePoint, поскольку она позволяет выполнять следующее:  
   
 -   Создавать и изменять *сервисные документы данных*, используемые для указания HTTP-соединения с определенным каналом.  
   

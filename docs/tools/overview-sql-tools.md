@@ -17,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba7958a1b5b9398dec3cb07630ee84b72970d2ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7662fe90dc6f90c4437f200086e4d96b486a20b
+ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Средства и программы для SQL Server, база данных Azure SQL и хранилище данных Azure SQL SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
 
 ## <a name="tools-to-run-queries-and-manage-databases"></a>Средства для выполнения запросов и управления базами данных  
@@ -37,7 +36,12 @@ ms.lasthandoff: 12/05/2017
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Стать мощная среда разработки Visual Studio для SQL Server, базы данных SQL Azure и хранилище данных SQL Azure. **Набор SSDT работает в Windows**.|
 | [Код Visual Studio](https://code.visualstudio.com/)| После установки Visual Studio Code, установить [mssql расширения](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) для разработки Microsoft SQL Server, базы данных SQL Azure и хранилище данных SQL. **Visual Studio код выполняется на Windows, Linux и macOS**.|
 
+## <a name="which-tool-should-i-choose"></a>Какие средства следует выбрать?
 
+- Вы действительно хотите управлять экземпляр SQL Server или базы данных, в редакторе недоступно в Windows, Linux или Mac? Выберите[[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] 
+- Вы действительно хотите управлять экземпляр SQL Server или базы данных в Windows с полной поддержкой графического пользовательского интерфейса? Выберите [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md)
+- Сделать нужно создавать и изменять код базы данных, включая проверки во время компиляции, рефакторинга и конструктор, поддерживают в Windows? Выберите [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)
+- Вы действительно хотите создать сценарии T-SQL в редакторе недоступно в Windows, Linux или Mac? Выберите [кода Visual Studio](https://code.visualstudio.com/) и [mssql расширения](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)
 
 ## <a name="additional-tools"></a>Дополнительные средства
 

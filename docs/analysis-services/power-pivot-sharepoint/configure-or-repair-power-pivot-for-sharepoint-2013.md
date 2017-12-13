@@ -2,12 +2,12 @@
 title: "Настройка или восстановление Power Pivot для SharePoint 2013 | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2c91996d2a7d72282147a64581d1fb64e0ce9a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bd09ebc71350f37803867f0c610135fd135bd413
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Настройка или восстановление Power Pivot для SharePoint 2013
-  Для настройки или восстановления установленного экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 используйте инструмент настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Работа средства настройки начинается со сканирования системы, в результате которого возвращается список действий, необходимых для завершения или восстановления установки. Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010, а также средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. В этом разделе описывается средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. Дополнительные сведения о SharePoint 2010 см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Для настройки или восстановления установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 используйте [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для средства настройки SharePoint. Работа средства настройки начинается со сканирования системы, в результате которого возвращается список действий, необходимых для завершения или восстановления установки. Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010, а также средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. В этом разделе описывается средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. Дополнительные сведения о SharePoint 2010 см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -218,7 +218,7 @@ ms.lasthandoff: 11/17/2017
  В дальнейшем, если потребуются дополнительные возможности по хранению и обработке данных, в ферму можно будет добавить дополнительные серверы для работы служб Analysis Services в режиме интеграции с SharePoint. Для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 новые серверы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] устанавливаются в режиме интеграции с SharePoint, а затем настраиваются службы Excel. Дополнительные сведения см. в подразделе "Действия после установки одиночного сервера" раздела [Установка служб Analysis Services в режиме PowerPivot](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
 ## <a name="additional-resources"></a>Дополнительные ресурсы  
- ![Параметры SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "параметры SharePoint") [отправки отзывов и контактных данных через Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![Параметры SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Параметры SharePoint") [Отправка отзыва и контактных данных через веб-сайт Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
 ## <a name="see-also"></a>См. также:  
  [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   

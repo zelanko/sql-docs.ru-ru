@@ -2,12 +2,12 @@
 title: "Строка формата Format_string (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 590521cd679b4717e4240602634bc05e8d73d49f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5116ad72af06d2820c2af6ed0957d9030d971747
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mdx-cell-properties---formatstring-contents"></a>Свойства ячеек MDX - строка формата Format_string
-  Свойство ячейки **FORMAT_STRING** используется для форматирования свойства ячейки **VALUE** , в результате образуется значение свойства ячейки **FORMATTED_VALUE** . В свойстве ячейки **FORMAT_STRING** допускаются как строковые, так и числовые исходные значения. Выражение формата применяется к значению, образуя отформатированное значение свойства ячейки **FORMATTED_VALUE** . В следующих таблицах подробно описан синтаксис и символы форматирования, используемые для обработки строковых и числовых значений.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**FORMAT_STRING** форматы свойство ячейки **значение** свойства ячейки, образуется значение **FORMATTED_VALUE** свойство ячейки. В свойстве ячейки **FORMAT_STRING** допускаются как строковые, так и числовые исходные значения. Выражение формата применяется к значению, образуя отформатированное значение свойства ячейки **FORMATTED_VALUE** . В следующих таблицах подробно описан синтаксис и символы форматирования, используемые для обработки строковых и числовых значений.  
   
 ## <a name="string-values"></a>Строковые значения  
  Выражение форматирования строк может состоять из одного или двух разделов, отделенных точкой с запятой (;).  

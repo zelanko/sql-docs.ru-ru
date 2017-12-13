@@ -2,12 +2,12 @@
 title: "Power просматривать свойства отчетов (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c7a6d7bc2008e1532a302f68c6db93123a24b5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d8ef26565ff777cf7f280408d08791364c136225
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---reporting-properties-ssas-tabular"></a>-Свойства отчетов Power View (табличные службы SSAS)
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] представляет интуитивно понятный способ создания ad-hoc-отчетов для бизнес-пользователей — аналитиков, сотрудников, ответственных за принятие решений, и информационных работников. Они могут легко создавать представления данных из табличных моделей, основанных на книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые опубликованы в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , или табличных моделей, созданных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и затем развернутых в экземплярах служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services, и работать с ними. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] — это браузерное приложение на основе Silverlight, запускаемое из SharePoint Server 2010 или более поздней версии.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] предоставляет интуитивно понятный способ создания отчетов для бизнес-пользователей — аналитиков, руководителей и информационных работников. Они могут легко создавать представления данных из табличных моделей, основанных на книгах [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые опубликованы в коллекции [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , или табличных моделей, созданных в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и затем развернутых в экземплярах служб [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Services, и работать с ними. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] — это браузерное приложение на основе Silverlight, запускаемое из SharePoint Server 2010 или более поздней версии.  
   
  При создании проектов табличной модели в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]пользователь может настроить определенные свойства составления отчетов, которые будут уникальными для отчетов [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] . В подразделах этого раздела описывается оптимизация модели с целью улучшения работы с отчетами в [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  
   

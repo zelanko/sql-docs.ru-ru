@@ -2,12 +2,12 @@
 title: "Включить режим DirectQuery в SSDT | Документы Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a3b43ff386936e76091c64d8db1f73bda587f23b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1866cd3c6194edf7065ebb2929cc77f8cc4acc3a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>Включение режима DirectQuery в SSDT
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-В этом разделе описывается включение режима DirectQuery для проекта табличной модели в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе мы опишем, как включить режим DirectQuery для проекта табличной модели в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
 При включении режима DirectQuery для табличной модели, разрабатываемой в SSDT:
 -   Отключаются компоненты, не совместимые с режимом DirectQuery.  
@@ -54,7 +51,7 @@ ms.lasthandoff: 11/17/2017
     >  Даже если модель пуста, в режиме DirectQuery для каждой таблицы всегда можно посмотреть небольшой встроенный набор строк. В [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]выберите меню **Таблица** > **Свойства таблицы** , чтобы просмотреть набор данных из 50 строк.  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Включение режима DirectQuery в SSMS](../../analysis-services/tabular-models/enable-directquery-mode-in-ssms.md)
 
 [Добавление демонстрационных данных в модель DirectQuery в режиме конструктора](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md)

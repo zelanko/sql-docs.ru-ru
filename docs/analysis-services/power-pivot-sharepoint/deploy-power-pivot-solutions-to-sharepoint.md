@@ -2,12 +2,12 @@
 title: "Развертывание решений PowerPivot для SharePoint | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 206b31adec86e7ea2213746687d535d56ca3b617
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 685e5d9b0586d0c97fa686507bc1934f8fb31c1e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Развертывание решений PowerPivot в SharePoint
-  Используйте следующие инструкции, чтобы вручную развернуть два пакета решений, которые добавляют компоненты [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в среду SharePoint Server 2010. Развертывание решений — это обязательный шаг по настройке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint на сервере SharePoint 2010. Сведения о просмотре полного списка необходимых действий см. в разделе [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Используйте следующие инструкции, чтобы вручную развернуть два пакета решений, которые добавляют [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] функций в среде SharePoint Server 2010. Развертывание решений — это обязательный шаг по настройке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint на сервере SharePoint 2010. Сведения о просмотре полного списка необходимых действий см. в разделе [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md).  
   
  Кроме того, для развертывания решений можно использовать средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . При установке одиночного сервера проще и удобнее использовать средство настройки, однако если вы предпочитаете знакомое средство или если требуется настроить несколько компонентов одновременно, то лучше пользоваться центром администрирования и PowerShell. Дополнительные сведения об использовании средства настройки см. в разделе [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md).  
   

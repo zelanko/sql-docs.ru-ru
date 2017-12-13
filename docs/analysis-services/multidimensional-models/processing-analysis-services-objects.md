@@ -2,12 +2,12 @@
 title: "Обработка служб Analysis Services объектов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7314562257267c1350174e48c79c3e0b28bbaa6a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14559d9f5b7581c406df31aee9782019a580bc31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-analysis-services-objects"></a>Обработка объектов служб Analysis Services
-  Обрабатываются следующие типы объектов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , кубы, измерения, группы мер, секции, а также структуры и модели интеллектуального анализа данных. Для каждого объекта можно указать уровень обработки или назначить его обработку по умолчанию, чтобы службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могли выбрать его автоматически. Дополнительные сведения об уровнях обработки для каждого объекта см. в разделе [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Обработка затрагивает следующие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] типов объектов: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных, кубов, измерений, групп мер, секций и структур интеллектуального анализа данных и моделей. Для каждого объекта можно указать уровень обработки или назначить его обработку по умолчанию, чтобы службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] могли выбрать его автоматически. Дополнительные сведения об уровнях обработки для каждого объекта см. в разделе [Настройка параметров обработки (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md).  
   
  Чтобы исключить все негативные эффекты, важно знать последовательность выполнения этапов обработки. Например, полная обработка измерения автоматически устанавливает все зависимые от него секции в состояние необработанных. Из-за этого до окончания обработки зависимых секций соответствующие кубы становятся недоступными для запросов.  
   

@@ -1,7 +1,7 @@
 ---
 title: "ИЗМЕНИТЬ уровень совместимости базы данных (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 12/07/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 62a9e4eec99073e63d53c2d610a7527fbe5f9c91
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: b418634c714fda6dfd0e339e42c7b584436c5433
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Уровень совместимости ALTER DATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,15 +102,7 @@ SELECT name, compatibility_level FROM sys.databases;
  Если существующие [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] влияет на различия в поведении в версии приложения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], преобразование приложения для работы с новый режим совместимости. Затем с помощью **инструкции ALTER DATABASE** для изменения уровня совместимости 130. Новая настройка уровня совместимости для базы данных изменения вступят в силу при **USE Database** выдается или при обработке нового имени входа этой базы данных в качестве базы данных по умолчанию.  
   
 ## <a name="best-practices"></a>Рекомендации  
- Изменение уровня совместимости в то время, когда пользователи подключены к базе данных, может привести к формированию неверных результирующих наборов для активных запросов. Например, если уровень совместимости изменится во время компиляции плана запроса, скомпилированный план может основываться на обоих, старом и новом, уровнях совместимости, что в результате даст неверный план и потенциально неточные результаты. Более того, проблема может стать еще более запутанной, если план будет помещен в кэш планов и повторно использован для последующих запросов. Чтобы запросы не выдавали неверных результатов, рекомендуется воспользоваться следующей процедурой для изменения уровня совместимости базы данных.  
-  
-1.  Перевести базу данных в однопользовательский режим работы с помощью инструкции ALTER DATABASE SET SINGLE_USER.  
-  
-2.  Изменить уровень совместимости базы данных.  
-  
-3.  Перевести базу данных в многопользовательский режим работы с помощью инструкции ALTER DATABASE SET MULTI_USER.  
-  
-4.  Дополнительные сведения об установке режима доступа базы данных см. в разделе [инструкции ALTER DATABASE &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql.md).  
+Рекомендуемый рабочий процесс для обновления уровень совместимости. в разделе [изменение уровня совместимости базы данных и использование хранилища запросов](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md).  
   
 ## <a name="compatibility-levels-and-stored-procedures"></a>Уровни совместимости и хранимые процедуры  
  При выполнении хранимой процедуры используется текущий уровень совместимости базы данных, в которой она была определена. Когда настройка совместимости базы данных подвергается изменению, все хранимые процедуры этой базы данных автоматически перекомпилируются соответствующим образом.  

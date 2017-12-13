@@ -2,12 +2,12 @@
 title: "Добавление демонстрационных данных в модель DirectQuery в режиме конструктора | Документы Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff618d97a65c7143dda513d38d66dd72d1459022
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 962cadeac40c4cd450265d6c617a2bdcf1afa9ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Добавление демонстрационных данных в модель DirectQuery в режиме конструктора
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
- В режиме DirectQuery секции таблиц используются для создания либо образцов подмножеств данных, применяемых при разработке модели, либо альтернатив полному представлению данных.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В режиме DirectQuery секции таблицы используются для создания подмножеств образец данных во время разработки модели, или создания дополнительных вариантов представления полного набора данных.
  
  При развертывании табличной модели DirectQuery каждой таблице может соответствовать только одна секция, поэтому такая секция должна содержать полное представление данных. Все дополнительные секции служат либо заменой полного представления данных, либо образцом данных. В этом разделе описывается создание примера секции с подмножеством данных.
  

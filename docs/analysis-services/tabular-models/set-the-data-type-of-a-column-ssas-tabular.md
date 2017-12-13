@@ -2,12 +2,12 @@
 title: "Задайте тип данных столбца (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8ff4bf9de4a232561d813ae304aa3ae660ff9041
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ca2bd5f49f3d8a756e213f9e8ae46dcd5a25f6a9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Выбор типа данных столбца (табличные службы SSAS)
-  При импорте данных или вставке данных в модель конструктор модели автоматически обнаруживает и применяет типы данных. После добавления данных в модель можно вручную изменить тип данных столбца, чтобы изменить способ хранения данных. Если необходимо только изменить формат отображения данных, не изменяя способ их хранения, так и сделайте.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]При импорте данных или вставке данных в модель конструктор моделей автоматически определять и применяет типы данных. После добавления данных в модель можно вручную изменить тип данных столбца, чтобы изменить способ хранения данных. Если необходимо только изменить формат отображения данных, не изменяя способ их хранения, так и сделайте.  
   
 ### <a name="to-change-the-data-type-or-display-format-for-a-column"></a>Изменение типа данных или формата отображения для столбца  
   

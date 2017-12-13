@@ -2,12 +2,12 @@
 title: "Интеллектуальный анализ данных (службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 08014cb37823ce3f2bbdec7d89647d685f6a7684
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ac8390ebf0ffd45388d4fcea1dfbf846146b3b0d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-ssas"></a>Интеллектуальный анализ данных (службы SSAS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] занимал лидирующие позиции в области прогнозирующей аналитики с выпуска 2000, обеспечивая интеллектуальный анализ данных в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Сочетание [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и интеллектуального анализа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует интегрированную платформу для прогнозной аналитики, которая охватывает решения по очистке и подготовке данных, машинному обучению и отчетности. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Интеллектуальный анализ данных включает в себя несколько стандартных алгоритмов, включая модели кластеризации EM и K-средние, нейронные сети, логистическую регрессию и линейную регрессию, деревья принятия решений и классификаторы упрощенного алгоритма Байеса. Все модели располагают интегрированными визуальными элементами для упрощения разработки, уточнения и оценки моделей.  Интеграция интеллектуального анализа данных в решения бизнес-аналитики помогает принимать обоснованные решения по сложным вопросам.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был лидером в прогнозной аналитики с момента выпуска 2000, предоставляя интеллектуального анализа данных в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Сочетание [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и интеллектуального анализа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует интегрированную платформу для прогнозной аналитики, которая охватывает решения по очистке и подготовке данных, машинному обучению и отчетности. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Интеллектуальный анализ данных включает в себя несколько стандартных алгоритмов, включая модели кластеризации EM и K-средние, нейронные сети, логистическую регрессию и линейную регрессию, деревья принятия решений и классификаторы упрощенного алгоритма Байеса. Все модели располагают интегрированными визуальными элементами для упрощения разработки, уточнения и оценки моделей.  Интеграция интеллектуального анализа данных в решения бизнес-аналитики помогает принимать обоснованные решения по сложным вопросам.  
   
 ## <a name="benefits-of-data-mining"></a>Преимущества интеллектуального анализа данных  
  В интеллектуальном анализе данных (который также называется прогнозирующей аналитикой и машинным обучением) используются хорошо исследованные статистические принципы для выделения закономерностей в данных. Применив алгоритмы интеллектуального анализа данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] к своим данным, вы сможете прогнозировать тенденции, выделять закономерности, создавать правила и рекомендации, анализировать последовательность событий в сложных наборах данных и обнаруживать новые зависимости.  

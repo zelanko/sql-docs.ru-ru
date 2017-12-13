@@ -2,12 +2,12 @@
 title: "Элемент ForceRebuildInterval (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 905e9151bd389cd33d4cb0ef212e83c58b11a5df
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 30bb9a2d2d1110859c65aa6b27effa50e7acc25c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="forcerebuildinterval-element-assl"></a>Элемент ForceRebuildInterval (ASSL)
-  Определяет время (начиная с момента, когда становится доступным новый образ многомерного OLAP (MOLAP)), через которое безусловно начинается операция создания образа MOLAP.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет количество времени, запуск, если новый образ многомерного OLAP (MOLAP) становится доступной, после которого начинается безусловно Создание образа MOLAP.  
   
 ## <a name="syntax"></a>Синтаксис  
   

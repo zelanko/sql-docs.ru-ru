@@ -2,12 +2,12 @@
 title: "Типы данных поддерживаются в табличных моделях служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 10/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79512ded963b6568346c261b69c100b77e03bc74
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a5dcf73586ff73b24e121d517e8bc56c71c2156c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Типы данных поддерживаются в табличных моделях
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  В этом разделе описаны типы данных, которые можно использовать в табличных моделях, и рассматривается неявное преобразование типов данных, выполняемое при вычислении данных или их использовании в формуле выражения анализа данных (DAX).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этой статье описаны типы данных, которые могут использоваться в табличных моделях и рассматривается неявное преобразование типов данных при вычислении данных или использовании в формуле выражения анализа данных (DAX).  
 
   
 ##  <a name="bkmk_data_types"></a>Типы данных, используемые в табличных моделях  

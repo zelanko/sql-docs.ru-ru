@@ -2,12 +2,12 @@
 title: "Переводы в табличных моделях (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0f125112e836420d8103379c8c119d52c13dfea6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a79c607d07a50861f87bcdec21c928231cd51bc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Переводы в табличных моделях (службы Analysis Services)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Добавляет поддержку строки перевода для табличных моделей. Одиночный объект в модели может иметь несколько переводов имени или описания, что позволяет поддерживать несколько языков в определении модели.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] добавляет поддержку строки перевода для табличных моделей. Одиночный объект в модели может иметь несколько переводов имени или описания, что позволяет поддерживать несколько языков в определении модели.  
   
  Переведенные строки имеются только для тех метаданных объектов (имен и описаний таблиц и столбцов), которые отображаются в клиентском средстве, например в сводной таблице Excel.  Чтобы использовать переведенные строки, клиентское соединение указывает язык и региональные параметры. В компоненте **Анализ в Excel** в раскрывающемся списке можно выбрать язык. Для других средств, возможно, потребуется указать язык и региональные параметры в строке подключения.  
   

@@ -2,12 +2,12 @@
 title: "Элемент AllowedSet (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ec0b7b19d3673a6893362a291c4417f2ff1f0691
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f9faf60422f7c00661486926a4ed763f6cb263e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="allowedset-element-assl"></a>Элемент AllowedSet (ASSL)
-  Содержит выражение набора, определяющее набор допустимых разрешений для [роли](../../../analysis-services/scripting/objects/role-element-assl.md) на атрибут.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит выражение набора, определяющее набор допустимых разрешений для [роли](../../../analysis-services/scripting/objects/role-element-assl.md) на атрибут.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Тип данных и длина|Строковые значения|  
 |Значение по умолчанию|None|  
-|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
+|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

@@ -2,12 +2,12 @@
 title: "Наборы строк схемы интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 35f4df3e7e01a8f0987e955a180842efde5793e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcde375ccb8186f0ef5d38dca2c7f88aefaaf4b7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-schema-rowsets"></a>Data Mining Schema Rowsets
-  Сервер, на котором выполняется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает следующие наборы строк схемы интеллектуального анализа данных. Чтобы проверить, поддерживает ли определенного поставщика XML/A определенного набора строк, используйте [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) набора строк с [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Сервер, на котором выполняется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] поддерживает следующие наборы строк схемы интеллектуального анализа данных. Чтобы проверить, поддерживает ли определенного поставщика XML/A определенного набора строк, используйте [DISCOVER_ENUMERATORS](../../../analysis-services/schema-rowsets/xml/discover-enumerators-rowset.md) набора строк с [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод.  
   
  В [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] к наборам строк схемы интеллектуального анализа данных доступ предоставляется так же, как к таблицам на языке Transact-SQL, в схеме $SYSTEM. Например, следующий запрос применительно к экземпляру служб Analysis Services возвращает список схем, доступных в текущем экземпляре.  
   

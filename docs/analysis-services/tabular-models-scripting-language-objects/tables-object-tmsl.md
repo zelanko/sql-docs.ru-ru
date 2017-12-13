@@ -2,12 +2,12 @@
 title: "Объект Tables (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d681a36710cdc096739f2c4e5f6f13afeb3ac8cc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85e0d667cc7ad89533dd9df7ced0a68e6e7ae8a7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables-object-tmsl"></a>Объект Tables (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Определяет таблиц, содержащихся в модели. Таблицы в модели либо привязаны к таблицам во внешней базе данных, из которого импортируются и запрашивать данные или вычисляемой таблицы, построенным на основе выражения DAX. В таблице один или несколько **секции** объектов описания источника данных.  Между таблицами **связь** объект указывает количество элементов, направление фильтрации и другие свойства связи.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Определяет таблиц, содержащихся в модели. Таблицы в модели либо привязаны к таблицам во внешней базе данных, из которого импортируются и запрашивать данные или вычисляемой таблицы, построенным на основе выражения DAX. В таблице один или несколько **секции** объектов описания источника данных.  Между таблицами **связь** объект указывает количество элементов, направление фильтрации и другие свойства связи.  
   
 ## <a name="object-definition"></a>Определение объекта  
  Все объекты имеют общий набор свойств, включая имя, тип, описание, коллекцию свойств и заметки. **Таблица** объекты также имеют следующие свойства.  

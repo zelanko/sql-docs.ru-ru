@@ -2,12 +2,12 @@
 title: "Определение нового атрибута автоматически | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdf5101c35d3245c027b64a767546d655fc582e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f0f9cd8d5bcae6b423be4744445a194bc66bb72a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---define-a-new-attribute-automatically"></a>Атрибут свойства - определение нового атрибута автоматически
-  Новый атрибут измерения можно создать путем редактирования перетаскиванием элементов в конструкторе измерений.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно создать новый атрибут в измерении с помощью перетаскивания и вставки, редактирования в конструкторе измерений.  
   
 ### <a name="to-create-a-new-attribute-automatically"></a>Автоматическое создание нового атрибута  
   

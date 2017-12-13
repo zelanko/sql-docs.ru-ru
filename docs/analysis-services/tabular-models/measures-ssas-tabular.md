@@ -2,12 +2,12 @@
 title: "Меры | Документы Microsoft"
 ms.custom: 
 ms.date: 04/10/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ece228053898085df6a2d95bf513c0d889cfa646
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures"></a>меры
-  В табличных моделях мера представляет собой вычисление, созданное при помощи формулы DAX, специально созданной для использования в клиенте отчетов. Меры оцениваются на основании полей, фильтров и срезов, которые пользователи выбирают в клиентском приложении создания отчетов.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В табличных моделях мера представляет собой вычисление, созданное с помощью формулы DAX для использования в клиенте отчетов. Меры оцениваются на основании полей, фильтров и срезов, которые пользователи выбирают в клиентском приложении создания отчетов.  
   
 ##  <a name="bkmk_understanding"></a> Преимущества  
  Меры могут быть основаны на стандартных агрегатных функциях, например AVERAGE, COUNT или SUM, либо на пользовательских формулах на языке выражений анализа данных (DAX). В дополнение к формуле каждая мера имеет свойства, определенные типом данных меры, например «Имя», «Сведения о таблице», «Формат» и «Десятичные разряды».  

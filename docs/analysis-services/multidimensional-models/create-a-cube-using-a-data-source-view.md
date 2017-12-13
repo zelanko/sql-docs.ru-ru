@@ -2,12 +2,12 @@
 title: "Создать куб с использованием представления источника данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdd918ba24a9704d17753ccf39176c96ec03586d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c5514b6ef512855ff718740fc7b7ea7342a1258
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Создание куба с использованием представления источников данных
-  Этот метод служит для создания нового куба, если планируется использование существующего представления источников данных. Этот метод позволяет задать представление источника данных и выбрать таблицы фактов и таблицы измерений для использования в представлении источника данных. Затем необходимо выбрать измерения и меры для включения в куб.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Этот метод служит для создания нового куба, если вы планируете использовать существующее представление источника данных. Этот метод позволяет задать представление источника данных и выбрать таблицы фактов и таблицы измерений для использования в представлении источника данных. Затем необходимо выбрать измерения и меры для включения в куб.  
   
  Чтобы создать куб с использованием источника данных, в обозревателе решений щелкните правой кнопкой мыши узел **Кубы** и выберите пункт **Создать куб**. Откроется мастер кубов.  
   

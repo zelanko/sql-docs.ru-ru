@@ -2,12 +2,12 @@
 title: "Переименование таблицы или столбца (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: edfd1fe4e353f74f9729325b40865905a1907dc2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bf322e42ce1913eef2a7cf03208192c3b1b6e4ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Переименование таблицы или столбца (табличные службы SSAS)
-  Имя таблицы можно изменить во время импорта, указав **Понятное имя** на странице **Выбор таблиц и представлений** **мастера импорта таблиц**. Имена таблицы и столбцов также можно изменить, если данные импортируются с помощью запроса на странице **Указание SQL-запроса** **мастера импорта таблиц**.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Можно изменить имя таблицы во время импорта, введя **понятное имя** в **Выбор таблиц и представлений** страница **мастера импорта таблиц**. Имена таблицы и столбцов также можно изменить, если данные импортируются с помощью запроса на странице **Указание SQL-запроса** **мастера импорта таблиц**.  
   
  После добавления данных в модель имя (или название) таблицы появляется на вкладке таблицы в нижней части конструктора моделей. Имя таблицы можно заменить более подходящим. После добавления данных в модель можно также переименовать столбец. Переименование столбца может оказаться полезным в том случае, если данные были импортированы из нескольких источников и необходимо сделать так, чтобы столбцы в разных таблицах имели легко различимые имена.  
   

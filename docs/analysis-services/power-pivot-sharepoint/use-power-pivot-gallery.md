@@ -2,12 +2,12 @@
 title: "Использование коллекции PowerPivot | Документы Microsoft"
 ms.custom: 
 ms.date: 08/31/2015
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2baeb4233fc9c8c8121e468c7d9111a52a66ba7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3e56bbb1285683d0328b9ca64092d075406ccabf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-power-pivot-gallery"></a>Использование коллекции PowerPivot
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] — это специальная библиотека документов SharePoint. Она предлагает широкие возможности просмотра документов и управления ими для опубликованных книг Excel и отчетов служб Reporting Services, содержащих данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Коллекция — это специальная библиотека документов SharePoint, которая предоставляет широкие возможности просмотра и управления документами для опубликованных книг Excel и отчетов служб Reporting Services, содержащих [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данных.  
   
 > [!NOTE]  
 >  В зависимости от конфигурации сервера в области предварительного просмотра для некоторых документов могут появляться предупреждения или сообщения об ошибках. Сообщения могут появляться, если для книги Excel задано автоматическое обновление данных при открытии. Сообщения с предупреждениями об обновлении данных отображаются в изображении предварительного просмотра, если в службе Excel настроена выдача таких предупреждений. Администратор фермы или службы может изменить параметры конфигурации, включив показ фактических листов при предварительном просмотре. Дополнительные сведения см. в разделе [Создание надежного расположения для сайтов PowerPivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  

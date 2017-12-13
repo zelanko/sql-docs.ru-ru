@@ -2,12 +2,12 @@
 title: "Создание и управление секциями табличной модели (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/31/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,15 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dcf049205f00cf10f4c8dda308911b202c3a3728
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 231545ecf1ecbaaaeb24041347772f558164112a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Создание секций табличной модели и управление ими
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
   Секции разделяют таблицу на логические части. Каждая секция затем может обрабатываться (обновляться) независимо от других секций. Секции, определенные для модели во время разработки модели, дублируются в модели развертывания. После развертывания можно настроить управление секциями с помощью диалогового окна **Секции** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью скрипта. В задачах этого раздела описывается создание и управление секциями в развернутой модели.  
   
@@ -36,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 >  Секции в табличных моделей, созданных на уровне совместимости 1400 определяются с помощью инструкции запроса M. Дополнительные сведения см. в разделе [ссылка M](https://msdn.microsoft.com/library/mt211003.aspx). 
 >
   
-## <a name="tasks"></a>Задачи  
+## <a name="tasks"></a>Задания  
  Создание секций и управление ими в развернутой базе данных с табличной моделью выполняются в диалоговом окне **Секции** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Чтобы открыть диалоговое окно **Секции** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], щелкните таблицу правой кнопкой мыши и выберите команду **Секции**.  
   
 ###  <a name="bkmk_create_new"></a> Создание новой секции  

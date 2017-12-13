@@ -2,12 +2,12 @@
 title: "Режим DirectQuery | Документы Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,17 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9bd8eb8e3bd0f313fec3e2d0228fb04e08cb6199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="directquery-mode"></a>Режим DirectQuery
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  В этом разделе описывается *режим DirectQuery* для табличных моделей служб Analysis Services на уровне совместимости 1200 и выше. Режим DirectQuery можно включить для моделей, разрабатываемых в среде SSDT. Для уже развернутых табличных моделей можно переключиться в режим DirectQuery в среде SSMS. Перед выбором режима DirectQuery важно понять его преимущества и ограничения.
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе описывается *режим DirectQuery* для табличных моделей служб Analysis Services на уровне совместимости 1200 и выше. Режим DirectQuery можно включить для моделей, разрабатываемых в среде SSDT. Для уже развернутых табличных моделей можно переключиться в режим DirectQuery в среде SSMS. Перед выбором режима DirectQuery важно понять его преимущества и ограничения.
   
 ##  <a name="bkmk_Benefits"></a> Преимущества
  По умолчанию табличные модели используют кэш в памяти для хранения данных и отправки запросов к данным. Если табличные модели запрашивают данные, находящиеся в памяти, даже сложные запросы могут выполняться очень быстро. Однако есть некоторые недостатки использования кэшированных данных. А именно: для больших наборов данных может не хватать выделенного объема памяти. В этом случае процесс выполнения запросов на обновление данных по расписанию может быть сложным или вообще невозможным.  

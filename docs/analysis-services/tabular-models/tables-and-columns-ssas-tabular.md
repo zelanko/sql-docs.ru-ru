@@ -2,12 +2,12 @@
 title: "Таблицы и столбцы (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 205dce73a6fb5940be83c5082b730ddbd753ce3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 26bae76004b344b15f8f2be3605eb8c600c31039
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Таблицы и столбцы (табличные службы SSAS)
-  После добавления в модель таблиц и данных с помощью мастера импорта таблиц можно начать работу с таблицами — добавление новых столбцов данных, создание связей между таблицами, определение вычислений для расширения данных, фильтрацию и сортировку данных в таблицах для упрощения просмотра.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]После добавления таблиц и данных в модель с помощью мастера импорта таблиц, можно начать работу с таблицами путем добавления новых столбцов данных, создание связей между таблицами, определять вычисления, расширяющие данные, и фильтрации и сортировки данных в таблицы для удобства просмотра.  
   
  Разделы данной темы:  
   

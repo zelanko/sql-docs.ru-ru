@@ -2,12 +2,12 @@
 title: "Локальные кубы (службы Analysis Services — многомерные данные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5872bd5a1efda8d8add71bc1ce0e089785352e11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 06178b8d1023a95433d76543ff05db4d9c654a27
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Локальные кубы (службы Analysis Services — многомерные данные)
-  Для создания, обновления или удаления локальных кубов разработайте и выполните скрипт ASSL или программу AMO.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Для создания, обновления или удаления локальных кубов, вы должны написать и выполнить скрипт ASSL или программу AMO.  
   
  Локальные кубы и локальные модели интеллектуального анализа данных позволяют выполнять анализ на клиентской рабочей станции даже когда она не подключена к сети. Например, клиентское приложение может вызывать поставщик OLE DB для OLAP 9.0 (MSOLAP.3), который загружает локальный механизм куба и выполняет запросы к локальным кубам, как показано на приведенной ниже иллюстрации:  
   

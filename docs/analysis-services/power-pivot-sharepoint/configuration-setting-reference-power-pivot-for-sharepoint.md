@@ -2,12 +2,12 @@
 title: "Справочник (PowerPivot для SharePoint) по параметрам конфигурации | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 267128105fe02befb5fa42053fdaa77c581dd361
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 683198616cb883944a20de70e3531d9fa48fee62
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>Справочник по параметрам конфигурации (Power Pivot для SharePoint)
-  Эта статья содержит сведения о параметрах настройки, используемых приложениями служб [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на ферме SharePoint. В этом разделе можно найти подробные сведения об использовании скриптов PowerShell для настройки сервера, а также обо всех параметрах.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Этот раздел содержит справочную документацию для параметров конфигурации, используемые [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] приложений в ферме SharePoint службы. В этом разделе можно найти подробные сведения об использовании скриптов PowerShell для настройки сервера, а также обо всех параметрах.  
   
  Параметры конфигурации задаются для каждого приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . На ферме можно создать несколько приложений служб, чтобы настроить независимые логические экземпляры одного и того же физического экземпляра службы. Параметры конфигурации хранятся в базе данных приложения [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , отдельно созданной для каждого настроенного приложения службы.  
   

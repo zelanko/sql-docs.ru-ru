@@ -2,12 +2,12 @@
 title: "Элемент EntityContainer (CSDLBI) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5328a9c360fa4465e0bcf53bd0f017447c7c113
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Элемент EntityContainer (CSDLBI)
-  Элемент EntityContainer — сложный тип на основе типа языка CSDL EntityContainer, который определяет коллекцию сущностей в рамках единой модели данных. В приложении бизнес-аналитики модель данных, представленная элементом EntityContainer, может содержать несколько таблиц со столбцами, для которых объединены отношения, а также вычисления, меры и ключевые показатели эффективности. Он концептуально похож на базу данных или источник данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Элемент EntityContainer — это сложный тип, в зависимости от типа языка CSDL EntityContainer, который определяет коллекцию сущностей в рамках одной модели данных. В приложении бизнес-аналитики модель данных, представленная элементом EntityContainer, может содержать несколько таблиц со столбцами, для которых объединены отношения, а также вычисления, меры и ключевые показатели эффективности. Он концептуально похож на базу данных или источник данных.  
   
  В элементе EntityContainer должен указываться каждый из типов сущностей, включенных в модель данных, включая таблицы и связи. Сведения об этих сущностях в моделях указаны в списке дочерних сущностей этого типа в элементе Entity. Дополнительные сведения см. в разделе [Элемент EntityType (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entitytype-element-csdlbi.md).  
   

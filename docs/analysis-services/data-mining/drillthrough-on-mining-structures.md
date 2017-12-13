@@ -2,12 +2,12 @@
 title: "Детализация структур интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfbedd4235f4409df31912df360cf192725f36e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 96d9e924f914822b7eb26b4242c1120113da7c3b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="drillthrough-on-mining-structures"></a>Детализация структур интеллектуального анализа данных
-  *Детализация* — это возможность выполнять запросы к модели или структуре интеллектуального анализа данных и получать подробные данные, не представленные в модели.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Детализации* — возможность запрашивать модель интеллектуального анализа данных или структуру интеллектуального анализа данных и получать подробные данные, не представленные в модели.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] обеспечивает два различных варианта для детализации данных вариантов. Можно детализировать данные, которые были использованы для построения модели интеллектуального анализа данных, или исходные данные в структуре интеллектуального анализа данных.  
   

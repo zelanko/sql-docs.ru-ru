@@ -26,11 +26,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 638708265e79ff0f3a927e9e049f3985cfe2752a
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
-ms.translationtype: HT
+ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
+ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 11/29/2017
 ---
 # <a name="create-external-table-transact-sql"></a>СОЗДАЙТЕ ВНЕШНЮЮ ТАБЛИЦУ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -138,7 +138,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  *database_name* . [schema_name]. | schema_name. ] *имя_таблицы*  
  Одно для трех - часть имя создаваемой таблицы. Для внешней таблицы только метаданные таблицы хранятся в SQL вместе с базовую статистику о файл или папку, указанную в хранилище больших двоичных объектов Azure или Hadoop. Никакие данные перемещается или хранящихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- \<column_definition > [ ,... *n*  ] Одно или несколько определений столбца позволяет создать ВНЕШНЮЮ ТАБЛИЦУ. CREATE EXTERNAL TABLE и CREATE TABLE используется тот же синтаксис для определения столбца. Исключение, нельзя использовать ограничение по умолчанию во внешних таблицах. Подробная информация о определения столбцов и их типы данных, в разделе [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) и [создание таблицы в базе данных Azure SQL](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
+ \<column_definition > [,...  *n*  ] Одно или несколько определений столбца позволяет создать ВНЕШНЮЮ ТАБЛИЦУ. CREATE EXTERNAL TABLE и CREATE TABLE используется тот же синтаксис для определения столбца. Исключение, нельзя использовать ограничение по умолчанию во внешних таблицах. Подробная информация о определения столбцов и их типы данных, в разделе [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) и [создание таблицы в базе данных Azure SQL](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
   
  Определения столбцов, включая типы данных и количество столбцов должны соответствовать данным во внешних файлах. В случае несоответствия при запросе фактические данные будут отклонены строки файла.  
   
@@ -295,6 +295,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 -   CREATE TABLE и DROP TABLE  
   
 -   CREATE STATISTICS и DROP STATISTICS  
+Примечание: Создание и DROP STATISTICS во внешних таблицах не поддерживаются в базе данных SQL Azure. 
   
 -   Создание ПРЕДСТАВЛЕНИЯ и DROP VIEW  
   

@@ -2,12 +2,12 @@
 title: "Синхронизировать элемент (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e97d23419c9e1a52d11a22b9dbe491906f2d7efa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fe515a06d8fbb6f644db8ac0bb52b6e2eb2c7a52
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="synchronize-element-xmla"></a>Элемент Synchronize (XML для аналитики)
-  Синхронизирует [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных с другой существующей базой данных.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Синхронизирует [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных с другой существующей базой данных.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0–n: необязательный элемент, который может встречаться несколько раз.|  
+|Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 |Режим хранения|Сведения|  
 |------------------|-----------------|  
 |Многомерный OLAP (MOLAP)|Исходные данные, агрегаты и метаданные|  
-|гибридный OLAP (HOLAP).|Агрегаты и метаданные|  
+|Гибридный OLAP (HOLAP)|Агрегаты и метаданные|  
 |Реляционный OLAP (ROLAP)|Метаданные|  
   
  Во время выполнения команды **Synchronize** на базу данных-источник ставится блокировка на чтение, а на целевую базу данных — блокировка на запись. Обе блокировки снимаются после выполнения команды **Synchronize** .  

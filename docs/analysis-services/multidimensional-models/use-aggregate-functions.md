@@ -2,12 +2,12 @@
 title: "Использование агрегатных функций | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 407e0f9d3c7c0d6c3a8a3c2734a53fbab8aca240
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7a146e6be066f8669757d15f5fe76ac67c5c172b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-aggregate-functions"></a>Использование агрегатных функций
-  Если измерение используется для создания среза меры, то производится суммирование меры по иерархиям, содержащимся в этом измерении. Характер суммирования зависит от агрегатной функции, заданной для меры. Для большинства мер, содержащих числовые данные, агрегатная функция — **Sum**. Значение меры будет равно различным суммам в зависимости от того, какой уровень иерархии является активным.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если измерение используется для создания среза меры, то производится суммирование меры по иерархиям, содержащимся в этом измерении. Характер суммирования зависит от агрегатной функции, заданной для меры. Для большинства мер, содержащих числовые данные, агрегатная функция — **Sum**. Значение меры будет равно различным суммам в зависимости от того, какой уровень иерархии является активным.  
   
  В службах Analysis Services каждая созданная мера поддерживается функцией агрегирования, определяющей операцию меры. Предопределенные типы агрегирования включают **Sum**, **Min**, **Max**, **Count**, **Distinct Count**и некоторые другие более специализированные функции. Кроме того, если необходимы агрегаты на основании сложных или пользовательских формул, можно создавать вычисления многомерных выражений вместо готовых функций агрегирования. Например, для определения меры для процентного значения следует использовать многомерное выражение с вычисляемой мерой. См. статью [Инструкция CREATE MEMBER (многомерные выражения)](../../mdx/mdx-data-definition-create-member.md).  
   

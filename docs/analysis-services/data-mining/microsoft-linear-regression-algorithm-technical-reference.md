@@ -2,12 +2,12 @@
 title: "Технический справочник по алгоритму линейной регрессии Майкрософт | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 188666c119f92bc0093877c055ed4097cc2e1471
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6e68aa664039d9fa7531c6563025c108687c2868
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Технический справочник по алгоритму линейной регрессии (Майкрософт)
-  Алгоритм линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это частный случай алгоритма дерева принятия решений (Майкрософт), оптимизированный для моделирования пар непрерывных атрибутов. В данном разделе описывается реализация алгоритма и настройка его поведения. Приводятся также ссылки на дополнительную информацию о запросах к моделям.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм линейной регрессии — это частный случай алгоритма дерева принятия решений Майкрософт, оптимизированный для моделирования пар непрерывных атрибутов. В данном разделе описывается реализация алгоритма и настройка его поведения. Приводятся также ссылки на дополнительную информацию о запросах к моделям.  
   
 ## <a name="implementation-of-the-linear-regression-algorithm"></a>Реализация алгоритма линейной регрессии (Майкрософт)  
  Алгоритм дерева принятия решений Майкрософт можно использовать во многих задачах, таких как линейная регрессия, классификация или анализ взаимосвязей. Для реализации этого алгоритма с целью изучения линейной регрессии параметры алгоритма настраиваются так, чтобы контролировать рост дерева и держать все данные модели в едином узле. Иными словами, несмотря на то, что алгоритм линейной регрессии основан на дереве принятия решений, это дерево содержит только один корень и не имеет ветвей: все данные содержатся в корневом узле.  

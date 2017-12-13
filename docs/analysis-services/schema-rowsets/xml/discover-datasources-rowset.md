@@ -2,12 +2,12 @@
 title: "Набор строк DISCOVER_DATASOURCES | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6948843614925bb4f31dd5e60180e8a921ce6f7d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 88fede87c305afd15819a9379999806ec39eeb49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdatasources-rowset"></a>Набор строк DISCOVER_DATASOURCES
-  Возвращает список источников данных поставщика XML для аналитики, которые доступны на сервере или в веб-службе. Для возврата источников опубликованных данных применяется URL-адрес веб-сервера приложения. Клиент может подключиться к одному из источников данных в этом списке.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает список XML для аналитики (XMLA) источников данных поставщика, доступных на сервере или веб-службы. Для возврата источников опубликованных данных применяется URL-адрес веб-сервера приложения. Клиент может подключиться к одному из источников данных в этом списке.  
   
  При вызове метода [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод с **DISCOVER_DATASOURCES** значения перечисления в [RequestType](../../../analysis-services/xmla/xml-elements-properties/requesttype-element-xmla.md) элемент, **Discover** метод возвращает **DISCOVER_DATASOURCES** набора строк.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**DataSourceDescription**|**DBTYPE_WSTR**||Описание источника данных, введенное издателем.<br /><br /> Может возвращать значение **NULL**.|  
 |**URL-адрес**|**DBTYPE_WSTR**|Да|Уникальный путь, который показывает, откуда следует вызывать методы XML для аналитики для этого источника данных.<br /><br /> Может возвращать значение **NULL**.|  
 |**DataSourceInfo**|**DBTYPE_WSTR**||Строка, которая содержит любые дополнительные сведения, необходимые для подключения к источнику данных.<br /><br /> Может возвращать значение **NULL**.|  
-|**ProviderName**|**DBTYPE_WSTR**|Да|Имя поставщика для источника данных.<br /><br /> Пример:`"MSOLAP"`<br /><br /> Может возвращать значение **NULL**.|  
+|**ProviderName**|**DBTYPE_WSTR**|Да|Имя поставщика для источника данных.<br /><br /> Пример: `"MSOLAP"`<br /><br /> Может возвращать значение **NULL**.|  
 |**ProviderType**|**DBTYPE_WSTR**|Да|Типы данных, поддерживаемые поставщиком. Этот массив может включать один или несколько следующих типов:<br /><br /> **MDP**. Поставщик многомерных данных.<br /><br /> **TDP**. Поставщик табличных данных.<br /><br /> **DMP**. Поставщик интеллектуального анализа данных (реализовывает технологию OLE для DB применительно к спецификации интеллектуального анализа данных).|  
 |**AuthenticationMode**|**DBTYPE_WSTR**|Да|Спецификация, определяющая тип режима безопасности, используемого в источнике данных. Значением может быть одно из следующих.<br /><br /> **Unauthenticated**: Не требуется отправка какого-либо идентификатора пользователя или пароля.<br /><br /> **Authenticated**: Идентификатор пользователя и пароль должны быть включены в сведения, необходимые для подключения к источнику данных.<br /><br /> **Интегрированный**: источник данных используются базовые средства безопасности для определения авторизации, такие как встроенная безопасность, обеспечиваемая [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internet Information Services (IIS).|  
   

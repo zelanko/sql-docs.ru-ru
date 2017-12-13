@@ -2,12 +2,12 @@
 title: "Службы Analysis Services сценариев типы данных XML (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b15c0ffee8bc0217ec119d6d66ef446f7897c0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4c4f046379f48724876223ea5248f4aff58bb637
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-scripting-language-xml-data-types-assl"></a>Типы данных XML в языке ASSL
-  В этом разделе справки содержатся сведения о синтаксисе и об использовании каждого элемента, который выступает в качестве типа в схеме языка ASSL.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе справки содержатся сведения о синтаксисе и использовании для каждого элемента, который выступает в качестве типа в схеме языка сценариев служб Analysis Services (ASSL).  
   
  Несмотря на то, что в схеме языка ASSL содержатся только элементы XML, с точки зрения разработчика, элементы, описанные в этом разделе соответствуют типам, таких как **привязки** и **разрешение**, используются для Определите дочерние элементы и свойства других объектов.  
   

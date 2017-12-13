@@ -2,12 +2,12 @@
 title: "Определение хранилища секции (службы Analysis Services — многомерные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -35,14 +35,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4610c996aa58fc71090c5a724447cfe733ede5d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 82b81fb4ee7b4c9df136b519922807fdf94cfa77
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Определение хранилища секции (Analysis Services — многомерные данные)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют несколько стандартных конфигураций хранилища для режимов хранения и параметров кэширования. Они предоставляют часто используемые конфигурации для уведомлений об обновлениях, задержки и перестроения данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько стандартных конфигураций хранилища для режимов хранения и параметров кэширования. Они предоставляют часто используемые конфигурации для уведомлений об обновлениях, задержки и перестроения данных.  
   
  Хранилище секций можно указать на вкладке секций куба в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]или на странице свойств секции в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

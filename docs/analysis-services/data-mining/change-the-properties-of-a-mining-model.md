@@ -2,12 +2,12 @@
 title: "Изменение свойств модели интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a0b40837b81326e63821e4f46f360f79b5940280
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ccfd17eb10b11052f24cf18f9b0e94649b5030af
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Изменение свойств модели интеллектуального анализа данных
-  Некоторые свойства моделей интеллектуального анализа данных могут применяться ко всей модели, другие действуют только на отдельные столбцы. Примеры свойств, которые применяются ко всей модели: свойство **Drillthrough** , задающее доступность данных вариантов для запросов, а также свойство **Description** . Свойства, действующие только на определенные столбцы: **Usage** и **ModelingFlags**, управляющие использованием данных в столбце внутри модели.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Некоторые свойства моделей интеллектуального анализа данных применяются к модели в целом, а другие свойства модели к отдельным столбцам. Примеры свойств, которые применяются ко всей модели: свойство **Drillthrough** , задающее доступность данных вариантов для запросов, а также свойство **Description** . Свойства, действующие только на определенные столбцы: **Usage** и **ModelingFlags**, управляющие использованием данных в столбце внутри модели.  
   
  Для следующих свойств модели предусмотрены расширенные редакторы, с помощью которых можно создавать выражения или настраивать сложные свойства моделей. Следующие свойства предоставляют:  
   

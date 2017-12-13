@@ -2,12 +2,12 @@
 title: "Резервное копирование элемента (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed85939848e2304cec9651245815c3848da5aa04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 26a67121b506f33f69b408fde57aa2e94fa3beed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backup-element-xmla"></a>Элемент Backup (XML для аналитики)
-  Создает резервную копию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных в файл резервной копии.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Создает резервную копию [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных в файл резервной копии.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0–n: необязательный элемент, который может встречаться несколько раз.|  
+|Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 |Режим хранения|Данные, попадающие в резервную копию|  
 |------------------|-----------------------------------|  
 |Многомерный OLAP (MOLAP)|Исходные данные, агрегаты и метаданные|  
-|гибридный OLAP (HOLAP).|Агрегаты и метаданные|  
+|Гибридный OLAP (HOLAP)|Агрегаты и метаданные|  
 |Реляционный OLAP (ROLAP)|Метаданные|  
   
  Во время **резервного копирования** команды, совмещаемая блокировка на [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] базы данных, указанной в **объекта** элемент. Совмещаемая блокировка снимается после выполнения команды **Backup** .  

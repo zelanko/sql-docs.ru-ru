@@ -2,12 +2,12 @@
 title: "Развертывание решений интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e40b686c7aa60b023600e17170c33e2ba7b776be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa0664275dd45cb5cccdef8a9f93d3b4da697be0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Развертывание решений интеллектуального анализа данных
-  Последний шаг процесса интеллектуального анализа данных — это развертывание моделей в производственной среде. Процесс развертывания важен, так как делает модели доступными пользователям для решения любой из следующих задач.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Последним шагом процесса интеллектуального анализа данных является развертывание моделей в производственной среде. Процесс развертывания важен, так как делает модели доступными пользователям для решения любой из следующих задач.  
   
 -   Использование моделей для создания прогнозов и принятия бизнес-решений. Сведения об использовании средств создания запросов см. в разделе [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md).  
   

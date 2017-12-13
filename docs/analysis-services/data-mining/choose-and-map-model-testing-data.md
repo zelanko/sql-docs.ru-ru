@@ -2,12 +2,12 @@
 title: "Выбрать и сопоставить данные проверки модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0fc3ae78de1d40004dc1d99cd465cf043e1fa334
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 591da6613982e9c7539b26257c6f78265343220e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-and-map-model-testing-data"></a>Выбрать и сопоставить данные проверки модели
-  Чтобы создать диаграмму точности прогнозов в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо выбрать данные, которые будут использоваться для проверки модели, и сопоставить эти данные с моделью.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Чтобы создать диаграмму точности прогнозов в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо выбрать данные, которые будут использоваться для проверки модели и сопоставления данных в модель.  
   
  По умолчанию в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будут использоваться проверочные данные модели интеллектуального анализа данных, если при создании структуры интеллектуального анализа данных был создан набор контрольных данных. Создание набора контрольных данных — самый простой способ проверки моделей на основе одной структуры интеллектуального анализа данных, поскольку имена столбцов и типы данных всегда будут совпадать с моделью и можно быть достаточно уверенным в том, что распределение данных будет аналогичным. Кроме того, конструктор автоматически создает связи между входом и столбцами модели.  
   

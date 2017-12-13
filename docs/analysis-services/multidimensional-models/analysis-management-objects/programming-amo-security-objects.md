@@ -2,12 +2,12 @@
 title: "Программирование объектов безопасности AMO | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b81d5b81df182309384c5d647a4251688bb1489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d8733a0255c22701009baf79892d7ff6f83b9c87
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-security-objects"></a>Программирование объектов безопасности AMO
-  В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], программирования объектов безопасности или выполнения программ, в которых используются объекты безопасности AMO, необходимо быть членом группы администраторов сервера или администраторов базы данных. Администратор сервера или администратор базы данных — доступа предоставляемые уровни [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], программирования объектов безопасности или выполнения программ, в которых используются объекты безопасности AMO, необходимо быть членом группы администраторов сервера или администраторов базы данных. Администратор сервера или администратор базы данных — доступа предоставляемые уровни [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
  В службах [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] пользователь получает доступ к объекту через сочетание ролей и разрешений, назначенных этому объекту. Дополнительные сведения см. в разделе [классы безопасности AMO](../../../analysis-services/multidimensional-models/analysis-management-objects/amo-security-classes.md).  
   

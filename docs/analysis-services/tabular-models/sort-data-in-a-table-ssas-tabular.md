@@ -2,12 +2,12 @@
 title: "Сортировка данных в таблице (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 331894e59c7cbf8d5fe2b4e6112732f45a986f6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6cfced262d6b178712da538e9b678ac46357bc1a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>Сортировка данных в таблице (табличные службы SSAS)
-  Данные могут быть отсортированы по алфавиту (в прямом или обратном порядке) и по значениям (по возрастанию или по убыванию) в одном или нескольких столбцах.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Можно сортировать данные в текст (от A до Z или от я до А) и числа (возрастанию или по убыванию) в один или несколько столбцов.  
   
 ### <a name="to-sort-the-data-in-a-table-based-on-a-text-column"></a>Сортировка данных в таблице по текстовому столбцу  
   

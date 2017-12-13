@@ -2,12 +2,12 @@
 title: "Элемент ProcessingPriority (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09c386528caeeb607493e358201eac7ba18c26aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a598b4ad898211f3bf5c5b6ba30d8af16ec6913
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processingpriority-element-assl"></a>Элемент ProcessingPriority (ASSL)
-  Определяет приоритет обработки для родительского объекта во время работы в фоновом режиме (например: отложенная статистическая обработка, индексирование или кластеризация).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет приоритет обработки для родительского объекта во время фоновых операций, например отложенная статистическая обработка, индексирование или кластеризация.  
   
 ## <a name="syntax"></a>Синтаксис  
   

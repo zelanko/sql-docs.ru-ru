@@ -2,12 +2,12 @@
 title: "Элемент MergePartitions (XML для Аналитики) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cc2b0bd7644d9142124c54cef12909174c1cf723
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 12d980f5a40d320d346da4711eca72f23ec14685
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mergepartitions-element-xmla"></a>Элемент MergePartitions (XML для аналитики)
-  Выполняет слияние данных из одной или нескольких исходных секций в целевую секцию, а затем удаляет исходные секции.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Выполняет слияние данных из одного или нескольких исходных секций в целевую секцию, а затем удаляет исходные секции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0–n: необязательный элемент, который может встречаться несколько раз.|  
+|Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   

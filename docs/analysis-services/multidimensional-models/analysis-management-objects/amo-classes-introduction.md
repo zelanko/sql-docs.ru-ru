@@ -2,12 +2,12 @@
 title: "Знакомство с классами объектов AMO | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a688b9544642ecb9dc5cbca1d7c5e3af90a5ebd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bcaa0f01f487eeb028ec93792f29a9a8598ca6a6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-classes---introduction"></a>Классы AMO — введение
-  Объекты AMO — это библиотека классов, предназначенных для управления экземпляром служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] из клиентского приложения. Классы AMO — это классы, которые используются для администрирования таких объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , как базы данных, измерения, кубы, структуры и модели интеллектуального анализа, роли и разрешения, исключения и др.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Объекты управления Analysis (AMO) — это библиотека классов, предназначенных для управления экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] из клиентского приложения. Классы AMO — это классы, которые используются для администрирования таких объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , как базы данных, измерения, кубы, структуры и модели интеллектуального анализа, роли и разрешения, исключения и др.  
   
  На следующем рисунке показана связь между классами, описываемыми в этом разделе.  
   

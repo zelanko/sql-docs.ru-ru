@@ -2,12 +2,12 @@
 title: "Просмотр модели с помощью средства просмотра нейронных сетей Майкрософт | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cc0dddf9fd02a618cbc687e2f9cab385ab9d9f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bf3960aa4308b921cb0c9da01ddfdb1bb52e6f0d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Просмотр модели с помощью средства просмотра нейронных сетей (Майкрософт)
-  Средство просмотра нейронных сетей ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с помощью алгоритма нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Алгоритм нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] создает классификационные и регрессивные модели интеллектуального анализа данных, с помощью которых можно выполнять анализ из нескольких входящих и исходящих источников. Это делает его полезным при выполнении различных видов открытого анализа и изучения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Средство просмотра нейронных сетей в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритма нейронной сети. Алгоритм нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] создает классификационные и регрессивные модели интеллектуального анализа данных, с помощью которых можно выполнять анализ из нескольких входящих и исходящих источников. Это делает его полезным при выполнении различных видов открытого анализа и изучения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md).  
   
  При исследовании модели при помощи средства просмотра нейронных сетей [!INCLUDE[msCoName](../../includes/msconame-md.md)] , обычно выбирается некий целевой атрибут и состояние, после чего средство просмотра используется для того, чтобы узнать, как входящие атрибуты отражаются на результате  
   

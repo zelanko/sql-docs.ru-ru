@@ -2,12 +2,12 @@
 title: "Настройка и просмотр SharePoint и ведения журнала диагностики | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 2ca4cda21f2cb76f2f46e13be5f87765a73d665d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8c9c9e933c57a17e8b64846e25d6e9fe80f8f61d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Настройка и просмотр SharePoint и ведения журнала диагностики
-  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] регистрируются в файлах журнала SharePoint. Сведения, приведенные в этом разделе, помогут настроить уровни ведения журнала и просмотреть данные файла журнала. Можно выбирать, какие события сервера [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] заносятся в файл журнала. а также определять степень серьезности регистрируемых сообщений. Дополнительные сведения см. в разделе [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] операций сервера, события и сообщения записываются в файлы журнала SharePoint. Сведения, приведенные в этом разделе, помогут настроить уровни ведения журнала и просмотреть данные файла журнала. Можно выбирать, какие события сервера [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] заносятся в файл журнала. а также определять степень серьезности регистрируемых сообщений. Дополнительные сведения см. в разделе [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  В этом разделе:  
   

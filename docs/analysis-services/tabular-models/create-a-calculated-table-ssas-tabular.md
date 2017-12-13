@@ -2,12 +2,12 @@
 title: "Создание вычисляемой таблицы (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: adeaa21b5bf9a70f52dc6442b5e453b99ad6721b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 61ad9b1d13918bd6d172c7670b20b127d0713b67
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-calculated-table-ssas-tabular"></a>Создание вычисляемой таблицы (табличные службы SSAS)
-  *Вычисляемая таблица* представляет собой объект, вычисляемый на основе выражения или запроса DAX и наследуемый (полностью или частично) от других таблиц в той же модели.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Объект *вычисляемой таблицы* объект, вычисляемый на основе запроса DAX или выражение, производный от всей или части других таблиц в той же модели.  
   
  Основной задачей, решаемой с помощью вычисляемых таблиц, является подключение ролевого измерения в определенном контексте, чтобы представить его в виде структуры запроса в клиентских приложениях.  Как вы помните, ролевое измерение — это таблица, подключаемая в нескольких контекстах. В качестве классического примера можно привести таблицу Date, которая представляется как OrderDate, ShipDate или DueDate в зависимости от связи по внешнему ключу. Создав вычисляемую таблицу для ShipDate, вы получите автономную таблицу, к которой можно отправлять запросы и с которой можно работать так же, как с любой другой таблицей.  
   

@@ -2,12 +2,12 @@
 title: "Совместное использование веб-каналов данных с помощью библиотеки каналов данных (Power Pivot для SharePoint) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b345b289e396d62565f9fee76a72c0cf9cb9d04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 70d102f069894aec4e6286e3bdc590f41fcdbbea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Совместное использование веб-каналов данных Power Pivot с помощью библиотеки каналов данных (Power Pivot для SharePoint)
-  Каналом данных называется поток XML-данных, создаваемый службой или приложением и представляющий данные в формате Atom. Он все чаще используется для передачи данных между приложениями и средствами просмотра на стороне клиента. В развернутой службе [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint веб-каналы данных используются для заполнения источника данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данными приложений или служб, поддерживающих Atom.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Каналом данных называется поток XML-данных, созданный из службы или приложения, предоставляющего данные в формате Atom. Он все чаще используется для передачи данных между приложениями и средствами просмотра на стороне клиента. В развернутой службе [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint веб-каналы данных используются для заполнения источника данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данными приложений или служб, поддерживающих Atom.  
   
  Если в организации уже используется сочетание приложений с поддержкой Atom, то изучение этих форматов может и не понадобиться, поскольку данные передаются между приложениями без дополнительных преобразований. Однако организациям, использующим пользовательские решения для публикации веб-каналов Atom, часто нужны способы обеспечения доступа к каналам для специалистов по работе с данными. Один из таких способов заключается в создании и предоставлении общего доступа к сервисным документам данных (ATOMSVC-файлам), которые предназначены для создания каналов и установления соединения с источниками данных в сети. Специальная библиотека, которая называется библиотекой каналов данных, поддерживает создание и предоставление общего доступа к сервисным документам данных в веб-приложении SharePoint.  
   

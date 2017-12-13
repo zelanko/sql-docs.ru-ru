@@ -2,12 +2,12 @@
 title: "Роли (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6bdb45605383bb567f8b3f1b313f5ac9b7600b81
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 121aa11fa1238529d4d3c382c0347878615a3068
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="roles"></a>Роли
-  В табличной модели роли определяют разрешения члена для модели. Члены роли могут выполнять с моделью действия, заданные в разрешении роли. Роли, которым заданы разрешения на чтение, также могут обеспечивать дополнительную защиту на уровне строк с помощью фильтров уровня строк. 
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Роли в табличных моделях определяют разрешения члена для модели. Члены роли могут выполнять с моделью действия, заданные в разрешении роли. Роли, которым заданы разрешения на чтение, также могут обеспечивать дополнительную защиту на уровне строк с помощью фильтров уровня строк. 
   
  Для SQL Server Analysis Services членами ролей могут быть пользователя, имя пользователя Windows или группы Windows и разрешения (чтение, процесс, администратор). Для служб Azure Analysis Services пользователи должны находиться в Azure Active Directory и имена пользователей и групп, указанных должен быть адрес электронной почты в организации или имя участника-пользователя. 
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 |ProductCategory|=ProductCategory[Name]=”Bicycles”|  
 |Transactions|=Transactions[Year]=2008|  
   
- В результате применения этих разрешений к таблице Transactions члены роли смогут запрашивать только строки данных, в которых клиенты находятся в США, категория продуктов — велосипеды, а год — 2008. Пользователи не смогут запрашивать сделки, совершенные не в США, не по велосипедам и не в 2008 году, если они не являются членами другой роли, которая предоставляет такие разрешения.  
+ В результате применения этих разрешений к таблице Transactions члены роли смогут запрашивать только строки данных, в которых клиенты находятся в США, категория продуктов — велосипеды, а год — 2008. Пользователи не смогут запрашивать сделки, совершенные не в США, не по велосипедам и не в 2008 году, если они не являются членами другой роли, которая предоставляет такие разрешения.  
   
  Чтобы запретить доступ ко всем строкам таблицы, можно использовать фильтр *=FALSE()*.  
   

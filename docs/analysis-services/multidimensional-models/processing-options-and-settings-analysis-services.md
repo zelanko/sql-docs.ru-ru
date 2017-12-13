@@ -2,12 +2,12 @@
 title: "Настройка параметров обработки (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9ca6239dc157d5c6d7f4ac8afd24ff161b57992a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 37311ad6191047a4eebdc51f427bc0e28c8f86d0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-options-and-settings-analysis-services"></a>Обработка параметров и настроек (службы Analysis Services)
-  При обработке объектов в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно задать параметр, определяющий тип обработки для каждого объекта. Типы обработки могут быть различными в зависимости от объекта, а также от изменений, которые произошли с объектом с момента последней обработки. Если включить в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматический выбор типа обработки, будет использоваться метод, возвращающий объект в полностью обработанном состоянии за минимальное время.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При обработке объектов в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], можно выбрать режим обработки для управления типом действия, выполняемые для каждого объекта. Типы обработки могут быть различными в зависимости от объекта, а также от изменений, которые произошли с объектом с момента последней обработки. Если включить в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматический выбор типа обработки, будет использоваться метод, возвращающий объект в полностью обработанном состоянии за минимальное время.  
   
  Параметры обработки позволяют определять, какие объекты и каким образом будут обработаны. Некоторые параметры используются главным образом в заданиях пакетной обработки. Дополнительные сведения см. в разделе [Пакетная обработка (службы Analysis Services)](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md).  
   

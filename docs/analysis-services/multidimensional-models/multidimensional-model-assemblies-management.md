@@ -2,12 +2,12 @@
 title: "Управление сборками многомерной модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 62bd92bbfc8c0bf4cb3278186ee27a55e8e6aea0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 73dfb81f267fea0d246ff1f7c7e48abb8d1dcccc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Управление сборками многомерной модели
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют значительное количество встроенных функций для использования с языками многомерных выражений и расширений интеллектуального анализа данных, предназначенных для выполнения любых задач, от стандартных статистических вычислений до обхода по элементам в иерархии. Однако, как и с любым другим сложным и надежным продуктом, существует необходимость в дальнейшем расширении функциональности такого продукта.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляют значительное количество внутренних функций для использования с языками многомерных выражений (MDX) и расширений интеллектуального анализа данных (DMX), предназначенный для выполнения любых от стандартных статистических вычислений для задач обхода элементов в иерархии. Однако, как и с любым другим сложным и надежным продуктом, существует необходимость в дальнейшем расширении функциональности такого продукта.  
   
  Поэтому [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] позволяет добавлять сборки в экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или базу данных. Сборки позволяют создавать внешние пользовательские функции при помощи любого языка среды CLR, например Microsoft Visual Basic .NET или Microsoft Visual C#. Также можно использовать языки автоматизации COM, например Microsoft Visual Basic или Microsoft Visual C++.  
   

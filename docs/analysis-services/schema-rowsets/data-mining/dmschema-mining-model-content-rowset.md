@@ -2,12 +2,12 @@
 title: "Набор строк DMSCHEMA_MINING_MODEL_CONTENT | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 110863a69d45ece85023e5dd3bbd8a554631ed43
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d0bd29ab1dcd96412710e9d79255119489253bde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dmschemaminingmodelcontent-rowset"></a>Набор строк DMSCHEMA_MINING_MODEL_CONTENT
-  Разрешает клиентскому приложению просматривать содержимое модели интеллектуального анализа данных. Клиентские приложения для перемещений по содержимому модели интеллектуального анализа данных могут применять специальные ограничения операций дерева, описанные в конце этого раздела.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Позволяет клиентскому приложению просматривать содержимое модели интеллектуального анализа данных. Клиентские приложения для перемещений по содержимому модели интеллектуального анализа данных могут применять специальные ограничения операций дерева, описанные в конце этого раздела.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DMSCHEMA_MINING_MODEL_CONTENT** набор строк содержит следующие столбцы.  

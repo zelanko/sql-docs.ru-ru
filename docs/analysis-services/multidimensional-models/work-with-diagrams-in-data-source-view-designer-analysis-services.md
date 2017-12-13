@@ -2,12 +2,12 @@
 title: "Работа с диаграммами в конструкторе представлений источников данных (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 78ed687d57d110b8b851a6ad69dcaf50ce79301f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: db04c042238a82e090e13c795c96114207526e31
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)
-  Диаграмма представления источников данных (DSV) — это визуальное представление объектов в виде DSV. С диаграммой можно работать интерактивно. Она позволяет добавить, скрыть, удалить или изменить определенные объекты. Можно также создать несколько диаграмм одного и того же представления DSV, чтобы сосредоточить внимание на подмножестве объектов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Диаграмма представления (DSV) источника данных — это визуальное представление объектов в представлении источника данных. С диаграммой можно работать интерактивно. Она позволяет добавить, скрыть, удалить или изменить определенные объекты. Можно также создать несколько диаграмм одного и того же представления DSV, чтобы сосредоточить внимание на подмножестве объектов.  
   
  Чтобы изменить зону диаграммы, которая появляется на панели диаграмм, нажмите четырехстороннюю стрелку в правом нижнем углу панели и перетащите поле выбора на эскиз диаграммы до тех пор, пока не будет выделена та область, которая должна появиться на панели диаграмм.  
   

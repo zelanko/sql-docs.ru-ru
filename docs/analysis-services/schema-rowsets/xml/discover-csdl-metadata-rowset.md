@@ -2,12 +2,12 @@
 title: "Набор строк DISCOVER_CSDL_METADATA | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7221a67fb73c55b0173da2c10826d75003c50e6d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Набор строк DISCOVER_CSDL_METADATA
-  Возвращает сведения о модели данных служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] (табличной или многомерной), предоставляя определение модели в формате CSDLBI (язык CSDL с заметками бизнес-аналитики). CSDLBI основан на языке CSDL, схеме XML, используемой платформой Entity Data Framework, необходимой для обеспечения коммуникации между сервером [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и клиентом [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Заметки бизнес-аналитики (BI) предоставляют дополнительные метаданные о табличных моделях и их объектах. Дополнительные сведения о табличных моделях данных см. в разделе [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает сведения о [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] данных модели (табличной или многомерной), предоставляя определение модели в формате CSDLBI (язык определения концептуальной схемы с заметками бизнес-Аналитики). CSDLBI основан на языке CSDL, схеме XML, используемой платформой Entity Data Framework, необходимой для обеспечения коммуникации между сервером [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и клиентом [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Заметки бизнес-аналитики (BI) предоставляют дополнительные метаданные о табличных моделях и их объектах. Дополнительные сведения о табличных моделях данных см. в разделе [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   
  Контекст безопасности команды влияет на возвращаемый набор строк. Для получения определения CSDL с сервера необходимы разрешения на чтение в экземпляре служб Analysis Services.  
   

@@ -2,12 +2,12 @@
 title: "Настройка правил исправности PowerPivot | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,15 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09a92c74c31247541767258e30b9d61d62cd567d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d18bf49c81bbd296160d21e90e59d6cce68a163d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-power-pivot-health-rules"></a>Настройка правил определения работоспособности PowerPivot
-[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint включает правила определения работоспособности SharePoint, позволяющие отслеживать и устранять проблемы доступности и конфигурации сервера. Правила определения работоспособности, которые применяются к [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint, отображаются на странице Review rule definitions (Просмотр определений правил).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]для SharePoint включает правила определения работоспособности SharePoint, которые позволяют отслеживать и устранять проблемы доступности и конфигурации сервера. Правила определения работоспособности, которые применяются к [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint, отображаются на странице Review rule definitions (Просмотр определений правил).  
   
  Правила определения исправности позволяют заранее выявлять проблемы сервера, которые в итоге могут привести к нарушениям работы служб. [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] для SharePoint предоставляет ряд правил, позволяющих выявлять и устранять проблемы, прежде чем они коснутся пользователей. Многие из этих правил можно настроить в соответствии с уникальными характеристиками конкретного развертывания. Например, если требуется больше времени на принятие мер в ответ на нехватку места на диске, можно увеличить пороговое значение доступного пространства с 5 до 10 %, чтобы предупреждение поступало раньше.  
   

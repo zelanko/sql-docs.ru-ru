@@ -1,12 +1,12 @@
 ---
 title: "Конструктор табличных моделей | Документы Microsoft"
 ms.date: 10/19/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology:
 - analysis-services
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 388c20c5fffdd584b2923341db13c7bf634f289b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 14a6ca056a079b4a51813783883cc09c5f53e8ad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tabular-model-designer-ssas"></a>Конструктор табличных моделей (службы SSAS)
-Конструктор табличных моделей входит в состав [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]и интегрируется с Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]. Имеются дополнительные шаблоны типов проектов, предназначенные специально для разработки профессиональных решений табличных моделей.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно установить, бесплатно скачав из Интернета. Дополнительные сведения см. в статье [Скачивание последней версии SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Конструктор табличных моделей входит в состав [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], интегрированной с Microsoft [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], с дополнительные шаблоны типов проектов для разработки профессиональных решений табличных моделей.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно установить, бесплатно скачав из Интернета. Дополнительные сведения см. в статье [Скачивание последней версии SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md).    
   
 ##  <a name="bkmk_benefits"></a> Преимущества  
  При установке среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]к доступным типам проектов добавляются новые типовые шаблоны проекта для создания табличных моделей. После создания нового проекта табличной модели на основе одного из шаблонов можно приступать к созданию моделей с помощью средств и мастеров конструктора табличных моделей.  
@@ -139,7 +139,7 @@ ms.lasthandoff: 11/17/2017
  **Сочетания клавиш**  
  Сочетания клавиш служб Analysis Services можно настраивать/переназначать в диалоговом окне "Сервис->Параметры->Клавиатура". Некоторые глобальные сочетания клавиш [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] , например сборка, сохранение, отладка, новый проект и т. д. поддерживаются в контексте конструктора табличных моделей. Другие сочетания клавиш для конструктора табличных моделей принадлежат к контексту служб Analysis Services.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Проекты табличной модели (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
  [Свойства (табличные службы SSAS)](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   

@@ -2,12 +2,12 @@
 title: "Подзапросы выборки в запросах | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 513ec56cc2f73b1c9e0b1746ec2d22bc5ee31145
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 664aa30f1b4dca46597ba464e93eb8534e44dca3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="subselects-in-queries"></a>Подзапросы выборки в запросах
-  Выражения подзапросов выборки являются вложенными выражениями SELECT, которые используются для ограничения пространства куба, из которого вычисляется внешнее выражение SELECT. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Выражения подзапросов выборки являются вложенные выражения SELECT, которые используются для ограничения пространства куба, из которой было определено внешней операцией ВЫБОРА внешних. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
   
 ## <a name="subselects-by-example"></a>Подзапросы выборки в примерах  
  Начнем с примера того, как подзапросы выборки могут помочь сформировать результаты, которые нам требуется отобразить. Предположим, требуется сформировать таблицу, отражающую динамику продаж за несколько лет по 10 самым популярным продуктам.  
