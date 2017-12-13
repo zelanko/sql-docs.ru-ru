@@ -2,12 +2,12 @@
 title: "Ячейки элемент (MDDataSet) (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: xmla
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5f769ad3ae301d6ae8901bc34973ff7db15df6fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5c90aca85496cfe59b18a93230cb5157052eaacf
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cell-element-mddataset-xmla"></a>Элемент Cell (MDDataSet) (XML для аналитики)
-  Содержит сведения об одной ячейке, содержащейся в родительском [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит сведения об одной ячейке, содержащейся в родительском [CellData](../../../analysis-services/xmla/xml-elements-properties/celldata-element-xmla.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0–n: необязательный элемент, который может встречаться несколько раз.|  
+|Количество элементов|от 0 до n: необязательный элемент, который может встречаться несколько раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -103,15 +103,15 @@ ms.lasthandoff: 11/17/2017
   
 |Состояние|Квартал|Продажи единиц товара|Стоимость хранения|Продажи магазинов|Количество продаж|  
 |-----------|-------------|----------------|----------------|-----------------|-----------------|  
-|Калифорния|К1|16890|14431.09|36175.2|5498|  
+|California|К1|16890|14431.09|36175.2|5498|  
 ||К2|18052|15332.02|38396.75|5915|  
 ||К3|18370|**15672.83**|**39394.05**|**6014**|  
 ||К4|21436|**18094.5**|**45201.84**|**7015**|  
-|Орегон|К1|19287|**16081.07**|**40170.29**|**6184**|  
+|Oregon|К1|19287|**16081.07**|**40170.29**|**6184**|  
 ||К2|15079|12678.96|31772.88|4799|  
 ||К3|16940|14273.78|35880.46|5432|  
 ||К4|16353|13738.68|34453.44|5196|  
-|Вашингтон|К1|30114|25240.08|63282.86|9906|  
+|Washington|К1|30114|25240.08|63282.86|9906|  
 ||К2|29479|24953.25|62496.64|9654|  
 ||К3|30538|25958.26|64997.38|10007|  
 ||К4|34235|29172.72|73016.34|11217|  

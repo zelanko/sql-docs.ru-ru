@@ -2,12 +2,12 @@
 title: "Технический справочник по заметки бизнес-Аналитики для языка CSDL | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 525b00678272347473f0cf845689be6d691c8ace
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: be086d8e2a61ffbf5871c12b73cb628f656414ac
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="technical-reference-for-bi-annotations-to-csdl"></a>Технический справочник по аннотациям бизнес-аналитики для языка CSDL
-  В этом разделе приведен список элементов, атрибутов и свойств, используемых в CSDL, которые представляют табличные модели [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Некоторые элементы новые; другие помечены или расширены для поддержки построения моделей бизнес-аналитики.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе перечислены элементов, атрибутов и свойств на языке CSDL, используемых для представления [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] табличных моделей. Некоторые элементы новые; другие помечены или расширены для поддержки построения моделей бизнес-аналитики.  
   
  Обзор табличной модели и как сущности, связи и формулы представлены на языке CSDL см. в разделе [заметки языка CSDL для бизнес-аналитики &#40; CSDLBI &#41; ](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
   

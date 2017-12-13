@@ -2,12 +2,12 @@
 title: "Выбор столбца, используемого для тестирования модели интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b5b70b350d54987869c77ced1cebfbd8f7b00ec1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dfefbe59b4adc99b675f2735b86346062b172315
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>Выбор столбца, используемого для тестирования модели интеллектуального анализа данных
-  Прежде чем измерять точность модели интеллектуального анализа данных, необходимо решить, какие результаты вы хотите оценить. Для большинства моделей интеллектуального анализа данных необходимо выбрать хотя бы один столбец, который будет использоваться в качестве прогнозируемого атрибута при создании модели. Поэтому при проверке точности модели обычно необходимо выбрать для проверки этот атрибут.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Прежде чем измерять точность модели интеллектуального анализа данных, необходимо решить, какие результаты вы хотите оценить. Для большинства моделей интеллектуального анализа данных необходимо выбрать хотя бы один столбец, который будет использоваться в качестве прогнозируемого атрибута при создании модели. Поэтому при проверке точности модели обычно необходимо выбрать для проверки этот атрибут.  
   
  В следующем списке указаны некоторые дополнительные соображения, связанные с выбором прогнозируемого атрибута для использования при проверке.  
   

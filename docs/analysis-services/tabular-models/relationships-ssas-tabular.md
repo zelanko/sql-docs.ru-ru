@@ -2,12 +2,12 @@
 title: "Связи (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: eb0e07074d8658944d6abb3feaeab2b8c51a5d92
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="relationships-ssas-tabular"></a>Связи (табличные службы SSAS)
-  В табличных моделях связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах. Например, таблица «Customers» и таблица «Orders» могут быть связаны, чтобы отображалось имя клиента, соответствующее каждому заказу.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В табличных моделях связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах. Например, таблица «Customers» и таблица «Orders» могут быть связаны, чтобы отображалось имя клиента, соответствующее каждому заказу.  
   
  При использовании мастера импорта таблиц для импорта из одного и того же источника данных связи, существующие в таблицах (в источнике данных), которые выбраны для импорта, будут повторно созданы в модели. Можно просмотреть связи, которые были автоматически обнаружены и созданы повторно, с помощью конструктора моделей в представлении диаграммы либо с помощью диалогового окна «Управление связями». Можно также вручную создавать новые связи между таблицами при помощи конструктора моделей в представлении диаграмм или при помощи диалоговых окон «Создание связи» или «Управление связями».  
   
@@ -185,7 +185,7 @@ ms.lasthandoff: 11/17/2017
 |[Удаление связей](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Содержит описание того, как удалить связь, а также последствий удаления отношений.|  
 |[Двунаправленные кросс-фильтры для табличных моделей в службах SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|Содержит описание двунаправленной кросс-фильтрации для связанных таблиц. Если таблицы связаны и определены двунаправленные кросс-фильтры, контекст фильтра одной связи таблиц можно использовать для запросов ко второй связи таблиц.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Таблицы и столбцы](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [Импорт данных](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   

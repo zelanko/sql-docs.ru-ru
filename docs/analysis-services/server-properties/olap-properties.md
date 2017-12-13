@@ -2,12 +2,12 @@
 title: "Свойства OLAP | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -102,14 +102,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c0efd9b01acb4b10a8863719a8d08c43cea4401d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: aab19956bbd7b25a8b6fbd55c587f09383a73283
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="olap-properties"></a>Свойства OLAP
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживают перечисленные в следующих таблицах свойства сервера OLAP. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает свойства сервера OLAP, перечисленные в следующих таблицах. Дополнительные сведения о дополнительных свойствах сервера и их настройке см. в разделе [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
  **Область применения:** только в многомерном режиме сервера  
   
@@ -325,7 +325,7 @@ ms.lasthandoff: 11/17/2017
  **DimensionPropertyCacheSize**  
  Подписанное 32-разрядное целочисленное свойство, указывающее объем памяти (в байтах), используемой для сохранения в кэше тех элементов измерения, которые применяются в запросе.  
   
- Значение по умолчанию равно 4 000 000 байт (или 4 МБ) на одну иерархию атрибутов, на один активный запрос. Значение по умолчанию обеспечивает хорошо сбалансированный размер кэша для решений со стандартными иерархиями. Однако измерения с очень большим количеством элементов (которые исчисляются миллионами) или глубокие иерархии работают лучше, если увеличить это значение.  
+ Значение по умолчанию равно 4 000 000 байт (или 4 МБ) на одну иерархию атрибутов, на один активный запрос. Значение по умолчанию обеспечивает хорошо сбалансированный размер кэша для решений со стандартными иерархиями. Однако измерения с очень большим количеством элементов (которые исчисляются миллионами) или глубокие иерархии работают лучше, если увеличить это значение.  
   
  Последствия увеличение размера кэша.  
   

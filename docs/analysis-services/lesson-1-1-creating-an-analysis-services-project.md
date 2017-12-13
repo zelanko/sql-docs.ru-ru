@@ -2,12 +2,12 @@
 title: "Создание служб Analysis Services проекта | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e2ec11e3b9dc622f254a42f82e24eadc88808400
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ebc25a68b66605dd82de6107011bcce34a2a0557
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>Урок 1-1-Создание проекта служб Analysis Services
-В следующей задаче будет использована среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания нового проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с именем **Учебник по службам Analysis Services**на основе шаблона проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . *Проект* представляет собой коллекцию связанных объектов. Проекты содержатся в решении, которое может включать несколько проектов. Дополнительные сведения см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]В следующей задаче используется [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания нового [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проект с именем **учебник по службам Analysis Services**, основываясь на [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] шаблона проекта. *Проект* представляет собой коллекцию связанных объектов. Проекты содержатся в решении, которое может включать несколько проектов. Дополнительные сведения см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Создание нового проекта служб Analysis Services  
   

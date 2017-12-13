@@ -2,12 +2,12 @@
 title: "Включить режим DirectQuery в среде SSMS | Документы Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,17 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 209ab16c43e8d90e47dd9c4758c45af9d7eb8b62
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbce2dcf30bcdeded89ab0d8ea558d18585fe6a4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Включение режима DirectQuery в SSMS
-
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-  Вы можете изменить свойства доступа к данным в уже развернутой табличной модели, включив режим DirectQuery, при котором запросы выполняются для источника реляционных данных серверной части, а не для кэшированных данных, находящихся в памяти.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Можно изменить свойства доступа к данным табличной модели, которая уже была развернута, включив режим DirectQuery, где запросы применяемыми серверный источник реляционных данных, а не в кэше данных, находящихся в памяти.  
   
  В [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]действия, необходимые для настройки DirectQuery, различаются в зависимости от уровня совместимости модели. Ниже описаны шаги, которые подойдут для всех уровней совместимости.  
   
@@ -133,7 +130,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Изучив трассировку, вы увидите свидетельство выполнения запроса к реляционной базе данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровень совместимости табличных моделей в службах Analysis Services](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Поддерживаемые источники данных (табличные службы SSAS)](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)   

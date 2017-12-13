@@ -2,12 +2,12 @@
 title: "Установка поставщиков данных служб Analysis Services (AMO, ADOMD.NET, MSOLAP) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 63ce2b423f04ef4199bbb32b5349c26c25fe2199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7cd7f4a950335557e3fb65d3d504f79af0801de0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="install-analysis-services-data-providers-amo-adomdnet-msolap"></a>Установка поставщиков данных для служб Analysis Services (AMO, ADOMD.NET, MSOLAP)
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] содержит обновление поставщиков данных для служб Analysis Services, к которым относятся ADOMD.Net, AMO и MSOLAP.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] содержит обновление поставщиков данных служб Analysis Services, состоящий из ADOMD.Net, AMO и MSOLAP.  
   
  В большинстве сценариев доступа к данным на основе запросов вы можете продолжать использовать старые версии поставщиков данных, которые уже установлены на клиентских компьютерах, для доступа к табличным и многомерным моделям в экземпляре служб Analysis Services для SQL Server 2016. Это относится и к табличным моделям, которые используют функции, появившиеся в SQL Server 2016. Как правило, клиентским приложениям, которые создают запросы, например Excel, Reporting Services или Tableau, не нужен новейший поставщик данных для доступа к модели служб Analysis Services.  
   

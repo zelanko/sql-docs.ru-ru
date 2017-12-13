@@ -2,12 +2,12 @@
 title: "Применение функций прогнозирования к модели | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 496cacf7c8c2a374748f81b45a1a5e7ac770016b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c36ab1bbdb5f2f11b81ddc43fb79b5f073ec9b9
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Применение функций прогнозирования к модели
-  Чтобы создать прогнозирующий запрос в службах интеллектуального анализа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо сначала выбрать модель интеллектуального анализа данных, на которой будет основан этот запрос. Можно выбрать любую модель интеллектуального анализа данных, существующую в текущем проекте.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Создание прогнозирующего запроса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеллектуального анализа данных, необходимо сначала выбрать модель интеллектуального анализа данных, на котором будет основан это запрос. Можно выбрать любую модель интеллектуального анализа данных, существующую в текущем проекте.  
   
  Выбрав модель, добавьте в запрос *прогнозирующую функцию* . Её можно использовать для получения прогноза. Кроме того, в запросы можно добавлять прогнозирующие функции, которые возвращают соответствующие статистические данные, например вероятность получения прогнозируемого значения, или информацию, на основе которой быть составлен прогноз.  
   

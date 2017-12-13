@@ -2,12 +2,12 @@
 title: "Получение данных с помощью XmlReader | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb85566c9ed1533e35e2f108dd61f50dc20a5a23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: dbcce4f4a75d2aa8aefedfff4c3b8b8de81d1fe6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Получение данных с помощью объекта XmlReader
-  **XmlReader** класса часть **System.Xml** пространство имен для библиотеки классов Microsoft .NET Framework аналогично <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> класса в том, что **XmlReader**класс также предоставляет быстрый некэшируемый однопроходный доступ к данным. Если нет необходимости для представления в памяти и аналитических данных с помощью <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> объекта, **XmlReader** объекта идеально подходит для получения XML-данных, особенно для больших объемов данных. Поскольку **XmlReader** потоки данных, **XmlReader** не должен получать и кэшировать все данные перед передачей вызывающему объекту, как было бы в том случае, если <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> объекта были использованы для преобразования Ответ XML для аналитики в аналитическое представление модели объектов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**XmlReader** класса часть **System.Xml** пространство имен для библиотеки классов Microsoft .NET Framework аналогично <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> класса в том, что **XmlReader**класс также предоставляет быстрый некэшируемый однопроходный доступ к данным. Если нет необходимости для представления в памяти и аналитических данных с помощью <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> объекта, **XmlReader** объекта идеально подходит для получения XML-данных, особенно для больших объемов данных. Поскольку **XmlReader** потоки данных, **XmlReader** не должен получать и кэшировать все данные перед передачей вызывающему объекту, как было бы в том случае, если <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> объекта были использованы для преобразования Ответ XML для аналитики в аналитическое представление модели объектов.  
   
  **XmlReader** класс предоставляет прямой доступ к XML-ответа полученных ADOMD.NET при <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand.ExecuteXmlReader%2A> метод <xref:Microsoft.AnalysisServices.AdomdClient.AdomdCommand> вызывается. Синтаксический анализ полученных данных необходимо выполнить вручную, поскольку они представляют собой необработанный XML. Как можно скорее после получения данных **XmlReader** должен быть закрыт.  
   

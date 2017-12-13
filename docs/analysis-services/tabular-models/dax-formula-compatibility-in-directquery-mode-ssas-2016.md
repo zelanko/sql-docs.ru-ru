@@ -2,12 +2,12 @@
 title: "Совместимость формул в режиме DirectQuery (службы SSAS 2016) | Документы Microsoft"
 ms.custom: 
 ms.date: 07/06/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,16 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ab540d2806d6afb75eab3890fdad605a7b34a71c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ba414696dffec7b1477487e19b0ff4e45f6213e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode"></a>Совместимость формул в режиме DirectQuery 
-[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
-
-Для табличных 1200 и выше моделей в режиме DirectQuery больше не применяются многие функциональные ограничения в более ранних версиях. В частности, для формул DAX:
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Для табличных 1200 и выше моделей в режиме DirectQuery больше не применяются многие функциональные ограничения в более ранних версиях. В частности, для формул DAX:
 
 - Теперь DirectQuery создает более простые запросы, обеспечивая более высокую производительность.
 - Безопасность на уровне строк (RLS) теперь поддерживается в режиме DirectQuery.

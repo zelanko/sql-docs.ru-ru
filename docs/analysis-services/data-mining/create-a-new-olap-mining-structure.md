@@ -2,12 +2,12 @@
 title: "Создать новую структуру интеллектуального анализа данных OLAP | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1aceaa55b007eaf43a9a44540284ba95786fca63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ede498333c2fa7c1967d62e2d403d09a6d50acde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-new-olap-mining-structure"></a>создать новую структуру интеллектуального анализа OLAP
-  Можно воспользоваться мастером интеллектуального анализа данных в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы создать структуру интеллектуального анализа данных, в которой будут использоваться данные многомерной модели. Модели интеллектуального анализа данных, основанные на кубах OLAP, способны использовать столбец и его значения в таблицах фактов, измерениях и в группах мер в качестве атрибутов для анализа.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно использовать мастер интеллектуального анализа данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для создания структуры интеллектуального анализа данных, который использует данные из многомерной модели. Модели интеллектуального анализа данных, основанные на кубах OLAP, способны использовать столбец и его значения в таблицах фактов, измерениях и в группах мер в качестве атрибутов для анализа.  
   
 ### <a name="to-create-a-new-olap-mining-structure"></a>Создание новой структуры интеллектуального анализа OLAP  
   

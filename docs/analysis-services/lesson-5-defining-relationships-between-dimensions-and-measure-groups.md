@@ -2,12 +2,12 @@
 title: "Занятие 5: Определение связей между измерениями и группами мер | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a36c57ed912ec93c52d0f3316d0ac7ba421e4966
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Занятие 5. Определение связей между измерениями и группами мер
-На предыдущем занятии было рассмотрено, что измерения баз данных, добавленные к кубу, могут использоваться как основа для одного или нескольких измерений куба. На этом занятии предстоит изучить, как следует определять различные типы связей между измерениями куба и группами мер, а также изучить определение свойств этих связей.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]На предыдущем занятии этого учебника вы узнали, добавляемых к кубу измерения базы данных можно использовать как основу для одного или нескольких измерений куба. На этом занятии предстоит изучить, как следует определять различные типы связей между измерениями куба и группами мер, а также изучить определение свойств этих связей.  
   
 Дополнительные сведения см. в разделе [Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   

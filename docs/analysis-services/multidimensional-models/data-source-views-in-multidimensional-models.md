@@ -2,12 +2,12 @@
 title: "Представления в многомерных моделях источников данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4e502fb546500d0de60fbdb0a5584ecb0604075
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fa655c5c761d4ba943bad6c7f8c188b50c45a275
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Представления источников данных в многомерных моделях
-  Представление источников данных представляет собой абстракцию реляционного источника данных, который становится основой кубов и измерений, создаваемых в многомерном проекте. Представление источника данных позволяет управлять структурами данных, используемыми в проекте, и независимо работать с базовыми источниками данных (например, можно переименовать или объединить столбцы без непосредственного изменения исходного источника данных).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Представления источника данных (DSV) — это абстракция источника реляционных данных, который становится основой кубов и измерений, созданные в многомерном проекте. Представление источника данных позволяет управлять структурами данных, используемыми в проекте, и независимо работать с базовыми источниками данных (например, можно переименовать или объединить столбцы без непосредственного изменения исходного источника данных).  
   
  Вы можете построить несколько представлений источников данных в проекте или в базе данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для одного или нескольких источников данных и сконструировать каждый из них для удовлетворения требований другого решения.  
   

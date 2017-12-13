@@ -2,12 +2,12 @@
 title: "OLE DB для интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 936073519a4b05780e611b89b7e1ee7f66f8c3cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3caad32d76be76c70baff4c16827a37743222049
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-programming---ole-db"></a>Программирование интеллектуального анализа данных — OLE DB
-  Функции интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] соответствовать [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB для интеллектуального анализа данных 1.0 спецификации, выпущенной в июне 2000.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Функции интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] соответствовать [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB для интеллектуального анализа данных 1.0 спецификации, выпущенной в июне 2000.  
   
  Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] расширяют эту спецификацию, добавляя новые наборы строк для схемы, столбцы в существующие наборы строк схемы и новый синтаксис в язык расширения интеллектуального анализа данных (DMX) для создания структур интеллектуального анализа данных и управления ими.  
   

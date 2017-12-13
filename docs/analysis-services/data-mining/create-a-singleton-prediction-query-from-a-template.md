@@ -2,12 +2,12 @@
 title: "Создание одноэлементного прогнозирующего запроса из шаблона | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b455a9f4c8996ec2dd9e6d255f4e9f282d58df4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ddcf7a176fd619ffb3140b8bbeea390b3532b2e0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>создать одноэлементный прогнозирующий запрос из шаблона
-  Одноэлементный запрос удобен, если есть модель, которую предполагается использовать для прогнозирования, но нужно обойтись без сопоставления ее с внешним набором входных данных, либо для массовых прогнозов. Одноэлементный запрос позволяет предоставлять модели значения и мгновенно видеть спрогнозированное значение.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Одноэлементный запрос используется в тех случаях, когда у вас есть модель, которая будет использоваться для прогнозирования, но не требуется сопоставляется с внешним набором входных данных или массовых прогнозов. Одноэлементный запрос позволяет предоставлять модели значения и мгновенно видеть спрогнозированное значение.  
   
  Например, следующий запрос расширений интеллектуального анализа данных представляет одноэлементный запрос к модели целевой рассылки, TM_Decision_Tree.  
   

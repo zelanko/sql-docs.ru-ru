@@ -2,12 +2,12 @@
 title: "Урок 4: Определение дополнительных свойств атрибутов и измерений | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4a649addc2a2ab676856076fa64ed352f48cf4e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2ed7b1d026369b249b1acfc7da23242efcc22b26
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Занятие 4. Определение расширенных свойств атрибутов и измерений
-На этом занятии изучается использование расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Урок 4. Определение расширенных свойств атрибутов и измерений
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]На этом занятии вы узнаете, как использовать некоторые расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
   
 > [!NOTE]  
 > Это занятие проводится на основе улучшенной версии проекта Tutorial служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , созданного на первых трех занятиях данного учебного курса. В первой задаче занятия рассмотрено, где следует размещать соответствующий образец проекта для данного занятия, а также объясняется разница между этим проектом и проектом, созданным на первых трех занятиях.  

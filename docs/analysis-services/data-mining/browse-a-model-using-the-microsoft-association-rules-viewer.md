@@ -2,12 +2,12 @@
 title: "Просмотр модели с помощью средства просмотра правил взаимосвязи (Microsoft) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41ef2091d63d1a4e5f2f3bf294e590be5cd173e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a30bdbe56a78d1bb9b09f0ff179646496bb4afdd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Просмотр модели с помощью средства просмотра правил ассоциации (Майкрософт)
-  Средство просмотра правил взаимосвязи [!INCLUDE[msCoName](../../includes/msconame-md.md)] в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, которые построены с помощью алгоритма ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] ― это алгоритм установления взаимосвязей для использования при создании моделей интеллектуального анализа данных, которые можно использовать для анализа покупательского поведения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Средство просмотра правил взаимосвязи в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритм взаимосвязей. Алгоритм ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] ― это алгоритм установления взаимосвязей для использования при создании моделей интеллектуального анализа данных, которые можно использовать для анализа покупательского поведения. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md).  
   
  Ниже перечислены основные причины использования алгоритма ассоциаций [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

@@ -1,12 +1,12 @@
 ---
 title: "Службы Analysis Services | Документы Microsoft"
 ms.date: 05/11/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.custom: 
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c7e997b69125703fd4dbd240aada1071d4e6a658
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d31d430fdaf5276b52a3f90efacf4a9a56576a35
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what-is-analysis-services"></a>Новые возможности служб Analysis Services
-  Службы Analysis Services — это ядро аналитических данных, используемых в поддержки принятия решений и бизнес-аналитика, предоставляя аналитические данные для бизнес-отчеты и клиентские приложения, такие как Power BI, Excel, отчеты служб Reporting Services и других инструментах визуализации данных.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Службы Analysis Services — это ядро аналитических данных, используемых в поддержки принятия решений и бизнес-аналитика, предоставляя аналитические данные для бизнес-отчеты и клиентские приложения, такие как Power BI, Excel, отчеты служб Reporting Services и других инструментах визуализации данных.  
   
  Типичный рабочий процесс включает создание модели, многомерные или табличные данные, развертывание модели в качестве базы данных на экземпляре сервера для локальных служб SQL Server Analysis Services или служб Azure Analysis Services, Настройка повторяющегося обработки данных и назначение разрешения на доступ к данным конечным пользователем. Когда она будет готова к работе, вашей семантическую модель данных может осуществляться любым клиентским приложениям, поддерживающих служб Analysis Services в качестве источника данных.  
  

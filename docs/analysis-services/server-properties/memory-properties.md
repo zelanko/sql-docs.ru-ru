@@ -2,12 +2,12 @@
 title: "Свойства памяти | Документы Microsoft"
 ms.custom: 
 ms.date: 11/17/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3c8b8f8e94f95174b2d4038454d834b1427cb56c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bcf950fc7219996bfc60f56797f52a5ed6d49fc8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="memory-properties"></a>Свойства памяти
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] сначала выделяет небольшой объем памяти, чтобы запросы могли выполняться незамедлительно. Дополнительная память выделяется по мере увеличения числа запросов и рабочей нагрузки. 
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предварительно размещает небольшой объем памяти в начале вверх, чтобы немедленно обработки запросов. Дополнительная память выделяется по мере увеличения числа запросов и рабочей нагрузки. 
   
   С помощью параметров конфигурации можно контролировать пороговые уровни нагрузки, при которых будет выделяться дополнительная память. Например, параметр **HardMemoryLimit** задает принудительное состояние нехватки памяти (по умолчанию этот порог неактивен), при котором запросы отклоняются до тех пор, пока не будет доступно больше ресурсов.
   

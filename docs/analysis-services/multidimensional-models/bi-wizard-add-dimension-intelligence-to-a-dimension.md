@@ -2,12 +2,12 @@
 title: "Добавление логики измерений к измерению | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da03582649052d24d22bbced266fbfcbc3f74cba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4109707f30b6569c9d67bf6259e61958ff1a6251
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Мастер бизнес-Аналитики — Добавление логики измерений к измерению
-  Добавьте расширение логики измерений к кубу или измерению, чтобы задать для измерения стандартный бизнес-тип. Данное расширение также указывает соответствующие типы атрибутов измерения. Клиентские приложения могут использовать эти характеристики типа при анализе данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Добавьте расширение логики измерений к кубу или измерению, чтобы указать стандартный бизнес-тип для измерения. Данное расширение также указывает соответствующие типы атрибутов измерения. Клиентские приложения могут использовать эти характеристики типа при анализе данных.  
   
  Чтобы добавить логику измерений, используйте мастер бизнес-аналитики и выберите параметр **Определить логику операций с измерениями** на странице **Выбор расширения** . После этого мастер проведет по шагам, позволяющим выбрать измерение, к которому необходимо применить логику измерений, а также определить атрибуты для выбранного измерения.  
   

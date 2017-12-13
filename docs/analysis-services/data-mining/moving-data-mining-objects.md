@@ -2,12 +2,12 @@
 title: "Перемещение объектов интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39ff7c19d4bb069149e56ae2d4939225d57a8223
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 162991baf2c6e5a1a83f5db69a354b0b7d085e33
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="moving-data-mining-objects"></a>Перемещение объектов интеллектуального анализа данных
-  Самым распространенным случаем перемещения объектов интеллектуального анализа данных является развертывание модели из тестовой среды или среды анализа в рабочей среде или обеспечение общего доступа к моделям для других пользователей.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Самым распространенным случаем перемещения объектов интеллектуального анализа данных, развертывание модели в среде тестирования или анализа в рабочей среде или для совместного использования моделей с другими пользователями.  
   
  В данном разделе описывается использование средств и языков скриптов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]для перемещения объектов интеллектуального анализа данных.  
   

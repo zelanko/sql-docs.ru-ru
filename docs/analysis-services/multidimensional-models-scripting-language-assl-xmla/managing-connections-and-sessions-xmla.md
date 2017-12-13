@@ -2,12 +2,12 @@
 title: "Управление соединениями и сеансами (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52392cf2a1af25e0f67634286e371fb2bef408f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bf118b3eb709ffffd67d5e984b0303bdfa21d149
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="managing-connections-and-sessions-xmla"></a>Управление соединениями и сеансами (XMLA)
-  *Пользуясь* — это условие, в течение которого сервер сохраняет идентификатор и контекст клиента между вызовами методов. *Отсутствие поддержки состояния* — это условие, в течение которого сервер не запоминает идентификатор и контекст клиента после завершения вызова метода.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Пользуясь* — это условие, в течение которого сервер сохраняет идентификатор и контекст клиента между вызовами методов. *Отсутствие поддержки состояния* — это условие, в течение которого сервер не запоминает идентификатор и контекст клиента после завершения вызова метода.  
   
  Чтобы обеспечить контроль изменений состояния, XML для аналитики (XMLA) поддерживает *сеансы* , которые позволяют выполнить ряд инструкций друг с другом. Примером такого ряда инструкций служит создание вычисляемого элемента, который должен использоваться в последующих запросах.  
   

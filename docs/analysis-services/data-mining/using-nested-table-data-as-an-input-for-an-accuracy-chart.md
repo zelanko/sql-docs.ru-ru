@@ -2,12 +2,12 @@
 title: "Использования данных вложенной таблицы в качестве входных данных для диаграммы точности | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d60e6dbaae295d5bc4f3e221306ab478583defc9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 05314d5f52757332c8909f78fd57f8d141ff1696
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Использование данных вложенной таблицы в качестве входных для диаграммы точности
-  Если при проверке точности модели интеллектуального анализа данных на внешних данных модель интеллектуального анализа содержит вложенные таблицы, то внешние данные также должны содержать таблицу вариантов и связанную с ней вложенную таблицу.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При проверке точности модели интеллектуального анализа данных с помощью внешних данных, если модель интеллектуального анализа данных содержит вложенные таблицы, внешние данные также должны содержать таблицу вариантов и связанную вложенную таблицу.  
   
  В этом разделе описана работа с вложенными таблицами, используемыми для проверки моделей, сопоставление вложенных таблиц и таблиц вариантов в режиме и во внешних данных, а также применение фильтра к вложенной таблице.  
   

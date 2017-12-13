@@ -2,12 +2,12 @@
 title: "Двунаправленные кросс-фильтры служб Analysis Services — табличные модели — | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 77c84d5c262127b64ad38a2e643028120ec5da12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>Двунаправленные кросс-фильтры служб Analysis Services — табличные модели —
-  Новым в SQL Server 2016 является стандартный подход по включению *двунаправленных кросс-фильтров* в табличные модели, исключающий необходимость вручную создавать обходные пути DAX для распространения контекста фильтра по связям между таблицами.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Новые в SQL Server 2016 является стандартный подход по включению *двунаправленные кросс-фильтры,* в табличных моделях, устраняя необходимость вручную создавать обходные пути DAX для распространения контекста фильтра между связями таблиц.  
   
  Концепцию можно разбить на две составляющих. *Кроссфильтрация* — это возможность задать контекст фильтра для таблицы на основе значений в связанной таблице, а *двунаправленность* означает передачу контекста фильтра второй связанной таблице на другой стороне связи. Само название указывает на то, что срез можно выполнить в обоих направлениях, а не только в одном.  На внутреннем уровне двусторонняя фильтрация расширяет контекст фильтра до запроса супермножества данных.  
   

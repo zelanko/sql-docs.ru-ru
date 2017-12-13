@@ -2,12 +2,12 @@
 title: "Создать копию модели интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ef19138a03ca98b74cfb53703219f6db15875dec
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41293698d331f6b315e4d2eae668ba6274800532
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>создать копию модели интеллектуального анализа данных
-  Создание копии модели интеллектуального анализа полезно, если необходимо быстро создать несколько моделей интеллектуального анализа данных на основе одних и тех же данных. После копирования модели новую копию можно редактировать путем изменения параметров или добавления фильтра.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Создание копии модели интеллектуального анализа данных полезно в том случае, если вы хотите быстро создать несколько моделей интеллектуального анализа данных, основанные на тех же данных. После копирования модели новую копию можно редактировать путем изменения параметров или добавления фильтра.  
   
  Например, если существующая таблица Customers связана с таблицей данных о покупках, сделанных клиентами, можно создать отдельные модели интеллектуального анализа данных для каждого демографического показателя клиентов, такого как возраст или область.  
   

@@ -2,12 +2,12 @@
 title: "Свойства (табличные службы SSAS) проекта | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66a5bfd14d877229f51a257c4775cf9873b854db
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: aeddf6f4c7739f86bf7d5c597684d084a7227848
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="project-properties-ssas-tabular"></a>Свойства проекта (табличные службы SSAS)
-  В этом разделе описаны свойства проекта табличной модели. Каждый проект табличной модели имеет параметры развертывания и свойства сервера развертывания, которые указывают порядок развертывания проекта и модели. Например, сервер, на котором будет развернута модель, и имя базы данных развернутой модели. Эти параметры отличаются от свойств модели, которые влияют на базу данных рабочей области модели. Описанные здесь свойства проекта находятся в модальном диалоговом окне "Свойства", которое отличается от окна свойств, используемого для отображения других типов свойств. Для отображения модальных свойств проекта в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в **обозревателе решений**щелкните правой кнопкой мыши проект и выберите пункт **Свойства**.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе описаны свойства проекта модели. Каждый проект табличной модели имеет параметры развертывания и свойства сервера развертывания, которые указывают порядок развертывания проекта и модели. Например, сервер, на котором будет развернута модель, и имя базы данных развернутой модели. Эти параметры отличаются от свойств модели, которые влияют на базу данных рабочей области модели. Описанные здесь свойства проекта находятся в модальном диалоговом окне "Свойства", которое отличается от окна свойств, используемого для отображения других типов свойств. Для отображения модальных свойств проекта в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в **обозревателе решений**щелкните правой кнопкой мыши проект и выберите пункт **Свойства**.  
   
  Разделы данной темы:  
   

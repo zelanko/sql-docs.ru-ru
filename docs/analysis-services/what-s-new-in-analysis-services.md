@@ -2,12 +2,12 @@
 title: "Какой новые возможности служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/24/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5264fa7ed32a1f35136c710da28af09c6ee0fab8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="what39s-new-in-analysis-services"></a>Какой новые возможности служб Analysis Services
-SQL Server 2016 Analysis Services включает множество усовершенствований обеспечивая повышение производительности, упрощения разработки решения, управление автоматических базы данных, улучшенные связи с двунаправленной перекрестной фильтрации, параллельная обработка секции, и многое другое. Все усовершенствования, реализованные в этом выпуске, основаны на уровне совместимости 1200 для баз данных табличной модели.     
+[!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services включает множество усовершенствований обеспечивая повышение производительности, упрощения разработки решения, управление автоматических базы данных, улучшенные связи с двунаправленной перекрестной фильтрации, параллельная обработка секции, и многое другое. Все усовершенствования, реализованные в этом выпуске, основаны на уровне совместимости 1200 для баз данных табличной модели.     
 
 ## <a name="azure-analysis-services"></a>Службы Analysis Services
 Представленные на онлайн-конференции PASS о SQL 2016 службы Analysis Services теперь доступны в облаке как служба Azure. **Azure Analysis Services** поддерживает табличные модели на уровне совместимости 1200 и выше. DirectQuery, секции, безопасность на уровне строк, двунаправленные связи и переводы полностью поддерживаются. Дополнительные сведения и пробную версию можно найти на странице [Azure Analysis Services](http://azure.microsoft.com/services/analysis-services/). 

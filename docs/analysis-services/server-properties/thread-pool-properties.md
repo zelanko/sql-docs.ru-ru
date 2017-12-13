@@ -2,12 +2,12 @@
 title: "Свойства пула потоков | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: server-properties
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: afc7c7e8464661b6d853715c98f6cc61b00bf6b7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 25a741e35b7efa0b3bb13047853f6f39d8300c3c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="thread-pool-properties"></a>Свойства пула потоков
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует многопоточность во многих операциях, повышая общую производительность сервера за счет параллельного выполнения нескольких заданий. Чтобы эффективнее управлять потоками, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует пулы потоков для предварительного выделения ресурсов и обеспечения доступности потоков для последующих заданий.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует многопоточность во многих операциях, повышая общую производительность сервера за счет параллельного выполнения нескольких заданий. Чтобы эффективнее управлять потоками, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] использует пулы потоков для предварительного выделения ресурсов и обеспечения доступности потоков для последующих заданий.  
   
  Каждый экземпляр [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] поддерживает собственный набор пулов потоков. Есть различия в том, как табличные и многомерные экземпляры используют пулы потоков. Например, пул потоков **IOProcess** используют только многомерные экземпляры. Таким образом, свойство **PerNumaNode** , описанное в этом разделе, для табличных экземпляров не задействуется. В подразделе [Справочник по свойствам](#bkmk_propref) ниже требования к режиму вызываются для каждого свойства.
   

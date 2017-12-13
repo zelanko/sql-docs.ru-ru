@@ -2,12 +2,12 @@
 title: "Определение логических первичных ключей в представлении источника данных (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6ba2ab3a2fb37400a47b9d54981d48190f7f0e5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8d38773feb45ada119da338ccf022630b4a781b8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Определение логических первичных ключей в представлении источника данных (службы Analysis Services)
-  Мастер представлений источника данных и конструктор представлений источника данных автоматически определяют первичный ключ для таблицы, добавляемой в представление источника данных на основе базовой таблицы базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Мастер представлений источников данных и конструктор представлений источника данных автоматически определяют первичный ключ для таблицы, которая добавляется к представлению источника данных на основе базовой таблицы базы данных.  
   
  Иногда может потребоваться вручную определить первичный ключ в представлении источника данных. Например, по соображениям производительности или архитектурным соображениям таблицы в источнике данных могут не иметь явно определенных первичных ключевых столбцов. В именованных запросах и представлениях первичный ключевой столбец для таблицы также может опускаться. Если таблица, представление или именованный запрос не имеют заданного физического первичного ключа, можно вручную задать логический первичный ключ для таблицы или именованного запроса в конструкторе представлений источника данных.  
   

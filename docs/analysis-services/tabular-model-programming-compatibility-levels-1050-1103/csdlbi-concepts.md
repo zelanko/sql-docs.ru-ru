@@ -2,12 +2,12 @@
 title: "Основные понятия CSDLBI | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,17 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 16688e8f3f87e8ca9e2e95e4d2200a3a1bf03342
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8b75857391d8c5298db654469ada8c117926dc89
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="csdlbi-concepts"></a>Основные понятия CSDLBI
-
-[!INCLUDE[ssas-appliesto-sqlas-all](../../includes/ssas-appliesto-sqlas-all.md)]
-
-  Язык определения концептуальной схемы с заметками бизнес-аналитики (CSDLBI) основан на среде Entity Data Framework, которая является абстракцией, представляющей данные способом, который позволяет программно оценивать, опрашивать или экспортировать разрозненные наборы данных. CSDLBI используется для представления моделей данных, созданных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], поскольку поддерживает широкий выбор отчетов, управляемых данными, и приложений.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Язык определения концептуальной схемы с заметками бизнес-Аналитики (CSDLBI) основан на данных Entity Framework, которая является абстракцией, представляющей данные способом, который позволяет разрозненные наборы данных программно обращаться, запрашивать или экспортировать. CSDLBI используется для представления моделей данных, созданных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], поскольку поддерживает широкий выбор отчетов, управляемых данными, и приложений.  
   
  В этом разделе описывается процесс сопоставления представления CSDLBI с моделями данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (и табличными и многомерными) с примерами каждого вида модели.  
   

@@ -2,12 +2,12 @@
 title: "Настройка свойств работы таблицы для отчетов Power View (табличные службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d72788a68562aef532b436d182a2768cfa08d9e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View — Настройка свойств работы таблицы для отчетов
-  Если для [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]в качестве модели интеллектуального анализа данных используется табличная модель, то можно настроить свойства поведения таблицы, содержащие строки более гранулярного уровня. Задание свойств поведения таблицы изменяет групповую обработку строк и обеспечивает более эффективное размещение идентификационной информации (имен, фотографий, логотипов и т. д.) в мозаичном, карточном или диаграммном виде.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]При использовании табличной модели в качестве модели данных для [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], можно задать свойства поведения таблицы, которые предоставляют строки детализации на более детальном уровне. Задание свойств поведения таблицы изменяет групповую обработку строк и обеспечивает более эффективное размещение идентификационной информации (имен, фотографий, логотипов и т. д.) в мозаичном, карточном или диаграммном виде.  
   
  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] отличается от других приложений для создания отчетов тем, что автоматически группирует материалы во время разработки отчета, пытаясь определить, какие из столбцов в поле отчета соответствуют используемому формату представления. В большинстве случаев при группировании по умолчанию результат оптимальный. Однако для некоторых таблиц, в особенности для тех, которые содержат подробные данные, при группировании по умолчанию иногда будет происходить группирование строк, которые не должны группироваться. Для таких таблиц можно задать свойства, изменяющие вычисление групп.  
   

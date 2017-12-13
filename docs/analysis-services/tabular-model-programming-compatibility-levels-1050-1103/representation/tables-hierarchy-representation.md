@@ -2,12 +2,12 @@
 title: "Представление иерархии (табличное) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 843a0f870ad9b30ad4746bbe9913de845bfc30e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 58ee908dc3dbf745a15c8dfa5f44d711f91c392b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="tables---hierarchy-representation"></a>Таблицы - представление иерархии
-  В табличных моделях иерархия представляет собой путь навигации от одного атрибута к другому в зависимости от значений, выбранных пользователем.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В табличных моделях иерархия представляет собой путь навигации от одного атрибута к другому в зависимости от значения, выбранного пользователем.  
   
 ## <a name="hierarchy-representation"></a>Представление иерархии  
   

@@ -2,12 +2,12 @@
 title: "События трассировки служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: trace-events
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 72e9e9352f5eaba5ca528cebfcd45fb6ca2917de
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bda0bd4dac6b7f60bbda2fd9562af9fa2ebe9abb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-trace-events"></a>События трассировки служб Analysis Services
-  За активностью экземпляра Microsoft SQL Server Analysis Services (SSAS) можно наблюдать путем отслеживания и анализа событий трассировки, создаваемых экземпляром.  События трассировки сгруппированы для облегчения поиска связанных событий трассировки.  Каждое событие трассировки содержит набор данных, имеющих отношение к событию; не все фрагменты данных имеют отношение к событиям.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно выполнить действия с экземпляром Microsoft SQL Server Analysis Services (SSAS), отслеживания и анализа событий трассировки, создаваемые экземпляром.  События трассировки сгруппированы для облегчения поиска связанных событий трассировки.  Каждое событие трассировки содержит набор данных, имеющих отношение к событию; не все фрагменты данных имеют отношение к событиям.  
   
  События трассировки можно запускать и записывать с помощью **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**(см. раздел [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)), а также запускать с помощью команды XMLA как **расширенные события SQL Server** и впоследствии анализировать (см. раздел [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)).  
   

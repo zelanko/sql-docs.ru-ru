@@ -4,7 +4,7 @@ description: "В этом разделе содержатся заметки о 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 11/28/2017
+ms.date: 12/12/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 460333eec732a38015229a402aaf1d7985710bc4
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
@@ -148,7 +148,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="known-issues"></a>Известные проблемы
 
-В следующих разделах описаны известные проблемы с выпуском Общи доступность (GA) 2017 г. SQL Server в Linux.
+В следующих разделах описаны известные проблемы с выпуском Общая доступность (GA) 2017 г. SQL Server в Linux.
 
 #### <a name="general"></a>Общие сведения
 
@@ -178,7 +178,7 @@ ms.lasthandoff: 12/01/2017
 
 - При восстановлении базы данных, которая была создана резервная копия на сервере SQL Server в Windows, необходимо использовать **WITH MOVE** предложение в инструкции Transact-SQL.
 
-- Распределенные транзакции, требуется службу координатора распределенных транзакций не поддерживаются в SQL Server на ОС Linux. SQL Server до SQL Server, поддерживаются распределенные транзакции.
+- Распределенные транзакции, требуется службу координатора распределенных транзакций не поддерживаются в SQL Server на ОС Linux. SQL Server до SQL Server, связанные серверы поддерживаются в том случае, если только они включают DTC. Дополнительные сведения см. в разделе [распределенных транзакций требуется службу координатора распределенных транзакций не поддерживаются в SQL Server на Linux](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/).
 
 - Некоторые алгоритмы (шифров) Transport Layer Security (TLS) не работают должным образом с SQL Server в Linux. В результате ошибок соединения при попытке подключения к SQL Server, а также проблем с установлением соединения между репликами в группах высокого уровня доступности.
 

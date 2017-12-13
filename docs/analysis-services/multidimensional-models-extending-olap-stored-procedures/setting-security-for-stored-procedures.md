@@ -2,12 +2,12 @@
 title: "Настройка безопасности для хранимых процедур | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2865051f8689620a5a9df1b450ea74fb6eff8c7b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ae76fbe9c09366f0a9177de901e8c08ca5ffe15
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="setting-security-for-stored-procedures"></a>Настройка безопасности хранимых процедур
-  Безопасность хранимых процедур задается свойством **PermissionSet** в хранимой процедуре для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (уровень сервера), базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Безопасность хранимых процедур задается с **PermissionSet** свойство на хранимую процедуру для экземпляра [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (уровня сервера), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных, или [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта.  
   
 ## <a name="see-also"></a>См. также:  
  [Управление сборками многомерной модели](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   

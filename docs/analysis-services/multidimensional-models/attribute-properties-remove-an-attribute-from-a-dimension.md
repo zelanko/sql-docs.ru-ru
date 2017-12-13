@@ -2,12 +2,12 @@
 title: "Удаление атрибута из измерения | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e9c4bcca48bbd02d572cf8a695730c898273ea0a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bba401df8092f349ae3bb192733736225d5952ad
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---remove-an-attribute-from-a-dimension"></a>Атрибут свойства — удалить атрибут из измерения
-  Чтобы удалить атрибут из измерения в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], щелкните его правой кнопкой мыши на панели **Атрибуты** , размещенной на вкладке **Структура измерения** конструктора измерений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], а затем выберите **Удалить**. В диалоговом окне **Удаление объектов** нажмите кнопку **ОК**. Благодаря этим действиям, атрибут из измерения будет удален, но представление источника данных для измерения останется неизменным.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Чтобы удалить атрибут из измерения в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], щелкните правой кнопкой мыши атрибут в **атрибуты** области **Структура измерения** вкладку измерения В конструкторе [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], а затем нажмите кнопку **удалить**. В диалоговом окне **Удаление объектов** нажмите кнопку **ОК**. Благодаря этим действиям, атрибут из измерения будет удален, но представление источника данных для измерения останется неизменным.  
   
 ## <a name="see-also"></a>См. также  
  [Измерения в многомерных моделях](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)   

@@ -2,12 +2,12 @@
 title: "Объект источника данных (TMSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 05/30/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: tabular-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -19,17 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42da7b6895e2a125253e824e8a812f63c04e633a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d1a28cf4fcb0f9cd7ba5d00f74e6957302768c17
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="datasources-object-tmsl"></a>Объект источника данных (TMSL)
-
-[!INCLUDE[ssas-appliesto-sql2016-later-aas](../../includes/ssas-appliesto-sql2016-later-aas.md)]
-
-  Определяет соединение с источником данных, используемых в модели, либо при импорте, чтобы добавлять данные к модели, в запросы к серверу через режим DirectQuery.  В режиме DirectQuery модель может иметь только один **DataSource** объекта.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Определяет соединение с источником данных, используемых в модели, либо при импорте, чтобы добавлять данные к модели, в запросы к серверу через режим DirectQuery.  В режиме DirectQuery модель может иметь только один **DataSource** объекта.  
   
  Если вы создаете, заменив, или изменение сам объект источника данных, любой источник данных, на которые ссылается сценарий (например, в сценарий секционирования) должен быть существующим **DataSource** объектов в модели.  
   

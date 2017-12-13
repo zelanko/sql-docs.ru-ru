@@ -2,12 +2,12 @@
 title: "Применение фильтров к модели проверочных данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 39d35b7421b9d3ddeff5cede6e1539b34b7012c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e0a9ffaeaeaffb9a93e36f865a6b3e7a0647befa
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Применение фильтров к данным проверки модели
-  Задавая внешний источник данных для использования при тестировании модели, можно при необходимости применить фильтр для ограничения входных данных. Например, необходимо проверить модель конкретно по прогнозам для клиентов с определенным уровнем дохода.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При указании внешнего источника данных для использования при тестировании модели, можно при необходимости применить фильтр для ограничения входных данных. Например, необходимо проверить модель конкретно по прогнозам для клиентов с определенным уровнем дохода.  
   
  Например, в сценарии целевой рассылки Adventure Works можно создать критерий фильтра, аналогичный приведенному ниже в ProspectiveBuyer, который является таблицей с проверочными данными, и ограничить проверочные варианты по уровню дохода:  
   

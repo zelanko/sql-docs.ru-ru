@@ -2,12 +2,12 @@
 title: "После установки конфигурации (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a87a4995e5b7776012e81f9cf908949dbc9339a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6c35dfdbf2dd4eb9e9cae0c99bfc405fbca27380
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="post-install-configuration-analysis-services"></a>Настройка после установки (службы Analysis Services)
-  После установки служб Analysis Services требуется дополнительная настройка, чтобы обеспечить полноценное функционирование сервера и сделать его доступным для типового пользования. В этом разделе представлены дополнительные задачи, завершающие установку. В зависимости от требований соединения можно также настроить проверку подлинности (см. раздел [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После установки служб Analysis Services, конфигурации требуется дополнительная чтобы сделать сервер полностью работает и доступен для общего использования. В этом разделе представлены дополнительные задачи, завершающие установку. В зависимости от требований соединения можно также настроить проверку подлинности (см. раздел [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
  Впоследствии потребуется дополнительная работа, когда появятся базы данных, готовые к развертыванию. А именно, требуется настроить членство в роли базы данных, чтобы предоставить пользователю доступ к данным, разработать стратегию резервного копирования и восстановления баз данных, а также решить, нужна ли запланированная рабочая нагрузка по обработке для обновления данных через регулярные промежутки времени. Дополнительные сведения о развертывании и администрировании базы данных можно найти по следующим ссылкам: [Базы данных многомерной модели (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) и [Базы данных табличной модели (табличные службы SSAS)](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   

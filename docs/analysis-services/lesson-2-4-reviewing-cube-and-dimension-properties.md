@@ -2,12 +2,12 @@
 title: "Просмотр свойств куба и измерения | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 73dea5a137a6ae685d36f06a4e4497e976133819
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0831f70668a453f811b2b330e6593d6ac23dd1f4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-2-4---reviewing-cube-and-dimension-properties"></a>Занятие 2-4 - свойств Просмотр куба и измерения
-После определения свойств куба можно просмотреть результаты в конструкторе кубов. В следующей задаче предстоит просмотреть структуру куба проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]После определения свойств куба можно просмотреть результаты в конструкторе кубов. В следующей задаче предстоит просмотреть структуру куба проекта [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.  
   
 ### <a name="to-review-cube-and-dimension-properties-in-cube-designer"></a>Просмотр свойств куба и измерений в конструкторе кубов  
   

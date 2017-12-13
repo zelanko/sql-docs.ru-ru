@@ -2,12 +2,12 @@
 title: "Диаграмма роста прибыли (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 445c65775a59a1fb9490d947246b22f4adeded2d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: ddde9150e2e748e75cef8fb25f16377c9dcea4b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>Диаграмма роста прибыли (службы Analysis Services — интеллектуальный анализ данных)
-  В диаграмме роста прибыли отображается теоретический прирост прибыли, связанный с использованием модели интеллектуального анализа данных. Предположим, что модель прогнозирует, с какими клиентами компании следует связаться в определенном бизнес-сценарии. В этом случае следует добавить в диаграмму роста прибыли данные о стоимости проведения кампании целевой рассылки. И тогда в готовой диаграмме вы увидите сравнение прибыли при правильном выборе целевых клиентов и при обращении к клиентам случайным образом.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Диаграмма роста прибыли отображается Теоретический прирост прибыли, связанный с использованием модели интеллектуального анализа данных. Предположим, что модель прогнозирует, с какими клиентами компании следует связаться в определенном бизнес-сценарии. В этом случае следует добавить в диаграмму роста прибыли данные о стоимости проведения кампании целевой рассылки. И тогда в готовой диаграмме вы увидите сравнение прибыли при правильном выборе целевых клиентов и при обращении к клиентам случайным образом.  
   
 ## <a name="build-a-profit-chart"></a>Создание диаграммы роста прибыли  
  Диаграмма роста прибыли аналогична диаграмме точности прогнозов. Начните с создания диаграммы точности прогнозов, а затем добавьте сведения об издержках и прибыли.  

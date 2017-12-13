@@ -2,12 +2,12 @@
 title: "Свойства структуры интеллектуального анализа данных и столбцов структуры | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c1a05d933124d98894ddf40edee9584c0dfd89bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 42ee21307542c7e204ac7b4616714c2285cce032
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Свойства структур интеллектуального анализа данных и их столбцов
-  Можно задать или изменить свойства структуры интеллектуального анализа данных, а также связанных с ней столбцов и вложенных таблиц, используя вкладку **Структура интеллектуального анализа данных** конструктора интеллектуального анализа данных. Свойства, устанавливаемые на этой вкладке, распространяются на каждую модель интеллектуального анализа данных, связанную с этой структурой.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно задать или изменить свойства структуры интеллектуального анализа данных, а также связанных с ней столбцов и вложенных таблиц с помощью **структуры интеллектуального анализа данных** конструктора интеллектуального анализа данных. Свойства, устанавливаемые на этой вкладке, распространяются на каждую модель интеллектуального анализа данных, связанную с этой структурой.  
   
 > [!NOTE]  
 >  Если в структуре интеллектуального анализа данных было изменено любое значение, даже метаданные, например имя или описание, то будет необходимо провести повторную обработку структуры интеллектуального анализа данных и ее моделей перед просмотром или созданием запросов для них.  

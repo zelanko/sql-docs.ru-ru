@@ -2,12 +2,12 @@
 title: "Создание отчета перекрестной проверки | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 08431f6a1eb5e2ed7ae82ea732fd2cdb466c6d70
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 47368a14a07f9ab0a42df11d29dbca6404b19463
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cross-validation-report"></a>создать отчет перекрестной проверки
-  В данном разделе описывается создание отчета перекрестной проверки с помощью вкладки «Диаграмма точности» в конструкторе интеллектуального анализа данных. Дополнительные сведения о том, как выглядит отчет перекрестной проверки, и содержащихся в нем статистических мерах см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описывается создание отчета перекрестной проверки с помощью диаграммы точности вкладки конструктора интеллектуального анализа данных. Дополнительные сведения о том, как выглядит отчет перекрестной проверки, и содержащихся в нем статистических мерах см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).  
   
  Отчет перекрестной проверки существенно отличается от диаграммы точности, в том числе от диаграммы точности прогнозов или матрицы классификации.  
   

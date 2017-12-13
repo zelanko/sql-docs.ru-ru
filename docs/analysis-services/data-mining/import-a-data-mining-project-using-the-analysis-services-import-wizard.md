@@ -2,12 +2,12 @@
 title: "Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5111073e53da22a27edfe9d3f3c13985236c0b15
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b90ffa3645d844d066542e0c2cd8ac7e6999250d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Импорт проекта интеллектуального анализа данных с помощью мастера импорта служб Analysis Services
-  В этом разделе описано, как создать новый проект интеллектуального анализа данных путем импорта метаданных из существующего проекта интеллектуального анализа данных на другом сервере, используя шаблон **Импорт с сервера (многомерные данные и интеллектуальный анализ данных)**, в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описывается создание нового проекта интеллектуального анализа данных путем импорта метаданных из существующего проекта интеллектуального анализа данных на другом сервере, с помощью шаблона, **Импорт проекта с сервера (многомерный и интеллектуальный анализ данных)**, в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Импорт источников данных, структур интеллектуального анализа данных и моделей интеллектуального анализа данных из существующего проекта интеллектуального анализа данных  
  При использовании шаблона **Импорт с сервера (многомерные данные и интеллектуальный анализ данных)**среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] создает новый проект интеллектуального анализа данных, а затем копирует метаданные из указанного проекта интеллектуального анализа данных. Новый проект содержит те же источники данных, представления источников данных, структуры интеллектуального анализа данных и модели интеллектуального анализа данных, что и база данных ssASnoversion, из которой был выполнен импорт. Однако этот проект нельзя использовать до тех пор, пока некоторые свойства не будут обновлены, а объекты — обработаны согласно описанию.  

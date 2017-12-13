@@ -2,12 +2,12 @@
 title: "Мониторинг экземпляра служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6fafa9acf07ddd88cfeb66f6328a4f0da99512d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69cc17afa5a35844a76f838993630cecf49b0bed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Наблюдение за экземпляром служб Analysis Services
-  Производительность служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно отслеживать при помощи системного монитора [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , который иногда называют приложением **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] предоставляет возможность создания трассировок и управления ими, а также анализа и воспроизведения результатов трассировок. Системный монитор сообщает состояние сервера, индексированное посредством определенных счетчиков, которые описаны в следующем разделе.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно отслеживать производительность [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или системный монитор, иногда называют приложения **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] предоставляет возможность создания трассировок и управления ими, а также анализа и воспроизведения результатов трассировок. Системный монитор сообщает состояние сервера, индексированное посредством определенных счетчиков, которые описаны в следующем разделе.  
   
 > [!NOTE]  
 >  Дополнительные сведения о мониторинге см. в [руководстве по использованию SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  

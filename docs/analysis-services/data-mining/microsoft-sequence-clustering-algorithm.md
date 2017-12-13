@@ -2,12 +2,12 @@
 title: "Алгоритм кластеризации последовательностей (Microsoft) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c64eddbe78782344e4cd3f3f6afdd48884362808
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 375e6c59c38d7bcf4eb270c6b007d2fca16d119c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Алгоритм кластеризации последовательностей (Майкрософт)
-  Алгоритм кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это уникальный алгоритм сочетающий в себе анализ последовательностей и кластеризацию. Данный алгоритм можно использовать для просмотра данных, содержащих события, которые могут быть связаны в *последовательность*. Алгоритм находит самые распространенные последовательности и выполняет кластеризацию для поиска идентичных последовательностей. Ниже описаны типы последовательностей, которые можно использовать в качестве данных для машинного обучения, чтобы получить сведения о стандартных проблемах или бизнес-сценариях:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм кластеризации последовательностей — это уникальный алгоритм, который объединяет анализа последовательности и кластеризации. Данный алгоритм можно использовать для просмотра данных, содержащих события, которые могут быть связаны в *последовательность*. Алгоритм находит самые распространенные последовательности и выполняет кластеризацию для поиска идентичных последовательностей. Ниже описаны типы последовательностей, которые можно использовать в качестве данных для машинного обучения, чтобы получить сведения о стандартных проблемах или бизнес-сценариях:  
   
 -   Сведения о посещениях и схемах щелчков, которые создаются, когда пользователи переходят по веб-сайту или просматривают его.  
   

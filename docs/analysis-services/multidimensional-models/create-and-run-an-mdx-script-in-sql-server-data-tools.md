@@ -2,12 +2,12 @@
 title: "Создание и выполнение скрипта многомерных Выражений в SQL Server Data Tools | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8f496189909d7f6b7801c642eea2e4830ce239f0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 097d318ddf841e09f53ca90b0266bbd3806f59dc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Создание и выполнение скрипта многомерных выражений SQL Server Data Tools
-  Чтобы создать и запустить скрипт многомерных выражений в службах  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], необходимо находиться в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с уже созданным и готовым к редактированию кубом.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Для создания и выполнения сценария многомерных Выражений [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], вы должны быть в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с куб уже создан и готовым к редактированию.  
   
 ### <a name="to-create-a-multidimensional-expressions-mdx-script"></a>Создание скрипта многомерных выражений  
   

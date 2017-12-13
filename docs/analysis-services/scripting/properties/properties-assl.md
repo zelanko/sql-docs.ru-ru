@@ -2,12 +2,12 @@
 title: "Свойства (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff1e43f8fd1242b8ac314b49268ec8c86e7cb907
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10cd57d39845f67fe8e447a1c95a5e412709409d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="properties-assl"></a>Свойства (ASSL)
-  В этом разделе справки содержатся сведения о синтаксисе и использовании каждого элемента, выступающего в качестве свойства объекта в схеме языка ASSL.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе справки содержатся сведения о синтаксисе и использовании для каждого элемента, который выступает в качестве свойства объекта в схеме языка сценариев служб Analysis Services (ASSL).  
   
  Хотя в схеме языка ASSL содержатся только элементы XML, но, с точки зрения разработчика, элементы, которые описываются в этом разделе, соответствуют свойствам, описывающим объекты.  
   

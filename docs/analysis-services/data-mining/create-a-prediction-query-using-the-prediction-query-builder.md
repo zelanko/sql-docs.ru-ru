@@ -2,12 +2,12 @@
 title: "Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e788f53ac41de8cdecdfbc88f61afacc0bfbad16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c7d6511a36b9a59e20908feffdb0f61a907377ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов
-  Создать прогнозирующий запрос можно при создании решения интеллектуального анализа данных в среде BI Development Studio. Можно также щелкнуть правой кнопкой мыши существующую модель интеллектуального анализа данных в среде SQL Server Management Studio и выбрать параметр **Построить прогнозирующий запрос**.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно создать прогнозирующий запрос можно при построении решения интеллектуального анализа данных в среде BI Development Studio или щелкнув правой кнопкой мыши существующую модель интеллектуального анализа данных в SQL Server Management Studio, и затем выбрав параметр **построить прогнозирующий запрос**.  
   
  **Построитель прогнозирующих запросов** имеет три режима конструктора. Для перехода из одного режима в другой используются значки в верхнем левом углу.  
   

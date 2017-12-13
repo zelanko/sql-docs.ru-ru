@@ -2,12 +2,12 @@
 title: "Упорядочение фигур в диаграмме связей атрибутов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 84b4ffab1a59bd155557b53f0c5a16040096b2da
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 60a01263806eca9ef04fbc4b6c8c01aebb33bb38
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-relationships---arrange-shapes-in-the-diagram"></a>Связи атрибутов — упорядочить фигуры в диаграмме
-  В среде **можно изменить расположение фигур на вкладке** Связи атрибутов [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]в представлении структуры измерений конструктора измерений.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно изменить расположение фигур на **связи атрибутов** вкладке представления Структура измерения в конструкторе измерений в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-arrange-shapes-in-the-attribute-relationship-diagram"></a>Упорядочивание фигур в диаграмме связи атрибутов  
   

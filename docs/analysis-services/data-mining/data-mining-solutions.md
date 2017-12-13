@@ -2,12 +2,12 @@
 title: "Решения для интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7d296518a6a41af88d194e8cb23b2abc371b497b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4b806912f80b6e95a455456a992979953113a330
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-solutions"></a>Решения для интеллектуального анализа данных
-  Решение по интеллектуальному анализу данных представляет собой решение служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , которое содержит один или несколько проектов интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Решение по интеллектуальному анализу данных — [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] решение, содержащее один или несколько проектов интеллектуального анализа данных.  
   
  Подразделы этого раздела содержат сведения о том, как спроектировать и внедрить интегрированное решение по интеллектуальному анализу данных с помощью служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Общие сведения о процессе разработки в области интеллектуального анализа данных и связанных с этим средствах см. в разделе [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
   

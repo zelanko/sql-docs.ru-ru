@@ -2,12 +2,12 @@
 title: "Функции и задачи служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 82a302c5d7ef97038ae7d15e8478a9551189e416
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 72bf28a40f2314ec696eae6ce8b758010a0ad78e
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="analysis-services-features-and-tasks"></a>Функции и задачи служб Analysis Services
-  Основная документация по службам Analysis Services структурирована по типам моделей и режимам сервера. Это упрощает изучение средств, задач и функций, доступных в установленном режиме. Задачи администрирования сервера, которые относятся к нескольким режимам, находятся в разделе "Управление экземплярами".  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Основная документация по службам Analysis Services организована по тип модели и сервер режим, что можно сосредоточиться на средствах, задачи и функций, доступных в установленном режиме. Задачи администрирования сервера, которые относятся к нескольким режимам, находятся в разделе "Управление экземплярами".  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Сравнение табличных и многомерных решений (службы SSAS)](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  

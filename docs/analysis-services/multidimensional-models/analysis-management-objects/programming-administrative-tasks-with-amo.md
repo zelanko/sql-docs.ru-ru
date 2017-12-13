@@ -2,12 +2,12 @@
 title: "Программирование административных задач с помощью объектов AMO | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e585db13b3c3562cd454ef41fdbb7d60bbd94c26
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 72c1e8f8b21dbdaed355bd72fe89dc9976a49137
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-administrative-tasks-with-amo"></a>Программирование административных задач с помощью объектов AMO
-  Объекты AMO — это библиотека программирования, используемая из клиентских приложений для управления службами [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В этом разделе описывается программирование с использованием объектов AMO.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Объекты управления Analysis (AMO) — это библиотека программирования, используемая из клиентских приложений для управления [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В этом разделе описывается программирование с использованием объектов AMO.  
   
  Библиотеку объектов AMO можно рассматривать как логически связанные группы объектов, которые используются для выполнения конкретных задач.  
   
