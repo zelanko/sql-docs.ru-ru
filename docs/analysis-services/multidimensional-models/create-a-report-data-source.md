@@ -2,12 +2,12 @@
 title: "Создать источник данных отчета | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f30b38b27a56bf3af10c4f39681b160feec34fd5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7e8bac4005982e113a765b59557ae4380610b03b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-report-data-source"></a>Создание источника данных отчета
-  Для подключения Power View к многомерной модели необходимо создать определение общего источника данных отчета (файл с расширением RSDS) в библиотеке SharePoint. Файл RSDS задает имя экземпляра сервера служб Analysis services, тип соединения, строку подключения и учетные данные, используемые для подключения к многомерной модели. Когда пользователь щелкает RSDS, в браузере открывается новый пустой отчет Power View (файл RDLX).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Power View для подключения к многомерной модели, необходимо создать определение источника данных общего отчета, также известные как RSDS-файл, в библиотеке SharePoint. Файл RSDS задает имя экземпляра сервера служб Analysis services, тип соединения, строку подключения и учетные данные, используемые для подключения к многомерной модели. Когда пользователь щелкает RSDS, в браузере открывается новый пустой отчет Power View (файл RDLX).  
   
  Для создания соединения RSDS должны быть установлены службы SQL Server 2012 Reporting Services (или более поздних версий) и надстройка служб Reporting Services для SharePoint 2010 или SharePoint 2013.  
   

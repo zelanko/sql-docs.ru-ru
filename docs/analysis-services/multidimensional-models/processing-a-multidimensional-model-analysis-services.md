@@ -2,12 +2,12 @@
 title: "Обработка многомерной модели (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0813f6d0947927d93a44519c5cbe8eeeb6a5719c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a919efd37f8e10259ee23b9d6b879c46812d2721
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="processing-a-multidimensional-model-analysis-services"></a>Обработка многомерной модели (службы Analysis Services)
-  Обработка ― это шаг или последовательность шагов, в которых службы Analysis Services загружают данные из реляционного источника данных в многомерную модель. Для объектов, использующих режим хранения MOLAP, данные сохраняются на диске в папке файла базы данных. Для режима хранения ROLAP обработка происходит по запросу, в ответ на запрос многомерных выражений к объекту. Для объектов, использующих режим хранения ROLAP, обработка относится к обновлению кэш-памяти до возврата результатов запроса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Обработка — это шаг или последовательность шагов, в которых службы Analysis Services загружает данные из реляционного источника данных в многомерной модели. Для объектов, использующих режим хранения MOLAP, данные сохраняются на диске в папке файла базы данных. Для режима хранения ROLAP обработка происходит по запросу, в ответ на запрос многомерных выражений к объекту. Для объектов, использующих режим хранения ROLAP, обработка относится к обновлению кэш-памяти до возврата результатов запроса.  
   
  По умолчанию обработка выполняется при развертывании решения на сервер. Можно также обработать все решение или его часть либо с помощью нерегламентированных средств, таких как [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], либо по расписанию с помощью служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и агента SQL Server. При выполнении структурных изменений в модель, например при удалении измерения или изменении его уровня совместимости, необходимо выполнить обработку повторно, чтобы синхронизировать физические и логические аспекты модели.  
   

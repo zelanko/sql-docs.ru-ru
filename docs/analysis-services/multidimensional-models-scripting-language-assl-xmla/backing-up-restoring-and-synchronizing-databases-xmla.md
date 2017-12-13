@@ -2,12 +2,12 @@
 title: "Резервное копирование, восстановление и синхронизация баз данных (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d23fcaca8e9ad0d73d1e79566d2fa11348382a3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 7155763db87be5c44ae9e5718d3d72939380038b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Резервное копирование, восстановление и синхронизация баз данных (XMLA)
-  В XML для аналитики есть три команды для резервного копирования, восстановления и синхронизации баз данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В XML для аналитики существует три команды для резервного копирования, восстановления и синхронизации баз данных.  
   
 -   [Резервного копирования](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md) команда создает резервную копию [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ABF), как описано в разделе [резервное копирование баз данных](#backing_up_databases).  
   

@@ -2,12 +2,12 @@
 title: "Создание проекта служб Analysis Services (SSDT) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b26af390b901d6f23eacd409d919a6d1c656ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ff6e42f9b18df54afc83fe80574d79845cf78e4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Создание проекта служб Analysis Services (среда SSDT)
-  Проект служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] можно определить либо с помощью шаблона проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , либо с помощью мастера импорта баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , считывающего содержимое базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Если в настоящий момент в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]не загружено ни одно решение, при создании нового проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будет автоматически создано новое решение. В противном случае новый проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будет добавлен в существующее решение. При разработке решений рекомендуется создавать отдельные проекты для разных типов данных приложений и использовать одно решение в том случае, если проекты взаимосвязаны. Например, можно создать одно решение с различными проектами для пакетов служб Integration Services, баз данных служб Analysis Services и отчетов служб Reporting Services, используемых одним и тем же бизнес-приложением.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно определить [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] либо с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] шаблон проекта или с помощью функции импорта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] мастера баз данных для считывания содержимого [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных. Если в настоящий момент в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]не загружено ни одно решение, при создании нового проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будет автоматически создано новое решение. В противном случае новый проект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] будет добавлен в существующее решение. При разработке решений рекомендуется создавать отдельные проекты для разных типов данных приложений и использовать одно решение в том случае, если проекты взаимосвязаны. Например, можно создать одно решение с различными проектами для пакетов служб Integration Services, баз данных служб Analysis Services и отчетов служб Reporting Services, используемых одним и тем же бизнес-приложением.  
   
  Проект служб Analysis Services содержит объекты, используемые в одной базе данных служб Analysis Services. Свойства развертывания проекта задают сервер и имя базы данных, в которой метаданные проекта будут развернуты как созданные экземпляры объектов.  
   

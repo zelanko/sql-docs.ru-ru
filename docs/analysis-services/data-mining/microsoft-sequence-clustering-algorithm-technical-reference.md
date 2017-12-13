@@ -2,12 +2,12 @@
 title: "Технический справочник по алгоритму кластеризации последовательностей (Microsoft) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9c624a1c14614d62c200e1f3afdfe5623a318853
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 993c4005015b18b1ee6f6106e13fae8429ddcaec
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)
-  Алгоритм кластеризации последовательностей (Майкрософт) — это гибридный алгоритм, использующий методы анализа марковских цепей для определения упорядоченных последовательностей и сочетает результаты этого анализа с технологией кластеризации для построения кластеров на основе последовательностей и других атрибутов модели. В данном разделе описывается реализация алгоритма и настройка его поведения. Приводятся также ссылки на дополнительную информацию о требованиях к моделям кластеризации последовательностей.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Алгоритм кластеризации последовательностей Майкрософт — это гибридный алгоритм, использующий методы анализа Марковских цепей для определения упорядоченных последовательностей и сочетает результаты этого анализа с технологией кластеризации для построения кластеров на основе последовательностей и других атрибутов в модели. В данном разделе описывается реализация алгоритма и настройка его поведения. Приводятся также ссылки на дополнительную информацию о требованиях к моделям кластеризации последовательностей.  
   
  Общие сведения об алгоритме, в том числе о просмотре и запросах моделей кластеризации последовательностей, см. в разделе [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   

@@ -2,12 +2,12 @@
 title: "Сравнение табличных и многомерных решений (службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 06/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: b4ebbabc5925f42a377be5b54ff9d5c5c5605c49
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Сравнение табличных и многомерных решений
-  SQL Server Analysis Services предоставляет несколько подходов для создания семантической модели бизнес-аналитики: табличных, многомерных и Power Pivot для SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services предоставляет несколько подходов для создания семантической модели бизнес-аналитики: табличных, многомерных и Power Pivot для SharePoint.
   
  Это позволяет использовать процессы моделирования, адаптированные для разных пользовательских и бизнес-требований. Многомерный подход — это надежная технология, основанная на открытых стандартах, которая используется множеством поставщиков программного обеспечения бизнес-аналитики, но овладеть ей не так просто. Табличный подход использует реляционные модели, которые многим разработчикам кажутся более понятными. Power Pivot еще проще — эта технология предоставляет возможности визуального моделирования данных в Excel с поддержкой серверов через SharePoint.  
   

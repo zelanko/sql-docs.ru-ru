@@ -2,12 +2,12 @@
 title: "Свойства строки подключения (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd41219341488f64487b831ec42c50869552a660
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connection-string-properties-analysis-services"></a>Свойства строки подключения (службы Analysis Services)
-  В этом разделе описываются свойства строки подключения, которые можно задать в конструкторе или одном из средств управления. Также эти свойства есть в строках подключения, созданных клиентскими приложениями, которые подключаются и запрашивают данные служб Analysis Services. Описывается только подмножество доступных свойств. Полный список содержит множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения независимо от того, как экземпляр или база данных настроены на сервере.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описываются свойства строки подключения можно задать в одном из средств конструктора или администрирования или в строках подключения, созданных клиентских приложений, которые подключаются и запрашивают данные служб Analysis Services. Описывается только подмножество доступных свойств. Полный список содержит множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения независимо от того, как экземпляр или база данных настроены на сервере.  
   
  Разработчики, которые создают пользовательские строки подключения в коде приложений, могут найти более подробный список в документации по API-интерфейсам для клиента ADOMD.NET: <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>  
   

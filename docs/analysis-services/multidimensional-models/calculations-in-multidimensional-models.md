@@ -2,12 +2,12 @@
 title: "Вычисления в многомерных моделях | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96b296189200416c2c5234597cf8f4e45618b6d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2b1941a129b0348b9939100de46334ce7be676e4
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculations-in-multidimensional-models"></a>Вычисления в многомерных моделях
-  Для создания вычисляемых элементов, именованных наборов и других вычислений многомерных выражений используется вкладка **Вычисления** конструктора кубов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Используйте **вычисления** конструктора кубов для создания вычисляемых элементов, именованных наборов и других вычислений многомерных выражений (MDX).  
   
  Вкладка **Вычисления** содержит следующие три панели.  
   

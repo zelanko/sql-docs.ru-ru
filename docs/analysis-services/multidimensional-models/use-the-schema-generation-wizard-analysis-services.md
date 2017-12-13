@@ -2,12 +2,12 @@
 title: "Используйте мастер формирования схем (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8df428eef937514ff96276bc0ebea1964ffb8773
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a52799da2610aa55a0e045b2192b46ffd5f85f15
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Использование мастера формирования схем (службы Analysis Services)
-  На стадии формирования мастер формирования схем требует ограниченный объем сведений. Большая часть данных, необходимых мастеру формирования схем для формирования реляционных схем, извлекается из кубов и измерений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , уже созданных в проекте. Кроме того, можно настроить то, каким образом будет создана предметная область и как будут именоваться объекты схемы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Мастер формирования схем требует ограниченный объем сведений о во время создания. Большая часть данных, необходимых мастеру формирования схем для формирования реляционных схем, извлекается из кубов и измерений служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , уже созданных в проекте. Кроме того, можно настроить то, каким образом будет создана предметная область и как будут именоваться объекты схемы.  
   
 ## <a name="start-the-wizard"></a>Запуск мастера  
  Мастер формирования схем можно открыть в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] несколькими способами.  

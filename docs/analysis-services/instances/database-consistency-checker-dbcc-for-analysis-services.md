@@ -2,12 +2,12 @@
 title: "Базы данных проверка согласованности (DBCC) для служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9dee0f68a2d9b4dd1bdae90435de3c02eddfeba2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1bf91c2e3c09b30f5e9ea48756ae2b7c9f889644
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Проверки согласованности базы данных (DBCC) для служб Analysis Services
-  DBCC обеспечивает проверку базы данных по требованию для многомерных и табличных баз данных в экземпляре служб Analysis Services. Команду DBCC можно выполнить в окне запроса многомерных выражений или XMLA в SQL Server Management Studio (SSMS). Отслеживать выходные данные DBCC можно в сеансах SQL Server Profiler или xEvent в среде SSMS.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]DBCC обеспечивает проверку базы данных по требованию для многомерных и табличных баз данных на экземпляре служб Analysis Services. Команду DBCC можно выполнить в окне запроса многомерных выражений или XMLA в SQL Server Management Studio (SSMS). Отслеживать выходные данные DBCC можно в сеансах SQL Server Profiler или xEvent в среде SSMS.  
 Команда принимает определение объекта и возвращает пустой результирующий набор или подробные сведения об ошибке, если объект поврежден.   Прочитав эту статью, вы узнаете, как выполнить команду, интерпретировать результаты и решить возникшие проблемы.  
   
  Для табличных баз данных проверки согласованности с помощью DBCC эквивалентны встроенной проверке, которая выполняется автоматически при каждой перезагрузке, синхронизации и восстановлении базы данных.  Напротив, проверки согласованности для многомерных баз данных происходят только при запуске средства DBCC по требованию.  

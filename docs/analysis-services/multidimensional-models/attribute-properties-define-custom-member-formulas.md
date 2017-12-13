@@ -2,12 +2,12 @@
 title: "Определение нестандартных формул элементов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f2d802623b470077ba46326c7650e30013d07534
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e82a27d94e0a964921bc54918e4d0e54a9eba35f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---define-custom-member-formulas"></a>Атрибут свойства - Определение нестандартных формул элементов
-  Нестандартные формулы элемента — это многомерные выражения, предоставляющие значения для элементов указанного атрибута. Столбец таблицы из представления источников данных содержит выражение для каждого элемента атрибута, предоставляющее значение для этого элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно определить выражение многомерных выражений (MDX), вызывается нестандартную формулу элемента, для предоставления значений для элементов указанного атрибута. Столбец таблицы из представления источников данных содержит выражение для каждого элемента атрибута, предоставляющее значение для этого элемента.  
   
  Нестандартные формулы элементов определяют значения ячеек, которые связаны с элементами, и заменяют агрегатные функции мер. Нестандартные формулы элементов записаны в многомерных выражениях. Каждая нестандартная формула элемента применяется к одному элементу. Нестандартные формулы элементов хранятся в таблице измерения или в другой таблице, имеющей связь по внешнему ключу с таблицей измерения.  
   

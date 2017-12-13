@@ -2,12 +2,12 @@
 title: "Куб хранения данных (службы Analysis Services — многомерные данные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 082e54f8ebaf83609c8f90b37e41657cb26da1f7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 83762a6da2ee3b67c388fdd7b1b3ac5ffc144573
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Хранилище кубов (службы Analysis Services — многомерные данные)
-  В хранилище могут содержаться либо только метаданные куба, либо все исходные данные из таблицы фактов и все агрегаты, определенные связанными с группой мер измерениями. Объем хранимых данных зависит от выбранного режима хранения и количества агрегатов. Объем сохраняемых данных непосредственно влияет на производительность запросов. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют несколько методов минимизации дискового пространства, необходимого для хранения данных и агрегатов куба:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Хранилище могут содержаться либо только метаданные куба или все исходные данные из таблицы фактов, а также все агрегаты, определенные связанными с группой мер измерениями. Объем хранимых данных зависит от выбранного режима хранения и количества агрегатов. Объем сохраняемых данных непосредственно влияет на производительность запросов. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют несколько методов минимизации дискового пространства, необходимого для хранения данных и агрегатов куба:  
   
 -   Параметры хранилища позволяют выбрать режим хранения и наиболее подходящее место хранения данных куба.  
   

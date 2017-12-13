@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 8aa36adac3f7be50105a387dc3d39fca208eaba8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c4de3f861a994ebe2476008146be810e7a2e2500
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-2017-on-linux"></a>Рекомендации по производительности и рекомендации по конфигурации для 2017 г. SQL Server в Linux
 
@@ -55,7 +55,6 @@ ms.lasthandoff: 12/01/2017
 Рекомендуется использовать следующие параметры конфигурации операционной системы Linux в работе Наилучшая производительность для установки SQL Server.
 
 ### <a name="kernel-settings-for-high-performance"></a>Параметры ядра для повышения производительности
-
 Это рекомендуемый операционной системы Linux настройки для высокого уровня производительности и пропускной способности для установки SQL Server. Обратитесь к документации операционной системы Linux процесс настройки этих параметров.
 
 
@@ -92,7 +91,7 @@ sysctl -w kernel.numa_balancing=0
 Значение по умолчанию **vm.max_map_count** (то есть 65536) не может быть достаточным для установки SQL Server. Измените это значение, (который верхний предел) до 256 КБ.
 
 ```bash
-sysctl -w vm.max_map_count 262144
+sysctl -w vm.max_map_count=262144
 ```
 
 ### <a name="disable-last-accessed-datetime-on-file-systems-for-sql-server-data-and-log-files"></a>Отключить доступ к которым осуществляется Дата и время последнего в файловых системах для файлов данных и журналов SQL Server

@@ -2,12 +2,12 @@
 title: "Обработка ошибок (многомерные Выражения) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8679c6d912e6dab8fa89f4f67ddfa9070c04460f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1eb0133bb4f6e1d4b03e83f771c6170204eeb5b8
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="error-handling-mdx"></a>Обработка ошибок (многомерные выражения)
-  Каждый куб может управлять способом обработки ошибок в скриптах многомерных выражений. Обработка ошибок осуществляется с помощью перечислителя **ScriptErrorHandlingMode** . Перечислитель может принимать следующие значения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Каждый куб может управлять способ обработки ошибок в скриптах многомерных выражений (MDX). Обработка ошибок осуществляется с помощью перечислителя **ScriptErrorHandlingMode** . Перечислитель может принимать следующие значения.  
   
  **IgnoreNone**  
  Ошибка на сервере возникает при обнаружении службами [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] любых ошибок в скрипте многомерных выражений.  

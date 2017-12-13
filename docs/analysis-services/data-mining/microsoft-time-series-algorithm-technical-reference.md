@@ -2,12 +2,12 @@
 title: "Microsoft Time Series Algorithm Technical Reference | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -36,14 +36,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1109ae6cf12199d9e38d231497b8126b8fa0ebe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a38c2585e2da3c1086ce15f220e13741bd7e9e71
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-time-series-algorithm-technical-reference"></a>Технический справочник по алгоритму временных рядов (Майкрософт)
-  алгоритм временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] включает два отдельных алгоритма для анализа временных рядов:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритма временных рядов включает два отдельных алгоритма для анализа временных рядов:  
   
 -   алгоритм ARTXP, который появился в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], оптимизирован для прогнозирования следующего вероятного значения в ряду;  
   

@@ -2,12 +2,12 @@
 title: "Счетчики производительности (службы SSAS) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b7da59897426d459371d44b637dfda97183cca3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0046d4b982d57491553353c88d309b309964e142
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="performance-counters-ssas"></a>Счетчики производительности [службы SSAS]
-  С помощью системного монитора можно контролировать производительность экземпляра служб Microsoft SQL Server Analysis Services (SSAS) посредством счетчиков производительности.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]С помощью системного монитора, можно отслеживать производительность экземпляра Microsoft SQL Server Analysis Services (SSAS) с помощью счетчиков производительности.  
   
  Системный монитор представляет собой [!INCLUDE[msCoName](../../includes/msconame-md.md)] оснастку консоли управления (MMC), отслеживающую использование ресурсов. Эту оснастку консоли управления (MMC) можно запустить, введя команду **PerfMon** в командную строку, а также из панели управления, щелкнув пункт **Администрирование**, а затем **Системный монитор**. Системный монитор позволяет отслеживать работу сервера и производительность процессов и действий, используя стандартные объекты и счетчики, а также осуществлять мониторинг событий, используя определяемые пользователем счетчики. Системный монитор собирает значения счетчиков вместо данных о событиях, например: использование памяти, количество активных транзакций или загрузка ЦП. Можно также установить пороговые значения для определенных счетчиков для формирования предупреждений, уведомляющих операторов.  
   

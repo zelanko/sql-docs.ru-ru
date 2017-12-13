@@ -2,12 +2,12 @@
 title: "Создать измерение с помощью существующей таблицы | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eeabc8b64e3d5450373fb1235a78a27a8aff5a5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: b27073cb4276e73ed4e28507d2c3ae55fd956945
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Создание измерения с помощью существующей таблицы
-  Для создания измерения на основе существующей таблицы в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно использовать мастер измерений среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Для этого на странице **Выберите метод создания** мастера измерений необходимо выбрать параметр **Использовать существующую таблицу** . Если выбран этот параметр, мастер сформирует структуру измерения на основе таблиц измерения, их столбцов и всех связей между этими столбцами в существующем представлении источника данных. Мастер делает выборку данных из исходной таблицы и связанных с ней таблиц. На основе этих данных он определяет столбцы атрибутов, основанные на столбцах таблиц измерения, а также иерархии атрибутов (называемые *пользовательскими* иерархиями). Создав измерение с помощью мастера измерений, можно использовать конструктор измерений для добавления, удаления и настройки атрибутов и иерархий в измерении.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], можно использовать мастер измерений [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для создания измерения из существующей таблицы. Для этого на странице **Выберите метод создания** мастера измерений необходимо выбрать параметр **Использовать существующую таблицу** . Если выбран этот параметр, мастер сформирует структуру измерения на основе таблиц измерения, их столбцов и всех связей между этими столбцами в существующем представлении источника данных. Мастер делает выборку данных из исходной таблицы и связанных с ней таблиц. На основе этих данных он определяет столбцы атрибутов, основанные на столбцах таблиц измерения, а также иерархии атрибутов (называемые *пользовательскими* иерархиями). Создав измерение с помощью мастера измерений, можно использовать конструктор измерений для добавления, удаления и настройки атрибутов и иерархий в измерении.  
   
  Если измерение создается на основе существующей таблицы, мастер измерений проведет по следующим этапам:  
   

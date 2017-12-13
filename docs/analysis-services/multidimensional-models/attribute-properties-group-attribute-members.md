@@ -2,12 +2,12 @@
 title: "Группы элементов атрибутов (дискретизация) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6779eda5faf42a64a6d6f87494f57ac0166ab31c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Свойства атрибутов - группирование элементов атрибута
-  Группа элементов является созданным системой набором последовательных элементов измерения. В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]элементы атрибута могут группироваться в различные группы элементов в ходе процесса, называемого дискретизацией. Уровень в иерархии содержит либо группы элементов, либо элементы, но не то и другое сразу. Когда пользователи выполняют обзор уровня, содержащего группы элементов, они видят имена и значения ячеек групп элементов. Элементы, формируемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для поддержания групп членов, называются элементами группирования и выглядят как обычные элементы.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Группа элементов является созданным системой набором последовательных элементов измерения. В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]элементы атрибута могут группироваться в различные группы элементов в ходе процесса, называемого дискретизацией. Уровень в иерархии содержит либо группы элементов, либо элементы, но не то и другое сразу. Когда пользователи выполняют обзор уровня, содержащего группы элементов, они видят имена и значения ячеек групп элементов. Элементы, формируемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для поддержания групп членов, называются элементами группирования и выглядят как обычные элементы.  
   
  Свойство **DiscretizationMethod** атрибута управляет группированием элементов.  
   

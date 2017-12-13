@@ -2,12 +2,12 @@
 title: "Определение вычисляемых элементов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e77732f0ad13e3373e073038587e819ed2617eb1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2968ac67b1e7ca3652dd4ae2cbb7cfd3293e51ca
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Урок 6-1-Определение вычисляемых элементов
-Вычисляемые элементы — это элементы измерения или группы мер, которые определяются на основе сочетания данных куба, арифметических операторов, чисел и функций. Например, можно создать вычисляемый элемент для расчета суммы двух физических мер в кубе. Определения вычисляемых элементов хранятся в кубах, а их значения рассчитываются при выполнении запроса.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Вычисляемые элементы — это элементы измерения или группы мер, определенных на основании сочетание данных куба, арифметических операторов, чисел и функций. Например, можно создать вычисляемый элемент для расчета суммы двух физических мер в кубе. Определения вычисляемых элементов хранятся в кубах, а их значения рассчитываются при выполнении запроса.  
   
 Для создания вычисляемого элемента следует использовать команду **Создать вычисляемый элемент** на вкладке **Вычисления** конструктора кубов. Вычисляемые элементы можно создавать в любом измерении, в том числе в измерении мер. Их также можно разместить в папке отображения из диалогового окна **Calculation Properties** . Дополнительные сведения см. в разделах [Вычисления](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md), [Вычисления в многомерных моделях](../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)и [Создание вычисляемых элементов](../analysis-services/multidimensional-models/create-calculated-members.md).  
   

@@ -59,11 +59,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2a7ab870eda08de78986c14233e4ebc79b397573
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 92e32f9a86265376a67466aa389f29ec9608a061
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -241,7 +241,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  *index_name*  
  Имя индекса. Имена индексов должны быть уникальными в пределах таблицы или представления, но необязательно должны быть уникальными в пределах базы данных. Имена индексов должны соответствовать правилам [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
   
- *столбец*  
+ *column*  
  Столбец или столбцы, на которых основан индекс. Имена одного или нескольких столбцов для создания комбинированного индекса. Список столбцов, которые должны быть включены в составной индекс, в порядке сортировки, заключенный в круглые скобки после *table_or_view_name*.  
   
  До 32 столбцов можно объединить в один составной ключ индекса. Все столбцы ключа составного индекса должны находиться в одной таблице или одном и том же представлении. Максимально допустимый размер значений составного индекса является 900 байтов для кластеризованного индекса или 1700 для некластеризованного индекса. Эти ограничения действуют 16 столбцов до 900 байт для версий до [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12 и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
@@ -422,17 +422,11 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  Если статистики по секциям не поддерживаются, параметр пропускается и выводится предупреждение. Добавочные статистики не поддерживаются для следующих типов статистических данных.  
   
 -   Статистики, созданные с индексами, не выровненными по секциям для базовой таблицы.  
-  
 -   Статистики, созданные в доступных для чтения базах данных-получателях AlwaysOn.  
-  
 -   Статистики, созданные в базах данных, доступных только для чтения.  
-  
 -   Статистики, созданные по фильтрованным индексам.  
-  
 -   Статистика, созданная по представлениям.  
-  
 -   Статистики, созданные по внутренним таблицам.  
-  
 -   Статистики, созданные с пространственными индексами или XML-индексами.  
   
  DROP_EXISTING = {ON | **OFF** }  
@@ -473,15 +467,10 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  Индексы, включая индексы глобальных временных таблиц, могут создаваться в режиме в сети со следующими исключениями:  
   
 -   XML-индекс  
-  
 -   Индекс локальной временной таблицы.  
-  
 -   Исходные уникальные кластеризованные индексы представлений.  
-  
 -   Отключенные кластеризованные индексы.  
-  
 -   Кластеризованные индексы, если базовая таблица содержит типы данных LOB: **изображения**, **ntext**, **текст**и Пространственные типы.  
-  
 -   **varchar(max)** и **varbinary(max)** столбцов не может быть частью индекса. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) и в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], таблица, содержащая **varchar(max)** или **varbinary(max)** столбцы, кластеризованный индекс, содержащий другие столбцы могут быть строятся или перестраиваются с помощью **ONLINE** параметр. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]не разрешает **ONLINE** вариант, если базовая таблица содержит **varchar(max)** или **varbinary(max)** столбцов.  
   
  Дополнительные сведения см. в статье [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).  
@@ -511,7 +500,7 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
  MAXDOP = *max_degree_of_parallelism*  
  **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
- Переопределяет [Настройка параметра max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) параметр конфигурации в течение операции с индексами. MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
+ Переопределяет **максимальная степень параллелизма** параметр конфигурации в течение операции с индексами. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
  *max_degree_of_parallelism* может быть:  
   

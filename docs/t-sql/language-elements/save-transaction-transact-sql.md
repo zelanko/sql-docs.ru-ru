@@ -31,11 +31,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a3a252fced11410718d1bcdbc82d9bb199585745
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9c6489bd5ca7b8b82b7211bc77414335e6e62bd7
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="save-transaction-transact-sql"></a>SAVE TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ SAVE { TRAN | TRANSACTION } { savepoint_name | @savepoint_variable }
   
 ## <a name="arguments"></a>Аргументы  
  *savepoint_name*  
- Имя, назначенное точке сохранения. Имена точек сохранения должны соответствовать правилам для идентификаторов, но ограничены 32 символами. *transaction_name* — всегда учитывается регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр не учитывается.  
+ Имя, назначенное точке сохранения. Имена точек сохранения должны соответствовать правилам для идентификаторов, но ограничены 32 символами. *savepoint_name* — всегда учитывается регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистр не учитывается.  
   
  @*savepoint_variable*  
  Имя пользовательской переменной, содержащей допустимое имя точки сохранения. Переменная должна быть объявлена с **char**, **varchar**, **nchar**, или **nvarchar** тип данных. В переменную может быть передано более 32 символов, но будут использованы только 32 первых символа.  

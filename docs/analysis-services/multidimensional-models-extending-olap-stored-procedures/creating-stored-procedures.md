@@ -2,12 +2,12 @@
 title: "Создание хранимых процедур | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a18ccef8d4e2e79f5a88e43def0bf13b683e266
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5badc4ffe9ddfc52a767f93771436913369ab1f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="creating-stored-procedures"></a>Создание хранимых процедур
-  Для использования любой хранимой процедуры необходимо, чтобы она была связана с классом среды CLR или модели COM. Класс должен быть установлен на сервере, обычно в виде [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® библиотеки динамической компоновки (DLL) и зарегистрирован как сборка на сервере или в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Для использования всех хранимых процедур должны быть связаны с общеязыковая среда выполнения (CLR) или класса объектов модели компонентов (COM). Класс должен быть установлен на сервере, обычно в виде [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® библиотеки динамической компоновки (DLL) и зарегистрирован как сборка на сервере или в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных.  
   
  Хранимые процедуры регистрируются на сервере или в базе данных. Серверные хранимые процедуры могут вызываться из контекста любого запроса. Доступ к хранимым процедурам базы данных имеется, только если контекст базы данных представляет собой базу данных, в которой определена хранимая процедура. Если функции из одной сборки вызывают функции из другой сборки, то необходимо зарегистрировать обе сборки в одном и том же контексте (сервера или базы данных). Для сервера или развернутой [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных на сервере, можно использовать [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для регистрации сборки. Для проекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно использовать конструктор служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для регистрации сборки в проекте.  
   

@@ -2,12 +2,12 @@
 title: "Объекты AMO другие классы и методы | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d201ea38ed360b35b5b19daf945cc11ffe45f849
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="amo-other-classes-and-methods"></a>Другие классы и методы объектов AMO
-  Этот раздел содержит общие классы, которые не относятся к OLAP и интеллектуального анализа данных, и которые являются удобны для администрирования и управления объектами в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Эти классы охватывают работу с хранимыми процедурами, трассировкой, исключениями, а также резервированием и восстановлением.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Этот раздел содержит общие классы, которые не относятся к OLAP и интеллектуального анализа данных, и которые являются удобны для администрирования и управления объектами в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Эти классы охватывают работу с хранимыми процедурами, трассировкой, исключениями, а также резервированием и восстановлением.  
   
  Этот раздел состоит из следующих подразделов.  
   

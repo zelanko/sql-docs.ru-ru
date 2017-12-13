@@ -2,12 +2,12 @@
 title: "Высокий уровень доступности и масштабируемость в службах Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7d6b6f6fa02735de056b83a3ec0216cd95c84926
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1a1f8208a30e1ff24e76465fd9210a60ef1ec849
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Высокий уровень доступности и масштабируемость в службах Analysis Services
-  В этой статье описаны наиболее часто используемые методы для создания высокодоступных масштабируемых баз данных для служб Analysis Services. Несмотря на то что к каждой цели можно обращаться отдельно, в реальности они часто идут рука об руку: от масштабируемого развертывания больших рабочих нагрузок по выполнению запросов или обработке данных обычно ожидается высокая доступность.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этой статье описаны наиболее часто используемые методы для создания баз данных служб Analysis Services высокого уровня доступности и масштабируемости. Несмотря на то что к каждой цели можно обращаться отдельно, в реальности они часто идут рука об руку: от масштабируемого развертывания больших рабочих нагрузок по выполнению запросов или обработке данных обычно ожидается высокая доступность.  
   
  А вот обратное верно не всегда. Высокий уровень доступности без масштабирования может быть единственной целью при наличии строгих соглашений об уровне обслуживания для критически важных, но умеренных рабочих нагрузок по выполнению запросов.  
   

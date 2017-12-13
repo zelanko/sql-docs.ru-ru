@@ -2,12 +2,12 @@
 title: "Модель интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bdf21e47900f66d564ff209261fb0b3533f2d9cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0e6fb2186671be3fee4132ee67d39e7ea2c8c824
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)
-  В этом разделе описано содержимое модели интеллектуального анализа данных, характерное для моделей, в которых используется упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описаны модели интеллектуального анализа данных, характерное для моделей, которые используют [!INCLUDE[msCoName](../../includes/msconame-md.md)] упрощенный алгоритм Байеса. Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Основные сведения о структуре модели упрощенного алгоритма Байеса  
  Модель упрощенного алгоритма Байеса состоит из одного родительского узла, который представляет модель и ее метаданные, и нескольких независимых деревьев, расположенных под родительским узлом и представляющих выбранные прогнозируемые атрибуты. Помимо деревьев для атрибутов, каждая модель содержит один узел граничной статистики (NODE_TYPE = 26), в котором приведена описательная статистика по набору обучающих вариантов. Дополнительные сведения см. в разделе [Данные в узле граничной статистики](#bkmk_margstats).  

@@ -2,12 +2,12 @@
 title: "Настройка обратной записи секции | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3f1f8ef13a4b05c5f5be5553b601e019b68aa100
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="set-partition-writeback"></a>Настройка обратной записи секции
-  При включении возможности записи в группе мер пользователи смогут вносить изменения в данные куба при их просмотре. При этом сделанные изменения сохраняются не в данных куба или исходных данных, а в отдельной таблице, которая называется таблицей обратной записи. Конечные пользователи, просматривающие секцию, доступную для записи, видят суммарный результат всех изменений в таблице обратной записи для секции.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если разрешить запись группу мер конечные пользователи могут изменять данные куба при их просмотре, где будут сохранены в отдельной таблице, называемой таблицей обратной записи, а не в данных куба или исходных данных. Конечные пользователи, просматривающие секцию, доступную для записи, видят суммарный результат всех изменений в таблице обратной записи для секции.  
   
  Данные обратной записи можно просматривать или удалять. Также можно преобразовывать данные обратной записи в секцию. В секции, доступной для записи, можно использовать роли кубов для предоставления доступа на чтение и запись пользователям и группам пользователей и для ограничения доступа к конкретным ячейкам или группам ячеек в секции.  
   

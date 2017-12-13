@@ -2,12 +2,12 @@
 title: "Технический справочник по алгоритму дерева принятия решений Майкрософт | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 81dd23b543d8791f9e68a15cfc8feaf58aade127
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 397c5e27b3dcf096fa3707d94d3e5e8d049e8f36
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Технический справочник по алгоритму дерева принятия решений (Майкрософт)
-  Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой гибридный алгоритм, объединяющий различные методы для создания дерева и поддерживающий несколько аналитических задач, в том числе регрессию, классификацию и взаимосвязи. Алгоритм дерева принятия решений (Майкрософт) поддерживает моделирование как дискретных, так и непрерывных атрибутов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм дерева принятия решений — это гибридный алгоритм, объединяющий различные методы для создания дерева и поддерживающий несколько аналитических задач, в том числе регрессию, классификацию и взаимосвязи. Алгоритм дерева принятия решений (Майкрософт) поддерживает моделирование как дискретных, так и непрерывных атрибутов.  
   
  В данном разделе описывается реализация алгоритма и настройка его поведения для различных задач. Приводятся также ссылки на дополнительную информацию о запросах к модели дерева принятия решений.  
   

@@ -2,12 +2,12 @@
 title: "Технический справочник по алгоритму логистической регрессии Майкрософт | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2cfb1b20bed865c750ed5a29ff94fd4136830c18
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 41ce8bab5404398328cef0a769c2163805940e44
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Технический справочник по алгоритму логистической регрессии (Майкрософт)
-  Алгоритм логистической регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] представляет собой вариант алгоритма нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] , в котором параметр *HIDDEN_NODE_RATIO* равен 0. Эта настройка создает модель нейронной сети, которая не содержит скрытого слоя и, таким образом, эквивалентна логистической регрессии.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм логистической регрессии является разновидностью [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритма нейронной сети, где *HIDDEN_NODE_RATIO* параметр имеет значение 0. Эта настройка создает модель нейронной сети, которая не содержит скрытого слоя и, таким образом, эквивалентна логистической регрессии.  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Реализация алгоритма логистической регрессии (Майкрософт)  
  Предположим, что прогнозируемый столбец содержит только два состояния, но все же необходимо провести регрессионный анализ, сопоставляя входные столбцы с вероятностью того, что прогнозируемый столбец будет содержать конкретное состояние. На следующей диаграмме показаны результаты, которые будут получены, если состояниям прогнозируемого столбца присвоить значения 1 и 0, рассчитать вероятность того, что столбец будет содержать конкретное состояние, и рассчитать линейную регрессию по отношению к входной переменной.  

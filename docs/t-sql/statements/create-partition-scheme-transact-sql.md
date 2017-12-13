@@ -34,19 +34,19 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5c97264457e575aa076e6b10f3454f0d8cf6e2d7
-ms.sourcegitcommit: 50e54dda407f362262b86941f68b7d80516db7fb
+ms.openlocfilehash: 98abb06746c88d7876505033f5b209c30812fc5d
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Создает схему в текущей базе данных, которая сопоставляет секции секционированной таблицы или индекса с файловыми группами. Количество и домен секций секционированной таблицы или индекса определяются в функции секционирования. Функции секционирования, сначала должна быть создана в [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) инструкцию перед созданием схемы секционирования.  
 
-[!NOTE]
-В базе данных SQL Azure, поддерживаются только первичную файловую группу.  
+>[!NOTE]
+>В базе данных SQL Azure, поддерживаются только первичную файловую группу.  
 
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

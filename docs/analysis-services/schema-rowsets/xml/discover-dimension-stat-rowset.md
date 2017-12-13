@@ -2,12 +2,12 @@
 title: "Набор строк DISCOVER_DIMENSION_STAT | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: schema-rowsets
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ed2707a9ee417f8e019137034e90f1a9132948e2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="discoverdimensionstat-rowset"></a>Набор строк DISCOVER_DIMENSION_STAT
-  Предоставляет сведения об измерении, в том числе имя базы данных, в котором оно содержится, имя измерения, его атрибуты и число членов для каждого атрибута. В табличной модели соответствует столбцам в таблице и количеству значений в каждом столбце.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Сведения об измерении, в том числе имя базы данных, содержащий его, имя измерения, атрибуты и число членов для каждого атрибута. В табличной модели соответствует столбцам в таблице и количеству значений в каждом столбце.  
   
  **Область применения:** табличные модели, многомерные модели  
   

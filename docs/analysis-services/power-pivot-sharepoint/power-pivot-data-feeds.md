@@ -2,12 +2,12 @@
 title: "Power Pivot потоки данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: power-pivot-sharepoint
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4703cf8f6ac0af1d45c4fcfb4129b40fd52ecb9a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 6e845c632a44b4d74a7b12eeaf2ed80e85ffbb02
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="power-pivot-data-feeds"></a>Веб-каналы данных Power Pivot
-  По запросу канал данных предоставляет поток данных из источника данных в режиме «в сети» для клиентского приложения. В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно использовать веб-каналы данных, чтобы добавлять данные из веб-службы или приложения с поддержкой Atom в источник данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в книге Excel.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Канал данных предоставляет поток данных по запросу из сетевого источника данных в клиентском приложении. В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]можно использовать веб-каналы данных, чтобы добавлять данные из веб-службы или приложения с поддержкой Atom в источник данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в книге Excel.  
   
  В этом разделе приведены сведения, с помощью которых можно наиболее эффективно использовать веб-каналы данных для передачи существующих корпоративных данных или данных рабочих групп в рабочие книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Кроме того, даны сведения о предоставлении общего доступа для других пользователей к веб-каналам данных в организации, а также структуре веб-каналов данных и их использовании при необходимости диагностики и устранении неполадок.  
   

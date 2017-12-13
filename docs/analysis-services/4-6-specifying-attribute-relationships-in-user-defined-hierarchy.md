@@ -2,12 +2,12 @@
 title: "Указание 4-6 связей атрибутов в определенной пользователем иерархии | Документы Microsoft"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f8db9cd243cb27505bfda4eb2342802b8bb588ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03b086e70e3d1fdb085faac12392cc4265af5dcb
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>Указание 4-6 связей атрибутов в определенной пользователем иерархии
-Как уже было рассмотрено в этом учебнике, иерархии атрибутов внутри пользовательских иерархий можно упорядочивать по уровням, чтобы предоставлять пользователям пути перемещения в кубе. Пользовательская иерархия может отражать естественную иерархию, такую как города, область и страна, или просто путь перемещения,например фамилию сотрудника, его должность и название отдела. Для пользователя, перемещающегося по иерархии, нет разницы между этими двумя типами пользовательских иерархий.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Как вы уже знаете, в этом учебнике, иерархии атрибутов можно организовать в уровнях в пользовательские иерархии для предоставления путей перемещения для пользователей в кубе. Пользовательская иерархия может отражать естественную иерархию, такую как города, область и страна, или просто путь перемещения,например фамилию сотрудника, его должность и название отдела. Для пользователя, перемещающегося по иерархии, нет разницы между этими двумя типами пользовательских иерархий.  
   
 В естественной иерархии, если определены связи между атрибутами, составляющими уровни, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут использовать статистические вычисления по одному атрибуту для получения результатов из связанного атрибута. Если связи атрибутов не определены, в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] будут выполняться статистические вычисления по всем неключевым атрибутам из ключевого атрибута. Таким образом, если базовые данные позволяют, необходимо определить связи между атрибутами. Это повышает производительность обработки измерений, секций и выполнения запросов. Дополнительные сведения см. в разделах [Определение связей атрибутов](../analysis-services/multidimensional-models/attribute-relationships-define.md) и [Связи атрибутов](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   

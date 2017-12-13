@@ -2,12 +2,12 @@
 title: "Предоставление разрешений базы данных (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ae21903694c80a5f919374e4e367dc82b4cec09e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d313637275d28a83b8a0f79e23bfc46bd972ae2a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Предоставление разрешений базы данных (службы Analysis Services)
-  Если вы подходите к администрированию базы данных службы Analysis Services с квалификацией в смежных базах данных, первое, что вам необходимо понять, с точки зрения доступа к данным, это то, что база данных не является первичным защищаемым объектом службы Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если вы подходите к администрированию базы данных служб Analysis Services с квалификацией в реляционных базах данных, первое, что вам необходимо понять является, с точки зрения доступа к данным базы данных не является первичным защищаемым объектом в службах Analysis Services.  
   
  Первичной структурой запроса в службе Analysis Services является куб (или табличная модель), с пользовательскими разрешениями, установленными на эти отдельные объекты. В отличие от родственного ядра СУБД, в котором имена для входа и разрешения пользователя (часто **db_datareader**) установлены на саму базу данных, база данных службы Analysis Services в большинстве случаев является контейнером для основных объектов запроса в модели данных. Если вашей ближайшей целью является активация доступа к данным для куба или табличной модели, вы можете сейчас пропустить разрешения базы данных и перейти прямо к изучению данной статьи: [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   

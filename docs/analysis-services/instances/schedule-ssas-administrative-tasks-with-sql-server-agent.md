@@ -2,12 +2,12 @@
 title: "Планирование задач администрирования служб SSAS с агентом SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28be70a8fe43d1c22ba3e7787d507c694b09750a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4842c80e3ac4cd34ec419e1577f7a2354a2ae34a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Планирование задач администрирования служб SSAS с помощью агента SQL Server
-  Используя службу агента SQL Server, вы можете запланировать административные задачи [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в нужном порядке и в нужное время. Планирование задач позволяет автоматизировать процессы, выполняющиеся регулярно или с предсказуемой цикличностью. Задачи типа обработки кубов могут быть запланированы на периоды низкой деловой активности. Кроме того, при создании шагов задания агента SQL Server пользователь имеет возможность определить порядок, в котором будут выполняться задачи. Например, можно выполнить обработку куба, а затем создать его резервную копию.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Используя службу агента SQL Server, можно запланировать [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] требуются административные задачи для выполнения в порядке и время. Планирование задач позволяет автоматизировать процессы, выполняющиеся регулярно или с предсказуемой цикличностью. Задачи типа обработки кубов могут быть запланированы на периоды низкой деловой активности. Кроме того, при создании шагов задания агента SQL Server пользователь имеет возможность определить порядок, в котором будут выполняться задачи. Например, можно выполнить обработку куба, а затем создать его резервную копию.  
   
  Шаги задания позволяют управлять потоком выполнения. Агент SQL Server может быть настроен таким образом, чтобы в случае сбоя одного из заданий выполнение оставшихся задач было продолжено или прекращено. Вы можете также настроить агент SQL Server на отправку уведомлений о выполнении или сбое выполнения задания.  
   

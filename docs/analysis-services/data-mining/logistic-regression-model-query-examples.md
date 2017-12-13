@@ -2,12 +2,12 @@
 title: "Примеры запросов модели логистической регрессии | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -22,14 +22,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6b423036644bdb4811aec4fcf7fb720b2f783944
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 2255369fe9a3e8c74088a13efba5eaab19f7bb53
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="logistic-regression-model-query-examples"></a>Примеры запросов модели логистической регрессии
-  К модели интеллектуального анализа данных можно создать два вида запросов: запросы содержимого, возвращающие подробные сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, в которых используются закономерности, содержащиеся в модели, для прогнозирования на основе новых данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании запроса к модели интеллектуального анализа данных, можно создать запрос содержимого, который предоставляет сведения о закономерностях, обнаруженных при анализе, или можно создать прогнозирующие запросы, использующие закономерности, содержащиеся в модели для прогнозирования на основе новых данных.  
   
  В этом разделе описывается процесс создания запросов к моделям, основанным на алгоритме логистической регрессии (Майкрософт).  
   

@@ -2,12 +2,12 @@
 title: "Запросы интеллектуального анализа данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85305fce0f348bca26bb5b2381a87bd204e4679c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f836f060a52db56267cd943c1dea018c9b0732a3
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="data-mining-queries"></a>Запросы интеллектуального анализа данных
-  Запросы интеллектуального анализа Возможные действия:  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Запросы интеллектуального анализа данных полезны для различных целей. Возможные действия:  
   
 -   Применить модели к новым данным, чтобы сделать один или несколько прогнозов. Входные значения можно предоставить в качестве параметров или в одном пакете.  
   

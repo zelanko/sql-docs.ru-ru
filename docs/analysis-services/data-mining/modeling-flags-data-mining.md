@@ -2,12 +2,12 @@
 title: "Флаги моделирования (интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -31,14 +31,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ce08e6cf57aa2ca49aea8834b96a69aa69362e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fbe2029742ba4df3c390820effa565055159f7dd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="modeling-flags-data-mining"></a>Флаги моделирования (интеллектуальный анализ данных)
-  Флаги моделирования можно использовать в службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , чтобы включить в алгоритм интеллектуального анализа данных дополнительные сведения о данных, которые определены в таблице вариантов. Алгоритм может использовать эти сведения для создания более точной модели интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Флаги моделирования в можно использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для предоставления алгоритм интеллектуального анализа данных дополнительных сведений о данных, которые определены в таблице вариантов. Алгоритм может использовать эти сведения для создания более точной модели интеллектуального анализа данных.  
   
  Некоторые флаги модели определены на уровне структуры интеллектуального анализа данных, а другие определены на уровне столбца модели интеллектуального анализа данных. Например, флаг моделирования **NOT NULL** используется со столбцами структуры интеллектуального анализа данных. В столбцах модели интеллектуального анализа данных можно определить дополнительные флаги модели в зависимости от алгоритма, используемого при создании модели.  
   

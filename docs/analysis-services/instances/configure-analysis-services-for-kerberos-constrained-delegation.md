@@ -2,12 +2,12 @@
 title: "Настройка служб Analysis Services для ограниченного делегирования Kerberos | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 60e56d6d5643afee56cf5d30a548a90ebd5ff7f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 992175bef13c947a11ed738a135df14d226fa05b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Настройка служб Analysis Services для ограниченного делегирования Kerberos
-  Во время настройки служб Analysis Services для проверки подлинности Kerberos, скорее всего, потребуется добиться одного или обоих приведенных ниже результатов: олицетворения пользовательского удостоверения с помощью служб Analysis Services для доступа к данным или делегирования пользовательского удостоверения с помощью служб Analysis Services в службу более низкого уровня. У каждого сценария есть свои требования к конфигурации. Для обоих сценариев необходима проверка, чтобы убедиться в правильности настройки.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При настройке служб Analysis Services для проверки подлинности Kerberos, то скорее всего, потребуется добиться одного или обоих приведенных ниже результатов: служб Analysis Services олицетворять пользователя при запросе данных; или служб Analysis Services делегировать удостоверение пользователя к службе низкого уровня. У каждого сценария есть свои требования к конфигурации. Для обоих сценариев необходима проверка, чтобы убедиться в правильности настройки.  
   
 > [!TIP]  
 >  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] диспетчер конфигурации Kerberos для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** — это диагностическое средство, которое помогает расследовать проблемы Kerberos со связью при использовании [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Дополнительные сведения см. в разделе [Диспетчер конфигурации Microsoft Kerberos для SQL Server](http://www.microsoft.com/download/details.aspx?id=39046).  

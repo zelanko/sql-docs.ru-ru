@@ -2,12 +2,12 @@
 title: "Настройка типов атрибутов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 60ccef2ddc36c4a8dda691526cb3209eb6737c6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 3a7d8d9405d27956eecef276ef9a5b80b1806667
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attribute-properties---configure-attribute-types"></a>Атрибут свойства — Настройка типов атрибутов
-  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]типы атрибутов помогают классифицировать атрибут с точки зрения функциональности бизнеса. Существует много типов атрибутов, большинство из которых используется клиентскими приложениями для облегчения отображения или поддержки атрибута. Однако некоторые типы атрибутов также имеют конкретное значение для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, некоторые типы атрибутов идентифицируют атрибуты, представляющие периоды времени в различных календарях для измерений времени.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], типы атрибутов помогают классифицировать атрибут с точки зрения функциональности бизнеса. Существует много типов атрибутов, большинство из которых используется клиентскими приложениями для облегчения отображения или поддержки атрибута. Однако некоторые типы атрибутов также имеют конкретное значение для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Например, некоторые типы атрибутов идентифицируют атрибуты, представляющие периоды времени в различных календарях для измерений времени.  
   
 ##  <a name="setting_attibute_types"></a> Установка типов атрибутов  
  Значение свойства **Type** для атрибута определяет тип этого атрибута. Некоторые мастера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] устанавливают типы атрибутов при определении измерений или атрибутов. Эти мастера служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] также устанавливают типы атрибутов при добавлении дополнительной функциональности к измерениям. Например, мастер бизнес-аналитики применяет несколько типов атрибутов к атрибутам в измерении при добавлении логики операций со счетами для идентификации атрибутов, содержащих имена, коды, номера и структуру счетов в измерении. Мастер бизнес-аналитики также использует типы атрибутов, например для конвертации валют. Дополнительные сведения см. в разделе [Создание измерения типа Currency](../../analysis-services/multidimensional-models/database-dimensions-create-a-currency-type-dimension.md).  

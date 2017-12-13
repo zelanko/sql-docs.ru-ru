@@ -2,12 +2,12 @@
 title: "Содержимое модели интеллектуального анализа данных (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 52e0108a90e47ae9868b450375be26ffdf563c63
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 03698274a1d63fb34e814074a17da063442aebab
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
-  После создания и обработки модели интеллектуального анализа данных с использованием данных из базовой структуры интеллектуального анализа данных эта модель считается завершенной и содержит *содержимое модели интеллектуального анализа данных*. На основе этого содержимого производится создание прогнозов и анализ данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После создания и обработки модели интеллектуального анализа данных с использованием данных из базовой структуры интеллектуального анализа данных, модели интеллектуального анализа данных считается завершенной и содержит *содержимое модели интеллектуального анализа данных*. На основе этого содержимого производится создание прогнозов и анализ данных.  
   
  Модель интеллектуального анализа данных включает метаданные о модели, статистику по данным, а также закономерности, выявленные алгоритмом интеллектуального анализа данных. В зависимости от применяемого алгоритма содержимое модели может включать формулы регрессии, определения правил, наборы элементов, весовые коэффициенты и другие статистические данные.  
   

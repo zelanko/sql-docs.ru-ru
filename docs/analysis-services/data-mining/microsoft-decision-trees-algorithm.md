@@ -2,12 +2,12 @@
 title: "Алгоритм дерева принятия решений Майкрософт | Документы Microsoft"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 60e78baa62709d39d61fb1592eab794dbccb458d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c5b1fd05f99d361aabc8e5f340cd3d013475203d
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Алгоритм дерева принятия решений (Майкрософт)
-  Алгоритм дерева принятия решений ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) представляет собой алгоритм регрессии и классификации для использования в прогнозном моделировании дискретных и непрерывных атрибутов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм дерева принятия решений — это алгоритм классификации и регрессии, для использования в прогнозирующем моделировании дискретных и непрерывных атрибутов.  
   
  Для дискретных атрибутов алгоритм осуществляет прогнозирования на основе связи между входными столбцами в наборе данных. Он использует значения этих столбцов (известные как состояния) для прогнозирования состояний столбца, который обозначается как прогнозируемый. Алгоритм идентифицирует входные столбцы, которые коррелированы с прогнозируемым столбцом. Например, в сценарии для прогнозирования того, какие заказчики, скорее всего, приобретут велосипед, если девять из десяти молодых заказчиков покупают велосипед, но только двое из более старших заказчиков делают это, то алгоритм заключает, что возраст является хорошим прогнозом приобретения велосипеда. Дерево решений осуществляет прогнозирование на основе этой тенденции в направлении конкретного результата.  
   

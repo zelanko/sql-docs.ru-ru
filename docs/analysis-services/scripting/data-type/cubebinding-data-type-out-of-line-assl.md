@@ -2,12 +2,12 @@
 title: "Тип данных CubeBinding (вне строки) (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d34b7f4ca7425c412497382842b6e29173a0f1d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d60e844f3970fb5deadbf2cd44eb46b985f9b7d1
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="cubebinding-data-type-out-of-line-assl"></a>Тип данных CubeBinding (внешний) (ASSL)
-  Определяет тип-примитив, представляющий связь между [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемент и [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет тип-примитив, представляющий связь между [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемент и [DataSource](../../../analysis-services/scripting/objects/datasource-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   

@@ -2,12 +2,12 @@
 title: "Тип данных ReferenceMeasureGroupDimension (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8c14e0750b4f012a9229ee938b033a059070a2e1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69b36af420a3cfbc8866e741d9b0a35739501c4f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="referencemeasuregroupdimension-data-type-assl"></a>Тип данных ReferenceMeasureGroupDimension (ASSL)
-  Определяет производный тип данных, представляющий измерение, которое косвенно связано с таблицей фактов через промежуточное измерение (например группа мер Sales может ссылаться на измерение Geography, которое связывается через измерение Customer).  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет производный тип данных, представляющий измерение, которое косвенно связано с таблицей фактов через промежуточное измерение. (например группа мер Sales может ссылаться на измерение Geography, которое связывается через измерение Customer).  
   
 ## <a name="syntax"></a>Синтаксис  
   

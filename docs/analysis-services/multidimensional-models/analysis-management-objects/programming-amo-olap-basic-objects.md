@@ -2,12 +2,12 @@
 title: "Программирование основных объектов AMO OLAP | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bebff2d4f64f26f0f1824042512534c5459f2872
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e92a5a964dc95906cc6d74e983723868e7b48c61
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="programming-amo-olap-basic-objects"></a>Программирование основных объектов AMO OLAP
-  Процесс создания сложных объектов служб [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] является простым и понятным, но требует внимания к деталям. В этом разделе подробно описывается программирование базовых объектов OLAP. Этот раздел состоит из следующих подразделов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Создание сложных [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] объектов является простым и понятным, но требует внимания к деталям. В этом разделе подробно описывается программирование базовых объектов OLAP. Этот раздел состоит из следующих подразделов.  
   
 -   [Объекты измерений](#Dim)  
   

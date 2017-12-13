@@ -2,12 +2,12 @@
 title: "Меры и группы мер | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -30,14 +30,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f02584f0daf175439fb51e3afac34e6b4a328f52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: a800041d5a0f98760e1359c5eee93c706859e020
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="measures-and-measure-groups"></a>Меры и их группы
-  Куб содержит *меры* в *группах мер*, бизнес-логику, а также коллекцию измерений, дающих контекст для вычисления числовых данных, которые предоставляет мера. Меры и группы мер являются неотъемлемой частью куба. Куб не может существовать без них.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Куб содержит *меры* в *группы мер*, бизнес-логику, а также коллекцию измерений, дающих контекст для вычисления числовых данных, который предоставляет мера. Меры и группы мер являются неотъемлемой частью куба. Куб не может существовать без них.  
   
  В этом разделе описываются [Measures](#bkmk_measure) и [Measure Groups](#bkmk_mg). Здесь также приведена следующая таблица с ссылками на инструкции по созданию и настройке мер и групп мер.  
   

@@ -2,12 +2,12 @@
 title: "Вычисляемые элементы в подзапросах выборки и вложенных кубах | Документы Microsoft"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a2dc70e91783283b2b57fe6737c558375bb47f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
-  Вычисляемый элемент — это элемент измерения, значение которого вычисляется из выражения во время выполнения и может использоваться в подзапросах выборки и вложенных кубах, чтобы более точно определить пространство куба запроса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Вычисляемый элемент — это элемент измерения, значение которого вычисляется из выражения во время выполнения и может использоваться в подзапросах выборки и вложенных кубах, чтобы более точно определить пространство куба запроса.  
   
 ## <a name="enabling-calculated-members-in-the-subspace"></a>Включение вычисляемых элементов в подпространстве  
  Свойство строки подключения **SubQueries** в разделе <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> или свойство **DBPROPMSMDSUBQUERIES** в разделе [Поддерживаемые свойства XMLA (XMLA)](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) определяет поведение или квоту для вычисляемых элементов или вычисляемых наборов в подзапросах выборки и вложенных кубах. В контексте настоящего документа, если не указано иное, термин «подзапросы выборки» означает подзапросы выборки и вложенные кубы.  

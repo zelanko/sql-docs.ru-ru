@@ -2,12 +2,12 @@
 title: "Записи операций в службах Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 546e28af279bd62018f54a7f1bff33c6e27b8883
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="log-operations-in-analysis-services"></a>Журнал операций в службах Analysis Services
-  Экземпляр служб Analysis Services будет записывать уведомления сервера, ошибки и предупреждения в журнал msmdsrv.log. Для каждого устанавливаемого экземпляра создается один журнал. Администраторы обращаются к этому журналу для анализа как обычных, так и непредвиденных событий. В последних версиях ведение журнала было усовершенствовано, чтобы собирать больше сведений. Записи журнала теперь включают сведения о версии и выпуске продукта, а также о процессоре, памяти, подключении и событиях блокировки. Список всех изменений можно просмотреть в разделе [Улучшения ведения журнала](http://support.microsoft.com/kb/2965035).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Экземпляр служб Analysis Services будет записывать журнал уведомлений от сервера, ошибки и предупреждения в журнал msmdsrv.log – для каждого устанавливаемого экземпляра. Администраторы обращаются к этому журналу для анализа как обычных, так и непредвиденных событий. В последних версиях ведение журнала было усовершенствовано, чтобы собирать больше сведений. Записи журнала теперь включают сведения о версии и выпуске продукта, а также о процессоре, памяти, подключении и событиях блокировки. Список всех изменений можно просмотреть в разделе [Улучшения ведения журнала](http://support.microsoft.com/kb/2965035).  
   
  Помимо встроенного ведения журнала, многие администраторы и разработчики используют средства, предоставляемые сообществом служб Analysis Services для сбора данных об операциях сервера, например **ASTrace**. Ссылки на загрузки вы найдете здесь: [Примеры для служб аналитики, предоставленные сообществом Microsoft SQL Server](https://sqlsrvanalysissrvcs.codeplex.com/) .  
   

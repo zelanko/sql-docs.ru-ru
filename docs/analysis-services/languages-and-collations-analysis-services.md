@@ -2,12 +2,12 @@
 title: "Языки и параметры сортировки (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 04/20/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3992b6ea5ff2dedbb18571919041407a8545fd4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="languages-and-collations-analysis-services"></a>Языки и параметры сортировки (службы Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает языки и параметры сортировки, предоставляемые операционными системами Windows [!INCLUDE[msCoName](../includes/msconame-md.md)] . Свойства**Language** и **Collation** изначально устанавливаются на уровне экземпляра во время установки, но их можно изменить позже на разных уровнях иерархии объектов.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает языки и параметры сортировки, предоставляемые [!INCLUDE[msCoName](../includes/msconame-md.md)] операционных систем Windows. Свойства**Language** и **Collation** изначально устанавливаются на уровне экземпляра во время установки, но их можно изменить позже на разных уровнях иерархии объектов.  
   
  В многомерной модели (только) вы можете задавать эти свойства в базе данных или в кубе, а также настраивать их в переводах, создаваемых для объектов в кубе. В табличной модели язык и параметры сортировки наследуются от операционной системы сервера виртуальных машин.  
   

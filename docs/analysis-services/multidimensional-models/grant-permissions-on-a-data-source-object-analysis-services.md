@@ -2,12 +2,12 @@
 title: "Предоставление разрешений на объект источника данных (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -27,14 +27,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c774f7711a32eb512c28914146b05f2db52f4b2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5a08c7f67120126f836552af70bf97e0b6cda366
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Предоставление разрешений объекту источника данных (службы Analysis Services
-  Обычно, большинству пользователей службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] нет необходимости в доступе к источникам данных, которые обуславливают проект службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . обычно пользователи лишь запрашивают данные в рамках базы данных службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Однако в контексте интеллектуального анализа данных, например выполнения прогнозов, основанных на модели интеллектуального анализа данных, пользователю необходимо соединить обучающие данные, полученные моделью интеллектуального анализа данных, с данными, предоставленными пользователем. Для подключения источника данных, содержащего предоставленные пользователем данные, пользователь использует запрос расширений интеллектуального анализа данных, в котором содержится либо предложение [OPENQUERY (DMX)](../../dmx/source-data-query-openquery.md), либо предложение [OPENROWSET (DMX)](../../dmx/source-data-query-openrowset.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Обычно, большинству пользователей службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не требуется доступ к источникам данных, которые лежат в основе [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта. обычно пользователи лишь запрашивают данные в рамках базы данных службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Однако в контексте интеллектуального анализа данных, например выполнения прогнозов, основанных на модели интеллектуального анализа данных, пользователю необходимо соединить обучающие данные, полученные моделью интеллектуального анализа данных, с данными, предоставленными пользователем. Для подключения источника данных, содержащего предоставленные пользователем данные, пользователь использует запрос расширений интеллектуального анализа данных, в котором содержится либо предложение [OPENQUERY (DMX)](../../dmx/source-data-query-openquery.md), либо предложение [OPENROWSET (DMX)](../../dmx/source-data-query-openrowset.md).  
   
  Чтобы выполнить DMX-запрос, соединяющийся с источником данных, пользователю необходимо обладать доступом к объекту источника данных в рамках базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . По умолчанию, только Администраторы Сервера и Базы данных имеют доступ к объектам источника данных. Это значит, что пользователь не может получить доступ к объекту источника данных до тех пор, пока администратор не предоставит ему разрешения.  
   

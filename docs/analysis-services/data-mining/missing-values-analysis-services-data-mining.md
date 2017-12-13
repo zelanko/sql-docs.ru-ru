@@ -2,12 +2,12 @@
 title: "Отсутствующие значения (службы Analysis Services — Интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1c2b1b598989965af2be43ad62c02ae4017fd42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 9fd36d5de83b72fcc62945de61aa5f7b2d0cb3e2
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Отсутствующие значения (службы Analysis Services — интеллектуальный анализ данных)
-  Правильная обработка  *отсутствующих значений* является важной частью эффективного моделирования. В этом разделе объясняется, что такое отсутствующие значения, и описываются функции [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для работы с отсутствующими значениями при построении структур и моделей интеллектуального анализа данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Обработка *недостающие значения* правильно является важной частью эффективного моделирования. В этом разделе объясняется, что такое отсутствующие значения, и описываются функции [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для работы с отсутствующими значениями при построении структур и моделей интеллектуального анализа данных.  
   
 ## <a name="definition-of-missing-values-in-data-mining"></a>Определение отсутствующих значений в интеллектуальном анализе данных  
  Отсутствующее значение может указывать на различные обстоятельства. Возможно, поле неприменимо, не произошло событие или данные не были доступными. Может быть, человек, заполнявший данные, не знал правильного значения или не заботился о заполнении этого поля.  

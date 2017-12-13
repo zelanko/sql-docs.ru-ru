@@ -2,12 +2,12 @@
 title: "Создание реляционной структуры | Документы Microsoft"
 ms.custom: 
 ms.date: 03/13/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3d58cb5bf4be5eddaa40cc13efa88b3ade9f49dd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 77b40db70cf3758f76d8e1773e6388fd6a833c49
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-relational-mining-structure"></a>Создание реляционной структуры интеллектуального анализа данных
-  Большинство моделей интеллектуального анализа данных основано на реляционных источниках данных. Преимуществом создания реляционной модели интеллектуального анализа данных является возможность собирать неорганизованные данные, а также проводить обучение и обновление модели, не решая сложную задачу построения куба.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Большинство моделей интеллектуального анализа данных основаны на реляционных источниках данных. Преимуществом создания реляционной модели интеллектуального анализа данных является возможность собирать неорганизованные данные, а также проводить обучение и обновление модели, не решая сложную задачу построения куба.  
   
  Реляционная структура интеллектуального анализа данных может основываться на данных из разрозненных источников. Необработанные данные могут храниться в таблицах, файлах или системах реляционных баз данных при условии, что эти данные можно определить в составе представления источников данных. Например, реляционную структуру интеллектуального анализа данных следует использовать, если данные находятся в Excel, в хранилище данных SQL Server, в базе данных отчетов SQL Server или во внешних источниках, доступ к которым осуществляется посредством поставщиков OLE DB или ODBC.  
   

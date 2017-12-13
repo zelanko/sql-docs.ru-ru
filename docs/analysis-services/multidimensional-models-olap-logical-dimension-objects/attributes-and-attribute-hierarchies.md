@@ -2,12 +2,12 @@
 title: "Атрибуты и иерархии атрибутов | Документы Microsoft"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -32,14 +32,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a86eb2f15fe0109a2e5b2492a61ca7102e662e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 18621eba78a2e4c95de6373485044b5f88e1f744
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Атрибуты и иерархии атрибутов
-  Измерения — это коллекции атрибутов, которые в представлении источника данных привязаны к одному или нескольким столбцам таблицы или представления.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Измерения — это коллекции атрибутов, которые связаны с одного или нескольких столбцов таблицы или представления в представлении источника данных.  
   
 ## <a name="key-attribute"></a>Ключевой атрибут  
  Каждое измерение содержит ключевой атрибут. Каждый атрибут привязан к одному или нескольким столбцам в таблице измерения. Ключевой атрибут — это атрибут в измерении, который определяет столбцы в основной таблице измерения, используемые в связях внешнего ключа с таблицей фактов. Как правило, ключевой атрибут представляет первичный ключ столбца или столбцов в таблице измерения. Можно определить логический первичный ключ таблицы в представлении источника данных, не имеющей физического первичного ключа в базовом источнике данных. **Для получения дополнительной информации**, в разделе [определение логических первичных ключей в представлении источника данных &#40; Службы Analysis Services &#41; ](../../analysis-services/multidimensional-models/define-logical-primary-keys-in-a-data-source-view-analysis-services.md). При определении ключевых атрибутов мастер кубов и мастер измерений используют первичные ключевые столбцы таблицы измерения в представлении источника данных. Если таблица измерения не имеет определенного логического или физического первичного ключа, то мастера не смогут правильно определить ключевые атрибуты для измерения.  

@@ -2,12 +2,12 @@
 title: "Создание измерения путем формирования в источнике данных таблицы не содержащую время | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 83c9ceffb0bf846992b020722a2a47ebd7106634
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Создание измерения путем формирования в источнике данных таблицы, отличной от таблицы времени
-  Для создания измерений в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]без использования существующего источника данных можно использовать мастер измерений среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Для этого на странице мастера **Выберите метод создания** следует выбрать параметр **Создать в источнике данных таблицу, отличную от таблицы времени** . Для создания новой таблицы измерения в базовом источнике данных нужно иметь разрешение на создание объектов в базовом источнике данных. Определение измерения без стандартного представления источников данных можно выполнить с нуля или с помощью шаблона измерения.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], можно использовать мастер измерений [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Чтобы создать измерение без использования существующего источника данных. Для этого на странице мастера **Выберите метод создания** следует выбрать параметр **Создать в источнике данных таблицу, отличную от таблицы времени** . Для создания новой таблицы измерения в базовом источнике данных нужно иметь разрешение на создание объектов в базовом источнике данных. Определение измерения без стандартного представления источников данных можно выполнить с нуля или с помощью шаблона измерения.  
   
  Мастер измерений предоставляет шаблоны измерений, из которых можно создать распространенный тип измерения. Можно выбрать из следующих типов измерений:  
   

@@ -2,12 +2,12 @@
 title: "Представление источника данных определение | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7fa2ed565479de8dfc127ce74d769da7540ba140
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb0297f91f6a7b3cac69e262eac707cdc59040bd
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-1-3---defining-a-data-source-view"></a>Урок 1-3-определение представления источника данных
-После определения источников данных, используемых в проекте служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , на следующем этапе, как правило, определяется представление источника данных для этого проекта. Представление источника данных является отдельным единым представлением метаданных из указанных таблиц и представлений, определяемых источником данных для проекта. Хранение метаданных в представлении источника данных позволяет работать с метаданными в процессе разработки, не устанавливая соединений с базовыми источниками данных. Дополнительные сведения см. в разделе [Представления источников данных в многомерных моделях](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]После определения источников данных, которые будут использоваться в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта, следующим шагом является обычно определение представления источника данных для проекта. Представление источника данных является отдельным единым представлением метаданных из указанных таблиц и представлений, определяемых источником данных для проекта. Хранение метаданных в представлении источника данных позволяет работать с метаданными в процессе разработки, не устанавливая соединений с базовыми источниками данных. Дополнительные сведения см. в разделе [Представления источников данных в многомерных моделях](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
 В следующей задаче будет определено представление источника данных, которое содержит пять таблиц из источника данных **AdventureWorksDW2012** .  
   

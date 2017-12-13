@@ -2,12 +2,12 @@
 title: "Наблюдение за трассировками (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45bf2482dc80a7f6f2019572ffd38b1937e72b85
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f913d7d7cd223d017f617430e4beae1a6c1b8c95
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="monitoring-traces-xmla"></a>Наблюдение за трассировками (XMLA)
-  Можно использовать [Subscribe](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) в XML для аналитики (XMLA) для наблюдения за существующей трассировкой, определенной в экземпляре команда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. **Subscribe** команда возвращает результаты трассировки в виде набора строк.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно использовать [Subscribe](../../analysis-services/xmla/xml-elements-commands/subscribe-element-xmla.md) в XML для аналитики (XMLA) для наблюдения за существующей трассировкой, определенной в экземпляре команда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. **Subscribe** команда возвращает результаты трассировки в виде набора строк.  
   
 ## <a name="specifying-a-trace"></a>Задание трассировки  
  [Объекта](../../analysis-services/xmla/xml-elements-properties/object-element-xmla.md) свойство **Subscribe** команды должен содержать либо ссылку на объект [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра или трассировки на [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] экземпляра. Если **объекта** свойство не указано или не указан идентификатор трассировки в **объекта** свойства **Subscribe** команда отслеживает трассировку сеанса по умолчанию для явного сеанса, указанного в заголовке SOAP для команды.  

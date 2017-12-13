@@ -2,12 +2,12 @@
 title: "Тип данных AggregationDimension (ASSL) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/15/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: scripting
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 17c7c2b0eb70477bc0e10e49e4795b94612c6cba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: cd73d9a355f19357ea22f5554d56dfe4eaaff6d6
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="aggregationdimension-data-type-assl"></a>Тип данных AggregationDimension (ASSL)
-  Определяет тип-примитив, представляющий связь между измерением и [статистической обработки](../../../analysis-services/scripting/objects/aggregation-element-assl.md) элемента.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет тип-примитив, представляющий связь между измерением и [статистической обработки](../../../analysis-services/scripting/objects/aggregation-element-assl.md) элемента.  
   
 ## <a name="syntax"></a>Синтаксис  
   

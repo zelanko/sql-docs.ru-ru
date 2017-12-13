@@ -2,12 +2,12 @@
 title: "Вычисления | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0771e03eaa12e37cce685309fa776fe7f7c31443
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 660c506193bfd554d8bbf5c1183bfea9384bbb4c
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="calculations"></a>вычисления
-  Вычисление представляет собой выражение многомерных выражений (MDX) или сценарий, используемый для определения вычисляемого элемента, именованного набора или оценивающего назначения в кубе в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют добавлять объекты, определенные не данными куба, а выражениями, которые могут ссылаться на прочие части куба, другие кубы, или даже данные вне базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют расширить возможности куба, увеличивая гибкость и производительность приложений бизнес-аналитики. Дополнительные сведения о сценариях для вычислений см. в разделе [введение в сценарии многомерных Выражений в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о проблемах производительности, связанных с запросами и вычислениями MDX см. в разделе [SQL Server 2005 производительности руководства по Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Вычисление представляет собой выражение многомерных выражений (MDX) или сценарий, используемый для определения вычисляемого элемента, именованного набора или оценивающего назначения в кубе в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют добавлять объекты, определенные не данными куба, а выражениями, которые могут ссылаться на прочие части куба, другие кубы, или даже данные вне базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Вычисления позволяют расширить возможности куба, увеличивая гибкость и производительность приложений бизнес-аналитики. Дополнительные сведения о сценариях для вычислений см. в разделе [введение в сценарии многомерных Выражений в Microsoft SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=81892). Дополнительные сведения о проблемах производительности, связанных с запросами и вычислениями MDX см. в разделе [SQL Server 2005 производительности руководства по Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
 ## <a name="calculated-members"></a>Вычисляемые элементы  
  Вычисляемый элемент представляет собой элемент, значение которого вычисляется в процессе выполнения при помощи многомерного выражения, которое задается во время определения вычисляемого элемента. Вычисляемый элемент доступен для приложений бизнес-аналитики, равно как и любой другой. Вычисляемые элементы не увеличивают размер куба, потому что в кубе хранятся только определения; значения вычисляются в памяти, когда возникает необходимость ответить на запрос.  

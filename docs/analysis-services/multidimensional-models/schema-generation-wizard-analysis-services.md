@@ -2,12 +2,12 @@
 title: "Мастер формирования схем (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -21,14 +21,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f4c43ae5e0b38aab494f21237986b958286d7b9b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 5bd04de3519739a08ba65b5ecf2e27e0b5915254
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Мастер формирования схем (службы Analysis Services)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] поддерживает два метода работы с реляционными схемами при определении объектов OLAP в рамках проекта или базы данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В целом, определение объектов OLAP основано на модели логических данных, созданной в представлении источника данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Такое представление источника данных определяется на основе элементов схемы одного или более источников реляционных данных в соответствии с настройками представления источников данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] поддерживает два метода работы с реляционными схемами при определении объектов OLAP в пределах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекте или базе данных. В целом, определение объектов OLAP основано на модели логических данных, созданной в представлении источника данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Такое представление источника данных определяется на основе элементов схемы одного или более источников реляционных данных в соответствии с настройками представления источников данных.  
   
  Можно также сначала определять объекты OLAP, а затем генерировать представление источника данных, источник данных и базовую схему реляционной базы данных, поддерживающую эти объекты OLAP. Эта реляционная база данных называется базой данных предметной области.  
   

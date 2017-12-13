@@ -2,12 +2,12 @@
 title: "Сценарии глобализации для служб Analysis Services | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
-ms.prod_service: analysis-services
+ms.prod: analysis-services
+ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: misc
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c18f5e2ab55d1cae1f57ad67d157fc3f109949b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 81fd021deaed75731aa79f48a5a3ef8669e4c18a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="globalization-scenarios-for-analysis-services"></a>Сценарии глобализации для служб Analysis Services
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] хранят многоязычные данные и метаданные, а также управляют ими как в табличных, так и в многомерных моделях данных. Данные хранятся в Юникоде (UTF-16), в кодировках, использующих кодировку Юникод. При загрузке данных ANSI в модель данных символы хранятся с использованием эквивалентных кодовых точек Юникода.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] хранит и управляет многоязычные данные и метаданные для обеих моделей табличных и многомерных данных. Данные хранятся в Юникоде (UTF-16), в кодировках, использующих кодировку Юникод. При загрузке данных ANSI в модель данных символы хранятся с использованием эквивалентных кодовых точек Юникода.  
   
  Поддержка Юникода означает, что службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут хранить данные в любом из языков, поддерживаемых клиентскими и серверными операционными системами Windows, позволяя читать, записывать, сортировать и сравнивать данные в любой кодировке, используемой на компьютере Windows. Клиентские приложения бизнес-аналитики, использующие данные служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , могут представлять данные на выбранном пользователем языке, при условии что в модели существуют данные на этом языке.  
   

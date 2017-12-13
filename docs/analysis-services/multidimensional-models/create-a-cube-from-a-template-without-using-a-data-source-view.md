@@ -2,12 +2,12 @@
 title: "Создать куб на основе шаблона без использования представления источников данных | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e5105826e0aff1721b379b9ad0b2e1a9f5208414
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 8ebf7113a80cecd58a98108a82caa26d21d5d158
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Создание куба на основе шаблона без использования представления источников данных
-  На первой странице мастера кубов выберите **Построить куб без использования источника данных** , чтобы создать куб, не обращаясь к представлению источника данных. Позже можно с помощью мастера формирования схем создать реляционную схему для представления источников данных на основе структуры куба и, возможно, других объектов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения о генерации схемы см. в разделе [Мастер формирования схем (службы Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Выберите **построить куб без использования источника данных** на первой странице мастера кубов, чтобы создать куб без использования представления источника данных. Позже можно с помощью мастера формирования схем создать реляционную схему для представления источников данных на основе структуры куба и, возможно, других объектов [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения о генерации схемы см. в разделе [Мастер формирования схем (службы Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md).  
   
 ## <a name="selecting-the-build-method"></a>Выбор метода построения  
  На странице **Выбор метода построения** мастера кубов выберите **Построить куб без использования источника данных**. Чтобы построить куб по существующему шаблону куба, установите флажок **Использовать шаблон куба** . . Если использование шаблона не выбрано, то необходимо задать параметры вручную.  

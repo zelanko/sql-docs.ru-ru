@@ -2,12 +2,12 @@
 title: "Проверка PowerPivot для SharePoint | Документы Microsoft"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4ab5b1730f6244f81fc9e59c7565080eb72fba66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 4f3ff72bc10a222ddd5d5ed8ee8a7748fcaa2d47
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Проверка установки PowerPivot для SharePoint
-  Администрирование экземпляра [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, устанавливаемого в ферме SharePoint, осуществляется с помощью центра администрирования SharePoint. Как минимум можно проверить страницы в центре администрирования и на сайтах SharePoint, чтобы убедиться в доступности компонентов и функций сервера [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Однако, чтобы полностью проверить установку, необходимо иметь книгу [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , которую можно опубликовать в SharePoint и открывать из библиотеки. В целях тестирования можно опубликовать образец книги, в котором уже есть данные [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , и с его помощью убедиться в правильности настройки интеграции с SharePoint.  
+[!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Объект [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, устанавливаемого в ферме SharePoint экземпляр осуществляется с помощью центра администрирования SharePoint. Как минимум можно проверить страницы в центре администрирования и на сайтах SharePoint, чтобы убедиться в доступности компонентов и функций сервера [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Однако, чтобы полностью проверить установку, необходимо иметь книгу [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , которую можно опубликовать в SharePoint и открывать из библиотеки. В целях тестирования можно опубликовать образец книги, в котором уже есть данные [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] , и с его помощью убедиться в правильности настройки интеграции с SharePoint.  
   
 ||  
 |-|  

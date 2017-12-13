@@ -2,12 +2,12 @@
 title: "Прогнозирующие запросы (интеллектуальный анализ данных) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: data-mining
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/data-mining
@@ -19,14 +19,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3ba916eaea3e1aeacb108a4c6a800d677dfb578c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 0219e94bf988b1df95a93e8fc927092fc07e2c2f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="prediction-queries-data-mining"></a>Прогнозирующие запросы (интеллектуальный анализ данных)
-  Целью стандартного проекта интеллектуального анализа данных является создание прогнозов с помощью моделей интеллектуального анализа данных. Например, пользователю может потребоваться спрогнозировать возможное время простоя определенного кластера серверов либо сформировать оценку, показывающую вероятность отклика покупателей из разных сегментов на рекламную кампанию. Чтобы выполнить все это, следует создать прогнозирующий запрос.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Целью стандартного проекта интеллектуального анализа является использование модели интеллектуального анализа данных для создания прогнозов. Например, пользователю может потребоваться спрогнозировать возможное время простоя определенного кластера серверов либо сформировать оценку, показывающую вероятность отклика покупателей из разных сегментов на рекламную кампанию. Чтобы выполнить все это, следует создать прогнозирующий запрос.  
   
  С точки зрения практики в SQL Server поддерживаются разные типы прогнозирующих запросов, в зависимости от типа входных данных запроса.  
   

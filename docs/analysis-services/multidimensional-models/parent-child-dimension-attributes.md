@@ -2,12 +2,12 @@
 title: "Атрибуты в иерархиях родителей потомков | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: edadec950e3a3e38ff235bf20d05b5a1e8b15f2a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: f61c234b79d57db0873ce09ace882bc44c054f9b
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="parent-child-dimension-attributes"></a>Родительские атрибуты измерения
-  В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]о содержимом элементов измерения обычно делается общее предположение. Конечные элементы содержат данные, полученные непосредственно из основных источников данных; неконечные элементы содержат данные статистических вычислений, рассчитанных по дочерним элементам.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], о содержимом элементов измерения обычно делается общее предположение. Конечные элементы содержат данные, полученные непосредственно из основных источников данных; неконечные элементы содержат данные статистических вычислений, рассчитанных по дочерним элементам.  
   
  Тем не менее в иерархии вида «родители-потомки» некоторые неконечные элементы вместе со статистическими выражениями над дочерними элементами также могут содержать данные из основных источников данных. Для таких неконечных элементов в иерархии вида «родители-потомки» создаются специальные, формируемые системой дочерние элементы, содержащие данные из основной таблицы фактов. Такие элементы называются *элементами данных*, они непосредственно связаны с неконечным элементом дерева, который не зависит от суммарного значения, вычисленного для его потомков.  
   

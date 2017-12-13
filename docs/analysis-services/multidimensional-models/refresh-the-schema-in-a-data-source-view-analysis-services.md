@@ -2,12 +2,12 @@
 title: "Обновление схемы в представлении источника данных (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e2cfa87e6eca8ee933fa42686f12070ce9dca7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 365363d74cd937156e609f8a76caee745d45122f
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Обновление схемы в представлении источника данных (службы Analysis Services)
-  После определения представления источников данных в проекте или базе данных [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] можно изменить схему базового источника данных. Эти изменения не определяются и не обновляются автоматически в проекте разработки. Более того, при развертывании проекта на сервере будут возникать ошибки обработки, если службы Analysis Services не смогут подключиться к внешнему источнику данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После определения представления источников данных (DSV) в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта или базы данных, можно изменить схему базового источника данных. Эти изменения не определяются и не обновляются автоматически в проекте разработки. Более того, при развертывании проекта на сервере будут возникать ошибки обработки, если службы Analysis Services не смогут подключиться к внешнему источнику данных.  
   
  Для обновления представления источников данных так, чтобы он соответствовал внешнему источнику данных, можно обновить представление источника данных в среде Business Intelligence Development Studio (BIDS). Обновление представления источников данных приводит к выявлению изменений относительно внешнего источника данных, на котором основывается представление, и созданию списка добавлений или удалений во внешнем источнике данных. После этого можно применить набор изменений к представлению источников данных, который снова выровняет представление относительно базового источника данных. Обратите внимание, что для последующего обновления кубов и измерений в проекте, использующем представление источника данных, могут потребоваться дополнительные усилия.  
   

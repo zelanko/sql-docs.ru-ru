@@ -2,12 +2,12 @@
 title: "Использовать шаблоны служб Analysis Services в SQL Server Management Studio | Документы Microsoft"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: instances
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -20,14 +20,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9775571e489c2f950bf50fb3c62386fba13e90dc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: aa787d2f040ac8065e4df8c68da3b6c730ff9640
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Использование шаблонов служб Analysis Services в среде SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет набор шаблонов, которые помогают быстро создавать скрипты XML для аналитики, многомерные или DMX-запросы, ключевые показатели эффективности в кубе или табличной модели, формировать скрипты для резервного копирования и восстановления, а также выполнять много других задач. Шаблоны расположены в **обозревателе шаблонов** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет набор шаблонов, которые помогают быстро создавать скрипты XMLA, запросы многомерных Выражений или расширений интеллектуального анализа данных, Создание ключевых показателей эффективности в кубе или табличной модели, скрипт резервного копирования и операциями восстановления и выполнять многие другие задачи. Шаблоны расположены в **обозревателе шаблонов** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  В этом разделе приводится список шаблонов для многомерных и табличных моделей, а также рассматриваются примеры построения MDX-запросов и инструкций XML для аналитики с помощью обозревателя метаданных и обозревателя шаблонов.  
   

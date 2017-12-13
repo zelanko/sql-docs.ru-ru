@@ -2,12 +2,12 @@
 title: "Предоставление разрешений кубу или модели (службы Analysis Services) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -26,14 +26,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b57c8f78162dbfcfe414ed8bc4fcdcedd04c85d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fb36f978c414a1ef5916cb0ebd78971c001940e7
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Предоставление разрешений кубу или модели (службы Analysis Services)
-  Куб или табличная модель являются основным объектом запроса в модели данных службы Analysis Service. При подключении к многомерным или табличным данным из Excel для просмотра данных ad hoc, пользователи обычно начинают с выбора определенного куба или табличной модели в качестве структуры данных Сводного объекта отчета. Данная тема объясняет, как предоставить необходимые разрешения для доступа к кубу или табличным данным.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Куба или табличной модели является основным объектом запроса в модели данных служб Analysis Services. При подключении к многомерным или табличным данным из Excel для просмотра данных ad hoc, пользователи обычно начинают с выбора определенного куба или табличной модели в качестве структуры данных Сводного объекта отчета. Данная тема объясняет, как предоставить необходимые разрешения для доступа к кубу или табличным данным.  
   
  По умолчанию, никто, кроме Администратора Сервера или Администратора Базы данных не имеет разрешения давать запросы кубу в базе данных. Доступ к кубу без прав администратора требует членство в роли, созданной для базы данных, содержащей куб. Членство поддерживается для пользователя Windows или для учетных записей групп, определенных либо в службе Active Directory, либо на локальном компьютере. Перед тем как начать, определите, какие учетные записи будут назначены как членские в ролях, которые вы собираетесь создать.  
   

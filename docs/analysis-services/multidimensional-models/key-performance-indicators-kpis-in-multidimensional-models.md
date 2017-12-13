@@ -2,12 +2,12 @@
 title: "Ключевые показатели эффективности (KPI) в многомерных моделях | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -29,14 +29,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 326f2bd9d1ca70ff025e0b9cdf27ce167474d7be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 166c09d9d8b2c767767ffda7914f8d465af43829
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>Ключевые показатели эффективности в многомерных моделях
-  Употребляемый в деловой лексике термин «ключевой показатель эффективности» (KPI) означает количественно исчислимую меру успешности бизнеса.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В деловой лексике ключевого индикатора производительности (KPI) означает количественно исчислимую меру успешности бизнеса.  
   
  В службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ключевой показатель эффективности представляет собой коллекцию вычислений, связанных с группой мер куба и используемых для оценки успешности бизнеса. Обычно такие вычисления являются сочетанием многомерных выражений или вычисляемых элементов. В состав ключевых показателей эффективности также входят метаданные, определяющие способ отражения клиентскими приложениями результатов вычислений ключевого показателя эффективности.  
   

@@ -2,12 +2,12 @@
 title: "Использование измененной версией Analysis Services учебного проекта | Документы Microsoft"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: tutorial
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
@@ -18,14 +18,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd789a871d90169a726cbb1709e5de1f9275fa16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Занятие 4-1-использование измененной версии проекта Tutorial служб Analysis Services
-Оставшиеся занятия этого учебника основаны на улучшенной версии проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, с которым велась работа на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Оставшиеся занятия этого учебника основаны на улучшенной версии [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] учебного проекта, созданного на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  
   
 Перед продолжением работы с учебником необходимо загрузить, извлечь, выполнить и обработать улучшенную версию проекта учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Инструкции в этом разделе помогут выполнить все эти шаги.  
   

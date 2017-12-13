@@ -2,12 +2,12 @@
 title: "Проектирование агрегатов (XMLA) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -28,14 +28,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: da7a6639d68c6b97725fea152d4d7f8be1224273
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 1fa363dc4d38a68a7cf4c9a62a501fb48c3aa0fc
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-aggregations-xmla"></a>Создание агрегатов (XMLA)
-  Статические схемы связываются с секциями определенных групп мер, чтобы эти секции при хранении агрегатов использовали одинаковую структуру. Используя ту же структуру хранилища для секций позволяет легко определить секции, которые могут быть объединены с помощью [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) команды. Дополнительные сведения о статистических схем см. в разделе [агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Статистические схемы связаны с конкретной группе мер, секции, использовать ту же структуру при хранении агрегатов секции. Используя ту же структуру хранилища для секций позволяет легко определить секции, которые могут быть объединены с помощью [MergePartitions](../../analysis-services/xmla/xml-elements-commands/mergepartitions-element-xmla.md) команды. Дополнительные сведения о статистических схем см. в разделе [агрегаты и статистические схемы](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
  Чтобы определить агрегаты для статистической схемы, можно использовать [DesignAggregations](../../analysis-services/xmla/xml-elements-commands/designaggregations-element-xmla.md) в XML для аналитики (XMLA) команду. **DesignAggregations** команда имеет свойства, которые определяют, какие статистической схемы для использования в качестве ссылки и для управления процессом проектирования по этой ссылке. С помощью **DesignAggregations** команда и его свойства, можно спроектировать агрегаты последовательно или в пакете и затем просмотреть итоговую статистику создания для оценки процесса проектирования.  
   

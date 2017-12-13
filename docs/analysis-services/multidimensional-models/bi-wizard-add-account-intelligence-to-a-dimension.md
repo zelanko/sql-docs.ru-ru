@@ -2,12 +2,12 @@
 title: "Добавление операций со счетами к измерению | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -24,14 +24,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9507044c972401407aadf80dddfe164ec4a3617c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: d91930309e865b84f4d6e763a46026879bdc47c5
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="bi-wizard---add-account-intelligence-to-a-dimension"></a>Мастер бизнес-Аналитики — Добавление операций со счетами к измерению
-  Добавьте расширение интеллектуальной обработки счетов к кубу или измерению, чтобы присвоить стандартные классификации счетов, например «доходы» и «расходы», элементам атрибута «счет». Это расширение также идентифицирует типы счетов (такие как «Актив» и «Долг») и назначает соответствующую статистическую обработку каждому типу счета. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может использовать классификации для выполнения статистического вычисления во времени.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Добавьте интеллектуальной обработки счетов к кубу или измерению, чтобы присвоить стандартные классификации счетов, например доходы или расходы, элементам атрибута счета. Это расширение также идентифицирует типы счетов (такие как «Актив» и «Долг») и назначает соответствующую статистическую обработку каждому типу счета. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] может использовать классификации для выполнения статистического вычисления во времени.  
   
 > [!NOTE]  
 >  Логика операций со счетами доступна только для измерений, основанных на существующих источниках данных. Для измерений, созданных без использования источника данных, необходимо запустить мастер формирования схем, чтобы создать представление источника данных перед тем, как добавить логику операций с учетными записями.  

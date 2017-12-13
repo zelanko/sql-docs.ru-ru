@@ -2,12 +2,12 @@
 title: "Проектирование статистических схем (службы Analysis Services — многомерные) | Документы Microsoft"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
@@ -23,14 +23,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: efa41383ba0e5ba5032b4763dc069fd83d03e489
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: 139ad1c8585dbed61b4881b2a171c18b686bbf37
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>Проектирование агрегатов (службы Analysis Services — многомерные данные)
-  Агрегатами называются предварительно вычисленные сводки по данным куба, помогающие службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ускорить выполнение запросов.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Агрегатами называются предварительно вычисленные сводки по данным куба, помогающие службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] чтобы ускорить выполнение запросов.  
   
  Для настройки параметров хранения и проектирования статистических схем для секции применяется мастер статистических схем. Мастер работает с одной секцией группы мер, поэтому каждую секцию можно настроить по-своему. Мастер руководит настройкой хранилища и проектированием статистических схем для секции. Для получения дополнительных сведений о настройке хранилища см.  
   

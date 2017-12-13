@@ -2,12 +2,12 @@
 title: "Установление соединений в ADOMD.NET | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-non-specified
+ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: multidimensional-models
+ms.component: 
 ms.reviewer: 
-ms.suite: sql
+ms.suite: pro-bi
 ms.technology:
 - analysis-services
 - docset-sql-devref
@@ -25,14 +25,14 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 262b81a3177806ead76bbff15f770e0d1d0418aa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
-ms.translationtype: HT
+ms.openlocfilehash: fcda3b90d2157869be1c187e8c6d86449790f7b0
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="connections-in-adomdnet"></a>Соединений в ADOMD.NET
-  В ADOMD.NET, используется <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> объекта для открытия соединений с источниками аналитических данных, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных. Если необходимости в соединении больше нет, его следует явно закрыть.  
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В ADOMD.NET, используется <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection> объекта для открытия соединений с источниками аналитических данных, таких как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] баз данных. Если необходимости в соединении больше нет, его следует явно закрыть.  
   
 ## <a name="opening-a-connection"></a>Открытие соединения  
  Чтобы открыть соединение в ADOMD.NET, необходимо сначала задать строку соединения с допустимым источником аналитических данных и базой данных. Затем следует явно открыть соединение с этим источником данных.  
