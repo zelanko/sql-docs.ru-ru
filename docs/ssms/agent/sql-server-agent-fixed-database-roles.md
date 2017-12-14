@@ -3,8 +3,11 @@ title: "Предопределенные роли базы данных аген
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a8b2d1ccf779150f478702870689c359af4b0182
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: cc6c25e52402bcf7e4d1a3a9899e9b3ce6449b73
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Предопределенные роли базы данных агента SQL Server
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет следующие предопределенные роли базы данных **msdb** , предоставляющие администраторам возможности более точного управления доступом к агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Далее приводятся роли, в порядке от имеющих наименьшие права к имеющим большие права доступа.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] имеет следующие предопределенные роли базы данных **msdb**, предоставляющие администраторам возможности более точного управления доступом к агенту [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Далее приводятся роли, в порядке от имеющих наименьшие права к имеющим большие права доступа.  
   
 -   **SQLAgentUserRole**  
   
@@ -47,7 +51,7 @@ ms.lasthandoff: 11/09/2017
 Роль**SQLAgentUserRole** имеет наименьшие права из всех предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Она имеет разрешения только на операторы, локальные задания и расписания заданий. Члены роли **SQLAgentUserRole** имеют разрешения только на локальные задания и расписания заданий, которыми они владеют. Они не могут использовать многосерверные задания (задания с главным и целевым серверами) и изменять владение заданиями для получения доступа к заданиям, которыми не владеют в настоящее время. Члены роли**SQLAgentUserRole** могут просматривать список доступных учетных записей-посредников только в диалоговом окне **Свойства шага задания** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. В обозревателе объектов среды **членам роли** SQLAgentUserRole [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] виден только узел **Задания**.  
   
 > [!IMPORTANT]  
-> При предоставлении доступа к учетной записи-посреднику **членам**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**ролей базы данных агента** следует учитывать влияние этого на безопасность. Члены ролей **SQLAgentReaderRole** и **SQLAgentOperatorRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены ролей **SQLAgentReaderRole** и **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
+> При предоставлении доступа к учетной записи-посреднику членам [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**ролей** **базы данных агента** следует учитывать влияние этого на безопасность. Члены ролей **SQLAgentReaderRole** и **SQLAgentOperatorRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены ролей **SQLAgentReaderRole** и **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
   
 В следующей таблице приводится сводка разрешений роли **SQLAgentUserRole** на объекты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
@@ -66,7 +70,7 @@ ms.lasthandoff: 11/09/2017
 Роль**SQLAgentReaderRole** имеет все разрешения роли **SQLAgentUserRole** , а также разрешения на просмотр списка имеющихся многосерверных заданий, их свойств и их журнала. Члены этой роли могут также просматривать не только информацию о заданиях и расписаниях заданий, которыми они владеют, но и список всех имеющихся заданий, расписаний заданий и их свойств. Члены роли**SQLAgentReaderRole** не могут изменять владельцев заданий для получения доступа к не принадлежащим им заданиям. В обозревателе объектов среды **членам роли** SQLAgentReaderRole [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] виден только узел **Задания**.  
   
 > [!IMPORTANT]  
-> При предоставлении доступа к учетной записи-посреднику **членам**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**ролей базы данных агента** следует учитывать влияние этого на безопасность. Члены роли **SQLAgentReaderRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены роли **SQLAgentReaderRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
+> При предоставлении доступа к учетной записи-посреднику членам [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**ролей** **базы данных агента** следует учитывать влияние этого на безопасность. Члены роли **SQLAgentReaderRole** автоматически являются членами роли **SQLAgentUserRole**. Это означает, что члены роли **SQLAgentReaderRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которые были предоставлены роли **SQLAgentUserRole** , и могут использовать эти учетные записи.  
   
 В следующей таблице приводится сводка разрешений роли **SQLAgentReaderRole** на объекты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
@@ -90,7 +94,7 @@ ms.lasthandoff: 11/09/2017
 В обозревателе объектов среды **членам роли**SQLAgentOperatorRole **видны узлы**Задания **,**Предупреждения **,** Операторы [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] и **Учетные записи-посредники**. Членам этой роли не доступен только узел **Журналы ошибок** .  
   
 > [!IMPORTANT]  
-> При предоставлении доступа к учетной записи-посреднику **членам**[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**ролей базы данных агента** следует учитывать влияние этого на безопасность. Члены роли **SQLAgentOperatorRole** автоматически являются членами ролей **SQLAgentUserRole** и **SQLAgentReaderRole**. Это означает, что члены роли **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которые были предоставлены роли **SQLAgentUserRole** или **SQLAgentReaderRole** , и могут использовать эти учетные записи.  
+> При предоставлении доступа к учетной записи-посреднику членам [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]**ролей** **базы данных агента** следует учитывать влияние этого на безопасность. Члены роли **SQLAgentOperatorRole** автоматически являются членами ролей **SQLAgentUserRole** и **SQLAgentReaderRole**. Это означает, что члены роли **SQLAgentOperatorRole** имеют доступ ко всем учетным записям-посредникам агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , которые были предоставлены роли **SQLAgentUserRole** или **SQLAgentReaderRole** , и могут использовать эти учетные записи.  
   
 В следующей таблице приводится сводка разрешений роли **SQLAgentOperatorRole** на объекты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   

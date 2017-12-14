@@ -3,8 +3,11 @@ title: "Назначение учетной записи для запуска �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c421d5bab68e114069534ebf4fd83dddfb50469e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 071137041f513170cae50bc6cada54fad552af80
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Назначение стартовой учетной записи службы для агента SQL Server (диспетчер конфигурации SQL Server)
-Стартовая учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определяет учетную запись Windows, которая запускает агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , а также его сетевые разрешения. Этот раздел посвящен назначению учетных записей службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
+# <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Стартовая учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определяет учетную запись Windows, которая запускает агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], а также его сетевые разрешения. Этот раздел посвящен назначению учетных записей службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
 **В этом разделе**  
   
@@ -76,7 +79,7 @@ ms.lasthandoff: 11/09/2017
   
 6.  В области сведений щелкните правой кнопкой **Агент SQL Server***имя_сервера*, где *имя_сервера* — это имя экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], для которого необходимо изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
   
-7.  В диалоговом окне **Агент SQL Server***(имя_сервера)* **Свойства** выберите на вкладке **Вход в систему** один из следующих параметров в разделе **Вход в систему в качестве**:  
+7.  В диалоговом окне **Свойства** **агента SQL Server***(имя_сервера)* выберите на вкладке **Вход в систему** один из следующих параметров в разделе **Использовать для входа**:  
   
     -   **Встроенная учетная запись**. Выберите этот параметр, если заданиям требуются ресурсы только с локального сервера. Дополнительные сведения о выборе типа встроенной учетной записи Windows см. в разделе [Выбор учетной записи для службы агента SQL Server.](http://msdn.microsoft.com/library/ms191543.aspx)  
   
