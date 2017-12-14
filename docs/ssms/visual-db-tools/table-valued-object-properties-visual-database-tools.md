@@ -3,8 +3,11 @@ title: "Свойства объектов с табличными значени
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b780f2dea124c603e24015149ab2d98b93f711f2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a9ee522227473617b98b60691599b42ec7f8d35c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="table-valued-object-properties-visual-database-tools"></a>Свойства объектов с табличными значениями (визуальные инструменты для баз данных)
-Эти свойства отображаются в окне свойств при выборе табличного объекта в **конструкторе запросов и представлений**. Табличный объект может быть представлением, синонимом, производной таблицей или возвращающей табличное значение функцией. Если не указано иное, в окне **Свойства** эти свойства отображаются только для чтения.  
+# <a name="table-valued-object-properties-visual-database-tools"></a>Свойства табличных объектов (визуальные инструменты для баз данных)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Эти свойства отображаются в окне свойств при выборе табличного объекта в **конструкторе запросов и представлений**. Табличный объект может быть представлением, синонимом, производной таблицей или возвращающей табличное значение функцией. Если не указано иное, в окне **Свойства** эти свойства отображаются только для чтения.  
   
 > [!NOTE]  
 > Свойства в данном разделе сгруппированы по категориям, а не по алфавиту.  

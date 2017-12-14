@@ -6,27 +6,23 @@ documentationcenter:
 author: MightyPen
 manager: jhubbard
 editor: barbkess
-ms.service: 
-ms.component: database-engine
-ms.suite: sql
+ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
-ms.custom: 
+ms.custom: UpdArt.exe
 ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/27/2017
-ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: a367634760aba2b3293df230a427f10bc49feffa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a0b847d4f0e848105be50a06f93abbbbc6f67dc9
+ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/04/2017
 ---
 # <a name="new-and-recently-updated-database-engine-docs"></a>Новые и недавно обновленные статьи: документация по ядру СУБД
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
 
 
 Почти каждый день корпорация Майкрософт вносит изменения в свои статьи на веб-сайте документации [Docs.Microsoft.com](http://docs.microsoft.com/). В этой статье приводятся отрывки из обновленных недавно статей, а также ссылки на новые статьи.
@@ -37,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 
 
 
-- *Диапазон дат обновлений:* &nbsp; **11.09.2017**&nbsp;–&nbsp;**27.09.2017**
+- *Диапазон дат обновлений:* &nbsp; **28.09.2017**&nbsp;–&nbsp;**02.12.2017**
 - *Предметная область:* &nbsp; **ядро СУБД**.
 
 
@@ -50,10 +46,7 @@ ms.lasthandoff: 11/20/2017
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Добавление компонентов в экземпляр SQL Server (программа установки)](install-windows/add-features-to-an-instance-of-sql-server-setup.md)
-2. [Установка SQL Server из командной строки](install-windows/install-sql-server-from-the-command-prompt.md)
-3. [Установка SQL Server с помощью файла конфигурации](install-windows/install-sql-server-using-a-configuration-file.md)
-4. [Непрерывность бизнес-процессов и восстановление базы данных — SQL Server](sql-server-business-continuity-dr.md)
+***На данный момент новых статей нет.***
 
 
 
@@ -79,7 +72,7 @@ ms.lasthandoff: 11/20/2017
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
-1. [Установка обновлений из командной строки](#TitleNum_1)
+1. [Параметр конфигурации сервера «optimize for ad hoc workloads»](#TitleNum_1)
 
 
 
@@ -90,36 +83,37 @@ ms.lasthandoff: 11/20/2017
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-installing-updates-from-the-command-promptinstall-windowsinstalling-updates-from-the-command-promptmd"></a>1. &nbsp; [Установка обновлений из командной строки](install-windows/installing-updates-from-the-command-prompt.md)
+### <a name="1-nbsp-optimize-for-ad-hoc-workloads-server-configuration-optionconfigure-windowsoptimize-for-ad-hoc-workloads-server-configuration-optionmd"></a>1. &nbsp; [Параметр конфигурации сервера "optimize for ad hoc workloads"](configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md)
 
-*Обновлено: 12.09.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*Обновлено: 20.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 48.  ms.author= "mikeray".  -->
+<!-- Source markdown line 38.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 04abb23d0682c23654a55e7926d2140f0b6ae408 a4bb1e27ae99460a66da72848ace1417b148f85c  (PR=3122  ,  Filename=installing-updates-from-the-command-prompt.md  ,  Dirpath=docs\database-engine\install-windows\  ,  MergeCommitSha40=1df54edd5857ac2816fa4b164d268835d9713638) -->
+<!-- git diff --ignore-all-space --unified=0 6ca71358f13780b930e6fd10e431d4df2bb96441 221306c4554ebd383ab68ed67cdaeca390f57106  (PR=4032  ,  Filename=optimize-for-ad-hoc-workloads-server-configuration-option.md  ,  Dirpath=docs\database-engine\configure-windows\  ,  MergeCommitSha40=7f8aebc72e7d0c8cff3990865c9f1316996a67d5) -->
 
 
 
-- Обновите на компьютере все экземпляры ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] и все общие компоненты, такие как ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] и средства управления:
+**Рекомендации**
 
-```
-    <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /AllInstances.
-```
-
-- Удалите обновление из одного экземпляра ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)] и всех общих компонентов, таких как ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] и средства управления:
+Если количество одноразовых планов занимает существенную часть памяти ..!NCLUDE-NotShown--ssDEnoversion--../../includes/ssdenoversion-md.md)] на сервере OLTP и эти планы являются нерегламентированными, используйте этот параметр сервера для уменьшения объема используемой этими объектами памяти.
+Чтобы найти количество одноразовых кэшированных планов, выполните следующий запрос:
 
 ```
-    <package_name>.exe /qs /Action=RemovePatch /InstanceName=MyInstance.
+SELECT objtype, cacheobjtype,
+  AVG(usecounts) AS Avg_UseCount,
+  SUM(refcounts) AS AllRefObjects,
+  SUM(CAST(size_in_bytes AS bigint))/1024/1024 AS Size_MB
+FROM sys.dm_exec_cached_plans
+WHERE objtype = 'Adhoc' AND usecounts = 1
+GROUP BY objtype, cacheobjtype;
 ```
 
-- Удалите обновление только из общих компонентов ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)], таких как ..!NCLUDE-NotShown--ssISnoversion--../../includes/ssisnoversion-md.md)] и средства управления:
-
-```
-    <package_name>.exe /qs /Action=RemovePatch
-```
+> [!IMPORTANT]
+> Когда параметру **optimize for ad hoc workloads** присваивается значение 1, это влияет только на новые планы; те планы, которые уже находятся в кэше планов, остаются неизменными.
+> Чтобы немедленно повлиять на уже кэшированные планы запросов, необходимо очистить кэш планов с помощью [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE--../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) или перезапустить ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)].
 
 
 
@@ -132,36 +126,40 @@ ms.lasthandoff: 11/20/2017
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
     Then run Run-533-*.BAT
+    2017-12-02  23:00pm
 -->
 
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новые + обновленные (0+1): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (0+1): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Новые + обновленные (4+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
-- [Новые + обновленные (17+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
-- [Новые + обновленные (3+0): **Linux для SQL**](../linux/new-updated-linux.md)
-- [Новые + обновленные (1+1): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
-- [Новые + обновленные (2+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (3+14): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (1+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (87+0): **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Новые + обновленные (5+4): **Подключение к SQL**](../connect/new-updated-connect.md)
+- [Новые + обновленные (0+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (2+2): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (10+9): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (2+4): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (4+2): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (0+1): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (21+0): **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новые + обновленные(5+1): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+1): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новые + обновленные (1+0): **Помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новые + обновленные (0+1): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (0+2): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
+- [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): **Подключение к SQL**](../connect/new-updated-connect.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
 - [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
-- [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
-- [Новые + обновленные (0+0): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
 

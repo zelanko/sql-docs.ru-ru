@@ -3,8 +3,11 @@ title: "Печать результатов запроса (визуальные
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ba40459f019675c3975b31155cbd7f3cfbfa45e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0e4347b0c336d750d5e2cd08aa744cb03fca9210
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>Печать результатов запроса (визуальные инструменты для баз данных)
-Чтобы распечатать результаты запроса, необходимо скопировать содержимое [панели результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) в другую программу Windows, например в программу подготовки текстов, затем произвести в ней форматирование и распечатать результаты запроса из этой программы.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Чтобы распечатать результаты запроса, необходимо скопировать содержимое [панели результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) в другую программу Windows, например в программу подготовки текстов, затем произвести в ней форматирование и распечатать результаты запроса из этой программы.  
   
 Конструктор запросов и представлений копирует результаты запроса в буфер обмена, используя символы табуляции в качестве разделителей между столбцами и символов возврата каретки, а символы новой строки в качестве разделителей между строками.  
   

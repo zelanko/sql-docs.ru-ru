@@ -2,10 +2,10 @@
 title: "Настройка брандмауэра Windows для разрешения доступа к SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/17/2017
-ms.prod: install
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
 ms.suite: sql
 ms.technology: setup-install
@@ -30,11 +30,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b3474499df5f06198377ff824c14358a86900b68
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 90d281884a092adda6f50777dd5403e275611bf4
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,7 @@ ms.lasthandoff: 11/20/2017
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , работающий через конечную точку HTTP|Может указываться во время создания конечной точки HTTP. По умолчанию используется TCP-порт 80 для данных CLEAR_PORT и порт 443 для данных SSL_PORT.|Используется для HTTP-соединения по URL-адресу.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по умолчанию, работающий через конечную точку HTTPS|TCP-порт 443|Используется для HTTPS-соединения по URL-адресу. HTTPS представляет собой HTTP-соединение, защищенное по протоколу SSL.|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|TCP-порт 4022. Чтобы проверить используемый порт, выполните следующий запрос:<br /><br /> `SELECT name, protocol_desc, port, state_desc`<br /><br /> `FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'SERVICE_BROKER'`|Для компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSB](../../includes/sssb-md.md)]нет порта по умолчанию, но эта конфигурация принята в электронной документации для использования в примерах.|  
-|Зеркальное отображение базы данных|Порт, выбранный администратором. Чтобы определить порт, выполните следующий запрос.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Для зеркального отображения базы данных нет порта по умолчанию, однако в примерах электронной документации используется TCP-порт 7022. Очень важно избегать прерывания используемой конечной точки зеркального отображения, особенно в режиме высокой безопасности с автоматической отработкой отказа. Конфигурация брандмауэра должна избегать прерывания кворума. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
+|Зеркальное отображение базы данных|Порт, выбранный администратором. Чтобы определить порт, выполните следующий запрос.<br /><br /> `SELECT name, protocol_desc, port, state_desc FROM sys.tcp_endpoints`<br /><br /> `WHERE type_desc = 'DATABASE_MIRRORING'`|Для зеркального отображения базы данных нет порта по умолчанию, однако в примерах электронной документации используется TCP-порт 5022 или 7022. Очень важно избегать прерывания используемой конечной точки зеркального отображения, особенно в режиме высокой безопасности с автоматической отработкой отказа. Конфигурация брандмауэра должна избегать прерывания кворума. Дополнительные сведения см. в разделе [Указание сетевого адреса сервера (зеркальное отображение базы данных)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).|  
 |Репликация|Соединения с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для репликации используют порты, которые обычно использует компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] (TCP-порт 1433 для экземпляра по умолчанию и т. д.)<br /><br /> Веб-синхронизация и доступ через FTP/UNC к моментальному снимку репликации потребуют открытия в брандмауэре других портов. Передачу начальных данных и схемы из одного места в другое репликация осуществляет по протоколу FTP (TCP-порт 21) либо с помощью синхронизации через HTTP (TCP-порт 80) или общего доступа к файлам. Для общего доступа к файлам используются UDP-порты 137 и 138 и TCP-порт 139 (если используется NetBIOS). Совместное использование файлов использует TCP-порт 445.|Для синхронизации по протоколу HTTP в репликации используется конечная точка IIS (порты которой являются настраиваемыми, но порт 80 применяется по умолчанию), однако процесс IIS подключается к серверу базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через стандартные порты (1433 для экземпляра по умолчанию).<br /><br /> При веб-синхронизации через FTP-порт передача данных выполняется между службами IIS и издателем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , а не между подписчиком и службами IIS.|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] отладчик|TCP-порт 135<br /><br /> См. раздел [Особые замечания относительно порта 135](#BKMK_port_135)<br /><br /> Также может потребоваться исключение [IPsec](#BKMK_IPsec) .|При использовании среды [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]на [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] главном компьютере в список исключений необходимо также добавить программу **Devenv.exe** и открыть TCP-порт 135.<br /><br /> При использовании среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]на [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] главном компьютере необходимо также добавить в список исключений программу **ssms.exe** и открыть TCP-порт 135. Дополнительные сведения см. в разделе [Настройка правил брандмауэра перед запуском отладчика TSQL](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md).|  
   

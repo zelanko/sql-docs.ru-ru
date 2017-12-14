@@ -3,8 +3,11 @@ title: "Диалоговое окно \"Таблицы и столбцы\" (ви
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 33692673658ea967da029931bc3786678ed2590d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1eead403ffc94b04113d0b4415b7002eaed25a02
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Таблицы и столбцы» (визуальные инструменты для баз данных)
-Это диалоговое окно используется для сопоставления первичного ключа одной таблицы с внешним ключом другой. Для доступа к этому диалоговому окну из меню **Конструктор таблиц** щелкните **Связи**. В диалоговом окне **Связи по внешнему ключу** щелкните поле **Спецификация таблиц и столбцов** , а затем щелкните многоточие **(…)** справа от свойства.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно используется для сопоставления первичного ключа одной таблицы с внешним ключом другой. Для доступа к этому диалоговому окну из меню **Конструктор таблиц** щелкните **Связи**. В диалоговом окне **Связи по внешнему ключу** щелкните поле **Спецификация таблиц и столбцов** , а затем щелкните многоточие **(…)** справа от свойства.  
   
 > [!NOTE]  
 > Если таблица опубликована для репликации, то изменения схемы следует проводить при помощи инструкции языка Transact-SQL [ALTER TABLE](http://msdn.microsoft.com/en-us/f1745145-182d-4301-a334-18f799d361d1) или объектов SMO. При изменении схемы с помощью конструктора таблиц или конструктора диаграмм баз данных конструктор пытается удалить и затем вновь создать таблицу. Но поскольку удалять опубликованные объекты нельзя, изменения схемы не будут применены.  

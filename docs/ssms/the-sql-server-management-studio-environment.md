@@ -3,8 +3,11 @@ title: "Среда SQL Server Management Studio | Документация Ма�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,15 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e590f12bafa1c027487ab7a096b1ff6d4a5cf44
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 084ad027bbf4bf66f3883cedfdd2346cd720e4e3
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="the-sql-server-management-studio-environment"></a>Среда SQL Server Management Studio
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] имеет богатые функциональные возможности по созданию запросов и управлению ими в [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] предоставляет многофункциональную среду для составления запросов и управления ими в [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)].  
   
 ## <a name="in-this-section"></a>В этом разделе  
 [Общие элементы интерфейса пользователя](../ssms/general-user-interface-elements.md)  

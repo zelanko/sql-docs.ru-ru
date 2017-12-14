@@ -3,8 +3,11 @@ title: "Очистка результатов запросов (визуальн
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34c9f0c6283b05a06c0b7671b8aa008899a560c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 30c1aa87c77ce0a3f60c690d24eb563c524b7739
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Очистка результатов запросов (визуальные инструменты для баз данных)
-Выполнив запрос в **конструкторе запросов и представлений**, можно очистить панель результатов. Эта процедура применима к запросам, созданным с использованием параметров **Открыть представление** или **Открыть таблицу** в обозревателе объектов. В среде[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]после выполнения запроса в редакторе запросов невозможно очистить панель результатов до закрытия окна редактора запросов или выполнения другого запроса.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Выполнив запрос в **конструкторе запросов и представлений**, можно очистить панель результатов. Эта процедура применима к запросам, созданным с использованием параметров **Открыть представление** или **Открыть таблицу** в обозревателе объектов. В среде[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]после выполнения запроса в редакторе запросов невозможно очистить панель результатов до закрытия окна редактора запросов или выполнения другого запроса.  
   
 > [!NOTE]  
 > Это не отменит изменения, выполненные в базе данных. Дополнительные сведения о функционировании панели результатов см. в разделе [Работа с данными на панели результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  

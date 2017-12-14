@@ -3,8 +3,11 @@ title: "Диалоговое окно \"Расположение\" (визуал
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6534a08d327b7cd88cdf86320daea2c4a6b78cc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e909d68acae61d209d8d5c9be569b6d76c88b892
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="location-dialog-box-visual-database-tools"></a>Диалоговое окно «Расположение» (визуальные инструменты для баз данных)
-Используйте это диалоговое окно, чтобы найти и выбрать папку с нужными файлами. Это диалоговое окно возвращает вызывающему диалоговому окну путь выбранной папки. Доступ к этому диалоговому окну можно получить одним из следующих способов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте это диалоговое окно, чтобы найти и выбрать папку с нужными файлами. Это диалоговое окно возвращает вызывающему диалоговому окну путь выбранной папки. Доступ к этому диалоговому окну можно получить одним из следующих способов.  
   
 -   В меню **Файл** выберите пункт **Создать** и **Проект**. Когда появится диалоговое окно **Создание проекта** , выберите **Обзор**. Диалоговое окно **Расположение** откроется под заголовком **Расположение проекта**.  
   

@@ -3,8 +3,11 @@ title: "Предупреждения | Документация Майкросо
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6506dcef18d066ff7432d3e8ce9ee62255a82d89
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bcf6d6ecebacd8ea3f3b2a18d5ffe89cb5d2b6ba
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="alerts"></a>Предупреждения
-События, формируемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , помещаются в журнал приложений [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент считывает этот журнал и сравнивает события, которые там содержатся, с определенными пользователем предупреждениями. Как только агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обнаруживает такое соответствие, в ответ на это событие автоматически создается предупреждение. Кроме событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] может отслеживать условия производительности и события инструментария управления Windows (WMI).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] События генерируются [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и регистрируются в журнале приложений Windows [!INCLUDE[msCoName](../../includes/msconame_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент считывает этот журнал и сравнивает события, которые там содержатся, с определенными пользователем предупреждениями. Как только агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обнаруживает такое соответствие, в ответ на это событие автоматически создается предупреждение. Кроме событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] может отслеживать условия производительности и события инструментария управления Windows (WMI).  
   
 Чтобы определить предупреждение, необходимо указать:  
   

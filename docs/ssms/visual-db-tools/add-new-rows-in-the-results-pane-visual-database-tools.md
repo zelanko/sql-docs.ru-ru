@@ -3,8 +3,11 @@ title: "Добавление строк на панели результатов
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fc68d3e19e5c962ed805ce8b8bb50fe3e918f2c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 736d3da284554a6657ff644bd9e3658a3bc06a0c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Добавление новых строк на панель результатов (визуальные инструменты для баз данных)
-Новые данные можно добавлять, вводя их или копируя из другой программы, например из блокнота или приложения Excel. Чтобы можно было вставить строку, в ней должно быть ровно то же число столбцов тех же типов, что и в таблице, куда производится вставка. За раз на панель результатов можно вставить несколько строк.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Новые данные можно добавлять, вводя их или копируя из другой программы, например из блокнота или приложения Excel. Чтобы можно было вставить строку, в ней должно быть ровно то же число столбцов тех же типов, что и в таблице, куда производится вставка. За раз на панель результатов можно вставить несколько строк.  
   
 Сведения о вводе данных см. в разделе [Правила обновления результатов (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md).  
   

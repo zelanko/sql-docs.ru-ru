@@ -2,9 +2,12 @@
 title: "Сохранение скриптов в виде проектов или решений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f2e8f9470fe28427a78eb74a41c4e76c400f3761
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 58ff1fcef47768a5ad4d8749b66b1928ffa99e3c
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-3-3---save-scripts-as-projects-or-solutions"></a>Занятие 3–3. Сохранение скриптов в виде проектов или решений
-Разработчики, знакомые со средой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, найдут удобным обозреватель решений в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Скрипты, которые поддерживают бизнес, могут быть сгруппированы в проекты скриптов, а проектами скриптов можно одновременно управлять как решением. Когда скрипты помещены в проекты скриптов и решения, они могут быть открыты вместе как группа или сохранены вместе в системе управления версиями, например Visual SourceSafe. Проекты скриптов включают данные о соединениях, необходимые для правильного выполнения скриптов, а также могут содержать файлы других типов, такие как вспомогательные текстовые файлы.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Разработчикам, знакомым с [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, понравится обозреватель решений в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Скрипты, которые поддерживают бизнес, могут быть сгруппированы в проекты скриптов, а проектами скриптов можно одновременно управлять как решением. Когда скрипты помещены в проекты скриптов и решения, они могут быть открыты вместе как группа или сохранены вместе в системе управления версиями, например Visual SourceSafe. Проекты скриптов включают данные о соединениях, необходимые для правильного выполнения скриптов, а также могут содержать файлы других типов, такие как вспомогательные текстовые файлы.  
   
 В следующем практическом задании предстоит создать короткий скрипт, выполняющий запрос к базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , включенной в проект скрипта и решение.  
   

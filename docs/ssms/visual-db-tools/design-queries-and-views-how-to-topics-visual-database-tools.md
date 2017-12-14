@@ -3,8 +3,11 @@ title: "Разделы по конструированию запросов и �
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4212d888298d36e7a2aa9365de7153e3e353fff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 208b7c4819344b1a54dfbff8b5299cb122f01727
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Разделы по конструированию запросов и представлений (визуальные инструменты для баз данных)
-Конструктор запросов и представлений помогает создавать и поддерживать фрагменты для получения данных и управления данными для приложения.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Конструктор запросов и представлений помогает создавать и поддерживать фрагменты для получения данных и управления данными для приложения.  
   
 ## <a name="in-this-section"></a>В этом разделе  
 [Открытие конструктора запросов и представлений (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  

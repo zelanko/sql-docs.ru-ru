@@ -3,8 +3,11 @@ title: "Панель диаграмм (визуальные инструмент
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6808554aad795fcda134687dfaf071487217f63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 572d4a03893a080c6e2e97a882965c160574cfba
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Панель диаграммы (визуальные инструменты для баз данных)
-Панель диаграмм представляет в графическом виде таблицы или возвращающие табличное значение объекты, выбранные из подключения к данным. Отображаются также все связи соединений между ними.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Панель диаграмм представляет в графическом виде таблицы или возвращающие табличное значение объекты, выбранные из подключения к данным. Отображаются также все связи соединений между ними.  
   
 На панели диаграммы допускается:  
   

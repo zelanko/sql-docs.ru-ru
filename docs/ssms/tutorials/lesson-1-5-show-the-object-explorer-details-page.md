@@ -2,9 +2,12 @@
 title: "Отображение страницы \"Сведения об обозревателе объектов\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cd84b6f12a797177d11bda12c4998eec4473ff41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9dcd0a63047fdb9a5bb1398b996b3aac85ca4c97
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-5---show-the-object-explorer-details-page"></a>Занятие 1–5. Отображение страницы "Сведения об обозревателе объектов"
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] выводится отчет по каждому объекту, выбранному в обозревателе объектов. Отчет, называемый «Страница подробностей обозревателя объектов», создается в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и открывается в окне документа.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] может показывать отчет для каждого объекта, выбранного в проводнике объектов. Отчет, называемый «Страница подробностей обозревателя объектов», создается в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и открывается в окне документа.  
   
 ## <a name="showing-the-object-explorer-details-page"></a>Отображение страницы «Сведения об обозревателе объектов»  
   

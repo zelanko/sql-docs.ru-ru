@@ -3,8 +3,11 @@ title: "Отмена изменений, внесенных в диаграмм�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d8bca44d80234f7176c14edd55ead755ccba6eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 59f4167104b87c8e37ab2df3f2590cabbf6dede7
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="discard-changes-made-to-diagrams-visual-database-tools"></a>Отмена изменений, внесенных в диаграммы (визуальные инструменты для баз данных)
-Пользователь имеет возможность отменить изменения, внесенные в диаграмму базы данных, если не хочет сохранять их в ней.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Пользователь имеет возможность отменить изменения, внесенные в диаграмму базы данных, если не хочет сохранять их в ней.  
   
 ### <a name="to-discard-pending-modifications"></a>Отмена ожидающих изменений  
   

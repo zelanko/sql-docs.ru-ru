@@ -3,8 +3,11 @@ title: "Создание внешних соединений (визуальны
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1fba920f03220f261b62c37cb6d95e9a5710975f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ccbda35c56aaa7aeb221ff3f0c7527b0389eebe8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Создание внешних соединений (визуальные инструменты для баз данных)
-По умолчанию [Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) создает внутреннее соединение таблиц. Внутренние соединения исключают строки, не соответствующие строке из другой таблицы. Однако внешние соединения возвращают все строки хотя бы из одной таблицы или представления, упомянутых в предложении FROM, если эти строки удовлетворяют условиям поиска WHERE или HAVING. Если необходимо включить строки данных, которые не имеют совпадений в соединяемой таблице, в результирующий набор, можно создать внешнее соединение.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] По умолчанию [Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) создает внутреннее соединение таблиц. Внутренние соединения исключают строки, не соответствующие строке из другой таблицы. Однако внешние соединения возвращают все строки хотя бы из одной таблицы или представления, упомянутых в предложении FROM, если эти строки удовлетворяют условиям поиска WHERE или HAVING. Если необходимо включить строки данных, которые не имеют совпадений в соединяемой таблице, в результирующий набор, можно создать внешнее соединение.  
   
 При создании внешнего соединения имеет значение порядок, в котором указывают таблицы в инструкции SQL (как показано на панели SQL). Первая таблица становится «левой» таблицей, а вторая — «правой» (Реальный порядок, в котором указываются таблицы на [панели диаграммы](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), несущественен.) При указании левого или правого внешнего соединения указывается порядок, в котором таблицы были добавлены в запрос, и порядок, в котором они появляются в инструкции SQL на [панели SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   

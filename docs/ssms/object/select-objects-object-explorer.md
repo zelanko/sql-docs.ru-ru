@@ -3,8 +3,11 @@ title: "Выбор объектов (обозреватель объектов) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e0cabd01a513714390048fbce62fd91dd2efcaf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-objects-object-explorer"></a>Выбор объектов (обозреватель объектов)
-Используйте диалоговое окно **Выбор объектов** , чтобы добавить объект к списку в другом диалоговом окне. Заголовок диалогового окна и параметры, доступные в нем, зависят от того, каким способом окно было открыто. Отображаются только доступные параметры; например доступны только имена входа, если необходимо выбрать владельца для нового объекта.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте диалоговое окно **Выбор объектов**, чтобы добавить объект к списку в другом диалоговом окне. Заголовок диалогового окна и параметры, доступные в нем, зависят от того, каким способом окно было открыто. Отображаются только доступные параметры; например доступны только имена входа, если необходимо выбрать владельца для нового объекта.  
   
 ## <a name="options"></a>Параметры  
 **Выберите типы объектов**  

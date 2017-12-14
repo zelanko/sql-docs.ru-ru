@@ -2,9 +2,12 @@
 title: "Сводка. Основы работы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b9f0db357c16b9b3b2347fdd1f1922be9e473827
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bfc0fee9e578e04c7011e838fad8336fae015fc9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-9---summary---basic-navigation"></a>Занятие 1–9. Сводка. Основы работы
-Область конструктора среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] может быть настроена в соответствии с предпочтениями пользователя и требованиями работы.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Область конструктора среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] может быть настроена в соответствии с предпочтениями пользователя и требованиями работы.  
   
 Ниже следуют рекомендации по эффективному использованию рабочего пространства среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] .  
   

@@ -24,6 +24,8 @@
 ### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
 ### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+## [7_Развертывание кластера Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md)
+## [8_Создание и настройка групп доступности](sql-server-linux-create-availability-group.md)
 
 # Основные понятия
 ## Установить
@@ -51,6 +53,7 @@
 ### [Использование для управления PowerShell](sql-server-linux-manage-powershell.md)
 ### [Использование доставки журналов](sql-server-linux-use-log-shipping.md)
 ### [Использование DB Mail и оповещений по почте](sql-server-linux-db-mail-sql-agent.md)
+### [Настройка нескольких подсетей для доступности](sql-server-linux-configure-multiple-subnet.md)
 
 ## [анализа](sql-server-linux-migrate-overview.md)
 ### [Экспорт и импорт BACPAC из Windows](sql-server-linux-migrate-ssms.md)
@@ -63,19 +66,20 @@
 ### [Планирование пакетов служб SSIS](sql-server-linux-schedule-ssis-packages.md)
 
 ## [Настройка непрерывности бизнес-процессов](sql-server-linux-business-continuity-dr.md)
-### [Резервное копирование и восстановление](sql-server-linux-backup-and-restore-database.md)
+### [Основы доступности](sql-server-linux-ha-basics.md)
+### [Архивация и восстановление](sql-server-linux-backup-and-restore-database.md)
 #### [Интерфейс виртуальных устройств — Linux](sql-server-linux-backup-vdi-specification.md)
 ### [Экземпляр отказоустойчивого кластера](sql-server-linux-shared-disk-cluster-concepts.md)
-#### [Red Hat Enterprise Linux]()
+#### [Red Hat Enterprise Linux (RHEL)]()
 ##### [Настройка (дополнение HA)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [Работа (дополнение HA)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-#### [SUSE Linux Enterprise Server]()
+#### [SUSE Linux Enterprise Server (SLES)]()
 ##### [Настройка (дополнение HA)](sql-server-linux-shared-disk-cluster-sles-configure.md)
 ### [Группы доступности](sql-server-linux-availability-group-overview.md)
 #### [Обеспечение высокой доступности](sql-server-linux-availability-group-ha.md)
 ##### [Настройка группы доступности](sql-server-linux-availability-group-configure-ha.md)
 ##### [Настройка в RHEL](sql-server-linux-availability-group-cluster-rhel.md)
-##### [Настройка в SUSE](sql-server-linux-availability-group-cluster-sles.md)
+##### [Настройка на SLES](sql-server-linux-availability-group-cluster-sles.md)
 ##### [Настройка в Ubuntu](sql-server-linux-availability-group-cluster-ubuntu.md)
 ##### [Эксплуатация](sql-server-linux-availability-group-failover-ha.md)
 #### [Создание только для чтения и масштабирования]()
@@ -91,8 +95,8 @@
 
 # Примеры
 ## Автоматическая установка
-### [Red Hat Enterprise Linux](sample-unattended-install-redhat.md)
-### [SUSE Linux Enterprise Server](sample-unattended-install-suse.md)
+### [Red Hat Enterprise Linux (RHEL)](sample-unattended-install-redhat.md)
+### [SUSE Linux Enterprise Server (SLES)](sample-unattended-install-suse.md)
 ### [Ubuntu](sample-unattended-install-ubuntu.md)
 
 # Ресурсы

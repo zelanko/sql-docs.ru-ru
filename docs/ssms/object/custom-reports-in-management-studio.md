@@ -3,8 +3,11 @@ title: "Пользовательские отчеты в среде Management S
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d1933b88111092137c15210111d3bafb63f0f381
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Пользовательские отчеты в среде Management Studio
-Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame_md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame_md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
 ## <a name="implementation"></a>Реализация  
 Пользовательские отчеты создаются на языке определения отчетов и хранятся в виде файлов определения отчетов (RDL). RDL определяет сведения о получении данных и макете отчета в формате XML. Язык RDL представляет собой открытую схему. Это дает разработчикам возможность расширять его, добавляя дополнительные атрибуты и элементы. Внутри отчета могут выполняться любые допустимые инструкции [!INCLUDE[tsql](../../includes/tsql_md.md)] .  

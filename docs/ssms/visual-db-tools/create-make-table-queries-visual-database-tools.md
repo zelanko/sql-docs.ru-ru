@@ -3,8 +3,11 @@ title: "Создание запроса на создание таблицы (в
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b7d5fa6a7c13d6a10ecd8d21fbff4981260617eb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3062cf684505e7c67c5b65a8e296ff75deb3610b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Создание запроса на создание таблицы (визуальные инструменты для баз данных)
-При помощи запросов на создание таблицы в новую таблицу можно копировать строки, что может оказаться полезным для создания подмножества данных и копирования содержимого таблиц из одной базы данных в другую. Запрос на создание таблицы похож на запрос на вставку результатов, но создает новую таблицу, в которую затем копируются строки.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При помощи запросов на создание таблицы в новую таблицу можно копировать строки, что может оказаться полезным для создания подмножества данных и копирования содержимого таблиц из одной базы данных в другую. Запрос на создание таблицы похож на запрос на вставку результатов, но создает новую таблицу, в которую затем копируются строки.  
   
 При создании запроса на создание таблицы указывают:  
   

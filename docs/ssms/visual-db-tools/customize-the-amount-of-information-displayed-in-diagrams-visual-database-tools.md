@@ -3,8 +3,11 @@ title: "Настройка объема сведений, отображаемы
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4650285a2b6070bf057f114235550591f557a85c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b4e05f53f40655a5bf269db9022abd9e6e40eb09
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>Настройка объема сведений, отображаемых в диаграммах (визуальные инструменты для баз данных)
-При добавлении таблицы в диаграмму базы данных эта таблица появляется вместе с рядом отображаемых свойств. Количество отображаемых сведений можно задать в меню вариаций или создавать пользовательский набор свойств.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При добавлении таблицы в диаграмму базы данных эта таблица появляется вместе с рядом отображаемых свойств. Количество отображаемых сведений можно задать в меню вариаций или создавать пользовательский набор свойств.  
   
 Возможные варианты:  
   

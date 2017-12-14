@@ -3,8 +3,11 @@ title: "Сортировка строк (визуальные инструмен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fe4cd939bad623ab959f4cab01f1c7bcdcf471f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a044ed67ea4b7ba2eedeafbc4af8fcd1e20e7061
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sort-rows-visual-database-tools"></a>Сортировка строк (визуальные инструменты для баз данных)
-Строки в результатах запроса можно сортировать. То есть можно указать конкретный столбец или набор столбцов, значениями которых определяется порядок строк в результирующем наборе.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Строки в результатах запроса можно сортировать. То есть можно указать конкретный столбец или набор столбцов, значениями которых определяется порядок строк в результирующем наборе.  
   
 > [!NOTE]  
 > Порядок сортировки частично определяется параметрами сортировки столбца. Очередность использования параметров сортировки можно изменить в диалоговом окне [Параметры сортировки](../../ssms/visual-db-tools/collation-dialog-box-visual-database-tools.md).  

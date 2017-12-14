@@ -3,8 +3,11 @@ title: "Использование пользовательских отчето
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-objects
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd56bfad6a216bd631cdd5c532d86913607dc156
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: dd4e8e45cb6002d2ede2a7ac487f9408b13e8685
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Использование пользовательских отчетов совместно со свойствами узлов обозревателя объектов
-Пользовательские отчеты могут выполняться в контексте выбранного узла обозревателя объектов, если они ссылаются на параметры отчета этого узла. Это позволяет пользовательскому отчету использовать текущий контекст, например текущей базы данных либо объекта базы данных или сервера.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Пользовательские отчеты могут выполняться в контексте выбранного узла обозревателя объектов, если они ссылаются на параметры отчета этого узла. Это позволяет пользовательскому отчету использовать текущий контекст, например текущей базы данных либо объекта базы данных или сервера.  
   
 ## <a name="object-explorer-node-report-parameters"></a>Параметры отчета узла обозревателя объектов  
   

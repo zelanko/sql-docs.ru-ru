@@ -3,8 +3,11 @@ title: "Выбор элементов инструментария (страни
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d3b661fc344ca48b1cb1d44a40cec9f9731cafec
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cb904c376444eeaf7ad7cfe217d3d202d4d3e59
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Выбор элементов инструментария (страница «Задачи обслуживания»)
-На этой вкладке диалогового окна **Настройка области элементов** выводится список всех компонентов задачи обслуживания, зарегистрированных на компьютере, и предоставляется возможность изменять компоненты, отображаемые на панели элементов. Диалоговое окно **Настройка области элементов** можно открыть из меню **Сервис** . Для сортировки списка компонентов выберите любой заголовок столбца.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] На этой вкладке диалогового окна **Настройка** области элементов выводится список всех компонентов задачи обслуживания, зарегистрированных на компьютере, и предоставляется возможность изменять компоненты, отображаемые на панели элементов. Диалоговое окно **Настройка области элементов** можно открыть из меню **Сервис** . Для сортировки списка компонентов выберите любой заголовок столбца.  
   
 ## <a name="options"></a>Параметры  
 Вкладка **Задачи обслуживания** содержит указанные ниже столбцы данных.  

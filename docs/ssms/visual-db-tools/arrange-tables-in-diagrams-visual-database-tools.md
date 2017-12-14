@@ -3,8 +3,11 @@ title: "Размещение таблиц в диаграммах (визуал�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c955812c8033d26a37df66bfe596e3d0153d1e08
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6a5505e26e46786a461dbf7d48538c01da6e253a
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="arrange-tables-in-diagrams-visual-database-tools"></a>Размещение таблиц в диаграммах (визуальные инструменты для баз данных)
-Для наглядного представления каждой таблицы и связей между таблицами можно быстро разместить таблицы в диаграмме базы данных.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Для наглядного представления каждой таблицы и связей между таблицами можно быстро разместить таблицы в диаграмме базы данных.  
   
 ### <a name="to-arrange-tables-in-diagrams"></a>Размещение таблиц в диаграммах  
   

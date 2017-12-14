@@ -3,8 +3,11 @@ title: "Открытие конструктора запросов и предс
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a884c10eb96fbab9a9202427643cb3d1262e6477
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9f787061531603aa2adb2a10021c6e4ec234b2b5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>Открытие конструктора запросов и представлений (визуальные инструменты для баз данных)
-Конструктор запросов и представлений открывается при открытии определения представления, показе результатов запроса или представления, при создании или открытии запроса. Он состоит из четырех отдельных панелей.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Конструктор запросов и представлений открывается при открытии определения представления, показе результатов запроса или представления, а также при создании или открытии запроса. Он состоит из четырех отдельных панелей.  
   
 -   Панель диаграмм представляет в графическом виде таблицы или возвращающие табличное значение объекты, выбранные из подключения к данным. Отображаются также все связи соединений между ними.  
   

@@ -3,8 +3,11 @@ title: "Добавление внешнего средства в меню \"С�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abb0f69280d9a841ff8374d4e1792546acb4a453
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 81aeeca6f826ea15266c6049df383b13b39f9a3f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Добавление внешнего средства в меню «Сервис» (среда SQL Server Management Studio)
-Любое приложение [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows или [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] можно запустить из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. В меню **Сервис** можно добавлять и затем запускать внешние приложения.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Любое приложение [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows или [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort_md.md)] можно запустить из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. В меню **Сервис** можно добавлять и затем запускать внешние приложения.  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>Добавление внешнего средства в меню «Сервис»  
   

@@ -3,8 +3,11 @@ title: "Извлечение рефлексивных связей (визуал
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d6f8d9ef3e27ddfb4512ec684157501284e69de5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 56b5d0c6558b802d595eee6cb6e3a2e0acabcbec
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>Извлечение рефлексивных связей (визуальные инструменты для баз данных)
-Чтобы связать столбец или столбцы в таблице с другим столбцом или столбцами в той же таблице, можно создать рефлексивные связи. Например, в таблице `employee` имеется столбец `emp_id` и столбец `mgr_id` . Учитывая то, что менеджеры также являются сотрудниками, можно связать эти столбцы при помощи линии взаимосвязи в таблице. Такие связи гарантируют, что каждый идентификатор менеджера, добавляемый в таблицу, будет соответствовать существующему идентификатору сотрудника.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Чтобы связать столбец или столбцы в таблице с другим столбцом или столбцами в той же таблице, можно создать рефлексивные связи. Например, в таблице `employee` имеется столбец `emp_id` и столбец `mgr_id` . Учитывая то, что менеджеры также являются сотрудниками, можно связать эти столбцы при помощи линии взаимосвязи в таблице. Такие связи гарантируют, что каждый идентификатор менеджера, добавляемый в таблицу, будет соответствовать существующему идентификатору сотрудника.  
   
 Перед тем как создавать связи, необходимо определить для таблицы первичный ключ или ограничение уникальности. Затем необходимо связать первичный ключевой столбец с соответствующим столбцом. После того как связь создана, соответствующий столбец становится внешним ключом таблицы.  
   

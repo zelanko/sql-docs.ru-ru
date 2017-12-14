@@ -15,7 +15,7 @@
 ## [Проверка подлинности Kerberos](configure-analysis-services-for-kerberos-constrained-delegation.md)  
 ## [Регистрация SPN-адреса](spn-registration-for-an-analysis-services-instance.md)  
 ## [Доступ по HTTP-адресу](configure-http-access-to-analysis-services-on-iis-8-0.md)  
-## [Поставщики данных](data-providers-used-for-analysis-services-connections.md)  
+## [Клиентские библиотеки (поставщики данных)](data-providers-used-for-analysis-services-connections.md)  
 ## [Отключение пользователей и сеансов](disconnect-users-and-sessions-on-analysis-services-server.md)  
 # [Мониторинг экземпляра Analysis Services](monitor-an-analysis-services-instance.md)  
 ## [Приложение SQL Server Profiler](use-sql-server-profiler-to-monitor-analysis-services.md)  

@@ -3,8 +3,11 @@ title: "Диалоговое окно \"Выбор папок поиска\" (Vi
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e21d0e8cf2a8906be3699d742b420439181d500
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7bdc3ea0d960d2bb2e4abbe2f16ec2ff2a3db62b
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-search-folders-dialog-box-visual-studio"></a>Диалоговое окно «Выбор папок поиска» (Visual Studio)
-Позволяет собирать, сохранять и исправлять собственные именованные наборы папок поиска, а также задавать порядок поиска в них. Чтобы отобразить это диалоговое окно, нажмите кнопку **Обзор (...)** под раскрывающимся списком **Папка** в окне "Найти в файлах" или "Заменить в файлах", "Найти и заменить".  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Позволяет собирать, сохранять и исправлять собственные именованные наборы папок поиска, а также задавать порядок поиска в них. Чтобы отобразить это диалоговое окно, нажмите кнопку **Обзор (...)** под раскрывающимся списком **Папка** в окне "Найти в файлах" или "Заменить в файлах", "Найти и заменить".  
   
 Добавьте папки в список **Выбранные папки** , введите имя этого набора папок в поле **Набор папок** и нажмите кнопку **Применить** для сохранения. Эту пользовательскую область поиска затем можно выбирать по имени из раскрывающихся списков **Папка** окон **Найти в файлах** и **Заменить в файлах**. Чтобы удалить пользовательский набор папок из списков **Папка** , выберите его имя в поле **Набор папок** и нажмите кнопку **Удалить**.  
   

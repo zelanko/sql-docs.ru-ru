@@ -2,9 +2,12 @@
 title: "Подключение к зарегистрированным серверам и к обозревателю объектов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0077010615a2859b1b76f79fd1302d0f0ec8e7df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f280ca05701c1497843a1dd8caf78e166a1b98f5
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-2---connect-with-registered-servers-and-object-explorer"></a>Занятие 1–2. Подключение к зарегистрированным серверам и к обозревателю объектов
-В этом учебнике показано, как использовать зарегистрированные серверы и обозреватель объектов.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом учебнике показано, как использовать зарегистрированные серверы и обозреватель объектов.  
   
 В этом учебнике используется образец базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . По соображениям безопасности образцы базы данных по умолчанию не устанавливаются. Дополнительные сведения см. в разделе [Установка образцов кода и образцов баз данных SQL Server](http://sqlserversamples.codeplex.com).  
   

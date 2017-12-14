@@ -3,8 +3,11 @@ title: "Диалоговое окно \"Выбор целевой таблицы
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0a85c2a077e8ebfbff90dc5e8eb41f741d8cbb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 122a85ded88a961a7c39945d5db88e1f2b128140
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>Диалоговое окно «Выбор целевой таблицы для вставки» (визуальные инструменты для баз данных)
-Данное диалоговое окно позволяет задать, какую таблицу необходимо обновлять запросом INSERT VALUES. Это диалоговое окно выводится, когда на панели **Диаграмма** отображается несколько таблиц при изменении типа запроса на запрос INSERT VALUES.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Данное диалоговое окно позволяет задать, какую таблицу необходимо обновлять запросом INSERT VALUES. Это диалоговое окно выводится, когда на панели **Диаграмма** отображается несколько таблиц при изменении типа запроса на запрос INSERT VALUES.  
   
 Выберите таблицу, к которой нужно добавить данные, а затем нажмите кнопку **ОК**.  
   

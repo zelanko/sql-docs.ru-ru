@@ -2,9 +2,12 @@
 title: "Справка F1 по зарегистрированным серверам | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-registration
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6862293a076e345534c77995352e5f63daee20b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fd228d9af6de24bc8e57a1ae640af9fa0e613695
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="registered-servers-f1-help"></a>Справка F1 по зарегистрированным серверам
-  Этот раздел содержит справку F1 для компонента "Зарегистрированные серверы" в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Он описывает различные параметры.
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Этот раздел содержит справку F1 для компонента "Зарегистрированные серверы" в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Он описывает различные параметры.
   
  Дополнительные сведения о зарегистрированных серверах и ссылки на то, что с ними делать, см. в разделе [Register Servers](../../tools/sql-server-management-studio/register-servers.md) (Регистрация серверов). 
  

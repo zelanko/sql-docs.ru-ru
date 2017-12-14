@@ -3,8 +3,11 @@ title: "Сохранение запросов (визуальные инстру
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d935d9d79d2c83ef42c8631a0f8e163682f0a3c8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c12821b95b599bbd48ddb60083bd051e930ecfaf
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="save-queries-visual-database-tools"></a>Сохранение запросов (визуальные инструменты для баз данных)
-Сохранение запроса для дальнейшей работы с ним. Обратите внимание, что при выполнении запроса изменения не сохраняются.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Сохраните свой запрос, если планируете работать с ним в дальнейшем. Обратите внимание, что при выполнении запроса изменения не сохраняются.  
   
 ### <a name="to-save-a-query"></a>Сохранение запроса  
   

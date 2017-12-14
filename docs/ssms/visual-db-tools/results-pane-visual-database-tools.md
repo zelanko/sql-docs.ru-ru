@@ -3,8 +3,11 @@ title: "Панель результатов (визуальные инструм
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,14 +29,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d363fd63a32e338558e67ca86d5ed155e48a72c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 72c6d376b55df42961420aacb9d768324196c21f
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="results-pane-visual-database-tools"></a>Панель результатов (визуальные инструменты для баз данных)
-панель результатов отображает результаты самого последнего выполненного запроса SELECT (результаты запросов других типов отображаются в окнах сообщений). Чтобы открыть панель результатов, откройте или создайте запрос или представление или получите данные таблицы. Если панель результатов не отображается по умолчанию, в меню **Конструктор запросов** выберите пункт **Панель**и щелкните **Результаты**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Панель результатов показывает результаты выполнения самого последнего запроса SELECT. (результаты запросов других типов отображаются в окнах сообщений). Чтобы открыть панель результатов, откройте или создайте запрос или представление или получите данные таблицы. Если панель результатов не отображается по умолчанию, в меню **Конструктор запросов** выберите пункт **Панель**и щелкните **Результаты**.  
   
 ## <a name="what-you-can-do-in-the-results-pane"></a>Что можно делать на панели результатов:  
   

@@ -2,9 +2,12 @@
 title: "Создание скрипта таблицы | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 299ee6d6e49a86c36bb14dab28da5b6fe484aa02
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 425971d7320db6e3237729a3de69cd23fa41cc6d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-6---script-a-table"></a>Занятие 2–6. Создание скрипта таблицы
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно создавать скрипты выбора, вставки, обновления и удаления таблиц, а также скрипты создания, изменения, удаления и выполнения хранимых процедур.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] может создавать скрипты выбора, вставки, обновления и удаления таблиц, а также скрипты создания, изменения, удаления и выполнения хранимых процедур.  
   
 Иногда возникает необходимость создать скрипт с несколькими действиями, например: удаление процедуры с последующим созданием другой процедуры, создание таблицы и ее изменение. Чтобы создать комбинированный скрипт, сохраните первый скрипт в окне редактора запросов, а второй — в буфере обмена, чтобы можно было вставить его из буфера обмена в это окно после первого скрипта.  
   

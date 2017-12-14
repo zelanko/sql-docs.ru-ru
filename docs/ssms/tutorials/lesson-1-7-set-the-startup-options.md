@@ -2,9 +2,12 @@
 title: "Настройка параметров запуска | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,13 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2591464744621eaf94e9367ab88152019aaf534c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 11ad1af74c3db5dfcf05e37e0f6fef598435cfde
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-7---set-the-startup-options"></a>Занятие 1–7. Настройка параметров запуска
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] может быть настроена таким образом, чтобы при запуске среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] область конструктора имела нужный вид. Настройка среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] позволяет сэкономить время пользователя.  
   
 ## <a name="configuring-startup-options"></a>Настройка параметров запуска  

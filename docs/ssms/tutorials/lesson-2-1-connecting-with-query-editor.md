@@ -2,9 +2,12 @@
 title: "Подключение к редактору запросов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6714bafa18075219a7da895b05b954f3d67329d2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5a822268755f46da6775150119b6c7fd771838c8
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-1---connecting-with-query-editor"></a>Занятие 2–1. Подключение к редактору запросов
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно писать или изменять код без соединения с сервером. Это может оказаться полезным в том случае, если сервер недоступен или требуется экономить ограниченные ресурсы сервера или сети. Можно заменить соединение с редактором запросов на соединение с новым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не открывая нового окна редактора запросов и не вводя код повторно.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет создавать или редактировать код без соединения с сервером. Это может оказаться полезным в том случае, если сервер недоступен или требуется экономить ограниченные ресурсы сервера или сети. Можно заменить соединение с редактором запросов на соединение с новым экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , не открывая нового окна редактора запросов и не вводя код повторно.  
   
 ## <a name="coding-offline"></a>Программирование в режиме «вне сети»  
   

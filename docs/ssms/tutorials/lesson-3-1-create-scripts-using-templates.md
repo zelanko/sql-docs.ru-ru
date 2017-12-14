@@ -2,9 +2,12 @@
 title: "Создание скриптов на основе шаблонов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fc7fd3fbed4069c45382c404fe1a8b65b81f366f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e042e4083d3e62543cee463e2d8456f162b945aa
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-3-1---create-scripts-using-templates"></a>Занятие 3–1. Создание скриптов на основе шаблонов
-Среда Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предлагает большое число шаблонов скриптов, содержащих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , предназначенные для решения многих типовых задач. Эти шаблоны содержат параметры, значения которых вводятся пользователем, такие как имя таблицы. Используя эти параметры, можно ввести имя только один раз, а затем автоматически скопировать его во все требуемые позиции в скрипте. Можно создавать собственные пользовательские шаблоны для поддержки скриптов, которые приходится писать чаще всего. Кроме того, можно реорганизовать дерево шаблонов, перемещая шаблоны или создавая новые папки для их хранения. В следующей практической работе с помощью шаблона будет создана база данных с указанием шаблона параметров сортировки.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Среда Майкрософт [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предлагает большое число шаблонов скриптов, содержащих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], предназначенные для решения многих типовых задач. Эти шаблоны содержат параметры, значения которых вводятся пользователем, такие как имя таблицы. Используя эти параметры, можно ввести имя только один раз, а затем автоматически скопировать его во все требуемые позиции в скрипте. Можно создавать собственные пользовательские шаблоны для поддержки скриптов, которые приходится писать чаще всего. Кроме того, можно реорганизовать дерево шаблонов, перемещая шаблоны или создавая новые папки для их хранения. В следующей практической работе с помощью шаблона будет создана база данных с указанием шаблона параметров сортировки.  
   
 ## <a name="using-templates"></a>Использование шаблонов  
   

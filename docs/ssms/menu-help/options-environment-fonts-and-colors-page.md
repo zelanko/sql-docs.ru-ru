@@ -3,8 +3,11 @@ title: "Параметры (\"Среда\" — \"Шрифты и цвета\") 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-menu
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 522dd3d6c6428c722ced50d677543ae91ef545b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ae02d8e4c6639555fe79ceca82ca46361648ddee
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="options-environment---fonts-and-colors-page"></a>Параметры ("Среда" — страница "Шрифты и цвета")
-В диалоговом окне **Параметры** можно определить шрифт и цветовую схему для различных элементов пользовательского интерфейса среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. В меню **Сервис** выберите **Параметры** , разверните узел **Среда** и выберите **Шрифты и цвета**.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В диалоговом окне **Параметры** можно определить шрифт и цветовую схему для различных элементов пользовательского интерфейса среды [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]. В меню **Сервис** выберите **Параметры** , разверните узел **Среда** и выберите **Шрифты и цвета**.  
   
 Изменения цветовой схемы не затрагивают сеанс, в котором эти изменения были сделаны. Чтобы оценить изменения цвета, можно открыть другой экземпляр среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] и создать условия, в которых изменения проявятся.  
   

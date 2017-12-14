@@ -3,8 +3,11 @@ title: "Создание решения | Документация Майкро�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08c16387a7b73b26a2c9448623e9a2799c04e476
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8e0e4034f71fa1a6a6c4a9fbad967fd0bc419af9
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="create-a-new-solution"></a>Создание решения
-При создании проекта среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] создает решение, в котором будет содержаться проект. Одновременно можно открыть только одно решение. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] не разрешает добавлять папки внутри проекта. В целях организации работы можно создать несколько проектов.  
+# <a name="create-a-new-solution"></a>Создание нового решения
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Когда вы создаете проект, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] создает решение, которое будет его содержать. Одновременно можно открыть только одно решение. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] не разрешает добавлять папки внутри проекта. В целях организации работы можно создать несколько проектов.  
   
 Для доступа к обозревателю решений выберите в меню **Вид** пункт **Обозреватель решений** .  
   

@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d6049d82cb551c1614f4ea9f76528e53cd29942c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ###  <a name="Recommendations"></a> Рекомендации  
   
--   По мере увеличения размера базы данных полное резервное копирование занимает больше времени и требует больше дискового пространства. При работе с большими базами данных рекомендуется дополнить полную резервную копию серией [разностных резервных копий баз данных] ((../../relational-databases/backup-restore/differential-backups-sql-server.md). Дополнительные сведения см. в разделе [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
+-   По мере увеличения размера базы данных полное резервное копирование занимает больше времени и требует больше дискового пространства. Для больших баз данных может потребоваться, кроме полных резервных копий, создавать также и [разностные резервные копии баз данных](../../relational-databases/backup-restore/differential-backups-sql-server.md). Дополнительные сведения см. в разделе [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md).  
   
 -   Размер полной резервной копии базы данных вы можете вычислить с помощью системной хранимой процедуры [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) .  
   

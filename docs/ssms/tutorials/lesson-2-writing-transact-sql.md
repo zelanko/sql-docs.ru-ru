@@ -2,9 +2,12 @@
 title: "Занятие 2. Создание инструкций на языке Transact-SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fdc78cbd3ca921ba16f4c68ab550f51342a87053
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d093707f1b7a7b9e4a5b40929b796146e8e6fa72
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-2-writing-transact-sql"></a>Занятие 2. Создание инструкций на языке Transact-SQL
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это интегрированная среда разработки, предназначенная для создания запросов многомерных выражений, запросов расширений интеллектуального анализа данных, запросов на языках [!INCLUDE[tsql](../../includes/tsql-md.md)]и XML, а также команд SQLCMD. Учебник демонстрирует использование редактора запросов компонента ядра СУБД для создания скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] — это интегрированная среда разработки, предназначенная для создания [!INCLUDE[tsql](../../includes/tsql-md.md)], запросов многомерных выражений, запросов расширений интеллектуального анализа данных, запросов на языках и XML, а также команд SQLCMD. Учебник демонстрирует использование редактора запросов компонента ядра СУБД для создания скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 >**ПРИМЕЧАНИЕ.** На этом занятии рассматривается использование среды SSMS при работе с инструкциями T-SQL, **а не написание инструкций T-SQL**. Руководство по написанию инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] см. в разделе [Учебник. Составление инструкций Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md).  
   

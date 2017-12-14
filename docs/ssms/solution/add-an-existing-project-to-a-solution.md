@@ -3,8 +3,11 @@ title: "Добавление существующего проекта к реш
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-solutions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 52cfe3e2d40668ae0d912e4cc532f775914852e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 49df8383be7aa92a07429deb886f31e9f62b2755
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Добавление к решению существующий проект
-К существующему решению можно добавить один или несколько проектов. Проект может быть связан более чем с одним решением.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно добавить в существующее решение один или несколько проектов. Проект может быть связан более чем с одним решением.  
   
 ### <a name="to-add-an-existing-project-to-a-solution"></a>Добавление к решению существующего проекта  
   

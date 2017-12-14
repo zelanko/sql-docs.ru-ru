@@ -3,8 +3,11 @@ title: "Работа с макетом диаграммы (визуальные 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 49f415516259af9648253702ebef3a9abcbc2cf1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 88aa97250f97a5de0a977c85201d9f56f4028702
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>Работа с макетом диаграммы (визуальные инструменты для баз данных)
-Внешний вид диаграммы базы данных можно настроить.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Внешний вид диаграммы базы данных можно настроить.  
   
 ## <a name="in-this-section"></a>В этом разделе  
 [Настройка объема сведений, отображаемых в диаграммах (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools.md)  

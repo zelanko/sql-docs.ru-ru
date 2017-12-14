@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cff5b201eee23cad7d5f8a6d6fe7748e4441f400
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 256a8f2456c5d5f728322e80d03629c75d921161
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="deprecated-database-engine-features-in-sql-server-2017"></a>Нерекомендуемые функции ядра СУБД в SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Уровни совместимости|Уровень совместимости базы данных 110 и 120|Запланируйте обновление базы данных и приложения для следующего выпуска.|Уровень совместимости базы данных 110<br /><br /> Уровень совместимости базы данных 120||  
 |XML|Создание встроенных схем XDR|Директива XMLDATA для параметра XML FOR является устаревшей. В режимах RAW и AUTO следует использовать создание XSD-схем. В режиме EXPLICT для директивы XMLDATA замены нет.|XMLDATA|181|  
 |Резервное копирование и восстановление|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE или LOG TO TAPE|235|  
-|Резервное копирование и восстановление|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
+|Резервное копирование и восстановление|sp_addumpdevice '**tape**'|sp_addumpdevice '**disk**'|ADDING TAPE DEVICE|236|  
 |Резервное копирование и восстановление|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |Параметры сортировки|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|Нет. Эти параметры сортировки существуют в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], но их нельзя увидеть с помощью функции fn_helpcollations.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
 |Параметры сортировки|Hindi<br /><br /> Macedonian|Эти параметры сортировки существуют в [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] и более поздних версий, но их нельзя увидеть с помощью функции fn_helpcollations. Вместо них следует использовать Macedonian_FYROM_90 и Indic_General_90.|Hindi<br /><br /> Macedonian|190<br /><br /> 193|  

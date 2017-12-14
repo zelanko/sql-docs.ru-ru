@@ -3,8 +3,11 @@ title: "Открытие конструктора диаграмм баз дан
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: be41a077b7c0f0e484adc67642b31c4c005ca38d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5303f21c4cb7b5e95d8c23b75f7b606eaf299175
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-database-diagram-designer-visual-database-tools"></a>Открытие конструктора диаграмм баз данных (визуальные инструменты для баз данных)
-Конструктор диаграмм баз данных представляет собой визуальное средство разработки и визуализации базы данных. Конструктор баз данных используется для создания, редактирования и удаления таблиц, столбцов, ключей, индексов, связей и ограничений. Для визуализации базы данных можно создать одну или несколько диаграмм, иллюстрирующих некоторые или все имеющиеся в ней таблицы, столбцы, ключи и связи.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Конструктор диаграмм баз данных представляет собой визуальное средство разработки и визуализации базы данных. Конструктор баз данных используется для создания, редактирования и удаления таблиц, столбцов, ключей, индексов, связей и ограничений. Для визуализации базы данных можно создать одну или несколько диаграмм, иллюстрирующих некоторые или все имеющиеся в ней таблицы, столбцы, ключи и связи.  
   
 Конструктор диаграмм баз данных автоматически запускается при открытии новой или уже существующей диаграммы.  
   

@@ -2,9 +2,12 @@
 title: "Выбор схемы сочетаний клавиш | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4ccdd4b9f6b850d4cb88232e52fe00a84241c2db
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f2ec0b8dd3142775006740726340df64994be660
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="lesson-1-6---select-the-keyboard-shortcut-scheme"></a>Занятие 1–6. Выбор схемы сочетаний клавиш
-Вместо стандартной схемы сочетаний клавиш среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно настроить [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] на использование схемы сочетаний клавиш, совместимой с [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Вместо стандартной схемы сочетаний клавиш среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно настроить [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] на использование схемы сочетаний клавиш, совместимой с [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)].  
   
 ## <a name="changing-to-the-includevsdev10longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>Переключение на схему сочетаний клавиш [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]  
   

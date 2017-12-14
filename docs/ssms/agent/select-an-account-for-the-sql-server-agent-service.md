@@ -3,8 +3,11 @@ title: "Выбор учетной записи для службы агента 
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-agent
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c4caa940800f07f91adbb6472b1221c6aa35234e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef5922992da36377ad46ab4f76a3a8fb6b310edb
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Выбор учетной записи для службы агента SQL Server
-Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняется как заданная учетная запись пользователя. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] позволяет выбрать учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] из следующих вариантов:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняется как заданная учетная запись пользователя. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] позволяет выбрать учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] из следующих вариантов:  
   
 -   **Встроенная учетная запись**. Может быть выбрана из списка следующих встроенных учетных записей Windows:  
   
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/09/2017
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>Ограничение 1. Использование неадминистративных учетных записей для администрирования нескольких серверов  
 Прикрепление целевого сервера к главному серверу может завершиться ошибкой, после чего появляется следующее сообщение: "Не удалось выполнить операцию прикрепления".  
   
-Чтобы устранить эту ошибку, перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Дополнительные сведения см. в статье [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6).  
+Чтобы устранить эту ошибку, перезапустите [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] . Дополнительные сведения см. в статье [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/32660a02-e5a1-411a-9e57-7066ca459df6).  
   
 ### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>Ограничение 2. Использование учетной записи Local System для администрирования нескольких серверов  
 Администрирование нескольких серверов поддерживается при выполнении службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] под учетной записью Local System только в том случае, если целевой и главный серверы расположены на одном и том же компьютере. При использовании этой конфигурации, при прикреплении целевого сервера к главному серверу, возвращается следующее сообщение:  
@@ -115,13 +118,13 @@ ms.lasthandoff: 11/09/2017
   
 **Указание профиля электронной почты агента SQL Server**  
   
--   [Практическое руководство. Настройка почты агента SQL Server для использования компонента Database Mail (среда SQL Server Management Studio)](http://msdn.microsoft.com/en-us/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
+-   [Практическое руководство. Настройка почты агента SQL Server для использования компонента Database Mail (среда SQL Server Management Studio)](http://msdn.microsoft.com/4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce)  
   
 > [!NOTE]  
 > Запуск агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] во время старта операционной системы задается с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 ## <a name="see-also"></a>См. также:  
-[Настройка учетных записей служб Windows](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
-[Управление службами с помощью SQL Computer Manager](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
+[Настройка учетных записей служб Windows](http://msdn.microsoft.com/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
+[Управление службами с помощью SQL Computer Manager](http://msdn.microsoft.com/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [Обеспечение безопасности агента SQL Server](../../ssms/agent/implement-sql-server-agent-security.md)  
   

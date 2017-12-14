@@ -3,8 +3,11 @@ title: "Создание новой диаграммы базы данных (в
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: fbffc3ea565ac6ccebcb13a4b5977f825908b541
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9138d33302135de59e1d2e862f31cf16784ae60e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>Создание новой диаграммы базы данных (визуальные инструменты для баз данных)
-Для создания новых диаграмм баз данных можно использовать обозреватель объектов. Диаграммы базы данных графически изображают структуру баз данных. При помощи диаграмм баз данных можно создавать и изменять таблицы, столбцы, связи и ключи. Кроме того, можно изменять индексы и ограничения.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Для создания новых диаграмм баз данных можно использовать обозреватель объектов. Диаграммы базы данных графически изображают структуру баз данных. При помощи диаграмм баз данных можно создавать и изменять таблицы, столбцы, связи и ключи. Кроме того, можно изменять индексы и ограничения.  
   
 ### <a name="to-create-a-new-database-diagram"></a>Для создания новой диаграммы базы данных  
   

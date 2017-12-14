@@ -2,9 +2,12 @@
 title: "Сочетания клавиш среды SQL Server Management Studio | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b42d5ff8c209d4df06abbf8c85b0edee8883a868
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1fc409c7b1028a2e8b34eecc1485bffb0b53c023
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Сочетания клавиш среды SQL Server Management Studio
-  Среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предлагает пользователям две схемы сочетаний клавиш на выбор. По умолчанию используется схема [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , при которой применяются те же сочетания клавиш, что и в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. Среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предлагает схему сочетаний клавиш, аналогичную стандартной схеме из [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Чтобы изменить схему сочетаний клавиш или добавить новые сочетания клавиш, выберите в меню **Сервис** пункт **Параметры**. Выберите предпочтительную клавиатурную схему на вкладке **Среда**страницы **Клавиатура** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] предлагает пользователям две схемы сочетаний клавиш на выбор. По умолчанию используется схема [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] , при которой применяются те же сочетания клавиш, что и в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010. Среда [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] также предлагает схему сочетаний клавиш, аналогичную стандартной схеме из [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]. Чтобы изменить схему сочетаний клавиш или добавить новые сочетания клавиш, выберите в меню **Сервис** пункт **Параметры**. Выберите предпочтительную клавиатурную схему на вкладке **Среда**страницы **Клавиатура** .  
   
 > [!NOTE]  
 >  Чтобы отображались только заголовки, нажмите **Свернуть все** в верхней части этой страницы.  

@@ -3,8 +3,11 @@ title: "Соединение таблиц по нескольким столбц
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6c2a8e7220e89c8abb0b5f44509159b83e3ea7d5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 926380140dc136647cdf4bfba95f825af5966415
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>Соединение таблиц по нескольким столбцам (визуальные инструменты для баз данных)
-Таблицы можно соединять по нескольким столбцам. То есть можно создать запрос, который будет сопоставлять строки из двух таблиц, только если они удовлетворяют нескольким условиям. Если база данных содержит связь, которая сопоставляет несколько столбцов с внешними ключами в одной таблице первичному ключу из нескольких столбцов в другой, эту связь можно использовать для соединения по нескольким столбцам. Дополнительные сведения см. в статье [Автоматическое соединение таблиц (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md).  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Таблицы можно соединять по нескольким столбцам. То есть можно создать запрос, который будет сопоставлять строки из двух таблиц, только если они удовлетворяют нескольким условиям. Если база данных содержит связь, которая сопоставляет несколько столбцов с внешними ключами в одной таблице первичному ключу из нескольких столбцов в другой, эту связь можно использовать для соединения по нескольким столбцам. Дополнительные сведения см. в статье [Автоматическое соединение таблиц (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md).  
   
 Даже если база данных не содержит связь с несколькими внешними ключами, соединение можно создать вручную.  
   

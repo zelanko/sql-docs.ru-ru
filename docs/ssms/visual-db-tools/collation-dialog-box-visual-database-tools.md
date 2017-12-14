@@ -3,8 +3,11 @@ title: "Диалоговое окно \"Параметры сортировки\
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16504f76025571fa7627027ba37267aac6e41a41
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a18cb703b8df4ef7017be7be1fe73d39de603940
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Диалоговое окно «Параметры сортировки» (визуальные инструменты для баз данных)
-Это диалоговое окно позволяет указать параметры сортировки для столбца. Параметры сортировки столбца используются во всех операциях, сравнивающих значение столбца с другим столбцом или значением константы. Он также воздействует на некоторые символьные функции, например SUBSTRING или CHARINDEX. Подробный список воздействий параметров сортировки для столбца см. в документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно позволяет указать параметры сортировки для столбца. Параметры сортировки столбца используются во всех операциях, сравнивающих значение столбца с другим столбцом или значением константы. Он также воздействует на некоторые символьные функции, например SUBSTRING или CHARINDEX. Подробный список воздействий параметров сортировки для столбца см. в документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
   
 Оно отображается:  
   

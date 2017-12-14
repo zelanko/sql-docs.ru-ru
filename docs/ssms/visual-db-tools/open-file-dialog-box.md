@@ -3,8 +3,11 @@ title: "Диалоговое окно \"Открытие файла\" | Доку
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d5f9d1622e694e9b771a353252306318346feae
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 11a990c6668b4b70998cd3e118c01d5d7bcb7722
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="open-file-dialog-box"></a>Диалоговое окно «Открытие файла»
-Используйте диалоговое окно **Открытие файла** для открытия существующего файла. Это диалоговое окно можно также использовать для повторного открытия уже открытого файла с другими параметрами языковой кодировки.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте диалоговое окно **Открытие файла**, чтобы открыть существующий файл с диска. Это диалоговое окно можно также использовать для повторного открытия уже открытого файла с другими параметрами языковой кодировки.  
   
 Для доступа к этому диалоговому окну выберите пункт **Открыть** в меню **Файл** , а затем выберите **Файл**. Это диалоговое окно отображается также при открытии файлов с помощью других элементов интерфейса, например диалогового окна **Внешние средства** . В меню **Файл** выберите команду **Открыть**и пункт **Решение или проект** , чтобы открыть похожее диалоговое окно **Открытие проекта** .  
   

@@ -3,8 +3,11 @@ title: "Создание запросов на вставку результат
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssms-visual-db
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7728baf26863015b323cd3841b0f9dfb898ea897
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ddef4fd36ca72c473b480c31e7cd46c7e710d295
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
-# <a name="create-insert-results-queries-visual-database-tools"></a>Создание запросов на вставку результатов (визуальные инструменты для баз данных)
-Запрос вставки результатов позволяет копировать строки внутри таблицы или из одной таблицы в другую. Например, с помощью запроса вставки результатов можно скопировать сведения о названиях книг некоторого издателя из таблицы `titles` в другую таблицу, которая будет ему доступна. Запрос вставки результатов похож на запрос создания таблицы, но копирует строки в уже существующую таблицу.  
+# <a name="create-insert-results-queries-visual-database-tools"></a>Создание запросов вставки результатов (визуальные инструменты для баз данных)
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Запрос вставки результатов позволяет копировать строки внутри таблицы или из одной таблицы в другую. Например, с помощью запроса вставки результатов можно скопировать сведения о названиях книг некоторого издателя из таблицы `titles` в другую таблицу, которая будет ему доступна. Запрос вставки результатов похож на запрос создания таблицы, но копирует строки в уже существующую таблицу.  
   
 > [!TIP]  
 > Строки можно скопировать из одной таблицы в другую методом вырезания и вставки. Создайте запрос для каждой таблицы и запустите их. Скопируйте нужные строки из одной сетки результатов в другую.  
