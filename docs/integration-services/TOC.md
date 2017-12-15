@@ -73,6 +73,7 @@
 # [Развертывание пакетов](packages/deploy-integration-services-ssis-projects-and-packages.md)
 # [Масштабирование](scale-out/integration-services-ssis-scale-out.md)
 
+# [Каталог и сервер](catalog/integration-services-ssis-server-and-catalog.md)
 # [Обслуживание (для прежних версий)](../integration-services/service/integration-services-service-ssis-service.md)
 # [Безопасность](../integration-services/security/security-overview-integration-services.md)
 # [Производительность](../integration-services/performance/monitor-running-packages-and-other-operations.md)
