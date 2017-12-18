@@ -2,9 +2,12 @@
 title: "Командлет Invoke-Sqlcmd | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: powershell
+ms.service: 
+ms.component: powershell
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3a80c470217ede2ea1eae6ffad6d09cd4bccec8c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7afb1a8a23055df89c0a446e2d4be3255311b5b6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd, командлет
   **Invoke-Sqlcmd** представляет собой командлет [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , предназначенный для выполнения скриптов, которые содержат инструкции определенных языков ([!INCLUDE[tsql](../includes/tsql-md.md)] и XQuery) и команды, поддерживаемые служебной программой **sqlcmd** .  
@@ -114,14 +117,14 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-U|-Username|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|-P|-Password|  
 |Определение переменной|-v|-Variable|  
-|Интервал времени ожидания запроса|-t|-QueryTimeout|  
+|Интервал времени ожидания запроса (в секундах).|-t|-QueryTimeout|  
 |Прекращение выполнения в случае ошибки|-b|-AbortOnError|  
 |Выделенное административное соединение|-A|-DedicatedAdministratorConnection|  
 |Отключение интерактивных команд, скрипта запуска и переменных среды|-X|-DisableCommands|  
 |Отключение подстановки переменных|-X|-DisableVariables|  
 |Минимальная степень серьезности для формирования отчета|-v|-SeverityLevel|  
 |Минимальный уровень ошибки для формирования отчета|-m|-ErrorLevel|  
-|Интервал времени ожидания входа|-l|-ConnectionTimeout|  
+|Интервал времени ожидания входа (в секундах).|-l|-ConnectionTimeout|  
 |Имя узла|-H|-HostName|  
 |Изменение пароля и выход|-Z|-NewPassword|  
 |Входной файл, содержащий запрос|-i|-InputFile|  

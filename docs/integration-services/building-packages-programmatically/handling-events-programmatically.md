@@ -1,5 +1,5 @@
 ---
-title: "Программная обработка событий | Документы Microsoft"
+title: "Программная обработка событий | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,27 +27,26 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 7235703f494bd1fb50e696aef537391ba23d1749
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dadff8ac9d513c998dbe8f019e00e4fd84983344
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="handling-events-programmatically"></a>Программная обработка событий
-  В среде выполнения служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] имеется коллекция событий, возникающих до, во время и после проверки и выполнения пакета. Эти события можно зафиксировать двумя способами. Первый метод является реализацией <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> интерфейса в классе и указание класса в качестве параметра **Execute** и **проверки** методы пакета. Второй метод включает создание объектов <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, которые могут содержать другие объекты служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], например задачи и циклы, выполняемые при возникновении события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. В данном разделе описаны эти два метода и приведены примеры кода, иллюстрирующие их использование.  
+  В среде выполнения служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] имеется коллекция событий, возникающих до, во время и после проверки и выполнения пакета. Эти события можно зафиксировать двумя способами. Первый метод включает реализацию интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> в классе и указание класса в качестве параметра для методов **Execute** и **Validate** пакета. Второй метод включает создание объектов <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, которые могут содержать другие объекты служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], например задачи и циклы, выполняемые при возникновении события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. В данном разделе описаны эти два метода и приведены примеры кода, иллюстрирующие их использование.  
   
 ## <a name="receiving-idtsevents-callbacks"></a>Получение обратных вызовов IDTSEvents  
- Разработчики, создающие и программно выполняющие пакеты, могут получать уведомления о событиях во время проверки и выполнения с помощью интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Это делается путем создания класса, реализующего <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> интерфейс и этот класс как параметр **проверки** и **Execute** методы пакета. Методы класса затем вызываются подсистемой выполнения при возникновении события.  
+ Разработчики, создающие и программно выполняющие пакеты, могут получать уведомления о событиях во время проверки и выполнения с помощью интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Для этого создается класс, в котором реализован интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>, и этот класс указывается в качестве параметра для методов **Validate** и **Execute** пакета. Методы класса затем вызываются подсистемой выполнения при возникновении события.  
   
- Класс <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> — это класс, в котором уже реализован интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Поэтому другой альтернативой прямой реализации <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> является создание производного от <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> класса и переопределение событий, требующих отклика. Затем этот класс указывается как параметр **проверки** и **Execute** методы <xref:Microsoft.SqlServer.Dts.Runtime.Package> для получения обратных вызовов событий.  
+ Класс <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> — это класс, в котором уже реализован интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. Поэтому другой альтернативой прямой реализации <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> является создание производного от <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents> класса и переопределение событий, требующих отклика. Затем этот класс указывается в качестве параметра для методов **Validate** и **Execute** класса <xref:Microsoft.SqlServer.Dts.Runtime.Package> для получения обратных вызовов событий.  
   
- В следующем образце кода показан класс, производный от <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>, переопределяющий метод <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. Затем класс предоставляется как aparameter для **проверки** и **Execute** методы пакета.  
+ В следующем образце кода показан класс, производный от <xref:Microsoft.SqlServer.Dts.Runtime.DefaultEvents>, переопределяющий метод <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnPreExecute%2A>. Затем этот класс указывается в качестве параметра для методов **Validate** и **Execute** пакета.  
   
 ```csharp  
 using System;  
@@ -118,7 +115,7 @@ End Class
 ## <a name="creating-dtseventhandler-objects"></a>Создание объектов DtsEventHandler  
  Подсистема выполнения обеспечивает гибкую и мощную систему обработки событий и уведомления о них с помощью объекта <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Эти объекты позволяют создавать с помощью обработчика событий целые рабочие процессы, выполняющиеся только при возникновении события, которому принадлежит обработчик событий. Объект <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> является контейнером, выполняющимся только при возникновении соответствующего события в родительском объекте. Эта архитектура позволяет создавать изолированные рабочие процессы, выполняющиеся в ответ на возникновение событий в контейнере. Поскольку объекты <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> являются синхронными, выполнение не возобновляется до тех пор, пока не будут возвращены обработчики событий, связанные с событием.  
   
- В следующем примере кода показано, как создать объект <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Код добавляет <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> к коллекции <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> пакета, а затем создает объект <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> для события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> задачи. Задача <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> добавляется к обработчику событий, который выполняется при возникновении события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> для первой задачи <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>. В этом примере предполагается, что для тестирования существует файл с именем «C:\Windows\Temp\DemoFile.txt». При первом запуске образца файл успешно копируется и обработчик событий не вызывается. Во второй раз при выполнении образца, первый <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> не удается скопировать файл (так как значение <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> — **false**), вызывается обработчик события, второй <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> удаляет исходный файл, а пакет сообщает о сбое из-за возникшей ошибки.  
+ В следующем примере кода показано, как создать объект <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Код добавляет <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> к коллекции <xref:Microsoft.SqlServer.Dts.Runtime.Package.Executables%2A> пакета, а затем создает объект <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> для события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> задачи. Задача <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> добавляется к обработчику событий, который выполняется при возникновении события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnError%2A> для первой задачи <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>. В этом примере предполагается, что для тестирования существует файл с именем «C:\Windows\Temp\DemoFile.txt». При первом запуске образца файл успешно копируется и обработчик событий не вызывается. При втором запуске образца первой задаче <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> не удается скопировать файл (так как для <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask.OverwriteDestinationFile%2A> задано значение **false**), вызывается обработчик события, вторая задача <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask> удаляет исходный файл, а пакет сообщает о сбое, так как возникла ошибка.  
   
 ## <a name="example"></a>Пример  
   
@@ -258,8 +255,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Службы Integration Services &#40; Службы SSIS &#41; Обработчики событий](../../integration-services/integration-services-ssis-event-handlers.md)   
- [Добавить обработчик событий в пакет](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Обработчики событий в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Добавление обработчика событий к пакету](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

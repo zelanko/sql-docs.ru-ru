@@ -2,9 +2,12 @@
 title: "Развертывание базы данных с помощью приложения уровня данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9717734b42a35703da2323c6eabac6719203494
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cf70035387f68c17913ba152101cf1417f6e8741
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Развертывание базы данных с помощью приложения уровня данных
-  С помощью мастера **развертывания базы данных в SQL Azure** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью мастера **развертывания базы данных в SQL Azure** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
   
 ##  <a name="BeforeBegin"></a> Перед началом  
  Мастер использует архивный файл приложения уровня данных (DAC) BACPAC для развертывания как данных, так и определений объектов базы данных. Он выполняет операцию экспорта приложения уровня данных из базы данных-источника и импорт приложения уровня данных в место назначения.  

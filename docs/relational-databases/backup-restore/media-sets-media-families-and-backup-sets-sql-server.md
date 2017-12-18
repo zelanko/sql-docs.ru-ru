@@ -2,9 +2,12 @@
 title: "Наборы носителей, семейства носителей и резервные наборы данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/18/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -27,14 +30,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9961dc03ba9e6e98abb63136cfc4accce8caca4a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9ef5b39e2192d0e5814c3b3ab5525eb69330cf51
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)
-  **В настоящем разделе приведена основная терминология, касающаяся носителей резервных копий для резервного копирования и восстановления в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Он предназначен для читателей, впервые знакомящихся с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **В настоящем разделе приведена основная терминология, касающаяся носителей резервных копий для резервного копирования и восстановления в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он предназначен для читателей, впервые знакомящихся с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].** 
   
   В этом разделе приведено описание формата, используемого в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для носителей резервных копий, соответствия между носителями резервных копий и устройствами резервного копирования, организации резервных копий на носителях резервных копий, а также даны некоторые соображения, касающиеся наборов носителей и семейств носителей. Кроме того, в этом разделе описаны шаги инициализации или форматирования носителей резервных копий перед их использованием впервые или использованием для замены старого набора носителей новым набором носителей, а также показано, как перезаписать старые резервные наборы в наборе носителей и как добавить новые резервные наборы к набору носителей.  
   

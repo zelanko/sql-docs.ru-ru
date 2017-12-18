@@ -1,5 +1,5 @@
 ---
-title: "Catalog.add_data_tap_by_guid | Документы Microsoft"
+title: "catalog.add_data_tap_by_guid | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9bd4ecb4a6a419f1965a349d46d16d764dd83708
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: efb6c297b776cd6246f0c6226160afba9302bcdb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,30 +40,30 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @execution_id =] *execution_id*  
- Идентификатор выполнения для выполнения, содержащего пакет. *Execution_id* — **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ Идентификатор выполнения для выполнения, содержащего пакет. Параметр *execution_id* имеет тип **bigint**.  
   
- [ @dataflow_task_guid =] *dataflow_task_guid*  
- Идентификатор задачи потока данных в пакете, который содержит путь потока данных для отвода. *Dataflow_task_guid* —**uniqueidentifier**.  
+ [ @dataflow_task_guid = ] *dataflow_task_guid*  
+ Идентификатор задачи потока данных в пакете, который содержит путь потока данных для отвода. Параметр *dataflow_task_guid* имеет тип **uniqueidentifier**.  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- Строка идентификации для пути потока данных. Путь соединяет два компонента потока данных. **IdentificationString** для пути определяет строку.  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ Строка идентификации для пути потока данных. Путь соединяет два компонента потока данных. Свойство **IdentificationString** для пути определяет строку.  
   
- Чтобы найти строку идентификации, в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] щелкните правой кнопкой мыши путь между двумя компонентами потока данных, а затем нажмите кнопку **свойства**. **IdentificationString** свойство появляется в **свойства** окна.  
+ Чтобы найти строку идентификации, в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] щелкните правой кнопкой мыши путь между двумя компонентами потока данных, а затем выберите пункт **Свойства**. Свойство **IdentificationString** отображается в окне **Свойства**.  
   
- *Dataflow_path_id_string* — **nvarchar(4000)**.  
+ Параметр *dataflow_path_id_string* имеет тип **nvarchar(4000)**.  
   
- [ @data_filename =] *data_filename*  
- Имя файла, в котором хранятся полученные данные. Если задача потока данных выполняется внутри контейнера «цикл по каждому элементу» или «цикл по элементам», то полученные данные для каждого прохода цикла хранятся в отдельных файлах. Каждому файлу добавляется префикс с номером, соответствующим итерации. Файлы отвода данных записываются в папку «*\<папку установки SQL Server >*\130\DTS\\». *Data_filename* — **nvarchar(4000)**.  
+ [ @data_filename = ] *data_filename*  
+ Имя файла, в котором хранятся полученные данные. Если задача потока данных выполняется внутри контейнера «цикл по каждому элементу» или «цикл по элементам», то полученные данные для каждого прохода цикла хранятся в отдельных файлах. Каждому файлу добавляется префикс с номером, соответствующим итерации. Файлы отвода данных записываются в папку "*\<папка установки SQL Server>*\130\DTS\\". Параметр *data_filename* имеет тип **nvarchar(4000)**.  
   
- [ @max_rows =] max_rows  
- Количество строк, полученных при отводе данных. Если это значение не задано, фиксируются все строки. Параметр max_rows имеет **int**.  
+ [ @max_rows = ] max_rows  
+ Количество строк, полученных при отводе данных. Если это значение не задано, фиксируются все строки. Параметр max_rows имеет тип **int**.  
   
- [ @data_tap_id =] *data_tap_id*  
- Идентификатор отвода данных. *Data_tap_id* — **bigint**.  
+ [ @data_tap_id = ] *data_tap_id*  
+ Идентификатор отвода данных. Параметр *data_tap_id* имеет тип **bigint**.  
   
 ## <a name="example"></a>Пример  
- В следующем примере отвод данных создается на пути потока данных, `Paths[SRC DimDCVentor.OLE DB Source Output]`в задаче потока данных `{D978A2E4-E05D-4374-9B05-50178A8817E8}`. Полученные данные хранятся в файле DCVendorOutput.csv.  
+ В следующем примере отвод данных создан в пути потока данных `Paths[SRC DimDCVentor.OLE DB Source Output]`, в задаче потока данных `{D978A2E4-E05D-4374-9B05-50178A8817E8}`. Полученные данные хранятся в файле DCVendorOutput.csv.  
   
 ```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
@@ -75,7 +73,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 ```  
   
 ## <a name="remarks"></a>Замечания  
- Чтобы добавить отводы данных, экземпляр выполнения должен быть создан (значение 1 в **состояние** столбец [catalog.operations &#40; База данных SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)представления). Значения состояния изменяются после запуска выполнения. Выполнение можно создать путем вызова [catalog.create_execution &#40; База данных SSISDB &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+ Чтобы добавить отводы данных, экземпляр выполнения должен быть создан (значение 1 в столбце **status** представления [catalog.operations &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). Значения состояния изменяются после запуска выполнения. Выполнение можно создать путем вызова [catalog.create_execution &#40;база данных SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  Далее приведены замечания по использованию хранимой процедуры add_data_tap_by_guid.  
   
@@ -100,9 +98,9 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
 -   Разрешения MODIFY на экземпляр выполнения  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  В следующем списке описываются условия, приводящие к сбою хранимой процедуры.  
@@ -119,4 +117,3 @@ exec catalog.add_data_tap_by_guid   @execution_id,
  [catalog.add_data_tap](../../integration-services/system-stored-procedures/catalog-add-data-tap.md)  
   
   
-

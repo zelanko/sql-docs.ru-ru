@@ -1,5 +1,5 @@
 ---
-title: "Балансировки нагрузки пакетов на удаленных серверах с помощью агента SQL Server | Документы Microsoft"
+title: "Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - parent packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c6226a4f0e91ac69b8355892d67c721325a1439b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e94e2a9341651198f556022e4cd20cb257b2c6ce
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Пакеты балансировки нагрузки на удаленном сервере с использованием агента SQL Server
   Если нужно загрузить много пакетов, удобно использовать другие доступные серверы. Балансировка нагрузки — это метод использования других серверов для загрузки пакетов, когда пакеты находятся под контролем родительского пакета. В службах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]балансировка нагрузки — это ручная процедура, которая должна быть разработана владельцами пакетов. Балансировка нагрузки не выполняется серверами автоматически. Кроме того, пакеты, выполняемые на удаленных серверах, должны быть полными, а не отдельными задачами из других пакетов.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="illustration-of-load-balancing"></a>Иллюстрация к балансировке нагрузки  
  Следующая диаграмма показывает родительский пакет на сервере. Родительский пакет содержит несколько задач «Выполнение задания агента SQL Server». Каждая задача в родительском пакете вызывает агент SQL Server на удаленном сервере. Удаленные серверы содержат задания агента SQL Server, которые включают шаги, вызывающие пакет на сервере.  
   
- ![Обзор архитектуры распределения нагрузки служб SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "архитектуры распределения нагрузки Обзор служб SSIS")  
+ ![Обзор архитектуры распределения нагрузки в службах SSIS](../../integration-services/packages/media/loadbalancingoverview.gif "Обзор архитектуры распределения нагрузки в службах SSIS")  
   
  Шаги, необходимые для балансировки нагрузки в данной архитектуре, не являются новыми понятиями. Напротив, балансировка нагрузки достигнута благодаря использованию существующих основных понятий и общих объектов служб SSIS в новом качестве.  
   
@@ -110,7 +108,7 @@ ms.lasthandoff: 08/03/2017
 ### <a name="listing-child-packages"></a>Прослушивание дочерних пакетов  
  При развертывании проекта, содержащего родительский пакет и один или несколько дочерних пакетов, на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно просмотреть список дочерних пакетов, выполняемых родительским пакетом. После запуска родительского пакета в **автоматически создается отчет** Обзор [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]для этого пакета. В отчете содержится список дочерних пакетов, выполненных задачей «Выполнение пакета», которая находится в родительском пакете, как показано далее.  
   
- ![Отчет по обзору со списком дочерних пакетов](../../integration-services/packages/media/overviewreport-childpackagelisting.png "отчет по обзору со списком дочерних пакетов")  
+ ![Отчет по обзору со списком дочерних пакетов](../../integration-services/packages/media/overviewreport-childpackagelisting.png "Отчет по обзору со списком дочерних пакетов")  
   
  Сведения о доступе к отчету **Обзор** см. в разделе [Reports for the Integration Services Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).  
   
@@ -125,17 +123,16 @@ ms.lasthandoff: 08/03/2017
 >  Можно использовать задачу "Выполнение SQL", содержащую инструкцию Transact-SQL **sp_start_job N'имя_пакета'**. Дополнительные сведения см. в разделе [sp_start_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md).  
   
 ### <a name="debugging-environment"></a>Среда отладки  
- Во время тестирования родительского пакета запустите в конструкторе среду отладки, выбрав в меню «Отладка» команду «Начать отладку» или нажав клавишу F5. Или можно воспользоваться программой командной строки **dtexec**. Дополнительные сведения см. в разделе [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+ Во время тестирования родительского пакета запустите в конструкторе среду отладки, выбрав в меню «Отладка» команду «Начать отладку» или нажав клавишу F5. Или можно воспользоваться программой командной строки **dtexec**. Дополнительные сведения см. в статье [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
 
 ## <a name="logging-for-load-balanced-packages-on-remote-servers"></a>Ведение журнала для пакетов с балансировкой нагрузки на удаленных серверах
   Для администратора проще управлять журналами для всех дочерних пакетов, выполняющихся на разных серверах, когда все дочерние пакеты используют один регистратор и все они выполняют запись в одно назначение. Одним из способов создания общего файла журнала для всех дочерних пакетов является настройка дочерних пакетов на запись своих событий в регистратор служб SQL Server. Для всех пакетов можно задать использование одной базы данных, одного сервера и одного экземпляра сервера.  
   
  При просмотре журналов администратору достаточно подключиться к одному серверу, чтобы просмотреть файлы журналов для всех дочерних пакетов.  
   
- Сведения о том, как включить ведение журнала в пакете см. в разделе [ведения журналов Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
+ Дополнительные сведения о том, как включить ведение журналов в пакете, см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
 
 ## <a name="related-tasks"></a>Связанные задачи  
  [Пакеты служб из заданий агента SQL Server](../../integration-services/packages/sql-server-agent-jobs-for-packages.md)  
   
   
-

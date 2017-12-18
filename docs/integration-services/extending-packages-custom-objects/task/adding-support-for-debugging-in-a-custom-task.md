@@ -1,5 +1,5 @@
 ---
-title: "Добавление поддержки отладки в пользовательской задаче | Документы Microsoft"
+title: "Добавление поддержки отладки в пользовательскую задачу | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,33 +24,32 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f6e3d95b834bf64cb4dd4201658e0905d3e3ed46
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 90156ac284967ca1446ec7a9e34416208f612b6e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Добавление поддержки отладки в пользовательскую задачу
   Обработчик среды выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] дает возможность приостанавливать пакеты, задачи и другие типы контейнеров во время выполнения при помощи точек останова. Использование точек останова позволяет просматривать и исправлять ошибки, мешающие правильной работе приложения или задач. Архитектура точек останова позволяет оценивать во время выполнения значения объектов в пакете в определенных точках выполнения при приостановке обработки задачи.  
   
  Разработчики пользовательских задач могут использовать эту архитектуру для создания целевых объектов пользовательских точек останова с помощью интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> и его родительского интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> определяет взаимодействие между обработчиком среды выполнения и задачей для создания сайтов или целевых объектов пользовательских точек останова и управления этими сайтами и объектами. Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> предоставляет методы и свойства, вызываемые обработчиком среды выполнения для уведомления задачи о приостановке или возобновлении ее обработки.  
   
- Сайтом или целевым объектом точки останова является точка в выполнении задачи, где обработка может быть приостановлена. Выберите пользователей из доступных точек останова сайтов **задание точек останова** диалоговое окно. Например, дополнительно к параметрам точек останова по умолчанию контейнер «цикл по каждому элементу» предлагает параметр «Прервать в начале каждого повторения цикла».  
+ Сайтом или целевым объектом точки останова является точка в выполнении задачи, где обработка может быть приостановлена. Пользователи выбирают из доступных сайтов точек останова с помощью диалогового окна **Задание точек останова**. Например, дополнительно к параметрам точек останова по умолчанию контейнер «цикл по каждому элементу» предлагает параметр «Прервать в начале каждого повторения цикла».  
   
- Когда во время выполнения задача достигает целевого объекта точки останова, она оценивает целевой объект точки останова для определения, включена ли точка останова. Включение указывает на то, что пользователь хочет остановить выполнение в этой точке останова. Если точка останова включена, задача инициирует событие <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> для обработчика среды выполнения. Механизм среды выполнения реагирует на событие вызовом **Suspend** метод для каждой задачи, которая запущена в пакете. Выполнение задачи возобновляется, когда среда выполнения вызывает **ResumeExecution** метод приостановленной задачи.  
+ Когда во время выполнения задача достигает целевого объекта точки останова, она оценивает целевой объект точки останова для определения, включена ли точка останова. Включение указывает на то, что пользователь хочет остановить выполнение в этой точке останова. Если точка останова включена, задача инициирует событие <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> для обработчика среды выполнения. Обработчик среды выполнения реагирует на событие вызовом метода **Suspend** каждой задачи, которая выполняется в настоящее время в пакете. Выполнение задачи возобновляется, когда среда выполнения вызывает метод **ResumeExecution** приостановленной задачи.  
   
  Задачи, не использующие точек останова, должны тем не менее реализовывать интерфейсы <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> и <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>. Это гарантирует, что задача правильно приостановится, если другие объекты в пакете инициируют события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
 ## <a name="idtsbreakpointsite-interface-and-breakpointmanager"></a>Интерфейс IDTSBreakpointSite и класс BreakpointManager  
- Задачи создают целевые объекты точек останова, вызывая метод <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> класса <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, предоставляя целочисленный идентификатор и строковое описание как параметры. Когда задача достигает точки в коде, которая содержит целевой объект точки останова, она оценивает целевой объект при помощи метода <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A>, чтобы определить, включена ли точка останова. Если **true**, задача уведомляет обработчик среды выполнения, вызывая <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A> событий.  
+ Задачи создают целевые объекты точек останова, вызывая метод <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.CreateBreakpointTarget%2A> класса <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, предоставляя целочисленный идентификатор и строковое описание как параметры. Когда задача достигает точки в коде, которая содержит целевой объект точки останова, она оценивает целевой объект при помощи метода <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager.IsBreakpointTargetEnabled%2A>, чтобы определить, включена ли точка останова. Если возвращается значение**true**, задача уведомляет обработчик среды выполнения, инициируя событие <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
- Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> определяет единственный метод <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>, который вызывается обработчиком среды выполнения во время создания задачи. Этот метод предоставляет в качестве параметра объект <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, который далее используется задачей для создания точек останова и управления ими. Задачи должны хранить <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> локально для использования во время **проверки** и **Execute** методы.  
+ Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> определяет единственный метод <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite.AcceptBreakpointManager%2A>, который вызывается обработчиком среды выполнения во время создания задачи. Этот метод предоставляет в качестве параметра объект <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>, который далее используется задачей для создания точек останова и управления ими. Задачи должны хранить объект <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager> локально для использования во время выполнения методов **Validate** и **Execute**.  
   
  В следующем образце кода демонстрируется создание целевого объекта точки останова <xref:Microsoft.SqlServer.Dts.Runtime.BreakpointManager>. В образце для инициирования события вызывается метод <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents.OnBreakpointHit%2A>.  
   
@@ -97,11 +94,11 @@ End Function
 ```  
   
 ## <a name="idtssuspend-interface"></a>Интерфейс IDTSSuspend  
- Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> определяет методы, вызываемые обработчиком среды выполнения, когда он приостанавливает или возобновляет выполнение задачи. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> Интерфейс реализуется <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> интерфейс и его **Suspend** и **ResumeExecution** методы обычно переопределяются пользовательской задачей. Когда среда выполнения получает **OnBreakpointHit** от задачи событие, он вызывает **Suspend** метод каждой выполняемой задачи, уведомляя задачи о приостановке. Когда клиент возобновляет выполнение, среда выполнения вызывает **ResumeExecution** метод приостановленных задач.  
+ Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> определяет методы, вызываемые обработчиком среды выполнения, когда он приостанавливает или возобновляет выполнение задачи. Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> реализован интерфейсом <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite>, и его методы **Suspend** и **ResumeExecution** обычно переопределяются пользовательской задачей. Если обработчик среды выполнения получает от задачи событие **OnBreakpointHit**, он вызывает метод **Suspend** каждой выполняемой задачи, уведомляя задачи о приостановке. Когда клиент возобновляет выполнение, обработчик среды выполнения вызывает метод **ResumeExecution** приостановленных задач.  
   
- Приостановка и возобновление выполнения задачи подразумевают приостановку и возобновление потока выполнения задачи. В управляемом коде это делается с помощью **ManualResetEvent** класса в **System.Threading** пространства имен платформы .NET Framework.  
+ Приостановка и возобновление выполнения задачи подразумевают приостановку и возобновление потока выполнения задачи. В управляемом коде это выполняется с помощью класса **ManualResetEvent** в пространстве имен **System.Threading** платформы .NET Framework.  
   
- В следующем образце кода демонстрируется приостановка и возобновление выполнения задачи. Обратите внимание, что **Execute** метод отличается от предыдущего примера кода, и поток выполнения приостанавливается при срабатывании точки останова.  
+ В следующем образце кода демонстрируется приостановка и возобновление выполнения задачи. Обратите внимание, что метод **Execute** изменен по сравнению с предыдущим примером образца кода и поток выполнения приостанавливается при срабатывании точки останова.  
   
 ```csharp  
 private ManualResetEvent m_suspended = new ManualResetEvent( true );  
@@ -354,4 +351,3 @@ End Sub
  [Отладка потока управления](../../../integration-services/troubleshooting/debugging-control-flow.md)  
   
   
-

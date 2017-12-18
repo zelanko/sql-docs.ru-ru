@@ -1,5 +1,5 @@
 ---
-title: "Шаг 3: Проверка учебного пакета занятия 3 | Документы Microsoft"
+title: "Шаг 3. Проверка учебного пакета, созданного на занятии 3 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d6477267c95ffd200f70b2c93191dfaf0883a4af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fa344530396b13defc44680a1232a3d6a1c39b42
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Занятие 3-3-Проверка учебного пакета занятия 3
+# <a name="lesson-3-3---testing-the-lesson-3-tutorial-package"></a>Занятие 3–3. Проверка учебного пакета, созданного на занятии 3
 В этой задаче вы выполните пакет Lesson 3.dtsx. После запуска пакета в окне «Журнал событий» отображаются записи, которые заносятся в файл журнала. После завершения выполнения пакета следует проверить, что регистратор сформировал содержимое файла журнала.  
   
 ## <a name="checking-the-package-layout"></a>Проверка макета пакета  
@@ -35,11 +32,11 @@ ms.lasthandoff: 09/26/2017
   
 **Поток управления**  
   
-![Поток в пакете управления](../integration-services/media/task4lesson2control.gif "поток в пакете управления")  
+![Поток управления в пакете](../integration-services/media/task4lesson2control.gif "Поток управления в пакете")  
   
 **Поток данных**  
   
-![Поток данных в пакете](../integration-services/media/task9lesson1data.gif "потока данных в пакете")  
+![Поток данных в пакете](../integration-services/media/task9lesson1data.gif "Поток данных в пакете")  
   
 ### <a name="to-run-the-lesson-4-tutorial-package"></a>Выполнение учебного пакета занятия 4  
   
@@ -60,4 +57,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

@@ -2,9 +2,12 @@
 title: "Устройство резервного копирования (страница \"Содержимое носителя\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c2aeb7c0443f6409e71640c35b1aca5e194abbc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4182c9dd27cc5adb8e1b4608bd47fa5d765e35bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-device-media-contents-page"></a>Устройство резервного копирования (страница «Содержимое носителя»)
-  Используйте диалоговое окно **Устройство резервного копирования** для просмотра сведений о резервной копии. Сюда входят сведения об устройстве, носителе, наборе носителей, а также резервном наборе (наборах) данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте диалоговое окно **Устройство резервного копирования** для просмотра сведений о резервной копии. Сюда входят сведения об устройстве, носителе, наборе носителей, а также резервном наборе (наборах) данных.  
   
  **Использование среды SQL Server Management Studio для просмотра содержимого устройства резервного копирования**  
   

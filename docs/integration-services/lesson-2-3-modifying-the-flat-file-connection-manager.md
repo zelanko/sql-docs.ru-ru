@@ -1,5 +1,5 @@
 ---
-title: "Шаг 3: Изменение диспетчера соединений с неструктурированными файлами | Документы Microsoft"
+title: "Шаг 3. Изменение диспетчера соединений с неструктурированными файлами | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 525557f034199c5e6823c18ab9fdb7c3b505a434
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b0a714de788a94028320999df48fad41c393df37
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Занятие 2-3-изменение диспетчера соединений с неструктурированными файлами
+# <a name="lesson-2-3---modifying-the-flat-file-connection-manager"></a>Занятие 2-3. Изменение диспетчера соединений с неструктурированными файлами
 В этом задании требуется модифицировать диспетчер соединений с неструктурированными файлами, созданный и настроенный на занятии 1. При создании диспетчера соединений неструктурированных файлов он был настроен на статическую загрузку отдельного файла. Чтобы диспетчер соединений с неструктурированными файлами мог последовательно загружать файлы, необходимо изменить свойство ConnectionString диспетчера соединений таким образом, чтобы он принимал пользовательскую переменную `User:varFileName`, содержащую путь к файлу, который должен быть загружен в процессе выполнения.  
   
 Изменив диспетчер соединений таким образом, чтобы для заполнения свойства ConnectionString использовалось значение пользовательской переменной `User::varFileName`, можно добиться того, чтобы диспетчер соединений подключался к различным неструктурированным файлам. При выполнении каждой итерации контейнера «цикл по каждому элементу» будет динамически обновляться переменная `User::varFileName` . Обновление переменной в свою очередь вызовет соединение диспетчера со следующим неструктурированным файлом и обработку следующего набора данных задачей потока данных.  
@@ -55,4 +52,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

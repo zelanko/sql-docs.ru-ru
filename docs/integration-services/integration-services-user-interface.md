@@ -1,5 +1,5 @@
 ---
-title: "В службах Integration Services пользовательский интерфейс | Документы Microsoft"
+title: "Пользовательский интерфейс служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - SSIS, SSIS Designer
 - Integration Services, SSIS Designer
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6f6f682da8a11f99d1d58d85405dd2ff0d526a47
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-user-interface"></a>Пользовательский интерфейс служб Integration Services
   Дополнительно к областям конструктора на вкладках конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] пользовательский интерфейс предоставляет доступ к следующим окнам и диалоговым окнам для добавления возможностей в пакеты и задания настроек объектов пакета.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 |**Цифровая подпись**|Подпишите пакет или удалите подпись из пакета.|В меню **Службы SSIS** щелкните **Цифровая подпись**.<br /><br /> -или-<br /><br /> Щелкните правой кнопкой мыши рабочую область конструирования на вкладке **Поток управления** , а затем выберите **Цифровая подпись**.|  
 |**Установка точек останова**|Включите точки останова в задачах и задайте свойства точек останова.|В рабочей области конструирования на вкладке **Поток управления** щелкните правой кнопкой мыши задачу или контейнер, а затем выберите **Изменить точки останова**. Чтобы установить точку останова в пакете, щелкните правой кнопкой мыши в любом месте рабочей области конструирования вкладки **Поток управления** , а затем выберите **Изменить точки останова**.|  
   
- В окне **Приступая к работе** представлены ссылки на образцы кода, учебники и видеоматериалы. Для добавления ссылок на дополнительные материалы измените файл SamplesSites.xml, который входит в состав текущего выпуска служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Рекомендуется не изменять \<GettingStartedSamples > значение элемента, который указывает RSS URL-адрес канала. Файл расположен в  *\<диска >*: папка \Program Files\Microsoft SQL Server\110\DTS\Binn. На 64-разрядном компьютере, файл находится в  *\<диска >*: \Microsoft SQL Server\110\DTS\Binn папку \Program Files (x86)  
+ В окне **Приступая к работе** представлены ссылки на образцы кода, учебники и видеоматериалы. Для добавления ссылок на дополнительные материалы измените файл SamplesSites.xml, который входит в состав текущего выпуска служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Рекомендуется не изменять значение элемента \<GettingStartedSamples>, указывающее URL-адрес RSS-канала. Этот файл расположен в папке *\<диск>*:\Program Files\Microsoft SQL Server\110\DTS\Binn. В 64-разрядной системе он расположен в папке *\<диск>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn.  
   
  Если файл SamplesSites.xml поврежден, замените текст в нем следующим XML-кодом по умолчанию.  
   
@@ -125,7 +123,6 @@ ms.lasthandoff: 08/03/2017
  Сведения о способах создания пакетов в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [Создание пакетов в SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
 ## <a name="see-also"></a>См. также  
- [Конструктор служб SSIS](../integration-services/ssis-designer.md)  
+ [конструктор служб SSIS](../integration-services/ssis-designer.md)  
   
   
-

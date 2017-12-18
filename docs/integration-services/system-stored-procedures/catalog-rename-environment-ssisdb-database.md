@@ -1,5 +1,5 @@
 ---
-title: "Catalog.rename_environment (база данных SSISDB) | Документы Microsoft"
+title: "catalog.rename_environment (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: c73d7452-31c5-4f4e-afcc-e9eca760c826
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d3ca0f18c9ea11105ebb575d2f5db449f91e4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: fab134694401fa13f2798fcd5a5ef0787dc14f52
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogrenameenvironment-ssisdb-database"></a>catalog.rename_environment (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +37,14 @@ catalog.rename_environment [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name =] *имя_папки*  
- Имя папки, которая содержит среду. *Имя_папки* — **nvarchar(128)**.  
+ [ @folder_name = ] *folder_name*  
+ Имя папки, которая содержит среду. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- Исходное имя среды. *Environment_name* — **nvarchar(128)**.  
+ [ @environment_name = ] *environment_name*  
+ Исходное имя среды. Параметр *environment_name* имеет тип **nvarchar(128)**.  
   
- [ @new_environment_name =] *new_environment_name*  
- Новое имя среды. *New_environment_name* — **nvarchar(128)**.  
+ [ @new_environment_name = ] *new_environment_name*  
+ Новое имя среды. Параметр *new_environment_name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -59,9 +57,9 @@ catalog.rename_environment [ @folder_name = ] folder_name
   
 -   Разрешения MODIFY для среды  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
@@ -77,4 +75,3 @@ catalog.rename_environment [ @folder_name = ] folder_name
 >  Проверка и исполнение пакетов, использующих недействительные ссылки на среду, завершится с ошибкой.  
   
   
-

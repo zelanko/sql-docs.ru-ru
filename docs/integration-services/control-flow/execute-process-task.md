@@ -1,5 +1,5 @@
 ---
-title: "Задача «Выполнение процесса» | Документы Microsoft"
+title: "Задача \"Выполнение процесса\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
 - sql13.dts.designer.executeprocesstask.general.f1
 - sql13.dts.designer.executeprocesstask.process.f1
-helpviewer_keywords:
-- Execute Process task [Integration Services]
+helpviewer_keywords: Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: e9b4a89e32139f359e049f1f9d3e46d5b27696b1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 8beda5fb308ad93d4582bdcf947c1a1a8a9f2f71
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="execute-process-task"></a>Задача «Выполнение процесса»
   Задача «Выполнение процесса» запускает приложение или пакетный файл как часть рабочего процесса пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хотя задача «Выполнение процесса» может использоваться для выполнения любого стандартного приложения, такого как [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] или [!INCLUDE[ofprword](../../includes/ofprword-md.md)], обычно она применяется для запуска бизнес-приложений или командных файлов, работающих с источником данных. Например, задачу «Выполнение процесса» можно использовать для развертывания сжатого текстового файла. Потом пакет сможет использовать текстовый файл в качестве источника данных для потока данных в пакете. Или, например, задача «Выполнение процесса» может использоваться для запуска приложения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , создающего ежедневный отчет о продажах. Затем можно присоединить отчет к задаче «Отправка почты» и разослать отчет по списку распространения.  
@@ -120,15 +117,15 @@ ms.lasthandoff: 08/11/2017
  Введите путь к папке, содержащей исполняемый объект, или нажмите кнопку обзора **(…)** и укажите эту папку.  
   
  **StandardInputVariable**  
- Выберите переменную для ввода данных для процесса, или нажмите кнопку \< **создать переменную...** > для создания новой переменной:  
+ Выберите переменную для ввода данных для этого процесса или нажмите кнопку \<**Создать переменную...**> для создания новой переменной:  
   
  **См. также:** [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
  **StandardOutputVariable**  
- Выберите переменную для получения выходных данных процесса, или нажмите кнопку \< **создать переменную...** > для создания новой переменной.  
+ Выберите переменную для получения выходных данных этого процесса или нажмите кнопку \<**Создать переменную...**> для создания новой переменной.  
   
  **StandardErrorVariable**  
- Выберите переменную для записи выхода ошибок у обработчика, или нажмите кнопку \< **создать переменную...** > для создания новой переменной.  
+ Выберите переменную для получения выходных данных об ошибке этого процессора или нажмите кнопку \<**Создать переменную...**> для создания новой переменной.  
   
  **FailTaskIfReturnCodeIsNotSuccessValue**  
  Укажите, должна ли задача завершаться с ошибкой, если код завершения отличен от кода, указанного в параметре **SuccessValue**.  
@@ -150,4 +147,3 @@ ms.lasthandoff: 08/11/2017
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   
   
-

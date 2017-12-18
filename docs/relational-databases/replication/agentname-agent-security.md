@@ -2,9 +2,12 @@
 title: "Защита агента &lt;Имя_агента&gt; | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 659d4902e802f91b7086ee982798554d7e52c828
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: aa977bc32f0b033032c837c3a8eda36635e8da61
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ltagentnamegt-agent-security"></a>Защита агента &lt;Имя_агента&gt;
-  На странице **\<Безопасность агента <имя_агента>** можно указать учетные записи, от имени которых выполняется агент распространителя (для репликации транзакций или репликации моментальных снимков) или агент слияния (для репликации слиянием), а также создать подключения к компьютерам в топологии репликации. Сведения о разрешениях, требуемых агентами, и об оптимальных методах защиты репликации см. в статьях [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md) и [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]На странице **Безопасность агента \<имя_агента>** можно указать учетные записи, от имени которых выполняется агент распространителя (для репликации транзакций или репликации моментальных снимков) или агент слияния (для репликации слиянием), а также создать подключения к компьютерам в топологии репликации. Сведения о разрешениях, требуемых агентами, и об оптимальных методах защиты репликации см. в статьях [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md) и [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md).  
   
 ## <a name="options"></a>Параметры  
  Нажмите кнопку свойств (**...**) в строке для каждого подписчика, чтобы открыть диалоговое окно **Безопасность агента распространителя** или **Безопасность агента слияния** . Для получения дополнительных сведений о разрешениях, необходимых для учетных записей агентов, нажмите кнопку **Справка** в появившемся диалоговом окне.  

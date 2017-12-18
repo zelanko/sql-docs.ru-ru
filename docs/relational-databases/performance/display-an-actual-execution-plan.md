@@ -2,9 +2,12 @@
 title: "Отображение фактического плана выполнения | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a630e54028bb930453ec50503284fc360c878e3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 88de7b411542d0bbbd4b1aad39c80c02e166b4b1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="display-an-actual-execution-plan"></a>Отображение действительного плана выполнения
-  В этой теме описывается, как создать фактические графические планы выполнения с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Фактические планы выполнения создаются после выполнения запросов или пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Поэтому фактический план выполнения содержит сведения времени выполнения, такие как фактические метрики использования ресурса и предупреждения времени выполнения (если они есть). Создаваемый план выполнения отображает фактический план выполнения запроса, который используется в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для выполнения запросов.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этом разделе описывается, как создать фактические графические планы выполнения с использованием среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Фактические планы выполнения создаются после выполнения запросов или пакетов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Поэтому фактический план выполнения содержит сведения времени выполнения, такие как фактические метрики использования ресурса и предупреждения времени выполнения (если они есть). Создаваемый план выполнения отображает фактический план выполнения запроса, который используется в [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] для выполнения запросов.  
   
  Для использования этой возможности необходимо иметь соответствующие разрешения на выполнение запросов [!INCLUDE[tsql](../../includes/tsql-md.md)] , для которых создается графический план выполнения, и разрешение SHOWPLAN для всех баз данных, на которые ссылается запрос.  
   

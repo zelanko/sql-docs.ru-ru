@@ -1,5 +1,5 @@
 ---
-title: "Определение источника пакетов с помощью цифровых подписей | Документы Microsoft"
+title: "Определение источника пакетов с помощью цифровых подписей | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.digitalsigning.f1
+f1_keywords: sql13.dts.digitalsigning.f1
 helpviewer_keywords:
 - signing packages [Integration Services]
 - certificates [Integration Services]
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 1df41a5be2b49662abec2f44ddc0de07fea87a6e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 43734906c7c48c3747c88c10583a30af097d6706
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Определение источника пакетов с помощью цифровых подписей
   Пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может быть подписан цифровым сертификатом, удостоверяющим его происхождение. После подписи пакета цифровым сертификатом службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проверяют цифровую подпись перед загрузкой пакета. Чтобы службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] проверяли подпись, необходимо задать параметр в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или в программе **dtexec** (dtexec.exe) либо задать необязательное значение реестра.  
@@ -141,7 +138,7 @@ ms.lasthandoff: 08/03/2017
   
      Теперь пакет подписан, но службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо настроить для проверки наличия и корректности цифровой подписи перед загрузкой пакета.  
 
-## <a name="signing_dialog"></a>Справочник цифровой подписи диалоговое окно пользовательского интерфейса
+## <a name="signing_dialog"></a> Справочник по пользовательскому интерфейсу: диалоговое окно "Цифровая подпись"
   С помощью диалогового окна **Цифровая подпись** можно подписать пакет цифровой подписью или удалить подпись. Диалоговое окно **Цифровая подпись** доступно из параметра **Цифровая подпись** в меню **службы SSIS** в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
  Дополнительные сведения см. в статье [Подписание пакета цифровым сертификатом](#cert).  
@@ -155,7 +152,6 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="see-also"></a>См. также:  
  [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md)   
- [Общие сведения о безопасности &#40; службы Integration Services &#41;](../../integration-services/security/security-overview-integration-services.md)  
+ [Общие сведения о безопасности (службы Integration Services)](../../integration-services/security/security-overview-integration-services.md)  
   
   
-

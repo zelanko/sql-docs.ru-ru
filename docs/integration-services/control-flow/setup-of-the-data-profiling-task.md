@@ -1,5 +1,5 @@
 ---
-title: "Настройка задачи \"профилирование данных\" | Документы Microsoft"
+title: "Установка задачи \"Профилирование данных\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling task [Integration Services], configuring
+helpviewer_keywords: Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b6b75462db3e9245644c2ee0f0c667183ea9ace9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="setup-of-the-data-profiling-task"></a>Установка задачи «Профилирование данных»
   Перед просмотром профиля исходных данных необходимо сначала настроить и выполнить задачу «Профилирование данных». Эта задача создается в пакете служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Задача «Профилирование данных» настраивается с помощью редактора задачи «Профилирование данных». Этот редактор позволяет выбрать расположение, в которое будут выводиться профили, в том числе профили, требуемые для вычисления. После настройки задачи запускается пакет, вычисляющий профили данных.  
@@ -111,4 +108,3 @@ ms.lasthandoff: 08/03/2017
  [Средство просмотра профиля данных](../../integration-services/control-flow/data-profile-viewer.md)  
   
   
-

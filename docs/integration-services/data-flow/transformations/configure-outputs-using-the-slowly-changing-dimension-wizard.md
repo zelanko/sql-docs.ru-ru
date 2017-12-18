@@ -1,5 +1,5 @@
 ---
-title: "Настройка выходов при помощи мастера медленно меняющихся измерений | Документы Microsoft"
+title: "Настройка выходов с помощью мастера медленно изменяющихся измерений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - slowly changing dimensions
 - Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
-caps.latest.revision: 43
+caps.latest.revision: "43"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 478b3340eda942efc1cbef8a19a2cb811daf0685
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Настройка выходов при помощи мастера медленно изменяющихся измерений
   Мастер медленно изменяющихся измерений выполняет функции редактора преобразования «Медленно изменяющиеся измерения». Построение и настройка потока данных для данных медленно изменяющегося измерения может оказаться сложной задачей. С помощью мастера медленно изменяющихся измерений легко создавать поток данных для выходов преобразования «Медленно изменяющиеся измерения», руководствуясь шагами по сопоставлению столбцов, выбору столбцов с бизнес-ключами, заданию атрибутов изменения столбцов и настройке поддержки выводимого элемента измерения.  
@@ -82,7 +80,7 @@ ms.lasthandoff: 08/03/2017
   
      На представленной ниже диаграмме показан пример потока данных, поддерживающего изменения атрибутов неизменности, изменяемых атрибутов и атрибутов с предысторией, выводимые элементы, а также изменения совпадающих записей.  
   
-     ![Поток данных из мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "поток данных из мастера медленно изменяющихся измерений")  
+     ![Поток данных из мастера медленно меняющихся измерений](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "Поток данных из мастера медленно меняющихся измерений")  
   
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Обновление выходов медленно изменяющегося измерения  
  Чтобы обновить конфигурацию выходов преобразования «Медленно изменяющиеся измерения», вернитесь в мастер медленно изменяющихся измерений и измените свойства на его страницах. Также преобразование «Медленно изменяющееся измерение» можно обновить с помощью диалогового окна **Расширенный редактор** или программно.  
@@ -91,4 +89,3 @@ ms.lasthandoff: 08/03/2017
  [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   
-

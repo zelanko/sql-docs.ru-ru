@@ -2,9 +2,12 @@
 title: "Поиск свойств документа с помощью списков свойств поиска | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9d409de5e77c8cb684cb74d821bb9b7d6a45eef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: df8aadeeec0588b9ddd851daa97d4f31d493f228
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
-  Ранее содержимое свойств документа нельзя было отличить от содержимого текста документа. Это ограничивало полнотекстовые запросы, позволяя выполнять только поиск во всем документе. Теперь можно настроить полнотекстовый индекс для поддержки поиска по определенным свойствам, например Author и Title, для поддерживаемых типов документов в столбцах двоичных данных **varbinary**, **varbinary(max)** (включая **FILESTREAM**) или **image** . Такая форма поиска называется *поиск свойств*.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Ранее содержимое свойств документа нельзя было отличить от содержимого текста документа. Это ограничивало полнотекстовые запросы, позволяя выполнять только поиск во всем документе. Теперь можно настроить полнотекстовый индекс для поддержки поиска по определенным свойствам, например Author и Title, для поддерживаемых типов документов в столбцах двоичных данных **varbinary**, **varbinary(max)** (включая **FILESTREAM**) или **image** . Такая форма поиска называется *поиск свойств*.  
   
  Связанный [фильтр](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter) определяет возможность поиска свойств в заданном типе документа. Для некоторых типов документов связанный фильтр IFilter извлекает часть или все свойства, определенные для этого типа документа, а также содержимое текста документа. Можно настроить полнотекстовый индекс, чтобы разрешить поиск только в свойствах, которые извлекаются фильтром IFilter во время полнотекстового индексирования. К фильтрам IFilter, извлекающим ряд свойств документа, относятся фильтры IFilter для типов документов Microsoft Office 2007 (DOCX, XLSX, PPTX и др.). С другой стороны, фильтр IFilter XML не возвращает свойства.  
   

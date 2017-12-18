@@ -1,5 +1,5 @@
 ---
-title: "Средства устранения неполадок при выполнении пакета | Документы Microsoft"
+title: "Инструменты устранения неполадок с выполнением пакетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок пакетов после их завершения и развертывания.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **Обеспечивайте целостность данных с помощью транзакций**. Дополнительные сведения см. в разделе [Транзакции служб Integration Services](../../integration-services/integration-services-transactions.md).  
   
--   **Перезапускайте пакеты с точки сбоя, используя контрольные точки**. Дополнительные сведения см. в разделе [Перезапуск пакетов с помощью контрольных точек](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+-   **Перезапускайте пакеты с точки сбоя, используя контрольные точки**. Дополнительные сведения см. в разделе [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>Перехват и обработка ошибок пакетов с помощью обработчиков событий  
  Обработчики событий могут реагировать на многие события, вызванные пакетами и объектами в них.  
@@ -118,4 +116,3 @@ ms.lasthandoff: 09/27/2017
   
 ## <a name="related-content"></a>См. также  
  Запись в блоге [Adding the error column name to an error output](http://go.microsoft.com/fwlink/?LinkId=261546)(Добавление имени столбца с ошибкой к выводу ошибок) на сайте dougbert.com.  
-

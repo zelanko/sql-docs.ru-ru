@@ -2,9 +2,12 @@
 title: "План обслуживания (свойства вложенного плана) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e97a88a9ab7a57a41c6a3b8ac2b6ae2c98736d04
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 2951f131e6579ac0fb5f7ecc831114123c106dbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-plan-subplan-properties"></a>План обслуживания (свойства вложенного плана)
-  Диалоговое окно **План обслуживания (свойства вложенного плана)** используется для указания имени, описания и расписания вложенного плана для плана обслуживания. Чтобы открыть это диалоговое окно, щелкните **Свойства вложенного плана** на вкладке **Создать** плана обслуживания или дважды щелкните вложенный план в сетке конструктора.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **План обслуживания (свойства вложенного плана)** используется для указания имени, описания и расписания вложенного плана для плана обслуживания. Чтобы открыть это диалоговое окно, щелкните **Свойства вложенного плана** на вкладке **Создать** плана обслуживания или дважды щелкните вложенный план в сетке конструктора.  
   
 ## <a name="options"></a>Параметры  
  **Название**  

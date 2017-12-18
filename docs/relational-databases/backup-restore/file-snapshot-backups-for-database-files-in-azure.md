@@ -1,12 +1,13 @@
 ---
 title: "Резервные копии моментальных снимков файлов базы данных в Azure | Документация Майкрософт"
-ms.custom:
-- IAAS
-- SQL2016_New_Updated
+ms.custom: 
 ms.date: 05/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 51364693e9385333392ea96258e547b2c8fbea96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6546a08f4d45f8104a752ed8ba578b3b82f97be9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Резервные копии моментальных снимков файлов для файлов базы данных в Azure
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Функция резервного копирования моментальных снимков файлов в Azure использует моментальные снимки Azure для практически мгновенного создания резервных копий и более быстрого восстановления файлов баз данных, сохраненных с помощью службы хранилища BLOB-объектов. Это дает возможность упростить политики резервного копирования и восстановления. Работа функции показана в [видеоролике, посвященном восстановлению до точки во времени](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). Дополнительные сведения о сохранении файлов базы данных с помощью службы хранилища BLOB-объектов Azure см. в статье [Файлы данных SQL Server в Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Функция резервного копирования моментальных снимков файлов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] использует моментальные снимки Azure для практически мгновенного создания резервных копий и более быстрого восстановления файлов баз данных, сохраненных с помощью службы хранилища BLOB-объектов. Это дает возможность упростить политики резервного копирования и восстановления. Работа функции показана в [видеоролике, посвященном восстановлению до точки во времени](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo). Дополнительные сведения о сохранении файлов базы данных с помощью службы хранилища BLOB-объектов Azure см. в статье [Файлы данных SQL Server в Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md).  
   
  ![Архитектурная диаграмма резервного копирования моментального снимка](../../relational-databases/backup-restore/media/snapshotbackups.PNG "Архитектурная диаграмма резервного копирования моментального снимка")  
   

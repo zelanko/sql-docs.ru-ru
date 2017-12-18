@@ -1,5 +1,5 @@
 ---
-title: "Обратная совместимость служб Reporting Services | Документы Microsoft"
+title: "Обратная совместимость служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/14/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - Integration Services, backward compatibility
 - backward compatibility [Integration Services]
 ms.assetid: bfff5b25-cfe1-449b-8e07-38cd511ac307
-caps.latest.revision: 84
+caps.latest.revision: "84"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b9303874bc5b9fd769063e89caa982f211cca0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 07cf052ddd44b5c5bdfd7a4538dfb940a1866e21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-backward-compatibility"></a>Обратная совместимость служб Reporting Services
   В этом разделе описаны различия между разными версиями служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Здесь рассмотрены функции, которые больше не доступны или запланированы к удалению в следующем выпуске. Кроме того, описываются внесенные в продукт изменения, которые могут вызвать изменения в поведении или привести к неработоспособности существующих приложений, использующих функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -58,4 +56,3 @@ ms.lasthandoff: 08/03/2017
 В этом разделе описаны изменения в работе служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Изменения в работе касаются того, как компоненты работают или взаимодействуют в текущем выпуске служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в сравнении с предыдущими версиями [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 Изменений в поведении для функций служб Integration Services в [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]нет.  
-

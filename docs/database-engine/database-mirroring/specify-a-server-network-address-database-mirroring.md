@@ -2,9 +2,12 @@
 title: "Указание сетевого адреса сервера (зеркальное отображение базы данных) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 933d557bed780358dd9ac24edc244a734a03e7bb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f2563b8b93e4f3f9d4d0387a6cda8804b2f0453e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Указание сетевого адреса сервера (зеркальное отображение базы данных)
-  При настройке сеанса зеркального отображения базы данных для каждого экземпляра сервера необходим сетевой адрес. Он должен однозначно определять экземпляр по адресу и номеру порта, который прослушивается данным экземпляром.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При настройке сеанса зеркального отображения базы данных для каждого экземпляра сервера необходим сетевой адрес. Он должен однозначно определять экземпляр по адресу и номеру порта, который прослушивается данным экземпляром.  
   
  Определение порта в сетевом адресе сервера возможно при наличии конечной точки зеркального отображения базы данных в экземпляре сервера. Дополнительные сведения см. в разделе [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   

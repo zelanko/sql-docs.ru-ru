@@ -2,9 +2,12 @@
 title: "Просмотр сведений и выполнение задач для агентов публикации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5c5ba135563c7a029a5c4de1a9d3e8ae6f58935
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6dbe419ea1a8042a607045d60873794252378406
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-information-and-perform-tasks-for-publication-agents"></a>Просмотр информации и выполнение задач для агентов публикации
-  Монитор репликации содержит вкладку **Агенты** , на которой приведены сведения об агентах, связанных с выбранной публикацией. Агент распределения и агент слияния ассоциированы с подписками. Дополнительные сведения о них вы найдете в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Монитор репликации содержит вкладку **Агенты**, на которой приведены сведения об агентах, связанных с выбранной публикацией. Агент распределения и агент слияния ассоциированы с подписками. Дополнительные сведения о них вы найдете в статье [Просмотр сведений и выполнение задач для агентов, связанных с подпиской (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md).  
   
  На этой вкладке отображаются сведения о следующих агентах:  
   

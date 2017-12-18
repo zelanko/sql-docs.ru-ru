@@ -2,9 +2,12 @@
 title: "Модель безопасности агента репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/07/2015
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c8739960446f19d805de7b716ed2270c64afe3e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b677b08f0643a4e37ca217338187302bae4f1b8e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-agent-security-model"></a>Модель безопасности агента репликации
-  Модель безопасности агента репликации предоставляет возможность точного управления учетными записями, под которыми агенты репликации выполняются и устанавливают соединения: для каждого агента может быть задана своя учетная запись. Дополнительные сведения об определении учетных записей см. в статье [Управление именами входа и паролями в репликации](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Модель безопасности агента репликации предоставляет возможность точного управления учетными записями, с которыми агенты репликации выполняются и устанавливают соединения: для каждого агента может быть задана своя учетная запись. Дополнительные сведения об определении учетных записей см. в статье [Управление именами входа и паролями в репликации](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   
 > [!IMPORTANT]  
 >  Если репликацию настраивает член предопределенной роли сервера **sysadmin** , агенты репликации можно настроить для олицетворения учетной записи агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Это можно сделать, если не задавать имя входа и пароль для агента репликации, однако такой подход не рекомендуется. Вместо этого для обеспечения надежной защиты рекомендуется задать учетную запись для каждого агента с минимальными разрешениями, описанными в подразделе «Разрешения, необходимые для агентов» ниже в этом разделе.  

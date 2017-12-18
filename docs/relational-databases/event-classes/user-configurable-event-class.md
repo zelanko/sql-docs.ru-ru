@@ -2,9 +2,12 @@
 title: "Класс событий User-Configurable | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ff6cce49cb06cf6d102be1cf7c5dc93abff1fc2c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 76c62dfdfecf2aa657d64f6bc6209749ea8bff35
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-configurable-event-class"></a>класс пользовательских событий
-  Используйте категорию событий Пользовательские для наблюдения за пользовательскими событиями. Создайте пользовательские классы событий, чтобы наблюдать за событиями, которые не могут контролироваться системными классами событий в других категориях событий. Например, пользовательское событие может быть создано для наблюдения за ходом работы приложения, которое тестируется. В ходе работы приложения оно может создавать события в предопределенных позициях, позволяя определить текущий этап выполнения приложения.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Используйте категорию событий User-Configurable для наблюдения за пользовательскими событиями. Создайте пользовательские классы событий, чтобы наблюдать за событиями, которые не могут контролироваться системными классами событий в других категориях событий. Например, пользовательское событие может быть создано для наблюдения за ходом работы приложения, которое тестируется. В ходе работы приложения оно может создавать события в предопределенных позициях, позволяя определить текущий этап выполнения приложения.  
   
 ## <a name="user-configurable-event-class-data-columns"></a>Столбцы класса пользовательских событий  
   

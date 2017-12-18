@@ -2,9 +2,12 @@
 title: "Настройка многосетевого компьютера для доступа к SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 153525785a354d9a730bee4fff48d0562a2e48e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 64c02e1d3e2c0304acebd9d8c8c9a60982841c10
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Настройка многосетевого компьютера для доступа к SQL Server
-  Если сервер должен предоставить соединение с двумя или более сетями или подсетями, обычно используется многосетевой компьютер. Часто этот компьютер расположен в пограничной сети (также известной как ДМЗ, демилитаризованная зона или экранированная подсеть). В этом разделе описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Если сервер должен предоставить соединение с двумя или более сетями или подсетями, обычно используется многосетевой компьютер. Часто этот компьютер расположен в пограничной сети (также известной как ДМЗ, демилитаризованная зона или экранированная подсеть). В этом разделе описываются настройки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и брандмауэра Windows в режиме повышенной безопасности для предоставления сетевого подключения экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в многосетевой среде.  
   
 > [!NOTE]  
 >  Многосетевой компьютер имеет несколько сетевых адаптеров или настроен для использования нескольких IP-адресов через один сетевой адаптер. Компьютер с двойной привязкой имеет два сетевых адаптера или настроен для использования двух IP-адресов через один сетевой адаптер.  

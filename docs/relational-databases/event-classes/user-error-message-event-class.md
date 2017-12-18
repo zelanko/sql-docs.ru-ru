@@ -2,9 +2,12 @@
 title: "Класс событий User Error Message | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e0d31b41e2188f4a9eea84f428ed995370e4d4d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 30fd7468f8cfddf8bd614dfdddf270891dcc6f1c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="user-error-message-event-class"></a>User Error Message, класс событий
-  Класс событий User Error Message содержит сообщение об ошибке в том виде, в каком его видит пользователь при возникновении ошибки или исключения. Текст сообщения содержится в поле TextData.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий User Error Message содержит сообщение об ошибке в том виде, в каком его видит пользователь при возникновении ошибки или исключения. Текст сообщения содержится в поле TextData.  
   
 ## <a name="user-error-message-event-class-data-columns"></a>Столбцы данных класса событий User Error Message  
   

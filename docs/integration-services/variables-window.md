@@ -1,5 +1,5 @@
 ---
-title: "Окно «переменные» | Документы Microsoft"
+title: "Окно \"Переменные\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.variables.f1
 - sql13.dts.designer.variableoptionswindow.f1
-helpviewer_keywords:
-- Variables Window dialog box
+helpviewer_keywords: Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="variables-window"></a>Окно переменных
   Окно **Переменные** используется для создания и изменения переменных, определяемых пользователем, и просмотра системных переменных.  
@@ -86,7 +83,7 @@ ms.lasthandoff: 09/26/2017
   
  При присваивании выражения переменной рядом с переменной отображается специальный маркер значка. Этот специальный маркер значка отображается также рядом с диспетчерами соединений и задачами, для которых заданы выражения.  
 
-## <a name="variable-grid-options-dialog-box"></a>Диалоговое окно Параметры сетки переменных
+## <a name="variable-grid-options-dialog-box"></a>Диалоговое окно "Параметры сетки переменных"
  Используйте диалоговое окно **Параметры сетки переменных** для выбора столбцов, которые появятся в окне **Переменные** , и для выбора фильтров, применяемых к списку переменных. Дополнительные сведения о свойствах соответствующей переменной см. в разделе [Переменные в службах Integration Services (SSIS)](../integration-services/integration-services-ssis-variables.md).  
   
 ### <a name="options-for-filter"></a>Параметры фильтрации  
@@ -120,8 +117,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="see-also"></a>См. также  
  [Переменные в службах Integration Services (SSIS)](../integration-services/integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
- [Службы Integration Services &#40; Службы SSIS &#41; Выражения](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Выражения служб Integration Services (SSIS)](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Создание файлов дампа для выполнения пакетов](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

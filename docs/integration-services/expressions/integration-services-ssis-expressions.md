@@ -1,5 +1,5 @@
 ---
-title: "В службах Integration Services (SSIS) выражения | Документы Microsoft"
+title: "Выражения служб Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 988f9993207daeebe6c5aaea0f60d887fe74024c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 14b6c80d59f3f302e2beef26a03d95b2bf6f8294
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-expressions"></a>Выражения служб Integration Services (SSIS)
   Выражение — это сочетание символов (идентификаторов, литералов, функций и операторов), которое дает одно значение данных. Простые выражения могут включать одну константу, переменную или функцию. Чаще встречаются сложные выражения, включающие несколько операторов и функций и ссылающиеся на несколько столбцов и переменных. В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выражения могут использоваться для определения условий в инструкциях CASE, создания и обновления значений в столбцах данных, присвоения значений переменным, обновления или заполнения свойств во время выполнения, определения ограничений в управлении очередностью и указания выражений, используемых контейнером «цикл по элементам».  
@@ -51,7 +49,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Переменные используют выражение для установки значений. Например, GETDATE() присваивает переменной значение, равное текущей дате.  
   
--   Управление очередностью может использовать выражения для указания условий, определяющих, будет ли выполняться задача с ограничением или контейнер пакета. Выражения, используемые в элементах управления очередностью, должны давать значение **true** или **false**. Например, выражение @A > @B сравнивает две переменные, определяемые пользователем, чтобы определить, будет ли выполняться задача с ограничением.  
+-   Управление очередностью может использовать выражения для указания условий, определяющих, будет ли выполняться задача с ограничением или контейнер пакета. Выражения, используемые в элементах управления очередностью, должны давать значение **true** или **false**. Например, выражение @A > @B сравнивает две определяемые пользователем переменные для определения того, будет ли выполняться задача, для которой задано управление.  
   
 -   Контейнер «цикл по элементам» может использовать выражения для создания инструкций инициализации, оценки выражения и приращения счетчика, используемые структурами цикла. Например, выражение @Counter = 1 инициализирует счетчик циклов.  
   
@@ -77,7 +75,6 @@ ms.lasthandoff: 08/03/2017
  Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
 ## <a name="see-also"></a>См. также  
- [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
+ [службы SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

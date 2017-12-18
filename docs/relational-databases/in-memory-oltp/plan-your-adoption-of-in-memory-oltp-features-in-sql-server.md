@@ -1,29 +1,27 @@
 ---
 title: "Планирование применения выполняющейся в памяти OLTP в SQL Server | Документация Майкрософт"
 ms.custom: 
-ms.date: 05/08/2017
+ms.date: 11/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: in-memory-oltp
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine-imoltp
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: d8cfb42dd7bfa261ba364b427075280631d386b9
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Планирование освоения возможностей выполняющейся в памяти OLTP в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -261,126 +259,15 @@ ms.lasthandoff: 09/27/2017
 ## <a name="e-limitations-of-native-procs"></a>Д. Ограничения, связанные со скомпилированными в машинный код процедурами
 
 
-Определенные элементы Transact-SQL не поддерживаются в скомпилированных в машинный код хранимых процедурах.
+Определенные элементы Transact-SQL не поддерживаются в скомпилированных в машинный код модулях T-SQL, включая хранимые процедуры. Дополнительные сведения о поддерживаемых компонентах см.:
 
-Факторы, которые необходимо учесть при переносе скрипта Transact-SQL в скомпилированную в машинный код процедуру, описаны в следующей статье:
+- [Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
+
+Рекомендации по миграции модулей Transact-SQL, в которых используются неподдерживаемые компоненты, в скомпилированные в собственном коде модули см.:
 
 - [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)
 
-
-### <a name="e1-no-case-in-a-native-proc"></a>Д.1. Отсутствие выражения CASE в скомпилированной в машинный код процедуре
-
-Выражение CASE в Transact-SQL невозможно использовать в скомпилированной в машинный код процедуре. Однако существует обходное решение:
-
-- [Реализация выражения CASE в скомпилированной в собственном коде хранимой процедуре](../../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md)
-
-
-### <a name="e2-no-merge-in-a-native-proc"></a>Д.2. Отсутствие выражения MERGE в скомпилированной в машинный код процедуре
-
-
-[Инструкция MERGE](../../t-sql/statements/merge-transact-sql.md) в Transact-SQL похожа на логику *upsert* ("изменить данные, если они существуют, либо вставить, если их еще нет"). Ее невозможно использовать в скомпилированной в машинный код процедуре. Однако схожую с MERGE функциональность можно обеспечить сочетанием инструкций SELECT, UPDATE и INSERT. Пример кода доступен в следующей статье:
-
-- [Реализация функциональности MERGE в скомпилированной в собственном коде хранимой процедуре](../../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)
-
-
-
-### <a name="e3-no-joins-in-update-or-delete-statements-in-a-native-proc"></a>Д.3. Отсутствие соединений в инструкциях UPDATE и DELETE в скомпилированной в машинный код процедуре
-
-Инструкции Transact-SQL в скомпилированной в машинный код процедуре могут обращаться только к оптимизированным для обработки в памяти таблицам. В инструкциях UPDATE и DELETE невозможно соединить какие бы то ни было таблицы. Попытки сделать это в скомпилированной в машинный код процедуре завершатся ошибками с сообщением 12319, которое поясняет следующее:
-
-- Невозможно использовать предложение FROM в инструкции UPDATE.
-- Невозможно указывать таблицу-источник в инструкции DELETE.
-
-Нет таких вложенных запросов, которые помогли бы обойти эту ситуацию. Однако можно использовать переменную оптимизированной для обработки в памяти таблицы, чтобы выполнить соединение в несколько инструкций. Ниже представлены два примера кода:
-
-- Инструкции DELETE...JOIN...: желательно использовать в отношении скомпилированной в машинный код процедуры, однако невозможно.
-- Существует обходное решение, состоящее из ряда инструкций Transact-SQL, позволяющих выполнить удаление и соединение.
-
-
-*Ситуация:* таблица TabProjectEmployee имеет уникальный ключ из двух столбцов: ProjectId и EmployeeId. Каждая строка указывает на назначение сотрудника активному проекту. Когда сотрудник уходит из компании, его необходимо удалить из таблицы TabProjectEmployee.
-
-
-#### <a name="invalid-t-sql-deletejoin"></a>Недопустимая инструкция T-SQL, DELETE...JOIN
-
-
-В скомпилированной в машинный код процедуре невозможно использовать инструкции DELETE...JOIN следующим образом.
-
-
-```tsql
-DELETE pe
-    FROM
-             TabProjectEmployee   AS pe
-        JOIN TabEmployee          AS e
-
-            ON pe.EmployeeId = e.EmployeeId
-    WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-```
-
-
-#### <a name="valid-work-around-manual-deletejoin"></a>Рабочее обходное решение: удаление и соединение вручную
-
-Ниже представлен пример кода для реализации этого обходного пути (в двух частях):
-
-1. Инструкция CREATE TYPE выполняется один раз и задолго до того, как тип в первый раз используется любой реальной табличной переменной.
-
-2. Созданный тип используется в бизнес-процессе. Для начала объявляется табличная переменная типа созданной таблицы.
-
-
-```tsql
-
-CREATE TYPE dbo.type_TableVar_EmployeeId
-    AS TABLE  
-    (
-        EmployeeId   bigint   NOT NULL
-    );
-```
-
-
-Затем используется тип создания таблицы.
-
-
-```tsql
-DECLARE @MyTableVarMo  dbo.type_TableVar_EmployeeId  
-
-INSERT INTO @MyTableVarMo (EmployeeId)
-    SELECT
-            e.EmployeeId
-        FROM
-                 TabProjectEmployee  AS pe
-            JOIN TabEmployee         AS e  ON e.EmployeeId = pe.EmployeeId
-        WHERE
-            e.EmployeeStatus = 'Left-the-Company'
-;
-
-DECLARE @EmployeeId   bigint;
-
-WHILE (1=1)
-BEGIN
-    SET @EmployeeId = NULL;
-
-    SELECT TOP 1 @EmployeeId = v.EmployeeId
-        FROM @MyTableVarMo  AS v;
-
-    IF (NULL = @Employeed) BREAK;
-    
-    DELETE TabProjectEmployee
-        WHERE EmployeeId = @EmployeeId;
-
-    DELETE @MyTableVarMo
-        WHERE EmployeeId = @EmployeeId;
-END;
-```
-
-
-### <a name="e4-query-plan-limitations-for-native-procs"></a>Д.4. Ограничения, связанные с планом запросов для скомпилированных в машинный код процедур
-
-
-Некоторые типы планов запросов недоступны для скомпилированных в машинный код процедур. Многие подробности обсуждаются в следующей статье:
-
-- [Руководство по обработке запросов для таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md)
-
+Помимо ограничений на определенные элементы Transact-SQL, также накладываются некоторые ограничения на операторы запросов, поддерживаемые в скомпилированных в собственном коде модулях T-SQL. Из-за этих ограничений скомпилированные в собственном коде хранимые процедуры не подходят для аналитических запросов, которые обрабатывают большие наборы данных.
 
 #### <a name="no-parallel-processing-in-a-native-proc"></a>В скомпилированных в машинный код процедурах отсутствует параллельная обработка
 
@@ -421,6 +308,5 @@ END;
 ## <a name="related-links"></a>Связанные ссылки
 
 - [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
-
 
 

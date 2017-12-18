@@ -1,5 +1,5 @@
 ---
-title: "Службы Integration Services (SSIS) разработки и средства управления | Документы Microsoft"
+title: "Средства разработки и управления Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,20 +20,19 @@ helpviewer_keywords:
 - SQL Server Integration Services, studio environments
 - tools [Integration Services], SQL Server Management Studio
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-caps.latest.revision: 52
+caps.latest.revision: "52"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
-ms.openlocfilehash: b0b765912f6cd4e6128453918d2a30b3ef1e1a63
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/04/2017
-
+ms.openlocfilehash: 07f4bba6b5a5312d62898f26b1ed6965f72cbec2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-ssis-development-and-management-tools"></a>Разработка Integration Services (SSIS) и средства управления
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]включает две интегрированные среды службами для работы с пакетами.  
+# <a name="integration-services-ssis-development-and-management-tools"></a>Средства разработки и управления Integration Services (SSIS)
+  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] содержат две интегрированные среды для работы с пакетами:  
   
 -   Среда[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] предназначена для разработки пакетов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , необходимых для бизнес-решения. Среда[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] предоставляет проект [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , в котором можно создавать пакеты.  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 10/04/2017
   
 -   Создавать программу развертывания, при помощи которой можно устанавливать пакеты и их зависимости на другие компьютеры.  
   
--   Сохранять копии пакетов для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] базы данных msdb, [!INCLUDE[ssIS](../includes/ssis-md.md)] хранилище пакетов, а в файловой системе.  
+-   Сохранять копии пакетов в базе данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, в хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и в файловой системе.  
   
  Дополнительные сведения о [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/hh272686.aspx).  
   
@@ -69,4 +67,3 @@ ms.lasthandoff: 10/04/2017
 -   Запустите программу выполнения пакетов для создания командной строки, которую можно использовать в программе командной строки **dtexec** (dtexec.exe).  
   
 -   Проводить операции импорта и экспорта пакетов с базой данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, хранилищами пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] и с файловой системой.  
-

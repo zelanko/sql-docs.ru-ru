@@ -2,9 +2,12 @@
 title: "Приостановка и возобновление зеркального отображения базы данных (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 285a9cf5c006787b371411c1eb2e1bd5c07ff050
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d504cd71dc0cfaab100f32ab82ba19ca8b34aeed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Приостановка и возобновление зеркального отображения базы данных (SQL Server)
-  Владелец базы данных может приостанавливать и возобновлять сеанс зеркального отображения базы данных в любое время. Приостановление сохраняет состояние сеанса, при этом приостанавливается зеркальное отображение. Во время пиковых нагрузок приостановление может способствовать повышению производительности основного сервера.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Владелец базы данных может приостанавливать и возобновлять сеанс зеркального отображения базы данных в любое время. Приостановление сохраняет состояние сеанса, при этом приостанавливается зеркальное отображение. Во время пиковых нагрузок приостановление может способствовать повышению производительности основного сервера.  
   
  Когда сеанс приостанавливается, основная база данных остается доступной. Приостановленный сеанс зеркального отображения переходит в состояние SUSPENDED, зеркальная база данных перестает соответствовать основной, что ставит под угрозу сохранность данных в основной базе.  
   

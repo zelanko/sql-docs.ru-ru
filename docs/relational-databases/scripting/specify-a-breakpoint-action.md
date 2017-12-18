@@ -2,9 +2,12 @@
 title: "Указание действия в точке останова | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 05021a400801a1cae9edbd5e5f9443ff3bd89a63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a4f2df0116147c4c4093762e91274d01dfe1610c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-a-breakpoint-action"></a>Задание действия в точке останова
-  Действие точки останова **При попадании** задает пользовательское действие, которое отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняет для точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Действие точки останова **При попадании** задает настраиваемую задачу, которую отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] выполняет для точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.  
   
 ##  <a name="BKMK_ActionConsiderations"></a> Обзор действий  
  Действие для точки останова по умолчанию — прекращение выполнения, если достигнуто число попаданий и удовлетворяется условие для точки останова. А действие **При попадании** в отладчике [!INCLUDE[tsql](../../includes/tsql-md.md)] , напротив, главным образом используется для вывода информации в окне отладчика **Вывод** в виде сообщения.  

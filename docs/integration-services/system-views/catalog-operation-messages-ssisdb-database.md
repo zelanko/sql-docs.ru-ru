@@ -1,5 +1,5 @@
 ---
-title: "Catalog.operation_messages (база данных SSISDB) | Документы Microsoft"
+title: "catalog.operation_messages (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 235e9896cbf075bdc26e3df120b23091b8e82d6d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,18 +35,18 @@ ms.lasthandoff: 09/26/2017
 |-----------------|---------------|-----------------|  
 |operation_message_id|**bigint**|Уникальный идентификатор сообщения.|  
 |operation_id|**bigint**|Уникальный идентификатор операции.|  
-|message_time|**DateTimeOffset(7)**|Время создания сообщения.|  
+|message_time|**datetimeoffset(7)**|Время создания сообщения.|  
 |message_type|**smallint**|Тип отображаемого сообщения.|  
 |message_source_type|**smallint**|Идентификатор типа источника сообщения.|  
 |message|**nvarchar(max)**|Текст сообщения.|  
-|extended_info_id|**bigint**|Идентификатор дополнительных сведений, которые относятся к сообщению операции найден в [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md) представления.|  
+|extended_info_id|**bigint**|Идентификатор дополнительных сведений, которые относятся к сообщению об операции и находятся в представлении [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
 ## <a name="remarks"></a>Замечания  
  В этом представлении отображается по одной строке для каждого из сообщений, которые внесены в журнал во время выполнения операции в каталоге. Сообщения могут формироваться сервером, процессом выполнения пакета или подсистемой выполнения.  
   
  В этом представлении отображаются следующие типы сообщений:  
   
-|**message_type** значение|Description|  
+|Значение **message_type**|Description|  
 |-----------------------------|-----------------|  
 |-1|Неизвестно|  
 |120|Ошибка|  
@@ -84,12 +82,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Разрешение READ по отношению к операции  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 > [!NOTE]  
 >  Наличие разрешения на выполнение операции на сервере подразумевает наличие разрешения на просмотр сведений об этой операции. Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

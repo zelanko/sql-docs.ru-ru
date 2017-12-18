@@ -2,9 +2,12 @@
 title: "Разностные резервные копии (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: eba06fb9a5537477a0b0ed5ef143ac33f9bd2867
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 127eed1b2970254accdfc83a795e3b0a66d9f08a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="differential-backups-sql-server"></a>Разностные резервные копии (SQL Server)
-  В данной теме рассматривается резервное копирование и восстановление любых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе рассматривается резервное копирование и восстановление любых баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Разностное резервное копирование основано на самой последней предыдущей полной резервной копии данных. В разностной резервной копии сохраняются только те изменения, которые были произведены с момента создания последней полной резервной копии. Полная резервная копия, на которой основано разностное резервное копирование, известна также как *основа* разностной резервной копии. Полные резервные копии, за исключением резервных копий только для копирования, могут служить базой для последовательности разностных резервных копий, включая резервные копии баз данных, частичные резервные копии и резервные копии файлов. Базовая разностная резервная копия для файла может содержаться в полной резервной копии, в резервной копии файлов или частичной резервной копии.  
   

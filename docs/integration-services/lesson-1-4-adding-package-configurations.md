@@ -1,5 +1,5 @@
 ---
-title: "Шаг 4: Добавление конфигураций пакетов | Документы Microsoft"
+title: "Шаг 4. Добавление конфигураций пакетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 9e708a39e926908ff542a5137517f51a5e200009
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 65f39cdf199ebe30eccc4d3ae11f5332b18ae532
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-4---adding-package-configurations"></a>Урок 1-4 - Добавление конфигураций пакетов
+# <a name="lesson-1-4---adding-package-configurations"></a>Занятие 1–4. Добавление конфигураций пакетов
 В этой задаче необходимо добавить конфигурацию каждому пакету. Конфигурации позволяют обновлять значения свойств и объектов пакетов во время выполнения.  
   
-Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют различные типы конфигурации. Конфигурации можно сохранять в переменных среды, в записях реестра, пользовательских переменных, таблицах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и XML-файлах. Чтобы обеспечить дополнительную гибкость, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поддерживают косвенную конфигурацию. Это подразумевает использование переменной среды для указания расположения конфигурации, которая, в свою очередь, указывает фактические значения. Для пакетов проекта из учебника по развертыванию используется сочетание XML-файлов конфигурации и косвенная конфигурация. В XML-файле конфигурации могут содержаться параметры конфигурации для различных свойств, а когда возможно, и для различных пакетов. В данном учебнике для каждого пакета используется отдельный файл конфигурации.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют различные типы конфигурации. Конфигурации можно сохранять в переменных среды, в записях реестра, пользовательских переменных, таблицах [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и XML-файлах. Чтобы обеспечить дополнительную гибкость, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] поддерживают косвенную конфигурацию. Это подразумевает использование переменной среды для указания расположения конфигурации, которая, в свою очередь, указывает фактические значения. Для пакетов проекта из учебника по развертыванию используется сочетание XML-файлов конфигурации и косвенная конфигурация. В XML-файле конфигурации могут содержаться параметры конфигурации для различных свойств, а когда возможно, и для различных пакетов. В данном учебнике для каждого пакета используется отдельный файл конфигурации.  
   
 В файлах конфигурации часто содержатся конфиденциальные данные, такие как строки соединения. Поэтому необходимо использовать список управления доступом (ACL), чтобы ограничить доступ к месту или папке, где хранятся эти файлы, и предоставить доступ только пользователям или учетным записям, обладающим разрешением на выполнение пакетов. Дополнительные сведения см. в разделе [Доступ к файлам, используемым пакетами](../integration-services/security/security-overview-integration-services.md#files).  
   
@@ -38,7 +35,7 @@ ms.lasthandoff: 08/03/2017
   
 Будут созданы два файла конфигурации, DataTransferConfig.dtsConfig и LoadXMLData.dtsConfig. Эти файлы содержат пары «имя-значение», обновляющие в пакетах свойства, которые указывают расположение используемых пакетом файлов данных и журналов. Позже, на одном из этапов процесса развертывания, потребуется обновить значения в файлах конфигурации, чтобы отразить новое место хранения файлов на целевом компьютере.  
   
-Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] распознают, что файлы DataTransferConfig.dtsConfig и LoadXMLData.dtsConfig представляют собой зависимости пакетов DataTransfer и LoadXMLData, и на следующем занятии при создании комплекта развертывания в них автоматически будут содержаться эти файлы конфигурации.  
+[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] распознают, что файлы DataTransferConfig.dtsConfig и LoadXMLData.dtsConfig представляют собой зависимости пакетов DataTransfer и LoadXMLData, и на следующем занятии при создании комплекта развертывания в них автоматически будут содержаться эти файлы конфигурации.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>Создание косвенной конфигурации для пакета DataTransfer  
   
@@ -145,4 +142,3 @@ ms.lasthandoff: 08/03/2017
 [Конфигурации пакетов](../integration-services/packages/package-configurations.md)  
 [Создание конфигурации пакетов](../integration-services/packages/create-package-configurations.md)  
 [Доступ к файлам, используемым пакетами](../integration-services/security/security-overview-integration-services.md#files)  
-

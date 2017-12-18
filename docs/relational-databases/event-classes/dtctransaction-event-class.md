@@ -2,9 +2,12 @@
 title: "Класс событий DTCTransaction | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1141977cd68380ba94848a510a21ccf540bf8889
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 87a52c7d2055b583cfdbf8eda47021e58a1de23b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="dtctransaction-event-class"></a>DTCTransaction, класс событий
-  Используйте класс событий **DTCTransaction** для контроля состояния транзакций компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , координируемых с помощью координатора распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Сюда входят транзакции, задействующие две или более баз данных на одном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], или распределенные транзакции, задействующие несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Используйте класс событий **DTCTransaction** для контроля состояния транзакций [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], координируемых с помощью координатора распределенных транзакций [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Сюда входят транзакции, задействующие две или более баз данных на одном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], или распределенные транзакции, задействующие несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="dtctransaction-event-class-data-columns"></a>Столбцы данных класса событий DTCTransaction  
   

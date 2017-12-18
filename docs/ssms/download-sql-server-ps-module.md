@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 16ca0d08413ba75b7603596e8e4c5340715cb1a3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7f6ab758ecd32d4d9bdb39d9157cbba9b38e73ba
+ms.sourcegitcommit: b0c223ba0f78af5eb76948e68e2d1aab2e7b80c1
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/16/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>Загрузка модуля PowerShell (SQL Server)
 Модуль SQL Server PowerShell теперь поставляется через коллекцию PowerShell как часть выпуска SQL Server Management Studio 17.0.  В пакет установки SSMS этот модуль больше не входит. Чтобы использовать PowerShell с SSMS 17.0 и более поздних версий, необходимо дополнительно установить на компьютер модуль SQL Server.
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/09/2017
 
 > Install-Module -Name SqlServer -AllowClobber
 
-Если запуск от имени администратора невозможен либо для установки только для текущего пользователя:
+Если запуск от имени администратора невозможен либо для установки только для текущего пользователя
 
 > Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
 

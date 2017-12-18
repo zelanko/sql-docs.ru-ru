@@ -2,9 +2,12 @@
 title: "Сжатие резервных копий (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 817ca0481f0629aac260c79a2ada21a33e54772c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d6d49cc4da4ae5b188622a0e03c4d80ea446ff5a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-compression-sql-server"></a>Сжатие резервных копий (SQL Server)
-  В этом разделе описывается сжатие резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в том числе ограничения, влияние сжатия резервных копий на производительность, настройка конфигурации сжатия резервных копий и коэффициент сжатия.  Сжатие резервной копии поддерживается в следующих выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Enterprise, Standard и Developer.  Сжатую резервную копию можно восстановить в любом выпуске [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздней версии. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается сжатие резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в том числе ограничения, влияние сжатия резервных копий на производительность, настройка конфигурации сжатия резервных копий и коэффициент сжатия.  Сжатие резервной копии поддерживается в следующих выпусках [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] : Enterprise, Standard и Developer.  Сжатую резервную копию можно восстановить в любом выпуске [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздней версии. 
  
   
 ##  <a name="Benefits"></a> Преимущества  

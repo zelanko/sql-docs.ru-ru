@@ -2,9 +2,12 @@
 title: "Окно \"Вывод\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e68c1da086ab3fdc2cc1885939d84687887bc99b
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 234b8119ae9d1ed11d67a537cd4eab1a56bd7854
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---output-window"></a>Отладчик Transact-SQL, окно вывода
-  В этом окне отображается сообщение о состоянии для различных функциональных возможностей в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Выходные данные доставляются в специальные панели окна **Вывод** из отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] , компонентов внешних средств или команд, выполняемых в **Окне команд**отладчика. Также доступны выходные данные внешних средств, таких как BAT и COM-файлы, обычно отображаемые в окне командной строки.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом окне отображаются сообщения о состоянии для различных функциональных возможностей в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Выходные данные доставляются в специальные панели окна **Вывод** из отладчика [!INCLUDE[tsql](../../includes/tsql-md.md)] , компонентов внешних средств или команд, выполняемых в **Окне команд**отладчика. Также доступны выходные данные внешних средств, таких как BAT и COM-файлы, обычно отображаемые в окне командной строки.  
   
  **Получение доступа к окну «Вывод»**  
   

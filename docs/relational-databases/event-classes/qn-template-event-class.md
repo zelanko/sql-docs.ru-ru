@@ -2,9 +2,12 @@
 title: "Класс событий QN:Template | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c8cb69f8146567bb93fd1892d165422b78a9bea
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6351cab3f6b1316f1e7128b593f19ee421230d2e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="qntemplate-event-class"></a>Класс событий QN: Template
-  Событие QN:Template возвращает данные о внутреннем использовании шаблонов запросов. Шаблоны запросов представляют собой механизм, который компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] применяет для рассылки определений запроса, о котором будут распространяться уведомления. Эти шаблоны создаются одновременно с таблицами параметров. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает событие этого типа, когда шаблон запроса создается, применяется или разрушается.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Событие QN:Template возвращает данные о внутреннем использовании шаблонов запросов. Шаблоны запросов представляют собой механизм, который компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] применяет для рассылки определений запроса, о котором будут распространяться уведомления. Эти шаблоны создаются одновременно с таблицами параметров. Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает событие этого типа, когда шаблон запроса создается, применяется или разрушается.  
   
 ## <a name="qntemplate-event-class-data-columns"></a>Столбцы данных класса событий QN:Template  
   

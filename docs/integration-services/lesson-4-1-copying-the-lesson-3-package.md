@@ -1,5 +1,5 @@
 ---
-title: "Шаг 1: Копирование пакета занятия 3 | Документы Microsoft"
+title: "Шаг 1. Копирование пакета, созданного на занятии 3 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 0d053786-5203-43f3-a613-27a8dd2bc44a
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8c578fc6154a2a78e223bc1a920669228776e689
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 435147a234c6d6ddc6d1efc09e5b02de4e9e5e4f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Занятие 4-1-копирование пакета занятия 3
+# <a name="lesson-4-1---copying-the-lesson-3-package"></a>Занятие 4–1. Копирование пакета, созданного на занятии 3
 В этой задаче будет создана копия пакета Lesson 3.dtsx, созданного на занятии 3. Если вы не прошли занятие 3, можно добавить пакет задания 3, прилагаемый к учебнику по проекту, скопировать его и работать с копией. Полученная копия впоследствии будет использоваться на протяжении всего занятия 4.  
   
 ### <a name="to-create-the-lesson-4-package"></a>Создание пакета занятия 4  
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Этап 2. Создание поврежденного файла](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Источник SAP BW | Документы Microsoft"
+title: "Источник SAP BW | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 749afb64-3567-4dc9-8431-783d650c25db
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe41cbbd7a58fe50e6dbfaa2c85b9f5f22cea0b5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e7a2f3ea58e0237ce5e037306223c6231fd12fd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sap-bw-source"></a>Источник SAP BW
   Источник SAP BW — это компонент источника Connector 1.1 для SAP BW [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Таким образом, источник SAP BW извлекает данные из системы SAP Netweaver BW версии 7 и делает их доступными для потока данных в пакете [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -127,13 +125,13 @@ ms.lasthandoff: 08/03/2017
 ### <a name="using-the-ssis-designer-to-configure-the-source"></a>Использование конструктора служб SSIS для настройки источника  
  Дополнительные сведения о свойствах источника SAP BW, которые можно задать в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в одном из последующих разделов.  
   
--   [Редактор источников SAP BW &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Редактор источника SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Редактор источников SAP BW &#40; Страница «столбцы» &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Редактор источника SAP BW (страница "Столбцы")](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Редактор источников SAP BW &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Редактор источника SAP BW (страница "Вывод ошибок")](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Редактор источников SAP BW &#40; Страница "Дополнительно" &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Редактор источника SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
  При настройке источника SAP BW можно также использовать другие диалоговые окна для поиска объектов SAP Netweaver BW и предварительного просмотра исходных данных. Дополнительные сведения об этих диалоговых окнах см. в следующих разделах.  
   
@@ -149,4 +147,3 @@ ms.lasthandoff: 08/03/2017
  [Компоненты Microsoft Connector для SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

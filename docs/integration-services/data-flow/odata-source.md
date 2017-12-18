@@ -1,5 +1,5 @@
 ---
-title: "Источник OData | Документы Microsoft"
+title: "Источник OData | Документы Майкрософт"
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -8,8 +8,7 @@ ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,17 +17,16 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 1e0ef2b7cca9509a58aeadca3903e8aec3b7b9b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/23/2017
-
+ms.openlocfilehash: 653b48d9148d840290911baed697138d07a92a91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="odata-source"></a>Источник OData
 Компонент источника OData используется в пакете служб SSIS для получения данных от служб OData. Этот компонент поддерживает протоколы OData версии 3 и 4.  
@@ -37,19 +35,19 @@ ms.lasthandoff: 08/23/2017
   
 -   Для протокола OData версии 4 компонент поддерживает формат данных JSON.  
 
-Источник OData поддерживает следующие источники данных.
--   Microsoft Dynamics CRM Online и Microsoft Dynamics AX в интерактивном режиме
--   Списки SharePoint. Чтобы увидеть все списки на сервере SharePoint, используйте следующий URL-адрес: http://\<сервера > / _vti_bin/ListData.svc. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
+Источник OData поддерживает следующие источники данных:
+-   Microsoft Dynamics AX Online и Microsoft Dynamics CRM Online.
+-   Списки SharePoint. Просмотреть все списки на сервере SharePoint можно по следующему URL-адресу: http://\<сервер>/_vti_bin/ListData.svc. Дополнительные сведения о соглашениях об URL-адресах SharePoint см. в разделе [Интерфейс REST SharePoint Foundation](http://msdn.microsoft.com/library/ff521587.aspx).
   
-## <a name="odata-format-and-performance"></a>Формат OData и производительности
- Большинство служб OData можно возвращать результаты в различных форматах. Можно указать формат результирующего набора с помощью `$format` параметра запроса. Такие форматы, как JSON и JSON Light, более эффективны, чем ATOM или XML, и способны обеспечить более высокую производительность при передаче больших объемов данных. В следующей таблице отображаются результаты типовых тестов. Как видно, прирост производительности составил 30–53 % при переходе от ATOM к JSON и 67 % при переходе от ATOM к новому формату JSON Light (доступный в WCF Data Services 5.1).  
+## <a name="odata-format-and-performance"></a>Формат OData и производительность
+ Большинство служб OData могут возвращать результаты в различных форматах. Можно указать формат результирующего набора с помощью параметра запроса `$format`. Такие форматы, как JSON и JSON Light, более эффективны, чем ATOM или XML, и способны обеспечить более высокую производительность при передаче больших объемов данных. В следующей таблице отображаются результаты типовых тестов. Как видно, прирост производительности составил 30–53 % при переходе от ATOM к JSON и 67 % при переходе от ATOM к новому формату JSON Light (доступный в WCF Data Services 5.1).  
   
 |Строки|ATOM|JSON|JSON (Light)|  
 |-|-|-|-|  
 |10000|113 секунд|74 секунды|68 секунд|  
 |1000000|1110 секунд|853 секунды|665 с|  
   
-## <a name="related-topics-in-this-section"></a>Связанные разделы в этом разделе  
+## <a name="related-topics-in-this-section"></a>Связанные подразделы в этом разделе  
   
 -   [Учебник. Использование источника OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
@@ -78,10 +76,10 @@ ms.lasthandoff: 08/23/2017
 |Путь к ресурсу|Извлечение данных из источника OData с помощью пути к ресурсу.|  
   
  **Параметры запроса**  
- Укажите параметры запроса. Например: `$top=5` 
+ Укажите параметры запроса. Например: `$top=5`. 
   
  **URL-адрес канала**  
- Отображает только для чтения на основе параметров, выбранных в этом диалоговом окне URL-адрес канала.  
+ Отображает доступный только для чтения URL-адрес веб-канала на основе параметров, выбранных в этом диалоговом окне.  
   
  **Предварительный просмотр**  
  Предварительный просмотр результатов в диалоговом окне **Предварительный просмотр** . В окне**Предварительный просмотр** может отображаться до 20 строк.  
@@ -140,4 +138,3 @@ ms.lasthandoff: 08/23/2017
  [Диспетчер подключений OData](../../integration-services/connection-manager/odata-connection-manager.md)  
   
   
-

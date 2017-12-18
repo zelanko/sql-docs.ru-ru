@@ -1,5 +1,5 @@
 ---
-title: "Выбор входных столбцов программным образом | Документы Microsoft"
+title: "Выбор входных столбцов программным образом | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - data flow [Integration Services], column mapping
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2ead17945bc9a6d2d3baeb73c07c86fad0e8cf1f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: aea8e6a9c780cbb56dff74c3ee003be2d4259486
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="selecting-input-columns-programmatically"></a>Выбор входных столбцов программным образом
   После соединения компонентов программным способом, выберите столбцы из вышестоящих компонентов, которые должны быть преобразованы или переданы нижестоящим компонентам. Если не выбрать входные столбцы для компонента, компонент не получит строк от задачи потока данных.  
@@ -221,7 +218,6 @@ End Module
 ```
   
 ## <a name="see-also"></a>См. также:  
- [Сохранение пакета программным способом](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
+ [Сохранение пакета программным образом](../../integration-services/building-packages-programmatically/saving-a-package-programmatically.md)  
   
   
-

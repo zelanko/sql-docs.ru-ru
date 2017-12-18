@@ -2,9 +2,12 @@
 title: "Отложенные транзакции (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd75354d6930a93a04ecb27c4c900ba89a0390ee
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8ac062d5ba0e12162aa6872f57e90780b1d7c4d0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deferred-transactions-sql-server"></a>Отложенные транзакции (SQL Server)
-  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise поврежденная транзакция может быть отложена, если данные, которые требуются для отката (отмены), находятся в режиме "вне сети" во время запуска базы данных. *Отложенная транзакция* представляет собой транзакцию, которая не фиксируется по завершении стадии наката и которая вызывает ошибку, препятствующую ее откату. Поскольку нельзя выполнить откат этой транзакции, она откладывается.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise поврежденная транзакция может быть отложена, если данные, которые требуются для отката (отмены), находятся в режиме "вне сети" во время запуска базы данных. *Отложенная транзакция* представляет собой транзакцию, которая не фиксируется по завершении стадии наката и которая вызывает ошибку, препятствующую ее откату. Поскольку нельзя выполнить откат этой транзакции, она откладывается.  
   
 > [!NOTE]  
 >  Поврежденные транзакции откладываются только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. В других выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]поврежденная транзакция вызывает сбой запуска.  

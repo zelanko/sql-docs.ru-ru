@@ -1,5 +1,5 @@
 ---
-title: "Источник неструктурированного файла | Документы Microsoft"
+title: "Источник \"Неструктурированный файл\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3460c0a209af8b587617e81c28fdccc2d5ff0eed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 0d9493c57bcfa4285bfadc811d6b24e1485bbb46
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flat-file-source"></a>источник «Неструктурированный файл»
   Источник «Неструктурированный файл» считывает данные из текстового файла. Текстовый файл может иметь разделители, фиксированную ширину полей или смешанный формат.  
@@ -80,7 +78,7 @@ ms.lasthandoff: 08/17/2017
   
 -   Диспетчер соединений с неструктурированными файлами, если источник является отдельным неструктурированным файлом. Дополнительные сведения см. в статье [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md).  
   
--   Диспетчер соединения с несколькими неструктурированными файлами, если источник представлен несколькими неструктурированными файлами и задачей потока данных внутри контейнера цикла (например, контейнера «цикл по элементам»). В каждом цикле контейнера источник неструктированных файлов загружает данные из следующего имени файла, которое предоставляет диспетчер соединения с несколькими неструктурированными файлами. Дополнительные сведения см. в статье [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
+-   Диспетчер соединения с несколькими неструктурированными файлами, если источник представлен несколькими неструктурированными файлами и задачей потока данных внутри контейнера цикла (например, контейнера «цикл по элементам»). В каждом цикле контейнера источник неструктированных файлов загружает данные из следующего имени файла, которое предоставляет диспетчер соединения с несколькими неструктурированными файлами. Дополнительные сведения см. в разделе [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md).  
   
 ### <a name="options"></a>Параметры  
  **Flat file connection manager**  
@@ -143,4 +141,3 @@ ms.lasthandoff: 08/17/2017
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Сводка. Управление данными в иерархической таблице | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tables
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a5c0f68a48e557da916d9d4de741ff44128fd6e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 994ef486992a0541323eed37a3e8054091969680
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-2-5---summary---managing-data-in-a-hierarchical-table"></a>Занятие 2.5. Сводка. Управление данными в иерархической таблице
-Тип данных **hierarchyid** позволяет легко создавать таблицы, отражающие иерархические данные, а затем создавать индексы по ширине и глубине для организации эффективного доступа к ним. Для выполнения запросов и управления данными используйте иерархические методы.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Тип данных **hierarchyid** позволяет легко создавать таблицы, отражающие иерархические данные, а затем создавать индексы по ширине и глубине для организации эффективного доступа к ним. Для выполнения запросов и управления данными используйте иерархические методы.  
   
 ## <a name="return-to-the-start-of-the-tutorial"></a>Вернуться к началу учебника  
 [Учебник. Использование типа данных hierarchyid](../../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)  

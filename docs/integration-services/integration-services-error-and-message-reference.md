@@ -1,5 +1,5 @@
 ---
-title: "Об ошибках служб Integration Services и справочник по сообщениям | Документы Microsoft"
+title: "Справочник по сообщениям об ошибках служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-caps.latest.revision: 44
+caps.latest.revision: "44"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8b969229037b01c4897ad504ad8db2cfa17182cc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-error-and-message-reference"></a>Справочник по сообщениям об ошибках служб Integration Services
   Следующие таблицы содержат стандартные ошибки, предупреждения и информационные сообщения служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в возрастающей цифровой последовательности в каждой категории вместе с числовыми кодами и символьными именами. Каждая ошибка определена как поле в классе <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> в пространстве имен <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -2345,4 +2343,3 @@ ms.lasthandoff: 09/26/2017
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1 не допускает вставку столбцов внешних метаданных.|  
   
   
-

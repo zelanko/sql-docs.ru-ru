@@ -1,5 +1,5 @@
 ---
-title: "Работа со службами CDC | Документы Microsoft"
+title: "Работа со службами CDC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- cdcServ
+f1_keywords: cdcServ
 ms.assetid: 4fc8edad-e16e-432f-a8ca-75f9a27444f3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 496eead0f37abd155b789d4ae4c40a40a64ac9f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: eda4caf15a2c86f541978b49ee7e55c0d89e053c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="work-with-cdc-services"></a>Работа со службами CDC
   Можно использовать консоль настройки службы CDC для создания новой службы CDC и подготовки базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для CDC.  
@@ -48,8 +45,7 @@ ms.lasthandoff: 08/03/2017
  Откроется диалоговое окно создания новой службы Oracle CDC.  
   
 ## <a name="see-also"></a>См. также  
- [Работа со службами CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
+ [Как работать со службами CDC](../../integration-services/change-data-capture/how-to-work-with-cdc-services.md)   
  [Создание и изменение службы CDC Oracle](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md)  
   
   
-

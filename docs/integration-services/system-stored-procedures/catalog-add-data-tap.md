@@ -1,5 +1,5 @@
 ---
-title: "Catalog.add_data_tap | Документы Microsoft"
+title: "catalog.add_data_tap | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 686b40e7e1ad7f7843bee5af3295fdf394538f63
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 20b136348f21d6b688d86039e96c5f16f1fa7d10
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,36 +40,36 @@ catalog.add_data_tap [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @execution_id =] *execution_id*  
- Идентификатор выполнения для выполнения, содержащего пакет. *Execution_id* — **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ Идентификатор выполнения для выполнения, содержащего пакет. Параметр *execution_id* имеет тип **bigint**.  
   
- [ @task_package_path =] *task_package_path*  
- Путь пакета для задачи потока данных. **PackagePath** путь свойства для задачи потока данных. Путь учитывает регистр. Чтобы найти путь к пакету в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] правой кнопкой мыши задачу потока данных затем **свойства**. **PackagePath** свойство появляется в **свойства** окна.  
+ [ @task_package_path = ] *task_package_path*  
+ Путь пакета для задачи потока данных. Свойство **PackagePath** задает путь для задачи потока данных. Путь учитывает регистр. Чтобы найти путь к пакету, в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] щелкните правой кнопкой мыши задачу "Поток данных", а затем выберите пункт **Свойства**. Свойство **PackagePath** отображается в окне **Свойства**.  
   
- *Task_package_path* — **nvarchar(max)**.  
+ Параметр *task_package_path* имеет тип **nvarchar(max)**.  
   
- [ @dataflow_path_id_string =] *dataflow_path_id_string*  
- Строка идентификации для пути потока данных. Путь соединяет два компонента потока данных. **IdentificationString** для пути определяет строку.  
+ [ @dataflow_path_id_string = ] *dataflow_path_id_string*  
+ Строка идентификации для пути потока данных. Путь соединяет два компонента потока данных. Свойство **IdentificationString** для пути определяет строку.  
   
- Чтобы найти строку идентификации, в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] щелкните правой кнопкой мыши путь между двумя компонентами потока данных, а затем нажмите кнопку **свойства**. **IdentificationString** свойство появляется в **свойства** окна.  
+ Чтобы найти строку идентификации, в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] щелкните правой кнопкой мыши путь между двумя компонентами потока данных, а затем выберите пункт **Свойства**. Свойство **IdentificationString** отображается в окне **Свойства**.  
   
- *Dataflow_path_id_string* — **nvarchar(4000)**.  
+ Параметр *dataflow_path_id_string* имеет тип **nvarchar(4000)**.  
   
- [ @data_filename =] *data_filename*  
+ [ @data_filename = ] *data_filename*  
  Имя файла, в котором хранятся полученные данные. Если задача потока данных выполняется внутри контейнера «цикл по каждому элементу» или «цикл по элементам», то полученные данные для каждого прохода цикла хранятся в отдельных файлах. Каждому файлу добавляется префикс с номером, соответствующим итерации.  
   
- По умолчанию файл хранится в \< *диск*>: папка \Program Files\Microsoft SQL Server\130\DTS\DataDumps.  
+ По умолчанию файл хранится в папке \<*диск*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps.  
   
- *Data_filename* — **nvarchar(4000)**.  
+ Параметр *data_filename* имеет тип **nvarchar(4000)**.  
   
- [ @max_rows =] *max_rows*  
- Количество строк, полученных при отводе данных. Если это значение не задано, фиксируются все строки. *Max_rows* — **int**.  
+ [ @max_rows = ] *max_rows*  
+ Количество строк, полученных при отводе данных. Если это значение не задано, фиксируются все строки. Параметр *max_rows* имеет тип **int**.  
   
- [ @data_tap_id =] *data_tap_id*  
- Возвращает идентификатор отвода данных. *Data_tap_id* — **bigint**.  
+ [ @data_tap_id = ] *data_tap_id*  
+ Возвращает идентификатор отвода данных. Параметр *data_tap_id* имеет тип **bigint**.  
   
 ## <a name="example"></a>Пример  
- В следующем примере отвод данных создается в пути потока данных `'Paths[OLE DB Source.OLE DB Source Output]`, в задаче потока данных `\Package\Data Flow Task`. Полученные данные хранятся в `output0.txt` файл в папке DataDumps (\<*диск*>: \Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
+ В следующем примере отвод данных создается в пути потока данных `'Paths[OLE DB Source.OLE DB Source Output]`, в задаче потока данных `\Package\Data Flow Task`. Полученные данные сохраняются в файл `output0.txt` в папке DataDumps (\<*диск*>:\Program Files\Microsoft SQL Server\130\DTS\DataDumps).  
   
 ```sql
 Declare @execution_id bigint  
@@ -85,7 +83,7 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ```  
   
 ## <a name="remarks"></a>Замечания  
- Чтобы добавить отводы данных, экземпляр выполнения должен быть создан (значение 1 в **состояние** столбец [catalog.operations &#40; База данных SSISDB &#41; ](../../integration-services/system-views/catalog-operations-ssisdb-database.md)представления). Значения состояния изменяются после запуска выполнения. Выполнение можно создать путем вызова [catalog.create_execution &#40; База данных SSISDB &#41; ](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
+ Чтобы добавить отводы данных, экземпляр выполнения должен быть создан (значение 1 в столбце **status** представления [catalog.operations &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). Значения состояния изменяются после запуска выполнения. Выполнение можно создать путем вызова [catalog.create_execution &#40;база данных SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  Ниже приведены замечания по использованию хранимой процедуры add_data_tap.  
   
@@ -114,9 +112,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
   
 -   Разрешения MODIFY на экземпляр выполнения  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  В следующем списке описываются условия, приводящие к сбою хранимой процедуры.  
@@ -130,10 +128,9 @@ Exec SSISDB.Catalog.start_execution @execution_id
 ## <a name="requirements"></a>Требования  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [службы SSIS 2012: взгляд на отвод данных](http://go.microsoft.com/fwlink/?LinkId=239983), на сайте rafael-salas.com.  
+ Запись [Службы SSIS 2012. Взгляд на отвод данных](http://go.microsoft.com/fwlink/?LinkId=239983) в блоге rafael-salas.com.  
   
 ## <a name="see-also"></a>См. также:  
  [catalog.add_data_tap_by_guid](../../integration-services/system-stored-procedures/catalog-add-data-tap-by-guid.md)  
   
   
-

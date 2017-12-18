@@ -2,9 +2,12 @@
 title: "Запрос с полнотекстовым поиском | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,15 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: bfded7d067ded1dacaffede2f36f261451cd59c3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cdd09271669926fdf2c94f183818517a439bef92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="query-with-full-text-search"></a>Запрос с полнотекстовым поиском
-
-Пишите полнотекстовые запросы при помощи полнотекстовых предикатов **CONTAINS** и **FREETEXT** и функций, возвращающих наборы строк **CONTAINSTABLE** и **FREETEXTTABLE** с инструкцией **SELECT**. В этом разделе приведены примеры предикатов и функций, из которых вы сможете выбрать самые подходящие.
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Пишите полнотекстовые запросы с помощью полнотекстовых предикатов **CONTAINS** и **FREETEXT** и функций **CONTAINSTABLE** и **FREETEXTTABLE**, возвращающих наборы строк, с инструкцией **SELECT**. В этом разделе приведены примеры предикатов и функций, из которых вы сможете выбрать самые подходящие.
 
 -   Используйте функции **CONTAINS** и **CONTAINSTABLE** для сопоставления слов и фраз.
 -   Используйте функции **FREETEXT** и **FREETEXTTABLE** для поиска совпадений по смыслу, а не буквального совпадения.

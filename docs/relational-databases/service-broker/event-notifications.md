@@ -2,9 +2,12 @@
 title: "Уведомления о событиях | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: service-broker
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6a1470d8bb606a29df7c7393fbd0c74772ba5d06
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 963b05a3b4f233f5252ef97465cd8a251de1a9ae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="event-notifications"></a>Уведомления о событиях
-  Уведомления о событии отправляют данные о событиях в службу [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Уведомления о событиях выполняются в ответ на множество инструкций языка определения данных (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] и на события трассировки SQL; уведомления отправляют сведения об этих событиях службе компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Уведомления о событиях отправляют сведения о событиях в службу [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Уведомления о событиях выполняются в ответ на множество инструкций языка определения данных (DDL) [!INCLUDE[tsql](../../includes/tsql-md.md)] и на события трассировки SQL; уведомления отправляют сведения об этих событиях службе компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
   
  Уведомления о событиях можно использовать следующим образом.  
   

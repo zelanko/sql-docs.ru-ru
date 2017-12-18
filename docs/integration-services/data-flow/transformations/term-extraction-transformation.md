@@ -1,5 +1,5 @@
 ---
-title: "Преобразования извлечения терминов | Документы Microsoft"
+title: "Преобразование \"Извлечение терминов\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -31,17 +30,16 @@ helpviewer_keywords:
 - term extractions [Integration Services]
 - stemming words [Integration Services]
 ms.assetid: d0821526-1603-4ea6-8322-2d901568fbeb
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 4282ad429a54af716010bc8b0463551477a771fb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="term-extraction-transformation"></a>преобразование «Извлечение терминов»
   Преобразование «Извлечение терминов» извлекает термины из текста во входном столбце преобразования, а затем записывает термины в выходной столбец преобразования. Это преобразование работает только с англоязычным текстом и использует собственный словарь и лингвистические сведения об английском языке.  
@@ -157,7 +155,7 @@ ms.lasthandoff: 08/19/2017
   
 -   Сочетания чисел, знаков препинания и символов алфавита. Например, *A23B#99* возвращает термин *A23B*.  
   
--   The characters, %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, and ‘.  
+-   Символы %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ и ‘.  
   
     > [!NOTE]  
     >  Акронимы, включающие одну или более точек (.), не разделяются на несколько предложений.  
@@ -261,6 +259,5 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>См. также  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование «Уточняющий запрос термина»](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
-
+ [Преобразование "Уточняющий запрос термина"](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
 

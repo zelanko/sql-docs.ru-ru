@@ -2,9 +2,12 @@
 title: "Класс событий Audit Add DB User | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c7de35de5031e404f7ac4a2ea580988bec1d981
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 25d15b25de3c25223cb2a49a62f442afc51b5603
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User, класс событий
-  События класса **Audit Add DB User** происходят, когда имя входа добавляется в базу данных как пользователь базы данных или удаляется из нее. Этот класс событий используется для хранимых процедур **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**и **sp_dropuser** .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий **Audit Add DB User** возникает, когда имя входа добавляется в базу данных или удаляется из нее в качестве пользователя базы данных. Этот класс событий используется для хранимых процедур **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**и **sp_dropuser** .  
   
  В будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот класс событий может быть удален. Вместо него рекомендуется использовать класс событий **Audit Database Principal Management** .  
   

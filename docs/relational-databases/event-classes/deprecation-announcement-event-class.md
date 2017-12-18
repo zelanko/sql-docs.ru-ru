@@ -2,9 +2,12 @@
 title: "Класс событий Deprecation Announcement | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2ab108ddb69d1de2859d80ba0c158d11c9ddb991
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 62f19f19df184eb1c8e95d18bb5af265550ff375
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deprecation-announcement-event-class"></a>Deprecation Announcement, класс событий
-  Класс событий **Deprecation Announcement** происходит при использовании функции, которая будет удалена из будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](но не начиная со следующего выпуска). Для продления срока службы приложения избегайте использования функциональных возможностей, вызывающих события класса **Deprecation Announcement** или **Deprecation Final Support** .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] События класса **Deprecation Announcement** происходят при использовании функции, которая будет удалена из будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (но не начиная со следующего основного выпуска). Для продления срока службы приложения избегайте использования функциональных возможностей, вызывающих события класса **Deprecation Announcement** или **Deprecation Final Support** .  
   
 ## <a name="deprecation-announcement-event-class-data-columns"></a>Столбцы класса событий Deprecation Announcement  
   

@@ -2,9 +2,12 @@
 title: "Просмотр хранимой коллекции схем XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4c460246b6849a83ac096c8f37c001f2d9a1e83f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 60d143e53c01fb90e4c8c73c42f20463739d185c
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-a-stored-xml-schema-collection"></a>Просмотр хранимой коллекции схем XML
-  После импорта коллекции XML-схем с помощью команды [Создать коллекцию схем XML](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)компоненты схемы будут храниться в метаданных. Можно использовать внутреннюю функцию [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md), чтобы повторно построить коллекцию XML-схем. Эта функция возвращает экземпляр типа данных **xml** .  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] После импорта коллекции схем XML с помощью инструкции [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) компоненты схемы хранятся в метаданных. Можно использовать внутреннюю функцию [xml_schema_namespace](../../t-sql/xml/xml-schema-namespace.md), чтобы повторно построить коллекцию XML-схем. Эта функция возвращает экземпляр типа данных **xml** .  
   
  Например, следующий запрос извлекает коллекцию XML-схем (`ProductDescriptionSchemaCollection`) в реляционной схеме продукции в базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   

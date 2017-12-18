@@ -1,5 +1,5 @@
 ---
-title: "Служебная программа dtexec | Документы Microsoft"
+title: "Программа dtexec | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/26/2016
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: b83e544cb070ab07d943965a5a11f305e7c70a2d
+ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/22/2017
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
   Программа командной строки **dtexec** используется для настройки и выполнения пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа **dtexec** обеспечивает доступ ко всем функциям настройки и выполнения пакетов, таким как параметры, подключения, свойства, переменные, средства ведения журналов и индикаторы выполнения. Служебная программа **dtexec** позволяет загружать пакеты из следующих источников: сервер [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ISPAC-файл проекта, база данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловая система.  
@@ -63,29 +61,29 @@ ms.lasthandoff: 09/27/2017
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- При использовании **dtexec** для запуска пакета из ISPAC-файла проекта применяются параметры /Proj[ect] и /Pack[age] для указания пути к проекту и имени потока проекта. При преобразовании проекта в модель развертывания пакета путем запуска **Мастера преобразования проекта служб Integration Services** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], мастер создает файл проекта ISPAC. Дополнительные сведения см. в разделе [развертывания Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ При использовании **dtexec** для запуска пакета из ISPAC-файла проекта применяются параметры /Proj[ect] и /Pack[age] для указания пути к проекту и имени потока проекта. При преобразовании проекта в модель развертывания пакета путем запуска **Мастера преобразования проекта служб Integration Services** в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], мастер создает файл проекта ISPAC. Дополнительные сведения см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Вместе с программой **dtexec** можно использовать сторонние средства для планирования времени запуска пакетов, развернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
 ##  <a name="bit"></a> Вопросы установки на 64-разрядные компьютеры  
  На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] устанавливают 64-разрядную версию программы **dtexec** (dtexec.exe). Если какие-либо пакеты нужно запустить в 32-разрядном режиме, следует установить 32-разрядную версию программы **dtexec** . Чтобы установить 32-разрядную версию программы **dtexec** , во время установки необходимо выбрать клиентские средства или среду [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
   
- По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Как правило, является путь к каталогу 32-разрядных  *\<диска >*: \Program \Microsoft SQL Server\110\DTS\Binn файлы (x86), а путь к каталогу 64-разрядных  *\<диска >*: \Program Files\Microsoft SQL Server\110\DTS\Binn.)  
+ По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Обычно путь к каталогу 32-разрядной версии выглядит следующим образом: *\<диск>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn, а путь к каталогу 64-разрядной версии — *\<диск>*:\Program Files\Microsoft SQL Server\110\DTS\Binn.)  
   
 > **ПРИМЕЧАНИЕ.** Если для запуска программы используется агент SQL Server, то он автоматически использует 64-разрядную версию программы. Чтобы определить точное расположение исполняемого файла программы, агент SQL Server использует реестр, а не переменную среды PATH.  
   
  Чтобы убедиться, что в командной строке запущена 64-разрядная версия программы, выполните одно из следующих действий.  
   
--   Откройте окно командной строки, перейдите в каталог, который содержит 64-разрядную версию программы (*\<диска >*: \Program Files\Microsoft SQL Server\110\DTS\Binn), а затем запустите программу из этого расположения.  
+-   Откройте окно командной строки, задайте путь к каталогу, содержащему 64-разрядную версию программы (*\<диск>*:\Program Files\Microsoft SQL Server\110\DTS\Binn), а затем запустите программу из указанного расположения.  
   
--   В командной строке запустите программу, введя полный путь (*\<диска >*: \Program Files\Microsoft SQL Server\110\DTS\Binn) к 64-разрядной версии программы.  
+-   В командной строке запустите программу, введя полный путь (*\<диск>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) к 64-разрядной версии программы.  
   
--   Окончательно измените порядок путей в переменной среды PATH, поместив путь 64-разрядной версии (*\<диска >*: \Program Files\Microsoft SQL Server\110\DTS\Binn) перед путем к 32-разрядных (*\<диска >*: \ Программа \Microsoft SQL Server\110\DTS\Binn файлы (x86)) в переменной.  
+-   Окончательно измените порядок путей в переменной среды PATH, поместив в ней путь к 64-разрядной версии (*\<диск>*:\Program Files\Microsoft SQL Server\110\DTS\Binn) перед путем к 32-разрядной версии (*\<диск>*:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn).  
   
 ##  <a name="side"></a> Рекомендации для компьютеров, где проведены параллельные установки  
  Если [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] установлено на компьютере, где установлено [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] или [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] , устанавливаются несколько версий программы **dtexec** .  
   
- Чтобы гарантировать выполнение правильная версия программы, в командной строке запустите программу, введя полный путь (*\<диска >*: \Program Files\Microsoft SQL Server\\< версия\>\DTS\Binn).  
+ Чтобы убедиться в том, что запускается правильная версия программы, в командной строке запустите программу, введя полный путь (*\<диск>*:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn).  
   
 ##  <a name="phases"></a> Этапы выполнения  
  Программа во время выполнения проходит четыре стадии. Они перечислены далее.  
@@ -221,7 +219,7 @@ dtexec /option [value] [/option [value]]...
   
      Некоторые примеры использования параметра **/ConsoleLog** см. в разделе **Примечания** .  
   
---   **/D [ts]** *путь к пакету*: (необязательно). Загружает пакет из хранилища пакетов служб SSIS. Пакеты, которые хранятся в хранилище пакетов служб SSIS, развертываются с помощью устаревшей модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+--   **/D[ts]** *package_path*: (необязательно). Загружает пакет из хранилища пакетов служб SSIS. Пакеты, которые хранятся в хранилище пакетов служб SSIS, развертываются с помощью устаревшей модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -237,7 +235,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/ Dump** *код ошибки*: по умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке  *\<диска >*: \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     **/Dump** *error code*. По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке *\<диск>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **ПРИМЕЧАНИЕ.** Файлы дампа отладки могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL). В частности, перед отправкой отладочных файлов в службу технической поддержки Майкрософт рекомендуется удалить из них все конфиденциальные сведения.  
   
@@ -249,7 +247,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**(необязательный). Создает отладочные файлы дампа MDMP и TMP, если во время работы пакета происходит любая ошибка.  
   
-     По умолчанию [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке  *\<диска >*: папка \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
+     По умолчанию службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке *\<диск>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.  
   
     > **ПРИМЕЧАНИЕ.** Файлы дампа отладки могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL). В частности, перед отправкой отладочных файлов в службу технической поддержки Майкрософт рекомендуется удалить из них все конфиденциальные сведения.  
   
@@ -266,7 +264,7 @@ dtexec /option [value] [/option [value]]...
      Используйте параметр **/Env[Reference]** вместе с параметрами **/ISServer** и **/Server** .  
   
      Этот параметр используется агентом SQL Server.  
-  --   **/F [ile]** *filespec*: (необязательно). Производит загрузку пакета, сохраненного в файловой системе. Пакеты, которые сохраняются в файловой системе, развертываются с помощью устаревшей модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
+  --   **/F[ile]** *filespec*: (необязательно). Производит загрузку пакета, сохраненного в файловой системе. Пакеты, которые сохраняются в файловой системе, развертываются с помощью устаревшей модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md).  
 
   Аргумент *filespec* определяет путь и имя файла пакета. Можно указывать либо путь в формате UNC, либо локальный путь. Если путь или имя файла, указанные в аргументе *filespec* , содержат пробел, то аргумент *filespec* необходимо заключить в кавычки.  
   
@@ -416,7 +414,7 @@ dtexec /option [value] [/option [value]]...
   
      Параметр **/Ser[ver]** необходим при указании параметра **/ISServer** .  
   
---   **/SQ [L]** *путь к пакету*: загружает пакет, хранящийся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в **msdb** базы данных. Пакеты, которые хранятся в базе данных **msdb** , развертываются с помощью модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
+--   **/SQ[L]** *package_path*. Загружается пакет, хранящийся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в базу данных **msdb**. Пакеты, которые хранятся в базе данных **msdb** , развертываются с помощью модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).   
   
      The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -640,4 +638,3 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  См. запись в блоге [Коды завершения, DTEXEC и каталог служб SSIS](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)на сайте www.mattmasson.com.  
   
   
-

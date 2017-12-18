@@ -2,9 +2,12 @@
 title: "Класс событий RPC Output Parameter | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9e13ddf9de1322190398c4bdd7524b36cc55c77
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f904cc8dc684bdc21c1a34325a8a5c3433f662a1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rpc-output-parameter-event-class"></a>RPC Output Parameter, класс событий
-  События класса RPC Output Parameter отслеживают значения выходных параметров вызовов удаленных процедур после выполнения этих вызовов.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] События класса RPC Output Parameter отслеживают значения выходных параметров в вызовах удаленных процедур после выполнения этих вызовов.  
   
  Используйте этот класс для проверки выходных значений, возвращаемых хранимыми процедурами. Например, если приложение не создает выходных значений после выполнения вызова удаленной процедуры, события этого класса можно использовать для облегчения поиска проблемы между кодом клиента и кодом сервера.  
   

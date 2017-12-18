@@ -2,9 +2,12 @@
 title: "Подключение к SQL Server в случае, если доступ системных администраторов заблокирован | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 851ca8cf8c899f5028c2de73e59186000ee93abf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a9291c06a2e21ab760e68874d7bd584b2d56571a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Подключение к SQL Server в случае, если доступ системных администраторов заблокирован
-  В этом разделе описывается, как восстановить доступ к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в качестве системного администратора. Системный администратор может утратить доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по одной из следующих причин:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается, как восстановить доступ к компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в качестве системного администратора. Системный администратор может утратить доступ к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по одной из следующих причин:  
   
 -   по ошибке удалены все члены предопределенной роли сервера sysadmin;  
   

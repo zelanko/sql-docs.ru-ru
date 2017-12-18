@@ -1,5 +1,5 @@
 ---
-title: "Построитель выражений | Документы Microsoft"
+title: "Построитель выражений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.expressionbuilder.f1
-helpviewer_keywords:
-- Expression Builder dialog box
+f1_keywords: sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords: Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 820179477a33b18a634c509d2793d8f0bac79ddd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5d1f46b2833246dde0cd95eb8c815ae9cca69ab5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="expression-builder"></a>Построитель выражений
-  Диалоговое окно **Построитель выражений** используется для создания и редактирования выражения свойства или написания выражения, определяющего значение переменной, с помощью графического интерфейса, содержащего список переменных и встроенные ссылки на функции, приведения типов и операторы, включенные в язык выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Диалоговое окно **Построитель выражений** используется для создания и редактирования выражения свойства или написания выражения, определяющего значение переменной, с помощью графического интерфейса, содержащего список переменных и встроенные ссылки на функции, приведения типов и операторы, включенные в язык выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Выражение свойства представляет собой выражение, которое присваивается свойству. При вычислении выражения свойство динамически обновляется для использования результатов вычисления выражения. Аналогичным образом, выражение, которое используется в переменной, позволяет присваивать переменной результаты вычисления выражения в качестве нового значения.  
   
@@ -55,10 +51,9 @@ ms.lasthandoff: 08/03/2017
 |**Вычислить значение выражения**|Чтобы просмотреть результаты вычислений выражения, выберите параметр **Вычислить значение выражения** .|  
   
 ## <a name="see-also"></a>См. также  
- [Страница «выражения»](../../integration-services/expressions/expressions-page.md)   
+ [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)   
  [Редактор выражений свойств](../../integration-services/expressions/property-expressions-editor.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Переменные](../../integration-services/integration-services-ssis-variables.md)   
+ [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)   
  [Системные переменные](../../integration-services/system-variables.md)  
   
   
-

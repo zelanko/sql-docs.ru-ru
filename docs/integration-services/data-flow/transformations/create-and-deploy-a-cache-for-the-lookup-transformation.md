@@ -1,5 +1,5 @@
 ---
-title: "Создание и развертывание кэша для преобразования «Уточняющий запрос» | Документы Microsoft"
+title: "Создание или развертывание кэша для преобразования \"Уточняющий запрос\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - deploying cache files for Lookup transformation
 - Lookup transformation cache files
 ms.assetid: cedf5cad-2fac-42d0-ad91-9461e117d330
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 88d6515c29c789c12818dfc51c86c5b1d4537247
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b859cc7f282c2e1ef5ed095ee8c7326cb7dcf382
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-deploy-a-cache-for-the-lookup-transformation"></a>Создание или развертывание кэша для преобразования «Уточняющий запрос»
   Можно создать и развернуть файл кэша (CAW) для преобразования «Уточняющий запрос». Эталонный набор данных хранится в файле кэша.  
@@ -94,12 +92,11 @@ ms.lasthandoff: 08/03/2017
   
 4.  Настройте проект для создания программы развертывания, а затем постройте проект. Дополнительные сведения см. в статье [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md).  
   
-     Файл манифеста \< *имя проекта*>. Ssisdeploymentmanifest.XML, в котором перечисляются различные файлы в проекте, пакеты и конфигурации пакетов.  
+     Создается файл манифеста \<*имя проекта*>.SSISDeploymentManifest.xml, в котором перечислены различные файлы в проекте, пакеты и конфигурации пакетов.  
   
 5.  Развертывание пакета в файловой системе. Дополнительные сведения см. в статье [Deploy Packages by Using the Deployment Utility](../../../integration-services/packages/deploy-packages-by-using-the-deployment-utility.md).  
   
 ## <a name="see-also"></a>См. также  
- [Создание программы развертывания](../../../integration-services/packages/create-a-deployment-utility.md)  
+ [Create a Deployment Utility](../../../integration-services/packages/create-a-deployment-utility.md)  
   
   
-

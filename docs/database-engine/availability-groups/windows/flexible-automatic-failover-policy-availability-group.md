@@ -2,9 +2,12 @@
 title: "Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f80c2603b7b67908a4c3e0d7bdea8c48c0582ab2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e23a4e8d2e814f2dba9217b891672d469251882d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flexible-automatic-failover-policy---availability-group"></a>Гибкая политика отработки отказа для автоматического перехода на другой ресурс группы доступности
-  Гибкая политика отработки отказа предоставляет гранулярное управление условиями, которые могут вызвать [автоматический переход на другой ресурс](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) для группы доступности. Изменяя условия отказа, которые инициируют автоматический переход на другой ресурс, и частоту проверки исправности, вы можете увеличить или уменьшить вероятность автоматического перехода на другой ресурс и добиться высокого уровня доступности соглашения об уровне обслуживания.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Гибкая политика перехода на другой ресурс предоставляет детальное управление условиями, которые могут вызвать [автоматический переход на другой ресурс](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) для группы доступности. Изменяя условия отказа, которые инициируют автоматический переход на другой ресурс, и частоту проверки исправности, вы можете увеличить или уменьшить вероятность автоматического перехода на другой ресурс и добиться высокого уровня доступности соглашения об уровне обслуживания.  
   
  Гибкая политика отработки отказа группы доступности определяется уровнем условий сбоя и пороговым значением времени ожидания проверки работоспособности. При обнаружении, что группа доступности превысила уровень условий сбоя или пороговое значение проверки времени ожидания работоспособности, DLL-ресурс группы доступности ответит WSFC-кластеру. После этого WSFC-кластер инициирует автоматический переход на вторичную реплику.  
   

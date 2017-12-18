@@ -1,5 +1,5 @@
 ---
-title: "Соединиться с базой данных-источником Oracle | Документы Microsoft"
+title: "Соединение с базой данных-источником Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- oraDb
+f1_keywords: oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1c48c856677c0b840fdeb56a683c84425d77e4a4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Соединение с базой данных-источником Oracle
   На странице «Источник Oracle» указываются сведения, необходимые для соединения с базой данных-источником Oracle. Экземпляр CDC считывает журналы повторов базы данных Oracle, с которой установлено соединение.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 08/03/2017
 > [!NOTE]  
 >  Для выполнения интеллектуального анализа журналов пользователь должен иметь следующие права доступа, предоставленные в базе данных Oracle.  
 >   
->  -   ВЫБЕРИТЕ на \<any отслеживаемая Таблица >  
+>  -   SELECT на \<любая-отслеживаемая-таблица>  
 > -   SELECT ANY TRANSACTION  
 > -   EXECUTE на DBMS LOGMNR  
 > -   SELECT на V$LOGMNR CONTENTS  
@@ -78,4 +75,3 @@ ms.lasthandoff: 08/03/2017
  [Изменение свойств экземпляра](../../integration-services/change-data-capture/edit-instance-properties.md)  
   
   
-

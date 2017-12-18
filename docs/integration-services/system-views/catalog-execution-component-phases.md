@@ -1,5 +1,5 @@
 ---
-title: "Catalog.execution_component_phases | Документы Microsoft"
+title: "catalog.execution_component_phases | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: b3459ce6d7e9eb0b9580ffa54e3b87e16f3e8fb0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 1cbf125c6e69af8faac15d0aa0fe5a11afe72e41
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutioncomponentphases"></a>catalog.execution_component_phases
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +36,15 @@ ms.lasthandoff: 08/03/2017
 |task_name|**nvarchar(4000)**|Имя задачи потока данных.|  
 |subcomponent_name|**nvarchar(4000)**|Имя компонента потока данных.|  
 |этап|**nvarchar(128)**|Имя этапа выполнения.|  
-|start_time|**DateTimeOffset(7)**|Время начала этапа.|  
-|end_time|**DateTimeOffset(7)**|Время окончания этапа.|  
+|start_time|**datetimeoffset(7)**|Время начала этапа.|  
+|end_time|**datetimeoffset(7)**|Время окончания этапа.|  
 |execution_path|**nvarchar(max)**|Путь выполнения задачи потока данных.|  
   
 ## <a name="remarks"></a>Замечания  
  Это представление отображает строку для каждого этапа выполнения компонента потока данных, такого как Validate, Pre-Execute, Post-Execute, PrimeOutput и ProcessInput. Каждая строка отображает время начала и окончания для конкретного этапа выполнения.  
   
 ## <a name="example"></a>Пример  
- В следующем примере используется представление catalog.execution_component_phases для нахождения общего времени, определенного пакета потратил на выполнение всех фаз (**active_time**) и общее затраченное время для пакета (**total_time**).  
+ В следующем примере используется представление catalog.execution_component_phases для нахождения общего времени, затраченного пакетом на выполнение всех фаз (**active_time**), и полное затраченное время на пакет (**total_time**).  
   
 > [!WARNING]  
 >  Представление catalog.execution_component_phases предоставляет эти сведения, если в качестве уровня ведения журнала выполнения пакетов задано значение Performance или Verbose. Дополнительные сведения см. в разделе [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).  
@@ -62,17 +60,16 @@ group by package_name, task_name, subcomponent_name, execution_path
 order by package_name, task_name, subcomponent_name, execution_path  
 ```  
   
-## <a name="permissions"></a>Разрешения  
+## <a name="permissions"></a>Permissions  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ на экземпляр выполнения  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 > [!NOTE]  
 >  Наличие разрешения на выполнение операции на сервере подразумевает наличие разрешения на просмотр сведений об этой операции. Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

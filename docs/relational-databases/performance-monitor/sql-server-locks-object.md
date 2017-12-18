@@ -2,9 +2,12 @@
 title: "SQL Server, объект Locks | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d9a60e5e072a0c6b5d9d769aa07b57a921f678c7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 46adb9899754722c68350ee5c679b37c656a002a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-locks-object"></a>SQL Server, объект Locks
-  Объект **SQLServer: блокировки** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет сведения о блокировках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , полученных для отдельных типов ресурсов. Блокировки выдаются на такие ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , как прочитанные или измененные транзакцией строки, для предотвращения одновременного использования ресурсов несколькими транзакциями. Например, если исключительная (X) блокировка получена транзакцией на строку в таблице, никакая другая транзакция не сможет изменить эту строку, пока блокировка не будет освобождена. Минимизация использования блокировок повышает параллелизм, что может улучшить общую производительность. Одновременно может отслеживаться несколько экземпляров объекта **Locks** , каждый из которых будет представлять собой блокировку отдельного вида ресурсов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:Locks** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет сведения о блокировках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], полученных для отдельных типов ресурсов. Блокировки выдаются на такие ресурсы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , как прочитанные или измененные транзакцией строки, для предотвращения одновременного использования ресурсов несколькими транзакциями. Например, если исключительная (X) блокировка получена транзакцией на строку в таблице, никакая другая транзакция не сможет изменить эту строку, пока блокировка не будет освобождена. Минимизация использования блокировок повышает параллелизм, что может улучшить общую производительность. Одновременно может отслеживаться несколько экземпляров объекта **Locks** , каждый из которых будет представлять собой блокировку отдельного вида ресурсов.  
   
  В этой таблице описаны счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** .  
   

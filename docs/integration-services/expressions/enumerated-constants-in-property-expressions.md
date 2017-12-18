@@ -1,5 +1,5 @@
 ---
-title: "Перечисляемые константы в выражениях свойств | Документы Microsoft"
+title: "Перечислимые константы в выражениях свойств | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d6de3f50f2a0630e2488b33c6fe98c1fe20c1b0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Констант-перечислителей в выражениях свойств
   Если выражения свойств включают в себя значения из списка элементов-перечислителей, эти выражения должны использовать числовое значение элементов-перечислителей вместо понятного имени элемента. Например, если выражение устанавливает свойство **LoggingMode** , необходимо использовать числовое значение 2 вместо понятного имени «Запрещено».  
@@ -611,10 +609,9 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>См. также  
  [Использование выражений свойств в пакетах](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Пакеты](../../integration-services/integration-services-ssis-packages.md)   
+ [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md)   
  [Контейнеры служб Integration Services](../../integration-services/control-flow/integration-services-containers.md)   
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
- [Ограничения очередностью](../../integration-services/control-flow/precedence-constraints.md)  
+ [Управление очередностью](../../integration-services/control-flow/precedence-constraints.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Поток данных | Документы Microsoft"
+title: "Поток данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,17 +19,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: 70
+caps.latest.revision: "70"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow"></a>Поток данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет три различных типа компонентов потока данных: источники, преобразования и назначения. Источники извлекают данные из хранилищ, таких как таблицы и представления реляционных баз данных, файлы и базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Преобразования изменяют, объединяют и очищают данные. Целевые объекты загружают данные в хранилища или создают наборы данных в памяти.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 08/03/2017
   
  На следующей диаграмме показан поток данных с источником, преобразованием с одним входом и одним выходом и целевым объектом. На диаграмме присутствуют входы, выходы, выходы ошибок, а также входные, выходные и внешние столбцы.  
   
- ![Компоненты и их входы и выходы потока данных](../../integration-services/data-flow/media/mw-dts-dataflow.gif "компоненты и их входы и выходы потока данных")  
+ ![Компоненты потока данных и их вводы и выводы](../../integration-services/data-flow/media/mw-dts-dataflow.gif "Компоненты потока данных и их вводы и выводы")  
   
 ## <a name="data-flow-implementation"></a>Реализация потока данных  
  Добавление задачи потока данных к потоку управления пакета является первым шагом реализации потока данных в пакете. Пакет может включать несколько задач потока данных, каждая из которых имеет свой собственный поток данных. Например, если пакет требует, чтобы потоки данных были запущены в указанной последовательности или чтобы между потоками данных были выполнены другие задачи, необходимо указывать отдельную задачу потока данных для каждого потока данных.  
@@ -224,4 +222,3 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>См. также  
  Видеоролик [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkID=210369)(Работа соединителя для Oracle (Майкрософт) от компании Attunity — видео по SQL Server) на сайте technet.microsoft.com.  
-

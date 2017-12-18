@@ -2,9 +2,12 @@
 title: "Коллекции схем XML (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +28,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 90af09f6d1ce768405c824e76e9ad746624b2245
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 581c46bbb59d9339bc91712a4e100d922e76813f
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
-  Как указано в разделе [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md), SQL Server естественным образом поддерживает**xml**. При помощи коллекции XML-схем можно связать с переменной или столбцом типа **xml** XSD-схемы. Коллекция XML-схем хранит импортированные XML-схемы и используется для решения следующих задач:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Как указано в разделе [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md), SQL Server предоставляет собственное хранилище для данных XML посредством типа данных **xml**. При помощи коллекции XML-схем можно связать с переменной или столбцом типа **xml** XSD-схемы. Коллекция XML-схем хранит импортированные XML-схемы и используется для решения следующих задач:  
   
 -   проверка экземпляров XML;  
   

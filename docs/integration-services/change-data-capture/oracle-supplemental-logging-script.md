@@ -1,5 +1,5 @@
 ---
-title: "Скрипт дополнительного журналирования Oracle | Документы Microsoft"
+title: "Скрипт дополнительного журналирования Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e6ee618-b89b-46c7-92ad-4fc5ef7b777a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16e3c1b59550236eaa1716d7251e55c0cee6b919
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a4e4c40eac6c055684cb3fb302861febbd512934
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="oracle-supplemental-logging-script"></a>Скрипт дополнительного журналирования Oracle
   В этом диалоговом окне отображается скрипт дополнительного журналирования Oracle.  
@@ -45,8 +43,7 @@ ms.lasthandoff: 08/03/2017
  Копирует скрипт в буфер обмена. Когда все будет готово, скрипт дополнительного журналирования можно вставить в нужное место, если администратору базы данных Oracle необходимо ознакомиться с ним перед выполнением.  
   
 ## <a name="see-also"></a>См. также  
- [Управление экземпляром CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [Как управлять экземпляром CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Управление экземпляром CDC](../../integration-services/change-data-capture/manage-a-cdc-instance.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Catalog.executions (база данных SSISDB) | Документы Microsoft"
+title: "catalog.executions (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,25 +8,23 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - executions view [Integration Services]
 - catalog.executions view [Integration Services]
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
-caps.latest.revision: 32
+caps.latest.revision: "32"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5e60664352054cd8f62250cc7c6b8082e84f607f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c4bb75156f20f2d652d7553937ac5772a56fdf91
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,8 +34,8 @@ ms.lasthandoff: 09/26/2017
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |execution_id|**bigint**|Уникальный идентификатор для экземпляра выполнения.|  
-|имя_папки|**sysname(nvarchar(128))**|Имя папки, которая содержит проект.|  
-|имя_проекта|**sysname(nvarchar(128))**|Имя проекта.|  
+|folder_name|**sysname(nvarchar(128))**|Имя папки, которая содержит проект.|  
+|project_name|**sysname(nvarchar(128))**|Имя проекта.|  
 |package_name|**nvarchar(260)**|Имя первого пакета, запущенного во время выполнения.|  
 |reference_id|**bigint**|Среда, на которую ссылается экземпляр выполнения.|  
 |reference_type|**char(1)**|Указывает, может среда находиться в той же папке, что и проект (относительная ссылка), или в другой папке (абсолютная ссылка). Если значение равно `R`, для определения расположения сред используется относительная ссылка. Если значение равно `A`, то для определения расположения сред используется абсолютная ссылка.|  
@@ -74,12 +72,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Разрешение READ на экземпляр выполнения  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 > [!NOTE]  
 >  Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Catalog.deploy_packages | Документы Microsoft"
+title: "catalog.deploy_packages | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 8e861df6-d103-4d84-8438-e822533f6849
-caps.latest.revision: 4
+caps.latest.revision: "4"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1839430dd7fb83ab16c4de46011819e3ce28e835
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: a19a301fab52b0373eadb673d17e7436d0ffc1e2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogdeploypackages"></a>Catalog.deploy_packages
+# <a name="catalogdeploypackages"></a>catalog.deploy_packages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Развертывание одного или нескольких пакетов в папке [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] каталога или обновление существующего пакета, который был развернут ранее.  
+  Развертывает один или несколько пакетов в папке каталога служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или обновляет существующий пакет, который был развернут ранее.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -37,17 +35,17 @@ ms.lasthandoff: 09/26/2017
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name =] *имя_папки*  
- Имя папки. *Имя_папки* — **nvarchar(128)**.  
+ [ @folder_name = ] *folder_name*  
+ Имя папки. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Имя проекта в папке. *Project_name* — **nvarchar(128)**.  
+ [ @project_name = ] *project_name*  
+ Имя проекта в папке. Параметр *project_name* имеет тип **nvarchar(128)**.  
   
- [ @packages_table =] *packages_table*  
- Двоичное содержимое [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакета файлов (с расширением DTSX). *Packages_table* — **[catalog]. [ Package_Table_Type]**  
+ [ @packages_table = ] *packages_table*  
+ Двоичное содержимое файлов (DTSX) пакета [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Параметр *packages_table* имеет тип **[catalog].[Package_Table_Type]**  
   
- [ @operation_id =] *operation_id*  
- Возвращает уникальный идентификатор для операции развертывания. *Operation_id* — **bigint**.  
+ [ @operation_id = ] *operation_id*  
+ Возвращает уникальный идентификатор для операции развертывания. Параметр *operation_id* имеет тип **bigint**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -58,18 +56,17 @@ ms.lasthandoff: 09/26/2017
 ## <a name="permissions"></a>Permissions  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
--   Разрешения CREATE_OBJECTS на проект или изменить разрешения для пакета для обновления пакета.  
+-   Разрешения CREATE_OBJECTS на проект или разрешения MODIFY на пакет для обновления пакета.  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  В следующем списке приведено описание некоторых условий, при которых эта хранимая процедура может вызывать ошибки.  
   
--   Параметр ссылается на объект, который не существует, параметр пытается создать объект, который уже существует, или параметр недопустим, либо другим способом.  
+-   Параметр ссылается на объект, который не существует, параметр пытается создать уже существующий объект или же параметр недопустим по какой-либо другой причине.  
   
 -   У пользователя нет достаточных разрешений  
   
   
-

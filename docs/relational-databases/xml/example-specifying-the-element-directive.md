@@ -2,9 +2,12 @@
 title: "Пример. Указание директивы ELEMENT | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a7213ce0ad1fe8f13310a5e72f4143235451d7e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9cf0356191e1f71c1b886599a46da1be9bb46bd3
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="example-specifying-the-element-directive"></a>Пример. Указание директивы ELEMENT
-  Это приводит к получению сведений о сотрудниках и созданию элементного XML, как показано далее:  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Это приводит к получению сведений о сотрудниках и созданию элементного XML, как показано далее:  
   
 ```  
 <Employee EmpID=...>  
@@ -33,7 +36,7 @@ ms.lasthandoff: 11/09/2017
 </Employee>  
 ```  
   
- Запрос остается тем же, за исключением того, что в имена столбцов добавлена директива `ELEMENT`. Поэтому вместо атрибутов будут добавлены дочерние элементы <`FName`> и <`LName`> к элементу <`Name`>. Так как столбец `Employee!1!EmpID` не указывает директиву `ELEMENT`, `EmpID` добавляется в качестве атрибута элемента <`Employee`>.  
+ Запрос остается тем же, за исключением того, что в имена столбцов добавлена директива `ELEMENT` . Поэтому вместо атрибутов будут добавлены дочерние элементы <`FName`> и <`LName`> к элементу <`Name`>. Так как столбец `Employee!1!EmpID` не указывает директиву `ELEMENT`, `EmpID` добавляется в качестве атрибута элемента <`Employee`>.  
   
 ```  
 SELECT 1    as Tag,  

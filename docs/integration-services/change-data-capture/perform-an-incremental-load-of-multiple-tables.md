@@ -1,5 +1,5 @@
 ---
-title: "Добавочная Загрузка нескольких таблиц | Документы Microsoft"
+title: "Выполнение добавочной загрузки нескольких таблиц | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],multiple tables
+helpviewer_keywords: incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 75aa5ac19aa1bfca6f35f709b26bc4561eec1642
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>Выполнение добавочной загрузки нескольких таблиц
   На диаграмме в разделе [Улучшение добавочных загрузок с помощью системы отслеживания измененных данных](../../integration-services/change-data-capture/change-data-capture-ssis.md)показан базовый пакет, выполняющий добавочную загрузку только для одной таблицы. Однако чаще требуется добавочная загрузка не одной, а нескольких таблиц  
@@ -111,4 +108,3 @@ ms.lasthandoff: 08/03/2017
          Пример, демонстрирующий использование этого преобразования для применения операций обновления и удаления, см. в разделе [Применение изменений в назначении](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md).  
   
   
-

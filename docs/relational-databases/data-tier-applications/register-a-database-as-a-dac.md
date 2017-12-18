@@ -2,9 +2,12 @@
 title: "Регистрация базы данных в качестве приложения уровня данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b6f99676e0fbb0a8b883593e88eb8a0e9ccf258
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3f79711d831a0f92805f8a9c59b003aed3fe1c63
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="register-a-database-as-a-dac"></a>Регистрация базы данных в качестве приложения уровня данных
-  С помощью **Мастера регистрации приложения уровня данных** или скрипта Windows PowerShell создайте определение приложения уровня данных (DAC), описывающее объекты из существующей базы данных, а затем зарегистрируйте это определение в системной базе данных **msdb** (**master** в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью **мастера регистрации приложения уровня данных** или скрипта Windows PowerShell создайте определение приложения уровня данных (DAC), описывающее объекты из существующей базы данных, а затем зарегистрируйте это определение в системной базе данных **msdb** (**master** в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]).  
   
 -   **Перед началом работы:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
   

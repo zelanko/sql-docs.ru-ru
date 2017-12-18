@@ -2,9 +2,12 @@
 title: "Мастер создания подписки (справочник по пользовательскому интерфейсу) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce75e568b50f4d45684664897de0d4351b51d808
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f896ec3aef62e23f25ba58c34c54e1fe447e613a
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="new-subscription-wizard-ui-reference"></a>Мастер создания подписки (справочник пользовательского интерфейса)
-  Этот раздел предоставляет сведения о следующих страницах мастера создания подписки.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Этот раздел предоставляет сведения о следующих страницах мастера создания подписки:  
   
 -   [Расположение агента <имя_агента>](../../relational-databases/replication/agentname-agent-location.md)  
   

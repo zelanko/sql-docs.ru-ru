@@ -2,9 +2,12 @@
 title: "Задача уведомления оператора (план обслуживания) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ea1e759deceda040ef243e89c998651b5e23577
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4e8e10a98a1d2ee8328d4124b9949abf33943821
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="notify-operator-task-maintenance-plan"></a>Задача уведомления оператора (план обслуживания)
-  Диалоговое окно **Задача уведомления оператора** используется для добавления автоматического уведомления к данному плану обслуживания. Для использования этой задачи необходимо включить и надлежащим образом настроить компонент Database Mail в MSDB в качестве базы данных обслуживания почты, а также иметь оператора агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с действующим адресом электронной почты.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Задача уведомления оператора** используется для добавления автоматического уведомления в этот план обслуживания. Для использования этой задачи необходимо включить и надлежащим образом настроить компонент Database Mail в MSDB в качестве базы данных обслуживания почты, а также иметь оператора агента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с действующим адресом электронной почты.  
   
  Данная задача использует хранимую процедуру sp_notify_operator.  
   

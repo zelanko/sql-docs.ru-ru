@@ -2,9 +2,12 @@
 title: "Рекомендации по использованию тестовых серверов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31ae5e4f32eb2a6a2a5bd1e017b46937d70e8ef0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e8fddc2009fba8e86f0d9ebfdffcf476d90e747d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="considerations-for-using-test-servers"></a>Вопросы использования тестовых серверов
-  Одним из важных преимуществ помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] является возможность использовать тестовый сервер для настройки базы данных на рабочем сервере. Благодаря этому можно перенаправить работу по настройке базы данных на тестовый сервер, не копируя на него данные с рабочего сервера.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Одним из важных преимуществ помощника по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] является возможность использовать тестовый сервер для настройки базы данных на рабочем сервере. Благодаря этому можно перенаправить работу по настройке базы данных на тестовый сервер, не копируя на него данные с рабочего сервера.  
   
 > [!NOTE]  
 >  Функция настройки тестового сервера не поддерживается в графическом пользовательском интерфейсе помощника по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

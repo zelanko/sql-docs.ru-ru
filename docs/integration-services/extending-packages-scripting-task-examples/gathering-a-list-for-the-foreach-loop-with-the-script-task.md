@@ -1,5 +1,5 @@
 ---
-title: "Составление списка для цикла ForEach с задачей «скрипт» | Документы Microsoft"
+title: "Составление списка для цикла по каждому элементу в задаче \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,41 +8,38 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Foreach Loop containers
 - Script task [Integration Services], Foreach loops
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b1bd133c2fdc8c500db9c07df9c54e954db327bf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 8abf9b5440cb59319b7d827a406efd900ac689bb
+ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Составление списка для цикла по каждому элементу в задаче «Скрипт»
-  Перечислитель по объекту из переменной перечисляет элементы в списке, передаваемом ему в переменной, и выполняет одни и те же задачи для каждого элемента. Чтобы заполнить список, можно использовать пользовательский код в задаче «Скрипт». Дополнительные сведения о перечислителе см. в разделе [контейнер цикла Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
+  Перечислитель по объекту из переменной перечисляет элементы в списке, передаваемом ему в переменной, и выполняет одни и те же задачи для каждого элемента. Чтобы заполнить список, можно использовать пользовательский код в задаче «Скрипт». Дополнительные сведения о перечислителе см. в разделе [Контейнер "Цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md).  
   
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
 ## <a name="description"></a>Description  
- В следующем примере методы из **System.IO** пространство имен для сбора списка книг Excel на компьютере, на которые новее или старше, чем число дней, указанное пользователем в переменной. В примере выполняется рекурсивный поиск в каталогах на диске С для нахождения файлов, имеющих расширение XLS, и проверяется дата последнего изменения каждого файла, чтобы определить, должен ли файл быть в списке. Он добавляет соответствующие файлы для **ArrayList** и сохраняет **ArrayList** переменной для дальнейшего использования в контейнере цикла Foreach. Контейнер «цикл по каждому элементу» настроен для использования перечислителя по объекту из переменной.  
+ В следующем примере для получения списка книг Excel на компьютере, которые новее или старше, чем указанное пользователем в переменной число дней, используются методы из пространства имен **System.IO**. В примере выполняется рекурсивный поиск в каталогах на диске С для нахождения файлов, имеющих расширение XLS, и проверяется дата последнего изменения каждого файла, чтобы определить, должен ли файл быть в списке. В примере файлы добавляются в массив **ArrayList**, и массив **ArrayList** сохраняется в переменной для дальнейшего использования в контейнере "Цикл по каждому элементу". Контейнер «цикл по каждому элементу» настроен для использования перечислителя по объекту из переменной.  
   
 > [!NOTE]  
->  Должен иметь тип переменной, используемой с перечислитель по объекту из переменной **объекта**. Объект, помещаемый в переменную должен реализовывать один из следующих интерфейсов: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource**, или **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. **Массива** или **ArrayList** обычно используется. **ArrayList** требует ссылку и **Imports** инструкции для **System.Collections** пространства имен.  
+>  Переменная, используемая с перечислителем по объекту из переменной, должна иметь тип **Object**. Объект, который помещается в переменную, должен реализовывать один из следующих интерфейсов: **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** или **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Как правило, используется **Array** или **ArrayList**. Для **ArrayList** требуются ссылка и инструкция **Imports** для пространства имен **System.Collections**.  
   
  Можно поэкспериментировать с этой задачей, используя различные положительные и отрицательные значения для переменной пакета `FileAge`. Например, можно ввести 5 для поиска файлов, созданных за последние пять дней, или ввести -3 для поиска файлов, созданных более трех дней назад. Для этой задачи потребуется минута или две, чтобы выполнить поиск на диске с большим количеством папок.  
   
@@ -50,11 +47,11 @@ ms.lasthandoff: 09/26/2017
   
 1.  Создайте переменную пакета с именем `FileAge`, имеющую тип целого числа, и введите положительное или отрицательное целое значение. Если значение положительное, код выполняет поиск файлов, созданных позже указанного числа дней назад; если значение отрицательное, выполняется поиск файлов, созданных раньше указанного числа дней назад.  
   
-2.  Создайте переменную пакета с именем `FileList` типа **объекта** для получения списка файлов, полученных задачей «скрипт» для последующего использования, перечислитель по объекту из переменной.  
+2.  Создайте переменную пакета с именем `FileList`, имеющую тип **Object**, чтобы получить список файлов, полученных задачей "Скрипт" для дальнейшего использования перечислителем по объекту из переменной.  
   
-3.  Добавить `FileAge` переменной в задаче «скрипт» **ReadOnlyVariables** свойство и добавьте `FileList` переменной **ReadWriteVariables** свойство.  
+3.  Добавьте переменную `FileAge` в свойство **ReadOnlyVariables** задачи "Скрипт" и добавьте переменную `FileList` в свойство **ReadWriteVariables**.  
   
-4.  В коде импорта **System.Collections** и **System.IO** пространства имен.  
+4.  В коде импортируйте пространства имен **System.Collections** и **System.IO**.  
   
 ### <a name="code"></a>код  
   
@@ -183,7 +180,7 @@ public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTAR
     // Extract number of days as positive integer.  
     fileAgeLimit = Math.Abs(fileAgeLimit);  
   
-    ArrayList listForEnumerator = new ArrayList();  
+    listForEnumerator = new ArrayList();  
   
     GetFilesInFolder(FILE_ROOT);  
   
@@ -256,8 +253,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Контейнер цикла foreach](../../integration-services/control-flow/foreach-loop-container.md)   
+ [Контейнер "Цикл по каждому элементу"](../../integration-services/control-flow/foreach-loop-container.md)   
  [Настройка контейнера «цикл по каждому элементу»](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)  
   
   
-

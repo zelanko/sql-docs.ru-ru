@@ -1,5 +1,5 @@
 ---
-title: "Проверка компоненте потока данных | Документы Microsoft"
+title: "Проверка компонента потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -26,17 +24,16 @@ helpviewer_keywords:
 - data flow components [Integration Services], validating
 - validation [Integration Services]
 ms.assetid: 1a7d5925-b387-4e31-af7f-c7f3c5151040
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 937d904f7139e03655177b4544d573da7cc35e14
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3c3953a6c1fbf676d82b3057df2eb9a61f9cc6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="validating-a-data-flow-component"></a>Проверка компонента потока данных
   Метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A> базового класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent> предназначен для того, чтобы не допустить исполнения неправильно настроенного компонента. С помощью этого метода можно убедиться, что у компонента есть нужное число входных и выходных объектов, его пользовательские свойства имеют допустимые значения и что любые нужные соединения заданы. Этот метод также используется для проверки правильности типов данных во входной и выходной коллекциях столбцов и что свойство <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSUsageType> всех столбцов настроено в соответствии с типом компонента. Реализация метода в базовом классе участвует в проверке: она проверяет коллекцию входных столбцов компонента, гарантируя, что каждый столбец этой коллекции ссылается на столбец коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100> вышестоящего компонента.  
@@ -48,9 +45,9 @@ ms.lasthandoff: 08/03/2017
   
  Значение <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISBROKEN> указывает, что компонент содержит ошибку, которую можно исправить, изменив компонент в конструкторе. Такая ошибка обычно вызвана неправильно заданным или настроенным пользовательским свойством или обязательным соединением.  
   
- Последнее значение ошибки — <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>: оно указывает, что компонент обнаружил ошибки, которые могут возникнуть только в случае непосредственного изменения свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> редактированием XML-кода программного пакета или с помощью модели объектов. Например, такая ошибка может возникнуть, если в компоненте добавлен только один входной параметр, но при проверке обнаруживается, что в метаданных <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> их указано несколько. Возвращает ошибки, создающие это значение можно исправить только сбросом компонента с помощью **Сброс** кнопку в **расширенный редактор** диалоговое окно.  
+ Последнее значение ошибки — <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSValidationStatus.VS_ISCORRUPT>: оно указывает, что компонент обнаружил ошибки, которые могут возникнуть только в случае непосредственного изменения свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> редактированием XML-кода программного пакета или с помощью модели объектов. Например, такая ошибка может возникнуть, если в компоненте добавлен только один входной параметр, но при проверке обнаруживается, что в метаданных <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A> их указано несколько. Ошибки, выдающие это возвращаемое значение, можно исправить только сбросом компонента с помощью кнопки **Сброс** в диалоговом окне **Расширенный редактор**.  
   
- Кроме возвращения кода ошибки, компоненты предоставляют отзыв с помощью предупреждений и сообщений об ошибках, выдаваемых во время проверки. Этот механизм поддерживают методы <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>. При вызове этих методов, эти события передаются в **список ошибок** окно [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Затем разработчики компонента могут предоставить отзыв пользователям о происшедших ошибках и, по возможности, о способах их исправления.  
+ Кроме возвращения кода ошибки, компоненты предоставляют отзыв с помощью предупреждений и сообщений об ошибках, выдаваемых во время проверки. Этот механизм поддерживают методы <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireWarning%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireError%2A>. При их вызове сообщения о соответствующих событиях публикуются в окне **Список ошибок** среды [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]. Затем разработчики компонента могут предоставить отзыв пользователям о происшедших ошибках и, по возможности, о способах их исправления.  
   
  В следующем примере кода показана переопределенная реализация метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.Validate%2A>.  
   
@@ -199,4 +196,3 @@ Public  Overrides Sub ReinitializeMetaData()
 End Sub  
 ```  
   
-

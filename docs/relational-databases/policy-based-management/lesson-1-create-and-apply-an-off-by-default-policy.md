@@ -2,9 +2,12 @@
 title: "Занятие 1. Создание и применение политики, отключенной по умолчанию | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40c9434ae693dfe71e97a389ac4c8b500154112a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 85ecfe90f8821623156f5a343197cc7b20ce8802
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Урок 1. Создание и применение политики, отключенной по умолчанию
-С помощью политик управления на основе политик можно администрировать один или несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], один или несколько объектов экземпляра, экземпляров сервера, баз данных, а также один или несколько объектов базы данных. Администратор базы данных должен убедиться, что определенные серверы компонента Database Mail отключены. На этом занятии создаются условие и политика, задающие этот параметр сервера. Выполняется проверка сервера на предмет соответствия политике. Затем используется политика для изменения настройки сервера с целью приведения его в соответствие.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью политик управления на основе политик можно администрировать один или несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], один или несколько объектов экземпляра, экземпляров сервера, баз данных, а также один или несколько объектов базы данных. Администратор базы данных должен убедиться, что определенные серверы компонента Database Mail отключены. На этом занятии создаются условие и политика, задающие этот параметр сервера. Выполняется проверка сервера на предмет соответствия политике. Затем используется политика для изменения настройки сервера с целью приведения его в соответствие.  
   
 Это занятие содержит следующие разделы:  
   

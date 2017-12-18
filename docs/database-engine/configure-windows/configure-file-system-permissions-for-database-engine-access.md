@@ -2,9 +2,12 @@
 title: "Настройка разрешений файловой системы для доступа к компоненту ядра СУБД | Документы Майкрософт"
 ms.custom: 
 ms.date: 06/06/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e3c785cf6ee2c27cf0817659008aa1d293221fd5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c3c16fe40753700a0f8e6d89c403b7a96324d366
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Настройка разрешений файловой системы для доступа к компоненту ядра СУБД
-  В этом разделе описана процедура предоставления компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]доступа к тому расположению в файловой системе, где хранятся файлы базы данных. Служба компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должна иметь разрешение файловой системы Windows для доступа к папке, в которой хранятся файлы базы данных. Разрешение на расположение по умолчанию задается во время установки. Если файла базы данных размещаются в другом расположении, то необходимо выполнить эти действия, чтобы предоставить компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] разрешение полного доступа к этому расположению.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описана процедура предоставления компоненту [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] доступа к расположению в файловой системе, где хранятся файлы базы данных. Служба компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должна иметь разрешение файловой системы Windows для доступа к папке, в которой хранятся файлы базы данных. Разрешение на расположение по умолчанию задается во время установки. Если файла базы данных размещаются в другом расположении, то необходимо выполнить эти действия, чтобы предоставить компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] разрешение полного доступа к этому расположению.  
   
  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , разрешения назначаются идентификатору безопасности каждой из служб. Эта система позволяет обеспечить изоляцию и всестороннюю защиту службы. Идентификатор безопасности службы создается на основе имени службы и является уникальным для каждой службы. В разделе [Настройка учетных записей и разрешений службы Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) описывается идентификатор безопасности каждой службы доступа, а имена перечисляются в разделе **Права и привилегии Windows**. Разрешение на доступ к расположению файла назначается именно идентификатору безопасности службы.  
   

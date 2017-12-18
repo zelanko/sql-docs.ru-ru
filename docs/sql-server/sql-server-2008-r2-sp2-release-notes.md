@@ -1,11 +1,14 @@
 ---
 title: "Заметки о выпуске SQL Server 2008 R2 с пакетом обновления 2 (SP2) | Документация Майкрософт"
-ms.prod: sql-non-specified
+ms.prod: sql-server
+ms.prod_service: sql-non-specified
+ms.service: server-general
+ms.component: 
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,14 +20,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e9a25b50719f315fc9b6ab4683cdb4a75f13d266
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 274eacb496ce91ca2171c467e9265acad5ce4b79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="sql-server-2008-r2-sp2-release-notes"></a>Заметки о выпуске пакета обновления 2 (SP2) для SQL Server 2008 R2
-В этих заметках о выпуске содержится описание известных проблем, которое необходимо прочитать перед установкой или диагностикой Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2). Эти заметки о выпуске относятся ко всем выпускам SQL Server 2008 R2 с пакетом обновления 2 (SP2) и доступны только в сети. Этот документ периодически обновляется.  
+# <a name="sql-server-2008-r2-sp2-release-notes"></a>SQL Server 2008 R2 SP2 Release Notes
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] В этих заметках о выпуске содержится описание известных проблем, которое необходимо прочитать перед установкой или диагностикой Microsoft SQL Server 2008 R2 с пакетом обновления 2 (SP2). Эти заметки о выпуске относятся ко всем выпускам SQL Server 2008 R2 с пакетом обновления 2 (SP2) и доступны только в сети. Этот документ периодически обновляется.  
   
 ## <a name="10-whats-new-in-service-pack-2"></a>1.0. Новые возможности пакета обновления 2 (SP2)  
 Добавлено динамическое административное представление **sys.dm_db_stats_properties**. С помощью этих динамических административных представлений можно определять статистические свойства указанной таблицы или индексированного представления из текущей базы данных. Например, это динамическое административное представление возвращает количество строк, которые были отобраны, и количество шагов в гистограмме.  

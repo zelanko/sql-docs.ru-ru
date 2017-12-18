@@ -1,5 +1,5 @@
 ---
-title: "В службах Integration Services (SSIS) проекты и решения | Документы Microsoft"
+title: "Проекты и решения служб Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/24/2016
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.importprojectwizard.f1
+f1_keywords: sql13.ssis.importprojectwizard.f1
 helpviewer_keywords:
 - projects [Integration Services], creating
 - folders [Integration Services], projects
@@ -21,22 +19,21 @@ helpviewer_keywords:
 - folders [Integration Services]
 - projects [Integration Services], about projects
 ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 246a6df702e323d57d21e9e014aa059db31b300e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c5231ce48a81595fe3523b490ca38ea056f0c9a3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>Проекты и решения служб Integration Services (SSIS)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] включает среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , предназначенную для разработки пакетов [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]пакеты находятся в проектах. Для создания проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и работы с ними необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в статье [Установка служб Integration Services](../integration-services/install-windows/install-integration-services.md).  
+Пакеты [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] находятся в проектах. Для создания проектов служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] и работы с ними необходимо установить среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] . Дополнительные сведения см. в статье [Установка служб Integration Services](../integration-services/install-windows/install-integration-services.md).  
   
  При создании нового проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]отображается диалоговое окно **Создание проекта** с шаблоном **Проект служб Integration Services** . Этот шаблон позволяет создать проект, в котором содержится единственный пакет.  
   
@@ -44,7 +41,7 @@ ms.lasthandoff: 09/26/2017
  Проекты сохраняются в решениях. Можно сначала создать решение, затем добавить к решению проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Если не существует никаких решений, среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] автоматически создает для пользователя решение после того, как пользователь сначала создаст проект. Решение может содержать несколько проектов различного типа.  
   
 > [!TIP]  
->  По умолчанию при создании нового проекта в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], решение не отображается в **обозревателе решений** области. Чтобы изменить это поведение по умолчанию, в меню **Сервис** выберите пункт **Параметры**. В диалоговом окне **Параметры** последовательно раскройте элементы **Проекты и решения**, а затем щелкните **Общие**. На странице **Общие** выберите **Всегда показывать решение**.  
+>  По умолчанию при создании проекта в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] решение не отображается в области **Обозреватель решений**. Чтобы изменить это поведение по умолчанию, в меню **Сервис** выберите пункт **Параметры**. В диалоговом окне **Параметры** последовательно раскройте элементы **Проекты и решения**, а затем щелкните **Общие**. На странице **Общие** выберите **Всегда показывать решение**.  
 
 ## <a name="solutions-contain-projects"></a>Решения содержат проекты  
  Решение — это контейнер, который выполняет группирование проектов и управление проектами, которые используются при разработке комплексных бизнес-решений. Решение позволяет обрабатывать несколько проектов как один модуль и сводить воедино несколько связанных проектов, задействованных в бизнес-решении.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="folders-in-integration-services-projects"></a>Папки в проектах служб Integration Services  
  На следующей диаграмме показаны папки проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
- ![Папки в проект служб Integration Services](../integration-services/media/solutionexplorer.gif "папок в проект служб Integration Services")  
+ ![Папки в проекте служб Integration Services](../integration-services/media/solutionexplorer.gif "Папки в проекте служб Integration Services")  
   
  В следующей таблице описаны папки, появляющиеся в проекте служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -92,7 +89,7 @@ ms.lasthandoff: 09/26/2017
   
  В обозревателе решений щелкните правой кнопкой мыши проект служб Integration Services и выберите пункт **Свойства** , чтобы открыть страницу свойств проекта. На вкладке **Общие** окна **Свойства конфигурации**выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
   
- ![Свойство TargetServerVersion, в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "свойство TargetServerVersion, в диалоговом окне свойств проекта")  
+ ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
  
 ## <a name="create-a-new-integration-services-project"></a>Создание нового проекта служб Integration Services  
   
@@ -124,11 +121,11 @@ ms.lasthandoff: 09/26/2017
   
 2.  На вкладке **Общие** окна **Свойства конфигурации**выберите свойство **TargetServerVersion** и затем SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
   
-     ![Свойство TargetServerVersion, в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "свойство TargetServerVersion, в диалоговом окне свойств проекта")  
+     ![Свойство TargetServerVersion в диалоговом окне свойств проекта](../integration-services/media/targetserverversion2.png "Свойство TargetServerVersion в диалоговом окне свойств проекта")  
   
  Можно создавать, обслуживать и выполнять пакеты, предназначенные для версий SQL Server 2016, SQL Server 2014 или SQL Server 2012.  
 
-## <a name="import-an-existing-project-with-the-import-project-wizard"></a>Импортировать существующий проект с помощью мастера импорта проектов
+## <a name="import-an-existing-project-with-the-import-project-wizard"></a>Импорт существующего проекта с помощью мастера импорта проектов
   
 1.  В [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]выберите команду **Создать** > **Проект** в меню **Файл** .  
   
@@ -160,7 +157,7 @@ ms.lasthandoff: 09/26/2017
   
 12. Нажмите кнопку **Закрыть** , чтобы закрыть диалоговое окно **Мастер импорта проекта служб Integration Services** .  
 
-## <a name="add-a-project-to-a-solution"></a>Добавьте проект в решение 
+## <a name="add-a-project-to-a-solution"></a>Добавление проекта к решению 
  При добавлении проекта можно создать новый пустой проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] или добавить проект, созданный для другого решения. Добавить проект к существующему решению можно, только если решение отображается в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="add-a-new-project-to-a-solution"></a>Добавление нового проекта к решению  
@@ -189,7 +186,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Проект будет добавлен в папку решений **Обозревателя решений**.  
   
-## <a name="remove-a-project-from-a-solution"></a>Удалить проект из решения
+## <a name="remove-a-project-from-a-solution"></a>Удаление проекта из решения
  Удалить проект из решения можно, только если решение отображается в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. После отображения решения можно удалить все проекты, кроме одного. Когда остается только один проект, среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] больше не отображает папку решения и удалить последний проект становится невозможным.  
    
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]нужно открыть решение, из которого необходимо удалить проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -198,7 +195,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  Чтобы подтвердить удаление, нажмите кнопку **ОК** .  
 
-## <a name="add-an-item-to-a-project"></a>Добавить элемент в проект  
+## <a name="add-an-item-to-a-project"></a>Добавление элемента в проект  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте решение с проектом служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , к которому требуется добавить элемент.  
   
@@ -211,7 +208,7 @@ ms.lasthandoff: 09/26/2017
 3.  Новый элемент появляется в соответствующей папке в обозревателе решений.  
 
 ## <a name="copy-project-items"></a>Копирование элементов проекта  
-Вы можете скопировать объекты в пределах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проекта или между [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проектов. Также вы можете скопировать объекты между другими типами проектов [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Чтобы можно было выполнить копирование между проектами, они должны быть частью одного решения среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .
+Объекты можно копировать внутри проекта [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] или из одного проекта [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] в другой. Также вы можете скопировать объекты между другими типами проектов [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] и [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Чтобы можно было выполнить копирование между проектами, они должны быть частью одного решения среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .
 
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] или решение, с которым собираетесь работать.  
   
@@ -223,4 +220,3 @@ ms.lasthandoff: 09/26/2017
   
      Элементы автоматически копируются в нужную папку. При копировании элементов в проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , которые не являются пакетами, элементы копируются в папку **Разное** .  
      
-

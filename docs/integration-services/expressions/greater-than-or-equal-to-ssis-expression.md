@@ -1,5 +1,5 @@
 ---
-title: "&gt;= (Больше или равно) (выражение служб SSIS) | Документы Microsoft"
+title: "&gt;= (больше или равно) (выражение служб SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - <= (less than or equal to operator)
 - greater than or equal to (>=)
 ms.assetid: 52ad504d-2f54-44de-b5e2-620577c0e289
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e8739ef9b5147a2019d71ee5ffa06274dea29d53
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 86e4fb934f5f583314e5d3bc69a9275d911e5dfe
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (Больше или равно) (выражение служб SSIS)
+# <a name="gt-greater-than-or-equal-to-ssis-expression"></a>&gt;= (больше или равно) (выражение служб SSIS)
   Выполняет сравнение с целью определения, является ли первое выражение больше второго или равно ему. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  
   
 > [!NOTE]  
@@ -111,11 +109,10 @@ ListPrice >= 500
 ```  
   
 ## <a name="see-also"></a>См. также  
- [&#62; &#40; Больше &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#60; &#40; Меньше, чем &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#60; = &#40; Меньше или равно &#41; &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
- [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+ [&#62; (больше чем) (выражение служб SSIS)](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [&#60; (меньше чем) (выражение служб SSIS)](../../integration-services/expressions/less-than-ssis-expression.md)   
+ [&#60;= (меньше или равно) (выражение служб SSIS)](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
   
   
-

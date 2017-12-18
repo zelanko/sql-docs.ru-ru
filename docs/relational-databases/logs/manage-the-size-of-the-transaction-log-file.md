@@ -2,9 +2,12 @@
 title: "Управление размером файла журнала транзакций | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/15/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: logs
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3b0a01269443e7d2c66f200c165409bb72404849
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a77aa280acd7a8b6525ac5c17d209b384a7fbed8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Управление размером файла журнала транзакций
-В этой статье рассказывается о мониторинге размера журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сжатии журнала транзакций, добавлении или увеличении файла журнала транзакций, оптимизации скорости роста журнала транзакций **tempdb**, а также об управлении размером файла журнала транзакций.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этой статье рассказывается о мониторинге размера журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сжатии журнала транзакций, добавлении или увеличении файла журнала транзакций, оптимизации скорости роста журнала транзакций **tempdb**, а также об управлении размером файла журнала транзакций.  
 
   ##  <a name="MonitorSpaceUse"></a> Мониторинг используемого пространства журнала  
 Контролировать используемое пространство журнала можно с помощью команды [DBCC SQLPERF (LOGSPACE)](https://docs.microsoft.com/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql). Она возвращает сведения об объеме пространства, используемого журналом в данный момент, и указывает, необходимо ли провести усечение журнала транзакций. Дополнительные сведения см. в разделе [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md). Для получения сведений о текущем размере файла журнала, его максимальном размере и параметре автоматического увеличения файла вы можете также использовать столбцы **size**, **max_size** и **growth** для данного файла журнала в представлении **sys.database_files**. Дополнительные сведения см. в разделе [sys.database_files (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  

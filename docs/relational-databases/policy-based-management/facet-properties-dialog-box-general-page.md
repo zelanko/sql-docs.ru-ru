@@ -2,9 +2,12 @@
 title: "Диалоговое окно \"Свойства аспекта\", вкладка \"Общие\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 315e059b0d90b1aa47eb998b3559dd675e4b5b4e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 741f4ddad940038388efc7cb6d1c9480ee428fa0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Диалоговое окно «Свойства аспекта», вкладка «Общие»
-  Это диалоговое окно предназначено для просмотра свойств аспекта управления на основе политик. Каждый аспект может быть применен к одному или нескольким типам целевого объекта, например к серверу, базе данных или таблице. Используйте эту страницу, чтобы просмотреть целевые типы, связанные с данным аспектом. Свойства аспекта определяются во время его создания и их нельзя изменить на этой странице.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Это диалоговое окно предназначено для просмотра свойств аспекта управления на основе политик. Каждый аспект может быть применен к одному или нескольким типам целевого объекта, например к серверу, базе данных или таблице. Используйте эту страницу, чтобы просмотреть целевые типы, связанные с данным аспектом. Свойства аспекта определяются во время его создания и их нельзя изменить на этой странице.  
   
 ## <a name="options"></a>Параметры  
  **Описание**  

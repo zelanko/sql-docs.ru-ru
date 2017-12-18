@@ -1,5 +1,5 @@
 ---
-title: "Источники данных | Документы Microsoft"
+title: "Источники данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/27/2016
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- data sources [Integration Services], about data sources
+helpviewer_keywords: data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: a9bdd1ee95d794dc02851da35beff5ce4ea88243
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-sources"></a>Источники данных
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] входит объект времени разработки, который можно использовать в пакетах служб [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : источник данных.  
@@ -52,4 +49,3 @@ ms.lasthandoff: 09/27/2017
  Между источником данных и диспетчерами соединений, ссылающимися на него, нет зависимостей. Если источник данных больше не входит в проект, пакет по-прежнему остается правильным, так как информация об источнике данных, например тип и строка соединения, включается в определение пакета.  
   
   
-

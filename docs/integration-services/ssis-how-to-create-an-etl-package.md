@@ -1,5 +1,5 @@
 ---
-title: "Службы SSIS Создание ETL-пакета | Документы Microsoft"
+title: "Службы SSIS: создание пакета ETL | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 helpviewer_keywords:
 - SSIS, tutorials
 - packages [Integration Services], tutorials
@@ -22,21 +20,20 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-caps.latest.revision: 38
+caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 2005755d073f7bb4950268e0fba827860491d1c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b14d05d686b26aaad7e6de24c9b445e0c4b1abf7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>Службы SSIS: создание пакета ETL
 
- > Содержимое, связанное с предыдущих версий SQL Server, в разделе [учебник по службам SSIS: создание простого ETL-пакета](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx).
+ > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Учебник по службам SSIS. Создание простого ETL-пакета](https://msdn.microsoft.com/en-US/library/ms169917(SQL.120).aspx).
 
 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) представляют собой платформу для построения высокопроизводительных решений для интеграции данных, включая пакеты ETL для хранения данных. Службы SSIS содержат графические инструменты и мастера для построения и отладки пакетов; задачи для выполнения функций рабочего процесса, таких как операции FTP, выполнение инструкций SQL и отправка сообщений электронной почты; источники данных и назначения для извлечения и загрузки данных; преобразования для очистки, статистической обработки, слияния и копирования данных; службу управления, службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для администрирования выполнения и хранения пакетов, а также API-интерфейсы для программирования объектной модели служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -52,7 +49,7 @@ ms.lasthandoff: 08/03/2017
   
 Для работы с этим учебником в системе должны быть установлены следующие компоненты:  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]с **AdventureWorksDW2012** базы данных. В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Для загрузки базы данных **AdventureWorksDW2012** перейдите по ссылке [Adventure Works для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с базой данных **AdventureWorksDW2012** . В целях повышения безопасности образцы баз данных по умолчанию не устанавливаются. Для загрузки базы данных **AdventureWorksDW2012** перейдите по ссылке [Adventure Works для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=275026).  
   
     > [!IMPORTANT]  
     > При присоединении базы данных (файл\*.mdf) по умолчанию среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] выполняет поиск LDF-файла. Необходимо вручную удалить LDF-файл перед тем, как нажать кнопку «ОК» в диалоговом окне **Присоединение баз данных** .  
@@ -88,4 +85,3 @@ ms.lasthandoff: 08/03/2017
   
   
   
-

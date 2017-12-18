@@ -2,9 +2,12 @@
 title: "Состояния зеркального отображения (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 62690acf5d9e89f1d89aece14514385193057c1c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4321216ddefa8ac3a3e6335a2432244f342c12da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="mirroring-states-sql-server"></a>Состояния зеркального отображения (SQL Server)
-  Во время сеанса зеркального отображения база данных всегда находится в определенном состоянии ( *состояние зеркального отображения*). Состояние базы данных отражает состояние соединения, поток данных и различия между данными, которые имеются у участников. Сеанс зеркального отображения базы данных принимает такое же состояние, что и у основной базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Во время сеанса зеркального отображения база данных всегда находится в определенном состоянии (*состояние зеркального отображения*). Состояние базы данных отражает состояние соединения, поток данных и различия между данными, которые имеются у участников. Сеанс зеркального отображения базы данных принимает такое же состояние, что и у основной базы данных.  
   
  На всем протяжении сеанса зеркального отображения базы данных экземпляры сервера контролируют друг друга. Состояние зеркального отображения используется участниками для наблюдения за базой данных. Основная и зеркальная базы данных всегда находятся в одинаковом состоянии, за исключением состояния PENDING_FAILOVER. При наличии в сеансе следящего сервера он контролируется каждым из участников при помощи его состояния соединения (CONNECTED или DISCONNECTED).  
   

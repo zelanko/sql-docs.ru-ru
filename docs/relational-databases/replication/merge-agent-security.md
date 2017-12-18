@@ -2,9 +2,12 @@
 title: "Защита агента слияния | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 830d3a7d00d560c7a3360d23c7a6fe2dd4db035a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 65555f66e205e6502b07ba09105ee1de2fe411f0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="merge-agent-security"></a>Безопасность агента слияния
-  При помощи диалогового окна **Безопасность агента слияния** можно указать учетную запись Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] , под которой необходимо запускать агент слияния. Агент слияния запускается на распространителе для принудительных подписок и на подписчике для подписок по запросу. На учетную запись Windows можно также ссылаться как на *учетную запись процесса*, потому что процесс агента работает под этой учетной записью. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью диалогового окна **Безопасность агента слияния** можно указать учетную запись Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)], под которой необходимо запускать агент слияния. Агент слияния запускается на распространителе для принудительных подписок и на подписчике для подписок по запросу. На учетную запись Windows можно также ссылаться как на *учетную запись процесса*, потому что процесс агента работает под этой учетной записью. Дополнительные параметры в этом диалоговом окне зависят от метода доступа к нему.  
   
 -   Если это диалоговое окно вызывается из мастера создания подписки, можно указать контекст, при котором агент слияния устанавливает соединение с сервером подписчика (для принудительных подписок) или с серверами издателя и распространителя (для подписок по запросу). Соединение можно установить с помощью учетной записи Windows или в контексте указанной учетной записи [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

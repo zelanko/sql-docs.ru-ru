@@ -2,9 +2,12 @@
 title: "Задача \"Перестроение индекса\" (план обслуживания) | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bce95c76bdf7eb37469b33f800e9aa8bf574bed3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f077a5071cfb7f3da4114fde9453cfa2c331783f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>Задача «Перестроение индекса» (план обслуживания)
-  Диалоговое окно **Задача "Перестроение индекса"** используется для пересоздания индексов на таблицах в базе данных с новым коэффициентом заполнения. Коэффициент заполнения определяет количество пустого пространства на каждой странице индекса для обеспечения роста в будущем. По мере того как к таблице добавляются данные, свободное пространство заполняется, поскольку коэффициент заполнения не сохраняется. Восстановить свободное пространство можно путем реорганизации данных и страниц индекса.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Задача "Перестроение индекса"** используется для повторного создания индексов для таблиц в базе данных с новым коэффициентом заполнения. Коэффициент заполнения определяет количество пустого пространства на каждой странице индекса для обеспечения роста в будущем. По мере того как к таблице добавляются данные, свободное пространство заполняется, поскольку коэффициент заполнения не сохраняется. Восстановить свободное пространство можно путем реорганизации данных и страниц индекса.  
   
  **Задача "Перестроение индекса"** использует инструкцию ALTER INDEX. Дополнительные сведения о параметрах, описанных на этой странице, см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   

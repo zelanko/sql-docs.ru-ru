@@ -1,10 +1,13 @@
 ---
 title: "Подготовка к обновлению с помощью помощника по миграции данных | Документы Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8c5409e595067fe23ad54ba13109f27d182a21e0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3a4e884490b9def42f660fca00da886f93627666
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="prepare-for-upgrade-by-running-data-migration-assistant"></a>Подготовка к обновлению с помощью помощника по миграции данных
-  Приготовьтесь к обновлению баз данных OLTP и внедрению новых возможностей в [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)], скачав и запустив помощник по миграции данных Microsoft Data Migration Assistant.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Приготовьтесь к обновлению баз данных OLTP и внедрению новых возможностей в [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)], скачав и запустив помощник по миграции данных Microsoft Data Migration Assistant.  
   
 ## <a name="download-and-install-data-migration-assistant"></a>Загрузка и установка помощника по миграции данных  
  Скачайте и установите помощник по миграции данных [здесь](http://go.microsoft.com/fwlink/?LinkID=613421). Этот инструмент не входит в комплект на установочном носителе [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] .  

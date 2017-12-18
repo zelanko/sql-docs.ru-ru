@@ -1,5 +1,5 @@
 ---
-title: "Catalog.Startup | Документы Microsoft"
+title: "catalog.startup | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 271fd405-246a-4852-bfbe-f557241ce6ea
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3a8c89be0541be1861f45240b891d349019a8935
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b80919c3a754913ff15a5eed9ae37b39044977a0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogstartup"></a>catalog.startup
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +30,7 @@ ms.lasthandoff: 09/26/2017
   
  Хранимая процедура исправляет состояние любых пакетов, выполнявшихся в момент отключения экземпляра сервера служб [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
   
- У вас есть возможность включить хранимую процедуру на автоматический запуск при каждом [!INCLUDE[ssIS](../../includes/ssis-md.md)] перезапуске экземпляра сервера, выбрав **включить автоматическое выполнение служб Integration Services хранимой процедуры при запуске SQL Server** в диалоговом окне **создать каталог** диалоговое окно.  
+ Предусмотрена возможность включить хранимую процедуру для автоматического выполнения при каждом перезапуске экземпляра сервера [!INCLUDE[ssIS](../../includes/ssis-md.md)], выбрав параметр **Включить автоматическое выполнение хранимой процедуры служб Integration Services при запуске SQL Server** в диалоговом окне **Создание каталога**.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -51,9 +49,8 @@ catalog.startup
   
 -   Разрешения READ и MODIFY на экземпляр выполнения, разрешения READ и EXECUTE на проект и, при необходимости, разрешения READ на среду, указанную в ссылке  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
   
-

@@ -2,9 +2,12 @@
 title: "Класс событий Unprepare SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 714bf39c07d862b51f0d0fa0ff2ebb63b23101c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 22da6cb0ea25b23b581ee8048a03ca6af855bda2
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="unprepare-sql-event-class"></a>Unprepare SQL, класс событий
-  Событие класса событий Unprepare SQL указывает, что приложение, использующее технологии SqlClient, ODBC, OLE DB или DB-Library, аннулировало (удалило) подготовленную инструкцию или несколько инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий Unprepare SQL указывает, что компонент SqlClient, ODBC, OLE DB или DB-Library аннулировал (удалил) подготовленную инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] или несколько таких инструкций.  
   
 ## <a name="unprepare-sql-event-class-data-columns"></a>Столбцы данных класса событий Unprepare SQL  
   

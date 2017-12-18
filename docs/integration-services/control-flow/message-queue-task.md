@@ -1,5 +1,5 @@
 ---
-title: "«Очередь сообщений» | Документы Microsoft"
+title: "Задача \"Очередь сообщений\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,17 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: 68
+caps.latest.revision: "68"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: eddacf0c8454160e6078ff59d150bab5218b6523
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: cc23a330f63d67cef6a5e12df9bf3b6ca82dcff9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="message-queue-task"></a>Задача «Очередь сообщений»
   Задача "Очередь сообщений" позволяет использовать службу очередей сообщений Майкрософт для отправки и получения сообщений между пакетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или для отправления сообщений в очередь приложений, которая обрабатывается пользовательским приложением. Эти сообщения могут принимать форму простого текста, файлов или переменных и их значений.  
@@ -100,7 +98,7 @@ ms.lasthandoff: 08/11/2017
 ## <a name="configuration-of-the-message-queue-task"></a>Настройка задачи «Очередь сообщений»  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами. Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующих разделах:  
   
--   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
+-   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения о задании этих свойств программными средствами см. в документации по классу **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** в руководстве для разработчиков.  
   
@@ -124,7 +122,7 @@ ms.lasthandoff: 08/11/2017
  Укажите, нужно ли использовать формат 2000 службы очередей сообщений (MSMQ). По умолчанию **False**.  
   
  **MSMQConnection**  
- Выберите существующий диспетчер соединений MSMQ или щелкните \< **новое подключение...** > для создания нового соединения диспетчера.  
+ Выберите существующий диспетчер подключений MSMQ или щелкните \<**Создать соединение...**>, чтобы создать диспетчер.  
   
  **См. также**: [Диспетчер FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager.md), [Редактор диспетчера FTP-соединений](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -234,7 +232,7 @@ ms.lasthandoff: 08/11/2017
 |**Из пакета**|Сообщение получает только сообщения из указанного пакета. Выбор этого значения отображает динамический параметр **Идентификатор**.|  
   
  **Переменная**  
- Введите имя переменной или нажмите \< **создать переменную...** > и затем настройте новую переменную.  
+ Введите имя переменной либо выберите \<**Создать переменную…**> и затем настройте новую переменную.  
   
  **См. также:** [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -279,7 +277,7 @@ ms.lasthandoff: 08/11/2017
  Если в качестве значения параметра **Сравнить** установлено **Нет**, укажите строку, с которой должно сравниваться сообщение.  
   
  **Переменная**  
- Введите имя переменной храниться полученное сообщение, или нажмите кнопку \< **создать переменную...** > и затем настройте новую переменную.  
+ Введите имя переменной, в которой должно храниться полученное сообщение, либо выберите \<**Создать переменную…**> и затем настройте новую переменную.  
   
  **См. также:** [Добавление переменной](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -308,4 +306,3 @@ ms.lasthandoff: 08/11/2017
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   
   
-

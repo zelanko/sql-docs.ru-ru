@@ -2,9 +2,12 @@
 title: "Функция-классификатор регулятора ресурсов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: resource-governor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01c1a57ade59d9bf46c4c1f2f71a5b8c61fd61b5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a47914e36079c04040e1ccc23228278396154fbe
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="resource-governor-classifier-function"></a>Функция-классификатор регулятора ресурсов
-  Процесс классификации регулятора ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает входящие сеансы группе рабочей нагрузки с учетом характеристик сеанса. Логику классификации можно адаптировать путем написания определяемой пользователем функции, называемой функцией-классификатором.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Процесс классификации регулятора ресурсов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] назначает входящие сеансы группе рабочей нагрузки с учетом характеристик сеанса. Логику классификации можно адаптировать путем написания определяемой пользователем функции, называемой функцией-классификатором.  
   
 ## <a name="classification"></a>Классификация  
  Регулятор ресурсов поддерживает классификацию входящих сеансов. Классификация основывается на наборе пользовательских критериев, содержащихся в функции. Результаты логики функции позволяют регулятору ресурсов классифицировать сеансы по существующим группам рабочей нагрузки.  

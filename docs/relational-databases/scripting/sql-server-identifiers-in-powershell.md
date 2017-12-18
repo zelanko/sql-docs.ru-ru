@@ -2,9 +2,12 @@
 title: "Идентификаторы SQL Server в PowerShell | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cdc0185b9ac8564a47ca6e4e51b8fdb76e63a653
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 95ead7b5686d23d3318d30b84abe868d00fb1622
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Идентификаторы SQL Server в PowerShell
-  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell использует идентификаторы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в путях Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать символы, которые не поддерживаются в путях Windows PowerShell. Такие символы при использовании в идентификаторах в составе путей Windows PowerShell следует экранировать или применять для них специальную кодировку.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell использует идентификаторы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в путях Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать символы, которые не поддерживаются в путях Windows PowerShell. Такие символы при использовании в идентификаторах в составе путей Windows PowerShell следует экранировать или применять для них специальную кодировку.  
   
 ## <a name="sql-server-identifiers-in-windows-powershell-paths"></a>Идентификаторы SQL Server в путях Windows PowerShell  
  Поставщики Windows PowerShell предоставляют доступ к иерархиям данных с помощью структуры путей, аналогичной используемой в файловой системе Windows. В поставщике [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] реализуются пути к объектам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Для компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]жесткий диск задается как SQLSERVER, а первая папка — как \SQL. Объекты базы данных указываются как контейнеры и элементы. Ниже приведен путь к таблице Vendor в схеме Purchasing базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]по умолчанию:  

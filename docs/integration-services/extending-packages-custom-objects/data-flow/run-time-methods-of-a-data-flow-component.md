@@ -1,5 +1,5 @@
 ---
-title: "Компонент потока данных во время выполнения методов | Документы Microsoft"
+title: "Методы времени выполнения для компонента потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - run-time [Integration Services]
 - data flow components [Integration Services], run-time methods
 ms.assetid: fd9e4317-18dd-43af-bbdc-79db32183ac4
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: da14a10c936d1966e9317fe50141ecdb86c23379
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f978a101e721ee1b96caa59e7633988777d30dc
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Методы времени выполнения для компонента потока данных
   Во время выполнения задача потока данных проверяет последовательность компонентов, подготавливает план выполнения и управляет пулом рабочих потоков, выполняющих план работы. Задача загружает строки данных из источников, обрабатывает их с помощью преобразований, а затем сохраняет в соответствующие назначения.  
@@ -167,10 +164,10 @@ public overrides sub PrimeOutput( outputs as Integer , outputIDs() as Integer ,b
 End Sub  
 ```  
   
- Дополнительные сведения о разработке компонентов, которые добавляют строки в выходные буферы см. в разделе [разработке пользовательского компонента источника](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) и [Разработка пользовательского компонента преобразования с асинхронными выходами](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
+ Дополнительные сведения о разработке компонентов, добавляющих строки в выходные буферы, см. в разделах [Разработка пользовательского компонента источника](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md) и [Разработка пользовательского компонента преобразования с асинхронными выходами](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md).  
   
 ### <a name="receiving-rows"></a>Получение строк  
- Компоненты получают строки из вышестоящих компонентов в объектах <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. Задача потока данных передает объект <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>, который содержит строки, добавленные в поток данных вышестоящими компонентами, в качестве параметра метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Этот входной буфер можно использовать для проверки и изменения строк и столбцов в буфере, но непригоден для добавления или удаления строк. Метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> вызывается повторно до тех пор, пока не останется ни одного доступного буфера. Вызывается, время последнего <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> свойство **true**. Можно просматривать коллекцию строк в буфере с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, при этом буфер перемещается в следующую строку. Этот метод возвращает **false** когда буфер располагается в последней строке в коллекции. Нет необходимости проверять значение свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>, если не требуется выполнить дополнительное действие после обработки последних строк данных.  
+ Компоненты получают строки из вышестоящих компонентов в объектах <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. Задача потока данных передает объект <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>, который содержит строки, добавленные в поток данных вышестоящими компонентами, в качестве параметра метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A>. Этот входной буфер можно использовать для проверки и изменения строк и столбцов в буфере, но непригоден для добавления или удаления строк. Метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> вызывается повторно до тех пор, пока не останется ни одного доступного буфера. При последнем вызове свойство <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> имеет значение **true**. Можно просматривать коллекцию строк в буфере с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A>, при этом буфер перемещается в следующую строку. Этот метод возвращает значение **false**, когда буфер располагается в последней строке коллекции. Нет необходимости проверять значение свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>, если не требуется выполнить дополнительное действие после обработки последних строк данных.  
   
  Ниже показан правильный шаблон использования метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.NextRow%2A> и свойства <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A>.  
   
@@ -216,10 +213,9 @@ Public Overrides Sub ProcessInput(ByVal inputID As Integer, ByVal buffer As Pipe
 End Sub  
 ```  
   
- Дополнительные сведения о разработке компонентов, получающих строки во входные буферы см. в разделе [разработка компонентов назначения](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) и [Разработка пользовательского компонента преобразования с синхронными выходами](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
+ Дополнительные сведения о разработке компонентов, получающих строки из входных буферов, см. в разделах [Разработка пользовательского компонента назначения](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md) и [Разработка пользовательского компонента преобразования с синхронными выходами](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-synchronous-outputs.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Методы времени разработки компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
+ [Методы времени разработки для компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md)  
   
   
-

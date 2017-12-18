@@ -1,5 +1,5 @@
 ---
-title: "Службы Integration Services (службы SSIS) | Документы Microsoft"
+title: "Службы Integration Services (службы SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,22 +24,21 @@ helpviewer_keywords:
 - service [Integration Services]
 - SQL Server Integration Services, service
 ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: 9c2a1063b982ab1f3b8203f76adc59e945da12b1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-service-ssis-service"></a>Службы Integration Services (службы SSIS)
   В подразделах этого раздела описывается служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] — служба Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Эта служба не требуется для создания, сохранения и выполнения пакетов служб Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] поддерживает службу [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для обеспечения обратной совместимости с более ранними версиями служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
- Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют объекты, настройки и рабочие данные в базе данных **SSISDB** для проектов, развернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проектов. На сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ядра СУБД, размещается база данных. Дополнительные сведения о базе данных см. в разделе [Каталог служб SSIS](../../integration-services/service/ssis-catalog.md). Дополнительные сведения о развертывании проектов на [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сервера, в разделе [развертывания Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] сохраняют объекты, настройки и рабочие данные в базе данных **SSISDB** для проектов, развернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проектов. На сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который является экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ядра СУБД, размещается база данных. Дополнительные сведения о базе данных см. в разделе [Каталог служб SSIS](../../integration-services/service/ssis-catalog.md). Дополнительные сведения о развертывании проектов на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ## <a name="management-capabilities"></a>Функции управления  
  Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] является службой Windows для управления пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] доступна только в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -93,7 +91,7 @@ ms.lasthandoff: 09/27/2017
   
  Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вносит записи в журнал событий Windows. Также можно просмотреть события службы в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Можно также просматривать события службы с использованием программы просмотра событий.  
   
-## <a name="set-the-properties-of-the-service"></a>Настройка параметров службы
+## <a name="set-the-properties-of-the-service"></a>Настройка свойств службы
   
  Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] управляет и отслеживает пакеты в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. После первой установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]запускается служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а тип запуска для нее устанавливается на автоматический.  
   
@@ -146,7 +144,7 @@ ms.lasthandoff: 09/27/2017
   
 7.  Чтобы закрыть оснастку **Службы** , в меню **Файл** выберите пункт **Выход** .  
 
-## <a name="grant-permissions-to-the-service"></a>Предоставление разрешений для службы
+## <a name="grant-permissions-to-the-service"></a>Предоставление разрешений службе
   В предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию при установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] все пользователи в группе пользователей имели доступ к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . При установке текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пользователи не имеют доступа к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию эта служба является защищенной. После завершения установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] администратор должен предоставить доступ к службе.  
   
 ### <a name="to-grant-access-to-the-integration-services-service"></a>Предоставление доступа к службе Integration Services  
@@ -175,7 +173,7 @@ ms.lasthandoff: 09/27/2017
   
 -   Корневыми папками служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] для отображения в обозревателе объектов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] являются папки MSDB и файловой системы.  
   
--   Пакеты в файловой системе, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] служба управляет расположены в %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages.  
+-   Пакеты файловой системы, которыми управляет служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], расположены в папке %ProgramFiles%\Microsoft SQL Server\130\DTS\Packages.  
   
  В этом файле конфигурации указывается, какая база данных msdb содержит пакеты, которыми будет управлять служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . По умолчанию служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] настроена для управления пакетами в базе данных msdb экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , который установлен одновременно со службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] не установлен в то же время, служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] будет настроена для управления пакетами базы данных msdb локального экземпляра по умолчанию компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -209,7 +207,7 @@ ms.lasthandoff: 09/27/2017
 </DtsServiceConfiguration>  
 ```  
   
-### <a name="modify-the-configuration-file"></a>Измените файл конфигурации  
+### <a name="modify-the-configuration-file"></a>Изменение файла конфигурации  
  Можно изменить файл конфигурации, чтобы продолжить выполнение пакетов при остановке службы, отображать дополнительные корневые папки в обозревателе объектов или указать другую папку или дополнительные папки файловой системы, которые будут управляться службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Например, можно создать дополнительные корневые папки типа **SqlServerFolder**, чтобы управлять пакетами в базах данных msdb дополнительных экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 > [!NOTE]  
@@ -255,17 +253,17 @@ ms.lasthandoff: 09/27/2017
 ```  
   
 ### <a name="modify-the-configuration-file-location"></a>Изменение расположения файла конфигурации  
- Раздел реестра **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** указывает расположение и имя конфигурации файла, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует служба. Значение по умолчанию раздела реестра **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Можно изменить значение этого раздела реестра, чтобы использовать другое имя и местонахождение файла конфигурации. Обратите внимание, что номер версии в пути (120 для SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], т. д.) зависит от версии SQL Server.
+ Раздел реестра **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\130\SSIS\ServiceConfigFile** указывает расположение и имя файла конфигурации, используемого службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. По умолчанию этот раздел реестра имеет значение **C:\Program Files\Microsoft SQL Server\130\DTS\Binn\MsDtsSrvr.ini.xml**. Можно изменить значение этого раздела реестра, чтобы использовать другое имя и местонахождение файла конфигурации. Обратите внимание на то, что номер версии в пути (120 для SQL Server [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)], 130 для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и т. д.) зависит от версии SQL Server.
   
 > [!CAUTION]  
 >  Неправильное изменение реестра может приводить к серьезным проблемам, вплоть до необходимости переустановки операционной системы. [!INCLUDE[msCoName](../../includes/msconame-md.md)] не гарантирует возможность разрешения проблем, возникших в результате неправильного изменения реестра. Перед изменением реестра создайте резервную копию всех необходимых данных. Дополнительные сведения о том, как выполнять создание резервной копии, восстановление и изменение системного реестра, см. в [!INCLUDE[msCoName](../../includes/msconame-md.md)] статье базы знаний [Описание системного реестра Microsoft Windows](http://support.microsoft.com/kb/256986).  
   
  Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] загружают файл конфигурации при запуске. Все изменения записей реестра требуют перезапуска службы.  
 
-## <a name="connect-to-the-local-service"></a>Подключиться к локальной службе
+## <a name="connect-to-the-local-service"></a>Подключение к локальной службе
   Для подключения к службе [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо, чтобы администратор предоставил к ней доступ. 
   
-### <a name="to-connect-to-the-integration-services-service"></a>Для подключения к службе Integration Services  
+### <a name="to-connect-to-the-integration-services-service"></a>Подключение к службам Integration Services  
   
 1.  Откройте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -277,7 +275,7 @@ ms.lasthandoff: 09/27/2017
   
 5.  Нажмите кнопку **Соединить**.  
 
-## <a name="connect-to-a-remote-ssis-server"></a>Подключиться к удаленному серверу служб SSIS
+## <a name="connect-to-a-remote-ssis-server"></a>Подключение к удаленному серверу служб Integration Services
   
  Соединение с экземпляром служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на удаленном сервере из среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или другого управляющего приложения требует определенного набора прав на сервере для пользователей этого приложения.  
   
@@ -361,24 +359,24 @@ ms.lasthandoff: 09/27/2017
  
 ## <a name="configure-the-firewall"></a>Настройка брандмауэра
   
- Система брандмауэров Windows помогает предотвратить несанкционированный доступ к ресурсам компьютера через сетевое подключение. Чтобы получить доступ к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] через этот брандмауэр, необходимо настроить брандмауэр для разрешения доступа.  
+ Система брандмауэра Windows предотвращает несанкционированный доступ к ресурсам компьютера через сетевое подключение. Чтобы получить доступ к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] через этот брандмауэр, необходимо настроить брандмауэр для разрешения доступа.  
   
 > [!IMPORTANT]  
 >  Чтобы управлять пакетами, которые хранятся на удаленном сервере, не нужно соединятся с экземпляром службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на этом удаленном сервере. Вместо этого измените файл конфигурации для службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] таким образом, чтобы среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отображала пакеты, хранимые на удаленном сервере.
   
  Служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует протокол DCOM. Дополнительные сведения о работе протокола DCOM с брандмауэром см. в статье[Использование протокола DСОМ с брандмауэрами](http://go.microsoft.com/fwlink/?LinkId=12490)библиотеки MSDN.  
   
- Существует множество систем брандмауэров. Если вы используете брандмауэр, отличный от брандмауэра Windows, обратитесь к документации брандмауэра сведения, относящиеся к системе, которую вы используете.  
+ Существует множество систем брандмауэров. При запуске другого брандмауэра обратитесь к документации по нему.  
   
  Если брандмауэр поддерживает фильтрацию на уровне приложения, то можно использовать пользовательский интерфейс, предоставляемый Windows для указания исключений, которым разрешается доступ через брандмауэр, например программам и службам. Иначе необходимо установить настройки DCOM, ограничивающие количество портов TCP. Ссылка на веб-сайт Майкрософт в прошлом включала сведения о том, как указать TCP-порты для использования.  
   
  Служба Integration Services использует порт 135, который не может быть изменен. Для доступа к диспетчеру управления службами (SCM) необходимо открыть TCP-порт 135. SCM выполняет такие задачи, как запуск и остановка служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а также передачу управляющих запросов выполняемой службе.  
   
- В следующем разделе сведения относятся к брандмауэру Windows. Можно настроить систему брандмауэра Windows, введя команду в командной строке или установив свойства в диалоговом окне брандмауэра Windows.  
+ Сведения в следующем разделе относятся к брандмауэру Windows. Вы можете настроить систему брандмауэра Windows, введя команду в командной строке или задав свойства в диалоговом окне брандмауэра Windows.  
   
  Дополнительные сведения о настройках брандмауэра Windows по умолчанию и описание портов TCP, влияющих на компонент Database Engine, службы Analysis Services, службы Reporting Services и службы Integration Services, см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
-### <a name="configuring-a-windows-firewall"></a>Настройка параметров брандмауэра Windows  
+### <a name="configuring-a-windows-firewall"></a>Настройка брандмауэра Windows  
  Можно использовать следующие команды для открытия TCP-порта 135, добавления в список исключения MsDtsSrvr.exe и указания области доступа, предоставляемого брандмауэром.  
   
 #### <a name="to-configure-a-windows-firewall-using-the-command-prompt-window"></a>Настройка брандмауэра Windows с помощью окна командной строки  
@@ -400,7 +398,7 @@ ms.lasthandoff: 09/27/2017
   
  Следующая процедура описывает, как использовать пользовательский интерфейс Windows для открытия TCP-порта 135, добавления в список исключения MsDtsSrvr.exe и указания области доступа, предоставляемой брандмауэром.  
   
-#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>Настройка брандмауэра с помощью диалогового окна брандмауэра Windows  
+#### <a name="to-configure-a-firewall-using-the-windows-firewall-dialog-box"></a>Настройка брандмауэра Windows с помощью диалогового окна  
   
 1.  На панели управления дважды щелкните элемент **Брандмауэр Windows**.  
   
@@ -424,5 +422,4 @@ ms.lasthandoff: 09/27/2017
 9. Чтобы закрыть диалоговое окно **Брандмауэр Windows** , нажмите кнопку **ОК**.  
   
     > [!NOTE]  
-    >  Для настройки брандмауэра Windows эта процедура использует **брандмауэра Windows** элемента панели управления. Элемент **Брандмауэр Windows** настраивает брандмауэр только для текущего сетевого профиля. Тем не менее, можно также настроить брандмауэр Windows с помощью **netsh** средство командной строки или [!INCLUDE[msCoName](../../includes/msconame-md.md)] оснастки консоли управления (MMC) с именем брандмауэр Windows в режиме повышенной безопасности. Дополнительные сведения об этих средствах см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
-
+    >  Для настройки брандмауэра Windows в этой процедуре используется элемент **Брандмауэр Windows** на панели управления. Элемент **Брандмауэр Windows** настраивает брандмауэр только для текущего сетевого профиля. Брандмауэр Windows также можно настроить с помощью программы командной строки **netsh** или оснастки консоли управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] (MMC) "Брандмауэр Windows в режиме повышенной безопасности". Дополнительные сведения об этих средствах см. в разделе [Настройка брандмауэра Windows для разрешения доступа к SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  

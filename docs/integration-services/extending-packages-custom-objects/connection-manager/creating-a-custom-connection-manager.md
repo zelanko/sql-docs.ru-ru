@@ -1,5 +1,5 @@
 ---
-title: "Создание пользовательского диспетчера соединений | Документы Microsoft"
+title: "Создание пользовательского диспетчера подключений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom connection managers [Integration Services], creating
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom connection managers [Integration Services], creating
 ms.assetid: e83f8e02-ace4-42e0-b979-2f6be1460985
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c617741134c19c012f487bc00263c2e4b071810
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 17534beced4fc9e917ded7fb91514460deb83d0a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="creating-a-custom-connection-manager"></a>Создание пользовательского диспетчера соединений
   Создание пользовательского диспетчера соединений осуществляется за несколько шагов, аналогично созданию любого другого пользовательского объекта служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
@@ -53,9 +49,9 @@ ms.lasthandoff: 08/03/2017
  Настройте в обоих проектах подписывание сборок, которые будут создаваться во время построения, с помощью файла ключа для строгого имени.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Применение атрибута DtsConnection  
- Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>, чтобы определить его в качестве диспетчера соединений. Этот атрибут содержит сведения для времени разработки, например, имя, описание и тип соединения диспетчера соединений. <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> И **описание** свойства соответствуют **тип** и **описание** столбцов, отображаемых в **Добавление диспетчера соединений служб SSIS** диалоговое окно отображается при настройке соединений пакета в [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Примените к созданному классу атрибут <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>, чтобы определить его в качестве диспетчера соединений. Этот атрибут содержит сведения для времени разработки, например, имя, описание и тип соединения диспетчера соединений. Свойства <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> и **Description** соответствуют столбцам **Тип** и **Описание** в диалоговом окне **Добавление диспетчера соединений со службами SSIS**, которое отображается при настройке соединений пакета в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
   
- Используйте свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>, чтобы связать диспетчер соединений с его пользовательским интерфейсом. Чтобы получить токен открытого ключа, необходимый для этого свойства, можно использовать **sn.exe -t** для отображения токен открытого ключа из файла пары ключей (расширение SNK), который будет использоваться для подписывания сборки пользовательского интерфейса.  
+ Используйте свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>, чтобы связать диспетчер соединений с его пользовательским интерфейсом. Чтобы получить токен открытого ключа, необходимый для этого свойства, можно использовать команду **sn.exe -t**, отображающую токен открытого ключа из SNK-файла пары ключей, который предназначен для подписывания сборки пользовательского интерфейса.  
   
 ```vb  
 <DtsConnection(ConnectionType:="SQLVB", _  
@@ -81,11 +77,10 @@ ConnectionManagerBase
 ```  
   
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>Построение, развертывание и отладка пользовательского диспетчера соединений  
- Построение, развертывание и отладка пользовательского диспетчера соединений в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] осуществляется в несколько шагов, аналогичных используемым при работе с другими типами пользовательских объектов. Дополнительные сведения см. в разделе [построение, развертывание и отладка пользовательских объектов](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).    
+ Построение, развертывание и отладка пользовательского диспетчера соединений в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] осуществляется в несколько шагов, аналогичных используемым при работе с другими типами пользовательских объектов. Дополнительные сведения см. в разделе [Сборка, развертывание и отладка пользовательских объектов](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).    
   
 ## <a name="see-also"></a>См. также:  
- [Кодирование пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
+ [Написание кода пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)   
  [Разработка пользовательского интерфейса для пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

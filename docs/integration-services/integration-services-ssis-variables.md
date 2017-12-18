@@ -1,5 +1,5 @@
 ---
-title: "В службах Integration Services (SSIS) переменных | Документы Microsoft"
+title: "Переменные в службах Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: 60
+caps.latest.revision: "60"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb632c5fa2242b5b607d62488b65682a0cc4b07f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
   Переменные хранят значения, которые могут использоваться пакетом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а также его контейнерами, задачами и обработчиками событий во время выполнения. Скрипты в задаче «Скрипт» и компоненте скрипта также могут использовать переменные. Управления очередностью, которые упорядочивают задачи и контейнеры в рабочий процесс, могут использовать переменные, если связанные с ними определения ограничений включают в себя выражения.  
@@ -103,7 +101,7 @@ ms.lasthandoff: 08/03/2017
  Определяет имя переменной.  
   
  **Пространство имен**  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]предоставляют два пространства имен **пользователя** и **системы**. По умолчанию пользовательские переменные содержатся в пространстве имен **User** , а системные переменные — в пространстве имен **System** . Можно создать дополнительные пространства имен для пользовательских переменных и переименовать пространство имен **User** , однако переименовать пространство имен **System** , добавлять переменные в пространство имен **System** или назначить системные переменные другому пространству имен нельзя.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют два пространства имен: **User** и **System**. По умолчанию пользовательские переменные содержатся в пространстве имен **User** , а системные переменные — в пространстве имен **System** . Можно создать дополнительные пространства имен для пользовательских переменных и переименовать пространство имен **User** , однако переименовать пространство имен **System** , добавлять переменные в пространство имен **System** или назначить системные переменные другому пространству имен нельзя.  
   
 **RaiseChangedEvent**  
  Если это свойство имеет значение **True**, то при изменении значения переменной возникает событие **OnVariableValueChanged** .  
@@ -193,7 +191,7 @@ ms.lasthandoff: 08/03/2017
  **Контейнер**  
  Выберите контейнер из списка. Контейнер определяет область видимости переменной. Контейнер может быть пакетом или исполняемым объектом в пакете.  
   
- **Имя**  
+ **Название**  
  Введите имя переменной.  
   
  **Пространство имен**  
@@ -224,7 +222,7 @@ ms.lasthandoff: 08/03/2017
   
 6.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="change-the-scope-of-a-variable"></a>Изменение области действия переменной  
+## <a name="change-the-scope-of-a-variable"></a>Изменение области видимости переменной  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -248,9 +246,9 @@ ms.lasthandoff: 08/03/2017
 -   Окно «Свойства». В окне **Свойства** указаны свойства для настройки переменных, недоступные в окне **Переменные** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType и IncludeInDebugDump.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]также предоставляет набор системных переменных, свойства которого не удается обновить, за исключением свойство RaiseChangedEvent.  
+>  Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют также набор системных переменных, свойства которых нельзя обновить, за исключением свойства RaiseChangedEvent.  
   
-### <a name="set-expressions-on-variables"></a>Набор выражений в переменных  
+### <a name="set-expressions-on-variables"></a>Задание выражений в переменных  
   
  При использовании окна **Свойства** для задания выражений на определяемой пользователем переменной:  
   
@@ -270,11 +268,11 @@ ms.lasthandoff: 08/03/2017
   
  Нельзя изменить тип данных переменной ни в окне **Переменные** , ни в окне **Свойства** , если переменной назначено выражение, а свойство **EvaluateAsExpression** задано как **True**, .  
   
-### <a name="set-the-namespace-and-name-properties"></a>Задайте пространство имен и имя свойства
+### <a name="set-the-namespace-and-name-properties"></a>Задание свойств пространства имен и имени
   
  Первым символом в значениях свойств **Имя** и **Пространство имен** согласно стандарту Юникод 2.0 должна быть буква или символ подчеркивания (_). Далее могут следовать буквы или цифры по определению стандарта Юникод 2.0 или символ подчеркивания (\_).  
   
-### <a name="set-variable-properties-in-the-variables-window"></a>Задание свойств переменной в окне «переменные»   
+### <a name="set-variable-properties-in-the-variables-window"></a>Задание свойств переменной в окне "Переменные"   
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -292,7 +290,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  Чтобы сохранить измененный пакет, в меню **Файл** выберите команду **Сохранить выбранные элементы**.  
   
-### <a name="set-variable-properties-in-the-properties-window"></a>Задание свойств переменной в окне «Свойства»  
+### <a name="set-variable-properties-in-the-properties-window"></a>Задание свойств переменной в окне "Свойства"  
 
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -312,11 +310,10 @@ ms.lasthandoff: 08/03/2017
   
 8.  Чтобы сохранить измененный пакет, в меню **Файл** выберите команду **Сохранить выбранные элементы**.  
 
-## <a name="update-a-variable-dynamically-with-configurations"></a>Динамическое обновление переменной с конфигурациями  
+## <a name="update-a-variable-dynamically-with-configurations"></a>Динамическое обновление переменной с помощью конфигураций  
  Чтобы динамически обновлять переменные, можно создавать конфигурации для переменных, развертывать их вместе с пакетами и обновлять значения переменных в файле конфигурации при развертывании пакета. Во время выполнения пакет будет использовать обновленные значения переменных. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../integration-services/packages/create-package-configurations.md).  
 
 ## <a name="related-tasks"></a>Связанные задачи  
  [Использование значений переменных и параметров в дочернем пакете](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Сопоставления параметров запросов с переменными в компонентах потока данных](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
-

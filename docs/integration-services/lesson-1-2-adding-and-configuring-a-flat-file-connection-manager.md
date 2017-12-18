@@ -1,5 +1,5 @@
 ---
-title: "Шаг 2: Добавление и настройка диспетчера соединения с плоскими файлами | Документы Microsoft"
+title: "Шаг 2. Добавление и настройка диспетчера соединений с неструктурированными файлами | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a0b3ebf32ebaa03f1dbb1aa1c52234b56fa8de16
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 498e6557348e164085bae3b3ea646caa318a49c7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Занятие 1-2-Добавление и настройка диспетчера соединений с неструктурированными файлами
+# <a name="lesson-1-2---adding-and-configuring-a-flat-file-connection-manager"></a>Занятие 1–2. Добавление и настройка диспетчера соединений с неструктурированными файлами
 В этом задании к только что созданному пакету будет добавлен диспетчер соединений с неструктурированными файлами. Диспетчер соединений с неструктурированными файлами позволяет пакету извлекать данные из неструктурированных файлов. С помощью диспетчера соединений с неструктурированными файлами можно указать имя и расположение файла, локали и кодовую страницу, а также формат файла, включая разделители столбцов. Эти данные будут использованы при извлечении пакета из неструктурированного файла. Кроме того, можно вручную указать тип данных для каждого столбца или в диалоговом окне **Предлагаемые типы столбцов** указать автоматическое сопоставление столбцов извлекаемых данных с типами данных в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
 Для каждого используемого формата файла необходимо создать отдельный диспетчер соединений с неструктурированными файлами. Так как в данном учебнике данные извлекаются из неструктурированных файлов одинакового формата, в пакет необходимо добавить только один диспетчер соединений с неструктурированными файлами.  
@@ -117,4 +114,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

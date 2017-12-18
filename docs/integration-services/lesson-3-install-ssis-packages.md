@@ -1,5 +1,5 @@
 ---
-title: "Занятие 3: Установка пакетов служб SSIS | Документы Microsoft"
+title: "Занятие 3. Установка пакетов SSIS | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 986b8b46b7790b18442e17b6317f7816a0c7ec7c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b2e2f583b73ea67cdf3dcab23fe93ca00db8b949
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="lesson-3-install-ssis-packages"></a>Занятие 3. Установка пакетов SSIS
 На [занятии 2: создание пакета развертывания в службах SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)вы создали программу развертывания и пакет развертывания, содержащий элементы, которые говорят о том, что нужно установить пакеты на другой компьютер. Вы также проверили список файлов в пакете развертывания и изучили содержимое файла манифеста, который был создан при сборке программы развертывания.  
@@ -37,15 +34,14 @@ ms.lasthandoff: 08/03/2017
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  
   
--   [Шаг 1: Копирование пакета развертывания](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
+-   [Шаг 1. Копирование пакета развертывания](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
--   [Шаг 2: Запуск мастера установки пакета](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+-   [Шаг 2. Запуск мастера установки пакета](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
--   [Шаг 3: Тестирование развернутых пакетов](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+-   [Шаг 3. Тестирование развернутых пакетов](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>Начало занятия  
 [Шаг 1. Копирование пакета развертывания](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
   
   
-

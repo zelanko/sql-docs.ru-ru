@@ -2,9 +2,12 @@
 title: "Ключи шифрования базы данных и SQL Server (ядро СУБД) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: security
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,16 +16,16 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 caps.latest.revision: "18"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee3fe7a3feeaf400fea2a982d1813f0c9296e0ef
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a1f811501db4568f9e893fdbdf64205381298368
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>Ключи шифрования базы данных и SQL Server (компонент Database Engine)
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] используются ключи шифрования для защиты данных, информации об учетных данных и соединениях, которые хранятся в серверной базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] существует два вида ключей: *симметричный* и *aсимметричный*. В симметричных ключах для шифрования и расшифровки данных используется одинаковый пароль. При использовании асимметричных ключей один пароль применяется для шифрования данных ( *открытый* ключ), а другой для расшифровки данных ( *закрытый* ключ).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] использует ключи шифрования для защиты данных, информации об учетных данных и соединениях, которые хранятся в серверной базе данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] существует два вида ключей: *симметричный* и *aсимметричный*. В симметричных ключах для шифрования и расшифровки данных используется одинаковый пароль. При использовании асимметричных ключей один пароль применяется для шифрования данных ( *открытый* ключ), а другой для расшифровки данных ( *закрытый* ключ).  
   
  Используемые в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ключи шифрования представляют собой сочетание открытых, закрытых и симметричных ключей, которые используются для защиты конфиденциальных данных. Симметричный ключ создается во время инициализации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , при первом запуске экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Этот ключ используется [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] для шифрования конфиденциальных данных, которые хранятся в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Открытые и закрытые ключи создаются операционной системой и используются для защиты симметричного ключа. Пара из открытого и закрытого ключей создается для каждого экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который сохраняет конфиденциальные данные в базе данных.  
   

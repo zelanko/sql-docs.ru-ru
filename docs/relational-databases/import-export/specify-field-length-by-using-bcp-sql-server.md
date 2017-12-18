@@ -2,9 +2,12 @@
 title: "Указание длины поля с помощью программы bcp (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 213f03b9f8b3fe55daa28dbc131067fca581aa31
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a59b93a9877eb6e58c34fc1aeb54795aaee52d3c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Указание длины поля с помощью программы bcp (SQL Server)
-  Длина поля указывает максимальное количество символов, необходимых для представления данных в символьном формате. Длина поля известна заранее, если данные хранятся в собственном формате, например значение типа **int** занимает 4 байта. Если в качестве длины префикса указано значение 0, то командная строка **bcp** выводит запрос на указание длины поля и длины поля по умолчанию, а также на то, как должно отразиться значение длины поля на хранении данных в файлах данных, которые содержат данные **char** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Длина поля определяет максимальное количество символов, необходимых для представления данных в символьном формате. Длина поля известна заранее, если данные хранятся в собственном формате, например значение типа **int** занимает 4 байта. Если в качестве длины префикса указано значение 0, то командная строка **bcp** выводит запрос на указание длины поля и длины поля по умолчанию, а также на то, как должно отразиться значение длины поля на хранении данных в файлах данных, которые содержат данные **char** .  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Запрос командой bcp значения длины поля  
  Если интерактивная команда **bcp** содержит параметр **in** или **out** без параметра файла форматирования (**-f**) либо параметра формата данных (**-n**, **-c**, **-w**или **-N**), то команда запрашивает длину каждого поля данных следующим образом:  

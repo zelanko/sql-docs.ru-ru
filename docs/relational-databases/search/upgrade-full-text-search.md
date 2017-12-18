@@ -2,9 +2,12 @@
 title: "Обновление полнотекстового поиска | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 19ef4422f1afa9af64f2e735941dc343390d3959
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e544e5cefe8b935086b93ac7f30acd033a8462aa
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="upgrade-full-text-search"></a>Обновление полнотекстового поиска
-  Обновление полнотекстового поиска с переходом к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполняется во время установки, а также во время присоединения, восстановления или копирования файлов баз данных или полнотекстовых каталогов из более ранней версии до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера копирования баз данных.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Обновление полнотекстового поиска с переходом к версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] выполняется во время установки, а также во время присоединения, восстановления или копирования файлов баз данных или полнотекстовых каталогов из более ранней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью мастера копирования баз данных.  
   
   
 ##  <a name="Upgrade_Server"></a> Обновление экземпляра сервера  

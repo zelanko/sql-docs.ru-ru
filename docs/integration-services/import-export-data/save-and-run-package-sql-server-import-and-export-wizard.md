@@ -1,5 +1,5 @@
 ---
-title: "Сохранение и выполнение пакета (мастер экспорта и импорта SQL Server) | Документы Microsoft"
+title: "Сохранение и выполнение пакета (мастер экспорта и импорта SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/16/2017
 ms.prod: sql-non-specified
@@ -8,40 +8,37 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.saveschedule.f1
+f1_keywords: sql13.dts.impexpwizard.saveschedule.f1
 ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 40b8677cddf363e8789a2fc15b1c2aab5f49f58c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 84d128eafce53fb4de337d0a835155850a09c2e5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Сохранение и выполнение пакета (мастер экспорта и импорта SQL Server)
-  После указания и настройки источника данных и назначения в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется станица **Сохранение и запуск пакета**. На этой странице можно указать, нужно ли немедленно запустить операцию копирования. В зависимости от конфигурации, также можно сохранить параметры как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакетов (службы SSIS) для ее настройки и использовать его повторно.
+# <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Сохранение и выполнение пакета (мастер экспорта и импорта SQL Server)
+  После указания и настройки источника данных и назначения в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется станица **Сохранение и запуск пакета**. На этой странице можно указать, нужно ли немедленно запустить операцию копирования. В зависимости от конфигурации также можно сохранить параметры в виде пакета [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS), чтобы настроить и использовать его позднее.
   
 **Что такое пакет?** Мастер использует службы SQL Server Integration Services (SSIS) для копирования данных. В службах SSIS основной единицей является пакет. По мере перемещения по страницам и указания параметров мастер создает пакет служб SSIS в памяти.
   
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>Снимок экрана: страница "Сохранение и запуск пакета"  
 На следующем снимке экрана показана страница мастера **Сохранение и запуск пакета** . 
    
-![Сохраните и выполните пакет страница мастера импорта и экспорта](../../integration-services/import-export-data/media/save-and-run.png "сохраните и выполните пакет страница мастера импорта и экспорта") 
+![Страница "Сохранение и запуск пакета" в мастере импорта и экспорта](../../integration-services/import-export-data/media/save-and-run.png "Страница "Сохранение и запуск пакета" в мастере импорта и экспорта") 
   
 ## <a name="run-and-save-the-package"></a>Сохранение и запуск пакета 
  Чтобы продолжить, необходимо выбрать по меньшей мере один из следующих параметров.  
   
  **Run immediately**  
- Выберите этот параметр для импорта и экспорта данных немедленно. По умолчанию этот флажок установлен, и немедленно выполняется операция.
+ Выберите этот параметр, чтобы немедленно импортировать и экспортировать данные. По умолчанию этот флажок установлен, и операция запускается немедленно.
   
  **Сохранить пакет служб SSIS**  
  Сохраните параметры в виде пакета служб SSIS. При необходимости можно позднее настроить пакет и запустить его снова. Чтобы сохранить пакет, используйте дополнительные параметры на следующей странице — **Сохранение пакета служб SSIS**.
@@ -49,16 +46,16 @@ ms.lasthandoff: 08/03/2017
 Параметр сохранения пакета доступен только в том случае, если установлен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выпуска Standard Edition или более позднего.   
   
 > [!NOTE]
-> Если завершить работу мастера, запустите программу, но остановки операции до ее завершения, пакет не сохраняется, даже если вы выбрали **Сохранение пакета служб SSIS** флажок.  
+> Если вы завершаете работу мастера и запускаете, а затем останавливаете операцию до окончания ее выполнения, пакет не сохраняется, даже если установлен флажок **Сохранить пакет служб SSIS**.  
 
-### <a name="if-you-started-the-wizard-from-visual-studio"></a>Если мастер запущен из Visual Studio
-Если мастер запущен из проекта служб Integration Services в Visual Studio с SQL Server Data Tools (SSDT):
--   Вы не можете **запуска** пакета, пока после выхода из мастера. Затем вы можете запустить пакет из Visual Studio.
--   Мастер **сохраняет** пакета в проект служб Integration Services, из которого был запущен мастер.
+### <a name="if-you-started-the-wizard-from-visual-studio"></a>Запуск мастера из Visual Studio
+Если мастер был запущен из проекта служб Integration Services в Visual Studio с SQL Server Data Tools (SSDT):
+-   Вы не можете **запустить** пакет до выхода из мастера. После выхода вы можете запустить пакет из Visual Studio.
+-   Мастер **сохранит** пакет в проекте служб Integration Services, из которого был запущен мастер.
 
 ## <a name="specify-options-for-saving-the-package"></a>Указание параметров сохранения пакета
 **SQL Server**  
- Выберите этот параметр для сохранения пакета в SQL Server в **msdb** базы данных в **sysssispackages** таблицы.
+ Выберите этот параметр, чтобы сохранить пакет в SQL Server в базе денных **msdb** в таблице **sysssispackages**.
  
 > [!IMPORTANT]
 > При выборе этого параметра пакет не сохраняется в базе данных каталога служб SSIS (SSISDB).  
@@ -66,7 +63,7 @@ ms.lasthandoff: 08/03/2017
  Выберите целевой сервер и укажите учетные данные для подключения к серверу на следующей странице — **Сохранение пакета служб SSIS**. Дополнительные сведения см. в разделе [Сохранение пакета служб SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
  **Файловая система**  
- Выберите этот параметр, чтобы сохранить пакет в виде файла с **расширением dtsx** расширения.  
+ При выборе этого параметра пакет сохраняется в файле с расширением **DTSX**.  
   
  Выберите целевую папку и имя файла для пакета на следующей странице — **Сохранение пакета служб SSIS**. Дополнительные сведения см. в разделе [Сохранение пакета служб SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
  
@@ -83,7 +80,7 @@ ms.lasthandoff: 08/03/2017
  Введите пароль еще раз.  
   
 > [!NOTE]
-> Параметры пароля, доступны только, если указать **уровень защиты пакета** , требуется пароль — то есть, при указании либо **Шифровать конфиденциальные данные паролем** или **шифровать все данные паролем**.  
+> Параметры для пароля доступны только в том случае, если для параметра **Уровень защиты пакета** выбрано значение, требующее указания пароля, то есть **Шифровать конфиденциальные данные паролем** или **Шифровать все данные паролем**.  
 
 ## <a name="about-the-two-pages-of-options-for-saving-the-package"></a>Сведения о двух страницах с параметрами сохранения пакета  
  Страница **Сохранение и запуск пакета** является одной из двух страниц, на которых выбираются параметры для сохранения пакета служб SSIS.  
@@ -105,8 +102,7 @@ ms.lasthandoff: 08/03/2017
 [Сохранение пакетов](../../integration-services/save-packages.md)  
 [Запуск пакетов служб Integration Services (SSIS)](../../integration-services/packages/run-integration-services-ssis-packages.md)  
 [SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
-[Приступая к работе с простой пример мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
+[Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
   
-
 

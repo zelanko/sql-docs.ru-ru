@@ -2,9 +2,12 @@
 title: "Свойства публикации, моментальный снимок | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c0927c53dff6dc6bd14d93029cd49c376ae46bd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 26335cccf77aced43c3db73976bccde394b766d1
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publication-properties-snapshot"></a>Свойства публикаций, моментальный снимок
-  Страница **Моментальный снимок** диалогового окна **Свойства публикации** позволяет настраивать формат моментальных снимков, указывать месторасположение папки моментальных снимков и скрипты, исполняемые до и после выполнения приложения моментальных снимков. Папка моментальных снимков должна быть в общем доступе и иметь достаточные разрешения для чтения и записи в нее файлов агентами. Дополнительные сведения о надлежащей защите папок см. в статье [Организация безопасности папки моментальных снимков](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Моментальный снимок** диалогового окна **Свойства публикации** позволяет настраивать формат моментальных снимков, указывать месторасположение папки моментальных снимков и скрипты, исполняемые до и после выполнения приложения моментальных снимков. Папка моментальных снимков должна быть в общем доступе и иметь достаточные разрешения для чтения и записи в нее файлов агентами. Дополнительные сведения о надлежащей защите папок см. в статье [Организация безопасности папки моментальных снимков](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 > [!NOTE]  
 >  Изменения требуют новый моментальный снимок для публикации. Дополнительные сведения см. в статье [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

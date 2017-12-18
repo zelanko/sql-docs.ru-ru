@@ -1,5 +1,5 @@
 ---
-title: "Служба для Oracle от Attunity F1 Help системы отслеживания измененных данных | Документы Microsoft"
+title: "Справка F1 для Change Data Capture Service для Oracle от Attunity | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d214af688c862d64e5a5d5f608c5b02f9037b55a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e97cdc3490c7a0d0c263b434a50eaa958c6ebac0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Справка F1 службы системы отслеживания измененных данных для Oracle компании Attunity
   Консоль конфигурации службы CDC используется для определения, изменения и удаления локальных служб Oracle CDC Service.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="in-this-section"></a>В этом разделе  
   
--   [Подключение к SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)  
+-   [Соединение с SQL Server](../../integration-services/change-data-capture/connection-to-sql-server.md)  
   
 -   [Соединение с SQL Server для удаления](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)  
   
@@ -47,4 +45,3 @@ ms.lasthandoff: 08/03/2017
 -   [Работа со службами CDC](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   
-

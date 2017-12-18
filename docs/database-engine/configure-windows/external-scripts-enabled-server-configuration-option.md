@@ -1,10 +1,13 @@
 ---
 title: "Параметр конфигурации сервера \"external scripts enabled\" | Документы Майкрософт"
-ms.custom: SQL2016_New_Updated
-ms.date: 08/03/2017
-ms.prod: sql-server-2016
+ms.date: 11/13/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -14,37 +17,57 @@ f1_keywords:
 helpviewer_keywords: external scripts enabled option
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 caps.latest.revision: "9"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: jeannt
+ms.author: edmaca
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 05c5af488241c28a5b83c01ac089fa5e1e1715c0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 8d92fc9873ffd3fded2e0f614b0f633895d6a715
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>Параметр конфигурации сервера external scripts enabled
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+**Область применения:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)] [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] и [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-  Параметр **external scripts enabled** позволяет включить выполнение скриптов с некоторыми удаленными расширениями языка. По умолчанию это свойство отключено. Программа установки может при необходимости задать этому свойству значение true, если установлены **расширенные службы аналитики**.  
-  
+Параметр **external scripts enabled** позволяет включить выполнение скриптов с некоторыми удаленными расширениями языка. По умолчанию это свойство отключено. Программа установки может при необходимости задать этому свойству значение true, если установлены **расширенные службы аналитики**.
 
- Параметр external scripts enabled необходимо включить перед выполнением внешнего скрипта с помощью процедуры **sp_execute_external_script** . Процедура **sp_execute_external_script** служит для выполнения сценариев, написанных на поддерживаемом языке, например R. В версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]службы [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] включают в себя серверный компонент, устанавливаемый с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], а также набор инструментов рабочей станции и библиотек подключений, которые позволяют специалистам по анализу и обработке данных подключаться к высокопроизводительной среде [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  Установите компонент **Расширения углубленной аналитики** в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы включить выполнение скриптов R. Дополнительные сведения см. в разделе [Installing Previous Versions of SQL Server R Services](http://msdn.microsoft.com/library/48380645-9e72-4744-bebb-1c1fd8a18c43).  
-  
- Чтобы включить внешние скрипты, выполните следующий скрипт.  
-  
-```  
-sp_configure 'external scripts enabled', 1;  
+## <a name="remarks"></a>Замечания
+
+Параметр external scripts enabled необходимо включить перед выполнением внешнего скрипта с помощью процедуры [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) . Используйте **sp_execute_external_script**, чтобы выполнять в скрипты, написанные на нескольких поддерживаемых языках, таких как R или Python. 
+
++ При анализе служб [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]
+
+    [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] включает поддержку языка R в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], а также набор инструментов рабочей станции R и библиотек подключений.
+
+    Установите компонент **Расширения углубленной аналитики** в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , чтобы включить выполнение скриптов R. Язык R устанавливается по умолчанию.
+
++ Для [[!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]
+
+    [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)] использует ту же архитектуру, что и SQL Server 2016, но поддерживает язык Python.
+
+    Установите компонент **Расширения углубленной аналитики** в ходе установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы включить выполнение внешних скриптов R. Во время начальной настройки нужно выбрать хотя бы один язык: R, Python или оба. 
+
+## <a name="additional-requirements"></a>Дополнительные требования
+
+Чтобы после установки включить внешние скрипты, выполните следующий скрипт:
+
+```sql
+sp_configure 'external scripts enabled', 1;
 RECONFIGURE WITH OVERRIDE;  
-```  
-  
- Чтобы это изменение вступило в силу, необходимо перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-  
-## <a name="see-also"></a>См. также:  
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
- [RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)   
- [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)   
- [Службы R SQL Server](../../advanced-analytics/r-services/sql-server-r-services.md)  
-  
-  
+```
+
+Чтобы это изменение вступило в силу, необходимо перезапустить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+
+Дополнительные сведения см. в разделе [Установка машинного обучения SQL Server](/../../advanced-analytics/r/set-up-sql-server-r-services-in-database.md).
+
+## <a name="see-also"></a>См. также:
+
+[sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
+
+[RECONFIGURE (Transact-SQL)](../../t-sql/language-elements/reconfigure-transact-sql.md)
+
+[sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
+
+[Изучение служб машины SQL Server](../../advanced-analytics/r/sql-server-r-services.md)

@@ -1,5 +1,5 @@
 ---
-title: "Завершение мастера медленно меняющихся измерений | Документы Microsoft"
+title: "Завершение работы мастера медленно изменяющихся измерений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.loaddimwizard.finish.f1
+f1_keywords: sql13.dts.loaddimwizard.finish.f1
 ms.assetid: f8ed1a54-d79a-43ca-80a0-02547d97c0f9
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2f3e966952f36966c21c6732845224510b543e9d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 12d5db6458f33b84672d0b5e3ca776c8c2186c88
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="finish-the-slowly-changing-dimension-wizard"></a>Завершение работы мастера медленно меняющихся измерений
   Используйте диалоговое окно **Завершение работы мастера медленно изменяющихся измерений** для подтверждения пользовательского выбора до того, как мастер создаст поддержку для медленно изменяющихся измерений.  
@@ -37,7 +34,6 @@ ms.lasthandoff: 08/03/2017
  Подтвердите, что список выводов подходит для ваших целей.  
   
 ## <a name="see-also"></a>См. также  
- [Настройка выходов при помощи мастера медленно меняющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
+ [Настройка выходов при помощи мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
-

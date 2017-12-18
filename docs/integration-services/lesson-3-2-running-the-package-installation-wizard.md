@@ -1,5 +1,5 @@
 ---
-title: "Шаг 2: Запуск мастера установки пакета | Документы Microsoft"
+title: "Шаг 2. Запуск мастера установки пакета | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3007d8fa9bf7fc3c699665823b3c9c3b42d76551
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c021cf13f16aa5feaa8fc0a28f0f735478fcd42d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Занятие 3-2-запуск мастера установки пакета
+# <a name="lesson-3-2---running-the-package-installation-wizard"></a>Занятие 3–2. Запуск мастера установки пакета
 В этой задаче мастер установки пакета используется для развертывания пакетов из проекта Deployment Tutorial в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. В таблицу sysssispackages базы данных [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb можно установить только пакеты; файлы поддержки, включенные в пакет развертывания, будут развернуты в файловой системе.  
   
 Мастер установки пакета проводит пользователя через последовательность шагов по установке и настройке пакетов. Пакеты будут устанавливаться в экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] на компьютере назначения (куда скопирован пакет развертывания). Будет также создана папка «C:\DeploymentTutorialInstall», в которую мастер установит файлы, не относящиеся к пакету.  
@@ -113,4 +110,3 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="see-also"></a>См. также:  
 [Службы Integration Services (службы SSIS)](../integration-services/service/integration-services-service-ssis-service.md)  
-

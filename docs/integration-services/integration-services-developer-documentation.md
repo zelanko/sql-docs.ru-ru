@@ -1,5 +1,5 @@
 ---
-title: "В службах Integration Services документации для разработчиков | Документы Microsoft"
+title: "Документация для разработчиков служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -23,19 +21,18 @@ helpviewer_keywords:
 - SQL Server Integration Services, programming
 - packages [Integration Services], programming
 ms.assetid: 60fe148b-a7c4-4289-ae3e-2e949fc1886c
-caps.latest.revision: 76
+caps.latest.revision: "76"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cf7d7afba8ada3f6027db3053914b1822597792c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4f1568b369673d68051ecccf19484f80b6094087
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-developer-documentation"></a>Документация для разработчиков служб интеграции
+# <a name="integration-services-developer-documentation"></a>Документация для разработчиков служб Integration Services
   Службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] включают полностью переписанную модель объектов, которая была улучшена многими функциями, позволяющими упростить расширение и программирование пакетов и сделать их более гибкими и более мощными. Разработчики могут расширять и программировать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] почти в любом аспекте.  
   
  Разработчик служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] может воспользоваться двумя фундаментальными подходами при программировании служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -68,7 +65,7 @@ ms.lasthandoff: 09/26/2017
  Описывает важное различие между синхронными и асинхронными выходами, а также описывает компоненты, в которых используются эти выходы в потоке данных.  
   
  [Работа с диспетчерами соединений программным образом](../integration-services/working-with-connection-managers-programmatically.md)  
- Список диспетчеров соединений, которые можно использовать из управляемого кода и значения, возвращаемые диспетчерами при вызове кодом **AcquireConnection** метод.  
+ Описывает диспетчеры соединений, которые можно использовать из управляемого кода, а также значения, возвращаемые диспетчерами при вызове метода **AcquireConnection** из кода.  
   
  [Расширение пакетов с помощью сценариев](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
  Показывает, как расширить поток управления с помощью задачи «Скрипт» или поток данных с помощью компонента скрипта.  
@@ -98,4 +95,3 @@ ms.lasthandoff: 09/26/2017
  [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
   
   
-

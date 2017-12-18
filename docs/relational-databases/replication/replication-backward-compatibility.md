@@ -2,9 +2,12 @@
 title: "Обратная совместимость репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/02/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 92770f531048f6697e2904f1399c74f88022be53
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4031251e251a40014cdcbf41727876bf85f08efd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-backward-compatibility"></a>Обратная совместимость репликации
-  Разделы в главе по обратной совместимости описывают изменения в поведении репликации в разных версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . При обновлении или наличии нескольких версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в топологии репликации важно понимать принцип обратной совместимости.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В подразделах раздела об обратной совместимости описываются изменения в поведении репликации в разных версиях [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При обновлении или наличии нескольких версий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в топологии репликации важно понимать принцип обратной совместимости.  
   
  [Устаревшие функции репликации в SQL Server](../../relational-databases/replication/deprecated-features-in-sql-server-replication.md)  
  Функциональные возможности репликации, которые были сохранены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в целях обратной совместимости, но которые будут удалены из будущей версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

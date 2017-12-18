@@ -1,10 +1,13 @@
 ---
 title: "Рекомендации по хранилищу запросов | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 11/24/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,18 +18,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 617746f2d48662ca0eb5a26338149cf4a2e77793
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="best-practice-with-the-query-store"></a>Рекомендации по хранилищу запросов
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   В этом разделе описаны рекомендации по использованию хранилища запросов с вашей рабочей нагрузкой.  
   
-##  <a name="SSMS"></a> Используйте последний выпуск SQL Server Management Studio  
+##  <a name="SSMS"></a> Используйте последнюю версию [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] включает в себя набор пользовательских интерфейсов, предназначенных для настройки хранилища запросов, а также для использования собранных данных о рабочей нагрузке.  
 Скачайте последнюю версию [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] [здесь](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).  
   
@@ -125,9 +128,10 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 Перейдите во вложенную папку Query Store в узле базы данных в обозревателе объектов [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , чтобы открыть представления по устранению неполадок для конкретных сценариев.   
 Представления хранилища запросов[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] работают с набором метрик выполнения, каждая из которых выражается в виде какой-либо из следующих статистических функций.  
   
-|Метрика выполнения|Статистическая функция|  
-|----------------------|------------------------|  
-|CPU time (время ЦП), Duration (длительность), Execution Count (число выполнений), Logical Reads (число логических операций чтения), Logical writes (число логических операций записи), Memory consumption (потребление памяти) и Physical Reads (число физических операций чтения)|Average (среднее), Maximum (максимум), Minimum (минимум), Standard Deviation (стандартное отклонение), Total (всего)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Метрика выполнения|Статистическая функция|  
+|----------------------|----------------------|------------------------|  
+|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|CPU time (время ЦП), Duration (длительность), Execution Count (число выполнений), Logical Reads (число логических операций чтения), Logical writes (число логических операций записи), Memory consumption (потребление памяти), Physical Reads (число физических операций чтения), CLR time (время среды CLR), Degree of Parallelism (DOP) (степень параллелизма) и Row count (число строк)|Average (среднее), Maximum (максимум), Minimum (минимум), Standard Deviation (стандартное отклонение), Total (всего)|
+|[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]|CPU time (время ЦП), Duration (длительность), Execution Count (число выполнений), Logical Reads (число логических операций чтения), Logical writes (число логических операций записи), Memory consumption (потребление памяти), Physical Reads (число физических операций чтения), CLR time (время среды CLR), Degree of Parallelism (DOP) (степень параллелизма), Row count (число строк), Log memory (память, занимаемая журналом), TempDB memory (память, занимаемая базой данных TempDB) и Wait times (время ожидания)|Average (среднее), Maximum (максимум), Minimum (минимум), Standard Deviation (стандартное отклонение), Total (всего)|
   
  На следующем рисунке показано, как найти представления хранилища запросов.  
   
@@ -200,7 +204,7 @@ FROM sys.database_query_store_options;
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
- Можно применить одно или оба этих действия, выполнив следующую инструкцию, которая явно изменяет режим работы обратно в режим чтения и записи.  
+Можно применить одно или оба этих действия, выполнив следующую инструкцию, которая явно изменяет режим работы обратно в режим чтения и записи.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -234,7 +238,7 @@ FROM sys.database_query_store_options;
  
  Хранилище запросов можно освободить, выполнив хранимую процедуру **sp_query_store_consistency_check** в соответствующей базе данных.
  
- Если это не помогло, необходимо очистить хранилище запросов перед запросом режима чтения и записи.  
+ Если это не помогло, можно попробовать очистить хранилище запросов перед запросом режима чтения и записи.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   

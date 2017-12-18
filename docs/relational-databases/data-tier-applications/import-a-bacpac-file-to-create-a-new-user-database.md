@@ -2,9 +2,12 @@
 title: "Импорт файла BACPAC для создания новой пользовательской базы данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/31/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -30,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a919d864464b02da417add79139d532689d43e92
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b105471806865b78a07c5478f08d7a1bf6cf49f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Импорт файла BACPAC для создания новой пользовательской базы данных
-  Импортируйте файл приложения уровня данных (DAC), файл .bacpac, для создания копии исходной базы данных с данными в новом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в компоненте [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Операции экспорта-импорта могут быть совмещены для переноса приложения уровня данных или базы данных из одного экземпляра в другой или для создания логического резервного копирования, например создания находящейся на предприятии копии базы данных, развернутой в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Импортируйте файл приложения уровня данных (DAC) (файл BACPAC) для создания копии исходной базы данных с данными в новом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] или компоненте [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Операции экспорта-импорта могут быть совмещены для переноса приложения уровня данных или базы данных из одного экземпляра в другой или для создания логического резервного копирования, например создания находящейся на предприятии копии базы данных, развернутой в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ## <a name="before-you-begin"></a>Перед началом  
  Процедура импорта создает новое приложение уровня данных в два этапа.  

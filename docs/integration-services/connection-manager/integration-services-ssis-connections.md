@@ -1,5 +1,5 @@
 ---
-title: "В службах Integration Services (SSIS) подключения | Документы Microsoft"
+title: "Соединения служб Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: 92
+caps.latest.revision: "92"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: 2f257448e90c82a2cd29e082fe6321401c889e37
-ms.contentlocale: ru-ru
-ms.lasthandoff: 11/07/2017
-
+ms.openlocfilehash: c5d4d5a7a4e0e6adf52d430d6d32352b531dd03f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-ssis-connections"></a>Соединения в службах Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют соединения для выполнения различных задач и реализации функций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -74,7 +72,7 @@ ms.lasthandoff: 11/07/2017
   
 -   Можно создать собственный диспетчер соединений, если существующие диспетчеры не отвечают требованиям.  
 
-### <a name="package-level-and-project-level-connection-managers"></a>Уровень пакета и проекта уровня диспетчеров соединений
+### <a name="package-level-and-project-level-connection-managers"></a>Диспетчеры подключений на уровне пакета и уровне проекта
 Можно создать диспетчер соединений на уровне пакета или на уровне проекта. Диспетчер соединений, созданный на уровне проекта, доступен всем пакетам в проекте. Диспетчер соединений, созданный на уровне пакета, доступен только этому определенному пакету.  
   
  Диспетчеры соединений, созданные на уровне проекта, заменяют источники данных. Это делается для совместного использования соединений к источникам. Чтобы добавить диспетчер соединений на уровне проекта, проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] должен использовать модель развертывания проекта. Когда проект настроен для использования данной модели, в **обозревателе решений** появляется папка **Диспетчеры соединений**, а папка **Источники данных** удаляется из **обозревателя решений**.  
@@ -82,7 +80,7 @@ ms.lasthandoff: 11/07/2017
 > [!NOTE]  
 >  Если в пакете нужно использовать источники данных, проект необходимо преобразовать в модель развертывания пакета.  
 >   
->  Дополнительные сведения об этих двух моделях и о преобразовании проектов в модель развертывания проекта см. в разделе [развертывания Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
+>  Дополнительные сведения об этих двух моделях и о преобразовании проекта в модель развертывания проектов см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).
 
 ### <a name="built-in-connection-managers"></a>Встроенные диспетчеры соединений  
  В следующей таблице перечислены типы диспетчеров соединений, предоставляемые службами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -117,14 +115,14 @@ ms.lasthandoff: 11/07/2017
   
 |Тип|Description|Раздел|  
 |----------|-----------------|-----------|  
-|ORACLE|Подключается к Oracle \<сведений о версии\> сервера.|Диспетчер соединений Oracle — это компонент диспетчера соединений соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity. Кроме того, в состав соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)(на английском языке).|  
+|ORACLE|Подключается к серверу Oracle \<версия\>.|Диспетчер соединений Oracle — это компонент диспетчера соединений соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity. Кроме того, в состав соединителя для Oracle [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)(на английском языке).|  
 |SAPBI|Подключается к системе SAP NetWeaver BI версии 7.|Диспетчер соединений SAP BI — это компонент диспетчера соединений соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Кроме того, в состав соединителя для SAP BI [!INCLUDE[msCoName](../../includes/msconame-md.md)] входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft SQL Server 2008 Feature Pack](http://go.microsoft.com/fwlink/?LinkId=262016)(на английском языке).|  
-|TERADATA|Подключается к Teradata \<сведений о версии\> сервера.|Диспетчер соединений Teradata — это компонент диспетчера соединений соединителя для Teradata [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity. Кроме того, в состав соединителя для Teradata [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)(на английском языке).|  
+|TERADATA|Подключается к серверу Teradata \<версия\>.|Диспетчер соединений Teradata — это компонент диспетчера соединений соединителя для Teradata [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity. Кроме того, в состав соединителя для Teradata [!INCLUDE[msCoName](../../includes/msconame-md.md)] компании Attunity входят источник и назначение. Дополнительные сведения см. на странице загрузки [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=251526)(на английском языке).|  
   
 ### <a name="custom-connection-managers"></a>Пользовательские диспетчеры соединений  
  Кроме того, можно создавать пользовательские диспетчеры соединений. Дополнительные сведения см. в разделе [Developing a Custom Connection Manager](../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  
   
-## <a name="create-connection-managers"></a>Создание диспетчеров соединений
+## <a name="create-connection-managers"></a>Создание диспетчеров подключений
   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают набор диспетчеров соединений для соответствия нуждам задач, подключающихся к разным серверам и источникам данных. Диспетчеры соединений используются компонентами потока данных, которые извлекают и загружают данные в разные типы хранилищ данных, и поставщиками журналов, которые записывают журналы на сервер, в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в файл. Например, пакет с задачей «Отправка почты» использует тип диспетчера соединений SMTP, чтобы подключиться к SMTP-серверу. Пакет с заданием «Выполнение SQL» может использовать диспетчер соединений OLE DB, чтобы подключиться к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
  Для автоматического создания и настройки диспетчеров подключений при создании пакета можно использовать мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Он также поможет вам создать и настроить источники и назначения для диспетчеров подключений. Дополнительные сведения см. в статье [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
@@ -138,7 +136,7 @@ ms.lasthandoff: 11/07/2017
   
  Следующая диаграмма показывает область **Диспетчеры соединений** на вкладке **Поток управления** конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- ![Снимок экрана: конструктор потока управления пакета](../../integration-services/connection-manager/media/samplecontrolflow.gif "снимок экрана: конструктор потока управления пакета")    
+ ![Снимок экрана: конструктор потока управления с пакетом](../../integration-services/connection-manager/media/samplecontrolflow.gif "Снимок экрана: конструктор потока управления с пакетом")    
   
 ### <a name="32-bit-and-64-bit-providers-for-connection-managers"></a>32-разрядная и 64-разрядная версии поставщиков для диспетчеров соединений  
  Для многих поставщиков, используемых диспетчерами соединений, доступны 32-разрядная и 64-разрядная версии. Среда разработки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] — это 32-разрядная среда, поэтому в ней содержатся только 32-разрядные поставщики. Поэтому необходимо настроить диспетчер соединений для использования специального 64-разрядного поставщика, если 32-разрядная версия того же поставщика уже установлена.  
@@ -147,14 +145,14 @@ ms.lasthandoff: 11/07/2017
   
   У обеих версий поставщика один идентификатор. Чтобы предписать использование средой выполнения служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] доступной 64-разрядной версии поставщика, установите свойство Run64BitRuntime проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если свойство Run64BitRuntime имеет значение **true**, среда выполнения находит и использует 64-разрядный поставщик; если свойство Run64BitRuntime имеет значение **false**, среда выполнения использует 32-разрядный поставщик. Дополнительные сведения о свойствах, которые можно настраивать в проектах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], см. в разделе [Службы Integration Services (SSIS) и среды Studio](https://msdn.microsoft.com/library/ms140028.aspx).   
 
-## <a name="add-a-connection-manager"></a>Добавление диспетчера соединений
-###  <a name="wizard"></a>Добавление диспетчера соединений при создании пакета  
+## <a name="add-a-connection-manager"></a>Добавление диспетчера подключений
+###  <a name="wizard"></a> Добавление диспетчера подключений при создании пакета  
   
 -   Использование мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
   
      Помимо создания и настройки диспетчера соединений, этот мастер также поможет создать и настроить источники и назначения, используемые диспетчером соединений. Дополнительные сведения см. в разделе [Create Packages in SQL Server Data Tools](../../integration-services/create-packages-in-sql-server-data-tools.md).  
   
-###  <a name="package"></a>Добавьте диспетчер соединений в существующий пакет  
+###  <a name="package"></a> Добавление диспетчера подключений в существующий пакет  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -177,20 +175,20 @@ ms.lasthandoff: 11/07/2017
     |[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[настройка диспетчера соединений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Диспетчер подключений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Редактор диспетчера соединений с Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|[Редактор диспетчера подключения файлов](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Редактор диспетчера подключений Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
+    |[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|[Редактор диспетчера подключений файлов](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
     |[Диспетчер подключений нескольких файлов](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений файлов"](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Диспетчер подключений неструктурированных файлов](../../integration-services/connection-manager/flat-file-connection-manager.md)|[Редактор диспетчера подключений к неструктурированным файлам (страница "Общие")](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Столбцы")](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Дополнительно")](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Предварительный просмотр")](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
     |[Диспетчер подключений нескольких неструктурированных файлов](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Общие")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Столбцы")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Дополнительно")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Предварительный просмотр")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
+    |[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Диспетчер HTTP-подключений](../../integration-services/connection-manager/http-connection-manager.md)|[Редактор диспетчера HTTP-сеансов (страница "Сервер")](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Редактор диспетчера соединений MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
+    |[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Редактор диспетчера подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
     |[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Справочник по пользовательскому интерфейсу диспетчера соединений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[Диспетчер подключений управляющих объектов SQL Server](../../integration-services/connection-manager/smo-connection-manager.md)|[Редактор диспетчера соединений SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)|[Редактор диспетчера соединений SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
+    |[Диспетчер подключений управляющих объектов SQL Server](../../integration-services/connection-manager/smo-connection-manager.md)|[Редактор диспетчера подключений SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
+    |[Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)|[Редактор диспетчера SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Диспетчер подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Редактор диспетчера подключений SQL Server Compact Edition (страница "Соединение")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Редактор диспетчера подключений SQL Server Compact Edition (страница "Все")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[Диспетчер WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager.md)|[Редактор диспетчера WMI-сеансов](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[Диспетчер WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager.md)|[Редактор диспетчера WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
      Область **Диспетчеры соединений** отображает добавленные диспетчеры соединений.  
   
@@ -198,7 +196,7 @@ ms.lasthandoff: 11/07/2017
   
 6.  Чтобы сохранить обновленный пакет, щелкните **Сохранить выбранные элементы** в меню **Файл** .  
   
-###  <a name="project"></a>Добавьте диспетчер соединений на уровне проекта  
+###  <a name="project"></a> Добавление диспетчера подключений на уровне проекта  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -213,20 +211,20 @@ ms.lasthandoff: 11/07/2017
     |[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[настройка диспетчера соединений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Диспетчер подключений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Редактор диспетчера соединений с Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|[Редактор диспетчера подключения файлов](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Редактор диспетчера подключений Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
+    |[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|[Редактор диспетчера подключений файлов](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
     |[Диспетчер подключений нескольких файлов](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений файлов"](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Диспетчер подключений неструктурированных файлов](../../integration-services/connection-manager/flat-file-connection-manager.md)|[Редактор диспетчера подключений к неструктурированным файлам (страница "Общие")](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Столбцы")](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Дополнительно")](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Предварительный просмотр")](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
     |[Диспетчер подключений нескольких неструктурированных файлов](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Общие")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Столбцы")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Дополнительно")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Предварительный просмотр")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
+    |[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Диспетчер HTTP-подключений](../../integration-services/connection-manager/http-connection-manager.md)|[Редактор диспетчера HTTP-сеансов (страница "Сервер")](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Редактор диспетчера соединений MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
+    |[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Редактор диспетчера подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
     |[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Справочник по пользовательскому интерфейсу диспетчера соединений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[Диспетчер подключений управляющих объектов SQL Server](../../integration-services/connection-manager/smo-connection-manager.md)|[Редактор диспетчера соединений SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)|[Редактор диспетчера соединений SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
+    |[Диспетчер подключений управляющих объектов SQL Server](../../integration-services/connection-manager/smo-connection-manager.md)|[Редактор диспетчера подключений SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
+    |[Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)|[Редактор диспетчера SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Диспетчер подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Редактор диспетчера подключений SQL Server Compact Edition (страница "Соединение")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Редактор диспетчера подключений SQL Server Compact Edition (страница "Все")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[Диспетчер WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager.md)|[Редактор диспетчера WMI-сеансов](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[Диспетчер WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager.md)|[Редактор диспетчера WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
      Добавленный диспетчер соединений появится в узле **Диспетчеры соединений** в **обозревателе решений**. Также он появится на вкладке **Диспетчеры соединений** в окне **Конструктор служб SSIS** для всех пакетов в проекте. Имя диспетчера соединений на этой вкладке будет иметь префикс **(проект)** для того, чтобы можно было отличить данный диспетчер соединений на уровне проекта от диспетчеров соединений на уровне пакета.  
   
@@ -235,26 +233,26 @@ ms.lasthandoff: 11/07/2017
     > [!NOTE]  
     >  На вкладке **Диспетчеры соединений** окна **Конструктор служб SSIS** нет возможности перезаписать префикс **(проект)** с имени диспетчера соединений. Это сделано намеренно.  
 
-### <a name="add-ssis-connection-manager-dialog-box"></a>Добавление диспетчера соединений служб SSIS-диалоговое окно
+### <a name="add-ssis-connection-manager-dialog-box"></a>Диалоговое окно "Добавление диспетчера соединений со службами SSIS"
 Диалоговое окно **Добавление диспетчера соединений служб SSIS** используется для выбора типа соединения, добавляемого в пакет.  
   
  Дополнительные сведения о диспетчерах соединений см. в разделе [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).  
   
 #### <a name="options"></a>Параметры  
- **Тип диспетчера соединений**  
+ **Тип диспетчера подключений**  
  Выберите тип соединения, а затем нажмите кнопку **Добавить**, либо дважды щелкните тип соединения, чтобы задать свойства соединения с помощью редактора для каждого из типов соединений.  
   
  **Добавить**  
  Укажите свойства соединения с помощью редактора для каждого из типов соединений.  
    
-##  <a name="parameter"></a>Создание параметра для свойства диспетчера соединений  
+##  <a name="parameter"></a> Создание параметра для свойства диспетчера подключений  
   
 1.  В области **Диспетчеры соединений** щелкните правой кнопкой мыши диспетчер соединений, для которого необходимо создать параметр, и щелкните **Параметризировать**.  
   
 2.  Настройка установок параметра в диалоговом окне **Параметризация** . Дополнительные сведения см. в разделе [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
 
-## <a name="delete-a-connection-manager"></a>Удаление диспетчера соединений 
-###  <a name="DeletePackageLevel"></a>Удаление диспетчера соединений из пакета  
+## <a name="delete-a-connection-manager"></a>Удаление диспетчера подключений 
+###  <a name="DeletePackageLevel"></a> Удаление диспетчера подключений из пакета  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -274,9 +272,9 @@ ms.lasthandoff: 11/07/2017
   
 5.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-###  <a name="DeleteProjectLevel"></a>Удаление общего диспетчера соединений (диспетчер соединений на уровне проекта)  
+###  <a name="DeleteProjectLevel"></a> Удаление общего диспетчера подключений (диспетчер подключений на уровне проекта)  
   
-1.  Для удаления диспетчера соединений на уровне проекта щелкните правой кнопкой мыши диспетчер соединений в узле **Диспетчеры соединений** в окне **Обозреватель решений** и нажмите кнопку **Удалить**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]отображает следующее предупреждающее сообщение:  
+1.  Для удаления диспетчера соединений на уровне проекта щелкните правой кнопкой мыши диспетчер соединений в узле **Диспетчеры соединений** в окне **Обозреватель решений** и нажмите кнопку **Удалить**. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] отображает следующее предупреждающее сообщение:  
   
     > [!WARNING]  
     >  При удалении диспетчера соединений на уровне проекта, пакеты, использующие этот диспетчер соединений, могут не запуститься. Это действие нельзя отменить. Продолжить удаление диспетчера соединений?  
@@ -289,9 +287,9 @@ ms.lasthandoff: 11/07/2017
 ## <a name="set-the-properties-of-a-connection-manager"></a>Задание свойств диспетчера соединений
 Все диспетчеры соединений могут быть настроены в окне **Свойства** .  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]также предоставляет пользовательские диалоговые окна для изменения различных типов диспетчеров соединений в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Диалоговое окно имеет различные наборы настроек в зависимости от типа диспетчера соединений.  
+ Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предлагают пользовательские диалоговые окна для изменения различных типов диспетчеров подключений в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Диалоговое окно имеет различные наборы настроек в зависимости от типа диспетчера соединений.  
   
-### <a name="modify-a-connection-manager-using-the-properties-window"></a>Изменение диспетчера соединений с помощью окна свойств  
+### <a name="modify-a-connection-manager-using-the-properties-window"></a>Изменение диспетчера подключений в окне "Свойства"  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -307,7 +305,7 @@ ms.lasthandoff: 11/07/2017
   
 7.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>Изменение диспетчера соединений с помощью диалогового окна диспетчера соединений  
+### <a name="modify-a-connection-manager-using-a-connection-manager-dialog-box"></a>Изменение диспетчера подключений в диалоговом окне диспетчера подключений  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -322,20 +320,20 @@ ms.lasthandoff: 11/07/2017
     |[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
     |[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|[настройка диспетчера соединений ADO.NET](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)|  
     |[Диспетчер подключений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений служб Analysis Services"](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)|  
-    |[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Редактор диспетчера соединений с Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
-    |[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|[Редактор диспетчера подключения файлов](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
+    |[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|[Редактор диспетчера подключений Excel](../../integration-services/connection-manager/excel-connection-manager-editor.md)|  
+    |[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|[Редактор диспетчера подключений файлов](../../integration-services/connection-manager/file-connection-manager-editor.md)|  
     |[Диспетчер подключений нескольких файлов](../../integration-services/connection-manager/multiple-files-connection-manager.md)|[Справочник по пользовательскому интерфейсу: диалоговое окно "Добавление диспетчера подключений файлов"](../../integration-services/connection-manager/add-file-connection-manager-dialog-box-ui-reference.md)|  
     |[Диспетчер подключений неструктурированных файлов](../../integration-services/connection-manager/flat-file-connection-manager.md)|[Редактор диспетчера подключений к неструктурированным файлам (страница "Общие")](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Столбцы")](../../integration-services/connection-manager/flat-file-connection-manager-editor-columns-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Дополнительно")](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)<br /><br /> [Редактор диспетчера подключений к неструктурированным файлам (страница "Предварительный просмотр")](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)|  
     |[Диспетчер подключений нескольких неструктурированных файлов](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|[Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Общие")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)<br /><br /> [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Столбцы")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)<br /><br /> [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Дополнительно")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)<br /><br /> [Редактор диспетчера подключений с несколькими неструктурированными файлами (страница "Предварительный просмотр")](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)|  
-    |[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-сеансов](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
+    |[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|[Редактор диспетчера FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager-editor.md)|  
     |[Диспетчер HTTP-подключений](../../integration-services/connection-manager/http-connection-manager.md)|[Редактор диспетчера HTTP-сеансов (страница "Сервер")](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)<br /><br /> [Редактор диспетчера HTTP-сеансов (страница "Прокси-сервер")](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)|  
-    |[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Редактор диспетчера соединений MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
+    |[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|[Редактор диспетчера подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)|  
     |[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|[Справочник по пользовательскому интерфейсу диспетчера соединений ODBC](../../integration-services/connection-manager/odbc-connection-manager-ui-reference.md)|  
     |[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|[настройка диспетчера соединений OLE DB](../../integration-services/connection-manager/configure-ole-db-connection-manager.md)|  
-    |[Диспетчер подключений управляющих объектов SQL Server](../../integration-services/connection-manager/smo-connection-manager.md)|[Редактор диспетчера соединений SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
-    |[Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)|[Редактор диспетчера соединений SMTP](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
+    |[Диспетчер подключений управляющих объектов SQL Server](../../integration-services/connection-manager/smo-connection-manager.md)|[Редактор диспетчера подключений SMO](../../integration-services/connection-manager/smo-connection-manager-editor.md)|  
+    |[Диспетчер SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager.md)|[Редактор диспетчера SMTP-подключений](../../integration-services/connection-manager/smtp-connection-manager-editor.md)|  
     |[Диспетчер подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|[Редактор диспетчера подключений SQL Server Compact Edition (страница "Соединение")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)<br /><br /> [Редактор диспетчера подключений SQL Server Compact Edition (страница "Все")](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)|  
-    |[Диспетчер WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager.md)|[Редактор диспетчера WMI-сеансов](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
+    |[Диспетчер WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager.md)|[Редактор диспетчера WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager-editor.md)|  
   
 5.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
 
@@ -352,4 +350,3 @@ ms.lasthandoff: 11/07/2017
 -   Техническая статья [Получено сообщение об ошибке "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" при использовании диспетчера соединений Oracle в SSIS](http://go.microsoft.com/fwlink/?LinkId=233696)на сайте support.microsoft.com.  
   
   
-

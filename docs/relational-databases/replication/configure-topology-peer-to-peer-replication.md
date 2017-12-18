@@ -2,9 +2,12 @@
 title: "Настройка топологии (одноранговая репликация) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ac55f8620b7be677223f34d3d14d23007e49d2e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc8f91a4da3bfa31f6eab0bcb492e16c9bccba0d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Настройка топологии (одноранговая репликация)
-  Для выполнения таких наиболее типичных задач конфигурации, как добавление и удаление узлов, а также добавления новых соединений между существующими узлами, служит страница **Настройка топологии** . Узел, выбранный на странице **Публикация** этого мастера, отображается в области конструктора. Чтобы задать параметры конфигурации, щелкните правой кнопкой мыши узел, соединение или область конструктора.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для выполнения таких наиболее типичных задач конфигурации, как добавление и удаление узлов, а также добавления новых соединений между существующими узлами служит страница **Настройка топологии**. Узел, выбранный на странице **Публикация** этого мастера, отображается в области конструктора. Чтобы задать параметры конфигурации, щелкните правой кнопкой мыши узел, соединение или область конструктора.  
   
 > [!NOTE]  
 >  Мастер настройки одноранговой топологии запрашивает сведения о топологии при закрытии этого мастера. Если этот мастер был закрыт и вновь открыт до того, как все узлы ответили на запрос на информацию, мастер, возможно, отобразит лишь часть сети.  

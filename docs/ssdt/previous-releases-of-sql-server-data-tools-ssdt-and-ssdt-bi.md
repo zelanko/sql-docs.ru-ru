@@ -3,8 +3,11 @@ title: "Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-
 ms.custom: 
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: ssdt
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: tools-ssdt
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4b1dab5e822c5ef2f9ac580f4d4cd2e5b43b7ae6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7ab22071b1f85d14e1a1e01f50a2924af702334e
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>Предыдущие выпуски SQL Server Data Tools (SSDT и SSDT-BI)
-
-SQL Server Data Tools (SSDT) предоставляет шаблоны проектов и рабочих областей конструирования для создания различных типов содержимого SQL Server: реляционных баз данных, моделей Analysis Services, отчетов Reporting Services и пакетов Integration Services.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] SQL Server Data Tools (SSDT) предоставляет шаблоны проектов и рабочих областей конструирования для создания различных типов содержимого SQL Server: реляционных баз данных, моделей Analysis Services, отчетов Reporting Services и пакетов Integration Services.  
   
 Продукт основан на оболочке Visual Studio и выпускается совместно с SQL Server. Новые версии SSDT включают в себя новейшие функции SQL Server. В более поздние версии входят шаблоны и среда разработки, актуальные на момент выхода конкретного выпуска.  
   

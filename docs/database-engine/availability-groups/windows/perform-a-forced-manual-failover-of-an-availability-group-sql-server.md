@@ -2,9 +2,12 @@
 title: "Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a6365667a087ddd408925dddbdd712cb26df3d96
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef796792b50508d43361a86dd7a276990954bfdd
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)
-  В этом разделе описывается выполнение принудительной отработки отказа (с возможной потерей данных) в группе доступности AlwaysOn с использованием [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Принудительная отработка отказа — это форма перехода на другой ресурс вручную, предназначенная исключительно для аварийного восстановления в случаях, когда невозможно выполнить [запланированную отработку отказа вручную](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Если выполняется принудительный переход на несинхронизированную вторичную реплику, возможна потеря данных. Поэтому мы настоятельно рекомендуем выполнять принудительную отработку отказа только в том случае, если необходимо немедленно возобновить работу группы доступности и вы готовы пойти на риск потери данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается выполнение принудительной отработки отказа (с возможной потерей данных) в группе доступности AlwaysOn с использованием [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Принудительная отработка отказа — это форма перехода на другой ресурс вручную, предназначенная исключительно для аварийного восстановления в случаях, когда невозможно выполнить [запланированную отработку отказа вручную](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Если выполняется принудительный переход на несинхронизированную вторичную реплику, возможна потеря данных. Поэтому мы настоятельно рекомендуем выполнять принудительную отработку отказа только в том случае, если необходимо немедленно возобновить работу группы доступности и вы готовы пойти на риск потери данных.  
   
  После принудительной отработки отказа цель перехода, на которую перешла группа доступности, становится новой первичной репликой. Базы данных-получатели на оставшихся вторичных репликах приостанавливаются и должны быть восстановлены вручную. Если прежняя первичная реплика станет доступной, то она переключится в роль вторичной, в связи с чем бывшие базы данных-источники станут базами данных-получателями и перейдут в состояние SUSPENDED. Перед возобновлением работы данной базы данных-получателя можно попробовать восстановить ее потерянные данные. Однако обратите внимание, что, если хотя бы одна из баз данных-получателей приостановлена, усечение журнала транзакций в данной базе данных-источнике откладывается.  
   

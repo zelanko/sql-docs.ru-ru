@@ -2,9 +2,12 @@
 title: "Репликация моментального снимка | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 927b6cb09af9a41a8326033cc36f949b3e29bb68
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d2ce2c53b4aee32b5d280b81d6672f9b5c679798
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="snapshot-replication"></a>Репликация моментальных снимков
-  Репликация моментальных снимков распространяет данные точно в том виде, в котором они были представлены в определенный момент времени, и не наблюдает за обновлением этих данных. Во время синхронизации формируется моментальный снимок и отсылается подписчикам целиком.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Репликация моментальных снимков распространяет данные точно в том виде, в котором они были представлены в определенный момент времени, и не наблюдает за обновлением этих данных. Во время синхронизации формируется моментальный снимок и отсылается подписчикам целиком.  
   
 > [!NOTE]  
 >  Репликация моментальных снимков может использоваться сама по себе, но процесс создания моментального снимка (который создает копию всех объектов и данных, заданных публикацией) также часто используется для предоставления первоначального набора данных и объектов базы данных для публикации транзакций и публикации слиянием.  

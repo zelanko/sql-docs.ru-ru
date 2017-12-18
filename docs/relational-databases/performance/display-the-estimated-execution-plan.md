@@ -2,9 +2,12 @@
 title: "Отображение предполагаемого плана выполнения | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/21/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b05bddb677c7cf707c63c003c569eb296270832d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c559446e933893547306252d0efe05ecab75f479
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="display-the-estimated-execution-plan"></a>Отображение предполагаемого плана выполнения
-  В этом разделе описано создание графических предполагаемых планов выполнения с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При создании расчетных планов выполнения запросы и пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] не выполняются. Поэтому расчетный план выполнения не содержит сведений времени выполнения, таких как фактические метрики использования ресурса и предупреждения времени выполнения. Вместо этого созданный план выполнения отображает наиболее вероятный план выполнения запроса, которому следовал бы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] при фактическом выполнении запросов, а также отображает расчетное движение строк при выполнении нескольких операторов в плане.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этом разделе описано создание графических предполагаемых планов выполнения с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. При создании расчетных планов выполнения запросы и пакеты [!INCLUDE[tsql](../../includes/tsql-md.md)] не выполняются. Поэтому расчетный план выполнения не содержит сведений времени выполнения, таких как фактические метрики использования ресурса и предупреждения времени выполнения. Вместо этого созданный план выполнения отображает наиболее вероятный план выполнения запроса, которому следовал бы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] при фактическом выполнении запросов, а также отображает расчетное движение строк при выполнении нескольких операторов в плане.  
   
  Для использования этой возможности пользователи должны обладать соответствующими разрешениями на запуск запроса [!INCLUDE[tsql](../../includes/tsql-md.md)] , для которого создается графический план выполнения. Кроме того, пользователям должно быть предоставлено разрешение SHOWPLAN для всех баз данных, упоминаемых в запросе.  
   

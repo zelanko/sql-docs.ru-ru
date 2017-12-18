@@ -1,5 +1,5 @@
 ---
-title: "Назначение «ADO.NET» | Документы Microsoft"
+title: "Назначение \"ADO.NET\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - destinations [Integration Services], ADO.NET
 - ADO.NET destination
 ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
-ms.openlocfilehash: dc8301025936bb5f1b0ad31db6b15d90416580ba
-ms.contentlocale: ru-ru
-ms.lasthandoff: 11/08/2017
-
+ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ado-net-destination"></a>Назначение «ADO.NET»
   Назначение ADO NET загружает данные в различные базы данных, совместимые с [!INCLUDE[vstecado](../../includes/vstecado-md.md)], которые используют таблицу или представление базы данных. Можно загрузить эти данные в существующую таблицу или представление либо создать новую таблицу и загрузить в нее данные.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 11/08/2017
  Назначение ADO NET содержит сопоставления между входными столбцами и столбцами в источнике данных назначения. Не обязательно сопоставлять входные столбцы всем целевым столбцам. Однако свойства некоторых целевых столбцов могут требовать сопоставления с входными столбцами. В противном случае могут происходить ошибки. Например, если целевой столбец не допускает значений NULL, ему должен быть сопоставлен входной столбец. Кроме того, типы данных сопоставленных столбцов должны быть совместимыми. Например, нельзя сопоставить входной столбец строкового типа с целевым столбцом числового типа данных, если поставщик [!INCLUDE[vstecado](../../includes/vstecado-md.md)] не поддерживает такое сопоставление.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]не поддерживает вставку текста в столбцы, тип данных которого имеет значение для развертывания образа. Дополнительные сведения о типах значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает вставку текста в столбцы, для которых установлен тип данных image. Дополнительные сведения о типах значений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md).  
   
 > [!NOTE]  
 >  Назначение ADO NET не поддерживает сопоставление входного столбца типа DT_DBTIME столбцу базы данных типа datetime. Дополнительные сведения о типах данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] см. в разделе [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
@@ -104,12 +102,12 @@ ms.lasthandoff: 11/08/2017
  Если был выбран параметр **По возможности использовать массовую вставку**, а для параметра **Ошибка** задано значение **Перенаправить строку**, то в пакет данных, перенаправляемый объектом назначения в вывод ошибок, могут попасть и строки, не содержащие ошибок. Дополнительные сведения об обработке ошибок в массовых операциях см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md). Дополнительные сведения о параметре **Ошибка** см. в разделе [Редактор назначения ADO.NET (страница "Вывод ошибок")](../../integration-services/data-flow/ado-net-destination-editor-error-output-page.md).  
   
 > [!NOTE]  
->  Если в исходной таблице SQL Server или Sybase включает столбец идентификаторов, необходимо использовать задачи «Выполнение SQL» для включения IDENTITY_INSERT перед назначением ADO NET и отключить его после выполнения. (Это свойство столбца идентификаторов указывает значение приращения для столбца. Инструкции SET IDENTITY_INSERT позволяет явно заданные значения из таблицы источника вставляется в столбец идентификаторов целевой таблицы.)  
+>  Если исходная таблица SQL Server или Sybase включает столбец идентификаторов, то необходимо использовать задачи "Выполнение SQL" для включения инструкции IDENTITY_INSERT до доступа к назначению "ADO.NET" и ее отключение после доступа. (Это свойство столбца идентификаторов указывает значение приращения для столбца. Инструкция SET IDENTITY_INSERT позволяет вставлять явные значения из таблицы источника в столбец идентификаторов таблицы назначения.)  
 >   
->   Для выполнения инструкции SET IDENTITY_INSERT и успешно загрузку данных, необходимо выполнить следующие действия. 
->       1. Используйте один и тот же диспетчер соединений ADO.NET для задач «Выполнение SQL» и назначения ADO.NET. 
->       2. В диспетчере соединений задать **RetainSameConnection** свойство и **MultipleActiveResultSets** значение True. 
->       3. На сервере назначения ADO.NET задайте **UseBulkInsertWhenPossible** свойству значение False. 
+>   Чтобы выполнить инструкции SET IDENTITY_INSERT и успешно загрузить данные, необходимо сделать следующее. 
+>       1. Используйте один и тот же диспетчер соединений ADO.NET для задач "Выполнение SQL" и назначения "ADO NET". 
+>       2. В диспетчере соединений присвойте свойствам **RetainSameConnection** и **MultipleActiveResultSets** значение True. 
+>       3. В назначении "ADO.NET" присвойте свойству **UseBulkInsertWhenPossible** значение False. 
 >
 >  Дополнительные сведения см. в разделе [SET IDENTITY_INSERT (Transact-SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) и [IDENTITY (свойство) (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -135,7 +133,7 @@ ms.lasthandoff: 11/08/2017
  Просмотрите список доступных целевых столбцов. Чтобы сопоставить доступные целевые столбцы с входными столбцами, воспользуйтесь операцией перетаскивания.  
   
  **Входной столбец**  
- Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав  **\<пропустить >** исключить столбцы из выходных данных.  
+ Позволяет просматривать выбранные входные столбцы. Сопоставления можно удалить, выбрав вариант **\<игнорировать>**, чтобы исключить столбцы из выходных данных.  
   
  **Целевой столбец**  
  Позволяет просмотреть каждый из доступных целевых столбцов без учета наличия или отсутствия сопоставления.  
@@ -176,4 +174,3 @@ ms.lasthandoff: 11/08/2017
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
   
-

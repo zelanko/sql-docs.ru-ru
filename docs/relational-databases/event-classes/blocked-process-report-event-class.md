@@ -2,9 +2,12 @@
 title: "Класс событий Blocked Process Report | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea1519e09402020d9ee6daccfbe34b3de5dffe67
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e9b92c3ed426d733243916372a15df601d3c01e0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report, класс событий
-  Класс событий **Blocked Process Report** показывает, что задача была заблокирована на период времени больше указанного. К данному классу событий не относятся системные задачи или задачи, ожидающие ресурсов, для которых взаимоблокировку обнаружить нельзя.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий **Blocked Process Report** показывает, что задача была заблокирована на период времени больше указанного. К данному классу событий не относятся системные задачи или задачи, ожидающие ресурсов, для которых взаимоблокировку обнаружить нельзя.  
   
  Пороговое значение и частота создания отчетов в параметре **blocked process threshold** настраиваются с помощью хранимой процедуры **sp_configure** ; значение параметра может задаваться в секундах. По умолчанию отчеты о заблокированных процессах не создаются. Дополнительные сведения о настройке параметра **blocked process threshold** см. в разделе [Параметр конфигурации сервера "blocked process threshold"](../../database-engine/configure-windows/blocked-process-threshold-server-configuration-option.md).  
   

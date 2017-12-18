@@ -2,9 +2,12 @@
 title: "Сведения о доступе клиентского подключения к репликам доступности (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a06ad7142fa98b0a5e0a1ab1af0a98863744fa3c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d945149c7bb6dc583f378c0d8823e2eff0e925b0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="about-client-connection-access-to-availability-replicas-sql-server"></a>Сведения о доступе клиентского подключения к репликам доступности (SQL Server)
-  В группе доступности AlwaysOn можно настроить одну или несколько реплик доступности, подключения к которой могут выполняться в режиме только для чтения, когда они являются вторичными (то есть при работе в качестве вторичной реплики). Каждую реплику доступности можно также настроить так, чтобы она разрешала или исключала соединения только для чтения во время работы под первичной ролью (т. е. во время работы в качестве первичной реплики).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В группе доступности AlwaysOn можно настроить одну или несколько реплик доступности, подключения к которой могут выполняться в режиме только для чтения, когда они являются вторичными (то есть при работе в качестве вторичной реплики). Каждую реплику доступности можно также настроить так, чтобы она разрешала или исключала соединения только для чтения во время работы под первичной ролью (т. е. во время работы в качестве первичной реплики).  
   
  Чтобы упростить клиентский доступ к базе данных-источнику или получателю в данной группе доступности, необходимо определить прослушиватель группы доступности. По умолчанию новые соединения с прослушивателем группы доступности будут перенаправляться к первичной реплике. Однако можно настроить группу доступности для поддержки маршрутизации только для чтения, которая позволяет своему прослушивателю переадресовывать запросы на соединения только для чтения на вторичную реплику только для чтения. Дополнительные сведения см. в статье [Настройка маршрутизации только для чтения в группе доступности (SQL Server)](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).  
   

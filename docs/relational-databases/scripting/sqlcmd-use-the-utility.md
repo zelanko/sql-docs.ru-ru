@@ -2,9 +2,12 @@
 title: "Использование программы sqlcmd | Документация Майкрософт"
 ms.custom: 
 ms.date: 06/06/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f0db4cc8c1888e53735579e82699a1471d432b18
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0969b3f39f94ec3832cc762ec9419425e099000f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sqlcmd---use-the-utility"></a>Использование программы sqlcmd
-  Служебная программа **sqlcmd** представляет собой программу командной строки для нерегламентированного интерактивного выполнения инструкций и скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)] , а также для автоматизации задач скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] . Интерактивная работа с **sqlcmd** и создание файлов скриптов, исполняемых с помощью **sqlcmd**, требует от пользователя понимания языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Программа **sqlcmd** обычно применяется следующим образом.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Служебная программа **sqlcmd** представляет собой программу командной строки для нерегламентированного интерактивного выполнения инструкций и скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)], а также для автоматизации задач скриптов [!INCLUDE[tsql](../../includes/tsql-md.md)]. Интерактивная работа с **sqlcmd** и создание файлов скриптов, исполняемых с помощью **sqlcmd**, требует от пользователя понимания языка [!INCLUDE[tsql](../../includes/tsql-md.md)]. Программа **sqlcmd** обычно применяется следующим образом.  
   
 -   Пользователь вводит инструкции на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] точно так же, как при работе в командной строке. Результаты выводятся в окно командной строки. Чтобы открыть окно командной строки, введите "cmd" в поле поиска Windows и выберите пункт **Командная строка**. В окне командной строки введите **sqlcmd** и необходимые параметры. Полный перечень параметров, поддерживаемых программой **sqlcmd**, см. в разделе [Программа sqlcmd](../../tools/sqlcmd-utility.md).  
   

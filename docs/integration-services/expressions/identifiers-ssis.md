@@ -1,5 +1,5 @@
 ---
-title: "Идентификаторы (службы SSIS) | Документы Microsoft"
+title: "Идентификаторы (службы SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,17 +22,16 @@ helpviewer_keywords:
 - expressions [Integration Services], identifiers
 - qualified identifiers [Integration Services]
 ms.assetid: 56af984d-88b4-4db8-b6a2-6b07315a699e
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc690b6318c3e9fea27fbbba74b1f1b7289a3d32
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 819dc582a8c30c4758399c3d7d07184a65b72b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="identifiers-ssis"></a>Идентификаторы (службы SSIS)
   В выражениях идентификаторы обозначают столбцы и переменные, значения которых могут быть использованы в операциях. Выражения могут использовать обычные и сложные идентификаторы.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 08/03/2017
 >  Если оба элемента в точечной нотации окружены одной парой скобок, то средство оценки выражения воспримет точку как часть сложного имени, а не как оператор уточнения.  
   
 ## <a name="variables-in-expressions"></a>Переменные в выражениях  
- При использовании переменных в выражениях, необходимо использовать префикс @ перед именем переменной. Например **счетчика** переменной указывается с помощью @Counter. Символ @ не является частью имени переменной. Он только указывает средству оценки выражений на принадлежность объекта к переменным. Если выражение построено в диалоговом окне конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , то символ @ будет автоматически добавлен к имени переменной. Между символом @ и именем переменной не должно быть пробелов.  
+ При использовании переменных в выражениях, необходимо использовать префикс @ перед именем переменной. Например, выражение @Counter является ссылкой на переменную **Counter**. Символ @ не является частью имени переменной. Он только указывает средству оценки выражений на принадлежность объекта к переменным. Если выражение построено в диалоговом окне конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , то символ @ будет автоматически добавлен к имени переменной. Между символом @ и именем переменной не должно быть пробелов.  
   
  Имена переменных должны удовлетворять тем же самым правилам, что и имена других обычных идентификаторов.  
   
@@ -132,4 +130,3 @@ ms.lasthandoff: 08/03/2017
  Техническая статья [Памятка выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=746575)на сайте pragmaticworks.com  
   
   
-

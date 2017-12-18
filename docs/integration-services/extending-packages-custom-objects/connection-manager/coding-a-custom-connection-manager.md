@@ -1,5 +1,5 @@
 ---
-title: "Кодирование пользовательского диспетчера соединений | Документы Microsoft"
+title: "Написание кода пользовательского диспетчера соединений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,27 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-helpviewer_keywords:
-- custom connection managers [Integration Services], coding
+applies_to: SQL Server 2016 Preview
+helpviewer_keywords: custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2c8117a84ee1dcbd78de5015e5e9e21bfa0e8940
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ab9cc5d32606564b4b79ac5270217fd849e97fd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-a-custom-connection-manager"></a>Написание кода пользовательского диспетчера соединений
   После создания класса, наследующего от базового класса <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>, и применения к нему атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>, необходимо переопределить реализацию свойств и методов базового класса, чтобы обеспечить пользовательские функциональные возможности.  
   
- Образцы пользовательских диспетчеров соединений см. в разделе [Разработка пользовательского интерфейса для пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Примеры кода, приведенные в этом разделе, взяты из образца пользовательского диспетчера соединений SQL Server.  
+ Примеры пользовательских диспетчеров соединений см. в разделе [Разработка пользовательского интерфейса для пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md). Примеры кода, приведенные в этом разделе, взяты из образца пользовательского диспетчера соединений SQL Server.  
   
 > [!NOTE]  
 >  Большая часть задач, источников и назначений в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] работает только с определенными типами встроенных диспетчеров соединений. Поэтому данные образцы нельзя протестировать с помощью встроенных задач и компонентов.  
@@ -202,7 +198,7 @@ public override Microsoft.SqlServer.Dts.Runtime.DTSExecResult Validate(Microsoft
  Методы, поддерживающие соединение с внешним источником данных, являются наиболее важными методами для пользовательского диспетчера соединений. Методы <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A> вызываются в различные моменты, как во время разработки, так и во время выполнения.  
   
 ### <a name="acquiring-the-connection"></a>Получение соединения  
- Необходимо решить, какого типа объект должен возвращаться методом <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> из пользовательского диспетчера соединений. Например, диспетчер соединения файлов возвращает только строку, содержащую путь и имя файла, в то время как диспетчер соединений ADO.NET возвращает управляемый объект соединения, который уже открыт. Диспетчер соединений OLE DB возвращает собственный объект соединения OLE DB, который не может использоваться из управляемого кода. Пользовательский диспетчер соединений SQL Server, из которого взяты фрагменты кода в этом разделе, возвращает открытый **SqlConnection** объекта.  
+ Необходимо решить, какого типа объект должен возвращаться методом <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A> из пользовательского диспетчера соединений. Например, диспетчер соединения файлов возвращает только строку, содержащую путь и имя файла, в то время как диспетчер соединений ADO.NET возвращает управляемый объект соединения, который уже открыт. Диспетчер соединений OLE DB возвращает собственный объект соединения OLE DB, который не может использоваться из управляемого кода. Пользовательский диспетчер соединений SQL Server, из которого взяты фрагменты кода в этом разделе, возвращает открытый объект **SqlConnection**.  
   
  Пользователям диспетчера соединений необходимо знать заранее, какого типа объект следует ожидать, чтобы они могли привести возвращенный объект к соответствующему типу и получить доступ к его методам и свойствам.  
   
@@ -273,4 +269,3 @@ public override void ReleaseConnection(object connection)
  [Разработка пользовательского интерфейса для пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/developing-a-user-interface-for-a-custom-connection-manager.md)  
   
   
-

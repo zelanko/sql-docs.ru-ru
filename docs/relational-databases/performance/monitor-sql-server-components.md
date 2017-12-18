@@ -2,9 +2,12 @@
 title: "Наблюдение за компонентами SQL Server | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c31b1ebaa449c650edfcac6e045770652d7989be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4cc1115ebc7142d49a8b0cda79cc6dee1d8f250f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="monitor-sql-server-components"></a>Наблюдение за компонентами SQL Server
-  Важность мониторинга обусловлена динамикой среды, в которой выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Данные приложений постоянно изменяются. Меняется тип доступа, который требуется пользователям. Меняется способ подключения пользователей. Может измениться даже тип приложений, обращающихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически управляет такими системными ресурсами, как память и место на диске, поэтому ручная настройка системы практически не требуется. Мониторинг позволяет администраторам следить за тенденциями изменения производительности и определять ситуации, когда требуются изменения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Важность мониторинга обусловлена динамикой среды, в которой выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Данные приложений постоянно изменяются. Меняется тип доступа, который требуется пользователям. Меняется способ подключения пользователей. Может измениться даже тип приложений, обращающихся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , однако [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] автоматически управляет такими системными ресурсами, как память и место на диске, поэтому ручная настройка системы практически не требуется. Мониторинг позволяет администраторам следить за тенденциями изменения производительности и определять ситуации, когда требуются изменения.  
   
  Для организации эффективного мониторинга компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполните следующие действия.  
   

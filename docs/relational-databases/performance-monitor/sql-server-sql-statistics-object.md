@@ -2,9 +2,12 @@
 title: "Объект статистики SQL (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 82c9a520edf0f65e3197d43ad5ef50a8e12b7068
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, объект SQL Statistics
-  Объект **SQLServer: статистика SQL** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает работу счетчиков для наблюдения компиляции и типов запросов, отправляемых экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наблюдение за числом компиляций и повторных компиляций запросов и числа пакетов, полученных экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , дает представление о том, как быстро [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет запросы пользователей и насколько эффективно их обрабатывает оптимизатор запросов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:SQL Statistics** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для наблюдения за компиляцией и типами запросов, отправляемых экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наблюдение за числом компиляций и повторных компиляций запросов и числа пакетов, полученных экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , дает представление о том, как быстро [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет запросы пользователей и насколько эффективно их обрабатывает оптимизатор запросов.  
   
  Компиляция занимает в обработке запроса значительную часть времени. Чтобы сэкономить на стоимости компиляции, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] сохраняет компилированный план запроса в кэше запросов. Целью кэширования является снижение числа компиляций путем сохранения уже откомпилированных запросов для дальнейшего повторного использования, избавляя от необходимости повторной компиляции аналогичных запросов, которые могут поступить позже. Однако каждый уникальный запрос должен быть скомпилирован хотя бы однажды. Компиляция запросов может быть вызвана следующими факторами:  
   

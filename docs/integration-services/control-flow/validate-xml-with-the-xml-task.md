@@ -1,5 +1,5 @@
 ---
-title: "Проверка XML с помощью задачи «XML» | Документы Microsoft"
+title: "Проверка XML с использованием задачи \"XML\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,39 +8,37 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - XML validation
 - XML, validating
 ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15e3873505601704c4a14d4e5701875b7dc104f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 71429997374af75e681da85b0f54588448e8937a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Проверка XML с использованием задачи XML
   Активировав в задаче XML свойство **ValidationDetails** , вы сможете получить подробные результаты проверки XML-документа.  
   
  На следующем снимке экрана показано окно **редактора задачи XML** с необходимыми параметрами для проверки XML, позволяющими настроить вывод подробных сведений об ошибках.  
   
- ![Свойства задачи XML в редакторе XML задач](../../integration-services/control-flow/media/xmltaskproperties.jpg "свойства задачи XML в редакторе задачи XML")  
+ ![Свойства задачи "XML" в редакторе задачи "XML"](../../integration-services/control-flow/media/xmltaskproperties.jpg "Свойства задачи "XML" в редакторе задачи "XML"")  
   
  До появления свойства **ValidationDetails** проверка XML в задачах XML возвращала информацию только о том, есть ошибка в документе или нет. Сведения о самих ошибках и их расположении были недоступны. Теперь, если для свойства **ValidationDetails** задать значение True, выходной файл будет содержать подробные сведения обо всех ошибках, включая номера строк и позиции. Эти сведения можно использовать для анализа, поиска и исправления ошибок в XML-документах.  
   
  Функция проверки XML легко масштабируется в соответствии с размером XML-документов и количеством ошибок. Так как выходной файл имеет формат XML, можно запрашивать и анализировать содержащиеся в нем данные. Например, если выходные данные содержат большое количество ошибок, их можно сгруппировать, используя запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] , как описано в этом разделе.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) появился **ValidationDetails** свойство в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 2. Кроме того, это свойство доступно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) свойство **ValidationDetails** появилось с выходом пакета обновления 2 для [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Кроме того, это свойство доступно в [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Пример выходных данных в допустимом XML-файле  
  Ниже приведен пример допустимого выходного XML-файла с результатами проверки.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/03/2017
 ```  
   
 ## <a name="sample-output-for-xml-thats-not-valid"></a>Пример выходных данных в недопустимом XML-файле  
- Ниже приведен пример выходного XML-файла с результатами проверки, который содержит небольшое количество ошибок. Текст \<ошибки > элементов скрыт для удобства чтения.  
+ Ниже приведен пример выходного XML-файла с результатами проверки, который содержит небольшое количество ошибок. Текст элементов \<error> скрыт для удобства чтения.  
   
 ```xml  
   
@@ -124,11 +122,10 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Ниже приведен результат запроса к [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] из второго примера, показанного выше.  
   
- ![Запрос для группы ошибок XML в среде Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "запроса Группировка ошибок XML в среде Management Studio")  
+ ![Запрос на группирование ошибок XML в Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Запрос на группирование ошибок XML в Management Studio")  
   
 ## <a name="see-also"></a>См. также:  
  [Задача «XML»](../../integration-services/control-flow/xml-task.md)   
- [Редактор задачи XML &#40; Страница "Общие" &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
+ [Редактор задачи "XML" (страница "Общие")](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
   
-

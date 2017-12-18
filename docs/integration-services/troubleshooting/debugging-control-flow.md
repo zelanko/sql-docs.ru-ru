@@ -1,16 +1,17 @@
 ---
-title: "Отладка потока управления | Документы Microsoft"
+title: "Отладка потока управления | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: troubleshooting
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.setbreakpoints.f1
+f1_keywords: sql13.dts.designer.setbreakpoints.f1
 helpviewer_keywords:
 - progress reporting [Integration Services]
 - breakpoints [Integration Services]
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - color-coded progress reporting [Integration Services]
 - Set Breakpoints dialog box
 ms.assetid: 54a458cc-9f4f-4b48-8cf2-db2e0fa7756c
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: dbf3a57ca87678aed1eac296b24e230d68db93b7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 3fbeb43740b012eb4af3b9bb38252a4e18006ba2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="debugging-control-flow"></a>Отладка потока управления
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] и службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] include features и службы tools that you can use to troubleshoot the control flow in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -103,7 +104,7 @@ ms.lasthandoff: 08/03/2017
   
  Вкладка **Выполнение** показана на следующей диаграмме.  
   
- ![Вкладка «выполнение» конструктора служб SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "вкладка «выполнение» конструктора служб SSIS")  
+ ![Вкладка "Ход выполнения" конструктора служб SSIS](../../integration-services/troubleshooting/media/mw-dtsflow04.gif "Вкладка "Ход выполнения" конструктора служб SSIS")  
   
 ## <a name="debug-windows"></a>Окна отладки  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит много окон, которые можно использовать для работы с точками останова и для отладки пакетов, содержащих точки останова. Чтобы получить больше информации по каждому из окон, откройте окно и нажмите клавишу F1 для получения справки.  
@@ -133,9 +134,9 @@ ms.lasthandoff: 08/03/2017
   
     -   Чтобы установить точки останова в потоке управления пакета, перейдите на вкладку **Поток управления** , правой кнопкой мыши щелкните задачу, контейнер "цикл по элементам", "цикл по каждому элементу" или контейнер последовательности и выберите пункт **Изменить точки останова**.  
   
-    -   Чтобы установить точки останова в обработчике события, перейдите на вкладку **Обработчик события**, щелкните правой кнопкой мыши задачу, контейнер "цикл по элементам", "цикл по каждому элементу" или контейнер последовательности и выберите пункт **Изменить точки останова**.  
+    -   Чтобы установить точки останова в обработчике события, перейдите на вкладку **Обработчик события** , щелкните правой кнопкой мыши задачу, контейнер "цикл по элементам", "цикл по каждому элементу" или контейнер последовательности и выберите пункт **Изменить точки останова**.  
   
-4.  В **задание точек останова \<имя контейнера >** диалогового окна выберите точки останова для включения.  
+4.  В диалоговом окне **Задание точек останова \<имя контейнера>** выберите точки останова для включения.  
   
 5.  При необходимости измените тип счетчика попаданий и значение числа попаданий для каждой точки останова.  
   
@@ -167,4 +168,3 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>См. также:  
  [Инструменты устранения неполадок при разработке пакета](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
  [Отладка скрипта с помощью точек останова в задаче и компоненте «Скрипт»](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)   
-

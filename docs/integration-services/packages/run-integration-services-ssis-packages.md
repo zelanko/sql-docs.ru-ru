@@ -1,12 +1,14 @@
 ---
-title: "Выполнения Integration Services (SSIS) пакеты | Документы Microsoft"
+title: "Запуск пакетов служб Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: packages
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,21 +23,21 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: 65
+caps.latest.revision: "65"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f9c69107d378b8a49c02cfebd04d09e76f5c6e8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: fa8080adf06263de7a3055d790b9c5fe89633e20
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="run-integration-services-ssis-packages"></a>Запуск пакетов служб Integration Services (SSIS)
   Чтобы запустить пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , можно воспользоваться одним из предостовляемых средств. Выбор средства зависит от места хранения пакета. Эти средства приведены в следующей таблице.  
   
- Чтобы сохранить пакет на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , используется модель развертывания проекта. Сведения см. в разделе [развертывания Integration Services (SSIS) проектов и пакетов](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+ Чтобы сохранить пакет на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , используется модель развертывания проекта. Сведения см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
  Чтобы сохранить пакет в хранилище пакетов SSIS, базе данных msdb, или в файловой системе, используется модель развертывания пакета. Дополнительные сведения см. в разделе [Устаревшее развертывание пакетов (службы SSIS)](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
@@ -49,8 +51,8 @@ ms.lasthandoff: 08/03/2017
 |**dtexecui**<br /><br /> Дополнительные сведения см. в разделе [Справочник по пользовательскому интерфейсу программы выполнения пакетов (DtExecUI)](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md).|Нет|Да|Да|  
 |**Агент SQL Server**<br /><br /> Чтобы запланировать запуск пакета, используйте задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Дополнительные сведения см. в статье [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Да|Да|Да|  
 |**Встроенная хранимая процедура**<br /><br /> Дополнительные сведения см. в разделе [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).|Да|Нет|Нет|  
-|**Управляемые API, использующие типы и члены в** <xref:Microsoft.SqlServer.Management.IntegrationServices> пространства имен|Да|Нет|Нет|  
-|**Управляемые API, использующие типы и члены в** <xref:Microsoft.SqlServer.Dts.Runtime> пространства имен|В настоящее время нет|Да|Да|  
+|**Управляемые API, использующие типы и элементы пространства имен** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Да|Нет|Нет|  
+|**Управляемые API, использующие типы и элементы пространства имен** <xref:Microsoft.SqlServer.Dts.Runtime>|В настоящее время нет|Да|Да|  
 
 ## <a name="execution-and-logging"></a>Выполнение и ведение журнала  
  Данные о пакетах служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут заноситьтся в журнал выполнения, данные времени исполнения могут сохраняться в файлах журнала. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md).  
@@ -80,7 +82,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  В обозревателе решений щелкните правой кнопкой мыши папку проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащую запускаемый пакет, затем выберите пункт **Свойства**.  
   
-2.  В  **\<имя проекта > страницы свойств** диалоговое окно, нажмите кнопку **сборки**.  
+2.  В диалоговом окне **Страницы свойств \<имя проекта>** выберите элемент **Сборка**.  
   
 3.  Обновите значения свойства OutputPath для указания папки, которую необходимо использовать для развертывания времени разработки, и нажмите кнопку **ОК**.  
 
@@ -171,4 +173,3 @@ ms.lasthandoff: 08/03/2017
 [Запуск мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   
   
-

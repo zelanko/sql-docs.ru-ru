@@ -1,5 +1,5 @@
 ---
-title: "Работа со службой Oracle CDC | Документы Microsoft"
+title: "Работа со службой CDC Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 69eb7087530b82c7ba75a9d8ff87fd8fff815f16
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Работа со службой CDC Oracle
   В этом разделе описываются некоторые важные понятия, относящиеся к службе Oracle CDC Service. В разделе описываются следующие понятия.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/03/2017
 |ref_count|Этот элемент подсчитывает количество компьютеров, где установлена одна и та же служба Oracle CDC Service. Этот счетчик увеличивается при каждом добавлении службы Oracle CDC Service с тем же именем и уменьшается, когда такая служба удаляется. Когда значение счетчика достигнет нуля, эта строка будет удалена.|  
 |active_service_node|Имя узла Windows, который в настоящее время обрабатывает службу CDC. Если служба была остановлена корректно, в этот столбец помещается значение NULL, указывающее, что служба больше не активна.|  
 |active_service_heartbeat|Этот элемент отслеживает текущую службу CDC, чтобы определить, активна ли она.<br /><br /> Для активной службы CDC этот элемент обновляется через равные промежутки времени, получая значение текущей отметки времени в формате UTC базы данных. Интервал по умолчанию составляет 30 секунд, но его можно менять.<br /><br /> Если ожидающая служба CDC обнаруживает, что тактовый импульс не обновлялся на протяжении заданного интервала, она пытается взять на себя роль активной службы CDC.|  
-|параметры|Этот элемент указывает дополнительные параметры, такие как настройка или трассировка. Он имеет вид: **имя[= значение][; ]**. В строке параметров используется та же семантика, что и в строке подключения ODBC. Если параметр принадлежит к логическому типу (со значением «да/нет»), значение может содержать только имя.<br /><br /> Параметр trace может принимать одно из следующих возможных значений:<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<Имя класса > [, имя_класса >]**<br /><br /> <br /><br /> Значение по умолчанию — **false**.<br /><br /> **service_heartbeat_interval** ― это временной интервал (в секундах), на протяжении которого служба должна обновить столбец active_service_heartbeat. Значение по умолчанию — **30**. Максимальное значение равно **3600**.<br /><br /> **service_config_polling_interval** ― это интервал опроса (в секундах), который служба CDC использует для проверки изменений конфигурации. Значение по умолчанию — **30**. Максимальное значение равно **3600**.<br /><br /> **sql_command_timeout** ― время ожидания для команды, взаимодействующей с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию — **1**. Максимальное значение равно **3600**.|  
+|параметры|Этот элемент указывает дополнительные параметры, такие как настройка или трассировка. Он имеет вид: **имя[= значение][; ]**. В строке параметров используется та же семантика, что и в строке подключения ODBC. Если параметр принадлежит к логическому типу (со значением «да/нет»), значение может содержать только имя.<br /><br /> Параметр trace может принимать одно из следующих возможных значений:<br /><br /> **true**<br /><br /> **on**<br /><br /> **false**<br /><br /> **off**<br /><br /> **\<имя_класса>[,имя_класса>]**<br /><br /> <br /><br /> Значение по умолчанию — **false**.<br /><br /> **service_heartbeat_interval** ― это временной интервал (в секундах), на протяжении которого служба должна обновить столбец active_service_heartbeat. Значение по умолчанию — **30**. Максимальное значение равно **3600**.<br /><br /> **service_config_polling_interval** ― это интервал опроса (в секундах), который служба CDC использует для проверки изменений конфигурации. Значение по умолчанию — **30**. Максимальное значение равно **3600**.<br /><br /> **sql_command_timeout** ― время ожидания для команды, взаимодействующей с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Значение по умолчанию — **1**. Максимальное значение равно **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Хранимые процедуры базы данных MSXDBCDC  
@@ -165,7 +163,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service(svcname,sqlusr)  
  Процедура **dbo.xcbcdc_add_service** добавляет запись в таблицу **MSXDBCDC.xdbcdc_services** и увеличивает на единицу счетчик ref_count для данного имени службы в таблице **MSXDBCDC.xdbcdc_services** . Если значение **ref_count** становится равным 0, процедура удаляет эту строку.  
   
- Для использования **dbo.xcbcdc_add_service\<имени службы, имя пользователя >** процедуры, пользователь должен быть членом **db_owner** роли базы данных, именованный экземпляр базы данных CDC или членом **sysadmin** или **serveradmin** предопределенной роли сервера.  
+ Для использования процедуры **dbo.xcbcdc_add_service\<имя_службы, имя_пользователя>** пользователь должен быть членом роли **db_owner** указанной базы данных экземпляра CDC или членом одной из следующих предопределенных ролей сервера: **sysadmin** или **serveradmin**.  
   
 ###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(имя_базы_данных)  
  Процедура **dbo.xdbcdc_start** посылает запрос на запуск службе CDC, обрабатывающей выбранный экземпляр CDC, чтобы начать обработку изменений.  
@@ -270,7 +268,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>См. также:  
  [Как использовать интерфейс командной строки службы CDC](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
- [Подготовка SQL Server для CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
+ [Как подготовить SQL Server для CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   
   
-

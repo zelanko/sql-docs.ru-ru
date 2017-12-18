@@ -1,5 +1,5 @@
 ---
-title: "Шаг 4: Добавление назначения «неструктурированный файл» | Документы Microsoft"
+title: "Шаг 4. Добавление назначения \"Неструктурированный файл\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: f4088de3-16d8-419c-96a1-a2cd005d0a5b
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ff4badae70e5762f51003c0d3edae3ad1fb3907b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-4---adding-a-flat-file-destination"></a>Занятие 4-4-Добавление назначения «неструктурированный файл»
+# <a name="lesson-4-4---adding-a-flat-file-destination"></a>Занятие 4–4. Добавление назначения "Неструктурированный файл"
 Выход ошибок преобразования «Ключ уточняющего запроса валют» перенаправляет в преобразование «Скрипт» все строки данных, завершившиеся ошибкой в операции поиска. Для расширения сведений о возникших ошибках преобразование «Скрипт» выполняет скрипт, получающий описания ошибок.  
   
 В этой задаче все сведения об ошибках строк будут сохранены для последующей обработки в файле с разделителями. Чтобы сохранить ошибочные строки, необходимо добавить и настроить диспетчер соединений с неструктурированными файлами для текстового файла, который будет содержать данные об ошибках, и назначение «Неструктурированный файл». Путем установки свойств в диспетчере соединений с неструктурированными файлами, который использует назначение «Неструктурированный файл», можно определить способ, которым назначение «Неструктурированный файл» форматирует и записывает текстовый файл. Дополнительные сведения см. в разделах [Flat File Connection Manager](../integration-services/connection-manager/flat-file-connection-manager.md) и [Flat File Destination](../integration-services/data-flow/flat-file-destination.md).  
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

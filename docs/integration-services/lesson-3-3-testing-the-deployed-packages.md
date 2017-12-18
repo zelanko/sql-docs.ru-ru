@@ -1,5 +1,5 @@
 ---
-title: "Шаг 3: Тестирование развернутых пакетов | Документы Microsoft"
+title: "Шаг 3. Тестирование развернутых пакетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 2b0caedd9ff32327970ea36993f5e239eafe37cc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 59cceacbf934aea6fc3e7c0a8e2c5f089ed7f6e4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-3-3---testing-the-deployed-packages"></a>Занятие 3-3-тестирование развернутых пакетов
+# <a name="lesson-3-3---testing-the-deployed-packages"></a>Занятие 3–3. Тестирование развернутых пакетов
 В этой задаче вы проверите пакеты, развернутые на экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 В других учебниках по [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] вы выполняли пакеты в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], среде разработки для [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]при помощи параметра **Запустить отладку** в меню **Отладка** . В этот раз пакет будет выполнен по-другому.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     > Если подключиться к [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]не удается, возможно, что служба [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не запущена. Чтобы узнать о состоянии службы, нажмите кнопку **Пуск**и последовательно выберите пункты **Все программы**, **Microsoft SQL Server**, **Средства настройки**и **Диспетчер конфигурации SQL Server**. На левой панели щелкните **Службы SQL Server**. На панели справа найдите службу [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Если служба не запущена, запустите ее.  
   
-    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Откроется. По умолчанию окно обозревателя объектов открывается и помещается в правом верхнем углу студии. Если обозреватель объектов не открыт, выберите **Обозреватель объектов** в меню **Вид** .  
+    [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . По умолчанию окно обозревателя объектов открывается и помещается в правом верхнем углу студии. Если обозреватель объектов не открыт, выберите **Обозреватель объектов** в меню **Вид** .  
   
 ### <a name="to-run-the-packages-using-the-execute-package-utility"></a>Выполнение пакета с помощью программы выполнения пакетов  
   
@@ -114,8 +111,7 @@ ms.lasthandoff: 08/03/2017
     Запрос возвращает 21 строку. Возвращаемый результат состоит из строк XML-файла данных, "orders.xml". Каждая строка является сводкой по стране или региону; в строке присутствуют данные про название страны или региона, про число заказов для каждой страны или региона и даты последнего и первого заказов.  
   
 ## <a name="see-also"></a>См. также:  
-[Служебная программа dtexec](../integration-services/packages/dtexec-utility.md)  
+[Программа dtexec](../integration-services/packages/dtexec-utility.md)  
   
   
   
-

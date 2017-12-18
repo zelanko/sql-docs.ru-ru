@@ -1,5 +1,5 @@
 ---
-title: "Программное Включение ведения журнала | Документы Microsoft"
+title: "Программное включение ведения журнала | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - LogProvider object
 - packages [Integration Services], logs
 ms.assetid: 3222a1ed-83eb-421c-b299-a53b67bba740
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: dd512f022832b57aa3fdcb85260926dd8354298c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e35f1d74cf6df3c3a37b8f03765f96ae2c6d7f65
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enabling-logging-programmatically"></a>Программное включение ведения журнала
   Ядро выполнения предоставляет коллекцию объектов <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider>, которые позволяют перехватывать во время проверки и выполнения пакета сведения, относящиеся к конкретному событию. Объекты <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> доступны для объектов <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, включая объекты <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> и <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. Ведение журналов включается для индивидуальных контейнеров или пакета в целом.  
@@ -46,22 +43,22 @@ ms.lasthandoff: 08/03/2017
  Существует несколько типов регистраторов, которые может использовать контейнер. Это повышает гибкость, позволяя создавать и сохранять сведения журнала во многих форматах. Включение журналирования для объекта-контейнера выполняется в два этапа: сначала включается ведение журнала, а потом выбирается регистратор журнала. Свойства контейнера <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingOptions%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> используются для указания записываемых в журнал событий и выбора регистратора.  
   
 ## <a name="enabling-logging"></a>Включение журнала  
- Свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A>, имеющееся у каждого контейнера, который может осуществлять ведение журнала, определяет, записывается ли информация о событиях контейнера в журнал событий. Этому свойству назначается значение из структуры <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>. По умолчанию оно наследуется от родительского контейнера. Если контейнер — это пакет и поэтому не имеет родителя, свойство использует <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>, который по умолчанию **отключено**.  
+ Свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A>, имеющееся у каждого контейнера, который может осуществлять ведение журнала, определяет, записывается ли информация о событиях контейнера в журнал событий. Этому свойству назначается значение из структуры <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode>. По умолчанию оно наследуется от родительского контейнера. Если контейнер является пакетом и, следовательно, не имеет родителя, свойство использует значение <xref:Microsoft.SqlServer.Dts.Runtime.DTSLoggingMode.UseParentSetting>, которое по умолчанию равно **Disabled**.  
   
 ### <a name="selecting-a-log-provider"></a>Выбор регистратора  
- После <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> свойству **включено**, регистратор добавляется <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> коллекцию контейнера, чтобы завершить процесс. Коллекция <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> доступна через объект <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> и содержит регистраторы, выбранные для данного контейнера. Метод <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> вызывается для создания регистратора и добавления его в коллекцию. После этого метод возвращает регистратор, добавленный в коллекцию. Каждый регистратор имеет уникальные параметры настройки, которые устанавливаются с помощью свойства <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
+ После того как свойству <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.LoggingMode%2A> присвоено значение **Enabled**, регистратор добавляется в коллекцию контейнера <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> для завершения процесса. Коллекция <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> доступна через объект <xref:Microsoft.SqlServer.Dts.Runtime.LoggingOptions> и содержит регистраторы, выбранные для данного контейнера. Метод <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders.Add%2A> вызывается для создания регистратора и добавления его в коллекцию. После этого метод возвращает регистратор, добавленный в коллекцию. Каждый регистратор имеет уникальные параметры настройки, которые устанавливаются с помощью свойства <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
   
  В следующей таблице перечислены доступные регистраторы и приведено их описание и значения их свойства <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>.  
   
 |Поставщик|Description|Свойство ConfigString|  
 |--------------|-----------------|---------------------------|  
 |Приложение SQL Server Profiler|Создает трассировки SQL, которые могут перехватываться и просматриваться в приложении [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler. По умолчанию для имени файла данного регистратора используется расширение TRC.|Настройка не требуется.|  
-|SQL Server|Записывает элементы журнала событий **sysssislog** таблицы в любом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных.|Регистратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требует указания соединения с базой данных, а также имени базы данных-получателя.|  
+|SQL Server|Записывает записи журнала событий в таблицу **sysssislog** любой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Регистратор [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требует указания соединения с базой данных, а также имени базы данных-получателя.|  
 |Текстовый файл|Записывает записи журнала событий в текстовые файлы в ASCII-кодировке в формате CSV (с разделителями-запятыми). По умолчанию для имени файла для данного регистратора используется расширение LOG.|Имя диспетчера соединения файлов.|  
 |Журнал событий Windows|Сохраняет журнальные записи в стандартном журнале событий Windows.|Настройка не требуется.|  
 |XML-файл|Записывает записи журнала событий в файл в формате XML. По умолчанию для имени файла данного регистратора используется расширение XML.|Имя диспетчера соединения файлов.|  
   
- События, в или исключены из журнала событий, задав **EventFilterKind** и **EventFilter** свойства контейнера. **EventFilterKind** структура содержит два значения, **ExclusionFilter** и **InclusionFilter**, указывающее, являются ли события, добавляемого **EventFilter** включаются в журнал событий. **EventFilter** затем присваивается массив строк, содержащий имена событий, которые воздействуют на фильтрацию.  
+ События включаются в журнал событий или исключаются из него путем задания свойств контейнера **EventFilterKind** и **EventFilter**. Структура **EventFilterKind** содержит два значения, **ExclusionFilter** и **InclusionFilter**, которые указывают, включаются ли в журнал событий события, добавленные в фильтр **EventFilter**. После этого свойству **EventFilter** назначается строковый массив, содержащий имена событий, подлежащих фильтрации.  
   
  Следующий код включает ведение журнала для пакета, добавляет регистратор для текстовых файлов в коллекцию <xref:Microsoft.SqlServer.Dts.Runtime.SelectedLogProviders> и указывает список событий, которые должны включаться в выход журнала.  
   
@@ -125,7 +122,6 @@ End Module
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Службы Integration Services &#40; Службы SSIS &#41; Ведение журнала](../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

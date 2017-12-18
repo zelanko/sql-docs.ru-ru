@@ -1,5 +1,5 @@
 ---
-title: "Задаче потока данных | Документы Microsoft"
+title: "Задача потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataflowtask.f1
+f1_keywords: sql13.dts.designer.dataflowtask.f1
 helpviewer_keywords:
 - data flow task [Integration Services]
 - performance [Integration Services]
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3021aa51460aee1d74acdaa383aeca6ca4edd534
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-flow-task"></a>Задача потока данных
   В состав задачи потока данных входит подсистема обработки потока данных, перемещающая данные между источником и назначением и позволяющая пользователю преобразовывать, очищать и изменять данные в процессе перемещения. Добавление задачи потока данных в поток управления пакета позволяет пакету извлекать, преобразовывать и загружать данные.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  На следующей диаграмме показана задача потока данных с несколькими потоками данных.  
   
- ![Потоки данных](../../integration-services/control-flow/media/mw-dts-09.gif "потоков данных")  
+ ![Потоки данных](../../integration-services/control-flow/media/mw-dts-09.gif "Потоки данных")  
   
 ## <a name="log-entries"></a>Записи журнала  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют несколько событий журнала, которые доступны всем задачам. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют также пользовательские записи журнала. Дополнительные сведения см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../integration-services/performance/integration-services-ssis-logging.md). Задача потока данных содержит следующие пользовательские записи журнала.  
@@ -125,4 +122,3 @@ ms.lasthandoff: 08/03/2017
  Видеоматериал [Распространитель сбалансированных данных](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на узле Technet.microsoft.com (на английском языке).  
   
   
-

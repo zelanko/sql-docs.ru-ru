@@ -2,11 +2,12 @@
 title: "Файлы данных SQL Server в Microsoft Azure | Microsoft Docs"
 ms.custom: 
 ms.date: 10/02/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +16,14 @@ caps.latest.revision: "26"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: d70ab69a1779e19c66fadb1044e0fc6af38a4129
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9fca2543543bc508d3fc232ba75c05f19a561ebb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Файлы данных SQL Server в Microsoft Azure
-  ![Файлы данных в Azure](../../relational-databases/databases/media/data-files-on-azure.png "Файлы данных в Azure")  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] ![Файлы данных в Azure](../../relational-databases/databases/media/data-files-on-azure.png "Файлы данных в Azure")  
   
  Файлы данных SQL Server в Microsoft Azure включают встроенную поддержку файлов баз данных SQL Server, которые хранятся в виде больших двоичных объектов Microsoft Azure. Этот компонент позволяет создать базу данных на сервере SQL Server, работающем локально или на виртуальной машине в Microsoft Azure, с назначенным местом хранения для данных в хранилище BLOB-объектов Microsoft Azure. Это усовершенствование значительно упрощает перемещение баз данных между компьютерами с помощью операций отсоединения и присоединения. Кроме того, данный компонент предоставляет альтернативное расположение для хранения файлов резервных копий баз данных, позволяя выполнять восстановление из службы хранилища Microsoft Azure и в нее. Поэтому он обеспечивает возможность реализации нескольких гибридных решений, предоставляя ряд преимуществ для виртуализации данных, перемещения данных, безопасности и доступности, а также достижения снижения затрат и обслуживания для высокого уровня доступности и эластичного масштабирования.
  

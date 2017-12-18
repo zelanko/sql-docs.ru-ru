@@ -2,9 +2,12 @@
 title: "Свойства издателя — страница \"Базы данных публикации\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a89c93aef880f5d092c48f05bc3fef515cb8c4ff
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b10464b7d1b222bad0dc36144a700eb621820d88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="publisher-properties---publisher-publication-databases"></a>Свойства издателя — издатель, базы данных публикации
-  Страница **Базы данных публикации** диалогового окна **Свойства издателя** позволяет пользователю в предопределенной роли сервера **sysadmin** включить базы данных для репликации. Включение базы данных не приводит к публикации базы данных, но позволяет любому пользователю в предопределенной роли базы данных **db_owner** создать одну или несколько публикаций этой базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Базы данных публикации** диалогового окна **Свойства издателя** позволяет пользователю в предопределенной роли сервера **sysadmin** включить базы данных для репликации. Включение базы данных не приводит к публикации базы данных, но позволяет любому пользователю в предопределенной роли базы данных **db_owner** создать одну или несколько публикаций этой базы данных.  
   
 ## <a name="options"></a>Параметры  
  **Транзакционная**  

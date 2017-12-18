@@ -1,11 +1,14 @@
 ---
 title: "Заметки о выпуске SQL Server 2012 с пакетом обновления 1 (SP1) | Документация Майкрософт"
-ms.prod: sql-server-2012
+ms.prod: sql-non-specified
+ms.prod_service: sql-non-specified
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 72171357-28de-4edd-bdfd-194f97225a6f
@@ -14,14 +17,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0e126678e921a47135ada143b1dba53a467df7d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ac1dcd75aa97cb12142d142c82d5c0c6d3f59791
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp1-release-notes"></a>SQL Server 2012 SP1 Release Notes
-В этих заметках о выпуске содержится описание известных проблем. Их необходимо прочитать перед установкой или устранением проблем в [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с пакетом обновления 1 (SP1). Этот документ «Заметки о выпуске» доступен только для загрузки в сети и постоянно обновляется. Этот документ не содержится на установочном носителе.  
+[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] В этих заметках о выпуске содержится описание известных проблем. Их необходимо прочитать перед установкой или устранением проблем в [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssSQL11](../includes/sssql11-md.md)] с пакетом обновления 1 (SP1). Этот документ «Заметки о выпуске» доступен только для загрузки в сети и постоянно обновляется. Этот документ не содержится на установочном носителе.  
   
 ## <a name="bkmk_top"></a>Содержание  
 [1.0 Перед началом установки](#bmk_Install)  

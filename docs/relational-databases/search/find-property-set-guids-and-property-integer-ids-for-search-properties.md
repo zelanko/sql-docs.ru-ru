@@ -2,9 +2,12 @@
 title: "Поиск идентификаторов GUID для наборов свойств и целочисленных идентификаторов свойств для свойств поиска | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: search
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cf8b11f86a4d95d2518d85d79df2a53c900b9706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 881c663038225af57b33aeb655306f6ef1d1f1f4
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>Поиск идентификаторов GUID наборов свойств и целочисленных идентификаторов свойств для свойств поиска
-  В этом разделе описывается получение значений, которые необходимы для добавления свойства в список свойств поиска и включения свойства для полнотекстового поиска. К таким значениям относится идентификатор GUID набора свойств и целочисленный идентификатор свойства документа.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этом разделе описывается получение значений, которые необходимы для добавления свойства в список свойств поиска и включения поддержки полнотекстового поиска для свойства. К таким значениям относится идентификатор GUID набора свойств и целочисленный идентификатор свойства документа.  
   
  Свойства документа, извлекаемые фильтрами IFilter из двоичных данных, то есть данных, которые хранятся в столбцах с типом данных **varbinary**, **varbinary(max)** (в том числе **FILESTREAM**) или **image** , можно сделать доступными для полнотекстового поиска. Чтобы сделать извлеченное свойство доступным для поиска, его необходимо вручную добавить в список свойств поиска. Список свойств поиска необходимо также связать с одним или несколькими полнотекстовыми индексами. Дополнительные сведения см. в статье [Поиск свойств документа с использованием списков свойств поиска](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   

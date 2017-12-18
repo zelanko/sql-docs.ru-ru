@@ -1,5 +1,5 @@
 ---
-title: "Catalog.Folders (база данных SSISDB) | Документы Microsoft"
+title: "catalog.folders (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9622bd1a5f1415c9f506a00a63441081154b53ff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 5a439659dd93bdcd4d6c627782de8772adfe6466
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +35,7 @@ ms.lasthandoff: 09/26/2017
 |description|**nvarchar(1024)**|Описание папки.|  
 |created_by_sid|**varbinary(85)**|Уникальный идентификатор безопасности пользователя, создавшего папку.|  
 |created_by_name|**nvarchar(128)**|Имя пользователя, создавшего папку.|  
-|created_time|**DateTimeOffset(7)**|Дата и время создания папки.|  
+|created_time|**datetimeoffset(7)**|Дата и время создания папки.|  
   
 ## <a name="remarks"></a>Замечания  
  В этом представлении отображается строка для каждой папки в каталоге.  
@@ -47,12 +45,11 @@ ms.lasthandoff: 09/26/2017
   
 -   разрешение READ на папку  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 > [!NOTE]  
 >  Наличие разрешения на выполнение операции на сервере подразумевает наличие разрешения на просмотр сведений об этой операции. Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

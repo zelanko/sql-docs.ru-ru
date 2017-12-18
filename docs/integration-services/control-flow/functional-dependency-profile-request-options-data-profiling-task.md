@@ -1,5 +1,5 @@
 ---
-title: "Параметры запроса профиля функциональной зависимости («профилирование данных») | Документы Microsoft"
+title: "Параметры запроса для профиля функциональной зависимости (задача \"Профилирование данных\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Data Profiling Task Editor
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4efcec555b59668145cd2b998c77a9cc1f8feb54
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 0958bc22c6ed4a6790145a430fefbe68312cd634
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Параметры запроса для профиля функциональной зависимости (задача «Профилирование данных»)
   Для установки параметров варианта **Запрос профиля функциональной зависимости** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль функциональной зависимости показывает, в какой степени значения в одном столбце (зависимом) зависят от значений в другом столбце или наборе столбцов (определяющем). Этот профиль также поможет выявить проблемы в данных, например наличие недопустимых значений. Например, выполняется профилирование зависимости между столбцом почтовых индексов США и столбцом штатов США. В этом профиле один и тот же почтовый индекс всегда должен соответствовать одному и тому же штату, но профиль обнаруживает нарушения этой зависимости.  
@@ -128,8 +125,7 @@ ms.lasthandoff: 08/03/2017
  Укажите максимальное число нарушений функциональных зависимостей для сообщения в выводе. Значение по умолчанию этого свойства равно 100. Этот параметр будет выключен только в случае выбора для свойства **ThresholdSetting** значения **Точно**.  
   
 ## <a name="see-also"></a>См. также раздел  
- [Данные профилирования редактор задач &#40; Страница "Общие" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Форма быстрого профиля одной таблицы &#40; данные профилирования задач &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

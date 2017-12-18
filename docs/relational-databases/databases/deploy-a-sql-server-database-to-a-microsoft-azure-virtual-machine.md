@@ -1,9 +1,13 @@
 ---
 title: "Развертывание базы данных SQL Server на виртуальной машине Microsoft Azure | Документация Майкрософт"
 ms.date: 07/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -37,14 +41,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f2595d826f1922e497e9774d67afc7e6741d15bc
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a571327d912f4b9f8ee96477db49be0ffa69e829
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Развертывание базы данных SQL Server в виртуальной машине Microsoft Azure
-  Используйте мастер **развертывания базы данных на виртуальной машине Windows Azure** для развертывания базы данных из экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виртуальной машине (ВМ) Microsoft Azure. Мастер использует операцию полного резервного копирования базы данных, поэтому он всегда копирует всю схему базы данных и данные из пользовательской базы данных SQL Server. Мастер также выполняет всю настройку ВМ Azure, поэтому дополнительные действия для задания параметров ВМ не требуются.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте **мастер развертывания базы данных в виртуальной машине Microsoft Azure** для развертывания базы данных из экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виртуальной машине Microsoft Azure. Мастер использует операцию полного резервного копирования базы данных, поэтому он всегда копирует всю схему базы данных и данные из пользовательской базы данных SQL Server. Мастер также выполняет всю настройку ВМ Azure, поэтому дополнительные действия для задания параметров ВМ не требуются.  
   
  Мастер нельзя использовать для создания разностных резервных копий. Он не перезаписывает существующую базу данных с таким же именем. Чтобы заменить существующую базу данных на ВМ, сначала необходимо удалить существующую базу данных или изменить имя базы данных. В случае возникновения конфликта имен между базой данных, в отношении которой выполняется операция развертывания на лету, и существующей базой данных на виртуальной машине мастер предложит имя базы данных с добавлением определенных символов для развертываемой на лету базы данных, чтобы можно было завершить операцию.  
   

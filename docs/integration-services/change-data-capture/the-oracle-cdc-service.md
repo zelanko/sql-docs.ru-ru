@@ -1,5 +1,5 @@
 ---
-title: "Служба Oracle CDC | Документы Microsoft"
+title: "Служба CDC Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47759ddc-358d-405b-acb9-189ada76ea6d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d1c3535f7818b1865d9ff7b0da1d098884b042ca
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9b3e886c83c59eb4f30a1e06a60338dd757d6d9d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-oracle-cdc-service"></a>Служба CDC Oracle
   Служба CDC Oracle — это служба Windows, благодаря которой запускается программа xdbcdcsvc.exe. Служба Oracle CDC может настраиваться для запуска нескольких служб Windows на одном компьютере, каждая из которых должна иметь другое имя службы Windows. Создание нескольких служб Windows для Oracle CDC на одном компьютере обычно выполняется для достижения лучшего их разделения или в случае, если каждой из них требуется работать с другим экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -105,4 +103,3 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
  [Управление службой CDC Oracle](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   
-

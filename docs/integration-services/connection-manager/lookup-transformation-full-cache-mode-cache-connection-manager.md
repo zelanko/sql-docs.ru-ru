@@ -1,5 +1,5 @@
 ---
-title: "Режим полного кэширования Преобразование уточняющего запроса - диспетчер соединений с кэшем | Документы Microsoft"
+title: "Преобразование \"Уточняющий запрос\" в режиме полного кэширования — диспетчер подключений кэша | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- Lookup transformation [Integration Services]
+helpviewer_keywords: Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: 40
+caps.latest.revision: "40"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 01d518ca176ab3de156ba303221777e9cbc65207
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 804b0ab72a0e52c9ddcd10f8261998e0e8847d9f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Режим полного кэширования Преобразование уточняющего запроса - диспетчер соединений с кэшем
+# <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений кэша
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать режим полного кэширования и диспетчер соединений с кэшем. В режиме полного кэширования эталонный набор данных загружается в кэш еще до запуска преобразования «Уточняющий запрос».  
   
 > [!NOTE]  
@@ -61,9 +58,9 @@ ms.lasthandoff: 08/03/2017
   
 -   [Преобразование кэша](../../integration-services/data-flow/transformations/cache-transform.md)  
   
--   [Диспетчер соединений с кэшем](../../integration-services/connection-manager/cache-connection-manager.md)  
+-   [Диспетчер подключений с кэшем](../../integration-services/connection-manager/cache-connection-manager.md)  
   
--   [Ограничения очередностью](../../integration-services/control-flow/precedence-constraints.md)  
+-   [Управление очередностью](../../integration-services/control-flow/precedence-constraints.md)  
   
 -   [Задача «Выполнение пакета»](../../integration-services/control-flow/execute-package-task.md)  
   
@@ -288,9 +285,8 @@ ms.lasthandoff: 08/03/2017
 9. Запустите пакет.  
   
 ## <a name="see-also"></a>См. также  
- [Реализовать преобразование «Уточняющий запрос» в режиме полного кэширования с помощью диспетчера соединений OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
- [Реализация уточняющего запроса в режиме частичного кэширования или без кэширования](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
+ [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
+ [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Преобразования служб Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

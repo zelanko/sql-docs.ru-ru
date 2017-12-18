@@ -2,9 +2,12 @@
 title: "Пример скрипта OLE-автоматизации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ole
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ea466e1a827b90ebbe55f7e62469beecbc8a9a28
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 99b9e3c7e3bd0e75e80418f26cfbc9f9bafb8562
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ole-automation-sample-script"></a>Пример скрипта OLE-автоматизации
-  В этом разделе содержится пример пакета инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , который использует хранимые процедуры OLE-автоматизации для создания и использования объекта SQLServer языка SQL-DMO в логическом экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Части приведенного кода используются в качестве примеров в разделах справки по системным хранимым процедурам OLE-автоматизации.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе содержится пример пакета инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], который использует хранимые процедуры OLE-автоматизации для создания и использования объекта SQLServer языка SQL-DMO в локальном экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Части приведенного кода используются в качестве примеров в разделах справки по системным хранимым процедурам OLE-автоматизации.  
   
 ```  
 USE AdventureWorks2012;  

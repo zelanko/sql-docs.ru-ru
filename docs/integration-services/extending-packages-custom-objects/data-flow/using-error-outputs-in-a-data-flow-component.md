@@ -1,5 +1,5 @@
 ---
-title: "Использование выводов ошибок в компоненте потока данных | Документы Microsoft"
+title: "Использование выводов ошибок в компоненте потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,25 +26,24 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0253d7a43724b0b852b96bb84618480df6c8f9a4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6dae159609b8bdd57375c9a9e2abd0fbd8ee0ca1
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Использование выводов ошибок в компоненте потока данных
   Специальные объекты <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>, именуемые выводами ошибок, можно добавлять в компоненты, чтобы позволить компоненту перенаправлять строки, которые он не может обработать во время выполнения. Проблемы, с которыми компонент может столкнуться, обычно упорядочиваются по категориям как ошибки или усечения. Они специфичны для каждого компонента. Компоненты, предоставляющие выводы ошибок, дают пользователям компонента гибкие возможности по обработке ошибок путем фильтрации строк ошибок в результирующем наборе, обеспечивая завершение работы компонента с ошибкой при возникновении проблемы или не обрабатывая ошибки и продолжая работу.  
   
- Чтобы реализовать и поддерживает выход ошибок в компоненте, необходимо сначала установить <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> свойство компонента для **true**. Затем необходимо добавить выход компонента, имеющего его <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> свойство **true**. Наконец, компонент должен содержать код, перенаправляющий строки в вывод ошибок при возникновении ошибки или усечения. В этом разделе рассматриваются эти три шага и описываются различия между синхронными и асинхронными выводами ошибок.  
+ Чтобы реализовать и обеспечить поддержку вывода ошибок в компоненте, необходимо вначале присвоить свойству <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> компонента значение **true**. Затем нужно добавить выход в компонент, свойство <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> которого имеет значение **true**. Наконец, компонент должен содержать код, перенаправляющий строки в вывод ошибок при возникновении ошибки или усечения. В этом разделе рассматриваются эти три шага и описываются различия между синхронными и асинхронными выводами ошибок.  
   
 ## <a name="creating-an-error-output"></a>Создание вывода ошибок  
- Вывод ошибок создается путем вызова <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> метод <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A>и затем присваивая <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> свойства нового выхода для **true**. Если выход является асинхронным, никаких дополнительных действий не требуется. Если выход является синхронным (и существует другой выход, являющийся синхронным для того же входа), необходимо также задать свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A>. Оба свойства должны иметь одни и те же значения для всех выходов, синхронных для того же входа. Если этим свойствам не присвоены значения, отличные от нуля, строки, предоставляемые входом, направляются в оба выхода, которые являются синхронными к этому входу.  
+ Вывод ошибок создается путем вызова метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> и последующего присвоения свойству <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> нового выхода значения **true**. Если выход является асинхронным, никаких дополнительных действий не требуется. Если выход является синхронным (и существует другой выход, являющийся синхронным для того же входа), необходимо также задать свойства <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A>. Оба свойства должны иметь одни и те же значения для всех выходов, синхронных для того же входа. Если этим свойствам не присвоены значения, отличные от нуля, строки, предоставляемые входом, направляются в оба выхода, которые являются синхронными к этому входу.  
   
  Если компонент сталкивается с ошибкой или усечением во время выполнения, его дальнейшие действия зависят от настроек свойств <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> входа и выхода, либо входного или выходного столбца, где произошла ошибка. По умолчанию для этих свойств должно быть задано значение <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed>. Если вывод ошибок компонента соединен с нижестоящим компонентом, это свойство задается пользователем компонента и позволяет ему управлять тем, как компонент обрабатывает ошибки или усечения.  
   
@@ -283,7 +280,7 @@ End Sub
 ```  
   
 ### <a name="redirecting-a-row-with-asynchronous-outputs"></a>Перенаправление строки с асинхронными выходами  
- Вместо направления строк в выход, как это делалось с синхронными выводами ошибок, компоненты с асинхронными выходами посылают строку в вывод ошибок, явным образом добавляя строку в выход <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. Реализация компонента, использующего асинхронные выводы ошибок, требует добавления в вывод ошибок столбцов, предоставляемых нижестоящим компонентам, и кэширования выходного буфера для вывода ошибок, предоставляемого компоненту во время выполнения метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. Подробно реализация компонента с асинхронными выходами подробно описаны в разделе [Разработка пользовательского компонента преобразования с асинхронным выводом](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md). Если столбцы не добавляются явным образом в вывод ошибок, строка буфера, которая добавляется в выходной буфер, содержит только два столбца ошибок.  
+ Вместо направления строк в выход, как это делалось с синхронными выводами ошибок, компоненты с асинхронными выходами посылают строку в вывод ошибок, явным образом добавляя строку в выход <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer>. Реализация компонента, использующего асинхронные выводы ошибок, требует добавления в вывод ошибок столбцов, предоставляемых нижестоящим компонентам, и кэширования выходного буфера для вывода ошибок, предоставляемого компоненту во время выполнения метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A>. Дополнительные сведения о реализации компонента с асинхронными выходами см. в разделе [Разработка пользовательского компонента преобразования с асинхронными выходами](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-transformation-component-with-asynchronous-outputs.md). Если столбцы не добавляются явным образом в вывод ошибок, строка буфера, которая добавляется в выходной буфер, содержит только два столбца ошибок.  
   
  Чтобы направить строку в асинхронный вывод ошибок, необходимо добавить строку в буфер вывода ошибок. Иногда строка может быть уже добавлена в выходной буфер, отличный от буфера вывода ошибок, и необходимо удалить эту строку с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.RemoveRow%2A>. Далее необходимо задать значения столбцов выходного буфера и, наконец, вызвать метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.SetErrorInfo%2A>, чтобы предоставить код ошибки, относящийся к определенному компоненту, и значение столбца ошибок.  
   
@@ -442,7 +439,6 @@ End Sub
   
 ## <a name="see-also"></a>См. также:  
  [Обработка ошибок в данных](../../../integration-services/data-flow/error-handling-in-data.md)   
- [С помощью вывода ошибок](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
+ [Использование выводов ошибок](../../../integration-services/extending-packages-custom-objects/data-flow/using-error-outputs-in-a-data-flow-component.md)  
   
   
-

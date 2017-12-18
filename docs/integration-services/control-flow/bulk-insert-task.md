@@ -1,5 +1,5 @@
 ---
-title: "Массовая вставка задач | Документы Microsoft"
+title: "Задача \"Массовая вставка\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 72f40019acada98168cf425dca983154e0e2dc8f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 5e0fb65fba9e0a9d600af89fd6b77c1a38030e08
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="bulk-insert-task"></a>задача «Массовая вставка»
   Задача «Массовая вставка» обеспечивает наиболее эффективный способ копирования больших объемов данных в таблицу или представление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Предположим, что компания хранит список продуктов объемом в миллион строк в головном компьютере, но система электронной коммерции компании использует для заполнения веб-страниц сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Необходимо обновлять таблицу продуктов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по ночам в соответствии с главным списком продуктов, хранящимся в головном компьютере. Для обновления таблицы список продуктов сохраняется в формате с символами табуляции в качестве разделителей и используется задача «Массовая вставка» для копирования данных напрямую в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -100,7 +98,7 @@ ms.lasthandoff: 08/11/2017
   
  Дополнительные сведения о свойствах, которые можно задать в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , см. в следующем разделе:  
   
--   [Страница "Выражения"](../../integration-services/expressions/expressions-page.md)  
+-   [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)  
   
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
@@ -129,9 +127,9 @@ ms.lasthandoff: 08/11/2017
   
 ### <a name="options"></a>Параметры  
  **Соединение**  
- Выберите диспетчер соединений OLE DB из списка или нажмите кнопку \< **новое подключение...** > для создания нового соединения.  
+ Выберите диспетчер подключений OLE DB в списке или щелкните \<**Создать подключение...**>, чтобы создать соединение.  
   
- **См. также:** [диспетчера соединений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
+ **См. также:** [Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
  **DestinationTable**  
  Введите имя целевой таблицы или представления или выберите таблицу или представление из списка.  
@@ -145,13 +143,13 @@ ms.lasthandoff: 08/11/2017
 |**Указать**|Укажите формат. При выборе этого параметра отображаются динамические параметры **RowDelimiter** и **ColumnDelimiter**.|  
   
  **Файл**  
- Выберите диспетчер соединений с плоскими файлами или списка или нажмите кнопку \< **новое подключение...** > для создания нового соединения.  
+ Выберите диспетчер подключений файлов или неструктурированных файлов в списке или щелкните \<**Создать подключение...**>, чтобы создать соединение.  
   
  Расположение файла задается относительно компонента SQL Server Database Engine, указанного в диспетчере соединений для выполнения этой задачи. Доступ к тестовому файлу можно получить с помощью компонента SQL Server Database Engine на локальном жестком диске на сервере или через общий диск или сопоставленный диск относительно SQL Server. Этот файл не имеет доступа к среде выполнения служб SSIS.  
   
  Если пользователь осуществляет доступ к исходному файлу с помощью диспетчера соединений с неструктурированным файлом, в задаче «Массовая вставка» не используется формат, указанный в диспетчере соединений с неструктурированными файлами. Вместо этого задача "Массовая вставка" использует либо формат, указанный в файле форматирования, либо значения свойств задачи RowDelimiter и ColumnDelimiter.  
   
- **См. также:** [диспетчер подключения файлов](../../integration-services/connection-manager/file-connection-manager.md), [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md) 
+ **См. также:** [Диспетчер соединений с файлами](../../integration-services/connection-manager/file-connection-manager.md), [Диспетчер соединений с неструктурированными файлами](../../integration-services/connection-manager/flat-file-connection-manager.md) 
   
  **Обновить таблицы**  
  Обновите список таблиц и представлений.  
@@ -221,4 +219,3 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Каждая строка, которая не может быть импортирована операцией массовой загрузки, считается за одну ошибку.  
   
-

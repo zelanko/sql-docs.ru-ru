@@ -1,5 +1,5 @@
 ---
-title: "Catalog.create_execution_dump | Документы Microsoft"
+title: "catalog.create_execution_dump | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b05e1b46845c0a2b5ee47b94dc239d79d4a12a17
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e8fc97f65fb17605393505c428b645994d3fd1da
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Приводит к приостановке выполняемого пакета и создает файл дампа. Файл хранится в  *\<диска >*: папка \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
+  Приводит к приостановке выполняемого пакета и создает файл дампа. Файл сохраняется в папке *\<диск>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -38,8 +36,8 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @execution_id =] *execution_id*  
- Идентификатор выполнения для выполняющегося пакета. *Execution_id* — **bigint**.  
+ [ @execution_id = ] *execution_id*  
+ Идентификатор выполнения для выполняющегося пакета. Параметр *execution_id* имеет тип **bigint**.  
   
 ## <a name="example"></a>Пример  
  В следующем примере выполняющийся пакет с идентификатором выполнения равным 88 получает запрос для создания файла дампа.  
@@ -57,7 +55,7 @@ EXEC create_execution_dump @execution_id = 88
  Нет  
   
 ## <a name="permissions"></a>Permissions  
- Эта хранимая процедура требует от пользователей в качестве членов **ssis_admin** роли базы данных.  
+ Для этой хранимой процедуры требуется, чтобы пользователи были членами роли базы данных **ssis_admin**.  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  В следующем списке описываются условия, приводящие к сбою хранимой процедуры.  
@@ -72,4 +70,3 @@ EXEC create_execution_dump @execution_id = 88
  [Создание файлов дампа для выполнения пакетов](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
-

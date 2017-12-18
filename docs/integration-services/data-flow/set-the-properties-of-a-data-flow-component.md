@@ -1,5 +1,5 @@
 ---
-title: "Задание свойств компонента потока данных | Документы Microsoft"
+title: "Задание свойств для компонента потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- components [Integration Services], properties
+helpviewer_keywords: components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-caps.latest.revision: 50
+caps.latest.revision: "50"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e2073bf67289ff1d54a364f6a82bff51779dc1c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: e1e43cd578cd37385b643890a07588ff0d3fdc43
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Установление свойств компонента потока данных
   Чтобы задать свойства компонентов потока данных, которые включают источники, целевые объекты и преобразования, можно использовать следующие компоненты.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/26/2017
   
 -   Диалоговое окно **Расширенный редактор** предоставляет доступ к пользовательским свойствам каждого компонента. Диалоговое окно **Расширенный редактор** также предоставляет доступ к общим свойствам всех компонентов потока данных — к свойствам входов, выходов, выводов ошибок на выходе, а также к свойствам столбцов и внешних столбцов.  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Задание свойств компонента потока данных с помощью редактора компонентов  
+## <a name="set-the-properties-of-a-data-flow-component-with-a-component-editor"></a>Задание свойств для компонента потока данных с помощью редактора компонентов  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -50,7 +47,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  Чтобы сохранить измененный пакет, в меню **Файл** выберите команду **Сохранить выбранные элементы**.  
   
-## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>Установить свойства компонента потока данных в окне «Свойства»  
+## <a name="set-the-properties-of-a-data-flow-component-in-the-properties-window"></a>Задание свойств для компонента потока данных в окне "Свойства"  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -67,7 +64,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  Чтобы сохранить измененный пакет, в меню **Файл** выберите команду **Сохранить выбранные элементы**.  
   
-## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>Задание свойств компонента потока данных с помощью расширенного редактора  
+## <a name="set-the-properties-of-a-data-flow-component-with-the-advanced-editor"></a>Задание свойств для компонента потока данных с помощью Расширенного редактора  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -146,7 +143,7 @@ ms.lasthandoff: 09/26/2017
 |ValidateExternalMetadata|Логическое значение|Указывает, проверены ли метаданные внешних столбцов. Значение по умолчанию этого свойства равно **True**.|  
 |Версия|Целочисленный|Версия компонента.|  
   
-###  <a name="inputs"></a>Входные свойства  
+###  <a name="inputs"></a> Свойства входа  
  В объектной модели служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] преобразования и назначения имеют входы. Вход компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100>.  
   
  В следующей таблице показаны свойства входов компонентов в потоке данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
@@ -166,7 +163,7 @@ ms.lasthandoff: 09/26/2017
   
  Назначения и некоторые преобразования не поддерживают вывод ошибок на выходе, а свойства ErrorRowDisposition и TruncationRowDisposition этих компонентов доступны только для чтения.  
   
-###  <a name="inputcolumns"></a>Свойства входного столбца  
+###  <a name="inputcolumns"></a> Свойства входного столбца  
  В объектной модели служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вход содержит коллекцию входных столбцов. Входной столбец компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInputColumn100>.  
   
  В следующей таблице показаны свойства входных столбцов компонентов потока данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
@@ -190,7 +187,7 @@ ms.lasthandoff: 09/26/2017
   
  Входной столбец также использует свойства типа данных, описанные в разделе "Свойства типа данных".  
   
-###  <a name="outputs"></a>Свойства выхода  
+###  <a name="outputs"></a> Свойства выхода  
  В объектной модели служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] источники и назначения имеют выходы. Выход компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100>.  
   
  В следующей таблице показаны свойства выходов компонентов в потоке данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
@@ -206,12 +203,12 @@ ms.lasthandoff: 09/26/2017
 |Идентификатор|Целочисленный|Значение, уникально определяющее выход.|  
 |IdentificationString|Строковые значения|Строка, определяющая выход.|  
 |IsErrorOut|Логическое значение|Указывает, используется ли выход для вывода ошибок.|  
-|IsSorted|Логическое значение|Указывает, отсортирован ли выход. Значение по умолчанию равно **False**.<br /><br /> **\*\*Важные \* \***  значения параметра **IsSorted** свойства **True** не приводит к сортировке данных. Это свойство только указывает компонентам нисходящего потока, что данные раньше были отсортированы. Дополнительные сведения см. в разделе [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
+|IsSorted|Логическое значение|Указывает, отсортирован ли выход. Значение по умолчанию равно **False**.<br /><br /> **\*\* Важно. \*\*** Установка свойства **IsSorted** в значение **True** не приводит к сортировке данных. Это свойство только указывает компонентам нисходящего потока, что данные раньше были отсортированы. Дополнительные сведения см. в разделе [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |Название|Строковые значения|Имя выхода.|  
 |SynchronousInputID|Целочисленный|Идентификатор синхронного с выходом входа.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Значение, определяющее, как компонент обрабатывает усечения, происходящие при обработке строк. Допустимые значения — **Fail component**, **Ignore failure**и **Redirect row**.|  
   
-###  <a name="outputcolumns"></a>Свойства выходного столбца  
+###  <a name="outputcolumns"></a> Свойства выходного столбца  
  В объектной модели служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выход содержит коллекцию выходных столбцов. Выходной столбец компонента потока данных реализует интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputColumn100>.  
   
  В следующей таблице показаны свойства выходных столбцов компонентов потока данных. Некоторые свойства имеют значения, доступные только для чтения и присваиваемые подсистемой обработки потока данных на этапе выполнения.  
@@ -262,7 +259,7 @@ ms.lasthandoff: 09/26/2017
 |Масштаб|Целочисленный|Масштаб числового столбца.|  
 
 ## <a name="custom-properties-of-data-flow-components"></a>Пользовательские свойства компонентов потока данных
-Сведения о пользовательских свойствах см.  
+Сведения о пользовательских свойствах см. в следующих разделах:  
   
 -   [Пользовательские свойства ADO NET](../../integration-services/data-flow/ado-net-custom-properties.md)  
   
@@ -300,7 +297,7 @@ ms.lasthandoff: 09/26/2017
   
 -   [Пользовательские свойства источника "XML"](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
-## <a name="use-an-expression-in-a-data-flow-component"></a>Использование выражений в компоненте потока данных
+## <a name="use-an-expression-in-a-data-flow-component"></a>Использование выражения в компоненте потока данных
 Ниже описана процедура добавления выражения в преобразование «Условное разбиение» или «Производный столбец». Преобразование «Условное разбиение» с помощью выражений определяет условия, которые направляют строки данных в выход преобразования, а преобразование «Производный столбец» с помощью выражений определяет значения, присваиваемые столбцам.  
   
  Чтобы реализовать выражение в преобразовании, необходимо, чтобы в пакете уже была хотя бы одна задача потока данных и один источник. 
@@ -378,7 +375,6 @@ ms.lasthandoff: 09/26/2017
 |----------------------|--------------|  
 |Назначение «ADO.NET»|Свойство TableOrViewName<br /><br /> Свойство BatchSize<br /><br /> Свойство CommandTimeout|  
 |назначение «Неструктурированный файл»|Свойство Header|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Compact назначения|Свойство TableName|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Назначение|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
-
+|Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact|Свойство TableName|  
+|Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Свойство BulkInsertTableName<br /><br /> Свойство BulkInsertFirstRow<br /><br /> Свойство BulkInsertLastRow<br /><br /> Свойство BulkInsertOrder<br /><br /> Свойство Timeout|  
 

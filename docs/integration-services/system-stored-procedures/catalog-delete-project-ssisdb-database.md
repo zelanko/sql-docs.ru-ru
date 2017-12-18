@@ -1,5 +1,5 @@
 ---
-title: "Catalog.delete_project (база данных SSISDB) | Документы Microsoft"
+title: "catalog.delete_project (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: abc0280a693be8e0f9fa9b3ec997c1d38d96ed54
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: c09d08c3b115a3d5171d368aba7373240458cd48
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +35,11 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name =] *имя_папки*  
- Имя папки, которая содержит проект. *имя_папки* — **nvarchar(128)**.  
+ [ @folder_name = ] *folder_name*  
+ Имя папки, которая содержит проект. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Имя удаляемого проекта. *имя_проекта* — **nvarchar(128)**.  
+ [ @project_name = ] *project_name*  
+ Имя удаляемого проекта. Параметр *project_name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -54,12 +52,12 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 -   Разрешения READ и MODIFY на проект  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
- Ниже приводятся некоторые условия, которые могут вызвать delete_project хранимой процедура возвращает ошибку.  
+ В следующем списке перечислены некоторые условия, при которых хранимая процедура delete_project может вызвать ошибку:  
   
 -   Проект не существует  
   
@@ -71,4 +69,3 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
  Все объекты и ссылки на среду удаляются вместе с соответствующим проектом. Однако, версии проекта и значимые записи об операциях сохраняются до следующего запуска задания очистки операций.  
   
   
-

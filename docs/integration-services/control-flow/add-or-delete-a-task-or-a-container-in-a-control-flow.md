@@ -1,5 +1,5 @@
 ---
-title: "Добавление или удаление задачи или контейнера в потоке управления | Документы Microsoft"
+title: "Добавление задачи или контейнера в поток управления или удаление их из него | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-caps.latest.revision: 46
+caps.latest.revision: "46"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9c5a240223fb25e36a9ccd4591656fffbc8875a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: f7502275ff31671bd8726dec5ecb42a299d3f17c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Добавление задачи или контейнера в поток управления или удалить их из него
   При работе в конструкторе потока управления окно «Область элементов» конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] содержит задачи, которые службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют для построения потока управления в пакете. Дополнительные сведения об области элементов см. в разделе [SSIS Toolbox](../../integration-services/ssis-toolbox.md).  
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/26/2017
   
 8.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>Удалить задачу или контейнер из потока управления  
+## <a name="delete-a-task-or-a-container-from-a-control-flow"></a>Удаление задачи или контейнера из потока управления  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -69,12 +67,12 @@ ms.lasthandoff: 09/26/2017
   
 3.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
 
-## <a name="set-the-properties-of-a-task-or-container"></a>Задание свойств задачи или контейнера
+## <a name="set-the-properties-of-a-task-or-container"></a>Задание свойств задач или контейнера
 Большинство свойств задач и контейнеров можно задать с помощью окна **Свойства** . Исключение составляют свойства коллекций задач и свойства, задание которых в окне **Свойства** было бы слишком сложным. Например, нельзя настроить перечислитель, который контейнер «цикл по каждому элементу» использует в окне **Свойства** . Для задания таких сложных свойств следует использовать редактор задачи или контейнера. У большинства редакторов задач и контейнеров имеется несколько узлов, содержащих связанные свойства. Имя узла указывает на субъект свойств, содержащихся в узле.  
   
  Следующие процедуры описывают задание свойств задачи или контейнера с помощью окон **Свойства** либо с помощью соответствующего редактора задачи или контейнера.  
   
-### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Задание свойств задачи или контейнера в окне "Свойства"  
+### <a name="set-the-properties-of-a-task-or-container-with-the-properties-window"></a>Задание свойств задачи или контейнера с помощью окна "Свойства"  
   
 1.  В среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]откройте проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , содержащий необходимый пакет.  
   
@@ -124,4 +122,3 @@ ms.lasthandoff: 09/26/2017
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Просмотр и изменение параметров безопасности репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 673d8fdcdda983dd111b6c2297f2303882b8bd66
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1982ed9a207dad495d6e9e8555785a9260498cc6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Просмотр и изменение параметров безопасности репликации
-  В данном разделе описывается процесс просмотра и изменения параметров безопасности репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Например, может потребоваться изменение подключения агента чтения журнала к издателю для использования проверки подлинности SQL Server вместо встроенной проверки подлинности Windows, или может потребоваться изменение учетных данных для запуска задания агента при изменении пароля учетной записи Windows. Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) (Модель безопасности агента репликации).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается, как просмотреть и изменить параметры безопасности репликации в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов Replication Management Objects (RMO). Например, может потребоваться изменение подключения агента чтения журнала к издателю для использования проверки подлинности SQL Server вместо встроенной проверки подлинности Windows, или может потребоваться изменение учетных данных для запуска задания агента при изменении пароля учетной записи Windows. Дополнительные сведения о разрешениях, необходимых каждому агенту, см. в статье [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md) (Модель безопасности агента репликации).  
   
  **В этом разделе**  
   

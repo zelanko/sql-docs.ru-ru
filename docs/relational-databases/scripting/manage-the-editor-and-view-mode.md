@@ -2,9 +2,12 @@
 title: "Управление режимами редактирования и просмотра | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -24,14 +27,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 20b9724db826018521d68f44e42447112921027c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b3058e6ca6902a5b91368724763ab53f82bc982b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Управление режимами редактирования и просмотра
-  Редактор позволяет управлять способами просмотра кода.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Редактор позволяет управлять способами просмотра кода.  
   
 ## <a name="changing-the-view-mode"></a>Изменение режима просмотра  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] имеется режим просмотра **Документы с вкладками**, позволяющий открыть одновременно несколько редакторов и документов и переключаться между ними с помощью вкладок в верхней части окна редактора. Также можно открыть среду [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] в режиме интерфейса MDI (Multiple Document Interface), объединяющем окна без вкладок и позволяющем сворачивать окна, располагать их рядом и т. д.  

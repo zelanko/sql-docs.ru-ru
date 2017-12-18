@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Connector для SAP BW компонентов | Документы Microsoft"
+title: "Компоненты соединителя с SAP BW (Майкрософт) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13877d29b192079361051d4775d09f1f4596c9d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4026737ea567bb6e4d9300f3fa5d0b9456b1d2b2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-connector-for-sap-bw-components"></a>Компоненты Microsoft Connector для SAP BW
   В подразделах этого раздела приведено описание трех компонентов [!INCLUDE[msCoName](../includes/msconame-md.md)] Microsoft Connector 1.1 для SAP BW.  
@@ -38,14 +36,13 @@ ms.lasthandoff: 08/03/2017
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
   
 ## <a name="in-this-section"></a>В этом разделе  
- [Диспетчер соединений SAP BW](../integration-services/connection-manager/sap-bw-connection-manager.md)  
+ [SAP BW Connection Manager](../integration-services/connection-manager/sap-bw-connection-manager.md)  
  Описывает диспетчер соединений SAP BW. Диспетчер соединений подключает источник SAP BW или назначение SAP BW к системе SAP Netweaver BW версии 7.  
   
- [Источник SAP BW](../integration-services/data-flow/sap-bw-source.md)  
+ [SAP BW Source](../integration-services/data-flow/sap-bw-source.md)  
  Описывает источник SAP BW, который позволяет извлекать данные из системы SAP Netweaver BW.  
   
- [Назначение SAP BW](../integration-services/data-flow/sap-bw-destination.md)  
+ [SAP BW Destination](../integration-services/data-flow/sap-bw-destination.md)  
  Описывает назначение SAP BW, позволяющее загружать данные в систему SAP Netweaver BW.  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Программа dtutil | Документы Microsoft"
+title: "Программа dtutil | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,17 +27,16 @@ helpviewer_keywords:
 - removing packages
 - relocating packages
 ms.assetid: 6c7975ff-acec-4e6e-82e5-a641e3a98afe
-caps.latest.revision: 114
+caps.latest.revision: "114"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 15315ffd796662bb814060c62bc0fb3872c9190a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 7a5cf2737ac465c5d216a0d9a27a3c3e6e5836e0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="dtutil-utility"></a>dtutil, программа
   Программа командной строки **dtutil** предназначена для управления пакетами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Программа может копировать, перемещать, удалять пакет или проверять его существование. Эти действия могут выполняться с любым из пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] , который хранится в любом из трех мест: база данных [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и файловая система. Если программа имеет доступ к пакету, хранимому в **msdb**, в командной строке может быть необходимо ввести имя пользователя и пароль. Если экземпляр [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] использует проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , в командной строке необходимо ввести и имя пользователя, и пароль. Если имя пользователя отсутствует, **dtutil** попытается войти на сервер [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , используя проверку подлинности Windows. Тип хранилища пакета определяется параметрами **/SQL**, **/FILE**и **/DTS** .  
@@ -70,18 +68,18 @@ ms.lasthandoff: 08/03/2017
   
  На 64-разрядном компьютере службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] устанавливают 64-разрядные версии программ **dtexec** (dtexec.exe) и **dtutil** (dtutil.exe). Чтобы установить 32-разрядные версии этих средств служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , при установке необходимо выбрать либо клиентские средства, либо среду [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] .  
   
- По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Как правило, является путь к каталогу 32-разрядных  *\<диска >*: \Program \Microsoft SQL Server\130\DTS\Binn файлы (x86), а путь к каталогу 64-разрядных  *\<диска >*: \Program Files\Microsoft SQL Server\130\DTS\Binn.)  
+ По умолчанию на 64-разрядном компьютере, на котором установлены и 64-разрядная, и 32-разрядная версия программы командной строки служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , будет запущена 32-разрядная версия командной строки. 32-разрядная версия запускается, потому что путь к каталогу для 32-разрядной версии появляется в переменной среды PATH перед путем к каталогу для 64-разрядной версии. (Обычно путь к каталогу 32-разрядной версии выглядит следующим образом: *\<диск>*:\Program Files(x86)\Microsoft SQL Server\130\DTS\Binn, а путь к каталогу 64-разрядной версии — *\<диск>*:\Program Files\Microsoft SQL Server\130\DTS\Binn.)  
   
 > [!NOTE]  
 >  Если для запуска программы используется агент SQL Server, то он автоматически использует 64-разрядную версию программы. Чтобы определить точное расположение исполняемого файла программы, агент SQL Server использует реестр, а не переменную среды PATH.  
   
  Чтобы убедиться, что в командной строке запущена 64-разрядная версия программы, выполните одно из следующих действий.  
   
--   Откройте окно командной строки, перейдите в каталог, содержащий 64-разрядной версии программы *(\<диска >*: \Program Files\Microsoft SQL Server\130\DTS\Binn), а затем запустите программу из этого расположения.  
+-   Откройте окно командной строки, задайте путь к каталогу, содержащему 64-разрядную версию программы *(\<диск>*:\Program Files\Microsoft SQL Server\130\DTS\Binn), а затем запустите программу из указанного расположения.  
   
--   В командной строке запустите программу, введя полный путь (*\<диска >*: \Program Files\Microsoft SQL Server\130\DTS\Binn) к 64-разрядной версии программы.  
+-   В командной строке запустите программу, введя полный путь (*\<диск>*:\Program Files\Microsoft SQL Server\130\DTS\Binn) к 64-разрядной версии программы.  
   
--   Окончательно измените порядок путей в переменной среды PATH, поместив путь 64-разрядной версии (*\<диска >*: \Program Files\Microsoft SQL Server\130\DTS\Binn) перед путем к 32-разрядных (*\<диска >*: \ Программа \Microsoft SQL Server\130\DTS\Binn файлы (x86)) в переменной.  
+-   Окончательно измените порядок путей в переменной среды PATH, поместив в ней путь к 64-разрядной версии (*\<диск>*:\Program Files\Microsoft SQL Server\130\DTS\Binn) перед путем к 32-разрядной версии (*\<диск>*:\ Program Files(x86)\Microsoft SQL Server\130\DTS\Binn).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -100,7 +98,7 @@ dtutil /option [value] [/option [value]]...
 |/DestP[assword] *пароль*|Указывает пароль, используемый с параметром SQL для подключения к целевому экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Если *DESTPASSWORD* указан в командной строке, где отсутствует параметр *DTSUSER* , возникнет ошибка.<br /><br /> Примечание. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].|  
 |/DestS[erver] *экземпляр_сервера*|Указывает имя сервера, используемое в любой операции, при выполнении которой назначение сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Этот параметр используется для определения удаленного или именованного сервера при сохранении пакета служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Указание *DESTSERVER* в командной строке, в которой отсутствует действие, связанное с [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], является ошибкой. Для совместного использования с этим параметром подходят команды *SIGN SQL*, *COPY SQL*и *MOVE SQL* .<br /><br /> Имя экземпляра [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно указать, добавив обратную косую черту и имя экземпляра к имени сервера.|  
 |/DestU[ser] *имя пользователя*|Указывает имя пользователя, применяемое с параметрами *SIGN SQL*, *COPY SQL*и *MOVE SQL* для подключения к экземпляру [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , использующему проверку подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Указание *DESTUSER* в командной строке, в которой отсутствует параметр *SIGN SQL*, *COPY SQL*или *MOVE SQL* , является ошибкой.|  
-|/Dump *идентификатор процесса*|Приостанавливает указанный процесс (либо программу **dtexec** , либо процесс **dtsDebugHost.exe** ) и создает отладочные файлы дампа с расширениями MDMP и TMP (необязательно).<br /><br /> Примечание. Для использования параметра **/Dump**пользователю должно быть назначено право "Отладка программ" (SeDebugPrivilege).<br /><br /> Найти значение параметра *process ID* для приостанавливаемого процесса можно с помощью диспетчера задач Windows.<br /><br /> По умолчанию [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке  *\<диска >*: \Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.<br /><br /> Дополнительные сведения о программе **dtexec** и процессе **dtsDebugHost.exe** см. в разделах [dtexec Utility](../integration-services/packages/dtexec-utility.md) и [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Дополнительные сведения об отладочных файлах дампа см. в разделе [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Примечание. Отладочные файлы дампа могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL).|  
+|/Dump *идентификатор процесса*|Приостанавливает указанный процесс (либо программу **dtexec** , либо процесс **dtsDebugHost.exe** ) и создает отладочные файлы дампа с расширениями MDMP и TMP (необязательно).<br /><br /> Примечание. Для использования параметра **/Dump**пользователю должно быть назначено право "Отладка программ" (SeDebugPrivilege).<br /><br /> Найти значение параметра *process ID* для приостанавливаемого процесса можно с помощью диспетчера задач Windows.<br /><br /> По умолчанию службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] сохраняют отладочные файлы дампа в папке *\<диск>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.<br /><br /> Дополнительные сведения о программе **dtexec** и процессе **dtsDebugHost.exe** см. в разделах [dtexec Utility](../integration-services/packages/dtexec-utility.md) и [Building, Deploying, and Debugging Custom Objects](../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md).<br /><br /> Дополнительные сведения об отладочных файлах дампа см. в разделе [Generating Dump Files for Package Execution](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).<br /><br /> Примечание. Отладочные файлы дампа могут содержать конфиденциальные сведения. Скопируйте файлы в папку с ограниченным доступом или ограничьте доступ к ним при помощи списка управления доступом (ACL).|  
 |/DT[S] *filespec*|Указывает, что пакет служб [!INCLUDE[ssIS](../includes/ssis-md.md)] , с которым предполагается работать, находится в хранилище пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Аргумент *filespec* должен включать путь к папке, начиная от корневой папки хранилища пакетов служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . По умолчанию в файле конфигурации существуют следующие имена корневых папок: «MSDB» и «File System». Пути, содержащие символ пробела, должны быть заключены в двойные кавычки.<br /><br /> Если параметр DT[S] указан одновременно с любым из следующих параметров, будет возвращена ошибка DTEXEC_DTEXECERROR:<br /><br /> **FILE**<br /><br /> **SQL**<br /><br /> **SOURCEUSER**<br /><br /> **SOURCEPASSWORD**<br /><br /> **SOURCESERVER**|  
 |/En[crypt] *{SQL &#124; FILE}; Path;ProtectionLevel[;password]*|(Необязательно.) Шифрует загруженный пакет с указанным уровнем защиты и паролем и сохраняет его в место, указанное в параметре *Path*. Параметр *ProtectionLevel* определяет, необходим ли пароль.<br /><br /> *SQL* — параметр Path является именем целевого пакета.<br /><br /> *FILE* — параметр Path является полным именем файла для пакета.<br /><br /> *DTS* — этот параметр в данный момент не поддерживается.<br /><br /> Параметры*ProtectionLevel* :<br /><br /> Уровень 0. Удаляет конфиденциальные сведения.<br /><br /> Уровень 1. Конфиденциальные сведения шифруются с помощью учетных данных локального пользователя.<br /><br /> Уровень 2. Конфиденциальные сведения шифруются с помощью обязательного пароля.<br /><br /> Уровень 3. Пакет шифруется с помощью обязательного пароля.<br /><br /> Уровень 4. Пакет шифруется с помощью учетных данных локального пользователя.<br /><br /> Уровень 5. Пакет использует шифрование хранилища [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
 |/Ex[ists]|(Необязательно.) Используется для определения существования пакета. **dtutil** пытается найти пакет, указанный параметрами *SQL*, *DTS* или *FILE* . Если программа **dtutil** не может определить местонахождение указанного пакета, будет возвращена ошибка DTEXEC_DTEXECERROR.|  
@@ -284,4 +282,3 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [Запуск пакетов служб Integration Services (SSIS)](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
-

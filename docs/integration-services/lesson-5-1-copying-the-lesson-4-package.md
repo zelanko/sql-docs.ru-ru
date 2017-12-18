@@ -1,5 +1,5 @@
 ---
-title: "Шаг 1: Копирование пакета занятия 4 | Документы Microsoft"
+title: "Шаг 1. Копирование пакета, созданного на занятии 4 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 54328f5769560ca6710ed7df6ebe8de9509b8316
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9d7c64162898389439190286fa470854bc716318
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-1---copying-the-lesson-4-package"></a>Занятие 5-1-копирование пакета занятия 4
+# <a name="lesson-5-1---copying-the-lesson-4-package"></a>Занятие 5-1. Копирование пакета, созданного на занятии 4
 В этой задаче будет создана копия пакета Lesson 4.dtsx, созданного на занятии 4. Либо можно добавить пакет для занятия 4, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 5.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>Копирование пакета занятия 4  
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Шаг 2. Активация и настройка конфигурации пакетов](../integration-services/lesson-5-2-enabling-and-configuring-package-configurations.md)  
   
-

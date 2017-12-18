@@ -2,9 +2,12 @@
 title: "Фильтрация опубликованных данных для репликации слиянием | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f49fb64688a3e739cf6d0c80f41d01ca10425995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: d8b02dc4f90db95034df79a341aacf4b346dc3ae
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="filter-published-data-for-merge-replication"></a>Фильтрация опубликованных данных для репликации слиянием
-  Кроме статических фильтров строк и фильтров столбцов, которые можно определять с другими типами репликации, репликация слиянием позволяет определять параметризованные фильтры строк и фильтры соединения. Дополнительные сведения о статических фильтрах строк и фильтрах столбцов см. в разделе [Фильтрация опубликованных данных](../../../relational-databases/replication/publish/filter-published-data.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Кроме статических фильтров строк и фильтров столбцов, которые можно определять с другими типами репликации, репликация слиянием позволяет определять параметризованные фильтры строк и фильтры соединения. Дополнительные сведения о статических фильтрах строк и фильтрах столбцов см. в разделе [Фильтрация опубликованных данных](../../../relational-databases/replication/publish/filter-published-data.md).  
   
  Репликация слиянием используется во многих приложениях, поддерживающих мобильных пользователей; эти приложения обычно имеют большое количество подписок, при этом каждая подписка получает уникальный набор данных. Параметризованные фильтры в сочетании с фильтрами соединения позволяют администратору настраивать одну публикацию (или в крайнем случае небольшое количество публикаций) и тем не менее предоставлять пользователям различные наборы данных, сокращая затраты на управление, связанные с созданием многочисленных публикаций.  
   

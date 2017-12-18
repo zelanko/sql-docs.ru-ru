@@ -2,9 +2,12 @@
 title: "Справка F1 для компонента \"Область элементов\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6ee1d17314517b3115f594d36f781bd778585e6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7d1295c3b760386380c626e1afde9b98401ef3bd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»
-  В окне**Область элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В окне **Панель элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  
   
  Значки окна**Область элементов** можно перетаскивать, копировать и вставлять в редакторы кода или размещать в областях конструирования в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

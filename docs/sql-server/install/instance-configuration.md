@@ -2,9 +2,12 @@
 title: "Справка мастера установки | Документация Майкрософт"
 ms.custom: 
 ms.date: 2017-04-21
-ms.prod: sql-server-2016
+ms.prod: install
+ms.prod_service: sql-non-specified
+ms.service: database-engine
+ms.component: 
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,15 +21,14 @@ ms.author: mikeray
 manager: jhubbard
 robots: noindex,nofollow
 ms.workload: On Demand
-ms.openlocfilehash: bf24705838daf5ed120fa279a9b5742d3b8d0ed0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5bed6d3c6538e0a6d9dacea134d854233a578de2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="installation-wizard-help"></a>Справка мастера установки
-
-В этом разделе описываются некоторые страницы настройки в мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описываются некоторые страницы настройки в мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 ## <a name="instance-configuration"></a>Конфигурация экземпляра
 На странице **Конфигурация экземпляра** мастера установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно выбрать создание экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]по умолчанию или именованного экземпляра. Если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] еще не установлен и не указано создание именованного экземпляра, то будет создан экземпляр по умолчанию.  
@@ -305,7 +307,7 @@ ms.lasthandoff: 11/09/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] Никогда не указывайте пустой или простой пароль для пользователя sa.  
   
- **Смешанный режим (проверка подлинности Windows или проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
+  **Смешанный режим (проверка подлинности Windows или проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
  Возможность подключения пользователей с помощью режима проверки подлинности Windows или проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Пользователи, которые подключаются под учетной записью Windows, могут использовать доверенные соединения, которые проверяются Windows.  
   
  При выборе смешанного режима проверки подлинности и наличии условий для использования входных имен SQL для согласования унаследованных приложений необходимо установить надежные пароли для всех учетных записей [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

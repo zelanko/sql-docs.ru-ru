@@ -1,5 +1,5 @@
 ---
-title: "Управление службой CDC | Документы Microsoft"
+title: "Управление службой CDC | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- manSer
+f1_keywords: manSer
 ms.assetid: 645ae53f-f352-4d6a-9eb0-264e53a93a18
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b212ccfd61c11a8c06a840260918cc581564a6fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 5eb8286b7e6289bd82e85e4c052fbb8b9ad69197
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="manage-a-cdc-service"></a>Управление службой CDC
   В консоли конструктора CDC можно просматривать службы, созданные с помощью консоли конфигурации служб CDC, а также управлять всеми экземплярами в службе CDC Oracle.  
@@ -56,4 +53,3 @@ ms.lasthandoff: 08/03/2017
  [Использование мастера создания экземпляра](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Создание плана обслуживания (область конструктора планов обслуживания) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 039e306af582e2bc56559557eea3a5d6d57ec819
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9368c1af9cc0288868523d413d698816c7babc18
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Создание планов обслуживания (область конструктора планов обслуживания)
-  В этом разделе описывается создание плана обслуживания одного или нескольких серверов с помощью области конструктора для плана обслуживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. **Мастер планов обслуживания** лучше подходит для создания простых планов обслуживания, а область конструктора позволяет использовать расширенные рабочие процессы.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается создание плана обслуживания одного или нескольких серверов с помощью области конструктора для плана обслуживания в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. **Мастер планов обслуживания** лучше подходит для создания простых планов обслуживания, а область конструктора позволяет использовать расширенные рабочие процессы.  
   
  **В этом разделе**  
   

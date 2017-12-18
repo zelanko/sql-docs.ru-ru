@@ -2,9 +2,12 @@
 title: "Класс событий CursorUnprepare | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e14b95896487273bac6e2c4bcc28b9c582c8e6d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ef10f0eee4c9c710f68c5dcea60cabcdf5c9d51a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare, класс событий
-  Класс событий **CursorUnprepare** выдает сведения об аннулирующих курсор событиях, которые происходят с курсорами программных интерфейсов приложений (API). Аннулирующие курсор события происходят тогда, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] аннулирует план выполнения.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий **CursorUnprepare** выдает сведения об аннулирующих курсор событиях, которые происходят с курсорами программных интерфейсов (API). Аннулирующие курсор события происходят тогда, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] аннулирует план выполнения.  
   
  Включите класс событий **CursorUnprepare** в трассировки, записывающие производительность курсоров. Если класс событий **CursorUnprepare** включен в трассировку, то объем дополнительной нагрузки зависит от частоты применения курсора к базе данных в процессе трассировки. Если курсоры используются интенсивно, трассировка может привести к значительному снижению производительности.  
   

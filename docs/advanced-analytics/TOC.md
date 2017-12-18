@@ -122,6 +122,7 @@
 
 ### [Как избежать ошибок, связанных с библиотеками пакетов пользователей для R](r/packages-installed-in-user-libraries.md)
 
+### [Добавление SQLRUserGroup в качестве пользователя базы данных](r/add-sqlrusergroup-to-database.md)
 
 ## Изучение данных и моделирование
 

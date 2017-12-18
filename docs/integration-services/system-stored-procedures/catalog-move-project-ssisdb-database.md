@@ -1,5 +1,5 @@
 ---
-title: "Catalog.move_project (база данных SSISDB) | Документы Microsoft"
+title: "catalog.move_project (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,22 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5b091ccea1f733ebbf6e52308d17c7bdb7449cbe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogmoveproject---ssisdb-database"></a>Catalog.move_project - база данных SSISDB
+# <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project — база данных SSISDB
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Перемещает проект из одной папки в другую в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -39,14 +37,14 @@ catalog.move_project [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @source_folder =] *source_folder*  
- Имя исходной папки, в которой проект хранится до перемещения. *Source_folder* — **nvarchar(128)**.  
+ [ @source_folder = ] *source_folder*  
+ Имя исходной папки, в которой проект хранится до перемещения. Параметр *source_folder* имеет тип **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Имя перемещаемого проекта. *Project_name* — **nvarchar(128)**.  
+ [ @project_name = ] *project_name*  
+ Имя перемещаемого проекта. Параметр *project_name* имеет тип **nvarchar(128)**.  
   
- [ @destination_folder =] *destination_folder*  
- Имя целевой папки, в которой проект хранится после перемещения. *Destination_folder* — **nvarchar(128)**.  
+ [ @destination_folder = ] *destination_folder*  
+ Имя целевой папки, в которой проект хранится после перемещения. Параметр *destination_folder* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -59,9 +57,9 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   Разрешения READ и MODIFY на перемещаемый проект и разрешение CREATE_OBJECTS на целевую папку.  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  В следующем списке приведено описание некоторых условий, при которых эта хранимая процедура может вызывать ошибки.  
@@ -81,4 +79,3 @@ catalog.move_project [ @source_folder = ] source_folder
 >  Проект может иметь относительные или абсолютные ссылки на среду. Относительные ссылки указывают среду по имени, для использования этих ссылок среда должна находиться в той же папке, что и проект. Абсолютные ссылки указывают среду по имени и папке, они могут ссылаться на среду, расположенную в другой папке, отличной от папки, в которой находится проект.  
   
   
-

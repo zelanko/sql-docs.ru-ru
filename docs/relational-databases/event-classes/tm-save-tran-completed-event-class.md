@@ -2,9 +2,12 @@
 title: "Класс событий TM: Save Tran Completed | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 066d0e89dd12c4480c355cc8986fee7cbd19b1f5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 02cc41242141e2905ffe05ec07972e0ab37829ff
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tm-save-tran-completed-event-class"></a>Класс событий TM: Save Tran Completed
-  События класса TM: класс события Save Tran Completed указывает, что завершен запрос SAVE TRANSACTION. Запрос был отправлен клиентом через интерфейс управления транзакциями.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий TM: Save Tran Completed указывает, что завершен запрос SAVE TRANSACTION. Запрос был отправлен клиентом через интерфейс управления транзакциями.  
   
 ## <a name="tm-save-tran-completed-event-class-data-columns"></a>Столбцы данных класса событий TM: Save Tran Completed  
   

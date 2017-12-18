@@ -2,9 +2,12 @@
 title: "Свойства сервера (страница \"Память\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e8f2099ebff05085188514503c11abef5f8159c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4b9ae03362f1dfb89aaebc09aabfed60c327a9d3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="server-properties---memory-page"></a>Свойства сервера (страница "Память")
-  Используйте данную страницу для просмотра или изменения параметров памяти сервера. Если параметр **Минимальный размер памяти сервера** равен 0, а параметр **Максимальный размер памяти сервера** равен 2 147 483 647 МБ, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда может использовать оптимальный объем памяти, в зависимости от того, сколько памяти в текущий момент использует операционная система и другие приложения. При изменении загрузки компьютера и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] меняется объем выделенной памяти. Ограничить объем динамически выделяемой памяти можно с помощью задания минимального и максимального значений.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте эту страницу для просмотра или изменения параметров памяти сервера. Если параметр **Минимальный размер памяти сервера** равен 0, а параметр **Максимальный размер памяти сервера** равен 2 147 483 647 МБ, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] всегда может использовать оптимальный объем памяти, в зависимости от того, сколько памяти в текущий момент использует операционная система и другие приложения. При изменении загрузки компьютера и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] меняется объем выделенной памяти. Ограничить объем динамически выделяемой памяти можно с помощью задания минимального и максимального значений.  
   
 ## <a name="options"></a>Параметры  
  **Минимальный размер памяти сервера (в МБ)**  

@@ -1,5 +1,5 @@
 ---
-title: "Редактор задачи (страница «запросы профиля») «профилирование данных» | Документы Microsoft"
+title: "Редактор задачи \"Профилирование данных\" (страница \"Запросы профиля\") | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,22 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.dataprofilingtask.profilerequests.f1
-helpviewer_keywords:
-- Data Profiling Task Editor
+f1_keywords: sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords: Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 63b377a6412dc2c886f1aec2a76e6f94fa78eda5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Редактор задачи «Профилирование данных» (страница «Запросы профиля»)
   **Страница «Запросы профиля»** **редактора задачи «Профилирование данных»** используется для выбора и настройки профилей, которые необходимо вычислить. В рамках одной задачи «Профилирование данных» можно вычислить несколько профилей для нескольких столбцов или сочетаний столбцов из нескольких таблиц или представлений.  
@@ -138,25 +134,24 @@ ms.lasthandoff: 08/03/2017
   
  Эти параметры различаются в зависимости от выделенного профиля. Сведения о параметрах отдельных типов профилей см. в следующих разделах:  
   
--   [Параметры запроса профиля ключей кандидата &#40; данные профилирования задач &#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля потенциальных ключей (задача "Профилирование данных")](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля соотношения значений Null столбца &#40; данные профилирования задач &#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля соотношения значений NULL в столбцах (задача "Профилирование данных")](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля статистики столбцов &#40; данные профилирования задач &#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля статистики столбцов (задача "Профилирование данных")](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля распределения значения столбца &#40; данные профилирования задач &#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля распределения значений в столбцах (задача "Профилирование данных")](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля распределения длины столбца &#40; данные профилирования задач &#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля распределения длины столбцов (задача "Профилирование данных")](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля шаблона столбцов &#40; данные профилирования задач &#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля шаблона столбцов (задача "Профилирование данных")](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [Функциональные зависимости параметры запроса профиля &#40; данные профилирования задач &#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса для профиля функциональной зависимости (задача "Профилирование данных")](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [Параметры запроса профиля включения значение &#40; данные профилирования задач &#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [Параметры запроса профиля включения значений (задача "Профилирование данных")](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
 ## <a name="see-also"></a>См. также  
- [Данные профилирования редактор задач &#40; Страница "Общие" &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [Форма быстрого профиля одной таблицы &#40; данные профилирования задач &#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+ [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
-

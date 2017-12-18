@@ -1,5 +1,5 @@
 ---
-title: "Запуск и управление пакетами программным образом | Документы Microsoft"
+title: "Выполнение пакетов и управление пакетами программным образом | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 ms.assetid: 1a08c75e-ce8c-45ee-81bd-32248bbdb2b2
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 206411bed262d99b043cf667b9699a6fbeb85981
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6affcd02d932b1e382268f328a6e5c6abf8b177b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="running-and-managing-packages-programmatically"></a>Выполнение пакетов и управление пакетами программным образом
   Если требуется управлять пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и выполнять их за пределами среды разработки, можно делать это программно. Этот подход предоставляет следующие возможности.  
@@ -38,14 +35,14 @@ ms.lasthandoff: 09/26/2017
   
  Можно загрузить и выполнить существующий пакет из клиентского приложения при помощи всего нескольких строк кода.  
   
- В этом разделе рассматривается программное выполнение существующего пакета и получение доступа к выходу потока данных из другого приложения. Дополнительной возможностью программирования, можно программным образом создать [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] пакета построчно, как описано в разделе [построение пакетов программными средствами](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
+ В этом разделе рассматривается программное выполнение существующего пакета и получение доступа к выходу потока данных из другого приложения. Дополнительной возможностью программирования является возможность программно создавать пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] построчно, как описано в разделе [Программное построение пакетов](../../integration-services/building-packages-programmatically/building-packages-programmatically.md).  
   
  Также в этом разделе описываются другие задачи администрирования, которые можно выполнять программно для управления сохраненными пакетами, запуска пакетов и ролей пакетов.  
   
 ## <a name="running-packages-on-the-integration-services-server"></a>Выполнение пакетов на сервере службы Integration Services  
  При развертывании пакетов на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно запустить пакеты программным путем с помощью пространства имен <xref:Microsoft.SqlServer.Management.IntegrationServices>. Сборка Microsoft.SqlServer.Management.IntegrationServices компилируется с платформой .NET Framework 3.5. При построении приложения .NET Framework 4.0 может потребоваться добавить ссылку на сборку непосредственно в файл проекта.  
   
- Можно также использовать пространство имен для развертывания проектов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управления ими. Общие сведения о пространстве имен и фрагменты кода, см. в записи блога [Обзор модели управляемых объектов служб SSIS каталога](http://go.microsoft.com/fwlink/?LinkId=253122), на сайте blogs.msdn.com.  
+ Можно также использовать пространство имен для развертывания проектов [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на сервере [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и управления ими. Общие сведения о пространстве имен и фрагменты кода см. в записи блога [Обзор модели управляющих объектов каталога служб SSIS](http://go.microsoft.com/fwlink/?LinkId=253122) на сайте blogs.msdn.com.  
   
 ## <a name="in-this-section"></a>В этом разделе  
  [Основные сведения об отличиях между локальным и удаленным выполнением](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)  
@@ -69,7 +66,7 @@ ms.lasthandoff: 09/26/2017
  [Программное управление запуском пакетов](../../integration-services/run-manage-packages-programmatically/managing-running-packages-programmatically.md)  
  Описывается создание списка запущенных в настоящее время пакетов, исследование их свойств и остановка пакетов.  
   
- [Программное управление ролями пакетов &#40; Службы SSIS &#41;](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
+ [Программное управление ролями пакетов (служба SSIS)](../../integration-services/run-manage-packages-programmatically/managing-package-roles-programmatically-ssis-service.md)  
  Описывается получение или задание информации о ролях, назначенных пакету или папке.  
   
 ## <a name="reference"></a>Справочник  
@@ -90,4 +87,3 @@ ms.lasthandoff: 09/26/2017
  [службы SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   
-

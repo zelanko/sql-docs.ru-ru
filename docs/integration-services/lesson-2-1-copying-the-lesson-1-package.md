@@ -1,5 +1,5 @@
 ---
-title: "Шаг 1: Копирование пакета занятия 1 | Документы Microsoft"
+title: "Шаг 1. Копирование пакета, созданного на занятии 1 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b3b601049b8904d439136a1fdc9af7cd84a86b5b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: cc1fd5b193fa9b9a2da8931ad290b7f2612bd76f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-2-1---copying-the-lesson-1-package"></a>Занятие 2-1-копирование пакета занятия 1
+# <a name="lesson-2-1---copying-the-lesson-1-package"></a>Занятие 2–1. Копирование пакета, созданного на занятии 1
 В этой задаче будет создана копия пакета Lesson 1.dtsx, созданного на занятии 1. Если вы не прошли занятие 1, можно добавить пакет задания 1, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 2.  
   
 ### <a name="to-create-the-lesson-2-package"></a>Создание пакета занятия 2  
@@ -73,4 +70,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Шаг 2. Добавление и настройка контейнера "цикл по каждому элементу"](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
-

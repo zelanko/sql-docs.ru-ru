@@ -1,5 +1,5 @@
 ---
-title: "Разработка пользовательского интерфейса для пользовательского диспетчера соединений | Документы Microsoft"
+title: "Разработка пользовательского интерфейса для пользовательского диспетчера соединений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,24 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - custom connection managers [Integration Services], developing user interface
 - custom user interface [Integration Services], custom connection manager
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: c66c5410f38532c80a631cb190f248f7c5377bd5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 267313c3cc0c6d12f290088832ad908bf53dd980
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>Разработка пользовательского интерфейса для пользовательского диспетчера соединений
   После переопределения реализации свойств и методов базового класса для выполнения пользовательских функций может потребоваться создание настраиваемого пользовательского интерфейса для диспетчера соединений. Если собственный пользовательский интерфейс не создается, пользователи могут настроить только диспетчер соединений в диалоговом окне «Свойства».  
@@ -36,19 +33,19 @@ ms.lasthandoff: 08/03/2017
  В проекте или сборке собственного пользовательского интерфейса обычно существует два класса: класс, реализующий интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, и отображаемая им форма Windows для получения сведений от пользователя.  
   
 > [!IMPORTANT]  
->  После подписи и построения настраиваемого пользовательского интерфейса и его установки в глобальный кэш сборок, как описано в [кодирование пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), необходимо указать полное имя этого класса в <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> свойство <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
+>  После подписи и построения собственного пользовательского интерфейса и его установки в глобальный кэш сборок, как описано в разделе [Написание кода для пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/building-deploying-and-debugging-custom-objects.md), необходимо указать полное имя этого класса в свойстве <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A> атрибута <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>.  
   
 > [!NOTE]  
 >  Большая часть задач, источников и назначений в службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] работает только с определенными типами встроенных диспетчеров соединений. Поэтому данные образцы нельзя протестировать с помощью встроенных задач и компонентов.  
   
 ## <a name="coding-the-user-interface-class"></a>Написание кода для класса пользовательского интерфейса  
- <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> Интерфейса есть четыре метода: <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.New%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A>, и <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A>. Эти четыре метода описаны в следующих разделах.  
+ Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI> имеет четыре метода: <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.New%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Edit%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A>. Эти четыре метода описаны в следующих разделах.  
   
 > [!NOTE]  
 >  Возможно, писать код для метода <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Delete%2A> не потребуется, если при удалении пользователем экземпляра диспетчера соединений очистка не нужна.  
   
 ### <a name="initializing-the-user-interface"></a>Инициализация пользовательского интерфейса  
- В методе <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> конструктор указывает ссылку на диспетчер соединений, настроенный таким образом, что пользовательский интерфейс может изменять его свойства. Как показано в следующем коде, коду необходимо кэшировать ссылки managerfor подключения позже использовать.  
+ В методе <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize%2A> конструктор указывает ссылку на диспетчер соединений, настроенный таким образом, что пользовательский интерфейс может изменять его свойства. Как показано в следующем коде, эту ссылку на диспетчер соединений необходимо кэшировать для последующего использования.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As Microsoft.SqlServer.Dts.Runtime.ConnectionManager, ByVal serviceProvider As System.IServiceProvider) Implements Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI.Initialize  
@@ -170,7 +167,7 @@ public bool Edit(System.Windows.Forms.IWin32Window parentWindow, Microsoft.SqlSe
  После создания класса пользовательского интерфейса, реализующего методы интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionManagerUI>, необходимо создать форму Windows, в которой пользователь сможет настраивать свойства диспетчера соединений.  
   
 ### <a name="initializing-the-user-interface-form"></a>Инициализация формы пользовательского интерфейса  
- При отображении пользовательской формы для изменения можно передать ссылку на изменяемый диспетчер соединений. Можно передать эту ссылку или с помощью пользовательского конструктора для класса формы, или путем создания собственного **инициализировать** метода, как показано ниже.  
+ При отображении пользовательской формы для изменения можно передать ссылку на изменяемый диспетчер соединений. Эту ссылку можно передать или с помощью пользовательского конструктора для класса формы, или создав собственный метод **Initialize**, как показано ниже.  
   
 ```vb  
 Public Sub Initialize(ByVal connectionManager As ConnectionManager, ByVal serviceProvider As IServiceProvider)  
@@ -296,7 +293,6 @@ private void ConfigureControlsFromConnectionManager()
   
 ## <a name="see-also"></a>См. также:  
  [Создание пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/creating-a-custom-connection-manager.md)   
- [Кодирование пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
+ [Написание кода пользовательского диспетчера соединений](../../../integration-services/extending-packages-custom-objects/connection-manager/coding-a-custom-connection-manager.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Задание путей и указания по оптимизации для селективных XML-индексов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b52b967dd2ff43f96726326e7e58da1feca898a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: fd7817115889688a612e004c6eb44584acb49ff6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Задайте путь и указания по оптимизации для селективных XML-индексов
-  В данном разделе описывается настройка путей узла для индексирования и задание указаний по оптимизации для индексирования при создании или изменении селективных XML-индексов.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] В этом разделе описывается настройка путей узла для индексирования и задание подсказок оптимизации для индексирования при создании или изменении селективных XML-индексов.  
   
  Пути узла и указания по оптимизации задаются одновременно в одной из следующих инструкций:  
   

@@ -2,9 +2,12 @@
 title: "Свойства статьи — &lt;Статья&gt; | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44abce2c85d841034ec0e70433b29fbb48e99714
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e023115d959322e0e870d6ef43c7ffcdcc82f21f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="article-properties---ltarticlegt"></a>Свойства статьи — &lt;Статья&gt;
-  Диалоговое окно **Свойства статьи** доступно из мастера создания публикаций и диалогового окна **Свойства публикации** . Оно позволяет просматривать и устанавливать свойства для всех типов статей. Некоторые свойства могут быть установлены только при создании публикации, а другие могут устанавливаться только в случае, если у публикации нет активных подписок. Свойства, которые не могут быть установлены, отображаются как доступные только для чтения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Свойства статьи** доступно из мастера создания публикаций и диалогового окна **Свойства публикации**. Оно позволяет просматривать и устанавливать свойства для всех типов статей. Некоторые свойства могут быть установлены только при создании публикации, а другие могут устанавливаться только в случае, если у публикации нет активных подписок. Свойства, которые не могут быть установлены, отображаются как доступные только для чтения.  
   
 > [!NOTE]  
 >  После создания публикации для некоторых изменений свойств требуется новый моментальный снимок. Если на публикацию имеются подписки, для некоторых изменений также требуется повторная инициализация всех подписок. Дополнительные сведения см. в статье [Изменение свойств публикации и статьи](../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

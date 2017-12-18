@@ -1,5 +1,5 @@
 ---
-title: "Преобразование «Нечеткий уточняющий запрос» | Документы Microsoft"
+title: "Преобразование \"Нечеткий уточняющий запрос\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -36,17 +35,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: 75
+caps.latest.revision: "75"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 81427a1ae80ddf6a3d3135e8d814dc9944413e60
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="fuzzy-lookup-transformation"></a>преобразование «Нечеткий уточняющий запрос»
   Преобразование «Нечеткий уточняющий запрос» выполняет задачи по очистке данных, такие как стандартизация данных, исправление данных и предоставление отсутствующих значений.  
@@ -223,8 +221,7 @@ ms.lasthandoff: 08/19/2017
   
 ## <a name="see-also"></a>См. также:  
  [Преобразование «Уточняющий запрос»](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
- [Преобразование «Нечеткое группирование»](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
+ [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

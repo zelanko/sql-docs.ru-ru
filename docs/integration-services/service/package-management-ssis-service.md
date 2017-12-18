@@ -1,5 +1,5 @@
 ---
-title: "Пакет управления (службы SSIS) | Документы Microsoft"
+title: "Управление пакетами (службы SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 11/16/2016
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,31 +29,30 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 51d6e32f04d470c7f4ddfc8d3c4b6d994e0bd764
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
-  Пакет управления включает мониторинг, управление, Импорт и экспорт пакетов.  
+  Управление пакетами включает в себя операции мониторинга, управления, импорта и экспорта пакетов.  
  
  ## <a name="package-store"></a>Хранилище пакетов  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]предоставляет две папки верхнего уровня для доступа к пакетам: 
- - **Запуск пакетов** 
+ Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют две папки верхнего уровня для доступа к пакетам служб: 
+ - **Выполняемые пакеты** 
  - **Сохраненные пакеты**
 
  В папке **Выполняемые пакеты** отображаются пакеты, которые в данный момент выполняются на сервере. В папке **Сохраненные пакеты** перечислены пакеты, которые сохранены в хранилище пакетов. Это только те пакеты, которыми управляет служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хранилище пакетов может состоять либо из базы данных msdb, либо из папок файловой системы, перечисленных в файле конфигурации службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , либо как из базы данных, так и из файловой системы. В файле конфигурации указываются база данных msdb и папки файловой системы, над которыми требуется осуществлять управление. Где-либо в файловой системе могут также иметься пакеты, не управляемые службами [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
- Пакеты, сохраненные в базе данных msdb хранятся в таблице с именем sysssispackages. При сохранении пакетов в базе данных msdb, их можно сгруппировать в логические папки. Использование логических папок может помочь организовать пакеты по назначению или отфильтровывать пакеты в таблице sysssispackages. Создание новых логических папок в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. По умолчанию все логические папки, добавляемые в базу данных msdb, автоматически включаются в хранилище пакетов.  
+ Пакеты, сохраняемые в базе данных msdb, хранятся в таблице с именем sysssispackages. При сохранении пакетов в базе данных msdb их можно сгруппировать в логические папки. Использование логических папок помогает организовывать пакеты по назначению или отфильтровывать пакеты в таблице sysssispackages. Логические папки можно создавать с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. По умолчанию все логические папки, добавляемые в базу данных msdb, автоматически включаются в хранилище пакетов.  
   
- Логические папки, создаваемые вами, представляются в виде строк в таблице sysssispackagefolders в базе данных msdb. Столбцы folderid и parentfolderid в таблице sysssispackagefolders определяют иерархию папок. Корневые логические папки в базе данных msdb представлены строками таблицы sysssispackagefolders со значениями null в столбце parentfolderid. Дополнительные сведения см. в разделе [sysssispackages &#40; Transact-SQL &#41; ](../../relational-databases/system-tables/sysssispackages-transact-sql.md) и [sysssispackagefolders (Transact-SQL &)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md).  
+ Создаваемые логические папки представлены как строки в таблице sysssispackagefolders базы данных msdb. Столбцы folderid и parentfolderid в таблице sysssispackagefolders определяют иерархию папок. Корневые логические папки в базе данных msdb представлены строками таблицы sysssispackagefolders, которые содержат значение NULL в столбце parentfolderid. Дополнительные сведения см. в разделах [sysssispackages (Transact-SQL)](../../relational-databases/system-tables/sysssispackages-transact-sql.md) и [sysssispackagefolders (Transact-SQL)](../../relational-databases/system-tables/sysssispackagefolders-transact-sql.md).  
   
  При открытии среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и подключении к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]папки базы данных msdb, управляемые службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , перечислены внутри папки "Хранимые пакеты". Если файл конфигурации задает корневые папки файловой системы, то папка «Хранимые пакеты» также перечисляет пакеты, сохраненные в файловой системе в этих папках и всех ее вложенных папках.  
   
@@ -66,14 +64,14 @@ ms.lasthandoff: 08/03/2017
   
  Для просмотра списка пакетов в хранилище пакетов следует открыть среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и подключиться к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-## <a name="monitor-running-packages"></a>Контроля за выполнением пакетов  
- **Выполняемые пакеты** выводит список пакетов, выполняющихся в данный момент. Для просмотра сведений о текущих пакетах на странице **Сводка** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]щелкните папку **Выполняемые пакеты** . На странице **Сводка** приведены такие сведения, как время выполнения пакетов. При необходимости обновите содержимое папки для просмотра более свежих данных.  
+## <a name="monitor-running-packages"></a>Мониторинг выполняемых пакетов  
+ В папке **Выполняемые пакеты** находятся выполняемые в данный момент пакеты. Для просмотра сведений о текущих пакетах на странице **Сводка** в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]щелкните папку **Выполняемые пакеты** . На странице **Сводка** приведены такие сведения, как время выполнения пакетов. При необходимости обновите содержимое папки для просмотра более свежих данных.  
   
  Чтобы просмотреть сведения о выполняющемся пакете на странице **Сводка** , щелкните пакет. На странице **Сводка** представлены такие сведения, как версия и описание пакета.  
   
-Остановить выполнение пакета из **выполняемые пакеты** папку, щелкните пакет правой кнопкой мыши и выбрав **остановить**.  
+Можно остановить выполнение пакета в папке **Выполняемые пакеты**, щелкнув правой кнопкой мыши пакет и выбрав **Остановить**.  
   
-## <a name="view-packages-in-ssms"></a>Просмотр пакетов в среде SSMS
+## <a name="view-packages-in-ssms"></a>Просмотр пакетов в SSMS
     
  Эта процедура описывает подключение к службам [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и просмотр списка пакетов, которыми управляют службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     >  Если подключиться к [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]не удается, возможно, что служба [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не запущена. Чтобы узнать о состоянии службы, нажмите кнопку **Пуск**и последовательно выберите пункты **Все программы**, **Microsoft SQL Server**, **Средства настройки**и **Диспетчер конфигурации SQL Server**. На левой панели щелкните **Службы SQL Server**. На панели справа найдите службу [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если служба не запущена, запустите ее.  
   
-     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Откроется. По умолчанию окно «Обозреватель объектов» открыто и находится в нижнем левом углу среды разработки. Если обозреватель объектов не открыт, выберите **Обозреватель объектов** в меню **Вид** .  
+     [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . По умолчанию окно «Обозреватель объектов» открыто и находится в нижнем левом углу среды разработки. Если обозреватель объектов не открыт, выберите **Обозреватель объектов** в меню **Вид** .  
   
 ### <a name="to-view-the-packages-that-integration-services-service-manages"></a>Просмотр пакетов, управляемых службой служб Integration Services  
   
@@ -96,9 +94,9 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="import-and-export-packages"></a>Импорт и экспорт пакетов
  
- Пакеты можно сохранять либо в таблице sysssispackages базы данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], либо в файловой системе.  
+ Пакеты можно сохранять либо в таблице sysssispackages базы данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , либо в файловой системе.  
   
- Хранилище пакетов, являющееся логическим хранилищем, которое контролируется службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], может включать и базу данных msdb, и папки файловой системы, указанные в файле конфигурации для службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+ Хранилище пакетов, являющееся логическим хранилищем, которое контролируется службой [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , может включать и базу данных msdb, и папки файловой системы, указанные в файле конфигурации для службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Можно выполнять импорт и экспорт пакетов между следующими типами хранилищ:  
   
@@ -106,9 +104,9 @@ ms.lasthandoff: 08/03/2017
   
 -   Папки в хранилище пакетов служб SSIS. Две папки по умолчанию с именами File System и MSDB.  
   
--   База данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   База данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]предоставляет возможность импорта и экспорта пакетов и посредством этого изменения формата и места хранения пакетов. С помощью функций импорта и экспорта можно добавлять пакеты в файловую систему, хранилище пакетов или базу данных msdb, а также копировать пакеты из одного формата хранения в другой. Например, пакеты, сохраненные в msdb, можно скопировать в файловую систему и наоборот.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют возможность для импорта и экспорта пакетов и посредством этого изменения формата и места хранения пакетов. С помощью функций импорта и экспорта можно добавлять пакеты в файловую систему, хранилище пакетов или базу данных msdb, а также копировать пакеты из одного формата хранения в другой. Например, пакеты, сохраненные в msdb, можно скопировать в файловую систему и наоборот.  
   
  Можно также скопировать пакет в другой формат с помощью программы командной строки **dtutil** (dtutil.exe). Дополнительные сведения см. в статье [dtutil Utility](../../integration-services/dtutil-utility.md).  
   
@@ -128,13 +126,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-import-a-package-by-using-sql-server-management-studio"></a>Импорт пакета с помощью среды SQL Server Management Studio  
   
-1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выберите пункт среды **SQL Server Management Studio**.  
+1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и выберите пункт среды **SQL Server Management Studio**.  
   
 2.  В диалоговом окне **Соединение с сервером** установите следующие параметры.  
   
     -   В поле **Тип сервера** выберите **Службы Integration Services**.  
   
-    -   В **имя сервера** , введите имя сервера или выберите команду  **\<Обзор... >** и найдите нужный сервер.  
+    -   В поле **Имя сервера** введите имя сервера или щелкните **\<<Искать дальше...>** и найдите нужный сервер.  
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   
@@ -164,13 +162,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="to-export-a-package-by-using-sql-server-management-studio"></a>Экспорт пакета с помощью среды SQL Server Management Studio  
   
-1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и выберите пункт среды **SQL Server Management Studio**.  
+1.  Нажмите кнопку **Пуск**, укажите пункт **Microsoft** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и выберите пункт среды **SQL Server Management Studio**.  
   
 2.  В диалоговом окне **Соединение с сервером** установите следующие параметры.  
   
     -   В поле **Тип сервера** выберите **Службы Integration Services**.  
   
-    -   В **имя сервера** , введите имя сервера или выберите команду  **\<Обзор... >** и найдите нужный сервер.  
+    -   В поле **Имя сервера** введите имя сервера или щелкните **\<<Искать дальше...>** и найдите нужный сервер.  
   
 3.  Если обозреватель объектов не открыт, в меню **Вид** выберите пункт **Обозреватель объектов**.  
   
@@ -295,4 +293,3 @@ ms.lasthandoff: 08/03/2017
  [Службы Integration Services (службы SSIS)](../../integration-services/service/integration-services-service-ssis-service.md)  
   
   
-

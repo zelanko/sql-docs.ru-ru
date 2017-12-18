@@ -2,9 +2,12 @@
 title: "Определение порядка обработки для статей публикации слиянием | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f5b620fc73c704b30d87c9e95a10763ab27500cb
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1cb9d8b566766e23bfb17bc93b53d9d222fa3895
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-the-processing-order-of-merge-articles"></a>Указание порядка обработки статей публикации слиянием
-  Начиная с версии [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], порядок обработки статей для публикаций слиянием, принятый по умолчанию, можно переопределять. Это полезно, например, при определении ссылочной целостности с помощью триггеров и при этом триггеры должны запускаться в конкретном порядке.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Начиная с версии [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], порядок обработки статей для публикаций слиянием, принятый по умолчанию, можно переопределять. Это полезно, например, при определении ссылочной целостности с помощью триггеров и при этом триггеры должны запускаться в конкретном порядке.  
   
  **Указание порядка обработки статей**  
   

@@ -1,5 +1,5 @@
 ---
-title: "Catalog.move_environment (база данных SSISDB) | Документы Microsoft"
+title: "catalog.move_environment (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e08328e0baccaa9098d8647b50c6133de2504912
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 4c143403ba0ebfb429c8d7f646214704c4e692d4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +37,14 @@ catalog.move_environment [ @source_folder = ] source_folder
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @source_folder =] *source_folder*  
- Имя исходной папки, в которой среда хранится до перемещения. *Source_folder* — **nvarchar(128)**.  
+ [ @source_folder = ] *source_folder*  
+ Имя исходной папки, в которой среда хранится до перемещения. Параметр *source_folder* имеет тип **nvarchar(128)**.  
   
- [ @environment_name =] *environment_name*  
- Имя перемещаемой среды. *Environment_name* — **nvarchar(128)**.  
+ [ @environment_name = ] *environment_name*  
+ Имя перемещаемой среды. Параметр *environment_name* имеет тип **nvarchar(128)**.  
   
- [ @destination_folder =] *destination_folder*  
- Имя целевой папки, в которой среда хранится после перемещения. *Destination_folder* — **nvarchar(128)**.  
+ [ @destination_folder = ] *destination_folder*  
+ Имя целевой папки, в которой среда хранится после перемещения. Параметр *destination_folder* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -59,9 +57,9 @@ catalog.move_environment [ @source_folder = ] source_folder
   
 -   Разрешения READ и MODIFY для среды  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
@@ -79,4 +77,3 @@ catalog.move_environment [ @source_folder = ] source_folder
 >  Проект может иметь относительные или абсолютные ссылки на среду. Относительные ссылки указывают среду по имени, для использования этих ссылок среда должна находиться в той же папке, что и проект. Абсолютные ссылки указывают среду по имени и папке, они могут ссылаться на среду, расположенную в другой папке, отличной от папки, в которой находится проект.  
   
   
-

@@ -2,9 +2,12 @@
 title: "Сопоставители на основе технологии COM | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6d2b075d4880ddff279df4f578c23fe4424628ed
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 389e7b9b83ee1f9dda06e8338f9b4c7b34f18a12
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>Конфликт расширенной репликации слиянием: пользовательские сопоставители на основе технологии COM
-  Пользовательские сопоставители предоставляют большую гибкость по сравнению с механизмом разрешения конфликтов по умолчанию, и они могут реализовать бизнес-логику, необходимую для приложений, использующих реплицированные данные. Пользовательский сопоставитель на основе COM — это динамически подключаемая библиотека (DLL), которая реализует COM-интерфейс **ICustomResolver** , его методы и свойства, а также другие поддерживаемые интерфейсы и определения типов, разработанные специально для устранения конфликтов.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Пользовательские сопоставители предоставляют большую гибкость по сравнению с механизмом разрешения конфликтов по умолчанию и могут реализовать бизнес-логику, необходимую для приложений, использующих реплицированные данные. Пользовательский сопоставитель на основе COM — это динамически подключаемая библиотека (DLL), которая реализует COM-интерфейс **ICustomResolver** , его методы и свойства, а также другие поддерживаемые интерфейсы и определения типов, разработанные специально для устранения конфликтов.  
   
 > [!NOTE]  
 >  Рекомендуется использовать обработчик бизнес-логики вместо пользовательского сопоставителя на основе COM, если это возможно. Дополнительные сведения об обработчиках бизнес-логики см. в статье [Выполнение бизнес логики во время синхронизации слияния](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md).  

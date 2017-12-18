@@ -1,5 +1,5 @@
 ---
-title: "Преобразование кэша | Документы Microsoft"
+title: "Преобразование кэша | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
@@ -8,28 +8,25 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.cachetrans.f1
 - sql13.dts.designer.cachetranscon.f1
 - sql13.dts.designer.cachetransmap.f1
-helpviewer_keywords:
-- Cache transform
+helpviewer_keywords: Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 4f1a65ed00262cfc0af0d4c4f117ef022846e26c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: b1120ee2702b4951c91717a108997253de023d9c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cache-transform"></a>преобразование кэша
   Преобразование «Преобразование кэша» создает ссылочный набор данных для преобразования «Уточняющий запрос», выполняя запись из подключенного источника данных в потоке данных в диспетчер соединений с кэшем. Преобразование «Подстановка» выполняет подстановки, соединяя данные из входных столбцов подключенного источника данных и данные из столбцов в связанной базе данных.  
@@ -45,7 +42,7 @@ ms.lasthandoff: 08/19/2017
   
  В пределах одного пакета только одно преобразование «Преобразование кэша» может производить запись в один диспетчер соединений с кэшем. Если в пакете содержится несколько преобразований «Преобразование кэша», запись в диспетчер соединений будет производить первое преобразование, вызванное при запуске пакета. Операции записи последующих преобразований «Преобразование кэша» завершатся ошибкой.  
   
- Дополнительные сведения см. в разделе [диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
+ Дополнительные сведения см. в разделе [Редактор диспетчера соединений с кэшем](../../../integration-services/data-flow/transformations/cache-connection-manager.md).  
   
 ## <a name="configuration-of-the-cache-transform"></a>Настройка преобразования кэша  
  Диспетчер соединений с кэшем можно настроить на сохранение данных в файлы кэша (CAW).  
@@ -85,4 +82,3 @@ ms.lasthandoff: 08/19/2017
  [Поток данных](../../../integration-services/data-flow/data-flow.md)  
   
   
-

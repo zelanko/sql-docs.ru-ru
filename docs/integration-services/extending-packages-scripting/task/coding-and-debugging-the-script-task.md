@@ -1,5 +1,5 @@
 ---
-title: "Кодирование и отладка задачи «скрипт» | Документы Microsoft"
+title: "Написание кода и отладка задачи \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], debugging
 - SSIS Script task, development environment
@@ -26,50 +23,49 @@ helpviewer_keywords:
 - VSTA
 - SSIS Script task, coding
 ms.assetid: 687c262f-fcab-42e8-92ae-e956f3d92d69
-caps.latest.revision: 81
+caps.latest.revision: "81"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8c706fc1db3e31130a7754b9e4c3d16f9a13eaf4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2bccd7c5b39ff2614eb390ed60ebb41653127f81
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Написание кода и отладка задачи «Скрипт»
-  После настройки скрипт задачи в **редактор задачи «скрипт»**, написать пользовательский код в среде разработки задачи скрипта.  
+  После настройки задачи "Скрипт" в окне **Редактор задачи "Скрипт"** нужно создать пользовательский код в среде разработки задачи "Скрипт".  
   
 ## <a name="script-task-development-environment"></a>Среда разработки задачи «Скрипт»  
- Задача «скрипт» использует [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] средств для приложений (VSTA) в качестве среды разработки для самого сценария.  
+ Задача "Скрипт" использует набор средств [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools для работы с приложениями (VSTA) в качестве среды разработки для самого скрипта.  
   
- Код скрипта пишется на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Укажите язык скриптов, задав **ScriptLanguage** свойство в **редактор задачи «скрипт»**. Если разработчик предпочитает пользоваться другим языком программирования, можно разработать пользовательскую сборку на выбранном языке и вызвать его функциональные возможности из кода в задаче «Скрипт».  
+ Код скрипта пишется на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#. Пользователь указывает язык скрипта, задавая значение свойства **ScriptLanguage** в окне **Редактор задачи "Скрипт"**. Если разработчик предпочитает пользоваться другим языком программирования, можно разработать пользовательскую сборку на выбранном языке и вызвать его функциональные возможности из кода в задаче «Скрипт».  
   
  Скрипт, созданный в задаче «Скрипт», хранится в определении пакета. Отдельного файла скрипта не существует. Поэтому использование задачи «Скрипт» не влияет на развертывание пакета.  
   
 > [!NOTE]  
 >  При проектировании пакета и отладке скрипта код скрипта временно записывается в файл проекта. Хранение конфиденциальных сведений в файле представляет потенциальный риск для безопасности, поэтому в код скрипта не рекомендуется включать конфиденциальные данные, например пароли.  
   
- По умолчанию **Option Strict** в Интегрированной среде разработки отключена.  
+ По умолчанию параметр **Option Strict** в интегрированной среде разработки отключен.  
   
 ## <a name="script-task-project-structure"></a>Структура проекта задачи «Скрипт»  
  При создании или изменении скрипта, содержащегося в задаче «Скрипт» средства VSTA открывают новый пустой проект или повторно открывают существующий проект. Создание этого проекта VSTA не влияет на развертывание пакета, поскольку проект сохраняется внутри пакетного файла и задача «Скрипт» не создает дополнительных файлов.  
   
 ### <a name="project-items-and-classes-in-the-script-task-project"></a>Элементы и классы проекта в проекте задачи «Скрипт»  
- По умолчанию проект задачи скрипта, отображаются в окне обозревателя проекта VSTA содержит один элемент, **ScriptMain**. **ScriptMain** элемент, в свою очередь, содержит один класс, именуемый **ScriptMain**. Элементы кода в классе изменяются в зависимости от языка программирования, выбранного для задачи «Скрипт».  
+ По умолчанию проект задачи "Скрипт", отображаемый в окне обозревателя проектов VSTA, содержит один элемент — **ScriptMain**. В свою очередь, элемент **ScriptMain** содержит один класс, именуемый **ScriptMain**. Элементы кода в классе изменяются в зависимости от языка программирования, выбранного для задачи «Скрипт».  
   
--   После настройки задачи «скрипт» для [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] языке программирования **ScriptMain** класс имеет открытую подпрограмму **Main**. **ScriptMain.Main** подпрограммы — метод, который среда выполнения вызывает при выполнении задачи «скрипт».  
+-   Если задача "Скрипт" настроена для языка программирования [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)], класс **ScriptMain** содержит открытую подпрограмму **Main**. Подпрограмма **ScriptMain.Main** является методом, который вызывается во время выполнения задачи "Скрипт".  
   
-     По умолчанию только код в **Main** подпрограммы нового скрипта является строка `Dts.TaskResult = ScriptResults.Success`. Эта строка извещает среду выполнения об успешной работе задачи. **Dts.TaskResult** свойство рассматривается в [возврат результатов из задачи «скрипт»](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     По умолчанию единственным кодом в подпрограмме **Main** нового скрипта является строка `Dts.TaskResult = ScriptResults.Success`. Эта строка извещает среду выполнения об успешной работе задачи. Свойство **Dts.TaskResult** описано в разделе [Возврат результатов из задачи "Скрипт"](../../../integration-services/extending-packages-scripting/task/returning-results-from-the-script-task.md).  
   
--   При настройке задачи «скрипт» для Visual C# языке программирования **ScriptMain** класс имеет открытый метод **Main**. Этот метод вызывается при запуске задачи «Скрипт».  
+-   Если для задачи "Скрипт" задан язык программирования Visual C#, то класс **ScriptMain** имеет публичный метод **Main**. Этот метод вызывается при запуске задачи «Скрипт».  
   
-     По умолчанию **Main** метода содержит строку `Dts.TaskResult = (int)ScriptResults.Success`. Эта строка извещает среду выполнения об успешной работе задачи.  
+     По умолчанию метод **Main** включает строку `Dts.TaskResult = (int)ScriptResults.Success`. Эта строка извещает среду выполнения об успешной работе задачи.  
   
- **ScriptMain** может содержать классы, отличный от **ScriptMain** класса. Классы доступны только задаче «Скрипт», в которой они находятся.  
+ Элемент **ScriptMain** может содержать классы, отличные от класса **ScriptMain**. Классы доступны только задаче «Скрипт», в которой они находятся.  
   
- По умолчанию **ScriptMain** элемент проекта содержит следующий автоматически формируемый код. В шаблоне кода также имеются общие сведения о задаче «Скрипт» и дополнительные сведения о получении и управлении такими объектами служб SSIS, как переменные, события и подключения.  
+ По умолчанию элемент проекта **ScriptMain** содержит следующий автоматически формируемый код. В шаблоне кода также имеются общие сведения о задаче «Скрипт» и дополнительные сведения о получении и управлении такими объектами служб SSIS, как переменные, события и подключения.  
   
 ```vb  
 ' Microsoft SQL Server Integration Services Script Task  
@@ -207,28 +203,28 @@ To open Help, press F1.
 ```  
   
 ### <a name="additional-project-items-in-the-script-task-project"></a>Дополнительные элементы проекта в проекте задачи «Скрипт»  
- Задача проект скрипта может содержать такие элементы, используемый по умолчанию **ScriptMain** элемента. К проекту можно добавлять классы, модули и файлы кодов. Можно также использовать папки для организации групп элементов. Все добавляемые элементы сохраняются внутри пакета.  
+ Проект задачи "Скрипт" может содержать элементы, отличные от элемента **ScriptMain** по умолчанию. К проекту можно добавлять классы, модули и файлы кодов. Можно также использовать папки для организации групп элементов. Все добавляемые элементы сохраняются внутри пакета.  
   
 ### <a name="references-in-the-script-task-project"></a>Ссылки в проекте задачи «Скрипт»  
- Можно добавить ссылки на управляемые сборки, щелкнув правой кнопкой мыши проект задачи скрипта в **обозревателя проектов**и выбрав **добавить ссылку**. Дополнительные сведения см. в разделе [ссылки на другие сборки в решениях сценариев](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
+ Чтобы добавить ссылки в управляемые сборки, щелкните правой кнопкой мыши проект задачи "Скрипт" в **Обозревателе проектов**, затем выберите **Добавить ссылку**. Дополнительные сведения см. в разделе [Ссылки на другие сборки в решениях со сценариями](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md).  
   
 > [!NOTE]  
->  Ссылки проекта можно просмотреть в среде разработки VSTA в **представление классов** или в **обозревателя проектов**. Можно открыть из этих окон **представление** меню. Можно добавить новую ссылку из **проекта** меню из **обозревателя проектов**, или из **представление классов**.  
+>  Ссылки проекта можно просмотреть в среде разработки VSTA в **представлении классов** или в **обозревателе проектов**. Любое из этих окон можно открыть из меню **Вид**. Можно добавить новую ссылку из меню **Проект**, из **обозревателя проектов** или из **представления классов**.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>Взаимодействие с пакетом в задаче «Скрипт»  
- Задача «скрипт» использует глобальный **Dts** объекта, который является экземпляром из <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> класс и его элементы должны взаимодействовать с содержащим их пакетом и [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] среды выполнения.  
+ Задача "Скрипт" использует глобальный объект **Dts**, являющийся экземпляром класса <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, а его элементы должны взаимодействовать с содержащим их пакетом и со средой выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)].  
   
- В следующей таблице перечислены основные открытые элементы <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> класс, который предоставляется коду Задача сценария через глобальный **Dts** объекта. В этом разделе более подробно рассматривается использование этих элементов.  
+ В следующей таблице представлены основные открытые элементы класса <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>, который представлен в коде задачи "Скрипт" через глобальный объект **Dts**. В этом разделе более подробно рассматривается использование этих элементов.  
   
 |Член|Назначение|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Предоставляет доступ к диспетчерам соединений, определенным в пакете.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Предоставляет интерфейс событий, чтобы задача «Скрипт» могла инициировать ошибки, предупреждения и информационные сообщения.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Предоставляет простой способ возвращения одного объекта в среду выполнения (в дополнение к **TaskResult**), также может использоваться для ветвления рабочего процесса.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A>|Предоставляет простой способ возвращения одного объекта в среду выполнения (в дополнение к **TaskResult**), который может также использоваться для ветвления рабочего процесса.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>|Записывает во включенные регистраторы данные, такие как ход выполнения задачи и результаты.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A>|Сообщает об успешном или неуспешном выполнении задачи.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Transaction%2A>|Предоставляет транзакцию, если она имеется, в которой работает контейнер задачи.|  
-|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|Предоставляет доступ к переменным, указанным в **ReadOnlyVariables** и **ReadWriteVariables** задач свойств, используемых в скрипте.|  
+|<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>|Предоставляет доступ к используемым в скрипте переменным, указанным в свойствах **ReadOnlyVariables** и **ReadWriteVariables** задачи.|  
   
  Класс <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel> содержит также некоторые открытые элементы, которые, вероятно, не будут использованы.  
   
@@ -253,11 +249,10 @@ To open Help, press F1.
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Запись в блоге [VSTA установке и настройке VSTA для установок SSIS 2008 и R2](http://go.microsoft.com/fwlink/?LinkId=215661), на сайте blogs.msdn.com.  
+-   Запись в блоге [Затруднения при установке и настройке VSTA для установок SSIS 2008 и R2](http://go.microsoft.com/fwlink/?LinkId=215661) на сайте blogs.msdn.com.  
   
 ## <a name="see-also"></a>См. также:  
- [Ссылки на другие сборки в решениях со сценариями](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
- [Настройка задачи «скрипт» в редакторе сценариев задач](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
+ [Ссылки на другие сборки в решениях со скриптами](../../../integration-services/extending-packages-scripting/referencing-other-assemblies-in-scripting-solutions.md)   
+ [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  
   
   
-

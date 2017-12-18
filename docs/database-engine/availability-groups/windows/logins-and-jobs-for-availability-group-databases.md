@@ -2,9 +2,12 @@
 title: "Имена входа и задания для баз данных групп доступности | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ce98cfd35c45966509fcee5d4cc9594fd4c48139
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3643ec9676ef251bb022b16e50529b1bdfeae45c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logins-and-jobs-for-availability-group-databases"></a>Имена входа и задания для баз данных групп доступности
-  Необходимо постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Следует постоянно поддерживать одинаковый набор имен входа пользователей и заданий агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в каждой базе данных-источнике группы доступности AlwaysOn и соответствующих баз данных-получателей. Имена входа и задания необходимо воспроизвести на каждом экземпляре [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , на котором размещается реплика доступности для группы доступности.  
   
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Задания агентов**  
   

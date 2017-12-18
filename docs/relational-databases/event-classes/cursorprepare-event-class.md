@@ -2,9 +2,12 @@
 title: "Класс событий CursorPrepare | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 978867c63089538ad4d02c92058fa147560e7ee3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 6fcbca475c65b6fb1b3aed42f49bfa7dace3cea8
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorprepare-event-class"></a>CursorPrepare, класс событий
-  Класс событий **CursorPrepare** описывает события подготовки курсора, имеющие место с курсорами прикладного интерфейса программирования (API). Событие подготовки курсора наступает, когда компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] компилирует связанную с курсором инструкцию SELECT в план выполнения, но не создает курсор.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий **CursorPrepare** описывает события подготовки курсора, имеющие место в курсорах программного интерфейса (API). Событие подготовки курсора наступает, когда компонент [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] компилирует связанную с курсором инструкцию SELECT в план выполнения, но не создает курсор.  
   
  Включите класс событий **CursorPrepare** в трассировки, записывающие производительность курсоров. Когда класс событий **CursorPrepare** включен в трассировку, объем дополнительной нагрузки будет зависеть от того, насколько часто курсоры используются в базе данных во время трассировки. Если курсоры используются активно, трассировка может существенно снизить производительность.  
   

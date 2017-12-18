@@ -2,9 +2,12 @@
 title: "Пошаговая отладка кода Transact-SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eae8d3d85744058fef34a6bfb97460f531c6c2be
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: cc1cc4305f53fe709a984f9cb16776c2f911b8cb
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="step-through-transact-sql-code"></a>Пошаговая отладка кода Transact-SQL
-  Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет выбирать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , которые будут выполняться в окне редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Отладчик можно останавливать на отдельных инструкциях, а затем просматривать состояние элементов кода в этой точке.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет выбирать инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], которые будут выполняться в окне редактора запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Отладчик можно останавливать на отдельных инструкциях, а затем просматривать состояние элементов кода в этой точке.  
   
 ## <a name="breakpoints"></a>Точки останова  
  Точка останова указывает отладчику приостановку выполнения на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] . Дополнительные сведения о точках останова см. в статье [Точки останова Transact-SQL](../../relational-databases/scripting/transact-sql-breakpoints.md).  

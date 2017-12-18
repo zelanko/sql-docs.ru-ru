@@ -2,9 +2,12 @@
 title: "Сравнение типизированного и нетипизированного XML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -29,14 +32,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 80233d9013231c07cb1f9236f357f2ca30622995
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Сравнение типизированного и нетипизированного XML
-  Можно создать переменные, параметры и столбцы типа **xml** . При необходимости можно связать коллекцию схем XML с переменной, параметром или столбцом типа **xml** . В данном случае экземпляр типа данных **xml** называется *типизированным*. В противном случае экземпляр XML называется *нетипизированным*.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Можно создать переменные, параметры и столбцы типа **xml**. При необходимости можно связать коллекцию схем XML с переменной, параметром или столбцом типа **xml** . В данном случае экземпляр типа данных **xml** называется *типизированным*. В противном случае экземпляр XML называется *нетипизированным*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>XML-документы правильного формата и тип данных XML  
  Тип данных **xml** соответствует типу данных **xml** стандарта ISO. Таким образом, он позволяет хранить синтаксически корректные документы XML 1.0, а также так называемые фрагменты XML-содержимого с текстовыми узлами и произвольным числом элементов верхнего уровня в нетипизированном XML-столбце. Система, осуществляющая проверку правильности формата данных, не требует, чтобы столбец был связан с XML-схемами, и отклоняет данные, имеющие неправильный формат в общепринятом смысле. Это также верно для нетипизированных переменных и параметров типа XML.  

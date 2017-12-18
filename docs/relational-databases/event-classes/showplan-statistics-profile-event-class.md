@@ -2,9 +2,12 @@
 title: "Столбцы данных класса событий Showplan Statistics Profile | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fce31743a7bb66586b414d2e4b720bd70216d379
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: acf72e8f528b80074ec964b375c00e172119bbed
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-statistics-profile-event-class"></a>Showplan Statistics Profile, класс событий
-  Класс событий Showplan Statistics Profile происходит, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию SQL. Включаемые в эти события сведения представляют собой часть данных, доступных в классе событий Showplan XML Statistics Profile.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий Showplan Statistics Profile происходит, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию SQL. Включаемые в эти события сведения представляют собой часть данных, доступных в классе событий Showplan XML Statistics Profile.  
   
  Класс событий Showplan Statistics Profile выводит полные данные времени компиляции. Трассировки, содержащие профиль статистики инструкции Showplan, могут значительно снизить производительность. Чтобы свести их к минимуму, сделайте использование этого класса событий доступным только для трассировок, наблюдающих за отдельными проблемами в течение короткого промежутка времени.  
   

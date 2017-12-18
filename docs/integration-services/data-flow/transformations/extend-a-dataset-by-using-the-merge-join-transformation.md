@@ -1,5 +1,5 @@
 ---
-title: "Расширение набора данных с помощью преобразование «Соединение слиянием» | Документы Microsoft"
+title: "Расширение набора данных с помощью преобразования \"Соединение слиянием\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0a7d7b4a2af89c855a6269d90d94f79465bfad8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 72dedff881d8cefe4b2eb0ecbcfc37994cdc0143
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Расширение набора данных при помощи преобразования «Соединение слиянием»
   Чтобы добавить и настроить преобразование «Соединение слиянием», пакет должен содержать по крайней мере одну задачу потока данных и два компонента потока данных, которые используются в качестве входных для преобразования «Соединение слиянием».  
@@ -69,10 +67,9 @@ ms.lasthandoff: 08/03/2017
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [«Соединение слиянием»](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
+ [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)  
   
   
-

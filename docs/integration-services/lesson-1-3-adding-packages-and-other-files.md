@@ -1,5 +1,5 @@
 ---
-title: "Шаг 3: Добавление пакетов и других файлов | Документы Microsoft"
+title: "Шаг 3. Добавление пакетов и других файлов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f8cf4eedc8930492e28f41cee67f0c25a382bacd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 43f5f8e693aac51bee20a4ca7b29a5cb0676cf92
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-1-3---adding-packages-and-other-files"></a>Занятие 1-3 - Добавление пакетов и других файлов
+# <a name="lesson-1-3---adding-packages-and-other-files"></a>Занятие 1–3. Добавление пакетов и других файлов
 В этой задаче к проекту, созданному в предыдущей задаче учебника по развертыванию, добавляются существующие пакеты, вспомогательные файлы для поддержки отдельных пакетов, а также файл сведений. Например, будет добавлен файл XML-данных, содержащий данные для пакета, и текстовый файл Readme с данными о всех пакетах проекта.  
   
 При развертывании пакетов в тестовой или рабочей среде файлы данных обычно не включаются в развертывание. Вместо этого источники данных настраиваются таким образом, чтобы обновлять соответствующие пути доступа к тестовым или рабочим версиям файлов или баз банных. В данном учебнике файлы данных включены в пакет развертывания для учебных целей.  
@@ -82,4 +79,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Разработка пользовательской задачи | Документы Microsoft"
+title: "Разработка пользовательской задачи | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -28,17 +26,16 @@ helpviewer_keywords:
 - tasks [Integration Services], custom
 - TaskHost object
 ms.assetid: dcbd8615-fa6d-4ddb-b8a5-0b19dddd6239
-caps.latest.revision: 67
+caps.latest.revision: "67"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a6f9c16453365ce5b7a278f352c8cec8d86c2780
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 265f05d748398eb4a219899681c0bf71eb481b44
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-task"></a>Разработка пользовательской задачи
   Для выполнения элементов работы, направленных на обеспечение извлечения, преобразования и загрузки данных службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] используют задачи. В службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] имеются различные задачи, выполняющие наиболее часто используемые действия, от извлечения инструкции SQL до загрузки файла с FTP-сайта. Если имеющиеся задачи и поддерживаемые действия не удовлетворяют потребностям пользователя, можно создать пользовательскую задачу.  
@@ -51,16 +48,16 @@ ms.lasthandoff: 08/03/2017
  [Создание пользовательской задачи](../../../integration-services/extending-packages-custom-objects/task/creating-a-custom-task.md)  
  Описывает первый шаг, состоящий в создании пользовательской задачи.  
   
- [Программирования пользовательской задачи](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)  
+ [Создание кода пользовательской задачи](../../../integration-services/extending-packages-custom-objects/task/coding-a-custom-task.md)  
  Описывает, как кодировать основные методы пользовательской задачи.  
   
- [Подключение к источникам данных в пользовательской задаче](../../../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
+ [Соединение с источниками данных в пользовательской задаче](../../../integration-services/extending-packages-custom-objects/task/connecting-to-data-sources-in-a-custom-task.md)  
  Описывает, как соединить пользовательскую задачу с источником данных.  
   
  [Вызов и определение событий в пользовательской задаче](../../../integration-services/extending-packages-custom-objects/task/raising-and-defining-events-in-a-custom-task.md)  
  Описывает, как обеспечить вызов событий и определить пользовательские события для пользовательской задачи.  
   
- [Добавление поддержки отладки в пользовательской задаче](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
+ [Добавление поддержки отладки в пользовательскую задачу](../../../integration-services/extending-packages-custom-objects/task/adding-support-for-debugging-in-a-custom-task.md)  
  Описывает, как создать целевые объекты точек останова в пользовательской задаче.  
   
  [Разработка пользовательского интерфейса для пользовательской задачи](../../../integration-services/extending-packages-custom-objects/task/developing-a-user-interface-for-a-custom-task.md)  
@@ -89,15 +86,14 @@ ms.lasthandoff: 08/03/2017
  [Разработка пользовательского регистратора](../../../integration-services/extending-packages-custom-objects/log-provider/developing-a-custom-log-provider.md)  
  Описывает вопросы программирования пользовательских регистраторов.  
   
- [Разработка пользовательских перечислитель](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
+ [Разработка пользовательского перечислителя по каждому элементу](../../../integration-services/extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Описывает вопросы программирования пользовательских перечислителей.  
   
  [Разработка пользовательского компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md)  
  Описывает вопросы программирования пользовательских источников, преобразований и назначений потока данных.  
   
 ## <a name="see-also"></a>См. также:  
- [Расширение пакетов с помощью задачи «скрипт»](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
+ [Расширение пакета с помощью задачи "Скрипт"](../../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
  [Сравнение решений со сценариями и пользовательских объектов](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
-

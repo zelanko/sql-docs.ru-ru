@@ -1,5 +1,5 @@
 ---
-title: "Создание базы данных (мастер экспорта и импорта SQL Server) | Документы Microsoft"
+title: "Создание базы данных (мастер импорта и экспорта SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.createdatabase.f1
+f1_keywords: sql13.dts.impexpwizard.createdatabase.f1
 ms.assetid: 56a8a79f-086c-4bdc-8888-0045bb4b0cbf
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3f8c2b652515f4c84121dcf14371a9e86c8f86f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: aa72ff1cc846db19f946bff714e97303c41306f3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-database-sql-server-import-and-export-wizard"></a>Создание базы данных (мастер импорта и экспорта SQL Server)
 Если на странице **Выбор назначения** выбрать вариант **Создать** для создания целевой базы данных SQL Server, мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображает диалоговое окно **Создание базы данных** . На этой странице можно указать имя новой базы данных. При необходимости можно также изменить параметры для начального размера и автоматического увеличения новой базы данных и ее файла журнала. 
 
-**Create Database** диалоговом окне в мастере доступны только основные параметры, доступные для создания новой базы данных SQL Server. Чтобы просмотреть и настроить все параметры для нового [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] базы данных, используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания базы данных или Настройка базы данных после ее создания. 
+Диалоговое окно **Создание базы данных** в мастере содержит лишь базовые параметры, доступные для создания базы данных SQL Server. Чтобы просмотреть и настроить все параметры для новой базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для создания базы данных или ее настройки после создания мастером. 
 
 > [!NOTE]
 > Если вам нужны сведения об инструкции CREATE TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)], а не о диалоговом окне **Создание базы данных** мастера импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. раздел [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -38,13 +35,13 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot-of-the-create-database-page"></a>Снимок экрана: страница "Создание базы данных"  
 На следующем снимке экрана показано диалоговое окно **Создание базы данных** в мастере.  
 
-![Страница создания базы данных из мастера импорта и экспорта](../../integration-services/import-export-data/media/create-database.png "страницы создания базы данных из мастера импорта и экспорта")  
+![Страница создания базы данных в мастере импорта и экспорта](../../integration-services/import-export-data/media/create-database.png "Страница создания базы данных в мастере импорта и экспорта")  
 
 ## <a name="provide-a-name-for-the-new-database"></a>Ввод имени новой базы данных  
 **Название**  
- Введите имя целевой базы данных SQL Server.
+ Введите имя для целевой базы данных SQL Server.
  
-### <a name="naming-requirements"></a>Требования к именованию
+### <a name="naming-requirements"></a>Требования к именам
 При вводе имени обязательно следуйте соглашениям об именовании SQL Server.  
   
 -   Имя базы данных должно быть уникальным в рамках экземпляра SQL Server.  
@@ -97,5 +94,4 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="whats-next"></a>Дальнейшие действия  
  После указания имени для новой базы данных и нажатия кнопки **ОК**в диалоговом окне **Создание базы данных** снова открывается страница **Выбор назначения** . Дополнительные сведения см. в разделе [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md).  
-
 

@@ -1,5 +1,5 @@
 ---
-title: "ОБЪЕДИНЕНИЕ пакетов в службах Integration Services | Документы Microsoft"
+title: "Предложение MERGE в пакетах служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- MERGE statement [SQL Server]
+helpviewer_keywords: MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a3b26c9c918e1a3c59b0bd8cd688b3fff2d6a868
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="merge-in-integration-services-packages"></a>Предложение MERGE в пакетах служб Integration Services
   Для текущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]инструкция SQL в задаче "Выполнить SQL" может содержать инструкцию MERGE. Эта инструкция MERGE позволяет выполнять несколько операций INSERT, UPDATE и DELETE в единой инструкции.  
@@ -77,4 +74,3 @@ ms.lasthandoff: 08/03/2017
  База данных Inventory содержит таблицу ProductsInventory, в которой есть столбцы ProductID и StockOnHand. Таблица Shipments со столбцами ProductID, CustomerID и Quantity хранит данные об отгрузке товаров заказчикам. Таблица ProductInventory должна ежедневно обновляться на основании данных из таблицы Shipments. Уменьшить указанное в таблице ProductInventory количество товара на основании данных об отгрузке можно с помощью единственной инструкции MERGE. Если запас товара на складе упал до 0, инструкция MERGE может также удалить строку этого продукта из таблицы ProductInventory.  
   
   
-

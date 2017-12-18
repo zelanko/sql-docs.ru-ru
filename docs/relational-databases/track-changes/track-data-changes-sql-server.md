@@ -2,9 +2,12 @@
 title: "Отслеживание изменений данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/08/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: track-changes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6b0846e43315062143d462a82e2c588db00b1169
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: acb1b3a650c43652dd6a2b46e52ce84690173f6d
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="track-data-changes-sql-server"></a>Отслеживание измененных данных (SQL Server)
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет две функции отслеживания изменений в базе данных: [система отслеживания измененных данных](#Capture) и [отслеживание изменений](#Tracking). Эти функции позволяют приложениям обнаруживать изменения DML (операции вставки, обновления и удаления), произведенные в пользовательских таблицах базы данных. Отслеживание измененных данных и отслеживание изменений можно включить для одной и той же базы данных без каких-либо дополнительных действий. Список выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих отслеживание измененных данных и отслеживание изменений, см. в разделе [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Отслеживание изменений поддерживается [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] предоставляет две функции для отслеживания изменений в базе данных: [система отслеживания измененных данных](#Capture) и [отслеживание изменений](#Tracking). Эти функции позволяют приложениям обнаруживать изменения DML (операции вставки, обновления и удаления), произведенные в пользовательских таблицах базы данных. Отслеживание измененных данных и отслеживание изменений можно включить для одной и той же базы данных без каких-либо дополнительных действий. Список выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , поддерживающих отслеживание измененных данных и отслеживание изменений, см. в разделе [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md). Отслеживание изменений поддерживается [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].
   
 ## <a name="benefits-of-using-change-data-capture-or-change-tracking"></a>Преимущества использования отслеживания измененных данных или отслеживания изменений  
  Возможность выполнять запросы к измененным данным в базе данных — важное условие для эффективной работы некоторых приложений. Обычно для определения изменений данных разработчикам приложений приходилось реализовывать в своих приложениях специальный метод отслеживания, использующий сочетание триггеров, столбцов отметок времени и дополнительных таблиц. Создание таких приложений обычно связано с большими трудозатратами, требует обновлений схемы и часто вызывает серьезное снижение производительности.  

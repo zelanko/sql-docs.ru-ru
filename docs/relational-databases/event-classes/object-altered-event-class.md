@@ -2,9 +2,12 @@
 title: "Класс событий Object:Altered | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd36a75d1672a25cd2a8571d0b9d6c240088065f
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8a7c43fda5f0543e51a835f70dbee5be6b94ad1a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="objectaltered-event-class"></a>Object:Altered, класс событий
-  Класс событий Object:Altered указывает на изменение объекта, например инструкциями ALTER INDEX, ALTER TABLE или ALTER DATABASE. Этот класс событий можно использовать для определения, был ли изменен объект, например приложениями ODBC, которые часто создают временные хранимые процедуры.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий Object:Altered указывает на изменение объекта, например инструкциями ALTER INDEX, ALTER TABLE или ALTER DATABASE. Этот класс событий можно использовать для определения, был ли изменен объект, например приложениями ODBC, которые часто создают временные хранимые процедуры.  
   
  Класс событий Object:Altered всегда происходит в виде двух событий. Первое событие указывает на фазу начала. Второе событие указывает на фазу отката или фиксирования.  
   

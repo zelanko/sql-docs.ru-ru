@@ -1,5 +1,5 @@
 ---
-title: "Экземпляр Oracle CDC | Документы Microsoft"
+title: "Экземпляр CDC Oracle | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ed71e8c4-e013-4bf2-8b6c-1e833ff2a41d
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 13704cfef54e3401d31eb22f6dca9c9f247c079b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 2e34f2e09e740e44566fb6081ebfe1dcd5842d97
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-oracle-cdc-instance"></a>Экземпляр CDC Oracle
   Экземпляр Oracle CDC — это процесс, создаваемый службой Oracle CDC Service для обработки изменений, отслеживаемых в одной базе данных-источнике Oracle. Экземпляр Oracle CDC получает свою конфигурацию из таблицы **cdc.xdbcdc_config** и передает данные о своем состоянии в таблицу **cdc.xdbcdc_state** . Эти таблицы являются частью базы данных CDC, которая определяет экземпляр Oracle CDC. Дополнительные сведения о базе данных и таблицах xdbcdc см. в разделе [The CDC Databases](../../integration-services/change-data-capture/working-with-the-oracle-cdc-service.md#BKMK_CDCdatabase).  
@@ -54,4 +52,3 @@ ms.lasthandoff: 08/03/2017
  [Обработка ошибок](../../integration-services/change-data-capture/error-handling.md)  
   
   
-

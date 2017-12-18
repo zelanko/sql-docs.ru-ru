@@ -3,8 +3,11 @@ title: "Новые возможности установки SQL Server | Док
 ms.custom: 
 ms.date: 08/23/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d41437182f423016da8e25c71bd493c5f1816f95
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 795e9e627916e62545c95be34c30f79fb4c45d2d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Новые возможности установки SQL Server
-
- Установка поддерживается только для процессоров x64. Дополнительные сведения см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Установка поддерживается только для процессоров x64. Дополнительные сведения см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
   
  При установке [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] будет предложено указать каталог для сохранения извлеченного пакета. Если расположение не указано, то сервер будет по умолчанию использовать системный диск компьютера. Извлеченные файлы после завершения установки [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] останутся на диске.  
   

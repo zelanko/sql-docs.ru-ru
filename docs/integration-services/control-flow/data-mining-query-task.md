@@ -1,5 +1,5 @@
 ---
-title: "Задачи запроса интеллектуального анализа данных | Документы Microsoft"
+title: "Задача \"Запрос интеллектуального анализа данных\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-caps.latest.revision: 45
+caps.latest.revision: "45"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: efffacb30616a880c628894dac2f49201c2b8e24
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.openlocfilehash: 72ed17f506e2da78c972c54e19e98c8deacc287c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="data-mining-query-task"></a>Задача «Запрос интеллектуального анализа данных»
   Задача «Запрос интеллектуального анализа данных» запускает прогнозирующие запросы, основанных на моделях интеллектуального анализа данных, встроенных в службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Прогнозирующий запрос создает прогноз для новых данных с использованием моделей интеллектуального анализа данных. Например, прогнозирующий запрос может предсказать, сколько яхт может быть продано в летние месяцы, или сформировать список предполагаемых клиентов, которые могут купить яхту.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Описание**  
+ **Description**  
  Введите описание задачи «Запрос интеллектуального анализа данных».  
   
 ### <a name="mining-model-tab-options"></a>Параметры вкладки «Модель интеллектуального анализа данных»  
@@ -116,7 +114,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Описание**  
+ **Description**  
  Введите описание задачи «Запрос интеллектуального анализа данных».  
   
 ### <a name="build-query-tab-options"></a>Параметры вкладки «Построение запроса»  
@@ -172,7 +170,7 @@ ms.lasthandoff: 08/11/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Описание**  
+ **Description**  
  Введите описание задачи «Запрос интеллектуального анализа данных».  
   
 ### <a name="output-tab-options"></a>Параметры вкладки «Вывод»  
@@ -188,4 +186,3 @@ ms.lasthandoff: 08/11/2017
  **Удалить и повторно создать выходную таблицу**  
  Укажите, должен ли прогнозирующий запрос перезаписывать содержимое целевой таблицы путем ее удаления и повторного создания.  
   
-

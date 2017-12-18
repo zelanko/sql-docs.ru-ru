@@ -2,9 +2,12 @@
 title: "Экземпляры компонента Database Engine (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: configure-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 418e09ffb86563d22b145c2fba9f7ce61ad0c746
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 906150705dabca37cfee4eae1d0e19cecc641e4c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-engine-instances-sql-server"></a>Экземпляры компонента Database Engine (SQL Server)
-  Экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] представляет собой копию исполняемого файла **sqlservr.exe** , который работает как служба операционной системы. Каждый экземпляр управляет несколькими системными базами данных, а также одной или несколькими пользовательскими базами данных. На каждом компьютере могут работать несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Приложения подключаются к экземпляру для выполнения работы в базе данных, которой управляет экземпляр.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] представляет собой копию исполняемого файла **sqlservr.exe**, который работает как служба операционной системы. Каждый экземпляр управляет несколькими системными базами данных, а также одной или несколькими пользовательскими базами данных. На каждом компьютере могут работать несколько экземпляров компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Приложения подключаются к экземпляру для выполнения работы в базе данных, которой управляет экземпляр.  
   
 ## <a name="instances"></a>Экземпляры  
  Экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] работает как служба, которая обрабатывает все запросы приложений на работу с данными в любой из баз данных, которыми управляет этот экземпляр. Сюда направляются запросы на подключение (вход в систему) от приложений. Если приложение и экземпляр находятся на разных компьютерах, для соединения с SQL Server используется сетевое подключение. Если приложение и экземпляр находятся на одном и том же компьютере, соединение с SQL Server осуществляться через сетевое подключение или подключение в оперативной памяти. Когда связь установлена, приложение передает инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] экземпляру. Экземпляр преобразует инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] в операции с данными и объектами в базах данных и выполняет работу, если учетным данным входа предоставлены необходимые разрешения. Все полученные данные возвращаются в приложение со всеми необходимыми сообщениями, например сообщениями об ошибках.  

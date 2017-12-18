@@ -2,9 +2,12 @@
 title: "Отладчик Transact-SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d5409025fee4cb80a8f7b64e8946f058635e7551
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ed70a11de7d159fb2e26f43b7456954fc41db9f6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger"></a>Отладчик Transact-SQL
-  Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет находить ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] путем проверки поведения кода во время его выполнения. После перевода окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режим отладки можно приостанавливать выполнение на определенных строках кода и просматривать сведения и данные, которые используются или возвращаются соответствующими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] позволяет находить ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] путем проверки поведения кода во время его выполнения. После перевода окна редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в режим отладки можно приостанавливать выполнение на определенных строках кода и просматривать сведения и данные, которые используются или возвращаются соответствующими инструкциями [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ## <a name="stepping-through-transact-sql-code"></a>Пошаговая отладка кода Transact-SQL  
  Если окно редактора компонента [!INCLUDE[tsql](../../includes/tsql-md.md)] находится в режиме отладки, отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет следующие возможности для перемещения по коду [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  

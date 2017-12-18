@@ -1,5 +1,5 @@
 ---
-title: "Ведение журнала и определение элементов журнала в данные компонента потока | Документы Microsoft"
+title: "Ведение журнала и определение элементов журнала в компоненте потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - logs [Integration Services], custom
 - custom log entries [Integration Services]
 - custom data flow components [Integration Services], logging
 - data flow components [Integration Services], logging
 ms.assetid: 2190dba9-59b5-480b-b8e9-21d5a54c5917
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a0cbdbb818c7299221172f5ceb9b4ee5c54bddcb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: dbe113aad9e86802378eec1b24cc6539d758a5ac
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-and-defining-log-entries-in-a-data-flow-component"></a>Ведение журнала и определение элементов журнала в компоненте потока данных
   Пользовательские компоненты потока данных могут помещать сообщения в существующую запись журнала с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.PostLogMessage%2A> интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Они могут также предоставлять информацию для пользователя с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireInformation%2A> или подобных методов интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>. Однако этот подход создает нагрузку по вызову и обработке дополнительных событий и заставляет пользователя фильтровать многочисленные информационные сообщения в поисках сообщений, которые могут представлять интерес. Можно использовать собственный формат записи журнала, как показано далее, для предоставления пользователям разработанного компонента точно обозначенной информации.  
@@ -77,7 +74,7 @@ End Sub
   
  В приведенном выше примере используется значение <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSLogEntryFrequency.DTSLEF_CONSISTENT>, поскольку ожидается, что компонент будет создавать запись в журнале один раз во время каждого выполнения.  
   
- После регистрации пользовательской записи журнала и добавления экземпляра пользовательского компонента в область конструктора данных потока, **ведение журнала** в конструкторе появится новая запись с именем «Мой собственный формат записи журнала» в списке доступных записей журнала.  
+ После регистрации собственного формата записи журнала и добавления экземпляра пользовательского компонента в рабочую область конструктора потока данных диалоговое окно **Ведение журнала** в конструкторе выводит новую запись журнала с именем "Мой собственный формат записи журнала" в списке доступных записей журнала.  
   
 ### <a name="logging-to-a-custom-log-entry"></a>Внесение в журнал пользовательской записи  
  После регистрации пользовательской записи журнала компонент может создавать такие записи в журнале. В приведенном ниже примере пользовательская запись журнала заносится в журнал во время работы метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PreExecute%2A>, содержащего текст инструкции SQL, используемой компонентом.  
@@ -105,10 +102,9 @@ Public  Overrides Sub PreExecute()
 End Sub  
 ```  
   
- Теперь, когда пользователь запустит пакет, выбрав «Мой настраиваемый компонент записи журнала» в **входа** диалоговое окно, журнал будет содержать запись, явно помеченная как «Пользователь::мой собственный формат записи журнала.» Новая запись в журнале содержит текст инструкции SQL, отметку времени и всю дополнительную информацию, заданную разработчиком.  
+ Теперь, когда пользователь запустит пакет, после выбора пункта "Мой собственный формат записи журнала" в диалоговом окне **Ведение журнала** в журнале появится новая запись, явно помеченная как "Пользователь::Мой собственный формат записи журнала". Новая запись в журнале содержит текст инструкции SQL, отметку времени и всю дополнительную информацию, заданную разработчиком.  
   
 ## <a name="see-also"></a>См. также:  
- [Службы Integration Services &#40; Службы SSIS &#41; Ведение журнала](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Ведение журналов в службах Integration Services (SSIS)](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

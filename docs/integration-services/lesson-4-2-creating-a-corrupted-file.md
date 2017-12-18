@@ -1,5 +1,5 @@
 ---
-title: "Шаг 2: Создание поврежденного файла | Документы Microsoft"
+title: "Шаг 2. Создание поврежденного файла | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7760a481839ec7bd33aeeefd4b066f3d7750020d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 89cd8b22732914664b8fc870334c3994adc15373
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-4-2---creating-a-corrupted-file"></a>Занятие 4-2-Создание поврежденного файла
+# <a name="lesson-4-2---creating-a-corrupted-file"></a>Занятие 4–2. Создание поврежденного файла
 Для демонстрации настройки и обработки ошибок преобразования необходимо создать образец неструктурированного файла, который при обработке вызовет сбой в работе компонента.  
   
 В этой задаче предстоит скопировать существующий образец неструктурированного файла. Затем предстоит открыть его в приложении «Блокнот» и изменить столбец **CurrencyID** таким образом, чтобы при поиске совпадений во время преобразования произошел сбой. При обработке нового файла произойдет сбой в преобразовании «Уточняющий запрос» для CurrencyKey, что приведет к ошибке в работе всего пакета. После создания поврежденного образца файла предстоит выполнить пакет, чтобы просмотреть его поведение при сбое.  
@@ -75,4 +72,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

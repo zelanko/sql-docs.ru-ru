@@ -2,9 +2,12 @@
 title: "Поставщик SQL Server PowerShell | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fe5587212030b01ec03aa357e3bf4ff7f6ac0e73
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4aa7050589878d109ef826bad2c9385abc00b5f9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell, поставщик
-  Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell отображает иерархию объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде путей, аналогичных путям файловой системы. Можно определить расположение объекта с помощью путей, а затем использовать методы, доступные в моделях объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO, для выполнения действия с объектами.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell представляет иерархию объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виде путей, аналогичных путям в файловой системе. Можно определить расположение объекта с помощью путей, а затем использовать методы, доступные в моделях объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SMO, для выполнения действия с объектами.  
   
 ## <a name="benefits-of-the-sql-server-powershell-provider"></a>Преимущества поставщика SQL Server PowerShell  
  Пути, реализуемые поставщиком [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяют легко просматривать все объекты в экземпляре SQL Server в интерактивном режиме. Предусмотрена возможность переходить по этим путям с использованием псевдонимов Windows PowerShell по аналогии с переходом по путям файловой системы с помощью команд.  

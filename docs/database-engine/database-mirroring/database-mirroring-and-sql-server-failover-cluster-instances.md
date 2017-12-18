@@ -2,9 +2,12 @@
 title: "Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 85bfda015ac159cad16deb1e2e2bac20f304b6df
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4a180fe2ed117c92207a768745dd86a99fd39661
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Экземпляры зеркального отображения баз данных и отказоустойчивых кластеров (SQL Server)
-  Отказоустойчивый кластер представляет собой сочетание одного или нескольких физических дисков в группе кластеров службы кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)] , называемой группой ресурсов, которые являются узлами-участниками кластера. Группа ресурсов настраивается как экземпляр кластера отработки отказа, на котором запускается экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется в сети как одиночный компьютер, при этом он обладает функциональными возможностями, обеспечивающими отработку отказа с одного узла на другой, если один из узлов становится недоступным. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Отказоустойчивый кластер представляет собой сочетание одного или нескольких физических дисков в группе кластеров службы кластеров [!INCLUDE[msCoName](../../includes/msconame-md.md)], называемой группой ресурсов, которые являются узлами-участниками кластера. Группа ресурсов настраивается как экземпляр кластера отработки отказа, на котором запускается экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Экземпляр кластера отработки отказа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется в сети как одиночный компьютер, при этом он обладает функциональными возможностями, обеспечивающими отработку отказа с одного узла на другой, если один из узлов становится недоступным. Дополнительные сведения см. в разделе [Экземпляры отказоустойчивого кластера (режим AlwaysOn) (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
  Отказоустойчивые кластеры обеспечивают поддержку высокого уровня доступности для всего экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в противовес зеркальному отображению базы данных, которое обеспечивает поддержку высокого уровня доступности для отдельной базы данных. Зеркальное отображение базы данных может работать между отказоустойчивыми кластерами, а также между отказоустойчивым кластером и некластеризованным узлом.  
   

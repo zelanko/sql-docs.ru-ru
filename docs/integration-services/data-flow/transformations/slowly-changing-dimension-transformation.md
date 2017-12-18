@@ -1,5 +1,5 @@
 ---
-title: "«Медленно изменяющееся измерение» | Документы Microsoft"
+title: "Преобразование \"Медленно изменяющееся измерение\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.slowlychangingdimtrans.f1
+f1_keywords: sql13.dts.designer.slowlychangingdimtrans.f1
 helpviewer_keywords:
 - Slowly Changing Dimension transformation
 - slowly changing dimensions
 - SCD transformation
 - updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
-caps.latest.revision: 55
+caps.latest.revision: "55"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8061b07985e3d8d85656ddb85996384b5b6ee257
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="slowly-changing-dimension-transformation"></a>Преобразование "Медленно изменяющееся измерение"
+# <a name="slowly-changing-dimension-transformation"></a>преобразование «Медленно изменяющееся измерение»
   Преобразование «Медленно изменяющееся измерение» согласует обновление и вставку записей в таблицы измерения хранилища данных. Например, это преобразование можно использовать для настройки выходов преобразования, которые вставляют и обновляют записи в таблице DimProduct базы данных [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] данными из таблицы Production.Products OLTP-базы данных.  
   
 > [!IMPORTANT]  
@@ -118,4 +115,3 @@ ms.lasthandoff: 08/03/2017
 -   Запись в блоге [Оптимизация мастера медленно изменяющегося измерения](http://go.microsoft.com/fwlink/?LinkId=199481)на сайте blogs.msdn.com.  
   
   
-

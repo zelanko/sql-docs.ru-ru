@@ -2,9 +2,12 @@
 title: "Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1c076cc3e503a1417cec2fd9704cae29e0bb8a8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bb9460eb2dee21369bac8920dcc77a64e98b9857
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>Уменьшение уровня шума в политиках загрузки ЦП (служебная программа SQL Server)
-  Чтобы сократить число неважных записей в отчетах и нежелательных нарушений в политиках использования ресурсов программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , применяются следующие стратегии.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы сократить число неважных записей в отчетах и нежелательных нарушений в политиках использования ресурсов служебной программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], применяются следующие стратегии.  
   
 ## <a name="how-frequently-should-processor-utilization-be-in-violation-before-it-is-reported-as-overutilized"></a>Как часто параметр загрузки процессора должен превышать пороговое значение, чтобы программа сообщила о его перегрузке?  
  Оценочный период и допуск на процент нарушений настраиваются с помощью параметров вкладки **Политика** на узле **Администрирование программ** в обозревателе программ. Для изменения политик воспользуйтесь соответствующим ползунком справа от описания политики, затем нажмите кнопку **Применить**. Можно также восстановить значения по умолчанию или отменить изменения с помощью кнопок в нижней части экрана.  

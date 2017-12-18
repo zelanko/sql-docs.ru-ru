@@ -2,9 +2,12 @@
 title: "Помощник по настройке ядра СУБД | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec52b09547ab5a97d96709c20d8f125956d3c941
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c0c43bf59c4b45990c491f129598fe4210a8494b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="database-engine-tuning-advisor"></a>помощник по настройке ядра СУБД
-  Помощник по настройке ядра СУБД [!INCLUDE[msCoName](../../includes/msconame-md.md)] анализирует базы данных и составляет рекомендации по оптимизации производительности запросов. Помощник по настройке ядра СУБД можно использовать для выбора и создания оптимальных наборов индексов, индексированных представлений и секций таблицы, не обладая экспертным уровнем понимания структуры баз данных или внутренних процессов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Помощник по настройке ядра СУБД позволяет выполнять следующие задачи.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Помощник по настройке ядра СУБД [!INCLUDE[msCoName](../../includes/msconame-md.md)] анализирует базы данных и составляет рекомендации по оптимизации производительности запросов. Помощник по настройке ядра СУБД можно использовать для выбора и создания оптимальных наборов индексов, индексированных представлений и секций таблицы, не обладая экспертным уровнем понимания структуры баз данных или внутренних процессов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Помощник по настройке ядра СУБД позволяет выполнять следующие задачи.  
   
 -   Устранение неполадок производительности конкретного проблемного запроса  
   

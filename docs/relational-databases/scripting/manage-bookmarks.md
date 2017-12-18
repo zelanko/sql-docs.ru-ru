@@ -2,9 +2,12 @@
 title: "Управление закладками | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ae054743dcdf57727fd94a55ccf1ba78b0875fa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 163b9f1d67e6c690d1865d1041344d811566e6dd
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-bookmarks"></a>Управление закладками
-  При работе в редакторе кода в окне **Закладки** можно создавать ссылки на определенные строки кода в документе. Это окно можно открыть из меню **Вид** .  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При работе в редакторе кода в окне **Закладки** можно создавать ссылки на определенные строки кода в документе. Это окно можно открыть из меню **Вид** .  
   
  Для создания закладок и навигации по ним пользуйтесь кнопками, расположенными на панели инструментов **Текстовый редактор** , а также в верхней части окна **Закладки** . Закладки можно добавлять или удалять, включать или отключать, а также организовывать их в папки. Кроме того, определенные команды доступны в контекстном меню в окне **Закладки** . Для добавления или удаления закладки поместите точку вставки на нужной строке в редакторе и нажмите **Переключить закладку**. Для активации закладки отметьте ее флажок в окне **Закладки** ; для отключения (но не удаления) закладки снимите соответствующий флажок.  
   

@@ -2,9 +2,12 @@
 title: "Класс событий Broker:Message Undeliverable | Документация Майкрософт"
 ms.custom: 
 ms.date: 07/24/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1ff63d8d6824a29bb26dd960b74a6b810a227f50
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f803671ca0838b9eb389643ba7bfd6d928c116c6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="brokermessage-undeliverable-event-class"></a>Класс событий Broker:Message Undeliverable
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Broker:Message Undeliverable**, когда компонент Service Broker не может сохранить полученное сообщение, которое нужно доставить службе в этом экземпляре. Сведения о сообщениях, которые должны были быть перенаправлены, см. в разделе [Broker:Forwarded Message Dropped Event Class](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md).  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создает событие **Broker:Message Undeliverable**, когда компонент Service Broker не может сохранить полученное сообщение, которое нужно доставить службе в этом экземпляре. Сведения о сообщениях, которые должны были быть перенаправлены, см. в разделе [Broker:Forwarded Message Dropped Event Class](../../relational-databases/event-classes/broker-forwarded-message-dropped-event-class.md).  
   
 ## <a name="brokermessage-undeliverable-event-class-data-columns"></a>Столбцы данных для класса событий Broker:Message Undeliverable  
   

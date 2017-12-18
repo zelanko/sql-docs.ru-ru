@@ -1,5 +1,5 @@
 ---
-title: "Расширение вывода ошибок с помощью компонента скрипта | Документы Microsoft"
+title: "Расширение вывода ошибок с помощью компонента скрипта | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-non-specified
@@ -8,42 +8,39 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - transformations [Integration Services], components
 - Script component [Integration Services], examples
 - error outputs [Integration Services], enhancing
 - Script component [Integration Services], transformation components
 ms.assetid: f7c02709-f1fa-4ebd-b255-dc8b81feeaa5
-caps.latest.revision: 41
+caps.latest.revision: "41"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 3881b57f4089dbb075d019f9bd1a88a96a307b72
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f6058a8d8a12b9004cb42d26753a1fc7cee7181
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="enhancing-an-error-output-with-the-script-component"></a>Расширение вывода ошибок с помощью компонента скрипта
-  По умолчанию два дополнительных столбца в [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] вывод ошибок, ErrorCode и ErrorColumn, содержат только числовые коды, представляющие номер ошибки и идентификатор столбца, в котором произошла ошибка. Эти числовые значения могут быть малополезны без соответствующего описания ошибки и имя столбца.  
+  По умолчанию два дополнительных столбца в выводе ошибок служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], ErrorCode и ErrorColumn, содержат только числовые коды, представляющие номер ошибки и идентификатор столбца, в котором произошла ошибка. Эти числовые значения могут быть малополезны без соответствующего описания ошибки и имени столбца.  
   
- В этом разделе описывается добавление описания ошибки и имя столбца к существующим выходным данным ошибок в потоке данных с помощью компонента скрипта. В следующем примере с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, доступ к которому можно получить через свойство <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> компонента скрипта, добавляется описание ошибки, соответствующее конкретному стандартному коду ошибки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Затем в примере добавляется имя столбца, который соответствует идентификатору записанного журнала обращений и преобразований с помощью <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> метод одного интерфейса.  
+ В этом разделе описывается, как добавить имя столбца и описание ошибки к существующим выходным данным ошибок в потоке данных с помощью компонента скрипта. В следующем примере с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.GetErrorDescription%2A> интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, доступ к которому можно получить через свойство <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> компонента скрипта, добавляется описание ошибки, соответствующее конкретному стандартному коду ошибки служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Затем в примере с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> того же интерфейса добавляется имя столбца, соответствующее зарегистрированному идентификатору журнала обращений и преобразований.  
   
 > [!NOTE]  
 >  Если нужно создать компонент, который будет полезен в нескольких задачах потока данных и нескольких пакетах, рекомендуется в качестве основы использовать этот образец компонента скрипта. Дополнительные сведения см. в разделе [Разработка пользовательского компонента потока данных](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="example"></a>Пример  
- В следующем примере использует компонент скрипта, настроенный в качестве преобразования для добавления описание ошибки и имя столбца к существующим выходным данным ошибок в потоке данных.  
+ В приведенном примере компонент скрипта, настроенный в качестве преобразования, используется для добавления имени столбца и описания ошибки к существующим выходным данным ошибок в потоке данных.  
   
- Дополнительные сведения о том, как настроить компонент скрипта для использования в качестве преобразования в потоке данных см. в разделе [создание синхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) и [Создание асинхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Дополнительные сведения о том, как настроить компонент скрипта для использования в качестве преобразования в потоке данных см. в разделах [Создание синхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md) и [Создание асинхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Настройка этого примера компонента скрипта  
   
@@ -53,21 +50,21 @@ ms.lasthandoff: 08/03/2017
   
 3.  Соедините вывод ошибок вышестоящего компонента с новым компонентом скрипта.  
   
-4.  Откройте **редактор преобразования «скрипт»**и на **сценарий** страницы, для **ScriptLanguage** свойства, выберите язык сценария.  
+4.  Откройте **Редактор преобразования "Скрипт"** и на странице **Скрипт** для свойства **ScriptLanguage** выберите язык скрипта.  
   
-5.  Нажмите кнопку **изменить скрипт** Открытие [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] средств для приложений (VSTA) интегрированной среды разработки и добавьте следующий образец кода.  
+5.  Нажмите кнопку **Изменить скрипт**, чтобы открыть интегрированную среду разработки средств [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] для приложений (VSTA), и добавьте приведенный ниже пример кода.  
   
 6.  Закройте среду VSTA.  
   
-7.  В редакторе сценариев преобразования на **входные столбцы** выберите столбцы ErrorCode и ErrorColumn.  
+7.  В редакторе преобразования "Скрипт" на странице **Входные столбцы** выберите столбцы ErrorCode и ErrorColumn.  
   
-8.  На **входы и выходы** добавьте два новых столбца.  
+8.  На странице **Входы и выходы** добавьте два новых столбца.  
   
-    -   Добавьте новый выходной столбец типа **строка** с именем **ErrorDescription**. Увеличьте длину нового столбца по умолчанию до 255 для поддержки длинных сообщений.  
+    -   Добавьте новый выходной столбец типа **String** с именем **ErrorDescription**. Увеличьте длину нового столбца по умолчанию до 255 для поддержки длинных сообщений.  
   
-    -   Добавьте другой новый выходной столбец типа **строка** с именем **ColumnName**. Увеличьте длину нового столбца до 255 для поддержки длинные значения по умолчанию.  
+    -   Добавьте еще один новый выходной столбец типа **String** с именем **ColumnName**. Увеличьте длину нового столбца по умолчанию до 255 для поддержки длинных значений.  
   
-9. Закрыть **редактор преобразования «скрипт».**  
+9. Закройте **Редактор преобразования "Скрипт"**.  
   
 10. Соедините выход компонента скрипта с подходящим назначением. Назначение «Неструктурированный файл» проще всего при настройке в случае нерегламентированной отладки.  
   
@@ -116,4 +113,3 @@ public class ScriptMain:
  [Создание синхронного преобразования с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
   
   
-

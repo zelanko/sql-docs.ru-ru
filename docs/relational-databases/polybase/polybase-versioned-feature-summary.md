@@ -8,26 +8,23 @@ ms.service:
 ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6591994d-6109-4285-9c5b-ecb355f8a111
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
+ms.openlocfilehash: 70725ec64b79f538b4129993de83dfd97772a667
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/01/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-versioned-feature-summary"></a>Сводка функций PolyBase по версиям
-
-Сводка функций PolyBase, доступных для продуктов и служб SQL Server.  
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Сводка функций PolyBase, доступных для продуктов и служб SQL Server.  
   
 ## <a name="feature-summary-for-product-releases"></a>Сводка функций по выпускам  
  В приведенной ниже таблице перечислены основные функции PolyBase и продукты, в которых они доступны.  
@@ -65,4 +62,3 @@ ms.lasthandoff: 09/01/2017
  [Руководство по PolyBase](../../relational-databases/polybase/polybase-guide.md)  
   
   
-

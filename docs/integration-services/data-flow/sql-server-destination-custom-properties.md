@@ -1,25 +1,27 @@
 ---
-title: "Пользовательские свойства назначения SQL Server | Документы Microsoft"
+title: "Пользовательские свойства назначения \"SQL Server\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: data-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d29337e20ed16ab60fc3ec55968a351dc527e2c6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 61f7caddb59fc68399b274a71db5ee740d0f21c9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="sql-server-destination-custom-properties"></a>Пользовательские свойства назначения «SQL Server»
   Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  

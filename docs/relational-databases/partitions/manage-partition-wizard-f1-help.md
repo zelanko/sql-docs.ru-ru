@@ -2,9 +2,12 @@
 title: "Справка F1 мастера управления секциями | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: partitions
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-partition
 ms.tgt_pltfrm: 
 ms.topic: reference
@@ -26,14 +29,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 89d561c68a324e4760c8b093ba641dc7ea3453e1
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 25be7d99d07300731a9395b096f316faef973eef
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Справка F1 мастера управления секциями
-  **Мастер управления секциями** используется для управления и изменения существующих секционированных таблиц с помощью переключения секций или реализации сценария скользящего окна. Этот мастер облегчает управление секциями и упрощает регулярный перенос данных в таблицы и из них.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] **Мастер управления секциями** используется для изменения существующих секционированных таблиц и управления ими с помощью переключения секций или реализации сценария скользящего окна. Этот мастер облегчает управление секциями и упрощает регулярный перенос данных в таблицы и из них.  
   
 ### <a name="to-start-the-manage-partition-wizard"></a>Запуск мастера управления секциями  
   

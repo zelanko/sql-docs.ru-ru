@@ -2,9 +2,12 @@
 title: "Класс событий Exchange Spill | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fcde620a2badc249d1f6105548ca4e816e4fdb4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: bbbac6c6e2fd126ab40cddf9b21aa426b69d04dc
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill, класс событий
-  Класс событий **Exchange Spill** показывает, что буфер связи в параллельном плане запроса временно записан в базу данных **tempdb** . Это происходит редко и только если план запроса содержит несколько просмотров диапазона.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий **Exchange Spill** показывает, что буфер связи в параллельном плане запроса временно записан в базу данных **tempdb**. Это происходит редко и только если план запроса содержит несколько просмотров диапазона.  
   
  Как правило, запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] , формирующий такие просмотры диапазонов, содержит много операторов BETWEEN, каждый из которых выбирает диапазон строк из таблицы или индекса. Другой способ получить несколько диапазонов — использовать такое выражение, как (T.a > 10 AND T.a < 20) OR (T.a > 100 AND T.a < 120). Кроме того, планы запросов должны выполнять просмотр этих диапазонов исключительно в упорядоченном виде либо из-за наличия предложения ORDER BY в T.a, либо из-за того, что итератор плана обрабатывает кортежи строго в порядке сортировки.  
   

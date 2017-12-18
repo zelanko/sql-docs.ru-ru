@@ -1,32 +1,30 @@
 ---
 title: "Индексы для оптимизированных для памяти таблиц | Документация Майкрософт"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
-ms.date: 06/12/2017
-ms.prod: sql-server-2016
+ms.custom: 
+ms.date: 11/6/2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
 ms.reviewer: 
 ms.service: 
-ms.suite: 
-ms.technology:
-- database-engine-imoltp
+ms.component: in-memory-oltp
+ms.suite: sql
+ms.technology: database-engine-imoltp
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
+ms.openlocfilehash: 1679cf30077600cbff38aea1869bc7c8c9edc53e
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>Индексы для оптимизированных для памяти таблиц
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
 В этой статье описываются типы индексов, доступных для оптимизированных для памяти таблиц. В этой статье  
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/31/2017
   
 ## <a name="a-syntax-for-memory-optimized-indexes"></a>A. Синтаксис индексов, оптимизированных для памяти  
   
-Каждая инструкция CREATE TABLE для оптимизированной для памяти таблицы должна включать от 1 до 8 предложений для объявления индексов. Индекс должен быть одним из следующих:  
+Каждая операция CREATE TABLE для таблицы, оптимизированной для памяти, должна включать индекс либо явно посредством INDEX, либо неявно посредством ограничения PRIMAY KEY или UNIQUE. Индекс должен быть одним из следующих:  
   
 - Хэш-индекс.  
 - Некластеризованный индекс (т. е. внутренняя структура сбалансированного дерева по умолчанию).  
@@ -66,7 +64,9 @@ ms.lasthandoff: 07/31/2017
         WITH (  
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
-  
+> [!NOTE]  
+>  В [!INCLUDE[ssSQL15](../../includes/sssql14-md.md)] и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] действует ограничение в 8 индексов на таблицу, оптимизированную для памяти, или тип таблицы. Начиная с версии [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] больше нет ограничений на число индексов для оптимизированных для памяти таблиц и типов таблиц.
+
   
   
 ### <a name="a1-code-sample-for-syntax"></a>A.1 Пример кода для синтаксиса  
@@ -232,4 +232,3 @@ ms.lasthandoff: 07/31/2017
   
   
 В таблице "Да" означает, что индекс может эффективно обслуживать запрос, а "Нет" — что не может.  
-

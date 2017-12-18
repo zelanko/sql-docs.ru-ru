@@ -1,5 +1,5 @@
 ---
-title: "Catalog.extended_operation_info (база данных SSISDB) | Документы Microsoft"
+title: "catalog.extended_operation_info (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4d89a9adbf89dcc89715832664dcca176cd7f2ff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6eaae27a96c79901693899b2e8730efd87e20864
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogextendedoperationinfo-ssisdb-database"></a>catalog.extended_operation_info (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +36,8 @@ ms.lasthandoff: 09/26/2017
 |object_type|**smallint**|Тип объекта, затронутого операцией. Объект может представлять собой папку (`10`), проект (`20`), пакет (`30`), среду (`40`) или экземпляр выполнения (`50`).|  
 |reference_id|**bigint**|Уникальный идентификатор (ID) ссылки, используемой в операции.|  
 |status|**int**|Состояние операции. Возможными значениями являются: создана (`1`), запущена (`2`), отменена (`3`), завершена неуспешно (`4`), ожидает (`5`), завершена непредвиденно (`6`), выполнена успешно (`7`), остановлена (`8`) и завершена (`9`).|  
-|start_time|**DateTimeOffset(7)**|Дата и время начала операции.|  
-|end_time|**DateTimeOffset(7)**|Дата и время окончания операции.|  
+|start_time|**datetimeoffset(7)**|Дата и время начала операции.|  
+|end_time|**datetimeoffset(7)**|Дата и время окончания операции.|  
   
 ## <a name="remarks"></a>Замечания  
  В одном объекте может быть несколько строк расширенных сведений.  
@@ -49,12 +47,11 @@ ms.lasthandoff: 09/26/2017
   
 -   Разрешение READ по отношению к операции  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 > [!NOTE]  
 >  Наличие разрешения на выполнение операции на сервере подразумевает наличие разрешения на просмотр сведений об этой операции. Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

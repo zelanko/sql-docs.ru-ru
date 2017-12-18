@@ -2,9 +2,12 @@
 title: "Вопросы управления издателями Oracle | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 80e61dbe67613d0ca7fecb6d39746812203a5d11
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4793c95c2e266e945ea1d32c65aeed83998fd656
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="administrative-considerations-for-oracle-publishers"></a>Вопросы управления издателями Oracle
-  После завершения настройки издателя Oracle и установки механизмов отслеживания изменения репликаций администраторы систем баз данных Oracle могут использовать стандартные служебные программы Oracle и выполнять типичные задачи системного администратора. Однако необходимо знать о влиянии некоторых административных задач на публикуемые данные.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Завершив настройку издателя Oracle и реализовав механизмы отслеживания изменения репликации, администраторы систем баз данных Oracle могут использовать стандартные служебные программы Oracle и выполнять типичные задачи системного администратора. Однако необходимо знать о влиянии некоторых административных задач на публикуемые данные.  
   
  За исключением удаления или изменения столбца, публикуемого для репликации, либо удаления или изменения любого объекта репликации, эти вопросы не относятся к публикациям моментальных снимков.  
   

@@ -1,5 +1,5 @@
 ---
-title: "Создание и изменение службы CDC Oracle | Документы Microsoft"
+title: "Создание и изменение Oracle CDC Service​ | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- createSrv
+f1_keywords: createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5ba2f4af6ef7c21de22b8223dedc538199168521
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Создание и изменение службы CDC Oracle
   Новые службы Windows для Oracle CDC создаются и изменяются из консоли конфигурации службы CDC.  
@@ -38,7 +35,7 @@ ms.lasthandoff: 09/26/2017
   
  Введите следующие сведения в диалоговом окне «Новая служба Windows для Oracle CDC» или «Свойства службы CDC».  
   
-** Имя службы **  
+** Имя службы**  
  Введите имя новой службы Windows для Oracle CDC. По возможности не следует использовать длинные имена. В имени службы также нельзя использовать символы «/» и «\».  
   
 > [!NOTE]  
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
      В качестве учетной записи службы можно использовать учетную запись локального пользователя Windows либо пользователя домена. В таком случае необходимо ввести **пароль** этой учетной записи. Эта учетная запись может быть для локального компьютера или домена. Не забудьте обновить пароль, когда он изменяется с помощью управления локальными службами на панели управления Windows.  
   
- **Имя сервера**: выберите целевой объект [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляр для подключения (например,  **\\ \\< имя_компьютера >\\< имя_экземпляра >**). По умолчанию выводится экземпляр сервера, к которому подключение выполнялось в последний раз.  
+ **Имя сервера**. Выберите целевой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], с которым устанавливается соединение (например, **\\\\<имя_компьютера>\\<имя_экземпляра>**). По умолчанию выводится экземпляр сервера, к которому подключение выполнялось в последний раз.  
   
  **Проверка подлинности**  
  Выберите один из следующих вариантов:  
@@ -99,4 +96,3 @@ ms.lasthandoff: 09/26/2017
  [Создание и изменение службы CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   
-

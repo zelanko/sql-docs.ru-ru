@@ -1,5 +1,5 @@
 ---
-title: "Плоский файл назначения | Документы Microsoft"
+title: "Назначение \"Неструктурированный файл\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - text file writing [Integration Services]
 - destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
-caps.latest.revision: 49
+caps.latest.revision: "49"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: c7112381911e783e86db2504e3ec12b321be4905
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 14de99532df85ad2d65d28bdeeccfcbd8fa3d039
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="flat-file-destination"></a>назначение «Неструктурированный файл»
   Назначение «Неструктурированный файл» записывает данные в текстовый файл. Текстовый файл может быть в следующих форматах: с разделителями, фиксированной ширины, фиксированной ширины с разделителем строки и без выравнивания текста справа.  
@@ -95,7 +93,7 @@ ms.lasthandoff: 08/17/2017
  Просмотрите список доступных целевых столбцов. Чтобы сопоставить доступные входные столбцы с целевыми столбцами, воспользуйтесь операцией перетаскивания.  
   
  **Входной столбец**  
- Просмотрите входные столбцы, выбранные ранее в этом разделе. Сопоставления можно изменить с помощью списка **Доступные входные столбцы**. Выберите  **\<пропустить >** чтобы исключить столбец из выходных данных.  
+ Просмотрите входные столбцы, выбранные ранее в этом разделе. Сопоставления можно изменить с помощью списка **Доступные входные столбцы**. Выберите **\<игнорировать>**, чтобы исключить столбец из вывода.  
   
  **Целевой столбец**  
  Просмотреть все доступные целевые столбцы независимо от того, сопоставлены они с входными столбцами или нет.  
@@ -105,4 +103,3 @@ ms.lasthandoff: 08/17/2017
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   
-

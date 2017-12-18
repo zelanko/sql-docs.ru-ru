@@ -1,5 +1,5 @@
 ---
-title: "Запрос Active Directory с помощью задачи «скрипт» | Документы Microsoft"
+title: "Запрос Active Directory в задаче \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,34 +8,30 @@ ms.service:
 ms.component: extending-packages-scripting-task-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - Script task [Integration Services], Active Directory access
 - SSIS Script task, Active Directory access
 - Script task [Integration Services], examples
 - Active Directory [Integration Services]
 ms.assetid: a88fefbb-9ea2-4a86-b836-e71315bac68e
-caps.latest.revision: 51
+caps.latest.revision: "51"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ee5a82829785e78554b105e1f3bf3bd24f05b778
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 0328b2eeaa94e279a53b45e8e205c1356768e53d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>Запрос Active Directory в задаче «Скрипт»
-  Часто задачей корпоративных приложений обработки данных, например, пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], является обработка данных различным образом, в зависимости от категории, названия должности, иных характеристик сотрудников, сведения о которых хранятся в службе каталогов Active Directory. Active Directory — [!INCLUDE[msCoName](../../includes/msconame-md.md)] службы каталогов Windows, обеспечивающая централизованное хранение метаданных не только о пользователях, но также и о других корпоративных ресурсах, таких как компьютеры и принтеры. **System.DirectoryServices** пространство имен в платформе Microsoft .NET Framework предоставляет классы для работы с Active Directory, которые помогут прямой обработки данных рабочего процесса, в зависимости от типа данных.  
+  Часто задачей корпоративных приложений обработки данных, например, пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], является обработка данных различным образом, в зависимости от категории, названия должности, иных характеристик сотрудников, сведения о которых хранятся в службе каталогов Active Directory. Active Directory — служба каталогов [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, обеспечивающая централизованное хранение метаданных не только о пользователях, но и об используемых ими корпоративных ресурсах, например компьютерах и принтерах. Пространство имен **System.DirectoryServices** платформы Microsoft .NET Framework предоставляет классы для работы со службой каталогов Active Directory, с помощью которых можно управлять рабочим процессом по обработке данных в зависимости от типа данных.  
   
 > [!NOTE]  
 >  Если нужно создать задачу, которую будет удобно использовать в нескольких пакетах, рекомендуется начать разработку пользовательской задачи с этого образца задачи «Скрипт». Дополнительные сведения см. в разделе [Разработка пользовательской задачи](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md).  
@@ -47,13 +43,13 @@ ms.lasthandoff: 09/26/2017
   
 1.  Создайте три строковые переменные: `email`, `name` и `title`. Введите действительный корпоративный адрес электронной почты в качестве значения переменной `email`.  
   
-2.  На **сценарий** страница **редактор задачи «скрипт»**, добавьте `email` переменной **ReadOnlyVariables** свойство.  
+2.  На странице **Скрипт** в **редакторе задачи "Скрипт"** добавьте переменную `email` к свойству **ReadOnlyVariables**.  
   
-3.  Добавить `name` и `title` переменных **ReadWriteVariables** свойство.  
+3.  Добавьте переменные `name` и `title` к свойству **ReadWriteVariables**.  
   
-4.  В проекте скрипта добавьте ссылку на **System.DirectoryServices** пространства имен.  
+4.  В проекте скрипта добавьте ссылку на пространство имен **System.DirectoryServices**.  
   
-5.  . В коде, используйте **Imports** инструкцию, чтобы импортировать **DirectoryServices** пространства имен.  
+5.  . В коде используйте инструкцию **Imports** для импорта пространства имен **DirectoryServices**.  
   
 > [!NOTE]  
 >  Для успешного выполнения этого скрипта необходимо, чтобы в сети организации использовалась служба каталогов Active Directory и в ней хранились сведения, используемые в этом примере.  
@@ -118,7 +114,6 @@ public void Main()
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Техническая статья [обработки данных Active Directory в SSIS](http://go.microsoft.com/fwlink/?LinkId=199588), на сайте social.technet.microsoft.com  
+-   Техническая статья [Обработка данных Active Directory в службах SSIS](http://go.microsoft.com/fwlink/?LinkId=199588) на сайте social.technet.microsoft.com  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "XML-источник | Документы Microsoft"
+title: "XML-источник | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,17 +21,16 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: cc10de2bb6f4d9cebf341242321e692ec9a4614e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="xml-source"></a>XML-источник
   XML-источник считывает файл XML-данных и заполняет данными столбцы в выходе источника.  
@@ -178,4 +176,3 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="related-tasks"></a>Связанные задачи  
  [Извлечение данных с помощью XML-источника](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
-

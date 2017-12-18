@@ -1,5 +1,5 @@
 ---
-title: "Catalog.environment_variables (база данных SSISDB) | Документы Microsoft"
+title: "catalog.environment_variables (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 40e31b9697c453f6a9d60dfcc8d9302dfefe0ac4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 936d4f9346b4f8e3e58f88bbadf60127b7dc122f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/26/2017
 |description|**nvarchar(1024)**|Описание переменной среды.|  
 |Тип|**nvarchar(128)**|Тип данных переменной среды.|  
 |sensitive|**bit**|Если значение равно `1`, переменная является конфиденциальной и шифруется при сохранении. Если значение равно `0`, переменная не является конфиденциальной и ее значение сохраняется в формате открытого текста.|  
-|value|**sql_variant**|Значение переменной среды. Если конфиденциальные является `0`, отображается значение открытого текста. Если конфиденциальные — `1`, **NULL** отображается значение.|  
+|value|**sql_variant**|Значение переменной среды. Если значение sensitive равно `0`, отображается значение в виде открытого текста. Если значение sensitive равно `1`, отображается значение **NULL**.|  
   
 ## <a name="remarks"></a>Замечания  
  В этом представлении отображается по одной строке для каждой из переменных среды в каталоге.  
@@ -48,12 +46,11 @@ ms.lasthandoff: 09/26/2017
   
 -   разрешение READ на соответствующую среду  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 > [!NOTE]  
 >  Наличие разрешения на выполнение операции на сервере подразумевает наличие разрешения на просмотр сведений об этой операции. Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
   
-

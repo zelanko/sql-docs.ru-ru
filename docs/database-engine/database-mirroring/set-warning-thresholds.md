@@ -2,9 +2,12 @@
 title: "Установка порогов предупреждений | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e43b17175889f598f01e841f22b87adea5abc9f3
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f731b903bf0c8006fb9a36177f8951ac214537b3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="set-warning-thresholds"></a>Установка порогов предупреждений
-  Это диалоговое окно позволяет разрешить и настроить один или несколько пороговых значений предупреждений для базы данных, выбранной в дереве навигации диалогового окна **Монитор зеркального отображения баз данных** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Это диалоговое окно позволяет включить и настроить одно или несколько пороговых значений предупреждений для базы данных, выбранной в дереве навигации диалогового окна **Монитор зеркального отображения баз данных**.  
   
  В этом диалоговом окне предпринимается попытка подключиться к обоим экземплярам сервера. Эти соединения устанавливаются асинхронно. Диалоговое окно показывает состояние соединения каждого сервера-участника. Если сервер-участник не подключен, можно нажать кнопку **Соединить**.  
   

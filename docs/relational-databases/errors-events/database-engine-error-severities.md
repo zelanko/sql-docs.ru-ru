@@ -2,9 +2,12 @@
 title: "Уровни серьезности ошибок ядра СУБД | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: errors-events
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,16 +21,16 @@ ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 caps.latest.revision: "21"
 author: edmacauley
 ms.author: edmaca
-manager: cguyer
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ac34636ce0b0d4dff468218d9883f5f225b3940c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a399c817aef67a59ef9a4e7edff00391a9173b88
+ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/21/2017
 ---
 # <a name="database-engine-error-severities"></a>Степени серьезности ошибок компонента Database Engine
-  Если ошибка возникла в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], серьезность ошибки указывает на тип проблемы, с которой столкнулся сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Если ошибка возникла в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], серьезность ошибки указывает на тип проблемы, с которой столкнулся сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="levels-of-severity"></a>Уровни серьезности  
  В следующей таблице описаны уровни серьезности ошибок, формируемых компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  

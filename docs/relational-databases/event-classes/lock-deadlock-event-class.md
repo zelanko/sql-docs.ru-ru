@@ -2,9 +2,12 @@
 title: "Класс событий Lock:Deadlock | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b9ca6119d3c4972e4b9edb758c62891da536c24d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1236806dff15aefb7f1ce9b2388c2e63b8f81e08
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockdeadlock-event-class"></a>Класс событий Lock:Deadlock
-  События класса Lock:Deadlock создаются при отмене попытки получить блокировку, приводящую к взаимоблокировке и выбранную сервером в качестве жертвы.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] События класса Lock:Deadlock возникают при отмене попытки получить блокировку, приводящую к взаимоблокировке и выбранную сервером в качестве жертвы.  
   
  Класс событий Lock:Deadlock предназначен для отслеживания возникновения взаимоблокировок и объектов, которые в них участвуют. Эти сведения предназначены для определения степени влияния взаимоблокировок на производительность приложения. Они позволяют просмотреть код приложения и изменить его так, чтобы минимизировать взаимоблокировки.  
   

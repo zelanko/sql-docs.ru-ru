@@ -1,5 +1,5 @@
 ---
-title: "Параметры конструкторы служб интеграции, страница «Общие» | Документы Microsoft"
+title: "Параметры конструкторов служб Integration Services: страница \"Общие\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
+f1_keywords: VS.ToolsOptionsPages.Business_Intelligence_Designers.Data_Transformation_Designers.General
 ms.assetid: d695690a-923b-4036-945e-7621e8651deb
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 599665d49b8512ec772ac5ca522cb4e0b7a521ec
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: e0c72afb5690be9e69958276c6d7e5b2663ce24a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="general-page-of-integration-services-designers-options"></a>Параметры конструкторов служб Integration Services: страница "Общие"
   Страница **Общие** страницы **Конструкторы служб Integration Services** диалогового окна **Параметры** позволяет указать параметры загрузки, отображения и обновления пакетов.  
@@ -34,7 +31,7 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="options"></a>Параметры  
  **Проверка цифровой подписи при загрузке пакета**  
- Установите этот флажок, чтобы службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проверяли цифровую подпись при загрузке пакета [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]проверяют только ли цифровая подпись присутствует, действителен и получен из надежного источника. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]не проверяют, изменялся ли пакет с момента его подписания.  
+ Установите этот флажок, чтобы службы [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проверяли цифровую подпись при загрузке пакета [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] проверяют только наличие цифровой подписи, ее правильность и надежность источника. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] не проверяют, изменялся ли пакет с момента его подписания.  
   
  Если установлено значение реестра **BlockedSignatureStates** , оно переопределяет параметр **Проверять цифровую подпись при загрузке пакета** . Дополнительные сведения см. в разделе [Реализация политики подписывания путем задания параметра реестра](../integration-services/packages/implement-a-signing-policy-by-setting-a-registry-value.md).  
   
@@ -50,11 +47,11 @@ ms.lasthandoff: 08/03/2017
  Выберите значение по умолчанию для языка скрипта новых задач «Скрипт» и компонентов скрипта.  
   
  **Обновить строки соединения для использования новых имен поставщиков**  
- При открытии или обновлении [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] пакетов, обновите строки подключения, чтобы использовались имена следующих поставщиков текущего выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]:  
+ При открытии или обновлении пакетов служб [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] обновите строки подключения, чтобы использовать в них принятые в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]имена следующих поставщиков:  
   
--   Поставщик OLE DB служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Поставщик OLE DB  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Собственный клиент  
   
  Мастер обновления пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] обновляет только те строки подключения, которые хранятся в диспетчерах соединений. Мастер не обновляет строки соединения, которые формируются динамически с помощью языка выражений служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] или программно в задаче «Скрипт».  
   
@@ -62,8 +59,7 @@ ms.lasthandoff: 08/03/2017
  При обновлении пакетов служб [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] создает новые идентификаторы пакетов для обновленных версий пакетов.  
   
 ## <a name="see-also"></a>См. также  
- [Общие сведения о безопасности &#40; службы Integration Services &#41;](../integration-services/security/security-overview-integration-services.md)   
+ [Общие сведения о безопасности (службы Integration Services)](../integration-services/security/security-overview-integration-services.md)   
  [Расширение пакетов с помощью сценариев](../integration-services/extending-packages-scripting/extending-packages-with-scripting.md)  
   
   
-

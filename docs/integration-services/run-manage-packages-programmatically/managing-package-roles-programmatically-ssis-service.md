@@ -1,5 +1,5 @@
 ---
-title: "Программное управление ролями пакетов (службы SSIS) | Документы Microsoft"
+title: "Программное управление ролями пакетов (служба SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,35 +8,32 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - Integration Services packages, roles
 - roles [Integration Services]
 - packages [Integration Services], roles
 ms.assetid: 2e0ca0d5-d4f5-421d-b17d-a48b37b923e5
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 7a7fb000389756caf0c2f2ea00cd0b80e75557d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 6d8c77d398dbfac21d582b31184e879eb7e2a2d5
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="managing-package-roles-programmatically-ssis-service"></a>Программное управление ролями пакетов (служба SSIS)
   При программной работе с пакетами служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] может потребоваться определить, какие роли доступны для пакетов, либо определить или задать роли для индивидуального пакета. Класс <xref:Microsoft.SqlServer.Dts.Runtime.Application> из пространства имен <xref:Microsoft.SqlServer.Dts.Runtime> предоставляет разнообразные методы, выполняющие эти требования.  
   
- Роли применимы только для пакетов, хранящихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** базы данных. Дополнительные сведения о ролях пакетов см. в разделе [роли службы Integration Services &#40; Службы SSIS &#41; ](../../integration-services/security/integration-services-roles-ssis-service.md).  
+ Роли применимы только для пакетов, хранящихся в базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb**. Дополнительные сведения о ролях пакетов см. в разделе [Роли служб Integration Services (службы SSIS)](../../integration-services/security/integration-services-roles-ssis-service.md).  
   
- Все методы, описанные в этом разделе требуют наличия ссылки на **Microsoft.SqlServer.ManagedDTS** сборки. После добавления ссылки в новый проект импортируйте <xref:Microsoft.SqlServer.Dts.Runtime> пространства имен с помощью **с помощью** или **Imports** инструкции.  
+ Все методы, используемые в данном разделе, требуют наличия ссылки на сборку **Microsoft.SqlServer.ManagedDTS**. После добавления ссылки в новый проект импортируйте пространство имен <xref:Microsoft.SqlServer.Dts.Runtime> с помощью инструкции **using** или **Imports**.  
   
 > [!IMPORTANT]  
 >  Методы класса <xref:Microsoft.SqlServer.Dts.Runtime.Application> для работы с хранилищем пакетов служб SSIS поддерживают только имена «.», localhost и имя сервера для локального сервера. Нельзя использовать имя «(local)».  
@@ -48,7 +45,6 @@ ms.lasthandoff: 08/03/2017
  Чтобы определить, какие роли уже назначены определенному пакету, вызовите метод <xref:Microsoft.SqlServer.Dts.Runtime.Application.GetPackageRoles%2A>. Чтобы назначить роли пакету, вызовите метод <xref:Microsoft.SqlServer.Dts.Runtime.Application.SetPackageRoles%2A>.  
   
 ## <a name="see-also"></a>См. также:  
- [В службах Integration Services ролей &#40; Службы SSIS &#41;](../../integration-services/security/integration-services-roles-ssis-service.md)  
+ [Роли служб Integration Services (службы SSIS)](../../integration-services/security/integration-services-roles-ssis-service.md)  
   
   
-

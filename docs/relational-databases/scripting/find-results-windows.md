@@ -2,9 +2,12 @@
 title: "Окно \"Результаты поиска\" | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 739ebc9657fa81650ab57a95d057dc3cc674ebf9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ca6d03068225909a645b05059a3da15893604821
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="find-results-windows"></a>Окна «Результаты поиска»
-  В двух окнах «Результаты поиска» отображаются совпадения, найденные с использованием вкладок **Поиск в файлах** или **Замена в файлах** диалогового окна **Найти и заменить** . Команда **Параметры результата** для **Поиск в файлах** и **Замена в файлах** позволяет выбрать окно «Результаты поиска», содержащее список найденных совпадений.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В двух окнах "Результаты поиска" отображаются совпадения, найденные с использованием вкладок **Поиск в файлах** или **Замена в файлах** диалогового окна **Найти и заменить**. Команда **Параметры результата** для **Поиск в файлах** и **Замена в файлах** позволяет выбрать окно «Результаты поиска», содержащее список найденных совпадений.  
   
  Выбранное окно «Результаты поиска» открывается автоматически при нахождении совпадений. Для ручного отображение окна «Результаты поиска» выберите пункт **Другие окна** в меню **Просмотр** , а затем выберите пункт **Результаты поиска 1** или **Результаты поиска 2**.  
   

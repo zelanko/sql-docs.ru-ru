@@ -1,5 +1,5 @@
 ---
-title: "Catalog.set_worker_agent_property (база данных SSISDB) | Документы Microsoft"
+title: "catalog.set_worker_agent_property (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/02/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ddd2a534-6925-4d66-90e7-541c14f41de7
-caps.latest.revision: 2
+caps.latest.revision: "2"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
-ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/20/2017
-
+ms.openlocfilehash: 1438d3a2cf200450791c085f501c49329d61154d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>Catalog.set_worker_agent_property (база данных SSISDB)
+# <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-Задает свойство [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] шкалы Out работника.
+Задает свойство рабочей роли [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,16 +36,16 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 
 ## <a name="arguments"></a>Аргументы
 [@WorkerAgentId =] *WorkerAgentId*  
-Агент рабочий идентификатор из шкалы Out работника. *WorkerAgentId* — **uniqueidentifier**.
+Идентификатор агента рабочей роли для рабочей роли Scale Out. Параметр *WorkerAgentId* имеет тип **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-Имя свойства. *PropertyName* — **nvarchar(256)**.
+Имя свойства. Параметр *PropertyName* имеет тип **nvarchar(256)**.
 
 [@PropertyValue =] *PropertyValue*  
-Значение свойства. *PropertyValue* — **nvarchar(max)**.
+Значение свойства. Параметр *PropertyValue* имеет тип **nvarchar(max)**.
 
 ## <a name="remarks"></a>Замечания
-Допустимые имена свойств являются **DisplayName**, **описание**, **теги**.
+Допустимыми именами свойств являются **DisplayName**, **Description**, **Tags**.
 
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -58,18 +56,17 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 ## <a name="permissions"></a>Permissions  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера
+-   Членство в роли сервера **sysadmin**
 
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения
   Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
   
 -   Пользователь не имеет соответствующих разрешений 
 
--   Недопустимый идентификатор агента работника.
+-   Недопустимый идентификатор агента рабочей роли.
 
 -   Недопустимое имя свойства.
 
 -   Недопустимое значение свойства.  
-

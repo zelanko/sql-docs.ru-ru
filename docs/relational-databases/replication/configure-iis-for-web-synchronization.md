@@ -2,9 +2,12 @@
 title: "Настройка служб IIS для веб-синхронизации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 635969e907f5c99a34b3b3f076c95602be6510b7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e5c661e39ca7e011e185b68867be5955e2cfc280
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
-  Описанные в данном разделе процедуры составляют второй этап настройки веб-синхронизации при репликации слиянием. Эти процедуры выполняют после включения веб-синхронизации для публикации. Обзор этого процесса настройки см. в разделе [Настроить веб-синхронизацию](../../relational-databases/replication/configure-web-synchronization.md). После завершения выполнения процедур, описанных в этом разделе, перейдите к третьему этапу — настройке подписки для использования веб-синхронизации. Этот этап описывается в следующих разделах:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Описанные в этом разделе процедуры составляют второй этап настройки веб-синхронизации при репликации слиянием. Эти процедуры выполняют после включения веб-синхронизации для публикации. Обзор этого процесса настройки см. в разделе [Настроить веб-синхронизацию](../../relational-databases/replication/configure-web-synchronization.md). После завершения выполнения процедур, описанных в этом разделе, перейдите к третьему этапу — настройке подписки для использования веб-синхронизации. Этот этап описывается в следующих разделах:  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Как настроить подписку для использования веб-синхронизации \(среда SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   

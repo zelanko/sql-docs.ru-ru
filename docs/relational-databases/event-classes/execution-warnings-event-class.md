@@ -2,9 +2,12 @@
 title: "Класс событий Execution Warnings | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e8a8f643884c4d2c817a6a899690f980dc41502
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a0f3903f3bcf19915b962f95e413ccee492ae34c
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings, класс событий
-  События класса событий Execution Warnings сообщают о предупреждениях, связанных с выделением памяти при выполнении инструкции или хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . События этого класса можно отслеживать, чтобы определить, сколько времени запрос ожидал выделения памяти и завершилась ли неудачей попытка выделения памяти. Сведения о задержках могут помочь в обнаружении конфликтов, связанных с попытками одновременной передачи данных, которые могут повлиять на производительность.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] События класса Execution Warnings сообщают о предупреждениях, связанных с выделением памяти при выполнении инструкции или хранимой процедуры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. События этого класса можно отслеживать, чтобы определить, сколько времени запрос ожидал выделения памяти и завершилась ли неудачей попытка выделения памяти. Сведения о задержках могут помочь в обнаружении конфликтов, связанных с попытками одновременной передачи данных, которые могут повлиять на производительность.  
   
 ## <a name="execution-warnings-event-class-data-columns"></a>Столбцы данных класса событий Execution Warnings  
   

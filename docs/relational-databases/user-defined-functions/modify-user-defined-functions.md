@@ -2,9 +2,12 @@
 title: "Изменение определяемых пользователем функций | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/20/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: udf
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-udf
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b17a09c7ddf1edd113cc352a0d6ca1f5b1c72dc8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ce501e925db46f69725ef56dbbecbba135630e58
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="modify-user-defined-functions"></a>Изменение определяемых пользователем функций
-  Определяемые пользователем функции [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно изменять с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При изменении определяемых пользователем функций описанными ниже методами, разрешения этих функций не будут изменены, также не будут затронуты любые другие зависимые функции, хранимые процедуры или триггеры.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] Определяемые пользователем функции в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно изменять с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. При изменении определяемых пользователем функций описанными ниже методами, разрешения этих функций не будут изменены, также не будут затронуты любые другие зависимые функции, хранимые процедуры или триггеры.  
   
  **В этом разделе**  
   

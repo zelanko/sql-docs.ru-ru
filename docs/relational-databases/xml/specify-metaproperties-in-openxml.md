@@ -2,9 +2,12 @@
 title: "Определение метасвойств в инструкции OPENXML | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: xml
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0d2eed1cb054c76e7f6e4d816ec98ce60c36f0c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1e1d8a0a29b6d92aeab9c1c6e4afa01a2665add6
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Определение метасвойств в инструкции OPENXML
-  Атрибутами метасвойств в документе XML называются атрибуты, описывающие свойства сущностей XML, например элементов, атрибутов и других узлов DOM. Физически эти атрибуты отсутствуют в тексте документа XML. Тем не менее инструкция OPENXML предоставляет эти метасвойства для всех сущностей XML. Эти метасвойства позволяют извлекать сведения, например данные о локальном положении и пространстве имен, об узлах XML. Эти сведения предоставляют более подробные данные, чем текстовое представление.  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Атрибутами метасвойств в документе XML называются атрибуты, описывающие свойства сущностей XML, например элементов, атрибутов и других узлов DOM. Физически эти атрибуты отсутствуют в тексте документа XML. Тем не менее инструкция OPENXML предоставляет эти метасвойства для всех сущностей XML. Эти метасвойства позволяют извлекать сведения, например данные о локальном положении и пространстве имен, об узлах XML. Эти сведения предоставляют более подробные данные, чем текстовое представление.  
   
  Метасвойства можно сопоставить со столбцами набора строк инструкции OPENXML при помощи параметра *ColPattern* . Столбцы будут содержать значения метасвойств, с которыми они связаны. Дополнительные сведения о синтаксисе инструкции OPENXML см. в разделе [OPENXML (Transact-SQL)](../../t-sql/functions/openxml-transact-sql.md).  
   

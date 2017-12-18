@@ -1,28 +1,30 @@
 ---
-title: "Типы данных в выражениях служб Integration Services | Документы Microsoft"
+title: "Типы данных в выражениях служб Integration Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: expressions
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd0a604c665f7bd31a8ebd3e46b78afde802cc98
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.workload: Inactive
+ms.openlocfilehash: 44b5829a581f0e0a0c2ff67eabe4a2a4fae3885e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
   Средство оценки выражений использует типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Когда данные впервые попадают в поток данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , подсистема обработки потока данных преобразует все данные столбцов в тип данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а данные столбцов, используемых выражением, уже имеют тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Выражения, используемые в преобразованиях «Условное разбиение» и «Производный столбец», могут ссылаться на столбцы, поскольку являются частью потока данных, включающего данные столбцов.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 08/03/2017
   
  Рассмотрим выражения на снимке экрана ниже.  
   
- ![Строковые типы данных в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "строковые типы данных в выражениях служб SSIS")  
+ ![Строковые типы данных в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions.png "Строковые типы данных в выражениях служб SSIS")  
   
 1.  Первое выражение выполняется без ошибок, так как функция NULL(DT_STR, …) находится на корневом уровне выражения.  
   
@@ -58,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
  В следующих примерах демонстрируется влияние приведения.  
   
- ![Приведение строки в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "приведение строк в выражениях служб SSIS")  
+ ![Приведение строк в выражениях служб SSIS](../../integration-services/expressions/media/stringsinssisexpressions2.png "Приведение строк в выражениях служб SSIS")  
   
 1.  В первом выражении приведение находится не на корневом уровне выражения. Вычислитель выражений интеллектуально обрабатывает это приведение и выполняет его применительно к типу DT_WSTR, а не DT_STR. Выражение возвращает DT_WSTR.  
   
@@ -71,7 +73,7 @@ ms.lasthandoff: 08/03/2017
   
  На следующей диаграмме показан тип результата неявного преобразования операций BINARY. Пересечение столбцов и строк в этой таблице является типом результата побитовой операции с операндами левого (From) и правого (To) типов.  
   
- ![Неявное преобразование между типами данных ТипДанных](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "неявное преобразование между типами данных ТипДанных")  
+ ![Неявное преобразование между типами данных](../../integration-services/expressions/media/mw-dts-impl-conver-02.gif "Неявное преобразование между типами данных")  
   
  Пересечением целых чисел со знаком и без знака является целое число со знаком, которое потенциально больше любого из этих двух аргументов.  
   

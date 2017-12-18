@@ -2,9 +2,12 @@
 title: "Резервные копии заключительного фрагмента журнала (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 697a6b7db5513165db073bf70954499dc95503e8
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3396d9d6ec351550509300f760db8e5fc58836d6
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tail-log-backups-sql-server"></a>Резервные копии заключительного фрагмента журнала (SQL Server)
-  В данном разделе рассматриваются вопросы резервного копирования и восстановления только тех баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые используют модель полного восстановления или модель восстановления с неполным протоколированием.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В данном разделе рассматриваются вопросы резервного копирования и восстановления только тех баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые используют модель полного восстановления или восстановления с неполным протоколированием.  
   
  В *резервную копию заключительного фрагмента журнала* попадают все записи, резервная копия которых еще не была создана ( *заключительный фрагмент журнала*), что позволяет предотвратить потерю работы и сохранить неповрежденную цепочку журналов. Для восстановления базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на последний момент времени необходимо предварительно выполнить резервное копирование заключительного фрагмента журнала ее транзакций. Заключительный фрагмент журнала является становится последней рассматриваемой частью резервной копии в плане восстановления базы данных.  
   

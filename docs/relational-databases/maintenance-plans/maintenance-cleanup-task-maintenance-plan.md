@@ -2,9 +2,12 @@
 title: "Задача \"Очистка после обслуживания\" (план обслуживания) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: maintenance-plans
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3934b29a7067cda0cd74656c2f6fa38f0748e658
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a2339a873b593f3c9fc689212739ab1f66adfba7
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Задача «Очистка после обслуживания» (план обслуживания)
-  С помощью диалогового окна **Задача «Очистка после обслуживания»** можно удалить старые файлы, связанные с планами обслуживания, включая текстовые отчеты, созданные планами обслуживания, и файлы резервных копий базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью диалогового окна **Задача "Очистка после обслуживания"** можно удалить старые файлы, связанные с планами обслуживания, включая текстовые отчеты, созданные планами обслуживания, и файлы резервных копий базы данных.  
   
 > [!NOTE]  
 >  Задача «Очистка после обслуживания» автоматически не удаляет файлы во вложенных папках указанного каталога. Это снижает вероятность того, что злоумышленник сможет удалить файлы с помощью задачи «Очистка после обслуживания». Если нужно удалять файлы во вложенных папках первого уровня, установите флажок **Включить вложенные папки первого уровня**.  

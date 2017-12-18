@@ -1,5 +1,5 @@
 ---
-title: "Catalog.set_environment_reference_type (база данных SSISDB) | Документы Microsoft"
+title: "catalog.set_environment_reference_type (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b79e3a06-22c0-40e5-8933-1b3414db3329
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 31a6d4310ad32f2517c8779172b0d539803e9f15
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogsetenvironmentreferencetype-ssisdb-database"></a>catalog.set_environment_reference_type (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,14 +37,14 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @reference_id =] *reference_id*  
- Уникальный идентификатор обновляемой ссылки на среду. *Reference_id* — **bigint**.  
+ [ @reference_id = ] *reference_id*  
+ Уникальный идентификатор обновляемой ссылки на среду. Параметр *reference_id* имеет тип **bigint**.  
   
- [ @reference_type =] *reference_type*  
- Указывает, может среда находиться в той же папке, что и проект (относительная ссылка), или в другой папке (абсолютная ссылка). Значение `R` указывает, что ссылка относительная. Значение `A` указывает, что ссылка абсолютная. *Reference_type* — **char(1)**.  
+ [ @reference_type = ] *reference_type*  
+ Указывает, может среда находиться в той же папке, что и проект (относительная ссылка), или в другой папке (абсолютная ссылка). Значение `R` указывает, что ссылка относительная. Значение `A` указывает, что ссылка абсолютная. Параметр *reference_type* имеет тип **char(1)**.  
   
- [ @environment_folder_name =] *environment_folder_name*  
- Папка, в которой находится среда. Это значение требуется для абсолютных ссылок. *Environment_folder_name* — **nvarchar(128)**.  
+ [ @environment_folder_name = ] *environment_folder_name*  
+ Папка, в которой находится среда. Это значение требуется для абсолютных ссылок. Параметр *environment_folder_name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -59,9 +57,9 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   Разрешения READ и MODIFY на проект и разрешение READ на среду  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
@@ -70,13 +68,12 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
   
 -   Пользователь не имеет соответствующих разрешений.  
   
--   Абсолютная ссылка задается с помощью `A` знаку в *reference_location* параметра, но имя папки не указан с *environment_folder_name* параметр.  
+-   Задана абсолютная ссылка с помощью символа `A` в параметре *reference_location*, но имя папки в параметре *environment_folder_name* не указано.  
   
 ## <a name="remarks"></a>Замечания  
  Проект может иметь относительные или абсолютные ссылки на среду. Относительные ссылки указывают среду по имени и требуют, чтобы она находилась в той же папке, что и проект. Абсолютные ссылки указывают среду с применением имени и папки и могут указывать среды, находящиеся в иной папке, чем проект. Проект может ссылаться на несколько сред.  
   
 > [!IMPORTANT]  
->  Если задан относительная ссылка, *environment_folder_name* значение параметра не используется, и имя папки среды автоматически устанавливается значение **NULL**. Если указано абсолютная ссылка в необходимо указать имя папки среды *environment_folder_name* параметра.  
+>  Если указана относительная ссылка, значение параметра *environment_folder_name* не используется, а имени папки среды автоматически присваивается значение **NULL**. Если указана абсолютная ссылка, должно быть задано имя папки среды через параметр *environment_folder_name*.  
   
   
-

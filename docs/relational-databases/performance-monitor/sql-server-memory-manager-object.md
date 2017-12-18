@@ -2,9 +2,12 @@
 title: "Объект диспетчера памяти (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6ec8688bb10331cf10ef7ebec337c03f96a45305
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 7c4994f77321278c9f923cb5899e70c10a688d95
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, объект Memory Manager
-  Объект **Диспетчер памяти** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает счетчики для контроля использования памяти всего сервера. Контроль над использованием памяти всего сервера для оценки действий пользователя и использования ресурсов может помочь идентифицировать нехватку производительности. Контроль над памятью, используемый экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может помочь определить:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **Диспетчер памяти** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для контроля общего использования памяти на сервере. Контроль над использованием памяти всего сервера для оценки действий пользователя и использования ресурсов может помочь идентифицировать нехватку производительности. Контроль над памятью, используемый экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может помочь определить:  
   
 -   существуют ли нехватки в недостаточной физической памяти для хранения в кэше часто используемых данных. Если памяти недостаточно, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен получить данные с диска;  
   

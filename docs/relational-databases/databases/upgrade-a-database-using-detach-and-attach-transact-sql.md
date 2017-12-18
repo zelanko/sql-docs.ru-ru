@@ -2,9 +2,12 @@
 title: "Обновление базы данных с помощью функций отсоединения и присоединения (Transact-SQL) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: databases
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4a6e2f8514fea8a4815cd46d3603e3a8f62ea4c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3cb578629db2c757cb52d8db1610a81558de6b82
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="upgrade-a-database-using-detach-and-attach-transact-sql"></a>обновить базу данных при помощи отсоединения и присоединения (Transact-SQL)
-  В этой теме описывается использование операции отсоединения и присоединения для обновления базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После присоединения к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]база данных сразу становится доступной, после чего автоматически обновляется.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается использование операций отсоединения и присоединения для обновления базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. После присоединения к [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]база данных сразу становится доступной, после чего автоматически обновляется.  
   
  **В этом разделе**  
   

@@ -2,9 +2,12 @@
 title: "Соединение с подпиской Microsoft Azure | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: dagiro
 ms.author: v-dagir
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d975f8d04025f3bcfc07b72a1437d6337f2a0bb6
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4a014146048e59e437167b340dc34e3be64d0665
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Соединение с подпиской Microsoft Azure
-Параметр **Соединиться с подпиской Майкрософт** используется для регистрации существующего контейнера больших двоичных объектов в экземпляре SQL Server.  С помощью параметров, приведенных в диалоговом окне, в контейнере больших двоичных объектов будет создан подписанный URL-адрес и политика подписанных URL-адресов, после чего будут созданы учетные данные SQL Server.  Это диалоговое окно открывается при использовании задачи резервного копирования или восстановления в SQL Server Management Studio. Для выполнения операции требуется URL-адрес устройства.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Параметр **Соединиться с подпиской Майкрософт** используется для регистрации существующего контейнера BLOB-объектов Azure в экземпляре SQL Server.  С помощью параметров, приведенных в диалоговом окне, в контейнере больших двоичных объектов будет создан подписанный URL-адрес и политика подписанных URL-адресов, после чего будут созданы учетные данные SQL Server.  Это диалоговое окно открывается при использовании задачи резервного копирования или восстановления в SQL Server Management Studio. Для выполнения операции требуется URL-адрес устройства.
 
 ## <a name="limitation"></a>Ограничение
 Параметр**Соединиться с подпиской Майкрософт** работает только с учетной записью хранилища Azure, созданной с помощью модели развертывания управления службами (классической модели развертывания).  Дополнительные сведения о моделях развертывания Azure см. в статье [Azure Resource Manager и классическое развертывание](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/).

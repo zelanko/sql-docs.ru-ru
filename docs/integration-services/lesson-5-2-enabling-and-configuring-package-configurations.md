@@ -1,5 +1,5 @@
 ---
-title: "Шаг 2: Включение и настройка конфигурации пакетов | Документы Microsoft"
+title: "Шаг 2. Активация и настройка конфигураций пакетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5cf47715b998a7f09b6d90772a2b456872eebed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Занятие 5-2-Включение и настройка конфигурации пакетов
+# <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Занятие 5–2. Активация и настройка конфигураций пакетов
 В этой задаче вы преобразуете проект в модель развертывания пакета и включите конфигурации пакетов с помощью мастера настройки пакета. Этот мастер будет использоваться для создания файла конфигурации в формате XML, который содержит параметры конфигурации для свойства **Directory** контейнера "цикл по каждому элементу". Значение свойства Directory содержится в новой переменной уровня пакета, обновление которой можно осуществлять в процессе выполнения. Кроме того, будет заполнена новая папка с образцами данных для использования при проверке.  
   
 ### <a name="to-create-a-new-package-level-variable-mapped-to-the-directory-property"></a>Создание новой переменной уровня пакета, сопоставленной со свойством Directory  
@@ -117,4 +114,3 @@ ms.lasthandoff: 09/26/2017
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Шаг 3. Изменение значения конфигурации свойства Directory](../integration-services/lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
-

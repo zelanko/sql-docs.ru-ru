@@ -1,5 +1,5 @@
 ---
-title: "Catalog.get_parameter_values (база данных SSISDB) | Документы Microsoft"
+title: "catalog.get_parameter_values (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4ad8f0c367e38581db696d2aa32afd5b92d635d2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 644103554b39fde12a2abb150af18799700f7b79
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +39,17 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name =] *имя_папки*  
- Имя папки, которая содержит проект. *Имя_папки* — **nvarchar(128)**.  
+ [ @folder_name = ] *folder_name*  
+ Имя папки, которая содержит проект. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Имя проекта, где находятся параметры. *Project_name* — **nvarchar(128)**.  
+ [ @project_name = ] *project_name*  
+ Имя проекта, где находятся параметры. Параметр *project_name* имеет тип **nvarchar(128)**.  
   
- [ @package_name =] *имя_пакета*  
- Имя пакета. Укажите имя пакета для извлечения всех параметров проекта и параметры из конкретного пакета. Укажите NULL для извлечения всех параметров проекта и параметров из всех пакетов. *Имя_пакета* — **nvarchar(260)**.  
+ [ @package_name = ] *package_name*  
+ Имя пакета. Укажите имя пакета для извлечения всех параметров проекта и параметры из конкретного пакета. Укажите NULL для извлечения всех параметров проекта и параметров из всех пакетов. Параметр *package_name* имеет тип **nvarchar(260)**.  
   
- [ @reference_id =] *reference_id*  
- Уникальный идентификатор ссылки на среду. Этот параметр является необязательным. *Reference_id* — **bigint**.  
+ [ @reference_id = ] *reference_id*  
+ Уникальный идентификатор ссылки на среду. Этот параметр является необязательным. Параметр *reference_id* имеет тип **bigint**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -70,16 +68,16 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |value_set|**bit**|Если значение равно `1`, то значение параметра было назначено. Если значение равно `0`, то значение параметра не было назначено.|  
   
 > [!NOTE]  
->  Литеральные значения отображаются обычным текстом. **Значение NULL** отображается вместо конфиденциальных значений.  
+>  Литеральные значения отображаются обычным текстом. Вместо конфиденциальных значений отображается **NULL**.  
   
 ## <a name="permissions"></a>Permissions  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения READ на проект и, если применимо, на указанную среду.  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
@@ -91,4 +89,3 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 -   Указанный идентификатор среды не существует.  
   
   
-

@@ -1,6 +1,6 @@
 ---
-title: "Обновлено - служб Integration Services для SQL Server docs | Документы Microsoft"
-description: "Отображение фрагментов обновленное содержимое для последних измененных в документации для служб Integration Services для Microsoft SQL Server."
+title: "Обновленные документы по службам Integration Services для SQL Server | Документы Майкрософт"
+description: "Отрывки из недавно обновленного содержимого в документации по службам Integration Services для Microsoft SQL Server."
 services: na
 documentationcenter: 
 author: MightyPen
@@ -19,14 +19,13 @@ ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.author: genemi
 ms.workload: integration-services
-ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 3c5da14b7a65f8a3eb1eb253d685a146d813868a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/02/2017
-
+ms.openlocfilehash: b4f4ec841a9f815ddbe0558154ec8ea692683c11
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>Новые и недавно обновленные: службы Integration Services для SQL Server
+# <a name="new-and-recently-updated-integration-services-for-sql-server"></a>Новые и обновленные статьи по службам Integration Services для SQL Server
 
 
 
@@ -38,8 +37,8 @@ ms.lasthandoff: 10/02/2017
 
 
 
-- *Диапазон обновлений дат:* &nbsp; **2017 г-09-11** &nbsp; - в - &nbsp; **2017 г-09-27**
-- *Предметной области:* &nbsp; **службы Integration Services для SQL Server**.
+- *Диапазон дат обновлений:* &nbsp; **11.09.2017**&nbsp;–&nbsp;**27.09.2017**
+- *Предметная область:* &nbsp; **Службы Integration Services для SQL Server**.
 
 
 
@@ -51,23 +50,23 @@ ms.lasthandoff: 10/02/2017
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Подключения к базе данных каталога SSISDB в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-2. [Подключиться к локальным источникам данных с проверкой подлинности Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
+1. [Подключение к базе данных каталога SSISDB в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+2. [Подключение к локальным источникам данных с помощью проверки подлинности Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 3. [Развертывание, запуск и отслеживание пакета служб SSIS в Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-4. [Усилие SQL Server Integration Services рабочих нагрузок в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
-5. [Запланировать выполнение пакета служб SSIS в Azure](lift-shift/ssis-azure-schedule-packages.md)
-6. [Развертывание проекта служб SSIS из командной строки с ISDeploymentWizard.exe](ssis-quickstart-deploy-cmdline.md)
+4. [Перенос рабочих нагрузок SQL Server Integration Services в облако](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+5. [Планирование выполнения пакета служб SSIS в Azure](lift-shift/ssis-azure-schedule-packages.md)
+6. [Развертывание проекта служб SSIS из командной строки с помощью ISDeploymentWizard.exe](ssis-quickstart-deploy-cmdline.md)
 7. [Развертывание проекта служб SSIS с кодом C# в приложении .NET](ssis-quickstart-deploy-dotnet.md)
 8. [Развертывание проекта служб SSIS с помощью PowerShell](ssis-quickstart-deploy-powershell.md)
-9. [Развертывание проекта служб SSIS с SQL Server Management Studio (SSMS)](ssis-quickstart-deploy-ssms.md)
-10. [Развертывание проекта служб SSIS в среде SSMS с помощью Transact-SQL](ssis-quickstart-deploy-tsql-ssms.md)
-11. [Развертывание проекта служб SSIS из кода Visual Studio с помощью Transact-SQL](ssis-quickstart-deploy-tsql-vscode.md)
-12. [Запустите из командной строки с DTExec.exe пакета служб SSIS](ssis-quickstart-run-cmdline.md)
-13. [Запустить пакет служб SSIS с кодом C# в приложении .NET](ssis-quickstart-run-dotnet.md)
-14. [Выполнить пакет служб SSIS с помощью PowerShell](ssis-quickstart-run-powershell.md)
-15. [Запустить пакет служб SSIS с SQL Server Management Studio (SSMS)](ssis-quickstart-run-ssms.md)
-16. [Запустить пакет служб SSIS в среде SSMS с помощью Transact-SQL](ssis-quickstart-run-tsql-ssms.md)
-17. [Запустить пакет служб SSIS из кода Visual Studio с помощью Transact-SQL](ssis-quickstart-run-tsql-vscode.md)
+9. [Развертывание проекта служб SSIS с помощью SQL Server Management Studio (SSMS)](ssis-quickstart-deploy-ssms.md)
+10. [Развертывание проекта служб SSIS из SSMS с помощью Transact-SQL](ssis-quickstart-deploy-tsql-ssms.md)
+11. [Развертывание проекта служб SSIS из Visual Studio Code с помощью Transact-SQL](ssis-quickstart-deploy-tsql-vscode.md)
+12. [Выполнение пакета служб SSIS из командной строки с помощью программы DTExec.exe](ssis-quickstart-run-cmdline.md)
+13. [Выполнение пакета служб SSIS с кодом C# в приложении .NET](ssis-quickstart-run-dotnet.md)
+14. [Выполнение пакета служб SSIS с помощью PowerShell](ssis-quickstart-run-powershell.md)
+15. [Выполнение пакета служб SSIS с помощью SQL Server Management Studio (SSMS)](ssis-quickstart-run-ssms.md)
+16. [Выполнение пакета служб SSIS из SSMS с помощью Transact-SQL](ssis-quickstart-run-tsql-ssms.md)
+17. [Выполнение пакета служб SSIS из Visual Studio Code с помощью Transact-SQL](ssis-quickstart-run-tsql-vscode.md)
 
 
 
@@ -117,20 +116,20 @@ ms.lasthandoff: 10/02/2017
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новый + обновленные (0 + 1): **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новый + обновленные (0 + 1): **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
-- [Новый + обновленные (4 + 1): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
-- [Новый + обновленные (17 + 0): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
-- [Новый + обновленные (3 + 0): **Linux для SQL** документы](../linux/new-updated-linux.md)
-- [Новый + обновленные (1 + 1): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
-- [Новый + обновленные (2 + 0): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
-- [Новый + обновленные (0 + 1): **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
-- [Новый + обновленные (0 + 1): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (0+1): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (0+1): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новые + обновленные (4+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (17+0): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (3+0): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (1+1): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (2+0): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новые + обновленные (0+1): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новый + обновленные (0 + 0): **подключение к SQL** документы](../connect/new-updated-connect.md)
+- [Новые + обновленные (0+0): **Подключение к SQL**](../connect/new-updated-connect.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
@@ -138,11 +137,10 @@ ms.lasthandoff: 10/02/2017
 - [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
 - [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
 - [Новые + обновленные (0+0): **примеры для SQL**](../sample/new-updated-sample.md)
-- [Новый + обновленные (0 + 0): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (0+0): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [Новые + обновленные (0+0): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
 - [Новые + обновленные (0+0): **помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новый + обновленные (0 + 0): **средства для SQL** документы](../tools/new-updated-tools.md)
+- [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
 - [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
-
 
 

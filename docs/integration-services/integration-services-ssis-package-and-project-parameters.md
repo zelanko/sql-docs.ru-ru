@@ -1,5 +1,5 @@
 ---
-title: "Пакет служб Integration Services (SSIS) и параметров проекта | Документы Microsoft"
+title: "Параметры пакета и проекта Integration Services (SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-non-specified
@@ -8,27 +8,25 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.parameter.f1
 - sql13.dts.designer.paramterwindow.f1
 ms.assetid: 9ed9ca8e-8b1e-48d9-907d-285516d6562b
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
-ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/27/2017
-
+ms.openlocfilehash: c8a82c0ebb888c4ea075789c7f2149726ff7af25
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="integration-services-ssis-package-and-project-parameters"></a>Пакет служб Integration Services (SSIS) и параметров проекта
+# <a name="integration-services-ssis-package-and-project-parameters"></a>Параметры пакета и проекта Integration Services (SSIS)
   Параметры служб[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (SSIS) могут быть использованы для присвоения значений свойствам внутри пакетов во время выполнения пакетов. Можно создать *параметры проекта* на уровне проекта и *параметры пакета* на уровне пакета. Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  
   
  В службах [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] можно создавать, изменять и удалять параметры проекта в окне **Project.params** . Создавать, изменять, удалять и параметров пакета можно с помощью вкладки **Параметры** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Диалоговое окно **Параметризация** позволяет связать новый или существующий параметр со свойством задачи. Дополнительные сведения об использовании окна **Project.params** и вкладки **Параметры** см. в разделе [Create Parameters](http://msdn.microsoft.com/library/cd5d675b-dd5d-49cc-8b1f-dc717a973f99). Дополнительные сведения о диалоговом окне **Параметризация** см. в разделе [Parameterize Dialog Box](http://msdn.microsoft.com/library/fac02b6d-d247-447a-8940-e8700c7ac350).  
@@ -41,11 +39,11 @@ ms.lasthandoff: 09/27/2017
 ## <a name="parameters-and-project-deployment-model"></a>Параметры и модели развертывания проекта  
  При развертывании проекта на сервере служб Integration Services (SSIS) используются хранимые процедуры, представления и пользовательский интерфейс [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] для управления параметрами проектов и пакетов. Дополнительные сведения см. в следующих разделах:  
   
--   [Представления &#40; каталог служб Integration Services &#41;](../integration-services/system-views/views-integration-services-catalog.md)  
+-   [Представления (каталог служб Integration Services)](../integration-services/system-views/views-integration-services-catalog.md)  
   
--   [Хранимые процедуры &#40; каталог служб Integration Services &#41;](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
+-   [Хранимые процедуры (каталог служб Integration Services)](../integration-services/system-stored-procedures/stored-procedures-integration-services-catalog.md)  
   
--   [Настройка диалоговое окно](../integration-services/service/configure-dialog-box.md)  
+-   [Диалоговое окно «Настройка»](../integration-services/service/configure-dialog-box.md)  
   
 -   [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
@@ -74,21 +72,21 @@ ms.lasthandoff: 09/27/2017
   
  Если параметр проекта ссылается на переменную среды и литеральное значение из переменной при выполнении процедуры не может быть разрешено, то используется значение проекта. Значение сервера не используется.  
   
- Чтобы просмотреть переменные среды, назначенные значениям параметра, запросите представление catalog.object_parameters. Дополнительные сведения см. в разделе [catalog.object_parameters &#40; База данных SSISDB &#41; ](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
+ Чтобы просмотреть переменные среды, назначенные значениям параметра, запросите представление catalog.object_parameters. Дополнительные сведения см. в разделе [catalog.object_parameters (база данных SSISDB)](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md).  
   
 #### <a name="determining-execution-parameter-values"></a>Определение значений параметров выполнения  
  Для отображения и задания значений параметров можно использовать следующие представления и хранимые процедуры Transact-SQL.  
   
- [Catalog.execution_parameter_values &#40; База данных SSISDB &#41; ](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(view)  
+ [catalog.execution_parameter_values (база данных SSISDB)](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(представление)  
  Показывает фактические значения параметров, которые будут использоваться определенным выполнением  
   
- [Catalog.get_parameter_values &#40; База данных SSISDB &#41; ](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (хранимая процедура)  
+ [catalog.get_parameter_values (база данных SSISDB)](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (хранимая процедура)  
  Разрешает и показывает фактические значения для заданного пакета и ссылки на среду  
   
- [Catalog.object_parameters &#40; База данных SSISDB &#41; ](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (view)  
+ [catalog.object_parameters (база данных SSISDB)](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (представление)  
  Отображает параметры и свойства для всех пакетов и проектов в каталоге [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , включая значения по умолчанию проекта и значения по умолчанию сервера.  
   
- [Catalog.set_execution_parameter_value &#40; База данных SSISDB &#41;](../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
+ [catalog.set_execution_parameter_value (база данных SSISDB)](../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md)  
  Задает значение параметра для экземпляра выполнения в каталоге служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
  Можно также использовать диалоговое окно **Выполнить пакет** в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] , чтобы изменить значение параметра. Дополнительные сведения см. в разделе [Execute Package Dialog Box](../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog).  
@@ -110,17 +108,17 @@ ms.lasthandoff: 09/27/2017
 ## <a name="create-parameters"></a>Create Parameters
 В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] можно создавать параметры проектов и пакетов. Следующие процедуры содержат пошаговые инструкции для создания параметров пакета (проекта).  
   
-> **ПРИМЕЧАНИЕ.** Если выполняется преобразование проекта, созданного с помощью предыдущей версии служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], в модель развертывания проекта, то для создания параметров на основе конфигураций можно запустить **Мастер преобразования проектов служб Integration Services**. Дополнительные сведения см. в разделе [развертывания Integration Services (SSIS) проектов и пакетов](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
+> **ПРИМЕЧАНИЕ.** Если выполняется преобразование проекта, созданного с помощью предыдущей версии служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], в модель развертывания проекта, то для создания параметров на основе конфигураций можно запустить **Мастер преобразования проектов служб Integration Services**. Дополнительные сведения см. в разделе [Развертывание проектов и пакетов служб Integration Services (SSIS)](../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md).  
   
 ### <a name="create-package-parameters"></a>Создание параметров пакета  
   
 1.  Откройте пакет в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], а затем перейдите на вкладку **Параметры** в конструкторе служб SSIS.  
   
-     ![Вкладка «Параметры» пакета](../integration-services/media/denali-package-parameters.gif "пакета вкладка «Параметры»")  
+     ![Вкладка "Параметры пакета"](../integration-services/media/denali-package-parameters.gif "Вкладка "Параметры пакета"")  
   
 2.  Нажмите кнопку **Добавить параметр** на панели инструментов.  
   
-     ![Кнопка добавления панели инструментов](../integration-services/media/denali-parameter-add.gif "добавить кнопки панели инструментов")  
+     ![Кнопка добавления панели инструментов](../integration-services/media/denali-parameter-add.gif "Кнопка добавления панели инструментов")  
   
 3.  Введите значения для свойств **Имя**, **Тип данных**, **Значение**, **С учетом регистра**и **Обязательно** в сам список или в окно **Свойства** . В следующей таблице описываются эти свойства.  
   
@@ -137,7 +135,7 @@ ms.lasthandoff: 09/27/2017
   
 4.  Сохраните проект для сохранения изменений, внесенных в параметры. Значения параметров хранятся в файле проекта.  
   
-    > **ПРЕДУПРЕЖДЕНИЕ!** Можно изменять список на месте или в окне **Свойства** изменить значения свойств параметра. Можно удалить параметр, нажав кнопку **Удалить (X)** на панели инструментов. С помощью последней кнопки на панели инструментов можно указать значение параметра, которое будет использоваться только при выполнении пакета в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
+    > **ПРЕДУПРЕЖДЕНИЕ!!** Можно изменять список на месте или в окне **Свойства** изменить значения свойств параметра. Можно удалить параметр, нажав кнопку **Удалить (X)** на панели инструментов. С помощью последней кнопки на панели инструментов можно указать значение параметра, которое будет использоваться только при выполнении пакета в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
   
     > **ПРИМЕЧАНИЕ.** Если повторно открыть файл пакета, не открыв при этом проект в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], вкладка **Параметры** будет пустой и неактивной.  
   
@@ -147,11 +145,11 @@ ms.lasthandoff: 09/27/2017
   
 2.  В обозревателе решений щелкните правой кнопкой мыши **Project.params** и выберите команду **Открыть** или дважды щелкните файл **Project.params** , чтобы открыть его.  
   
-     ![Окно параметров проекта](../integration-services/media/denali-project-parameters.gif "окно параметров проекта")  
+     ![Окно "Параметры проекта"](../integration-services/media/denali-project-parameters.gif "Окно "Параметры проекта"")  
   
 3.  Нажмите кнопку **Добавить параметр** на панели инструментов.  
   
-     ![Кнопка добавления панели инструментов](../integration-services/media/denali-parameter-add.gif "добавить кнопки панели инструментов")  
+     ![Кнопка добавления панели инструментов](../integration-services/media/denali-parameter-add.gif "Кнопка добавления панели инструментов")  
   
 4.  Введите значения для свойств **Имя**, **Тип данных**, **Значение**, **С учетом регистра**и **Обязательно** .  
   
@@ -168,26 +166,26 @@ ms.lasthandoff: 09/27/2017
   
     > **ПРЕДУПРЕЖДЕНИЕ!!!** Можно изменять список на месте или в окне **Свойства** изменить значения свойств параметра. Можно удалить параметр, нажав кнопку **Удалить (X)** на панели инструментов. Воспользуйтесь последней кнопкой на панели инструментов для открытия диалогового окна **Управление значениями параметров** и указания значения параметра, которое будет использоваться только при выполнении пакета в среде [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  
     
-## <a name="parameterize-dialog-box"></a>Диалоговое окно «Параметризация»
-**Параметризация** диалоговое окно позволяет связать новый или существующий параметр со свойством задачи. Чтобы открыть это диалоговое окно, щелкните правой кнопкой мыши задачу или вкладку «Поток управления» в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и выберите команду **Параметризация**. Следующий список описывает элементы пользовательского интерфейса в диалоговом окне. Дополнительные сведения о параметрах см. в разделе [Параметры служб Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
+## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
+Диалоговое окно **Параметризация** позволяет связать новый или существующий параметр со свойством задачи. Чтобы открыть это диалоговое окно, щелкните правой кнопкой мыши задачу или вкладку «Поток управления» в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и выберите команду **Параметризация**. Следующий список описывает элементы пользовательского интерфейса в диалоговом окне. Дополнительные сведения о параметрах см. в разделе [Параметры служб Integration Services (SSIS)](https://msdn.microsoft.com/library/hh213214.aspx).
   
 ### <a name="options"></a>Параметры  
  **Свойство**  
  Выберите свойство задачи, которую нужно связать с параметром. Этот список заполняется всеми свойствами, которые могут быть параметризированы.  
   
- **Используйте существующий параметр**  
+ **Использовать существующий параметр**  
  Выберите этот параметр для связывания свойства задачи с существующим параметром, а затем выберите параметр из раскрывающегося списка.  
   
- **Не используйте параметр**  
+ **Не использовать параметр**  
  Выберите этот параметр для удаления ссылки на параметр. Параметр не удаляется.  
   
- **Создание нового параметра**  
+ **Создать новый параметр**  
  Выберите этот параметр для создания нового параметра, который необходимо связать со свойством задачи.  
   
- **Имя**  
+ **Название**  
  Задайте имя создаваемого параметра.  
   
- **Описание**  
+ **Description**  
  Задайте описание параметра.  
   
  **Значение**  
@@ -196,13 +194,13 @@ ms.lasthandoff: 09/27/2017
  **Область действия**  
  Укажите область действия параметра, выбрав или параметр **Проект** , или параметр **Пакет** . Параметры проекта используются для предоставления любых внешних данных, получаемых проектом, одному пакету в проекте или более. Параметры пакета позволяют изменить выполнение пакета. При этом изменять пакет и развертывать его повторно не придется.  
   
- **Конфиденциальные**  
+ **С учетом регистра**  
  Установив или сняв флажок, определите конфиденциальность параметра. Конфиденциальные значения параметров шифруются в каталоге и при просмотре с помощью Transact-SQL или в среде SQL Server Management Studio отображаются как значения NULL.  
   
- **Обязательное**  
+ **Обязательно**  
  Укажите, необходимо ли задавать параметру значение, отличное от значения по умолчанию проекта, перед выполнением пакета.  
  
-## <a name="set-parameter-values-after-the-project-is-deployed"></a>Задать значения параметров после развертывания проекта
+## <a name="set-parameter-values-after-the-project-is-deployed"></a>Настройка значений параметров после развертывания проекта
 Мастер развертывания позволяет задавать значения параметров по умолчанию сервера при развертывании проекта в каталог. После развертывания проекта в каталог задать значения по умолчанию сервера можно будет с помощью обозревателя объектов среды SQL Server Management Studio (SSMS) или Transact-SQL.  
   
 ### <a name="set-server-defaults-with-ssms-object-explorer"></a>Настройка параметров сервера по умолчанию с помощью обозревателя объектов SSMS  
@@ -224,4 +222,3 @@ ms.lasthandoff: 09/27/2017
  Запись в блоге [SSIS Quick Tip: Required Parameters](http://go.microsoft.com/fwlink/?LinkId=239781)(Краткая рекомендация по службам SSIS. Необходимые параметры) на mattmasson.com.  
   
   
-

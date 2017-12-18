@@ -3,8 +3,11 @@ title: "Настройка сжатия для группы доступност
 ms.custom: 
 ms.date: 06/22/2016
 ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,15 +17,14 @@ author: MikeRayMSFT
 ms.author: v-saume
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3710e208a767a2291da6f27f9266f0729a5c239
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ad722c68fa1cf60e8b253892f093fcdae24b751a
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="tune-compression-for-availability-group"></a>Настройка сжатия для группы доступности
-
-По умолчанию SQL Server сжимает потоки данных для групп доступности, где это необходимо. Сжатие позволяет сократить объем сетевого трафика, увеличить загрузку ЦП и может вызывать задержки. Включить сжатие могут только члены предопределенной роли сервера sysadmin. В следующей таблице приведены ситуации, в которых SQL Server использует сжатие для потоков журнала группы доступности.
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] По умолчанию SQL Server сжимает потоки данных для групп доступности, где это необходимо. Сжатие позволяет сократить объем сетевого трафика, увеличить загрузку ЦП и может вызывать задержки. Включить сжатие могут только члены предопределенной роли сервера sysadmin. В следующей таблице приведены ситуации, в которых SQL Server использует сжатие для потоков журнала группы доступности.
 
 | Сценарий | Параметр сжатия
 | ---- | ----

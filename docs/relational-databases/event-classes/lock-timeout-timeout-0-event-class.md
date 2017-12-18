@@ -2,9 +2,12 @@
 title: "Класс событий Lock:Timeout (timeout &gt; 0) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f27e3ade16f666c8f07b7b74789a3ed007b0ffbf
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f7a88b0bd22adc4e39e17a0b4353d80962a1970a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Класс событий Lock:Timeout (timeout &gt; 0)
-  Класс событий **Lock:Timeout (timeout > 0)** показывает, что запрос на блокировку некоторого ресурса, например страницы, превысил время ожидания, так как этот ресурс был блокирован другой транзакцией. Данный класс событий работает аналогично классу событий **Lock:Timeout** за тем исключением, что не включает события со значением времени ожидания 0.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий **Lock:Timeout (timeout > 0)** показывает, что запрос на блокировку ресурса, например страницы, превысил время ожидания, так как этот ресурс был блокирован другой транзакцией. Данный класс событий работает аналогично классу событий **Lock:Timeout** за тем исключением, что не включает события со значением времени ожидания 0.  
   
  Класс событий **Lock:Timeout (timeout > 0)** следует включать в трассировку в том случае, если используются пробные блокировки или имеются другие процессы с нулевым временем ожидания. Это позволяет отслеживать возникновение случаев фактического превышения времени ожидания, не включая в трассировку нулевые значения времени ожидания.  
   

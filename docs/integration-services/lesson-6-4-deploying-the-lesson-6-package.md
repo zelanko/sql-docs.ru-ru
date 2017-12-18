@@ -1,5 +1,5 @@
 ---
-title: "Шаг 4: Развертывание пакета Lesson 6 | Документы Microsoft"
+title: "Шаг 4. Развертывание пакета, созданного на занятии 6 | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,26 +8,23 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to:
-- SQL Server 2016
+applies_to: SQL Server 2016
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 504d9be296088cf3f455f8790ff013ab0c1df14b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 35970f8d14fd44ec9b1e11aec91ed11ea439a648
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Урок 6-4-развертывания пакета Lesson 6
+# <a name="lesson-6-4---deploying-the-lesson-6-package"></a>Занятие 6–4. Развертывание пакета, созданного на занятии 6
 Развертывание пакета предполагает добавление пакета в каталоге SSISDB в службах Integration Services на экземпляре SQL Server. На этом занятии вы добавите пакет Lesson 6 в каталог SSISDB, зададите параметр и выполните пакет. На этом занятии будет использоваться SQL Server Management Studio для добавления пакета Lesson 6 в каталог SSISDB и развертывания пакета. После развертывания пакета будет изменен параметр для указания нового расположения, а затем выполнен пакет.  
   
 На этом занятии вы научитесь:  
@@ -130,4 +127,3 @@ ms.lasthandoff: 09/26/2017
   
   
   
-

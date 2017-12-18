@@ -1,5 +1,5 @@
 ---
-title: "Создание связей | Документы Microsoft"
+title: "Создание связей | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.createrelationships.f1
+f1_keywords: sql13.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a9f511b91e0e085c07dcf4dfb7742514ddad6070
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 651ad318f4bc55291eab79041c41167b9ee08e0d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="create-relationships"></a>Создание связей
   Используйте диалоговое окно **Создание связей** , чтобы изменить сопоставления между исходными столбцами и столбцами таблицы уточняющих запросов, настроенные в редакторе преобразования «Нечеткий уточняющий запрос», в редакторах преобразования «Уточняющий запрос» и «Уточняющий запрос термина».  
@@ -58,9 +55,8 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>См. также раздел  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Редактор преобразования Нечеткий уточняющий запрос &#40; Вкладка «столбцы» &#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Редактор преобразования Уточняющий запрос &#40; Страница «столбцы» &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
- [Редактор преобразования Уточняющий запрос термина &#40; Условие поиска вкладку &#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
+ [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Столбцы")](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [Редактор преобразования "Уточняющий запрос" (страница "Столбцы")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
+ [Редактор преобразований "Уточняющий запрос термина" (вкладка "Уточняющий запрос термина")](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
   
   
-

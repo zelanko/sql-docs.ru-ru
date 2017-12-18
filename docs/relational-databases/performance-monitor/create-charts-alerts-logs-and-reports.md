@@ -2,9 +2,12 @@
 title: "Создание диаграмм, предупреждений, журналов и отчетов | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14e449b64d959cd6f877b27871f329b231038955
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c9bfe93f96bc9c5b4b2c887e3935916fc2fad01b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="create-charts-alerts-logs-and-reports"></a>Создание диаграмм, предупреждений, журналов и отчетов
-  Для контроля экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]системный монитор позволяет создавать диаграммы, предупреждения, журналы и отчеты.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для контроля экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системный монитор позволяет создавать диаграммы, предупреждения, журналы и отчеты.  
   
 ## <a name="charts"></a>Диаграммы  
  Диаграммы позволяют контролировать производительность выбранных объектов и состояние счетчиков, например загрузку ЦП или дисковый ввод-вывод. К диаграмме можно добавить различные сочетания объектов и счетчиков системного монитора. К диаграмме также можно добавить объекты и счетчики [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  

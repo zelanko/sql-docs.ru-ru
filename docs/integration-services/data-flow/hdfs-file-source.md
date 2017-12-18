@@ -1,5 +1,5 @@
 ---
-title: "Источник файлов HDFS | Документы Microsoft"
+title: "Источник \"Файл HDFS\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,31 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.ssis.designer.hdfsfilesrc.f1
+f1_keywords: sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2b7ed3c3789b7c28476719422f600106a73bfebd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b51169029f95c084907d614fae60ea6b78acb502
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="hdfs-file-source"></a>Источник "Файл HDFS"
   Компонент "Источник "Файл HDFS" позволяет пакету служб SSIS считывать данные из файла HDFS. Поддерживаются следующие форматы файлов: TEXT и AVRO. Источники данных ORC не поддерживаются.  
   
  Чтобы настроить источник "Файл HDFS", перетащите источник "Файл HDFS" в конструктор потоков данных и дважды щелкните этот компонент, чтобы открыть редактор.  
   
- ![Редактор источника файла HDFS](../../integration-services/data-flow/media/hdfs-file-source.png "редактор источник файлов HDFS")  
+ ![Редактор источника "Файл HDFS"](../../integration-services/data-flow/media/hdfs-file-source.png "Редактор источника "Файл HDFS"")  
   
 ## <a name="options"></a>Параметры  
  Настройте следующие параметры на вкладке **Общие** в диалоговом окне **Редактор источника "Файл Hadoop"** .  
@@ -49,7 +46,6 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="see-also"></a>См. также  
  [Диспетчер подключений Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Назначение файлов HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
+ [Назначение «Файл HDFS»](../../integration-services/data-flow/hdfs-file-destination.md)  
   
   
-

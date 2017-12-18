@@ -2,9 +2,12 @@
 title: "Обновление зеркальных экземпляров | Документы Майкрософт"
 ms.custom: 
 ms.date: 02/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27c4e397e7cf5dbf6b8a930badf965b293898537
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f8b3e3b72900fe64a8925b6ebc9e8901b63e2dde
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-mirrored-instances"></a>Обновление зеркальных экземпляров
-  При обновлении зеркального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установкой новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , нового пакета обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]или накопительного пакета обновления, а также при установке нового пакета обновления Windows или накопительного пакета обновления Windows вы можете выполнить последовательное обновление, что позволит сократить время простоя каждой зеркальной базы данных до одного цикла перехода на другой ресурс вручную (или двух циклов перехода на другой ресурс вручную, если нужно вернуться к исходной первичной реплике). Последовательное обновление является многоэтапным процессом, который в самом простом случае заключается в обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , выступающего в роли зеркального сервера в сеансе зеркального отображения, последующем переходе на зеркальную базу данных вручную, обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , бывшего основным, и возобновлении зеркального отображения. Набор операций, фактически применяемый на практике, будет зависеть от режима работы, а также от количества и структуры сеансов зеркального отображения, активных в обновляемых экземплярах [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При обновлении зеркального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с установкой новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], нового пакета обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или накопительного пакета обновления, а также при установке нового пакета обновления Windows или накопительного пакета обновления Windows вы можете выполнить последовательное обновление, что позволит сократить время простоя каждой зеркальной базы данных до одного цикла перехода на другой ресурс вручную (или двух циклов перехода на другой ресурс вручную, если нужно вернуться к исходной первичной реплике). Последовательное обновление является многоэтапным процессом, который в самом простом случае заключается в обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , выступающего в роли зеркального сервера в сеансе зеркального отображения, последующем переходе на зеркальную базу данных вручную, обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , бывшего основным, и возобновлении зеркального отображения. Набор операций, фактически применяемый на практике, будет зависеть от режима работы, а также от количества и структуры сеансов зеркального отображения, активных в обновляемых экземплярах [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 > [!NOTE]  
 >  Для получения сведений об использовании зеркального отображения базы данных с доставкой журналов во время миграции скачайте [технический документ "Зеркальное отображение баз данных и доставка журналов"](https://t.co/RmO6ruCT4J).  

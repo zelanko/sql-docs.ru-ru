@@ -2,9 +2,12 @@
 title: "Указание параметров | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: stored-procedures
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-stored-Procs
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3b2bf91392ea6142dc0bb9ea624437069425a556
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f0b580149c946b88eafc138dc69e55ef673aafc9
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="specify-parameters"></a>Указание параметров
-  Путем указания параметров процедуры вызывающие программы могут передавать значения в тело процедуры. Эти значения могут использоваться для разных целей во время исполнения процедуры. Параметры процедуры могут также возвращать значения вызывающей программе, если параметр помечен признаком OUTPUT.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Путем указания параметров процедуры вызывающие программы могут передавать значения в тело процедуры. Эти значения могут использоваться для разных целей во время исполнения процедуры. Параметры процедуры могут также возвращать значения вызывающей программе, если параметр помечен признаком OUTPUT.  
   
  Хранимая процедура может иметь не более 2100 параметров, каждый из которых имеет имя, тип данных и направление. При необходимости параметрам можно задавать значения по умолчанию.  
   

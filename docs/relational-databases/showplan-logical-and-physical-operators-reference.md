@@ -2,9 +2,12 @@
 title: "Справочник по логическим и физическим операторам Showplan | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/12/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: relational-databases-misc
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -139,14 +142,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 80ad5d780193ef6a540dccb2f78fd2e5002a3eb7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 85c04a4e1322476be6181e09e6c3a6873955ec37
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>Справочник по логическим и физическим операторам Showplan
-  Операторы описывают, как [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняет запрос или инструкцию языка DML. Оптимизатор запросов использует операторы для построения плана запроса, чтобы создать результат, заданный в запросе, или произвести операцию, указанную в инструкции DML. План запроса — это дерево физических операторов. Можно просмотреть план запроса с помощью инструкций SET SHOWPLAN, параметров графического плана выполнения в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]и классов событий SQL Server Profiler Showplan.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Операторы описывают, как [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] выполняет запрос или инструкцию языка обработки данных DML. Оптимизатор запросов использует операторы для построения плана запроса, чтобы создать результат, заданный в запросе, или произвести операцию, указанную в инструкции DML. План запроса — это дерево физических операторов. Можно просмотреть план запроса с помощью инструкций SET SHOWPLAN, параметров графического плана выполнения в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]и классов событий SQL Server Profiler Showplan.  
   
  Операторы классифицируются как логические и физические.  
   

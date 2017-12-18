@@ -1,5 +1,5 @@
 ---
-title: "Применить изменения к назначению | Документы Microsoft"
+title: "Применение изменений в назначении | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords:
-- incremental load [Integration Services],applying changes
+helpviewer_keywords: incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f2900e6903553f9eb74cd18aad0c13691073d425
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 9edb9959d4d72e6f18d8949cfe5b311cf9a0a131
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Применение изменений в назначении
   В потоке данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , который выполняет добавочную загрузку информации об измененных данных, третьей и последней задачей является применение изменений к назначению. Один компонент потребуется для применения вставок, один — для применения обновлений и один — для применения удалений.  
@@ -113,4 +110,3 @@ ms.lasthandoff: 08/03/2017
  В инструкции Transact-SQL, получающей измененные данные, в качестве значения параметра *row_filter_option* при вызове функции **cdc.fn_cdc_get_net_changes_<экземпляр_отслеживания_изменений>** можно указать *all with merge*. Эта система отслеживания измененных данных работает более эффективно, если не требуется дополнительная обработка для различения вставок и обновлений. Если параметр получает значение *all with merge* , значение **__$operation** измененных данных равно 1 для удалений или 5 для изменений, вызванных вставками или обновлениями. Дополнительные сведения о функции Transact-SQL, используемой для получения измененных данных, см. в разделе [Получение и интерпретация измененных данных](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md). После получения изменений с параметром *all with merge* можно применить удаления и вывести оставшиеся строки во временную или промежуточную таблицу. Затем в нисходящей задаче «Выполнение SQL» можно использовать одну инструкцию MERGE для применения всех вставок или обновлений из промежуточной таблицы к назначению.  
   
   
-

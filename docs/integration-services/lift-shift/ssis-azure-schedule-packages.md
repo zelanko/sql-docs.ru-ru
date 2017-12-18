@@ -1,5 +1,5 @@
 ---
-title: "Запланировать выполнение пакета служб SSIS в Azure | Документы Microsoft"
+title: "Планирование выполнения пакета служб SSIS в Azure | Документы Майкрософт"
 ms.date: 09/25/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -8,44 +8,42 @@ ms.service:
 ms.component: lift-shift
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- integration-services
+ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
-ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/18/2017
-
+ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Запланировать выполнение пакета служб SSIS в Azure
-Можно запланировать выполнение пакетов, хранящихся в базе данных каталога SSISDB на сервере базы данных SQL Azure, выбрав один из следующих параметров планирования:
+# <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Планирование выполнения пакета служб SSIS в Azure
+Вы можете запланировать выполнение пакетов, хранящихся в базе данных каталога SSISDB на сервере базы данных SQL Azure, выбрав один из следующих вариантов планирования:
 -   [SQL Server, агент](#agent)
--   [Заданий эластичных баз данных SQL](#elastic)
--   [Действие хранимую процедуру для фабрики SQL Azure данные сервера](#sproc)
+-   [Задания обработки эластичных баз данных SQL](#elastic)
+-   [Операция хранимой процедуры SQL Server для фабрики данных Azure](#sproc)
 
-## <a name="agent"></a>Планирование пакета с помощью агента SQL Server
+## <a name="agent"></a> Планирование пакета с помощью агента SQL Server
 
 ### <a name="prerequisite"></a>Предварительные требования
 
-Прежде чем агент SQL Server на локальном компьютере можно использовать для планирования выполнения пакетов, хранящихся на сервере базы данных SQL Azure, необходимо добавить базу данных SQL server в качестве связанного сервера. Дополнительные сведения см. в разделе [создавать связанные серверы](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) и [связанные серверы](../../relational-databases/linked-servers/linked-servers-database-engine.md).
+Прежде чем использовать агент SQL Server в локальной среде для планирования выполнения пакетов, хранящихся на сервере базы данных SQL Azure, необходимо добавить сервер базы данных SQL Database в качестве связанного сервера. Дополнительные сведения см. в разделах [Создание связанных серверов](../../relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md) и [Связанные серверы](../../relational-databases/linked-servers/linked-servers-database-engine.md).
 
 ### <a name="create-a-sql-server-agent-job"></a>Создание задания агента SQL Server
 
-Чтобы запланировать запуск пакета с помощью агента SQL Server на локальном компьютере, создание задания с шага задания, который вызывает каталога служб SSIS хранимых процедур `[catalog].[create_execution]` и затем `[catalog].[start_execution]`. Дополнительные сведения см. в разделе [заданий агента SQL Server для пакетов](../packages/sql-server-agent-jobs-for-packages.md).
+Чтобы запланировать выполнение пакета с помощью локального агента SQL Server, создайте задание с шагом, на котором вызываются хранимые процедуры каталога служб SSIS `[catalog].[create_execution]` и затем `[catalog].[start_execution]`. Дополнительные сведения см. в разделе [Пакеты служб из заданий агента SQL Server](../packages/sql-server-agent-jobs-for-packages.md).
 
-1.  В SQL Server Management Studio подключитесь к базы данных SQL Server в локальной среде, на котором нужно создать задание.
+1.  В SQL Server Management Studio установите подключение к базе данных SQL Server в локальной среде, в которой требуется создать задание.
 
-2.  Щелкните правой кнопкой мыши **агента SQL Server** выберите **New**и выберите **задания** Открытие **новое задание** диалоговое окно.
+2.  Щелкните правой кнопкой мыши узел **Агент SQL Server**, выберите **Создать** и затем **Задание**, чтобы открыть диалоговое окно **Создание задания**.
 
-3.  В **новое задание** выберите **действия** страницы, а затем выберите **New** Открытие **новый шаг задания** диалоговое окно.
+3.  В диалоговом окне **Создание задания** перейдите на страницу **Шаги** и выберите команду **Создать**, чтобы открыть диалоговое окно **Создание шага задания**.
 
-4.  В **новый шаг задания** выберите `SSISDB` как **базы данных.**
+4.  В диалоговом окне **Создание шага задания** выберите `SSISDB` в поле **База данных**.
 
-5.  В поле Команда введите сценарий Transact-SQL, аналогичный сценарий, показанный в следующем примере:
+5.  В поле команды введите скрипт Transact-SQL, аналогичный приведенному в следующем примере:
 
     ```sql
     DECLARE @return_value int, @exe_id bigint 
@@ -62,21 +60,21 @@ ms.lasthandoff: 10/18/2017
 
 6.  Завершите настройку и планирование задания.
 
-## <a name="elastic"></a>Планирование пакета с заданий эластичных баз данных SQL
+## <a name="elastic"></a> Планирование пакета с использованием заданий обработки эластичных баз данных SQL
 
-Дополнительные сведения о эластичной задания в базе данных SQL см. в разделе [базы данных горизонтально масштабируемого облака управление](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Предварительные требования
 
-Перед эластичной заданий можно использовать для планирования пакетов служб SSIS, хранимые в базе данных каталога SSISDB на сервере базы данных SQL Azure, необходимо выполнить следующие действия:
+Прежде чем использовать задания обработки эластичных баз данных для планирования пакетов SSIS, хранящихся в каталоге базы данных SSISDB на сервере базы данных SQL Azure, необходимо выполнить следующие действия:
 
-1.  Установка и настройка компонентов заданий эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке эластичной базы данных заданий](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Установить и настроить компоненты для заданий обработки эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке заданий обработки эластичных баз данных](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
-2. Создание уровня базы данных учетных данных, используемых заданиями для отправки команд в базе данных каталога служб SSIS. Дополнительные сведения см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
+2. Создать учетные данные уровня базы данных, которые задания смогут использовать для отправки команд в базу данных каталога SSIS. Дополнительные сведения см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
-### <a name="create-an-elastic-job"></a>Создать задание эластичной
+### <a name="create-an-elastic-job"></a>Создание задания обработки эластичных баз данных
 
-Создание задания с помощью скрипта Transact-SQL, аналогично сценарий, показанный в следующем примере:
+Чтобы создать задание, используйте скрипт Transact-SQL, аналогичный приведенному в следующем примере:
 
 ```sql
 -- Create Elastic Jobs target group 
@@ -108,25 +106,25 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
     @schedule_interval_type='Minutes', @schedule_interval_count=60 
 ```
 
-## <a name="sproc"></a>Планирование пакета с действием хранимую процедуру для фабрики SQL Azure данные сервера
+## <a name="sproc"></a> Планирование пакета с использованием операции хранимой процедуры SQL Server для фабрики данных Azure
 
 > [!IMPORTANT]
-> Использование сценариев JSON в следующем примере с фабрикой данных Azure версии 1 действия хранимой процедуры.
+> Используйте скрипты JSON в следующем примере с операцией хранимой процедуры для фабрики данных Azure версии 1.
 
-Чтобы запланировать запуск пакета с действием хранимую процедуру для фабрики SQL Azure данные сервера, выполните следующие действия:
+Чтобы запланировать выполнение пакета с использованием операции хранимой процедуры SQL Server для фабрики данных Azure, выполните следующие действия:
 
 1.  Создайте фабрику данных.
 
-2.  Создать связанную службу для базы данных SQL, на котором размещена SSISDB.
+2.  Создайте связанную службу для базы данных SQL, в которой размещается SSISDB.
 
 3.  Создайте выходной набор данных, который управляет планированием.
 
-4.  Создание конвейера фабрики данных, который использует действие хранимую процедуру SQL Server для запуска пакета служб SSIS.
+4.  Создайте конвейер фабрики данных, который использует операцию хранимой процедуры SQL Server для выполнения пакета SSIS.
 
-Этот раздел содержит обзор этих действий. Весь учебник фабрики данных выходит за рамки данной статьи. Дополнительные сведения см. в разделе [действия хранимой процедуры SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
+В этом разделе приводится обзор необходимых действий. Полное руководство по работе с фабрикой данных выходит за рамки этой статьи. Дополнительные сведения см. в разделе [Операция хранимой процедуры SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
 
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Создать связанную службу для базы данных SQL, на котором размещена SSISDB
-Связанная служба позволяет подключиться к SSISDB фабрики данных.
+### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Создание связанной службы для базы данных SQL, в которой размещается SSISDB
+Связанная служба обеспечивает подключение фабрики данных к SSISDB.
 
 ```json
 {
@@ -141,8 +139,8 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 }
 ```
 
-### <a name="create-an-output-dataset"></a>Создайте набор данных выходных данных
-Выходной набор данных содержит данные расписания.
+### <a name="create-an-output-dataset"></a>Создание выходного набора данных
+Выходной набор данных содержит сведения о планировании.
 
 ```json
 {
@@ -161,7 +159,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 }
 ```
 ### <a name="create-a-data-factory-pipeline"></a>Создание конвейера фабрики данных
-Конвейер используется действие хранимую процедуру SQL Server для запуска пакета служб SSIS.
+Конвейер использует операцию хранимой процедуры SQL Server для выполнения пакета SSIS.
 
 ```json
 {
@@ -191,7 +189,7 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 }
 ```
 
-Не требуется создавать новую хранимую процедуру для инкапсуляции команд Transact-SQL, необходимые для создания и запустить выполнение пакета служб SSIS. В качестве значения можно предоставить всему скрипту `stmt` параметр в предыдущем примере JSON. Ниже приведен пример сценария:
+Вам не нужно создавать новую хранимую процедуру для инкапсуляции команд Transact-SQL, необходимых для создания и запуска выполнения пакета SSIS. Вы можете передать весь скрипт в качестве значения параметра `stmt` в приведенном выше примере JSON. Пример скрипта:
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
@@ -227,10 +225,9 @@ END
 GO
 ```
 
-Дополнительные сведения о коде в этом сценарии см. в разделе [развертывание и выполнение пакетов служб SSIS с помощью хранимых процедур](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
+Дополнительные сведения о коде в этом скрипте см. в разделе [Развертывание и выполнение пакетов служб SSIS с помощью хранимых процедур](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
 
 ## <a name="next-steps"></a>Следующие шаги
-Дополнительные сведения об агенте SQL Server см. в разделе [заданий агента SQL Server для пакетов](../packages/sql-server-agent-jobs-for-packages.md).
+Дополнительные сведения об агенте SQL Server см. в разделе [Пакеты служб из заданий агента SQL Server](../packages/sql-server-agent-jobs-for-packages.md).
 
-Дополнительные сведения о эластичной задания в базе данных SQL см. в разделе [базы данных горизонтально масштабируемого облака управление](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
-
+Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).

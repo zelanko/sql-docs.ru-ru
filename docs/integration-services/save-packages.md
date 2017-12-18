@@ -1,5 +1,5 @@
 ---
-title: "Сохранить пакеты | Документы Microsoft"
+title: "Сохранение пакетов | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.savecopyas.f1
+f1_keywords: sql13.dts.designer.savecopyas.f1
 helpviewer_keywords:
 - Integration Services packages, saving
 - packages [Integration Services], saving
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - SSIS packages, saving
 - SQL Server Integration Services packages, saving
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: b29636580a8e8e87229ce591863547a91cd05a8f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="save-packages"></a>Сохранение пакетов
   В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] пакеты создаются с помощью конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] и сохраняются в файловой системе как XML-файлы (DTSX-файлы). Копии XML-файла пакета можно также сохранять в базе данных msdb в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или в хранилище пакетов. Хранилище пакетов представляет собой папки в определенном месте файловой системы, управляемые службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -51,7 +48,7 @@ ms.lasthandoff: 09/26/2017
     >  Путь к файлу и имя, под которым был сохранен пакет, можно проверить в окне свойств.  
 
 ## <a name="save-a-copy-of-a-package"></a>Сохранение одной копии пакета
-  В этом разделе описывается сохранение копии пакета в файловую систему, хранилище пакетов или для **msdb** базы данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При указании места сохранения копии пакета можно также обновить имя пакета.  
+  Этот раздел описывает, как сохранить копию пакета в файле, хранилище пакетов или базе данных **msdb** в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При указании места сохранения копии пакета можно также обновить имя пакета.  
   
  Хранилищем пакетов может быть одновременно база данных **msdb** и папки файловой системы, только база данных **msdb**или только папки файловой системы. В базе данных **msdb**пакеты хранятся в таблице **sysdtspackages90** . Эта таблица содержит столбец **folderid** , который идентифицирует логический каталог, которому принадлежит пакет. Логические каталоги предоставляют полезный способ группировки пакетов, сохраненных в базе данных **msdb** так же как файловая система предоставляет способ группировки пакетов, сохраненных в файловой системе. Строки в таблице **sysdtspackagefolders90** в базе данных **msdb** определяют папки.  
   
@@ -64,7 +61,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  В обозревателе решений дважды щелкните пакет, копию которого необходимо сохранить.  
   
-2.  На **файл** меню, нажмите кнопку **сохранить копию \<файл пакета > как**.  
+2.  В меню **Файл** выберите пункт **Сохранить копию \<файл пакета> как**.  
   
 3.  В диалоговом окне **Сохранение копии пакета** выберите размещение пакета в списке **Размещение пакета** . Доступны следующие параметры:  
     -   SQL Server
@@ -93,8 +90,8 @@ ms.lasthandoff: 09/26/2017
   
 9. Нажмите кнопку **ОК**.  
 
-## <a name="save-a-package-as-a-package-template"></a>Сохранение пакета как шаблона пакета
- В этом разделе описывается, как обозначить и использовать пользовательские пакеты как шаблоны при создании новых пакетов служб Integration Services в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. По умолчанию в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используется шаблон пакета, который создает пустой пакет при добавлении нового пакета в проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Этот шаблон по умолчанию заменить нельзя, однако можно добавить новые шаблоны.  
+## <a name="save-a-package-as-a-package-template"></a>Сохранение пакета в качестве шаблона пакета
+ В этом разделе описано, как обозначить и использовать пользовательские пакеты в виде шаблонов при создании новых пакетов служб Integration Services в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. По умолчанию в службах [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] используется шаблон пакета, который создает пустой пакет при добавлении нового пакета в проект служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Этот шаблон по умолчанию заменить нельзя, однако можно добавить новые шаблоны.  
   
  Для использования в роли шаблонов можно назначить несколько пакетов. Прежде чем сделать из пользовательского пакета шаблон, необходимо создать сам пакет.  
   
@@ -114,9 +111,8 @@ ms.lasthandoff: 09/26/2017
   
 2.  В обозревателе решений щелкните проект правой кнопкой мыши, укажите **Добавить** и выберите **Новый элемент**.  
   
-3.  В **добавить новый элемент —\<имя проекта >** диалогового окна выберите пакет, который требуется использовать в качестве шаблона.  
+3.  В диалоговом окне **Добавление нового элемента — \<имя проекта>** щелкните пакет, который нужно использовать в качестве шаблона.  
   
      Список шаблонов включает шаблон пакетов по умолчанию с именем «Новый пакет служб SSIS». Значок пакета определяет шаблоны, которые можно использовать в качестве шаблонов пакетов.  
   
 4.  Нажмите кнопку **Добавить**.  
-

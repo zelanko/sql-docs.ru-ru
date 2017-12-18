@@ -1,5 +1,5 @@
 ---
-title: "Термин «Уточняющий запрос» | Документы Microsoft"
+title: "Преобразование \"Уточняющий запрос термина\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,17 +25,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: 56
+caps.latest.revision: "56"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="term-lookup-transformation"></a>преобразование «Уточняющий запрос термина»
   Преобразование «Уточняющий запрос термина» сопоставляет термины, извлеченные из текста во входном столбце преобразования, с терминами, содержащимися в ссылочной таблице. Затем оно подсчитывает количество найденных терминов в таблице уточняющих запросов входного набора данных и записывает количество повторений вместе с термином из ссылочной таблицы в столбец на выходе преобразования. Это преобразование полезно для создания пользовательского списка слов на основе входного текста, дополненного статистикой повторяемости слова.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 08/19/2017
 |Эталонные термины|Windows, Windows 7 Профессиональная|  
 |Вывод|Windows|  
   
- Преобразование «Уточняющий запрос термина» может сопоставлять существительные и субстантивные словосочетания, которые содержат специальные символы, и данные в ссылочной таблице также могут содержать эти символы. Специальные символы, как показано ниже: %, @ &, $, #, \*,:,,., **,** ,!,?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,} «, и ".  
+ Преобразование «Уточняющий запрос термина» может сопоставлять существительные и субстантивные словосочетания, которые содержат специальные символы, и данные в ссылочной таблице также могут содержать эти символы. Вот они: %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “ и ‘.  
   
 ## <a name="data-types"></a>Типы данных  
  В преобразовании «Уточняющий запрос термина» может использоваться только столбец, содержащий данные типа DT_WSTR или DT_NTEXT. Если столбец содержит текст, не принадлежащий ни к одному из этих типов данных, то преобразование «Конвертация данных» может добавить столбец с типом данных DT_WSTR или DT_NTEXT к потоку данных и скопировать значения столбца в этот новый столбец. Выходные данные преобразования «Конвертация данных» могут быть использованы в качестве входных данных преобразования «Уточняющий запрос термина». Дополнительные сведения см. в статье [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md).  
@@ -156,8 +154,7 @@ ms.lasthandoff: 08/19/2017
  **Настройка вывода ошибок**  
  Используйте диалоговое окно [Настройка вывода ошибок](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) для указания параметров обработки ошибок для строк, вызвавших ошибку.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование «Извлечение терминов»](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+ [Преобразование "Извлечение терминов"](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   
-

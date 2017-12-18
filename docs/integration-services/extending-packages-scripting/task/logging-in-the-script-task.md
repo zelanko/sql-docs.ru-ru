@@ -1,5 +1,5 @@
 ---
-title: "Ведение журналов в задаче «скрипт» | Документы Microsoft"
+title: "Ведение журнала в задаче \"Скрипт\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,14 +8,11 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- dbe-xml
+ms.technology: dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
-dev_langs:
-- VB
+applies_to: SQL Server 2016 Preview
+dev_langs: VB
 helpviewer_keywords:
 - SQL Server Integration Services packages, logs
 - SSIS packages, logs
@@ -26,25 +23,24 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-caps.latest.revision: 57
+caps.latest.revision: "57"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 98859dafe0b023954f10239fe11e8b76f36ab28b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3f656f97ab20e1692fdfa3fe6996bfa1d36d5256
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="logging-in-the-script-task"></a>Ведение журнала в задаче «Скрипт»
-  Ведение журнала в пакетах служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] позволяет записывать для последующего анализа извлекаемую из стандартных событий или определяемых пользователем сообщений подробную информацию о ходе выполнения, полученных результатах и возникших проблемах. Можно использовать задачу «скрипт» <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> метод **Dts** для записи в журнал определяемых пользователем данных. Если включено ведение журнала и **ScriptTaskLogEntry** событие выбирается для регистрации **сведения** вкладке **Настройка журналов служб SSIS** диалоговое окно, в рамках одного вызова <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> метод сохраняет сведения о событии в все регистраторы, настроенных для данной задачи.  
+  Ведение журнала в пакетах служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] позволяет записывать для последующего анализа извлекаемую из стандартных событий или определяемых пользователем сообщений подробную информацию о ходе выполнения, полученных результатах и возникших проблемах. Задача "Скрипт" может использовать метод <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> объекта **Dts** для записи в журнал определяемых пользователем данных. Если ведение журнала разрешено и событие **ScriptTaskLogEntry** выбрано для записи в журнал на вкладке **Подробности** диалогового окна **Настройка журналов служб SSIS**, однократный вызов метода <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> сохраняет сведения о событиях во всех регистраторах, настроенных для данной задачи.  
   
 > [!NOTE]  
 >  Хотя журнал можно вести непосредственно из задачи «Скрипт», можно реализовать события вместо ведения журнала. При использовании событий можно не только включить запись в журнал сообщений о событиях, но и реагировать на события с помощью обработчиков событий, определяемых пользователем или заданных по умолчанию.  
   
- Дополнительные сведения о ведении журнала см. в разделе [службы Integration Services &#40; Службы SSIS &#41; Ведение журнала](../../../integration-services/performance/integration-services-ssis-logging.md).  
+ Дополнительные сведения о ведении журналов см. в разделе [Ведение журналов в службах Integration Services (SSIS)](../../../integration-services/performance/integration-services-ssis-logging.md).  
   
 ## <a name="logging-example"></a>Пример ведения журнала  
  Следующий пример иллюстрирует ведение журнала из задачи «Скрипт» путем записи в журнал значения, представляющего число обработанных строк.  
@@ -104,10 +100,9 @@ public class ScriptMain
   
 ## <a name="external-resources"></a>Внешние ресурсы  
   
--   Запись в блоге [ведение журнала пользовательских событий для задач служб Integration Services](http://go.microsoft.com/fwlink/?LinkId=165644), на сайте dougbert.com  
+-   Запись в блоге: [Ведение журнала пользовательских событий для задач служб Integration Services](http://go.microsoft.com/fwlink/?LinkId=165644), на сайте dougbert.com  
   
 ## <a name="see-also"></a>См. также:  
- [Службы Integration Services &#40; Службы SSIS &#41; Ведение журнала](../../../integration-services/performance/integration-services-ssis-logging.md)  
+ [Ведение журналов в службах Integration Services (SSIS)](../../../integration-services/performance/integration-services-ssis-logging.md)  
   
   
-

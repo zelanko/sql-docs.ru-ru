@@ -1,5 +1,5 @@
 ---
-title: "Catalog.delete_environment_reference (база данных SSISDB) | Документы Microsoft"
+title: "catalog.delete_environment_reference (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cd452dfb87037e7aee2001f66a6884a66743697b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 09ba41e69a2011745b5966fa5803dd797075c111
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogdeleteenvironmentreference-ssisdb-database"></a>catalog.delete_environment_reference (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +35,8 @@ delete_environment_reference [ @reference_id = ] reference_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @reference_id =] *reference_id*  
- Уникальный идентификатор ссылки на среду. *Reference_id* — **bigint**.  
+ [ @reference_id = ] *reference_id*  
+ Уникальный идентификатор ссылки на среду. Параметр *reference_id* имеет тип **bigint**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -51,9 +49,9 @@ delete_environment_reference [ @reference_id = ] reference_id
   
 -   разрешение MODIFY для проекта  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  
@@ -63,4 +61,3 @@ delete_environment_reference [ @reference_id = ] reference_id
 -   Пользователь не имеет соответствующих разрешений  
   
   
-

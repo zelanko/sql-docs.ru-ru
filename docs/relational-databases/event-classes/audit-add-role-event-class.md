@@ -2,9 +2,12 @@
 title: "Класс событий Audit Add Role | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 99f91cb628e60b2646b39091f4ac53cd8d4c9a21
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9b4cbc6c52d893a90251ef785f878efccf11e36b
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-add-role-event-class"></a>Audit Add Role, класс событий
-  События класса **Audit Add Role** возникают, когда роль базы данных добавляется в базу данных или удаляется из нее. Этот класс событий используется хранимыми процедурами **sp_addrole** и **sp_droprole** .  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] События класса **Audit Add Role** возникают, когда роль базы данных добавляется в базу данных или удаляется из нее. Этот класс событий используется хранимыми процедурами **sp_addrole** и **sp_droprole** .  
   
  Этот класс событий может быть удален из следующей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Вместо него рекомендуется использовать класс событий **Audit Database Principal Management** .  
   

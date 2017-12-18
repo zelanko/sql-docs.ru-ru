@@ -2,9 +2,12 @@
 title: "Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки) | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/22/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3d9a4d46b684ef368b227c6de43b73950e8d3b00
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 9e35eab411af665d7758d76fa7e9f3f1353be7ce
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Обновление экземпляра отказоустойчивого кластера SQL Server (программа установки)
-  Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно обновить до отказоустойчивого кластера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью пользовательского интерфейса установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или из командной строки.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Отказоустойчивый кластер [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] можно обновить до отказоустойчивого кластера [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью пользовательского интерфейса установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или из командной строки.  
   
  Для локальных установок программу установки [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] нужно запускать с правами администратора. Если [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] устанавливается с удаленного общего ресурса, необходимо использовать учетную запись домена, у которой есть разрешения на чтение на этом удаленном ресурсе.  
   

@@ -2,9 +2,12 @@
 title: "Использование файла форматирования для пропуска столбца таблицы (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 08/05/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 02dff7296690e0ecf3bfd76f9e7be1808885b2f5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 0603aa186c900e60cc17bc388d439738fd41a95a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Пропуск столбца таблицы с помощью файла форматирования (SQL Server)
-  В этом подразделе описываются файлы форматирования. Если поле не существует в файле данных, то импорт столбца таблицы можно пропустить с помощью файла форматирования. Файл данных может содержать меньше полей, чем таблица столбцов, только если пропущенные столбцы необязательно определяемы и (или) имеют значение по умолчанию.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описываются файлы форматирования. Если поле не существует в файле данных, то импорт столбца таблицы можно пропустить с помощью файла форматирования. Файл данных может содержать меньше полей, чем таблица столбцов, только если пропущенные столбцы необязательно определяемы и (или) имеют значение по умолчанию.  
   
 ## <a name="sample-table-and-data-file"></a>Образец таблицы и файла данных  
  Для следующих примеров требуется таблица с именем `myTestSkipCol` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] схемы **dbo** . Создайте таблицу следующим образом:  

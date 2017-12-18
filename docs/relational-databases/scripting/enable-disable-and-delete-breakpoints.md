@@ -2,9 +2,12 @@
 title: "Включение, отключение и удаление точек останова | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,14 +17,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e0fe1a775a1a786234308dce7056f20edaecb63
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 38a596f36d68cc6efd8b21450aaddf5f0a293ab0
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Включение, отключение и удаление точек останова
-  Для просмотра всех открытых точек останова и управления ими используется окно **Точки останова** . Используйте данное окно для просмотра сведений о точках останова, а также для выполнения таких действий, как удаление, отключение или включение точек останова.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Для просмотра всех открытых точек останова и управления ими используется окно **Точки останова**. Используйте данное окно для просмотра сведений о точках останова, а также для выполнения таких действий, как удаление, отключение или включение точек останова.  
   
 ## <a name="the-breakpoints-window"></a>Окно точек останова  
  В окне **Точки останова** приводятся такие сведения, как строка кода, в которой расположена точка останова. Кроме того, в окне **Точки останова** можно удалять, отключать и включать точки останова. Дополнительные сведения об окне **Точки останова** см. в разделе [Точки останова Window](../../relational-databases/scripting/transact-sql-debugger-breakpoints-window.md).  

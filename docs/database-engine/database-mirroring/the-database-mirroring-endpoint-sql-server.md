@@ -2,9 +2,12 @@
 title: "Конечная точка зеркального отображения базы данных (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: database-mirroring
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b369c57edac0fed4ef8d64aa7aba0f364557aef7
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: c8d42834b9e77e626c860d54c2548eda64fba43e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Конечная точка зеркального отображения базы данных (SQL Server)
-  Для участия в [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] или зеркальном отображении базы данных экземпляр сервера должен иметь собственную выделенную *конечную точку зеркального отображения базы данных*. Это специальная конечная точка, которая используется исключительно для приема соединений от других экземпляров сервера. В каждом экземпляре сервера для каждого соединения [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] или зеркального отображения базы данных с любым другим экземпляром сервера требуется одна конечная точка зеркального отображения базы данных.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для участия в [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] или зеркальном отображении базы данных экземпляр сервера должен иметь собственную выделенную *конечную точку зеркального отображения базы данных*. Это специальная конечная точка, которая используется исключительно для приема соединений от других экземпляров сервера. В каждом экземпляре сервера для каждого соединения [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] или зеркального отображения базы данных с любым другим экземпляром сервера требуется одна конечная точка зеркального отображения базы данных.  
   
  Для передачи и получения сообщений между экземплярами серверов, участвующими в сеансах зеркального отображения базы данных или размещающих реплики доступности, в конечных точках зеркального отображения базы данных используется протокол TCP. Конечная точка зеркального отображения базы данных прослушивает порт TCP с уникальным номером.  
   

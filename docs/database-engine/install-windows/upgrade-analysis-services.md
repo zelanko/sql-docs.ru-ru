@@ -2,11 +2,12 @@
 title: "Обновление служб Analysis Services | Документы Майкрософт"
 ms.custom: 
 ms.date: 09/12/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: analysis-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -25,14 +26,14 @@ caps.latest.revision: "79"
 author: Minewiskan
 ms.author: owend
 manager: erikre
-ms.openlocfilehash: 7e6b4f4e6c984e8d3e6f88939e88d73dfc2d3909
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: ec21983a07b5f61359912f90a4e32731de7ce8b4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-analysis-services"></a>Обновление служб Analysis Services
-  Чтобы воспользоваться преимуществами функций, появившихся в текущем выпуске, вы можете перевести экземпляры служб Analysis Services на версию SQL Server с аналогичным режимом сервера. Эта процедура описана в разделе [Новые возможности в службах Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы воспользоваться функциями, появившимися в текущем выпуске, вы можете обновить экземпляры служб Analysis Services до версии SQL Server с аналогичным режимом сервера. Эта процедура описана в разделе [Новые возможности в службах Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md).  
   
  Вы можете обновить каждый экземпляр на месте независимо от других экземпляров, выполняемых на том же оборудовании. Но большинство администраторов устанавливают экземпляр новой версии для тестирования приложений, прежде чем переносить рабочие нагрузки на новый сервер. Однако для серверов разработки или тестирования обновление на месте может быть более удобным.  
   

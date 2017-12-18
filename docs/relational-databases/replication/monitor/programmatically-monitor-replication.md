@@ -2,9 +2,12 @@
 title: "Наблюдение за репликацией программным образом | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -31,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5ab76000d3986678af0be8b85303a6b2df89ea34
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: caa7d7966fee784794884d7e840f0802c4a7774d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="programmatically-monitor-replication"></a>Наблюдение за репликацией программным образом
-  Монитор репликации — это графическое средство, позволяющее осуществлять мониторинг топологии репликации. К данным мониторинга можно обращаться программным путем с помощью хранимых процедур репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Эти объекты позволяют программировать следующие задачи:  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Монитор репликации — это графическое средство, позволяющее осуществлять мониторинг топологии репликации. К данным мониторинга можно обращаться программным путем с помощью хранимых процедур репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Эти объекты позволяют программировать следующие задачи:  
   
 -   Наблюдение за состоянием издателей, публикаций и подписок.  
   

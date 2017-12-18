@@ -2,9 +2,12 @@
 title: "Агент распространения репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/23/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2e028fb7c3c1849bd65495725bcf9edf66c0a81
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 32e48df7831764259bd9f05d53a2d8b4e3ca29d5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="replication-distribution-agent"></a>Агент распространения репликации
-  Агент распространения репликации перемещает моментальный снимок (для репликации моментальных снимков или транзакций) и транзакции, находящиеся в таблицах базы данных распространителя (для репликации транзакций), в целевые таблицы на подписчиках.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Агент распространения репликации — это исполняемый файл, который перемещает моментальный снимок (для репликации моментальных снимков или транзакций) и транзакции, находящиеся в таблицах базы данных распространителя (для репликации транзакций), в конечные таблицы в подписчиках.  
   
 > [!NOTE]  
 >  Параметры можно указывать в любом порядке. Если необязательные параметры не указаны, используются стандартные значения из реестра локального компьютера.  

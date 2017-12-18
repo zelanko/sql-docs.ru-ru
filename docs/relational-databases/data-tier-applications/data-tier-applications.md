@@ -1,10 +1,13 @@
 ---
 title: "Приложения уровня данных | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 08/12/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: data-tier-applications
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-data-tier-apps
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +22,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ab8a8fded3daac09e9d7b90ba3a734a46fd4cce0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 102a18fdb5a3f183a15ef719e6d85e9d1bbb28bf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="data-tier-applications"></a>Приложения уровня данных
-  Приложение уровня данных (DAC) является логической сущностью управления базой данных, которая определяет все объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например таблицы, представления и объекты экземпляров, в том числе имена входов, связанные с базой данных пользователя. Приложение уровня данных — это автономная единица развертывания базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая позволяет разработчикам уровня данных и администраторам базы данных группировать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переносимый артефакт, называемый пакетом приложения уровня данных или пакетом DAC.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Приложение уровня данных (DAC) является логической сущностью управления базой данных, которая определяет все объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например таблицы, представления и объекты экземпляров, в том числе имена входов, связанные с базой данных пользователя. Приложение уровня данных — это автономная единица развертывания базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая позволяет разработчикам уровня данных и администраторам базы данных группировать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переносимый артефакт, называемый пакетом приложения уровня данных или пакетом DAC.  
   
  Пакет BAC — это связанный артефакт, который инкапсулирует схему базы данных и данные, хранящиеся в базе данных.  
   

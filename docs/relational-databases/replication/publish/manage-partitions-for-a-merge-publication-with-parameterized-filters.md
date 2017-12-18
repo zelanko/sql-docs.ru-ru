@@ -2,9 +2,12 @@
 title: "Управление секциями для публикации слиянием с параметризованными фильтрами | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84fffaafd009e08730d08e5ea10ec69197a61171
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5cb96ad51fb17a57c9296f508406a2aaad4f5b29
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Управление секциями для публикации слиянием с параметризованными фильтрами
-  В данном разделе описывается управление секциями для публикации слиянием с параметризованными фильтрами в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]или объектов RMO. Параметризованные фильтры строк могут быть использованы для формирования неперекрывающихся секций. Такие секции могут быть ограничены таким образом, чтобы каждая данная секция предоставлялась только одной подписке. В таком случае, чем больше число подписчиков, тем большее число секций потребуется, а это, в свою очередь, приведет к необходимости создания такого же числа секционированных моментальных снимков. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается управление секциями для публикации слиянием с параметризованными фильтрами в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов Replication Management Objects (RMO). Параметризованные фильтры строк могут быть использованы для формирования неперекрывающихся секций. Такие секции могут быть ограничены таким образом, чтобы каждая данная секция предоставлялась только одной подписке. В таком случае, чем больше число подписчиков, тем большее число секций потребуется, а это, в свою очередь, приведет к необходимости создания такого же числа секционированных моментальных снимков. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **В этом разделе**  
   

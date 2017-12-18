@@ -2,9 +2,12 @@
 title: "Кэширование, обновление и производительность монитора репликации | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -20,14 +23,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a14000889013e94cdf73a1ee88009f898021ecd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: a564b6b253365200f1cfeeee61750f945c84bc88
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="caching-refresh-and-replication-monitor-performance"></a>Кэширование, обновление и производительность монитора репликации
-  Монитор репликации[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предназначен для эффективного наблюдения за большим количеством компьютеров в производственной системе. Запросы, которые монитор репликации использует для выполнения вычислений и сбора данных, периодически кэшируются и обновляются. Кэширование уменьшает количество запросов и вычислений, необходимых для просмотра разных страниц в мониторе репликации и позволяет вести наблюдение за несколькими пользователями.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Монитор репликации [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] предназначен для эффективного наблюдения за большим количеством компьютеров в рабочей системе. Запросы, которые монитор репликации использует для выполнения вычислений и сбора данных, периодически кэшируются и обновляются. Кэширование уменьшает количество запросов и вычислений, необходимых для просмотра разных страниц в мониторе репликации и позволяет вести наблюдение за несколькими пользователями.  
   
  Обновление кэша обрабатывается заданием агента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] — **Обновитель монитора репликации для распространения**. Задание выполняется постоянно, однако расписание обновления кэша основано на определенном времени ожидания после предыдущего обновления:  
   

@@ -1,5 +1,5 @@
 ---
-title: "Обработка ошибок в данных | Документы Microsoft"
+title: "Обработка ошибок в данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.configureerroroutput.f1
+f1_keywords: sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -25,17 +23,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: 63
+caps.latest.revision: "63"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: cb565db8a68cb12e8c8a0ab5976c37ea76e183ea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling-in-data"></a>Обработка ошибок в данных
   Если компонент потока данных применяет преобразование к данным столбца, выделяет данные из источников или загружает данные в назначения, то может возникнуть ошибка. Ошибки часто возникают из-за непредвиденных значений данных. Например, преобразование данных не выполняется, так как столбец вместо числа содержит строку; вставка в столбец базы данных не выполняется, потому что данные имеют тип даты, а столбец содержит числовые данные; наконец, результат выражения не может быть определен, так как значение столбца равно нулю, поэтому математическая операция недопустима.  
@@ -57,11 +54,11 @@ ms.lasthandoff: 09/26/2017
   
  На следующей диаграмме показан простой поток данных, содержащий выход ошибок.  
   
- ![Поток данных с выводом ошибок](../../integration-services/data-flow/media/mw-dts-11.gif "с выводом ошибок потока данных")  
+ ![Поток данных с выводом ошибок](../../integration-services/data-flow/media/mw-dts-11.gif "Поток данных с выводом ошибок")  
   
  Дополнительные сведения см. в статьях [Поток данных](../../integration-services/data-flow/data-flow.md) и [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md).  
 
-## <a name="configure-error-output-dialog-box"></a>Настройка вывода ошибок-диалоговое окно
+## <a name="configure-error-output-dialog-box"></a>Диалоговое окно "Настройка вывода ошибок"
 Используйте диалоговое окно **Настройка вывода ошибок** , чтобы настроить параметры обработки ошибок для преобразований потока данных, поддерживающих вывод ошибок.  
   
  Дополнительные сведения о работе с выводом ошибок на выходе см. в разделе [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md).  
@@ -160,4 +157,3 @@ ms.lasthandoff: 09/26/2017
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   
-

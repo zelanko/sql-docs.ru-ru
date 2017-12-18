@@ -2,9 +2,12 @@
 title: "Руководство. Администрирование серверов с помощью управления на основе политик | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance-monitor
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a58c12e4a33510f2fc9242f0d762dfb877b84750
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4bda7d7ffbd562dc27acad4ee8eb5d427d3f542f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Учебник. Администрирование серверов с помощью управления на основе политик
-Добро пожаловать в учебник по администрированию серверов с помощью политик управления на основе политик. Этот учебник предназначен для пользователей, знакомых с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но новичков в управлении на основе политик.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Добро пожаловать в учебник по администрированию серверов с помощью политик управления на основе политик. Этот учебник предназначен для пользователей, знакомых с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но новичков в управлении на основе политик.  
   
 ## <a name="what-you-will-learn"></a>Обзор учебника  
 Данный учебник создает политику администрирования сервера, а также политику, применяемую к одиночной базе данных. Одна политика запускается по запросу для проверки на соответствие. Другая политика обеспечивает будущее соответствие.  

@@ -1,5 +1,5 @@
 ---
-title: "Выполнение программы пакетов (dtexecui) | Документы Microsoft"
+title: "Служебная программа для запуска пакетов (dtexecui) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,22 +22,20 @@ f1_keywords:
 - sql13.dts.dtexecui.executionoptions.f1
 - sql13.dts.dtexecui.commandline.f1
 - sql13.dts.dtexecui.configuration.f1
-helpviewer_keywords:
-- DTExecUI utility
+helpviewer_keywords: DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: b9491e2857cabef1c8aa15bdac1b6fd3628790c2
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="execute-package-utility-dtexecui"></a>Выполнение программы пакетов (dtexecui)
+# <a name="execute-package-utility-dtexecui"></a>Служебная программа для запуска пакетов (dtexecui)
   **Программа выполнения пакетов** используется для запуска пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа запускает пакеты, которые хранятся в одном из трех расположений: в базе данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловой системе. Этот пользовательский интерфейс, который можно открыть из [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью команды **dtexecui** в командной строке, представляет альтернативу запуску пакетов с использованием программы командной строки **DTExec** .  
   
  Пакеты выполняются в том же процессе, что и служебная программа **dtexecui.exe** . Так как эта служебная программа является 32-разрядной, пакеты, запускаемые с помощью **dtexecui.exe** в 64-разрядной среде, выполняются в режиме WOW (Windows на платформе Win32). Занимаясь разработкой и отладкой команд на 64-разрядном компьютере с использованием программы dtexecui.exe, необходимо проверять эти команды в 64-разрядном режиме с помощью 64-разрядной версии программы **dtexec.exe** , прежде чем развертывать эти команды или включать их в расписание на рабочем сервере.  
@@ -378,7 +375,6 @@ ms.lasthandoff: 08/03/2017
  Нажмите эту кнопку, чтобы закрыть диалоговое окно **Программа выполнения пакетов** .  
   
 ## <a name="see-also"></a>См. также  
- [Служебная программа dtexec](../../integration-services/packages/dtexec-utility.md)  
+ [Программа dtexec](../../integration-services/packages/dtexec-utility.md)  
   
   
-

@@ -2,9 +2,12 @@
 title: "Класс событий OLEDB Call | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a0d6544c97f10b3132e69ffbfa89023e1e1bf12c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 52b44fe50eac1dfbab29aeeebe9cc5f82107bcd5
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call, класс событий
-  События класса событий **OLEDB Call** происходят, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрашивает распределенные запросы и удаленные хранимые процедуры у поставщика OLE DB.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] События класса **OLEDB Call** происходят, когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запрашивает распределенные запросы и удаленные хранимые процедуры у поставщика OLE DB.  
   
  Включайте класс событий **OLEDB Call** для контроля только за теми запросами, которые не посылают запросы и не запрашивают данные, выполненные методом, отличным от **QueryInterface** . При включении в трассировку класса событий **OLEDB Call** количество сигналов зависит от того, насколько часто во время трассировки происходят запросы к базе данных с помощью технологии OLE DB. Если такие вызовы происходят часто, трассировка может заметно снизить производительность.  
   

@@ -2,9 +2,12 @@
 title: "Проверка реплицированных данных | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 257cb487ad0609a334a17604485a1941d4382373
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b9834f7c0d65ab05a7dda5f68b05438760abef21
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="validate-replicated-data"></a>Проверка реплицированных данных
-  Репликация транзакций, а также репликация слиянием позволяет проверять соответствие данных подписчика данным издателя. Проверку можно выполнять как для определенных подписок, так и для всех подписок в публикации. Задайте один из следующих типов проверки и агент распространителя или агент слияния проверят данные при следующем запуске.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Репликация транзакций и репликация слиянием позволяют проверить соответствие данных подписчика данным издателя. Проверку можно выполнять как для определенных подписок, так и для всех подписок в публикации. Задайте один из следующих типов проверки и агент распространителя или агент слияния проверят данные при следующем запуске.  
   
 -   Только подсчет строк. При проверке этого типа проверяется совпадение числа строк таблицы на подписчике с числом строк таблицы на издателе, но не проверяется содержимое строк на совпадение. Проверка количества строк обеспечивает упрощенный подход к проверке, который может уведомить о проблемах с данными.  
   

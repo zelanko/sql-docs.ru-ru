@@ -1,5 +1,5 @@
 ---
-title: "Источник OLE DB | Документы Microsoft"
+title: "Источник OLE DB | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,17 +20,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: 69
+caps.latest.revision: "69"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 995d2688f0e4f8ab9af751c3521e45cb0626451f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/17/2017
-
+ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -132,7 +130,7 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  Свойство **CommandTimeout** источника OLE DB недоступно в диалоговом окне **Редактор источника OLE DB**, но может быть установлено с помощью **расширенного редактора**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
-### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Откройте редактор источника OLE DB (страница «Диспетчер соединений»)  
+### <a name="open-the-ole-db-source-editor-connection-manager-page"></a>Откройте редактор источника OLE DB (страницу диспетчера соединений)  
   
 1.  Добавьте источник OLE DB к пакету служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -161,7 +159,7 @@ ms.lasthandoff: 08/17/2017
  Осуществляйте предварительный просмотр результатов в диалоговом окне **Просмотр данных** . В окне**Предварительный просмотр** может отображаться до 200 строк.  
   
 > [!NOTE]  
->  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого значения \<значение слишком велико для отображения > или System.Byte []. Первое отображается при доступе к источнику данных с помощью поставщика SQL OLE DB, второе — с помощью поставщика собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+>  При предварительном просмотре столбцы с определяемым пользователем типом данных CLR не содержат данных. Вместо этого отображается текст \<значение слишком велико для отображения> или System.Byte[]. Первое отображается при доступе к источнику данных с помощью поставщика SQL OLE DB, второе — с помощью поставщика собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ### <a name="data-access-mode-dynamic-options"></a>Динамические параметры режима доступа к данным  
   
@@ -235,8 +233,7 @@ ms.lasthandoff: 08/17/2017
   
 ## <a name="see-also"></a>См. также:  
  [Назначение «OLE DB»](../../integration-services/data-flow/ole-db-destination.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Переменные](../../integration-services/integration-services-ssis-variables.md)   
+ [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)   
  [Поток данных](../../integration-services/data-flow/data-flow.md)  
   
   
-

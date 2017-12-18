@@ -2,9 +2,12 @@
 title: "Использование символьного формата для импорта или экспорта данных (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 09/29/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.service: 
+ms.component: import-export
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d5dd9155a7cc669a5f7a62036bb42410dced9c48
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 53a3bd656302c47c1ccd69fa484a4d87b050c41f
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата для импорта и экспорта данных (SQL Server)
-Символьный формат рекомендуется применять при выполнении массового экспорта данных в текстовый файл, который предназначен для использования в других программах, а также при выполнении массового импорта данных из текстового файла, созданного другими программами.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Символьный формат рекомендуется применять при выполнении массового экспорта данных в текстовый файл, который предназначен для использования в других программах, а также при выполнении массового импорта данных из текстового файла, созданного другими программами.  
 
 В символьном формате все столбцы представлены в формате символьных данных. Хранение данных в символьном формате удобно в том случае, когда данные используются в других программах (например электронных таблицах) или когда на экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо перенести данные из базы данных другого поставщика (например Oracle).  
   

@@ -1,5 +1,5 @@
 ---
-title: "Разработка пользовательского интерфейса для компонента потока данных | Документы Microsoft"
+title: "Разработка пользовательского интерфейса для компонента потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -27,25 +25,24 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom data flow component
 - editors [Integration Services]
 ms.assetid: 10b829a1-609b-42e3-9070-cfe5a2bb698c
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5a1e9773d91303335b616159f70de7aa0ddf966e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: ce13ece34803cd0f30c0ec5633e59b6dbb1151cb
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Разработка пользовательского интерфейса для компонента потока данных
   Разработчики компонентов могут включить для компонента настраиваемый пользовательский интерфейс, отображающийся в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] во время изменения компонента. Реализация пользовательского интерфейса обеспечивает возможность получать уведомления, когда компонент добавляется или удаляется из задачи потока данных или при вызове справки по компоненту.  
   
- Если не создать для компонента пользовательский интерфейс, пользователи смогут настраивать компонент и его свойства с помощью расширенного редактора. Можно при необходимости убедиться, что расширенный редактор позволяет пользователям правильно изменять значения пользовательских свойств, с помощью свойств <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>. Дополнительные сведения см. в разделе «Создание пользовательских свойств» в [методы времени разработки компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ Если не создать для компонента пользовательский интерфейс, пользователи смогут настраивать компонент и его свойства с помощью расширенного редактора. Можно при необходимости убедиться, что расширенный редактор позволяет пользователям правильно изменять значения пользовательских свойств, с помощью свойств <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.TypeConverter%2A> и <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100.UITypeEditor%2A> интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSCustomProperty100>. Дополнительные сведения см. в пункте "Создание пользовательских свойств" раздела [Методы времени разработки для компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
   
 ## <a name="setting-the-uitypename-property"></a>Указание свойства UITypeName  
- Чтобы обеспечить пользовательский интерфейс, разработчик должен указать в качестве свойства <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> атрибута <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> имя класса, реализующего интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Если это свойство задается компонентом, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] загружаются и вызывают пользовательский интерфейс при редактировании компонента в [!INCLUDE[ssIS](../../../includes/ssis-md.md)] конструктора.  
+ Чтобы обеспечить пользовательский интерфейс, разработчик должен указать в качестве свойства <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> атрибута <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute> имя класса, реализующего интерфейс <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI>. Если это свойство задается компонентом, службы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] загружаются и вызывают пользовательский интерфейс при изменении компонента в конструкторе [!INCLUDE[ssIS](../../../includes/ssis-md.md)].  
   
  Свойство <xref:Microsoft.SqlServer.Dts.Pipeline.DtsPipelineComponentAttribute.UITypeName%2A> представляет собой разделенную запятыми строку, указывающую полное имя типа. В следующем списке показаны по порядку элементы, указывающие тип.  
   
@@ -94,10 +91,10 @@ End Class
   
  Хотя можно изменить компонент напрямую с помощью интерфейса <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>, лучше создать экземпляр <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> с помощью метода <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.Instantiate%2A>. При непосредственном изменении компонента с помощью интерфейса проверочная защита компонента обходится. Преимуществом использования экземпляра среды разработки для проектирования компонента с помощью <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.CManagedComponentWrapper> является возможность удостовериться, что компонент может управлять внесенными в него изменениями.  
   
- Возвращаемое значение метода <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> определяет, сохранились ли или отменены изменения, внесенные в компонент. Если этот метод возвращает **false**, все изменения отменяются; **true** сохраняет изменения в компонент и пакет помечается как нуждающийся в сохранении.  
+ Возвращаемое значение метода <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Edit%2A> определяет, сохранились ли или отменены изменения, внесенные в компонент. Если метод возвращает значение **false**, все изменения отменяются; при значении **true** изменения в компоненте сохраняются, а пакет помечается как нуждающийся в сохранении.  
   
 ### <a name="using-the-services-of-the-ssis-designer"></a>Использование служб конструктора служб SSIS  
- **IServiceProvider** параметр <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> обеспечивает доступ к следующим службам для [!INCLUDE[ssIS](../../../includes/ssis-md.md)] конструкторе:  
+ Параметр **IServiceProvider** метода <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A> предоставляет доступ к следующим службам конструктора служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)]:  
   
 |Служба|Description|  
 |-------------|-----------------|  
@@ -295,4 +292,3 @@ End Namespace
  [Создание пользовательского компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/creating-a-custom-data-flow-component.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Catalog.clear_object_parameter_value (база данных SSISDB) | Документы Microsoft"
+title: "catalog.clear_object_parameter_value (база данных SSISDB) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 5d0d89081a31341a8d813d9985940c0e3ce0160a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 9c079f4c5ce9809d1624992601213f6d5fafc8e3
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +39,20 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @folder_name =] *имя_папки*  
- Имя папки, которая содержит проект. *Имя_папки* — **nvarchar(128)**.  
+ [ @folder_name = ] *folder_name*  
+ Имя папки, которая содержит проект. Параметр *folder_name* имеет тип **nvarchar(128)**.  
   
- [ @project_name =] *project_name*  
- Имя проекта. *Project_name* — **nvarchar(128)**.  
+ [ @project_name = ] *project_name*  
+ Имя проекта. Параметр *project_name* имеет тип **nvarchar(128)**.  
   
- [ @object_type =] *object_type*  
- Тип объекта. Для проекта допустимо, в частности, значение `20`, а для пакета — значение `30`. *Object_type* — **smallInt**.  
+ [ @object_type = ] *object_type*  
+ Тип объекта. Для проекта допустимо, в частности, значение `20`, а для пакета — значение `30`. Параметр *object_type* имеет тип **smallInt**.  
   
- [@ _name объект =] *объекта _name*  
- Имя пакета. *Объекта _name* — **nvarchar(260)**.  
+ [ @ object _name = ] *object _name*  
+ Имя пакета. Параметр *object _name* имеет тип **nvarchar(260)**.  
   
- [ @parameter_ имя =] *parameter_name*  
- Имя параметра. *Имя parameter_* — **nvarchar(128)**.  
+ [ @parameter_ name = ] *parameter_name*  
+ Имя параметра. Параметр *parameter_ name* имеет тип **nvarchar(128)**.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
@@ -67,12 +65,12 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 -   Разрешения READ и MODIFY на проект  
   
--   Членство в **ssis_admin** роли базы данных  
+-   Членство в роли базы данных **ssis_admin**  
   
--   Членство в **sysadmin** роли сервера  
+-   Членство в роли сервера **sysadmin**  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
- Ниже приводятся некоторые условия, которые могут вызвать clear_object_parameter хранимой процедура возвращает ошибку.  
+ В следующем списке перечислены некоторые условия, при которых хранимая процедура clear_object_parameter может вызвать ошибку:  
   
 -   Указан недопустимый тип объекта, или имя объекта в проекте отсутствует.  
   
@@ -83,4 +81,3 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
 -   Пользователь не имеет соответствующих разрешений.  
   
   
-

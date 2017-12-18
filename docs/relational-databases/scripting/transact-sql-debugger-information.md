@@ -2,9 +2,12 @@
 title: "Сведения отладчика Transact-SQL | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: ssms
+ms.service: 
+ms.component: scripting
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,14 +24,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 63c4f19cea0dd6f938f2b6e2e89f66e49d4a4947
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 82eb9526073e35e05f39be67b6a3f4bcd6569612
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="transact-sql-debugger---information"></a>Сведения отладчика Transact-SQL
-  Каждый раз когда отладчик приостанавливает выполнение на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] , с текущим состоянием выполнения можно ознакомиться при помощи различных окон отладчика.  
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Каждый раз, когда отладчик приостанавливает выполнение на определенной инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], с текущим состоянием выполнения можно ознакомиться с помощью различных окон отладчика.  
   
 ## <a name="debugger-windows"></a>Окна отладчика  
  В режиме отладки внизу основного окна среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] отладчик открывает два окна. Все сведения отладчика отображаются в этих двух окнах. В каждом окне отладчика есть вкладки, определяющие, какой набор сведений отображается в данном окне. В левом окне отладчика есть вкладки **Локальные значения**, **Просмотр значений1**, **Просмотр значений2**, **Просмотр значений3**и **Просмотр значений4** . В правом окне отладчика есть вкладки **Стек вызовов**, **Потоки**, **Точки останова**, **Окно команд**и **Вывод** .  

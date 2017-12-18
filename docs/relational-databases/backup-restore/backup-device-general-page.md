@@ -2,9 +2,12 @@
 title: "Устройство резервного копирования (страница \"Общие\") | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 41ccc8cfe692b236e7bd372ef2328b7d987870a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: b7aff7cfef8a57056964cc688c563edce84cbe92
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="backup-device-general-page"></a>Устройство резервного копирования (страница «Общие»)
-  На странице **Общие** можно указать или просмотреть общие свойства логического устройства резервного копирования.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На странице **Общие** можно указать или просмотреть общие свойства логического устройства резервного копирования.  
   
  **Использование среды SQL Server Management Studio для просмотра содержимого устройства резервного копирования**  
   

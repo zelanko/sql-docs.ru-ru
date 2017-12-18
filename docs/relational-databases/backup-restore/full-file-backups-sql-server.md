@@ -2,9 +2,12 @@
 title: "Полные резервные копии файлов (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,14 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05d90a6c48c8841a03d276efe1da2ced2d20336c
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 68298d631d672ffc5752762612864bb96e88eecf
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="full-file-backups-sql-server"></a>полные резервные копии файлов (SQL Server)
-  Сведения, приведенные в этом разделе, относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые содержат несколько файлов или файловых групп.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Сведения, приведенные в этом разделе, относятся только к тем базам данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые содержат несколько файлов или файловых групп.  
   
  Резервные копии файлов базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно создавать и восстанавливать по отдельности. Кроме того, можно указать всю файловую группу, а не каждый файл по отдельности. Обратите внимание, что если какой-либо файл файловой группы находится в режиме «вне сети» (например во время его восстановления), то вся файловая группа переводится в режим «вне сети», и создать ее резервную копию будет невозможно.  
   

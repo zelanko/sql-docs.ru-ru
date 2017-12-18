@@ -2,11 +2,12 @@
 title: "Обновление ядра СУБД | Документы Майкрософт"
 ms.custom: 
 ms.date: 07/18/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: install-windows
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -19,14 +20,14 @@ caps.latest.revision: "62"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: 11bf3a52f7c528fca881c7dd3262c5a1ce09589e
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 49b515f9a46e0d6196762181f19500d2d06e4b33
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrade-database-engine"></a>Обновление [компонент ядра СУБД]
-  Подразделы данного раздела помогут вам обновить ядро СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Подразделы данного раздела помогут вам обновить ядро СУБД [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предыдущего выпуска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 1.  [Выбор метода обновления компонента Database Engine](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md) . Прежде всего вам необходимо понять различные методы обновления. В этом разделе рассматриваются различные методы обновления и действия, связанные с каждым из них.  
   

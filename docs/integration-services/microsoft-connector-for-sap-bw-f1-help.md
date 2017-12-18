@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Connector для SAP BW F1 справка | Документы Microsoft"
+title: "Справка F1 по соединителю с SAP BW (Майкрософт) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- sql13.dts.designer.sapbw.f1
+f1_keywords: sql13.dts.designer.sapbw.f1
 ms.assetid: 292f9572-362a-45c1-879a-d81d31496ca7
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 51b1f3bfd75179ec1a66d31d167a1827e8bf8d5c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: af4b72d2ec634d8ae71a607c6a7c4d6b17254599
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Справка F1 по Microsoft Connector для SAP BW
   В этом разделе содержатся подразделы справки F1 для трех компонентов [!INCLUDE[msCoName](../includes/msconame-md.md)] Microsoft Connector 1.1 для SAP BW. Эти разделы доступны также из пользовательского интерфейса, если нажать клавишу F1 или щелкнуть меню «Справка» на страницах мастеров или в диалоговых окнах.  
@@ -41,13 +38,13 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-source-f1-help"></a>Справка F1 по источнику SAP BW  
   
--   [Редактор источников SAP BW &#40; Страницы диспетчера соединений &#41;](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Редактор источника SAP BW (страница "Диспетчер подключений")](../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
--   [Редактор источников SAP BW &#40; Страница «столбцы» &#41;](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
+-   [Редактор источника SAP BW (страница "Столбцы")](../integration-services/data-flow/sap-bw-source-editor-columns-page.md)  
   
--   [Редактор источников SAP BW &#40; Страница «Вывод ошибок» &#41;](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
+-   [Редактор источника SAP BW (страница "Вывод ошибок")](../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)  
   
--   [Редактор источников SAP BW &#40; Страница "Дополнительно" &#41;](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
+-   [Редактор источника SAP BW (страница "Дополнительно")](../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)  
   
 -   [Поиск назначения RFC](../integration-services/data-flow/look-up-rfc-destination.md)  
   
@@ -59,21 +56,21 @@ ms.lasthandoff: 08/03/2017
   
 ### <a name="sap-bw-destination-f1-help"></a>Справка F1 по назначению SAP BW  
   
--   [Редактор назначений SAP BW &#40; Страницы диспетчера соединений &#41;](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
+-   [Редактор назначений SAP BW (страница "Диспетчер подключений")](../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)  
   
--   [Редактор назначений SAP BW &#40; Страница «сопоставления» &#41;](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
+-   [Редактор назначений SAP BW (страница "Сопоставления")](../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)  
   
--   [Редактор назначений SAP BW &#40; Страница «Вывод ошибок» &#41;](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
+-   [Редактор назначений SAP BW (страница "Вывод ошибок")](../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)  
   
--   [Редактор назначений SAP BW &#40; Страница "Дополнительно" &#41;](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
+-   [Редактор назначений SAP BW (страница "Дополнительно")](../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)  
   
--   [Поиск Infopackage](../integration-services/data-flow/look-up-infopackage.md)  
+-   [Поиск InfoPackage](../integration-services/data-flow/look-up-infopackage.md)  
   
--   [Создание нового InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
+-   [Создание InfoObject](../integration-services/data-flow/create-new-infoobject.md)  
   
 -   [Создание InfoCube для данных транзакции](../integration-services/data-flow/create-infocube-for-transaction-data.md)  
   
--   [Поиск infoObject](../integration-services/data-flow/look-up-infoobject.md)  
+-   [Поиск InfoObject](../integration-services/data-flow/look-up-infoobject.md)  
   
 -   [Создание InfoSource](../integration-services/data-flow/create-infosource.md)  
   
@@ -87,4 +84,3 @@ ms.lasthandoff: 08/03/2017
  [Компоненты Microsoft Connector для SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Приведение (выражение служб SSIS) | Документы Microsoft"
+title: "Приведение (выражение служб SSIS) | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,17 +18,16 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a4954ea582309732be9b911abc4a272a379a2227
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="cast-ssis-expression"></a>Приведение (выражение служб SSIS)
   Явно приводит выражение одного типа данных к другому типу. Оператор приведения может также выполнять функцию оператора усечения.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="remarks"></a>Замечания  
  На следующей диаграмме перечислены допустимые операторы приведения.  
   
- ![Допустимые и недопустимые приведения между типами данных](../../integration-services/expressions/media/data-conversion.gif "допустимые и недопустимые приведения между типами данных")  
+ ![Допустимые и недопустимые приведения между типами данных](../../integration-services/expressions/media/data-conversion.gif "Допустимые и недопустимые приведения между типами данных")  
   
  Для приведения к некоторым типам данных необходимо задавать определенные параметры. В следующей таблице приведены эти типы данных и их параметры.  
   
@@ -151,10 +149,9 @@ ms.lasthandoff: 08/03/2017
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Приоритет и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [Операторы &#40; Выражение служб SSIS &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Выражения](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [Типы данных в выражениях служб Integration Services](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+ [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Типы данных служб Integration Services в выражениях](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   
-

@@ -1,5 +1,5 @@
 ---
-title: "Использование заметок в пакетах | Документы Microsoft"
+title: "Использование заметок в пакетах | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,17 +16,16 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dabeecf1a4e2715bf4ccd214ac21ff3311f27411
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 639f7d012dd750cdbee0c1e523af38c25b4c2d93
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="use-annotations-in-packages"></a>Использование заметок в пакетах
   Конструктор служб [!INCLUDE[ssIS](../includes/ssis-md.md)] предоставляет заметки, которые можно использовать для обеспечения самодокументируемости пакетов, упрощения их понимания и поддержки. Заметки вы можете добавлять в области конструктора потока управления, потока данных и обработчика событий конструктора [!INCLUDE[ssIS](../includes/ssis-md.md)] . Заметки могут содержать разные типы текста; они полезны при добавлении меток, примечаний и других описательных сведений в пакет. Создание заметок возможно только во время проектирования. Например, они не записываются в журналы.  
@@ -60,4 +58,3 @@ ms.lasthandoff: 09/26/2017
 7.  Чтобы добавить заметку к группе, щелкните правой кнопкой мыши заметку и выберите пункт **Группа**.  
   
 8.  Чтобы сохранить обновленный пакет, в меню **Файл** выберите команду **Сохранить все**.  
-

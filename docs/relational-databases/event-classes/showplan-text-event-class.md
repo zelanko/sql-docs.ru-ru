@@ -2,9 +2,12 @@
 title: "Класс событий Showplan Text | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aec356e361b78a2ca35b646ee0514081b4ada6b0
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: e92f26c7ea3c3cdeb2aa5140a6900e1e36ac0397
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="showplan-text-event-class"></a>Showplan Text, класс событий
-  Класс событий Showplan Text происходит, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию SQL. Содержит только часть сведений, доступных при использовании классов событий Showplan All, Showplan XML Statistics Profile или Showplan XML.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий Showplan Text происходит, когда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкцию SQL. Содержит только часть сведений, доступных при использовании классов событий Showplan All, Showplan XML Statistics Profile или Showplan XML.  
   
  Если события класса Showplan Text включены в трассировку, объем нагрузки может существенно снизить производительность. Чтобы уменьшить этот эффект, используйте данный класс событий только в тех трассировках, которые применяются для наблюдения за конкретными проблемами в течение непродолжительного времени. События класса Showplan Text не вызывают столь большой нагрузки, как другие классы событий Showplan.  
   

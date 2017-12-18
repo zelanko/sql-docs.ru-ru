@@ -1,5 +1,5 @@
 ---
-title: "Статистическая обработка преобразования | Документы Microsoft"
+title: "Преобразование \"Статистическая обработка\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,19 +21,18 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: 59
+caps.latest.revision: "59"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: 7db09ca84b86d93790ce4b1bf6300526df188dea
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/19/2017
-
+ms.openlocfilehash: 1c52546eab7dc5c52fb38e03616df648d3d5d67d
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
-# <a name="aggregate-transformation"></a>Преобразование "Статистическая обработка"
+# <a name="aggregate-transformation"></a>Преобразование «Статистическая обработка»
   Преобразование "Агрегатная обработка" применяет агрегатные функции, такие как Average, к значениям столбцов и копирует результат на выход преобразования. Кроме агрегатных функций преобразование предоставляет возможность использования предложения GROUP BY, которое можно применять для указания обрабатываемых групп.  
   
 ## <a name="operations"></a>Операции  
@@ -135,7 +133,7 @@ ms.lasthandoff: 08/19/2017
 -   [Сортировка данных для преобразований «Слияние» и «Соединение слиянием»](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-tasks"></a>Связанные задачи  
- [Статистические значения в наборе данных с помощью агрегатных преобразования](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [Статистическая обработка значений в наборе данных с помощью преобразования "Статистическая обработка"](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>Редактор преобразования «Статистическая обработка» (вкладка «Агрегаты»)
   На вкладке **Агрегаты** диалогового окна **Редактор преобразования «Статистическая обработка»** можно указать столбцы для статистической обработки и свойства статистических выражений. Можно применять одновременно нескольких агрегатов. Это преобразование не приводит к формированию вывода ошибок.  
@@ -249,4 +247,3 @@ ms.lasthandoff: 08/19/2017
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   
-

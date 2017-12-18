@@ -2,9 +2,12 @@
 title: "Распределенные группы доступности (SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 08/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: availability-groups
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,15 +18,14 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e4cff3c69ac7369aef0bccf0121558a504c2bf76
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 245eb466e756017c3ae70a5fc408d4ce876370d4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="distributed-availability-groups"></a>Распределенные группы доступности
-
-Распределенные группы доступности — это новая функция SQL Server 2016, схожая с функцией групп доступности AlwaysOn. Данная статья разъясняет некоторые аспекты распределенных групп доступности и дополняет существующую [документацию по SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Распределенные группы доступности — это новая функция SQL Server 2016, схожая с функцией групп доступности AlwaysOn. Данная статья разъясняет некоторые аспекты распределенных групп доступности и дополняет существующую [документацию по SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
 
 > [!NOTE]
 > Аббревиатура "DAG" не является официальным сокращением для *распределенной группы доступности*, поскольку уже используется для обозначения функции группы доступности базы данных Exchange. Эта функция Exchange никак не связана с группами доступности SQL Server или распределенными группами доступности.

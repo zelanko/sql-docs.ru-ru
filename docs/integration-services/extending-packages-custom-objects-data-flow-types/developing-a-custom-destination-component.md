@@ -1,5 +1,5 @@
 ---
-title: "Разработка пользовательского компонента назначения | Документы Microsoft"
+title: "Разработка пользовательского компонента назначения | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects-data-flow-types
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -25,30 +23,29 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], destination components
 - data flow components [Integration Services], destination components
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: b579a17ba5095e3864148abaff75880da9fed108
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: a95f24318503d8f76604bbcf683bc9ed79bd1ce0
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="developing-a-custom-destination-component"></a>Разработка пользовательского компонента назначения
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] дает разработчикам возможность создания пользовательских компонентов назначения, можно подключиться и сохранить данные в любой пользовательский источник данных. Пользовательские компоненты назначения полезны при необходимости соединения с источниками данных, доступ к которым не может быть осуществлен с помощью одного из существующих исходных компонентов, включенных в службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
+  Службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют разработчикам возможность создания пользовательских компонентов назначения, которые могут соединяться с любым пользовательским источником данных и хранить в нем свои данные. Пользовательские компоненты назначения полезны при необходимости соединения с источниками данных, доступ к которым не может быть осуществлен с помощью одного из существующих исходных компонентов, включенных в службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
  Компоненты назначения имеют один или несколько входов и ни одного выхода. Во время разработки они создают и настраивают соединения и считывают метаданные столбцов из внешнего источника данных. Во время выполнения они соединяются с внешним источником данных и добавляют строки, получаемые от вышестоящих компонентов в потоке данных внешнего источника данных. Если внешний источник данных уже существует к моменту выполнения компонента, компонент назначения должен также убедиться, что типы данных столбцов, получаемых компонентом, соответствуют типам данных столбцов внешнего источника данных.  
   
- В этом разделе подробно описана разработка компонентов назначения и приведены примеры кода, поясняющие важные основные понятия. Общие сведения о разработке компонентов потока данных, в разделе [Разработка пользовательского компонента потока данных](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
+ В этом разделе подробно описана разработка компонентов назначения и приведены примеры кода, поясняющие важные основные понятия. Общие сведения о разработке компонентов потока данных см. в разделе [Разработка пользовательского компонента потока данных](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
 ## <a name="design-time"></a>Время разработки  
  Реализация для компонента назначения функциональности времени разработки включает указание соединения с внешним источником данных и проверку правильности настройки компонента. Компонент назначения по определению имеет один вход и, возможно, один выход для вывода ошибок.  
   
 ### <a name="creating-the-component"></a>Создание компонента  
- Компоненты назначения соединяются с внешними источниками данных при помощи определенных в пакете объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Компонент назначения указывает ему необходим диспетчер соединений для [!INCLUDE[ssIS](../../includes/ssis-md.md)] конструктора и пользователям компонента, добавляя элемент к <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> коллекцию <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Эта коллекция служит двум целям: во-первых, он объявляет потребность в диспетчер соединений для [!INCLUDE[ssIS](../../includes/ssis-md.md)] конструкторе; затем, после пользователем выбора или создания диспетчера подключения, он хранит ссылку на диспетчер соединений в пакете, который используется компонентом. Когда <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> добавляется в коллекцию **расширенный редактор** отображает **свойства соединения** вкладку, чтобы предложить пользователю выбрать или создать соединения в пакете для использования компонентом.  
+ Компоненты назначения соединяются с внешними источниками данных при помощи определенных в пакете объектов <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager>. Компонент назначения указывает конструктору служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] и пользователям компонента, что ему необходим диспетчер подключений, добавляя элемент в коллекцию <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A> объекта <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Коллекция служит двум целям. Во-первых, она извещает конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] о потребности в диспетчере подключений. Во-вторых, после выбора или создания пользователем диспетчера подключений она хранит ссылку на него в пакете, используемом компонентом. Когда объект <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> добавляется в коллекцию, в **расширенном редакторе** открывается вкладка **Свойства соединения**, предлагающая пользователю выбрать или создать в пакете соединение, которое будет использоваться компонентом.  
   
  Следующий образец кода иллюстрирует реализацию метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProvideComponentProperties%2A>, который добавляет вход и объект <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeConnection100> в коллекцию <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.RuntimeConnectionCollection%2A>.  
   
@@ -174,9 +171,9 @@ End Sub
 ```  
   
 ### <a name="validating-the-component"></a>Проверка компонента  
- Разработчики компонентов назначения должен выполнить проверку, как описано в [проверки компонентов](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md). Кроме того, они должны проверять, что свойства типа данных столбцов, определенных в коллекции входных столбцов компонентов, соответствуют столбцам внешнего источника данных. Иногда проверка входных столбцов на соответствие с внешним источником данных невозможна или нежелательна — например, если компонент или конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] отсоединены либо пересылка данных на сервер и обратно неприемлема. Однако и в этой ситуации можно выполнить проверку столбцов в коллекции входных столбцов с помощью коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> входного объекта.  
+ Разработчики компонентов назначения должны производить проверку, описанную в разделе [Проверка компонентов](../../integration-services/extending-packages-custom-objects/data-flow/validating-a-data-flow-component.md). Кроме того, они должны проверять, что свойства типа данных столбцов, определенных в коллекции входных столбцов компонентов, соответствуют столбцам внешнего источника данных. Иногда проверка входных столбцов на соответствие с внешним источником данных невозможна или нежелательна — например, если компонент или конструктор служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] отсоединены либо пересылка данных на сервер и обратно неприемлема. Однако и в этой ситуации можно выполнить проверку столбцов в коллекции входных столбцов с помощью коллекции <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ExternalMetadataColumnCollection%2A> входного объекта.  
   
- Эта коллекция имеется как у входных, так и выходных объектов и должна быть заполнена разработчиком компонента данными о столбцах внешнего источника данных. Эта коллекция используется для проверки входных столбцов при [!INCLUDE[ssIS](../../includes/ssis-md.md)] конструктор находится в автономном режиме при отключении компонента или когда <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> свойство **false**.  
+ Эта коллекция имеется как у входных, так и выходных объектов и должна быть заполнена разработчиком компонента данными о столбцах внешнего источника данных. Эту коллекцию можно использовать для проверки входных столбцов, если конструктора служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] нет в сети, если компонент не подключен либо если свойство <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A> имеет значение **false**.  
   
  Следующий образец кода добавляет столбец внешних метаданных, основываясь на данных о существующем входном столбце.  
   
@@ -214,7 +211,7 @@ End Sub
 ```  
   
 ## <a name="run-time"></a>Время выполнения  
- Во время выполнения компонент назначения получает вызов метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> каждый раз, когда заполняется буфер <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> данными из вышестоящего компонента. Этот метод вызывается многократно, пока имеется больше нет буферов и <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> свойство **true**. Во время выполнения этого метода компоненты назначения считывают из буфера столбцы и строки и добавляют их во внешний источник данных.  
+ Во время выполнения компонент назначения получает вызов метода <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> каждый раз, когда заполняется буфер <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer> данными из вышестоящего компонента. Метод вызывается повторно до тех пор, пока не закончатся буферы и пока свойство <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineBuffer.EndOfRowset%2A> не примет значение **true**. Во время выполнения этого метода компоненты назначения считывают из буфера столбцы и строки и добавляют их во внешний источник данных.  
   
 ### <a name="locating-columns-in-the-buffer"></a>Поиск столбцов в буфере  
  Входной буфер для компонента содержит все столбцы, определенные в коллекциях выходных столбцов компонентов, находящихся выше данного компонента в потоке данных. Например, если в выходе исходного компонента предоставлены три столбца, и следующий компонент вводит дополнительный выходной столбец, буфер для компонента назначения содержит четыре столбца, даже если компонент назначения будет записывать только два столбца.  
@@ -496,4 +493,3 @@ End Namespace
  [Создание назначения с помощью компонента скрипта](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   
-

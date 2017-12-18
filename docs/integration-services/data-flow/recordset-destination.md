@@ -1,5 +1,5 @@
 ---
-title: "«Набор записей» | Документы Microsoft"
+title: "Назначение \"Набора записей\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.designer.recordsetdest.f1
+f1_keywords: sql13.dts.designer.recordsetdest.f1
 helpviewer_keywords:
 - Recordset destination
 - ADO recordsets [Integration Services]
 - destinations [Integration Services], Recordset
 - in-memory ADO recordsets [Integration Services]
 ms.assetid: be973cf1-c4ff-49f8-987e-314c08ef98e4
-caps.latest.revision: 47
+caps.latest.revision: "47"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ba67dbc528d781325f35a7b6c1556b1debee1171
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: baf8b5de73fe5c4fd39800a6942b000c46d1b7e9
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="recordset-destination"></a>назначение «Набор записей»
   Назначение «Набора записей» создает и заполняет набор записей ADO в памяти. Форма набора записей определяется входными данными назначения «набор записей» во время проектирования.  
@@ -56,4 +53,3 @@ ms.lasthandoff: 08/03/2017
  [использовать назначение «Набор записей»](../../integration-services/data-flow/use-a-recordset-destination.md)  
   
   
-

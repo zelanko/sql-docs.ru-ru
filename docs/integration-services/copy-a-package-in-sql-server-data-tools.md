@@ -1,5 +1,5 @@
 ---
-title: "Копировать пакет в SQL Server Data Tools | Документы Microsoft"
+title: "Копирование пакета с помощью SQL Server Data Tools | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: integration-services
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - regenerating package GUID
 - updating package properties
 ms.assetid: 03edc659-e76d-48c0-a749-5f1899b6b507
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 59a001e0aa360183e5e393faedc613cfabda0f02
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 8f75a2f7d59a1c0fff49179020f37420f24149ed
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Копирование пакета с помощью SQL Server Data Tools
   В этом разделе описывается, как создать новый пакет служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] копированием существующего пакета и как обновить свойства **Name** и **GUID** нового пакета.  
@@ -41,10 +39,10 @@ ms.lasthandoff: 08/03/2017
   
 3.  Убедитесь, что копируемый пакет выбран в обозревателе решений либо в конструкторе служб SSIS выбрана вкладка, содержащая пакет  
   
-4.  На **файл** меню, нажмите кнопку **Сохранить \<имя пакета > как**.  
+4.  В меню **Файл** выберите команду **Сохранить \<имя пакета> как**.  
   
     > [!NOTE]  
-    >  Чтобы команда **Сохранить как** появилась в меню **Файл**, пакет нужно открыть в конструкторе служб SSIS.  
+    >  Чтобы команда **Сохранить как** появилась в меню **Файл** , пакет нужно открыть в конструкторе служб SSIS.  
   
 5.  При необходимости перейдите в другую папку.  
   
@@ -56,14 +54,13 @@ ms.lasthandoff: 08/03/2017
   
 9. При необходимости перейдите на вкладку **Поток управления** и выберите **Свойства**.  
   
-10. В окне «Свойства» щелкните значение свойства идентификатора, а затем в раскрывающемся списке выберите  **\<сформировать новый идентификатор >**.  
+10. В окне "Свойства" щелкните значение свойства идентификатора (ID), а затем выберите **\<Сформировать новый идентификатор>** в раскрывающемся списке.  
   
 11. В меню **Файл** выберите команду **Сохранить выбранные элементы** , чтобы сохранить новый пакет.  
   
 ## <a name="see-also"></a>См. также  
- [Сохранение копии пакета](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
+ [Сохранение одной копии пакета](http://msdn.microsoft.com/library/21482a20-e420-4452-b7eb-8f9fa1929f31)   
  [Создание пакетов в SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Пакеты](../integration-services/integration-services-ssis-packages.md)  
+ [Пакеты служб Integration Services (SSIS)](../integration-services/integration-services-ssis-packages.md)  
   
   
-

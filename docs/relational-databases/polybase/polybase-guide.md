@@ -8,8 +8,7 @@ ms.component: polybase
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology:
-- database-engine-polybase
+ms.technology: database-engine-polybase
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords:
@@ -22,21 +21,19 @@ helpviewer_keywords:
 - Hadoop export
 - Hadoop export, PolyBase overview
 - Hadoop import, PolyBase overview
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
+ms.openlocfilehash: f7ce518d2588e07ae90842f92a7e9ee47cfc5543
+ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
 ms.translationtype: HT
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 07/31/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/18/2017
 ---
 # <a name="polybase-guide"></a>Руководство по PolyBase
-
-  PolyBase — это технология, которая обращается к данным за пределами базы данных с помощью языка t-sql.  В SQL Server 2016 она позволяет выполнять запросы к внешним данным в хранилище BLOB-объектов Azure или Hadoop, а также импортировать данные в такое хранилище и экспортировать их из него. Для включения вычислений для Hadoop запросы оптимизируются. В хранилище данных SQL Azure можно импортировать данные из хранилища BLOB-объектов Azure и Azure Data Lake Store и экспортировать данные.
+[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] PolyBase — это технология, которая обращается к данным за пределами базы данных с помощью языка t-sql.  В SQL Server 2016 она позволяет выполнять запросы к внешним данным в хранилище BLOB-объектов Azure или Hadoop, а также импортировать данные в такое хранилище и экспортировать их из него. Для включения вычислений для Hadoop запросы оптимизируются. В хранилище данных SQL Azure можно импортировать данные из хранилища BLOB-объектов Azure и Azure Data Lake Store и экспортировать данные.
   
   
  Инструкции по работе с PolyBase см. в статье [Приступая к работе с PolyBase](../../relational-databases/polybase/get-started-with-polybase.md).  
@@ -82,4 +79,3 @@ ms.lasthandoff: 07/31/2017
 |[Устранение неполадок c PolyBase](../../relational-databases/polybase/polybase-troubleshooting.md)|Методы управления запросами PolyBase. Используйте динамические административные представления (DMV) для отслеживания запросов PolyBase и узнайте, как считать план запросов PolyBase для поиска узких мест производительности.|  
   
   
-

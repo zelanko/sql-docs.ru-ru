@@ -1,5 +1,5 @@
 ---
-title: "Вызов и определение событий в пользовательской задаче | Документы Microsoft"
+title: "Вызов и определение событий в пользовательской задаче | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -29,17 +27,16 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-caps.latest.revision: 53
+caps.latest.revision: "53"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 44e27c1ff000046744aa78479b73cc8ef39d6f2e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 4f71ff29b7e029bc52fd6ffe243b4279e6caf08b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Вызов и определение событий в пользовательской задаче
   Обработчиком среды выполнения служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляется коллекция событий, обозначающих состояние обработки задачи в ходе ее проверки и выполнения. Интерфейс <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> определяет эти события. Он передается задачам в качестве параметра методов <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  
@@ -47,13 +44,13 @@ ms.lasthandoff: 08/03/2017
  Имеется также другой набор событий, определяемых интерфейсом <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>, которые вызываются от имени задачи сервером задач <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>. Сервер задач <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> вызывает события, происходящие до и после проверки и выполнения, а задача вызывает события, происходящие непосредственно во время выполнения и проверки.  
   
 ## <a name="creating-custom-events"></a>Создание пользовательских событий  
- Разработчики пользовательских задач могут определять новые пользовательские события, создавая новый объект <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> в своей переопределенной реализации метода <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>. После <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> будет создан, он добавляется **EventInfos** коллекции с помощью <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> метод. Подпись метода <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> выглядит следующим образом:  
+ Разработчики пользовательских задач могут определять новые пользовательские события, создавая новый объект <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> в своей переопределенной реализации метода <xref:Microsoft.SqlServer.Dts.Runtime.Task.InitializeTask%2A>. После создания объект <xref:Microsoft.SqlServer.Dts.Runtime.EventInfo> добавляется в коллекцию **EventInfos** с помощью метода <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A>. Подпись метода <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos.Add%2A> выглядит следующим образом:  
   
  `public void Add(string eventName, string description, bool allowEventHandlers, string[] parameterNames, TypeCode[] parameterTypes, string[] parameterDescriptions);`  
   
  В следующем образце кода демонстрируется метод **InitializeTask** пользовательской задачи при создании двух пользовательских событий и указании их свойств. Затем новые события добавляются в коллекцию <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>.  
   
- Первому событию присваивается имя *eventName* "**OnBeforeIncrement**" и описание *description* "**Fires after the initial value is updated**". (Срабатывает после обновления исходного значения.) Следующий параметр, имеющий значение **true**, указывает, что для обработки этого события разрешено создание контейнера обработчика событий. Обработчик событий представляет собой контейнер, обеспечивающий структуру пакета и службы для задач, как и другие контейнеры, например, пакет, Sequence, ForLoop и ForEachLoop. Когда *значением переменой allowEventHandlers* параметр **true**, <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> объекты создаются для события. Любые параметры, которые были определены для события теперь доступны для <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> в коллекцию переменных <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
+ Первому событию присваивается имя *eventName* "**OnBeforeIncrement**" и описание *description* "**Fires after the initial value is updated**". (Срабатывает после обновления исходного значения.) Следующий параметр, имеющий значение **true**, указывает, что для обработки этого события разрешено создание контейнера обработчика событий. Обработчик событий представляет собой контейнер, обеспечивающий структуру пакета и службы для задач, как и другие контейнеры, например, пакет, Sequence, ForLoop и ForEachLoop. Если параметр *allowEventHandlers* имеет значение **true**, для события создаются объекты <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>. Любые параметры, определенные для события, становятся доступными для <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler> в его коллекции <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
 ```csharp  
 public override void InitializeTask(Connections connections,  
@@ -127,7 +124,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="sample"></a>Образец  
- В следующем примере показано задание, которое определяет пользовательское событие в **InitializeTask** метод, добавляет пользовательское событие для <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos> коллекции и затем вызывает пользовательское событие во время его **Execute** метод путем вызова <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A> метод.  
+ В следующем примере демонстрируется задача, которая определяет пользовательское событие в методе **InitializeTask**, добавляет пользовательское событие в коллекцию <xref:Microsoft.SqlServer.Dts.Runtime.EventInfos>, а затем вызывает пользовательское событие при выполнении метода **Execute** посредством вызова метода <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireCustomEvent%2A>.  
   
 ```csharp  
 [DtsTask(DisplayName = "CustomEventTask")]  
@@ -200,8 +197,7 @@ Nothing,  bFireOnBeforeIncrement)
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [Службы Integration Services &#40; Службы SSIS &#41; Обработчики событий](../../../integration-services/integration-services-ssis-event-handlers.md)   
- [Добавить обработчик событий в пакет](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
+ [Обработчики событий в службах Integration Services (SSIS)](../../../integration-services/integration-services-ssis-event-handlers.md)   
+ [Добавление обработчика событий к пакету](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)  
   
   
-

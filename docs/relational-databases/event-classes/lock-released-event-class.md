@@ -2,9 +2,12 @@
 title: "Класс событий Lock:Released | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fbcd710794e737b9be172f17756bd79aa1acaa34
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 4ec7889b8ba842cb837e1d318a67360b960e5547
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lockreleased-event-class"></a>Класс событий Lock:Released
-  Класс событий Lock:Released указывает на то, что блокировка ресурса, например страницы, была снята.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий Lock:Released указывает на то, что блокировка ресурса, например страницы, была снята.  
   
  Классы событий Lock:Acquired и Lock:Released можно применять для отслеживания блокировок объектов, типов блокировок и длительности их действия. Следует исследовать причины длительных захватов, так как они могут приводить к конфликтным ситуациям. Например, приложение может получать блокировку строк в таблице и затем ожидать ввода пользователя. Поскольку ввод данных пользователем может занять много времени, блокировка может помешать работать другим пользователям. В данном случае приложение необходимо перестроить таким образом, чтобы запросы на блокировку выполнялись только при необходимости и оно не ожидало ввода данных пользователем после запроса на блокировку.  
   

@@ -2,9 +2,12 @@
 title: "Запуск и использование помощника по настройке ядра СУБД | Документация Майкрософт"
 ms.custom: 
 ms.date: 01/09/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: performance
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,14 +25,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24e2347ba4cc496fcbb985f4a47bed8022b2c8c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 21efab98503bc82485097c87b04623bf38366a68
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Запуск и использование помощника по настройке ядра СУБД
-  В этом разделе описано, как запускать и использовать помощник по настройке ядра СУБД в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о просмотре и работе с результатами после настройки базы данных см. в статье [Просмотр и работа с выходными данными помощника по настройке ядра СУБД](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как запускать и использовать помощник по настройке ядра СУБД в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Дополнительные сведения о просмотре и работе с результатами после настройки базы данных см. в статье [Просмотр и работа с выходными данными помощника по настройке ядра СУБД](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Инициализация помощника по настройке ядра СУБД  
  При первом использовании помощника по настройке ядра СУБД его должен инициализировать пользователь, имеющий предопределенную роль сервера **sysadmin** . Это связано с тем, что для поддержки операций настройки в базе данных **msdb** необходимо создать несколько системных таблиц. Инициализация также помогает пользователям, являющимся членами предопределенной роли базы данных **db_owner** , настраивать рабочие нагрузки для таблиц в принадлежащих им базах данных.  

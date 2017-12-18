@@ -2,9 +2,12 @@
 title: "Восстановление в сети (SQL Server) | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: backup-restore
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,14 +20,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f17516a1a1ac2d07da67ee4688703ef0a5ee5611
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 8a92b8a183c2975e219ef5774cd110e5f53e483a
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="online-restore-sql-server"></a>Восстановление в сети (SQL Server)
-  Восстановление в сети поддерживается только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. В настоящем выпуске восстановление файлов, страниц или поэтапное восстановление выполняется по умолчанию в режиме «в сети». Этот раздел относится только к базам данных, содержащим несколько файлов или файловых групп, а также (для простой модели восстановления) к файловым группам, доступным только для чтения.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Оперативное восстановление поддерживается только в выпуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise. В настоящем выпуске восстановление файлов, страниц или поэтапное восстановление выполняется по умолчанию в режиме «в сети». Этот раздел относится только к базам данных, содержащим несколько файлов или файловых групп, а также (для простой модели восстановления) к файловым группам, доступным только для чтения.  
   
  Восстановление данных из копии, когда база данных находится в режиме «в сети», называется *восстановлением в сети*. Считается, что база данных находится в режиме «в сети», если первичная файловая группа находится в режиме «в сети», даже если одна или несколько вторичных файловых групп находится в режиме «вне сети». Если база данных находится в режиме «в сети», то файл можно восстановить при любой модели восстановления. Кроме того, при использовании модели полного восстановления можно восстанавливать страницы, когда база данных находится в режиме «в сети».  
   

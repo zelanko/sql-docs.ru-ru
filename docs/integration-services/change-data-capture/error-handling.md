@@ -1,5 +1,5 @@
 ---
-title: "Обработка ошибок | Документы Microsoft"
+title: "Обработка ошибок | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
@@ -8,21 +8,19 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9243f40c5088c8ed2abcb92c435d662b408b45d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="error-handling"></a>Обработка ошибок
   Экземпляр Oracle CDC извлекает изменения из одной базы данных-источника Oracle (кластер Oracle RAC считается одной базой данных) и записывает зафиксированные изменения в таблицы изменений в базе данных CDC на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -62,7 +60,7 @@ ms.lasthandoff: 08/03/2017
   
 -   Таблица MSXDBCDC.dbo.xdbcdc_trace, которая используется основным процессом службы Oracle CDC Service для ведения общего журнала и трассировки.  
   
--   \<Базы данных cdc >. CDC.xdbcdc_trace, которая используется для ведения общего журнала и трассировки экземпляров Oracle CDC. Это означает, что ошибки, связанные с определенным экземпляром Oracle CDC, записываются в таблицу трассировки данного экземпляра.  
+-   Таблица \<cdc-database>.cdc.xdbcdc_trace, которая используется экземплярами Oracle CDC для ведения общего журнала и трассировки. Это означает, что ошибки, связанные с определенным экземпляром Oracle CDC, записываются в таблицу трассировки данного экземпляра.  
   
  Сведения записываются в журнал службой Oracle CDC, когда служба:  
   
@@ -120,8 +118,7 @@ ms.lasthandoff: 08/03/2017
  Служба Oracle CDC Service отслеживает подпроцессы свих экземпляров CDC. Если выполнение подпроцесса экземпляра CDC прерывается, служба CDC Service отключает его в таблице MSXDBCDC.dbo.xdbcdc_databases и меняет его состояние в таблице cdc.xdbcdc_state на ABORTED. В этом случае можно использовать стандартное диалоговое окно отчета об ошибках Windows, чтобы передать сообщение об этой ошибке для анализа в дальнейшем.  
   
 ## <a name="see-also"></a>См. также  
- [Конструктор системы отслеживания измененных данных для Oracle компании attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
+ [Конструктор системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Экземпляр CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   
   
-

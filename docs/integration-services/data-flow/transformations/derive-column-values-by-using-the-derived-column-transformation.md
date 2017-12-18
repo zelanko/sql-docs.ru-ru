@@ -1,5 +1,5 @@
 ---
-title: "Получение значений столбцов с помощью преобразования «Производный столбец» | Документы Microsoft"
+title: "Получение значений столбцов с помощью преобразования \"Производный столбец\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,8 +8,7 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,17 +17,16 @@ helpviewer_keywords:
 - columns [Integration Services], values
 - Derived Column transformation
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
-caps.latest.revision: 48
+caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: c0106d70fa5a3b31f0a92edf5c7088cf427c59a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: c48aea11f3e1c72f134fdd5dad856d8d7a827ec4
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>Получение значений столбцов с помощью преобразования «Производный столбец»
   Чтобы добавить и настроить преобразование «Производный столбец», пакет уже должен содержать по крайней мере одну задачу потока данных и один источник.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 08/03/2017
     > [!NOTE]  
     >  Если выражение недопустимо, его текст выделяется, а в подсказке к столбцу появляется описание ошибки.  
   
-7.  В **производный столбец** выберите  **\<добавить как новый столбец >** для записи результата вычисления выражения в новый столбец или выберите существующий столбец для обновления результатом вычисления.  
+7.  В списке **Производный столбец** выберите **\<добавить как новый столбец>** для записи результата вычисления выражения в новый столбец или выберите существующий столбец для обновления результатов вычисления.  
   
      Если выбрано использование нового столбца, диалоговое окно **Редактор преобразования «Производный столбец»** вычисляет выражение и присваивает тип данных столбцу в зависимости от типа данных, длины, точности, масштаба и кодовой страницы.  
   
@@ -67,12 +65,11 @@ ms.lasthandoff: 08/03/2017
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [Преобразование «Производный столбец»](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
+ [Derived Column Transformation](../../../integration-services/data-flow/transformations/derived-column-transformation.md)   
  [Типы данных служб Integration Services](../../../integration-services/data-flow/integration-services-data-types.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   
  [Задача потока данных](../../../integration-services/control-flow/data-flow-task.md)   
- [Службы Integration Services &#40; Службы SSIS &#41; Выражения](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
+ [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md)  
   
   
-

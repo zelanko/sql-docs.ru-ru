@@ -2,9 +2,12 @@
 title: "Повторная инициализация подписок — одна подписка | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: replication
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: replication
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,14 +19,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c1e79ea2c89375473d31e1ec44e783b5af37c90a
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 57f205c4f64f1a85312faeded0f47f6489341dee
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="reinitialize-subscriptions---one-subscription"></a>Повторная инициализация подписок — одна подписка
-  При помощи диалогового окна **Повторная инициализация подписок** можно выбрать подписки для повторной инициализации. Повторная инициализация подразумевает применение моментального снимка к подписчику; она выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью диалогового окна **Повторная инициализация подписок** можно выбрать подписки для повторной инициализации. Повторная инициализация подразумевает применение моментального снимка к подписчику; она выполняется агентом распространителя для подписок на публикации транзакций и агентом слияния для подписок на публикации слиянием.  
   
 ## <a name="options"></a>Параметры  
  **Использовать текущий моментальный снимок**  

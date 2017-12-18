@@ -2,9 +2,12 @@
 title: "Класс событий CursorExecute | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6756b69213e3c9cd9d8f27eeab02f662445751c5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 3c6c48706f855065e96ebcd6c254dd2856c3e15d
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute, класс событий
-  Класс событий **CursorExecute** описывает события выполнения курсоров, возникающие в курсорах API. События выполнения курсоров возникают при создании и заполнении курсора компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием плана выполнения, созданного событием подготовки курсоров.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий **CursorExecute** описывает события выполнения курсоров, возникающие в курсорах API. События выполнения курсоров возникают при создании и заполнении курсора компонента [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием плана выполнения, созданного событием подготовки курсоров.  
   
  Включите класс событий **CursorExecute** в трассировки, фиксирующие производительность курсоров. Если класс событий **CursorExecute** включен в трассировку, объем служебных данных зависит от того, как часто курсоры используются в базе данных при трассировке. Если курсоры используются активно, трассировка может существенно снизить производительность.  
   

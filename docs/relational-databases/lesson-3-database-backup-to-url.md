@@ -1,10 +1,13 @@
 ---
 title: "Занятие 3. Резервное копирование базы данных по URL-адресу | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
+ms.custom: 
 ms.date: 03/07/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: tutorial
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec613fcc50ceb8cf712ad4a51b543a686cdb9cfd
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: f63e84d8c22b5c88214cc4d85a6bebf572c41430
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="lesson-3-database-backup-to-url"></a>Занятие 3. резервное копирование базы данных по URL-адресу
-На этом занятии выполняется резервное копирование базы данных AdventureWorks2014 в локальном экземпляре SQL Server 2016 в контейнер Azure, созданный на [занятии 1: создание хранимой политики доступа и подписанного URL-адреса в контейнере Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На этом занятии выполняется резервное копирование базы данных AdventureWorks2014 в локальном экземпляре SQL Server 2016 в контейнер Azure, созданный на [занятии 1: создание хранимой политики доступа и подписанного URL-адреса в контейнере Azure](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md).  
   
 > [!NOTE]  
 > Если необходимо выполнить резервное копирование базы данных SQL Server 2012 с пакетом обновления 1 (SP1) и накопительным пакетом обновления 2 или более поздней версии либо базы данных SQL Server 2014 в этот контейнер Azure, можно воспользоваться устаревшим синтаксисом, который описывается [здесь](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) . Таким образом можно выполнить резервное копирование по URL-адресу с помощью синтаксиса WITH CREDENTIAL.  

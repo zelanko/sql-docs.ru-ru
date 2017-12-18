@@ -2,9 +2,12 @@
 title: "Класс событий Audit Server Object Take Ownership | Документация Майкрософт"
 ms.custom: 
 ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: event-classes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 08eb73672db400903897dfb9cff5f3b9370e6e1d
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 5e860f06317c13c1d2170e1b2175dc5d386b0462
+ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="audit-server-object-take-ownership-event-class"></a>Audit Server Object Take Ownership, класс событий
-  Класс событий **Audit Server Object Take Ownership** имеет место в случае смены владельца для объектов в области видимости сервера.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Класс событий **Audit Server Object Take Ownership** возникает в случае смены владельца для объектов в области сервера.  
   
 ## <a name="audit-server-object-take-ownership-event-class-data-columns"></a>Столбцы данных класса событий Audit Server Object Take Ownership  
   

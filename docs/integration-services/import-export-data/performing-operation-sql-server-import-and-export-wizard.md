@@ -1,5 +1,5 @@
 ---
-title: "Выполнение операции (мастер экспорта и импорта SQL Server) | Документы Microsoft"
+title: "Выполнение операции (мастер импорта и экспорта SQL Server) | Документы Майкрософт"
 ms.custom: 
 ms.date: 01/11/2017
 ms.prod: sql-non-specified
@@ -8,24 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- sql13.dts.impexpwizard.performingoperation.f1
+f1_keywords: sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: 42
+caps.latest.revision: "42"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 75dc26699071ee88bb0c05368b4bf36ba677c35b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/26/2017
-
+ms.openlocfilehash: 6d31607e0a2880d0a984efe20e4b11c9195cb789
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Выполнение операции (мастер импорта и экспорта SQL Server)
 После того как вы проверите значения, выбранные в мастере, и нажмете кнопку **Готова** на странице **Завершение работы мастера** , в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выполнение операции**. На этой странице отображается ход выполнения и результат операции, настроенной на предыдущих страницах. На этой странице никакие действия не требуются.
@@ -33,12 +30,12 @@ ms.lasthandoff: 09/26/2017
 ## <a name="screen-shot---operation-in-progress"></a>Снимок экрана: выполнение операции 
  На следующем снимке экрана показана страница **Выполнение операции** мастера в процессе выполнения операции.  
   
- ![Выполнение операции страница мастера импорта и экспорта](../../integration-services/import-export-data/media/performing-operation1.png "выполнение операции страница мастера импорта и экспорта")  
+ ![Страница "Выполнение операции" в мастере импорта и экспорта](../../integration-services/import-export-data/media/performing-operation1.png "Страница "Выполнение операции" в мастере импорта и экспорта")  
 
 ## <a name="screen-shot---operation-completed"></a>Снимок экрана: операция завершена 
  На следующем снимке экрана показана страница **Выполнение операции** мастера после завершения операции. Щелкните элемент в столбце **Сообщение** , чтобы получить дополнительные сведения о соответствующем этапе.  
   
- ![Выполнение операции страница мастера импорта и экспорта](../../integration-services/import-export-data/media/performing-operation2.png "выполнение операции страница мастера импорта и экспорта")  
+ ![Страница "Выполнение операции" в мастере импорта и экспорта](../../integration-services/import-export-data/media/performing-operation2.png "Страница "Выполнение операции" в мастере импорта и экспорта")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Просмотр хода выполнения операции
  **Действие**  
@@ -64,6 +61,5 @@ ms.lasthandoff: 09/26/2017
 
 ## <a name="see-also"></a>См. также:
 [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
-
 
 

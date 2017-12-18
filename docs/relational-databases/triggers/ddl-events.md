@@ -2,9 +2,12 @@
 title: "DDL-события | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/01/2016
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: triggers
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-ddl
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,14 +21,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3da22dbb1f2887bf25690ea96fd0dcfcdf3cb8a9
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
-ms.translationtype: MT
+ms.openlocfilehash: 1a9d0788789ff16b6f3fad859c13d690f87220a9
+ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 11/17/2017
 ---
 # <a name="ddl-events"></a>DDL-события
-  В следующих таблицах перечислены DDL-события, которые могут быть использованы для срабатывания триггера DDL или уведомления о событиях. Обратите внимание, что каждое событие соответствует инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] или хранимой процедуре, причем синтаксис инструкции при этом включает в себя символ подчеркивания (_) между ключевыми словами.  
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] В следующих таблицах перечислены DDL-события, которые могут быть использованы для активации триггера DDL или уведомления о событиях. Обратите внимание, что каждое событие соответствует инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] или хранимой процедуре, причем синтаксис инструкции при этом включает в себя символ подчеркивания (_) между ключевыми словами.  
   
 > [!IMPORTANT]  
 >  Системные хранимые процедуры, выполняющие операции, подобные операциям DDL, также запускают триггеры DDL и уведомления о событиях. Проверьте имеющиеся триггеры DDL и уведомления о событии, чтобы определить их ответы на выполняемые системные хранимые процедуры. Например, как инструкция CREATE TYPE, так и хранимая процедура **sp_addtype** приведут к инициации триггера DDL или уведомления о событии, создаваемом при наступлении события CREATE_TYPE.  

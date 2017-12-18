@@ -1,5 +1,5 @@
 ---
-title: "Программное добавление задач | Документы Microsoft"
+title: "Программное добавление задач | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,12 +8,10 @@ ms.service:
 ms.component: building-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,17 +19,16 @@ helpviewer_keywords:
 - tasks [Integration Services], packages
 - adding package tasks
 ms.assetid: 5d4652d5-228c-4238-905c-346dd8503fdf
-caps.latest.revision: 54
+caps.latest.revision: "54"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
-ms.openlocfilehash: 35fbfd1c17d88d684671050c297a19822b098479
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: cbd8f1d0ac4a942fae2305f7841fe25dc185e463
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="adding-tasks-programmatically"></a>Программное добавление задач
   Задачи могут быть добавлены в среде выполнения к объектам следующих типов.  
@@ -50,10 +47,10 @@ ms.lasthandoff: 08/03/2017
   
  Каждый контейнер имеет коллекцию <xref:Microsoft.SqlServer.Dts.Runtime.Executables>, которая содержит отдельные объекты <xref:Microsoft.SqlServer.Dts.Runtime.Executable>. Каждая исполняемая задача наследует и реализует методы <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> и <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A>. Эти два метода вызываются средой выполнения для обработки каждого объекта <xref:Microsoft.SqlServer.Dts.Runtime.Executable>.  
   
- Чтобы добавить задачу к пакету, необходим контейнер с существующей коллекцией <xref:Microsoft.SqlServer.Dts.Runtime.Executables>. В большинстве случаев задачей, добавляемой к коллекции, является пакет. Чтобы добавить новый исполняемый файл задачи в коллекцию для этого контейнера, вызовите <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> метод. Этот метод имеет единственный параметр — строку, которая содержит специальное имя CLSID, PROGID, STOCK или свойство <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> добавляемой задачи.  
+ Чтобы добавить задачу к пакету, необходим контейнер с существующей коллекцией <xref:Microsoft.SqlServer.Dts.Runtime.Executables>. В большинстве случаев задачей, добавляемой к коллекции, является пакет. Чтобы добавить новый исполняемый файл задачи в коллекцию для этого контейнера, необходимо вызвать метод <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>. Этот метод имеет единственный параметр — строку, которая содержит специальное имя CLSID, PROGID, STOCK или свойство <xref:Microsoft.SqlServer.Dts.Runtime.TaskInfo.CreationName%2A> добавляемой задачи.  
   
 ## <a name="task-names"></a>Имена задач  
- Несмотря на то, что задачу можно указать по имени или по Идентификатору, **STOCK** моникер — параметр, наиболее часто используются в <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A> метод. Чтобы добавить задачу к исполняемому файлу, определяемому **STOCK** моникер, используйте следующий синтаксис:  
+ Задачу можно указать по имени или идентификатору, но специальное имя **STOCK** представляет собой параметр, используемый чаще всего в методе <xref:Microsoft.SqlServer.Dts.Runtime.Executables.Add%2A>. Чтобы добавить задачу к исполняемому файлу, обозначенному специальным именем **STOCK**, используйте следующий синтаксис:  
   
 ```csharp  
 Executable exec = package.Executables.Add("STOCK:BulkInsertTask");  
@@ -65,7 +62,7 @@ Dim exec As Executable = package.Executables.Add("STOCK:BulkInsertTask")
   
 ```  
   
- В следующем списке приведены имена для каждой задачи, которые используются после **STOCK** моникера.  
+ В следующем списке для каждой задачи показаны имена, которые используются после специального имени **STOCK**.  
   
 -   ActiveXScriptTask  
   
@@ -127,7 +124,7 @@ Dim exec As Executable = package.Executables.Add( _
   "Culture=neutral, PublicKeyToken=89845dcd8080cc91")  
 ```  
   
- Можно получить длинное имя для задачи программным способом, без указания версии задачи с помощью **AssemblyQualifiedName** свойству класса, как показано в следующем примере. В этом примере необходима ссылка на сборку Microsoft.SqlServer.SQLTask.  
+ Можно получить длинное имя для задачи программным путем без обязательного указания версии задачи с помощью свойства **AssemblyQualifiedName** класса, как показано в следующем примере. В этом примере необходима ссылка на сборку Microsoft.SqlServer.SQLTask.  
   
 ```csharp  
 using Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask;  
@@ -143,7 +140,7 @@ Imports Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask
       GetType(Microsoft.SqlServer.Dts.Tasks.ExecuteSQLTask.ExecuteSQLTask).AssemblyQualifiedName)  
 ```  
   
- В следующем примере кода показано, как создать <xref:Microsoft.SqlServer.Dts.Runtime.Executables> коллекции из нового пакета и затем добавить задачу файловой системы и задача массовой вставки в коллекцию с помощью их **STOCK** моникеры. В этом примере необходимы ссылки на сборки Microsoft.SqlServer.BulkInsertTask и Microsoft.SqlServer.FileSystemTask.  
+ В следующем примере кода показано, как создать коллекцию <xref:Microsoft.SqlServer.Dts.Runtime.Executables> из нового пакета, а затем добавить задачи "Файловая система" и "Массовая вставка" в коллекцию с использованием их специальных имен **STOCK**. В этом примере необходимы ссылки на сборки Microsoft.SqlServer.BulkInsertTask и Microsoft.SqlServer.FileSystemTask.  
   
 ```csharp  
 using System;  
@@ -209,7 +206,7 @@ Module Module1
 End Module  
 ```  
   
- **Вывод образца:**  
+ **Образец вывода:**  
   
  `Type Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask`  
   
@@ -311,7 +308,7 @@ Module Module1
 End Module  
 ```  
   
- **Вывод образца:**  
+ **Образец вывода:**  
   
  `Found task of type Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask`  
   
@@ -331,7 +328,7 @@ End Module
   
 -   Можно разрабатывать код общих подпрограмм, способных работать в любой задаче, поскольку нет необходимости знать имя задачи во время компиляции. Такие общие подпрограммы включают методы, в которых имя задачи передается методу, а код метода работает во всех задачах. Это удобный способ создания тестового кода.  
   
- Приведение из <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> для конкретных задач класс имеет следующие преимущества:  
+ Приведение от класса <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost> к классу, зависящему от задачи, позволяет достичь следующих преимуществ:  
   
 -   Проект разрабатывается в среде Visual Studio, поэтому обеспечивается возможность автоматического завершения инструкций (с помощью технологии IntelliSense).  
   
@@ -420,10 +417,9 @@ End Module
 ```  
   
 ## <a name="external-resources"></a>Внешние ресурсы  
- Запись в блоге [EzAPI – Updated for SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223), на сайте blogs.msdn.com.  
+ Запись в блоге [EzAPI — обновление для SQL Server 2012](http://go.microsoft.com/fwlink/?LinkId=243223) на сайте blogs.msdn.com.  
 
 ## <a name="see-also"></a>См. также:  
  [Соединение задач программным образом](../../integration-services/building-packages-programmatically/connecting-tasks-programmatically.md)  
   
   
-

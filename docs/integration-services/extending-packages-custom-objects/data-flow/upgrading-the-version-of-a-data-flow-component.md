@@ -1,5 +1,5 @@
 ---
-title: "Обновление версии компонента потока данных | Документы Microsoft"
+title: "Обновление версии компонента потока данных | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/06/2017
 ms.prod: sql-non-specified
@@ -8,29 +8,26 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- docset-sql-devref
+ms.technology: docset-sql-devref
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to:
-- SQL Server 2016 Preview
+applies_to: SQL Server 2016 Preview
 helpviewer_keywords:
 - PerformUpgrade method
 - custom data flow components [Integration Services], upgrading version
 - data flow components [Integration Services], upgrading version
 - upgrading data flow components [Integration Services]
 ms.assetid: c2a298c6-01b3-4ad1-884d-6108165eb56e
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 65e38600b0974d75f5509a4231f6ebb0a15ba19a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: d93362af894bb395123b5b18dc5b8ac60a418a0e
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="upgrading-the-version-of-a-data-flow-component"></a>Обновление версии компонента потока данных
   Пакеты, созданные с устаревшей версией компонента, могут содержать недопустимые метаданные, например, пользовательские свойства, применение которых было изменено в более новых версиях компонента. Можно переопределить метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> базового класса <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>, чтобы обеспечить обновление метаданных, которые были сохранены в ранее созданных пакетах, для соответствия текущим свойствам компонента.  
@@ -54,9 +51,9 @@ ms.lasthandoff: 08/03/2017
 -   Указывает версию метаданных в соответствии с текущей версией компонента.  
   
 > [!NOTE]  
->  Подсистема обработки потока данных передает свой собственный номер версии в <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> метод в *параметр pipelineVersion* параметра. Этот параметр бесполезен в версии 1.0 служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], но может оказаться полезным в последующих версиях.  
+>  Подсистема обработки потока данных передает номер своей версии в метод <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PerformUpgrade%2A> через параметр *pipelineVersion*. Этот параметр бесполезен в версии 1.0 служб [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], но может оказаться полезным в последующих версиях.  
   
- В образце кода используются только два значения перечисления, которые сопоставляются непосредственно с предыдущими логическими значениями пользовательского свойства. Пользователи могут выбрать другие доступные значения перечисления с помощью пользовательского интерфейса компонента, в расширенном редакторе или программным способом. Сведения об отображении значений перечисления для пользовательского свойства в расширенном редакторе см. в разделе «Создание пользовательских свойств» в [методы времени разработки компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
+ В образце кода используются только два значения перечисления, которые сопоставляются непосредственно с предыдущими логическими значениями пользовательского свойства. Пользователи могут выбрать другие доступные значения перечисления с помощью пользовательского интерфейса компонента, в расширенном редакторе или программным способом. Сведения об отображении значений перечисления для пользовательского свойства в расширенном редакторе см. в подразделе "Создание пользовательских свойств" раздела [Методы времени разработки для компонента потока данных](../../../integration-services/extending-packages-custom-objects/data-flow/design-time-methods-of-a-data-flow-component.md).  
   
 ```vb  
 Imports Microsoft.SqlServer.Dts.Pipeline  
@@ -188,4 +185,3 @@ public class PerformUpgradeCS :
   
 }  
 ```
-

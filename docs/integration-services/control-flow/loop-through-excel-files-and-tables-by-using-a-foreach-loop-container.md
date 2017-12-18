@@ -1,12 +1,14 @@
 ---
-title: "Цикл по файлам Excel и таблицы с использованием цикл | Документы Microsoft"
+title: "Просмотр файлов и таблиц Excel с помощью контейнера \"Цикл по каждому элементу\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/17/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: control-flow
 ms.reviewer: 
-ms.suite: 
-ms.technology:
-- integration-services
+ms.suite: sql
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +16,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0b4b4a69b1712a5b84b49c63aee4242cb6355bc5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.workload: On Demand
+ms.openlocfilehash: 41d1bbd66cb2dc73441e95cfa9573f60ced3358b
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>просматривать файлы и таблицы Excel с помощью контейнера «цикл по каждому элементу»
   Процедуры в этом разделе описывают, как выполнить цикл по книгам Excel в папке или цикл по таблицам в книге Excel с помощью контейнера «цикл по каждому элементу» с соответствующим перечислителем.  
@@ -95,11 +97,11 @@ ms.lasthandoff: 08/03/2017
 9. Создайте задачи в контейнере «цикл по каждому элементу», которые используют диспетчер соединений Excel для выполнения одинаковых операций для каждой таблицы Excel в заданной книге. Если задача "Скрипт" используется для анализа имени перечисляемой таблицы или работы с каждой таблицей, не забудьте добавить строковую переменную к свойству ReadOnlyVariables задачи "Скрипт".  
   
 ## <a name="see-also"></a>См. также  
- [Настройке контейнера «цикл по каждому элементу»](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
- [Добавление или изменение выражения свойства](../../integration-services/expressions/add-or-change-a-property-expression.md)   
- [Диспетчер соединений с Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
+ [Настройка контейнера "цикл по каждому элементу"](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
+ [Добавление или изменение выражение свойства](../../integration-services/expressions/add-or-change-a-property-expression.md)   
+ [Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Источник Excel](../../integration-services/data-flow/excel-source.md)   
- [Назначение «Excel»](../../integration-services/data-flow/excel-destination.md)   
- [Работа с файлами Excel с помощью задачи «скрипт»](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [Назначение Excel](../../integration-services/data-flow/excel-destination.md)   
+ [Работа с файлами Excel в задаче «Скрипт»](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

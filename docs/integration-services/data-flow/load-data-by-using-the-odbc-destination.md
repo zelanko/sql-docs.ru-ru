@@ -1,5 +1,5 @@
 ---
-title: "Загрузка данных с помощью назначения «ODBC» | Документы Microsoft"
+title: "Загрузка данных с помощью назначения \"ODBС\" | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
@@ -8,22 +8,20 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 668cf193758a8dfaba90e598ccbdb7d0d84351fc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/03/2017
-
+ms.openlocfilehash: 72eb11720fe037c3bea74d5343b8b59a39328bd8
+ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/20/2017
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Загрузка данных с помощью назначения ODBС
   Эта процедура показывает, как загрузить данные с использованием назначения ODBC. Чтобы можно было добавить и настроить назначение ODBC, пакет уже должен включать по крайней мере одну задачу «Поток данных» и источник.  
@@ -59,9 +57,8 @@ ms.lasthandoff: 08/03/2017
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
 ## <a name="see-also"></a>См. также  
- [Редактор назначения ODBC &#40; Страницы диспетчера соединений &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [Редактор назначения ODBC &#40; Страница «сопоставления» &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [Редактор источника ODBC &#40; Страница «Вывод ошибок» &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+ [Редактор назначения ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
+ [Редактор назначения ODBC (страница "Сопоставления")](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
+ [Редактор источника ODBC (страница "Вывод ошибок")](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   
-
