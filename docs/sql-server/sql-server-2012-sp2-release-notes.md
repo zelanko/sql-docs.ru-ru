@@ -1,9 +1,9 @@
 ---
 title: "Заметки о выпуске SQL Server 2012 с пакетом обновления 2 (SP2) | Документация Майкрософт"
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 01/31/2017
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83969d05f234dc5e6384754971ca6eb5a2621006
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31f86cebfc5dc23aac8d56a1a9c75d140b744063
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp2-release-notes"></a>Заметки о выпуске SQL Server 2012 с пакетом обновления 2 (SP2)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] В этих заметках о выпуске описываются вопросы, которые вам необходимо знать перед установкой пакета обновлений 2 SQL Server 2012 или устранением связанных с ним проблем. Заметки о выпуске доступны только в сети Интернет, а не на установочном носителе. Они периодически обновляются при добавлении новых вопросов. Дополнительную информацию смотри в [исправленные ошибки в пакете обновлений 2 SQL Server 2012](http://support.microsoft.com/KB/2958429) .  

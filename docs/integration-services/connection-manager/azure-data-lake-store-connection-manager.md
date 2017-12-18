@@ -20,11 +20,11 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a5520dc00083bdd4522e10a2479e69fa000dc65
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 556f0efa1ce15ee23acc190e547e3700e64eca4d
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Диспетчер подключений Azure Data Lake Store
 Пакет служб SQL Server Integration Services (SSIS) может использовать диспетчер подключений Azure Data Lake Store для подключения к службе Azure Data Lake Store с использованием одного из двух следующих типов проверки подлинности:
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
     1.  Если вы выбрали вариант **Удостоверение пользователя Azure AD**, выполните указанные ниже действия.
         1. Укажите значения в полях **Имя пользователя** и **Пароль**. 
     
-        2. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**. Если вы или администратор клиента ранее не давали согласия на разрешение доступа к данным Azure Data Lake Store со стороны служб SSIS, выберите **Принять** при появлении соответствующего запроса. Дополнительные сведения о предоставлении согласия см. в разделе [Интеграция приложений с Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+        2. Чтобы проверить подключение, нажмите кнопку **Проверить подключение**. Если вы или администратор клиента ранее не давали согласия на разрешение доступа к данным Azure Data Lake Store со стороны служб SSIS, выберите **Принять** при появлении соответствующего запроса. Дополнительные сведения о предоставлении согласия см. в разделе [Интеграция приложений с Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
     
         >   [!NOTE] 
         > При выборе варианта проверки подлинности **Удостоверение пользователя Azure AD** многофакторная проверка подлинности и проверка подлинности учетной записи Майкрософт не поддерживаются.
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
     2. Если вы выбрали вариант **Удостоверение службы Azure AD**, выполните указанные ниже действия.
         1. Создайте приложение и субъект-службу Azure Active Directory (AAD) для доступа к данным Azure Data Lake.
     
-        2. Назначьте приложению AAD соответствующие разрешения на доступ к ресурсам Azure Data Lake. Дополнительные сведения об этом параметре проверки подлинности см. в разделе [Использовать портал для создания приложения и службы-участника, который имеет доступ к ресурсам Active Directory](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-create-service-principal-portal).
+        2. Назначьте приложению AAD соответствующие разрешения на доступ к ресурсам Azure Data Lake. Дополнительные сведения об этом параметре проверки подлинности см. в разделе [Использовать портал для создания приложения и службы-участника, который имеет доступ к ресурсам Active Directory](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).
     
         3. Укажите значения в полях **Идентификатор клиента**, **Секретный ключ** и **Имя клиента**.
     

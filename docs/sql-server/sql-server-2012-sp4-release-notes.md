@@ -1,9 +1,9 @@
 ---
 title: "Заметки о выпуске SQL Server 2012 с пакетом обновления 4 (SP4) | Microsoft Docs"
-ms.prod: sql-server
+ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
-ms.service: server-general
-ms.component: 
+ms.service: 
+ms.component: sql-non-specified
 ms.technology: server-general
 ms.custom: 
 ms.date: 10/05/2017
@@ -17,11 +17,11 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 562c03dfc873adeaca8f8486f1ecb4c66c3c4d14
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7aed12a3e687ab4c8b42b8f07c29d252e0d6acad
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="sql-server-2012-sp4-release-notes"></a>Заметки о выпуске SQL Server 2012 с пакетом обновления 4 (SP4)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)] Этот раздел приводит общую информацию об улучшениях в SQL Server 2012 с пакетом обновления 4 (SP4). В разделах также описываются проблемы, которые следует просмотреть перед установкой пакета обновления 4 (SP4) или устранением неполадок с ней. Заметки о выпуске доступны только в сети Интернет, а не на установочном носителе. Этот раздел периодически обновляется при обнаружении новых проблем. Подробный список исправлений в пакете обновления 4 (SP4) см. в разделе [Выпуск SQL Server 2012 с пакетом обновления 4 (SP4)](https://go.microsoft.com/fwlink/?linkid=846937).  

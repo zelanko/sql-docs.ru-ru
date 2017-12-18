@@ -2,10 +2,10 @@
 title: "Автоматическое восстановление страниц (группы доступности: зеркальное отображение базы данных) | Документация Майкрософт"
 ms.custom: 
 ms.date: 05/17/2016
-ms.prod: failover-clusters
-ms.prod_service: sql-non-specified
-ms.service: database-engine
-ms.component: 
+ms.prod: sql-non-specified
+ms.prod_service: database-engine
+ms.service: 
+ms.component: failover-clusters
 ms.reviewer: 
 ms.suite: sql
 ms.technology: dbe-high-availability
@@ -22,11 +22,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fb7034634b662ce184065adb72f190ce6b2aa4b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1f5007a8c6b8f222d0708692ecc802f6409738d
+ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>Автоматическое восстановление страниц (группы доступности: зеркальное отображение баз данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Автоматическое восстановление страниц поддерживается за счет зеркального отображения баз данных и с помощью [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]. После повреждения страниц вследствие ошибок определенных типов, после чего страницы становятся нечитаемыми, база данных, участвующая в зеркальном отображении (главная или зеркало), либо реплика доступности (основная или вторичная) выполняет попытку автоматического восстановления страницы. Участник или реплика, для которой считывание страницы невозможно, запрашивает новую копию у другого участника или реплики. Если этот запрос завершается успешно, нечитаемая страница заменяется читаемой копией, что обычно устраняет ошибку.  

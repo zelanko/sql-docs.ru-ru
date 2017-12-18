@@ -18,15 +18,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 58a71c4ef573925218061d5796a56028d82d042b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Занятие 1. Создание проекта и основного пакета с помощью служб SSIS
 
- > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Занятие 1. Создание проекта и основного пакета](https://msdn.microsoft.com/en-US/library/ms170419(SQL.120).aspx).
+ > Содержимое, связанное с предыдущими версиями SQL Server, см. в разделе [Занятие 1. Создание проекта и основного пакета](https://msdn.microsoft.com/library/ms170419(SQL.120).aspx).
 
 На этом занятии будет рассмотрено создание простого ETL-пакета, который будет извлекать данные из отдельного источника неструктурированных файлов, преобразовывать полученные данные при помощи двух компонентов преобразования «Уточняющий запрос», а затем записывать эти данные в таблицу фактов **FactCurrency** , находящуюся в базе данных **AdventureWorksDW2012**. На этом занятии предстоит узнать, как создавать новые пакеты, добавлять и настраивать соединения с источниками данных и назначениями, а также работать с новыми компонентами потока управления и потока данных.  
   
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="understanding-the-package-requirements"></a>Основные сведения о требованиях пакета  
 Для выполнения упражнений этого учебника требуется Microsoft SQL Server Data Tools.  
   
-Дополнительные сведения об установке SQL Server Data Tools см. в разделе [Скачать SQL Server Data Tools](http://msdn.microsoft.com/en-us/data/hh297027).  
+Дополнительные сведения об установке SQL Server Data Tools см. в разделе [Загрузка SQL Server Data Tools](http://msdn.microsoft.com/data/hh297027).  
   
 Перед созданием пакета необходимо знать о форматировании в источнике данных и в назначении. Если эти форматы данных известны, можно определить преобразования, необходимые для сопоставления формата данных источника формату назначения.  
   

@@ -3,7 +3,7 @@
 # Обзор
 ## [Что такое службы машины обучения Майкрософт](r/r-services.md)
 ## [Новые возможности машинного обучения](what-s-new-in-sql-server-machine-learning-services.md)
-## [Новые и недавно обновленные статьи](new-updated-advanced-analytics.md)
+## [Новые и обновленные Статьи](new-updated-advanced-analytics.md)
 ## [Архитектура и обзор](architecture-overview-machine-learning.md)
 ## [Различия в машинном обучении между выпусками SQL Server](r/differences-in-r-features-between-editions-of-sql-server.md)
 
