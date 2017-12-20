@@ -1,5 +1,6 @@
 # [SQL Operations Studio (предварительная версия)](what-is.md)
 # [Установка](download.md)
+# [Заметки о выпуске](release-notes.md)
 # Краткие руководства
 ## [Подключение и отправка запроса к SQL Server](quickstart-sql-server.md)
 ## [Подключение и отправка запроса к базе данных SQL Azure](quickstart-sql-database.md)
