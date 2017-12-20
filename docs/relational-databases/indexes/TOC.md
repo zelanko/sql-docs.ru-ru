@@ -26,16 +26,14 @@
 ## [Настройка параллельных операций с индексами](configure-parallel-index-operations.md)  
 ## [Справка F1 по свойствам индекса](index-properties-f1-help.md)  
 
-
-
 # Индексы columnstore
 ## [Обзор](columnstore-indexes-overview.md)  
-## [Архитектура](columnstore-indexes-architecture.md)  
+## [Архитектура](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)  
 ## [Руководство по проектированию](columnstore-indexes-design-guidance.md)  
 ## [Руководство по загрузке данных](columnstore-indexes-data-loading-guidance.md)  
 ## [Новые возможности](columnstore-indexes-what-s-new.md)  
 ## [Производительность запросов](columnstore-indexes-query-performance.md)  
 ## [Операционная аналитика в реальном времени](get-started-with-columnstore-for-real-time-operational-analytics.md)  
-## [Индексы columnstore: хранилище данных](columnstore-indexes-data-warehouse.md)  
+## [Хранилище данных](columnstore-indexes-data-warehouse.md)  
 ## [Дефрагментация](columnstore-indexes-defragmentation.md)  
 
