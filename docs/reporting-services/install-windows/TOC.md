@@ -1,7 +1,7 @@
-# [Установка служб Reporting Services](install-reporting-services.md)
+# [Установка Reporting Services 2017](install-reporting-services.md)
+## [Как найти ключ продукта для Reporting Services 2017](find-reporting-services-product-key-ssrs.md)
 
-
-# [Установка служб отчетов в собственном режиме](install-reporting-services-native-mode-report-server.md)  
+# [Установка Reporting Services 2016 в собственном режиме](install-reporting-services-native-mode-report-server.md)  
 ## [Установки служб Reporting Services в режиме "только файлы"](files-only-installation-reporting-services.md)  
 ## [Параллельная установка служб Reporting Services и служб IIS (собственный режим SSRS)](install-reporting-and-internet-information-services-side-by-side.md)  
 ## [Размещение базы данных сервера отчетов в отказоустойчивом кластере SQL Server](host-a-report-server-database-in-a-sql-server-failover-cluster.md)  
@@ -29,7 +29,7 @@
 ### [Интеграция Power BI](power-bi-report-server-integration-configuration-manager.md)  
 
 
-# [Установка режима интеграции с SharePoint для служб Reporting Services](install-reporting-services-sharepoint-mode.md)  
+# [Установка Reporting Services 2016 в режиме SharePoint](install-reporting-services-sharepoint-mode.md)  
 ## [Поддерживаемые сочетания SharePoint, компонентов служб Reporting Services и надстроек (SQL Server 2016)](supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 ## [Где найти надстройку служб SSRS для SharePoint](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
 ## [Установка первого сервера отчетов в режиме интеграции с SharePoint](install-the-first-report-server-in-sharepoint-mode.md)  
