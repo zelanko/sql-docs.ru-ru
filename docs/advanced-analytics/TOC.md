@@ -122,8 +122,6 @@
 
 ### [Как избежать ошибок, связанных с библиотеками пакетов пользователей для R](r/packages-installed-in-user-libraries.md)
 
-### [Добавление SQLRUserGroup в качестве пользователя базы данных](r/add-sqlrusergroup-to-database.md)
-
 ## Изучение данных и моделирование
 
 ### [Библиотеки и типы данных R](r/r-libraries-and-data-types.md)
@@ -155,7 +153,10 @@
 ### [Вопросы безопасности для среды выполнения R в SQL Server](r/security-considerations-for-the-r-runtime-in-sql-server.md)
 ### [Изменение пула учетных записей пользователей для служб машинного обучения SQL Server](r/modify-the-user-account-pool-for-sql-server-r-services.md)
 
+### [Добавление SQLRUserGroup в качестве пользователя базы данных](r/add-sqlrusergroup-to-database.md)
+
 ### [Развертывание и использование моделей с помощью веб-служб](operationalization-with-mrsdeploy.md)
+
 ### [Управление решениями машинного обучения и их мониторинг](r/managing-and-monitoring-r-solutions.md)
 ### [Известные проблемы в службах машинного обучения](r/resource-governance-for-r-services.md)
 ### [Создание пула ресурсов для машинного обучения](r/how-to-create-a-resource-pool-for-r.md)
