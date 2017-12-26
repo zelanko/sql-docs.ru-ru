@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ddfcca6408a64b2c2875aaa625c275899e8c85f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
+ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/08/2017
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
 Пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure.
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
 Фабрика данных также поддерживает другие типы сред Integration Runtime. Дополнительные сведения об SSIS IR и других типах сред Integration Runtime см. в статье [Среда выполнения интеграции в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
 ## <a name="prerequisites"></a>Предварительные требования
-Для описываемых в этой статье возможностей не требуется SQL Server 2017 или SQL Server 2016.
+Для возможностей, которые описаны в этой статье, не требуется SQL Server 2017 или SQL Server 2016.
 
 Для этих возможностей требуются следующие версии SQL Server Data Tools (SSDT):
 -   для Visual Studio 2017 версия 15.3 (предварительная) или более поздняя;

@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80fac355ad3ecc1486257651999be9d3f6ad30e6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0b8dbc635523b33a480ad887b73d9f395d71c8d
+ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Планирование выполнения пакета служб SSIS в Azure
 Вы можете запланировать выполнение пакетов, хранящихся в базе данных каталога SSISDB на сервере базы данных SQL Azure, выбрав один из следующих вариантов планирования:
@@ -62,13 +62,13 @@ ms.lasthandoff: 11/20/2017
 
 ## <a name="elastic"></a> Планирование пакета с использованием заданий обработки эластичных баз данных SQL
 
-Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
 ### <a name="prerequisites"></a>Предварительные требования
 
 Прежде чем использовать задания обработки эластичных баз данных для планирования пакетов SSIS, хранящихся в каталоге базы данных SSISDB на сервере базы данных SQL Azure, необходимо выполнить следующие действия:
 
-1.  Установить и настроить компоненты для заданий обработки эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке заданий обработки эластичных баз данных](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation).
+1.  Установить и настроить компоненты для заданий обработки эластичных баз данных. Дополнительные сведения см. в разделе [Общие сведения об установке заданий обработки эластичных баз данных](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-service-installation).
 
 2. Создать учетные данные уровня базы данных, которые задания смогут использовать для отправки команд в базу данных каталога SSIS. Дополнительные сведения см. в разделе [CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md).
 
@@ -121,7 +121,9 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 4.  Создайте конвейер фабрики данных, который использует операцию хранимой процедуры SQL Server для выполнения пакета SSIS.
 
-В этом разделе приводится обзор необходимых действий. Полное руководство по работе с фабрикой данных выходит за рамки этой статьи. Дополнительные сведения см. в разделе [Операция хранимой процедуры SQL Server](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity).
+В этом разделе приводится обзор необходимых действий. Полное руководство по работе с фабрикой данных выходит за рамки этой статьи. Дополнительные сведения см. в разделе [Операция хранимой процедуры SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-stored-proc-activity).
+
+Если происходит сбой запланированного выполнения и в ходе операции хранимой процедуры ADF предоставляется идентификатор для этого выполнения, просмотрите этот идентификатор в отчете о выполнении в среде SSMS в каталоге служб SSIS.
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Создание связанной службы для базы данных SQL, в которой размещается SSISDB
 Связанная служба обеспечивает подключение фабрики данных к SSISDB.
@@ -225,9 +227,45 @@ END
 GO
 ```
 
+Как правило, чтобы указать приведенный выше скрипт SQL, в качестве значения параметра `stmt`, требуется добавить весь скрипт в одну строку, как показано в следующем примере. [Стандарт JSON](https://json.org/) не поддерживает управляющие символы, включая управляющий символ новой строки `\n`, используемый в других языках для разделения строк в строке из нескольких строк.
+
+```json
+{
+    "name": "SprocActivitySamplePipeline",
+    "properties": {
+        "activities": [
+            {
+                "type": "SqlServerStoredProcedure",
+                "typeProperties": {
+                    "storedProcedureName": "sp_executesql",
+                    "storedProcedureParameters": {
+                        "stmt": "DECLARE @return_value INT, @exe_id BIGINT, @err_msg NVARCHAR(150)    EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'test', @project_name=N'TestProject', @package_name=N'STestPackage.dtsx', @use32bitruntime=0, @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT    EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1    EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id, @retry_count=0    IF(SELECT [status] FROM [SSISDB].[catalog].[executions] WHERE execution_id=@exe_id)<>7 BEGIN SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20)) RAISERROR(@err_msg,15,1) END"
+                    }
+                },
+                "outputs": [
+                    {
+                        "name": "sprocsampleout"
+                    }
+                ],
+                "scheduler": {
+                    "frequency": "Minute",
+                    "interval": 15
+                },
+                "name": "SprocActivitySample"
+            }
+        ],
+        "start": "2017-12-06T12:00:00Z",
+        "end": "2017-12-06T12:30:00Z",
+        "isPaused": false,
+        "hubName": "test_hub",
+        "pipelineMode": "Scheduled"
+    }
+}
+```
+
 Дополнительные сведения о коде в этом скрипте см. в разделе [Развертывание и выполнение пакетов служб SSIS с помощью хранимых процедур](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
 
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные сведения об агенте SQL Server см. в разделе [Пакеты служб из заданий агента SQL Server](../packages/sql-server-agent-jobs-for-packages.md).
 
-Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview).
+Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).

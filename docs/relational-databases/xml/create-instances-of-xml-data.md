@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc794554646b0382f5cb0e0c60451e213746d16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ec51663f65f5673888ef20ee462078e545848334
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="create-instances-of-xml-data"></a>Создание экземпляров XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] В этом разделе описывается формирование экземпляров XML.  
@@ -73,7 +73,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Синтаксический XML-анализатор отменяет незначащие пробелы при преобразовании строковых данных в XML по умолчанию, если выполняется одно из следующих условий:  
   
--   `The xml:space` не определен на элементе или его родителях;  
+-   атрибут `xml:space` не определен в элементе или его предках;  
   
 -   атрибут `xml:space` , действующий на элемент или на одного из его родителей, имеет значение по умолчанию.  
   

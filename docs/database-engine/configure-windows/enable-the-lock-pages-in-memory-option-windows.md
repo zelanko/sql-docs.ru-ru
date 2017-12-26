@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3278e9eaf53426fef36b42c47e63cdf049de4266
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b5758fcbb5e73e40a3022d5a97fb744b6735c7d2
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Включение параметра «Блокировка страниц в памяти» (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта политика Windows определяет, какие учетные записи могут использовать процесс для сохранения данных в физической памяти, чтобы система не отправляла страницы данных в виртуальную память на диске.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 7.  В диалоговом окне **Выбор: пользователи, учетные записи служб или группы** добавьте учетную запись, обладающую правами доступа для запуска sqlservr.exe.  
   
-8.  Чтобы изменения вступили в силу, выйдите из системы и снова войдите в нее.  
+8.  Чтобы этот параметр вступил в силу, перезагрузите службу ядра СУБД SQL Server.
   
 ## <a name="see-also"></a>См. также:  
  [Параметры конфигурации сервера «Server Memory»](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  

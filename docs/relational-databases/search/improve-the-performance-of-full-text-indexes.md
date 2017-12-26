@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 99dc1f614be8180a8d8a4fbb5a5bf15b77f2df8e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8b31518a6ed1b32820e9ed1dc2f7acb7a6b94685
+ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Улучшение производительности полнотекстовых индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этой статье описываются некоторые из основных причин снижения производительности полнотекстовых индексов и запросов. Кроме того, тут представлены несколько предложений по устранению этих проблем и повышению производительности.
@@ -151,7 +151,7 @@ ms.lasthandoff: 11/17/2017
   
  `F = 8*10*8=640`  
   
- При следующем вычислении получается оптимальное значение **Макс. памяти сервера**—*M*. *О*бщий объем физической памяти, доступной в системе (в МБ) —*T*— равно `8192`.  
+ При следующем вычислении получается оптимальное значение **Макс. памяти сервера**—*M*. Общий объем физической памяти, доступной в системе (в МБ), —*T* — равен `8192`.  
   
  `M = 8192-640-500=7052`  
   

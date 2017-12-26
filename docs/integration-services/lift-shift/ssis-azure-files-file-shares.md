@@ -1,19 +1,19 @@
 ---
 title: "Хранение файлов в общих папках в локальной среде и в Azure и их извлечение | Документы Майкрософт"
 description: "В этой статье описывается использование файловой системы и общих папок в локальной среде и в Azure со службами SQL Server Integration Services"
-ms.date: 11/10/2017
+ms.date: 11/27/2017
 ms.topic: article
-ms.prod: sql-server-2017
+ms.prod: sql-non-specified
 ms.technology: integration-services
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f4980f39deea4d70817da3650dccbff7997ba83d
-ms.sourcegitcommit: 06bb91d138a4d6395c7603a2d8f99c69a20642d3
+ms.openlocfilehash: 5b6034787f2e6ab34e583c06d219d7415c82d055
+ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/16/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="store-and-retrieve-files-on-file-shares-on-premises-and-in-azure-with-ssis"></a>Хранение файлов в общих папках в локальной среде и в Azure и их извлечение
 В этой статье описывается, как обновить пакеты служб SQL Server Integration Services (SSIS), использующие локальную файловую систему, при их переносе в службы SSIS в Azure.
@@ -22,7 +22,7 @@ ms.lasthandoff: 11/16/2017
 > В настоящее время база данных каталога SSIS (SSISDB) поддерживает только один набор учетных данных для доступа. Поэтому инфраструктура Azure-SSIS Integration Runtime (IR) не может использовать разные учетные данные для подключения к нескольким локальным общим папкам и общим папкам в службе файлов Azure.
 
 ## <a name="store-temporary-files"></a>Хранение временных файлов
-Если в процессе выполнения отдельного пакета необходимо хранить и обрабатывать временные файлы, пакеты могут использовать временную папку `(.)/temp` или `%TEMP%` в узлах Azure-SSIS Integration Runtime.
+Если при выполнении отдельного пакета необходимо хранить и обрабатывать временные файлы, для пакетов можно использовать текущую рабочую папку `.` или временную папку `%TEMP%` на узлах Azure-SSIS Integration Runtime.
 
 ## <a name="store-files-across-multiple-package-executions"></a>Хранение файлах в рамках нескольких операций выполнения пакетов
 Если постоянные файлы необходимо хранить и обрабатывать в рамках нескольких операций выполнения пакетов, можно использовать локальные общие папки или службу файлов Azure.

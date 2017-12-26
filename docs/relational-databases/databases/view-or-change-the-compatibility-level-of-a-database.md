@@ -1,7 +1,7 @@
 ---
 title: "Просмотр или изменение уровня совместимости базы данных | Документация Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 11/24/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 40c4657342ee642cf7d9f9535d4bcfc5b5169618
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 83be5f7ff574c28cf5182053e47edbacd6cc7ecf
+ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 11/27/2017
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Просмотр или изменение уровня совместимости базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этом разделе описывается просмотр и изменение уровня совместимости базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Перед изменением уровня совместимости базы данных проанализируйте, как это повлияет на имеющиеся приложения. Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
      Текущий уровень совместимости будет указан в списке **Уровень совместимости** .  
   
-5.  Чтобы изменить уровень совместимости, выберите в списке другой параметр. Доступны следующие значения: **SQL Server 2008 (100)**, **SQL Server 2012 (110)**и **SQL Server 2014 (120)**.  
+5.  Чтобы изменить уровень совместимости, выберите в списке другой параметр. Возможные варианты: **SQL Server 2008 (100)**, **SQL Server 2012 (110)**, **SQL Server 2014 (120)**, **SQL Server 2016 (130)** и **SQL Server 2017 (140)**.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   
@@ -83,7 +83,6 @@ GO
 SELECT compatibility_level  
 FROM sys.databases WHERE name = 'AdventureWorks2012';  
 GO  
-  
 ```  
   
 #### <a name="to-change-the-compatibility-level-of-a-database"></a>Изменение уровня совместимости базы данных  
@@ -100,4 +99,5 @@ SET COMPATIBILITY_LEVEL = 120;
 GO  
 ```  
   
-  
+## <a name="see-also"></a>См. также:
+ [Уровень совместимости инструкции ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

@@ -32,11 +32,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1335222c16e955affee5237c0160afb058ebeea2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf2185ff9c0aa70c97b4d067f4d58d5360b70948
+ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/05/2017
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Сравнение типизированного и нетипизированного XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Можно создать переменные, параметры и столбцы типа **xml**. При необходимости можно связать коллекцию схем XML с переменной, параметром или столбцом типа **xml** . В данном случае экземпляр типа данных **xml** называется *типизированным*. В противном случае экземпляр XML называется *нетипизированным*.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
  В следующих примерах для указания имени коллекции XML-схем используется обозначение, состоящее из двух частей. Первая часть — это имя схемы, вторая часть — имя коллекции XML-схем.  
   
 ### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Пример. Связывание коллекции схем с переменными типа xml  
- В приведенном ниже примере создается переменная типа**xml** , с которой затем связывается коллекция схем. Коллекция схем, указанная в примере, уже импортирована в базу данных **AdventureWorks** .  
+ В приведенном ниже примере создается переменная типа **xml**, с которой затем связывается коллекция схем. Коллекция схем, указанная в примере, уже импортирована в базу данных **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   

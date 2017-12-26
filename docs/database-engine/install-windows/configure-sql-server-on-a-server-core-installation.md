@@ -19,11 +19,11 @@ caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: f55439476e962ab97c2e29a37524854fa52d819b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 571f4f13be8ddcfaf2bd1b4d649df0ef09ba6bfc
+ms.sourcegitcommit: 721ad1cbc10e8147c087ae36b36296d72cbb0de8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Настройка SQL Server на установке Server Core
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел содержит сведения о настройке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в установке Server Core.  
@@ -115,7 +115,7 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,Replication /INSTANCENAME=MSSQ
   
 7. Перейдите на вкладку **Высокий уровень доступности AlwaysOn** .  
   
-8. Убедитесь, что поле Имя отказоустойчивого кластера Windows содержит имя локального узла отказоустойчивого кластера. Если это поле не заполнено, значит в настоящее время этот экземпляр сервера не поддерживает группы доступности AlwaysOn. Либо локальный компьютер не является узлом кластера, кластер WSFC завершил работу, либо этот выпуск [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] не поддерживает группы доступности AlwaysOn.  
+8. Убедитесь, что поле Имя отказоустойчивого кластера Windows содержит имя локального узла отказоустойчивого кластера. Если это поле не заполнено, значит в настоящее время этот экземпляр сервера не поддерживает группы доступности AlwaysOn. Локальный компьютер не является узлом кластера, кластер WSFC завершил работу либо этот выпуск [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] не поддерживает группы доступности Always On.  
   
 9. Установите флажок «Включить группы доступности AlwaysOn» и нажмите кнопку «ОК».  
   
