@@ -16,11 +16,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d27099048dc1d89d94489898a501ebec4d39ff36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: db507927ac37d8f960f5090c774c6a52fa0d0243
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Мастер импорта неструктурированных файлов в SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,6 +32,10 @@ ms.lasthandoff: 11/17/2017
 Этот мастер создан на основе интеллектуальной платформы Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)) и позволяет улучшить текущий процесс импорта. Для пользователей, которые не обладают глубокими знаниями в предметной области, импорт данных часто представляет собой трудную и утомительную задачу, чреватую ошибками. При использовании мастера достаточно указать входной файл и уникальное имя таблицы, и платформа PROSE сделает все остальное.
 
 PROSE анализирует шаблоны данных во входном файле и определяет имена столбцов, типы, разделители и т. д. Платформа запоминает структуру файла и выполняет все действия по обработке данных.
+
+Подробные сведения о том, как улучшен пользовательский интерфейс мастера импорта неструктурированных файлов, см. в этом видео.
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player]
 
 ## <a name="prerequisites"></a>Предварительные требования
 Эта функция доступна только в SQL Server Management Studio (SSMS) 17.3 и более поздних версиях. Убедитесь, что вы используете последнюю версию. Ее можно найти [здесь](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms).

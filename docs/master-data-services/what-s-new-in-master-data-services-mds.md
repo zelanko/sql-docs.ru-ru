@@ -42,7 +42,7 @@ ms.lasthandoff: 12/04/2017
   
  Улучшенная производительность позволяет создавать модели большего размера, эффективнее загружать данные и повысить общее быстродействие. Улучшение производительности включает уменьшение времени загрузки данных в надстройке для Microsoft Excel и добавление надстройки для обработки больших сущностей.  
   
- Дополнительные сведения о надстройке для Microsoft Excel см. в разделе [Master Data Services Add-in for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
+ Дополнительные сведения о надстройке для Microsoft Excel см. в разделе [Надстройка Master Data Services для Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md).  
   
  Включены следующие улучшения функций.  
   

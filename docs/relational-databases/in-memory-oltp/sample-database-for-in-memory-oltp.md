@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Предварительные требования](#Prerequisites) для установки примера и выполнения демонстрационной рабочей нагрузки.  
   
--   Инструкции для [Installing the In-Memory OLTP sample based on AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
+-   Инструкции для [Установка образца OLTP в памяти на основе AdventureWorks](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)  
   
 -   [Описание образцов таблиц и процедур.](#Descriptionofthesampletablesandprocedures) Сюда входят описания таблиц и процедур, добавленных в AdventureWorks как пример выполняющейся в памяти OLTP, а также вопросы по миграции некоторых из оригинальных таблиц AdventureWorks в таблицы, оптимизированные для памяти.  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Для тестирования производительности требуется сервер, имеющий те же характеристики, что и в рабочей среде. Для этого конкретного примера должно быть доступно по меньшей мере 16 ГБ памяти в SQL Server. Общие рекомендации по оборудованию для выполняющейся в памяти OLTP см. в следующей записи блога:[http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx](http://blogs.technet.com/b/dataplatforminsider/archive/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014.aspx)  
   
-##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Installing the In-Memory OLTP sample based on AdventureWorks  
+##  <a name="InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks"></a> Установка образца OLTP в памяти на основе AdventureWorks  
  Чтобы установить образец, выполните следующие действия.  
   
 1.  Скачайте файлы AdventureWorks2016CTP3.bak и SQLServer2016CTP3Samples.zip со страницы по адресу [https://www.microsoft.com/download/details.aspx?id=49502](https://www.microsoft.com/download/details.aspx?id=49502) в папку на компьютере, например c:\temp.  

@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
 |Фильтрация данных MDS перед их загрузкой в Excel.|[Фильтрация данных перед их экспортом (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)|  
-|Загрузка данных MDS в Excel.|[Export Data to Excel from Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
+|Загрузка данных MDS в Excel.|[Экспорт данных в Excel из Master Data Services](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)|  
 |Изменение порядка столбцов перед загрузкой данных.|[Переупорядочение столбцов (надстройка MDS для Excel)](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>См. также  

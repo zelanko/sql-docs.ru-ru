@@ -1,7 +1,7 @@
 ---
 title: "Программа SSMS | Документы Майкрософт"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 12/08/2017
 ms.prod: sql-non-specified
 ms.prod_service: sql-non-specified
 ms.service: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e308a64f82ddb822bc5535c6cae7dc076265d212
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 867317119ffb1b58aeac049f4a1e64162368ff08
+ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="ssms-utility"></a>Программа SSMS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Служебная программа **Ssms** открывает [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Если указано, программа **Ssms** также устанавливает подключение к серверу и открывает запросы, скрипты, файлы, проекты и решения.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
   
 Ssms  
     [scriptfile] [projectfile] [solutionfile]  
-    [-S servername] [-d databasename] [-U username] [-P password]   
+    [-S servername] [-d databasename] [-G] [-U username] [-P password]   
     [-E] [-nosplash] [-log [filename]?] [-?]  
 ```  
   
@@ -58,27 +58,34 @@ Ssms
  Задает открываемое решение. Этот параметр должен содержать полный путь к файлу решения.  
   
  [**-S** *servername*]  
- Имя сервера  
+  Имя сервера  
   
  [**-d** *databasename*]  
- Имя базы данных  
+  Имя базы данных  
+
+ [**-G**] Подключение с использованием аутентификации Azure Active Directory. Тип подключения зависит от того, какой параметр включен: **-P** и (или) **- U**.
+ - Если параметры **- U** и **-P** *не* включены, используется аутентификация **Active Directory — встроенная** и диалоговое окно не открывается.
+ - Если оба параметра **- U** и **-P** включены, используется аутентификация **Active Directory — пароль**. **Не рекомендуем** использовать этот вариант, так как необходимо указывать пароль в виде открытого текста в командной строке, что нежелательно.
+ - Если параметр **- U** включен, но **-P** отсутствует, откроется диалоговое окно аутентификации, но все попытки входа завершатся ошибкой. 
+
+  Обратите внимание, что аутентификация **Active Directory — универсальная с поддержкой MFA** сейчас не поддерживается. 
   
- [**-U** *username*]  
- Имя пользователя при соединении с использованием проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+[**-U** *username*]  
+ Имя пользователя при подключении с помощью аутентификации SQL или аутентификации "Active Directory — пароль".  
   
- [**-P** *password*]  
- Пароль при соединении с использованием проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+[**-P** *password*]  
+ Пароль при подключении с помощью аутентификации SQL или аутентификации "Active Directory — пароль".
   
- [**-E**]  
+[**-E**]  
  Подключение с помощью проверки подлинности Windows  
   
- [**-nosplash**]  
+[**-nosplash**]  
  Отключает отображение экрана-заставки при открытии среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Используйте этот параметр при соединении с компьютером, где среда [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] работает с помощью служб терминалов, через соединение с ограниченной пропускной способностью. При записи этого аргумента регистр символов не учитывается, он может быть указан до или после других аргументов  
   
- [**-log***[filename]?*]  
+[**-log***[filename]?*]  
  Записывает действия среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] в указанный файл для диагностики неисправностей  
   
- [**-?**]  
+[**-?**]  
  Отображает справку командной строки.  
   
 ## <a name="remarks"></a>Замечания  
@@ -103,13 +110,21 @@ Ssms
   
 ```  
   
+ При помощи этого скрипта открывается [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки посредством аутентификации *Active Directory — встроенная*:  
+  
+```  
+Ssms.exe -S servername.database.windows.net -G
+  
+``` 
+
+
  Следующий скрипт открывает среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки с применением проверки подлинности Windows и с редактором кода, настроенным для сервера `ACCTG and the database AdventureWorks2012,` без показа экрана-заставки:  
   
 ```  
 Ssms -E -S ACCTG -d AdventureWorks2012 -nosplash  
   
 ```  
-  
+
  Следующий скрипт открывает среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] из командной строки и открывает скрипт MonthEndQuery:  
   
 ```  
@@ -130,7 +145,10 @@ Ssms "\\developer\fin\ReportProj\ReportProj\NewReportProj.ssmssqlproj"
 Ssms "C:\solutionsfolder\ReportProj\MonthlyReports.ssmssln"  
   
 ```  
-  
+ 
+
+
+
 ## <a name="see-also"></a>См. также:  
  [Использование среды SQL Server Management Studio](http://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  
   

@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Управление резервными копиями  
  В следующем списке перечислены общие рекомендации по управлению резервным копированием.  
