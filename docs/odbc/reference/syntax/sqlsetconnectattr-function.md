@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d239280ebe6eaaafaed44341354bec8a6d0b225e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 806acdd35452ff22e922158ed071d41d8e45f031
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectattr-function"></a>Функция SQLSetConnectAttr
 **Соответствия**  
@@ -129,7 +129,7 @@ SQLRETURN SQLSetConnectAttr(
   
  Некоторые атрибуты соединения можно задать только перед подключение установлено; другие могут устанавливаться только после установки соединения. В этой таблице перечислены эти атрибуты соединения, которые должны быть установлены до или после установки соединения. *Либо* указывает, что атрибут может быть задано до или после соединения.  
   
-|Attribute|Установить до или после подключения?|  
+|attribute|Установить до или после подключения?|  
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|Допустим любой вариант|  

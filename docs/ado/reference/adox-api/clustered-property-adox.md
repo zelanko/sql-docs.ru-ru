@@ -3,7 +3,7 @@ title: "Кластерные свойство (ADOX) | Документы Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 594c36ab02aed389226909e4737e2421b6b71728
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ca0871272034cb400d15268a99c471ffcbc31d8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clustered-property-adox"></a>Свойство Clustered (ADOX)
 Указывает, является ли индекс кластеризованным.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **логическое** значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение по умолчанию равно **False**.  
   
  Это свойство доступно только для чтения на [индекс](../../../ado/reference/adox-api/index-object-adox.md) объекты, которые уже добавленных в коллекцию.  

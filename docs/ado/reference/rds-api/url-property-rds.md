@@ -1,11 +1,13 @@
 ---
 title: "Свойство URL-адреса (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 85c0e3ee8fe805b0cd8a90651e9de2a0fa7f04c2
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0181a57f4a76985ef926d2038611c3e6bd864142
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="url-property-rds"></a>Свойство URL-адреса (RDS)
 Указывает строку, содержащую относительный или абсолютный URL-адрес.  
@@ -45,7 +47,7 @@ Run time: DataControl.URL="Server"
  *DataControl*  
  Объектную переменную, которая представляет **DataControl** объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Как правило, URL-адрес указывает файл Active Server Page (.asp), который может создавать и возвращать [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Таким образом, пользователь может получить **записей** без вызова сервере [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) программы пользовательский бизнес-объект, или объект.  
   
  Если **URL-адрес** задал свойство [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) будет передать изменения в расположении, указанном в URL-адресе.  

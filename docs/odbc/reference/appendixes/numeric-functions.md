@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 861fa1dead42c4bf667b80417c29259f3c3b4aaf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8a4b3c0cca843e576fd200b6803db8f1bac5adcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="numeric-functions"></a>Числовые функции
 В следующей таблице описаны числовые функции, включенные в набор скалярные функции ODBC. Путем вызова **SQLGetInfo** с *типу информации* из SQL_NUMERIC_FUNCTIONS, приложение может определить числовые функции, которые поддерживаются драйвером.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
  Скалярные функции CURRENT_DATE, CURRENT_TIME и CURRENT_TIMESTAMP были добавлены в ODBC версии 3.0 в соответствии со стандартом SQL-92.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |**ABS (** *числовое_выражение* **)** (ODBC 1.0)|Возвращает абсолютное значение *числовое_выражение*.|  
 |**ACOS (** *float_exp* **)** (ODBC 1.0)|Возвращает арккосинус числа *float_exp* как угол, выраженный в радианах.|  

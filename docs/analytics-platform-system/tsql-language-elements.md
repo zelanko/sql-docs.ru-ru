@@ -3,10 +3,10 @@ title: "Элементы языка T-SQL - аналитика платформ�
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -20,11 +20,11 @@ ms.topic: article
 ms.tgt_pltfrm: NA
 ms.workload: data-services
 ms.date: 12/15/2016
-ms.openlocfilehash: a3b4da032f0f82aeedfaaa3a579f6a53b1aeb89c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32643cbe6ab7019cbac912eb26fe3e78423bdeb9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-elements"></a>Элементы языка
 Элементы языка Transact-SQL (T-SQL) для аналитической Platform System (APS) SQL Server Parallel данных хранилища (PDW).
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 * [выражения](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Инструкции по решению свойство IDENTITY](../t-sql/statements/create-table-transact-sql-identity-property.md)
-* [ПЕЧАТЬ](../t-sql/language-elements/print-transact-sql.md)
+* [PRINT](../t-sql/language-elements/print-transact-sql.md)
 * [USE](../t-sql/language-elements/use-transact-sql.md)
 
 ## <a name="batches-control-of-flow-and-variables"></a>Пакеты, поток управления и переменные

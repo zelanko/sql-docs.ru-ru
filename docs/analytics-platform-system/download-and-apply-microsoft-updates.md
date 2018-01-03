@@ -3,10 +3,10 @@ title: "Загрузить и установить обновления Microsof
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 4f69df44-8549-4a8a-b10c-f91908594856
 caps.latest.revision: "51"
-ms.openlocfilehash: 806b7fd790244963d878038a3c3c291c387ebb1e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7c91a5ed97d5aedfa456fd63e16c0178c5241706
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-and-apply-microsoft-updates"></a>Загрузить и установить обновления Майкрософт
 В этом разделе описывается, как загрузить обновления из каталога Центра обновления Майкрософт для Windows Server Update Services (WSUS), и применять эти обновления к серверам appliance Analytics Platform System. Центр обновления Майкрософт установит все необходимые обновления для Windows и SQL Server. На виртуальной машине VMM устройства установлены службы WSUS.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 >   
 > Не применения обновлений Майкрософт во время устройства. Применение обновлений может привести к узлы устройств для перезагрузки. Обновления должны применяться во время периода обслуживания, когда устройство не используется.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
 Прежде чем выполнять эти действия, необходимо:  
   
 -   Настройка служб WSUS на устройстве, следуя инструкциям в разделе [настройки Windows Server Update Services &#40; WSUS &#41; &#40; Система платформы аналитики &#41; ](configure-windows-server-update-services-wsus.md).  

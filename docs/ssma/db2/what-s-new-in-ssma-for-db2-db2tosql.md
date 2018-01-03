@@ -1,7 +1,7 @@
 ---
 title: "Новые возможности SSMA для DB2 (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1549dc0f1bab6d19f4c7b2dd1ce0246368fc2af0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5ce602bd9726c8762793d9289daf5c52b2176494
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Новые возможности SSMA для DB2 (DB2ToSQL)
 В этом разделе перечислены SSMA для DB2 изменения в каждом выпуске.  

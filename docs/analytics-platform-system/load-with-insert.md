@@ -3,10 +3,10 @@ title: "Загрузка данных с помощью вставки"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 6e951b0e-e95b-4fd1-b5f3-c65607aee0d8
 caps.latest.revision: "21"
-ms.openlocfilehash: 059dc1e8601fb02aac9a91631a161bae1e995389
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 625b6938ebbb2d0b753cb1a35f5c1df7372c6cca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-insert"></a>Загрузка данных с помощью вставки
 
@@ -129,8 +129,8 @@ ms.lasthandoff: 11/17/2017
   
 |Тип литерала|Формат|Правила преобразования|  
 |------------|------|----------------|
-|Размер строкового литерала в **целое** формат|«nnnnnnnnnnnnnn»<br /><br />Пример: "321312313123"| Нет |  
-|Целочисленный литерал|nnnnnnnnnnnnnn<br /><br />Пример: 321312313123| Нет|  
+|Размер строкового литерала в **целое** формат|«nnnnnnnnnnnnnn»<br /><br />Пример: "321312313123"| None |  
+|Целочисленный литерал|nnnnnnnnnnnnnn<br /><br />Пример: 321312313123| None|  
 |Десятичный литерал|nnnnnn.NNNNN<br /><br />Пример: 123344.34455|Значения справа от десятичной запятой, усекаются.|  
   
 ### <a name="money-and-smallmoney-data-types"></a>типов данных Money и smallmoney  
@@ -153,10 +153,10 @@ ms.lasthandoff: 11/17/2017
   
 |Тип литерала|Формат|Правила преобразования|  
 |----------------|----------|--------------------|  
-|Строковый литерал|Формат: «символ строка»<br /><br />Пример: «abc»| Нет|  
-|Юникод строковый литерал|Формата: Строка N'character "<br /><br />Пример: N'abc'|  Нет |  
-|Целочисленный литерал|Формат: nnnnnnnnnnn<br /><br />Пример: 321312313123| Нет |  
-|Десятичный литерал|Формат: nnnnnn.nnnnnnn<br /><br />Пример: 12344.34455| Нет |  
+|Строковый литерал|Формат: «символ строка»<br /><br />Пример: «abc»| None|  
+|Юникод строковый литерал|Формата: Строка N'character "<br /><br />Пример: N'abc'|  None |  
+|Целочисленный литерал|Формат: nnnnnnnnnnn<br /><br />Пример: 321312313123| None |  
+|Десятичный литерал|Формат: nnnnnn.nnnnnnn<br /><br />Пример: 12344.34455| None |  
 |Денежный литерал|Формат: $nnnnnn.nnnnn<br /><br />Пример: $123456.99|Символ валюты не вставляется значение. Чтобы вставить символ валюты, вставьте значение в виде строкового литерала. Это будет соответствовать формату **dwloader** средства, которое обрабатывает каждый литерал как строковый литерал.<br /><br />Не допускаются запятые.<br /><br />Если количество цифр после десятичной запятой превышает 2, значение округляется до ближайшего значения. Например значение 123.946789 вставляется как 123.95.<br /><br />При использовании функции CONVERT для вставки литералы money разрешается только стиль по умолчанию 0 (без запятых и 2 цифры после десятичной запятой).|  
 
   

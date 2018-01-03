@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7859fbb5483acd09dd99f4f27be77d5874e7b992
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 335fc5f60e47be26a9e394bdd632c1301f507ac8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attribute-conformance"></a>Соответствие атрибутов
 Следующая таблица указывает уровень соответствия каждого атрибута среды ODBC, это не определен правильно.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_ATTR_CONNECTION_POOLING|--[1]|  
 |SQL_ATTR_CP_MATCH|--[1]|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
   
  Следующая таблица указывает уровень соответствия каждого атрибута соединения ODBC, где это является правильно определенным.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|Основные сведения|  
 |АТРИБУТУ SQL_ATTR_ASYNC_ENABLE|Уровень 1 и уровень 2 [1]|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
  Следующая таблица указывает уровень соответствия каждого атрибута инструкции ODBC, где это является правильно определенным.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_ATTR_APP_PARAM_DESC|Основные сведения|  
 |SQL_ATTR_APP_ROW_DESC|Основные сведения|  

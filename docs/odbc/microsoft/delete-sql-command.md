@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c302282bb88761b4e24d4e3efcd51b22ffe31c8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3a2c62dc7ec2da7c8df5683feab469ecd99a22c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete---sql-command"></a>Удаление - команды SQL
 Помечает записи для удаления.  
@@ -48,7 +48,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *FilterCondition* указывает критерии, которые должны удовлетворять записи помечена для удаления. Можно включить столько условий фильтрации, сколько требуется, подключив их с AND или оператор OR. Оператор NOT можно использовать и для отмены значения логического выражения, или можно использовать **пустой**() для проверки пустого поля.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если НАБОР УДАЛЕН имеет значение ON, помеченные на удаление записи игнорируются все команды, включающие области.  
   
  Удалите - SQL, использующая блокировки записей, когда несколько записей для удаления в таблицах открыт для общего доступа. Это уменьшает конфликты записи в многопользовательских ситуациях, но может привести к снижению производительности. Для максимальной производительности откройте таблицу для монопольного использования.  

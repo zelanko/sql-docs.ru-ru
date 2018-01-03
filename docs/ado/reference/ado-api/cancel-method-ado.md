@@ -3,7 +3,7 @@ title: "Cancel-метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3b0112431262f9b120bb3006c07e077e968f79c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b9a22787f40d4ac0104db19db0e95d25999e27c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancel-method-ado"></a>Метод Cancel (ADO)
 Отменяет выполнение вызова асинхронного метода, ожидающих утверждения.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 object.Cancel  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **отменить** метод для завершения выполнения асинхронного вызова метода: то есть метод вызван с **adAsyncConnect**, **adAsyncExecute**, или **adAsyncFetch** параметр.  
   
  В следующей таблице показано, какие задачи завершаются при использовании **отменить** метод для конкретного типа объектов.  

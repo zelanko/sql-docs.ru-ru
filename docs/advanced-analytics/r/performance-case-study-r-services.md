@@ -2,9 +2,11 @@
 title: "Производительность служб R - результаты и ресурсы | Документы Microsoft"
 ms.custom: 
 ms.date: 11/09/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 0b490c8f0d3795dae52fc575c1e231d39ff6e874
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0ee44976c109818292f7fa1587d6828e9f209fc1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Производительность служб R: результаты и ресурсы
 
@@ -95,7 +97,7 @@ metric time pct
 
 Первый тест сравнивается использование сжатия данных и один столбец таблицы для уменьшения объема данных.
 
-| Имя таблицы            | Строки     | Зарезервировано   | Данные       | index_size | Не используется  | Процент сохранения (зарезервировано) |
+| Имя таблицы            | Строки     | Зарезервировано   | data       | index_size | Не используется  | Процент сохранения (зарезервировано) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 КБ | 2 972 160 КБ | 6128 КБ    | 528 КБ  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 КБ  | 623 744 КБ  | 1352 КБ    | 688 КБ  | 79 %                 |
@@ -288,7 +290,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 - Таблицы в памяти
 - Soft-NUMA
-- Регулятор ресурсов
+- Resource Governor
 
 Чтобы оценить влияние на выполнение скрипта R программной архитектуры NUMA, команды обработки и анализа данных тестировать решение на виртуальной машине Azure с 20 физических ядер. На этих физических ядер на четыре программной архитектуры NUMA были созданы автоматически, таким образом, что каждый узел содержит пять ядер.
 
@@ -386,7 +388,7 @@ ArrDelay ~ Origin:DayOfWeek + Month + DayofMonth + CRSDepTime
 
 + [Наблюдение и настройка производительности](../../relational-databases/performance/monitor-and-tune-for-performance.md)
 
-+ [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)
++ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)
 
 + [Знакомство с регулятором ресурсов](https://technet.microsoft.com/library/bb895232.aspx)
 

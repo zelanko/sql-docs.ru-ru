@@ -3,10 +3,10 @@ title: "Загрузка данных со службами Integration Services
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 10/20/2016
 ms.topic: article
 ms.assetid: 9bdb559a-a91c-4342-8a6e-438cb93f975c
 caps.latest.revision: "69"
-ms.openlocfilehash: 631f93d14670e3d9c6f03517504e059087243ca1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f00f72886a10c8be05db6a28adf3df89f8116081
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="load-data-with-integration-services"></a>Загрузка данных со службами Integration Services
 Предоставляет информации о развертывании и ссылки для загрузки данных в хранилище параллельных данных SQL Server с помощью пакетов служб SQL Server Integration Services (SSIS).  
@@ -89,7 +89,7 @@ For general information about developing Integration Services packages, see [Des
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -120,7 +120,7 @@ SQL Server PDW не поддерживает следующие типы дан�
   
 Чтобы загрузить столбцов, содержащих данные из этих типов в SQL Server PDW, необходимо добавить вышестоящих «Конвертация данных» в потоке данных для преобразования данных в совместимый тип данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Чтобы запустить пакет служб Integration Services нагрузки, необходимо:  
   
 -   Разрешение загрузки в базе данных.  

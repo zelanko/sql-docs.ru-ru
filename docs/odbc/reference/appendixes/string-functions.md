@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bbc611df9bcddaf0930a864ca2541f003a6ddb4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 049e1acec8ad27e9fd65d838c17f48c78519ad46
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string-functions"></a>Строковые функции
 В следующей таблице перечислены функции обработки строк. Приложение может определить, какие строковые функции поддерживаются драйвером путем вызова **SQLGetInfo** с *типу информации* из SQL_STRING_FUNCTIONS.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Аргументы обозначается как *строковое_выражение* может быть именем столбца, *символ строковый литерал*, или результат другой скалярной функцией, где базовый тип данных может быть представлено как SQL_CHAR, SQL_ VARCHAR или SQL_LONGVARCHAR.  
   
  Аргументы обозначается как *character_exp* — это строка символов переменной длины.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
  BIT_LENGTH, CHAR_LENGTH, CHARACTER_LENGTH, OCTET_LENGTH и ПОЗИЦИИ строки скалярные функции были добавлены в ODBC версии 3.0 в соответствии со стандартом SQL-92.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |**ASCII (** *строковое_выражение* **)** (ODBC 1.0)|Возвращает код ASCII первого символа указанного *строковое_выражение* как целое число.|  
 |**BIT_LENGTH (** *строковое_выражение* **)** (ODBC 3.0)|Возвращает длину строкового выражения в битах.<br /><br /> Работает только для строковых типов данных, поэтому будет не неявно преобразовать *строковое_выражение* со строкой, а возвращается (внутренний) размер любого типа данных, ей присваивается.|  

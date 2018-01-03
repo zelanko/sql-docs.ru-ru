@@ -5,7 +5,7 @@ ms.date: 10/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc543e392818c2fa8ceea1c55e7a065df603b02d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ea780da11c39984fa8828119eee621a66768f1fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-data-migration-assistant"></a>Общие сведения о данных помощник по миграции
 
@@ -75,19 +75,19 @@ DMA заменяет все предыдущие версии помощника
 - SQL Server 2008 R2
 - SQL Server 2012 
 - SQL Server 2014
-- SQL Server 2016
+- SQL Server 2016
 
 **Целевые объекты**
 - SQL Server 2012
 - SQL Server 2014
-- SQL Server 2016
+- SQL Server 2016
 - База данных SQL Azure
 
 ## <a name="installation"></a>Установка
 
 Чтобы установить DMA, загрузите последнюю версию средства из [центра загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=53595), а затем запустите **DataMigrationAssistant.msi** файла.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Оценка миграции SQL Server](../dma/dma-assesssqlonprem.md)
 

@@ -2,10 +2,10 @@
 title: "Общие сведения об архитектуре служб SQL Server Machine Learning | Документы Microsoft"
 ms.custom: 
 ms.date: 11/03/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6904c963c6178db530248f6189906e71df25308a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 62bcc1ce7b8dbdbee96b50631644a00afbfd4e78
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="architecture-overview-for-sql-server-machine-learning-services"></a>Общие сведения об архитектуре служб SQL Server машины обучения 
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 
    Кроме того Корпорация Майкрософт предоставляет набор собственных библиотек, которые обеспечивают интеграцию с SQL Server, включая преобразования данных, сжатие и оптимизации, предназначенные для каждого поддерживаемого языка.
 
-+ **Безопасность**
++ **безопасность**
 
    Более высокий уровень безопасности означает поддерживает встроенную проверку подлинности Windows и имена входа SQL на основе пароля, в качестве также как безопасные обработку учетных данных, следует рассчитывать на SQL Server для защиты данных и использование доверенного панели запуска SQL Server для управления внешних скриптов выполнение и защиты данных, используемых в скриптах.
 

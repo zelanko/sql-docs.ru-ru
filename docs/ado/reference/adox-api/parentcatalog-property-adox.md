@@ -3,7 +3,7 @@ title: "Свойство ParentCatalog (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -46,11 +46,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27181ddda63e190f1aa6e451c4fd5eeca1a25c12
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0d0cdd505a30252b603477499c44176957d1dc45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parentcatalog-property-adox"></a>Свойство ParentCatalog (ADOX)
 Указывает каталог родительского объекта таблицы, пользователя или столбца для предоставления доступа к свойствам конкретного поставщика.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает [каталога](../../../ado/reference/adox-api/catalog-object-adox.md) объекта. Установка **ParentCatalog** открытому **каталога** разрешает доступ к свойствам определенного поставщика перед добавлением, таблицу или столбец для **каталога** коллекции.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Некоторые поставщики данных допускает значения свойства поставщика для записи только в момент создания: то есть, когда таблицы или столбца добавляется к его **каталога** коллекции. Для доступа к этим свойствам перед добавлением эти объекты, и **каталога**, укажите **каталога** в **ParentCatalog** свойства первого.  
   
  Ошибка возникает, когда таблица или столбец добавляется к другому **каталога** чем **ParentCatalog**.  

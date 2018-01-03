@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b5ebc2779d005a31f9b93a1cf6ca8fb6e35b346
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d63ef11103b88f70233f269914c54425402b1def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-data-types"></a>Типы данных SQL
 Каждой СУБД определяет собственные типы SQL. Каждый ODBC-драйвер предоставляет только те типы данных SQL, который определяет связанный СУБД. Сведения о сопоставление драйвер СУБД SQL типах идентификаторы типа SQL, определенных для ODBC и драйвером сопоставление типов СУБД SQL свои собственные идентификаторы типа специфические для драйвера SQL возвращается путем вызова **SQLGetTypeInfo**. Драйвер возвращает типы данных SQL, при описании типы данных столбцов и параметров с помощью вызовов **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, и **SQLSpecialColumns**.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 |SQL_NUMERIC|ЧИСЛОВОЙ (*p*,*s*)|Точное числовое значение с точностью *p* и масштаб *s* (1 < = *p* < = 15; *s* <= *p*). [ 4]|  
 |SQL_SMALLINT|SMALLINT|Точное числовое значение с точностью 5 и масштабом 0 (подпись: –32,768 < =  *n*  < = 32 767, без учета знака: 0 < =  *n*  < = 65 535) [3].|  
 _INTEGER|INTEGER|Точное числовое значение с точностью 10 и масштабом 0 (подпись: – 2 [31] < =  *n*  < = 2 [31] – 1, без учета знака: 0 < =  *n*  < = 2 [32] – 1) [3].|  
-|SQL_REAL|REAL|С подписью, Приблизительное числовое значение с двоичной точностью 24 (ноль или абсолютное значение 10 [–38] до 10[38]).|  
+|SQL_REAL|real|С подписью, Приблизительное числовое значение с двоичной точностью 24 (ноль или абсолютное значение 10 [–38] до 10[38]).|  
 |SQL_FLOAT|Число с плавающей запятой (*p*)|Подписанные Приблизительное числовое значение с точностью двоичные по крайней мере *p*. (Максимальная точность, определяемым драйвером). [5]|  
 |SQL_DOUBLE|DOUBLE PRECISION|С подписью, Приблизительное числовое значение с двоичной точностью 53 (ноль или абсолютное значение 10 [–308] до 10[308]).|  
 |SQL_BIT|BIT|Один бит двоичных данных. [8]|  

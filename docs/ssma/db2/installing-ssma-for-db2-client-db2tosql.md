@@ -1,7 +1,7 @@
 ---
 title: "Установка SSMA для DB2 клиента (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e38e6df37dd5b6aeda71e024850c3549e299c47
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cddb418e373c5ac61d2788f7e8a41d51c5976b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-db2-client-db2tosql"></a>Установка SSMA для DB2 клиента (DB2ToSQL)
 SSMA клиента состоит из файлов программы, которые выполняют следующие задачи:  
@@ -41,7 +41,7 @@ SSMA клиента состоит из файлов программы, кот�
   
 Этот раздел содержит необходимые условия для установки и инструкции по установке SSMA.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 SSMA предназначен для работы с DB2 для z/OS версии 9.0 и 10.0 или DB2 для LUW версии 9.8 и 10,1 или более поздней версии и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 г.  
   
 Прежде чем устанавливать SSMA, убедитесь в том, что компьютер соответствует следующим требованиям:  

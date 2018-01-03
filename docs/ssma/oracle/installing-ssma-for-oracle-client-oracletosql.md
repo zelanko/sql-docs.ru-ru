@@ -1,7 +1,7 @@
 ---
 title: "Установка SSMA для клиента Oracle (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: On Demand
-ms.openlocfilehash: f9fcb6b5b332b603c44d5bf62114e6137b5c99ec
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90e1f2b745ef0a093fb7a5b2ebf662aa969154f1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Установка SSMA для клиента Oracle (OracleToSQL)
 SSMA клиента состоит из файлов программы, которые выполняют следующие задачи:  
@@ -39,7 +39,7 @@ SSMA клиента состоит из файлов программы, кот�
   
 Этот раздел содержит необходимые условия для установки и инструкции по установке SSMA.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 SSMA предназначен для работы с Oracle 9 или более поздних версиях, а также всех выпусков [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 Прежде чем устанавливать SSMA, убедитесь в том, что компьютер соответствует следующим требованиям:  

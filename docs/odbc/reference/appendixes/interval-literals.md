@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b291abb4869256575b5d915e509107a1c46e2267
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ee22a6f808dd1b97d0d865229c78cbf26808fba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interval-literals"></a>Интервал литералы
 ODBC требует, что все драйверы поддерживают преобразование типа данных SQL_CHAR или SQL_VARCHAR для всех типов данных C интервал. Если в источнике данных не поддерживает типы данных интервала, тем не менее, драйвер необходимо знать правильный формат значение в поле SQL_CHAR для поддержки этих преобразований. Аналогичным образом ODBC требует у любого ODBC C тип преобразовываться SQL_CHAR или SQL_VARCHAR, поэтому необходимо знать, какой формат интервала, содержащегося в поле символ драйвера. В этом разделе описывается синтаксис интервал литералы, которые записи драйвер должен использовать для проверки во время преобразования в или из типов данных C интервал SQL_CHAR поля.  

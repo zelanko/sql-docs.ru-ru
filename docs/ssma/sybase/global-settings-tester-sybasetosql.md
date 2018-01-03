@@ -3,7 +3,7 @@ title: "Глобальные параметры (тестировщик) (Sybase
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a08108be504ebe901f6e202af2fd8c1d757c198c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b5ba92c5972df1e29bbe3c4cd3df4f093739a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Глобальные параметры (тестировщик) (SybaseToSQL)
 Используйте страницу тест-инженер **глобальные параметры** диалогового окна для задания параметров для тест-инженера SSMA.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
 **Дополнительные таблицы, в режиме энергосбережения**  
 Этот параметр определяет способ сохранения внутренних вспомогательных таблицах, созданному в ходе выполнения тестового случая. Для этого конкретного значения параметра можно задать следующие параметры:  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
 **Остановить выполнение теста после первой ошибки**  
 Этот параметр указывает, следует ли остановить текущее выполнение тестового случая, если произошла ошибка во время выполнения. Набор параметров по умолчанию — **Да**.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
 ## <a name="see-also"></a>См. также:  
 [Завершение подготовки тестового случая &#40; SybaseToSQL &#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

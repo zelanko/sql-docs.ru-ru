@@ -3,7 +3,7 @@ title: "Close-метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8d0df46efa689fa14f178f878887722dda179a2c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 79b6267de87409f4b1e7d07a6b42d85e22042def
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="close-method-ado"></a>Close-метод (ADO)
 Закрывает открытый объект и все зависимые объекты.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 object.Close  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **закрыть** метод закрытия [подключения](../../../ado/reference/ado-api/connection-object-ado.md), [записи](../../../ado/reference/ado-api/record-object-ado.md), [записей](../../../ado/reference/ado-api/recordset-object-ado.md), или [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта Чтобы освободить все связанные системные ресурсы. Закрывает объект не удаляется из памяти; можно изменить настройки его свойств и открыть его позже. Для полного устранения объекта из памяти, закройте объект и затем присвойте переменной объекта *ничего* (в Visual Basic).  
   
 ## <a name="connection"></a>Соединение  

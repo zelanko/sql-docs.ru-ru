@@ -2,11 +2,11 @@
 title: "Установка изолированного сервера обучения компьютера или изолированный сервер R | Документы Microsoft"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 8a11d71e1568b3da175de0d2eecf182a9b415400
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d69755716ae84ed280f8af9c62a85dc861f66d75
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone"></a>Установите сервер обучения машины (изолированный) или R Server (изолированный)
 
@@ -152,8 +152,8 @@ ms.lasthandoff: 11/17/2017
 |R Server (Standalone) |Автономный установщик Windows|`C:\Program Files\Microsoft\R Server\R_SERVER`|
 |Сервер машинного обучения (автономный) |  Мастер установки SQL Server 2017 г. |`C:\Program Files\Microsoft SQL Server\140\R_SERVER`|
 |Сервер машинного обучения (автономный) |  Автономный установщик Windows |`C:\Program Files\Microsoft\R Server\R_SERVER`|
-|Службы R Services (в базе данных) |Мастер установки SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
-|Службы машинного обучения (в базе данных) |Мастер установки SQL Server 2017 г.|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`или`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|Службы R (в базе данных) |Мастер установки SQL Server 2016|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
+|Службы машинного обучения (в базе данных) |Мастер установки SQL Server 2017 г.|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES` или `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 
 ### <a name="development-tools"></a>Средства разработки
 
@@ -217,6 +217,6 @@ ms.lasthandoff: 11/17/2017
   
     -   5A2A1571-B8CD-4AAF-9303-8DF463DABE5A        (для версии 7.5.0)
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Сервер машинного обучения (автономный)](../../advanced-analytics/r/r-server-standalone.md)

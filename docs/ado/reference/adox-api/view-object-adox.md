@@ -3,7 +3,7 @@ title: "Просмотр объекта (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 74f53494e11f46432b57b07ad0d9f42d6c3773f6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 63cce5bc12fe78ff57007a5d8531547dc6ff23e4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="view-object-adox"></a>Объект представления (ADOX)
 Представляет отфильтрованного набора записей или виртуальную таблицу. При использовании в сочетании с ADO [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, **представление** объект может использоваться для добавления, удаления или изменения представления.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Представление — это виртуальная таблица, созданные из других таблиц базы данных или представления. **Представление** позволяет создать представление без необходимости знать или с помощью синтаксиса «Создать ПРЕДСТАВЛЕНИЕ» поставщика.  
   
  С помощью свойств **представление** объекта, вы можете:  

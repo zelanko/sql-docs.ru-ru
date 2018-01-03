@@ -3,7 +3,7 @@ title: "Свойство SortOrder (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: afa1d7b930fd17568eb242149d4cc19d7226e37a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccacbbf0e89d237afbffd47661876597eade8b8a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sortorder-property-adox"></a>Свойство SortOrder (ADOX)
 Указывает последовательность сортировки для столбца (только для столбцов индекса).  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Задает и возвращает **длинные** значение, которое может быть одним из [SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md) константы. Значение по умолчанию — **adSortAscending**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Это свойство применяется только к [столбца](../../../ado/reference/adox-api/column-object-adox.md) объекты в [столбцы](../../../ado/reference/adox-api/columns-collection-adox.md) коллекцию [индекса](../../../ado/reference/adox-api/index-object-adox.md).  
   
 ## <a name="applies-to"></a>Объект применения  

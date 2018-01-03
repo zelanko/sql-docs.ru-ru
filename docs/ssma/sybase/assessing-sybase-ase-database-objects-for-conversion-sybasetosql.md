@@ -3,7 +3,7 @@ title: "Оценки объектов базы данных SAP ASE для пр�
 ms.custom: 
 ms.date: 12/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9fad1e13a82077bf25422e42a390804d67358c2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e22710f19c00a846c33e1dd378e7b0de5b8526e9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Оценки для преобразования (SybaseToSQL) объектов базы данных SAP ASE
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или Azure SQL, необходимо определить, как сложность миграции и о том, сколько времени должно уходить. SSMA можно создать отчет об оценки, который показывает процент объектов и процедуры, которые успешно преобразуются в [!INCLUDE[tsql](../../includes/tsql_md.md)]. SSMA также позволяет просматривать конкретные проблемы, которые может вызвать сбой преобразования.  

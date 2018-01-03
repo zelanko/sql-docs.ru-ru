@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ec3f9821b729c593fac8cb280f8596eaf0dbed1d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 151963c23abce0f737671dd73dec1d971998228e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writing-an-interoperable-application"></a>Создание приложений с возможностью взаимодействия
 Каждый раз, когда приложение использует один и тот же код с более чем один драйвер, этот код должен быть с возможностью взаимодействия между драйверы. В большинстве случаев это непростая задача. Например код для получения строк курсора однонаправленные одинаково для всех драйверов. В некоторых случаях это может быть более сложным. Например код для создания идентификаторов для использования в инструкциях SQL необходимо учитывать регистр идентификатора, заключения в кавычки и соглашения об именовании одного, двух частей и трех частей.  

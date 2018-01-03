@@ -3,10 +3,10 @@ title: "Устройство обзором установки и настрой
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 10934f62-4acf-4ca5-b550-f426ba81fe11
 caps.latest.revision: "23"
-ms.openlocfilehash: 34d66302d0ed114c32e0c6294dfe7789e32a9253
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 719447d2f6d9376ec9db35f35c7f38b50ef460fa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appliance-installation-and-configuration-overview"></a>Установка устройств и общие сведения о конфигурации
 Обзор SQL Server PDW appliance администраторов через первые шаги для настройки и приступить к работе с устройством новый SQL Server PDW.  
@@ -43,7 +43,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**Задача**|**Description**|  
+|**Задача**|**Описание**|  
 |Подтвердите документации|Убедитесь, что вы получили все необходимые документы и сведения из вашего оборудования независимых поставщиков Оборудования. В разделе [сведения для получения из вашего Оборудования &#40; Система платформы аналитики &#41; ](information-to-obtain-from-your-ihv.md).|  
 |Установка оборудования|Убедитесь, что центр обработки данных, способное устройства. Устройство компоненты перемещаются в центр обработки данных. Кабели и сетевые коммутаторы, блоками распределения питания, для установки в стойку. В разделе [Установка оборудования &#40; Система платформы аналитики &#41; ](hardware-installation.md).|  
   
@@ -51,14 +51,14 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**Задача**|**Description**|  
+|**Задача**|**Описание**|  
 |Питания на устройстве|Питания на каждом узле компонента устройства в нужном порядке, ожидающих при необходимости, чтобы убедиться, что ошибок не обнаружено.|  
   
 ## <a name="ConfigureAppliance"></a>3. Настройка устройства  
   
 |||  
 |-|-|  
-|**Задача**|**Description**|  
+|**Задача**|**Описание**|  
 |||  
 |Настройка устройства с помощью SQL Server PDW**Configuration Manager**|Используйте диспетчер конфигурации можно установить пароли на устройства, часовые пояса, параметры сети и брандмауэра, сертификаты безопасности, производительности и другие параметры на устройстве. В разделе [настроек устройств &#40; Система платформы аналитики &#41; ](appliance-configuration.md).|  
   
@@ -69,7 +69,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**Задача**|**Description**|  
+|**Задача**|**Описание**|  
 |Применение обновлений SQL Server PDW|(Необязательно) Может потребоваться применить одно или несколько обновлений SQL Server PDW для обновления программного обеспечения SQL Server PDW до последней версии. В разделе [применить исправления системы платформы аналитики &#40; Система платформы аналитики &#41; ](apply-analytics-platform-system-hotfixes.md).|  
 |Настройка Windows Server Update Services|Настройте устройство для получения обновлений из службы обновления Windows Server для поддержки программного обеспечения. В разделе [загрузить и установить обновления Майкрософт &#40; Система платформы аналитики &#41; ](download-and-apply-microsoft-updates.md).|  
   
@@ -78,7 +78,7 @@ Before you begin to install, configure, and use your new appliance, we recommend
   
 |||  
 |-|-|  
-|**Задача**|**Description**|  
+|**Задача**|**Описание**|  
 |Установка SQL Server PDW драйверов и соединения|Настройка локальных компьютерах для подключения к SQL Server PDW с помощью SQL Server Data Tools, sqlcmd, бизнес-аналитики программ или других средств. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |Создание ролей входы в систему и сервера и назначение разрешений|Планирование и создание входов и ролях сервера, позволяющих пользователям возможность входа в SQL Server PDW с соответствующими разрешениями. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Настройка шлюза управления данными Azure|Шлюз позволяет Azure пользователям получать доступ APS локальных данных, предоставляя APS данные, как защитить веб-каналы OData. Шлюз уже установлен на узле управления. Запросить помощь с настройкой Microsoft.|  

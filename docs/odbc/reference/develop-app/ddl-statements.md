@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12ad45516f14b33dcd9ae506bbf4e86c71c9a8cd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69fedff83875bf08625ee97ecab93a02a856cc21
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ddl-statements"></a>Инструкции DDL
 Инструкции определения языка DDL данных невероятно зависят от СУБД. Инструкции для наиболее распространенных операций определения данных определяет ODBC SQL: Создание и удаление таблиц, индексов и представления; Изменение таблиц; Предоставление и Отмена прав. Все другие инструкции DDL, зависящее от источника данных. Таким образом взаимодействующие приложения не может выполнять некоторые операции определения данных. Как правило это не проблема, из-за таких операций, как правило, очень конкретных СУБД и наилучшим образом влево, чтобы программное обеспечение администрирования собственную базу данных, поставляемых с большинством СУБД или программы установки поставлялась с драйвером.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 016c2cefd6280a7b2cc21e4b5e290468d8271973
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 12e66ad8a1aa5e1389b69d5f30156f7b86b3b733
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-features"></a>Новые возможности
 Следующие новые функциональные возможности была введена в ODBC 3. *x*. ODBC 3. *x* приложения, работа с ODBC 2*.x* драйвера, не смогут использовать эту функцию. ODBC 3. *x* диспетчер драйверов не сопоставляет эти возможности при работе с ODBC 2*.x* драйвера.  

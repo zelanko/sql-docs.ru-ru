@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e2127d5b33c5ea4bf2a0c96c5e020322aec39db
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b2a9fd1565d0980e5af77d3cded499ce1f0091e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="auto-commit-mode"></a>Режим автоматической фиксации
 *В режиме автоматической фиксации* каждой операции базы данных является транзакцией, которая фиксируется при выполнении. Этот режим подходит для многих реальных транзакций, состоящих из одной инструкции SQL. Нет необходимости разделять или указать завершения этих транзакций. В базах данных без поддержки транзакций режим автоматической фиксации имеет единственный поддерживаемый режим. В таких базах данных инструкции фиксируются, когда они выполняются, и нет возможности отката; они таким образом всегда находятся в режиме автоматической фиксации.  

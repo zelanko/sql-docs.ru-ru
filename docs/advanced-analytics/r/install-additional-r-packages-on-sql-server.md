@@ -1,11 +1,11 @@
 ---
 title: "Установка дополнительных пакетов R в SQL Server | Документы Microsoft"
 ms.date: 11/15/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: f8d20c5b5b687a6d9d94cd97605f294cead27215
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 996b69b08973805648da329a328e712d5de45660
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="install-additional-r-packages-on-sql-server"></a>Установка дополнительных пакетов R в SQL Server
 
@@ -297,13 +297,13 @@ ms.lasthandoff: 12/01/2017
 
 Если вам нужно установить несколько пакетов или нужно гарантировать, что все сотрудники вашей организации возвращает правильный пакет типа и версии, рекомендуется использовать пакет miniCRAN для создания локального репозитория, который может совместно использоваться несколько пользователей или компьютеров. Дополнительные сведения см. в разделе [Создать репозиторий локального пакета с помощью miniCRAN](create-a-local-package-repository-using-minicran.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Разрешения
 
 Если вы являетесь опытным пользователем R, может быть привыкли установку пакетов из командной строки без специальных разрешений или без предварительного скачивания. Однако большинство серверов нет подключения к Интернету. Кроме того, доступ к файловым ресурсам общего доступа или хранения может быть ограничен.
 
 В этом разделе описаны разные возможности разрешения, необходимые для установки пакетов в SQL Server 2016 и 2017 г. SQl Server. Установку можно выполнить с помощью средства R или SQL Server, но немного отличаться процесс и разрешения.
 
--   SQL Server 2016
+-   SQL Server 2016
 
     В этом выпуске только администратор на компьютере можно установить пакеты в нужное место. Можно использовать стандартные средства R для установки пакетов, но необходимо запустить с правами администратора и использовать средства R, связанные с экземпляром.
 

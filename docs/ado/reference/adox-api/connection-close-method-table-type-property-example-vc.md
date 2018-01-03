@@ -3,7 +3,7 @@ title: "Подключение закрывается метод пример с
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 22ca4649d8cab1b34bdfdcf064091c8faea9033a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e7d5552d124ce60ee9849aa1e22e2c1f0b0f29c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-close-method-table-type-property-example-vc"></a>Подключение метода закрытия, пример свойство типа таблицы (VC ++)
 Установка [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) свойства **ничего** «закрыть» каталога. Связанные коллекции будет пустым. Все объекты, которые были созданы из объектов схемы в каталоге будут изолированы. Все свойства на те объекты, которые были кэшированы по-прежнему доступен, но при чтении свойств, требующих вызов поставщика завершится ошибкой.  

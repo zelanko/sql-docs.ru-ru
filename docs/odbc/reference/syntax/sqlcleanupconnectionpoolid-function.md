@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 155df975e89008090e0ec2d5c856c74fe85ddfdd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4131ad3555a0206f500b28fc8df7b16a0f4ee707
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>Функция SQLCleanupConnectionPoolID
 **Соответствия**  
@@ -54,7 +54,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  Приложение не может получить сообщение об ошибке, возвращаемую драйвером.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **SQLCleanupConnectionPoolID** можно вызвать в любое время, но диспетчер драйверов гарантирует, что ни один поток одновременно вызов **SQLGetPoolID** и ни один поток одновременно вызов  **SQLRateConnection** и **SQLPoolConnect** с маркером сведения соединения с этим идентификатором пула. Таким образом драйвер должен убедитесь, что эта функция является потокобезопасным.  
   
  Драйвер можно очистить ресурсы, связанные с идентификатором пула.  

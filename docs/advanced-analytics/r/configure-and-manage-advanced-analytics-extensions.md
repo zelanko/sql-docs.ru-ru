@@ -2,11 +2,11 @@
 title: "Дополнительные параметры конфигурации для службы обучения машины | Документы Microsoft"
 ms.custom: SQL2016_New_Updated
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 369c630e249d7775e67508fc9b00e94447182012
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 24f2082572cdb314257826570471548f87b1b60e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="advanced-configuration-options-for-machine-learning-services"></a>Дополнительные параметры конфигурации для службы обучения машины
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/09/2017
 
 В следующей таблице перечислены дополнительные параметры для [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], с одним из допустимых значений. 
 
-|**Имя параметра**|**Тип**|**Description**|
+|**Имя параметра**|**Тип**|**Описание**|
 |----|----|----|
 |ЗАДАНИЕ\_ОЧИСТКИ\_ON\_ВЫХОДА|Целочисленный |Это внутренний параметр – не изменяйте это значение. </br></br>Указывает, является ли временную рабочую папку, создается для каждого сеанса внешней среды выполнения могут быть удалены после завершения сеанса. Этот параметр полезен для отладки. </br></br>Поддерживаемые значения: **0** (отключено) или **1** (включено). </br></br>Значение по умолчанию — 1, значение файлы журнала удаляются при выходе.|
 |ТРАССИРОВКИ\_УРОВЕНЬ|Целочисленный |Задает уровень детализации трассировки MSSQLLAUNCHPAD для целей отладки. Это влияет на файлы трассировки в каталоге, указанном параметром LOG_DIRECTORY. </br></br>Поддерживаемые значения: **1** (ошибка), **2** (производительность) **3** (предупреждение), **4** (сведения). </br></br>Значение по умолчанию — 1, то есть только выводить предупреждения.|

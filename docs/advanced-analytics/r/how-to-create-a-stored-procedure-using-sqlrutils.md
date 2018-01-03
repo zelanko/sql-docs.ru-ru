@@ -2,9 +2,11 @@
 title: "Создание хранимой процедуры с помощью sqlrutils | Документация Майкрософт"
 ms.custom: 
 ms.date: 12/16/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd86e9655770c55f99514cd5a0a9b9910d5f78e1
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 475665c87f672868eaa6efeb2b5b6e927ed945af
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="create-a-stored-procedure-using-sqlrutils"></a>Создание хранимой процедуры с помощью sqlrutils
 
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/01/2017
 
 Объекты внутри кадра данных, а также все другие входные параметры функции должны относиться к следующим типам данных R:
 - POSIXct
-- numeric
+- NUMERIC
 - character
 - integer
 - логические
@@ -87,7 +89,7 @@ ms.lasthandoff: 12/01/2017
 
 Когда готовы входные и выходные параметры, вызвать `StoredProcedure` конструктор.
 
-**Использование**
+**Usage**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

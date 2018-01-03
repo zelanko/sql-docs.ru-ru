@@ -1,11 +1,13 @@
 ---
 title: "Метод SubmitChanges (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2d7015e1a668697a12c373904c0bd71e22108449
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fc04a3ac77d6363c86f684b474fb5fa9a06c3c5e
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="submitchanges-method-rds"></a>Метод SubmitChanges (RDS)
 Ожидающие изменения локально кэшированных и обновляемые [записей](../../../ado/reference/ado-api/recordset-object-ado.md) к источнику данных, указанному в [Connect](../../../ado/reference/rds-api/connect-property-rds.md) свойство или [URL-адрес](../../../ado/reference/rds-api/url-property-rds.md) свойство.  
@@ -48,7 +50,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *Набор записей*  
  Объектную переменную, которая представляет **записей** объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [Connect](../../../ado/reference/rds-api/connect-property-rds.md), [сервера](../../../ado/reference/rds-api/server-property-rds.md), и [SQL](../../../ado/reference/rds-api/sql-property.md) свойства должны быть заданы, прежде чем использовать **SubmitChanges** метод с  **RDS. DataControl** объекта.  
   
  При вызове метода [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) метод после вызова **SubmitChanges** для той же **записей** объекта, **CancelUpdate** вызов завершается ошибкой, так как изменения уже были зафиксированы.  

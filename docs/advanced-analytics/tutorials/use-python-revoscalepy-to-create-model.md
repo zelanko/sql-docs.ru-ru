@@ -2,21 +2,23 @@
 title: "Для создания модели с помощью Python с revoscalepy | Документы Microsoft"
 ms.custom: SQL2016_New_Updated
 ms.date: 09/19/2017
-ms.prod: sql-non-specified
-ms.reviewer: 
-ms.suite: 
+mms.reviewer: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 caps.latest.revision: "4"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: bb5d4aac51728ac090fb4cbeae8da6c87db22aea
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: b5d6daa6c1e4db5f3f78b325f8821402a6b65b14
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Для создания модели с помощью Python с revoscalepy
 
@@ -26,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 
 Дополнительные сведения см. в разделе [возможности revoscalepy?](../python/what-is-revoscalepy.md) и [Python функции ссылки](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 > [!IMPORTANT]
 > Для выполнения кода Python в SQL Server, необходимо установить SQL Server 2017 г CTP-версии 2.0 или более поздней версии, а также необходимо установить и включить функцию, **службы обучения машины** с Python. Другие версии SQL Server не поддерживают интеграцию Python.

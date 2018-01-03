@@ -3,7 +3,7 @@ title: "Объект DataControl (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cf3ffe486c22f7e0fce7bec243e182c459aedc0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4921e2895aeeede12f161b31a5dac83e0276822a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datacontrol-object-rds"></a>Объект DataControl (RDS)
 Привязывает запрос данных [записей](../../../ado/reference/ado-api/recordset-object-ado.md) для одного или нескольких элементов управления (например, текстовое поле, элемент управления DataGrid или поле со списком) для отображения **записей** данных на веб-странице.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
 </OBJECT>  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Идентификатор класса для **RDS. DataControl** BD96C556 65A3 - 11 D 0-983A-00C04FC29E33 является объект.  
   
 > [!NOTE]

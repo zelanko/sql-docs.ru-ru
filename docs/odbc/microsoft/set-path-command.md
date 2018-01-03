@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a5679296dfc73dd4ff73efaa3a66b14d21fa1f50
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 553c3f464b5a14d578aa05bece939126f7251974
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="set-path-command"></a>ПУТЬ команды SET
 Указывает путь для поиска файлов. Дополнительные сведения см.  
@@ -38,7 +38,7 @@ SET PATH TO [Path]
  ДЛЯ [ *путь*]  
  Указывает каталог, который требуется Visual FoxPro для поиска. Используйте запятую или точку с запятой для разделения каталогов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ЗАДАЙТЕ путь можно указать пути поиска для других программ Visual FoxPro, которые можно вызывать хранимые процедуры. ЗАДАЙТЕ путь не изменит путь источника данных, который вы указали для подключения.  
   
  Выдавать ЗАДАТЬ путь без *путь* для восстановления путь к каталогу по умолчанию или папку.  

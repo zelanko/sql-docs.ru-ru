@@ -2,9 +2,11 @@
 title: "Мониторинг служб R | Документация Майкрософт"
 ms.custom: 
 ms.date: 11/29/2016
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3401a1b72b0ec409c8f3398b996de7e9d39c0763
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 212084dc9a8d4bea618f4f172d8db3f2ee25ea4a
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="monitoring-r-services"></a>Мониторинг служб R
   Эта статья содержит сведения о типовых задачах мониторинга, выполняемых при использовании [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]:  
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/01/2017
   
  Также в этой статье описываются средства, которые устанавливаются на компьютере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в процессе установки R, и перечисляются динамические административные представления и расширенные события, связанные с [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Представления DMV для служб R SQL Server](../../advanced-analytics/r-services/dmvs-for-sql-server-r-services.md)
 

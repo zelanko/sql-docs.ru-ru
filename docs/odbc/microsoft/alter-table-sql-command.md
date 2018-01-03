@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 79fbb4e4f6c143d693e1b41cc1660938bc61cde1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1bf0849ee91170b09ab927363dafda28bff474c2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - команда SQL
 Программно изменяет структуру таблицы.  
@@ -185,7 +185,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  NOVALIDATE  
  Указывает, что Visual FoxPro позволяет вносить изменения в структуру таблицы. Эти изменения могут нарушить целостность данных в таблице. По умолчанию Visual FoxPro предотвращает внесение изменений, которые нарушают целостность данных в таблице ALTER TABLE. Включить NOVALIDATE, чтобы переопределить это поведение по умолчанию.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ALTER TABLE может использоваться для изменения структуры таблицы, который не был добавлен в базу данных. Однако если включают по умолчанию, FOREIGN KEY, PRIMARY KEY, ссылки или предложений SET при изменении свободного таблицы Visual FoxPro возникает ошибка.  
   
  ALTER TABLE может перестроить таблицу, создав новый заголовок таблицы и добавления записей в заголовке таблицы. Например изменения типа или ширина поля может привести к таблице, чтобы перестроить.  

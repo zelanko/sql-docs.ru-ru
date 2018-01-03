@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46b8a628b6b8e6ad9a2eb3164e6935f3f3401ec8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b05067010701d1751056cb99089708b5cbeb67f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-returned-by-catalog-functions"></a>Данные, возвращаемые функциями каталога
 Каждая функция каталога возвращает данные в виде результирующего набора. Этот результирующий набор ничем не отличается от результирующего набора. Обычно формируется путем стандартных, параметризованные **ВЫБЕРИТЕ** инструкции, которая жестко запрограммированы в драйвере или хранимой процедуры в источнике данных. Сведения о способах получения данных из результирующего набора. в разделе [был результирующий набор создан?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

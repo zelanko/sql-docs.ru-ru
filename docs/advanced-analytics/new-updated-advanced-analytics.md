@@ -7,23 +7,24 @@ author: MightyPen
 manager: jhubbard
 editor: 
 ms.service: 
-ms.component: advanced-analytics
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.reviewer: 
 ms.suite: sql
-ms.topic: updart-autogen
-ms.technology: database-engine
+ms.technology: r-services
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
+ms.topic: article
 ms.date: 12/02/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
 ms.author: genemi
-ms.workload: advanced-analytics
-ms.openlocfilehash: 840e34eee090d9fba2ec25e10375a8b0c375fea4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.workload: 
+ms.openlocfilehash: c73c6295f7b6e2a23c947ab65160032ce83264e1
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="new-and-recently-updated-advanced-analytics-for-sql-server"></a>Новые и недавно обновленные: Advanced Analytics для SQL Server
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/08/2017
 
 
 
-- *Диапазон обновлений дат:* &nbsp; **2017 г-09-28** &nbsp; - в - &nbsp; **2017 г-12-02**
+- *Диапазон дат обновлений:* &nbsp; **28.09.2017**&nbsp;–&nbsp;**02.12.2017**
 - *Предметной области:* &nbsp; **Advanced Analytics для SQL Server**.
 
 <!-- Repo = 'MicrosoftDocs/sql-docs'.   Branch = 'live'. -->
@@ -51,7 +52,7 @@ ms.lasthandoff: 12/08/2017
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
 
-1. [Добавить SQLRUserGroup в качестве пользователя базы данных](r/add-sqlrusergroup-to-database.md)
+1. [Добавление SQLRUserGroup в качестве пользователя базы данных](r/add-sqlrusergroup-to-database.md)
 2. [Как использовать функции RevoScaleR для поиска или установка пакетов R в SQL Server](r/use-revoscaler-to-manage-r-packages.md)
 3. [Использование языка R в базе данных Azure SQL](r/using-r-in-azure-sql-database.md)
 
@@ -457,7 +458,7 @@ SQL Server предоставляет возможности для управл
 
 |Имя| Комментарии|
 |----|----|----|
-| **SQL Server 2016**| ***  |
+| **SQL Server 2016**| ***  |
 |SQL Server 2016 Enterprise с пакетом обновления 1 для Windows|Службы R для интеграции расширенной аналитики.|
 |BYOL SQL Server 2016 SP1 Enterprise на Windows Server |Службы R для интеграции расширенной аналитики. |
 |Бесплатная лицензия: SQL Server 2016 Developer с пакетом обновления 1 на Windows Server 2016 |Службы R для интеграции расширенной аналитики. |
@@ -653,7 +654,7 @@ RevoScaleR — это пакет машины обучения функций, �
 
 
    + Службы ядра СУБД
-   + Службы R Services (в базе данных)
+   + Службы R (в базе данных)
 
 7. После завершения установки перезагрузите компьютер.
 
@@ -745,7 +746,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR,
 
 ### <a name="14-nbsp-step-3-explore-and-visualize-the-datatutorialssqldev-py3-explore-and-visualize-the-datamd"></a>14. &nbsp;[Step 3: анализ и визуализация данных](tutorials/sqldev-py3-explore-and-visualize-the-data.md)
 
-*Обновлено: 2017 г-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([предыдущих](#TitleNum_13))
+*Обновлено: 30.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_13))
 
 <!-- Source markdown line 66.  ms.author= "jeannt".  -->
 
@@ -795,26 +796,26 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLENGINE,ADVANCEDANALYTICS, SQL_INST_MR,
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новый + обновленные (3 + 14): **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (3+14): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
 - [Новые + обновленные (1+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Новый + обновленные (87 + 0): **Analytics Platform System для SQL** документы](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Новый + обновленные (5 + 4): **подключение к SQL** документы](../connect/new-updated-connect.md)
-- [Новый + обновленные (0 + 1): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
-- [Новый + обновленные (2 + 2): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
-- [Новый + обновленные (10 + 9): **Linux для SQL** документы](../linux/new-updated-linux.md)
-- [Новый + обновленные (2 + 4): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
-- [Новый + обновленные (4 + 2): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
-- [Новый + обновленные (0 + 1): **образцы для SQL** документы](../sample/new-updated-sample.md)
-- [Новый + обновленные (21 + 0): **операций SQL Studio** документы](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Новый + обновленные (5 + 1): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (87+0): **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Новые + обновленные (5+4): **Подключение к SQL**](../connect/new-updated-connect.md)
+- [Новые + обновленные (0+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (2+2): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (10+9): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (2+4): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (4+2): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (0+1): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (21+0): **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новые + обновленные(5+1): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [Новые + обновленные (0+1): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новый + обновленные (1 + 0): **SQL Server Migration Assistant (SSMA)** документы](../ssma/new-updated-ssma.md)
+- [Новые + обновленные (1+0): **Помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новый + обновленные (0 + 2): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (0+2): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
-- [Новый + обновленные (0 + 0): **данных миграции Assistant (DMA) для SQL** документы](../dma/new-updated-dma.md)
+- [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)

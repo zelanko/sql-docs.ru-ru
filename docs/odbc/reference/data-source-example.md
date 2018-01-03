@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 16217ebf7c229a47263b330e395a777716907797
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 29fe9b818d34f620ededd9d07eab5cfbecfbee47
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-source-example"></a>Пример источника данных
 На компьютерах под управлением Microsoft® Windows NT® Server или Windows 2000 Server, Microsoft Windows NT Workstation или Windows 2000 Professional или Microsoft Windows 95/98, данные машина сведения об источнике хранится в реестре. В зависимости от того, какие параметры реестра ключа сведения хранятся в, источник данных называется *источника данных* или *системного источника данных*. Пользовательские источники данных хранятся в разделе HKEY_CURRENT_USER и доступны только для текущего пользователя. Системные источники данных хранятся в разделе HKEY_LOCAL_MACHINE и может использоваться больше одного пользователя на одном компьютере. Они также могут использоваться по службами всей системы, которые получают доступ к источнику данных даже если пользователь не вошел в систему на компьютере. Дополнительные сведения о пользовательских и системных источников данных см. в разделе [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  

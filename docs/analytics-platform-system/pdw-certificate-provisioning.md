@@ -3,10 +3,10 @@ title: "Сертификат PDW подготовки (система платф
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,16 +16,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 0a423b7d-c6ea-45c1-80b0-26758170594c
 caps.latest.revision: "22"
-ms.openlocfilehash: f0134ec239b938ee7ace6fc6dc05e130fb844b2f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9abee9638492368fe407f98a81beea2a48148971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pdw-certificate-provisioning"></a>Подготовка сертификата PDW
 **Подготовка сертификата PDW** страница Analytics Platform System**Configuration Manager** импортирует или удаляет сертификат, используемый регион PDW. Использование, сертификат для шифрования соединения может помочь безопасного обмена данными с узла управления через клиенты SQL Server, средства, использующие драйверы SQL Server PDW [консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md), и загружает служб Integration Services.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Прежде чем устанавливать сертификат, выполните следующее:  
   
 1.  Получите сертификат безопасности. Если требуются дополнительные сведения о том, как получить сертификат безопасности, обратитесь в службу поддержки Майкрософт.  

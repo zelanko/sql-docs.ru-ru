@@ -3,7 +3,7 @@ title: "Метод CreateRecordset (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a1bec5dc5b8c0e159755c9689aac0c9bfc40217
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7046143a53241622c7bcf03610c416715024fcc0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="createrecordset-method-rds"></a>Метод CreateRecordset (RDS)
 Создает пустой, отключен [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -51,7 +51,7 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Объект **Variant** массив атрибутов, который определяет каждый столбец в **записей** создан. Каждое определение столбца содержит массив из четырех необходимые атрибуты и один необязательный атрибут.  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Имя|Имя заголовка столбца.|  
 |Тип|Целое число типа данных.|  
@@ -61,7 +61,7 @@ object.CreateRecordset(ColumnInfos)
   
  Набор столбцов массивов, затем группируются в массив, который определяет **записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Серверные бизнес-объекта, можно заполнить итоговый **записей** данными из не - поставщик данных OLE DB, такие как операционной системой файл содержащего биржевых котировок.  
   
  В следующей таблице перечислены [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значений, поддерживаемых **CreateRecordset** метод. Номер, указанный — это номер ссылки, используемый для определения полей.  

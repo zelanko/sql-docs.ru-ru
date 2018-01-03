@@ -3,10 +3,10 @@ title: "Исправления Analytics платформы System (систем
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: fca5eec9-86b8-4d20-b498-1678c367b5c8
 caps.latest.revision: "25"
-ms.openlocfilehash: af879486885f2c27ad4c3d80ef9a3d41279ff0ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 562d0ce41f5a1b12930fdedabd73214ddebd4e4e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Применения исправлений системы платформы аналитики
 В этом разделе описывается, как для применения исправлений для программного обеспечения Analytics Platform System.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 > Не применить исправление Analytics Platform System, устройства во время работы. Применения исправления может привести к узлы устройств для перезагрузки. Исправления должны применяться во время обслуживания, когда устройство не используется.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
 Для выполнения этих действий, вам потребуется:  
   
 -   Система платформы аналитики имени входа с разрешениями для доступа к консоли администрирования, чтобы отслеживать состояние устройств. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  

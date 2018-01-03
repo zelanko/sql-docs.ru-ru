@@ -3,10 +3,10 @@ title: "Настройка внешней системы Windows для полу
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: f866890b-cad5-49ac-bbeb-848bfb26c2d5
 caps.latest.revision: "11"
-ms.openlocfilehash: 95cbd11e4e0a3e8455f76287221d970737dca228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: efebff74a8c17952b39efb43006051603c624a03
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-an-external-windows-system-to-receive-remote-table-copies-using-infiniband"></a>Настройки Windows внешние системы для получения копии удаленной таблицы с помощью InfiniBand
 Описывает, как приобрести и настроить систему Windows не является специализированным, подключенных с помощью сети InfiniBand для использования с функцией копирования удаленной таблицы в SQL Server PDW. Система Windows будет размещаться база данных SQL Server, который получает копию удаленной таблицы из базы данных SQL Server PDW. Он приобретается отдельно от устройства, подключен к сети InfiniBand устройства.  

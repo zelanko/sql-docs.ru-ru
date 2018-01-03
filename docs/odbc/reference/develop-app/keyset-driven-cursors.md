@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f908db305a92399ccb5ca9e4930460db249fff46
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eff91b12ebf378aa4bbcdbbfbdfa84c40a66f06b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyset-driven-cursors"></a>Управляемые набором ключей курсоры
 Курсор, управляемый набором ключей находится в диапазоне от статического и динамического курсора в ее способности обнаруживать изменения. Как статический курсор он не всегда обнаруживает изменения в членство и порядок результирующего набора. Как динамический курсор обнаруживать изменения значений строк в результирующем наборе (в зависимости от уровня изоляции транзакции, задаваемое при помощи атрибута SQL_ATTR_TXN_ISOLATION соединения).  

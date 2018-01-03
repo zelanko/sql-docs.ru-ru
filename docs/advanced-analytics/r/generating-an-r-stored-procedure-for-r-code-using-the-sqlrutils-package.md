@@ -2,9 +2,11 @@
 title: "Создание хранимой процедуры R для кода R с помощью пакета sqlrutils | Документация Майкрософт"
 ms.custom: 
 ms.date: 02/28/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -15,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 805d533d140512754ecd6393654c67fa70f93340
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 05cd57e3d4e4b266eb3570da253e9417646d91f4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package"></a>Создание хранимой процедуры R для кода R с помощью пакета sqlrutils
 Пакет **sqlrutils** предоставляет пользователям R механизм для помещения скриптов R в хранимую процедуру T-SQL, регистрации этой хранимой процедуры с базой данных и ее запуска из среды разработки R. 

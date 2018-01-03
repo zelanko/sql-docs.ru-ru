@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 83c2d0752cc8b786a9de84d1a5005a8bc0c5b5f5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b9d776df7e758f0902ca3b20a94f8c40e351e959
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Записи реестра (драйвер ODBC для Visual FoxPro)
 При установке драйвера ODBC для Visual FoxPro, программа установки обновляет в системном реестре в разделе реестра HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, чтобы добавить новый ключ с именем драйвера Microsoft Visual FoxPro. В данном разделе добавляются со значениями, описанными в следующей таблице.  
@@ -55,8 +55,8 @@ ms.lasthandoff: 11/20/2017
 |Разобрать по копиям|REG_SQ|Любой поддерживаемый упорядоченной последовательности|  
 |Description|REG_SZ|Описание источника данных пользователя|  
 |Драйвер||Путь к файлу vfpodbc.dll|  
-|Монопольно||Да или нет|  
-|BackgroundFetch||Да или нет|  
+|Монопольно||"Да" или "Нет".|  
+|BackgroundFetch||"Да" или "Нет".|  
 |SourceDB|REG_SZ|Путь. Файл DBC|  
 |Тип источника|REG_SZ|«DBC» или «DBF»|  
   

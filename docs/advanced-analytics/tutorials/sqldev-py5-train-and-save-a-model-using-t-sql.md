@@ -2,12 +2,14 @@
 title: "Шаг 5: Обучение и сохранить модель Python, с помощью T-SQL | Документы Microsoft"
 ms.custom: 
 ms.date: 10/17/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
-ms.technology: python-services
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
+ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: tutorial
 applies_to: SQL Server 2017
 dev_langs:
 - Python
@@ -17,11 +19,11 @@ caps.latest.revision: "2"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: bcad930d7d2a759e66adf1309eba6af144010c82
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 66a72f22e91cf1a1e4f4ec27279f7a7249e7571b
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="step-5-train-and-save-a-python-model-using-t-sql"></a>Шаг 5: Обучение и сохранить модель Python, с помощью T-SQL
 
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/01/2017
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    Обработка данных и соответствует модели может занять несколько минут. Сообщения, которые может быть выведен Python **stdout** потока отображаются в **сообщений** окно [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Например:
+    Обработка данных и соответствует модели может занять несколько минут. Сообщения, которые может быть выведен Python **stdout** потока отображаются в **сообщений** окно [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Пример:
 
     *Сообщения STDOUT из внешнего скрипта:*
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
@@ -187,7 +189,7 @@ ms.lasthandoff: 12/01/2017
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    Обработка данных и соответствует модели может занять некоторое время. Сообщения, которые может быть выведен Python **stdout** потока отображаются в **сообщений** окно [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Например:
+    Обработка данных и соответствует модели может занять некоторое время. Сообщения, которые может быть выведен Python **stdout** потока отображаются в **сообщений** окно [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Пример:
 
     *Сообщения STDOUT из внешнего скрипта:*
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*

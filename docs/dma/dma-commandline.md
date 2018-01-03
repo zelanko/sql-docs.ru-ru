@@ -5,7 +5,7 @@ ms.date: 09/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: dma
 ms.service: 
-ms.component: dma
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: sql-dma
@@ -19,11 +19,11 @@ author: HJToland3
 ms.author: jtoland
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eba6ced7109283f7f083058e64b7a9166401c2b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6147d01802a363082baf27d6b909e2c98f9afef2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Запустите помощник по миграции данных из командной строки
 С версии 2.1 и выше, когда вы можете установить помощник по миграции данных, она также устанавливает dmacmd.exe в *% ProgramFiles %\\Microsoft данных помощник по миграции\\*. Используйте dmacmd.exe для оценки баз данных в автоматическом режиме и вывода результатов в формате JSON или CSV-файл. Это особенно полезно при оценке несколько баз данных или большой базы данных. 
@@ -133,6 +133,6 @@ Catalog=DatabaseName3;Integrated Security=true"***
 
 
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Загрузка помощник по миграции данных](https://www.microsoft.com/download/details.aspx?id=53595)

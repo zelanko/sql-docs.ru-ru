@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f926f312b1696b3fcc3433e6234dc0f44005b7cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1992b3fc6d6013859c1bdd46d119f633db46acfc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scrollable-cursors"></a>Прокручиваемые курсоры
 В современных приложениях на экране пользователь выполняет прокрутку назад и вперед по данным. Для таких приложений для возврата к ранее выбранной строки является проблемой. Один из вариантов — закрыть и снова открыть курсор и затем выборки строк, пока не достигнет курсор необходимые строки. Другой вариант — чтение результирующего набора, локальное кэширование и реализовать прокрутку в приложении. Обе возможности работы подходит только с небольшими результирующими наборами, а последний вероятность трудно реализовать. Лучшим решением является использование *Прокручиваемый курсор* которого можно Переход вперед и назад в результирующем наборе.  

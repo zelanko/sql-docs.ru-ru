@@ -3,7 +3,7 @@ title: "WillChangeRecordset и RecordsetChangeComplete события (ADO) | Д
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -26,11 +26,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a103d1710f01403e8e199fc308369b4a9dc82c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 188bdb13879e4229686fb725edbc190db9ea59b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset и RecordsetChangeComplete события (ADO)
 **WillChangeRecordset** событие вызывается перед ожидающая выполнения операция изменяет [записей](../../../ado/reference/ado-api/recordset-object-ado.md). **RecordsetChangeComplete** событие вызывается после **записей** изменилось.  
@@ -64,7 +64,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  Объект **записей** объекта. **Записей** для возникновения этого события.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Объект **WillChangeRecordset** или **RecordsetChangeComplete** событие может происходить из-за **записей** [Requery](../../../ado/reference/ado-api/requery-method.md) или [Открыть](../../../ado/reference/ado-api/open-method-ado-recordset.md) методы.  
   
  Если поставщик не поддерживает закладки, **RecordsetChange** уведомление о событии возникает каждый раз, новые строки извлекаются из поставщика. Зависит от частоты возникновения этого события **RecordsetCacheSize** свойство.  

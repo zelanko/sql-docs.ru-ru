@@ -3,7 +3,7 @@ title: "Оптимизация примера свойства (VC ++) | Док�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07c69f576fcd1c85bd293c01c7b7995f7b7e1e9f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b7ef91419c5891d4f49aacfb0c50712609aeec8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimize-property-example-vc"></a>Оптимизация примера свойства (VC ++)
 В этом примере демонстрируется [поле](../../../ado/reference/ado-api/field-object.md) динамический объект **оптимизировать** свойство. **Zip** поле **авторов** в таблицу **Pubs** базы данных не проиндексированы. Установка [оптимизировать](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) свойства **True** на **zip** поле авторизует ADO при построении индекса, повышает производительность [найти](../../../ado/reference/ado-api/find-method-ado.md)метод.  

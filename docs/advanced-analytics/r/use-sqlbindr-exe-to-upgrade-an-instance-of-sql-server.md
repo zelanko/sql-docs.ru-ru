@@ -2,11 +2,11 @@
 title: "Обновление компонентов машины обучения в экземпляре SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: ea0784bc94dd3d3f4b7d11d83e92235591385396
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: e83922e15c8bea5f26dcc5c1992acc0529daf18c
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="upgrade-machine-learning-components-in-a-sql-server-instance"></a>Обновление компонентов машины обучения в экземпляре SQL Server
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/09/2017
 
 | Версия SQL Server| Поддерживаемые обновления| Примечания|
 |-----|-----|------|
-| SQL Server 2016| Машинного обучения сервера 9.2.1| Требуется как минимум с пакетом обновления 1, а также CU3. Службы R должно быть установлено и включено.|
+| SQL Server 2016| Машинного обучения сервера 9.2.1| Требуется как минимум с пакетом обновления 1, а также CU3. Службы R должно быть установлено и включено.|
 | SQL Server 2017| Машинного обучения сервера 9.2.1| Службы обучения машины (в базе данных) должно быть установлено и включено. |
 
 ## <a name="bind-or-upgrade-an-instance"></a>Привязать или обновление экземпляра
@@ -189,7 +189,7 @@ ms.lasthandoff: 11/09/2017
 
 ### <a name="parameters"></a>Параметры
 
-|Название|Description|
+|Имя|Description|
 |------|------|
 |*list*| Выводит список идентификаторов всех экземпляров баз данных SQL на текущем компьютере.|
 |*bind*| Обновляет указанный экземпляр базы данных SQL до последней версии R Server и обеспечивает автоматическое получение экземпляром будущих обновлений для R Server.|

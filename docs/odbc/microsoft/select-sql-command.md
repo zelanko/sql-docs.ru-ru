@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f9b8b9b4b5b69d257dccafc2567ebb59eab5bba2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e7295a800b3cc84f6eb64f5dfa762573fe80b6b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select---sql-command"></a>ВЫБЕРИТЕ - команда SQL
 Извлекает данные из одной или нескольких таблиц.  
@@ -276,7 +276,7 @@ WHERE customer.cust_id NOT IN ;
   
  Результаты запроса отображаются неупорядоченных, если заказ не указан вместе с ORDER BY.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  SELECT является команду SQL, который встроен в компонент Visual FoxPro, как и любые другие команды Visual FoxPro. При использовании ВЫБЕРИТЕ, чтобы представлять запрос, Visual FoxPro интерпретирует запрос и получает указанные данные из таблиц. Можно создать запрос SELECT из в окне командной строки или программы Visual FoxPro (как и любые другие команды Visual FoxPro).  
   
 > [!NOTE]  

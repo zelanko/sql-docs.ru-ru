@@ -3,7 +3,7 @@ title: "Свойства ADO | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 92fd58042fec8d001f539074db2d76d2d8243f6b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f77f31c7dcb3a52e25b359d146669284d43b1dce
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-properties"></a>Свойства ADO
 |||  
@@ -53,12 +53,12 @@ ms.lasthandoff: 11/17/2017
 |[Источник данных](../../../ado/reference/ado-api/datasource-property-ado.md)|Указывает объект, содержащий данные для представления в виде **записей** объекта.|  
 |[DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md)|Указывает базу данных по умолчанию для **подключения** объекта.|  
 |[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)|Показывает объем данных **поле** объекта.|  
-|[Описание](../../../ado/reference/ado-api/description-property.md)|Описывает **ошибка** объекта.|  
+|[Description](../../../ado/reference/ado-api/description-property.md)|Описывает **ошибка** объекта.|  
 |[Диалект](../../../ado/reference/ado-api/dialect-property.md)|Указывает, синтаксис и общие правила, поставщик будет использовать для синтаксического анализа **CommandText** или **CommandStream** свойства.|  
 |[Направление](../../../ado/reference/ado-api/direction-property.md)|Указывает, является ли **параметр** представляет входным параметром, выходным параметром или оба, или если параметр имеет значение, возвращаемое хранимой процедуры.|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Указывает состояние редактирования текущей записи.|  
 |[ЭЛЕКТРИЧЕСКОЙ ПЕРЕГРУЗКИ](../../../ado/reference/ado-api/eos-property.md)|Указывает, является ли текущая позиция в конце потока.|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|Указывает фильтр для данных в **записей**.|  
+|[Фильтр](../../../ado/reference/ado-api/filter-property.md)|Указывает фильтр для данных в **записей**.|  
 |[HelpContext и файл справки](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)|Указывает файл справки и раздел, связанный с **ошибка** объекта.<br /><br /> **Идентификатор справки** возвращает идентификатор контекста, в виде **длинные** значение для раздела в файле справки.<br /><br /> **HelpFile** возвращает **строка** значение, результатом которого является полностью разрешенной путь к файлу справки.|  
 |[Index](../../../ado/reference/ado-api/index-property.md)|Указывает имя индекса в настоящее время действует для **записей** объекта.|  
 |[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)|Указывает уровень изоляции для **подключения** объекта.|  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |[Тип](../../../ado/reference/ado-api/type-property-ado.md)|Тип рабочей тип или данные **параметр**, **поле**, или **свойство** объекта.|  
 |[Тип (поток ADO)](../../../ado/reference/ado-api/type-property-ado-stream.md)|Указывает тип данных, содержащихся в **поток** (двоичный файл или текст).|  
 |[UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md)|Показывает текущее значение в базе данных для **поле** объекта.|  
-|[Значение](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **поле**, **параметр**, или **свойство** объекта.|  
+|[Value](../../../ado/reference/ado-api/value-property-ado.md)|Указывает значение, присваиваемое **поле**, **параметр**, или **свойство** объекта.|  
 |[Версия](../../../ado/reference/ado-api/version-property-ado.md)|Указывает номер версии ADO.|  
   
 ## <a name="see-also"></a>См. также:  

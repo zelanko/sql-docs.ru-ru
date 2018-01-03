@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 46b25100a54d5a98a9db06bb26be4a3e1a6871b9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bd0e507985de3840d38e15753036cfd3899ebed3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="descriptor-field-conformance"></a>Дескриптор поля соответствия
 Следующая таблица указывает уровень соответствия для каждого ODBC поле заголовка дескриптора, где это является правильно определенным.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_DESC_ALLOC_TYPE|Основные сведения|  
 |SQL_DESC_ARRAY_SIZE|Основные сведения|  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
  Следующая таблица указывает уровень соответствия каждого ODBC дескриптор записи поля, где это является правильно определенным.  
   
-|Функция|Уровень соответствия|  
+|Компонент|Уровень соответствия|  
 |--------------|-----------------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|Уровень 2|  
 |SQL_DESC_BASE_COLUMN_NAME|Основные сведения|  

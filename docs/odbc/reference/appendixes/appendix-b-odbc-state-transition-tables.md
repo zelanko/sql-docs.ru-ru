@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a191cb539aec61150f30d8c083dfba7dd2d2069
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2dabd364fb0a7415a4cf05035d06f5a1dd5838e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Приложение б. таблицы перехода состояний ODBC
 В таблицах в этом приложении показано, как функции ODBC вызывают переходы среды, подключения, инструкции и дескриптора состояний. Состояние среды, подключения, инструкции и дескриптора обычно указывает, когда можно вызывать функции, использующие соответствующий тип дескриптора (среды, соединения, оператор или дескриптор). Состояния среды, подключения, инструкции и дескриптора перекрываться примерно, как показано на следующем рисунке. Например точное совпадение подключение состояния C5 и C6 и инструкция подтверждает, что S1 через S12 является данных зависит от источника, с момента начала транзакции в различные моменты времени в разных источниках данных и зависит от состояния дескриптор D1i (неявно выделить дескриптор) на состоянии инструкции, с которой связан дескриптор при этом состояние D1e (явно выделить дескриптор) — независимо от состояния любого оператора. Описание каждого состояния см. в разделе [среда переходит](../../../odbc/reference/appendixes/environment-transitions.md), [переходы подключения](../../../odbc/reference/appendixes/connection-transitions.md), [переходы инструкции](../../../odbc/reference/appendixes/statement-transitions.md), и [переходы дескриптора ](../../../odbc/reference/appendixes/descriptor-transitions.md)далее в этом приложении.  

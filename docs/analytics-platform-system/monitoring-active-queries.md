@@ -3,10 +3,10 @@ title: "Мониторинг активных запросов (SQL Server PDW)"
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/13/2017
@@ -16,16 +16,16 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: bb73f790-0537-414b-8dc2-f1eb69b92362
 caps.latest.revision: "7"
-ms.openlocfilehash: b2975ef92cb3af808ea5698f1980af3f9d0996d1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 44f128124c8027bf4c37e34309d6c711006ac113
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="monitoring-active-queries"></a>Мониторинг активных запросов
 В этом разделе показано, как использовать консоль администрирования и системных представлений SQL Server PDW для наблюдения за активных запросов. В разделе [отслеживать устройства с помощью консоли администрирования](monitor-the-appliance-by-using-the-admin-console.md) и [системных представлений](tsql-system-views.md) сведения об этих средствах.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Независимо от метода, который используется для наблюдения за активных запросов, пользователь, должен обладать разрешениями, описанными в «Использование всех из консоли администрирования» в [GRANT, предоставление разрешений для использования консоли администрирования](grant-permissions.md#grant-permissions-to-use-the-admin-console).  
   
 ## <a name="PermsAdminConsole"></a>Монитор активных запросов  

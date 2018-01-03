@@ -2,11 +2,11 @@
 title: "Управление ресурсами для машинного обучения в SQL Server | Документы Microsoft"
 ms.custom: 
 ms.date: 11/16/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: e5f334edf065d691a78469c01bf2cd3352a71544
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 61cffc85e6a27ffe4c171da8849d84a19332f223
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>Управление ресурсами для машинного обучения в SQL Server
 
@@ -91,7 +91,7 @@ SQL Server поддерживает три типа пулов ресурсов 
 
 Таким образом, если на проблему ресурсов, необходимо устранить немедленно, или проблема безопасности, администраторы могут немедленно отключить любое выполнение внешнего скрипта с помощью [sp_configure &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) и задав свойство `external scripts enabled` FALSE или 0.
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [Управление решениями машинного обучения и их мониторинг](../../advanced-analytics/r/managing-and-monitoring-r-solutions.md)
 

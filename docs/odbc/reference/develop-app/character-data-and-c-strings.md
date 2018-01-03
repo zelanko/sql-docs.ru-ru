@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54f9d438571b1535d16f5fc3b333e9a9cede42eb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9ea6f6c65e1250a999d019e7cf8b81510b227831
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="character-data-and-c-strings"></a>Символьные данные и строки на языке C
 Входные параметры, которые ссылаются на данные переменной длины символов (например, имена столбцов, динамических параметров и значений атрибутов строки) имеют связанные длина параметра. Если приложение завершает работу строки с нулевой символ, как это обычно на языке C, он предоставляет в качестве аргумента, либо длина в байтах строки (не включая символ конца строки) или SQL_NTS (строка Null-Terminated). Длина неотрицательным аргументом фактическую длину связанной строки. Длина аргумента может быть 0, чтобы указать строку нулевой длины, отличный от значения NULL. Отрицательное значение SQL_NTS Указывает драйверу, что для определения длины строки путем размещения символа конечное значение null.  

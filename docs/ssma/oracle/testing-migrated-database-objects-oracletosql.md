@@ -1,7 +1,7 @@
 ---
 title: "Тестирование перенесенные объекты базы данных (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 4b5f343234e77639e0b10eb07bce8281da9010f4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b20c1f5d47388a92e92402faa9017dc6b042a1c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-migrated-database-objects-oracletosql"></a>Тестирование перенесенные объекты базы данных (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Помощник по миграции для тест-инженера Oracle (SSMA тестировщик) автоматически проверяет преобразования объекта базы данных и переноса данных, внесенных SSMA. После завершения всех шагов миграции SSMA используйте тест-инженер SSMA для проверки, преобразованные объекты работать так же, как и все данные были перемещены должным образом.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Внимание! Никогда не используйте тест-инженер SSMA в рабочих системах. Во время выполнения тест-инженер изменяются исходной схемы и данных. В то же время завершения восстановления исходного состояния может быть невозможно для некоторых типов протестированного кода.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Если вы хотите использовать SSMA тестировщик, установите пакет расширения SSMA Oracle с **установки базы данных тест-инженер** включения параметра.  
   
 Чтобы включить сравнение результирующих данных таблицы, задать **ROWID сформировать столбец** для параметра **Да** перед началом преобразования схемы. SSMA будет добавлен столбец ROWID ко всем таблицам во время выполнения **преобразование схемы** команды.  

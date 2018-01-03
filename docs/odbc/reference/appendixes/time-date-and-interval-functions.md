@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 64af89226e917b05c28f0c85500281fa84bc676c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49f765c78f6c0b861c56d1299fc90786b6c22b78
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="time-date-and-interval-functions"></a>Функции даты, времени и интервалов
 В следующей таблице перечислены функций даты и времени, которые включены в набор скалярные функции ODBC. Приложение может определить, какие функции даты и времени поддерживаются драйвером путем вызова **SQLGetInfo** с *типу информации* из SQL_TIMEDATE_FUNCTIONS.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
  CURRENT_DATE, CURRENT_TIME и CURRENT_TIMESTAMP timedate скалярные функции были добавлены в ODBC 3.0 в соответствии со стандартом SQL-92.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |**(CURRENT_DATE)** (ODBC 3.0)|Возвращает текущую дату.|  
 |**CURRENT_TIME [(** *точность_в_секундах* **)]** (ODBC 3.0)|Возвращает текущее время. *Точность_в_секундах* аргумент определяет секунды значения типа возвращаемого значения.|  

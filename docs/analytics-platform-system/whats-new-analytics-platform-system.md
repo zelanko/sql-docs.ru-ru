@@ -3,26 +3,26 @@ title: "Новые возможности Analytics Platform System — хран
 author: happynicolle
 ms.author: nicw;barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
 description: "В разделе новые возможности Microsoft® Analytics Platform System масштабирования на локальном устройстве, на котором размещена MPP SQL Server Parallel Data Warehouse."
 ms.date: 11/28/2016
 ms.topic: article
-ms.openlocfilehash: 3dc1a338ced5aa90ada112b97c4a6f13777da409
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eeeb41045527e72856edfb8bdb40becc462bde07
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="whats-new-in-analytics-platform-system-2016-a-scale-out-mpp-data-warehouse"></a>Новые возможности 2016 системы платформы аналитики, масштабируемого хранилища данных MPP
 В разделе новые возможности в Microsoft® Analytics Platform System (APS) 2016 последнее обновление устройства для масштабирования на локальном устройстве, на котором размещена MPP SQL Server Parallel Data Warehouse. 
 
-## <a name="sql-server-2016"></a>SQL Server 2016
+## <a name="sql-server-2016"></a>SQL Server 2016
 
 APS 2016 запускается на последний выпуск SQL Server 2016 и использует по умолчанию уровень совместимости 130.  SQL Server 2016 позволяет поддерживать некоторые новые функции, такие как вторичные индексы для кластеризованных индексов columnstore и Kerberos для PolyBase. 
 

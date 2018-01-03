@@ -3,7 +3,7 @@ title: "Append-метод (ADOX ключи) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: eead7a8702c927e13b11cb75f2a5a3881a2065fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 80d21a0614b9480d6e6e0caa2d0918fe0f608c10
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-keys"></a>Append-метод (ADOX ключи)
 Добавляет новый [ключ](../../../ado/reference/adox-api/key-object-adox.md) объект [ключей](../../../ado/reference/adox-api/keys-collection-adox.md) коллекции.  
@@ -43,18 +43,18 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  **Ключ** добавляемый объект или имя ключа для создания и добавления.  
   
  *KeyType*  
- Необязательно. Объект **длинные** значение, указывающее тип ключа. *Ключ* параметр соответствует параметру [тип](../../../ado/reference/adox-api/type-property-key-adox.md) свойство **ключ** объекта.  
+ Необязательный параметр. Объект **длинные** значение, указывающее тип ключа. *Ключ* параметр соответствует параметру [тип](../../../ado/reference/adox-api/type-property-key-adox.md) свойство **ключ** объекта.  
   
  *Столбец*  
- Необязательно. Объект **строка** значение, указывающее имя столбца для индексирования. *Столбцы* параметр соответствует значению [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
+ Необязательный параметр. Объект **строка** значение, указывающее имя столбца для индексирования. *Столбцы* параметр соответствует значению [имя](../../../ado/reference/adox-api/name-property-adox.md) свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
   
  *RelatedTable*  
- Необязательно. Объект **строка** значение, указывающее имя связанной таблицы. *RelatedTable* параметр соответствует значению **имя** свойство [таблицы](../../../ado/reference/adox-api/table-object-adox.md) объекта.  
+ Необязательный параметр. Объект **строка** значение, указывающее имя связанной таблицы. *RelatedTable* параметр соответствует значению **имя** свойство [таблицы](../../../ado/reference/adox-api/table-object-adox.md) объекта.  
   
  *RelatedColumn*  
- Необязательно. Объект **строка** значение, указывающее имя связанного столбца для внешнего ключа. *RelatedColumn* параметр соответствует значению **имя** свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
+ Необязательный параметр. Объект **строка** значение, указывающее имя связанного столбца для внешнего ключа. *RelatedColumn* параметр соответствует значению **имя** свойство [столбца](../../../ado/reference/adox-api/column-object-adox.md) объекта.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *Столбцы* параметр может принимать либо имя столбца или массива имен столбцов.  
   
 ## <a name="applies-to"></a>Объект применения  

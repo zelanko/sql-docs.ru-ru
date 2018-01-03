@@ -3,7 +3,7 @@ title: "Новые возможности графического пользо�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4cb2203520db72867d0aa292aa8d831d185554a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c65710ff7ff0a89a326a4c7d5594d23fd660b8cb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Новые возможности графического пользовательского интерфейса в SSMA для СУБД Sybase (SybaseToSQL)
 В этой главе Описание новых возможностей пользовательского интерфейса SSMA.  

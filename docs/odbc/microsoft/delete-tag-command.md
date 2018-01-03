@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e31cf41163f512b5450e5452f8e0adff5c0a604
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cf31107e21cee13d51046e43acc5c557cf20b9ee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delete-tag-command"></a>Удаление ТЕГА команды
 Удаляет тег или теги из файла составной индекс (.cdx).  
@@ -44,7 +44,7 @@ DELETE TAG ALL [OF CDXFileName]
  ВСЕ [OF *CDXFileName*]  
  Удаляет каждый тег из файла составной индекс. Если текущая таблица содержит файл структурных составной индекс, из файла индекса удаляются все теги, файл индекса удаляется с диска и флаг в заголовке таблицы, что указывает на наличие структурных комплексной индексный файл удален. Использование в рамках OF *CDXFileName* для удаления всех тегов из файла открыть составной индекс, отличного от файла структурных составной индекс.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Составные файлы индекса, созданных с помощью ИНДЕКСА, содержат теги, соответствующий записи индекса. УДАЛИТЬ ТЕГ используется для удаления файлов открыть составной индекс тег или теги. Можно удалить только теги из составного индекса файлы, открытые в текущей рабочей области. Если удалить все теги из файла составной индекс, файл удаляется с диска.  
   
  Visual FoxPro находит первый тег в файле структурных составной индекс (если он открыт). Если тег не в файле структурных составной индекс, Visual FoxPro ищет тег в других файлах открыть составной индекс.  

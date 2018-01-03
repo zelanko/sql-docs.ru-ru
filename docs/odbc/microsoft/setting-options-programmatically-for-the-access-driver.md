@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,18 +22,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed08d24f96b66b69bbff409cbc2c9e203526041b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81ec270afc5c0e845bea829a1851b00bb38fa075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>Настройка параметров программным образом с целью драйвер доступа
 |Параметр|Description|Метод|  
 |------------|-----------------|------------|  
 |Размер буфера|Размер внутреннего буфера, в килобайтах, используемый для передачи данных на диск и обратно в Microsoft Access. Размер буфера по умолчанию — 2048 КБ (отображается как 2048). Можно ввести любое целочисленное значение, кратным 256.|Чтобы задать этот параметр динамически, используйте ключевое слово MAXBUFFERSIZE при обращении к [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Имя источника данных|Имя, идентифицирующее источник данных, например Payroll или службу.|Чтобы задать этот параметр динамически, используйте **DSN** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
-|База данных|Можно настроить источник данных Microsoft Access, без выбора или создания базы данных. Если база данных не предоставляется при установке, пользователю будет предложено выбрать файл базы данных при подключении к источнику данных.|Чтобы задать этот параметр динамически, используйте **DBQ** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
+|база данных|Можно настроить источник данных Microsoft Access, без выбора или создания базы данных. Если база данных не предоставляется при установке, пользователю будет предложено выбрать файл базы данных при подключении к источнику данных.|Чтобы задать этот параметр динамически, используйте **DBQ** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Description|Необязательное описание данных в источнике данных; Например «привлекает даты, журнал зарплат и текущий Обзор всех сотрудников.»|Чтобы задать этот параметр динамически, используйте **описание** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |Монопольно|Если **монопольного** установлен, базы данных будут открыты в монопольном режиме и может осуществляться одновременно только одним пользователем. Повышение производительности достигается при работе в режиме монопольного доступа.|Чтобы задать этот параметр динамически, используйте **МОНОПОЛЬНОГО** ключевое слово в вызове [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  
 |ImplicitCommitSync|Определяет, как изменения, внесенные вне транзакции записываются в базу данных. Это значение изначально установлено значение «Да», это означает, что драйвер Microsoft Access ждет фиксаций в внутренней/неявной транзакции должны завершаться.|Этот параметр включен в **Дополнительные параметры** диалоговое окно драйвером Microsoft Access.|  

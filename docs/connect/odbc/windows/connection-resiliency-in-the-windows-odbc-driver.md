@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 39532ba3a94d99ef4df7479d851348b6b179328a
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 6dda329540bd228920e88a12c69a4a6f2b8a8327
+ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/16/2017
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Устойчивость подключения в драйвере ODBC в Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -61,9 +61,9 @@ ms.lasthandoff: 11/18/2017
   
  Если приложение устанавливает соединение с SQL_DRIVER_COMPLETE_REQUIRED, а затем пытается выполнить инструкцию через разорванное соединение, драйвер ODBC не отображает это диалоговое окно повторно. Кроме того, во время восстановления наблюдается следующее:  
   
--   Во время восстановления любой вызов **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, должны возвращать **SQL_CD_TRUE**.  
+-   Во время восстановления любой вызов **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, должны возвращать **SQL_CD_FALSE**.  
   
--   Если в случае сбоя восстановления любой вызов **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, должны возвращать **SQL_CD_FALSE**.  
+-   Если в случае сбоя восстановления любой вызов **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)**, должны возвращать **SQL_CD_TRUE**.  
   
  Любая функция, которая выполняет команду на сервере, возвращает следующие коды состояния:  
   

@@ -3,7 +3,7 @@ title: "Метод Save | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6bd594fb077c3a8b6eca9e3496c857dbbc0249c7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb9651c4bf6de24fd3cdf7c7d42e6c0c24365fda
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="save-method"></a>Save-метод
 Сохраняет [записей](../../../ado/reference/ado-api/recordset-object-ado.md) в файле или [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -40,12 +40,12 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Параметры  
  *Назначение*  
- Необязательно. A **Variant** , представляющее полный путь имя файла, где **набора записей** должен быть сохранен, или ссылка на **поток** объекта.  
+ Необязательный параметр. A **Variant** , представляющее полный путь имя файла, где **набора записей** должен быть сохранен, или ссылка на **поток** объекта.  
   
  *PersistFormat*  
- Необязательно. Объект [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) значение, указывающее формат, в котором **записей** должен быть сохранен (XML или ADTG). Значение по умолчанию — **adPersistADTG**.  
+ Необязательный параметр. Объект [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) значение, указывающее формат, в котором **записей** должен быть сохранен (XML или ADTG). Значение по умолчанию — **adPersistADTG**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [Метод Save](../../../ado/reference/ado-api/save-method.md) метод можно вызывать только для открытого **записей**. Используйте [метода Open (набора записей ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) способ восстановления более поздней версии **записей** из *назначения*.  
   
  Если [свойство фильтра](../../../ado/reference/ado-api/filter-property.md) свойство действует для **записей**, то сохраняются только те строки, которые доступны в фильтре. Если **набора записей** имеет иерархическую структуру, затем текущий дочерний элемент **набора записей** и его дочерние элементы сохраняются, включая родительскую **набора записей**. Если метод Save дочернего **записей** является именем, дочерним элементом, а также все его дочерние элементы сохраняются, но не является родительским.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0bf9d6ecc7971d8047dff4a808e1fe84a6261b71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fa5f1fb5c50911718adf3aa509dd99fb6e30673c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-deprecated-functions"></a>Сопоставление устаревания функций.
 В этом разделе описывается, как устаревшие функции ODBC 3 для сопоставления*.x* диспетчера драйверов для обеспечения обратной совместимости ODBC 3*.x* драйверы, которые используются с ODBC 2. *x* приложений. Диспетчер драйверов выполняет это сопоставление, независимо от версии приложения. Так как каждый из ODBC 2. *x* функции в следующем списке сопоставляется с соответствующей ODBC 3*.x* работать при вызове в ODBC 3*.x* драйвера ODBC 3*.x*драйвер не должен реализовывать ODBC 2. *x* функции.  

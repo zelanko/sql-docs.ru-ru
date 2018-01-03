@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e72a72d2450f5095f120c0fbacf8559f2897011
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 957d43d4248e78e677f2cbee2e201934bb9778b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="translation-dll-function-summary"></a>Сводка по функциям DLL перевода
 Ниже перечислены функции преобразования DLL. Дополнительные сведения о синтаксисе и семантику для каждой функции см. в разделе [ссылка на функцию DLL перевода](../../../odbc/reference/syntax/translation-dll-api-reference.md).  

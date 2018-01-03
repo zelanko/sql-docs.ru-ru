@@ -3,7 +3,7 @@ title: "Запрос метод (RDS) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 32233e74eece2de258223599a682c8fb27d46fe6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ceedab6dd52492c5660165b3b1377def3a51f253
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-method-rds"></a>Метод запроса (RDS)
 Использует строку допустимый SQL-запроса для возврата [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -51,7 +51,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *Запрос*  
  Объект **строка** , содержащий SQL-запроса.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Запрос должен использовать разновидность языка SQL на сервере базы данных. Состояние результата возвращается в том случае, если возникает ошибка с запросом, который был выполнен. **Запроса** метод не выполняет проверку на любой синтаксиса **запроса** строки.  
   
 ## <a name="applies-to"></a>Объект применения  

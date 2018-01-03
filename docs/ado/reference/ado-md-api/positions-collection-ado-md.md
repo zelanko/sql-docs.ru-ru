@@ -3,7 +3,7 @@ title: "Помещает коллекции (ADO MD) | Документы Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,16 +23,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e812608f75e885ce933c0aaf252b50e1c9735dcc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0829260afe4da88c0cb974fb910de36510cb5945
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="positions-collection-ado-md"></a>Коллекция позиций (ADO MD)
 Содержит [позиции](../../../ado/reference/ado-md-api/position-object-ado-md.md) объекты, которые определяют точку на оси.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Позиций** — это обычная коллекция ADO. С помощью свойств и методов в коллекции можно сделать следующее:  
   
 -   Получить число объектов в коллекции с [число](../../../ado/reference/ado-api/count-property-ado.md) свойство.  

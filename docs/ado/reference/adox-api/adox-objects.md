@@ -3,7 +3,7 @@ title: "Объекты ADOX | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1e27df1ef9208016e0772aadf98514e8fa87df4d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ac969f567ce38b48d2c82218b09845e8247fea8e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-objects"></a>Объекты ADOX
 ## <a name="adox-object-summary"></a>Сводная информация об объекте ADOX  
   
-|Объект|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |[Каталог](../../../ado/reference/adox-api/catalog-object-adox.md)|Содержит коллекции, которые описывают каталог схемы источника данных.|  
 |[Столбец](../../../ado/reference/adox-api/column-object-adox.md)|Представляет столбец из таблицы, индекса или ключа.|  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |[Процедура](../../../ado/reference/adox-api/procedure-object-adox.md)|Представляет хранимую процедуру.|  
 |[Таблица](../../../ado/reference/adox-api/table-object-adox.md)|Представляет таблицу базы данных, включая столбцы, индексы и ключи.|  
 |[Пользователь](../../../ado/reference/adox-api/user-object-adox.md)|Представляет учетную запись пользователя, имеет разрешения на доступ в защищенной базы данных.|  
-|[Просмотр](../../../ado/reference/adox-api/view-object-adox.md)|Представляет отфильтрованного набора записей или виртуальную таблицу.|  
+|[Вид](../../../ado/reference/adox-api/view-object-adox.md)|Представляет отфильтрованного набора записей или виртуальную таблицу.|  
   
  Связи между этими объектами проиллюстрированы в [объектная модель ADOX](../../../ado/reference/adox-api/adox-object-model.md).  
   

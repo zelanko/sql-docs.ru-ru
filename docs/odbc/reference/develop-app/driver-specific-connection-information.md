@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e027eb6b5c5afdf361854892a22ad5dd69a9d646
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3352a0a31e6bb48be84d72a7da84eb3d7c6100c9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="driver-specific-connection-information"></a>Сведения о соединении драйвера
 **SQLConnect** предполагается, что имя источника данных, идентификатор пользователя и пароль достаточны для подключения к источнику данных и что все прочие сведения о соединении могут храниться в системе. Это часто не так. Например драйвер требуются идентификатор пользователя и пароль для входа на сервер, другой идентификатор пользователя и пароль для входа в СУБД. Поскольку **SQLConnect** принимает идентификатор одного пользователя и пароль, это означает, что идентификатор пользователя и пароль должны храниться с источника данных в системе если **SQLConnect** будет использоваться. Это потенциальные нарушения безопасности, следует избегать, если он зашифрован.  

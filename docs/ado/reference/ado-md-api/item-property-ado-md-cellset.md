@@ -3,7 +3,7 @@ title: "Свойство (ячеек ADO MD) элемента | Документ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34b0d4a5f2104d625091a0b39f1b009b933bedbe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36b85e56dbe958739b55f9446c368d01d8b436f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="item-property-ado-md-cellset"></a>Свойство Item (ячеек ADO MD)
 Возвращает ячейку из [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) координат.  
@@ -49,7 +49,7 @@ Cell = Cellset.Item ( Positions)
   
 -   Порядковый номер  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **элемент** возвращаемое свойство [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) объекта в [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) объекта. Если **элемент** свойства не удается найти ячейки, соответствующие *позиций* аргументов, возникает ошибка.  
   
  **Элемент** свойство является свойством по умолчанию для **ячеек** объекта. Следующие синтаксические формы являются взаимозаменяемыми:  
@@ -59,7 +59,7 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  *Позиций* аргумент указывает, какая ячейка для возврата. Можно указать ячейки по порядковому номеру или по позиции по каждой оси. При указании ячейки по позиции по каждой оси, можно задать числовое значение позиции или имена членов для каждого положения.  
   
  Порядковый номер является число, которое однозначно определяет одну ячейку в пределах **ячеек**. По существу, ячейки нумеруются в **ячеек** как если бы **ячеек** были *p*-мерный массив, где *p* — число осей. Адресация ячеек осуществляется по строкам. Ниже приведена формула для вычисления порядкового номера ячейки:  

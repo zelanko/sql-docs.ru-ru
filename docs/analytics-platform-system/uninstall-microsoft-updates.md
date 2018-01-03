@@ -3,10 +3,10 @@ title: "Удаление обновлений (система платформы
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.technology: mpp-data-warehouse
 ms.custom: 
 ms.date: 01/05/2017
@@ -16,18 +16,18 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: df61570a-210d-4154-822f-98acd721f075
 caps.latest.revision: "19"
-ms.openlocfilehash: c801918cbac5d0762384a0cd3adcca9ddf8f346a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 52bd212a753f4bb69c79d8b8e274664d2100cbee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uninstall-microsoft-updates"></a>Удаление обновлений
 В этом разделе описывается удаление ранее установленного обновления Майкрософт на устройстве, Analytics Platform System.  
   
 ## <a name="before-you-begin"></a>Перед началом  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
 Для выполнения этих действий, вам потребуется:  
   
 -   Система платформы аналитики имя входа с разрешениями для доступа к консоли администрирования для мониторинга устройства.  

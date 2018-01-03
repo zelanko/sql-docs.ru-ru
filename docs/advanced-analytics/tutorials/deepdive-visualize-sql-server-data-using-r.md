@@ -1,44 +1,49 @@
 ---
-title: "Визуализация данных SQL Server с помощью языка R (глубокое погружение в обработку и анализ данных) | Документация Майкрософт"
-ms.custom: SQL2016_New_Updated
-ms.date: 05/18/2017
-ms.prod: sql-non-specified
+title: " Визуализация данных SQL Server с помощью R (SQL и R глубокое погружение) | Документы Microsoft"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 10def0b3-9b09-4df9-b8aa-69516f7d7659
 caps.latest.revision: "14"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: fa42e69f1e376dc528b3385ca3c4be38fea4710b
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 77321589a87230535502cc37a75bf09722abb66d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="visualize-sql-server-data-using-r"></a>Визуализация данных SQL Server с помощью языка R
+#  <a name="visualize-sql-server-data-using-r-sql-and-r-deep-dive"></a>Визуализация данных SQL Server с помощью R (SQL и R глубокое погружение)
 
-Расширенные пакеты в [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] включают несколько функций, которые оптимизированы для масштабируемости и параллельной обработки. Обычно эти функции начинаются с префикса *rx* или *Rx*.
+В этой статье является частью учебника по глубокое погружение обработки и анализа данных, о том, как использовать [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-В этом пошаговом руководстве функция **rxHistogram** будет использоваться для просмотра распределения значений в столбце _creditLine_ по полу.
+Расширенные пакеты в [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] включают несколько функций, которые оптимизированы для масштабируемости и параллельной обработки. Обычно эти функции начинаются с префикса **rx** или **Rx**.
+
+В этом пошаговом руководстве используется **rxHistogram** функции, чтобы просмотреть распределение значений в _creditLine_ столбца по половому признаку.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Визуализация данных с помощью rxHistogram
 
-1. Используйте следующий код R для вызова функции rxHistogram и передайте формулу и источник данных. Сначала эту операцию можно выполнить локально, чтобы оценить результаты и продолжительность.
+1. Используйте следующий код R, чтобы вызвать функцию [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram) и передать формулу и источник данных. Сначала эту операцию можно выполнить локально, чтобы оценить результаты и продолжительность.
   
     ```R
     rxHistogram(~creditLine|gender, data = sqlFraudDS,  histType = "Percent")
     ```
  
-    На внутреннем уровне rxHistogram вызывает функцию rxCube, который включен в **RevoScaleR** пакета. Функция rxCube выводит один список (или кадра данных) содержит один столбец для каждой переменной, указанным в формуле, плюс количество столбец.
+    Сама по себе функция **rxHistogram** вызывает функцию [rxCube](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxcube) , которая включена в пакет **RevoScaleR** . **rxCube** выводит один список (или кадра данных) содержит один столбец для каждой переменной, указанным в формуле, плюс количество столбец.
     
-2. Теперь задайте для контекста вычислений удаленный компьютер SQL Server и запустите rxHistogram.
+2. Теперь, задайте для контекста вычислений удаленный компьютер SQL Server и запустите **rxHistogram** еще раз.
   
     ```R
     rxSetComputeContext(sqlCompute)
@@ -48,29 +53,27 @@ ms.lasthandoff: 12/01/2017
    
 ![Результаты в виде гистограммы](media/rsql-sue-histogramresults.jpg "Результаты в виде гистограммы")
 
-4. Можно также вызвать функцию rxCube и передать результаты построения функцию R.  Например, в следующем примере rxCube для вычисления среднего значения *fraudRisk* для каждой комбинации *numTrans* и *numIntlTrans*:
+4. Можно также вызвать **rxCube** функцией и передавать результаты для отображения на диаграмме функции R.  Например, в следующем примере функция **rxCube** используется для вычисления среднего значения *fraudRisk* для каждого сочетания значений *numTrans* и *numIntlTrans*:
   
     ```R
     cube1 <- rxCube(fraudRisk~F(numTrans):F(numIntlTrans),  data = sqlFraudDS)
     ```
   
-    Чтобы указать группы, используемые для вычисления средних значений по группам, используйте нотацию `F()` . В этом примере `F(numTrans):F(numIntlTrans)` указывает на то, что целочисленные значения переменных _numTrans_ и _numIntlTrans_ должны обрабатываться как категориальные переменные (каждое целочисленное значение имеет свой уровень).
+    Чтобы указать группы, используемые для вычисления средних значений по группам, используйте нотацию `F()` . В этом примере `F(numTrans):F(numIntlTrans)` указывает, что целых чисел в переменные `_numTrans` и `numIntlTrans` должны рассматриваться как категориальные переменные уровня для каждого целочисленное значение.
   
-    Так как нижний и верхний уровни уже были добавлены в источник данных *sqlFraudDS* (параметром *colInfo* ), уровни будут автоматически использоваться в гистограмме.
+    Поскольку низкий и высокий уровни уже было добавлено к источнику данных `sqlFraudDS` (с помощью `colInfo` параметра), уровни, автоматически используются в гистограмме.
   
-5. Возвращаемое значение rxCube — по умолчанию *rxCube объекта*, который представляет перекрестные таблицы. Однако при помощи функции **rxResultsDF** можно преобразовать результаты в кадр данных, который можно легко использовать в одной из стандартных функций формирования диаграмм языка R.
+5. Значение по умолчанию возвращает значение **rxCube** — *rxCube объекта*, представляющий перекрестные таблицы. Однако при помощи функции [rxResultsDF](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxresultsdf) можно преобразовать результаты в кадр данных, который можно легко использовать в одной из стандартных функций формирования диаграмм языка R.
   
     ```R
     cubePlot <- rxResultsDF(cube1)
     ```
   
-    > [!TIP]
-    > 
-    > Обратите внимание, что функция rxCube включает необязательный аргумент, *returnDataFrame* = TRUE, что можно использовать для преобразования результатов в кадр данных напрямую. Например:
-    >   
-    > `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
-    >   
-    > Тем не менее выходные данные rxResultsDF гораздо проще и сохраняет имена столбцов источника.
+    **RxCube** функция включает необязательный аргумент, *returnDataFrame* = **TRUE**, что можно использовать, чтобы преобразовать результаты в кадр данных напрямую. Пример:
+    
+    `print(rxCube(fraudRisk~F(numTrans):F(numIntlTrans), data = sqlFraudDS, returnDataFrame = TRUE))`
+       
+    Однако выходные данные функции **rxResultsDF** более понятны, и в них сохраняются имена исходных столбцов.
   
 6. Наконец, выполните следующий код для создания тепловой карты с помощью `levelplot` функции из **решетки** пакет, который входит в состав все R распределения.
   
@@ -84,14 +87,12 @@ ms.lasthandoff: 12/01/2017
   
 Даже выполнив такой быстрый анализ, можно заметить, что риск мошенничества растет с увеличением как числа обычных транзакций, так и числа международных транзакций.
 
-Дополнительные сведения о функции rxCube и перекрестным в целом см. в разделе [сводок по данным](https://msdn.microsoft.com/microsoft-r/scaler-user-guide-data-summaries).
+Дополнительные сведения о **rxCube** функции и перекрестным см в разделе [сводок по данным с помощью RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
 
 ## <a name="next-step"></a>Следующий шаг
 
-[Создание моделей](../../advanced-analytics/tutorials/deepdive-create-models.md)
+[Создание моделей R с помощью данных SQL Server](../../advanced-analytics/tutorials/deepdive-create-models.md)
 
 ## <a name="previous-step"></a>Предыдущий шаг
 
-[Занятие 2. Создание и выполнение скриптов R](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)
-
-
+[Создание и выполнение скриптов R](../../advanced-analytics/tutorials/deepdive-create-and-run-r-scripts.md)

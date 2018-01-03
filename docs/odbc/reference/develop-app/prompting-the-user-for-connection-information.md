@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -27,11 +27,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dc8ca40adb6a70b56d9b91842fa1fd560fc50f8a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f72a196447399b6df74de8d46fa1eee572910fac
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Запрашивая разрешения пользователя для сведений о подключении
 Если приложение использует **SQLConnect** и его необходимо запрашивать у пользователя сведения о соединении, например имя пользователя и пароль, он должен сделать это сам. Это позволяет приложению контролировать его «вид», он может вынудить приложение содержит код для конкретного драйвера. Это происходит, когда приложение должно запрашивать у пользователя сведения о соединении с драйвером. Это представляет невозможно ситуации для универсальных приложений, которые предназначены для работы с всех драйверов, включая драйверы, которые не существуют, если приложение создано.  

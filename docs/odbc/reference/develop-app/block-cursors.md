@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c8d6b3eb0a520d4c5c83e043f57076d164503f6c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cb5e136741491e644a223eb4f9294179893121d2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="block-cursors"></a>Блочные курсоры
 Многие приложения тратят значительное количество времени, перенос данных по сети. Часть этого времени, затраченному фактического переноса данных по сети, и его затрачивается на сетевых издержек, такие как вызов драйвером для запроса строки данных. Последнее время может уменьшиться, если приложение обеспечат рациональное использование *блока* или *fat,* *курсоров* возвращающие более чем одной строке за раз.  

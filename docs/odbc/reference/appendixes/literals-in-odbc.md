@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4bb79a21b65c2284f373bd224191f4a7c1264da3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: bbdc4f11714d13ed9ddcede30c1b6c6feda69550
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="literals-in-odbc"></a>Литералы в ODBC
 Для интервала и числовые литералы в ODBC используется синтаксис, в следующих разделах. Этот синтаксис предоставляется здесь как вспомогательное средство для средств записи драйвера при выполнении преобразования из строкового типа к типу numeric или интервал или из типа numeric или интервал в строковый тип символа. Дополнительные сведения см. в разделе [интервал литералы](../../../odbc/reference/appendixes/interval-literals.md) и [числовые литералы](../../../odbc/reference/appendixes/numeric-literals.md) в типах данных приложение D:.  

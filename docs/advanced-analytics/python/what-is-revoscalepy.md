@@ -2,20 +2,22 @@
 title: "Знакомство с revoscalepy | Документы Microsoft"
 ms.custom: 
 ms.date: 10/05/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: python
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: ad525f173ad6082f587324b41af768816077e371
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3863cb3ec0c50de9d5189927b01cba3f7f4277df
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="introducing-revoscalepy"></a>Знакомство с приложением revoscalepy
 
@@ -79,7 +81,7 @@ SQL Server и Python используют разные типы данных в 
 
 Следующие алгоритмы машинного обучения и Сводка функций из RevoScaleR, включаются в SQL Server 2017 г., начиная с CTP-версии 2.0.
 
-| Функция| Description|Примечания|
+| Компонент| Description|Примечания|
 | ------ | ------ |------ |
 |`rx_btrees` | Вписать вероятностного градиентного повышенные деревья принятия решений|`rx_btrees_ex`в CTP 2.0.|
 |`rx_dforest` | Вписать классификации и регрессии леса принятия решений|`rx_dforest_ex`в CTP 2.0.|
@@ -91,7 +93,7 @@ SQL Server и Python используют разные типы данных в 
 
 Версия Python также предоставляются новые алгоритмы машинного обучения [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
-| Функция| Description|
+| Компонент| Description|
 | ------ | ------ |
 |`rx_fast_forest` |Создание модели леса принятия решений|
 |`rx_fast_linear` | Линейной регрессии с помощью вероятностного Восхождение двух координат|

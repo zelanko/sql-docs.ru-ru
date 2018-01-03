@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3af1222c7404a5b05246026edbbc37149780de8c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6cbe554b72bf971e6b589b936cd6901ef5fa59a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="deferred-buffers"></a>Отложенное буферов
 Объект *отложенное буфера* — один, значение которого используется в некоторый момент *после* указывается в вызове функции. Например **SQLBindParameter** используется для связи, или *привязать,* буфера данных параметра в инструкции SQL. Приложение указывает номер параметра и передает адрес, длина в байтах и тип буфера. Драйвер сохраняет эти сведения, но не проверяет содержимое буфера. Позже когда приложение выполняет инструкцию, драйвер возвращает сведения и использует его для получения данных параметра и отправлять их в источник данных. Таким образом откладывается ввода данных в буфере. Из-за отложенного буферы указаны в одной функции и использовать в другом, это приложению программирования ошибок освободить отложенное буфера, если драйвер еще ожидает, что он существует; Дополнительные сведения см. в разделе [распределение и освобождение буферы](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md)далее в этом разделе.  

@@ -2,9 +2,11 @@
 title: "Мониторинг служб R с помощью настраиваемых отчетов в Management Studio | Документация Майкрософт"
 ms.custom: 
 ms.date: 10/09/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -14,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 370b261206515081a4c31b834597f58ceb977d29
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 51766319de3e29c45ef9c25148ac4750b8964a53
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Наблюдение за службами обучения на компьютере с помощью пользовательских отчетов в среде Management Studio
 
@@ -113,7 +115,7 @@ ms.lasthandoff: 12/01/2017
 
   Используйте этот отчет для просмотра потребление ресурсов ЦП, памяти и ввода-вывода при выполнении внешних скриптов. Кроме того, можно просмотреть настройки памяти для внешних пулов ресурсов.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Мониторинг служб R](../../advanced-analytics/r-services/monitoring-r-services.md)
 

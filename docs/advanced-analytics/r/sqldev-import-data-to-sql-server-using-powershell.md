@@ -2,9 +2,11 @@
 title: "Занятие 2: Импорт данных в SQL Server с помощью PowerShell | Документы Microsoft"
 ms.custom: 
 ms.date: 07/26/2017
-ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: r
 ms.technology: r-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -18,11 +20,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c62ca99196267262fbeee9c44136a8f8a015ecaa
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 2f88b31305c9c648192d48d071972a787903136d
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="lesson-2-import-data-to-sql-server-using-powershell"></a>Занятие 2: Импорт данных в SQL Server с помощью PowerShell
 
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/01/2017
   
     - имя пользователя и пароль учетной записи в экземпляре; Учетная запись должна иметь разрешения на создание баз данных, создание таблиц и хранимых процедур и передавать данные в таблицах. Если не указано имя пользователя и пароль для входа в SQL Server используется удостоверения Windows.
   
-    - путь к скачанному файлу с образцом данных и его имя. Например:
+    - путь к скачанному файлу с образцом данных и его имя. Пример:
   
         `C:\tempRSQL\nyctaxi1pct.csv`
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/01/2017
   
     В последней части этого пошагового руководства вы создадите ряд дополнительных хранимых процедур.
   
-    |**Имя файла скрипта SQL**|**Функция**|
+    |**Имя файла скрипта SQL**|**Компонент**|
     |------|------|
     |PlotHistogram.sql|Создает хранимую процедуру для изучения данных. Эта хранимая процедура вызывает функцию R для построения гистограммы на основе переменной, а затем возвращает диаграмму в виде двоичного объекта.|
     |PlotInOutputFiles.sql|Создает хранимую процедуру для изучения данных. Эта хранимая процедура создает график с помощью функции R, а затем сохраняет результат в виде локального файла PDF.|

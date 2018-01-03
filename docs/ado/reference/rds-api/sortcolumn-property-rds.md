@@ -1,12 +1,13 @@
 ---
 title: "Свойство SortColumn (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.topic: article
 apitype: COM
 helpviewer_keywords: SortColumn property [RDS]
@@ -16,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d8cdd4d854a4328613ab0fd98e8e107e207f2e12
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 3103fcf5a0ed7df6853c1d8ad2472c0c68ce9260
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="sortcolumn-property-rds"></a>Свойство SortColumn (RDS)
 Показывает, какой столбец для сортировки.  
@@ -42,7 +43,7 @@ DataControl.SortColumn = String
  *Строковые значения*  
  Объект **строка** значение, представляющее имя или псевдоним столбца, по которому выполняется сортировка записей.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **SortColumn**, [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), и [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md)свойства предоставляют сортировки и фильтрации функциональность на стороне клиента кэша. Функциональные возможности сортировки упорядочивает записи по значения из одного столбца. Функцию фильтра отображает подмножество записей на основе критериев поиска, при полной [записей](../../../ado/reference/ado-api/recordset-object-ado.md) сохраняется в кэше. [Сброс](../../../ado/reference/rds-api/reset-method-rds.md) метод будет выполнять критерии и заменить текущую **записей** с обновляемым **записей**.  
   
  Для сортировки **записей**, необходимо сначала сохранить ожидающие изменения. Если вы используете **RDS. DataControl**, можно использовать [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) метод. Например если ваш **RDS. DataControl** — с именем ADC1, код будет `ADC1.SubmitChanges`. При использовании ADO **записей**, можно использовать его [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) метод. С помощью **UpdateBatch** является рекомендуемым методом **записей** объекты, созданные с помощью [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) метод. Например, код может быть `myRS.UpdateBatch` или `ADC1.Recordset.UpdateBatch`.  

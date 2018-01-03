@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1bb5222837dab705701e4a137c00f3b10867ae2a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4cac84febc2f1dc2afe11cf118237ad4ed4a65a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="decimal-digits"></a>Десятичные цифры
 *Десятичные цифры* десятичных и числовых данных типов определяется как максимальное количество цифр справа от десятичной запятой или масштаб данных. Для приблизительных с плавающей запятой числа столбцов или параметров масштаб не определен, так как количество цифр справа от десятичной запятой не Фиксировано. Для данных даты-времени или интервала, содержащего компонент секунд десятичные цифры определяется как количество цифр справа от десятичной запятой в секунды в значении данных.  

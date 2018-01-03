@@ -3,10 +3,10 @@ title: "Настройка сетевых адаптеров InfiniBand Analytic
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.prod: sql-non-specified
+ms.prod: analytics-platform-system
 ms.prod_service: mpp-data-warehouse
 ms.service: 
-ms.component: analytics-platform-system
+ms.component: 
 ms.suite: sql
 ms.custom: 
 ms.technology: mpp-data-warehouse
@@ -15,11 +15,11 @@ ms.date: 01/05/2017
 ms.topic: article
 ms.assetid: 61f3c51a-4411-4fe8-8b03-c8e1ba279646
 caps.latest.revision: "15"
-ms.openlocfilehash: 007e595f52ab891438c862afa6d94d68644b091f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 052dfcb32de7fb84acc0ce97c55775944a1d0dc1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Настройка сетевых адаптеров InfiniBand для система платформы аналитики
 Описываются способы настройки сетевых адаптеров InfiniBand на сервере не является специализированным клиента для подключения к узлу на SQL Server Parallel данных хранилища (PDW). Используйте эти инструкции для базовых соединений и для обеспечения высокой доступности, чтобы загрузка, резервного копирования и другие процессы будут автоматически подключаться к сети InfiniBand active.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 Требуется учетная запись Windows на сервере клиента, который имеет разрешение на настройку сетевых адаптеров.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
 Эти инструкции предполагают клиент-сервер уже является racked и подключить кабели сети InfiniBand устройства. Racking и кабелей инструкции см. в разделе [приобретать и настраивать сервер загрузки](acquire-and-configure-loading-server.md).  
   
 ### <a name="general-remarks"></a>Общие замечания  

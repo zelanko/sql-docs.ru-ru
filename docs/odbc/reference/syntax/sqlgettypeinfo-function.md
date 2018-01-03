@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ab63b576841aef6dec553ecc0c07ccec010319
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508b89f5ff60b5cf64a03d167bf1ad4476edb734
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlgettypeinfo-function"></a>Функция SQLGetTypeInfo
 **Соответствия**  
@@ -113,7 +113,7 @@ SQLRETURN SQLGetTypeInfo(
 > [!NOTE]  
 >  **SQLGetTypeInfo** не может возвратить все типы данных. Например драйвер не может возвратить определяемым пользователем типам данных. Приложения могут использовать любой допустимый тип данных, независимо от того, он возвращается в виде **SQLGetTypeInfo**. Типы данных, возвращенных **SQLGetTypeInfo** поддерживаемые источника данных. Они предназначены для использования в инструкции языка определения данных (DDL). Драйверы может возвращать результирующий набор данных с помощью типов данных, отличных от типов, возвращаемых **SQLGetTypeInfo**. При создании результирующего набора функции каталога, драйвер может использовать тип данных, который не поддерживается источником данных.  
   
-|Имя столбца|Столбец<br /><br /> number|Тип данных|Комментарии|  
+|Имя столбца|столбцом<br /><br /> number|Тип данных|Комментарии|  
 |-----------------|-----------------------|---------------|--------------|  
 |ФУНКЦИЯ TYPE_NAME (ODBC 2.0)|1|Varchar not NULL|Имя типа данных зависит от источника данных; Например «CHAR()», «VARCHAR()», «MONEY», «ДЛИННОЕ VARBINARY» или «() CHAR FOR BIT DATA». Приложения должны использовать это имя в **CREATE TABLE** и **ALTER TABLE** инструкции.|  
 |ТИП ДАННЫХ (ODBC 2.0)|2|Smallint, не NULL|Тип данных SQL. Это может быть тип данных SQL драйвера или тип данных ODBC SQL. Для типов данных даты-времени или интервала этот столбец возвращает имя четкими данных (например, SQL_TYPE_TIME или SQL_INTERVAL_YEAR_TO_MONTH). Список допустимых типов данных ODBC SQL см. в разделе [типов данных SQL](../../../odbc/reference/appendixes/sql-data-types.md) в типах данных приложение D:. Сведения о типах данных драйвера SQL см. в документации драйвера.|  

@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 740be677f54f8d4b5d30902a792b58d4681df888
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ad739a0d3aded4b0bf0458803d9fcdba5b388272
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="read-method"></a>Read, метод
 Считывает указанное число байтов из двоичного файла [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -40,12 +40,12 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Параметры  
  *NumBytes*  
- Необязательно. Объект **длинные** значение, указывающее количество байтов, считываемых из файла или [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) значение **adReadAll**, используемого по умолчанию.  
+ Необязательный параметр. Объект **длинные** значение, указывающее количество байтов, считываемых из файла или [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) значение **adReadAll**, используемого по умолчанию.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  **Чтения** метод считывает указанное число байтов или всего потока из **поток** объекта и возвращает результирующие данные в виде **Variant**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если *NumBytes* остается больше числа байт в **поток**, возвращаются только оставшихся байтов. Считывание данных не заполняется в соответствии с длиной, определяемой *NumBytes*. Если ни один байт для чтения, возвращается значение variant со значением null. **Чтение** не может использоваться для чтения в обратном направлении.  
   
 > [!NOTE]

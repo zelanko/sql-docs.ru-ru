@@ -1,39 +1,45 @@
 ---
-title: "Выполнять анализ фрагментации, с помощью rxDataStep | Документы Microsoft"
+title: "Выполнить анализ фрагментации, с помощью rxDataStep (SQL и R глубокое погружение) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/03/2017
-ms.prod: sql-non-specified
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
 dev_langs: R
 ms.assetid: 4290ee5f-be90-446a-91e8-3095d694bd82
 caps.latest.revision: "17"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 245bf9cf48b833a87b96666f1c050ca8fc1b4dbc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7e47db93c014f2512f40afc88d9e9fb0f2031976
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep"></a>Выполнение фрагментирующего анализа с помощью rxDataStep
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-and-r-deep-dive"></a>Выполнение анализа фрагментации, с помощью rxDataStep (SQL и R глубокое погружение)
 
-Функцию **rxDataStep** можно использовать для обработки данных фрагментами, вместо того чтобы загружать в память и сразу обрабатывать весь набор данных, как в традиционных системах R. В данном случае данные считываются фрагментами, а функции R используются для последовательной обработки каждого фрагмента данных. Затем сводные результаты для каждого фрагмента записываются в единый источник данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
+В этой статье является частью учебника по глубокое погружение обработки и анализа данных, о том, как использовать [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) с SQL Server.
 
-На этом занятии вы научитесь этот метод с помощью `table` функции в R, чтобы вычислить таблицу на непредвиденные случаи.
+На этом занятии использовать **rxDataStep** функции для обработки данных в виде фрагментов, а не требуется, весь набор данных будет загружен в память и обрабатывать одновременно, как и традиционные R. **RxDataStep** функции считывает данные в блоке, применяет функций R каждый фрагмент данных, в свою очередь и сохраняет сводки результатов для каждого блока общего [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных. При считывании данных все результаты объединяются.
 
 > [!TIP]
-> Этот пример предназначен только для обучения. Если требуется подсчитать реальных наборов данных, мы рекомендуем использовать **rxCrossTabs** или **rxCube** функции в **RevoScaleR**, которые оптимизируются для данного сортировку операция.
+> Для этого занятия на непредвиденные случаи таблицы вычислений с помощью `table` функции в R. Этот пример предназначен для только в целях ознакомления. 
+> 
+> Если требуется подсчитать реальных наборов данных, мы рекомендуем использовать **rxCrossTabs** или **rxCube** функции в **RevoScaleR**, которые оптимизируются для данного сортировку операция.
 
-## <a name="partition-data-by-values"></a>Секционирование данных по значениям
+## <a name="partition-data-by-values"></a>Секционировать данные по значениям
 
-1. Создайте пользовательскую функцию R, которая вызывает *таблицы* каждого фрагмента данных и назовите ее `ProcessChunk`.
+1. Создание пользовательской функции R, который вызывает R `table` каждого фрагмента данных и назовите новую функцию `ProcessChunk`.
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -58,24 +64,20 @@ ms.lasthandoff: 12/01/2017
     rxSetComputeContext( sqlCompute )
     ```
   
-3. Будет определен источник данных SQL Server для хранения обрабатываемых данных. Для начала назначьте переменной SQL-запрос.
+3. Определите источник данных SQL Server для хранения данных, который обработка. Для начала назначьте переменной SQL-запрос. Затем с помощью этой переменной в *sqlQuery* новый аргумент [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] источника данных.
+  
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
-    ```
-
-4. Включите эту переменную в аргумент *sqlQuery* нового источника данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
-  
-    ```R
     inDataSource <- RxSqlServerData(sqlQuery = dayQuery,
         connectionString = sqlConnString,
         rowsPerRead = 50000,
         colInfo = list(DayOfWeek = list(type = "factor",
             levels = as.character(1:7))))
     ```
-     При обработке функцией *rxGetVarInfo* этого источника данных вы увидите, что имеется всего один столбец: *Var 1: DayOfWeek, Type: factor, no factor levels available*(Переменная 1: DayOfWeek, тип: признак, уровни признаков недоступны).
+4. При необходимости можно запустить **rxGetVarInfo** в этом источнике данных. На этом этапе он содержит один столбец: *Var 1: DayOfWeek, тип: коэффициент нет доступных уровней коэффициент*
      
-5. Прежде чем применять эту переменную-признак к исходным данным, создайте отдельную таблицу для хранения промежуточных результатов. Опять же просто используйте функцию RxSqlServerData для определения данных и удалить все существующие таблицы с таким же именем.
+5. Прежде чем применять эту переменную-признак к исходным данным, создайте отдельную таблицу для хранения промежуточных результатов. Опять же просто используйте функцию RxSqlServerData для определения данных, makign, удалите все существующие таблицы с таким же именем.
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -83,13 +85,13 @@ ms.lasthandoff: 12/01/2017
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  Теперь будет вызывать пользовательскую функцию `ProcessChunk` для преобразования данных по мере считывания, используя его как *transformFunc* аргумент функции rxDataStep.
+7.  Вызывать пользовательскую функцию `ProcessChunk` для преобразования данных по мере считывания, используя его как *transformFunc* аргумент **rxDataStep** функции.
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  Для просмотра промежуточных результатов `ProcessChunk`присвоить переменной результаты rxImport и вывод результатов на консоль.
+8.  Для просмотра промежуточных результатов `ProcessChunk`, присвойте результаты **rxImport** переменной и вывод результатов на консоль.
   
     ```R
     iroResults <- rxImport(iroDataSource)
@@ -115,18 +117,16 @@ ms.lasthandoff: 12/01/2017
 ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
 97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 
-10. Чтобы удалить таблицу промежуточных результатов, выполнение другого вызова rxSqlServerDropTable.
+10. Удалить таблицу промежуточные результаты, вызвать **rxSqlServerDropTable**.
   
     ```R
-    rxSqlServerDropTable( table = "iroResults",     connectionString = sqlConnString)
+    rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString)
     ```
 
 ## <a name="next-step"></a>Следующий шаг
 
-[Анализ данных в локальном контексте;](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
+[Анализ данных в локальном контексте вычисления](../../advanced-analytics/tutorials/deepdive-analyze-data-in-local-compute-context.md)
 
 ## <a name="previous-step"></a>Предыдущий шаг
 
-[Создание новой таблицы SQL Server, с помощью rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)
-
-
+[Создание таблицы SQL Server с помощью rxDataStep](../../advanced-analytics/tutorials/deepdive-create-new-sql-server-table-using-rxdatastep.md)

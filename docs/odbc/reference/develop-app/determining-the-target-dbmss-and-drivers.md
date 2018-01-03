@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 76daa1e2753c91df7a016d4801ddea48bc285eb5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 515b89b4b99d73584cf1f88783296e49f6ab298d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Определение целевой СУБД и драйверов
 Следующий вопрос, которые следует учитывать, каковы целевой СУБД для приложения, и какие драйверы станут доступными, поддерживает эти СУБД? Поскольку универсальные приложения, как правило, поддерживает возможность взаимодействия, лучше всего подходит для пользовательских и вертикальные приложения на вопрос: целевой СУБД. Тем не менее вопрос драйверов целевого применяется ко всем приложениям, так как драйверы существенно различаться по скорости, качества, поддержка функций и доступности. Кроме того Если драйверы должны распространяться вместе с приложением, стоимость и доступности планов лицензирования необходимо учитывать.  

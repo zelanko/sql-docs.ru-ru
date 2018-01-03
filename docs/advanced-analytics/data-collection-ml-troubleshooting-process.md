@@ -2,10 +2,10 @@
 title: "Устранение неполадок при сборе данных для машинного обучения — SQL Server"
 ms.custom: 
 ms.date: 06/16/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -17,11 +17,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ebf53ad0f099fc43ff072de46f443e83086c127
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: de6658f5fde0103992175b4dc735fae44a3b25fe
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Устранение неполадок при сборе данных для машинного обучения
 
@@ -91,7 +91,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 
 В качестве последнего средства можно открывать файлы на сервере, чтобы определить установленную версию. Чтобы сделать это, найдите файл rlauncher.config, чтобы получить расположение среды выполнения R и текущего рабочего каталога. Рекомендуется создать и открыть копию файла, чтобы случайного изменения любого свойства.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name\MSSQL\Binn\rlauncher.config`
 
@@ -101,7 +101,7 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 
 Чтобы получить версии R и RevoScaleR, откройте окно командной строки R или открыть RGui, который связан с экземпляром.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64\RGui.exe`
 
@@ -184,7 +184,7 @@ with WITH RESULT SETS (SQL keywords) ((PropertyName nvarchar(100), PropertyValue
 
 Получите самые последние ОШИБОК SQL Server. Полный набор файлов журнала ошибок, состоит из файлов в папке журнала по умолчанию:
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\Log\ExtensibilityLog`
 
@@ -228,7 +228,7 @@ SQL Server создает отдельные файлы журналов для 
 
 Эти журналы можно получить из следующих расположений по умолчанию.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
@@ -342,6 +342,6 @@ SQL Server создает отдельные файлы журналов для 
 * [Создание хранимой процедуры для кода R с помощью пакета sqlrutils](r/generating-an-r-stored-procedure-for-r-code-using-the-sqlrutils-package.md)
 * [Создание хранимой процедуры с помощью sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Устранение неполадок машинного обучения в SQL Server](machine-learning-troubleshooting-faq.md)

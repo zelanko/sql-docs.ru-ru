@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: microsoft
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ad5d029263219c97cb6bffa7536a9c9f9f58a21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4667e8c80c183cb22b7199e2f404ca5eb79c5c5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption (драйвер ODBC для Visual FoxPro)
 > [!NOTE]  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
   
  В следующей таблице описаны только те аргументы, поведение, характерное для драйвера ODBC для Visual FoxPro реализация **SQLSetConnectOption**.  
   
-|*fOption*|Замечания|  
+|*fOption*|Remarks|  
 |---------------|-------------|  
 |SQL_AUTOCOMMIT|При выборе SQL_AUTOCOMMIT_OFF ваше приложение должно явно фиксации или отката транзакции с [SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); драйвер ODBC для Visual FoxPro не фиксирует автоматически выполнении инструкции после завершения. Драйвер начать транзакцию, при выполнении инструкции.|  
 |SQL_CURRENT_QUALIFIER|Может быть полным [базы данных](../../odbc/microsoft/visual-foxpro-terminology.md) имя или полный путь к файлу каталог, содержащий ноль или более [свободных таблиц](../../odbc/microsoft/visual-foxpro-terminology.md).|  

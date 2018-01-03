@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: d5a621f6bcd1605b7f48ada14607b3e55ef6d6de
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка кластера общего диска Red Hat Enterprise Linux для SQL Server
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/01/2017
 
 Следующие разделы выполните эти шаги для настройки решения отказоустойчивого кластера. 
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Для выполнения сценария конца в конец ниже необходимы две машины для развертывания двух узлов кластера и другой сервер, чтобы настроить NFS-сервер. Шаги, описанные ниже описываются настройки этих серверов.
 
@@ -134,16 +134,16 @@ NFS-сервера выполните следующие действия.
 1. Включение и начало`rpcbind`
 
    ```bash
-   sudo systemctl enable rpcbind && systemctl start rpcbind
+   sudo systemctl enable rpcbind && sudo systemctl start rpcbind
    ```
 
 1. Включение и начало`nfs-server`
  
    ```bash
-   systemctl enable nfs-server && systemctl start nfs-server
+   sudo systemctl enable nfs-server && sudo systemctl start nfs-server
    ```
  
-1.  Изменение `/etc/exports` для экспорта в каталог, который вы хотите поделиться. Для каждой общей папки, которые нужно потребуется 1 строка. Например: 
+1.  Изменение `/etc/exports` для экспорта в каталог, который вы хотите поделиться. Для каждой общей папки, которые нужно потребуется 1 строка. Пример: 
 
    ```bash
    /mnt/nfs  10.8.8.0/24(rw,sync,no_subtree_check,no_root_squash)

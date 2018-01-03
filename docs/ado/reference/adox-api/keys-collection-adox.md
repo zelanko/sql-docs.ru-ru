@@ -3,7 +3,7 @@ title: "Ключи коллекции (ADOX) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,16 +22,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d58a565fde1f4f1628d55293c401250529269a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b832a459e5eac0a6e208517457eccba8b10e74c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keys-collection-adox"></a>Коллекция ключей (ADOX)
 Содержит все [ключ](../../../ado/reference/adox-api/key-object-adox.md) объектов [таблицы](../../../ado/reference/adox-api/table-object-adox.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) метод [ключи коллекции](../../../ado/reference/adox-api/keys-collection-adox.md) уникален для ADOX. Возможные действия:  
   
 -   Добавьте новый раздел в коллекцию с [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) метод.  

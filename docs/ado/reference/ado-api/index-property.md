@@ -3,7 +3,7 @@ title: "Свойство Index | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3fa23448f5942baabf364a0b02f61324d29ec7b3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9e7dac3b9494e2c23de547bdf96ba0079a264af9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-property"></a>Свойство Index
 Указывает имя индекса в настоящее время действует для [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение, которое является имя индекса.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Индекс с именем **индекс** свойство должно ранее было объявлено для базовой таблицы базового **записей** объекта. То есть индекса должна быть объявлена программными средствами как ADOX [индекс](../../../ado/reference/adox-api/index-object-adox.md) объекта, или при создании базовой таблицы.  
   
  Ошибка во время выполнения происходит, если индекс не может быть задано. **Индекс** невозможно задать свойство при следующих условиях:  

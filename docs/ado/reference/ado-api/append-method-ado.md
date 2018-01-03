@@ -3,7 +3,7 @@ title: "Append-метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 87c05e88325d3e00061ee57af80be65d9a7508ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d0c0c887da52e8c91caeab582c2b1973b491e81d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-ado"></a>Append-метод (ADO)
 Добавляет объект в коллекцию. Если коллекция [поля](../../../ado/reference/ado-api/fields-collection-ado.md), новый [поле](../../../ado/reference/ado-api/field-object.md) объект может быть создан, перед добавлением в коллекцию.  
@@ -54,15 +54,15 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  Объект [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) значение, значение которого по умолчанию — **adEmpty**, который указывает тип данных нового поля. Следующие типы данных не поддерживаются ADO и следует не будет использоваться, когда добавление новых полей в [объекта набора записей (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md): **adIDispatch**, **adIUnknown**, **adVariant**.  
   
  *DefinedSize*  
- Необязательно. Объект **длинные** значение, представляющее заданный размер, в символах или байтах нового поля. Значение по умолчанию для этого параметра является производным от *типа*. Поля, которые имеют *DefinedSize* больше 255 байт рассматриваются как столбцы переменной длины. Значение по умолчанию для *DefinedSize* не указан.  
+ Необязательный параметр. Объект **длинные** значение, представляющее заданный размер, в символах или байтах нового поля. Значение по умолчанию для этого параметра является производным от *типа*. Поля, которые имеют *DefinedSize* больше 255 байт рассматриваются как столбцы переменной длины. Значение по умолчанию для *DefinedSize* не указан.  
   
  *Attrib*  
- Необязательно. Объект [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значение, значение которого по умолчанию — **adFldDefault**, который задает атрибуты для нового поля. Если это значение не задано, это поле будет содержать атрибутов, производных от *типа*.  
+ Необязательный параметр. Объект [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) значение, значение которого по умолчанию — **adFldDefault**, который задает атрибуты для нового поля. Если это значение не задано, это поле будет содержать атрибутов, производных от *типа*.  
   
  *FieldValue*  
- Необязательно. Объект **Variant** , представляющий значение для нового поля. Если не указан, поле добавляется со значением null.  
+ Необязательный параметр. Объект **Variant** , представляющий значение для нового поля. Если не указан, поле добавляется со значением null.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="parameters-collection"></a>Коллекция Parameters  
  Необходимо задать [тип](../../../ado/reference/ado-api/type-property-ado.md) свойство [параметр](../../../ado/reference/ado-api/parameter-object.md) объекта перед его добавлением [параметры](../../../ado/reference/ado-api/parameters-collection-ado.md) коллекции. Если выбран тип данных переменной длины, необходимо также задать [размер](../../../ado/reference/ado-api/size-property-ado-parameter.md) значение больше нуля.  

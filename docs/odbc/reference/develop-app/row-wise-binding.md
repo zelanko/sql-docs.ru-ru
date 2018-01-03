@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5caaab8154951fe771767206ce3755d84314855
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4dd3d59875f649c7b797d39fa31ac744457d68ef
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="row-wise-binding"></a>Привязка на уровне строки
 Если используется привязка на уровне строки, приложение определяет структуру, содержащую один или два, или в некоторых случаях трех элементов для каждого столбца, для которого требуется возвращаемых данных. Первый элемент содержит значение данных, а второй элемент содержит буфер длины/индикатора. Индикаторы и значения длины могут храниться в отдельных буферов, задав поля дескриптора SQL_DESC_INDICATOR_PTR и SQL_DESC_OCTET_LENGTH_PTR в разные значения; Если это сделать, эта структура содержит третьего элемента. Затем приложение выделяет массив эти структуры, который содержит число элементов, как строк в наборе строк.  

@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e693a799c737baf8a11064c5bd50c2618cd1e29a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0eb3e03c3fd2cad60b8f4a0e6c65aaaebbda03bb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rowset-size"></a>Размер набора строк
 Размер набора строк зависит от приложения. На экране приложений часто выполните одно из двух стратегий. Первой задачей является установить размер набора строк на число строк, отображаемых на экране; Если пользователь изменяет размер экрана, приложение соответственным образом изменяет размер набора строк. Второй — для установки размера набора строк больше, например 100, что уменьшает количество вызовов к источнику данных. Приложение локально прокручивается в наборе строк, если это возможно и извлекает новых строк только в том случае, когда он выполняет прокрутку вне набора строк.  

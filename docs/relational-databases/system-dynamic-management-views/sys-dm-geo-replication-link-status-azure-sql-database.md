@@ -25,11 +25,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0399e0ef7587a7a7cb8a7ef32419518f1b95d53e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 040c326ca5e4f38a1a6c32ce3ae5fe7ba6ddddea
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,13 +48,13 @@ ms.lasthandoff: 11/17/2017
 |роль|**tinyint**|Роль георепликации, один из:<br /><br /> 0 = primary. Database_id ссылается на базы данных-источника в партнерстве географической репликации.<br /><br /> 1 = получателя.  Database_id ссылается на базы данных-источника в партнерстве географической репликации.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Вторичный тип, один из:<br /><br /> 0 = нет прямых подключений базы данных-получателя и базы данных не разрешен доступ для чтения.<br /><br /> 2 = all подключений к базе данных в дополнительный repl; приложений для доступа только для чтения.|  
-|secondary_allow_connections_desc|**nvarchar(256)**|Нет<br /><br /> все|  
-|last_commit|**datetimeoffset**|Время последней транзакции фиксируются в базе данных. Если получены на базу данных-получатель, если основной канала репликации не работает, это означает, что пока какой момент сервер-получатель устранил отставание.|
+|secondary_allow_connections_desc|**nvarchar(256)**|нет<br /><br /> All|  
+|last_commit|**datetimeoffset**|Время последней транзакции фиксируются в базе данных. Если извлечение базы данных-источника, он показывает время последней фиксации базы данных-источника. Если извлечение на базу данных-получатель, он показывает время последней фиксации на базу данных-получатель. Если получены на базу данных-получатель, если основной канала репликации не работает, это означает, что пока какой момент сервер-получатель устранил отставание.|
   
 > [!NOTE]  
 >  Если связь репликации прерывается путем удаления базы данных-получателя (раздел 4.2), строки для этой базы данных в **sys.dm_geo_replication_link_status** представление исчезает.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Можно запросить любой учетной записи с разрешением view_database_state **sys.dm_geo_replication_link_status**.  
   
 ## <a name="example"></a>Пример  

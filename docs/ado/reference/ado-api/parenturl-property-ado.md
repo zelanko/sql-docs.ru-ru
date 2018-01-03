@@ -3,7 +3,7 @@ title: "Свойство ParentURL (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1171d3d5b50838988ece3032300d327e08123356
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c0bf264bb42ad8598140dfb2e4330b2d747a80
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parenturl-property-ado"></a>Свойство ParentURL (ADO)
 Указывает строку абсолютный URL-адрес, указывающий на родительский [запись](../../../ado/reference/ado-api/record-object-ado.md) текущего **записи** объекта.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **строка** значение, указывающее URL-адрес родительского **записи**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **ParentURL** свойство зависит от источника, используемую для открытия **записи** объекта. Например **запись** могут быть открыты в источник, содержащий относительный путь к каталогу, который ссылается [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойство.  
   
  Предположим, что «second» папке содержится в разделе «первый». Откройте **записи** объекта, используя следующий синтаксис:  
@@ -52,7 +52,7 @@ record.Open "second"
   
 -   **Запись** представляет сущность, которая не может указываться с URL-адреса.  
   
- Это свойство предназначено только для чтения.  
+ Это свойство доступно только для чтения.  
   
 > [!NOTE]
 >  Это свойство поддерживается только поставщиками исходного документа, такие как [поставщик Microsoft OLE DB для публикаций в Интернете](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Дополнительные сведения см. в разделе [записи и поля Provider-Supplied](../../../ado/guide/data/records-and-provider-supplied-fields.md).  

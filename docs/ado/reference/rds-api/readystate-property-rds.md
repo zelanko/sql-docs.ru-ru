@@ -1,11 +1,13 @@
 ---
 title: "Состояние готовности свойство (RDS) | Документы Microsoft"
-ms.prod: sql-non-specified
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.component: reference
 ms.tgt_pltfrm: 
 ms.topic: article
 apitype: COM
@@ -16,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d5533fd471b6aee697825d2251c84adbcdfccfa
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 52d32f6b2ba1e3a85b0d374a4d11b4e0bf3c742c
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="readystate-property-rds"></a>Состояние готовности свойство (RDS)
 Индикатор выполнения [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта, поскольку он получает данные в его [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/09/2017
 > [!NOTE]
 >  Каждый клиентский исполняемый файл, который использует эти константы должен предоставить их объявления. Можно вырезать и вставить объявления констант из файла Adcvbs.inc, расположенный в папке установки по умолчанию для библиотеки служб удаленных рабочих СТОЛОВ.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) событий для отслеживания изменений в **состояние готовности** свойства во время выполнения операции асинхронного запроса. Это более эффективно, чем периодически проверки значения свойства.  
   
  При возникновении ошибки во время асинхронной операции, **состояние готовности** изменения свойств **adcReadyStateComplete**, [состояние](../../../ado/reference/ado-api/state-property-ado.md) свойство изменяется с **adStateExecuting** для **adStateClosed**и **записей** объекта [значение](../../../ado/reference/ado-api/value-property-ado.md) свойство остается *Nothing* .  

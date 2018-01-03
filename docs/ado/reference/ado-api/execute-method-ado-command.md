@@ -3,7 +3,7 @@ title: "Выполнить метод (команда ADO) | Документы 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d8a16c395a01e20765dd1aaa569889b4b041cb9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa39093a0efe75959bfa0e6805ea90b65c6d39a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-method-ado-command"></a>Выполнить метод (команда ADO)
 Выполняет запрос, инструкции SQL или хранимой процедуры, указанной в [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство [объект команды](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -43,18 +43,18 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
 #### <a name="parameters"></a>Параметры  
  *RecordsAffected*  
- Необязательно. Объект **длинные** переменной, в которой поставщик возвращает количество записей, затронутых операцию. *RecordsAffected* параметр применяется только для запросов или хранимых процедур. *RecordsAffected* не возвращает число записей, возвращаемых возвращение результата запроса или хранимой процедуры. Для получения этих сведений следует использовать [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство. **Execute** метод не возвращает правильные данные при использовании с **adAsyncExecute**, просто потому, что если команда выполняется асинхронно, количество обработанных записей еще неизвестна во время выполнения метода.  
+ Необязательный параметр. Объект **длинные** переменной, в которой поставщик возвращает количество записей, затронутых операцию. *RecordsAffected* параметр применяется только для запросов или хранимых процедур. *RecordsAffected* не возвращает число записей, возвращаемых возвращение результата запроса или хранимой процедуры. Для получения этих сведений следует использовать [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) свойство. **Execute** метод не возвращает правильные данные при использовании с **adAsyncExecute**, просто потому, что если команда выполняется асинхронно, количество обработанных записей еще неизвестна во время выполнения метода.  
   
  *Параметры*  
- Необязательно. Объект **Variant** массив значений параметров, используемые в сочетании с входную строку или поток, указанный в **CommandText** или **CommandStream**. (Выходные параметры не вернет правильные значения при передаче в этом аргументе.)  
+ Необязательный параметр. Объект **Variant** массив значений параметров, используемые в сочетании с входную строку или поток, указанный в **CommandText** или **CommandStream**. (Выходные параметры не вернет правильные значения при передаче в этом аргументе.)  
   
  *Параметры*  
- Необязательно. Объект **длинные** значение, указывающее, как следует оценивать поставщик [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство [команда](../../../ado/reference/ado-api/command-object-ado.md) объект. Может представлять собой значение битовой маски, выполненные с помощью [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) и/или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения. Например, можно использовать **adCmdText** и **adExecuteNoRecords** вместе, если вы хотите использовать ADO оценки значения элемента **CommandText** свойства в виде текста, и Укажите, что команду следует отменить и не возвратит никаких записей, которые могут возникнуть при выполнении текст команды.  
+ Необязательный параметр. Объект **длинные** значение, указывающее, как следует оценивать поставщик [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) или [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) свойство [команда](../../../ado/reference/ado-api/command-object-ado.md) объект. Может представлять собой значение битовой маски, выполненные с помощью [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) и/или [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) значения. Например, можно использовать **adCmdText** и **adExecuteNoRecords** вместе, если вы хотите использовать ADO оценки значения элемента **CommandText** свойства в виде текста, и Укажите, что команду следует отменить и не возвратит никаких записей, которые могут возникнуть при выполнении текст команды.  
   
 > [!NOTE]
 >  Используйте **ExecuteOptionEnum** значение **adExecuteNoRecords** для повышения производительности путем минимизации внутренней обработки. Если **adExecuteStream** был указан параметр **adAsyncFetch** и **adAsynchFetchNonBlocking** игнорируются. Не используйте **CommandTypeEnum** значения **adCmdFile** или **adCmdTableDirect** с **Execute**. Эти значения можно использовать только как параметры с [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) и [Requery](../../../ado/reference/ado-api/requery-method.md) методы **записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  С помощью **Execute** метод **команда** выполняется запрос, указанный в объект **CommandText** свойство или **CommandStream** свойство объекта.  
   
  Результаты возвращаются в **записей** (по умолчанию) или в виде потока двоичных данных. Чтобы получить двоичный поток, задайте **adExecuteStream** в *параметры*, затем указать поток, задав **Command.Properties («поток вывода»)**. ADO **поток** можно указать объект мог получать результаты, или другой объект потока, например объект ответа службы IIS могут быть указаны. Если поток не был указан перед вызовом **Execute** с **adExecuteStream**, возникает ошибка. Позиция в потоке при возврате из **Execute** зависит от поставщика.  
