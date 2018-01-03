@@ -3,7 +3,7 @@ title: "Append-метод (процедуры ADOX) | Документы Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac280aebcf98c593124cabb6876a0dd5b6a56826
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 71a98af48fe93c74ce16111b8018fa04764f597d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="append-method-adox-procedures"></a>Append-метод (ADOX процедур)
 Добавляет новый [процедура](../../../ado/reference/adox-api/procedure-object-adox.md) объект [процедуры](../../../ado/reference/adox-api/procedures-collection-adox.md) коллекции.  
@@ -45,7 +45,7 @@ Procedures.Append Name, Command
  *Command*  
  ADO [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, который представляет процедуру для создания и добавления.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Создает новую процедуру в источнике данных с именем и атрибутами, заданными в **команда** объекта.  
   
  Если текст команды, который пользователь указывает представляет представление, а не является процедурой, поведение зависит от используемого поставщика. **Добавление** завершится ошибкой, если поставщик не поддерживает сохранение команды.  

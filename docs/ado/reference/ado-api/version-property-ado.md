@@ -3,7 +3,7 @@ title: "Свойство Version (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9cff8cd7404ae02d4ed6aaafa1dd8155398c1bb0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 500dee0adfd3be82def58ba0dcce532b4bffec70
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="version-property-ado"></a>Свойство Version (ADO)
 Указывает номер версии ADO.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **строка** значение, которое указывает версию.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **версии** номер версии реализации ADO возвращаемое свойство.  
   
  Версия поставщика могут быть использованы как динамических свойств в [свойства](../../../ado/reference/ado-api/properties-collection-ado.md) коллекции.  

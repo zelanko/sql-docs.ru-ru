@@ -3,7 +3,7 @@ title: "BOF, свойства EOF (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e97052bce1e27e7730ffa73d04a8ba95f8af233c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c2b827856eac7ec2eed9ca4f3580b2a12418933
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, свойства EOF (ADO)
 -   **BOF** указывает, что положение текущей записи находится перед первой записью в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  **BOF** и **EOF** возвращаемого свойства **логическое** значения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **BOF** и **EOF** свойства, чтобы определить ли **записей** объект содержит записи или вы вышли за пределы возможностей **набора записей**  объекта при переходе от записи к записи.  
   
  **BOF** возвращает **True** (-1), если перед первой записью положения текущей записи и **False** (0), если текущая позиция записи во время или после первого запись.  

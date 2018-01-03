@@ -3,7 +3,7 @@ title: "Свойство ConnectionString (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 590125743d78e4c583cd22011dcf40f58eed1999
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 41f887dbd21f120706e32059128227669f517ea4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connectionstring-property-ado"></a>Свойство ConnectionString (ADO)
 Указывает сведения, используемые для установления соединения с источником данных.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **ConnectionString** свойство, чтобы указать источник данных, передав подробную строку подключения с сериями *аргумент* *= значение* разделенных инструкций точка с запятой.  
   
  ADO поддерживает пять аргументов для **ConnectionString** свойство; другие аргументы проход непосредственно к поставщику без обработки с ADO. Поддержка ADO аргументы выглядят следующим образом.  

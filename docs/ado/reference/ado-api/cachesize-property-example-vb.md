@@ -3,7 +3,7 @@ title: "Пример свойства CacheSize (VB) | Документы Micros
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f15787ed44187141da6fbedb630749f3a8a39838
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31c27a9bd613dbb54f198eb98fdcb41340838356
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachesize-property-example-vb"></a>Пример свойства CacheSize (Visual Basic)
 В этом примере используется [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) свойство, которое отображает разницу в производительности для операции, выполняемая с и без 30 записи кэша.  

@@ -3,7 +3,7 @@ title: "Печать результатов запроса (визуальные
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0e4347b0c336d750d5e2cd08aa744cb03fca9210
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f3633d69465df3d595d9145dfada1f80bf14d04
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="print-query-results-visual-database-tools"></a>Печать результатов запроса (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Чтобы распечатать результаты запроса, необходимо скопировать содержимое [панели результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) в другую программу Windows, например в программу подготовки текстов, затем произвести в ней форматирование и распечатать результаты запроса из этой программы.  

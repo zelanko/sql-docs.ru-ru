@@ -3,7 +3,7 @@ title: "Значение свойства (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8be64c318d9857f847dfc82c709a7e718d4bb462
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7fe603ac5853d1cc4afa6511ea6568593feebf6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-property-ado"></a>Значение свойства (ADO)
 Указывает значение, присваиваемое [поле](../../../ado/reference/ado-api/field-object.md), [параметр](../../../ado/reference/ado-api/parameter-object.md), или [свойство](../../../ado/reference/ado-api/property-object-ado.md) объекта.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **Variant** значение, указывающее значение объекта. Значение по умолчанию зависит от [тип](../../../ado/reference/ado-api/type-property-ado.md) свойства.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **значение** свойство, чтобы задать или получить данные из **поле** объектов задание или возврат значения параметров с **параметр** объекты, или на задание или возврат значения свойств с **Свойство** объектов. Ли **значение** свойство доступно для чтения/записи или только для чтения, зависит от множество факторов. см. Дополнительные сведения можно найти в разделах соответствующего объекта.  
   
  ADO позволяет задавать и возвращает двоичные данные с **значение** свойства.  

@@ -3,7 +3,7 @@ title: "Результаты запросов сортировки и групп
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -29,18 +29,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0977a1822b0dc2eec81254e3cc09f103640f5de6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22bb1cb3000fc6c97d168731c7c3085d994f55f5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sort-and-group-query-results-visual-database-tools"></a>Результаты запросов сортировки и группирования (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Может быть создан результат запроса, в котором каждая результирующая строка соответствует всей группе строк исходных данных.  
   
 Подробные сведения о создании таких запросов см. в указанных ниже разделах.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Сортировка строк (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/sort-rows-visual-database-tools.md)  
 В этом разделе описываются различные способы сортировки строк и даются советы по их применению.  
   

@@ -3,7 +3,7 @@ title: "Объект параметра | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7916c054b41b63b358f8330ff1a21b05689f2920
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bf234fd6cee37c525533bc082f4ae6c41a7b23f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-object"></a>Объект Parameter
 Представляет параметр или аргумент, связанный с [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта, основанного на параметризованный запрос или хранимую процедуру.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Многие поставщики поддерживают параметризованные команды. Это команды, в которых нужное действие определяется один раз, но переменные (или параметров) используются для изменения некоторые сведения о команды. Например инструкцию SQL SELECT использовать параметр для определения условия соответствия предложение WHERE, а другой для определения имени столбца для СОРТИРОВКИ BY.  
   
  **Параметр** объекты представляют параметры, связанные с параметризованными запросами или ввода-вывода аргументов и возвращаемых значений из хранимых процедур. В зависимости от функциональности поставщик некоторых коллекций, методы и свойства **параметр** могут оказаться недоступными.  

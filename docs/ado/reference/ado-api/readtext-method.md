@@ -3,7 +3,7 @@ title: "Метод ReadText | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d3628847bc62ad45781442f227e709e87f52c42
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9915f0bfe1b70cef5cab39a058f7131ceaa44f98
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readtext-method"></a>Метод ReadText
 Считывает указанное число символов из текстового [поток](../../../ado/reference/ado-api/stream-object-ado.md) объекта.  
@@ -40,12 +40,12 @@ String = Stream.ReadText ( NumChars)
   
 #### <a name="parameters"></a>Параметры  
  *NumChars*  
- Необязательно. Объект **длинные** значение, указывающее число символов для чтения из файла или [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) значение. Значение по умолчанию — **adReadAll**.  
+ Необязательный параметр. Объект **длинные** значение, указывающее число символов для чтения из файла или [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) значение. Значение по умолчанию — **adReadAll**.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  **ReadText** метод считывает указанное число символов, всю строку или весь поток из **поток** объекта и возвращает результирующую строку.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если *NumChar* остается больше числа символов в потоке, возвращаются только символов, оставшихся. Чтение строки заполнено в соответствии с длиной, определяемой *NumChar*. Если нет доступных для чтения символов, возвращается значение типа variant, значение которого равно null. **ReadText** не может использоваться для чтения в обратном направлении.  
   
 > [!NOTE]

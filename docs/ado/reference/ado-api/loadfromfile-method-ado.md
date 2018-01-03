@@ -3,7 +3,7 @@ title: "Loadfromfile-метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14124cf39e58cf46c50ae367f68ca61b82bd50e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c50565a087c9323a7f4dbafb9c604a42a19e1179
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="loadfromfile-method-ado"></a>Loadfromfile-метод (ADO)
 Загружает содержимое существующего файла в [поток](../../../ado/reference/ado-api/stream-object-ado.md).  
@@ -40,7 +40,7 @@ Stream.LoadFromFileFileName
  *FileName*  
  Объект **строка** значение, содержащее имя файла для загрузки в **поток**. *Имя файла* может содержать любой допустимый путь и имя в формате UNC. Если указанный файл не существует, возникает ошибка времени выполнения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод можно использовать для загрузки содержимого из локального файла в **поток** объекта. Это можно использовать для загрузки содержимого из локального файла на сервер.  
   
  **Поток** объект должен быть уже открыт перед вызовом метода **LoadFromFile**. Этот метод не изменяет привязку **поток** объекта; он будет по-прежнему привязан к объекту, определяемому URL-адрес или **запись** с помощью которого **поток** изначально Открыть.  

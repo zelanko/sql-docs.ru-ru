@@ -3,7 +3,7 @@ title: "Объект набора ячеек (ADO MD) | Документы Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,23 +20,23 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c860f9b84514cc84c73c52e10978ad76365cc6ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36bd85cb79d48590cb86a865cfd408db878a1b53
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cellset-object-ado-md"></a>Объект набора ячеек (ADO MD)
 Представляет результаты многомерного запроса. Представляет коллекцию ячеек, выбранных из кубов или других наборов ячеек.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Данные в **ячеек** получаются с помощью прямого доступа-массив. Вы можете выполнить детализацию до конкретный элемент, чтобы получить данные о таких членов. Например, следующий код возвращает заголовок первого элемента в первой позиции на первой оси набора ячеек с именем `cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Нет отсутствует понятие текущей ячейки в наборе ячеек. Вместо этого [элемент](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) свойство извлекает определенный [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) объект из набора ячеек. Аргументы **элемент** определения свойства ячейки, которая извлекается. Можно указать уникальный порядковый номер ячейки. Можно также получить ячейки с помощью их положение номера каждой оси набора ячеек. Дополнительные сведения о получении ячеек см. в разделе [элемент](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) свойство.  
   
  С коллекциями, методы и свойства **ячеек** объекта, можно сделать следующее:  

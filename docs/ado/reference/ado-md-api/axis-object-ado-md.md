@@ -3,7 +3,7 @@ title: "Объект Axis (ADO MD) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,16 +20,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4164cd36a128de91f42f141db4c04aa7d9a2110c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 075cccb08756fe6459db87bbbc091700ae333400
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="axis-object-ado-md"></a>Объект Axis (ADO MD)
 Представляет позиционные или оси фильтра набора ячеек, содержащий выбранные элементы из одного или нескольких измерений.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Оси** объекта могут находиться в [осей](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) коллекции, или возвращаемый [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) свойство [ячеек](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
   
  С коллекциями и свойствами **оси** объекта, можно сделать следующее:  

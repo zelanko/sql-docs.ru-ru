@@ -3,7 +3,7 @@ title: "Метод OpenSchema | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da75cff99c5a3fbe85c18a8b47f3025f748872bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b79dcd972c3b14a27cae47cc08893f2266dfd6b2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openschema-method"></a>Метод OpenSchema
 Получает сведения о схеме базы данных от поставщика.  
@@ -46,12 +46,12 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  Любой [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) значение, представляющее тип схемы запроса для запуска.  
   
  *Условия*  
- Необязательно. Массив ограничений запросов для каждого *QueryType* параметра, как указано в [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
+ Необязательный параметр. Массив ограничений запросов для каждого *QueryType* параметра, как указано в [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md).  
   
  *SchemaID*  
  Идентификатор GUID схемы поставщика запросов, не определенных в спецификации OLE DB. Этот параметр является обязательным, если *QueryType* равно **adSchemaProviderSpecific**; в противном случае он не используется.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **OpenSchema** метод возвращает описательные сведения об источнике данных, например, таблицы в источнике данных столбцы в таблицах, и поддерживаемые типы данных.  
   
  *QueryType* аргумент имеет значение GUID, которое указывает, возвращаются столбцы (схемы). Спецификация OLE DB содержит полный список схем.  

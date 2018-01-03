@@ -3,7 +3,7 @@ title: "Свойство SQLState | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e6709e1e538db77b1aed5b281ffd826d90448daf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9acd68c473f43fcbc4763dc2e76d80015fdca93c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstate-property"></a>Свойство SQLState
 Указывает состояние SQL для заданной [ошибка](../../../ado/reference/ado-api/error-object.md) объекта.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает из пяти символов **строка** значение, которое соответствует стандарту ANSI SQL и указывающее код ошибки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **SQLState** свойство для чтения код ошибки пяти знаков, поставщик возвращает при возникновении ошибки во время обработки инструкции SQL. Например при использовании поставщика Microsoft OLE DB для ODBC с базой данных Microsoft SQL Server, кодах ошибок состояния SQL берутся из ODBC, либо на основе ODBC ошибки или ошибок, возникших в Microsoft SQL Server, а затем сопоставляются с ODBC ошибки. Эти коды ошибок описаны в стандарте ANSI SQL, но может быть реализована по-разному в разных источниках.  
   
 ## <a name="applies-to"></a>Объект применения  

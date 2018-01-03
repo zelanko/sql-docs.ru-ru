@@ -3,7 +3,7 @@ title: "Справка F1 по визуальным инструментам д�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58c97c63b74f329e00958d833b732cc9ed1eadf9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ebe883f56442fcd71e31c514b16fd8305d2a09f3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-database-tools-f1-help"></a>Справка F1 визуальных инструментов для баз данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этих разделах рассматриваются команды и параметры в диалоговых окнах и окнах свойств для элементов визуальных инструментов для баз данных, таких как окно "Свойства таблицы" или вкладка "Свойства столбца".  

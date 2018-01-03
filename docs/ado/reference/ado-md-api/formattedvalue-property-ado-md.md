@@ -3,7 +3,7 @@ title: "Свойство FormattedValue (ADO MD) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cbf0c7a5fc9fc88cc1962ec3414b293c03a41a25
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dc60bd0923a37d396c6c181687b2a6091418227
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="formattedvalue-property-ado-md"></a>Свойство FormattedValue (ADO MD)
 Указывает форматированный вывод [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) значение.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-values"></a>Возвращаемые значения  
  Возвращает **строка** и доступно только для чтения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **FormattedValue** , чтобы получить значение форматированный вывод [значение](../../../ado/reference/ado-md-api/value-property-ado-md.md) свойство [ячейки](../../../ado/reference/ado-md-api/cell-object-ado-md.md) объекта. Например, если значение ячейки было 1056.87 и представить это значение суммы в долларах **FormattedValue** бы 1,056.87 $.  
   
 ## <a name="applies-to"></a>Объект применения  

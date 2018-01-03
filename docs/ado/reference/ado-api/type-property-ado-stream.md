@@ -3,7 +3,7 @@ title: "Type-свойство (поток ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 326dfd1e359d28188a41d45c0054a082a9a69515
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c935ffe744d73e31483f030a6efd122773909755
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-property-ado-stream"></a>Свойство Type (поток ADO)
 Указывает тип данных, содержащихся в [поток](../../../ado/reference/ado-api/stream-object-ado.md) (двоичный файл или текст).  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает [StreamTypeEnum](../../../ado/reference/ado-api/streamtypeenum.md) значение, указывающее тип данных, содержащихся в **поток** объекта. Значение по умолчанию — **adTypeText**. Однако, если изначально двоичные данные записываются в новый, пустой **поток**, **тип** будет изменен на **adTypeBinary**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Тип** свойство является чтение и запись только в том случае, если текущее положение находится в начале **поток** ([позиции](../../../ado/reference/ado-api/position-property-ado.md) равно 0) и только для чтения в любом другом месте.  
   
  **Тип** свойство определяет, какие методы следует использовать для чтения и записи **поток**. Для текста **потоки**, используйте [ReadText](../../../ado/reference/ado-api/readtext-method.md) и [WriteText](../../../ado/reference/ado-api/writetext-method.md). Для двоичного файла **потоки**, используйте [чтения](../../../ado/reference/ado-api/read-method.md) и [записи](../../../ado/reference/ado-api/write-method.md).  

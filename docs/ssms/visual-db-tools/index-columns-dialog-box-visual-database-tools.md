@@ -3,7 +3,7 @@ title: "Диалоговое окно \"Столбцы индексы\" (виз�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29a867a04114b6c6127786eeb630a872132d2be8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b86f3f9ad2d892e1b140742681365fe3e7e0ece
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Столбцы индекса» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно используется для выбора столбцов для индекса и установки порядка их сортировки. Индекс может использовать один или несколько столбцов, причем каждый столбец может быть отсортирован по возрастанию или убыванию. Чтобы открыть это диалоговое окно, в диалоговом окне **Индексы/Ключи** нажмите кнопку с многоточием для строки **Столбцы** в разделе **Общие** .  

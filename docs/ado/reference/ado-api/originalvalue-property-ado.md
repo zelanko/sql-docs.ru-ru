@@ -3,7 +3,7 @@ title: "Свойство OriginalValue (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: baa1b522660f2ed7d521a55ad995ed8347c0a2fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 70e33fcec6571a845ee81a393e5f267cc945de5d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="originalvalue-property-ado"></a>Свойство OriginalValue (ADO)
 Указывает значение [поле](../../../ado/reference/ado-api/field-object.md) , состоянии, предшествующем в записи были сделаны изменения.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **Variant** значение, представляющее значение поля до изменения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **OriginalValue** свойство, чтобы вернуть исходное значение поля для поля с текущей записью.  
   
  В *режим немедленного обновления* (в котором поставщик записывает изменения в источнике данных после вызова метода [обновление](../../../ado/reference/ado-api/update-method.md) метод), **OriginalValue** возвращает свойство значение поля, которые существовали до изменения (то есть с момента последнего **обновление** вызова метода). Это то же самое значение, которое [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) метод используется для замены [значение](../../../ado/reference/ado-api/value-property-ado.md) свойства.  

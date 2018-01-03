@@ -3,7 +3,7 @@ title: "ADO MD свойства | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 48c27fa950a31a0121bb5253fe9b94ba5893bae3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c59077cbb3604cca9ef352c348a49e6301ace6df
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-properties"></a>Свойства ADO MD
 |||  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 |[Children](../../../ado/reference/ado-md-api/children-property-ado-md.md)|Возвращает коллекцию **элементы** для которого текущий **члена** является родительской в иерархии.|  
 |[Счетчик](../../../ado/reference/ado-api/count-property-ado.md)|Указывает количество объектов в коллекции.|  
 |[Глубина](../../../ado/reference/ado-md-api/depth-property-ado-md.md)|Указывает число уровней между **уровень** и корневой уровень иерархии.|  
-|[Описание](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Возвращает текстовое описание текущего объекта.|  
+|[Description](../../../ado/reference/ado-md-api/description-property-ado-md.md)|Возвращает текстовое описание текущего объекта.|  
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Указывает число измерений на оси.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Указывает, следуют ли какие-либо потомки непосредственно за элементом на оси.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Указывает сведения о фильтре для текущего набора ячеек.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 |[Состояние](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Указывает текущее состояние набора ячеек.|  
 |[Тип](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Указывает тип текущего элемента.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Указывает имя однозначным для текущего объекта.|  
-|[Значение](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Указывает значение текущей ячейки.|  
+|[Value](../../../ado/reference/ado-md-api/value-property-ado-md.md)|Указывает значение текущей ячейки.|  
   
 ## <a name="see-also"></a>См. также:  
  [Справочник по API ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   

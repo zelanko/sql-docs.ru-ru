@@ -3,7 +3,7 @@ title: "Свойства запроса (визуальные инструмен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d7b8519c310eff1942280345c77c630aeea23e56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0140ad78a13b1dda752ee0c3f303094578c4f158
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-properties-visual-database-tools"></a>Свойства запроса (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Эти свойства отображаются в окне "Свойства" при открытии запроса в конструкторе запросов и представлений. Если не оговорено обратное, эти свойства можно изменять в окне «Свойства».  
@@ -36,10 +36,10 @@ ms.lasthandoff: 12/05/2017
 **Категория «Идентификатор»**  
 Разверните для отображения свойства **Имя** .  
   
-**Имя**  
+**Название**  
 Показывает имя текущего запроса. Нельзя изменить в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
   
-**Имя базы данных**  
+**Database Name**  
 Отображает имя источника данных для выбранной таблицы.  
   
 **Имя сервера**  

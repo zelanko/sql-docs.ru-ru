@@ -3,7 +3,7 @@ title: "Редактор SQL (визуальные инструменты для
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8d12d926366ece3db66b9edb950a0ec579e33f7f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4abc54346419e0ba6281e71d583cf0a4e571caf0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-editor-visual-database-tools"></a>Редактор SQL (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте редактор SQL для изменения существующих хранимых процедур, функций, триггеров и скриптов SQL. Данное окно появляется при открытии любого из перечисленных объектов. Если нужно создать новую инструкцию SQL для работы со своим источником данных, воспользуйтесь [панелью SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) конструктора запросов.  

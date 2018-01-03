@@ -3,7 +3,7 @@ title: "Работа с диаграммами баз данных (визуал
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,16 +23,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ab3f8d06ac812b63c86e763ab1f9dd077c35f4fb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 19146185e1f01352f7be33fed099163dfa36667c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="work-with-database-diagrams-visual-database-tools"></a>Работа с диаграммами баз данных (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] С помощью конструктора баз данных можно создать графическую диаграмму базы данных. Следующие подразделы описывают основы использования конструктора баз данных для работы с диаграммами базы данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Создание новой диаграммы базы данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/create-a-new-database-diagram-visual-database-tools.md)  
   
 [Сохранение диаграмм баз данных (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/save-database-diagrams-visual-database-tools.md)  

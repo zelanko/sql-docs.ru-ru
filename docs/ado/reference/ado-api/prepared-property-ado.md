@@ -3,7 +3,7 @@ title: "Подготовить свойство (ADO) | Документы Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62f01b807c56065c61e5cf8650c15f7210df6b7a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a938fcdbf5fbdbe73ca61465063ccd3622711920
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="prepared-property-ado"></a>Свойства подготовленный (ADO)
 Указывает, следует ли сохранить скомпилированную версию [команда](../../../ado/reference/ado-api/command-object-ado.md) перед выполнением.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **логическое** значение, если значение **True**, указывает, что команда должно быть подготовлено.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **Готово** свойство, чтобы сохранить запрос, указанный в подготовленную (скомпилированную) версию поставщика [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) свойства перед [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта первого выполнения. Это может привести к снижению первого выполнения команды, но после поставщик компилирует команду, поставщик будет использовать скомпилированная версия команды для любого последующего выполнения, что приведет к повышению производительности.  
   
  Если свойство **False**, поставщик будет выполняться **команда** объекта непосредственно, без создания скомпилированная версия.  

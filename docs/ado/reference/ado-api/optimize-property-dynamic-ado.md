@@ -3,7 +3,7 @@ title: "Оптимизировать динамические свойства (
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ad1ecfc8b29a5b2ca22ef4673ee2d55b3a3c988
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e18837dc119c2bdc1af557cf1385131ff78fd9d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimize-property-dynamic-ado"></a>Оптимизировать динамические свойства (ADO)
 Указывает, создан ли индекс на [поля](../../../ado/reference/ado-api/field-object.md).  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **логическое** значение, указывающее, должен ли быть создан индекс.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Индекс может повысить эффективность операций поиска или отсортировать значения в [записей](../../../ado/reference/ado-api/recordset-object-ado.md). Индекс является внутренним для ADO; нельзя явно доступ или использовать его в приложении.  
   
  Чтобы создать указатель на поле, установите **оптимизировать** свойства **True**. Чтобы удалить индекс, присвойте этому свойству значение **False**.  

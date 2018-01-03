@@ -3,7 +3,7 @@ title: "Свойство RecordCount (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 950b53501f84bdaebc1cdc0ce554d13860d894bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f33a73aa4aa322d6eb0a00612789f4048a24e85d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recordcount-property-ado"></a>Свойство RecordCount (ADO)
 Указывает количество записей в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **длинные** значение, указывающее количество записей в **записей**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **RecordCount** , свойство, чтобы узнать, сколько записей в **записей** объекта. Свойство возвращает значение -1, если ADO не удается определить число записей или если тип поставщика или курсор не поддерживает **RecordCount**. Чтение **RecordCount** свойство для закрытого **записей** приводит к ошибке.  
   
  Если **записей** объект поддерживает приблизительное позиционирование или закладки??? то есть **(adApproxPosition) поддерживает** или **(adBookmark) поддерживает**соответственно, возвращают **True**код Это значение будет точное число записей в **записей**независимо от того, является ли он полностью заполнен. Если **записей** объект не поддерживает приблизительное позиционирования, это свойство может быть значительно пустой тратой ресурсов, так как все записи должны быть получены и подсчитаны для возврата точный **RecordCount** значение.  

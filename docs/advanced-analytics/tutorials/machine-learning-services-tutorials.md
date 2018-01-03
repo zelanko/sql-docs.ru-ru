@@ -1,30 +1,33 @@
 ---
-title: "Учебные руководства машины SQL Server | Документы Microsoft"
-ms.custom: SQL2016_New_Updated
-ms.date: 10/31/2017
-ms.prod:
-- sql-server-2016
-- sql-server-2017
+title: "Учебники по службам обучения машины SQL Server | Документы Microsoft"
+ms.date: 12/14/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
+ms.component: 
 ms.technology: r-services
 ms.tgt_pltfrm: 
-ms.topic: article
-applies_to: SQL Server 2016
-dev_langs: Python
+ms.topic: tutorial
+applies_to:
+- SQL Server 2016
+- SQL Server 2017
+dev_langs:
+- Python
+- R
 ms.assetid: 5ccc75f6-6703-47d9-b879-9a740569b45e
 caps.latest.revision: "32"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: c0547d809e73e13b7bedcc8ac960b00c7c8a9706
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: b8c384e5d8e13ed0961ad82f95af17c0352389be
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/20/2017
 ---
-# <a name="sql-server-machine-learning-tutorials"></a>Учебники по обучения машины SQL Server
+# <a name="tutorials-for-sql-server-machine-learning-services"></a>Учебники для служб SQL Server машины обучения
 
 В этой статье содержит полный список учебников, демонстрационные материалы и образцов приложений, использующих функции обучения компьютера в SQL Server 2016 или 2017 г. SQL Server. Начните здесь рассматривается выполнение R или Python из T-SQL, использовать контексты вычислений, удаленные и локальные и оптимизировать код R и Python для производственной среды SQL.
 
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/09/2017
 
 + [Решения](#bkmk_solutions) 
 
-    Чтобы приступить к работе быстрое выполнение и машинное обучение настраиваются шаблоны из команды обработки и анализа данных Microsoft. Каждое решение соответствующий некоторой задачи или отрасли проблемы; Кроме того большинство решений предназначены для работы в SQL Server или в облачной среде, например машинного обучения Azure. Другие решения можно запустить в Linux или в кластерах Spark или Hadoop, с помощью Microsoft R Server или машины обучения.
+    Чтобы приступить к работе быстрое выполнение и машинное обучение настраиваются шаблоны из команды обработки и анализа данных Microsoft. Каждое решение соответствующий конкретной проблемы, задачи или отрасли. Большинство решений, которые предназначены для выполнения в SQL Server или в облачной среде, например машинного обучения Azure. Другие решения можно запустить в Linux или в кластерах Spark или Hadoop, с помощью Microsoft R Server или машины обучения.
 
 ### <a name ="bkmk_samples"></a>Образцы продуктов SQL Server
 
@@ -58,7 +61,7 @@ ms.lasthandoff: 11/09/2017
 
 + [НОВЫЕ ФУНКЦИИ! Выполнение клиента кластеризации с помощью Python и SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/)
 
-    Узнайте, как использовать алгоритм Kmeans для выполнения незащищенных кластеризации клиентов. Этот пример использует Python языка в базе данных. 
+    Узнайте, как использовать алгоритм Kmeans для выполнения незащищенных кластеризации клиентов. Этот пример использует Python языка в базе данных.
     
     Применяется к: SQL Server 2017 г.
 
@@ -73,6 +76,10 @@ ms.lasthandoff: 11/09/2017
    Построено ski аренды анализа с помощью Python, планированию будущих требований. В этом примере используется в новой библиотеке Python **revoscalepy**, чтобы создать модель линейной регрессии.
    
    Применяется к: SQL Server 2017 г.
+
++ [Как использовать Tableau со службами SQL Server машины обучения](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/)
+
+    Анализ социальных сетей и создание диаграмм Tableau, с помощью SQL Server и R.
 
 ### <a name="bkmk_solutions"></a>Шаблоны решений
 
@@ -111,7 +118,7 @@ ms.lasthandoff: 11/09/2017
 После запуска программы установки SQL Server, не забывайте следующие важные действия:
 
 1. Включение возможности выполнения внешнего сценария, запустив `sp_configure 'external scripts enabled', 1`. Следуйте инструкциям, чтобы изменить настройку и перезапустите SQL Server.
-2. Убедитесь, что запущена служба панели запуска и что исполнитель учетные записи он использует могут подключаться к экземпляру SQL Server.
+2. Убедитесь, что запущена служба панели запуска, и что рабочих учетных записей запуска можно подключиться к экземпляру SQL Server.
 3. Просмотрите разрешения, связанные с пользователями, которые необходимо выполнить скрипты R или Python. Независимо от того, используются ли имен входа SQL Server или учетные записи пользователей Windows пользователь должен иметь разрешение на выполнение скриптов R или Python и должен иметь возможность подключения к экземпляру. В зависимости от того, работу с учебником, пользователь может также потребоваться разрешение на запись данных, создания объектов базы данных или сделать массового импорта данных.
 
 Дополнительные сведения см. в этой статье, для некоторых распространенных проблем установки и настройки: [Устранение неполадок службы машины обучения](../machine-learning-troubleshooting-faq.md)

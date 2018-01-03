@@ -3,7 +3,7 @@ title: "Примеры кода ADO MD | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 040fff4e37e2e8f8baec3cef717ab1b9b738079a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2bd955452d799551a8d406489d4d337def554000
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-md-code-examples"></a>Примеры кода ADO MD
 Используйте в следующих примерах кода, чтобы узнать, как использовать объекты ADO MD, методы и свойства. Эти примеры являются подмножеством примера приложения, установленные с Microsoft SQL Server OLAP Services для SQL Server 7.0.  

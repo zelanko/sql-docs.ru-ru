@@ -3,7 +3,7 @@ title: "Свойство Status (набора записей ADO) | Докуме
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0005de0669a2dd68622c2e81c9f7b3be2f912da1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26539c8162d53566c31bde8e8f131f0760aed704
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-property-ado-recordset"></a>Свойство Status (набора записей ADO)
 Указывает состояние текущей записи в отношении пакета обновлений или других массовых операций.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает сумму одного или нескольких [RecordStatusEnum](../../../ado/reference/ado-api/recordstatusenum.md) значения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **состояние** свойство, чтобы узнать, какие изменения ожидают для записей изменен во время обновления пакета. Можно также использовать **состояние** свойства для просмотра состояния записи с ошибкой во время массовых операций, например при вызове [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), или [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) методы [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта или набора [фильтра](../../../ado/reference/ado-api/filter-property.md) свойство **набора записей** в массив закладки. Это свойство можно определить, как сбой и его устранению данной записи.  
   
 ## <a name="applies-to"></a>Объект применения  

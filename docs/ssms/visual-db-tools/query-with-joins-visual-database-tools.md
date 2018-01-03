@@ -3,7 +3,7 @@ title: "Запросы с соединениями (визуальные инс�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a4d46c668c5654155783c3cc70a1ad23b33c5c82
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb22fb2b6def35ee971edf962adf176aaa78edd3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-with-joins-visual-database-tools"></a>Запросы с соединениями (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Результат запроса может содержать данные из нескольких таблиц или табличных объектов. Чтобы соединить данные из нескольких возвращающих табличное значение объектов, используется оператор SQL JOIN.  
   
 Сведения о создании запросов с использованием нескольких таблиц см. в следующих разделах.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Изменение операторов соединения (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/modify-join-operators-visual-database-tools.md)  
 Заметим, что таблицы не могут быть соединены с помощью оператора «равно» (=).  
   

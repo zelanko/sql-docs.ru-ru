@@ -3,7 +3,7 @@ title: "Исходный пример свойства (Visual Basic) | Доку
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 953cd75d0924ef2dafdcfda11e8e111411a533f9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f698b209ac9d71c30a820790b494b973202622e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-property-example-vb"></a>Пример свойства источника (Visual Basic)
 В этом примере демонстрируется [источника](../../../ado/reference/ado-api/source-property-ado-recordset.md) свойства, открыв три [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты на основе различных источников данных.  

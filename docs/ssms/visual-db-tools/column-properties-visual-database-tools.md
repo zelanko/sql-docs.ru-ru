@@ -3,7 +3,7 @@ title: "Свойства столбца (визуальные инструмен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 647187fc56293cf1d30b2daa4150f1ad05503338
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8ef372c7a1716fe9e928b3567c52c654268f7a3e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="column-properties-visual-database-tools"></a>Свойства столбца (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Имеется два набора свойств столбцов: полный набор, который можно увидеть на вкладке **Свойства столбца** в конструкторе таблиц (доступен только для баз данных [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]), и сокращенный набор, который доступен в окне "Свойства" обозревателя серверов.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/05/2017
 **Категория «Идентификатор»**  
 При развертывании отображает свойства **Имя** и **База данных** .  
   
-**Имя**  
+**Название**  
 Отображает имя столбца.  
   
 **База данных**  
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/05/2017
 **Общая категория**  
 Отображает свойства **Имя**, **Разрешить значения NULL**, **Тип данных**, **Значение по умолчанию или привязка**, **Длина**, **Точность**и **Масштаб**.  
   
-**Имя**  
+**Название**  
 Отображает имя столбца. Для изменения имени введите его в текстовом поле.  
   
 > [!CAUTION]  
@@ -131,7 +131,7 @@ ms.lasthandoff: 12/05/2017
 **Сжатый тип данных**  
 Отображает сведения о типе данных поля в том же формате, что и в инструкции SQL CREATE TABLE. Например, поле, содержащее строку переменной длины с максимальной длиной 20 символов, будет представлено как «varchar(20)». Чтобы изменить это свойство, введите значение непосредственно в поле.  
   
-**Description**  
+**Описание**  
 Отображает описание столбца. Для просмотра или изменения полного описания щелкните в поле "Описание", а затем нажмите кнопку с многоточием **(…)** справа от значения.  
   
 **Категория описания полнотекстового столбца**  

@@ -3,7 +3,7 @@ title: "Метод обновления | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b8d9acf6072961b1d63a691033d4c2ecd578cb4b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f7d416b0d132af4d2f1d2145de577ca930eaeef9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="update-method"></a>Метод обновления
 Сохраняет любые изменения, внесенные в текущей строке [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или [поля](../../../ado/reference/ado-api/fields-collection-ado.md) коллекцию [записи](../../../ado/reference/ado-api/record-object-ado.md) объекта.  
@@ -38,13 +38,13 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Параметры  
- *Поля*  
- Необязательно. Объект **Variant** , представляющий одно имя или **Variant** массив, представляющий имена или порядковые номера полей, которые вы хотите изменить.  
+ *Fields*  
+ Необязательный параметр. Объект **Variant** , представляющий одно имя или **Variant** массив, представляющий имена или порядковые номера полей, которые вы хотите изменить.  
   
  *Значения*  
- Необязательно. Объект **Variant** , представляющий одно значение или **Variant** массив, представляющий значения для поля или поля в новой записи.  
+ Необязательный параметр. Объект **Variant** , представляющий одно значение или **Variant** массив, представляющий значения для поля или поля в новой записи.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="recordset"></a>набор записей  
  Используйте **обновление** метод, чтобы сохранить любые изменения, внесенные в текущую запись **записей** объект с момента вызова [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) метода или с момента изменять любые значения полей в существующие записи. **Записей** объект должен поддерживать обновлений.  

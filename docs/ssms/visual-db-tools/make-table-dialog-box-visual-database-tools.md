@@ -3,7 +3,7 @@ title: "Диалоговое окно \"Создание таблицы\" (ви�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a50332021cd0c3a3b4c789ced8b02d0c2ca9d34c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fba467f32b32d76ceed49a4dbb26c0e61878f953
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Диалоговое окно «Создание таблицы» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] позволяет присвоить имя созданной таблице, в которую копируются строки. Это диалоговое окно появляется при изменении типа запроса на MAKE TABLE. Чтобы изменить тип запроса, в меню **Конструктор запросов** выберите пункт **Тип изменения**, а затем щелкните **Создать таблицу**.  

@@ -3,7 +3,7 @@ title: "Примеры кода ADOX в Microsoft Visual Basic | Докумен�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 72497e01d95884bdfb09a451936b0df086e7b321
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3092479b81c672da3e71f685fa7c5711340c28d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adox-code-examples-in-microsoft-visual-basic"></a>Примеры кода ADOX в Microsoft Visual Basic
 В этих разделах содержатся примеров кода, которые помогут понять, как использовать ADOX. Все примеры кода представлены с помощью Microsoft Visual Basic.  

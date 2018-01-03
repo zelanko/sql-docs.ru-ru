@@ -3,7 +3,7 @@ title: "Move-метод (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9d1db74ef70a98467e320dc09ff4e19c5935ac04
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 47239335259fc7bee4d01ef01741e4148f1a3ea0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-method-ado"></a>Move-метод (ADO)
 Перемещает позицию в текущей записи [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта.  
@@ -43,9 +43,9 @@ recordset.Move NumRecords, Start
  Со знаком **длинные** выражение, указывающее количество записей, перемещает текущую позицию записей.  
   
  *Запуск*  
- Необязательно. Объект **строка** значение или **Variant** , результатом которого является закладка. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
+ Необязательный параметр. Объект **строка** значение или **Variant** , результатом которого является закладка. Можно также использовать [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Переместить** метод поддерживается на всех **записей** объектов.  
   
  Если *NumRecords* аргумент больше нуля, положение текущей записи перемещается вперед (ближе к концу **записей**). Если *NumRecords* меньше нуля, положение текущей записи выполняется перемещение назад (к началу **записей**).  

@@ -3,7 +3,7 @@ title: "Свойство UnderlyingValue | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0d4f3014350f4e29461a6208802d3f82f8c95535
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4c49f65c2f75e83765c8d4ede18881cc2f8fcdcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="underlyingvalue-property"></a>Свойство UnderlyingValue
 Указывает текущее значение [поле](../../../ado/reference/ado-api/field-object.md) объекта в базе данных.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает **Variant** значение, указывающее значение **поля**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **UnderlyingValue** свойство для возврата текущего значения поля из базы данных. Значение поля в **UnderlyingValue** свойство-значение, являются видимыми для транзакции и может быть результатом последнее обновление другой транзакцией. Он может отличаться от [OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) свойство, которое отражает значение, которое изначально было возвращено [записей](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  Это похоже на использование [Resync](../../../ado/reference/ado-api/resync-method.md) метода, но **UnderlyingValue** свойство возвращает только значение для указанного поля текущей записи. Это то же самое значение, которое [Resync](../../../ado/reference/ado-api/resync-method.md) метод используется для замены [значение](../../../ado/reference/ado-api/value-property-ado.md) свойства.  

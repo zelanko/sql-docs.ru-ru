@@ -3,7 +3,7 @@ title: "Запросы с параметрами (визуальные инст�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0a076e12d307e39188ca4d462fc1f65221066e8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 19089d8fa51a7285782606b8d49e3da31e07d865
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameter-queries-visual-database-tools"></a>Запросы с параметрами (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В некоторых случаях нужно создать запрос, который можно использовать многократно, на каждый раз с разными значениями. Например: можно часто запускать запрос, чтобы найти все `title_ids` , записанные одним автором, можно выполнять один запрос для каждого поиска, меняя только идентификатор автора.  

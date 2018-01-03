@@ -3,7 +3,7 @@ title: "Сортировать свойства | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -28,11 +28,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fc2498f80dfc5a057eff9350ed1949ee02ee5f4f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6e668f5d2644ece0fa9210bdb492fd37ca8089a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sort-property"></a>Свойство сортировки
 Указывает один или несколько имен полей, на котором [записей](../../../ado/reference/ado-api/recordset-object-ado.md) отсортирован, ли каждое поле сортируется в порядке возрастания или убывания.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение, указывающее поле имена в **записей** по которому выполняется сортировка. Имя каждого разделены точкой с запятой, а также обязательно следует пробел и ключевое слово **ASC**, которой сортирует по возрастанию, поле или **DESC**, который сортирует поля в порядке убывания. По умолчанию если нет ключевого слова не указан, поле сортируется по возрастанию.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для этого свойства требуется [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) свойству будет присвоено **adUseClient**. Временный индекс создается для каждого поля, указанного в **сортировки** свойства, если индекс еще не существует.  
   
  Операция сортировки эффективна, так как данные не переупорядочить физически, а просто осуществляется в порядке, заданном индексом.  

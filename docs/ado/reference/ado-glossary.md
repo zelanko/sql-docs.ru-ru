@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, glossary
@@ -17,11 +17,11 @@ caps.latest.revision: "15"
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.openlocfilehash: dd35c15674cff4dc01edddd18f8416d86280d38d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: be9365b3a26b2b8b1db2f4a705a5df1c7b547c54
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-glossary"></a>Глоссарий ADO
 В этом разделе определены термины, относящиеся к ADO.  
@@ -292,7 +292,7 @@ ms.lasthandoff: 11/17/2017
  Операция инициирована кодом, перед началом следующей операции может запуститься. См. также асинхронной операции.  
   
 ## <a name="t-z"></a>T — Z  
- Дерево  
+ дереВО  
  Структура, представляющая иерархические связи между элементами (узлы). На верхнем уровне дерева (корневой) имеется один узел. Ниже корня может быть несколько дочерних элементов. Каждый дочерний элемент в свою очередь может быть родительским для других дочерних объектов, таким образом ветвление подобно дереву. Папка, содержащая документы и другие папки — типичный пример структуры дерева. См. также иерархии, узел, корневой, дочерним, родительским.  
   
  Веб-сервер  

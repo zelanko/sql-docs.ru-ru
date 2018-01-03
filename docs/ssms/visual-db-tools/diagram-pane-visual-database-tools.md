@@ -3,7 +3,7 @@ title: "Панель диаграмм (визуальные инструмент
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 572d4a03893a080c6e2e97a882965c160574cfba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e339c6f51a7a6baf20ba1d7264c17a339722e466
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Панель диаграммы (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Панель диаграмм представляет в графическом виде таблицы или возвращающие табличное значение объекты, выбранные из подключения к данным. Отображаются также все связи соединений между ними.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
 |Значок|Тип объекта|  
 |--------|---------------|  
-|![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dv3wbi1.gif "Значок визуальных инструментов для баз данных")|Таблица|  
+|![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dv3wbi1.gif "Значок визуальных инструментов для баз данных")|Table|  
 |![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dv3wbi2.gif "Значок визуальных инструментов для баз данных")|Запрос или представление|  
 |![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dv3wbi3.gif "Значок визуальных инструментов для баз данных")|Связанная таблица|  
 |![Значок визуальных инструментов для баз данных](../../ssms/visual-db-tools/media/dvudficon.gif "Значок визуальных инструментов для баз данных")|Определяемая пользователем функция|  

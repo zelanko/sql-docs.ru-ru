@@ -3,7 +3,7 @@ title: "Исходный пример свойства (VC ++) | Докумен�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd94b8150058a3420920dc424e001290abef73a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74c3e9c9deafcb58d0e3d1cd4dbfd1ef53684276
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="source-property-example-vc"></a>Пример свойства источника (VC ++)
 В этом примере демонстрируется [источника](../../../ado/reference/ado-api/source-property-ado-recordset.md) свойства, открыв три [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекты на основе различных источников данных.  
