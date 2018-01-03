@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,17 +21,17 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b3f6faa7ac5d8506b75f32a018f3d568da65aa2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f556b19c64501af5f28655c365cc69e42cf291fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Создание пакета развертывания модели с помощью мастера
   Мастер развертывания модели [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] служит для создания пакета, содержащего только объекты модели. Если в пакет нужно включить данные, см. раздел [Создание пакета развертывания модели при помощи MDSModelDeploy](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   В веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** .  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 8.  Нажмите кнопку **Закрыть** , чтобы закрыть мастер.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Развертывание пакета развертывания модели с помощью мастера](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   

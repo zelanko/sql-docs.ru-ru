@@ -3,9 +3,9 @@ title: "Импорт модуля SQLPS | Документация Майкро�
 ms.custom: 
 ms.date: 08/01/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 360350a7b8e051bcab2e24df508ea97b742c52a4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae5fb5957e23a6ad4488a33587d227219855d6b8
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-the-sqlps-module"></a>Импорт модуля SQLPS
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из PowerShell рекомендуется импортировать модуль **sqlps** в среду Windows PowerShell. Модуль загружает и регистрирует оснастки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и сборки управляемости.  Начиная с Windows PowerShell 3.0, модули импортируются автоматически, когда любой командлет или любая функция из модуля используются в команде. Эта возможность работает для любого модуля в каталоге, включенного в значение переменной среды PSModulePath.  Дополнительные сведения см. в разделе [Импорт модуля PowerShell](https://msdn.microsoft.com/library/dd878284(v=vs.85).aspx)
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Команды, используемые в именах двух командлетов SQL Server (**Encode-Sqlname** и **Decode-Sqlname**), не соответствуют утвержденным командам для Windows PowerShell. Это не влияет на их работу, однако среда Windows PowerShell выдает предупреждение при импорте модуля **sqlps** в сеанс.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  По умолчанию в Windows PowerShell политика выполнения скриптов работает в **ограниченном**режиме, блокируя все скрипты Windows PowerShell. Чтобы загрузить модуль **sqlps** , с помощью командлета **Set-ExecutionPolicy** разрешите выполнение подписанных или всех скриптов. Следует выполнять только скрипты, полученные из доверенных источников, а также защищать все входные и выходные файлы, установив необходимые разрешения NTFS. Дополнительные сведения о включении скриптов Windows PowerShell см. в разделе [Выполнение скриптов Windows PowerShell](http://www.microsoft.com/technet/scriptcenter/topics/winpsh/manual/run.mspx).  
   
 ##  <a name="LoadSqlps"></a> Загрузка модуля sqlps  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85f1312bddda28f6ce4b664c8e906e83acae8312
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe67d6afd28bef9b73700206cd618db1a3374580
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-index-master-data-services"></a>Пользовательский индекс (Master Data Services)
   Пользовательские индексы создают в сущности некластеризованный индекс из одного атрибута (одиночный индекс) или из списка атрибутов (составной индекс). Как правило, индексы улучшают производительность обработки запросов. Дополнительные сведения об индексах SQL Server см. в разделе [Индексы](../relational-databases/indexes/indexes.md).  
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Изменить тип атрибута, включенного в пользовательских индекс, невозможно.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

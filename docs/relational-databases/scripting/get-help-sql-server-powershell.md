@@ -3,9 +3,9 @@ title: "Справка по PowerShell (SQL Server) | Документация �
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,13 +21,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 815fab8fa577dad6ee4ef34388c65a1ed3c4b63d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 22c902b09c96bd67fc64e6dc2c7ee33ba7558b17
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="get-help-sql-server-powershell"></a>Получение справок по SQL Server PowerShell
+# <a name="get-help-sql-server-powershell"></a>Get Help SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Сведения об использовании поставщика и командлетов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell можно получить из нескольких источников. К ним относится справка, доступная в среде Windows PowerShell.  
   
 ## <a name="before-you-begin"></a>Перед началом  

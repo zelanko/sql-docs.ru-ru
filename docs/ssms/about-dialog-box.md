@@ -3,7 +3,7 @@ title: "Диалоговое окно \"О программе\" | Докумен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e3a56399db397a6415a96b887b007504a063c738
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a3f8c19d3a121fa5a88ca26adc3cf52f53dca826
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="about-dialog-box"></a>диалоговое окно «О продукте»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В диалоговом окне **О программе** содержатся сведения о продукте, а также предоставляется доступ к сведениям о компьютере, на котором он запущен. Для копий с ограниченным сроком действия запись [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] содержит число дней, оставшихся до прекращения срока действия установленной копии. Это диалоговое окно открывается из меню **Справка** .  
@@ -40,5 +40,5 @@ ms.lasthandoff: 12/05/2017
 Позволяет копировать имена и версии компонентов в буфер обмена [!INCLUDE[msCoName](../includes/msconame_md.md)] Windows.  
   
 ## <a name="see-also"></a>См. также:  
-[Общие элементы интерфейса пользователя](../ssms/general-user-interface-elements.md)  
+[Общие элементы пользовательского интерфейса](../ssms/general-user-interface-elements.md)  
   

@@ -3,7 +3,7 @@ title: "Коды ошибок DataControl | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 54dcd3721781ccb2889d88c2545d8bb3630cb7bc
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0886839245fa7a4dc0e2baee0dfaf010ff876e70
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="datacontrol-object-error-codes"></a>Коды ошибок объекта DataControl
 В следующей таблице перечислены [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) объекта коды ошибок. Положительное десятичное трансляции низкий два байта, показаны отрицательное десятичное преобразование кода ошибки переполнения и шестнадцатеричных значений.

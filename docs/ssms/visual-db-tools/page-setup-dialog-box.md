@@ -3,7 +3,7 @@ title: "Диалоговое окно \"Параметры страницы\" | 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e52e80a2de50c69ecc6349a3666e9da5a71f742
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d415cfe737b8b559873b581e094b408495eb386
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="page-setup-dialog-box"></a>Диалоговое окно «Параметры страницы»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Структуру страницы можно настроить, выбирая параметры в диалоговом окне **Параметры страницы**. Доступность некоторых параметров зависит от языков, установленных и применяемых для изменения.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/05/2017
 Справа  
 Устанавливает расстояние между правым краем страницы и правым краем выровненных вправо строк без отступов.  
   
-В начало  
+TOP  
 Устанавливает расстояние между верхом страницы и верхней кромкой первой строки страницы.  
   
 Нижнее  

@@ -3,7 +3,7 @@ title: "BeginTrans CommitTrans и пример RollbackTrans методы (Visua
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 95e490863b80fa226e5f310560f0b1a197227620
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 779ec99986daa9b85a48febdbb8588e7d39b44d6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans CommitTrans и пример RollbackTrans методы (Visual Basic)
 В этом примере изменяется тип книги все книги по психологии в ***заголовки*** таблицы базы данных. После [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод запускает транзакцию, которая изолирует все изменения, внесенные в ***заголовки*** таблицы, [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод сохраняет изменения. Можно использовать [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) метод, чтобы отменить изменения, которые были сохранены с помощью [обновление](../../../ado/reference/ado-api/update-method.md) метод.  

@@ -3,7 +3,7 @@ title: "Элемент управления изменений в таблице
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29120a3012b74196e9184384fc740b7c18363e98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 034f0f577201d3f0b3b4e38e78e11acb8649884e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Уникальной таблицы, уникальную схему уникальный каталога динамические свойства (ADO)
 Позволяет точно управления изменения определенной базовой таблицей в [записей](../../../ado/reference/ado-api/recordset-object-ado.md) , была создана с помощью операции СОЕДИНЕНИЯ на нескольких базовых таблицах.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **строка** значение, представляющее имя таблицы, схемы или каталога.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Требуемый базовой таблицы однозначно идентифицируется его каталога, схемы и имена таблиц. Когда **уникальной таблицы** свойство задано, значения **уникальную схему** или **уникальный каталог** свойства используются для поиска в базовой таблице. Он предназначен, но не является обязательным, одной или обеих **уникальную схему** и **уникальный каталог** задать свойства перед **уникальной таблицы** свойству.  
   
  Первичный ключ **уникальной таблицы** рассматривается как первичный ключ всей **записей**. Это ключ, используемый для любого метода, требующие первичный ключ.  

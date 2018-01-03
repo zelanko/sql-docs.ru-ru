@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c434a1c9c514018176b1afcc0a7a57c63fc896e3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cc470ce80e24520283f3a34c9e1f560ab096288
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spatial-data-types-overview"></a>Основные сведения о типах пространственных данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
 На следующей диаграмме показаны одинаковые равнобедренные треугольники (треугольник A для определения треугольника использует сегменты линии, а треугольник B — сегменты дуги).  
 
 ![7e382f76-59da-4b62-80dc-caf93e637c14](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif) В этом примере показано, как сохранить эти равнобедренные треугольники с помощью экземпляра **LineString** и экземпляра **CircularString**:  
-```tsql
+```sql
 DECLARE @g1 geometry;
 DECLARE @g2 geometry;
 SET @g1 = geometry::STGeomFromText('LINESTRING(1 1, 5 1, 3 5, 1 1)', 0);
@@ -125,7 +125,7 @@ IF @g1.STIsValid() = 1 AND @g2.STIsValid() = 1
 Обратите внимание, что экземпляру **CircularString** требуется семь точек для определения треугольника, тогда как экземпляру **LineString** для этого достаточно всего четырех точек. Причиной этого является то, что экземпляр **CircularString** хранит сегменты дуги, а не сегменты линии. Поэтому сторонами треугольника, хранящегося в экземпляре **CircularString** , являются ABC, CDE и EFA, а сторонами треугольника, хранящегося в экземпляре **LineString** , — AC, CE и EA.  
 
 Рассмотрим следующий фрагмент кода:  
-```tsql
+```sql
 SET @g1 = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 4 0)', 0);
 SET @g2 = geometry::STGeomFromText('CIRCULARSTRING(0 0, 2 2, 4 0)', 0);
 SELECT @g1.STLength() AS [LS Length], @g2.STLength() AS [CS Length];
@@ -145,16 +145,16 @@ LS LengthCS Length
 
 ### <a name="linestring-and-compoundcurve-comparison"></a>Сравнение типов LineString и CompoundCurve  
 В следующем примере кода показано, как одна и та же фигура сохраняется с помощью экземпляров **LineString** и **CompoundCurve** :
-```tsql
+```sql
 SET @g = geometry::Parse('LINESTRING(2 2, 4 2, 4 4, 2 4, 2 2)');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2), (4 2, 4 4), (4 4, 2 4), (2 4, 2 2))');
 SET @g = geometry::Parse('COMPOUNDCURVE((2 2, 4 2, 4 4, 2 4, 2 2))');
 ```
 
-или  
+или диспетчер конфигурации служб  
 
 В этих примерах фигура может храниться как экземпляр **LineString** или как экземпляр **CompoundCurve** .  В следующем примере тип **CompoundCurve** используется для хранения среза круговой диаграммы:  
-```tsql
+```sql
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0, 2 2))');  
 ```  
 
@@ -162,7 +162,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(2 2, 1 3, 0 2),(0 2, 1 0,
 
 ### <a name="circularstring-and-compoundcurve-comparison"></a>Сравнение типов CircularString и CompoundCurve  
 В следующем примере кода показано, как можно сохранить срезы круговой диаграммы в экземпляре **CircularString** :  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)');
 SELECT @g.ToString(), @g.STLength();
@@ -170,12 +170,12 @@ SELECT @g.ToString(), @g.STLength();
 
 Для хранения среза круговой диаграммы с помощью экземпляра **CircularString** требуется три точки для каждого сегмента линии.  Если промежуточная точка неизвестна, необходимо либо вычислить ее, либо сдублировать конечную точку сегмента линии, как показано в следующем фрагменте кода:  
 
-```tsql
+```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');
 ```
 
 Экземпляры**CompoundCurve** позволяют использовать компоненты **LineString** и **CircularString** , поэтому необходимо знать только две точки сегментов линии среза круговой диаграммы.  В этом примере кода показано, как использовать тип **CompoundCurve** для хранения той же фигуры:  
-```tsql
+```sql
 DECLARE @g geometry;
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING( 3 6.3246, 0 7, -3 6.3246), (-3 6.3246, 0 0, 3 6.3246))');
 SELECT @g.ToString(), @g.STLength();

@@ -3,7 +3,7 @@ title: "Предупреждения | Документация Майкросо
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -29,13 +29,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bcf6d6ecebacd8ea3f3b2a18d5ffe89cb5d2b6ba
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a8210d7acf8121f616f89f3f87b0cb2d2ba34b36
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="alerts"></a>Предупреждения
+# <a name="alerts"></a>видны узлы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] События генерируются [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и регистрируются в журнале приложений Windows [!INCLUDE[msCoName](../../includes/msconame_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент считывает этот журнал и сравнивает события, которые там содержатся, с определенными пользователем предупреждениями. Как только агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обнаруживает такое соответствие, в ответ на это событие автоматически создается предупреждение. Кроме событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] может отслеживать условия производительности и события инструментария управления Windows (WMI).  
   
 Чтобы определить предупреждение, необходимо указать:  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="selecting-an-event-type"></a>Выбор типа события  
 Предупреждение создается в ответ на событие определенного типа. В частности, на следующие типы события:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] события  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] события;  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] условия производительности  
   

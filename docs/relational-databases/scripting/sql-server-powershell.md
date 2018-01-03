@@ -3,9 +3,9 @@ title: "PowerShell для SQL Server | Документация Майкросо
 ms.custom: 
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 20bdab1b97f3806cea8b8cb3b526a3d4a057f6fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19eb632fc1b975671f968b9e2db806129eacae27
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-powershell"></a>SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] поддерживает Windows PowerShell — многофункциональную оболочку для работы со скриптами, позволяющую администраторам и разработчикам автоматизировать администрирование серверов и развертывание приложений. Язык Windows PowerShell поддерживает более сложные логические конструкции по сравнению со сценариями [!INCLUDE[tsql](../../includes/tsql-md.md)] , что дает администраторам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возможность создавать надежно работающие сценарии администрирования. Сценарии Windows PowerShell также можно использовать для администрирования других серверных продуктов [!INCLUDE[msCoName](../../includes/msconame-md.md)] . В результате администраторы получают возможность использовать общий язык сценариев для разных серверов.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |Описание способа загрузки только сборок объектов SMO без поставщика и командлетов.|[Загрузка сборки объектов SMO в Windows PowerShell](../../relational-databases/scripting/load-the-smo-assemblies-in-windows-powershell.md)|  
 |Описание способа запуска сеанса Windows PowerShell щелчком правой кнопкой мыши узла в **обозревателе объектов**. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] запускает сеанс Windows Powershell, загружает модуль **sqlps** и настраивает путь поставщика SQL Server для выделенного объекта.|[Запуск Windows PowerShell из среды SQL Server Management Studio](../../relational-databases/scripting/run-windows-powershell-from-sql-server-management-studio.md)|  
 |Описание создания шагов задания агента SQL Server для запуска скрипта Windows PowerShell. Пользователь может планировать выполнение заданий в указанное время или в ответ на события.|[Использование Windows PowerShell в шагах агента SQL Server](../../relational-databases/scripting/run-windows-powershell-steps-in-sql-server-agent.md)|  
-|Описание использования поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для перемещения по иерархии объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)|  
+|Описание использования поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для перемещения по иерархии объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|[Поставщик SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)|  
 |Описание использования командлетов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащих действия компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , например запуск скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] .|[Использование командлетов компонента Database Engine](../../relational-databases/scripting/use-the-database-engine-cmdlets.md)|  
 |Описание способа указания идентификаторов с разделителями [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , содержащих символы, не поддерживаемые в Windows PowerShell.|[Идентификаторы SQL Server в PowerShell](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)|  
 |Описание создания подключения с проверкой подлинности SQL Server. По умолчанию компоненты SQL Server PowerShell используют подключение с помощью проверки подлинности Windows и учетных данных процесса, в котором выполняется Windows PowerShell.|[Управление проверкой подлинности в компонент Database Engine PowerShell](../../relational-databases/scripting/manage-authentication-in-database-engine-powershell.md)|  

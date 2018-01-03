@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1435effb52d063e6b51d07343a0c042e4919b2f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5c940b6382349630be1de89e5fde8db3991500bb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Определение действующих разрешений для ядра СУБД
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/21/2017
 Для предопределенных ролей сервера и предопределенных ролей базы данных предварительно настроены разрешения, которые не могут быть изменены. Чтобы определить, кто является участником предопределенной роли сервера, выполните следующий запрос.    
 >  [!NOTE] 
 >  Не относится к базе данных SQL или хранилищу данных SQL, где разрешение на уровне сервера недоступно. Столбец `is_fixed_role` таблицы `sys.server_principals` был добавлен в SQL Server 2012. Он не требуется для более старых версий SQL Server.  
-```tsql
+```sql
 SELECT SP1.name AS ServerRoleName, 
  isnull (SP2.name, 'No members') AS LoginName   
  FROM sys.server_role_members AS SRM
@@ -73,7 +73,7 @@ SELECT SP1.name AS ServerRoleName,
 >  * Этот запрос проверяет таблицы в базе данных master, но может выполняться в любой базе данных локального продукта. 
 
 Чтобы определить, кто является участником предопределенной роли базы данных, выполните следующий запрос в каждой базе данных.
-```tsql
+```sql
 SELECT DP1.name AS DatabaseRoleName, 
    isnull (DP2.name, 'No members') AS DatabaseUserName 
  FROM sys.database_role_members AS DRM
@@ -113,7 +113,7 @@ SELECT DP1.name AS DatabaseRoleName,
 Следующий запрос возвращает список разрешений, которые были предоставлены или запрещены на уровне сервера. Этот запрос должен быть выполнен в базе данных master.   
 >  [!NOTE] 
 >  Разрешения уровня сервера нельзя предоставлять и запрашивать в базе данных SQL или в хранилище данных SQL.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -127,7 +127,7 @@ SELECT pr.type_desc, pr.name,
 ### <a name="database-permissions"></a>Разрешения базы данных
 
 Следующий запрос возвращает список разрешений, которые были предоставлены или отклонены на уровне базы данных. Этот запрос должен быть выполнен в каждой базе данных.   
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, 
  isnull (pe.state_desc, 'No permission statements') AS state_desc, 
  isnull (pe.permission_name, 'No permission statements') AS permission_name 
@@ -139,7 +139,7 @@ ORDER BY pr.name, type_desc;
 ```
 
 Каждый класс разрешений в таблице разрешений может быть присоединен к другим системным представлениям, содержащим связанные сведения о классе защищаемого объекта. Например, следующий запрос предоставляет имя объекта базы данных, на которого распространяется разрешение.    
-```tsql
+```sql
 SELECT pr.type_desc, pr.name, pe.state_desc, 
  pe.permission_name, s.name + '.' + oj.name AS Object, major_id
  FROM sys.database_principals AS pr
@@ -151,8 +151,8 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-Используйте функцию `HAS_PERMS_BY_NAME`, чтобы определить, имеет ли разрешение конкретный пользователь (в данном случае `TestUser`). Например:   
-```tsql
+Используйте функцию `HAS_PERMS_BY_NAME`, чтобы определить, имеет ли разрешение конкретный пользователь (в данном случае `TestUser`). Пример:   
+```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
 REVERT;

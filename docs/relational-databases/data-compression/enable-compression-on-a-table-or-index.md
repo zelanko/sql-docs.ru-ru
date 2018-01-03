@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: SQL
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
+ms.component: data-compression
 ms.technology: dbe-data-compression
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -26,22 +28,25 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c78a4c6f009e0c90a2a966fb605b0727f8d0ecdd
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 470ba24be23fa4e020d2119eb0408d50ca14efa4
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Включение сжатия таблицы или индекса
+
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
   В этом разделе описано включение таблицы или индекса в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Чтобы включить сжатие таблицы или индекса с использованием:**  
   
@@ -59,9 +64,9 @@ ms.lasthandoff: 12/01/2017
   
 -   Если у таблицы есть невыровненные индексы, изменить настройку сжатия отдельной секции невозможно.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на таблицу или индекс.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  

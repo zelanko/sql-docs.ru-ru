@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f882e7a31a0b7ec24ca6219b88d37c3bc0713ec0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: baaee21d3e699c8882af169412f57200ed936635
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-database"></a>База данных служб Master Data Services
   База данных содержит все сведения, необходимые для системы [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Она является основой для развертывания [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . База данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Предоставляет представления для систем-подписчиков, которым надо извлекать данные из базы данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Конечный элемент таблицы элементов (службы Master Data Services)](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   

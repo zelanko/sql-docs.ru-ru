@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0528c9fb9751aadc11f7896347538d5a200b0290
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 08908c187ec2e548b4379aae11517f1ad50626fe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Администрирование и наблюдение за отслеживанием измененных данных (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как администрировать и отслеживать сбор данных об изменениях.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Выполните следующий код для создания пользовательского сборщика для отслеживания измененных данных.  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
   
     DECLARE @schedule_uid uniqueidentifier;  

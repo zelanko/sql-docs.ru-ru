@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,17 +17,17 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 997fc0e59ffe1a545bb0c56f9137711deb0e354f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7bcd13ec222d89b49a7ae570bd22c2ef033c8395
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-an-index-master-data-services"></a>Создание индекса (Master Data Services)
   Создайте пользовательский индекс списка часто запрашиваемых атрибутов, чтобы повысить производительность запросов.  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Когда обновлено**— дата и время последнего обновления индекса.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  [Изменение и удаление индекса (Master Data Services)](../master-data-services/edit-and-delete-an-index-master-data-services.md)  
   
 ## <a name="see-also"></a>См. также:  

@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b6434b5e98944ee48b51d3d1c06db0ba94fbda0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a84f5bfb08b3824f908b7b38a1da0dddcd8a71c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Просмотр размера разреженного файла снимка базы данных (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается использование [!INCLUDE[tsql](../../includes/tsql-md.md)] для проверки того, является ли файл базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разреженным файлом, и для определения фактического и максимального размеров. Разреженные файлы, которые являются средством файловой системы NTFS, используются моментальными снимками базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="example"></a>Пример
 Следующий скрипт отображается размер в килобайтах для каждого разреженного файла.  Скрипт также указывает максимальный размер в мегабайтах, до которого может увеличиться разреженный файл.  Выполните скрипт Transact-SQL в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-```tsql
+```sql
 SELECT  DB_NAME(sd.source_database_id) AS [SourceDatabase], 
         sd.name AS [Snapshot],
         mf.name AS [Filename], 

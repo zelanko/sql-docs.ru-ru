@@ -3,7 +3,7 @@ title: "Свойства задания — создание задания (с
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: abca15659be8754bd84032a8871508cda216739c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c7db6510c6ced00b0062267db4f73418de144d30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="job-properties---new-job-steps-page"></a>Свойства задания — новое задание (страница "Шаги")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта страница служит для просмотра и организации шагов задания агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -43,10 +43,10 @@ ms.lasthandoff: 12/05/2017
 **Insert**  
 Позволяет создать новый шаг задания перед выбранным этапом.  
   
-**Правка**  
+**Изменить**  
 Позволяет изменить выбранный шаг задания.  
   
-**Delete**  
+**Удаление**  
 Позволяет удалить выбранный шаг задания. При удалении шагов задания автоматически удаляются их выходные журналы.  
   
 ## <a name="see-also"></a>См. также:  

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dddce1fa24fe2a9a11b01dcf53ebc0ab25eba5ba
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 76667823c35b33546fb60cdf5a40830d9f8f8726
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="install-and-configure-semantic-search"></a>Установка и настройка семантического поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Описывает компоненты, необходимые для статистического семантического поиска, и способы их установки и проверки.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
  Возвращаемое значение 1 указывает, что установлен компонент Full-Text Search и семантический поиск. Возвращаемое значение 0 указывает, что они не установлены.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY('IsFullTextInstalled');  
 GO  
 ```  
@@ -54,7 +54,7 @@ GO
   
  Если для экземпляра установлена и зарегистрирована база данных семантической статистики языка, то результаты запроса содержат единственную строку сведений о базе данных.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_language_statistics_database;  
 GO  
 ```  
@@ -87,7 +87,7 @@ GO
   
  По умолчанию база данных имеет имя **semanticsdb**. При присоединении можно присвоить базе данных другое имя (необязательно). Это имя необходимо предоставить при регистрации базы данных в следующем шаге.  
   
-```tsql  
+```sql  
 CREATE DATABASE semanticsdb  
             ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb.mdf' )  
             LOG ON ( FILENAME = 'C:\Microsoft Semantic Language Database\semanticsdb_log.ldf' )  
@@ -101,7 +101,7 @@ GO
   
  Вызовите хранимую процедуру [sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md) и укажите имя, присвоенное базе данных при присоединении.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
 GO  
 ```  
@@ -126,7 +126,7 @@ GO
    
  Вызовите хранимую процедуру [sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md). Необходимость предоставлять имя базы данных отсутствует, поскольку экземпляр может иметь только одну базу данных семантической статистики языка.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_semantic_unregister_language_statistics_db;  
 GO  
 ```  
@@ -135,7 +135,7 @@ GO
  
  Вызовите хранимую процедуру [sp_detach_db (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) и укажите имя базы данных.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

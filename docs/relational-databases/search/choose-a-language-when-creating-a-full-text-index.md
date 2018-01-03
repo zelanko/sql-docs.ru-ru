@@ -4,7 +4,9 @@ ms.custom:
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.prod_service: database-engine, sql-database
+ms.component: search
 ms.technology: dbe-search
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -23,13 +25,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7225aea0968aac310bc531c5c5b12f994c46c752
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0d70cc0b053c776f56041fbf961de711c4ad5c26
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>Выбор языка при создании полнотекстового индекса
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   При создании полнотекстового индекса необходимо указать язык уровня столбца для индексируемого столбца. В полнотекстовых запросах к столбцу будут использоваться [средства разбиения по словам и парадигматические модули](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) указанного языка. При выборе языка столбца в процессе создания полнотекстового индекса следует учитывать несколько факторов. Они связаны со способом, которым текст размечается на лексемы и затем индексируется средством полнотекстового поиска.  
   
 > [!NOTE]  
@@ -50,7 +55,7 @@ ms.lasthandoff: 12/01/2017
   
      Тестирование показало, что новые средства разбиения по словам надежно работают в средах с большой интенсивностью запросов.  
   
--   Безопасность  
+-   безопасность  
   
      Новые средства разбиения по словам по умолчанию включены в SQL Server благодаря повышению безопасности в лингвистических компонентах. Все внешние компоненты, например средства разбиения по словам и фильтры, рекомендуется подписывать. Это позволяет повысить общий уровень безопасности и надежности SQL Server. Проверку наличия подписей у данных компонентов при полнотекстовом поиске можно настроить следующим образом:  
   

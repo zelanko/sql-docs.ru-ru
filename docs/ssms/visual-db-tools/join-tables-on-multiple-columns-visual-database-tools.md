@@ -3,7 +3,7 @@ title: "Соединение таблиц по нескольким столбц
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 926380140dc136647cdf4bfba95f825af5966415
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bfe676ff39f2ce59cd9c9b39915ff6393d5f9b6a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>Соединение таблиц по нескольким столбцам (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Таблицы можно соединять по нескольким столбцам. То есть можно создать запрос, который будет сопоставлять строки из двух таблиц, только если они удовлетворяют нескольким условиям. Если база данных содержит связь, которая сопоставляет несколько столбцов с внешними ключами в одной таблице первичному ключу из нескольких столбцов в другой, эту связь можно использовать для соединения по нескольким столбцам. Дополнительные сведения см. в статье [Автоматическое соединение таблиц (визуальные инструменты для баз данных)](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md).  

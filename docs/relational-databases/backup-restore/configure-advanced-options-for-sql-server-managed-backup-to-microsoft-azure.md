@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f4c2bb5ecc63c0168989e6ae23c0d85d5a22dea3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cb251e8c5305d6ee4acc8cfaff61ee1f9d01864f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом руководстве описана настройка дополнительных параметров для [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Эти процедуры необходимы, только если вам нужны соответствующие функции. В противном случае вы можете включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] и использовать параметры по умолчанию.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  **Создайте резервную копию сертификата или асимметричного ключа:** вы можете использовать для шифрования как сертификат, так и асимметричный ключ. Следующий пример демонстрирует создание сертификата, который будет использован для шифрования.  
   
-    ```tsql  
+    ```sql  
     USE Master;  
     GO  
        CREATE CERTIFICATE MyTestDBBackupEncryptCert  
@@ -115,7 +115,7 @@ ms.lasthandoff: 11/17/2017
   
     ```  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  После настройки дополнительных параметров и пользовательского расписания следует включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] для целевой базы данных или экземпляра SQL Server. Дополнительные сведения см. в статье [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="see-also"></a>См. также:  

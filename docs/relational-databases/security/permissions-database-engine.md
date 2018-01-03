@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6d2d7b6f97be65f053248396528c3f4f18f7230e
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e37b0da02e9608249c2283683324fee42fe9a8e3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="permissions-database-engine"></a>Разрешения (ядро СУБД)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/21/2017
 [![Разрешения для ядра СУБД](../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
 
 Если вы знаете, как применять разрешения, примените их на уровне сервера к именам для входа и пользователям разрешений на уровне базы данных, используя инструкции [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)и [DENY](../../t-sql/statements/deny-transact-sql.md) . Пример:   
-```tsql
+```sql
 GRANT SELECT ON OBJECT::HumanResources.Employee TO Larry;
 REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 ```   
@@ -110,7 +110,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |----------------|----------------|  
 |ALTER|Все классы объектов, кроме TYPE.|  
 |CONTROL|Все классы объектов: <br />AGGREGATE,<br />APPLICATION ROLE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />AVAILABILITY GROUP,<br />CERTIFICATE,<br />CONTRACT,<br />CREDENTIALS, DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br /> DEFAULT,<br />ENDPOINT,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />LOGIN,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />REMOTE SERVICE BINDING,<br />ROLE,<br />ROUTE,<br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SERVER,<br />SERVER ROLE,<br />SERVICE,<br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE, USER,<br />VIEW и<br />XML SCHEMA COLLECTION|  
-|DELETE|Все классы объектов, кроме DATABASE SCOPED CONFIGURATION и SERVER.|  
+|Delete|Все классы объектов, кроме DATABASE SCOPED CONFIGURATION и SERVER.|  
 |EXECUTE|Типы CLR, внешние сценарии, процедуры ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR), скалярные и агрегатные функции ([!INCLUDE[tsql](../../includes/tsql-md.md)] и среда CLR), а также синонимы|  
 |IMPERSONATE|Имена входа и пользователи|  
 |INSERT|Синонимы, таблицы и столбцы, а также представления и столбцы. Разрешение можно предоставить на уровне базы данных, схемы или объектов.|  
@@ -217,7 +217,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
+|DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> Применимо к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до текущей версии).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
@@ -264,7 +264,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
+|OBJECT|DELETE|DL|SCHEMA|Delete|  
 |OBJECT|EXECUTE|EX|SCHEMA|EXECUTE|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -294,7 +294,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
+|SCHEMA|Delete|DL|DATABASE|Delete|  
 |SCHEMA|EXECUTE|EX|DATABASE|EXECUTE|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -324,7 +324,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |SERVER|CONNECT SQL|COSQ|Неприменимо|Неприменимо|  
 |SERVER|CONTROL SERVER|CL|Неприменимо|Неприменимо|  
 |SERVER|CREATE ANY DATABASE|CRDB|Неприменимо|Неприменимо|  
-|SERVER|CREATE AVAILABILITY GROUP|CRAC|Неприменимо|Неприменимо|  
+|SERVER|Создание группы доступности|CRAC|Неприменимо|Неприменимо|  
 |SERVER|CREATE DDL EVENT NOTIFICATION|CRDE|Неприменимо|Неприменимо|  
 |SERVER|CREATE ENDPOINT|CRHE|Неприменимо|Неприменимо|  
 |SERVER|CREATE SERVER ROLE|CRSR|Неприменимо|Неприменимо|  
@@ -423,8 +423,8 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 
 ## <a name="secial-considerations-for-column-level-permissions"></a>Особые замечания относительно разрешений на уровне столбца
 
-Разрешения на уровне столбца предоставляются с помощью синтаксиса *<имя_таблицы> (\<имя_столбца>)*. Например:
-```tsql
+Разрешения на уровне столбца предоставляются с помощью синтаксиса *<имя_таблицы> (\<имя_столбца>)*. Пример:
+```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
 Разрешение GRANT на столбец переопределяет разрешение DENY на таблицу. При этом последующее разрешение DENY на таблицу удалит разрешение GRANT на столбец. 
@@ -432,10 +432,10 @@ GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ##  <a name="_examples"></a> Примеры  
  В примерах этого раздела показано, как получить сведения о разрешениях.  
   
-### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>А. Получение полного списка разрешений, которые могут быть предоставлены  
+### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Получение полного списка разрешений, которые могут быть предоставлены  
  Следующая инструкция возвращает все разрешения компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] с помощью функции `fn_builtin_permissions` . Дополнительные сведения см. в разделе [sys.fn_builtin_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions(default);  
 GO  
 ```  
@@ -443,7 +443,7 @@ GO
 ### <a name="b-returning-the-permissions-on-a-particular-class-of-objects"></a>Б. Получение разрешений на определенный класс объектов  
  В следующем примере функция `fn_builtin_permissions` используется для просмотра всех разрешений, доступных для категории защищаемых объектов. В примере возвращаются разрешения на сборки.  
   
-```tsql  
+```sql  
 SELECT * FROM fn_builtin_permissions('assembly');  
 GO    
 ```  
@@ -451,7 +451,7 @@ GO
 ### <a name="c-returning-the-permissions-granted-to-the-executing-principal-on-an-object"></a>В. Получение разрешений, предоставленных исполняющему участнику на объект  
  В следующем примере функция `fn_my_permissions` возвращает список действующих разрешений вызывающего участника в отношении указанного защищаемого объекта. В примере возвращаются разрешения на объект с именем `Orders55`. Дополнительные сведения см. в разделе [sys.fn_my_permissions (Transact-SQL)](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM fn_my_permissions('Orders55', 'object');  
 GO  
 ```  
@@ -459,7 +459,7 @@ GO
 ### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>Г. Получение разрешений, применимых к конкретному объекту  
  В следующем примере возвращаются применимые разрешения на объект с именем `Yttrium`. Обратите внимание, что для получения идентификатора объекта `OBJECT_ID` используется встроенная функция `Yttrium`.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_permissions   
     WHERE major_id = OBJECT_ID('Yttrium');  
 GO  

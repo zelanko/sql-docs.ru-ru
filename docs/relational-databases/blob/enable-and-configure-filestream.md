@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 28de8df00cc2a98756492b7ae434838d04a4e53c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 55dd8e263f95d9abf13d34bc37d703b7171bea2c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-and-configure-filestream"></a>Включение и настройка FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Перед использованием хранилища FILESTREAM его необходимо включить в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. В этом разделе описано, как включить FILESTREAM с помощью диспетчера конфигурации SQL Server.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
 11. В редакторе запросов введите следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-    ```tsql  
+    ```sql  
     EXEC sp_configure filestream_access_level, 2  
     RECONFIGURE  
     ```  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
 ||||||  
 |-|-|-|-|-|  
-|Уровень RAID|Производительность записи|Производительность чтения|Отказоустойчивость|Замечания|  
+|Уровень RAID|Производительность записи|Производительность чтения|Отказоустойчивость|Remarks|  
 |RAID 5|Нормальный|Нормальный|Высокая|Производительность лучше, чем у диска или JBOD, но хуже, чем у RAID 0 или RAID 5 с чередованием.|  
 |RAID 0|Высокая|Высокая|None||  
 |RAID 5 + чередование|Высокая|Высокая|Высокая|Самый дорогостоящий вариант.|  

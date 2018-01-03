@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,17 +20,17 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29be013a001857b2e8341d250a187be0fadc75ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 013c630c42d61bebcd71394c2f9e47a81cf1dfd3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unlock-a-version-master-data-services"></a>Разблокировка версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]разблокирование версии модели позволяет производить изменения элементов модели и их атрибутов.  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md)  
   

@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 422b1a28f91bb33705f0cb6592f4a19bb6341e76
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d8f1ced372910b7fcd5e30a79b92de5808342738
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>Страница «Веб-конфигурация» (диспетчер конфигурации Master Data Services)
   Используйте страницу **Веб-конфигурация** для настройки веб-сайта и веб-приложения. Можно также включить службы Data Quality Services  

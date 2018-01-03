@@ -3,9 +3,9 @@ title: "Редакторы запросов и текста (среда SQL Serv
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -33,11 +33,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b54b922643b184ccc19a3cdead0cec7d06503fea
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b278c4027a3293ec7845be3d9b344451d6a2f457
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>Редакторы запросов и текста (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Для интерактивного изменения и проверки скриптов [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], многомерных выражений, расширений интеллектуального анализа данных или XML/A либо для изменения простого текстового файла или XML-файла можно использовать один из редакторов среды [!INCLUDE[tsql](../../includes/tsql-md.md)]. В каждом редакторе поддерживается выделение цветом ключевых слов и проверка ошибок синтаксиса и применения для конкретного языка. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] есть отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] , с помощью которого можно находить и исправлять ошибки в коде [!INCLUDE[tsql](../../includes/tsql-md.md)] .  

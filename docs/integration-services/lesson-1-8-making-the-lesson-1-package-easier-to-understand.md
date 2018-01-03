@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,16 +18,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ac8c3fa9e34de95c826c6c89a0356ac4797bd638
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e057c1291ec3b606341c9be26a950b93ab24709
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Занятие 1–8. Облегчение чтения пакета, созданного на занятии 1
 После завершения настройки пакета, созданного на занятии 1, можно приступить к приведению его макета в порядок. Если фигуры в макетах элементов управления и потока данных имеют случайные размеры или если эти элементы не упорядочены или не сгруппированы, то функциональность пакета трудно понять.  
   
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools предоставляет средства, которые облегчают и ускоряют форматирование макета пакета. К функциям форматирования относится возможность создавать элементы одного размера, выравнивать их, а также управлять горизонтальным и вертикальным пространством между элементами.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools предоставляет средства, которые облегчают и ускоряют форматирование макета пакета. К функциям форматирования относится возможность создавать элементы одного размера, выравнивать их, а также управлять горизонтальным и вертикальным пространством между элементами.   
   
 Другим способом добиться лучшего понимания функциональности пакета является добавление заметок, описывающих функциональность пакета.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
     Если в окне заметки не введен никакой текст, то окно закрывается при щелчке за его пределами.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 [Шаг 9. Проверка учебного пакета, созданного на занятии 1](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   

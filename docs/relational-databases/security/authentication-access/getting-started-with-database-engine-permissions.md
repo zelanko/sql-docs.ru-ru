@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ff03a1d00fc6cd1972ecb1d5915882287f372a5f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 6234975f35a30fc956f4e8735771d09cea2d1e2e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Приступая к работе с разрешениями Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -193,7 +193,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
  Чтобы получить список явных разрешений, предоставленных или отклоненных в базе данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), выполните приведенную ниже инструкцию в базе данных.  
   
-```tsql  
+```sql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
@@ -208,7 +208,7 @@ JOIN sys.objects AS obj
   
  Чтобы получить список членов ролей сервера (только[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ), выполните приведенную ниже инструкцию.  
   
-```tsql  
+```sql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -220,7 +220,7 @@ JOIN sys.server_principals AS sRole
  
  Чтобы получить список членов ролей базы данных ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]), выполните приведенную ниже инструкцию в базе данных.  
   
-```tsql  
+```sql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -229,7 +229,7 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Другие разделы, посвященные началу работы:  
   
 -   [Учебник. Приступая к работе с компонентом Database Engine](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [Создание базы данных (учебник)](../../../t-sql/lesson-1-1-creating-a-database.md)  

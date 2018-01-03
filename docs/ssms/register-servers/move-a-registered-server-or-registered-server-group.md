@@ -3,7 +3,7 @@ title: "Перемещение зарегистрированного серве
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8ac3daddf1a07d6872d4813c99981c8546352d75
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89f9a409da7eede0af44d58d9d33a1105ec5b0e0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="move-a-registered-server-or-registered-server-group"></a>Перемещение зарегистрированного сервера или зарегистрированной группы серверов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается организация серверов в компоненте "Зарегистрированные серверы" путем перемещения зарегистрированного сервера или групп серверов в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Группа серверов может содержать зарегистрированные серверы или вложенные группы серверов. Как серверы, так и группы серверов можно перемещать из одной группы в другую.  

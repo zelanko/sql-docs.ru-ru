@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -27,11 +27,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 24316ec5dfd86dad719cf603287953f13b70743f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 953fccc13a0d3ef9d34cfe84e5ed50675eeb801b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-packages"></a>Пакеты служб Integration Services (SSIS)
   Пакет — это организованная коллекция соединений, элементов потока управления, элементов потока данных, обработчиков событий, переменных, параметров и конфигураций, которая собирается либо с помощью графических средств проектирования, предоставляемых службами [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , либо программно.  Затем собранный пакет сохраняется в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], хранилище пакетов [!INCLUDE[ssIS](../includes/ssis-md.md)] или в файловую систему. Также вы можете развернуть проект служб ssISnoversion на сервере [!INCLUDE[ssIS](../includes/ssis-md.md)] . Пакет — это рабочий блок, который можно получить, выполнить и сохранить.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/20/2017
   
  Чтобы изменить идентификатор пакета GUID, повторно сформируйте значение идентификатора GUID для свойства **ID** в окне свойств среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Чтобы изменить имя пакета, можно изменить значение свойства **Name** в окне свойств. Можно также использовать средство командной строки **dtutil** или изменить идентификатор GUID и имя программными средствами. Дополнительные сведения см. в разделах [Установка свойств пакета](../integration-services/set-package-properties.md) и [Программа dtutil](../integration-services/dtutil-utility.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] для создания пакетов, в состав служб [!INCLUDE[ssIS](../includes/ssis-md.md)] входят два графических средства: конструктор служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и мастер импорта и экспорта служб [!INCLUDE[ssIS](../includes/ssis-md.md)] . Подробные сведения см. в следующих разделах.  
   
 -   [Импорт и экспорт данных с помощью мастера импорта и экспорта SQL Server](../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  

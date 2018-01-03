@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ac501920047afb4d007c126fb36ac2215162bafc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 01cb38024cef71a6a19c9b79ca036270dc46a6ab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="logging-in-to-sql-server"></a>Вход в систему SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Войти в систему в экземпляре [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно с использованием любого графического средства администрирования или из командной строки.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
 |----------------------|-------------------------------|  
 |Соединение с экземпляром по умолчанию с помощью протокола по умолчанию. (Это рекомендуемый элемент для экземпляра по умолчанию).|APPHOST|  
 |Соединение с именованным экземпляром с помощью протокола по умолчанию. (Это рекомендуемый элемент для именованного экземпляра).|APPHOST\SQLEXPRESS|  
-|Соединение с экземпляром по умолчанию на том же компьютере при помощи точки для указания, что экземпляр выполняется на локальном компьютере.|вводить имя входа SQL Server не нужно.|  
+|Соединение с экземпляром по умолчанию на том же компьютере при помощи точки для указания, что экземпляр выполняется на локальном компьютере.|, и делает это по-другому.|  
 |Соединение с именованным экземпляром на том же компьютере с помощью точки для указания, что экземпляр выполняется на локальном компьютере.|.\SQLEXPRESS|  
 |Соединение с экземпляром по умолчанию на том же компьютере при помощи localhost для указания, что экземпляр выполняется на локальном компьютере.|localhost|  
 |Соединение с именованным экземпляром на том же компьютере с помощью localhost, указывающее, что экземпляр выполняется на локальном компьютере.|localhost\SQLEXPRESS|  
@@ -77,13 +77,13 @@ ms.lasthandoff: 11/20/2017
 ## <a name="verifying-your-connection-protocol"></a>Проверка протокола соединения  
  При соединении с компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)]следующий запрос возвратит протокол, используемый для текущего соединения, вместе с методом проверки подлинности (NTLM или Kerberos) и укажет состояние шифрования соединения.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
 ```  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Вход в экземпляр SQL Server (командная строка)](../../database-engine/configure-windows/log-in-to-an-instance-of-sql-server-command-prompt.md)  
   
  Следующие ресурсы могут помочь устранить проблему с соединением.  
@@ -93,7 +93,7 @@ WHERE session_id = @@SPID;
 -   [Шаги для устранения неполадок с подключением SQL](http://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
   
 ## <a name="related-content"></a>См. также  
- [Выбор режима проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md)  
+ [Выбор режима аутентификации](../../relational-databases/security/choose-an-authentication-mode.md)  
   
  [Использование программы sqlcmd](../../relational-databases/scripting/sqlcmd-use-the-utility.md)  
   

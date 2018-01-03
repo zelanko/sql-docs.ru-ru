@@ -7,23 +7,27 @@ documentationcenter:
 author: becczhang
 manager: jhubbard
 editor: 
-ms.assetid: 
+ms.prod: 
+ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database, sql-data-warehouse
 ms.service: sql-database
-ms.custom: quick start create, mvc
+ms.custom: 
+ms.component: security
 ms.workload: Inactive
-ms.tgt_pltfrm: portal
+ms.tgt_pltfrm: 
 ms.devlang: na
-ms.topic: hero-article
+ms.topic: article
 ms.date: 08/07/2017
 ms.author: ryzhang26
-ms.openlocfilehash: b682c9059d9a6365beebeff549d4c2840c04d477
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: 85a1d74907dc3e6b887a172247850b9bc4452b31
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rotate-the-transparent-data-encryption-tde-protector-using-powershell"></a>Смена средства защиты прозрачного шифрования данных (TDE) с помощью PowerShell 
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
 
 В этом практическом руководстве описывается процедура смены ключа сервера Azure SQL с помощью средства защиты TDE из Azure Key Vault. Смена средства защиты TDE для сервера Azure SQL означает переключение на новый асимметричный ключ, который защищает базы данных на сервере. Смена ключа выполняется в оперативном режиме и обычно занимает несколько секунд, так как при этом происходят лишь расшифровка и повторное шифрование шифрования данных для базы данных, а не всей базы данных.
 
@@ -37,11 +41,11 @@ ms.lasthandoff: 11/18/2017
 > **Не удаляйте** предыдущие версии ключа после смены.  При смене ключей некоторые данные по-прежнему шифруются с помощью предыдущих ключей, например старые резервные копии базы данных. 
 >
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - В этом практическом руководстве предполагается, что вы уже используете ключ из Azure Key Vault в качестве средства защиты TDE для базы данных или хранилища данных SQL Azure. Дополнительные сведения см. в статье [Transparent Data Encryption with BYOK Support](transparent-data-encryption-byok-azure-sql.md) (Прозрачное шифрование данных с поддержкой BYOK).
 - Должна быть установлена и запущена служба Azure PowerShell версии 3.7.0 или более поздней. 
-- [Рекомендуется, но необязательно] Сначала создайте материал ключа для средства защиты TDE в аппаратном модуле безопасности (HSM) или локальном хранилище ключей, а затем импортируйте этот материал в Azure Key Vault. Следуйте [инструкциям по использованию аппаратного модуля безопасности (HSM) и хранилища Key Vault](https://docs.microsoft.com/en-us/azure/key-vault/key-vault-get-started).
+- [Рекомендуется, но необязательно] Сначала создайте материал ключа для средства защиты TDE в аппаратном модуле безопасности (HSM) или локальном хранилище ключей, а затем импортируйте этот материал в Azure Key Vault. Следуйте [инструкциям по использованию аппаратного модуля безопасности (HSM) и хранилища Key Vault](https://docs.microsoft.com/azure/key-vault/key-vault-get-started).
 
 ## <a name="option-1-auto-rotation"></a>Вариант 1. Автоматическая смена
 

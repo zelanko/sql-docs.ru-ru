@@ -20,22 +20,22 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 5470b86096170410b88c6a8e8a596fe608d33cc7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: 8bc8f0154f8da5ecbbfc5d45e1ab1ee7ff974c69
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="rename-a-database"></a>Переименование базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается, как переименовать пользовательскую базу данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Имя базы данных может содержать все символы, соответствующие правилам для идентификаторов.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Переименование базы данных с использованием следующих средств:**  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Дальнейшие действия**  [После переименования базы данных](#FollowUp)  
+-   **Follow Up:**  [After renaming a database](#FollowUp)  
 
 > [!NOTE]
 > Чтобы переименовать базу данных в службе базы данных SQL Azure, используйте инструкцию [ALTER DATABASE (база данных SQL Azure)](../../t-sql/statements/alter-database-azure-sql-database.md). Чтобы переименовать базу данных в хранилище данных SQL Azure или в Parallel Data Warehouse, используйте инструкцию [RENAME (Transact-SQL)](/t-sql/statements/rename-transact-sql).
@@ -54,9 +54,9 @@ ms.lasthandoff: 11/20/2017
   
 -   Системные базы данных не могут быть переименованы.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -81,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере имя базы данных `AdventureWorks2012` изменяется на `Northwind`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  

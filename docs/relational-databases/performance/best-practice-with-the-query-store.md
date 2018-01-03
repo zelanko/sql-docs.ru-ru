@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8692566abced072b25d931a9b133c0fb7cd7f51d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c4026c4495c9c11922f8f4496b0000dfb2c9420
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="best-practice-with-the-query-store"></a>Рекомендации по хранилищу запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  Значение по умолчанию (100 МБ) может быть недостаточным, если рабочая нагрузка создает большое количество различных запросов и планов или если вы хотите хранить журнал запросов за более длительный период времени. Отслеживайте текущее использование пространства и увеличивайте максимальный размер (МБ), чтобы предотвратить переход хранилища запросов в режим "только чтение".  Используйте [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или выполните следующий скрипт, чтобы получить последние сведения о размере хранилища запросов.  
   
-```tsql 
+```sql 
 USE [QueryStoreDB];  
 GO  
   
@@ -68,14 +68,14 @@ FROM sys.database_query_store_options;
   
  Следующий скрипт задает новый максимальный размер (МБ).  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]  
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);  
 ```  
   
  **Интервал сбора статистики** . Определяет уровень детализации для собираемой статистики среды выполнения (значение по умолчанию — 1 час). Рекомендуется использовать меньшее значение, если требуется большая степень детализации или меньшее время на обнаружение и устранение проблем, но помните, что это значение будет напрямую влиять на объем данных в хранилище запросов. Чтобы задать другое значение для интервала сбора статистики, используйте SSMS или Transact-SQL:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
@@ -84,7 +84,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);
   
  Старайтесь не хранить исторические данные, которые не планируется использовать. Это позволит снизить переходы в состояние только чтения. Объем данных в хранилище запросов, а также время на обнаружение и устранение проблем будут более предсказуемыми. Используйте [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] или следующий скрипт, чтобы настроить политику очистки на основе времени:  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
@@ -93,7 +93,7 @@ SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));
   
  Настоятельно рекомендуется активировать очистку на основе размера, чтобы хранилище запросов всегда работало в режиме чтения и записи и собирало последние данные.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);  
 ```  
@@ -108,7 +108,7 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  Следующий скрипт задает режим записи запросов как Auto (автоматически).  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
@@ -120,7 +120,7 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
   
  Включите хранилище запросов с помощью [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , как описано в предыдущем разделе, или выполните следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
-```tsql  
+```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
   
@@ -179,7 +179,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 ##  <a name="Verify"></a> Проверяйте непрерывность сбора данных запросов хранилищем запросов  
  Хранилище запросов может без предупреждения изменять режим работы. Вы должны постоянно наблюдать за состоянием хранилища запросов, чтобы знать, что хранилище запросов работает, и предпринимать действия для исключения сбоев по предотвращаемым причинам. Выполните следующий запрос, чтобы определить режим работы и просмотреть наиболее актуальные параметры.  
   
-```tsql
+```sql
 USE [QueryStoreDB];  
 GO  
   
@@ -200,13 +200,13 @@ FROM sys.database_query_store_options;
   
 -   Очистка данных в хранилище запросов с помощью следующей инструкции.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE [QueryStoreDB] SET QUERY_STORE CLEAR;  
     ```  
   
 Можно применить одно или оба этих действия, выполнив следующую инструкцию, которая явно изменяет режим работы обратно в режим чтения и записи.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);  
 ```  
@@ -222,7 +222,7 @@ SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 ### <a name="error-state"></a>Состояние ошибки  
  Чтобы восстановить хранилище запросов, попробуйте явно установить режим чтения и записи и проверьте фактическое состояние еще раз.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);    
 GO  
@@ -240,7 +240,7 @@ FROM sys.database_query_store_options;
  
  Если это не помогло, можно попробовать очистить хранилище запросов перед запросом режима чтения и записи.  
   
-```tsql  
+```sql  
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE CLEAR;  
 GO  
@@ -303,7 +303,7 @@ FROM sys.database_query_store_options;
 
  Форсирование плана — это удобный механизм, позволяющий исправлять производительность важных запросов и делать их более предсказуемыми. Тем не менее, как и в случае подсказок планов и структур планов, не гарантируется, что это будет использовано в будущих выполнениях. Обычно, когда схема базы данных изменяется так, что объекты, упоминаемые в плане выполнения, изменяются или удаляются, принудительное выполнение плана будет начинаться сбоем. В этом случае [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращается к перекомпиляции запроса, а фактическая причина сбоя принудительного выполнения отображается в [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md). Следующий запрос возвращает информацию о принудительно выполненных планах.  
   
-```tsql  
+```sql  
 USE [QueryStoreDB];  
 GO  
   
@@ -334,6 +334,6 @@ WHERE is_forced_plan = 1;
  [Query Store Catalog Views (Transact-SQL) ](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  (Представления каталогов хранилища запросов (Transact-SQL))  
  [Query Store Stored Procedures (Transact-SQL)](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  (Хранимые процедуры хранилища запросов (Transact-SQL))  
  [Использование хранилища запросов с выполняющейся в памяти OLTP](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [Руководство по архитектуре обработки запросов](../../relational-databases/query-processing-architecture-guide.md)  
   

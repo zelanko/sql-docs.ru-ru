@@ -3,7 +3,7 @@ title: "Настройка служб удаленных рабочих СТОЛ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 831608a7930f9fae1bef31132ee11f22654a8b5c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bc8126f454dcb5ac990f837fb04e667589658926
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configuring-rds-on-windows-2000"></a>Настройка служб удаленных рабочих СТОЛОВ в Windows 2000
 При возникновении затруднений при получении служб удаленных рабочих СТОЛОВ для правильной работы после обновления до Windows 2000, выполните следующие действия для устранения неполадок.  

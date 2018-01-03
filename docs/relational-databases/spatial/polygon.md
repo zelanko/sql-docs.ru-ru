@@ -20,13 +20,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2b8881f34970d44bdf99a9e3e547eeefb8c21d2b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e65cb03e1efa9b1c83f9cacad4bd8edba231484e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="polygon"></a>Многоугольник
+# <a name="polygon"></a>Polygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **Polygon** представляет собой двухмерную поверхность, хранимую в виде последовательности точек, определяющих внешнее ограничивающее кольцо, и внутренних колец (последние могут отсутствовать).  
   
 ## <a name="polygon-instances"></a>Экземпляры многоугольников  
@@ -142,7 +142,7 @@ MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1
   
  Еще один пример преобразования недопустимого экземпляра в допустимый экземпляр geometry. В следующем примере создается экземпляр `Polygon` с тремя одинаковыми точками:  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('POLYGON((1 3, 1 3, 1 3, 1 3))');  
 SET @g = @g.MakeValid();  

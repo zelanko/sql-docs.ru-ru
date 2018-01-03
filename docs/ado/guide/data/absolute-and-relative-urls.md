@@ -3,7 +3,7 @@ title: "Абсолютные и относительные URL-адреса | Д
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ae21e6abedfda13da5a02130110cac0034ef8f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f0bbd79ff71ffe17c9fb33903501ab7302766fbf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absolute-and-relative-urls"></a>Абсолютные и относительные URL-адреса
 URL-адрес указывает расположение целевого объекта, хранящиеся на локальном или сетевом компьютере. Целевой объект может быть файл, каталог, HTML-страницы, изображения, программы и т. д*.*  
@@ -41,7 +41,7 @@ URL-адрес указывает расположение целевого об
  *Схема*  
  Указывает, как *ресурсов* осуществляется.  
   
- *сервер*  
+ *server*  
  Указывает имя компьютера, где *ресурсов* находится.  
   
  *путь*  

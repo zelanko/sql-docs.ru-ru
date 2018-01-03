@@ -20,24 +20,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7c787c1399715b4e0a3bff74a4f4e8f6c802816c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba331718701b81ec3fcf5f3de239d5e9ce49556f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-or-change-the-database-collation"></a>Установка и изменение параметров сортировки базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как задать и изменить параметры сортировки базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Если параметры сортировки не указаны, используются параметры сортировки сервера.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Задание и изменение параметров сортировки базы данных с помощью:**  
   
@@ -67,9 +67,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Можно изменить параметры сортировки любых новых объектов, созданных в пользовательской базе данных, с помощью предложения COLLATE инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Эта инструкция не изменяет параметры сортировки столбцов в любых существующих пользовательских таблицах. Он может быть изменен с помощью предложения COLLATE инструкции [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  CREATE DATABASE  
  Требуется разрешение CREATE DATABASE в базе данных **master** или разрешение CREATE ANY DATABASE или ALTER ANY DATABASE.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано задание параметров сортировки с помощью предложения [COLLATE](~/t-sql/statements/collations.md) . В примере создается база данных `MyOptionsTest` , в которой используются параметры сортировки `Latin1_General_100_CS_AS_SC` . Чтобы проверить параметр, после создания базы данных выполните инструкцию `SELECT` .  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -124,7 +124,7 @@ GO
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано изменение имени параметров сортировки с помощью предложения [COLLATE](~/t-sql/statements/collations.md) в инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) . Выполните инструкцию `SELECT` , чтобы проверить изменение.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE MyOptionsTest  

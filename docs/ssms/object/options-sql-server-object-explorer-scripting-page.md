@@ -3,7 +3,7 @@ title: "Параметры (обозреватель объектов SQL Server
 ms.custom: 
 ms.date: 08/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b49bce06a339326d1458827f2712130c725453d3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cd88ab1a30053aed5bbf012b95dfde6dbf888d68
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-sql-server-object-explorer---scripting-page"></a>Параметры (обозреватель объектов SQL Server — страница "Скрипты")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Эта страница используется для задания параметров скриптов, применяемых к следующим командам контекстных меню объектов в **обозревателе объектов**:  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
 -   На этой странице также задаются параметры скриптов по умолчанию для **мастера формирования скриптов SQL Server**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Результаты выполнения команд **Правка** и **Изменить** могут отличаться от результатов команды **Сформировать скрипт <object> как** при том же значении параметра. Команды **Правка** и **Изменить** предназначены для изменения объектов в текущей базе данных во время сеанса работы редактора запросов. Команда **Сформировать скрипт <object> как** предназначена для формирования скрипта, который можно использовать позже для создания объектов.  
   
 ## <a name="options"></a>Параметры  
@@ -154,6 +154,6 @@ ms.lasthandoff: 12/05/2017
 **Скрипт для версии сервера**  
 Создаваемые скрипты будут предназначены для указанной версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Новые функции [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] нельзя внести в скрипты для более ранних версий. Некоторые скрипты, созданные для [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] , нельзя выполнять на серверах, где выполняется более ранняя версия [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], или в базе данных с более ранним значением [уровня совместимости баз данных](https://msdn.microsoft.com/ca5fd220-d5ea-4182-8950-55d4101a86f6).  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 [Формирование скриптов (среда SQL Server Management Studio)](https://msdn.microsoft.com/9711c617-3c68-4e5a-aea3-befc64d51524)  
   

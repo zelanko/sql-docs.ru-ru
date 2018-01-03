@@ -21,22 +21,22 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b7281ad56ebbf4b63d03866888a91ccfc111985
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfde48c7c81bfc23bd01d771363d9c4e9f7443f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Создание псевдонима определяемого пользователем типа данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается создание определяемого пользователем псевдонима типа данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Создание пользовательского псевдонима типа данных с помощью различных средств.**  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Определяемый пользователем псевдоним типа данных должен соответствовать правилам для идентификаторов.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требует разрешения CREATE TYPE в текущей базе данных и разрешения ALTER для схемы *schema_name*. Если аргумент *schema_name* не указан, в действие вступают принимаемые по умолчанию правила разрешения имен с целью определения схемы для текущего пользователя.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
      **Разрешить значения NULL**  
      Указание, допускает ли определяемый пользователем тип данных значения NULL. Допустимость значений NULL для существующего определенного пользователем типа данных не может быть изменена.  
   
-     **Тип данных**  
+     **Data type**  
      Выберите базовый тип данных из списка. В списке показаны все типы данных, за исключением типов **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** и **xml** . Тип данных существующего определенного пользователем типа данных не может быть изменен.  
   
      **Default**  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В следующем примере создается псевдоним типа данных на базе определенного в системе типа данных `varchar` . Псевдоним типа данных `ssn` используется для столбцов, хранящих номера карточек социального страхования, состоящих из 11 разрядов (999-99-9999). Эти столбцы не могут иметь значение NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

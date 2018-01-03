@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b90ec3cc6932d9487dd339041fc1f580f63a8db6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9e5aa7f65caf1de9fc0389d6d1dd5aefcc825e0b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Создание определяемых пользователем функций (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] В этом разделе описывается создание определяемой пользователем функции в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Scalar"></a> Скалярные функции  
  В следующем примере создается скалярная функция из нескольких инструкций в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Функция имеет один входной параметр `ProductID`и возвращает одно значение — количество указанного товара на складе.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -98,7 +98,7 @@ END;
   
  В следующем примере функция `ufnGetInventoryStock` используется для получения сведений о количестве товаров с идентификаторами `ProductModelID` от 75 до 80.  
   
-```t-sql  
+```sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
@@ -107,7 +107,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
 ##  <a name="TVF"></a> Функции с табличными значениями  
  Результатом следующего примера является встроенная функция, создающая табличное значение в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Функция имеет один входной параметр — идентификатор клиента (магазина) — и возвращает столбцы `ProductID`, `Name`и столбец `YTD Total` со сведениями о продажах продукта за текущий год.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -128,13 +128,13 @@ RETURN
   
  В следующем примере функция вызывается с идентификатором 602.  
   
-```t-sql  
+```sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
  В следующем примере создается функция с табличным значением в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Функция имеет один входной параметр `EmployeeID` и возвращает список всех сотрудников, которые напрямую или косвенно отчитываются перед заданным сотрудником. Затем функция вызывается с указанием идентификатора сотрудника 109.  
   
-```t-sql  
+```sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  

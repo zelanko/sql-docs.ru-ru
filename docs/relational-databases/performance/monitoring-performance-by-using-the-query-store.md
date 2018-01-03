@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 01b85a4c7cf91d2d6b2f2616ff6b19221a188afd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4b3236a5888d906328f525333ae9e20b42e6d8de
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Мониторинг производительности с использованием хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="use-transact-sql-statements"></a>Использование инструкций Transact-SQL  
   
-1.  Используйте инструкцию **ALTER DATABASE** , чтобы включить хранилище запросов. Например:  
+1.  Используйте инструкцию **ALTER DATABASE** , чтобы включить хранилище запросов. Пример:  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE AdventureWorks2012 SET QUERY_STORE = ON;  
     ```  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/17/2017
   
  Следующий запрос возвращает сведения о запросах и планах в хранилище запросов.  
   
-```tsql  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -200,7 +200,7 @@ JOIN sys.query_store_query_text AS Txt
   
  Выполните запрос [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md), чтобы определить, активно ли хранилище запросов, и узнать, собирается ли сейчас статистика среды выполнения.  
   
-```tsql  
+```sql  
 SELECT actual_state, actual_state_desc, readonly_reason,   
     current_storage_size_mb, max_storage_size_mb  
 FROM sys.database_query_store_options;  
@@ -213,7 +213,7 @@ FROM sys.database_query_store_options;
   
  Чтобы найти подробные сведения о состоянии хранилища запросов, выполните следующую команду в базе данных пользователя.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.database_query_store_options;  
 ```  
   
@@ -221,7 +221,7 @@ SELECT * FROM sys.database_query_store_options;
   
  Вы можете переопределить интервал для объединения статистики времени выполнения запросов (по умолчанию — 60 минут).  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
@@ -235,14 +235,14 @@ SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);
   
  Чтобы проверить текущий размер хранилища запросов и установленное ограничение, выполните следующую инструкцию в пользовательской базе данных.  
   
-```tsql  
+```sql  
 SELECT current_storage_size_mb, max_storage_size_mb   
 FROM sys.database_query_store_options;  
 ```  
   
  Если хранилище запросов заполнено, используйте следующую инструкцию для его расширения.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database_name>   
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
@@ -251,7 +251,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);
   
  Вы можете задать несколько параметров хранилища запросов одновременно с помощью одной инструкции ALTER DATABASE.  
   
-```tsql  
+```sql  
 ALTER DATABASE <database name>   
 SET QUERY_STORE (  
     OPERATION_MODE = READ_WRITE,  
@@ -270,7 +270,7 @@ SET QUERY_STORE (
   
  Внутренние таблицы хранилища запросов создаются в группе файлов PRIMARY во время создания базы данных, и эту конфигурацию невозможно изменить позже. Если у вас заканчивается место, следует удалить более старые данные из хранилища запросов с помощью следующей инструкции.  
   
-```tsql  
+```sql  
 ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;  
 ```  
   
@@ -278,7 +278,7 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  **Удаление нерегламентированных запросов** . Эта функция удаляет запросы, которые были выполнены только один раз более 24 часов назад.  
   
-```tsql  
+```sql  
 DECLARE @id int  
 DECLARE adhoc_queries_cursor CURSOR   
 FOR   
@@ -321,7 +321,7 @@ DEALLOCATE adhoc_queries_cursor;
   
  **Каковы последние запросы (*n*), выполненные в базе данных?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
     qt.query_text_id, p.plan_id, rs.last_execution_time  
 FROM sys.query_store_query_text AS qt   
@@ -336,7 +336,7 @@ ORDER BY rs.last_execution_time DESC;
   
  **Сколько раз выполнен каждый запрос?**  
   
-```tsql  
+```sql  
 SELECT q.query_id, qt.query_text_id, qt.query_sql_text,   
     SUM(rs.count_executions) AS total_execution_count  
 FROM sys.query_store_query_text AS qt   
@@ -352,7 +352,7 @@ ORDER BY total_execution_count DESC;
   
  **У скольких запросов самое высокое значение среднего времени выполнения за последний час?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
     qt.query_text_id, p.plan_id, GETUTCDATE() AS CurrentUTCTime,   
     rs.last_execution_time   
@@ -369,7 +369,7 @@ ORDER BY rs.avg_duration DESC;
   
  **У скольких запросов самое высокое значение среднего количества операций чтения среди физических операций ввода-вывода за последние 24 часа с соответствующим числом строк и выполнений?**  
   
-```tsql  
+```sql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
     q.query_id, qt.query_text_id, p.plan_id, rs.runtime_stats_id,   
     rsi.start_time, rsi.end_time, rs.avg_rowcount, rs.count_executions  
@@ -388,7 +388,7 @@ ORDER BY rs.avg_physical_io_reads DESC;
   
  **У скольких запросов несколько планов?** Эти запросы особенно интересны, так как они являются кандидатами на снижение из-за изменения выбранного плана. Следующий запрос определяет данные запросы со всеми планами.  
   
-```tsql  
+```sql  
 WITH Query_MultPlans  
 AS  
 (  
@@ -417,7 +417,7 @@ ORDER BY query_id, plan_id;
   
  **У каких запросов недавно понизилась производительность (в сравнении с данными другой точки во времени)?** Следующий пример запроса возвращает все запросы, для которых время выполнения удвоилось за последние 48 часов из-за изменения выбранного плана. Запрос сравнивает все интервалы статистики времени выполнения.  
   
-```tsql  
+```sql  
 SELECT   
     qt.query_sql_text,   
     q.query_id,   
@@ -457,7 +457,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  **Какие запросы ожидают больше всего?**
 Этот запрос возвращает 10 ведущих запросов, ожидающих больше всего. 
  
- ```tsql 
+ ```sql 
   SELECT TOP 10
     qt.query_text_id,
     q.query_id,
@@ -473,7 +473,7 @@ ORDER BY sum_total_wait_ms DESC
  
  **У каких запросов недавно понизилась производительность (в недавних данных в сравнении с историческими)?** Следующий запрос сравнивает периоды выполнения на основе выполнения запросов. В этом примере запрос сравнивает статистику выполнения за последний период (1 час) и аналогичную статистику за более ранний период (последний день), чтобы определить запросы, которые привели к увеличению продолжительности рабочей нагрузки ( `additional_duration_workload`). Эти метрики подсчитываются путем умножения разницы между средним последним выполнением и средним выполнением по журналу на количество последних выполнений. Фактически они представляют количество последних выполнений с дополнительной длительностью по сравнению с журналом:  
   
-```tsql  
+```sql  
 --- "Recent" workload - last 1 hour  
 DECLARE @recent_start_time datetimeoffset;  
 DECLARE @recent_end_time datetimeoffset;  
@@ -562,7 +562,7 @@ OPTION (MERGE JOIN);
   
  **Планирование или принудительное выполнение запроса (применение политики принудительного выполнения).** При принудительном применении определенного плана каждый раз, когда запрос выполняется, он будет выполняться в принудительно выбранном плане.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;  
 ```  
   
@@ -570,7 +570,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
   
  **Удаление принудительного применения плана для запроса.** Чтобы снова использовать оптимизатор запросов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для вычисления оптимального плана запросов, используйте **sp_query_store_unforce_plan** для отмены принудительного выполнения плана, выбранного для запроса.  
   
-```tsql  
+```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   

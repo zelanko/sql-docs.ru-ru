@@ -3,9 +3,9 @@ title: "Использование командлетов ядра СУБД | Д
 ms.custom: 
 ms.date: 08/04/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -29,11 +29,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b3833567185c16097983cfce99fca2e33d61d88e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5d4bd752ec6a8029d7fb209557769d6e7f32c7d7
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-the-database-engine-cmdlets"></a>Использование командлетов компонента Database Engine
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Командлеты Windows PowerShell представляют собой команды из одной функции, в именах которых, как правило, используется соглашение об именовании "глагол-существительное", например **Get-Help** или **Set-MachineName**. Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell предоставляет командлеты, относящиеся к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

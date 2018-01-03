@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 365b24e35f44154c644afbf2646f8c52738bd90c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f7058099b0da0b991327f6ab408e55fc7143f8d3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-object-security-master-data-services"></a>Защита объектов базы данных (службы Master Data Services)
   В базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] данные хранятся во многих таблицах базы данных, а также отображаются в представлениях. Информация, которая может быть защищена в веб-приложении [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , видна пользователям, у которых есть доступ к базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="Staging"></a> Промежуточное сохранение данных  
  В следующей таблице каждый защищаемый объект имеет строку «name» в составе имени. Это указывает на имя промежуточной таблицы, которая определена при создании сущности. Дополнительные сведения см. в разделе [Обзор: импорт данных из таблиц (службы Master Data Services)](../master-data-services/overview-importing-data-from-tables-master-data-services.md).  
   
-|Действие|Защищаемые объекты|Permissions|  
+|Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
 |Создание, обновление и удаление конечных элементов и их атрибутов.|stg.name_Leaf|Требуется: INSERT<br /><br /> Необязательно: SELECT и UPDATE|  
 |Загрузить данные из конечной промежуточной таблицы в соответствующие таблицы базы данных MDS.|stg.udp_name_Leaf|EXECUTE|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="rules"></a> Проверка данных на соответствие бизнес-правилам  
   
-|Действие|Защищаемый объект|Permissions|  
+|Действие|Защищаемый объект|Разрешения|  
 |------------|---------------|-----------------|  
 |Проверка версии данных на соответствие бизнес-правилам|MDM.udpValidateModel|EXECUTE|  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="Versions"></a> Удаление версий  
   
-|Действие|Защищаемые объекты|Permissions|  
+|Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
 |Определение идентификатора версии, которую необходимо удалить|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |Удаление версии модели|mdm.udpVersionDelete|EXECUTE|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="Hierarchy"></a> Немедленное применение разрешений для элементов иерархии  
   
-|Действие|Защищаемые объекты|Permissions|  
+|Действие|Защищаемые объекты|Разрешения|  
 |------------|----------------|-----------------|  
 |Срочное применение разрешений для элемента|mdm.udpSecurityMemberProcessRebuildModel|EXECUTE|  
   

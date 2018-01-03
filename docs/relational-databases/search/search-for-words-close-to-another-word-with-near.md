@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 362ce1e89941b1abb4578f1931d91d424ec68ae8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c3e51c4507973ef0e4394aef1049fe0edadf94f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Поиск слов близких к другим с использованием оператора NEAR
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Выражение с *учетом расположения* **NEAR** может применяться в предикате [CONTAINS](../../t-sql/queries/contains-transact-sql.md) или функции [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) для поиска слов или фраз, расположенных рядом. 
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-1"></a>Пример 1
  Например, можно искать слово «John», расположенное не далее двух слов от слова «Smith», следующим образом.  
   
-```tsql
+```sql
 ... CONTAINS(column_name, 'NEAR((John, Smith), 2)')
 ```  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-2"></a>Пример 2
  В следующем примере в таблице `Production.Document` образца базы данных `AdventureWorks` выполняется поиск всех сводок по документам, где слово reflector содержится в одном документе со словом bracket.  
   
-```tsql
+```sql
 SELECT DocumentNode, Title, DocumentSummary  
 FROM Production.Document AS DocTable   
 INNER JOIN CONTAINSTABLE(Production.Document, Document,  
@@ -113,7 +113,7 @@ GO
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ## <a name="combine-near-with-other-terms"></a>Сочетание NEAR с другими выражениями  
- NEAR можно сочетать с некоторыми другими выражениями. Операторы AND (&), OR (|) и AND NOT (&!) позволяют сочетать настраиваемое выражение с учетом расположения с другим настраиваемым выражением с учетом расположения, простым выражением или префиксным выражением. Например:  
+ NEAR можно сочетать с некоторыми другими выражениями. Операторы AND (&), OR (|) и AND NOT (&!) позволяют сочетать настраиваемое выражение с учетом расположения с другим настраиваемым выражением с учетом расположения, простым выражением или префиксным выражением. Пример:  
   
 -   CONTAINS('NEAR((*выражение1*,*выражение2*),5) AND *выражение3*')  
   
@@ -125,7 +125,7 @@ GO
   
 -   CONTAINS('NEAR((*выражение1*,*выражение2*),5) OR NEAR((*выражение3*,*выражение4*),2, TRUE)')  
   
- Например:  
+ Например,  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -161,4 +161,4 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
 ## <a name="see-also"></a>См. также:  
  [CONTAINS (Transact-SQL)](../../t-sql/queries/contains-transact-sql.md)  
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [Запрос с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   
+ [Запросы с полнотекстовым поиском](../../relational-databases/search/query-with-full-text-search.md)   

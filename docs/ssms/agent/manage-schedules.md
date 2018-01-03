@@ -3,7 +3,7 @@ title: "Управление расписаниями | Документация
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3abb52a483d939ade1e2e24ddc9836fe1560548e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fed3a1f1202817d56c1e96c241d0487f5b51aaec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-schedules"></a>Управление расписаниями
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Позволяет просматривать и менять свойства для расписаний заданий агента [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
@@ -34,10 +34,10 @@ ms.lasthandoff: 12/05/2017
 **Название**  
 Отображает имя расписания.  
   
-**Включено**  
+**Enabled**  
 Выберите этот параметр, чтобы включить расписание.  
   
-**Description**  
+**Описание**  
 Описывает условия, при которых расписание запускает задание.  
   
 **Задания в расписании**  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 **Создать**  
 Нажмите эту кнопку, чтобы создать новое расписание.  
   
-**Delete**  
+**Удаление**  
 Нажмите эту кнопку, чтобы удалить выбранное расписание.  
   
 **Свойства**  

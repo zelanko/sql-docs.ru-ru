@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4c5183131893849feca62582a63a0d2c25963631
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0d876424f15b5b27972f7dd78721daad8e7f67a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-2---adding-and-configuring-the-foreach-loop-container"></a>Занятие 2–2. Добавление и настройка контейнера "цикл по каждому элементу" | Документы Майкрософт
 В этой задаче будет добавлена возможность выполнить циклическую обработку папки неструктурированных файлов и применить для каждого из этих неструктурированных файлов одинаковое преобразование потока данных, использованное на занятии 1. Это будет выполнено путем добавления в поток управления и настройки контейнера «цикл по каждому элементу».  

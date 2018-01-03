@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ba9740868c30bcc587cae0f99411bd6a49276fc1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b6d7a92e154f6e517fe3299a952a78a05aa4b7d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Создание связанных серверов (компонент SQL Server Database Engine)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  Возможности связанного сервера и необходимые аргументы могут сильно различаться. В примерах из этого раздела представлены типичные ситуации, но описаны не все параметры. Дополнительные сведения см. в статье [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   
-##  <a name="Security"></a> Безопасность  
+##  <a name="Security"></a> безопасность  
   
 ### <a name="permissions"></a>Разрешения  
  При использовании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] требуется разрешение **ALTER ANY LINKED SERVER** на сервер или членство в предопределенной роли сервера **setupadmin** . Для работы с [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] требуется разрешение **CONTROL SERVER** или членство в предопределенной роли сервера **sysadmin** .  
@@ -207,7 +207,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  В редакторе запросов введите следующую команду [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы установить связь с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с именем `SRVR002\ACCTG`:  
   
-    ```tsql  
+    ```sql  
     USE [master]  
     GO  
     EXEC master.dbo.sp_addlinkedserver   
@@ -219,7 +219,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Выполните следующий код, чтобы настроить связанный сервер для использования учетных данных домена для имени входа, которое использует связанный сервер.  
   
-    ```tsql  
+    ```sql  
     EXEC master.dbo.sp_addlinkedsrvlogin   
         @rmtsrvname = N'SRVR002\ACCTG',   
         @locallogin = NULL ,   
@@ -234,7 +234,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Выполните следующий код, чтобы проверить соединение со связанным сервером. Этот пример возвращает имена баз данных на связанном сервере.  
   
-    ```tsql  
+    ```sql  
     SELECT name FROM [SRVR002\ACCTG].master.sys.databases ;  
     GO  
   
@@ -244,7 +244,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Для ссылки на объект, расположенный на связанном сервере, используйте четырехкомпонентные имена. Выполните следующий код, чтобы получить список всех имен входа на локальном сервере и соответствующих имен входа на связанном сервере.  
   
-    ```tsql  
+    ```sql  
     SELECT local.name AS LocalLogins, linked.name AS LinkedLogins  
     FROM master.sys.server_principals AS local  
     LEFT JOIN [SRVR002\ACCTG].master.sys.server_principals AS linked  

@@ -5,7 +5,7 @@ ms.date: 03/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5d1cf7f3dd89fa9629881fcee9b133fac70ca409
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8bd22c0084e7077169254b773431183b89885fcb
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="business-rules-master-data-services"></a>Бизнес-правила (службы Master Data Services)
   Бизнес-правило в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]— это правило, позволяющее обеспечить качество и точность основных данных. Бизнес-правило можно использовать для автоматического обновления данных, отправки электронной почты или запуска бизнес-процесса или рабочего процесса.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="system-settings"></a>Системные настройки  
  В программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] имеется два параметра, которые влияют на бизнес-правила. Эти параметры можно настроить в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных настроек. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

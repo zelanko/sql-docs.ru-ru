@@ -3,7 +3,7 @@ title: "Служба Microsoft курсора для OLE DB (компонент 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9c1fe1572b2ef44ad8fe672b51d5b353ea8182f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62ee8c5da51de28eff001b2056e738653db5b813
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Службы Microsoft курсора OLE DB Обзор
 Служба курсора для OLE DB дополняет поддержки курсорных функций поставщиков данных. В результате пользователь понимает относительно однообразного функции из всех поставщиков данных.

@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: bc20a0bfe85f4e4f1a507554ec6e34e98274d624
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f3a806029b1583f1c8d8049639d3350f86969dd0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-spatial-data-for-nearest-neighbor"></a>Запросы пространственных данных для ближайшего соседа
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] При работе с пространственными данными часто применяется запрос ближайшего соседа. Запрос ближайшего соседа находит пространственные объекты, расположенные ближе всего к указанному пространственному объекту. Например, компонент поиска магазинов на веб-сайте часто должен находить магазины, которые расположены ближе всего к текущему положению клиента.  
@@ -83,7 +83,7 @@ SELECT TOP ( number )
 ## <a name="example"></a>Пример  
  В следующем примере кода показывается запрос ближайшего соседа, в котором может применяться пространственный индекс. В примере используется таблица `Person.Address` базы данных `AdventureWorks2012` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -98,7 +98,7 @@ ORDER BY SpatialLocation.STDistance(@g);
 ## <a name="example"></a>Пример  
  В следующем примере кода показывается запрос ближайшего соседа, в котором не может применяться пространственный индекс.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  

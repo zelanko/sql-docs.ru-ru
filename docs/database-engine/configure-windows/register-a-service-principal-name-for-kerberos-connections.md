@@ -23,13 +23,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4eba9f74d9eb5a46cfda7d5d28c1584c20fb22e7
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: ddf0e47b4ff05f5280401ae5fdbc7a81a8ebb7ec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имя участника-службы для соединений Kerberos
+# <a name="register-a-service-principal-name-for-kerberos-connections"></a>Регистрация имени участника-службы для соединений Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы использовать проверку подлинности Kerberos с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], необходимо соблюдение обоих приведенных ниже условий:  
   
 -   Компьютеры клиента и сервера должны быть частью одного домена Windows или доверенных доменов.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
 Можно определить, что соединение использует протокол Kerberos, запросив динамическое административное представление sys.dm_exec_connections. Выполните следующий запрос и проверьте значение в столбце auth_scheme, которое будет равно «KERBEROS», если включен протокол Kerberos.  
   
-```t-sql  
+```sql  
 SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;  
 ```  
   
@@ -62,7 +62,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  Для входа на SQL Server рекомендуется использовать проверку подлинности Windows. Проверка подлинности клиентов с проверкой подлинности Windows осуществляется при помощи протоколов NTLM или Kerberos. В среде Active Directory сначала всегда выполняется проверка подлинности по протоколу Kerberos. Проверка подлинности Kerberos не поддерживается клиентами [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с именованными каналами.  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  При запуске службы компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] она пытается зарегистрировать имя участника-службы (SPN). Если у учетной записи, с которой запускается SQL Server, нет права регистрировать имя участника-службы в службах домена Active Directory, вызов завершится ошибкой и в журнал событий приложений, а также в журнал ошибок SQL Server будет добавлено предупреждение. Для регистрации имени участника-службы компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен выполняться от имени встроенной учетной записи, например Local System (не рекомендуется) или NETWORK SERVICE, либо от имени учетной записи, обладающей разрешением на регистрацию имен участников-служб, например учетной записи администратора домена. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в ОС  [!INCLUDE[win7](../../includes/win7-md.md)] или  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , можно выполнить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью виртуальной учетной записи или управляемой учетной записи службы. Виртуальные счета и управляемые учетные записи службы могут зарегистрировать имя участника-службы. Если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется под другой учетной записью, то имя участника-службы не регистрируется при запуске, и администратору домена необходимо произвести его регистрацию вручную.  
   
 > [!NOTE]  
@@ -155,7 +155,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com/instancename redmond\accountname
   
 Чтобы определить метод проверки подлинности соединения, выполните следующий запрос.  
   
-```t-sql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

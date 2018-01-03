@@ -3,9 +3,9 @@ title: "Поиск документов с помощью списков рез�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b47e823091e48f25000f9d7fe1d1b927017a657c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6159d723ec52adf4117a5ab571570b6c1ec1166
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-documents-using-results-lists"></a>Поиск документов с помощью списков результатов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] С помощью диалогового окна **Найти и заменить** можно выполнять поиск и замену текста во всех файлах проекта или решения либо в папке файловой системы, даже если они не открыты в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Результаты поиска, выполненного в диалоговом окне **Найти и заменить** , появляются в окнах «Результаты поиска 1» и «Результаты поиска 2», что позволяет просмотреть точный текст строки, содержащей совпадение.  

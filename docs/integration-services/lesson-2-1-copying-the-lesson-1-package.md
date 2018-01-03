@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc1fd5b193fa9b9a2da8931ad290b7f2612bd76f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3656d4c9647c12e8d824b59956b114098270751e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-1---copying-the-lesson-1-package"></a>Занятие 2–1. Копирование пакета, созданного на занятии 1
 В этой задаче будет создана копия пакета Lesson 1.dtsx, созданного на занятии 1. Если вы не прошли занятие 1, можно добавить пакет задания 1, прилагаемый к учебнику по проекту, и скопировать его. Полученная копия впоследствии будет использоваться на протяжении всего занятия 2.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/20/2017
   
 1.  Откройте [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools, затем откройте проект «Учебник по службам SSIS».  
   
-2.  В обозревателе решений правой кнопкой мыши щелкните **Пакеты служб SSIS**и выберите команду **Добавить существующий пакет**.  
+2.  В обозревателе решений правой кнопкой мыши щелкните **Пакеты служб SSIS** и выберите команду **Добавить существующий пакет**.  
   
 3.  В диалоговом окне **Добавление копии существующего пакета** в разделе **Расположение пакета**выберите пункт **Файловая система**.  
   

@@ -3,9 +3,9 @@ title: "Управление аутентификацией в PowerShell (яд�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,20 +17,20 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2f25118386ef075d6e6b769def7b06c6908a9e4e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835a888a5ae50e38a26c0a299564b6bd57a0365c
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-authentication-in-database-engine-powershell"></a>Управление проверкой подлинности в компонент Database Engine PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] По умолчанию компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell используют проверку подлинности Windows при установлении соединения с экземпляром [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Для использования проверки подлинности SQL Server необходимо либо определить виртуальный диск PowerShell, либо указать параметры **–Username** и **–Password** для **Invoke-Sqlcmd**.  
   
 1.  **Перед началом работы выполните следующие действия.**  [Разрешения](#Permissions)  
   
-2.  **Настройка проверки подлинности с помощью следующих средств**  [виртуальный диск](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
+2.  **To set authentication, using:**  [A Virtual Drive](#SQLAuthVirtDrv), [Invoke-Sqlcmd](#SQLAuthInvSqlCmd)  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Все действия, которые могут быть выполнены на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , определяются разрешениями, предоставляемыми учетным данным, которые использовались при подключении к экземпляру. По умолчанию для подключения к компоненту [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с проверкой подлинности Windows поставщик [!INCLUDE[ssDE](../../includes/ssde-md.md)]и командлеты используют учетную запись Windows, под которой они работают.  
   
  Для подключения с проверкой подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо указать идентификатор имени входа и пароль проверки подлинности SQL Server. При использовании поставщика [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо связать учетные данные для входа на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с виртуальным диском, а затем с помощью команды перехода в каталог (**cd**) подключиться к этому диску. В Windows PowerShell учетные данные безопасности можно связывать только с виртуальными дисками.  
@@ -91,6 +91,6 @@ Invoke-Sqlcmd -Query "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyCompu
 ## <a name="see-also"></a>См. также:  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)   
- [Invoke-Sqlcmd, командлет](../../powershell/invoke-sqlcmd-cmdlet.md)  
+ [Командлет Invoke-Sqlcmd](../../powershell/invoke-sqlcmd-cmdlet.md)  
   
   

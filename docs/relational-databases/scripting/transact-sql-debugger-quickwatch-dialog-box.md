@@ -3,9 +3,9 @@ title: "Диалоговое окно \"Быстрая проверка\" | До
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 29db30b65a2ec487cfd56a849b82f645e5bb9e4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4831c5a62987109aba02f29f540fdff908cee5b1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Отладчик Transact-SQL, диалоговое окно "Быстрая проверка"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте диалоговое окно **Быстрая проверка**, чтобы быстро просмотреть тип данных и значение одного из выражений [!INCLUDE[tsql](../../includes/tsql-md.md)], такого как переменная или параметр, при отладке кода [!INCLUDE[tsql](../../includes/tsql-md.md)]. Чтобы просмотреть несколько выражений, можно также добавить выражение в окне **Контрольные значения** .  
@@ -67,7 +67,7 @@ ms.lasthandoff: 11/17/2017
  **Название**  
  Является просматриваемым выражением [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- **Значение**  
+ **Value**  
  Отображается значение, которое в настоящее время присвоено выражению. Если в настоящее время выражение не имеет значения, отображается пустое поле.  
   
  Если длина выражения больше ширины столбца **Значение** , полное значение отображается в подсказке при перемещении указателя на ячейку **Значение** для этого выражения.  

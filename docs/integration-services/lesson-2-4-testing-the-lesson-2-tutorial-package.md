@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 26912319fa6a922f0ef3fdc8ac3df090f01accdc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4cb56da4115cb662b5287b7474aef7dc375bf860
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-4---testing-the-lesson-2-tutorial-package"></a>Занятие 2–4. Проверка учебного пакета, созданного на занятии 2
 Используя настроенный контейнер «цикл по каждому элементу» и диспетчер соединений с неструктурированными файлами, можно в пакете, созданном на занятии 2, поочередно обрабатывать коллекцию из 14 неструктурированных файлов в папке образцов данных. Каждый раз при обнаружении имени файла, отвечающего указанным критериям имен файлов, в контейнере «цикл по каждому элементу» это имя подставляется в определенную пользователем переменную. В переменной, в свою очередь, обновляется свойство ConnectionString диспетчера соединений с неструктурированными файлами, после чего выполняется соединение с новым неструктурированным файлом. Затем в контейнере «цикл по каждому элементу» выполняется задача неизмененного потока данных по данным нового неструктурированного файла, после чего устанавливается соединение со следующим файлом в папке.  

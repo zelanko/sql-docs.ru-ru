@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e143b66f9a10627695387bc5215c3b92565e230f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ece7ad69dc6ed7421b3e2793330e9ecb995575fd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions---dmexecutionperformancecounters"></a>Функции — dm_execution_performance_counters
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
   
  Если идентификатор выполнения не указан, возвращается статистика производительности для нескольких выполнений. Для члена роли базы данных **ssis_admin** возвращается статистика производительности всех активных выполнений.  Если пользователь не является членом роли базы данных **ssis_admin** , возвращается статистика производительности активных выполнений, для которых имеются разрешения на чтение. Параметр *execution_id* имеет тип **BigInt**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице перечислены значения имени счетчика, возвращаемые функцией dm_execution_performance_counter.  
   
 |Имя счетчика|Description|  
@@ -62,7 +62,7 @@ dm_execution_performance_counters [ @execution_id = ] execution_id
 ## <a name="return"></a>Возвращает  
  Функция dm_execution_performance_counters возвращает таблицу со следующими столбцами для запущенного выполнения. Возвращаемые данные относятся ко всем пакетам, содержащимся в выполнении. Если отсутствуют активные выполнения, то возвращается пустая таблица.  
   
-|Имя столбца|Тип столбца|Description|Замечания|  
+|Имя столбца|Тип столбца|Description|Remarks|  
 |-----------------|-----------------|-----------------|-------------|  
 |execution_id|**BigInt**<br /><br /> **NULL** не является допустимым значением.|Уникальный идентификатор выполнения, содержащего пакет.||  
 |counter_name|**nvarchar(128)**|Имя счетчика.|См. раздел **Примечания** в описании значений.|  
@@ -83,7 +83,7 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Этой функции требуется одно из следующих разрешений:  
   
 -   разрешения READ и MODIFY на экземпляр выполнения  

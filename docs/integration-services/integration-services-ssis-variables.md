@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 47738020780bb8793c8cfa281815da5be26db222
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 35d6cd398b2bac3a4a7be85ba32ace3ea7a033a7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
   Переменные хранят значения, которые могут использоваться пакетом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а также его контейнерами, задачами и обработчиками событий во время выполнения. Скрипты в задаче «Скрипт» и компоненте скрипта также могут использовать переменные. Управления очередностью, которые упорядочивают задачи и контейнеры в рабочий процесс, могут использовать переменные, если связанные с ними определения ограничений включают в себя выражения.  
@@ -200,7 +200,7 @@ ms.lasthandoff: 11/20/2017
  **Тип значения**  
  Выберите тип данных.  
   
- **Значение**  
+ **Value**  
  Введите значение. Значение должно быть совместимо с типом данных, указанным для параметра **Тип значения** .  
   
  **Только для чтения**  
@@ -313,7 +313,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="update-a-variable-dynamically-with-configurations"></a>Динамическое обновление переменной с помощью конфигураций  
  Чтобы динамически обновлять переменные, можно создавать конфигурации для переменных, развертывать их вместе с пакетами и обновлять значения переменных в файле конфигурации при развертывании пакета. Во время выполнения пакет будет использовать обновленные значения переменных. Дополнительные сведения см. в разделе [Создание конфигурации пакетов](../integration-services/packages/create-package-configurations.md).  
 
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Использование значений переменных и параметров в дочернем пакете](../integration-services/packages/legacy-package-deployment-ssis.md#child)  
   
  [Сопоставления параметров запросов с переменными в компонентах потока данных](../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  

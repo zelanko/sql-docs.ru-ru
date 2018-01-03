@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8b7c1727022b049923f06225c667b4a9d0438402
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f6e078298bad01595efffa81da04d6d0d2ebb0d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Объект **CompoundCurve** — это набор из нуля или большего количества непрерывных экземпляров **CircularString** или **LineString** геометрического или географического типов.  
@@ -104,7 +104,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-compooundcurve"></a>A. Создание экземпляра geometry с пустым экземпляром CompoundCurve  
  В следующем примере показано, как создать пустой экземпляр `CompoundCurve` .  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');  
 ```  
@@ -112,21 +112,21 @@ SET @g = geometry::Parse('COMPOUNDCURVE EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-using-a-compoundcurve-in-the-same-statement"></a>Б. Объявление и создание экземпляра geometry с экземпляром CompoundCurve в одной инструкции  
  В следующем примере показано, как объявить и инициализировать экземпляр `geometry` с `CompoundCurve`в одной инструкции:  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0))';  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-compoundcurve"></a>В. Создание экземпляра geography с экземпляром CompoundCurve  
  В следующем примере показано объявление и инициализация экземпляра **geography** с `CompoundCurve`:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>Г. Хранение квадрата в экземпляре CompoundCurve  
  В следующем примере показаны два способа использования экземпляра `CompoundCurve` для хранения квадрата.  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3), (1 3, 3 3),(3 3, 3 1), (3 1, 1 1))');  
 SET @g2 = geometry::Parse('COMPOUNDCURVE((1 1, 1 3, 3 3, 3 1, 1 1))');  
@@ -138,7 +138,7 @@ SELECT @g1.STLength(), @g2.STLength();
 ### <a name="e-instantiating-a-geometry-instance-using-a-compoundcurve-with-multiple-circularstrings"></a>Д. Создание экземпляра geometry с помощью экземпляра CompoundCurve с несколькими экземплярами CircularString  
  В следующем примере показано, как использовать два разных экземпляра `CircularString` для инициализации `CompoundCurve`.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARSTRING(4 2, 2 4, 0 2))');  
 SELECT @g.STLength();  
@@ -149,7 +149,7 @@ SELECT @g.STLength();
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>Е. Использование экземпляра CompoundCurve для хранения полуокружности  
  В следующем примере экземпляр `CompoundCurve` используется для хранения полукруга.  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 0 2))');  
 SELECT @g.STLength();  
@@ -158,7 +158,7 @@ SELECT @g.STLength();
 ### <a name="g-storing-multiple-circularstring-and-linestring-instances-in-a-compoundcurve"></a>Ж. Хранение нескольких экземпляров CircularString и LineString в экземпляре CompoundCurve  
  В следующем примере показано, как можно хранить несколько экземпляров `CircularString` и `LineString` с помощью `CompoundCurve`.  
   
-```tsql  
+```sql  
 DECLARE @g geometry  
 SET @g = geometry::Parse('COMPOUNDCURVE((3 5, 3 3), CIRCULARSTRING(3 3, 5 1, 7 3), (7 3, 7 5), CIRCULARSTRING(7 5, 5 7, 3 5))');  
 SELECT @g.STLength();  
@@ -167,14 +167,14 @@ SELECT @g.STLength();
 ### <a name="h-storing-instances-with-z-and-m-values"></a>З. Хранение экземпляров со значениями Z и M  
  В следующем примере показано, как использовать экземпляр `CompoundCurve` для хранения последовательности экземпляров `CircularString` и `LineString` со значениями Z и M.  
   
-```tsql  
+```sql  
 SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(7 5 4 2, 5 7 4 2, 3 5 4 2), (3 5 4 2, 8 7 4 2))');  
 ```  
   
 ### <a name="i-illustrating-why-circularstring-instances-must-be-explicitly-declared"></a>И. Почему необходимо объявлять экземпляры CircularString явно  
  В следующем примере показано, почему экземпляры `CircularString` должны быть явно объявлены. Программист желает хранить окружность в экземпляре `CompoundCurve` .  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry;    
 DECLARE @g2 geometry;  
 SET @g1 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), (4 2, 2 4, 0 2))');  
@@ -200,5 +200,5 @@ Circle Two12.566370…
  [LineString](../../relational-databases/spatial/linestring.md)   
  [CircularString](../../relational-databases/spatial/circularstring.md)   
  [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md)   
- [Точка](../../relational-databases/spatial/point.md)  
+ [Point](../../relational-databases/spatial/point.md)  
   

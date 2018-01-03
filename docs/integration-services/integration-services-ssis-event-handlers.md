@@ -5,7 +5,7 @@ ms.date: 03/04/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -28,11 +28,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d546b045520134cd3e429ec0ecf1098a1b8b462e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f467fe7abac22aff8b9f832e879d9b7b229b768c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
   Во время выполнения исполняемых объектов (пакетов, контейнеров «цикл по каждому элементу», «цикл по элементам», последовательности и узлы задач) возникают события. Например, в случае ошибки возникает событие OnError. Можно создать пользовательские обработчики событий для этих событий, чтобы расширить функциональность пакетов и упростить управление пакетами во время их выполнения. Обработчики событий могут выполнять следующие задачи:  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения о настройке этих свойств программными средствами см. в разделе <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Сведения о том, как добавить обработчик событий в пакет, см. в разделе [Добавление к пакету обработчик событий](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78).  
   
   

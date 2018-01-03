@@ -3,7 +3,7 @@ title: "Настройка (страница \"Команды\") | Докуме�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7fec4dfbfc43e1b0ef8716af253278192bf82747
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9d748b147c19031f5f304f0233c772dbd91798b8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="customize-commands-page"></a>Настройка (страница «Команды»)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом диалоговом окне можно вводить и удалять команды панелей инструментов и меню, а также изменять изображения для кнопок на панели инструментов или команд меню. Чтобы открыть страницу **Команды** , в меню **Сервис** выберите команду **Настройка** , а затем выберите **Команды**.  

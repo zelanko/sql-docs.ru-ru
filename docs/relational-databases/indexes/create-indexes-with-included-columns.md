@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ab797826f45d019926f4e35055cc18bdece9763b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 064df7a689cbb3da0323448eb5efc8d0fdace5be
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-indexes-with-included-columns"></a>Создание индексов с включенными столбцами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,24 +45,8 @@ ms.lasthandoff: 11/17/2017
  Индекс с неключевыми столбцами может значительно повысить производительность запроса, когда все столбцы запроса включены в индекс как ключевые или неключевые. Производительность повышается благодаря тому, что оптимизатор запросов может найти все значения столбцов в этом индексе; при этом нет обращения к данным таблиц или кластеризованных индексов, что приводит к меньшему количеству дисковых операций ввода-вывода.  
   
 > [!NOTE]  
->  Если индекс содержит все столбцы, на которых в запросе имеются ссылки, это обычно называется *покрытием запроса*.  
-  
- **В этом разделе**  
-  
--   **Перед началом работы выполните следующие действия.**  
-  
-     [Рекомендации по проектированию](#DesignRecs)  
-  
-     [Ограничения](#Restrictions)  
-  
-     [Безопасность](#Security)  
-  
--   **Создание индекса с неключевыми столбцами с помощью различных средств.**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
+> Если индекс содержит все столбцы, на которых в запросе имеются ссылки, это обычно называется *покрытием запроса*.  
+   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
 ###  <a name="DesignRecs"></a> Рекомендации по проектированию  
@@ -89,9 +73,9 @@ ms.lasthandoff: 11/17/2017
   
     -   увеличение длины столбцов типов **varchar**, **nvarchar**и **varbinary** .  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -132,7 +116,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Creates a nonclustered index on the Person.Address table with four included (nonkey) columns.   
@@ -143,7 +127,7 @@ ms.lasthandoff: 11/17/2017
     INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);  
     GO  
     ```  
-  
- Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+
+## <a name="related-content"></a>См. также  
+[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)    
+[Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)   

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 6fb6a9d21c02faf2615d786dda40f35da4b25a7c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a5037fb489588b174ec66a8845cf4994d8a915e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-4---adding-a-flat-file-destination"></a>Занятие 4–4. Добавление назначения "Неструктурированный файл"
 Выход ошибок преобразования «Ключ уточняющего запроса валют» перенаправляет в преобразование «Скрипт» все строки данных, завершившиеся ошибкой в операции поиска. Для расширения сведений о возникших ошибках преобразование «Скрипт» выполняет скрипт, получающий описания ошибок.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 15. Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 [Шаг 5. Проверка учебного пакета, созданного на занятии 4](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
   

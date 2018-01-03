@@ -3,7 +3,7 @@ title: "Приложение а. поставщики | Документы Micro
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cc5846114e328cb717b8b9c6d86891e97b41ddf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fc27499ecc4b67a95067002be0d8d3a5c86c76da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="appendix-a-data-and-service-providers"></a>Приложение a. данных и поставщики услуг
 В этом разделе описываются три вида поставщики: поставщики данных, поставщиков услуг и службы компонентов. Поставщики делятся на две категории: те, предоставление данных, так и предоставления услуг. Объект *поставщик данных* владеет собственными данными и предоставляет доступ к нему в табличной форме в приложении. Объект *поставщика услуг* инкапсулирует службы, создания и использования данных, расширения возможностей в приложениях ADO. Поставщик услуг может также детализировать как *компонент службы*, которой должны работать вместе с другой поставщик службы или компоненты.

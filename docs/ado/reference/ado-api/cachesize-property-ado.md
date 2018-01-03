@@ -3,7 +3,7 @@ title: "Свойство CacheSize (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57ac5e367e3dd9181dcdbde260b04917d30453ee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a035843f42ba6dd29f18887fec5ca334943a0df4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachesize-property-ado"></a>Свойство CacheSize (ADO)
 Указывает количество записей из [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, которые локально кэшируются в памяти.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает **длинные** значение, которое должно быть больше 0. По умолчанию — 1.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **CacheSize** свойства, сколько записей следует извлекать за один раз в локальную память от поставщика. Например если **CacheSize** равно 10, после первого открытия **записей** объекта, поставщик возвращает первые 10 записей в локальную память. При перемещении по **записей** объекта, поставщик возвращает данные из буфера локальной памяти. После перемещения за последней записью в кэше, поставщик извлекает следующие 10 записей из источника данных в кэш.  
   
 > [!NOTE]

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 435147a234c6d6ddc6d1efc09e5b02de4e9e5e4f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e0d051aa94420c8c3aba844f746c88ed9784f4f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-1---copying-the-lesson-3-package"></a>Занятие 4–1. Копирование пакета, созданного на занятии 3
 В этой задаче будет создана копия пакета Lesson 3.dtsx, созданного на занятии 3. Если вы не прошли занятие 3, можно добавить пакет задания 3, прилагаемый к учебнику по проекту, скопировать его и работать с копией. Полученная копия впоследствии будет использоваться на протяжении всего занятия 4.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  В обозревателе решений правой кнопкой мыши щелкните **Пакеты служб SSIS**и выберите команду **Добавить существующий пакет**.  
   
-3.  В диалоговом окне **Добавление копии существующего пакета** в разделе **Расположение пакета**выберите пункт **Файловая система**.  
+3.  В диалоговом окне **Добавление копии существующего пакета** в разделе **Расположение пакета** выберите пункт **Файловая система**.  
   
 4.  Нажмите кнопку обзора **(…)** , перейдите в папку с пакетом Lesson 3.dtsx на компьютере и нажмите кнопку **Открыть**.  
   

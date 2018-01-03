@@ -3,7 +3,7 @@ title: "Служба Microsoft курсора для OLE DB | Документы
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 53d49e5214be1a91cf5f97cf71387a97f4527a41
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a84e9774120241d8d3813068a979a04aa27b236
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>Служба Microsoft курсора для OLE DB
 При выборе клиентский курсор, или задать **CursorLocation** свойства **adUseClient**, вы вызываете служба курсора для OLE DB. Также может отображаться ссылки на «Обработчик курсора клиента», который является по сути то же самое в контексте ADO. Эта служба дополняет функции поддержки курсора поставщиков данных. В результате способен воспринимать относительно однообразного функции из всех поставщиков данных.  

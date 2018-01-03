@@ -21,24 +21,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: aae33096e4fbea4eed0e5ae740b228c8b63e371c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 66abd1b705b384392d037922129ce53d3edf9d62
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Изменение или переименование триггеров DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] В этом разделе описывается процедура изменения или переименования триггера DML в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для изменения или переименования триггера DML используется:**  
   
@@ -68,9 +68,9 @@ ms.lasthandoff: 11/17/2017
   
     -   [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для изменения триггера DML требуется разрешение ALTER в таблице или представлении, в котором определен триггер.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Скопируйте следующие примеры в запрос. Выполните первый пример, чтобы создать триггер DML, который выводит на клиент определяемое пользователем сообщение, когда пользователь пытается добавить или изменить данные в таблице `SalesPersonQuotaHistory` . Выполните инструкцию [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) , чтобы изменить триггер так, чтобы он срабатывал только на операции `INSERT` . Этот триггер полезен, так как он напоминает пользователям, что при обновлениях и вставках строк в эту таблицу необходимо направить уведомление в отдел `Compensation` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  
@@ -116,7 +116,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER TRIGGER Sales.bonus_reminder  
@@ -135,7 +135,7 @@ GO
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере инструкции [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) и [ALTER TRIGGER](../../t-sql/statements/alter-trigger-transact-sql.md) используются для переименования триггера `Sales.bonus_reminder` в `Sales.bonus_reminder_2`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N'Sales.bonus_reminder', N'TR') IS NOT NULL  

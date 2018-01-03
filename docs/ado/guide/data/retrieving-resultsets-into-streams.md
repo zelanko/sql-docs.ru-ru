@@ -3,7 +3,7 @@ title: "Получение результирующих наборов в пот
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ed2d2412cf8314875f9469689677c22ae4e60e7e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7bca240a384ef3e8a3e6bbd2a59731cc8861136d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Получение результирующих наборов в потоки
 Вместо получения результатов в традиционных **записей** объекта ADO вместо этого можно получить результаты запроса в поток. ADO **поток** объекта (или другие объекты, которые поддерживают COM **IStream** интерфейса, таких как ASP **запроса** и **ответ** объектов ) можно использовать для хранения этих результатов. Эта возможность применяется для получения результатов в формате XML. С SQL Server например, XML-результатов могут быть возвращены несколькими способами, например с помощью предложения FOR XML с помощью запроса SELECT языка SQL или с помощью запроса XPath.  
@@ -184,5 +184,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Замечания  
+### <a name="remarks"></a>Remarks  
  На этом этапе XML передан в браузере клиента, и она готова для отображения. Для этого с помощью VBScript на стороне клиента для привязки XML-документ с экземпляром DOM и циклически каждого дочернего узла, для построения списка продуктов в формате HTML.

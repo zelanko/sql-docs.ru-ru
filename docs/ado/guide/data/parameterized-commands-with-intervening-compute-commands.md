@@ -3,7 +3,7 @@ title: "Параметризованные команды с командами 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c21676293fe0d395a1e0cc5952a3d6fab1951d60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7d59ce82d8c0d451495b229cc285e25286f5d197
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Параметризованные команды с промежуточных ВЫЧИСЛЕНИЙ команд
 Типичный параметризованных фигуры команда APPEND имеет предложения, который создается родительским **записей** с помощью команды запроса и другое предложение, который создает дочерний **записей** с помощью команды параметризованного запроса — то есть, содержащий местозаполнитель параметра команды (вопросительный знак «?»). Итоговый были сформированы **записей** имеет два уровня, в которых родительского занимает верхнего уровня и дочерние занимает более низком уровне.  

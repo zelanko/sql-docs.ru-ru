@@ -3,7 +3,7 @@ title: "Выполнение и Requery снимите примере метод
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ff72d44c2f5fa3bd71cabd091e3ec8ecf10d7bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 728c4dae528c9419eff4dccc46db320d3f8a11f6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Выполнение и Requery снимите примере методы (JScript)
 В этом примере демонстрируется **Execute** при запуске с оба метода [команда](../../../ado/reference/ado-api/command-object-ado.md) объекта и [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта. Она также использует [Requery](../../../ado/reference/ado-api/requery-method.md) метод для извлечения текущих данных в [набора записей](../../../ado/reference/ado-api/recordset-object-ado.md)и [снимите](../../../ado/reference/ado-api/clear-method-ado.md) метод, чтобы удалить содержимое [ошибки](../../../ado/reference/ado-api/errors-collection-ado.md)коллекции. ( **Ошибки** коллекции осуществляется через **подключения** объект [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) свойство [записей](../../../ado/reference/ado-api/recordset-object-ado.md).) Назовите файл **ExecuteJS.asp**.  

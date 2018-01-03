@@ -3,7 +3,7 @@ title: "Использование токенов в шагах задания |
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,18 +23,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 73cc2ac32724e2ed910c3ef44355990513020efe
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e45f9df8f2356e7dea91fd47d10afd4fea958205
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-tokens-in-job-steps"></a>Использование токенов в шагах задания
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент позволяет применять токены в скриптах шагов заданий на языке [!INCLUDE[tsql](../../includes/tsql_md.md)]. Применение токенов при написании шагов заданий обеспечивают такую же гибкость, какую дают переменные при написании программ. После добавления токена в скрипт шага задания агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] замещает токен во время выполнения, до того как шаг задания выполняется подсистемой [!INCLUDE[tsql](../../includes/tsql_md.md)]  
   
 > [!IMPORTANT]  
-> Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] с пакетом обновления 1 (SP1), синтаксис токена шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] был изменен. В результате все токены, используемые в шагах заданий, теперь должны сопровождаться экранирующим макросом, в противном случае они вызовут ошибку. Использование управляющих макросов и обновление шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , в которых используются токены, описывается в разделах «Основные сведения об использовании токенов», «Макросы и токены агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] » и «Обновление шагов заданий для использования маркеров». Кроме того, также изменился синтаксис [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] , при котором для обнаружения токенов шагов заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] (например «`[DATE]`») использовались квадратные скобки. Теперь необходимо заключить имена токенов в круглые скобки и поставить знак доллара (`$`) в начале синтаксиса токена. Например:  
+> Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] с пакетом обновления 1 (SP1), синтаксис токена шага задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] был изменен. В результате все токены, используемые в шагах заданий, теперь должны сопровождаться экранирующим макросом, в противном случае они вызовут ошибку. Использование управляющих макросов и обновление шагов заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , в которых используются токены, описывается в разделах «Основные сведения об использовании токенов», «Макросы и токены агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] » и «Обновление шагов заданий для использования маркеров». Кроме того, также изменился синтаксис [!INCLUDE[ssVersion2000](../../includes/ssversion2000_md.md)] , при котором для обнаружения токенов шагов заданий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] (например «`[DATE]`») использовались квадратные скобки. Теперь необходимо заключить имена токенов в круглые скобки и поставить знак доллара (`$`) в начале синтаксиса токена. Пример:  
 >   
 > `$(ESCAPE_`*имя макроса*`(DATE))`  
   

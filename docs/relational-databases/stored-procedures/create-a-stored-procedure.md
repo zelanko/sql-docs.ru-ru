@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0cc9ed462b52c79f792852a1b6b1d380cae3e182
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 321ac7ca18880205192923cc567c172342668eec
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-stored-procedure"></a>Создание хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,15 +36,15 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="Top"></a>   
 -   **Перед началом работы выполните следующие действия.**  [Разрешения](#Permissions)  
   
--   **Создание процедуры с помощью:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To create a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Для выполнения этой инструкции требуется разрешение CREATE PROCEDURE в отношении базы данных и разрешение ALTER в отношении схемы, в которой создается процедура.  
   
 ##  <a name="Procedures"></a> Создание хранимой процедуры  
  Можно использовать один из следующих способов:  
   
--   [SQL Server Management Studio](#SSMSProcedure)  
+-   [Среда SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
     |---------------|-----------|  
     |Автор|*Ваше имя*|  
     |Дата создания|*Сегодняшняя дата*|  
-    |Описание|Возвращает данные о сотрудниках.|  
+    |Description|Возвращает данные о сотрудниках.|  
     |Procedure_name|HumanResources.uspGetEmployeesTest|  
     |@Param1|@LastName|  
     |@Datatype_For_Param1|**nvarchar**(50)|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 7.  В **редакторе запросов**замените инструкцию SELECT следующей инструкцией:  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  

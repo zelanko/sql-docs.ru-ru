@@ -3,9 +3,9 @@ title: "Редактор запросов ядра СУБД (среда SQL Serv
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 554065f8cd2eee3667eaf93ced5e6fe1c99f9517
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6093f85a7efb9b10b03d24d5cb2e2efccb3e73f3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="database-engine-query-editor-sql-server-management-studio"></a>Редактор запросов компонента Database Engine (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет создавать и запускать скрипты, содержащие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. Этот редактор также поддерживает запуск скриптов, содержащих команды **sqlcmd** .  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sql-editor-toolbar"></a>Панель инструментов редактора SQL  
  Если редактор запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] открыт, появляется панель инструментов редактора SQL со следующими кнопками.  
   
- **Connect**  
+ **Подключить**  
  Открывает диалоговое окно **Соединение с сервером** . Используйте это диалоговое окно, чтобы установить соединение с сервером.  
   
  **Отключить**  

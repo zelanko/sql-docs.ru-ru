@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -22,11 +22,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 69ab566f5ad04cb52219c08bb6e9842da7415b87
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: db33e0c10049f1239449bafc6fdb0faa918abe0a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="versions-master-data-services"></a>Версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]можно создать несколько версий основных данных в модели. Версии могут быть заблокированы до проведения проверки данных и будут зафиксированы после проверки данных. Зафиксированные версии образуют запись аудита об изменениях. Каждая созданная версия содержит все элементы, значения атрибутов, элементы иерархии, отношения в иерархии и коллекции для модели.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Параметр в [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] определяет возможность копирования для всех версий или только для зафиксированных. Для создания одновременных версий необходимо выполнить настройку [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , чтобы можно было скопировать все версии. Этот параметр также присутствует в таблице системных настроек. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

@@ -5,7 +5,7 @@ ms.date: 08/22/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7bd2425af92d89982ea7ccfc8b2a3220a15b24e7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ddaf96b05f2d1b6fc9857faf6309c5bfdd4d449c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Пакет дополнительных компонентов Azure для служб Integration Services (SSIS)
 Пакет дополнительных компонентов Azure для служб SQL Server Integration Services (SSIS) — это дополнение, которое предоставляет перечисленные на этой странице компоненты для подключения служб SSIS к Azure, передачи данных между Azure и локальными источниками данных и обработки данных, хранящихся в Azure.
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/01/2017
 - [Пакет дополнительных компонентов SSIS для Azure](http://go.microsoft.com/fwlink/?LinkID=626967) для SQL Server 2016
 - [Пакет дополнительных компонентов SSIS для Azure](https://www.microsoft.com/download/details.aspx?id=54798) для [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
  Перед установкой этого пакета необходимо установить следующие компоненты:
 
 -   службы SQL Server Integration Services

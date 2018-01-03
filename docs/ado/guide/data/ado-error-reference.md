@@ -3,7 +3,7 @@ title: "Справочник ошибок ADO | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,16 +21,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 202ece8496decb7ada7300cbfca79158bd7d2338
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 05191a1797a2aa09f7c7f740401655febcead998
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-errors"></a>Ошибок ADO
 **ErrorValueEnum** константа описывает значения ошибок ADO. Полный список этих перечислимых констант, включая значения, в разделе [ошибок ADO приложение б:](../../../ado/guide/appendixes/appendix-b-ado-errors.md). В этом разделе будет изучить некоторые из наиболее интересных ошибок с описаниями некоторых определенных ситуациях, которые могут вызывать их или решений для устранения проблемы. Оба **ErrorValueEnum** перечислены константы и короткий положительное десятичное число.
 
-|Числовые|Константа ErrorValueEnum|Описание и возможные причины|
+|Количество|Константа ErrorValueEnum|Описание и возможные причины|
 |------------|-----------------------------|----------------------------------|
 |**3000**|**adErrProviderFailed**|Поставщику не удалось выполнить запрошенную операцию.|
 |**3001**|**adErrInvalidArgument**|Аргументы имеют неправильный тип, выходят за пределы допустимого диапазона или конфликтуют друг с другом. Эта ошибка обычно вызвана орфографическую ошибку в инструкции SQL SELECT. Например эту ошибку может вызывать неправильно написанное поле имя или имя таблицы. Эта ошибка также может возникнуть при поля или таблицы, указанной в инструкции SELECT не существует в хранилище данных.|

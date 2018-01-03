@@ -5,7 +5,7 @@ ms.date: 03/03/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4c51d7d251a7e445b85558dabd4bd5d4af80b4d8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 842e5bd0bcae76eaffa174c0fdacaf420ae88c5e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-create-a-project-and-basic-package-with-ssis"></a>Занятие 1. Создание проекта и основного пакета с помощью служб SSIS
 
@@ -63,10 +63,10 @@ ms.lasthandoff: 12/01/2017
   
 |Имя столбца|Тип данных|Таблица уточняющих запросов|Уточняющий столбец|  
 |---------------|-------------|----------------|-----------------|  
-|AverageRate|float|Нет|Нет|  
+|AverageRate|FLOAT|None|None|  
 |CurrencyKey|int (FK)|DimCurrency|CurrencyKey (PK)|  
 |DateKey|int (FK)|DimDate|DateKey (PK)|  
-|EndOfDayRate|float|Нет|Нет|  
+|EndOfDayRate|FLOAT|None|None|  
   
 ### <a name="mapping-source-data-to-be-compatible-with-the-destination"></a>Сопоставление совместимых данных источника с назначением  
 Анализ форматов данных источника и назначения показывает, что для значений **CurrencyKey** и **DateKey** требуются уточняющие запросы. Преобразования, которые выполнят эти уточняющие запросы, получат значения **CurrencyKey** и **DateKey** , с помощью альтернативных ключей из таблиц измерений **DimCurrency** и **DimDate** .  
@@ -75,8 +75,8 @@ ms.lasthandoff: 12/01/2017
 |--------------------|--------------|---------------|-------------|  
 |0|FactCurrency|AverageRate|float|  
 |1|DimCurrency|CurrencyAlternateKey|nchar (3)|  
-|2|DimDate|FullDateAlternateKey|date|  
-|3|FactCurrency|EndOfDayRate|float|  
+|2|DimDate|FullDateAlternateKey|Дата|  
+|3|FactCurrency|EndOfDayRate|FLOAT|  
   
 ## <a name="lesson-tasks"></a>Задачи занятия  
 Это занятие содержит следующие задачи.  

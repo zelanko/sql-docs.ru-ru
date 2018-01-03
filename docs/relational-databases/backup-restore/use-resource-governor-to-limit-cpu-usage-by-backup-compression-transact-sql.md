@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 967060be06fd9b7769705aa0995ba288f9ba19f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36fd0cd2cc5f7168e4daf7948ab9a9223b21e394
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>Использование регулятора ресурсов для ограничения загрузки ЦП при сжатии резервной копии (компонент Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
      **Создание имени входа**  
   
-    -   [Создание имени входа](../../relational-databases/security/authentication-access/create-a-login.md)  
+    -   [Создание имени для входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   
     -   [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  В этом примере создается имя для входа для учетной записи Windows *имя_домена*`\MAX_CPU` , а затем этому имени для входа предоставляется разрешение VIEW SERVER STATE. Это разрешение позволяет проверить классификацию сеансов имени входа в регуляторе ресурсов. Затем для имени *имя_домена*`\MAX_CPU` создается пользователь и добавляется к предопределенной роли db_backupoperator для образца базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Это имя пользователя будет использоваться функцией-классификатором в регуляторе ресурсов.  
   
-```tsql  
+```sql  
 -- Create a SQL Server login for low-priority operations  
 USE master;  
 CREATE LOGIN [domain_name\MAX_CPU] FROM WINDOWS;  
@@ -207,7 +207,7 @@ GO
 > [!IMPORTANT]  
 >  В приведенном ниже примере используется образец имени пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , созданный в разделе "Пример А. Настройка имени входа и пользователя (Transact-SQL)", *имя_домена*`\MAX_CPU`. Замените его именем пользователя, соответствующего имени входа, которое планируется использовать для создания низкоприоритетных сжатых резервных копий.  
   
-```tsql  
+```sql  
 -- Configure Resource Governor.  
 BEGIN TRAN  
 USE master;  
@@ -249,7 +249,7 @@ GO
 ##  <a name="verifying"></a> Проверка классификации текущего сеанса (Transact-SQL)  
  При необходимости войдите в систему как пользователь, указанный в функции-классификаторе, и проверьте классификацию сеанса, выполнив следующую инструкцию [SELECT](../../t-sql/queries/select-transact-sql.md) в обозревателе объектов:  
   
-```tsql  
+```sql  
 USE master;  
 SELECT sess.session_id, sess.login_name, sess.group_id, grps.name   
 FROM sys.dm_exec_sessions AS sess   
@@ -272,7 +272,7 @@ GO
 ### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>Пример В. Создание сжатой резервной копии (Transact-SQL)  
  В следующем примере [BACKUP](../../t-sql/statements/backup-transact-sql.md) создается сжатая полная резервная копия базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] в чистом форматированном файле резервной копии `Z:\SQLServerBackups\AdvWorksData.bak`.  
   
-```tsql  
+```sql  
 --Run backup statement in the gBackup session.  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   

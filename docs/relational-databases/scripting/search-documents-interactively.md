@@ -3,9 +3,9 @@ title: "Поиск в документах в интерактивном реж�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 894d326c58a11f4c284ef91a3b2ff5bacb4b498b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b85af6717ff7493bdfff482a88015cf47dac1bf9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-documents-interactively"></a>осуществлять поиск в документах в интерактивном режиме
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] С помощью диалогового окна **Найти и заменить** можно производить поиск в одном или нескольких открытых файлах или окнах и последовательно перемещаться по найденным совпадениям. Этот метод позволяет просматривать каждое отдельное найденное совпадение в контексте окружающего текста. Кроме того, с помощью диалогового окна **Найти и заменить** можно выполнять операции группового поиска и просматривать найденные совпадения в виде отчета.  

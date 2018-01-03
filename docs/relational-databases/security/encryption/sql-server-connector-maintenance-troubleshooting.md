@@ -18,11 +18,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 483b31cf84a5933bac88744612c5c95fa7ceae56
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c0cce6f70771e67f55f987fe6c307d4713e3f928
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Обслуживание соединителя SQL Server и устранение неполадок
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
   
      Импортируйте новый асимметричный ключ.  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE ASYMMETRIC KEY [MASTER_KEY2]   
     FROM PROVIDER [EKM]   
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
   
      Создайте новое имя входа, которое должно быть связано с новым асимметричным ключом (как показано в разделе с инструкциями по прозрачному шифрованию данных).  
   
-    ```tsql  
+    ```sql  
     USE master  
     CREATE LOGIN TDE_Login2   
     FROM ASYMMETRIC KEY [MASTER_KEY2]  
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/21/2017
   
      Создайте учетные данные, сопоставляемые с новым именем входа.  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL Azure_EKM_TDE_cred2  
         WITH IDENTITY = 'ContosoDevKeyVault',   
        SECRET = 'EF5C8E094D2A4A769998D93440D8115DAADsecret123456789=’   
@@ -86,14 +86,14 @@ ms.lasthandoff: 11/21/2017
   
      Выберите базу данных, ключ шифрования которой требуется повторно зашифровать.  
   
-    ```tsql  
+    ```sql  
     USE [database]  
     GO  
     ```  
   
      Повторно зашифруйте ключ шифрования базы данных.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE ENCRYPTION KEY   
     ENCRYPTION BY SERVER ASYMMETRIC KEY [MASTER_KEY2];  
     GO  
@@ -132,7 +132,7 @@ ms.lasthandoff: 11/21/2017
   
 6.  Выполните следующую инструкцию, чтобы настроить поставщик расширенного управления ключами для использования последней версии Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Убедитесь, что путь указывает именно на то расположение, куда вы скачали последнюю версию. (Этот шаг можно пропустить, если новая версия устанавливается там же, где и исходная версия.) 
   
-    ```tsql  
+    ```sql  
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE =   
     'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
@@ -207,7 +207,7 @@ ms.lasthandoff: 11/21/2017
 ##  <a name="AppendixC"></a> В. Описания кодов ошибок для Соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
  **Коды ошибок поставщика:**  
   
-Код ошибки  |Символ  |Описание    
+Код ошибки  |Символ  |Description    
 ---------|---------|---------  
 0 | scp_err_Success | Операция завершилась успешно.    
 1 | scp_err_Failure | Операция завершилась ошибкой.    
@@ -268,7 +268,7 @@ ms.lasthandoff: 11/21/2017
   
  Виды шифрования SQL с поддержкой расширенного управления ключами:  
   
--   [Enable TDE on SQL Server Using EKM (Включение прозрачного шифрования данных в SQL Server с помощью расширенного управления ключами)](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
+-   [Включение прозрачного шифрования данных в SQL Server с помощью расширенного управления ключами](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
 -   [Шифрование резервной копии](../../../relational-databases/backup-restore/backup-encryption.md)  
   

@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c996f85f6c487874f1d5bc5e4839b1ea2a9c618
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 941481fb17d33c18e648e4afe511e868e59fc0a1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="query-store-usage-scenarios"></a>Сценарии использования хранилища запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -145,7 +145,7 @@ ms.lasthandoff: 11/17/2017
   
  Кроме того, вы можете выполнить сценарий [!INCLUDE[tsql](../../includes/tsql-md.md)] , чтобы получить общее число текстов запросов, запросов и планов в системе и определить, насколько они отличаются, сравнив значения query_hash и plan_hash:  
   
-```tsql  
+```sql  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
@@ -166,7 +166,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
  В случае с отдельными шаблонами запросов требуется создание структуры плана:  
   
-```tsql  
+```sql  
 /*Apply plan guide for the selected query template*/  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
@@ -188,7 +188,7 @@ EXEC sp_create_plan_guide
   
  Если все запросы (или большинство из них) являются кандидатами для автоматической параметризации, более оптимальным решением станет изменение `FORCED PARAMETERIZATION` для всей базы данных:  
   
-```tsql  
+```sql  
 /*Apply forced parameterization for entire database*/  
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
@@ -204,7 +204,7 @@ ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;
   
  В этом случае рекомендуется включить параметр сервера [**Оптимизировать для нерегламентированной рабочей нагрузки**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md), чтобы предотвратить потерю кэш-памяти при выполнении запросов, которые, скорее всего, не будут выполняться снова. Чтобы запретить запись этих запросов в хранилище запросов, задайте для параметра `QUERY_CAPTURE_MODE` значение `AUTO`.  
   
-```tsql  
+```sql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  

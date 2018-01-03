@@ -3,7 +3,7 @@ title: "Передача параметров именованную коман�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cd64725eab5760c0cce7d2ecf33b320d94b3a283
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5e0db27250c2f095c31aa5bca95b738fa64ca922
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Передача параметров в именованную команду
 Точно так же как результат выполнения команды, передается вовне как *out* переменной именованного команды, параметры для параметризованной команды можно было передан в качестве *в* переменные для именованной команды.  

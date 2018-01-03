@@ -3,9 +3,9 @@ title: "Идентификаторы SQL Server в PowerShell | Документ
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 95ead7b5686d23d3318d30b84abe868d00fb1622
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43b6ff8e41bf17e5c41f79f65dac9b2714accec0
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>Идентификаторы SQL Server в PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Поставщик [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для Windows PowerShell использует идентификаторы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в путях Windows PowerShell. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут содержать символы, которые не поддерживаются в путях Windows PowerShell. Такие символы при использовании в идентификаторах в составе путей Windows PowerShell следует экранировать или применять для них специальную кодировку.  

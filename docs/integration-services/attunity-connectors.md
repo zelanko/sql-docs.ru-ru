@@ -4,7 +4,7 @@ ms.date: 05/16/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d7e5ca02e2e4f7ee2e1a2e7044f522048a6fb196
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0085e6bac892da01043e76843e51f43be3509cee
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-connectors-for-oracle-and-teradata-by-attunity-for-integration-services-ssis"></a>Соединители Microsoft для Oracle и Teradata компании Attunity для служб Integration Services (SSIS)
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 |Версия SSDT|Номер сборки SSDT|Целевая версия SQL Server|Требуемая версия соединителей|
 |---------|---------|---------|---------|
 |17|Начинается с 14|SQL Server 2017|[Соединители Microsoft версии 5.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=55179)|
-|16|Начинается с 13|SQL Server 2016|[Соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950)|
+|16|Начинается с 13|SQL Server 2016|[Соединители Microsoft версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950)|
 ||||
 
 ## <a name="download-the-latest-sql-server-data-tools-ssdt"></a>Скачать последнюю версию SQL Server Data Tools (SSDT)

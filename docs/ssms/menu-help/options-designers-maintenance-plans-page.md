@@ -3,7 +3,7 @@ title: "Параметры (\"Конструкторы\" — страница \
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: be7de4f323b1f4351ad851c04222e0513d73a93c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a30c75098d6c3211ae0b961867d156356566dba6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-designers---maintenance-plans-page"></a>Параметры ("Конструкторы" — страница "Планы обслуживания")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Диалоговое окно **Параметры** позволяет определить поведение конструктора по умолчанию при добавлении новых фигур на область конструктора. В меню **Сервис** выберите пункт **Параметры**, откройте раздел **Конструкторы**и выберите пункт **Планы обслуживания**.  

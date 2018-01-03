@@ -3,7 +3,7 @@ title: "Фигуры в целом команды | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f58f3450a097d2c84de5909a8f2f6817e1274947
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cca594326e550fd68b8cd507f019c8f19a392933
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shape-commands-in-general"></a>Команды фигуры в целом
 Формирование данных определяет столбцы фигурные **записей**, связи между сущностями, представленное столбцы и способ **записей** заполняется данными.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 |Тип столбца|Description|  
 |-----------------|-----------------|  
-|data|Поля из **записей** возвращается командой запроса поставщику данных, таблицы или ранее были сформированы **записей**.|  
+|.|Поля из **записей** возвращается командой запроса поставщику данных, таблицы или ранее были сформированы **записей**.|  
 |Глава|Ссылка на другой **записей**, который называется *главе*. Столбцах позволяют определить *родители потомки* связь где *родительского* — **записей** , содержащий столбец и *дочерних* — **записей** представленный главы.|  
 |статистическое выражение|Значение столбца вычисляется путем выполнения *агрегатной функции* на все строки или столбца, все строки, дочернего **записей**. (См. в следующем разделе [агрегатных функций, функция CALC и ключевое слово NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
 |Вычисляемое выражение|Значение столбца получается путем вычисления Visual Basic для приложений выражения для столбцов в той же строки **записей**. Выражение является аргументом функции Калькулятора. (См. в следующем разделе вычисленное выражение [агрегатных функций, функция CALC и ключевое слово NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) и [Visual Basic для приложений функции](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  

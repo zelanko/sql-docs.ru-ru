@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ed811d1184287c1e45f93d3ddd4253400dc5a237
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fee5822e0833afec741b00d2e18b2c1a0db28ec5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>Поддерживаемые функции для модулей, скомпилированных в собственном коде T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ ms.lasthandoff: 11/17/2017
   - Это ограничение может быть понижено в случае, если запрос содержит соединения или агрегатные функции. (Например, с одним соединением (двумя таблицами) ограничение составляет 4 096 строк. С двумя соединениями (тремя таблицами) ограничение равно 2 730 строкам.)  
   - Результаты более 8 192 можно получить, сохраняя в переменной несколько строк.  
 
-```tsql
+```sql
 DECLARE @v INT = 9000;
 SELECT TOP (@v) … FROM … ORDER BY …
 ```
@@ -155,7 +155,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   UPDATE  
 
--   DELETE  
+-   Delete  
 
 -   предложение WHERE поддерживается вместе с инструкциями UPDATE и DELETE.  
 
@@ -257,7 +257,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
  Пример для оператора TOP с числом значений 8192: компиляция  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -270,7 +270,7 @@ GO
 
  Пример для оператора TOP с числом значений > 8192: сбой компиляции.  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -285,7 +285,7 @@ GO
 
  Пример использования переменной: компиляция  
 
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -305,7 +305,7 @@ GO
 
  Формула для вычисления наименьшего поддерживаемого значения N в предложении TOP N выглядит следующим образом: `N = floor ( 65536 / number_of_tables * 8 + total_size+of+aggs )`.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Скомпилированные в собственном коде хранимые процедуры](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)   
  [Проблемы миграции, связанные с хранимыми процедурами, скомпилированными в собственном коде](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)  
 

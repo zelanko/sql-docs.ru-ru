@@ -3,7 +3,7 @@ title: "Выбор объектов (обозреватель объектов) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2290199a222c9b914ca0d23a8065e699bf397d4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 27a9e701bc4dede53db94d2f9ab3260e3d305d81
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select-objects-object-explorer"></a>Выбор объектов (обозреватель объектов)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте диалоговое окно **Выбор объектов**, чтобы добавить объект к списку в другом диалоговом окне. Заголовок диалогового окна и параметры, доступные в нем, зависят от того, каким способом окно было открыто. Отображаются только доступные параметры; например доступны только имена входа, если необходимо выбрать владельца для нового объекта.  

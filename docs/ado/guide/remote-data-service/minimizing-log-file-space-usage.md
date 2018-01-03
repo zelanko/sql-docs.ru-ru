@@ -3,7 +3,7 @@ title: "Минимизация использования пространств
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddb41dbe5a2d76bb26d1830d1b659dbd99ca1c21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e1363381e5cf3e4f3f48498883cb6806759a5c44
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="minimizing-log-file-space-usage"></a>Минимизация использования пространства для файла журнала
 Файл журнала может быстро заполнить (таким образом, остановка работы сервера) при наличии большого объема действий на базе данных Microsoft SQL Server. Можно задать файл журнала **Truncate на контрольной точке** позволяет значительно увеличить ресурсы файла журнала для базы данных.  

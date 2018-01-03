@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c389e518cd4250461102ead5343a1933d7de1426
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50cc4e0be728b54029c764e784008dab53aad8c6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="native-compilation-advisor"></a>Помощник по собственной компиляции
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  NCA позволяет определить для конкретной интерпретируемой хранимой процедуры все функции, которые не поддерживаются в собственных модулях. NCA предложит вам ссылки на документы, в которых описаны решения или обходные варианты.  
   
- Дополнительные сведения о методологиях миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](http://msdn.microsoft.com/library/dn673538.aspx).  
+ Сведения о методиках миграции см. в разделе [In-Memory OLTP — стандартные шаблоны рабочей нагрузки и вопросы миграции](http://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>Пошаговое руководство по использованию помощника по собственной компиляции  
  В **обозревателе объектов**щелкните правой кнопкой мыши хранимую процедуру, которую необходимо преобразовать, и выберите пункт **Помощник по собственной компиляции**. Появится стартовая страница для **помощника по собственной компиляции хранимых процедур**. Чтобы продолжить, нажмите кнопку **Далее** .  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Как обычно, элемент **FILEGROUP** и инструкция **USE** mydatabase применяются к Microsoft SQL Server, но не применяются к базе данных SQL Azure.  
   
-```tsql  
+```sql  
 CREATE DATABASE Demo  
 ON  
 PRIMARY(NAME = [Demo_data],  

@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8aab31080adfc6235d6110aa0ad21159996bfcff
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c4b8ec287be2953a6140aac18086cd52d91dea23
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-the-index-create-memory-server-configuration-option"></a>Настройка параметра конфигурации сервера index create memory
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +31,13 @@ ms.lasthandoff: 11/27/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Настройка значения параметра index create memory с помощью следующих средств:**  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 11/27/2017
 
 -   Создание индекса в производственной системе обычно проводится редко, и часто выполняется в качестве планового задания в момент минимальной загрузки сервера. Поэтому увеличение параметра **index create memory** позволяет повысить производительность создания индексов, если индексы создаются редко, во время низкой загрузки. Более низкое значение параметра **[min memory per query](../../database-engine/configure-windows/configure-the-min-memory-per-query-server-configuration-option.md)** можно указать, чтобы задание создания индексов запускалось даже в том случае, когда система не располагает требуемым объемом свободной памяти.
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения процедуры **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции RECONFIGURE необходимо иметь разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/27/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере описывается использование процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) для задания значения параметра `index create memory` равным `4096`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 EXEC sp_configure 'show advanced options', 1;  
 GO  
@@ -104,7 +104,7 @@ RECONFIGURE;
 GO  
 ```  
   
- Дополнительные сведения см. в статье [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Продолжение: после настройки параметра index create memory  
  Параметр вступает в силу немедленно, без перезапуска сервера.  

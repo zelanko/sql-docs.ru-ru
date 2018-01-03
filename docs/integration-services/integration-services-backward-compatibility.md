@@ -5,7 +5,7 @@ ms.date: 06/14/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -24,16 +24,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 07cf052ddd44b5c5bdfd7a4538dfb940a1866e21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: acee4af7baa5c4a5a6841183dcfebfb37743c387
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-backward-compatibility"></a>Обратная совместимость служб Reporting Services
   В этом разделе описаны различия между разными версиями служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Здесь рассмотрены функции, которые больше не доступны или запланированы к удалению в следующем выпуске. Кроме того, описываются внесенные в продукт изменения, которые могут вызвать изменения в поведении или привести к неработоспособности существующих приложений, использующих функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
-## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>Нерекомендуемые функции служб SQL Server 2016 Integration Services
+## <a name="deprecated-integration-services-features-in-sql-server-2016"></a>Нерекомендуемые функции служб SQL Server 2016 Integration Services
 
 В этой статье описаны нерекомендуемые функции служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , которые все еще доступны в текущем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Эти функции будут удалены в следующем выпуске [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Не используйте устаревшие функции в новых приложениях.  
   

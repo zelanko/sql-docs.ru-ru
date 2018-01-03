@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b1c53b09fe118de3a90c78bd1393da90a915385b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b009aea458e83421468e57a07455803f9df96a0b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cardinality-estimation-sql-server"></a>Оценка количества элементов (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  **Уровень совместимости:** чтобы убедиться, что база данных находится на определенном уровне, используйте следующий код на языке Transact-SQL для [COMPATIBILITY_LEVEL](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
 
-```tsql  
+```sql  
 SELECT ServerProperty('ProductVersion');  
 go  
   
@@ -65,7 +65,7 @@ go
   
  **Устаревшая CE**: для базы данных SQL Server с уровнем совместимости 120 или выше CE версии 70 может быть активирована на уровне базы данных с помощью инструкции [ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
   
-```tsql  
+```sql  
 ALTER DATABASE
     SCOPED CONFIGURATION  
         SET LEGACY_CARDINALITY_ESTIMATION = ON;  
@@ -78,7 +78,7 @@ SELECT name, value
  
  Или, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), используется [указание запроса](../../t-sql/queries/hints-transact-sql-query.md) `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`.
  
- ```tsql  
+ ```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01'; 
@@ -87,7 +87,7 @@ SELECT CustomerId, OrderAddedDate
  
  **Хранилище запросов**: появившееся в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] хранилище запросов является удобным инструментом для анализа производительности запросов. В среде [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] откройте **обозреватель объектов**. Затем откройте узел вашей базы данных; если хранилище запросов включено, вы увидите узел **Хранилище запросов**.  
   
-```tsql  
+```sql  
 ALTER DATABASE <yourDatabase>  
     SET QUERY_STORE = ON;  
 go  
@@ -109,7 +109,7 @@ ALTER DATABASE <yourDatabase>
   
  Другой способ отслеживания процесса оценки кратности (CE) подразумевает использование расширенного события с именем **query_optimizer_estimate_cardinality**. Следующий пример кода T-SQL выполняется в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он записывает XEL-файл в папку C:\Temp\ (хотя этот путь можно изменить). При открытии XEL-файла в [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] отображаются подробные сведения об этом файле.  
   
-```tsql  
+```sql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
 go  
   
@@ -143,11 +143,11 @@ go
   
  Далее приводятся пошаговые инструкции, позволяющие оценить, не выполняется ли какой-нибудь из важных запросов медленнее с учетом последних данных CE. Для выполнения некоторых шагов нужно выполнить пример кода из предыдущего раздела.  
   
-1.  Откройте среду [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Убедитесь, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
+1.  Откройте [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]. Убедитесь, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
   
 2.  Выполните следующие подготовительные действия:  
   
-    1.  Откройте среду [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
+    1.  Откройте [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)].  
   
     2.  Запустите T-SQL, чтобы убедиться, что для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задан наивысший доступный уровень совместимости.  
   
@@ -234,7 +234,7 @@ go
   
 Допустим, сбор статистики по параметру OrderTable последний раз выполнялся 30 апреля 2016 года, когда максимальное значение параметра OrderAddedDate было 2016-04-30. Расчет CE для уровня совместимости 120 (и выше) выполняется с допущением, что столбцы в таблице OrderTable с данными *по возрастанию* содержали значения, превышающие записанный в статистике максимум. Исходя из этого план обработки запросов для объектов SQL SELECT оптимизируется следующим образом.  
   
-```tsql  
+```sql  
 SELECT CustomerId, OrderAddedDate  
     FROM OrderTable  
     WHERE OrderAddedDate >= '2016-05-01';  
@@ -246,7 +246,7 @@ SELECT CustomerId, OrderAddedDate
   
 На уровне 120 расчет CE выполняется с тем допущением, что, возможно, существует корреляция между двумя столбцами одной и той же таблицы: Model и ModelVariant. CE более точно оценивает, сколько строк будет возвращено запросом, а оптимизатор запросов создает оптимизированный план.  
   
-```tsql  
+```sql  
 SELECT Model, Purchase_Price  
     FROM dbo.Hardware  
     WHERE  
@@ -257,7 +257,7 @@ SELECT Model, Purchase_Price
 ### <a name="example-c-ce-no-longer-assumes-any-correlation-between-filtered-predicates-from-different-tablescc"></a>Пример В. При расчете CE мы более не допускаем никаких корреляций между фильтрованными предикатами из разных таблиц. 
 Если провести новое исследование с актуальными рабочими нагрузками и фактическими бизнес-данными, обнаружится, что фильтры предикатов из разных таблиц, как правило, не коррелируют друг с другом. В следующем запросе при расчете CE предполагается, что между s.type и r.date нет никакой корреляции. Следовательно, CE оценивает, что число возвращаемых строк будет меньше.  
   
-```tsql  
+```sql  
 SELECT s.ticket, s.customer, r.store  
     FROM  
                    dbo.Sales    AS s  

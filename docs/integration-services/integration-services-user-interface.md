@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 53d4cd6d44f33b05ca586077a33307616aa45986
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e491a90b39421fb04501498b205b5e8355eec063
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-user-interface"></a>Пользовательский интерфейс служб Integration Services
   Дополнительно к областям конструктора на вкладках конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] пользовательский интерфейс предоставляет доступ к следующим окнам и диалоговым окнам для добавления возможностей в пакеты и задания настроек объектов пакета.  
@@ -119,10 +119,10 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения о дополнительных окнах и меню см. в документации по Visual Studio.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Сведения о способах создания пакетов в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]см. в разделе [Создание пакетов в SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [конструктор служб SSIS](../integration-services/ssis-designer.md)  
   
   

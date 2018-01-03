@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 65e7b1e15e55604eb6f92d0aed96d3be7dc54ad1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50274b346c5a404c9d2c8f82dbd8d75664fa6bbe
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-started-with-full-text-search"></a>Приступая к работе с компонентом Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] По умолчанию для баз данных SQL Server включен полнотекстовый поиск. Однако перед выполнением полнотекстовых запросов нужно создать полнотекстовый каталог и полнотекстовый индекс для таблиц или индексированных представлений, по которым требуется выполнить поиск.
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Для создания полнотекстового каталога `AdvWksDocFTCat`в примере используется инструкция [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md) :  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE FULLTEXT CATALOG AdvWksDocFTCat;  
@@ -59,13 +59,13 @@ ms.lasthandoff: 11/17/2017
  
 2.  Однако перед созданием полнотекстового индекса для таблицы Document следует убедиться, что в ней определен уникальный индекс с одним столбцом, не допускающий значений NULL. Следующая инструкция [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) создает уникальный индекс `ui_ukDoc`для столбца DocumentID таблицы Document:  
   
-    ```tsql 
+    ```sql 
     CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
     ```  
 
 3.  После создания уникального ключа можно создать полнотекстовый индекс для таблицы `Document` с помощью следующей инструкции [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) .  
   
-    ```tsql  
+    ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
     (  
         Document                         --Full-text index column name   
@@ -108,14 +108,14 @@ ms.lasthandoff: 11/17/2017
   
  Например, приведенная ниже инструкция [CREATE FULLTEXT STOPLIST](../../t-sql/statements/create-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] создает список полнотекстовых стоп-слов с именем myStoplist путем копирования из системного списка стоп-слов:  
   
-```tsql  
+```sql  
 CREATE FULLTEXT STOPLIST myStoplist FROM SYSTEM STOPLIST;  
 GO  
 ```  
   
  Приведенная ниже инструкция [ALTER FULLTEXT STOPLIST](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] изменяет список стоп-слов myStoplist путем добавления слова en для испанского и затем французского языков:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'Spanish';  
 ALTER FULLTEXT STOPLIST myStoplist ADD 'en' LANGUAGE 'French';  
 GO  

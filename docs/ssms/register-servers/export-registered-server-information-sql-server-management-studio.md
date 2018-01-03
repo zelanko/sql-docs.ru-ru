@@ -3,7 +3,7 @@ title: "Экспорт сведений о зарегистрированном 
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 95c412ae01c469a19bf5548c20c441c18957639a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e7f96a7298d67a10bfee5847f8647915a595d975
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Выполнение экспорта сведений компонента «Зарегистрированные серверы» (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается, как сохранить и экспортировать сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и передать их другим сотрудникам и на другие серверы. Данную возможность экспорта можно использовать для создания согласованного пользовательского интерфейса на нескольких компьютерах.  

@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0353aea7e84d69dca9dc469d4945a7cdf6eb7c34
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f06b2599172d8cbdaee05a4c42d852a37290dadb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-change-tracking-sql-server"></a>Управление отслеживанием изменений (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Кроме того, представление каталога [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) отражает внутренние таблицы, созданные при включении отслеживания изменений для пользовательской таблицы.  
   
-### <a name="security"></a>Безопасность  
+### <a name="security"></a>безопасность  
  Для доступа к данным отслеживания изменений с помощью [функций отслеживания изменений](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)участник должен иметь следующие разрешения.  
   
 -   Разрешение SELECT как минимум для первичных ключевых столбцов отслеживаемой таблицы, для которой выполняется запрос.  
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
  Как для других внутренних таблиц, место, занимаемое таблицами отслеживания изменений, можно определить с помощью хранимой процедуры [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) . Названия внутренних таблиц можно определить с помощью представления каталога [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) , как показано в следующем примере.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

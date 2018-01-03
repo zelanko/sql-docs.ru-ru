@@ -21,18 +21,18 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9eea80799dd0ccc51c23685249ebccc1cf3b1338
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 62c79a98fc0b23173539b9653272f85f20a534a7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>Определение и изменение статического строкового фильтра
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается определение и изменение статического фильтра строк в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
 -   Поскольку эти фильтры являются статическими, все подписчики получат один и тот же поднабор данных. Если необходимо динамически фильтровать строки в статье таблицы, принадлежащей к публикации слиянием, чтобы каждый подписчик получал собственную секцию данных, см. раздел [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md). Репликация слиянием также позволяет фильтровать связанные строки на основе существующего фильтра строк. Дополнительные сведения см. в статье [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
- Операции определения, изменения и удаления статических строковых фильтров выполняются на странице **Фильтрация строк таблицы** мастера создания публикаций или на странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера создания публикаций и доступе к этому диалоговому окну см. в статьях о [создании публикаций](../../../relational-databases/replication/publish/create-a-publication.md) и [просмотре и изменении свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Операции определения, изменения и удаления статических строковых фильтров выполняются на странице **Фильтрация строк таблицы** мастера создания публикаций или на странице **Фильтрация строк** диалогового окна **Свойства публикации — \<публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md) и [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-static-row-filter"></a>Определение статического фильтра строк  
   
@@ -76,25 +76,25 @@ ms.lasthandoff: 11/17/2017
   
     -   Текстовая область **Инструкция фильтра** содержит текст по умолчанию, в виде:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [schema].[tablename] WHERE  
         ```  
   
     -   Текст по умолчанию изменять нельзя. Введите предложение фильтра после ключевого слова WHERE, используя стандартный синтаксис SQL. Законченное предложение фильтра должно выглядеть следующим образом:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE [LoginID] = 'adventure-works\ranjit0'  
         ```  
   
     -   В статическом фильтре строк может содержаться определяемая пользователем функция. Полное предложение фильтра для статического фильтра строк с определяемой пользователем функцией должно выглядеть следующим образом:  
   
-        ```tsql  
+        ```sql  
         SELECT <published_columns> FROM [Sales].[SalesOrderHeader] WHERE MyFunction([Freight]) > 100  
         ```  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<Публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
+5.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 #### <a name="to-modify-a-static-row-filter"></a>Изменение статического фильтра строк  
   
@@ -113,11 +113,11 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Определение статического фильтра строк для публикации транзакций или публикации моментальных снимков  
   
-1.  Определите статью для фильтрации. Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  Определите статью для фильтрации. Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  В издателе в базе данных публикации выполните процедуру [sp_articlefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md). Укажите имя статьи в параметре **@article**, имя публикации в параметре **@publication**, имя фильтра в параметре **@filter_name**и предложение фильтрации в параметре **@filter_clause** (не включая `WHERE`).  
   
-3.  При необходимости определения фильтра столбцов см. раздел [Определение или изменение фильтра столбцов](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). В противном случае выполнение процедуру [sp_articleview (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). В параметре **@publication**укажите имя публикации, в параметре **@article**— имя фильтруемой статьи, а в параметре **@filter_clause**. Будут созданы объекты синхронизации для отфильтрованной статьи.  
+3.  При необходимости определения фильтра столбцов см. раздел [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). В противном случае выполнение процедуру [sp_articleview (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). В параметре **@publication**укажите имя публикации, в параметре **@article**— имя фильтруемой статьи, а в параметре **@filter_clause**. Будут созданы объекты синхронизации для отфильтрованной статьи.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>Изменение статического фильтра строк для моментального снимка публикации транзакций  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 11/17/2017
   
 #### <a name="to-define-a-static-row-filter-for-a-merge-publication"></a>Определение статического фильтра строк для публикации слиянием  
   
-1.  В издателе в базе данных публикации выполните процедуру [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите предложение фильтрации в параметре **@subset_filterclause** (не включая `WHERE`). Дополнительные сведения см. в статье [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
+1.  В издателе в базе данных публикации выполните процедуру [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Укажите предложение фильтрации в параметре **@subset_filterclause** (не включая `WHERE`). Дополнительные сведения см. в статье [определить статью](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  При необходимости определения фильтра столбцов см. раздел [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   

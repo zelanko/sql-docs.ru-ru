@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 207ca8c64cd20e8e98093960bd68ad23b770ea24
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96e21a0eb32b9aeecabdfeb574d3e793b3ab99d8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>Параметр конфигурации сервера «optimize for ad hoc workloads»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 Если количество одноразовых планов занимает существенную часть памяти [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] на сервере OLTP и эти планы являются нерегламентированными, используйте этот параметр сервера для уменьшения объема используемой этими объектами памяти.
 Чтобы найти количество одноразовых кэшированных планов, выполните следующий запрос:
 
-```t-sql
+```sql
 SELECT objtype, cacheobjtype, 
   AVG(usecounts) AS Avg_UseCount, 
   SUM(refcounts) AS AllRefObjects, 

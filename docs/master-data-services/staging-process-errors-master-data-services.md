@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,16 +18,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60d930bbdd618e5a99450735bdfe290d8f1a9e59
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06a7e065187ca920497d411172a67eb8362ba857
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staging-process-errors-master-data-services"></a>Ошибки промежуточного процесса (службы Master Data Services)
   После завершения промежуточного процесса все обработанные записи в промежуточных таблицах содержат значение в столбце ErrorCode. Эти значения перечислены в следующей таблице.  
   
-|код|Ошибка|Происходит при/сведения|Относится к таблице|  
+|Код|Ошибка|Происходит при/сведения|Относится к таблице|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|Один и тот же код элемента встречается в промежуточной таблице несколько раз.|Один и тот же код элемента встречается в промежуточном пакете несколько раз. Ни один элемент не создан и не обновлен.|Конечный элемент<br /><br /> Объединены<br /><br /> Связь|  
 |210003|Значение атрибута ссылается на несуществующий или неактивный элемент.|При промежуточной обработке атрибутов на основе домена необходимо использовать код, а не имя. Применяется к значениям **ImportType0**, **1**и **2**.|Конечный элемент<br /><br /> Объединены|  

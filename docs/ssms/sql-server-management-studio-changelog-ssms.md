@@ -3,7 +3,7 @@ title: "Среда SQL Server Management Studio (SSMS) — журнал изм�
 ms.custom: 
 ms.date: 12/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6046e57ec48ace2795c65879d00ad563d81fd0d6
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: f6a8a753f3bb272ebd1a98429a5f224dce717f33
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этой статье приводятся подробные сведения об обновлениях, улучшениях и исправлениях ошибок в текущей и предыдущих версиях SQL Server Management Studio. Скачать [предыдущие версии SQL Server Management Studio можно ниже](#previous-ssms-releases).

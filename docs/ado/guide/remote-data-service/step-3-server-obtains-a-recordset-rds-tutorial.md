@@ -3,7 +3,7 @@ title: "Шаг 3: Сервер получает набор записей (уч�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 47d4ebd2d43675014bd87812ef47b285fcca1041
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 03b8e94de98615dd411a5b454217803e1aae3381
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>Шаг 3: Сервер получает набор записей (учебник служб удаленных рабочих СТОЛОВ)
 Программа сервера использует текста строки и команда connect для запросов к источнику данных для нужные строки. ADO обычно используется для получения этого **записей**, несмотря на то, что другие Microsoft интерфейсы доступа к данным, таких как OLE DB, может быть использовано.  

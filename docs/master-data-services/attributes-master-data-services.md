@@ -5,7 +5,7 @@ ms.date: 03/15/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -24,11 +24,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca7a31974a26dfe6b8f38ea3e17c480a74526518
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9acfc7e9d80dd82186f62dcb3fedbe43c80f9f6c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="attributes-master-data-services"></a>Атрибуты (службы Master Data Services)
   Атрибуты — это объекты, которые содержатся в сущностях [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Значения атрибутов описывают элементы сущности. Атрибут может использоваться для описания конечного элемента, объединенного элемента или коллекции.  
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
  ![Древовидная структура сущности "Продукт"](../master-data-services/media/mds-conc-entity-ui.gif "Древовидная структура сущности "Продукт"")  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

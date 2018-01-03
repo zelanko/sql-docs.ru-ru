@@ -3,7 +3,7 @@ title: "Однопроходные курсоры | Документы Microsoft
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 496e62ece05a14a5b64eae797d546af7ba4a1ede
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6b9357706047dbcf6e69968ce289fb59a7e055b6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="forward-only-cursors"></a>Однопроходные курсоры
 Обычно по умолчанию используется тип курсора, вызывается курсора однонаправленные (или без прокрутки), можно переместить только вперед по результирующему набору. Однонаправленный курсор не поддерживает прокрутку (возможность перемещаться вперед и назад в результирующем наборе); он поддерживает только выборки строк от начала до конца результирующего набора. С помощью некоторых однонаправленные курсоры (таких как библиотеки курсоров SQL Server), что все insert, update и delete инструкции внесенные текущим пользователем (или зафиксированные другими пользователями), влияющих на строки результирующего набора, отображаются как строки, выбранные. Так как курсор не может быть прокручен назад, однако изменений, сделанных в строках в базе данных после получения строки, не видны через курсор.  

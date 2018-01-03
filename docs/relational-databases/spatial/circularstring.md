@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4804fa455e233e6ec921094cc3d9e11a25d9b0a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c60dcb5512ecc5f6566220968ff6ad420abe336f
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="circularstring"></a>CircularString
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Объект **CircularString** — это коллекция, состоящая из нуля или большего количества непрерывных круговых сегментов дуги. Сегмент дуги — это сегмент кривой, определяемый тремя точками на двумерной плоскости; первая точка не может совпадать с третьей. Если все три точки сегмента дуги лежат на одной прямой, сегмент дуги считается линейным сегментом.  
@@ -96,7 +96,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-circularstring"></a>A. Создание экземпляра Geometry с пустым экземпляром CircularString  
  В этом примере показано, как создать пустой экземпляр **CircularString** :  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING EMPTY');  
 ```  
@@ -104,7 +104,7 @@ SET @g = geometry::Parse('CIRCULARSTRING EMPTY');
 ### <a name="b-instantiating-a-geometry-instance-using-a-circularstring-with-one-circular-arc-segment"></a>Б. Создание экземпляра Geometry с экземпляром CircularString, содержащим один сегмент дуги  
  В следующем примере показывается создание экземпляра **CircularString** с одним сегментом дуги (полукруга):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry:: STGeomFromText('CIRCULARSTRING(2 0, 1 1, 0 0)', 0);  
 SELECT @g.ToString();  
@@ -113,7 +113,7 @@ SELECT @g.ToString();
 ### <a name="c-instantiating-a-geometry-instance-using-a-circularstring-with-multiple-circular-arc-segments"></a>В. Создание экземпляра Geometry с помощью экземпляра CircularString с несколькими сегментами дуги  
  В следующем примере показывается создание экземпляра **CircularString** более чем с одним сегментом дуги (круга):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CIRCULARSTRING(2 1, 1 2, 0 1, 1 0, 2 1)');  
 SELECT 'Circumference = ' + CAST(@g.STLength() AS NVARCHAR(10));    
@@ -127,7 +127,7 @@ Circumference = 6.28319
   
  Сравните вывод, получаемый при использовании **LineString** вместо **CircularString**:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('LINESTRING(2 1, 1 2, 0 1, 1 0, 2 1)', 0);  
 SELECT 'Perimeter = ' + CAST(@g.STLength() AS NVARCHAR(10));  
@@ -144,21 +144,21 @@ Perimeter = 5.65685
 ### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>Г. Объявление и создание экземпляра Geometry с экземпляром CircularString в одной инструкции  
  В этом фрагменте кода показывается объявление и создание экземпляра **geometry** с экземпляром **CircularString** в одной инструкции:  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CIRCULARSTRING(0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.3246, -1 2.1082, 0 0)';  
 ```  
   
 ### <a name="e-instantiating-a-geography-instance-with-a-circularstring"></a>Д. Создание экземпляра Geography с экземпляром CircularString  
  В следующем примере показывается объявление и создание экземпляра **geography** с экземпляром **CircularString**:  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
 ```  
   
 ### <a name="f-instantiating-a-geometry-instance-with-a-circularstring-that-is-a-straight-line"></a>Е. Создание экземпляра Geometry с экземпляром CircularString, представляющим прямую  
  В следующем примере показывается создание экземпляра **CircularString** , представляющего прямую:  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);  
 ```  

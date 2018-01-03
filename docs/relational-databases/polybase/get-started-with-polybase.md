@@ -25,11 +25,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 330a9b9a12312ab22389e8de0849ab164b8f0d47
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 27265e6d6caf4f1acfc0803839e3077cd1597f67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="get-started-with-polybase"></a>Приступая к работе с PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   у вас будут примеры запросов, в которых используются объекты PolyBase.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Экземпляр [SQL Server (64-разрядная версия)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) со следующим:  
   
 -   Microsoft .NET Framework 4.5.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="how-to-confirm-installation"></a>Подтверждение установки  
  Чтобы после установки убедиться, что технология PolyBase успешно установлена, выполните приведенную ниже команду. Если служба PolyBase установлена, она возвращает значение 1, а если нет — значение 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
@@ -102,8 +102,8 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 ### <a name="external-data-source-configuration"></a>Конфигурация внешнего источника данных  
   
-1.  Запустите хранимую процедуру [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' и задайте соответствующее значение. По умолчанию для подключения Hadoop установлено значение 7. Чтобы узнать значение, см. раздел [Конфигурация подключения к PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
-      ```tsql  
+1.  Запустите хранимую процедуру [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity' и задайте соответствующее значение. По умолчанию для подключения Hadoop установлено значение 7. Значение см. в статье [Конфигурация подключения к PolyBase (Transact-SQL)](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md).  
+      ```sql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -289,7 +289,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   Нерегламентированные запросы  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 1: Ad-Hoc Query joining relational with Hadoop data   
     -- Select customers who drive faster than 35 mph: joining structured customer data stored   
     -- in SQL Server with car sensor data stored in Hadoop.  
@@ -303,7 +303,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 -   импорт данных  
   
-    ```tsql  
+    ```sql  
     -- PolyBase Scenario 2: Import external data into SQL Server.  
     -- Import data for fast drivers into SQL Server to do more in-depth analysis and  
     -- leverage Columnstore technology.  

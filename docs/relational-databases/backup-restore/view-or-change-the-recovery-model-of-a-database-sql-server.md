@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: aa1faff7cf54cd227e7429fbdfda514ea177d204
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 835fd806c0292da07f82f02d6dae21c720f1bf00
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Просмотр или изменение модели восстановления базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере описано, как запросить через представление каталога [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) модель восстановления для базы данных **model** .  
   
-```tsql  
+```sql  
 SELECT name, recovery_model_desc  
    FROM sys.databases  
       WHERE name = 'model' ;  
@@ -103,7 +103,7 @@ GO
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как переключить модель восстановления в базе данных `model` в режим `FULL` с помощью параметра `SET RECOVERY` инструкции [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) .  
   
-```tsql  
+```sql  
 USE master ;  
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  

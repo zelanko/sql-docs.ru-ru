@@ -3,7 +3,7 @@ title: "Создание учетной записи-посредника аге
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0c908b928be491dfcaf0dafc0d66e9475208ee17
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 88384e9e1cd945cc9c0a53b6d6b4b898731cf47d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>Создание учетной записи-посредника агента SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как создать учетную запись-посредник агента SQL Server в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/05/2017
   
 **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
     [Ограничения](#Restrictions)  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Перед созданием учетной записи-посредника необходимо создать учетные данные, если они еще не созданы.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Пользователь, указанный в учетных данных, должен иметь разрешение "Доступ к этому компьютеру из сети" (SeNetworkLogonRight) на компьютере, где выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
+-   Учетные записи-посредники агента[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] используют учетные данные для хранения сведений об учетных записях пользователей Windows. Пользователь, указанный в учетных данных, должен иметь разрешение "Доступ к этому компьютеру из сети" (SeNetworkLogonRight) на компьютере, где выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] проверяет действительность доступа к подсистеме учетной записи-посредника и предоставляет ей доступ при каждом выполнении шага задания. Если учетная запись-посредник больше не имеет доступа к подсистеме, шаг задания завершается ошибкой. В противном случае агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] олицетворяет пользователя, указанного в учетной записи-посреднике, и запускает шаг задания.  
   

@@ -26,11 +26,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 076c1c9a78441473fccd0435980ecfc4e735803c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2e2c0047ec80addecb0825a7c8b85409ef62a0e5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Восстановление резервной копии журнала транзакций (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
      [Предварительные требования](#Prerequisites)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для восстановления резервной копии журнала транзакций используется:**  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 11/17/2017
   
          Дополнительные сведения о резервных копиях журналов транзакций см. в статье [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md) и [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Разрешения на выполнение инструкции RESTORE даются ролям, в которых данные о членстве всегда доступны серверу. Так как членство в предопределенной роли базы данных может быть проверено только тогда, когда база данных доступна и не повреждена, что не всегда имеет место при выполнении инструкции RESTORE, члены предопределенной роли базы данных **db_owner** не имеют разрешений RESTORE.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **Из файла или с ленты**  
   
-         Нажмите кнопку обзора (**...**), после чего откроется диалоговое окно **Выбор устройства резервного копирования** . В окне **Тип носителя резервной копии** выберите один из перечисленных типов устройств. Чтобы выбрать одно или несколько устройств в окне **Носитель резервной копии** , нажмите кнопку **Добавить**.  
+         Нажмите кнопку обзора (**...**), после чего откроется диалоговое окно **Выбор устройств резервного копирования** . В окне **Тип носителя резервной копии** выберите один из перечисленных типов устройств. Чтобы выбрать одно или несколько устройств в окне **Носитель резервной копии** , нажмите кнопку **Добавить**.  
   
          После добавления нужных устройств в списке **Носитель резервной копии** нажмите кнопку **ОК** для возвращения на страницу **Общие** .  
   
@@ -245,14 +245,14 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  По умолчанию для базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] используется простая модель восстановления. В следующем примере для перехода на модель полного восстановления требуется изменить базу данных следующим образом:  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### <a name="a-applying-a-single-transaction-log-backup"></a>A. Применение одной резервной копии журнала транзакций  
  В следующем примере база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] восстанавливается с помощью полной резервной копии базы данных, которая находится на устройстве резервного копирования с именем `AdventureWorks2012_1`. Затем применяется первая резервная копия журнала транзакций, находящаяся на устройстве с именем `AdventureWorks2012_log`. В заключение происходит восстановление базы данных.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -270,7 +270,7 @@ GO
 #### <a name="b-applying-multiple-transaction-log-backups"></a>Б. Применение нескольких резервных копий журналов транзакций  
  В следующем примере база данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] восстанавливается с помощью полной резервной копии базы данных, которая находится на устройстве резервного копирования с именем `AdventureWorks2012_1`. Затем последовательно применяются первые три копии журнала транзакций, находящиеся на устройстве с именем `AdventureWorks2012_log`. В заключение происходит восстановление базы данных.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  

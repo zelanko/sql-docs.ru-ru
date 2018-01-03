@@ -3,7 +3,7 @@ title: "Обработка множественных шагов задания 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 27cad9f2ede077dc8cc227c9639bf3b979b5995f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0391b5c3a997241fe4de095800306ed95f5b8e15
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handle-multiple-job-steps"></a>Обработка множественных шагов задания
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Если в задании содержится более одного шага, необходимо указать порядок выполнения шагов задания. Это называется *управлением потоком**.* Добавить новые шаги задания и реорганизовать поток шагов задания можно в любое время; изменения вступают в силу при следующем выполнении задания. На этой иллюстрации показано управление потоком для задания резервного копирования базы данных.  

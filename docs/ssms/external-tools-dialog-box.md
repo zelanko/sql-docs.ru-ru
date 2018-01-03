@@ -3,7 +3,7 @@ title: "Диалоговое окно \"Внешние средства\" | До
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d60bec587daeae84382166194d75db22b0a38a61
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fd3875e3c4dfe69fa2428ca8c348648ebd97e2a9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="external-tools-dialog-box"></a>Диалоговое окно «Внешние средства»
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте диалоговое окно **Внешние инструменты** для добавления внешних инструментов, например SQLCMD или приложения "Блокнот", в меню **Сервис**. Добавление внешних инструментов позволяет запускать другие приложения во время работы в среде [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] . При запуске средств можно указать аргументы и рабочий каталог. Кроме того, результаты работы некоторых средств могут отображаться в окне **Вывод** . Диалоговое окно **Внешние инструменты** доступно в меню **Сервис** .  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 **Добавить**  
 Текстовые поля очищаются, чтобы можно было указать новое средство.  
   
-**Удалить**  
+**Удаление**  
 Удаляет инструмент или команду из списка **Содержимое меню** , а также из меню **Сервис** .  
   
 **Title**  
@@ -80,6 +80,6 @@ ms.lasthandoff: 12/05/2017
 |**Аргументы**|-A|  
   
 ## <a name="see-also"></a>См. также:  
-[Arguments for External Tools](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
+[Аргументы для внешних средств](../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md)  
 [Общие элементы интерфейса пользователя](../ssms/general-user-interface-elements.md)  
   

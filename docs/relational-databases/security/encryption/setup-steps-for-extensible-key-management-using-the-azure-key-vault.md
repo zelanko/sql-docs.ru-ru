@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3105ead24cc79ba2374e6caf1438ed1384078a01
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 375898263ea58a2ac8dd9e54f86257d07d1daeca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ ms.lasthandoff: 11/21/2017
   
      Выполните следующий скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] , чтобы настроить [!INCLUDE[ssDE](../../../includes/ssde-md.md)] для использования поставщика расширенного управления ключами.  
   
-    ```tsql  
+    ```sql  
     -- Enable advanced options.  
     USE master;  
     GO  
@@ -294,7 +294,7 @@ ms.lasthandoff: 11/21/2017
      Создайте поставщик служб шифрования с помощью соединителя [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , который является поставщиком расширенного управления ключами для хранилища ключей Azure.    
     В этом примере используется имя `AzureKeyVault_EKM_Prov`.  
   
-    ```tsql  
+    ```sql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
     FROM FILE = 'C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll';  
     GO  
@@ -326,7 +326,7 @@ ms.lasthandoff: 11/21/2017
   
     -   Дополните вторую часть аргумента `SECRET` **секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL sysadmin_ekm_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -351,7 +351,7 @@ ms.lasthandoff: 11/21/2017
   
     -   Замените `ContosoRSAKey0` на имя ключа в хранилище ключей Azure.  
   
-    ```tsql  
+    ```sql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
     FROM PROVIDER [AzureKeyVault_EKM_Prov]  
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 01c6f66c5b72a320284034cf5e789d37cc265551
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 59869c0fdcb73fc30ee9bc763e8665f05f71df90
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>Справка F1 мастера обновления пакетов служб SSIS
   Воспользуйтесь мастером обновления пакетов SSIS, чтобы обновить пакеты, созданные в более ранних версиях [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], до формата пакета текущего выпуска [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
  **Использовать проверку подлинности SQL Server**  
  Выберите использование проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения к серверу. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
- **Имя пользователя**  
+ **User name**  
  Введите имя пользователя, которое будет использовано для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] при подключении к серверу.  
   
  **Пароль**  
@@ -134,7 +134,7 @@ ms.lasthandoff: 11/20/2017
  **Использовать проверку подлинности SQL Server**  
  Выберите использование проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для подключения к серверу. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
- **Имя пользователя**  
+ **User name**  
  Введите имя пользователя, которое будет использовано, если при подключении к серверу применяется проверка подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **Пароль**  

@@ -3,7 +3,7 @@ title: "Открыть с помощью (создать файл) | Докум�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6dddfbff4900c77823dbe7782dd720d75f4135
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9f40b2c05b2868c83c0a80d1fab2de85fe35d381
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="open-with-new-file"></a>Открыть с помощью (создать файл)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно открыть документ в одном или нескольких редакторах, щелкнув **Открыть** в меню **Файл**, а затем выбрав **Файл**. В диалоговом окне **Открытие файла** выберите файл, щелкните стрелку **Открыть** , затем щелкните **Открыть с помощью**. В диалоговом окне **Открыть с помощью** в списке **Выберите программу для открытия** выберите нужную программу и нажмите **Открыть**.  

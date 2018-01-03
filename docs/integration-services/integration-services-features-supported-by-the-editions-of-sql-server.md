@@ -5,7 +5,7 @@ ms.date: 07/26/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d7a5ad6abf892a9b8ab0b125336e13cf1318100
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Функции служб Integration Services, поддерживаемые различными выпусками SQL Server
  В этом разделе подробно описаны функции служб SQL Server Integration Services (SSIS), поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/01/2017
     
 ## <a name="ISNew"></a> Новые функции служб Integration Services в SQL Server 2017
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Мастер Scale Out|Да|||||
 |Рабочая роль Scale Out|Да|Да <sup>1</sup>|TBD|TBD|TBD|
@@ -53,13 +53,13 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="IEWiz"></a> Мастер импорта и экспорта SQL Server
 
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |мастер импорта и экспорта SQL Server|Да|Да|Да|Да|Да|  
 
 ## <a name="IS"></a> Службы Integration Services  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Встроенные соединители источника данных|Да|Да|||| 
 |Встроенные задачи и преобразования|Да|Да||||  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a name="ISAA"></a> Службы Integration Services — дополнительные источники и назначения  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Высокопроизводительные источник и назначение Oracle от Attunity|Да|||||  
 |Высокопроизводительные источник и назначение Teradata от Attunity|Да|||||  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/01/2017
   
 ## <a name="ISAT"></a> Службы Integration Services — дополнительные задачи и преобразования  
   
-|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express|  
+|Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Компоненты службы Change Data Capture от Attunity<sup>1</sup>|Да|||||  
 |Преобразование «Запрос интеллектуального анализа данных»|Да|||||  

@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2c6ed909469f034423c15b7ce1b6769a315e1d10
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 224f52ccadb3452bc79672e60b9986a7431acf74
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-alter-and-drop-selective-xml-indexes"></a>Создание, изменение и удаление селективных XML-индексов
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Описывает способы создания нового селективного XML-индекса, а также изменения или удаления существующего селективного XML-индекса.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
  В следующем примере показан синтаксис для создания селективного XML-индекса. Он также содержит несколько вариантов синтаксиса для описания индексируемых путей с указаниями по оптимизации.  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX sxi_index  
 ON Tbl(xmlcol)  
   
@@ -61,7 +61,7 @@ FOR(
   
  В следующем примере показана инструкция ALTER INDEX. Эта инструкция добавляет путь `'/a/b/m'` в часть XQuery индекса и удаляет путь `'/a/b/e'` из части SQL индекса, созданного в примере в разделе [CREATE SELECTIVE XML INDEX (Transact-SQL)](../../t-sql/statements/create-selective-xml-index-transact-sql.md). Путь для удаления определяется по имени, указанному при его создании.  
   
-```tsql  
+```sql  
 ALTER INDEX sxi_index  
 ON Tbl  
 FOR   
@@ -82,7 +82,7 @@ FOR
   
  В следующем примере показана инструкция DROP INDEX.  
   
-```tsql  
+```sql  
 DROP INDEX sxi_index ON tbl  
 ```  
   

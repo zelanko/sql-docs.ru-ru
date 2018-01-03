@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 514b16de05b03b43f8187f66e06cf6ff9f94209c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 996d73149e364263e0cda1ecd1ffb2aa8b8f14e0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="contained-database-collations"></a>Параметры сортировки автономной базы данных
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] На порядок сортировки и семантику сравнения текстовых данных влияют различные свойства, в том числе учет регистра, учет диакритических знаков и используемый базовый язык. Эти характеристики выражаются в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] посредством выбора параметров сортировки для данных. Подробное обсуждение параметров сортировки см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
@@ -37,13 +37,13 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example-1"></a>Пример 1  
  Например, для работы в Пекине можно использовать параметры сортировки китайского языка:  
   
-```tsql  
+```sql  
 ALTER DATABASE MyDB COLLATE Chinese_Simplified_Pinyin_100_CI_AS;  
 ```  
   
  Теперь для создаваемого столбца по умолчанию будут применяться параметры сортировки китайского языка, но в случае необходимости можно выбрать другие параметры.  
   
-```tsql  
+```sql  
 CREATE TABLE MyTable  
       (mycolumn1 nvarchar,  
       mycolumn2 nvarchar COLLATE Frisian_100_CS_AS);  
@@ -56,7 +56,7 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```tsql  
+```sql  
 name            collation_name  
 --------------- ----------------------------------  
 mycolumn1       Chinese_Simplified_Pinyin_100_CI_AS  
@@ -68,7 +68,7 @@ mycolumn2       Frisian_100_CS_AS
 ### <a name="example-2"></a>Пример 2  
  Например, пусть база данных с китайскими параметрами сортировки (упомянутая выше) используется в экземпляре с параметрами сортировки **Latin1_General** :  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max)) ;  
@@ -92,7 +92,7 @@ JOIN #T2
   
  Чтобы исправить эту проблему, можно явно задать параметры сортировки временной таблицы. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эта задача несколько упрощается благодаря наличию ключевого слова **DATABASE_DEFAULT** для предложения **COLLATE** .  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max) COLLATE DATABASE_DEFAULT);  
@@ -142,7 +142,7 @@ END;
   
  В ранее описанном примере с временной таблицей видно, что такой принцип работы параметров сортировки исключает необходимость явно задавать предложение **COLLATE** в большинстве случаев использования временной таблицы. В автономной базе данных этот код теперь работает без ошибок, даже в случае, когда параметры сортировки различаются для базы данных и для экземпляра.  
   
-```tsql  
+```sql  
 CREATE TABLE T1 (T1_txt nvarchar(max)) ;  
 GO  
 CREATE TABLE #T2 (T2_txt nvarchar(max));  

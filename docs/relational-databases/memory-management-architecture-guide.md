@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 503814b6f9ade3623a4586b97ae09434f78c0db4
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: 1e764d14059dbb4015c213fc9f35e75f529d4b10
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="memory-management-architecture-guide"></a>руководство по архитектуре управления памятью
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -93,10 +93,10 @@ ms.lasthandoff: 11/28/2017
 |Тип выделения памяти| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
 |Одностраничные выделения|Да|Да, объединяются в выделения страниц "Любой размер"|
-|Многостраничные выделения|Нет|Да, объединяются в выделения страниц "Любой размер"|
-|Выделения CLR|Нет|Да|
-|Память стеков потоков|Нет|Нет|
-|Прямые выделения из Windows|Нет|Нет|
+|Многостраничные выделения|нет|Да, объединяются в выделения страниц "Любой размер"|
+|Выделения CLR|нет|Да|
+|Память стеков потоков|нет|нет|
+|Прямые выделения из Windows|нет|нет|
 
 Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может выделять больше памяти, чем указано в значении "Макс. памяти сервера". Это поведение может возникать, если значение ***Общая память сервера (КБ)*** уже достигло параметра ***Целевая память сервера (КБ)*** (как указано в параметре "Макс. памяти сервера"). Если из-за фрагментации памяти недостаточно смежных областей свободной памяти для соответствия требованиям многостраничных запросов памяти (больше 8 КБ), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] может превысить объем вместо отклонения запроса памяти. 
 
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/28/2017
 
 |Тип выделения памяти| [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]| Начиная с [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|
 |-------|-------|-------|
-|Одностраничные выделения|Нет|Нет, объединяется в выделения страниц "Любой размер"|
+|Одностраничные выделения|нет|Нет, объединяется в выделения страниц "Любой размер"|
 |Многостраничные выделения|Да|Нет, объединяется в выделения страниц "Любой размер"|
 |Выделения CLR|Да|Да|
 |Память стеков потоков|Да|Да|
@@ -138,7 +138,7 @@ ms.lasthandoff: 11/28/2017
 
 Следующий запрос возвращает информацию о текущей выделенной памяти.  
   
-```t-sql  
+```sql  
 SELECT 
   physical_memory_in_use_kb/1024 AS sql_physical_memory_in_use_MB, 
     large_page_allocations_kb/1024 AS sql_large_page_allocations_MB, 

@@ -17,13 +17,13 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0673cda38da74437a8a5370ae664da91afef1f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b2d704561458719b9d1d73467370d2e5e1d8bd13
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>привязать базу данных с таблицами, оптимизированными для памяти, к пулу ресурсов
+# <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Пул ресурсов представляет подмножество физических ресурсов, доступных для управления. По умолчанию базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] привязываются к пулу и потребляют ресурсы пула по умолчанию. Чтобы защитить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] от использования его ресурсов одной или несколькими оптимизированными для памяти таблицами, а также чтобы другие потребители не занимали память, необходимую таким таблицам, рекомендуется создать отдельный пул ресурсов для управления использованием памяти для базы данных с оптимизированными для памяти таблицами.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_CreateDatabase"></a> Создайте базу данных  
  Следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)] создает базу данных с именем IMOLTP_DB, которая будет содержать одну или несколько таблиц, оптимизированных для памяти. Путь \<driveAndPath> должен существовать до выполнения этой команды.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP_DB  
 GO  
 ALTER DATABASE IMOLTP_DB ADD FILEGROUP IMOLTP_DB_fg CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -96,7 +96,7 @@ GO
   
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] создает пул ресурсов с именем Pool_IMOLTP, в котором для использования будет доступно 50 % памяти.  После создания пула регулятор ресурсов настраивается для включения Pool_IMOLTP.  
   
-```tsql  
+```sql  
 -- set MIN_MEMORY_PERCENT and MAX_MEMORY_PERCENT to the same value  
 CREATE RESOURCE POOL Pool_IMOLTP   
   WITH   
@@ -113,7 +113,7 @@ GO
   
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] определяет привязку базы данных IMOLTP_DB к пулу ресурсов Pool_IMOLTP. Привязка не вступит в силу до тех пор, пока база данных не будет переведена в режим запуска.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -123,7 +123,7 @@ GO
 ##  <a name="bkmk_ConfirmBinding"></a> Подтвердите привязку  
  Подтвердите привязку, указав идентификатор пула ресурсов для IMOLTP_DB. Он не должен принимать значение NULL.  
   
-```tsql  
+```sql  
 SELECT d.database_id, d.name, d.resource_pool_id  
 FROM sys.databases d  
 GO  
@@ -132,7 +132,7 @@ GO
 ##  <a name="bkmk_MakeBindingEffective"></a> Сделайте привязку эффективной  
  Необходимо вывести базу данных из сети, а затем снова вернуть в сеть после ее привязки к пулу ресурсов, чтобы привязка вступила в силу. Если база данных была ранее привязана к другому пулу, то перезапуск базы данных удаляет выделенную память из предыдущего пула ресурсов, после этого память будет выделяться для оптимизированных для памяти таблиц и индексов пула ресурсов, только что привязанного к базе данных.  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -156,7 +156,7 @@ GO
   
  **Образец кода**  
   
-```tsql  
+```sql  
 ALTER RESOURCE POOL Pool_IMOLTP  
 WITH  
      ( MIN_MEMORY_PERCENT = 70,  
@@ -185,7 +185,7 @@ GO
   
  После привязки базы данных к указанному пулу ресурсов выполните следующий запрос, чтобы узнать объем выделенной памяти в разных пулах ресурсов.  
   
-```tsql  
+```sql  
 SELECT pool_id  
      , Name  
      , min_memory_percent  
@@ -216,7 +216,7 @@ pool_id     Name        min_memory_percent max_memory_percent max_memory_mb used
 ## <a name="see-also"></a>См. также:  
  [sys.sp_xtp_bind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql.md)   
  [sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)   
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Пул ресурсов регулятора ресурсов](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Изменение параметров пула ресурсов](../../relational-databases/resource-governor/change-resource-pool-settings.md)   

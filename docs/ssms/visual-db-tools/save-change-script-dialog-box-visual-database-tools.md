@@ -3,7 +3,7 @@ title: "Диалоговое окно \"Сохранить скрипт изме
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2566eb868dc10e76854e6f76e767b33f3413749b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 10018ea2f1949da54c7dfc084ee204ad5619c6ca
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="save-change-script-dialog-box-visual-database-tools"></a>Диалоговое окно «Сохранение скрипта изменений» (визуальные инструменты для баз данных)
+# <a name="save-change-script-dialog-box-visual-database-tools"></a>Диалоговое окно "Сохранить скрипт изменений" (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно показывает скрипт [!INCLUDE[tsql](../../includes/tsql_md.md)] изменений, сделанных со времени последнего сохранения таблицы. Оно также позволяет сохранить скрипт в текстовом файле в выбранном местоположении.  
   
 Открыть это диалоговое окно также можно после совершения несохраненных изменений таблицы в конструкторе таблиц. В меню **Конструктор таблиц** выберите пункт **Создать скрипт изменения**.  

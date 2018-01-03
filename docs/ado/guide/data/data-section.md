@@ -3,7 +3,7 @@ title: "Раздел данных | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fae3df37c9a83bdf97a7ae2a53bc76777b318546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 486c936681adca59a90dae6a5e304be6f8b4dba5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-section"></a>Раздел данных
 Раздел данных определяет данные набора строк, а также все ожидающие обновления, вставки или удаления. Раздел данных может содержать ноль или более строк. Он может содержать только данные из одного набора строк, где строка определяется схемой. Кроме того как было отмечено ранее, столбцы без данных может быть опущено. Если атрибут или дочерний элемент используется в секции данных и конструкции не был определен в разделе Схема, он просто игнорируется.  
   
-## <a name="string"></a>Строковые значения  
+## <a name="string"></a>String  
  Зарезервированные символы XML в текстовых данных должны быть заменены сущности знаков. Например в имени компании «Джо гараже», одиночной кавычки необходимо заменить сущности. Собственно строка будет выглядеть следующим образом:  
   
 ```  

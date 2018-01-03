@@ -24,22 +24,22 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ffca436fc0c0557950e239fcf979c84b973df6a0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bca0580d442c30bc41d46340b3317cbe15515309
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Удаление или отключение триггеров DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)] В этом разделе описывается удаление или отключение триггера DML в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для удаления или отключения триггера DML используется:**  
   
@@ -57,9 +57,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Отключение триггера не сбрасывает его. Триггер все еще существует как объект в текущей базе данных. Впрочем, триггер в инструкциях INSERT, UPDATE или DELETE не сработает при выполнении любой из них. Отключенные триггеры можно повторно включать. При включении триггера он не создается повторно. Он срабатывает так же, как после создания.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Чтобы удалить триггер DML, необходимо разрешение ALTER для таблицы или представления, в которых определен данный триггер.  
   
  Для отключения или включения триггера DML пользователь должен обладать как минимум разрешением ALTER для таблицы или представления, где создан триггер.  
@@ -96,7 +96,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Скопируйте и вставьте следующие примеры в окно запроса. Выполните инструкцию [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) , чтобы создать триггер `Sales.bonus_reminder` . Чтобы удалить триггер, выполните инструкцию [DROP TRIGGER](../../t-sql/statements/drop-trigger-transact-sql.md) .  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -112,7 +112,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -130,7 +130,7 @@ GO
   
 3.  Скопируйте и вставьте следующие примеры в окно запроса. Выполните инструкцию [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) , чтобы создать триггер `Sales.bonus_reminder` . Чтобы отключить или включить триггер, выполните соответственно инструкцию [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) или [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md) .  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -146,7 +146,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -155,7 +155,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  

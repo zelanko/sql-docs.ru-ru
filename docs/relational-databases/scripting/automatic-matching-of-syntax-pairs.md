@@ -3,9 +3,9 @@ title: "Автоматическое сопоставление синтакси
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -20,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ca8d67e673cefb5fc61562f6b16c9482a030a7f1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d8d02ee81c5d9bccbac11cbb9a099881598a2f3
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Автоматическое сопоставление синтаксических пар
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Автоматическая проверка соответствия синтаксических пар позволяет немедленно убедиться в том, что элементы синтаксиса в коде правильно объединены в пары. В редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] такая проверка называется «соответствием разделителей», в редакторе запросов XMLA служб Analysis Services — «соответствием фигурных скобок», а в редакторах многомерных выражений и расширений интеллектуального анализа данных — «соответствием круглых скобок».  

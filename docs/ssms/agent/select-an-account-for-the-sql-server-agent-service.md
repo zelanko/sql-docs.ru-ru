@@ -3,7 +3,7 @@ title: "Выбор учетной записи для службы агента 
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef5922992da36377ad46ab4f76a3a8fb6b310edb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1bb0705f19d85e827f622e4da8783324574f303
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>Выбор учетной записи для службы агента SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Стартовая учетная запись службы определяет учетную запись [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows, с которой запускается агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], а также его сетевые разрешения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] выполняется как заданная учетная запись пользователя. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] позволяет выбрать учетную запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] из следующих вариантов:  

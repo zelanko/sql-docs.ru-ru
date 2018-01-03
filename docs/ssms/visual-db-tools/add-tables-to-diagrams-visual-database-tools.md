@@ -3,7 +3,7 @@ title: "Добавление таблиц в диаграммы (визуаль�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6440fa3227030cf334c0117d44b6ce9e1d1dfa70
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b210aae8de63f5bfb51b2bf3559af28a199865b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-tables-to-diagrams-visual-database-tools"></a>Добавление таблиц в диаграммы (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Можно добавить таблицу в диаграмму базы данных, чтобы изменить структуру этой таблицы или связать ее с другими таблицами. В диаграмму можно добавлять существующие таблицы или вставлять новые, еще не определенные в базе данных.  

@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7f597ea6c3b7f99a3dcff8ead62377acbafd2f34
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c3bd76705ebf1f118fc1398e9fb13e083053de03
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>Выбор режима остановки или продолжения операций резервного копирования и восстановления после возникновения ошибки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Определение, продолжает ли операция резервного копирования или восстановления работу после возникновения ошибки, с помощью следующих средств.**  
   
@@ -47,9 +47,9 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  BACKUP  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  В инструкции [BACKUP](../../t-sql/statements/backup-transact-sql.md) задайте параметр CONTINUE_AFTER ERROR для продолжения или STOP_ON_ERROR для остановки. По умолчанию в случае ошибки операция останавливается. В этом примере операция резервного копирования настраивается на продолжение работы в случае ошибки.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -93,7 +93,7 @@ GO
   
 3.  В инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) укажите параметр CONTINUE_AFTER ERROR для продолжения или STOP_ON_ERROR для остановки. По умолчанию в случае ошибки операция останавливается. В этом примере операция восстановления настраивается на продолжение работы в случае ошибки.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b01af634ed2681c49bdb444cd4a468b45be3ab03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d318e818800a2f1cf8591ba6f35f31d55b0cd564
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Управление и наблюдение за семантическим поиском
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Описывает процесс семантического индексирования и задачи, связанные с наблюдением за индексами и управлением ими.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Первый этап индексирования включает заполнение полнотекстового индекса ключевых слов и семантического индекса ключевых фраз, а также извлечение данных о подобии документов.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -62,7 +62,7 @@ GO
   
  Логический размер отображается в количестве страниц индекса.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -73,7 +73,7 @@ GO
 ### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Каков общий размер полнотекстового и семантического индексов для полнотекстового каталога?  
  Запросите свойство **IndexSize** функции метаданных [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')  
 GO  
 ```  
@@ -81,7 +81,7 @@ GO
 ### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>Сколько элементов проиндексированы в полнотекстовом и семантическом индексах для полнотекстового каталога?  
  Запросите свойство **ItemCount** функции метаданных [FULLTEXTCATALOGPROPERTY (Transact-SQL)](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')  
 GO  
 ```  
@@ -109,7 +109,7 @@ GO
   
  Если семантическое индексирование отключено и приостановлено, запросы к семантическим данным продолжают успешно выполняться и возвращать ранее проиндексированные данные. Такое поведение не согласуется с поведением полнотекстового поиска.  
   
-```tsql  
+```sql  
 -- To disable semantic indexing on a table  
 USE database_name  
 GO  

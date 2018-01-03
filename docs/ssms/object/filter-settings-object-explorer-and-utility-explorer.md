@@ -3,7 +3,7 @@ title: "Настройки фильтра (обозреватель объект
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fa2f9375b9fe2883e4dbc2fd69a42f163a6fe386
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ebfd7d638615b68d02da5b01c33ce4719cd162b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Настройки фильтра (обозреватель объектов и обозреватель программ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте данное диалоговое окно для задания фильтра. Фильтр позволяет настроить обозреватель объектов и проводник служебной программы для отображения только тех элементов, которые соответствуют заданным критериям. Например, фильтр можно использовать для отображения только тех заданий, имена которых содержат слово «Maintenance». В заголовке диалогового окна **Настройки фильтра** содержится имя сервера и может содержаться имя базы данных.  
@@ -72,7 +72,7 @@ ms.lasthandoff: 12/05/2017
   
     Доступно для дат. Отображаются элементы, дата которых не входит в диапазон двух заданных дат. Выберите **Вне** и в последней ячейке столбца **Оператор** нажмите клавишу TAB, чтобы добавить строку ввода второй даты.  
   
-**Значение**  
+**Value**  
 Введите значение, на основе которого будет сравниваться свойство. Для дат нажмите кнопку со стрелкой вниз, чтобы открыть календарь, и выберите в нем дату.  
   
 **Очистить фильтр**  

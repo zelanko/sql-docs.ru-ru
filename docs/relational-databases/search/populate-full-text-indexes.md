@@ -31,11 +31,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: aa5d1392d5dd90cd5b783ae8e96a47b0fdf4d5be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 463494b3e3810a31d487b44c58aac58eccbf3674
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="populate-full-text-indexes"></a>Заполнение полнотекстовых индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Создание и обслуживание полнотекстового индекса включает процесс *заполнения* индекса (которое также называется *сканированием*).  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>Пример создания полнотекстового индекса без выполнения полного заполнения  
  В следующем примере создается полнотекстовый индекс для таблицы `Production.Document` образца базы данных `AdventureWorks` . В этом примере используется параметр `WITH CHANGE_TRACKING OFF, NO POPULATION` для задержки первоначального полного заполнения.  
   
-```tsql
+```sql
 CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
 CREATE FULLTEXT CATALOG AW_Production_FTCat;  
 CREATE FULLTEXT INDEX ON Production.Document  
@@ -77,7 +77,7 @@ GO
 ### <a name="example---run-a-full-population-on-a-table"></a>Пример выполнения полного заполнения в таблице  
  В следующем примере полное заполнение выполняется в таблице `Production.Document` образца базы данных `AdventureWorks` .  
   
-```tsql
+```sql
 ALTER FULLTEXT INDEX ON Production.Document  
    START FULL POPULATION;  
 ```  
@@ -110,7 +110,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **Пример переключения полнотекстового индекса на автоматическое отслеживание изменений**  
     В следующем примере полнотекстовый индекс таблицы `HumanResources.JobCandidate` образца базы данных `AdventureWorks` переключается на отслеживание изменений с автоматическим заполнением.  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate SET CHANGE_TRACKING AUTO;  
@@ -130,7 +130,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **Пример создания полнотекстового индекса с отслеживанием изменений вручную**  
     В следующем примере создается полнотекстовый индекс, который будет использовать отслеживание изменений с заполнением вручную в таблице `HumanResources.JobCandidate` образца базы данных `AdventureWorks` .  
   
-    ```tsql
+    ```sql
     USE AdventureWorks;  
     GO  
     CREATE UNIQUE INDEX ui_ukJobCand ON HumanResources.JobCandidate(JobCandidateID);  
@@ -144,7 +144,7 @@ ALTER FULLTEXT INDEX ON Production.Document
     **Пример выполнения заполнения вручную**  
     В следующем примере выполняется заполнение вручную на полнотекстовом индексе с отслеживанием изменений для таблицы `HumanResources.JobCandidate` образца базы данных `AdventureWorks` .  
   
-    ```tsql 
+    ```sql 
     USE AdventureWorks;  
     GO  
     ALTER FULLTEXT INDEX ON HumanResources.JobCandidate START UPDATE POPULATION;  

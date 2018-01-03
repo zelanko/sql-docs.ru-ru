@@ -3,7 +3,7 @@ title: "Отправка обновлений: метод UpdateBatch | Доку
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b43ae9cdb1a8ed61dc1ef8546b4c560bac403a33
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2b1043286735c1fc44caed21650e098dfc923d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Отправка обновлений: метод UpdateBatch
 Следующий код открывает набор записей в пакетном режиме, присвоив свойству LockType adLockBatchOptimistic и CursorLocation для adUseClient. Он добавляет две новые записи и изменяет значение поля в существующей записи, сохранение исходных значений, а затем вызывает UpdateBatch для отправки изменений обратно в источник данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ```  
 'BeginBatchUpdate  

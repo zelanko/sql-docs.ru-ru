@@ -3,9 +3,9 @@ title: "Найти и заменить | Документация Майкрос
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 31dc1f37e5f8bd3cdb5f11c244966037bd8eeca4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85901d1a79d1f6bffb1787a555c9ebb553f4cfe5
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-and-replace"></a>Найти и заменить
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Диалоговое окно **Найти и заменить** позволяет найти текст в файле и при необходимости заменить его. Версии диалогового окна **Найти и заменить** могут несколько отличаться по набору параметров в зависимости от способа вызова этого окна. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрый поиск** для открытия этого диалогового окна с параметрами поиска, но без параметров замены. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрая замена** для открытия этого диалогового окна с параметрами и поиска, и замены.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="find-what"></a>Найти  
  Эти элементы управления позволяют указать искомую строку или выражение.  
   
- **Find what**  
+ **Найти**  
  Введите текст для поиска. Диалоговое окно попытается ввести в поле поиска возможный текст поиска, используя либо текст, который был выделен курсором перед открытием диалогового окна, либо соседний текст, либо текст предыдущего поиска. Можно повторно использовать одну из 20 последних строк поиска, выбрав необходимую из раскрывающегося списка.  
   
  **[строка с символами-шаблонами]**  

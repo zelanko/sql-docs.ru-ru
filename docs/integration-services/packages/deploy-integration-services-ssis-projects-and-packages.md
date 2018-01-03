@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ae82e603c67f5a0223231f92b96b2334dc55840a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e9f7359e19df03dc544211ba3a39041efa0637
+ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Развертывание проектов и пакетов служб Integration Services (SSIS)
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] поддерживают две модели развертывания: модель развертывания проектов и устаревшую модель развертывания пакетов. Модель развертывания проектов позволяет развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
 Дополнительные сведения об этой ошибке и разрешениях, необходимых для учетной записи службы SSIS, см. в следующей записи блога.  
 [Ошибка "System.ComponentModel.Win32Exception. Клиент не обладает требуемыми правами" во время развертывания проекта служб SSIS](https://blogs.msdn.microsoft.com/dataaccesstechnologies/2013/08/20/system-componentmodel-win32exception-a-required-privilege-is-not-held-by-the-client-while-deploying-ssis-project/)
 
-## <a name="deploy-projects-to-integration-services-server"></a>Развертывание проектов на сервере служб Integration Services
+## <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
   В текущей версии служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]вы можете развертывать проекты на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Сервер служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет управлять пакетами, выполнять пакеты и настраивать значения времени выполнения для пакетов с помощью сред.  
   
 > [!NOTE]  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
  Для развертывания проекта на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] необходимо выполнить следующие задачи.  
   
-1.  Создайте каталог SSISDB, если он еще не создан. Дополнительные сведения см. в разделе [Каталог служб SSIS](../../integration-services/service/ssis-catalog.md).  
+1.  Создайте каталог SSISDB, если он еще не создан. Дополнительные сведения см. в разделе [Каталог служб SSIS](../../integration-services/catalog/ssis-catalog.md).  
   
 2.  **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта. Дополнительные сведения см. в инструкциях ниже: [Преобразование проекта в модель развертывания проекта](#convert)  
   
@@ -291,7 +291,7 @@ static void Main()
 
  - Введите **"мастер развертывания SQL Server"** в Windows Search. 
 
-**или**
+**OR**
 
  - Найдите исполняемый файл **ISDeploymentWizard.exe** в папке установки SQL Server, например "C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn". 
  
@@ -341,7 +341,7 @@ static void Main()
 > [!IMPORTANT]  
 >  Для данного выполнения пакет может выполняться только со значениями, содержащимися в односерверной среде.  
   
- У представлений можно запрашивать список серверных сред, ссылок на среды и переменных сред. Также можно вызывать хранимые процедуры для добавления, удаления и изменения сред, ссылок на среды и переменных сред. Дополнительные сведения см. в разделе **Серверные среды, переменные сервера и ссылки на серверные среды** в [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+ У представлений можно запрашивать список серверных сред, ссылок на среды и переменных сред. Также можно вызывать хранимые процедуры для добавления, удаления и изменения сред, ссылок на среды и переменных сред. Дополнительные сведения см. в разделе **Серверные среды, переменные сервера и ссылки на серверные среды** в [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 ### <a name="to-create-and-use-a-server-environment"></a>Создание и использование серверной среды  
   
@@ -361,13 +361,13 @@ static void Main()
   
     3.  Введите **Значение** переменной среды.  
   
-         Сведения о правилах для имен переменных сред см. в разделе **Переменная среды** в [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Сведения о правилах для имен переменных сред см. в разделе **Переменная среды** в [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
     4.  Укажите, содержит ли переменная конфиденциальное значение, установив или сняв флажок **Конфиденциально** .  
   
          Если флажок **Конфиденциально**установлен, значение переменной не отображается в поле **Значение** .  
   
-         Конфиденциальные значения шифруются в каталоге SSISDB. Дополнительные сведения о шифровании см. в разделе [SSIS Catalog](../../integration-services/service/ssis-catalog.md).  
+         Конфиденциальные значения шифруются в каталоге SSISDB. Дополнительные сведения о шифровании см. в разделе [SSIS Catalog](../../integration-services/catalog/ssis-catalog.md).  
   
 6.  На странице **Разрешения** предоставьте или запретите соответствующие разрешения выбранным пользователям и ролям, выполнив следующие действия.  
   
@@ -509,7 +509,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
   
 ```  
 
-## <a name="integration-services-project-conversion-wizard"></a>Мастер преобразования проекта служб Integration Services
+## <a name="integration-services-project-conversion-wizard"></a>Мастером преобразования проекта служб Integration Services
   **Мастер преобразования проекта служб Integration Services** преобразует проект в модель развертывания проекта.  
   
 > [!NOTE]  
@@ -577,7 +577,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Использовать проверку подлинности SQL Server**  
  При соединении пользователя с указанным именем и паролем из ненадежных соединений [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет проверку подлинности подключения посредством проверки настройки учетной записи входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проверки совпадения указанного пароля с ранее сохраненным. Если в службе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не задана учетная запись входа, проверка подлинности завершается ошибкой, о которой пользователь получит сообщение.  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности SQL Server укажите имя пользователя.  
   
  **Пароль**  
@@ -697,7 +697,7 @@ exec [SSISDB].[CATALOG].[deploy_project] 'DestFolder', 'SSISPackages', @project_
  **Область действия**  
  Отображает область действия параметров.  
   
- **Значение**  
+ **Value**  
  Выводит список значений параметра.  
   
  Для настройки свойства параметра нажмите кнопку с многоточием рядом с полем значения.  

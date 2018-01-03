@@ -3,7 +3,7 @@ title: "Загрузка модуля PowerShell (SQL Server) | Документ
 ms.custom: 
 ms.date: 03/10/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 83b535f97682334f6a83f3eb58e2f673c2040b4c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 208bf291819a3e847e784e76611acdec0bf2f2d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="download-sql-server-powershell-module"></a>Загрузка модуля PowerShell (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]Модуль SQL Server PowerShell теперь поставляется через коллекцию PowerShell как часть выпуска SQL Server Management Studio 17.0.  В пакет установки SSMS этот модуль больше не входит. Чтобы использовать PowerShell с SSMS 17.0 и более поздних версий, необходимо дополнительно установить на компьютер модуль SQL Server.

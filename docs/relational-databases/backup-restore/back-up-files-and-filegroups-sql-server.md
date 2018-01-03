@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: a16ecd57c905d98d15b7c6e5a34adf975e1b290c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6383f0bdcbd230c5bd4868084ae2fd06f4003269
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Создание резервных копий файлов и файловых групп (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается создание файлов резервной копии и файловых групп в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] или PowerShell. Если размер базы данных и требования по производительности делают полное резервное копирование базы данных нецелесообразным, можно создать резервную копию файлов. *Резервная копия файлов* содержит данные одного или нескольких файлов или файловых групп. Дополнительные сведения о резервных копиях файлов см. в разделах [Полные резервные копии файлов (SQL Server)](../../relational-databases/backup-restore/full-file-backups-sql-server.md) и [Разностные резервные копии (SQL Server)](../../relational-databases/backup-restore/differential-backups-sql-server.md).  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
 -   По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если создание резервной копии журналов производится очень часто, сообщения об успешном завершении накапливаются очень быстро. Это приводит к увеличению журналов ошибок, затрудняя поиск других сообщений. Если работа существующих скриптов не зависит от этих записей, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
  
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
  Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/17/2017
   
     -   **Рассчитать контрольную сумму перед записью на носитель**и, при необходимости, **Продолжить при ошибке контрольной суммы**. Дополнительные сведения о контрольных суммах см. в разделе [Возможные ошибки носителей во время резервного копирования и восстановления (SQL Server)](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
-15. При резервном копировании на накопитель на магнитной ленте (как указано в разделе **Назначение** страницы **Общие**) активен параметр **Выгрузить ленту после резервного копирования**. Выбор этого параметра активирует параметр **Перемотать ленту перед выгрузкой** .  
+15. При резервном копировании на накопитель на магнитной ленте (как указано в разделе **Назначение** страницы **Общие** ) активен параметр **Выгрузить ленту после резервного копирования** . Выбор этого параметра активирует параметр **Перемотать ленту перед выгрузкой** .  
   
     > **ПРИМЕЧАНИЕ.** Параметры в разделе **Журнал транзакций** доступны, только если создается резервная копия журнала транзакций (это можно указать в разделе **Тип резервной копии** вкладки **Общие** ).  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 11/17/2017
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
-    |Параметр|Описание|  
+    |Параметр|Description|  
     |------------|-----------------|  
     |*database*|База данных, журнал транзакций и часть данных или все данные, которые подвергаются резервному копированию.|  
     |FILE **=***логическое_имя_файла*|Указывает логическое имя файла, который необходимо включить в резервную копию.|  
@@ -162,7 +162,7 @@ ms.lasthandoff: 11/17/2017
 #### <a name="a-create-a-file-backup-of-two-files"></a>A. Создание резервной копии двух файлов  
  В следующем примере создается разностная резервная копия только файла `SGrp1Fi2` из группы `SalesGroup1` и файла `SGrp2Fi2` из группы `SalesGroup2` .  
   
-```tsql  
+```sql  
 --Backup the files in the SalesGroup1 secondary filegroup.  
 BACKUP DATABASE Sales  
    FILE = 'SGrp1Fi2',   
@@ -174,7 +174,7 @@ GO
 #### <a name="b-create-a-full-file-backup-of-the-secondary-filegroups"></a>Б. Создание полной резервной копии вторичных файловых групп  
  В следующем примере создается полная резервная копия каждого файла в обеих вторичных файловых группах.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -186,7 +186,7 @@ GO
 #### <a name="c-create-a-differential-file-backup-of-the-secondary-filegroups"></a>В. Создание разностной резервной копии файлов вторичных файловых групп  
  В следующем примере создается разностная резервная копия каждого файла в обеих вторичных файловых группах.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1.  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -214,9 +214,9 @@ GO
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   

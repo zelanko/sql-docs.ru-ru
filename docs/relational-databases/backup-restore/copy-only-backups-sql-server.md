@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3a9709fa0261784ecb39fa74a90a139a3ecbdd82
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b95da2182f5ec836dab827dd959ba3d6607a249e
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="copy-only-backups-sql-server"></a>Резервные копии только для копирования (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] *Резервная копия только для копирования* — это резервная копия [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая не зависит от последовательности создания традиционных резервных копий [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Обычно создание резервного копирования приводит к изменению базы данных и влияет на то, как будут восстанавливаться последующие резервные копии. Однако иногда приходится выполнять резервное копирование базы данных для особых нужд, когда это не сказывается на общем процессе резервного копирования и восстановления. Этой цели служат резервные копии только для копирования.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="TsqlProcedure"></a>Б.  Использование Transact-SQL  
 В этом примере создается резервная копия только для копирования для базы данных `Sales` с использованием параметра COPY_ONLY.  Также создается резервная копия только для копирования для журнала транзакций.
 
-```tsql
+```sql
 BACKUP DATABASE Sales
 TO DISK = 'E:\BAK\Sales_Copy.bak'
 WITH COPY_ONLY;
@@ -98,7 +98,7 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
   
 ## <a name="see-also"></a>См. также:  

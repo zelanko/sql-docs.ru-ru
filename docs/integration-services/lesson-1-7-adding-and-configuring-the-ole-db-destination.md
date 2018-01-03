@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9d1e14ed63694a7b5dc320f062de85c73c843883
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9d3bbb70503d86358362e78809f9f51408309b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-7---adding-and-configuring-the-ole-db-destination"></a>Занятие 1–7. Добавление и настройка назначения OLE DB
 Созданный пакет теперь может извлекать данные из источника «Неструктурированный файл» и преобразовывать эти данные в формат, совместимый с форматом назначения. Далее требуется загрузить преобразованные данные в указанное назначение. Чтобы загрузить данные, необходимо добавить назначение OLE DB в поток данных. Назначение OLE DB может использовать таблицу, представление или SQL-команду базы данных, чтобы загрузить данные в различные OLE DB-совместимые базы данных.  

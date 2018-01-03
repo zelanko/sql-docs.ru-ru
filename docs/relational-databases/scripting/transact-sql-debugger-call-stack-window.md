@@ -3,9 +3,9 @@ title: "Окно \"Стек вызовов\" | Документация Майк
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 403dbe97619340a3075792b999b54500ab79d4fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 364d5ba93cf5ee8d558cafb09e84a12d833722eb
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---call-stack-window"></a>Отладчик Transact-SQL, окно стека вызовов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В окне **Стек вызовов** отображаются модули в стеке вызова, а также типы данных и значения всех параметров, передаваемых в модули. [!INCLUDE[tsql](../../includes/tsql-md.md)] включают в себя хранимые процедуры, функции и триггеры. Чтобы отобразить стек вызова, необходимо находиться в режиме отладки.  

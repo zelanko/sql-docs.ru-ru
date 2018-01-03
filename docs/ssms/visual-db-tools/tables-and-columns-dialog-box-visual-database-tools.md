@@ -3,7 +3,7 @@ title: "Диалоговое окно \"Таблицы и столбцы\" (ви
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1eead403ffc94b04113d0b4415b7002eaed25a02
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b828265e9f8e85e240420acd795ed9ab0494e4b4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tables-and-columns-dialog-box-visual-database-tools"></a>Диалоговое окно «Таблицы и столбцы» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно используется для сопоставления первичного ключа одной таблицы с внешним ключом другой. Для доступа к этому диалоговому окну из меню **Конструктор таблиц** щелкните **Связи**. В диалоговом окне **Связи по внешнему ключу** щелкните поле **Спецификация таблиц и столбцов** , а затем щелкните многоточие **(…)** справа от свойства.  

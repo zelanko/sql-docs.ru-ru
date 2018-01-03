@@ -3,7 +3,7 @@ title: "Сводка обработчик событий ADO | Документ�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e7a241c21719e2181f8dbbce11742a273d8552d7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c00af6ce5dcdff509b04d25bc09a42a6e9e89fd7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-connection-and-recordset-events"></a>Соединение ADO и события набора записей
 Два объекта ADO может порождать события: [подключения](../../../ado/reference/ado-api/connection-object-ado.md) объекта и [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта. **ConnectionEvent** семейства относится к операциям на **подключения** объекта и **RecordsetEvent** семейства относится к операциям на  **Набор записей** объекта.

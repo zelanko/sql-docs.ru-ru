@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 160513acf82e56718e15893de1aa70d698174c80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a81021ed7170b6bf92bfd2eebfebef9044de3bde
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Использование SELECT и JOIN в системных представлениях для расширенных событий в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/17/2017
 
 <a name="section_B_catalog_views"></a>
 
-## <a name="b-catalog-views"></a>Б. представлений каталога;
+## <a name="b-catalog-views"></a>Б. Представления каталога
 
 
 В этом разделе сопоставляются три разных технологических подхода для одного и того же определенного сеанса событий. Сеанс был определен и отображается в **обозревателе объектов** среды SQL Server Management Studio (SSMS.exe), но сеанс в данный момент не запущен.
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
 ![Новый сеанс > Общие, Запускать сеанс событий при запуске сервера.](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-Далее в разделе **События** видно, что было выбрано событие **lock_deadlock** . Для этого события были выбраны три **действия** . Это означает, что была нажата кнопка **Настроить** , которая становится серой после нажатия.
+Далее в разделе **События** видно, что было выбрано событие **lock_deadlock**. Для этого события были выбраны три **действия** . Это означает, что была нажата кнопка **Настроить** , которая становится серой после нажатия.
 
 ![Новый сеанс > События, Глобальные поля (действия)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
@@ -140,7 +140,7 @@ ms.lasthandoff: 11/17/2017
 ![Новый сеанс > События, Фильтр (предикат), Поля (действия)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-Затем в разделе **Хранилище данных** показано, что в качестве целевого объекта выбран **event_file** . Кроме того, здесь видно, что был выбран параметр **Включить переключение файлов** .
+Затем в разделе **Хранилище данных** показано, что в качестве целевого объекта выбран **event_file**. Кроме того, здесь видно, что был выбран параметр **Включить переключение файлов**.
 
 ![Новый сеанс > Хранилище данных, eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
@@ -165,7 +165,7 @@ ms.lasthandoff: 11/17/2017
 В результате реконструирования с помощью среды был создан следующий скрипт T-SQL. Затем он был вручную доработан с использованием только пробелов.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_session_test3]
     ON SERVER  -- Or, if on Azure SQL Database, ON DATABASE.
 
@@ -219,7 +219,7 @@ CREATE EVENT SESSION [event_session_test3]
 Не пугайтесь! Следующая инструкция T-SQL SELECT слишком длинна только потому, что она объединяет (UNION) несколько небольших инструкций SELECT. Любая из этих небольших инструкций SELECT может выполняться самостоятельно. Небольшие инструкции SELECT демонстрируют варианты присоединения (JOIN) различных системных представлений каталогизации.
 
 
-```tsql
+```sql
 SELECT
         s.name        AS [Session-Name],
         '1_EVENT'     AS [Clause-Type],
@@ -414,7 +414,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 Все объекты, которые можно использовать в области расширенных событий, взяты из пакетов, которые загружены в систему. В этом разделе перечислены все пакеты и даны их описания.
 
 
-```tsql
+```sql
 SELECT  --C.1
         p.name         AS [Package],
         p.description  AS [Package-Description]
@@ -470,7 +470,7 @@ XtpRuntime     Extended events for the XTP Runtime
 Здесь содержатся сведения о типах объектов, содержащихся в пакетах событий. Отображается полный список всех типов объектов, которые находятся в *sys.dm\_xe\_objects*, а также количество по каждому типу.
 
 
-```tsql
+```sql
 SELECT  --C.2
         Count(*)  AS [Count-of-Type],
         o.object_type
@@ -514,7 +514,7 @@ Count-of-Type   object_type
 
 
 
-```tsql
+```sql
 SELECT  --C.3
         o.object_type  AS [Type-of-Item],
         p.name         AS [Package],
@@ -583,7 +583,7 @@ type           package0       xml                           Well formed XML frag
 - Кроме того, потребуется изменить значение предложения WHERE для *o.name =*.
 
 
-```tsql
+```sql
 SELECT  -- C.4
         p.name         AS [Package],
         c.object_name  AS [Event],
@@ -661,7 +661,7 @@ sqlserver   lock_deadlock   transaction_id
 - для фильтрации вхождений событий, которые будут отправляться из целевого объекта или оставаться в нем.
 
 
-```tsql
+```sql
 SELECT  --C.5
         dp.name         AS [Package],
         do.name         AS [Object],
@@ -736,7 +736,7 @@ you could put:
 - Кроме того, потребуется изменить значение предложения WHERE для *o.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.6
         p.name        AS [Package],
         o.name        AS [Target],
@@ -801,7 +801,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 - Потребуется изменить значение предложения WHERE для *s.name =*.
 
 
-```tsql
+```sql
 SELECT  --C.7
         s.name,
         t.target_name,
@@ -869,7 +869,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
     - Не обращайте внимание на дополнительные цифры, которые система SQL будет внедрять в реальные имена XEL-файлов при каждом перезапуске сеанса. Просто укажите обычное корневое имя и расширение.
 
 
-```tsql
+```sql
 SELECT  --C.8
         f.module_guid,
         f.package_guid,

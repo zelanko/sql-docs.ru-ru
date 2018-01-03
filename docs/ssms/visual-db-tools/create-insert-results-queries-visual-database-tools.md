@@ -3,7 +3,7 @@ title: "Создание запросов на вставку результат
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -23,13 +23,13 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddef4fd36ca72c473b480c31e7cd46c7e710d295
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb2bc5a6ba90fb46d4d5329a3d8c8a16d7f9fe8d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="create-insert-results-queries-visual-database-tools"></a>Создание запросов вставки результатов (визуальные инструменты для баз данных)
+# <a name="create-insert-results-queries-visual-database-tools"></a>Создание запросов на вставку результатов (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Запрос вставки результатов позволяет копировать строки внутри таблицы или из одной таблицы в другую. Например, с помощью запроса вставки результатов можно скопировать сведения о названиях книг некоторого издателя из таблицы `titles` в другую таблицу, которая будет ему доступна. Запрос вставки результатов похож на запрос создания таблицы, но копирует строки в уже существующую таблицу.  
   
 > [!TIP]  

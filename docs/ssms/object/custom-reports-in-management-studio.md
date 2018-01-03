@@ -3,7 +3,7 @@ title: "Пользовательские отчеты в среде Management S
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc42f882d0d8644b02152e0b93d8d55fba1bfadb
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 299019dabf0c16863eda99cb2f841dae8bd4ea5b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="custom-reports-in-management-studio"></a>Пользовательские отчеты в среде Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Во многих узлах обозревателя объектов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] отображается набор стандартных отчетов, созданных в [!INCLUDE[msCoName](../../includes/msconame_md.md)]. В этих отчетах сведены все обычно запрашиваемые данные о серверах. Начиная с версии [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] с пакетом обновления 2 (SP2), администраторы могут запускать настраиваемые отчеты, созданные в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] , из среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)].  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="managing-custom-reports"></a>Управление пользовательскими отчетами  
 Пользователям, имеющим несколько пользовательских отчетов, рекомендуется упорядочить их по папкам файловой системы, задав соответствующие разрешения файловой системы NTFS.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Пользовательские отчеты работают с разрешениями текущего пользователя. Чтобы предотвратить изменение выполняемых отчетом запросов злоумышленниками, рекомендуется предоставлять ограниченные разрешения на папки, содержащие файлы отчетов.  
   
 И пользователь, и применяемая службой [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] учетная запись должны иметь доступ на чтение системной папки с файлами отчетов.  
@@ -79,5 +79,5 @@ ms.lasthandoff: 12/05/2017
 ## <a name="see-also"></a>См. также:  
 [Добавление пользовательского отчета в среду Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
 [Отмена подавления предупреждений для пользовательских отчетов](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
-[Использование пользовательских отчетов совместно со свойствами узлов обозревателя объектов](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
+[Использование пользовательских отчетов для свойств узлов обозревателя объектов](../../ssms/object/use-custom-reports-with-object-explorer-node-properties.md)  
   

@@ -3,7 +3,7 @@ title: "Обозреватель решений | Документация Ма�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: db694cf9183a4fd80aeb0f46c21be7abce1147de
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3652c94ce57fa5200e846c922f4d6a245478965c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="solution-explorer"></a>Обозреватель решений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Панель обозревателя решений в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] содержит контейнеры (проекты) для управления такими элементами, как скрипты базы данных, запросы, подключения к данным и файлы. Один или несколько связанных между собой проектов могут быть объединены в контейнер, который называется решением.  
@@ -53,12 +53,12 @@ ms.lasthandoff: 12/05/2017
   
 Элементы, содержащиеся в проектах, зависят от типа проекта и от того, используется ли среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
 Используйте следующие разделы для начала работы с решениями SQL Server.  
   
 |||  
 |-|-|  
-|**Description**|**Раздел**|  
+|**Описание**|**Раздел**|  
 |Описывает, как добавить один или несколько проектов в решение.|[Решения (среда SQL Server Management Studio)](../../ssms/solution/solutions-sql-server-management-studio.md)|  
 |Описывает, как создать проект и добавить элементы, например скрипты и соединения.|[Проекты (SQL Server Management Studio)](../../ssms/solution/projects-sql-server-management-studio.md)|  
 |Сведения о файлах, используемых средой [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] для управления решениями и файлами.|[Файлы для управления решениями и проектами](../../ssms/solution/files-that-manage-solutions-and-projects.md)|  

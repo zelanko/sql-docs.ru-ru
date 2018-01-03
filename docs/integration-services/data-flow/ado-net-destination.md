@@ -25,11 +25,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0ca2ed5ed71eff099a77151690422d51ec648237
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3bd7ded25119de1acc18ded3d2add5de52441399
+ms.sourcegitcommit: d70b1c121c8536f92c90bf90f2e2b126acbc86de
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="ado-net-destination"></a>Назначение «ADO.NET»
   Назначение ADO NET загружает данные в различные базы данных, совместимые с [!INCLUDE[vstecado](../../includes/vstecado-md.md)], которые используют таблицу или представление базы данных. Можно загрузить эти данные в существующую таблицу или представление либо создать новую таблицу и загрузить в нее данные.  
@@ -104,10 +104,10 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Если исходная таблица SQL Server или Sybase включает столбец идентификаторов, то необходимо использовать задачи "Выполнение SQL" для включения инструкции IDENTITY_INSERT до доступа к назначению "ADO.NET" и ее отключение после доступа. (Это свойство столбца идентификаторов указывает значение приращения для столбца. Инструкция SET IDENTITY_INSERT позволяет вставлять явные значения из таблицы источника в столбец идентификаторов таблицы назначения.)  
 >   
->   Чтобы выполнить инструкции SET IDENTITY_INSERT и успешно загрузить данные, необходимо сделать следующее. 
->       1. Используйте один и тот же диспетчер соединений ADO.NET для задач "Выполнение SQL" и назначения "ADO NET". 
->       2. В диспетчере соединений присвойте свойствам **RetainSameConnection** и **MultipleActiveResultSets** значение True. 
->       3. В назначении "ADO.NET" присвойте свойству **UseBulkInsertWhenPossible** значение False. 
+>   Чтобы выполнить инструкции SET IDENTITY_INSERT и успешно загрузить данные, необходимо сделать следующее.  
+>       1. Используйте один и тот же диспетчер соединений ADO.NET для задач "Выполнение SQL" и назначения "ADO NET".  
+>       2. В диспетчере соединений присвойте свойствам **RetainSameConnection** и **MultipleActiveResultSets** значение True.  
+>       3. В назначении "ADO.NET" присвойте свойству **UseBulkInsertWhenPossible** значение False.   
 >
 >  Дополнительные сведения см. в разделе [SET IDENTITY_INSERT (Transact-SQL)](../../t-sql/statements/set-identity-insert-transact-sql.md) и [IDENTITY (свойство) (Transact-SQL)](../../t-sql/statements/create-table-transact-sql-identity-property.md).  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/20/2017
  **Усечение**  
  Не используется.  
   
- **Description**  
+ **Описание**  
  Просмотрите описание операции.  
   
  **Присвоить указанное значение выбранным ячейкам**  

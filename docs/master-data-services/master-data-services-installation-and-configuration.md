@@ -5,7 +5,7 @@ ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1d909039eb43c65358515cd4c3891b20a9a2b7e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4e94eae55ba86f5aa2cd548790f583c281de8f8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Установка и настройка Master Data Services
   В этой статье рассматривается установка [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на компьютере под управлением Windows Server 2012 R2, настройка базы данных и веб-сайта MDS, а также развертывание образцов моделей и данных. Службы[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) позволяют организациям управлять надежной версией данных.   
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/20/2017
  
 Ссылки на видео и другие обучающие ресурсы, которые помогут ознакомиться с [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], см. в разделе [Изучение служб Master Data Services](../master-data-services/learn-sql-server-master-data-services.md). 
   
-> **Скачать**  
+> **Загрузить**  
 >-   Чтобы скачать [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], перейдите на сайт  **[Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2017-ctp/)**.  
 >-   Есть учетная запись Azure?  Тогда перейдите **[сюда](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)** , чтобы запустить виртуальную машину с уже установленным SQL Server.  
  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/20/2017
    
 9. На странице **Компоненты** выберите следующие компоненты и нажмите кнопку **Далее**. Они требуются для [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] в [!INCLUDE[winblue_server_2_md](../includes/winblue-server-2-md.md)].
   
-    |Функции|Функции|  
+    |Компоненты|Компоненты|  
     |--------------|--------------|  
     |![mds_AddRolesFeaturesWizard_FeaturesPage](../master-data-services/media/mds-addrolesfeatureswizard-featurespage.png)|![mds_AddRolesFeaturesWizard_FeaturesPage_WindowsProcActive](../master-data-services/media/mds-addrolesfeatureswizard-featurespage-windowsprocactive.png)|  
 
@@ -130,7 +130,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Щелкните **Создать базу данных**, а затем нажмите кнопку **Далее** в **мастере создания базы данных**.  
   
-3.  На странице **Сервер базы данных** выберите значение в поле **Тип проверки подлинности** , а затем нажмите кнопку **Проверить подключение** , чтобы проверить возможность подключения к базе данных с помощью учетных данных, выбранных для типа проверки подлинности. Установите переключатель в положение **Далее**.
+3.  На странице **Сервер базы данных** выберите значение в поле **Тип проверки подлинности** , а затем нажмите кнопку **Проверить подключение** , чтобы проверить возможность подключения к базе данных с помощью учетных данных, выбранных для типа проверки подлинности. Нажмите кнопку **Далее**.
   
     > [!NOTE]  
     >  Если выбран тип проверки подлинности **Current User – Integrated Security** , поле **Имя пользователя** доступно только для чтения и содержит имя текущей учетной записи пользователя Windows. Если вы используете [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] на виртуальной машине Azure, в поле **Имя пользователя** отображается имя виртуальной машины и имя пользователя для учетной записи локального администратора виртуальной машины. 
@@ -285,7 +285,7 @@ ms.lasthandoff: 11/20/2017
  Общие сведения об использовании модели и сущностей для создания структуры данных в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] см. в разделе [Общие сведения о службах Master Data Services (MDS)](../master-data-services/master-data-services-overview-mds.md)  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Эта статья помогла вам? Мы слушаем  
- Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии по адресу [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
+ Какие сведения вы искали и удалось ли вам их найти? Мы прислушиваемся к вашим отзывам для совершенствования материалов. Отправляйте свои комментарии сюда: [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Get%20Started%20with%20Master%20Data%20Services)  
   
 ## <a name="see-also"></a>См. также:  
  [База данных служб Master Data Services](../master-data-services/master-data-services-database.md)   

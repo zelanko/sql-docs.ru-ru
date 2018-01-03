@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7cf23385a5eb76d9d528213998de853856333614
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,12 @@ ms.lasthandoff: 12/05/2017
   
 -   По умолчанию каждая успешная операция резервного копирования добавляет запись в журнал ошибок служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и в журнал системных событий. Если резервное копирование выполняется часто, сообщения об успешном завершении операций накапливаются быстро, что приводит к стремительному увеличению журналов ошибок! Это может осложнить поиск других сообщений. Если работа существующих скриптов не зависит от записей журнала резервного копирования, то их можно отключить с помощью флага трассировки 3226. Дополнительные сведения см. в разделе [Флаги трассировки (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Для резервной копии базы данных свойству TRUSTWORTHY присваивается значение OFF. Дополнительные сведения о том, как задать для параметра TRUSTWORTHY значение ON, см. в разделе [Параметры ALTER DATABASE SET (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  Начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , параметры **PASSWORD** и **MEDIAPASSWORD** не поддерживаются при создании резервных копий. Все еще вы можете восстанавливать резервные копии, созданные с паролями.  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
  Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , **должна** иметь разрешения на запись. Однако процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.  
@@ -265,7 +265,7 @@ ms.lasthandoff: 12/05/2017
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
-    |Параметр|Описание|  
+    |Параметр|Description|  
     |------------|-----------------|  
     |*database*|База данных для резервного копирования.|  
     |*backup_device* [ **,**...*n* ]|Указывает список от 1 до 64 устройств резервного копирования, используемых для создания резервной копии. Можно указать как физическое устройство резервного копирования, так и соответствующее логическое устройство, если оно уже определено. Для указания физического устройства резервного копирования используйте параметр DISK или TAPE.<br /><br /> { DISK &#124; TAPE } **=***имя_физического_устройства_резервного _копирования*<br /><br /> Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
@@ -304,7 +304,7 @@ ms.lasthandoff: 12/05/2017
 #### <a name="a-back-up-to-a-disk-device"></a>**А. Резервное копирование на дисковое устройство**  
  В следующем примере производится резервное копирование всей базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на диск и создание нового набора носителей с помощью параметра `FORMAT` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -318,7 +318,7 @@ GO
 #### <a name="b-back-up-to-a-tape-device"></a>**Б. Резервное копирование на ленточное устройство**  
  В следующем примере создается полная резервная копия базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на ленте в дополнение к предыдущим резервными копиям.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 BACKUP DATABASE AdventureWorks2012  
@@ -331,7 +331,7 @@ GO
 #### <a name="c-back-up-to-a-logical-tape-device"></a>**В. Резервное копирование на логическое ленточное устройство**  
  В следующем примере создается логическое устройство резервного копирования для ленточного накопителя. Затем показано, как производится полное резервное копирование базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] на этот накопитель.  
   
-```tsql  
+```sql  
 -- Create a logical backup device,   
 -- AdventureWorks2012_Bak_Tape, for tape device \\.\tape0.  
 USE master;  
@@ -372,7 +372,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
  
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
@@ -390,7 +390,7 @@ Backup-SqlDatabase -ServerInstance "MyServer" –Database $database -BackupFile 
   
 -   [Использование мастера планов обслуживания](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 **[Устранение неполадок операций резервного копирования и восстановления SQL Server](https://support.microsoft.com/en-us/kb/224071)**          
 [Общие сведения о резервном копировании (SQL Server)](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   

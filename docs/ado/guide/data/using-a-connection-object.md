@@ -3,7 +3,7 @@ title: "С помощью объекта соединения | Документ
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,14 +18,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 38454d8edc91715f5a3e3d5ee55f045d0e55e581
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f6053e0134a3b9ae866f88aa4ee0742d311c2821
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-a-connection-object"></a>С помощью объекта соединения
-Прежде чем открывать **подключения** объекта, необходимо определить определенные сведения об источнике данных и тип соединения. Большая часть этих сведений, удерживается *ConnectionString* параметр [метод Open](../../../ado/reference/ado-api/open-method-ado-connection.md) на **подключения** объекта, или с помощью [ConnectionString Свойство](../../../ado/reference/ado-api/connectionstring-property-ado.md) на **подключения** объекта. Строка подключения состоит из списка пар аргументов и значений, значения, заключенные в одинарные кавычки, разделенные точкой с запятой. Например:  
+Прежде чем открывать **подключения** объекта, необходимо определить определенные сведения об источнике данных и тип соединения. Большая часть этих сведений, удерживается *ConnectionString* параметр [метод Open](../../../ado/reference/ado-api/open-method-ado-connection.md) на **подключения** объекта, или с помощью [ConnectionString Свойство](../../../ado/reference/ado-api/connectionstring-property-ado.md) на **подключения** объекта. Строка подключения состоит из списка пар аргументов и значений, значения, заключенные в одинарные кавычки, разделенные точкой с запятой. Пример:  
   
 ```  
 Dim sConn As String  

@@ -3,7 +3,7 @@ title: "Создание запросов на обновление (визуа�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c372b85235252bd8ff18e70b35648769cf1f955a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 42a7e0708746c29755ddf512b69c62ec7a091c2c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-update-queries-visual-database-tools"></a>Создание запросов на обновление (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Запрос UPDATE позволяет изменить содержимое нескольких строк одной операцией. Например, в таблице `titles` можно с помощью запроса UPDATE увеличить цену всех книг определенного издателя на 10%.  

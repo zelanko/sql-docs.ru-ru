@@ -3,7 +3,7 @@ title: "Сохранение скриптов в виде проектов ил�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 58ff1fcef47768a5ad4d8749b66b1928ffa99e3c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 69ac1bec3efbefa7933e0a34bdfbfc8dd81c3ce3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-3---save-scripts-as-projects-or-solutions"></a>Занятие 3–3. Сохранение скриптов в виде проектов или решений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Разработчикам, знакомым с [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio, понравится обозреватель решений в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Скрипты, которые поддерживают бизнес, могут быть сгруппированы в проекты скриптов, а проектами скриптов можно одновременно управлять как решением. Когда скрипты помещены в проекты скриптов и решения, они могут быть открыты вместе как группа или сохранены вместе в системе управления версиями, например Visual SourceSafe. Проекты скриптов включают данные о соединениях, необходимые для правильного выполнения скриптов, а также могут содержать файлы других типов, такие как вспомогательные текстовые файлы.  

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34d3f8da055577f32d1532f9ca5300960a51d383
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ac27d37604a2245346b307b0dff8d648de26ebd
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Собственная компиляция таблиц и хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В выполняющейся в памяти OLTP введено понятие компиляции в машинный код. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет возможность компиляции в собственном коде хранимых процедур, которые обращаются к оптимизированным для памяти таблицам. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может также скомпилировать в собственном коде оптимизированные для памяти таблицы. Компиляция в собственном коде обеспечивает повышение скорости доступа к данным и более эффективное выполнение запросов по сравнению с интерпретируемыми (традиционными) командами [!INCLUDE[tsql](../../includes/tsql-md.md)]. Компиляция таблиц и хранимых процедур в собственном коде создает библиотеки DLL.
@@ -39,7 +39,7 @@ In-Memory OLTP компилирует оптимизированные для п
 
 Следующий запрос отображает все библиотеки DLL таблиц и хранимых процедур, загруженных на данный момент в память сервера:
 
-```tsql
+```sql
 SELECT
         mod1.name,
         mod1.description
@@ -63,7 +63,7 @@ SELECT
 
 Рассмотрим следующий пример скрипта, который создает базу данных и оптимизированную для памяти таблицу:
 
-```tsql
+```sql
 USE master;
 GO
 
@@ -156,7 +156,7 @@ GO
 
 Рассмотрим следующий пример хранимой процедуры, которая вставляет строки в таблицу t1 из предыдущего примера:
 
-```tsql
+```sql
 CREATE PROCEDURE dbo.native_sp
     with native_compilation,
          schemabinding,

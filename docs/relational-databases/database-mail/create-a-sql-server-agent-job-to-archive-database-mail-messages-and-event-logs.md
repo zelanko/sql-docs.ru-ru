@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1d7173c3482cb13806c4d4754d493ccec3118a73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dc840281d8a9cd2ae9a1f85988f850cc29ab1582
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Создание задания агента SQL Server по архивации сообщений компонента Database Mail и журналов событий базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Копии сообщений компонента Database Mail и их вложения хранятся в таблицах **msdb**, расположенных в журнале событий компонента Database Mail. Может возникнуть потребность периодического уменьшения объема ненужных таблиц и архивных сообщений и событий. Представленные ниже процедуры используются для создания задания агента SQL Server для автоматизации указанного процесса.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
  В случае сбоя задания в процессе работы, возможно, понадобится провести дополнительную проверку и отправить уведомления операторам.  
   
   
-###  <a name="Permissions"></a> Разрешения  
+###  <a name="Permissions"></a> Permissions  
  Чтобы выполнить хранимые процедуры, описанные в данном разделе, пользователь должен быть членом предопределенной роли сервера **sysadmin** .  
   
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Чтобы создать таблицу с именем прошлого месяца, в которой будут храниться все строки данных за предыдущие месяцы, в окне **Команда** введите представленную ниже инструкцию:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Чтобы создать таблицу с именем прошлого месяца, в которой будут храниться все вложения, связанные с сообщениями, скопированными на предыдущем шаге, в окне **Команда** введите представленную ниже инструкцию:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Чтобы создать таблицу с именем прошлого месяца, в которой будут храниться все записи журнала, связанные с сообщениями, скопированными на предыдущих шагах, в окне **Команда** введите представленную ниже инструкцию:  
   
-    ```tsql  
+    ```sql  
     DECLARE @LastMonth nvarchar(12);  
     DECLARE @CopyDate nvarchar(20) ;  
     DECLARE @CreateTable nvarchar(250) ;  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
 5.  Чтобы удалить из таблиц компонента Database Mail строки, созданные ранее начала текущего месяца, в окне **Команда** введите представленную ниже инструкцию:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_mailitems_sp @sent_before = @CopyDate ;  
@@ -191,7 +191,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Чтобы удалить из журнала событий компонента Database Mail строки, созданные ранее начала текущего месяца, в окне **Команда** введите представленную ниже инструкцию:  
   
-    ```tsql  
+    ```sql  
     DECLARE @CopyDate nvarchar(20) ;  
     SET @CopyDate = (SELECT CAST(CONVERT(char(8), CURRENT_TIMESTAMP- DATEPART(dd,GETDATE()-1), 112) AS datetime)) ;  
     EXECUTE msdb.dbo.sysmail_delete_log_sp @logged_before = @CopyDate ;  

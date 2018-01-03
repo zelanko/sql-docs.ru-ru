@@ -3,9 +3,9 @@ title: "Использование программы sqlcmd с переменн
 ms.custom: 
 ms.date: 08/09/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 165c7c1cac15f641c44c0d2f4ce4e7327fd514c2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eba9a6581d4f93c1eb84e14b3172f1f6cefb312f
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcmd---use-with-scripting-variables"></a>sqlcmd — использование с переменными скрипта
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Переменные, которые используются в скриптах, называются переменными скрипта. Переменные скрипта позволяют использовать один скрипт в различных обстоятельствах. Например, если нужно выполнить один скрипт на нескольких серверах, вместо изменения скрипта для каждого сервера можно указать для имени сервера соответствующую переменную скрипта. Изменяя имя сервера, указываемое в переменной скрипта, можно выполнять один и тот же скрипт на разных серверах.  
@@ -113,7 +113,7 @@ sqlcmd -v ColumnName ="LastName" -i c:\testscript.sql
 ## <a name="sqlcmd-scripting-variables"></a>Переменные скрипта sqlcmd  
  Переменные, которые определяются программой **sqlcmd** , называются переменными сценария. В следующей таблице приведен список переменных сценария программы **sqlcmd** .  
   
-|        Переменная         | Связанный параметр | Чтение-запись |         По умолчанию         |
+|        Переменная         | Связанный параметр | Чтение-запись |         Default         |
 | ----------------------- | -------------- | --- | ----------------------- |
 | SQLCMDUSER*             | -U             | Чтение   | ""                      |
 | SQLCMDPASSWORD*         | -P             | --  | ""                      |

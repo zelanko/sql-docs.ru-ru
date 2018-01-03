@@ -3,7 +3,7 @@ title: "Параметры (\"Среда\" — \"Справка\" — \"В с�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3cbb96fdd292aabaf655ab69d9a8f44928705f2e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 864a8798e9778b16eb49592c8f4e2b801ed1749d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-environment---help---online-page"></a>Параметры ("Среда" — "Справка" — страница "В сети")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Диалоговое окно **Параметры** позволяет указать источники справки, которые используются при поиске в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], включая справку F1. В меню **Сервис** выберите **Параметры**, разверните папку **Среда** , выберите **Справка**и щелкните **Справка в сети**. Если страница **Справка в сети** отсутствует в списке, установите флажок **Показать все параметры** в диалоговом окне **Параметры** .  

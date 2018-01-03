@@ -3,7 +3,7 @@ title: "С именем команды | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,14 +20,14 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e0eca9ac410156f891f4bd383a7100342c69662c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6830fefa2e01cf03466ae0b28dc8b132ad6a7149
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="named-commands"></a>Именованные команды
-[Создание и выполнение простой команды](../../../ado/guide/data/creating-and-executing-a-simple-command.md) показано, как выполнить команду. Есть другой способ: можно упростить именованную команду, а затем вызвать этот именованный команду непосредственно на **подключения** объекта (назначенный **ActiveConnection** свойство **команда** объекта). Именование команды означает назначения имени **имя** свойство **команда** объекта. Например:  
+[Создание и выполнение простой команды](../../../ado/guide/data/creating-and-executing-a-simple-command.md) показано, как выполнить команду. Есть другой способ: можно упростить именованную команду, а затем вызвать этот именованный команду непосредственно на **подключения** объекта (назначенный **ActiveConnection** свойство **команда** объекта). Именование команды означает назначения имени **имя** свойство **команда** объекта. Например,  
   
 ```  
 objCmd.Name = "GetCustomers"  

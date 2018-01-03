@@ -3,9 +3,9 @@ title: "Окно \"Точки останова\" | Документация Ма
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 06c8b84f4cf69b06e54e8a8d10c1121add1c6026
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d1d2cbc8ca85606b85f8f4780bfda7bf25527162
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Отладчик Transact-SQL, окно точек останова
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В окне **Точки останова** перечислены все точки останова, которые заданы в текущем редакторе запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Чтобы управлять точками останова, используйте панель инструментов в окне **Точки останова** . Точки останова представляют собой точки кода, где выполнение в режиме отладке приостанавливается, чтобы можно было просматривать отладочные данные.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  Можно добавлять и удалять следующие столбцы, выбирая их в списке **Столбцы** .  
   
- **Фильтр**  
+ **Filter**  
  Отображает **(нет)**. Отладчик [!INCLUDE[tsql](../../includes/tsql-md.md)] не поддерживает задание фильтров для точек останова.  
   
  **При попадании**  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
  **Язык**  
  Отображает значение **Transact-SQL** для [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
- **Функция**  
+ **Компонент**  
  Отображается номер строки, на которой задана точка останова.  
   
  **Файл**  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="breakpoints-window-toolbar"></a>Панель инструментов окна «Точки останова»  
  Если в текущем окне редактора запросов компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] имеются активные точки останова, то в окне **Точки останова** отображается панель инструментов, с помощью которой можно управлять точками останова.  
   
- **Delete**  
+ **Удаление**  
  Удаляет выбранную точку останова.  
   
  **Удалить все точки останова**  

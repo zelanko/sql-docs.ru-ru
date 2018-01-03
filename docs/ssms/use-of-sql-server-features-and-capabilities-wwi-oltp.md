@@ -3,7 +3,7 @@ title: "Аргументы для внешних средств | Докумен
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,18 +20,18 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c09b8aa81f0846305b0bd1f33a89a269af64b45
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07a73ebeb158d520db011f979bfd2e21c543c22f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="arguments-for-external-tools"></a>Аргументы для внешних программ
+# <a name="arguments-for-external-tools"></a>Аргументы для внешних средств
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Аргументы — это переменные, с помощью которых среда Studio передает параметры внешним средствам, запускаемым через меню **Сервис**. Внешние средства, например «Блокнот», можно добавить в меню **Сервис** с помощью диалогового окна **Внешние средства** .  
   
 В следующей таблице приведены возможные аргументы для внешних программ.  
   
-|Название|Аргумент|Description|  
+|Имя|Аргумент|Description|  
 |--------|------------|---------------|  
 |**Путь элемента**|$(ItemPath)|Полное имя файла текущего источника (определяемое как диск + путь + имя файла); пусто, если окно источника не активно.|  
 |**Каталог элемента**|$(ItemDir)|Каталог текущего источника (определяемое как диск + путь); пусто, если окно источника не активно.|  

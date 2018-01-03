@@ -3,7 +3,7 @@ title: "Сведения об ошибке, относящееся к полю |
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d37d91f2b35cf211044f2ac1f2bf8705bbc1ef16
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 67404e4d66983c3cf64bd44a2d80c77c4eb99790
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="field-related-error-information"></a>Сведения об ошибке, относящееся к полю
 Если ошибка непосредственно связаны с полем — например, отсутствие данных, или если он имеет неверный тип для поля, можно получить дополнительные сведения о причине проблемы с помощью проверки **поле** объекта **состояния**  свойство. Это свойство была расширена для предоставления определенных сведений о проблеме. Так, например, при вызове **UpdateBatch** завершается ошибкой, причиной проблемы может определить, проверив **состояние** свойство **поля** в каждом из данных записи. Это свойство будет содержать одно из значений в **FieldStatusEnum** константой. В следующей таблице представлены те значения, которые представляют интерес при возникновении ошибки.  

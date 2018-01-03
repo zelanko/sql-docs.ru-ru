@@ -3,7 +3,7 @@ title: "Сводка. Решения и проекты скриптов | До�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a05d971d65639cc5644b19235cad05510257e54
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7fe194806dc60a604bcae54a3d170bf691a1b09a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-4---summary---solutions-and-script-projects"></a>Занятие 3–4. Сводка. Решения и проекты скриптов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используя расширенные функции среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio для разработки, среда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предлагает разработчикам необходимые возможности по управлению кодом на уровне предприятия. Вы можете создавать пользовательские шаблоны для выполнения повторяющихся задач, сохранения и управления сложными проектами знаков в централизованной и координируемой среде.  

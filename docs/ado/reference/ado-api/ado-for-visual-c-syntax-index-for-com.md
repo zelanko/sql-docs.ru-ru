@@ -3,7 +3,7 @@ title: "ADO для индекса синтаксис Visual C++ для моде�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e25f69205b217399242e1e3ff94935deed4536f3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5367b7c31db36fb2fe3c523371c1b3a7666669d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-for-visual-c-syntax-index-for-com"></a>ADO для индекса синтаксис Visual C++ для модели COM
 Этот индекс лучше перекрестной ссылки на Справочник по языку ADO, исходя из Microsoft Visual C++.  

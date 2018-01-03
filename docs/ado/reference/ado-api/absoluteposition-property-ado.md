@@ -3,7 +3,7 @@ title: "Свойство AbsolutePosition (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 491ed39340dd066955db2fd73ed986614744cff4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17fe4e32b8a54d51ac3009e06e74e77e74321171
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="absoluteposition-property-ado"></a>Свойство AbsolutePosition (ADO)
 Указывает порядковый номер [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта текущей записи.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  Для 64-разрядного кода используйте тип данных, который обеспечивает хранение 64-разрядное значение. Например, можно использовать долго или другой значение, представляющее длину 64-разрядной, например DBORDINAL. Не используйте **PositionEnum** значения, так как они ограничены длиной 32 бит.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы задать **AbsolutePosition** свойства, ADO требуется реализовать, поставщик OLE DB, который вы используете [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) интерфейса.  
   
  Доступ к **AbsolutePosition** свойство **записей** , был открыт с помощью последовательным или динамический курсор вызывает ошибку **adErrFeatureNotAvailable**. Для других типов курсоров правильное положение будут возвращены при условии, что поставщик OLE DB поддерживает **IRowsetScroll:IRowsetLocate** интерфейса. Если поставщик не поддерживает **IRowsetScroll** интерфейс, является свойство **adPosUnknown**. См. в документации для поставщика определить, поддерживает ли он **IRowsetScroll**.  

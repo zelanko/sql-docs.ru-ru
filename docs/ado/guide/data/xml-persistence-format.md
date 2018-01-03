@@ -3,7 +3,7 @@ title: "Формат сохраняемости XML | Документы Microso
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4ef8f1495b6c790abe7b3b616e2d37908c42517b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d56fbae28f2c1d5192f2ac1e1c4f8939d7e4b027
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-persistence-format"></a>Формат хранения XML
 ADO использует кодировку UTF-8 для XML-потока, он сохранится.  
   
  Формат ADO XML разбивается на два раздела, раздел схемы, следуют секции данных. Ниже приведен пример XML-файла для таблицы «Поставщики» из базы данных Northwind. Обсуждаются различные части XML следующий пример.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ```  
 <xml xmlns:s="uuid:BDC6E3F0-6DA3-11d1-A2A3-00AA00C14882"   

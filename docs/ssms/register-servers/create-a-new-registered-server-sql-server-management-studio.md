@@ -3,7 +3,7 @@ title: "Создание нового зарегистрированного с�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1802866292b1a8529e7ac2a415e6c2f64f5cc505
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eafb023f631824a41ba4e86ebb51f1ca392e6f45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Создание нового зарегистрированного сервера (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается, как сохранить сведения о соединении для серверов, к которым часто выполняется обращение, путем регистрации сервера в компоненте "Зарегистрированные серверы" среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Сервер может быть зарегистрирован в обозревателе объектов до или во время подключения. Для регистрации экземпляра сервера на локальном компьютере существует специальный пункт меню.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 12/05/2017
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Дополнительные сведения см. в разделе [Выбор режима проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md).  
   
-     **Имя пользователя**  
+     **User name**  
      Показывает текущее имя пользователя, с которым устанавливается соединение. Этот параметр только для чтения доступен лишь при соединении с использованием метода проверки подлинности Windows. Чтобы изменить **Имена пользователей**, войдите в систему под другим именем.  
   
      **Имя входа**  

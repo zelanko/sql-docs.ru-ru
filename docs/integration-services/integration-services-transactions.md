@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8fa0747761ecfac4fd617096942db77a2214019d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ce49a6834335160b400207521bd454a6c91298c3
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="integration-services-transactions"></a>Транзакции служб Integration Services
   Пакеты используют транзакции для связывания выполняемых в базе данных задачами операций в атомарные объекты, и, таким образом, сохраняют целостность данных. Все типы контейнеров служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] (пакеты, контейнеры циклов по элементам и по каждому элементу, контейнеры последовательности, а также серверы задач, которые содержат каждую задачу) могут быть настроены для использования транзакций. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] предоставляют три параметра для настройки транзакций: **NotSupported**, **Supported**и **Required**.  
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Запись в блоге, [Как использовать транзакции в службах SQL Server Integration Services SSIS](http://go.microsoft.com/fwlink/?LinkId=157783), на сайте www.mssqltips.com  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наследуемые транзакции](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)   
  [Множественные транзакции](http://msdn.microsoft.com/library/c3664a94-be89-40c0-a3a0-84b74a7fedbe)  
   

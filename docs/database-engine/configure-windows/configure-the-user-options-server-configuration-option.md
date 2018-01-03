@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 84f3081d1f5737c9b324c0ffe51b94a1c5a7183c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f356dbeceebad3a4b8f0be21921c96f97f5df818
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Настройка параметра конфигурации сервера user options
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +36,11 @@ ms.lasthandoff: 11/20/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Настройка параметра конфигурации user options с помощью:**  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
   
 -   В следующей таблице перечислены и описаны значения параметра **user options**. Не все значения конфигурации совместимы друг с другом. Например, параметры ANSI_NULL_DFLT_ON и ANSI_NULL_DFLT_OFF не могут быть установлены одновременно.  
   
-    |Значение|Конфигурация|Описание|  
+    |Значение|Конфигурация|Description|  
     |-----------|-------------------|-----------------|  
     |1|DISABLE_DEF_CNST_CHK|Управляет промежуточной или отложенной проверкой ограничений.|  
     |2|IMPLICIT_TRANSACTIONS|Для соединений сетевой библиотеки dblib управляет неявным запуском транзакции при выполнении инструкции. Установка IMPLICIT_TRANSACTIONS не влияет на соединения через ODBC или OLEDB.|  
@@ -76,9 +76,9 @@ ms.lasthandoff: 11/20/2017
   
 -   Битовые позиции в параметре **user options** совпадают с позициями в функции @@OPTIONS. Каждому соединению соответствует своя собственная функция @@OPTIONS, которая представляет собой окружение конфигурации. При входе в экземпляр \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]пользователь получает окружение по умолчанию, где параметру **user options** присваивается значение функции @@OPTIONS. При выполнении инструкции SET для параметра **user options** изменяется соответствующее значение функции @@OPTIONS для сеанса. Все соединения, установленные после изменения этой установки, принимают новое значение.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения процедуры **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции RECONFIGURE необходимо иметь разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -103,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как с помощью хранимой процедуры [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) настроить значение параметра `user options` , чтобы изменить значение параметра сервера ANSI_WARNINGS.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 005c8b60f2248f8a1aa4a17abfb0745c98eaead3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f742b5222054c918dc37ceb609dbee525cc4521
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="model-permissions-master-data-services"></a>Разрешения модели (службы Master Data Services)
   Разрешения модели применяются ко всем сущностям, явным и производным иерархиям и коллекциям, существующим в модели. Разрешения, назначенные для модели, можно переопределить для любого отдельного объекта.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |**Чтение**|Пользователь может просматривать элементы, атрибуты, членство в иерархии или коллекциях.|  
 |**Создание**|Пользователь может создавать элементы и назначать значения атрибутов во время создания.|  
 |**Update**|Пользователь может обновлять элементы, атрибуты, членство в иерархии или коллекциях.|  
-|**Delete**|Пользователь может удалять элементы.|  
+|**Удаление**|Пользователь может удалять элементы.|  
 |**Запретить**|Запрет любого доступа к сущности.|  
 |**Административный**|Административные разрешения для модели. Административные разрешения доступны только на уровне модели.|  
   

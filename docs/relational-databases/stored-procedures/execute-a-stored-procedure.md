@@ -26,11 +26,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0ae7abf60c9d2cf540a0daa73bd0bb6ceebb3729
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb605b3caeee875464e91ac811e6b760b0e353d2
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="execute-a-stored-procedure"></a>Выполнение хранимой процедуры
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,13 +42,13 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для выполнения хранимой процедуры используется:**  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
 -   При сопоставлении имен системных процедур используются параметры сортировки вызывающей базы данных. Таким образом, в вызове процедур следует всегда использовать точный регистр имен системных процедур. Например, этот код завершится с ошибкой при выполнении в контексте базы данных, в параметрах сортировки которой учитывается регистр:  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 11/17/2017
   
      Имена системных процедур начинаются с префикса **sp_**. Поскольку они логически отображаются во всех базах данных, определяемых и пользователем и системой, то они могут выполняться из любой базы данных без полного указания имени процедуры. Однако рекомендуется уточнять имена всех системных процедур указанием схемы **sys** во избежание конфликтов имен. В следующем примере демонстрируется рекомендуемый метод вызова системной процедуры.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
      В следующем примере демонстрируется рекомендуемый метод выполнения определяемой пользователем процедуры. Обратите внимание, что процедура принимает один входной параметр. Сведения об указании входных и выходных параметров см. в статье [Указание параметров](../../relational-databases/stored-procedures/specify-parameters.md).  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -94,7 +94,7 @@ ms.lasthandoff: 11/17/2017
   
      -Или-  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -128,10 +128,10 @@ ms.lasthandoff: 11/17/2017
   
     2.  отменить выполнение процедуры при запуске [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  Дополнительные сведения см. в статьях [EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-transact-sql.md) и [EXECUTE AS Clause (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Дополнительные сведения см. в разделе "Разрешения" статьи [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md).  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -158,7 +158,7 @@ ms.lasthandoff: 11/17/2017
      **Передать значение NULL**  
      Передать значение NULL в качестве значения параметра.  
   
-     **Значение**  
+     **Value**  
      Введите значение параметра, передаваемое ему при вызове процедуры.  
   
 5.  Чтобы выполнить хранимую процедуру, нажмите кнопку **ОК**.  
@@ -173,7 +173,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как выполнить хранимую процедуру, которая принимает один параметр. В примере выполняется хранимая процедура `uspGetEmployeeManagers` со значением  `6` , указанным в параметре `@EmployeeID` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -188,7 +188,7 @@ GO
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как использовать процедуру [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) , чтобы задать автоматическое выполнение процедуры.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -204,14 +204,14 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**. В этом примере показано, как использовать процедуру [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) , чтобы отменить автоматическое выполнение процедуры.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
     , @OptionValue = 'off';  
 ```  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
   
 ## <a name="see-also"></a>См. также:  
  [Указание параметров](../../relational-databases/stored-procedures/specify-parameters.md)   

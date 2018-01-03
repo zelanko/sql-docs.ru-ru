@@ -37,11 +37,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e0115a7595476adadb0fc0328a14b01b0476771a
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: c55cc253a5b82bed265b2b67ab9cd63d8c971408
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Реорганизация и перестроение индексов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 11/28/2017
   
  Результирующий набор, возвращаемый функцией **sys.dm_db_index_physical_stats** , включает следующие столбцы:  
   
-|Столбец|Описание|  
+|столбцом|Description|  
 |------------|-----------------|  
 |**avg_fragmentation_in_percent**|Процентная доля логической фрагментации (неупорядоченные страницы в индексе).|  
 |**fragment_count**|Число фрагментов (физически последовательные конечные страницы) в индексе.|  
@@ -92,9 +92,9 @@ ms.lasthandoff: 11/28/2017
 > [!IMPORTANT]
 > Начиная с выпуска [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]статистические данные не создаются путем сканирования всех строк таблицы при создании или перестроении секционированного индекса. Вместо этого оптимизатор запросов использует для создания статистики алгоритм выборки по умолчанию. Для получения статистики по секционированным индексам путем сканирования всех строк таблицы используйте инструкции `CREATE STATISTICS` или `UPDATE STATISTICS` с предложением `FULLSCAN`.
   
-### <a name="Security"></a> Безопасность  
+### <a name="Security"></a> безопасность  
   
-#### <a name="Permissions"></a> Разрешения  
+#### <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
   
 ## <a name="SSMSProcedureFrag"></a> Проверка фрагментации индексов с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
@@ -164,7 +164,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find the average fragmentation percentage of all indexes  
@@ -258,7 +258,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize the IX_Employee_OrganizationalLevel_OrganizationalNode 
@@ -278,7 +278,7 @@ ms.lasthandoff: 11/28/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;   
     GO  
     -- Reorganize all indexes on the HumanResources.Employee table.  

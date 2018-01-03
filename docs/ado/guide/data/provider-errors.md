@@ -3,7 +3,7 @@ title: "Ошибки поставщика | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 327869785bddfbd0d43bfff051a9b7ef6b97c8fb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bdb4d1847a2a55c57235a88979b19f7370169b9c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="provider-errors"></a>Ошибки поставщика
 В случае ошибки поставщика ошибку во время выполнения-2147467259 возвращается. При получении этой ошибки проверьте **ошибки** коллекцию активных **подключения** объекта, который будет содержать одну или несколько ошибок, описывающие, что именно произошло.  
@@ -72,7 +72,7 @@ End Function
   
 |Имя свойства|Description|  
 |-------------------|-----------------|  
-|**Description**|Текстовое описание возникшей ошибки.|  
+|**Описание**|Текстовое описание возникшей ошибки.|  
 |**HelpContext HelpFile**|Ссылается на раздел справки и справки файла, содержащего описание возникшей ошибки.|  
 |**NativeError**|Номер ошибки поставщика.|  
 |**Номер**|Длинное целое число, представляющее номер (перечисленных в **ErrorValueEnum**) возникшей ошибки.|  

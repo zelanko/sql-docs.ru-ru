@@ -3,7 +3,7 @@ title: "Страницы свойств в среде SQL Server Management Stud
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8c4c23da504c70c1139705c514d3b95631fa1ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bbb3f4310dfedc47615f47ba07d95ed44a9416e2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>Страницы свойств в среде SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Во всех диалоговых окнах страниц свойств в среде [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] используется общий формат представления данных с развертыванием и свертыванием категорий. Состав показываемых полей зависит от конкретного свойства. Свойства, выделенные серым цветом, доступны только для чтения. В верхней части каждой страницы свойств находятся кнопки «По категориям» и «По алфавиту».  

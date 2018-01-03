@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0123a452a34fc5d445499fa1ba372a458cdcff60
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e959e9afd0ff9487e77fd4526a570aacf894d285
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>восстановить базу данных и привязать ее к пулу ресурсов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Даже если у вас имеется достаточно памяти для восстановления базы данных с оптимизированными для памяти таблицами, желательно следовать рекомендациям и привязать базу данных к именованному пулу ресурсов. Хотя база данных должна существовать до того, как вы сможете ее привязать к пулу, восстановление вашей базы данных является многоступенчатым процессом. Этот раздел поможет выполнить данный процесс.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="bkmk_NORECOVERY"></a> Восстановление с NORECOVERY  
  Когда вы восстанавливаете базу данных, NORECOVERY осуществляет создание базы данных и восстановление образа диска без потребления памяти.  
   
-```tsql  
+```sql  
 RESTORE DATABASE IMOLTP_DB   
    FROM DISK = 'C:\IMOLTP_test\IMOLTP_DB.bak'  
    WITH NORECOVERY  
@@ -51,7 +51,7 @@ RESTORE DATABASE IMOLTP_DB
 ###  <a name="bkmk_createPool"></a> Создание пула ресурсов  
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] создает пул ресурсов с именем Pool_IMOLTP с 50% памяти, доступной для его использования.  После создания пула Регулятор Ресурсов перенастраивается для включения Pool_IMOLTP.  
   
-```tsql  
+```sql  
 CREATE RESOURCE POOL Pool_IMOLTP WITH (MAX_MEMORY_PERCENT = 50);  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 GO  
@@ -62,7 +62,7 @@ GO
   
  Следующий код [!INCLUDE[tsql](../../includes/tsql-md.md)] определяет привязку базы данных IMOLTP_DB к пулу ресурсов Pool_IMOLTP. Привязка не начнет функционировать до тех пор, пока не будет выполнен следующий шаг.  
   
-```tsql  
+```sql  
 EXEC sp_xtp_bind_db_resource_pool 'IMOLTP_DB', 'Pool_IMOLTP'  
 GO  
 ```  
@@ -70,7 +70,7 @@ GO
 ###  <a name="bkmk_RECOVERY"></a> Восстановление с RECOVERY  
  При восстановлении базы данных с параметром WITH RECOVERY база данных переводится в режим «в сети» и выполняется восстановление всех данных.  
   
-```tsql  
+```sql  
 RESTORE DATABASE IMOLTP_DB   
    WITH RECOVERY  
 ```  

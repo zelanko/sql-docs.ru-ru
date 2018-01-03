@@ -3,7 +3,7 @@ title: "Диалоговое окно \"Цвет\" (визуальные инс�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7380a1f338e519517fee09cda3c7419b1ac4817b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c769d37bb4ebda8299498f54c22b87099e788fb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Диалоговое окно «Цвет» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Диалоговое окно **Цвет** возвращает RGB-значение цвета, выбранного пользователем. Пользователь может выбрать базовые цвета, определяемые видеодрайвером, или использовать набор собственных цветов. Выберите из Базовых цветов или создайте собственные цвета. Определите цвет, щелкнув по цветовой матрице или заполнив поля **Оттенок**, **Насыщенность**, **Свет**, **Красный**, **Зеленый**и **Синий** .  

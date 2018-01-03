@@ -3,8 +3,11 @@ title: "Новые возможности служб Integration Services в SQL
 ms.custom: SQL2016_New_Updated
 ms.date: 09/28/2017
 ms.prod: sql-non-specified
+ms.prod_service: integration-services
+ms.service: 
+ms.component: non-specific
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 36f418950cfa6d475c911c05fd9737fcecf62aa6
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 6e459849dbbc844039ba3ae7a766794f1283e8a0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>Новые возможности служб Integration Services в SQL Server 2016
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -157,16 +160,16 @@ ms.lasthandoff: 12/04/2017
   
 -   База данных восстановлена из более старой версии SQL Server.  
   
--   База данных не была удалена из группы доступности AlwaysOn перед обновлением экземпляра SQL Server. Это препятствует автоматическому обновлению базы данных. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+-   База данных не была удалена из группы доступности AlwaysOn перед обновлением экземпляра SQL Server. Это препятствует автоматическому обновлению базы данных. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
   
- Дополнительные сведения см. в разделе [Каталог служб SSIS &#40;SSISDB&#41;](../integration-services/service/ssis-catalog.md). 
+ Дополнительные сведения см. в разделе [Каталог служб SSIS &#40;SSISDB&#41;](../integration-services/catalog/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> Поддержка Always On в каталоге служб SSIS  
  Группы доступности AlwaysOn — это решение для высокой доступности и аварийного восстановления, являющееся альтернативой зеркальному отображению баз данных на уровне предприятия. Группа доступности поддерживает среду отработки отказа для дискретного набора пользовательских баз данных, известных как базы данных доступности, которые выполняют отработку отказа совместно. Дополнительные сведения см. в статье [Группы доступности AlwaysOn](../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
  В SQL Server 2016 службы SSIS предоставляют новые возможности, позволяющие легко производить развертывание в централизованном каталоге служб SSIS (например, в пользовательской базе данных SSISDB). Чтобы обеспечить высокую доступность для базы данных SSISDB и ее содержимого (проектов, пакетов, журналов выполнения и т. п.), можно добавить ее в группу доступности Always On, как и любую другую пользовательскую базу данных. В случае сбоя один из вторичных узлов автоматически становится новым основным узлом.  
   
- Подробное описание и пошаговые инструкции по включению AlwaysOn для SSISDB см. в статье [Каталог служб SSIS](../integration-services/service/ssis-catalog.md).  
+ Подробное описание и пошаговые инструкции по включению AlwaysOn для SSISDB см. в статье [Каталог служб SSIS](../integration-services/catalog/ssis-catalog.md).  
 
 ####  <a name="IncrementalDeployment"></a> Добавочное развертывание пакетов  
 Функция добавочного развертывания пакетов позволяет развертывать один или несколько пакетов в существующем или новом проекте без развертывания всего проекта. Для этого можно использовать следующие средства:  
@@ -254,11 +257,11 @@ ms.lasthandoff: 12/04/2017
 ### <a name="expanded-connectivity-on-premises"></a>Расширенные возможности связи в локальной среде
 
 ####  <a name="ODatav4"></a> Поддержка источников данных OData версии 4  
- Источник OData и диспетчер подключений OData теперь поддерживают протоколы OData версии 3 и 4.  
+ Источник OData и диспетчер подключений OData теперь поддерживают протоколы OData версии&3; и&4;.  
   
 -   Для протокола OData версии 3 компонент поддерживает форматы данных ATOM и JSON.  
   
--   Для протокола OData версии 4 компонент поддерживает формат данных JSON.  
+-   Для протокола OData версии&4; компонент поддерживает формат данных JSON.  
   
  Дополнительные сведения см. в разделе [OData Source](../integration-services/data-flow/odata-source.md).  
 
@@ -289,7 +292,7 @@ ms.lasthandoff: 12/04/2017
  Соединитель Microsoft® для SAP BW для Microsoft SQL Server® 2016 выпущен в составе пакета дополнительных компонентов SQL Server 2016. Чтобы скачать компоненты пакета дополнительных компонентов, см. страницу [Microsoft® SQL Server® 2016 Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft® SQL Server® 2016).
  
 #### <a name="oracleteradata"></a> Выпуск соединителей версии 4.0 для Oracle и Teradata
-Были выпущены соединители Майкрософт версии 4.0 для Oracle и Teradata. Сведения о скачивании соединителей см. в разделе [Соединители Майкрософт версии 4.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
+Были выпущены соединители Майкрософт версии&4;.0 для Oracle и Teradata. Сведения о скачивании соединителей см. в разделе [Соединители Майкрософт версии&4;.0 для Oracle и Teradata](https://www.microsoft.com/download/details.aspx?id=52950).
 
 ### <a name="pdwau5"></a> Выпуск соединителей для системы платформы аналитики (PDW) с обновлением 5
 Были выпущены адаптеры назначения для загрузки данных в PDW с AU5. Сведения о скачивании адаптеров см. в разделе [Analytics Platform System Appliance Update 5 Documentation and Client Tools](https://www.microsoft.com/download/details.aspx?id=51610).
@@ -316,7 +319,7 @@ ms.lasthandoff: 12/04/2017
 ### <a name="better-install-experience"></a>Улучшенная процедура установки
 
 ####  <a name="Upgrade"></a> Блокировка обновления, когда база данных SSISDB относится к группе доступности  
- Если база данных каталога служб SSIS (SSISDB) относится к группе доступности AlwaysOn, необходимо удалить SSISDB из группы доступности обновить SQL Server, а затем добавить SSISDB обратно в группу. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/service/ssis-catalog.md#Upgrade).  
+ Если база данных каталога служб SSIS (SSISDB) относится к группе доступности AlwaysOn, необходимо удалить SSISDB из группы доступности обновить SQL Server, а затем добавить SSISDB обратно в группу. Дополнительные сведения см. в разделе [Upgrading SSISDB in an availability group](../integration-services/catalog/ssis-catalog.md#Upgrade).  
 
 ### <a name="better-design-experience"></a>Улучшенная процедура разработки
 

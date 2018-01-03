@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3d5227792c9f1a658135e1efa5c00bbcfe078cfe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ee6f5c066b43c91d1317ca833599ac2f178b03fc
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Включение управляемого резервного копирования SQL Server в Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как включить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с параметрами по умолчанию на уровне базы данных и экземпляра. Здесь также объясняется, как включить уведомления по электронной почте и как отслеживать резервное копирование.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
  В этом руководстве используется Azure PowerShell. Перед началом работы с руководством [скачайте и установите Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/).  
   
 > [!IMPORTANT]  
->  Если также требуется включить дополнительные параметры или использовать настраиваемое расписание, выполните эти настройки, прежде чем включать [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Дополнительные сведения см. в статье [Настройка дополнительных параметров управляемого резервного копирования SQL Server в Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
+>  Если также требуется включить дополнительные параметры или использовать настраиваемое расписание, выполните эти настройки, прежде чем включать [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. Дополнительные сведения см. в статье [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md).  
   
 ## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>Как включить и настроить [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] с параметрами по умолчанию  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  **Создайте учетные данные SQL для URL-адреса SAS.** Используйте маркер SAS, чтобы создать учетные данные SQL для URL-адреса контейнера BLOB-объектов. В SQL Server Management Studio с помощью указанного ниже запроса Transact-SQL создайте учетные данные для URL-адреса контейнера BLOB-объектов, основываясь на следующем примере:  
   
-    ```tsql  
+    ```sql  
     CREATE CREDENTIAL [https://managedbackupstorage.blob.core.windows.net/backupcontainer]   
     WITH IDENTITY = 'Shared Access Signature',  
     SECRET = 'sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl'  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  Чтобы включить управляемое резервное копирование на уровне экземпляра, укажите значение `NULL` для параметра `database_name` .  
   
-    ```tsql  
+    ```sql  
     Use msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   

@@ -5,7 +5,7 @@ ms.date: 03/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -18,11 +18,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5eea1f635fcd1080bf85fe0d45c689ef883181a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2ad5962c25cc48dcb95ff3d8efe8de37886cd971
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>Диалоговое окно «Создание профиля электронной почты и учетной записи базы данных»
   Используйте диалоговое окно **Создание профиля и учетной записи компонентов Database Mail** для создания профиля компонента Database Mail и учетной записи компонента Database Mail для базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Этот профиль будет использоваться для уведомления пользователей и групп по электронной почте, когда результаты проверки бизнес-правил будут отрицательными.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 |------------------|-----------------|  
 |**Проверка подлинности Windows с использованием учетных данных службы компонента Database Engine**|Укажите компонент Database Mail, который должен использовать учетные данные [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] для проверки подлинности на SMTP-сервере.|  
 |**обычная проверка подлинности**|Укажите, что компонент Database Mail будет использовать отдельные имя пользователя и пароль для проверки подлинности на SMTP-сервере. Эта информация будет использоваться только для проверки подлинности на почтовом сервере, при этом учетная запись не обязана соответствовать пользователю [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] или пользователю компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].|  
-|**Имя пользователя**|Введите имя учетной записи пользователя, которое компонент Database Mail будет использовать для входа на SMTP-сервер. Если SMTP-сервер требует обычную проверку подлинности, необходимо имя пользователя.|  
+|**User name**|Введите имя учетной записи пользователя, которое компонент Database Mail будет использовать для входа на SMTP-сервер. Если SMTP-сервер требует обычную проверку подлинности, необходимо имя пользователя.|  
 |**Пароль**|Введите пароль, который компонент Database Mail будет использовать для входа на SMTP-сервер. Пароль необходим, если SMTP-сервер требует обычную проверку подлинности.|  
 |**Подтверждение пароля**|Еще раз введите пароль для подтверждения.|  
 |**Анонимная проверка подлинности**|Укажите, что SMTP-серверу не требуется проверка подлинности. Компонент Database Mail не будет использовать никаких учетных данных для проверки подлинности на SMTP-сервере.|  

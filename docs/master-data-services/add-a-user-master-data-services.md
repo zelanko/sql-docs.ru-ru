@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,17 +20,17 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 708c9aaa3b0d5550104b23d08dec5339e8639e6b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c6d8362fb50fbaa020cb2ff5b43e603c4917df4c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-a-user-master-data-services"></a>Добавление пользователя (службы Master Data Services)
   Чтобы начать назначение разрешений для веб-приложения, нужно добавить пользователя в список **Пользователи** в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Чтобы пользователь из этого списка мог воспользоваться средой [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], ему нужно предоставить разрешение на одну или более функциональных областей и объектов модели.  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Разрешения пользователей и групп** ;  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Назначение разрешений для функциональной области (службы Master Data Services)](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   

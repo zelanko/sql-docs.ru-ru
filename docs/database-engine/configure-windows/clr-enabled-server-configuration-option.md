@@ -20,18 +20,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2227aa16c39c819a169844be9ac0df46849a74b0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8cd679c894e1d9518ff5547cde0150c11cf156f1
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="clr-enabled-server-configuration-option"></a>Параметр конфигурации сервера «clr enabled»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Используйте параметр «clr enabled», чтобы указать, может ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполнять пользовательские сборки. Параметр clr enabled принимает перечисленные ниже значения. 
+  Используйте параметр «clr enabled», чтобы указать, может ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполнять пользовательские сборки. Параметр clr enabled принимает перечисленные ниже значения. 
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0|Выполнение сборок не разрешается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |1|Выполнение сборок разрешается в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="example"></a>Пример  
  В следующем примере сначала отображается текущая настройка параметра clr enabled, а затем параметр включается с заданием значения 1. Чтобы отключить этот параметр, задайте значение 0.  
   
-```tsql  
+```sql  
 EXEC sp_configure 'clr enabled';  
 EXEC sp_configure 'clr enabled' , '1';  
 RECONFIGURE;    

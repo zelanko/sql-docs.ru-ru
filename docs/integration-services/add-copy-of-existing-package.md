@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b2b0255236aee66b63318dca9a18cfbae54d7ed6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 21e437e550b8522d85319a5207b2a26365b4e0d0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-copy-of-existing-package"></a>Добавление копии существующего пакета
   Используйте диалоговое окно **Добавление копии существующего пакета** для добавления копии пакета из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], файловой системы или хранилища пакетов служб SSIS к проекту служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/20/2017
  **Тип проверки подлинности**  
  При копировании из [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]выберите тип проверки подлинности.  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] укажите имя пользователя.  
   
  **Пароль**  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
  **Путь пакета**  
  Укажите путь к пакету или нажмите кнопку обзора **(…)** и укажите копируемый пакет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сохранение копии пакета](http://msdn.microsoft.com/library/7b44c0d7-d8fa-4491-8836-0899f621d3a8)   
  [Сохранение пакетов](../integration-services/save-packages.md)   
  [Службы Integration Services (службы SSIS)](../integration-services/service/integration-services-service-ssis-service.md)

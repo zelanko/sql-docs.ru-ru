@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: abfcc7d118cf97c24fd9d73817261fc1b8293c67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7b9a1fe1c33de87d0d298e530e4704f669e7675c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="semantic-search-sql-server"></a>Семантический поиск (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Статистический семантический поиск обеспечивает глубокий анализ неструктурированных документов, хранящихся в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], путем извлечения и индексирования статистически релевантных *ключевых фраз*. Эти ключевые фразы используются также для идентификации и индексирования *схожих или связанных документов*.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  
  Этот запрос вызывает функцию [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -79,7 +79,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
  
  Этот запрос вызывает функцию [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   
@@ -104,7 +104,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Установка и настройка семантического поиска](../../relational-databases/search/install-and-configure-semantic-search.md)  
  Описывает компоненты, необходимые для статистического семантического поиска, и способы их установки и проверки.  
   
- [Включение семантического поиска на таблицы и столбцы](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)  
+ [Включение семантического поиска по таблицам и столбцам](../../relational-databases/search/enable-semantic-search-on-tables-and-columns.md)  
  Описывает способ включения или отключения статистического семантического индексирования в выбранных столбцах, содержащих документы или текст.  
   
  [Поиск ключевых фраз в документах с использованием семантического поиска](../../relational-databases/search/find-key-phrases-in-documents-with-semantic-search.md)  

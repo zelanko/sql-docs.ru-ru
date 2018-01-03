@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc94325654b02854cff6a20f36519fa8ee46f17a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 43c86f6c856ae0e3ba814fcb899ab5c532c4945a
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Согласованное восстановление связанных баз данных с помощью помеченных транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="examples"></a>Примеры  
  В следующем примере журнал транзакций восстанавливается до метки в помеченной транзакции с именем `ListPriceUpdate`.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -135,7 +135,7 @@ RESTORE LOG AdventureWorks
   
  Например, рассмотрим секционированную базу данных, существующую в нескольких экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В каждом экземпляре находится база данных под названием `coyote`. Во-первых, необходимо создать хранимую процедуру, например `sp_SetMark`, в каждой базе данных.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -147,7 +147,7 @@ GO
   
  Затем необходимо создать хранимую процедуру `sp_MarkAll` , которая содержит транзакцию, размещающую отметку в каждой базе данных. `sp_MarkAll` может быть запущена из любого экземпляра.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  

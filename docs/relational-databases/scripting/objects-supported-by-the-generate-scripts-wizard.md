@@ -3,9 +3,9 @@ title: "Объекты, поддерживаемые мастером созда
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87fde29aab8338f096d2132b13011e44fcf96014
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2b775783cf11a74bbf5ddfd2641f8dc6b483a6ff
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="objects-supported-by-the-generate-scripts-wizard"></a>Объекты, поддерживаемые мастером создания скриптов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Мастер создания и публикации скриптов поддерживает подмножество объектов, поддерживаемое компонентом [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -31,10 +31,10 @@ ms.lasthandoff: 11/17/2017
   
 ||||||  
 |-|-|-|-|-|  
-|Роль приложения|Роль базы данных|Схема|Определяемое пользователем статистическое выражение|Представление*|  
+|Роль приложения|Роль базы данных|схема|Определяемое пользователем статистическое выражение|Представление*|  
 |Сборка|Ограничение DEFAULT|Хранимая процедура*|Определяемый пользователем тип данных|Коллекция схем XML|  
 |Ограничение CHECK|Полнотекстовый каталог|Синоним|Определяемая пользователем функция||  
-|Хранимая процедура среды CLR*|Указатель|Таблица|Определяемая пользователем таблица||  
+|Хранимая процедура среды CLR*|Указатель|Table|Определяемая пользователем таблица||  
 |Определяемая пользователем функция CLR|Правило|Пользователь**|Определяемый пользователем тип||  
   
  *Опубликовано без шифрования.  

@@ -5,7 +5,7 @@ ms.date: 07/25/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -21,17 +21,17 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e0b743b6c980b51f192ff32e2299125943b3bf91
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4d9ee304bc471b55e9d7c234dca6226cd840327d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>Создание атрибута на основе домена (службы Master Data Services)
   В службах [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]атрибут на основе домена создается, чтобы заполнить значения атрибута элементами сущности.  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Администрирование системы** ;  
   
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="attribute-information"></a>Сведения об атрибутах  
  Для каждого созданного атрибута в сетке создается строка с семью столбцами. В следующей таблице приводятся описания этих столбцов.  
   
-|Столбец|Description|  
+|столбцом|Description|  
 |------------|-----------------|  
 |Состояние|Состояние атрибута.<br /><br /> Когда вы нажимаете "Сохранить", появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление атрибута.<br /><br /> Если при создании или редактировании атрибута произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
 |Имя|Имя атрибута.|  

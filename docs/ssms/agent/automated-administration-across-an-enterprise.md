@@ -3,7 +3,7 @@ title: "Автоматизированное администрирование 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 77867115cb6d169bf7a3c84c8737d54f9657651f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 915518355263cb9977313abf5d2063556dccdd11
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Автоматизация администрирования в масштабах предприятия
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Автоматическое администрирование нескольких экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] называется *администрированием нескольких серверов*. Оно предназначено для выполнения следующих задач.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 > Функции администрирования нескольких серверов предназначены для членов роли sysadmin. Тем не менее член роли sysadmin на целевом сервере не может изменить операции, которые главный сервер выполняет на целевом сервере. Такая мера предосторожности предохраняет шаги задания от случайного удаления, а операции на целевом сервере — от постороннего вмешательства.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Создание многосерверной среды](../../ssms/agent/create-a-multiserver-environment.md)  
 Содержит сведения о создании главного и целевых серверов и управлении ими.  
   

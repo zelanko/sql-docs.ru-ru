@@ -3,7 +3,7 @@ title: "Справка F1 окна свойств (среда Management Studio)
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -30,11 +30,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a2c2c42f9a4e9690d9c9229ec7020e5e94c130ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e53a9ff4593a24820c6ff8f4ab0cb1540ba02a95
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Справка F1 окна свойств (среда Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В окне **Свойства** можно просмотреть свойства выбранных элементов. Кроме того, в окне **Свойства** можно просматривать свойства файла, проекта или решения. Чтобы открыть окно **Свойства** , щелкните **Окно "Свойства"** в меню **Вид** .  

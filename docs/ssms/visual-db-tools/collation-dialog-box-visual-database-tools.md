@@ -3,7 +3,7 @@ title: "Диалоговое окно \"Параметры сортировки\
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a18cb703b8df4ef7017be7be1fe73d39de603940
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc4c9a43c9442bed1c09f259f120b1f54b947013
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Диалоговое окно «Параметры сортировки» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно позволяет указать параметры сортировки для столбца. Параметры сортировки столбца используются во всех операциях, сравнивающих значение столбца с другим столбцом или значением константы. Он также воздействует на некоторые символьные функции, например SUBSTRING или CHARINDEX. Подробный список воздействий параметров сортировки для столбца см. в документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  

@@ -3,7 +3,7 @@ title: "Управление шагами задания | Документац�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -31,11 +31,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 74a603626ff9e2c076abb09eb27ac2416a525b01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6db3f3c828aa0841372bdc8bc8d493235d0bccb2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-job-steps"></a>Управление шагами задания
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Шаг задания — это действие, производимое заданием над базой данных или сервером. Каждое задание должно иметь, по крайней мере, один шаг. Шагами задания могут быть:  
@@ -200,11 +200,11 @@ Set oServer = nothing
   
 Дополнительные сведения о создании шагов заданий, которые выполняют пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion_md.md)] , см. в разделе [Пакеты служб из заданий агента SQL Server](http://msdn.microsoft.com/en-us/ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Раздел**|  
+|**Описание**|**Раздел**|  
 |Описывает создание шага задания с помощью исполняемой программы.|[Создание шага задания «CmdExec»](../../ssms/agent/create-a-cmdexec-job-step.md)|  
 |Описывает, как сбросить разрешения агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Настройка пользователя для создания заданий агента SQL Server и управления заданиями](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)|  
 |Описывает создание шага задания [!INCLUDE[tsql](../../includes/tsql_md.md)] .|[Create a Transact-SQL Job Step](../../ssms/agent/create-a-transact-sql-job-step.md)|  

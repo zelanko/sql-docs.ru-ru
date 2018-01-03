@@ -3,7 +3,7 @@ title: "Веб-браузер среды SQL Server Management Studio | Доку
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f2b2fef9625075583b267404da82567d7a562e21
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b8f75dcd8398205bdf4f9a2a1b553cea06e47174
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-management-studio-web-browser"></a>Веб-браузер среды SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] размещает версию [!INCLUDE[msCoName](../includes/msconame_md.md)] Internet Explorer. Этот веб-браузер позволяет переходить по URL-адресам, а также просматривать разделы справки библиотеки MSDN, не покидая среду [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]. Чтобы открыть веб-браузер, в меню **Вид** выберите пункт **Веб-браузер** , а затем **Показать браузер**.  
   
 ## <a name="see-also"></a>См. также:  
-[Общие элементы интерфейса пользователя](../ssms/general-user-interface-elements.md)  
+[Общие элементы пользовательского интерфейса](../ssms/general-user-interface-elements.md)  
   

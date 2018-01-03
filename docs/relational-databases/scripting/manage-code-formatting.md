@@ -3,9 +3,9 @@ title: "Управление форматированием кода | Доку�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -33,11 +33,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2cb1fae41c5a5eeb3b977d5a7d82ccf496053818
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 969a771a35210ee01b0b6b45cfea4b392b822ae2
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manage-code-formatting"></a>управлять форматированием кода
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В редакторе можно форматировать код с помощью отступов, скрытия текста, URL-адресов и т. д. Можно также выполнять автоматическое форматирование кода с помощью интеллектуальных отступов.  

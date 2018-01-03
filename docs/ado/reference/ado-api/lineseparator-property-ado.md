@@ -3,7 +3,7 @@ title: "Свойство LineSeparator (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6eefc91488558d00a58b8d5f1ff5127ec30a5a23
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 183f0847a6a70ff5191b7fb0755c928448ffa3ba
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lineseparator-property-ado"></a>Свойство LineSeparator (ADO)
 Указывает двоичный символ для использования в качестве разделителя строк в тексте [поток](../../../ado/reference/ado-api/stream-object-ado.md) объектов.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает [LineSeparatorsEnum](../../../ado/reference/ado-api/lineseparatorsenum.md) значение, указывающее знак разделителя строки, используемый в **поток**. Значение по умолчанию — **adCRLF**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **LineSeparator** для интерпретации строк при чтении содержимого текстового **поток**. Строки могут быть пропущены с [SkipLine](../../../ado/reference/ado-api/skipline-method.md) метод.  
   
  **LineSeparator** используется только с текстом **поток** объектов ([тип](../../../ado/reference/ado-api/type-property-ado-stream.md) — **adTypeText**). Это свойство учитывается, если **тип** — **adTypeBinary**.  

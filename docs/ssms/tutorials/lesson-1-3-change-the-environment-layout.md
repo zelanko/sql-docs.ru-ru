@@ -3,7 +3,7 @@ title: "Изменение структуры среды | Документы �
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec585601316887d3968dc70795a09053e54d1868
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: aeb1e5f0f66a98425ab7600636510e82cfdc16c0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-3---change-the-environment-layout"></a>Занятие 1–3. Изменение структуры среды
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Компонентам среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не хватает места на экране. Чтобы увеличить рабочее пространство, можно закрыть, скрыть или переместить компоненты среды [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] . В практических заданиях на этой странице компоненты перемещаются в другое положение.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  Щелкните правой кнопкой мыши заголовок окна обозревателя объектов и обратите внимание на следующие пункты меню:  
   
-    -   Число с плавающей запятой  
+    -   float  
   
     -   Закрепить  
   

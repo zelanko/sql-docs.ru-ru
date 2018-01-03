@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c87bfe2f5342cc9edceb6a472cba8579c09c220
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4688012500c7160b87c38470a482d46d50dfe996
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="curvepolygon"></a>CurvePolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] **CurvePolygon** является топологически закрытой областью, определенной внешним ограничивающим кольцом, а также нулем или более внутренних колец.  
@@ -132,7 +132,7 @@ SELECT @g.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Создание экземпляра типа Geometry с пустым CurvePolygon  
  В этом примере показано, как создать пустой экземпляр **CurvePolygon** :  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
@@ -140,21 +140,21 @@ SET @g = geometry::Parse('CURVEPOLYGON EMPTY');
 ### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>Б. Объявление и создание экземпляра типа Geometry с CurvePolygon в одной и той же инструкции  
  В этом фрагменте кода показывается объявление и инициализация экземпляра типа Geometry с **CurvePolygon** в одной инструкции.  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>В. Создание экземпляра типа Geometry с CurvePolygon  
  На примере следующего фрагмента кода показано объявление и создание экземпляра **geography** с **CurvePolygon**.  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>Г. Сохранение CurvePolygon только с внешним ограничивающим кольцом  
  В этом примере показано сохранение простого круга в экземпляре **CurvePolygon** (для определения круга используется только внешнее ограничивающее кольцо):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -163,7 +163,7 @@ SELECT @g.STArea() AS Area;
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>Д. Сохранение CurvePolygon с внутренними кольцами  
  В этом примере в экземпляре **CurvePolygon** создается бублик (для определения бублика используются как внешнее ограничивающее кольцо, так и внутреннее кольцо):  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -171,7 +171,7 @@ SELECT @g.STArea() AS Area;
   
  В этом примере показано, как при использовании внутренних колец экземпляр **CurvePolygon** может быть допустимым и недопустимым.  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 5, 5 0, 0 -5, -5 0, 0 5), (-2 2, 2 2, 2 -2, -2 -2, -2 2))');  
 IF @g1.STIsValid() = 1  

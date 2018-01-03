@@ -3,7 +3,7 @@ title: "Панель SQL (визуальные инструменты для б�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b5ec778110af1238b0bb703b5ff91c2086097cbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a44627a7853237edd1bfebb3cb576f495535c6d7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-pane-visual-database-tools"></a>Панель SQL (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Панель SQL можно использовать для создания собственных инструкций SQL; можно также создать инструкцию на панели критериев или панели диаграмм, и на панели SQL будут созданы инструкции SQL. После того как запрос построен, панель SQL его автоматически обновляет и меняет его формат для удобства чтения.  

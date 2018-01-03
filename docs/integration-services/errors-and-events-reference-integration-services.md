@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1924900d1e4237f49424808a71f40f61d769b2d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4076635be876b3ad472f6a7ac63500de9349eb4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Справочник по ошибкам и событиям (службы Integration Services)
   Этот раздел документации содержит сведения о некоторых ошибках и событиях, связанных со службами [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Сведения о причинах и способах устранения включены в сообщения об ошибках.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/20/2017
 |SQLISService_273|Указывает, что файл конфигурации не может быть прочитан или недопустим.|  
 |SQLISService_274|Указывает, что параметр реестра, указывающий местонахождение файла конфигурации, не существует или пуст.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../integration-services/integration-services-error-and-message-reference.md)  
   
   

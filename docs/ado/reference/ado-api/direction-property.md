@@ -3,7 +3,7 @@ title: "Свойство Direction | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9400ea130432404da164d563cb0d05abfa3207af
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 115301a55f3da3e9ff4dab4da880b366efeb8143
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="direction-property"></a>Свойство Direction
 Указывает, является ли [параметр](../../../ado/reference/ado-api/parameter-object.md) представляет входного параметра, выходного параметра, входного и выходного параметра, или если параметр имеет значение, возвращаемое хранимой процедуры.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="settings-and-return-values"></a>Параметры и возвращаемые значения  
  Возвращает или задает [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **направление** свойство, чтобы указать, каким образом параметр передается в или из процедуры. **Направление** свойство является чтение и запись; это позволяет для работы с поставщиками, которые не возвращают эти сведения или установить эту информацию, если вы не хотите ADO, чтобы сделать дополнительного обращения к поставщику для получения сведений о параметрах.  
   
  Не все поставщики можно определить направление параметров в хранимых процедур. В этих случаях необходимо установить **направление** свойство перед выполнением запроса.  

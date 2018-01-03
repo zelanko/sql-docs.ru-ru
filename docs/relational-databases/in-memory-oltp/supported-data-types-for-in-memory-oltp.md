@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b959d2dd76d312b64b4a2379a99d04fd5d164aff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1739fcbc11cdf849292e420842b168ba653cea46
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Поддерживаемые типы данных для выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 |-|-|-|  
 |[datetimeoffset (Transact-SQL)](../../t-sql/data-types/datetimeoffset-transact-sql.md)|[geography (Transact-SQL)](../../t-sql/spatial-geography/spatial-types-geography.md)|[geometry (Transact-SQL)](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md)|  
 |[hierarchyid (Transact-SQL)](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[rowversion (Transact-SQL)](../../t-sql/data-types/rowversion-transact-sql.md)|[xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md)|  
-|[sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)|Определяемые пользователем типы|.|  
+|[sql_variant (Transact-SQL)](../../t-sql/data-types/sql-variant-transact-sql.md)|Определяемые пользователем типы|, и делает это по-другому.|  
   
 ## <a name="notable-supported-data-types"></a>Важные поддерживаемые типы данных  
  Большинство типов данных поддерживаются компонентами выполняющейся в памяти OLTP. Обратите внимание на следующие компоненты:  
@@ -68,7 +68,7 @@ ms.lasthandoff: 11/17/2017
 - max_lengthax_length со значением -1 означает столбец большого объекта (LOB).
 
 
-```tsql
+```sql
 SELECT
         OBJECT_NAME(m.object_id) as [table],
         c.name                   as [column],

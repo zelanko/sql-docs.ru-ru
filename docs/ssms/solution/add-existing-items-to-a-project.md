@@ -3,7 +3,7 @@ title: "Добавление существующих элементов в пр
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 56f873817e5ed00c4ea07a3b9ac3dc44e40882f9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: baa79600bb9e617b5275c623e610688209d90c56
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="add-existing-items-to-a-project"></a>Добавление существующих элементов в проект
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Добавление новых элементов в проект с целью расширения функциональности приложений. Существующий элемент может быть запросом или произвольным файлом. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] имеет два типа проектов: проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и проект скрипта служб Analysis Services. Тип проекта определяет типы файлов запросов, которые могут быть добавлены в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql_md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , но нельзя добавить в проект скрипта служб Analysis Services. О том, как связать расширения файлов с типами проектов, см. в разделе [Практическое руководство. Связывание расширения файла с редактором кода](http://msdn.microsoft.com/en-us/193630f4-93de-4950-8f36-68702531f925).  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  В меню **Проект** выберите пункт **Добавить существующий элемент**.  
   
-    **Папка**  
+    **Look in**  
     Определите расположение файлов или папок, которые будут добавлены в проект из этого списка. Для веб-служб XML и веб-приложений ASP.NET файлы размещаются на веб-сервере.  
   
     **Рабочий стол**  

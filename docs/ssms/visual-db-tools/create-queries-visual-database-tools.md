@@ -3,7 +3,7 @@ title: "Создание запросов (визуальные инструме
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44d4501f760e397a9ce6339a9f898f30cbc181fa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c000e41faca9bcc3442cd67695f13d9a33e7366f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-queries-visual-database-tools"></a>Создание запросов (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Запросы позволяют получить данные из таблиц и представлений базы данных. Для создания запросов и работы с ними служит **Конструктор запросов и представлений**, который содержит четыре панели: [панель диаграммы](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), [панель SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), [панель критериев](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)и [панель результатов](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  

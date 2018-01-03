@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 06fa7924c167236056961396e9ae8f811f867be9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 24549110df950d32ef6a1757d7adc58e1bccc1ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="cross-database-queries"></a>Межбазовые запросы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 
 1. Создайте тестовые объекты.  Выполните приведенный ниже код [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
 
-    ```tsql
+    ```sql
 
     USE master;
     GO
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
 
 2.  Попытайтесь выполнить межбазовый запрос. Выполните приведенный ниже код [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
   
-    ```tsql  
+    ```sql  
     INSERT [DestinationDatabase].[dbo].[DestTable_InMem]
     SELECT * FROM [SourceDatabase].[dbo].[SourceTable]
     ```  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 
 3.  Создание типа оптимизированной для памяти таблицы.  Выполните приведенный ниже код [!INCLUDE[tsql](../../includes/tsql-md.md)] в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].
 
-    ```tsql
+    ```sql
     USE DestinationDatabase;
     GO
     
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
     ```
 
 4.  Еще раз попытайтесь выполнить межбазовый запрос.  На этот раз исходные данные сначала будут переданы в табличную переменную, оптимизированную для памяти.  Затем данные из табличной переменной будут переданы в таблицу, оптимизированную для памяти.
-    ```tsql
+    ```sql
     -- Declare table variable utilizing the newly created type - MemoryType
     DECLARE @InMem dbo.MemoryType;
     

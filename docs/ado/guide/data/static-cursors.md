@@ -3,7 +3,7 @@ title: "Статические курсоры | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4442e8fe5464f1eb8c7e79fe4df347ae10959b36
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0347981e324fe8aa80d1707cd8919890c955aec6
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="static-cursors"></a>Статические курсоры
 Статический курсор всегда отображает результирующий набор, в котором он был при первом открытии курсора. В зависимости от реализации, статические курсоры имеют только для чтения или чтения и записи и предоставить прямой и обратной прокрутки. Статический курсор обычно не обнаруживает изменений в членство, порядок и значения из результирующего набора, после открытия курсора. Статические курсоры могут обнаруживать свои собственные обновления, удаления и вставки, несмотря на то, что они не требуются для этого.  

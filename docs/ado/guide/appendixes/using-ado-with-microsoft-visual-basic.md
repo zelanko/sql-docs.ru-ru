@@ -3,7 +3,7 @@ title: "Использование ADO с помощью Microsoft Visual Basic 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef8260be592439a3130afe9af830b8159290f2a2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5f3652eba15968b40a6d8a33902e1ca757275dd8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>Использование ADO с Microsoft Visual Basic и Visual Basic для приложений
 Настройка проекта ADO и написание кода ADO аналогично ли вы использовать Visual Basic или Visual Basic для приложений. Этот раздел описывает, с помощью ADO в Visual Basic и Visual Basic для приложений и отмечает все различия.
@@ -103,7 +103,7 @@ Dim conn1
 Set conn1 = CreateObject("ADODB.Connection") As Object
 ```
 
- Создание экземпляров объектов с **CreateObject** являются позднее связывание, что означает, что они не являются строго типизированными и завершение командной строки отключено. Однако его можно пропустить, ссылающаяся на библиотеку ADO из проекта и позволяет создавать экземпляры определенных версий объектов. Например:
+ Создание экземпляров объектов с **CreateObject** являются позднее связывание, что означает, что они не являются строго типизированными и завершение командной строки отключено. Однако его можно пропустить, ссылающаяся на библиотеку ADO из проекта и позволяет создавать экземпляры определенных версий объектов. Пример:
 
 ```
 Set conn1 = CreateObject("ADODB.Connection.2.0") As Object

@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b0c6e128f6b2213e1a4a2af46281388f7c8a593
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 90bd63c6177591fbc3a92bf88f11f72eca4b2e58
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Создание и управление полнотекстовыми индексами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этом разделе описывается создание и заполнение полнотекстовых индексов, а также управление ими в SQL Server.
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
   
  В следующей таблице перечислены свойства полнотекстового поиска, связанные с индексированными таблицами и столбцами, и относящиеся к ним функции [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-|Свойство|Описание|Функция|  
+|Свойство|Description|Компонент|  
 |--------------|-----------------|--------------|  
 |**FullTextTypeColumn**|TYPE COLUMN в таблице, которая содержит информацию о типе документа столбца.|[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)|  
 |**IsFulltextIndexed**|Указывает, включено ли в столбце полнотекстовое индексирование.|COLUMNPROPERTY|  
@@ -174,7 +174,7 @@ GO
   
 Учтите, что средство полнотекстового поиска может использовать имеющиеся фильтры, которые установлены в операционной системе. Перед использованием фильтров операционной системы, средств разбиения по словам и парадигматических модулей их необходимо загрузить на экземпляр сервера следующим образом.  
   
-```tsql  
+```sql  
 EXEC sp_fulltext_service @action='load_os_resources', @value=1  
 ```  
   

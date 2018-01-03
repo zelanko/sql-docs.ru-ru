@@ -3,7 +3,7 @@ title: "Регистрация пользовательских бизнес-о�
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c121ddf9e271f4dfb67490d77a719267cfa11a3b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 505473d61ef7cc3aeea2067473cd23e3981a2aaa
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registering-a-custom-business-object"></a>Регистрация пользовательских бизнес-объект
 Чтобы успешно запустить пользовательский бизнес-объект (.dll или .exe) через веб-сервер, ProgID бизнес-объект должен быть введен в реестре как описано в этой процедуре. Эта функция служб удаленных рабочих СТОЛОВ защищает безопасности веб-сервера, запустив только санкционированные исполняемые файлы.  

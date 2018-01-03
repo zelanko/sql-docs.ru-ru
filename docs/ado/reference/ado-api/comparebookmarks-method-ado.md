@@ -3,7 +3,7 @@ title: "Метод CompareBookmarks (ADO) | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d29f880d5bc5896efe603153bbfaf8e58b658e4a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e4c3ebb53e34b8e17ae7bc3740bc33d1bfce4fe
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comparebookmarks-method-ado"></a>Метод CompareBookmarks (ADO)
 Сравнивает две закладки и возвращает сведения об их относительных значениях.  
@@ -49,7 +49,7 @@ result = recordset.CompareBookmarks(Bookmark1, Bookmark2)
  *Закладка Bookmark2*  
  Закладка, второй строки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Закладки необходимо применить к тому же [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объекта, или **записей** объекта и его [клон](../../../ado/reference/ado-api/clone-method-ado.md). Не удается сравнить надежно закладки из различных **записей** объектов, даже если они были созданы из одного источника или команды. И не может сравнить закладок для **записей** объект, базовый поставщик не поддерживает сравнение.  
   
  Закладка уникально идентифицирует строки в **записей** объекта. Используйте [закладки](../../../ado/reference/ado-api/bookmark-property-ado.md) свойство текущей строки, чтобы получить его закладки.  

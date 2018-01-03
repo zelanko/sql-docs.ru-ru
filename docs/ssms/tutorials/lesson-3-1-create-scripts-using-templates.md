@@ -3,7 +3,7 @@ title: "Создание скриптов на основе шаблонов | 
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-tutorial
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e042e4083d3e62543cee463e2d8456f162b945aa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 41b8e42e5af6b1fbdd5a094ba4df63938e2dea21
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-1---create-scripts-using-templates"></a>Занятие 3–1. Создание скриптов на основе шаблонов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Среда Майкрософт [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предлагает большое число шаблонов скриптов, содержащих инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)], предназначенные для решения многих типовых задач. Эти шаблоны содержат параметры, значения которых вводятся пользователем, такие как имя таблицы. Используя эти параметры, можно ввести имя только один раз, а затем автоматически скопировать его во все требуемые позиции в скрипте. Можно создавать собственные пользовательские шаблоны для поддержки скриптов, которые приходится писать чаще всего. Кроме того, можно реорганизовать дерево шаблонов, перемещая шаблоны или создавая новые папки для их хранения. В следующей практической работе с помощью шаблона будет создана база данных с указанием шаблона параметров сортировки.  

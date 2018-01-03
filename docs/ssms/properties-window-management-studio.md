@@ -3,7 +3,7 @@ title: "Окно \"Свойства\" (среда Management Studio) | Доку�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f31c5197f6b4767c91c85b042caf418c4c2b2ad7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5e1bd4e6f6201bc9a64e68a7b05722b281abbb0e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="properties-window-management-studio"></a>Окно «Свойства» (среда Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это окно используется для просмотра свойств выбранных элементов. Кроме того, в окне «Свойства» можно просматривать свойства файла, проекта или решения. Чтобы открыть окно «Свойства», щелкните **Окно «Свойства»** в меню **Вид** .  
@@ -44,5 +44,5 @@ ms.lasthandoff: 12/05/2017
 |**Панель описания**|панель описания расположена в нижней части окна «Свойства» и содержит тип и краткое описание текущего свойства. Для включения и отключения описания свойства можно использовать команду **Описание** в контекстном меню.|  
   
 ## <a name="see-also"></a>См. также:  
-[Общие элементы интерфейса пользователя](../ssms/general-user-interface-elements.md)  
+[Общие элементы пользовательского интерфейса](../ssms/general-user-interface-elements.md)  
   

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eab5482b701e990308aeaf1c39c1125b1592787b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 478c9b2d7699e261db6ac02b5600a97ebfcdf29b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="system-settings-master-data-services"></a>Системные параметры (службы Master Data Services)
   Для всех веб-приложений и веб-служб, связанных с базой данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , можно задавать системные настройки.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
 |Параметр диспетчера конфигурации|Системный параметр|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Время ожидания подключения к базе данных**|**DatabaseConnectionTimeOut**|Число секунд, которое база данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] отводит на установление соединения. Если в течение этого времени соединение не установлено, оно отменяется и возвращается ошибка. Значение по умолчанию — **60** секунд (1 минута).|  
+|**Время ожидания подключения к базе данных**|**DatabaseConnectionTimeOut**|Число секунд, которое база данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] отводит на установление соединения. Если в течение этого времени соединение не установлено, оно отменяется и возвращается ошибка. Значение по умолчанию — **60** секунд (1 минута).|  
 |**Время ожидания выполнения команды в базе данных**|**DatabaseCommandTimeOut**|Число секунд, которое база данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] отводит на выполнение команды. Если команда не завершается в течение указанного времени, то она отменяется и возвращается ошибка. Значение по умолчанию — **3600** секунд (60 минут).|  
 |**Время ожидания веб-службы**|**ServerTimeOut**|Число секунд, которое ASP.NET отводит на выполнение запроса страницы [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] . Если запрос не выполняется в течение указанного периода времени, выполнение запроса отменяется и возвращается ошибка. Значение по умолчанию — **120000** секунд (2000 минут).|  
 |**Время ожидания клиента**|**ClientTimeOut**|Период неактивности в секундах, по истечении которого [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] возвращается на домашнюю страницу. Значение по умолчанию — **300** секунд (5 минут).|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
 |Параметр диспетчера конфигурации|Системный параметр|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**Количество элементов в иерархии, задаваемое по умолчанию**|**HierarchyChildNodeLimit**|В функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** определяет максимальное количество элементов, которые отображаются в каждом узле иерархии до появления ссылки **…еще…** (…). Ссылку **…еще…** можно щелкнуть для отображения следующей группы элементов. Значение по умолчанию — **50**.|  
+|**Количество элементов в иерархии, задаваемое по умолчанию**|**HierarchyChildNodeLimit**|В функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **[!INCLUDE[ssMDSmdm](../Token/ssMDSmdm_md.md)]** определяет максимальное количество элементов, которые отображаются в каждом узле иерархии до появления ссылки **…еще…** (…). Ссылку **…еще…** можно щелкнуть для отображения следующей группы элементов. Значение по умолчанию — **50**.|  
 |**Отображать имена в иерархии по умолчанию**|**ShowNamesInHierarchy**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, determines the default setting that is selected when you view hierarchies.<br /><br /> Значение по умолчанию — **Да** или **1**, что задает отображение имени и кода каждого элемента. Измените значение на **Нет** или **2** , чтобы отображать только код.|  
 |**Количество атрибутов на основе домена в списке**|**DBAListRowLimit**|Определяет в функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. Значение по умолчанию — **50**. Если имеется более 50 элементов, вместо этого отображается диалоговое окно с возможностью поиска.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|Определяет функциональной области [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the level of similarity used when using the **Matches** filter criteria. Значение по умолчанию — **0,3**. При выборе значения ближе к **1** возвращаются элементы, более соответствующие указанным критериям. Задайте значение **1** для точного сопоставления.|  

@@ -8,7 +8,7 @@ ms.tgt_pltfrm:
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.topic: article
 helpviewer_keywords: ADO, programming
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: MightyPen
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ce6cdcbf6969f00c42b1fe06f591471a0735e8d0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 01aeb96879bf7822b8dde24a5d7e7605484947f2
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-overview-and-benefits"></a>Общие сведения о ADO и преимущества
 Объекты данных ActiveX (ADO) — это высокого уровня, простой в использовании интерфейс для OLE DB. OLE DB является более низкого уровня, высокопроизводительный интерфейс для различных хранилищ данных. ADO и OLE DB можно работать с реляционных (табличных) и нереляционных (иерархическое или потока) данных.

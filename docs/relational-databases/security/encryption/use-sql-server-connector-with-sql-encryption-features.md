@@ -20,11 +20,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e93230571a231e1746eeff928d894c02fffd57ad
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e25ba8ad35a44088cee720ad626bb1524f3db1c0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>Использование Соединителя SQL Server с компонентами шифрования SQL
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)] Типичные операции шифрования [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с использованием асимметричного ключа, защищенного хранилищем ключей Azure, включают в себя три следующих области.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
   
     -   Дополните вторую часть аргумента `SECRET` **секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
         WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/21/2017
   
      Создайте имя входа [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] и добавьте в него учетные данные из этапа 1. В этом примере [!INCLUDE[tsql](../../../includes/tsql-md.md)] используется тот же ключ, который был импортирован ранее.  
   
-    ```tsql  
+    ```sql  
     USE master;  
     -- Create a SQL Server login associated with the asymmetric key   
     -- for the Database engine to use when it loads a database   
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/21/2017
   
      Ключ DEK будет шифровать файлы данных и журналов в экземпляре базы данных и в свою очередь будет зашифрован с помощью асимметричного ключа хранилища ключей Azure. Ключ DEK можно создать, используя любой поддерживаемый алгоритм [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] или длину ключа.  
   
-    ```tsql  
+    ```sql  
     USE ContosoDatabase;  
     GO  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 11/21/2017
   
 4.  **Включение кэша TDE**  
   
-    ```tsql  
+    ```sql  
     -- Alter the database to enable transparent data encryption.  
     ALTER DATABASE ContosoDatabase   
     SET ENCRYPTION ON;  
@@ -127,7 +127,7 @@ ms.lasthandoff: 11/21/2017
   
      Можно также выполнить приведенный ниже скрипт [!INCLUDE[tsql](../../../includes/tsql-md.md)] . Состояние шифрования 3 указывает на зашифрованную базу данных.  
   
-    ```tsql  
+    ```sql  
     USE MASTER  
     SELECT * FROM sys.asymmetric_keys  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 11/21/2017
   
     -   Дополните вторую часть аргумента `SECRET` **секретом клиента** из части I. В этом примере **секрет клиента** из части I имеет значение `Replace-With-AAD-Client-Secret`. Окончательная строка аргумента `SECRET` будет представлять собой длинную последовательность букв и цифр *без дефисов*.   
   
-        ```tsql  
+        ```sql  
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
@@ -181,7 +181,7 @@ ms.lasthandoff: 11/21/2017
   
      В этом примере используется асимметричный ключ `CONTOSO_KEY_BACKUP` из хранилища ключей, который мог быть импортирован или создан ранее для базы данных master на этапе 5 в части IV.  
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     -- Create a SQL Server login associated with the asymmetric key   
@@ -203,7 +203,7 @@ ms.lasthandoff: 11/21/2017
      
      В следующем примере обратите внимание, что если база данных уже была зашифрована методом TDE и асимметричный ключ `CONTOSO_KEY_BACKUP` отличается от асимметричного ключа TDE, резервная копия будет зашифрована с помощью асимметричного ключа TDE и `CONTOSO_KEY_BACKUP`. Целевому экземпляру [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] потребуется оба ключа для расшифровки резервной копии.
   
-    ```tsql  
+    ```sql  
     USE master;  
   
     BACKUP DATABASE [DATABASE_TO_BACKUP]  
@@ -226,7 +226,7 @@ ms.lasthandoff: 11/21/2017
     
      Пример кода восстановления:  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE [DATABASE_TO_BACKUP]  
     FROM DISK = N'[PATH TO BACKUP FILE]'   
         WITH FILE = 1, NOUNLOAD, REPLACE;  
@@ -243,7 +243,7 @@ ms.lasthandoff: 11/21/2017
   
  В этом примере используется асимметричный ключ `CONTOSO_KEY_COLUMNS` из хранилища ключей, который мог быть импортирован или создан ранее, как описано в этапе 3 раздела 3 статьи [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md). Для использования асимметричного ключа в базе данных `ContosoDatabase` необходимо выполнить инструкцию `CREATE ASYMMETRIC KEY` еще раз, чтобы предоставить базе данных `ContosoDatabase` ссылку на ключ.  
   
-```tsql  
+```sql  
 USE [ContosoDatabase];  
 GO  
   
@@ -286,6 +286,6 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [Этапы настройки расширенного управления ключами с использованием хранилища ключей Azure](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)   
  [Расширенное управление ключами с помощью хранилища ключей Azure](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
  [Включенный параметр конфигурации сервера поставщика расширенного управления ключами](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Соединитель SQL Server, приложение](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
+ [Обслуживание и устранение неполадок соединителя SQL Server](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   

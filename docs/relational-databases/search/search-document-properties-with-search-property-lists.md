@@ -25,11 +25,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: df8aadeeec0588b9ddd851daa97d4f31d493f228
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ade7dbffabb11419e8eeb43f50fa2ecf6d27dc9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Поиск свойств документа с использованием списков свойств поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Ранее содержимое свойств документа нельзя было отличить от содержимого текста документа. Это ограничивало полнотекстовые запросы, позволяя выполнять только поиск во всем документе. Теперь можно настроить полнотекстовый индекс для поддержки поиска по определенным свойствам, например Author и Title, для поддерживаемых типов документов в столбцах двоичных данных **varbinary**, **varbinary(max)** (включая **FILESTREAM**) или **image** . Такая форма поиска называется *поиск свойств*.  
@@ -163,7 +163,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Запрос свойств поиска с ключевым словом CONTAINS  
  Далее представлен базовый синтаксис [CONTAINS](../../t-sql/queries/contains-transact-sql.md) для полнотекстового запроса по свойствам:  
   
-```tsql  
+```sql  
 SELECT column_name FROM table_name  
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  

@@ -3,7 +3,7 @@ title: "Поставщик Microsoft OLE DB для службы Microsoft Active
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c90c411842da3033b0be46330a2d9f2cb421c90b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a31421c2947f376b152826c87d2d01d1e0863da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Поставщик Microsoft OLE DB для службы Microsoft Active Directory
 Поставщик интерфейсы службы Active Directory (ADSI) позволяет ADO для подключения к службам каталогов разнородных через ADSI. Это дает приложения ADO доступ только для чтения в каталоге служб Microsoft Windows NT 4.0 и Microsoft Windows 2000, помимо любой совместимый с LDAP службы каталогов и Novell Directory Services. Сам интерфейс ADSI основан на модель поставщика, чтобы в случае нового обеспечивающий доступ поставщика в другой каталог приложения ADO будет получить к ним доступ без проблем. Поставщик является поставщиком ADSI свободнопоточный и Юникод.  
@@ -68,24 +68,24 @@ ADSDSOObject
 |Значение|Description|  
 |-----------|-----------------|  
 |*Root*|Указывает **ADsPath** объект, из которого следует начинать поиск (то есть корневой поиска).|  
-|*Filter*|Указывает фильтр поиска в формате RFC 1960.|  
+|*Фильтр*|Указывает фильтр поиска в формате RFC 1960.|  
 |*Атрибуты*|Указывает список с разделителями запятыми атрибутов должны быть возвращены.|  
-|*Область действия*|Необязательно. Объект **строка** , указывающий область поиска. Возможен один из следующих вариантов.<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-OneLevel — Поиск только один уровень.<br />-Поддерево — Поиск всего поддерева.|  
+|*Область действия*|Необязательный параметр. Объект **строка** , указывающий область поиска. Возможен один из следующих вариантов.<br /><br /> -Base — Поиск только базового объекта (корень поиска).<br />-OneLevel — Поиск только один уровень.<br />-Поддерево — Поиск всего поддерева.|  
   
- Например:  
+ Пример:  
   
 ```  
 "<LDAP://DC=ArcadiaBay,DC=COM>;(objectClass=*);sn, givenName; subtree"  
 ```  
   
- Поставщик также поддерживает SQL SELECT в тексте команды. Например:  
+ Поставщик также поддерживает SQL SELECT в тексте команды. Пример:  
   
 ```  
 "SELECT title, telephoneNumber From 'LDAP://DC=Microsoft, DC=COM' WHERE   
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Поставщик не поддерживает вызовы хранимых процедур и имена простую таблицу (например, [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) всегда будет иметь свойство **adCmdText**). См. в документации интерфейсы служб Active Directory более полное описание элементов текста команды.  
   
 ## <a name="recordset-behavior"></a>Поведение набора записей  
@@ -107,7 +107,7 @@ objectClass='user' AND objectCategory='Person'"
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|всегда **adOpenStatic**|  
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|всегда **как таковые**|  
 |[КОНЕЦ ФАЙЛА](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|  
+|[Фильтр](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|чтение/запись|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|недоступно|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|чтение/запись|  
@@ -122,13 +122,13 @@ objectClass='user' AND objectCategory='Person'"
   
 |Метод|Доступны?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Нет|  
-|[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Нет|  
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Нет|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|нет|  
+|[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|нет|  
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|нет|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|нет|  
 |[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|Да|  
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|  
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|  
+|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|нет|  
 |[Получение строк](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|  
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|  
@@ -140,8 +140,8 @@ objectClass='user' AND objectCategory='Person'"
 |[Повторный запрос](../../../ado/reference/ado-api/requery-method.md)|Да|  
 |[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Да|  
 |[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|Нет|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Нет|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|нет|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|нет|  
   
  Дополнительные сведения о ADSI и подробной информации о поставщике обратитесь к документации интерфейсы служб Active Directory или посетите ADSI веб-странице.  
   

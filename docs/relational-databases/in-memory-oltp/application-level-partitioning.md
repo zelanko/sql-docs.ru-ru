@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 10623fc1a5c493dc0fd5f03f730bf712f6c3b893
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f27dbf8d8a6deb04fc9f45af51d0a90f694e4ef
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="application-level-partitioning"></a>Секционирование уровня приложения
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Это приложение обрабатывает заказы. Большой объем обработки последних заказов. По старым заказам объем обработки меньше. Последние заказы находятся в оптимизированной для памяти таблице. Старые заказы размещены в таблице на диске. Все заказы с датой после *hotDate* размещены в оптимизированной для памяти таблице. Все заказы до *hotDate* находятся в таблице на диске. Предположим наличие предельной рабочей нагрузки OLTP с большим количеством параллельных транзакций. Это бизнес-правило (последние заказы находятся в оптимизированной для памяти таблице) необходимо обеспечить даже в том случае, когда несколько параллельных транзакций пытаются изменить *hotDate*.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="code-listing"></a>Листинг кода  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
 IF NOT EXISTS(SELECT name FROM sys.databases WHERE name = 'hkTest')  

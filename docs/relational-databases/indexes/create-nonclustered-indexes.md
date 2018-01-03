@@ -23,30 +23,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1deb5bcddde514334b0f8318c0dab221fb91d018
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 490130b298e35c512a7837f97b696376bf05c4d4
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-nonclustered-indexes"></a>Создание некластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Некластеризованные индексы в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] можно создать с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Некластеризованный индекс — это структура индекса, отделенная от данных, хранящихся в таблице, и переупорядочивающая один или несколько выделенных столбцов. Некластеризованные индексы часто ускоряют поиск данных по сравнению с поиском в базовой таблице. Иногда на запросы можно ответить, используя только данные из некластеризованного индекса, либо некластеризованный индекс может указать компоненту [!INCLUDE[ssDE](../../includes/ssde-md.md)] на нужные строки из базовой таблицы. Обычно некластеризованные индексы создаются с целью повышения производительности часто используемых запросов, не входящих в кластеризованный индекс, либо для поиска строк таблицы, не имеющей кластеризованного индекса (которая называется кучей). Можно создать несколько некластеризованных индексов для таблицы или индексированного представления.  
-  
- **В этом разделе**  
-  
--   **Перед началом работы выполните следующие действия.**  
-  
-     [Стандартные реализации](#Implementations)  
-  
-     [Безопасность](#Security)  
-  
--   **Для создания некластеризованного индекса используется:**  
-  
-     [Среда SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -65,9 +51,9 @@ ms.lasthandoff: 11/17/2017
   
      Некластеризованные индексы в представлении могут создаваться только после создания в нем уникального кластеризованного индекса. Дополнительные сведения см. в разделе [Создание индексированных представлений](../../relational-databases/views/create-indexed-views.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -122,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Скопируйте следующий пример в окно запроса и нажмите кнопку **Выполнить**.  
   
-    ```  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     -- Find an existing index named IX_ProductVendor_VendorID and delete it if found.   
@@ -137,6 +123,6 @@ ms.lasthandoff: 11/17/2017
     GO  
     ```  
   
- Дополнительные сведения см. в разделе [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md).  
-  
-  
+## <a name="related-content"></a>См. также  
+[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
+[Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md) 

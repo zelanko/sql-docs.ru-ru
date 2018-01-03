@@ -3,9 +3,9 @@ title: "Поиск в файлах | Документация Майкрософ
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1dfff51fc9ff9be167aee8263ede15e944eb1bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5aea89ee7bcf2410908b9a544fc8cf8134a514b1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-in-files"></a>Найти в файлах
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Вкладка **Найти в файлах** окна "Найти и заменить" позволяет найти определенную строку или выражение в коде, содержащемся в заданном наборе файлов. Обнаруженные совпадения и предпринятые действия перечисляются в окне «Результаты поиска», выбранном в диалоговом окне **Параметры результата**.  

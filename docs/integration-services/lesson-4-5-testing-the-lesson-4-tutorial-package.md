@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e4eb7a17b6a4c71cae84ada9b6cf9a88b326c093
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e16aa094a76f359d65b024fc428f4a2c623700b1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Занятие 4–5. Проверка учебного пакета, созданного на занятии 4
 На стадии выполнения произойдет ошибка поиска соответствия при работе преобразования «Уточняющий запрос» для Currency Key в поврежденном файле Currency_BAD.txt. Так как вывод ошибок преобразования «Уточняющий запрос» для Currency Key настроен на перенаправление строк новому адресату «неудачные обращения», операция не завершится ошибкой, и пакет будет успешно выполнен. Все ошибочные строки будут записаны в файл ErrorOutput.txt.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Откройте файл ErrorOutput.txt в приложении «Блокнот» или другом текстовом редакторе. Порядок столбцов по умолчанию: AverageRate, CurrencyID, CurrencyDate, EndOfDateRate, ErrorCode, ErrorColumn, ErrorDescription.  
   
-    Обратите внимание, что все строки файла содержат несовпадающие значения в столбце CurrencyID, значение столбца ErrorCode равно -1071607778, значение столбца ErrorColumn равно 0 и значение столбца ErrorDescription равно «В результате уточняющего запроса для строки не обнаружено соответствия». Значение столбца ErrorColumn равно 0, поскольку ошибка не является специфической для данного столбца. Это неудавшаяся операция уточняющего запроса. .  
+    Обратите внимание, что все строки файла содержат несовпадающие значения в столбце CurrencyID, значение столбца ErrorCode равно -1071607778, значение столбца ErrorColumn равно 0 и значение столбца ErrorDescription равно «В результате уточняющего запроса для строки не обнаружено соответствия». Значение столбца ErrorColumn равно 0, поскольку ошибка не является специфической для данного столбца. Это неудавшаяся операция уточняющего запроса. , и делает это по-другому.  
   
   
   

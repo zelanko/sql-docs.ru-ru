@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: de12dd7f28eb427429ecc0260ce37707ff0cec99
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: fcc6d1391487c1e56851f485abd709d29634adc6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Целевые объекты для расширенных событий в SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 [Раздел Ring_buffer](#h2_target_ring_buffer) содержит пример использования [XQuery в Transact-SQL](../../xquery/xquery-language-reference-sql-server.md) для копирования строки XML-кода в реляционный набор строк.
 
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>предварительные требования
 
 
 - Общее знакомство с основами расширенных событий, как описано в разделе [Краткое руководство. Расширенные события в SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md).
@@ -122,7 +122,7 @@ sqlserver      checkpoint_begin   4
 Далее идет CREATE EVENT SESSION, который привел к предыдущим результатам. Для этого теста использовалось поле **package0.counter** в предложении EVENT...WHERE, чтобы прекратить подсчета после достижения значения 4.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [event_counter_1]
     ON SERVER 
     ADD EVENT sqlserver.checkpoint_begin   -- Test by issuing CHECKPOINT; statements.
@@ -160,7 +160,7 @@ CREATE EVENT SESSION [event_counter_1]
 Далее идет CREATE EVENT SESSION, который мы использовали для тестирования. Одно из предложений ADD TARGET указывает event_file.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -292,7 +292,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - Для отслеживания более одного исходного действия можно добавить второй целевой объект histogram в инструкцию CREATE EVENT SESSION.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_lockacquired]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -358,7 +358,7 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [histogram_checkpoint_dbid]
     ON SERVER 
     ADD EVENT  sqlserver.checkpoint_begin
@@ -451,7 +451,7 @@ sqlserver   lock_acquired   resource_type            NULL
 Чтобы сократить число результатов, мы сначала использовали инструкцию SELECT для sys.objects, чтобы найти object_id нашей тестовой таблицы. Мы добавили фильтр для этого идентификатора в предложение EVENT...WHERE.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [pair_matching_lock_a_r_33]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -555,7 +555,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 В этой инструкции CREATE EVENT SESSION, которая использует целевой объект ring_buffer, нет ничего особенного.
 
 
-```tsql
+```sql
 CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
     ON SERVER 
     ADD EVENT sqlserver.lock_acquired
@@ -668,7 +668,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 Чтобы просмотреть предыдущий XML-код, вы можете использовать приведенную ниже инструкцию SELECT, пока активен сеанс событий. Активные XML-данные извлекаются из системного представления **sys.dm_xe_session_targets**.
 
 
-```tsql
+```sql
 SELECT
         CAST(LocksAcquired.TargetXml AS XML)  AS RBufXml,
     INTO
@@ -700,7 +700,7 @@ SELECT * FROM #XmlAsTable;
 Чтобы просмотреть предыдущий XML-кода в виде реляционного набора строк, после указанной выше инструкции SELECT выполните приведенный ниже код T-SQL. Каждое использование XQuery поясняется с помощью закомментированных строк.
 
 
-```tsql
+```sql
 SELECT
          -- (A)
          ObjectLocks.value('(@timestamp)[1]',

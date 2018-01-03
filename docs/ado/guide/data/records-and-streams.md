@@ -3,7 +3,7 @@ title: "Записи и потоки | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cfe5f8e48eb88233949102e988f3a2296cf373b4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3b449e3fb216703d41ab67d3a4be6e55234adc1b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="records-and-streams"></a>Записи и потоки
 В настоящее время предоставляют ADO [записей](../../../ado/reference/ado-api/recordset-object-ado.md) объект в качестве основного средства доступа к данным в источниках данных, таких как реляционные базы данных. Тем не менее, некоторые поставщики поддерживают [запись](../../../ado/reference/ado-api/record-object-ado.md) и [поток](../../../ado/reference/ado-api/stream-object-ado.md) объектов в качестве альтернативного или дополнительных объектов, с помощью которых можно управлять данных от поставщиков. Подробности о режимах **записи** поведение, см. в документации поставщика.  

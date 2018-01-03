@@ -5,7 +5,7 @@ ms.date: 01/10/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1ae6560cbdb884fa8009ab33c248f1de426c9c89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 30c30eac6d8651886a37f9895c39ab9cfc782903
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transactions-master-data-services"></a>Транзакции (службы Master Data Services)
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  Вы можете настроить длительность хранения данных журнала транзакций. Для этого необходимо определить свойство **Срок хранения журнала, дн.** в системных параметрах базы данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , а также задать значение **Хранение журнала в днях** при создании или изменении модели. Дополнительные сведения см. в разделах [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md) и [Создание модели (службы Master Data Services)](../master-data-services/create-a-model-master-data-services.md).  
   
- MDS_MDM_Sample_Log_Maintenace, задание агента SQL Server, запускает очистку журналов транзакций и выполняется каждую ночь. Для изменения расписания для этого задания можно использовать агент SQL Server.  
+ MDS_MDM_Sample_Log_Maintenace, задание агента SQL Server, инициирует очистку журналов транзакций и запускается каждую ночь. Для изменения расписания для этого задания можно использовать агент SQL Server.  
   
  Кроме того, для очистки журналов транзакций можно вызвать следующие хранимые процедуры.  
   
@@ -80,7 +80,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
 ```  
   
 ## <a name="system-settings"></a>Системные настройки  
- В программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] имеется параметр, который определяет, записываются ли транзакции для промежуточных записей. Этот параметр можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
+ В программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] имеется параметр, который определяет, записываются ли транзакции для промежуточных записей. Этот параметр можно настроить в программе [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] или непосредственно в таблице системных параметров в базе данных [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Дополнительные сведения см. в разделе [Системные параметры (службы Master Data Services)](../master-data-services/system-settings-master-data-services.md).  
   
  При импорте данных из этой версии [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] можно указать, следует ли вести журнал транзакций при инициировании хранимых процедур. Дополнительные сведения см. в разделе [Промежуточная хранимая процедура (службы Master Data Services)](../master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -89,7 +89,7 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
  Несколько пользователей могут обновлять одно значение сущности без ошибок несмотря на то, что транзакции включены. Обычно приоритет получает изменение, которое по времени было внесено последним. Администратор может просмотреть конфликты, возникающие при одновременном внесении нескольких одинаковых изменений, в журнале транзакций и вручную разрешить их. В журнале транзакций отображаются отдельные транзакции для **предыдущего значения** и **нового значения** для рассматриваемого атрибута из каждого сеанса, однако конфликты, возникающие, если для одного старого значения существуют несколько **новых значений** , автоматически не разрешаются.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

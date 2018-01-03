@@ -18,18 +18,18 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 05ac029c0e4ef807a5d6586882f7655753d1bfbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 982594dc9a0f3ec83dcecef9738b2d4cda1fad83
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="polybase-installation"></a>Установка PolyBase
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Чтобы установить пробную версию SQL Server, перейдите на страницу [ознакомительных версий SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016). 
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
   
 -   64-разрядный выпуск ознакомительной версии SQL Server;  
   
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 -   минимальный объем памяти: 4 ГБ;  
   
--   Минимальное свободное место на жестком диске: 2 ГБ.  
+-   минимальное свободное место на жестком диске: 2 ГБ.  
   
 -   Для корректной работы Polybase должен быть включен протокол TCP/IP. TCP/IP включен по умолчанию во всех выпусках SQL Server, кроме Developer и Express. Для корректной работы Polybase в выпусках Developer и Express нужно включить подключение по TCP/IP. См. раздел [Enable or Disable a Server Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) (Включение и отключение сетевого протокола сервера).
   
@@ -116,7 +116,7 @@ Setup.exe /Q /ACTION=INSTALL /IACCEPTSQLSERVERLICENSETERMS /FEATURES=SQLEngine,P
 ### <a name="how-to-confirm-installation"></a>Подтверждение установки  
  Выполните следующую команду. Если служба PolyBase установлена, она возвращает значение 1, а если нет — значение 0.  
   
-```tsql  
+```sql  
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   

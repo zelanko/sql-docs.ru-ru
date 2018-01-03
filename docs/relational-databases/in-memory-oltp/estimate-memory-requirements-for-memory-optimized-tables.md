@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f8eb8029f9824ceaeee061fc829a89d0054e1244
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1cb0435fd5e28952f71cc23ce61af4a3635f06cf
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Оценка требований к объему памяти для таблиц, оптимизированных для памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
 
 Рассмотрим следующую схему таблицы, оптимизированной для памяти:
   
-```tsql  
+```sql  
 CREATE TABLE t_hk
 (  
   col1 int NOT NULL  PRIMARY KEY NONCLUSTERED,  
@@ -116,21 +116,21 @@ GO
   
 В хэш-индексах скорость поиска совпадений очень высока:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 = 3;
 ```  
   
 Некластеризованные индексы будут быстрее при поиске диапазона, например:  
   
-```tsql  
+```sql  
 SELECT * FROM t_hk  
    WHERE Col2 >= 3;
 ```  
   
 При переносе дисковой таблицы можно использовать следующий критерий для определения количества уникальных значений в индексе t1c2_index.  
   
-```tsql
+```sql
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk;
 ```  
@@ -166,7 +166,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Некластеризованные индексы наилучшим образом подходят для поиска по диапазону, как показано в примере следующего запроса:  
   
-```tsql  
+```sql  
 SELECT * FRON t_hk  
    WHERE c2 > 5;  
 ```  

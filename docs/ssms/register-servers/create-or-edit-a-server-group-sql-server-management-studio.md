@@ -3,7 +3,7 @@ title: "Создание и изменение группы серверов (SQ
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7e91da011789c674e8169a3ef3eb68630ac2b111
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b2bb7c1950d3a8dd84b6c5445bc48bf1ab104887
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-or-edit-a-server-group-sql-server-management-studio"></a>Создание или изменение группы серверов (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается организация серверов в компоненте "Зарегистрированные серверы" в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] путем создания групп серверов и помещения серверов в эти группы. Группы серверов в зарегистрированных серверах можно создавать в любое время, либо делать это при их регистрации.  

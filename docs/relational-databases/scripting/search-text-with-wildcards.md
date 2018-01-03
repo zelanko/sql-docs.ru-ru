@@ -3,9 +3,9 @@ title: "Поиск текста с использованием подстано
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 97576c021e902fb460181124cbf21c24833cf7bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 538191055aedb1c2caebe062d3227742a4e12e9c
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="search-text-with-wildcards"></a>Поиск текста с символами-шаблонами
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] С помощью приведенных ниже выражений можно заменять символы либо цифры в поле **Найти** в диалоговом окне **Найти и заменить** среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  Следующая таблица содержит описание шаблонов, доступных через **Список подстановки**.  
   
-|Выражение|Синтаксис|Описание|  
+|Выражение|Синтаксис|Description|  
 |----------------|------------|-----------------|  
 |Любой отдельный символ|?|Соответствует любому отдельному символу.|  
 |Любая отдельная цифра|#|Соответствует любой отдельной цифре. Например, выражение 7# соответствует числам, начинающимся с 7 и содержащим еще одну цифру, например 71, но не 17.|  

@@ -3,7 +3,7 @@ title: "Импорт сведений о зарегистрированном с
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 587534b225f8b789a4a3b395b2af1bd0795b9653
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d75220973fbab5056572a899be93f24dde9f82d4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Импорт сведений о зарегистрированном сервере (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается, как импортировать сохраненные сведения о зарегистрированных серверах в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Экспорт и импорт файлов зарегистрированных серверов позволяет легко настроить для нескольких компьютеров одинаковые зарегистрированные серверы. Это удобно при управлении большим количеством серверов с компьютеров, расположенных в различных местах, или если требуется сконфигурировать базовые настройки соединения для менее опытных пользователей.  

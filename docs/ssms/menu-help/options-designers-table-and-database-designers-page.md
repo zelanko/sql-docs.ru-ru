@@ -3,7 +3,7 @@ title: "Параметры (\"Конструкторы\" — \"Конструк
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-menu
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b938451572de3aebe5176b6b4a6d8973614dd4ca
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c50b196a7344946fd25384b16210750f81eb8d1a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="options-designers---table-and-database-designers-page"></a>Параметры ("Конструкторы" — страница "Конструкторы таблиц и баз данных")
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] На этой странице можно определить поведение конструктора по умолчанию. Для доступа к параметрам в меню **Сервис** выберите **Параметры**, откройте папку **Конструкторы** и щелкните **Конструктор таблиц**.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
 **Представление таблицы по умолчанию**  
 Выбор способа отображения таблиц в конструкторах.  
   
--   **Standard Edition**  
+-   **Standard Edition Edition**  
   
     Отображается заголовок таблицы, имена всех столбцов, типы данных и установка разрешения значений NULL.  
   

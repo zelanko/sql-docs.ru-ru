@@ -7,7 +7,7 @@ ms.suite: sql
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: "“drivers”"
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b25081133a9af071fbd0dfb2ee98344c60d3d35a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3bbb3a9345c969d5d5bc038f31f7f7bc0b731c40
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="referencing-the-ado-libraries-in-a-visual-c-application"></a>Ссылающееся на библиотеки ADO в приложении Visual C++
 Чтобы использовать последнюю версию ADO в приложении Visual C++, используйте следующую `#import` директиву:  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
  Чтобы использовать ADO MD или ADOX, необходимо импортировать *msadomd.dll* или *msadox.dll*, с помощью синтаксиса выше.  
   
-## <a name="backward-compatibility"></a>Обратная совместимость  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  Чтобы использовать все более ранние версии ADO, замените *msado15.dll* выше с одним из следующих библиотек типов.  
   
 -   *msado27.tlb*, библиотека 2.7 тип ADO  

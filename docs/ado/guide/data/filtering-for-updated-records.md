@@ -3,7 +3,7 @@ title: "Фильтрация для обновления записей | Док
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 29539dfd62901a2db41e3d282f615a5ce550cb84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37ad79ea1018a2e272cb9071bde61176ddf6348e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filtering-for-updated-records"></a>Фильтрация для обновленных записей
 Перед вызовом метода UpdateBatch, можно использовать свойство фильтра набора записей для просмотра только те записи, которые были изменены с момента открытия набора записей или последнего вызова UpdateBatch. Чтобы сделать это, задайте в фильтр adFilterPendingRecords, чтобы определить, сколько записей будет обновлено, как показано в примере кода в следующем разделе.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В этом примере в предыдущем примере UpdateBatch расширяет путем фильтрации набора записей, только в том случае, перед вызовом UpdateBatch, показывающая пользователя приведет к изменению записей и позволяя ему отменить обновление (с помощью метода CancelBatch).  
   
 ```  

@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b49994a3167ad8639b537279085e16ef2c7ccb1a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d42b86732e2f752646ef7d71d61f037b8e66407
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>Отслеживание производительности скомпилированных в собственном коде хранимых процедур
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] В этом разделе показано, как наблюдать за производительностью хранимых процедур, скомпилированных в собственном коде  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
   
  **line_number**вместе с **object_id** в расширенном событии можно использовать для анализа запросов. Следующий запрос может использоваться для получения определения процедуры. Номер строки можно использовать для поиска запроса в определении.  
   
-```tsql  
+```sql  
 select [definition] from sys.sql_modules where object_id=object_id  
 ```  
   
@@ -55,7 +55,7 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  После сбора статистики следующий запрос возвращает имена и статистику выполнения скомпилированных в собственном коде хранимых процедур в текущей базе данных.  
   
-```tsql  
+```sql  
 select object_id,  
        object_name(object_id) as 'object name',  
        cached_time,  
@@ -77,7 +77,7 @@ order by total_worker_time desc
   
  Следующий запрос возвращает текст запроса, а также статистику выполнения всех запросов из скомпилированных в собственном коде хранимых процедур в текущей базе данных, для которой были собраны статистические данные. Статистика при этом упорядочивается по общему времени рабочей роли в убывающем порядке.  
   
-```tsql  
+```sql  
 select st.objectid,   
        object_name(st.objectid) as 'object name',   
        SUBSTRING(st.text, (qs.statement_start_offset/2) + 1, ((qs.statement_end_offset-qs.statement_start_offset)/2) + 1) as 'query text',   
@@ -106,7 +106,7 @@ order by qs.total_worker_time desc
   
  Для получения Showplan XML выполняется следующая инструкция [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC my_proc   

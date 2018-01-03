@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 34b63ac7f650bdc3e333bb50a19021a48c65dee1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ef0146839adf62839b6f319df6407a4afad8e1f8
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-custom-collection-set---generic-t-sql-query-collector-type"></a>Создание пользовательского набора элементов сбора — тип сборщика "Универсальный запрос T-SQL"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Можно создать пользовательский набор с элементами сбора, которые будут использовать тип сборщика "Универсальный запрос T-SQL" с помощью хранимых процедур, поставляемых вместе со сборщиком данных. Эта задача решается с помощью редактора запросов в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для выполнения следующих процедур.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Поскольку новый элемент сбора создан на базе универсального типа сборщика, который уже установлен, можно выполнить следующий код, чтобы изменить его идентификатор GUID для соответствия типу «Универсальный сборщик запросов T-SQL».  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid uniqueidentifier;  
     SELECT @collector_type_uid = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
     WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  С помощью хранимой процедуры sp_syscollector_create_collection_item создайте элемент сбора. Объявите схему для элемента сбора, чтобы он был сопоставлен со схемой, необходимой для типа сборщика «Универсальный запрос T-SQL».  
   
-    ```tsql  
+    ```sql  
     EXEC sp_syscollector_create_collection_item   
         @name=N'Query Stats - Test 1',   
         @parameters=N'  
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  Перед запуском нового набора сбора запустите следующий запрос, чтобы убедиться, что новый набор сбора и его элемент сбора были созданы:  
   
-    ```tsql  
+    ```sql  
     USE msdb;  
     SELECT * FROM syscollector_collection_sets;  
     SELECT * FROM syscollector_collection_items;  
@@ -126,7 +126,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="example"></a>Пример  
  В следующем образце кода объединены примеры, приведенные в предыдущих шагах. Обратите внимание, что частота сбора, установленная для данного элемента сбора (5 секунд), не учитывается, поскольку для набора сбора установлен режим сбора 0, то есть режим с кэшированием. Дополнительные сведения см. в разделе [Data Collection](../../relational-databases/data-collection/data-collection.md).  
   
-```tsql  
+```sql  
 USE msdb;  
   
 DECLARE @collection_set_id int;  

@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 96194edec70f67e9db45265de11d735e09fead30
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 46add077a9b90353ba41f18fe5c4dd15082e7c0c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-adding-looping-with-ssis"></a>Занятие 2. Добавление циклов с помощью служб SSIS
 При работе над разделом [Занятие 1. Создание проекта и основного пакета с помощью служб SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)был создан пакет, в котором данные извлекались из отдельного источника неструктурированного файла, преобразовывались с помощью преобразований "Уточняющий запрос" и затем загружались в таблицу фактов **FactCurrency** образца базы данных **AdventureWorksDW2012** .  

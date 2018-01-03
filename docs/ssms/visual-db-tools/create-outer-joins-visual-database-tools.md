@@ -3,7 +3,7 @@ title: "Создание внешних соединений (визуальны
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-visual-db
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ccbda35c56aaa7aeb221ff3f0c7527b0389eebe8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5847977926b80ef1cf98172b7b59c3e8a0a1c02
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Создание внешних соединений (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] По умолчанию [Конструктор запросов и представлений](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) создает внутреннее соединение таблиц. Внутренние соединения исключают строки, не соответствующие строке из другой таблицы. Однако внешние соединения возвращают все строки хотя бы из одной таблицы или представления, упомянутых в предложении FROM, если эти строки удовлетворяют условиям поиска WHERE или HAVING. Если необходимо включить строки данных, которые не имеют совпадений в соединяемой таблице, в результирующий набор, можно создать внешнее соединение.  

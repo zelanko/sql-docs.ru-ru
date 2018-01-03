@@ -3,7 +3,7 @@ title: "Использование пользовательских отчето
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-objects
 ms.reviewer: 
@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dd4e8e45cb6002d2ede2a7ac487f9408b13e8685
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc21ac20f60dfbe503779d4ad41c47d99068259f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Использование пользовательских отчетов совместно со свойствами узлов обозревателя объектов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Пользовательские отчеты могут выполняться в контексте выбранного узла обозревателя объектов, если они ссылаются на параметры отчета этого узла. Это позволяет пользовательскому отчету использовать текущий контекст, например текущей базы данных либо объекта базы данных или сервера.  
@@ -32,11 +32,11 @@ ms.lasthandoff: 12/05/2017
 |Имя параметра|Тип данных|  
 |------------------|-------------|  
 |**ObjectName**|**Строковые значения**|  
-|**ObjectTypeName**|**Строковые значения**|  
+|**ObjectTypeName**|**String**|  
 |**Фильтруемый**|**Логическое значение**|  
-|**ServerName**|**Строковые значения**|  
-|**FontName**|**Строковые значения**|  
-|**DatabaseName**|**Строковые значения**|  
+|**ServerName**|**String**|  
+|**FontName**|**String**|  
+|**DatabaseName**|**String**|  
   
 ## <a name="object-explorer-node-report-parameters-example"></a>Пример параметров отчета узла обозревателя объектов  
 Пример запускается с помощью следующей процедуры.  
@@ -536,5 +536,5 @@ ms.lasthandoff: 12/05/2017
 ## <a name="see-also"></a>См. также:  
 [Пользовательские отчеты в среде Management Studio](../../ssms/object/custom-reports-in-management-studio.md)  
 [Добавление пользовательского отчета в среду Management Studio](../../ssms/object/add-a-custom-report-to-management-studio.md)  
-[Отмена подавления предупреждений для пользовательских отчетов](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
+[Отмена скрытия предупреждений для пользовательских отчетов](../../ssms/object/unsuppress-run-custom-report-warnings.md)  
   

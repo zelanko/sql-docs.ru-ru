@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ebca47eee84b4e48edc5164fa6a66670a84e3fee
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e9f4dcd81deb9f16e21cd1b63df80cebb25a53ca
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Руководство по обработке запросов для таблиц, оптимизированных для памяти
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Мы рассмотрим две таблицы, Customer и Order. Следующий скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] содержит определения для этих двух таблиц и связанных индексов (в их традиционной форме для таблиц на диске):  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY,  
   ContactName nvarchar (30) NOT NULL   
@@ -72,7 +72,7 @@ GO
   
  Рассмотрим следующий запрос, который выполняет соединение таблиц Customer и Order и возвращает идентификатор заказа и связанную с ним информацию о клиенте:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -91,7 +91,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Рассмотрим немного другую версию этого запроса, которая возвращает все строки из таблицы Order, а не только OrderID.  
   
-```tsql  
+```sql  
 SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -144,7 +144,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Следующий скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)] содержит оптимизированные для памяти версии таблиц Order и Customer, использующих хэш-индексы:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.[Customer] (  
   CustomerID nchar (5) NOT NULL PRIMARY KEY NONCLUSTERED,  
   ContactName nvarchar (30) NOT NULL   
@@ -161,7 +161,7 @@ GO
   
  Тот же запрос, выполненный к таблицам, оптимизированным для памяти:  
   
-```tsql  
+```sql  
 SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID = o.CustomerID  
 ```  
   
@@ -180,10 +180,10 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   Этот план содержит оператор **Hash Match** , а не **Merge Join**. Индексы в таблицах Order и Customer представляют собой хэш-индексы и, следовательно, не упорядочены. Оператор **Merge Join** потребовал бы добавления операторов сортировки, которые вызвали бы снижение производительности запроса.  
   
-## <a name="natively-compiled-stored-procedures"></a>Скомпилированные в собственном коде хранимые процедуры  
+## <a name="natively-compiled-stored-procedures"></a>скомпилированные в собственном коде хранимые процедуры  
  Скомпилированные в собственном коде хранимые процедуры — это хранимые процедуры [!INCLUDE[tsql](../../includes/tsql-md.md)] , скомпилированные в машинный код, а не интерпретируемые подсистемой выполнения запросов. Следующий скрипт создает скомпилированную в собственном коде хранимую процедуру, которая выполняет пример запроса (из раздела «Пример запроса»).  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_SampleJoin  
 WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
 AS BEGIN ATOMIC WITH   
@@ -247,9 +247,9 @@ END
  Пробное сохранение параметров не используется для компиляции хранимых процедур, скомпилированных в собственном коде. Предполагается, что у всех параметров хранимой процедуры значения UNKNOWN (неизвестны). Как и интерпретируемые хранимые процедуры, скомпилированные в собственном коде хранимые процедуры также поддерживают указание **OPTIMIZE FOR** . Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Получение плана выполнения запроса для скомпилированных в собственном коде хранимых процедур  
- План выполнения запроса для скомпилированной в собственном коде хранимой процедуры можно получить с помощью **предполагаемого плана выполнения** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]или с помощью параметра SHOWPLAN_XML в [!INCLUDE[tsql](../../includes/tsql-md.md)]. Например:  
+ План выполнения запроса для скомпилированной в собственном коде хранимой процедуры можно получить с помощью **предполагаемого плана выполнения** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]или с помощью параметра SHOWPLAN_XML в [!INCLUDE[tsql](../../includes/tsql-md.md)]. Пример:  
   
-```tsql  
+```sql  
 SET SHOWPLAN_XML ON  
 GO  
 EXEC dbo.usp_myproc  
@@ -268,11 +268,11 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`||  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`||  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`||  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
+|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`||  
 |Compute Scalar|`SELECT OrderID+1 FROM dbo.[Order]`|Этот оператор используется как для встроенных функций, так и для преобразований типов. Не все функции и преобразования типов поддерживаются в хранимых процедурах, скомпилированных в собственном коде.|  
 |Соединение вложенными циклами|`SELECT o.OrderID, c.CustomerID FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|Nested Loops — единственный оператор соединения, который поддерживается в хранимых процедурах, скомпилированных в собственном коде. Все планы, которые содержат соединения, будут использовать оператор Nested Loops, даже если план одного и того же запроса, выполненного как интерпретируемый код [!INCLUDE[tsql](../../includes/tsql-md.md)] , содержит хэш-соединение или соединение слиянием.|  
-|Сортировка|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
-|В начало|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
+|Sort|`SELECT ContactName FROM dbo.Customer ORDER BY ContactName`||  
+|TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`||  
 |Оператор Top-sort|`SELECT TOP 10 ContactName FROM dbo.Customer  ORDER BY ContactName`|Выражение **TOP** (количество возвращаемых строк) не может превышать 8000 строк. Если в запросе есть операторы объединения и агрегирования, то строк должно быть еще меньше. Соединения и агрегатные выражения обычно уменьшают количество строк для сортировки в сравнении с количеством строк в базовых таблицах.|  
 |Статистическое выражение потока|`SELECT count(CustomerID) FROM dbo.Customer`|Обратите внимание, что оператор Hash Match для статической обработки не поддерживается. Поэтому все агрегаты в скомпилированных в собственном коде хранимых процедурах используют оператор Stream Aggregate, даже если план для этого же запроса в интерпретируемом [!INCLUDE[tsql](../../includes/tsql-md.md)] использует оператор Hash Match.|  
   

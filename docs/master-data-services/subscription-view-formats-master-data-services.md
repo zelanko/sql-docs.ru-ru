@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,18 +17,18 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91f9472c80cc592181618bd218ee03199334e9d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7a29f3f006af3376c430b99de312474283905ed9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Форматы представления подписки (Master Data Services)
   На основании выбранной сущности или производной иерархии для представления подписки будут доступны следующие форматы.  
   
 ## <a name="subscription-view-formats"></a>Форматы представлений подписки  
   
-|Название|Description|  
+|Имя|Description|  
 |----------|-----------------|  
 |**Конечные элементы**|Содержит конечные элементы и значения связанных с ними атрибутов.|  
 |**Журнал конечных элементов**|Содержит данные журнала о конечных элементах и значениях связанных с ними атрибутов. Формат представления соответствует стилю медленно изменяющегося измерения типа 4.|  

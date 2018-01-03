@@ -3,7 +3,7 @@ title: "Создание заданий | Документация Майкро�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-agent
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: fcabe7c6d56c8e888ae1f5563f0d20a5cbfe7485
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b8a6a9fdae56ee2c0c73966e44182dafbceb5f9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-jobs"></a>Создание заданий
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Задание — это определенная цепочка действий, последовательно выполняемых агентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Задание может выполнять широкий диапазон действий, например запуск скриптов [!INCLUDE[tsql](../../includes/tsql_md.md)] , приложений командной строки, скриптов Microsoft ActiveX, пакетов Integration Services, команд и запросов Analysis Services и задач репликации. Задания могут запускать повторяющиеся или запланированные задачи, они могут автоматически уведомлять пользователей о состоянии задания, формируя предупреждения и тем самым значительно упрощают администрирование [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .  
@@ -35,11 +35,11 @@ ms.lasthandoff: 12/05/2017
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент записывает сведения о задании и шагах задания в журнал заданий.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Description**|**Раздел**|  
+|**Описание**|**Раздел**|  
 |Описывает создание задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Создание задания](../../ssms/agent/create-a-job.md)|  
 |Описывает переназначение владения заданиями агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] другому пользователю.|[Give Others Ownership of a Job](../../ssms/agent/give-others-ownership-of-a-job.md)|  
 |Описывает настройку журнала заданий агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] .|[Set Up the Job History Log](../../ssms/agent/set-up-the-job-history-log.md)|  

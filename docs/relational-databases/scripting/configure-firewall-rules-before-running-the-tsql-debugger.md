@@ -3,9 +3,9 @@ title: "Настройка правил брандмауэра перед зап
 ms.custom: 
 ms.date: 10/20/2016
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -28,11 +28,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 072d92452d554a439ab05010d62f5fcf624f2c4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74c2f422427764fce597607afdd9a259b11544a1
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>Настройка правил брандмауэра перед запуском отладчика TSQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Необходимо настроить правила брандмауэра Windows, включив отладку [!INCLUDE[tsql](../../includes/tsql-md.md)] при подключении к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], который работает на компьютере, отличном от того, на котором работает редактор запросов [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

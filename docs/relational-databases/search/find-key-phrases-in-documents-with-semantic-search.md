@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1cfefe5ecccd92c1db4c10120c206ed0bb4255d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9ec9e75c2d54ee40946ed70d0ab293bb8881f28b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Поиск ключевых фраз в документах с использованием семантического поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Описывает способ поиска ключевых фраз в документах или текстовых столбцах, для которых настроено статистическое семантическое индексирование.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="HowToTopPhrases"></a> Пример 1. Поиск наиболее важных ключевых фраз в определенном документе  
  В следующем примере извлекаются 10 первых ключевых фраз из документа, указанного в переменной @DocumentId в столбце Document таблицы Production.Document в тестовой базе данных AdventureWorks. Переменная @DocumentId представляет значение из ключевого столбца полнотекстового индекса.  
   
-```tsql  
+```sql  
 SELECT TOP(10) KEYP_TBL.keyphrase  
 FROM SEMANTICKEYPHRASETABLE  
     (  
@@ -60,7 +60,7 @@ GO
 ###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
  В следующем примере извлекаются 25 первых документов, содержащих ключевую фразу «Bracket» в столбце «Document» таблицы Production.Document образца базы данных AdventureWorks.  
   
-```tsql  
+```sql  
 SELECT TOP (25) DOC_TBL.DocumentID, DOC_TBL.DocumentSummary  
 FROM Production.Document AS DOC_TBL  
     INNER JOIN SEMANTICKEYPHRASETABLE  

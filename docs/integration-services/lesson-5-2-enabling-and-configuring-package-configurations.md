@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 333379e7f96322ae8212625a0f42a1018a189dd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593c18478ee73b66d0f8402885324615615d0fcf
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Занятие 5–2. Активация и настройка конфигураций пакетов
 В этой задаче вы преобразуете проект в модель развертывания пакета и включите конфигурации пакетов с помощью мастера настройки пакета. Этот мастер будет использоваться для создания файла конфигурации в формате XML, который содержит параметры конфигурации для свойства **Directory** контейнера "цикл по каждому элементу". Значение свойства Directory содержится в новой переменной уровня пакета, обновление которой можно осуществлять в процессе выполнения. Кроме того, будет заполнена новая папка с образцами данных для использования при проверке.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Нажмите кнопку **ОК** в окне предупреждения и после завершения преобразования нажмите кнопку **ОК** в диалоговом окне **Преобразование в модель развертывания пакета** .  
   
-3.  Щелкните фон вкладки **Поток управления** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
+3.  Щелкните фон вкладки **Поток управления** в конструкторе служб [!INCLUDE[ssIS](../includes/ssis-md.md)].  
   
 4.  В меню **Службы SSIS** выберите команду **Конфигурации пакетов**.  
   

@@ -3,7 +3,7 @@ title: "Параметры события | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 750def3dc0a8f2938bcdf7adb6c3a8935da5dda1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e0d73ed8eda955b5b027b662e3e5c80c50730b7f
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-parameters"></a>Параметры события
 Каждый обработчик событий имеет состояние параметр, управляющий обработчик события. Для завершения событий этот параметр используется для указания на успешное или неуспешное выполнение операции, который создал событие. Наиболее полная события также имеют параметр ошибки для предоставления сведений о любой ошибки, возможно, произошло и один или несколько параметров объекта, которые ссылаются на объекты ADO, используемые для выполнения операции. Например [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) событий включает параметры объекта **команда**, **записей**, и **подключения** объектов связанный с событием. В следующем примере Microsoft Visual Basic®, можно увидеть командной, pRecordset и pConnection объекты, представляющие **команда**, **записей**, и **подключения** объекты, которые используются в **Execute** метод.  

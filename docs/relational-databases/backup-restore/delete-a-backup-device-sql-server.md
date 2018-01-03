@@ -23,20 +23,20 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2a398b2c48aa61d877d4dece9380289022998bd4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5bfc3a48c13e08702d7d06f1e6ee2cd95a92be6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="delete-a-backup-device-sql-server"></a>Удаление устройства резервного копирования (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается, как удалить устройство резервного копирования в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Удаление устройства резервного копирования с помощью:**  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требует членства в предопределенной роли сервера **diskadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Скопируйте следующий пример в запрос. В этом примере показано, как использовать инструкцию [sp_dropdevice](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md) для удаления устройства резервного копирования. Выполните первый пример для создания устройства резервного копирования `mybackupdisk` и физического имени `c:\backup\backup1.bak`. Выполните инструкцию **sp_dropdevice** для удаления устройства резервного копирования `mybackupdisk` . Параметр `delfile` удаляет физическое имя.  
   
-```tsql  
+```sql  
 --Define a backup device and physical name.   
 USE AdventureWorks2012 ;  
 GO  

@@ -3,9 +3,9 @@ title: "Редактор XML (среда SQL Server Management Studio) | Док�
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: ssms
+ms.prod_service: sql-tools
 ms.service: 
-ms.component: scripting
+ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
 ms.technology: database-engine
@@ -23,11 +23,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 4c7f2e3e338e1d8d2bc7df6cc8fb344213e05ed4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1ff569edefb2e65e5586ff645584afe755dd4df9
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Редактор XML (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Предоставляет набор визуальных средств для работы с XML-схемами, наборами данных ADO.NET и XML-документами. Конструктор XML поддерживает язык определения схем XML (XSD), определенный консорциумом World Wide Web (WC3). Этот конструктор не поддерживает определения DTD (определения типов файлов) или другие языки XML-схем, например XDR (XML-Data Reduced).  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Конструктор предоставляет следующие три представления (или режима) для работы с XML-файлами, XML-схемами и наборами данных.  
   
-|Просмотр|Описание|Поддерживаемые типы файлов|  
+|Просмотр|Description|Поддерживаемые типы файлов|  
 |----------|-----------------|--------------------------|  
 |**Схема**|Для визуального создания и изменения XML-схем и наборов данных ADO.NET.|.xsd|  
 |**Данные**|Для визуального изменения файлов XML-данных в структурированной сетке данных.|XML|  

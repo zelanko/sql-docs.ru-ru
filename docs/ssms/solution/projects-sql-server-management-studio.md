@@ -3,7 +3,7 @@ title: "Проекты (среда SQL Server Management Studio) | Докуме�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 485a950448f582f332af028eaa2edb69fb065043
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f7b80e3d65bbb72e154b267aa22f117e1e9060b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="projects-sql-server-management-studio"></a>Проекты (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Проект [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] представляет собой коллекцию логически связанных скриптов и файлов, которые можно хранить вместе для администрирования и разработки базы данных.  
@@ -56,9 +56,9 @@ ms.lasthandoff: 12/05/2017
 |Описано добавление существующего проекта к решению.|[Добавление к решению существующий проект](../../ssms/solution/add-an-existing-project-to-a-solution.md)|  
 |Описано изменение места сохранения файлов проекта по умолчанию.|[Изменение местоположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)|  
 |Описан просмотр текущих свойств проекта.|[Просмотр свойств проекта](../../ssms/solution/view-project-properties.md)|  
-|Описано добавление новых элементов в проект (соединений, файлов скриптов и т. д).|[Добавление в проект новые элементы](../../ssms/solution/add-new-items-to-a-project.md)|  
+|Описано добавление новых элементов в проект (соединений, файлов скриптов и т. д).|[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)|  
 |Описано создание сведений о подключении для запроса.|[Связь запроса с соединением в проекте](../../ssms/solution/associate-a-query-with-a-connection-in-a-project.md)|  
-|Описано изменение сведений о подключении для запроса.|[Изменение соединение, связанное с запросом](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
+|Описано изменение сведений о подключении для запроса.|[Изменение соединения, связанного с запросом](../../ssms/solution/change-the-connection-associated-with-a-query.md)|  
 |Описано изменение свойств подключения.|[Просмотр или изменение свойств соединения в проекте](../../ssms/solution/view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
 ## <a name="see-also"></a>См. также:  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 79b8887bd738bc5b91ad35febadbc528968881cb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cd98311fb9b047d7c518524a6f33210bf7e9ea2b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="variables-window"></a>Окно переменных
   Окно **Переменные** используется для создания и изменения переменных, определяемых пользователем, и просмотра системных переменных.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
  **Параметры сетки**  
  Нажмите, чтобы открыть диалоговое окно **Параметры сетки переменных** , в котором можно изменить выбор столбцов и применить фильтры к окну **Переменные** . Дополнительные сведения см. в статье [Параметры сетки переменных](../integration-services/variable-grid-options.md).  
   
- **Имя**  
+ **Название**  
  Посмотреть имя переменной. Имена пользовательских переменных можно изменить.  
   
  **Область действия**  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  При присваивании выражения переменной тип данных нельзя изменить.  
   
- **Значение**  
+ **Value**  
  Посмотреть значение переменной. Значение пользовательской переменной можно изменить. Это значение может быть буквенным или представлять собой выражение, а значение может быть многостроковым. Чтобы назначить выражение переменной, нажмите кнопку троеточия рядом с столбцом **Выражение** в окне **Переменные** .  
   
  **Пространство имен**  
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Создать событие изменения**  
  Указывает, будет ли активировано событие **OnVariableValueChanged** в случае изменения значения. Значение пользовательской и системной переменной можно изменить. По умолчанию окно **Переменные** не включает этот столбец. Для вывода этого столбца щелкните **Параметры сетки**.  
   
- **Description**  
+ **Описание**  
  Просмотр описания переменной. Можно изменить описание для пользовательских переменных. По умолчанию окно **Переменные** не включает этот столбец. Для вывода этого столбца щелкните **Параметры сетки**.  
   
  **Выражение**  
@@ -104,17 +104,17 @@ ms.lasthandoff: 11/20/2017
   
 -   **Data type**  
   
--   **Значение**  
+-   **Value**  
   
 -   **Пространство имен**  
   
 -   **Создавать событие при изменении значения переменной**  
   
--   **Description**  
+-   **Описание**  
   
 -   **Выражение**  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Переменные в службах Integration Services (SSIS)](../integration-services/integration-services-ssis-variables.md)   
  [Использование переменных в пакетах](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Выражения служб Integration Services (SSIS)](../integration-services/expressions/integration-services-ssis-expressions.md)   

@@ -5,7 +5,7 @@ ms.date: 08/31/2016
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b132be5de44e4bb669ce0c1aa014b89aec07a63
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 53c154bf25df98ca502925b5514e5d0da583ce2d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ssis-designer"></a>конструктор служб SSIS
   [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб — это графическое средство, с помощью которого можно создавать и обслуживать пакеты служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . [!INCLUDE[ssIS](../includes/ssis-md.md)] Конструктор служб доступен из среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] в составе проекта служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -157,7 +157,7 @@ ms.lasthandoff: 11/20/2017
  **Обработчик событий**  
  Выберите тип обработчика события. Создайте обработчик события, перетащив элементы из **Области элементов**.  
   
- **Delete**  
+ **Удаление**  
  Выберите обработчик события и удалите его из пакета, нажав кнопку **Удалить**.  
   
  **Щелкните здесь, чтобы создать \<имя_обработчика_событий\> для исполняемого файла \<имя_исполняемого_файла\>**  
@@ -186,11 +186,11 @@ ms.lasthandoff: 11/20/2017
   
  Щелкните правой кнопкой мыши в этой области, затем из контекстного меню выберите нужную задачу.
  
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Создание пакетов в SQL Server Data Tools](../integration-services/create-packages-in-sql-server-data-tools.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Пользовательский интерфейс служб Integration Services](../integration-services/integration-services-user-interface.md)  
   
   

@@ -3,8 +3,11 @@ title: "Указание коэффициента заполнения для и
 ms.custom: 
 ms.date: 02/17/2017
 ms.prod: sql-non-specified
+ms.prod_service: database-engine, sql-database
+ms.service: 
+ms.component: indexes
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology: dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -17,11 +20,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3145ece1536701b112f5ffddc55c12a6f0d5369c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a5d92a3e54da02194fa104d38a7440c9f191462b
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Укажите коэффициент заполнения для индекса
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -37,11 +40,11 @@ ms.lasthandoff: 12/01/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Вопросы производительности](#Performance)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Указание коэффициента заполнения для индекса с помощью следующих средств:**  
   
@@ -61,9 +64,9 @@ ms.lasthandoff: 12/01/2017
 #### <a name="adding-data-to-the-end-of-the-table"></a>Добавление данных в конец таблицы  
  Ненулевой коэффициент заполнения, отличный от 0 и 100, может повысить производительность, если новые данные равномерно распределяются по таблице. Однако, если данные добавляются в конец таблицы, пустое место на страницах индекса заполняться не будет. Например, если ключевым столбцом индекса является столбец IDENTITY, ключ для новых строк будет постоянно увеличиваться и строки индекса будут логически добавляться в конец индекса. Если существующие строки будут обновляться данными, увеличивающими размер строк, следует использовать коэффициент заполнения менее 100. Дополнительные байты на каждой странице помогут снизить до минимума разбиение страниц с помощью увеличения длины строк.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -145,6 +148,6 @@ ms.lasthandoff: 12/01/2017
     GO  
     ```  
   
- Дополнительные сведения см. в статье [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
+ Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   
   

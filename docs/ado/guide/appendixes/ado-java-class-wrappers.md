@@ -3,7 +3,7 @@ title: "ADO Java классов-оболочек | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44a9b6f6eeedd29bf8dacd69e07bc0d64c7161c8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9fa7bcb09520fba5a43223abb63b317a3d4434be
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-java-class-wrappers"></a>ADO Java классов-оболочек
 Этот код объявляет экземпляр ADO [записей](../../../ado/reference/ado-api/recordset-object-ado.md) оболочка класса и инициализирует его, все в одной строке кода. Кроме того, объявляет переменные для каждого аргумента в [откройте](../../../ado/reference/ado-api/open-method-ado-recordset.md) метод, особенно для [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) и [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (поскольку Java не поддерживает перечисленные типы). Он открывается и закрывается **записей** объекта. Просто задав Rs1 NULL планирует этой переменной, освобождается, когда Java выполняет его систематического и периодически выпуск неиспользуемых объектов.  

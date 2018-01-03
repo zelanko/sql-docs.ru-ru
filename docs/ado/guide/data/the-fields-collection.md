@@ -3,7 +3,7 @@ title: "Коллекция полей | Документы Microsoft"
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ecfc7532761897cddf868dcb617c6eeb5f32bccb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c5899f7f1d3d35d0b64cab9dc3c5169dfaba87e8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="the-fields-collection"></a>Коллекция полей
 **Поля** коллекция является одной из встроенных коллекций ADO. Коллекция — это упорядоченный набор элементов, которые могут ссылаться как единое целое. Дополнительные сведения о коллекциях ADO см. в разделе [объектная модель ADO](../../../ado/guide/data/ado-objects-and-collections.md).  

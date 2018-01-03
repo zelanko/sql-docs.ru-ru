@@ -5,7 +5,7 @@ ms.date: 03/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: af4b72d2ec634d8ae71a607c6a7c4d6b17254599
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e4f1911bef4050d55b388bfa08e359af4e1862a8
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-connector-for-sap-bw-f1-help"></a>Справка F1 по Microsoft Connector для SAP BW
   В этом разделе содержатся подразделы справки F1 для трех компонентов [!INCLUDE[msCoName](../includes/msconame-md.md)] Microsoft Connector 1.1 для SAP BW. Эти разделы доступны также из пользовательского интерфейса, если нажать клавишу F1 или щелкнуть меню «Справка» на страницах мастеров или в диалоговых окнах.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/20/2017
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>Справка F1 по диспетчеру соединений SAP BW  
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Создать InfoPackage](../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a>См. также  
- [Компоненты Microsoft Connector для SAP BW](../integration-services/microsoft-connector-for-sap-bw-components.md)  
+## <a name="see-also"></a>См. также:  
+ [Компоненты соединителя с SAP BW (Microsoft)](../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

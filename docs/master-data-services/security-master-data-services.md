@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,11 +17,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab9a4a049b49b3b5e0e7f9692fb8df2f7be5a824
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ab5a722213ba96fe591e9d9b8fa64681230d7733
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-master-data-services"></a>Безопасность (службы Master Data Services)
   Используйте систему безопасности в [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], чтобы пользователи имели доступ к определенным основным данным, необходимым для их работы, и не имели доступа к данным, которые не должны быть им открыты.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
   
  Единственная оговорка заключается в том, что все настройки безопасности, внесенные в [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] , вступают в действие в Excel только спустя 20 минут. Временной интервал определяется параметром *MdsMaximumUserInformationCacheInterval* в файле web.config. Для изменения интервала времени нужно изменить параметр и перезапустить IIS.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

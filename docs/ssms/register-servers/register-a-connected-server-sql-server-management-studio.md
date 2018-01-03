@@ -3,7 +3,7 @@ title: "Регистрация подключенного сервера (SQL S
 ms.custom: 
 ms.date: 07/28/2016
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 66d6bf38a5500017012c3eabb466b11d2d28ad49
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5140781326b2ada6fcc7e99dcf3cb566e70cba4b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="register-a-connected-server-sql-server-management-studio"></a>Регистрация подключенного сервера (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается регистрация подключенного сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). Регистрация сервера дает возможность сохранить данные о соединении для тех серверов, к которым часто осуществляется доступ. Сервер может быть зарегистрирован перед установкой соединения или во время соединения из обозревателя объектов.  Зарегистрированные серверы в среде SSMS можно просмотреть, выбрав пункты **Просмотр**\\**Зарегистрированные серверы** в меню.
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/05/2017
      > [!IMPORTANT]  
      > [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)] Дополнительные сведения см. в разделе [Выбор режима проверки подлинности](../../relational-databases/security/choose-an-authentication-mode.md).  
 
-     -    **Имя пользователя**  
+     -    **User name**  
 Показывает текущее имя пользователя, с которым устанавливается соединение. Этот параметр только для чтения доступен лишь при соединении с использованием метода проверки подлинности Windows. Чтобы изменить **Имена пользователей**, войдите в систему под другим именем. 
 
      -    **Имя входа**  

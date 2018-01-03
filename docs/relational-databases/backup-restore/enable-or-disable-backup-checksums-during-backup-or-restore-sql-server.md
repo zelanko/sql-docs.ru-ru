@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c363b96889bdf48710e4da2b930047d27ed3c26e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e6285718d684b1468bce5eefc4ab5e43c0310c80
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-or-disable-backup-checksums-during-backup-or-restore-sql-server"></a>Включение или отключение вычисления контрольных сумм резервных копий во время резервного копирования или восстановления (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Включение или отключение расчета контрольных сумм резервных копий**  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  BACKUP  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Чтобы включить контрольные суммы резервных копий в инструкции [BACKUP](../../t-sql/statements/backup-transact-sql.md) , укажите параметр WITH CHECKSUM. Чтобы отключить контрольные суммы резервных копий, укажите параметр WITH NO_CHECKSUM. Это поведение по умолчанию для всех, за исключением сжатых резервных копий. В следующем примере указывается, что контрольные суммы будут вычисляться.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -92,7 +92,7 @@ GO
   
 3.  Чтобы включить контрольные суммы резервных копий в инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) , укажите параметр WITH CHECKSUM. Это поведение по умолчанию для сжатых резервных копий. Чтобы отключить контрольные суммы резервных копий, укажите параметр WITH NO_CHECKSUM. Это поведение по умолчанию для всех, за исключением сжатых резервных копий. В следующем примере указывается, что контрольные суммы резервных копий будут вычисляться.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  

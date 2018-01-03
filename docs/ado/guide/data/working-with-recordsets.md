@@ -3,7 +3,7 @@ title: "Работа с наборами записей | Документы Mic
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cf54089c037d972649d3acc872a38eed21d02507
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a861030b8ec30e176d7535d6e2f7976a87c0832a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-recordsets"></a>Работа с наборами записей
 **Записей** объект имеет встроенные функции, которые позволяют изменить порядок данных в результирующем наборе для поиска конкретной записи на основе критериев, которые предоставляются и даже для оптимизации этих операций поиска с помощью индексов. Эти возможности доступны для использования зависит от поставщика и в некоторых случаях — например, [индекс](../../../ado/reference/ado-api/index-property.md) свойство — Структура самого источника данных.  

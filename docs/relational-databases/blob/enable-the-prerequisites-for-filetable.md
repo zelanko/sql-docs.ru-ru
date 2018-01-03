@@ -18,11 +18,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 77f4bb2425fbb390f026769fdf7dcc9bb7ba4481
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 973c27639186635730debbb75f5087530986b04d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Включение необходимых компонентов для таблицы FileTable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Описывает способ включения компонентов, обязательных для создания и использования таблиц FileTable.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="HowToCheckAccess"></a> Инструкции. Проверка состояния нетранзакционного доступа (включен или выключен)  
  Выполнить запрос к представлению каталога [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) и проверить столбцы **non_transacted_access** и **non_transacted_access_desc**.  
   
-```tsql  
+```sql  
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
@@ -74,14 +74,14 @@ GO
  **Указание уровня нетранзакционного доступа с помощью Transact-SQL**  
  -   При **create a new database** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **NON_TRANSACTED_ACCESS** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
   
 -   При **изменении существующей базы данных** вызовите инструкцию [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) с параметром **NON_TRANSACTED_ACCESS** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
     ```  
@@ -100,7 +100,7 @@ GO
  **Указание каталога для таблиц FileTable с помощью языка Transact-SQL**  
  -   При **create a new database** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -108,7 +108,7 @@ GO
   
 -   При **изменении существующей базы данных** вызовите инструкцию [ALTER DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM. Если эти параметры используются для изменения имени каталога, то база данных должна быть заблокирована в монопольном режиме при отсутствии открытых дескрипторов файлов.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE database_name  
         SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -116,7 +116,7 @@ GO
   
 -   При **подключении базы данных** вызовите инструкцию [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md) с параметром **FOR ATTACH** и **DIRECTORY_NAME** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE database_name  
         FOR ATTACH WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -124,7 +124,7 @@ GO
   
 -   При **восстановлении базы данных** вызовите инструкцию [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md) с параметром **DIRECTORY_NAME** FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     RESTORE DATABASE database_name  
         WITH FILESTREAM ( DIRECTORY_NAME = N'directory_name' );  
     GO  
@@ -136,7 +136,7 @@ GO
 ###  <a name="viewnames"></a> Инструкции. Просмотр существующих имен каталогов для экземпляра  
  Чтобы просмотреть список существующих имен каталогов для экземпляра, выполните запрос к представлению каталога [sys.database_filestream_options (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) и проверьте столбец **filestream_database_directory_name**.  
   
-```tsql  
+```sql  
 SELECT DB_NAME ( database_id ), directory_name  
     FROM sys.database_filestream_options;  
 GO  

@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,23 +20,23 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c98887d456b1bbbbb30bac07061670691e229bcc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef0231bc92908678aaf93ab5e3aa29303c16c320
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="commit-a-version-master-data-services"></a>Фиксация версии (службы Master Data Services)
   В среде [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]фиксация версии модели препятствует изменениям элементов модели и их атрибутов. Открыть зафиксированную версию нельзя.  
   
-## <a name="prerequisites"></a>Предварительные требования  
- Чтобы выполнить эту процедуру:  
+## <a name="prerequisites"></a>предварительные требования  
+ Для выполнения этой процедуры:  
   
 -   необходимо иметь разрешение на доступ к функциональной области **Управление версиями** ;  
   
 -   необходимо быть администратором модели. Дополнительные сведения см. в статье [Администраторы (службы Master Data Services)](../master-data-services/administrators-master-data-services.md).  
   
--   Версия должна иметь состояние **Заблокирована**. Дополнительные сведения см. в разделе [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md).  
+-   Версия должна иметь состояние **Заблокирована**. Дополнительные сведения см. в статье [Блокировка версии (службы Master Data Services)](../master-data-services/lock-a-version-master-data-services.md).  
   
 -   Все элементы должны пройти проверку.  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  В диалоговом окне подтверждения нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
   
 -   [Создание флага версии (службы Master Data Services)](../master-data-services/create-a-version-flag-master-data-services.md)  
   

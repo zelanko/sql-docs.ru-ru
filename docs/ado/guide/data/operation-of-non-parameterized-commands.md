@@ -3,7 +3,7 @@ title: "Операции без параметров команд | Докуме
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a94991dc8f1716186f5fdbcd44ded85926fd4a7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1c2e82698c31d920643ba68fabd8b0bd4f0d2321
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Операции без параметров команд
 Команды, без параметров, выполняются все команды поставщика и **наборы записей** создаются во время выполнения команды. Если команда выполняется синхронно, все **наборы записей** будет полностью заполнен. Если был выбран режим асинхронное заполнение, заполненных состояние **наборы записей** будет зависеть от режима заполнения и размера **наборы записей**.  

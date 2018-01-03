@@ -3,7 +3,7 @@ title: "Общие элементы пользовательского инте�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms
 ms.reviewer: 
@@ -20,16 +20,16 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70ebaa64ba9316d2931a5f7080a6aae5fce80cc4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 59e779d5f51ecfd481da588634409d920ef287da
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-user-interface-elements"></a>Общие элементы пользовательского интерфейса
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Примерами базовых элементов [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] являются **Редактор**, окно **Свойства**, а также **панель элементов**.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 [Диалоговое окно «О продукте»](../ssms/about-dialog-box.md)  
 Описывает диалоговое окно, содержащее сведения о среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] и компьютере, на котором она работает.  
   

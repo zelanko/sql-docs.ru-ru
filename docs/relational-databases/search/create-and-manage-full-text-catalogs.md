@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5686cc0fc615c7765ea592d80b803f2beecd4c52
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 82eda03e726cc16476847cc8ed21ad46f77509cb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Создание и управление полнотекстовыми каталогами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Полнотекстовый каталог — это логический контейнер для группы полнотекстовых индексов. Необходимо создать полнотекстовый каталог, прежде чем создавать полнотекстовый индекс.
@@ -34,9 +34,9 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="creating"></a> Создание полнотекстового каталога  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Создание полнотекстового каталога с помощью Transact-SQL
-Используйте инструкцию [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Например:
+Используйте инструкцию [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Пример:
 
-```tsql 
+```sql 
 USE AdventureWorks;  
 GO  
 CREATE FULLTEXT CATALOG ftCatalog AS DEFAULT;  
@@ -71,7 +71,7 @@ GO
   
 В следующей таблице перечислены свойства, о которых сообщается в полнотекстовых каталогах. Эти сведения полезны для администрирования и устранения нарушений в работе средств полнотекстового поиска. 
   
-|Свойство|Описание|  
+|Свойство|Description|  
 |--------------|-----------------|  
 |**AccentSensitivity**|Настройка учета диакритических знаков:|
 |**ImportStatus**|Выполняется ли в настоящее время импорт полнотекстового каталога.|  

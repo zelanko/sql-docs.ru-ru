@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -17,16 +17,16 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 137235e00d0ad2655bb856c425644969fef2bae0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8cd875b088c8c7003123db63b6f6584f80a93a42
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Создание и выполнение отношений синхронизации сущностей (Master Data Services)
   Синхронизация сущностей — это односторонняя повторяемая синхронизация между версиями сущности. Она позволяет разным моделям совместно использовать данные сущностей.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Чтобы создать отношения синхронизации сущностей, необходимо:  
   
 -   Иметь разрешение на доступ к функциональной области "Администрирование системы". Дополнительные сведения см. в разделе [Разрешения функциональной области (службы Master Data Services)](../master-data-services/functional-area-permissions-master-data-services.md).  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="sync-relationship-information"></a>Сведения об отношениях синхронизации  
  Для всех созданных отношений синхронизации в сетке создается строка с 10 столбцами. В следующей таблице приводятся описания этих столбцов.  
   
-|Столбец|Description|  
+|столбцом|Description|  
 |------------|-----------------|  
 |Состояние|Статус отношений синхронизации.<br /><br /> Когда вы нажимаете **Сохранить** или выполняете отношение синхронизации, появляется изображение ![Значок обновления состояния](../master-data-services/media/mds-statusicon-updating.png "Значок обновления состояния"), указывающее на обновление отношения синхронизации.<br /><br /> Если при создании, редактировании или выполнении отношения синхронизации произойдет ошибка, появится изображение ![Значок состояния ошибки](../master-data-services/media/mds-statusicon-error.png "Значок состояния ошибки").<br /><br /> В противном случае состояние является нормальным, и появляется изображение ![Значок нормального состояния](../master-data-services/media/mds-statusicon-ok.png "Значок нормального состояния").|  
 |Исходная модель|Имя исходной модели.|  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Когда обновлено**: дата и время последнего обновления синхронизации.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  [Создание и удаление отношения синхронизации сущностей (Master Data Services)](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

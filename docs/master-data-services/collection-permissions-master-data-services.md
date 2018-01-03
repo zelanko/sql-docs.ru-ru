@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: mds
 ms.service: 
-ms.component: master-data-services
+ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
 ms.technology: master-data-services
@@ -20,11 +20,11 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a4de2e0883886545e45d24b79b72c14b0296bb09
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: da7d46ed67b0bd9219e03a2af19e6876b042a6ae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-permissions-master-data-services"></a>Разрешения коллекции (службы основных данных)
   Разрешения коллекции применяются ко всем коллекциям для сущности. Нельзя назначить разрешение конкретной коллекции. Разрешения применяются ко всем коллекциям.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 |**Чтение**|Пользователь может просматривать элементы коллекции и атрибуты элементов.|  
 |**Создание**|Пользователь может создавать элементы коллекции и назначать значения атрибутов.|  
 |**Update**|Пользователь может обновить элементы коллекции, атрибуты и связи.|  
-|**Delete**|Пользователь может удалять элементы коллекции.|  
+|**Удаление**|Пользователь может удалять элементы коллекции.|  
 |**Запретить**|Запрет любого доступа к элементам коллекции.|  
   
  Разрешения на чтение, создание, обновление и удаление можно использовать в различных сочетаниях. Когда назначается разрешение на создание, обновление или удаление, автоматически добавляется и разрешение на чтение.  

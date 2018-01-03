@@ -3,7 +3,7 @@ title: "Поставщик Microsoft OLE DB для службы индексир
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 01/19/2017
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7d0fb1ffdfdd73562aaa5b64ce997e857ae9f213
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d278b3fd6a2460471195e5744baef93292dfbc30
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Поставщик Microsoft OLE DB для индексирования Обзор службы Microsoft
 Поставщик Microsoft OLE DB для службы индексирования Microsoft предоставляет программный доступ только для чтения к файловая система и веб-данных службой индексирования Microsoft. Приложения ADO могут выдавать запросы SQL для извлечения содержимого и файл сведений.
@@ -84,7 +84,7 @@ MSIDXS
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|всегда **adOpenStatic**|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|всегда **как таковые**|
 |[КОНЕЦ ФАЙЛА](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|только для чтения|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|
+|[Фильтр](../../../ado/reference/ado-api/filter-property.md)|чтение/запись|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|чтение/запись|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|недоступно|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|чтение/запись|
@@ -101,13 +101,13 @@ MSIDXS
 
 |Метод|Доступны?|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Нет|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|нет|
 |[Отмена](../../../ado/reference/ado-api/cancel-method-ado.md)|Да|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Нет|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Нет|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|нет|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|нет|
 |[Клон](../../../ado/reference/ado-api/clone-method-ado.md)|Да|
 |[Закрыть](../../../ado/reference/ado-api/close-method-ado.md)|Да|
-|[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Нет|
+|[Удаление](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|нет|
 |[Получение строк](../../../ado/reference/ado-api/getrows-method-ado.md)|Да|
 |[Переместить](../../../ado/reference/ado-api/move-method-ado.md)|Да|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Да|
@@ -116,8 +116,8 @@ MSIDXS
 |[Повторный запрос](../../../ado/reference/ado-api/requery-method.md)|Да|
 |[Повторная синхронизация](../../../ado/reference/ado-api/resync-method.md)|Да|
 |[Поддерживает](../../../ado/reference/ado-api/supports-method.md)|Да|
-|[Update](../../../ado/reference/ado-api/update-method.md)|Нет|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Нет|
+|[Update](../../../ado/reference/ado-api/update-method.md)|нет|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|нет|
 
  Особенности реализации и функционального сведения о поставщик Microsoft OLE DB для службы индексирования Microsoft, обратитесь к [Руководство программиста OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), или посетите веб-сайт веб-службы веб-сервера Windows NT веб-узел.
 

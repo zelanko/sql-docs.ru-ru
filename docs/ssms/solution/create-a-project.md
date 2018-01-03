@@ -3,7 +3,7 @@ title: "Создание проекта | Документация Майкро�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-solutions
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9a95d8c7ecf359e6fc10939759d05d816d91efc5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13ef5a52fff423b9c4a4035b2751017a30e86da9
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-project"></a>Создание проекта
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В существующем решении можно создать один или несколько проектов.  
@@ -104,7 +104,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="see-also"></a>См. также:  
 [обозревателе решений](../../ssms/solution/solution-explorer.md)  
 [Добавление к решению существующий проект](../../ssms/solution/add-an-existing-project-to-a-solution.md)  
-[Добавление в проект новые элементы](../../ssms/solution/add-new-items-to-a-project.md)  
+[Добавление новых элементов в проект](../../ssms/solution/add-new-items-to-a-project.md)  
 [Добавление существующих элементов в проект](../../ssms/solution/add-existing-items-to-a-project.md)  
 [Изменение местоположения проектов по умолчанию](../../ssms/solution/change-the-default-location-for-projects.md)  
 [Перемещение или удаление элемента или проекта](../../ssms/solution/remove-or-delete-an-item-or-project.md)  

@@ -3,7 +3,7 @@ title: "Удаление группы серверов (SQL Server Management 
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssms-registration
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f605faa9711e014f94325bb86414ee849f2f7ad6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d0ff2470ac6875c75c5a4882855536b4d0cf2d55
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-a-server-group-sql-server-management-studio"></a>Удаление группы серверов (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом разделе описывается удаление группы серверов из списка "Зарегистрированные серверы" в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Всегда можно удалить группу серверов. Если группа серверов не пуста, любые серверы или группы серверов, содержащиеся в удаляемой группе серверов, также будут удалены. Перед удалением группы серверов переместите все серверы и группы серверов, которые нужно сохранить, в новую группу серверов.  

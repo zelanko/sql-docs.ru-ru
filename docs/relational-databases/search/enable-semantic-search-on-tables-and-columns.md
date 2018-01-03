@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac05bddeb5b8ec7ddb153dc4eff000dc9747d4e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c036b75d93fe75cf0feb5e047223cb5bb285aad5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Включение семантического поиска на таблицы и столбцы
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Описывается способ включения или отключения статистической семантической индексации в выбранных столбцах, содержащих документы или текст.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  В следующем примере создается полнотекстовый каталог по умолчанию **ft**. Затем в примере создается уникальный индекс на столбце **JobCandidateID** таблицы **HumanResources.JobCandidate** образца базы данных AdventureWorks2012. Данный уникальный индекс используется в качестве ключевого столбца полнотекстового индекса. Затем в примере создается полнотекстовый и семантический индексы на столбце **Resume** .  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG ft AS DEFAULT  
 GO  
   
@@ -90,7 +90,7 @@ GO
   
  В примере также указано, что отслеживание изменений отключено (без заполнения). Позже, в часы с наименьшей загрузкой, будет запущено полное заполнение нового индекса и включено автоматическое отслеживание изменений с помощью инструкции **ALTER FULLTEXT INDEX** .  
   
-```tsql  
+```sql  
 CREATE FULLTEXT CATALOG documents_catalog  
 GO  
   
@@ -113,7 +113,7 @@ GO
   
  Позже, в часы с наименьшей загрузкой, выполняется заполнение индекса:  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document SET CHANGE_TRACKING AUTO  
 GO  
 ```  
@@ -139,7 +139,7 @@ GO
   
  В следующем примере выполняется изменение существующего полнотекстового индекса в таблице **Production.Document** из образца базы данных AdventureWorks2012. Пример добавляет семантический индекс для столбца **Document** таблицы **Production.Document** , для которого уже существует полнотекстовый индекс. В примере указывается, что повторное заполнение индекса не будет выполняться автоматически.  
   
-```tsql  
+```sql  
 ALTER FULLTEXT INDEX ON Production.Document  
     ALTER COLUMN Document  
         ADD Statistical_Semantics  
@@ -164,7 +164,7 @@ GO
  ### <a name="drop-a-semantic-index-by-using-transact-sql"></a>Удалите семантический индекс с помощью Transact-SQL  
 Для удаления семантического индексирования только из столбца или столбцов вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***column_name***DROP STATISTICAL_SEMANTICS** . С помощью одной инструкции **ALTER** можно удалить индексирование из нескольких столбцов.  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
 
@@ -176,7 +176,7 @@ GO
   
 Для удаления семантического и полнотекстового индексирования из столбца вызовите инструкцию **ALTER FULLTEXT INDEX** с параметром **ALTER COLUMN***column_name***DROP** .  
   
-```tsql  
+```sql  
 USE database_name  
 GO  
   
@@ -202,7 +202,7 @@ GO
   
  Возвращаемое значение 1 указывает, что полнотекстовый поиск и семантический поиск для базы данных включены; возвращаемое значение 0 указывает, что они не включены.  
   
-```tsql  
+```sql  
 SELECT DATABASEPROPERTYEX('database_name', 'IsFullTextEnabled')  
 GO  
 ```  
@@ -226,7 +226,7 @@ GO
   
      Возвращаемое значение 1 указывает, что семантический поиск для столбца включен; возвращаемое значение 0 указывает, что он не включен.  
   
-    ```tsql  
+    ```sql  
     SELECT COLUMNPROPERTY(OBJECT_ID('table_name'), 'column_name', 'StatisticalSemantics')  
     GO  
     ```  
@@ -235,7 +235,7 @@ GO
   
      Значение 1 в столбце **statistical_semantics** указывает, что для данного столбца, кроме полнотекстового индексирования, включено и семантическое индексирование.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM sys.fulltext_index_columns WHERE object_id = OBJECT_ID('table_name')  
     GO  
     ```  
@@ -253,7 +253,7 @@ GO
   
  Отправьте запрос в представление каталога [sys.fulltext_semantic_languages (Transact-SQL)](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fulltext_semantic_languages  
 GO  
 ```  
@@ -262,7 +262,7 @@ GO
   
 |Язык|LCID|  
 |--------------|----------|  
-|Немецкий|1031|  
+|German|1031|  
 |Английский (США)|1033|  
 |Французский|1036|  
 |Итальянский|1040|  

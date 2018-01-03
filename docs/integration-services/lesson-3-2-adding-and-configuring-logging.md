@@ -5,7 +5,7 @@ ms.date: 03/01/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
-ms.component: integration-services
+ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
 ms.technology: integration-services
@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2a318589eae5c96aed87835bd17bd3defceccf17
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f2842c71f7af2d569cd6455aa437fbf4f8397e5c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-3-2---adding-and-configuring-logging"></a>Занятие 3–2. Добавление и настройка ведения журнала
 В этой задаче будет включена запись в журнал потоков данных для пакета «Урок 3.dtsx». Затем предстоит настроить регистратор для текстовых файлов, чтобы записать в журнал события PipelineExecutionPlan и PipelineExecuteTrees. Регистратор текстовых файлов создает журналы, которые легко просматривать и пересылать. Простота этих файлов журнала делает их особенно полезными во время базового тестирования пакета. Для просмотра журнала приложений можно использовать окно «Регистрация событий» конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
@@ -64,6 +64,6 @@ ms.lasthandoff: 11/20/2017
   
 14. Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 [Шаг 3. Проверка учебного пакета, созданного на занятии 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   

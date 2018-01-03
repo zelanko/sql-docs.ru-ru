@@ -27,11 +27,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba873b9ae0f29caa7acc85e5d5daed8dcbfd22a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2df4759c6f2715706be48799e4190e309ffe3904
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>Настройка и управление средством разбиения на слова и парадигматические модули для поиска
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Средства разбиения текста на слова и парадигматические модули выполняют лингвистический анализ данных, проходящих полнотекстовое индексирование. При лингвистическом анализе выполняются следующие два действия:
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/17/2017
 
 Чтобы просмотреть список языков, поддерживаемых компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Full-Text Search, используйте следующую инструкцию [!INCLUDE[tsql](../../includes/tsql-md.md)]. Наличие языка в этом списке указывает, что средства разбиения по словам зарегистрированы для языка. 
   
-```tsql
+```sql
 SELECT * FROM sys.fulltext_languages
 ```
 
@@ -63,7 +63,7 @@ SELECT * FROM sys.fulltext_languages
 
 Чтобы просмотреть список зарегистрированных компонентов средства разбиения по словам, используйте следующую инструкцию.
 
-```tsql
+```sql
 EXEC sp_help_fulltext_system_components 'wordbreaker';  
 GO  
 ```
@@ -88,7 +88,7 @@ GO
   
 Чтобы просмотреть язык средства разбиения по словам для определенных столбцов, выполните следующую инструкцию.
    
-```tsql 
+```sql 
 SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
 ```  
 

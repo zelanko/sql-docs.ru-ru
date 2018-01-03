@@ -18,13 +18,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 84fee80391d7ac1ce5b509ba91eaf54b385b623a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ce086529c97471ed6b2e80e5487aadab70be2c9
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
-# <a name="migrate-to-a-partially-contained-database"></a>Миграция на частично автономную базу данных
+# <a name="migrate-to-a-partially-contained-database"></a>Migrate to a Partially Contained Database
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как подготовиться к переходу на частично автономную модель базы данных, и приведены шаги по миграции.  
   
  **В этом разделе:**  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Для этого потребуется понимание модели частично автономной базы данных. Дополнительные сведения см. в разделе [Contained Databases](../../relational-databases/databases/contained-databases.md).  
   
--   Необходимо понимать риски, связанные с частично автономными базами данных. Дополнительные сведения см. в статье [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+-   Необходимо понимать риски, связанные с частично автономными базами данных. Дополнительные сведения см. в разделе [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
 -   Автономные базы данных не поддерживают репликацию, отслеживание измененных данных или отслеживание изменений. Убедитесь, что в базе данных не используются эти функции.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="enabling-contained-databases-using-transact-sql"></a>Включение автономных баз данных с помощью Transact-SQL  
  В следующем примере в экземпляре компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]создаются автономные базы данных.  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE ;  
@@ -80,7 +80,7 @@ GO
 ### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Преобразование базы данных в частично автономную с помощью Transact-SQL  
  В следующем примере база данных показано преобразование `Accounting` в частично автономную базу данных.  
   
-```tsql  
+```sql  
 USE [master]  
 GO  
 ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL  
@@ -99,7 +99,7 @@ GO
 ##  <a name="users"></a> Миграция пользователей в пользователей автономной базы данных  
  В следующем примере выполняется миграция всех пользователей, основанных на имени входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , в пользователей автономной базы данных с паролями. Этот пример исключает имена входа, которые не были включены. Этот пример должен выполняться в автономной базе данных.  
   
-```tsql  
+```sql  
 DECLARE @username sysname ;  
 DECLARE user_cursor CURSOR  
     FOR   

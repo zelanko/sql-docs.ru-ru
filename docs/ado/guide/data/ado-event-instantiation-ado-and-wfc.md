@@ -3,7 +3,7 @@ title: "При создании экземпляра события ADO: ADO и 
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: guide
+ms.component: ado
 ms.technology: drivers
 ms.custom: 
 ms.date: 02/15/2017
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ffe0911f2845e7ff7e41cf41fcc4f267f7c0ad66
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d8c6afcc5c41535031961f0d96cf756cd4015c9b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>При создании экземпляра события ADO: ADO и WFC
 ADO ввода для Windows Foundation Classes (ADO и WFC) основана на модели событий ADO и предоставляет упрощенный интерфейс программирования. В общем случае ADO/WFC перехватывает события ADO, объединяет параметры события в классе событий и затем вызывает обработчик события.  

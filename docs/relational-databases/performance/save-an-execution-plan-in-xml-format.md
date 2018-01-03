@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 44774cbb85152ecbb16c36a01326973177bad8f8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f958bece2f83b2a29914367fb71adbac640a941d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Сохранение плана выполнения в формате XML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Используйте среду [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], чтобы сохранить планы выполнения в XML-файле и открыть их для просмотра.  
@@ -40,14 +40,14 @@ ms.lasthandoff: 11/17/2017
   
 2.  Включите [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md) с помощью следующей инструкции:  
   
-    ```t-sql  
+    ```sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
      Чтобы включить [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md), воспользуйтесь следующей инструкцией:  
   
-    ```t-sql  
+    ```sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  Выполните запрос. Пример  
   
-    ```t-sql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
