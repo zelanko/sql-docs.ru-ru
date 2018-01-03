@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2fd94b7bab89220337cede905ecbaf1decef722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 -   функции секционирования  
   
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -116,35 +116,35 @@ sys.dm_sql_referenced_entities (
   
  Возвращает ошибку 2020, когда не удается разрешить зависимости столбца. Эта ошибка не препятствует возврату запросом зависимостей на уровне объектов.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Данная функция может выполняться в контексте любой базы данных и осуществляет отображение списка сущностей, ссылающихся на триггер DDL уровня сервера.  
   
  В следующей таблице перечислены типы сущностей, для которых созданы и обновляются данные о зависимостях. Данные о зависимостях не создаются и не обновляются для правил, значений по умолчанию, временных таблиц, временных хранимых процедур и системных объектов.  
   
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
-|Таблица|Да*|Да|  
+|Table|Да*|Да|  
 |Просмотр|Да|Да|  
 |Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
-|Хранимая процедура CLR|Нет|Да|  
+|Хранимая процедура CLR|нет|Да|  
 |Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
-|Определяемая пользователем функция CLR|Нет|Да|  
-|Триггер CLR (DML и DDL)|Нет|Нет|  
-|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|Нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|Нет|  
-|Расширенные хранимые процедуры|Нет|Да|  
-|Очередь|Нет|Да|  
-|Синоним|Нет|Да|  
-|Тип (псевдоним и определяемый пользователем тип данных CLR)|Нет|Да|  
-|Коллекция схем XML|Нет|Да|  
-|Функция секционирования|Нет|Да|  
+|Определяемая пользователем функция CLR|нет|Да|  
+|Триггер CLR (DML и DDL)|нет|нет|  
+|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|нет|  
+|Расширенные хранимые процедуры|нет|Да|  
+|Очередь|нет|Да|  
+|Синоним|нет|Да|  
+|Тип (псевдоним и определяемый пользователем тип данных CLR)|нет|Да|  
+|Коллекция схем XML|нет|Да|  
+|Функция секционирования|нет|Да|  
   
  \*Таблица отслеживается как ссылающаяся сущность, только в том случае, если оно ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуля, определяемый пользователем тип или коллекция XML-схем в определении вычисляемого столбца, ограничения CHECK или ограничении DEFAULT.  
   
  ** Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отслеживаются в качестве ссылающихся или упоминаемых сущностей.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения SELECT для функции sys.dm_sql_referenced_entities и разрешения VIEW DEFINITION для ссылающейся сущности. Разрешение SELECT по умолчанию предоставляется роли public. Требует разрешения VIEW DEFINITION для базы данных, либо, если ссылающаяся сущность является триггером DDL уровня базы данных, разрешения ALTER DATABASE DDL TRIGGER. Если указанный модуль является триггером DDL уровня сервера, то требуется разрешение VIEW ANY DEFINITION на уровне сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -152,7 +152,7 @@ sys.dm_sql_referenced_entities (
 ### <a name="a-returning-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. Возврат списка сущностей, на которые ссылается триггер DDL уровня базы данных  
  В ходе выполнения следующего примера производится отображение списка сущностей (таблиц и столбцов), упоминаемых триггером DDL уровня базы данных `ddlDatabaseTriggerLog`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -164,7 +164,7 @@ GO
 ### <a name="b-returning-entities-that-are-referenced-by-an-object"></a>Б. Возврат списка сущностей, упоминаемых объектом  
  В ходе выполнения следующего примера производится отображение списка сущностей, упоминаемых в определяемой пользователем функции `dbo.ufnGetContactInformation`.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referenced_schema_name, referenced_entity_name, referenced_minor_name,   
@@ -176,7 +176,7 @@ GO
 ### <a name="c-returning-column-dependencies"></a>В. Возврат списка зависимостей столбцов  
  В ходе выполнения представленного ниже примера осуществляется создание таблицы `Table1`, в которой содержится вычисляемый столбец `c`, определяемый как сумма столбцов `a` и `b`. Затем производится вызов представления `sys.dm_sql_referenced_entities`. Представление содержит две строки, по одной для каждого столбца, определенного в вычисляемом столбце.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE dbo.Table1 (a int, b int, c AS a + b);  
@@ -205,7 +205,7 @@ GO
 ### <a name="d-returning-non-schema-bound-column-dependencies"></a>Г. Возврат списка зависимостей столбцов, не привязанных к схеме  
  В ходе выполнения представленного ниже примера выполняется удаление таблицы `Table1`, а также создание таблицы `Table2` и хранимой процедуры `Proc1`. Процедура ссылается на таблицу `Table2` и на несуществующую таблицу `Table1`. Представление `sys.dm_sql_referenced_entities` запускается с помощью хранимой процедуры, которая указана в качестве ссылающейся сущности. В результирующем наборе показана одна строка для таблицы `Table1` и 3 строки для таблицы `Table2`. Поскольку таблица `Table1` не существует, то не удается разрешить зависимости столбца и возвращается ошибка 2020. Столбец `is_all_columns_found` возвращает 0 для таблицы `Table1`, указывая, что существуют столбцы, которые не удалось обнаружить.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID ( 'dbo.Table1', 'U' ) IS NOT NULL   
@@ -239,7 +239,7 @@ GO
 ### <a name="e-demonstrating-dynamic-dependency-maintenance"></a>Д. Отображение параметров обслуживания динамических зависимостей  
  Следующий пример является продолжением примера Г и предназначен для отображения динамических зависимостей. В примере сначала производится повторное создание таблицы `Table1`, которая была удалена в примере Г. Затем снова запускается инструкция `sys.dm_sql_referenced_entities`, в которой в качестве ссылающейся сущности указана хранимая процедура. Результирующий набор содержит обе таблицы и их соответствующие столбцы, определенные в хранимой процедуре. Кроме того, столбец `is_all_columns_found` возвращает значение 1 для всех объектов и столбцов.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE Table1 (a int, b int, c AS a + b);  
@@ -272,7 +272,7 @@ GO
   
 **Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-```t-sql  
+```sql  
 SELECT referenced_entity_name AS table_name, referenced_minor_name as column_name, is_selected, is_updated, is_select_all  
 FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalInfo', 'OBJECT');  
   

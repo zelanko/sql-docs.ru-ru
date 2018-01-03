@@ -3,7 +3,7 @@ title: "Подключения к базе данных Azure SQL (SybaseToSQL) 
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d63fac7037bfe3f3646d9fa1c36200aa682b2fe3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1267aecb68c344b6de0fad2c7c129a0b6ab2205c
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db--sybasetosql"></a>Подключения к базе данных Azure SQL (SybaseToSQL)
 Используйте подключение к базе данных SQL Azure-диалоговое окно для подключения к базе данных SQL Azure базы данных, которые требуется перенести.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 > SSMA для СУБД Sybase в базе данных SQL Azure не поддерживает подключение к базе данных master.  
   
-**Имя пользователя**  
+**User name**  
   
 Введите имя пользователя, который SSMA будет использоваться для подключения к базе данных в базе данных SQL Azure  
   

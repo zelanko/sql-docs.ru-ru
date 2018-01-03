@@ -64,11 +64,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fc00fddf50d7f3261d0af09b755c1eb6b4c314d2
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 596e524d009f62439e5b8205603040369384fc79
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -579,7 +579,7 @@ WITH CHECK | WITH NOCHECK
  Указывает местоположение для перемещения строк данных, находящихся в настоящее время на конечном уровне кластеризованного индекса. Таблица перемещается на новое место. Этот параметр применяется только ограничениям, образующим кластеризованный индекс.  
   
 > [!NOTE]  
->  В этом контексте default не является ключевым словом. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, например: MOVE TO **»**по умолчанию**»** или MOVE TO **[**по умолчанию**]**. Если **»**по умолчанию**»** указан, параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+>  В этом контексте default не является ключевым словом. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, например: MOVE TO **»**по умолчанию**»** или MOVE TO **[**по умолчанию**]**. Если **»**по умолчанию**»** указан, параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  { CHECK | NOCHECK } CONSTRAINT  
  Указывает, что *constraint_name* включен или отключен. Данный параметр может использоваться только с ограничениями FOREIGN KEY и CHECK. Если указан параметр NOCHECK, то ограничение отключено и будущие вставки или обновления столбца не проверяются относительно условий ограничений. Невозможно отключить ограничения DEFAULT, PRIMARY KEY и UNIQUE.  
@@ -703,7 +703,7 @@ TABLE
   
  Задает режим сжатия данных для указанной таблицы, номера секции или диапазона секций. Существуют следующие параметры выбора.  
   
- NONE  
+ None  
  Таблица или указанные секции не сжимаются. Это не относится к таблицам columnstore.  
   
  ROW  
@@ -765,7 +765,7 @@ TABLE
   
  **Включение базы данных Stretch для таблицы**  
   
- Если включить растяжение для таблицы, указав `ON`, необходимо также указать `MIGRATION_STATE = OUTBOUND` начинается немедленно, перенос данных или `MIGRATION_STATE = PAUSED` чтобы отложить перенос данных. Значение по умолчанию — `MIGRATION_STATE = OUTBOUND`. Дополнительные сведения о включении растяжения для таблицы см. в разделе [включения базы данных Stretch для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
+ Если включить растяжение для таблицы, указав `ON`, необходимо также указать `MIGRATION_STATE = OUTBOUND` начинается немедленно, перенос данных или `MIGRATION_STATE = PAUSED` чтобы отложить перенос данных. Значение по умолчанию — `MIGRATION_STATE = OUTBOUND`. Дополнительные сведения о включении растяжения для таблицы см. в разделе [включения базы данных Stretch для таблицы](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md).  
   
  **Предварительные требования**. Прежде чем включать Stretch для таблицы, необходимо включить растяжение на сервере и в базе данных. Дополнительные сведения см. в разделе [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).  
   
@@ -777,7 +777,7 @@ TABLE
   
 -   Чтобы отключить базу данных Stretch для таблицы и скопировать удаленные данные из Azure обратно в SQL Server, запустите следующую команду. Эту команду нельзя отменить.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table name>
        SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;  
     ```  
@@ -788,7 +788,7 @@ ALTER TABLE \<table name>
   
 -   Чтобы отключить растяжение для таблицы и отказаться от удаленных данных, выполните следующую команду.  
   
-    ```tsql  
+    ```sql  
 ALTER TABLE \<table_name>
        SET ( REMOTE_DATA_ARCHIVE = OFF_WITHOUT_DATA_RECOVERY ( MIGRATION_STATE = PAUSED ) ) ;  
     ```  
@@ -849,7 +849,7 @@ WAIT_AT_LOW_PRIORITY
   
  Условно удаляет столбец или ограничение, только в том случае, если он уже существует.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы добавить новые строки данных, используйте [вставить](../../t-sql/statements/insert-transact-sql.md). Чтобы удалить строки данных, используйте [удаление](../../t-sql/statements/delete-transact-sql.md) или [TRUNCATE TABLE](../../t-sql/statements/truncate-table-transact-sql.md). Чтобы изменить значения в существующих строках, используйте [обновление](../../t-sql/queries/update-transact-sql.md).  
   
  При наличии в кэше процедур каких-либо планов выполнения, ссылающихся на таблицу, инструкция ALTER TABLE помечает их как подлежащие перекомпиляции в их следующем выполнении.  
@@ -943,7 +943,7 @@ WAIT_AT_LOW_PRIORITY
   
  Чтобы устранить эту проблему, используйте четырехкомпонентный префикс.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение ALTER на таблицу.  
   
  Разрешения ALTER TABLE применяются к обеим таблицам, затронутым инструкцией ALTER TABLE SWITCH. Любые переключенные данные наследуют защиту целевой таблицы.  

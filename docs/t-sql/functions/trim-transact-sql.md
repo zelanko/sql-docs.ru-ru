@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 54a39a38050589ba4e842253e192b820c2f1c0ea
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b7ea9bb6828182ee0cbc5d0ebef1065564bf03df
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trim-transact-sql"></a>Функция TRIM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -50,14 +50,14 @@ TRIM ( [ characters FROM ] string )
 ## <a name="return-types"></a>Типы возвращаемых значений   
 Возвращает символьное выражение с типом аргумента-строки, где символ пробела `char(32)` или другие указанные символы удаляются из обеих сторон. Возвращает `NULL` Если входная строка `NULL`.
 
-## <a name="remarks"></a>Замечания   
+## <a name="remarks"></a>Remarks   
 По умолчанию `TRIM` функция удаляет символ пробела `char(32)` с обеих сторон. Это равносильно `LTRIM(RTRIM(@string))`. Поведение `TRIM ` функцию с указанные символы идентична поведение `REPLACE` функции, где символов из начала или конца заменяются пустые строки.
 
 
 ## <a name="examples"></a>Примеры
 ### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>A.  Удаляет символ пробела с обеих сторон строки   
 Следующий пример удаляет пробелы до и после слова `test`.   
-```tsql
+```sql
 SELECT TRIM( '     test    ') AS Result;
 ```
 
@@ -68,7 +68,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>Б.  Удаляет указанные символы с обеих сторон строки   
 В следующем примере удаляется конечные точки и конечные пробелы.
-```tsql
+```sql
 SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
 ```
 

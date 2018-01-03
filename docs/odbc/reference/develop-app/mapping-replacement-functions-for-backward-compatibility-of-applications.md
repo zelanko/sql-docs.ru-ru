@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4fc2b4027039cf110caaf96bc2a197e2b10f1f62
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c93ea22e03f401580a968dacb1ca15910c7eb44b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Сопоставление замены функций для обеспечения обратной совместимости приложений
 ODBC 3*.x* приложения при работе с ODBC 3*.x* диспетчера драйверов будет работать для ODBC 2. *x* при условии, что используются не новые возможности драйвера. Оба дублирование функциональные возможности и изменения поведения тем не менее, влиять на который ODBC 3. *x* приложение работает на ODBC 2. *x* драйвера. При работе с ODBC 2. *x* драйвера, диспетчер драйверов сопоставляет следующие ODBC 3. *x* функций, которые произвели замену одного или нескольких ODBC 2. *x* функции, в соответствующие ODBC 2. *x* функции.  

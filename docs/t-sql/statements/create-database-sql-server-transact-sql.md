@@ -41,11 +41,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 57fe9fffdb553dffc3cd019d36692a8c34681817
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 777f08cf0a05e195ca5086f7af25eb8d95ef4010
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-database-sql-server-transact-sql"></a>CREATE DATABASE (SQL Server Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +190,7 @@ CREATE DATABASE database_snapshot_name
   
      Указывает уровень нетранзакционного доступа FILESTREAM к базе данных.  
   
-    |Значение|Описание|  
+    |Значение|Description|  
     |-----------|-----------------|  
     |OFF|Нетранзакционный доступ отключен.|  
     |READONLY|Данные FILESTREAM в этой базе данных могут быть считаны нетранзакционными процессами.|  
@@ -359,7 +359,7 @@ CREATE DATABASE database_snapshot_name
   
  РАЗМЕР не может быть указано при *имя_файла_ос* указан в формате UNC. Свойство SIZE к файловой группе FILESTREAM не применяется.  
   
- *размер*  
+ *size*  
  Задает начальный размер файла.  
   
  Когда *размер* не задан для первичного файла [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует размер первичного файла в базе данных модели. Размер модели по умолчанию — 8 МБ (начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) или 1 МБ (для более ранних версий). Когда указан вторичный файл данных или файл журнала, но *размер* не указан для файла, [!INCLUDE[ssDE](../../includes/ssde-md.md)] задает размер файла 8 МБ (начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) или 1 МБ (для более ранних версий). Размер, указанный для первичного файла, не должен быть менее размера первичного файла базы данных model.  
@@ -433,7 +433,7 @@ CREATE DATABASE database_snapshot_name
   
  Дополнительные сведения см. в подразделе «Моментальные снимки базы данных» раздела «Примечания».  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  [Базы данных master](../../relational-databases/databases/master-database.md) необходимо создавать резервную копию каждый раз, когда создан, изменен или удалении пользовательской базы данных.  
   
  Инструкция CREATE DATABASE должна выполняться в режиме автоматической фиксации (режим управления транзакциями по умолчанию) и не может применяться в явной или неявной транзакции.  
@@ -489,7 +489,7 @@ CREATE DATABASE database_snapshot_name
 ## <a name="viewing-database-information"></a>Просмотр сведений о базе данных  
  Для возврата сведений о базах данных, файлах и файловых группах можно использовать представления каталогов, системные функции и системные хранимые процедуры. Дополнительные сведения см. в разделе [Системные представления (Transact-SQL)](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CREATE DATABASE, CREATE ANY DATABASE или ALTER ANY DATABASE.  
   
  В целях сохранения управления над использованием диска в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]разрешение на создание баз данных обычно предоставляется небольшому числу учетных записей входа.  
@@ -541,7 +541,7 @@ GO
 ### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>Б. Создание базы данных, в которой заданы файлы данных и журнала транзакций  
  В следующем примере создается база данных `Sales`. Ключевое слово PRIMARY не использовано, поэтому первый файл (`Sales_dat`) становится первичным файлом. Поскольку в параметре SIZE для файла `Sales_dat` не заданы суффиксы MB и KB, используется значение MB и пространство выделяется в мегабайтах. Резервную копию базы данных `Sales_log` выделено в мегабайтах, потому что суффикс `MB` явно указан в параметре `SIZE` .  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -563,7 +563,7 @@ GO
 ### <a name="c-creating-a-database-by-specifying-multiple-data-and-transaction-log-files"></a>В. Создание базы данных, в которой указаны несколько файлов данных и журналов транзакций  
  Следующий пример создает базу данных `Archive`, имеющую 3 файла данных объемом по `100-MB` каждый и два файла журнала транзакций по `100-MB`. Первичный файл является первым файлом в списке и явно задан ключевым словом `PRIMARY`. Файлы журналов транзакций заданы следующими ключевыми словами `LOG ON`. Обратите внимание на расширения, используемые для файлов в параметре `FILENAME`: `.mdf` для первичных файлов данных, `.ndf` для вторичных файлов данных и `.ldf` для файлов журнала транзакций. В этом примере база данных размещается на диске `D:`, а не вместе с базой данных `master`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Archive   
@@ -609,7 +609,7 @@ GO
   
  В этом примере файлы данных и журналов размещаются на различных дисках с целью повышения производительности.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE Sales  
@@ -658,7 +658,7 @@ GO
 ### <a name="e-attaching-a-database"></a>Д. Присоединение базы данных.  
  В следующем примере база данных `Archive`, созданная в примере Е, отсоединяется, а затем присоединяется с помощью предложения `FOR ATTACH`. База данных `Archive` была определена с несколькими файлами данных и журналов. Однако поскольку местоположение файлов не изменилось со времени их создания, в предложении `FOR ATTACH` должен быть задан только первичный файл. Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] любые полнотекстовые файлы, являющиеся частью присоединяемой базы данных, будут присоединены вместе с базой данных.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 sp_detach_db Archive;  
@@ -674,7 +674,7 @@ GO
   
  База данных-источник для этого примера — `Sales`, созданная в примере Г.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 CREATE DATABASE sales_snapshot0600 ON  
@@ -691,7 +691,7 @@ GO
 ### <a name="g-creating-a-database-and-specifying-a-collation-name-and-options"></a>Ж. Создание базы данных и назначение имени и параметров сортировки  
  В следующем примере создается база данных `MyOptionsTest`. Указано имя параметров сортировки, а параметрам `TRUSTYWORTHY` и `DB_CHAINING` присвоено значение `ON`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 IF DB_ID (N'MyOptionsTest') IS NOT NULL  
@@ -712,7 +712,7 @@ GO
 ### <a name="h-attaching-a-full-text-catalog-that-has-been-moved"></a>З. Присоединение перемещенного полнотекстового каталога  
  В следующем примере показано, как присоединить полнотекстовый каталог `AdvWksFtCat` наряду с файлами данных и журнала `AdventureWorks2012`. В этом примере полнотекстовый каталог перемещается из расположения по умолчанию в новое расположение `c:\myFTCatalogs`. Файлы данных и журналов остаются в расположениях по умолчанию.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 --Detach the AdventureWorks2012 database  
@@ -737,7 +737,7 @@ GO
   
 -   Группа `FileStreamResumes` содержит данные FILESTREAM. Она содержит один контейнер данных FILESTREAM — `FSResumes`, расположенный в папке `C:\MyFSfolder\Resumes`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Get the SQL Server data path.  
@@ -789,7 +789,7 @@ GO
 ### <a name="j-creating-a-database-that-has-a-filestream-filegroup-with-multiple-files"></a>К. Создание базы данных, имеющей файловую группу FILESTREAM с несколькими файлами  
  В следующем примере создается база данных `BlobStore1`. Эта база данных создается с одной файловой группой строк и одной файловой группой FILESTREAM, `FS`. Файловая группа FILESTREAM содержит два файла, `FS1` и `FS2`. Затем выполняется изменение базы данных путем добавления третьего файла, `FS3`, в файловую группу FILESTREAM.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
   

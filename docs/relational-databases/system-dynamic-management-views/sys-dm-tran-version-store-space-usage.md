@@ -24,11 +24,11 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: 8488ee0a8bb823438071cb912bd56c08af640b42
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cfdd2caa03fdd12501580c2584d68f374ee54222
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/17/2017
 |**reserved_page_count**|**bigint**|Общее количество страниц, зарезервированных в базе данных tempdb для версии хранения записей базы данных.|  
 |**reserved_space_kb**|**bigint**|Общее пространство, используемое в базе данных tempdb, в килобайтах для версии хранения записей базы данных.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 
 ## <a name="examples"></a>Примеры  
  Следующий запрос может использоваться для определения места в базе данных tempdb хранилище версий каждой базы данных в экземпляре SQL Server. 
   
-```tsql  
+```sql  
 SELECT 
   DB_NAME(database_id) as 'Database Name',
   reserved_page_count,

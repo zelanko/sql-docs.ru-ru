@@ -1,7 +1,7 @@
 ---
 title: "Настройка параметров проекта (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -18,11 +18,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 6d54418b8a89a50773ffe3c98bb3c03a5ae955cd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0022ce5df4791ba3084507810d3490db2c7ae4dd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setting-project-options-oracletosql"></a>Настройка параметров проекта (OracleToSQL)
 Для каждого проекта SSMA можно задать параметры проекта. Эти параметры задают преобразование объекта, объект загрузки, параметры пользовательского интерфейса и данных миграции. Перед началом преобразования объектов [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или переноса данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], убедитесь, что параметры конфигурации подходят для проекта.  
@@ -44,7 +44,7 @@ SSMA имеет пять наборов параметров проекта.
   
 Он также имеет четыре режима для настройки этих параметров:  
   
--   По умолчанию  
+-   Default  
   
 -   Optimistic  
   
@@ -97,7 +97,7 @@ SSMA имеет пять наборов параметров проекта.
   
 3.  Нажмите кнопку **ОК** для сохранения настроек.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Следующий шаг в процессе переноса, зависит от требований проекта:  
   
 -   Настройка сопоставления исходных и целевых типов данных, в разделе [сопоставления Oracle и типы данных SQL Server &#40; OracleToSQL &#41;](../../ssma/oracle/mapping-oracle-and-sql-server-data-types-oracletosql.md).  

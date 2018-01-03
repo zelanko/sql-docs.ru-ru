@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_db_stats_properties (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 12/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e2a1ebc3301372b490de9ec631c3cdb0743f264b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d1603e9d1fb3fb9e84556f432c5b421844f8c1c3
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Идентификатор объекта (таблицы или индексированного представления), для которого возвращаются свойства объекта статистики.|  
 |stats_id|**int**|Идентификатор объекта статистики. Является уникальным в пределах таблицы или индексированного представления. Дополнительные сведения см. в статье [sys.stats (Transact-SQL)](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|last_updated|**datetime2**|Дата и время последнего обновления объекта статистики.|  
+|last_updated|**datetime2**|Дата и время последнего обновления объекта статистики. Дополнительные сведения см. в разделе [примечания](#Remarks) разделу на этой странице.|  
 |rows|**bigint**|Общее число строк в таблице или индексированном представлении при последнем обновлении статистики. Если статистика отфильтрована или соответствует отфильтрованному индексу, количество строк может быть меньше, чем количество строк в таблице.|  
 |rows_sampled|**bigint**|Общее количество строк, выбранных для статистических вычислений.|  
 |шаги|**int**|Число шагов в гистограмме. Дополнительные сведения см. в статье [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md).|  
@@ -62,20 +62,19 @@ sys.dm_db_stats_properties (object_id, stats_id)
 |modification_counter|**bigint**|Общее количество изменений в начальном столбце статистики (на основе которого строится гистограмма) с момента последнего обновления статистики.<br /><br /> Оптимизированные для памяти таблицы: запуск [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] этот столбец содержит: общее количество изменений для таблицы с момента последнего статистические данные о времени были обновлены или перезапуска базы данных.|  
 |persisted_sample_percent|**float**|Сохранен образец процент, используемый для обновления статистики, которые явно не указан процент выборки. Если значение равно нулю, процентное значение сохраненного образец устанавливается для этой статистики.<br /><br /> **Применяется к:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="Remarks"></a> Замечания  
  **sys.dm_db_stats_properties** возвращает пустой набор строк при выполнении любого из следующих условий:  
   
--   **object_id** или **stats_id** имеет значение NULL.  
-  
--   Указанный объект не найден или не соответствует таблице или индексированному представлению.  
-  
--   Указанный идентификатор статистики не соответствует имеющейся статистике для указанного идентификатора объекта статистики.  
-  
+-   **object_id** или **stats_id** имеет значение NULL.    
+-   Указанный объект не найден или не соответствует таблице или индексированному представлению.    
+-   Указанный идентификатор статистики не соответствует имеющейся статистике для указанного идентификатора объекта статистики.    
 -   Текущий пользователь не имеет разрешений на просмотр объекта статистики.  
   
  Это поведение позволяет безопасно использовать **sys.dm_db_stats_properties** при перекрестном применении к строкам в представлениях, таких как **sys.objects** и **sys.stats**.  
+ 
+Дата обновления статистики хранится в [большой двоичный объект статистики](../../relational-databases/statistics/statistics.md#DefinitionQOStatistics) вместе с [гистограммы](../../relational-databases/statistics/statistics.md#histogram) и [вектор плотностей](../../relational-databases/statistics/statistics.md#density), а не в метаданных. При чтении нет данных для создания статистических данных, статистические данные большого двоичного объекта не создается, дата не доступен и *last_updated* столбец имеет значение NULL. Это происходит для отфильтрованной статистики, для которого предикат не возвращает ни одной строки или новые пустые таблицы.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется наличие у пользователя разрешения на выбор столбцов статистики либо то, чтобы пользователь был владельцем таблицы или членом предопределенной роли сервера `sysadmin`, предопределенной роли базы данных `db_owner` или предопределенной роли базы данных `db_ddladmin`.  
   
 ## <a name="examples"></a>Примеры  
@@ -83,14 +82,14 @@ sys.dm_db_stats_properties (object_id, stats_id)
 ### <a name="a-simple-example"></a>A. Простой пример
 Следующий пример возвращает статистику для `Person.Person` таблицы в базе данных AdventureWorks.
 
-```
+```sql
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
 ``` 
   
 ### <a name="b-returning-all-statistics-properties-for-a-table"></a>Б. Получение всех статистических свойств таблицы  
  В следующем примере показано получение всех статистических свойств, имеющихся для таблицы TEST.  
   
-```  
+```sql  
 SELECT sp.stats_id, name, filter_definition, last_updated, rows, rows_sampled, steps, unfiltered_rows, modification_counter   
 FROM sys.stats AS stat   
 CROSS APPLY sys.dm_db_stats_properties(stat.object_id, stat.stats_id) AS sp  
@@ -100,7 +99,7 @@ WHERE stat.object_id = object_id('TEST');
 ### <a name="c-returning-statistics-properties-for-frequently-modified-objects"></a>В. Получение статистических свойств часто изменяемых объектов.  
  В следующем примере показано получение всех таблиц, индексированных представлений и статистических свойств из текущей базы данных, где начальный столбец менялся более 1000 раз с момента последнего обновления статистики.  
   
-```  
+```sql  
 SELECT obj.name, obj.object_id, stat.name, stat.stats_id, last_updated, modification_counter  
 FROM sys.objects AS obj   
 INNER JOIN sys.stats AS stat ON stat.object_id = obj.object_id  

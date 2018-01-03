@@ -3,7 +3,7 @@ title: "Просмотр рекомендаций по настройке | До
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0beed8adb028f43884306b92223a9c3f58db507b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: edd4b57780ac2df7a8eec09701819b5b44ef19bd
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-1-2---viewing-tuning-recommendations"></a>Занятие 1-2 - просмотра рекомендаций по настройке
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Эта задача используется сеанс настройки, который был создан в [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md). После завершения настройки базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] с использованием скрипта [!INCLUDE[tsql](../../includes/tsql-md.md)] с именем MyScript.sql помощник по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] отобразит результаты настройки на вкладке **Рекомендации** . В следующей задаче рассматривается назначение вкладки **Рекомендации** графического пользовательского интерфейса по настройке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и работа с предоставляемыми сведениями о результатах сеанса настройки.  

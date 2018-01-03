@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: c2a77abb7a86806281de3a84687f02c7c0b8fd7a
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: ceec3b427cb8b82cc155bbd5410d6ecca77bc64c
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-suse-linux-enterprise-server"></a>Пример: Сценария установки автоматической установки SQL Server для SUSE Linux Enterprise Server
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 12/09/2017
 Этот пример скрипта Bash устанавливает 2017 г. SQL Server на SP2 v12 SUSE Linux Enterprise Server (SLES) без интерактивного ввода данных. Он предоставляет примеры установке ядра СУБД, средства командной строки SQL Server, агент SQL Server и выполняет шаги после установки. При необходимости можно установить компонент full-text search и создать пользователя с правами администратора.
 
 > [!TIP]
-> Если не требуется использовать сценарий автоматической установки, то самый быстрый способ установки SQL Server является выполните [краткого руководства по SLES](quickstart-install-connect-suse.md). Другие сведения о настройке в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
+> Если не требуется использовать сценарий автоматической установки, то самый быстрый способ установки SQL Server является выполните [краткое руководство по SLES](quickstart-install-connect-suse.md). Другие сведения о настройке в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Необходимо по крайней мере 2 ГБ памяти для запуска SQL Server в Linux.
 - Файловая система должна быть **XFS** или **EXT4**. Других файловых систем, таких как **BTRFS**, не поддерживаются.
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/09/2017
 ## <a name="sample-script"></a>Пример сценария
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

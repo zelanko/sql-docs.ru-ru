@@ -14,11 +14,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 93e6520d3d2c15559ee001742bf58fa897814e3d
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: a66c65ea0eae4d3f1704f5bbeafb78ff657ab9ed
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Пример: Автоматической установки SQL Server сценария установки для Red Hat Enterprise Linux
 
@@ -27,9 +27,9 @@ ms.lasthandoff: 12/09/2017
 Этот образец скрипта Bash устанавливает 2017 г. SQL Server в Red Hat Enterprise Linux (RHEL) без ввода. Он предоставляет примеры установке ядра СУБД, средства командной строки SQL Server, агент SQL Server и выполняет шаги после установки. При необходимости можно установить компонент full-text search и создать пользователя с правами администратора.
 
 > [!TIP]
-> Если не требуется использовать сценарий автоматической установки, то самый быстрый способ установки SQL Server является выполните [краткого руководства по Red Hat](quickstart-install-connect-red-hat.md). Другие сведения о настройке в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
+> Если не требуется использовать сценарий автоматической установки, то самый быстрый способ установки SQL Server является выполните [краткое руководство по Red Hat](quickstart-install-connect-red-hat.md). Другие сведения о настройке в разделе [руководство по установке для SQL Server в Linux](sql-server-linux-setup.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 - Необходимо по крайней мере 2 ГБ памяти для запуска SQL Server в Linux.
 - Файловая система должна быть **XFS** или **EXT4**. Других файловых систем, таких как **BTRFS**, не поддерживаются.
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/09/2017
 Сохранить сценарий в файле и замените значения переменных в сценарии для ее настройки. Можно также задать любое переменных скрипта как переменные среды, при условии, что он удаляется из файла скрипта.
 
 ```bash
-#!/bin/bash -eu
+#!/bin/bash -e
 
 # Use the following variables to control your install:
 

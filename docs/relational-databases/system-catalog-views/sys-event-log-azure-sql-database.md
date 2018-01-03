@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4df7543112666b498a2896d62d16186a83d6e4af
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 77682d906a1fe24f371e6ec31c11e586398cdba6
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syseventlog-azure-sql-database"></a>sys.event_log (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.lasthandoff: 11/21/2017
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Имя базы данных. Если подключение завершилось ошибкой и пользователь не указал имя базы данных, то этот столбец остается пустым.|  
-|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Например:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|Дата и время начала интервала статистической обработки в формате UTC. Для статистических событий время всегда кратно 5 минутам. Пример:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Дата и время окончания интервала статистической обработки в формате UTC. Для статистически обрабатываемых событий **End_time** — всегда на пять минут больше соответствующего **start_time** в той же строке. Для событий, которые не обрабатываются статистически **start_time** и **end_time** равен фактические дата в формате UTC и время события.|  
 |**event_category**|**nvarchar(64)**|Высокоуровневый компонент, вызвавший данное событие.<br /><br /> В разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
 |**event_type**|**nvarchar(64)**|Тип события.<br /><br /> В разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
 |**event_subtype**|**int**|Подтип произошедшего события.<br /><br /> В разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
 |**event_subtype_desc**|**nvarchar(64)**|Описание подтипа события.<br /><br /> В разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
-|**Серьезность**|**int**|Степень серьезности ошибки. Возможны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
+|**severity**|**int**|Степень серьезности ошибки. Возможны следующие значения:<br /><br /> 0 = информационные<br />1 = предупреждение<br />2 = ошибка|  
 |**event_count**|**int**|Количество возникновений данного события для указанной базы данных в течение заданного интервала времени (**start_time** и **end_time**).|  
 |**Описание**|**nvarchar(max)**|Подробное описание события.<br /><br /> В разделе [типы событий](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md#EventTypes) список возможных значений.|  
 |**additional_data**|**XML**|*Примечание: Это значение всегда равно NULL для базы данных SQL Azure V12. В разделе [примеры](#Deadlock) раздел как извлечь события взаимоблокировки для версии 12.*<br /><br /> Для **взаимоблокировки** события, этот столбец содержит диаграмму взаимоблокировок. Этот столбец содержит значение NULL для других типов событий. |  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/21/2017
 > [!NOTE]  
 >  Это представление включает не все возможные события базы данных [!INCLUDE[ssSDS](../../includes/sssds-md.md)], которые могут возникнуть, а только события перечисленные ниже. Дополнительные категории, типы событий и подтипы могут быть добавлены в будущих версиях [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**Серьезность**|**Описание**|  
+|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**Описание**|  
 |-------------------------|---------------------|------------------------|------------------------------|------------------|---------------------|  
 |**подключение**|**connection_successful**|0|**connection_successful**|0|Успешное подключение к базе данных.|  
 |**подключение**|**connection_failed**|0|**invalid_login_name**|2|Имя входа не является допустимым именем входа в данной версии SQL Server.|  
@@ -87,10 +87,10 @@ ms.lasthandoff: 11/21/2017
 |**подключение**|**throttling_long_transaction**|40553|**excessive_memory_usage**|2|*Примечание: Применяется только к V11 базы данных Azure SQL.*<br /><br /> Сеанс был завершен в связи с чрезмерным использованием памяти. Рекомендуется изменить запрос, сократив число обрабатываемых строк. Дополнительные сведения см. в разделе [ограничения ресурсов](http://msdn.microsoft.com/library/windowsazure/dn338081.aspx).|  
 |**модуль**|**взаимоблокировки**|0|**взаимоблокировки**|2|Возникла взаимоблокировка.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователи, имеющие разрешение на доступ к **master** базы данных имеют доступ только для чтения к этому представлению.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ### <a name="event-aggregation"></a>Статистическая обработка событий  
  Сведения о событиях для этого представления собираются и обрабатываются каждые 5 минут. **Event_count** столбец представляет количество возникновений события с определенными **event_type** и **event_subtype** произошла для конкретной базы данных в течение заданного интервала времени.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/21/2017
   
  Например, если пользователю не удается подключиться к базе данных Database1 из-за недопустимого имени входа 7 раз с 11:00 до 11:05 5 февраля 2012 г. (UTC), эти сведения доступны в одной строке в следующем представлении:  
   
-|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**Серьезность**|**event_count**|**Описание**|**additional_data**|  
+|**database_name**|**start_time**|**end_time**|**event_category**|**event_type**|**event_subtype**|**event_subtype_desc**|**severity**|**event_count**|**Описание**|**additional_data**|  
 |------------------------|---------------------|-------------------|-------------------------|---------------------|------------------------|------------------------------|------------------|----------------------|---------------------|--------------------------|  
 |`Database1`|`2012-02-05 11:00:00`|`2012-02-05 11:05:00`|`connectivity`|`connection_failed`|`4`|`login_failed_for_user`|`2`|`7`|`Login failed for user.`|`NULL`|  
   
@@ -174,7 +174,7 @@ WHERE event_type = 'throttling'
 ### <a name="db-scoped-extended-event"></a>Области БД расширенных событий  
  В следующем примере кода используется для настройки сеанса расширенных событий (XEvent) уровня базы данных:  
   
-```tsql  
+```sql  
 IF EXISTS  
     (SELECT * from sys.database_event_sessions  
         WHERE name = 'azure_monitor_deadlock_session')  
@@ -206,7 +206,7 @@ ALTER EVENT SESSION azure_monitor_deadlock_session
 
 Используйте следующий запрос для проверки, если возникает взаимоблокировка.  
   
-```tsql  
+```sql  
 WITH CTE AS (  
     SELECT CAST(xet.target_data AS XML)  AS [target_data_XML]  
         FROM            sys.dm_xe_database_session_targets AS xet  

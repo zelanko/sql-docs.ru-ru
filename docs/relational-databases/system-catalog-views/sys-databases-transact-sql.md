@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3db3cbecf2486ba4096096b5d70c33eb12f0fc7f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: cccac1ba1615e6a825230c3735488e182aeed1e5
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |**is_read_only**|**bit**|1 = база данных находится в режиме READ_ONLY<br /> 0 = база данных находится в режиме READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = параметр AUTO_CLOSE находится в состоянии ON<br /> 0 = параметр AUTO_CLOSE находится в состоянии OFF|  
 |**is_auto_shrink_on**|**bit**|1 = параметр AUTO_SHRINK находится в состоянии ON<br /> 0 = параметр AUTO_SHRINK находится в состоянии OFF|  
-|**состояние**|**tinyint**|**Значение &#124; Применяется к**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = RECOVERING: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = АВАРИЙНОГО: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = вне сети: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Примечание:** базы данных, которая просто будет подключена к сети не обязательно готова к приему соединений. Чтобы определить базы данных может принимать подключения, запрос к столбцу collation_name sys.databases или свойства параметров сортировки **DATABASEPROPERTYEX**. База данных может принимать соединения, если параметры сортировки базы данных возвращают значение, отличное от NULL. Для базы данных Always On, запрос `database_state` или `database_state_desc` столбцы [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
+|**state**|**tinyint**|**Значение &#124; Применяется к**<br /> 0 = ONLINE <br /> 1 = RESTORING <br /> 2 = RECOVERING: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = SUSPECT <br /> 5 = АВАРИЙНОГО: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = вне сети: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)][!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Примечание:** базы данных Always On, запрос `database_state` или `database_state_desc` столбцы [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
 |**state_desc**|**nvarchar(60)**|Описание состояния базы данных. Для проверки состояния.|  
 |**is_in_standby**|**bit**|База данных доступна только для чтения для журнала восстановления.|  
 |**is_cleanly_shutdown**|**bit**|1 = база данных закрыта верно; восстановление при запуске не требуется<br /> 0 = база данных закрыта неверно; требуется восстановление при запуске|  
@@ -115,14 +115,14 @@ ms.lasthandoff: 11/21/2017
 |**delayed_durability**|**int**|Параметр отложенной длительности:<br /> 0 = ОТКЛЮЧЕНО<br /> 1 = РАЗРЕШЕНО<br /> 2 = ПРИНУДИТЕЛЬНЫЙ<br /> Дополнительные сведения см. в разделе [управление устойчивостью транзакций](../../relational-databases/logs/control-transaction-durability.md).<br /> **Применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**delayed_durability_desc**|**nvarchar(60)**|Параметр отложенной длительности:<br /> DISABLED<br /> ALLOWED<br /> FORCED<br /> **Применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /> **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**is_memory_optimized_elevate_to_snapshot_on**|**bit**|К таблицам с оптимизацией для памяти доступ производится с использованием изоляции SNAPSHOT, когда в TRANSACTION ISOLATION LEVEL установлен более низкий уровень изоляции — READ COMMITTED или READ UNCOMMITTED.<br /> 1 = минимальный уровень изоляции — SNAPSHOT.<br /> 0 = уровень изоляции не повышается.|  
-|**is_federation_member**|**bit**|Указывает, является ли база данных членом федерации.<br /> **Применяется к**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
+|**is_federation_member**|**bit**|Указывает, является ли база данных членом федерации.<br /> **Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]|  
 |**is_remote_data_archive_enabled**|**bit**|Указывает, растягивается ли базы данных.<br /> 0 = база данных не включена.<br /> 1 = база данных находится, совместимую со Stretch.<br /> **Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> Дополнительные сведения см. в разделе [базы данных Stretch](../../sql-server/stretch-database/stretch-database.md).|  
 |**is_mixed_page_allocation_on**|**bit**|Указывает, является ли таблицы и индексы в базе данных можно выделить начальной страницы из смешанных экстентов.<br /> 0 = таблиц и индексов в базе данных всегда выделяет начальной страницы из однородных экстентов.<br /> 1 = таблиц и индексов в базе данных можно выделить начальной страницы из смешанных экстентов.<br /> **Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> Дополнительные сведения см. в разделе ЗАДАТЬ инструкции mixed_page_allocation [параметры ALTER DATABASE SET &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md).|  
 |**is_temporal_retention_enabled**|**bit**|Указывает, включен ли задача очистки политики временного хранения.<br /> **Применяется к**: база данных Azure SQL|
 |**catalog_collation_type**|**int**|Настройка параметров сортировки каталога:<br />0 = DATABASE_DEFAULT<br />2 = SQL_Latin_1_General_CP1_CI_AS<br /> **Применяется к**: база данных Azure SQL|
 |**catalog_collation_type_desc**|**nvarchar(60)**|Настройка параметров сортировки каталога:<br />DATABASE_DEFAULT<br />SQL_Latin_1_General_CP1_CI_AS<br /> **Применяется к**: база данных Azure SQL|
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Если код, вызывающий `sys.databases` не является владельцем базы данных и база данных не `master` или `tempdb`, минимальные разрешения, необходимые для просмотра соответствующей строки являются `ALTER ANY DATABASE` или `VIEW ANY DATABASE` разрешение уровня сервера или `CREATE DATABASE` разрешение в `master` базы данных. Всегда можно просматривать базы данных, к которой подключен участник в `sys.databases`.  
   
 > [!IMPORTANT]  
@@ -158,7 +158,7 @@ WHERE a.state = 7;
 ### <a name="c-check-the-temporal-retention-policy-status-in-includesssdsincludessssds-mdmd"></a>В. Проверка состояния политики временного хранения[!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
  В следующем примере запрос `sys.databases` для возврата сведений о ли задача очистки временного хранения включена. Имейте в виду, что после операции восстановления временного хранения по умолчанию отключены. Используйте `ALTER DATABASE` чтобы явно включить.
   
-**Применяется к**:[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+**Область применения**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
 ```  
 -- Execute from the master database.  

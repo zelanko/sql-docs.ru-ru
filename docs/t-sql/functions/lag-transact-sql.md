@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8da98a7a5fe003c9567be9623cff3604e754c473
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a6942ecfcf189716e0829eadcb0d94c6d731650
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lag-transact-sql"></a>Предложение LAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -68,7 +68,7 @@ LAG (scalar_expression [,offset] [,default])
 ### <a name="a-compare-values-between-years"></a>A. Сравнение значений по годам  
  В следующем примере показано использование функции LAG для возврата разности в квотах продаж для указанного работника за предыдущие годы. Обратите внимание, что для первой строки возвращается значение, установленное по умолчанию, т. е. нуль (0), так как значение за предыдущие периоды для нее недоступно.  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -94,7 +94,7 @@ BusinessEntityID SalesYear   CurrentQuota          PreviousQuota
 ### <a name="b-compare-values-within-partitions"></a>Б. Сравнение значений внутри секций  
  В следующем примере используется функция LAG для сравнения количества продаж за текущий год между сотрудниками. Предложение PARTITION BY указывается для разделения строк результирующего набора по территориям продаж. Функция LAG применяется к каждой секции отдельно, а вычисление начинается заново для каждой секции. Предложение ORDER BY в предложении OVER упорядочивает строки в каждой секции. Предложение ORDER BY в инструкции SELECT сортирует сроки во всем результирующем наборе. Обратите внимание, что для первой строки возвращается значение, установленное по умолчанию, т. е. нуль (0), так как значение за предыдущий период для первой строки каждой секции недоступно.  
   
-```t-sql   
+```sql   
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -120,7 +120,7 @@ Northwest                280              1352577.1325          1573012.9383
 ### <a name="c-specifying-arbitrary-expressions"></a>В. Указание произвольных выражений  
  В следующем примере демонстрируется указание ряда произвольных выражений в синтаксисе функции LAG.  
   
-```t-sql   
+```sql   
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -148,7 +148,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: сравнение значений кварталов  
  В следующем примере функция LAG. В запросе используется функция LAG для возврата разности в квотах продаж для указанного работника за предыдущие календарных кварталов. Обратите внимание, что для первой строки возвращается значение, установленное по умолчанию, т. е. нуль (0), так как значение за предыдущие периоды для нее недоступно.  
   
-```t-sql   
+```sql   
 -- Uses AdventureWorks  
   
 SELECT CalendarYear, CalendarQuarter, SalesAmountQuota AS SalesQuota,  

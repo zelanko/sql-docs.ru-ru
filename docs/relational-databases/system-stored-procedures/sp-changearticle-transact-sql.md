@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 26e758e6f4884309a17d5abfaa82b64d767d4df5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 3dacb8a0f83084d61c7ca55c5ae093bb57876b82
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_changearticle** используется в репликации моментальных снимков и репликации транзакций.  
   
  Если статья принадлежит к публикации, поддерживающей-одноранговой репликации транзакций, можно выбрать только **описание**, **ins_cmd**, **upd_cmd**и **del_cmd** свойства.  
@@ -218,7 +218,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
  Для существующей публикации, можно использовать **sp_changearticle** для изменения статьи без необходимости удаления и повторного создания всей публикации.  
   
 > [!NOTE]  
->  При изменении значения *schema_option*, система не выполняет побитового обновления. Это означает, что при установке *schema_option* с помощью **sp_changearticle**существующие битовые настройки могут быть отключены. Чтобы сохранить существующие параметры, необходимо выполнить [& (побитовое и)](../../t-sql/language-elements/bitwise-and-transact-sql.md) между значением, которое устанавливается и текущее значение *schema_option*, которое можно получить, выполнив [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
+>  При изменении значения *schema_option*, система не выполняет побитового обновления. Это означает, что при установке *schema_option* с помощью **sp_changearticle**существующие битовые настройки могут быть отключены. Чтобы сохранить существующие параметры, необходимо выполнить [| (Побитовый оператор или) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) между значением, которое устанавливается и текущее значение *schema_option*, которое можно получить, выполнив [sp_helparticle](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md).  
   
 ## <a name="valid-schema-options"></a>Допустимые параметры схемы  
  В следующей таблице описаны допустимые значения *schema_option* зависимости от типа репликации (показаны в первой строке) и статей (показаны в первом столбце).  
@@ -246,7 +246,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## <a name="example"></a>Пример  
  [!code-sql[HowTo#sp_changetranarticle](../../relational-databases/replication/codesnippet/tsql/sp-changearticle-transac_1.sql)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера или **db_owner** предопределенной роли базы данных могут выполнять **sp_changearticle**.  
   
 ## <a name="see-also"></a>См. также:  

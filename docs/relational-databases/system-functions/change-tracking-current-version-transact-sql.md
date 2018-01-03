@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7be2d0c11dbf7537818c658b0a26254c5d7e41ff
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a560013a52a801b6b2ddf29050218f2370307717
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **bigint**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возвращает NULL, если отслеживание изменений не включено для базы данных.  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере объявляется локальная переменная `@next_baseline` для сохранения текущей версии отслеживаемых изменений, а затем используется функция `CHANGE_TRACKING_CURRENT_VERSION()` для получения значения переменной.  
   
-```tsql  
+```sql  
 DECLARE @next_baseline bigint;  
 SET @next_baseline = CHANGE_TRACKING_CURRENT_VERSION();  
 ```  

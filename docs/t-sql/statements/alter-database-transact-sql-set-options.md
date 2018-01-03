@@ -2,7 +2,7 @@
 title: "ИЗМЕНИТЬ параметры SET базы данных (Transact-SQL) | Документы Microsoft"
 description: "Дополнительные сведения о том, как задать параметры базы данных, например автоматической настройки, шифрование хранилища запросов в SQL Server и базы данных SQL Azure"
 ms.custom: 
-ms.date: 11/27/2017
+ms.date: 12/20/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -34,11 +34,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d73118014577a947037bd25fd2fb3959a56a4e47
-ms.sourcegitcommit: 28cccac53767db70763e5e705b8cc59a83c77317
+ms.openlocfilehash: de5b72bd7e890c2b7375448119af832f0e79d075
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Параметры ALTER DATABASE SET (Transact-SQL) 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -248,7 +248,7 @@ SET
   | ANSI_PADDING { ON | OFF }   
   | ANSI_WARNINGS { ON | OFF }   
   | ARITHABORT { ON | OFF }   
-  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120}  
+  | COMPATIBILITY_LEVEL = { 90 | 100 | 110 | 120 | 130 | 140 }  
   | CONCAT_NULL_YIELDS_NULL { ON | OFF }   
   | NUMERIC_ROUNDABORT { ON | OFF }   
   | QUOTED_IDENTIFIER { ON | OFF }   
@@ -316,7 +316,7 @@ SET
  Дополнительные сведения см. в подразделе «Использование параметров статистики уровня базы данных» в [статистики](../../relational-databases/statistics/statistics.md).  
   
  INCREMENTAL = ON | OFF  
- Если для AUTO_CREATE_STATISTICS установлено значение ON и для INCREMENTAL тоже ON, то автоматически создаваемые статистики создаются как добавочные везде, где поддерживаются добавочные статистики. Значение по умолчанию — OFF. Дополнительные сведения см. в разделе [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
+ Если для AUTO_CREATE_STATISTICS установлено значение ON и для INCREMENTAL тоже ON, то автоматически создаваемые статистики создаются как добавочные везде, где поддерживаются добавочные статистики. Значение по умолчанию — OFF. Дополнительные сведения см. в статье [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md).  
   
  **Применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -388,7 +388,7 @@ SET
 
  **\<change_tracking_option >:: =**  
   
- **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Недоступно в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)].  
   
  Определяет параметры отслеживания изменений. Отслеживание изменений можно включить или отключить, а также установить или изменить параметры. Примеры использования см. далее в этом разделе.  
   
@@ -693,7 +693,7 @@ MULTI_USER
   
  **\<query_store_options >:: =**  
   
- **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ON | OFF | CLEAR [ ALL ]  
  Указывает, включено ли хранилище запросов в этой базе данных, а также управляет удалением содержимого хранилища запросов.  
@@ -1018,7 +1018,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | ОТКЛЮЧЕНИЕ
   
  Состояние этого параметра можно определить с помощью проверки значения столбца is_arithabort_on в представлении каталога sys.databases или свойства IsArithmeticAbortEnabled функции DATABASEPROPERTYEX.  
   
- COMPATIBILITY_LEVEL { 90 | 100 | 110 | 120}  
+ COMPATIBILITY_LEVEL = {90 | 100 | 110 | 120 | 130 | 140}  
  Дополнительные сведения см. в разделе [Уровень совместимости инструкции ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
  CONCAT_NULL_YIELDS_NULL { ON | OFF }  
@@ -1050,7 +1050,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | ОТКЛЮЧЕНИЕ
   
  После создания таблицы параметр QUOTED IDENTIFIER всегда сохраняется в метаданных таблицы со значением ON, даже если при создании таблицы для него было задано OFF.  
   
- Настройки уровня соединения, установленные с помощью инструкции SET, переопределяют параметры базы данных по умолчанию для QUOTED_IDENTIFIER. По умолчанию клиенты ODBC и OLE DB при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливают параметр QUOTED_IDENTIFIER инструкции SET уровня соединения в состояние ON. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+ Настройки уровня соединения, установленные с помощью инструкции SET, переопределяют параметры базы данных по умолчанию для QUOTED_IDENTIFIER. По умолчанию клиенты ODBC и OLE DB при соединении с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] устанавливают параметр QUOTED_IDENTIFIER инструкции SET уровня соединения в состояние ON. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
  Состояние этого параметра можно определить с помощью проверки значения столбца is_quoted_identifier_on в представлении каталога sys.databases или свойства IsQuotedIdentifiersEnabled функции DATABASEPROPERTYEX.  
   
@@ -1123,21 +1123,21 @@ FEDERATED_SERVICE_ACCOUNT = ON | ОТКЛЮЧЕНИЕ
 |\<db_user_access_option >|Да|Да|  
 |\<db_update_option >|Да|Да|  
 |\<delayed_durability_option >|Да|Да|  
-|\<external_access_option >|Да|Нет|  
-|\<cursor_option >|Да|Нет|  
-|\<auto_option >|Да|Нет|  
-|\<sql_option >|Да|Нет|  
-|\<recovery_option >|Да|Нет|  
-|\<target_recovery_time_option >|Нет|Да|  
-|\<database_mirroring_option >|Нет|Нет|  
-|ALLOW_SNAPSHOT_ISOLATION|Нет|Нет|  
-|READ_COMMITTED_SNAPSHOT|Нет|Да|  
+|\<external_access_option >|Да|нет|  
+|\<cursor_option >|Да|нет|  
+|\<auto_option >|Да|нет|  
+|\<sql_option >|Да|нет|  
+|\<recovery_option >|Да|нет|  
+|\<target_recovery_time_option >|нет|Да|  
+|\<database_mirroring_option >|нет|нет|  
+|ALLOW_SNAPSHOT_ISOLATION|нет|нет|  
+|READ_COMMITTED_SNAPSHOT|нет|Да|  
 |MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT|Да|Да|  
-|\<service_broker_option >|Да|Нет|  
+|\<service_broker_option >|Да|нет|  
 |DATE_CORRELATION_OPTIMIZATION|Да|Да|  
 |\<parameterization_option >|Да|Да|  
 |\<change_tracking_option >|Да|Да|  
-|\<db_encryption >|Да|Нет|  
+|\<db_encryption >|Да|нет|  
   
  Кэш планов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] очищается при установке одного из следующих параметров.  
   
@@ -1223,7 +1223,7 @@ GO
   
  Результирующий набор показывает, что платформа изоляции моментального снимка включена.  
   
- |имя |snapshot_isolation_state |description|  
+ |NAME |snapshot_isolation_state |description|  
  |-------------------- |------------------------  |----------|  
  |AdventureWorks2012   |1                        | ON |  
   
@@ -1251,7 +1251,7 @@ SET CHANGE_TRACKING = OFF;
 ```  
   
 ### <a name="e-enabling-the-query-store"></a>Д. Включение хранилища запросов  
- **Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
  Следующий пример включает хранилище запросов и настраивает его параметры.  
   

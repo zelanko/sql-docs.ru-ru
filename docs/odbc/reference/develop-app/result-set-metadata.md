@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9e2270cf940fc7c9bc3ccaf50977328b3a1077bd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1aa59dd088611043a3212366f344ba0bae0cffc
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="result-set-metadata"></a>Метаданные результирующего набора
 *Метаданные* — это данные, описывающие другие данные. Например метаданные результирующего набора описывают результирующий набор, такие как число столбцов в результирующем наборе, типы данных этих столбцов, их имена, точность, допустимость значений NULL и т. д.  

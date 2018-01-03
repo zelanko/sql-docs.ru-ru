@@ -1,7 +1,7 @@
 ---
 title: "Сопоставление исходной и целевой типы данных (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -26,11 +26,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58d908af3ce4c8ee9e04d9499367949e27d9ca3e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4de8ef23dae7d51e63742caf30ccc2a79361ae0
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-source-and-target-data-types-accesstosql"></a>Сопоставление исходной и целевой типы данных (AccessToSQL)
 Типы доступа к базе данных отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] типы базы данных. При преобразовании объекты базы данных Access для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] объектов, необходимо указать способ сопоставления типов данных доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]. Вы можете принять сопоставления типов данных по умолчанию или можно настроить сопоставления, как показано в следующих процедурах.  
@@ -97,7 +97,7 @@ SSMA имеет набор по умолчанию сопоставлений т
   
     2.  Щелкните **Удалить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Следующим шагом в процессе миграции является [преобразования объектов базы данных access объекты SQL Server](http://msdn.microsoft.com/en-us/e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c)  
   
 ## <a name="see-also"></a>См. также:  

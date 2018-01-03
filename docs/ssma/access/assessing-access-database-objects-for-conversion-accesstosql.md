@@ -1,7 +1,7 @@
 ---
 title: "Оценка объекты баз данных Access для преобразования (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -29,11 +29,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b56dec5144daf0531fa630c2d6fc016903c5eeaa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e5deebf9af1de40aedfd549ba050e37a4539a1c7
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>Оценки для преобразования (AccessToSQL) объектов базы данных Access
 Прежде чем загружать объекты и переносить данные в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure, следует определить, насколько миграции будет выполнено успешно, и сколько времени может потребоваться преобразование. SSMA можно создать отчет об оценки, который показывает процент объекты, которые были успешно преобразованы [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или синтаксис SQL Azure и время оценки для выполнения миграции. SSMA также позволяет просматривать конкретные проблемы, вызвавшие ошибки преобразования.  

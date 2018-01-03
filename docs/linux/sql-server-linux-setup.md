@@ -4,7 +4,7 @@ description: "Установка, обновление и удаление SQL S
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/26/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.workload: Active
-ms.openlocfilehash: 65835ac1faf75664ecdbac8907c74906ccc4175e
-ms.sourcegitcommit: 085dd05d56afecbb454206ed8402cfbaa597cfbe
+ms.openlocfilehash: 180c8492531da7c3b9c15ebef28917b52e0869ce
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Руководство по установке для SQL Server в Linux
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/01/2017
 В этом разделе объясняется, как для установки, обновления и удаления 2017 г. SQL Server в Linux. В Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES) и Ubuntu поддерживается 2017 г. SQL Server. Она также доступна как образ Docker, который можно запустить на подсистема Docker в Linux или Docker для Windows или Mac.
 
 > [!TIP]
-> Чтобы быстро приступить к работе, перейти к одной части краткого руководства для [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), или [Docker](quickstart-install-connect-docker.md).
+> Чтобы быстро приступить к работе, перейти к одному из примеры использования для [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), или [Docker](quickstart-install-connect-docker.md).
 
 ## <a id="supportedplatforms"></a>Поддерживаемые платформы
 
@@ -40,6 +40,10 @@ ms.lasthandoff: 12/01/2017
 | **SUSE Linux Enterprise Server** | с пакетом обновления 2 для версии 12 | [Получить SP2 SLES версии 12](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Получить Ubuntu 16.04](http://www.ubuntu.com/download/server)
 | **Подсистема docker** | 1.8+ | [Получить Docker](http://www.docker.com/products/overview)
+
+Корпорация Майкрософт поддерживает развертывание и Управление контейнерами SQL Server с помощью OpenShift и Kubernetes.
+
+Последние политика поддержки для SQL Server 2017 г. в разделе [политика технической поддержки для Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a id="system"></a>Требования к системе
 
@@ -62,7 +66,7 @@ ms.lasthandoff: 12/01/2017
 
 ## <a id="platforms"></a>Установка SQL Server
 
-SQL Server в Linux можно установить из командной строки. Соответствующие инструкции см. в следующих учебниках краткое руководство:
+SQL Server в Linux можно установить из командной строки. Соответствующие инструкции см. следующие примеры использования:
 
 - [Установите на Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -162,7 +166,7 @@ sudo rm -rf /var/opt/mssql/
 Чтобы настроить репозитории CU или GDR, выполните следующие действия:
 
 > [!NOTE]
-> [Быстрого запуска учебники](#platforms) настройте CU репозитория. При выполнении этих учебников, выполните следующие действия, чтобы продолжить использование репозитории CU необязательно. Эти шаги необходимы только для изменения вашего настроенного репозитория.
+> [Краткие руководства](#platforms) настройте CU репозитория. При выполнении этих учебников, выполните следующие действия, чтобы продолжить использование репозитории CU необязательно. Эти шаги необходимы только для изменения вашего настроенного репозитория.
 
 1. При необходимости удалите ранее настроенного репозитория.
 
@@ -202,7 +206,7 @@ sudo rm -rf /var/opt/mssql/
 
 Можно выполнить автоматическую установку следующим образом:
 
-- Необходимо выполнить начального действия в [быстрого запуска учебники](#platforms) репозиториями регистрация и установка SQL Server.
+- Необходимо выполнить начального действия в [краткие руководства](#platforms) репозиториями регистрация и установка SQL Server.
 - При запуске `mssql-conf setup`, задайте [переменных среды](sql-server-linux-configure-environment-variables.md) и использовать `-n` (без запроса) параметра.
 
 В следующем примере настраивается Developer edition, SQL Server с **MSSQL_PID** переменной среды. Он также принимает условия лицензионного соглашения (**ACCEPT_EULA**) и задает пароль пользователя SA (**MSSQL_SA_PASSWORD**). `-n` Параметр выполняет unprompted установку, где значения конфигурации извлекаются из переменных среды.
@@ -262,11 +266,11 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 После установки можно также установить другие дополнительные пакеты SQL Server.
 
 - [Средства командной строки SQL Server](sql-server-linux-setup-tools.md)
-- [SQL Server, агент](sql-server-linux-setup-sql-agent.md)
+- [Агент SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Полнотекстовый поиск SQL Server](sql-server-linux-setup-full-text-search.md)
 - [SQL Server Integration Services (Ubuntu)](sql-server-linux-setup-ssis.md)
 
-Подключитесь к экземпляру SQL Server, чтобы начать создание и управление базами данных. Чтобы приступить к работе, см. в учебниках краткое руководство:
+Подключитесь к экземпляру SQL Server, чтобы начать создание и управление базами данных. Чтобы приступить к работе, см. Примеры использования:
 
 - [Установите на Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

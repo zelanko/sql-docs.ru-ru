@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 4119f0283be2bf4a0b145e59ec930eea4496d666
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,13 +93,13 @@ ms.lasthandoff: 11/17/2017
 |open_transaction_count|**int**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество открытых транзакций на сеанс.|  
 |pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Все могли увидеть свои собственные сведения о сеансе.  
 **[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]:** Требует `VIEW SERVER STATE` разрешение на [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] для просмотра всех сеансов на сервере.  
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** Требует `VIEW DATABASE STATE` для просмотра всех подключений к текущей базе данных. `VIEW DATABASE STATE`не может быть предоставлено в `master` базы данных. 
   
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Когда **включено соответствие стандарту common criteria** включен параметр конфигурации сервера, Статистика входа отображается в следующих столбцах.  
   
 -   last_successful_logon  
@@ -125,7 +125,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-finding-users-that-are-connected-to-the-server"></a>A. Поиск пользователей, подключенных к серверу  
  В следующем примере производится поиск пользователей, подключенных к серверу, и возвращаются сведения о числе сеансов для каждого пользователя.  
   
-```tsql  
+```sql  
 SELECT login_name ,COUNT(session_id) AS session_count   
 FROM sys.dm_exec_sessions   
 GROUP BY login_name;  
@@ -134,7 +134,7 @@ GROUP BY login_name;
 ### <a name="b-finding-long-running-cursors"></a>Б. Поиск курсоров, выполняющихся продолжительное время  
  В следующем примере производится поиск курсоров, открытых дольше заданного периода времени, определяются их создатели и соответствующие им сеансы.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 SELECT creation_time ,cursor_id   
@@ -148,7 +148,7 @@ WHERE DATEDIFF(mi, c.creation_time, GETDATE()) > 5;
 ### <a name="c-finding-idle-sessions-that-have-open-transactions"></a>В. Поиск бездействующих сеансов, имеющих открытые транзакции  
  В следующем производится поиск сеансов, имеющих открытые транзакции, но при этом бездействующих. Бездействующим сеансом считается сеанс, который в настоящий момент не выполняет запросов.  
   
-```tsql  
+```sql  
 SELECT s.*   
 FROM sys.dm_exec_sessions AS s  
 WHERE EXISTS   
@@ -168,7 +168,7 @@ WHERE EXISTS
 ### <a name="d-finding-information-about-a-queries-own-connection"></a>Г. Поиск сведений о собственном соединении запросов  
  Типичный запрос для сбора сведений о собственном соединении запросов.  
   
-```tsql  
+```sql  
 SELECT   
     c.session_id, c.net_transport, c.encrypt_option,   
     c.auth_scheme, s.host_name, s.program_name,   

@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2f4589c45311ad9c1479f97ceb82b38f3e13393e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 67c842da8894bc7fe33be69a35a88949c6e441b7
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,13 +48,13 @@ THROW [ { error_number | @local_variable },
  *ERROR_NUMBER*  
  Константа или переменная, представляющая исключение. *ERROR_NUMBER* — **int** и должно быть больше или равен 50 000 и меньше или равно 2147483647.  
   
- *Сообщение*  
+ *message*  
  Строка или переменная, описывающая исключение. *сообщение* — **nvarchar(2048)**.  
   
- *состояние*  
+ *state*  
  Константа или переменная со значением в диапазоне от 0 до 255, указывающие состояние, которое должно быть связано с сообщением. *состояние* — **tinyint**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В инструкции, выполняемой до инструкции THROW, должен использоваться признак конца инструкции — точка с запятой (;).  
   
  Если конструкция TRY…CATCH недоступна, то сеанс будет завершен. Задаются номер строки и процедура, где вызывается исключение. Серьезности задается значение 16.  
@@ -77,7 +77,7 @@ THROW [ { error_number | @local_variable },
 ### <a name="a-using-throw-to-raise-an-exception"></a>A. Использование инструкции THROW для вызова исключения  
  В следующем примере показано использование инструкции `THROW` для вызова исключения.  
   
-```tsql  
+```sql  
 THROW 51000, 'The record does not exist.', 1;  
 ```  
   
@@ -92,7 +92,7 @@ THROW 51000, 'The record does not exist.', 1;
 ### <a name="b-using-throw-to-raise-an-exception-again"></a>Б. Использование инструкции THROW для повторного вызова исключения  
  В следующем примере показано использование инструкции `THROW` для повторного вызова последнего исключения.  
   
-```tsql  
+```sql  
 USE tempdb;  
 GO  
 CREATE TABLE dbo.TestRethrow  
@@ -123,7 +123,7 @@ END CATCH;
 ### <a name="c-using-formatmessage-with-throw"></a>В. Использование инструкции FORMATMESSAGE с ключевым словом THROW  
  В следующем примере показано использование функции `FORMATMESSAGE` с ключевым словом `THROW` для вызова настроенных сообщений об ошибке. В данном примере сначала создается определяемое пользователем сообщение об ошибке с помощью `sp_addmessage`. Поскольку инструкция THROW не позволяет задать параметры подстановки для *сообщение* параметр образом делает инструкция RAISERROR, функция FORMATMESSAGE используется для передачи трех значений параметров, ожидаемых по сообщению об ошибке 60000.  
   
-```tsql  
+```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
 ,@severity = 16  

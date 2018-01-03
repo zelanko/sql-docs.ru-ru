@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5b5d294aaeebab45e0ff0ce36db0fa39b9738571
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e0d82da741babc168ce305ed8134d8f44f682f57
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-dynamic-cursors"></a>Динамические курсоры ODBC
 Динамический курсор, является: динамические. Он может определить любые изменения членства, порядок и значения из результирующего набора, после открытия курсора. Например предположим, курсор dynamic извлекает две строки и другое приложение, затем обновляет один из этих строк и удаляет другой. Если динамический курсор пытается повторно извлечь эти строки, не позволяет найти удаленную строку, но будет возвращать новые значения для измененной строки.  

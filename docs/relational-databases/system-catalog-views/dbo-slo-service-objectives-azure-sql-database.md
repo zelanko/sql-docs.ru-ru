@@ -1,13 +1,12 @@
 ---
 title: "dbo.slo_service_objectives (база данных SQL Azure) | Документы Microsoft"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 03/04/2017
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -27,15 +26,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5330bc8977c0e043f27cb5f035510c5da007e0c4
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: 0f91dccf478821047e4c3a25ea19d35d1a2774fd
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloserviceobjectives-azure-sql-database"></a>dbo.slo_service_objectives (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
-
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
 >  Этот компонент находится в состоянии предварительной версии и рекомендуется к использованию в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] версии 12. Не полагайтесь на конкретную реализацию этого компонента, так как он может быть изменен или удален в следующей версии.  
@@ -49,16 +47,16 @@ ms.lasthandoff: 11/09/2017
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |objective_id|**uniqueidentifier**|Идентификатор цели уровня обслуживания.|  
-|имя|**sysname**|Имя цели уровня обслуживания.|  
+|NAME|**sysname**|Имя цели уровня обслуживания.|  
 |description|**nvarchar**|Описание цели уровня обслуживания.|  
-|create_date|**DateTimeOffset(7)**|Дата создания объекта уровня обслуживания на сервере.|  
+|create_date|**datetimeoffset(7)**|Дата создания объекта уровня обслуживания на сервере.|  
 |is_system|**bit**|1 = системная цель уровня обслуживания|  
 |is_default|**bit**|1 = цель уровня обслуживания является SLO по умолчанию.|  
 |state|**tinyint**|1 = цель уровня обслуживания включена.<br /><br /> 2 = цель уровня обслуживания отключена.|  
 |state_desc|**nvarchar**|Описание цели уровня обслуживания.|  
 |metadata_version|**decimal**|Версия цели уровня обслуживания.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к виртуальной **master** базы данных.  
   
 ## <a name="see-also"></a>См. также:  

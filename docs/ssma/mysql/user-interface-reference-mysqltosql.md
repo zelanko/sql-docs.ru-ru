@@ -1,7 +1,7 @@
 ---
 title: "Справочник по пользовательскому интерфейсу (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,21 +20,21 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2e61c90785328f887caff3df0b97d632cf4cdbaf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e39a5ca8327230660a0a6dc1c0a6d1170ae7c279
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Справочник по пользовательскому интерфейсу (MySQLToSQL)
 В этом разделе содержатся справочные сведения для SQL Server Migration Assistant (SSMA) для MySQL.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
 В следующей таблице перечислены диалоговые окна SSMA:  
   
 |||  
 |-|-|  
-|**Раздел**|**Description**|  
+|**Раздел**|**Описание**|  
 |[Выбор дополнительных объектов &#40; MySQLToSQL &#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Используйте **выберите расширенный объект** диалогового окна поиска объектов базы данных с помощью условия фильтра и затем установите или снимите этих объектов.|  
 |[Отчета оценки &#40; MySQLToSQL &#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Используйте отчет, чтобы просмотреть результаты преобразования объектов MySQL синтаксиса Transact-SQL и для оценки времени и сложность миграции на SQL Server.|  
 |[Подключение к MySQL &#40; MySQLToSQL &#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Используйте **подключение к MySQL** диалоговое окно подключения к базе данных MySQL, которые требуется перенести.|  

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3346d20f183810891615615c493d1d39c3339658
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ae58f948d5219316c59022de477f147cdd4584b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 Из приведенной выше таблицы **атрибут** может принимать следующие значения:
 
-|Attribute|Тип данных|Description|  
+|attribute|Тип данных|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Показывает значения параметров, с использованием которых был скомпилирован план.|  
 |objectid|**int**|Одно из основных ключевых слов, используемое для поиска объекта в кэш-памяти. Это идентификатор объекта, хранимый в [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) для объектов базы данных (процедуры, представления, триггеры и т. д.). Для планов типа «Нерегламентированный» или «Подготовленный» — это внутренний хэш текста пакета.|  
@@ -83,12 +83,12 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |sql_handle|**varbinary**(64)|Дескриптор SQL для пакета.|  
 |merge_action_type|**smallint**|Тип плана выполнения триггеров, используемого в результате инструкции MERGE.<br /><br /> 0 указывает план без триггеров, или план триггеров, который не выполняется в результате инструкции MERGE, или план триггеров, который выполняется в результате инструкции MERGE, в которой задано только действие DELETE.<br /><br /> 1 указывает план триггеров INSERT, который выполняется в результате инструкции MERGE.<br /><br /> 2 указывает план триггеров UPDATE, который выполняется в результате инструкции MERGE.<br /><br /> 3 указывает план триггеров DELETE, который выполняется в результате инструкции MERGE, содержащей соответствующее действие INSERT или UPDATE.<br /><br /> Для вложенных триггеров, выполняемых каскадными операциями, это значение является действием инструкции MERGE, запустившей каскад.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо разрешение VIEW SERVER STATE на сервере.  
   
  На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Premium необходимо разрешение VIEW DATABASE STATE в базе данных. На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Standard и Basic требуется [!INCLUDE[ssSDS](../../includes/sssds-md.md)] учетная запись администратора.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="set-options"></a>Параметры SET  
  Копирует же скомпилированного плана могут отличаться только по значению в **set_options** столбца. Это указывает на то, что разные соединения используют разные наборы параметров SET для одного запроса. Использование разных наборов параметров, как правило, нежелательно, поскольку приводит к дополнительным компиляциям, меньшему повторному использованию планов и расширению кэша планов по причине размещения нескольких копий планов в кэш-памяти.  
@@ -126,7 +126,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 |Параметр|Значение|  
 |------------|-----------|  
-|Нет|0|  
+|None|0|  
 |INSENSITIVE|1|  
 |SCROLL|2|  
 |READ ONLY|4|  
@@ -148,7 +148,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. Возврат атрибутов для конкретного плана  
  Следующий пример возвращает все атрибуты для указанного плана. В первый раз динамическое административное представление `sys.dm_exec_cached_plans` опрашивается для получения дескриптора указанного плана. Во втором запросе `<plan_handle>` заменяется значением дескриптора плана из первого запроса.  
   
-```tsql  
+```sql  
 SELECT plan_handle, refcounts, usecounts, size_in_bytes, cacheobjtype, objtype   
 FROM sys.dm_exec_cached_plans;  
 GO  
@@ -160,7 +160,7 @@ GO
 ### <a name="b-returning-the-set-options-for-compiled-plans-and-the-sql-handle-for-cached-plans"></a>Б. Возврат параметров SET для скомпилированных планов и дескриптора SQL для планов в кэш-памяти  
  Следующий пример возвращает значение, представляющее параметры, с использованием которых был скомпилирован план. Кроме того, возвращается дескриптор SQL для всех кэшированных планов.  
   
-```tsql  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
     SELECT plan_handle, epa.attribute, epa.value   

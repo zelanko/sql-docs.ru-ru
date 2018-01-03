@@ -1,7 +1,7 @@
 ---
 title: "Инструкция DBCC CHECKDB (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 09/21/2016
+ms.date: 12/14/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -40,11 +40,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67d2d6b3b6ad42e444f8f7f2908f2327c4844933
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4a5ab88b068d32e9a40f4556564018a5f806608
+ms.sourcegitcommit: 27f1143cf9b52dd27acf81234a516c32a239a320
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,10 +132,7 @@ DBCC CHECKDB
 >  Для устранения ошибок рекомендуется восстановление из резервной копии. Операции восстановления не учитывают никакие ограничения, которые могут существовать для таблиц или между таблицами. Если указанная таблица включена в одно или несколько ограничений, рекомендуется выполнить инструкцию DBCC CHECKCONSTRAINTS после операции восстановления. Если необходимо использовать аргументы REPAIR, выполните инструкцию DBCC CHECKDB без параметра восстановления, чтобы узнать требуемый уровень восстановления. При использовании уровня REPAIR_ALLOW_DATA_LOSS, рекомендуется создать резервную копию базы данных перед выполнением инструкции DBCC CHECKDB с этим параметром.    
     
  ALL_ERRORMSGS  
- Отображает все сформированные для объекта ошибки. Все сообщения об ошибках выводятся по умолчанию. Указание или пропуск этого параметра не приводит к изменениям. Сообщения об ошибках сортируются по Идентификатору объекта, за исключением сообщений, формируемых [базы данных tempdb](../../relational-databases/databases/tempdb-database.md).  
-    
-> [!NOTE] 
-> В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] максимальное число возвращаемых сообщений об ошибках равно 1000. Если указан параметр ALL_ERRORMSGS, мы рекомендуем, выполните команду DBCC с помощью [программы sqlcmd](../../tools/sqlcmd-utility.md) или с помощью планирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] задание агента для выполнения команды и направляют выходные данные в файл. Использование любого из этих методов обеспечит однократное выполнение команды и включение в отчет всех сообщений об ошибках.    
+ Отображает все сформированные для объекта ошибки. Все сообщения об ошибках выводятся по умолчанию. Указание или пропуск этого параметра не приводит к изменениям. Сообщения об ошибках сортируются по Идентификатору объекта, за исключением сообщений, формируемых [базы данных tempdb](../../relational-databases/databases/tempdb-database.md).     
 
  EXTENDED_LOGICAL_CHECKS  
  При уровне совместимости 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) и выше выполняются проверки логической согласованности индексированных представлений, XML-индексов и пространственных индексов, если они есть.  
@@ -182,7 +179,7 @@ DBCC CHECKDB
 > [!WARNING] 
 > Если MAXDOP равно нулю, то SQL Server выбирает максимальную степень параллельности для использования.    
 
-## <a name="remarks"></a>Замечания    
+## <a name="remarks"></a>Remarks    
 Инструкция DBCC CHECKDB не анализирует отключенные индексы. Дополнительные сведения об отключенных индексах см. в разделе [отключение индексов и ограничений](../../relational-databases/indexes/disable-indexes-and-constraints.md).
 Если определяемый пользователем тип помечен как упорядоченный по байтам, должна быть выполнена только одна сериализация определяемого пользователем типа. Невыполнение согласованной сериализации побайтно упорядоченных типов, определяемых пользователем, приведет к возникновению ошибки 2537 при запуске инструкции DBCC CHECKDB. Дополнительные сведения см. в разделе [требования определяемого пользователем типа](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).
 Поскольку [базы данных Resource](../../relational-databases/databases/resource-database.md) только в однопользовательском режиме, инструкция DBCC CHECKDB, команда не может быть запущена на нем, напрямую или нет. Тем не менее, при выполнении инструкции DBCC CHECKDB к [базы данных master](../../relational-databases/databases/master-database.md), второй CHECKDB также выполняется внутри в базе данных ресурсов. Поэтому инструкция DBCC CHECKDB может вернуть дополнительные результаты. Эта команда возвратит дополнительные результирующие наборы, если не указано параметров или указан один из параметров PHYSICAL_ONLY или ESTIMATEONLY.
@@ -373,7 +370,7 @@ DBCC CHECKDB завершается со сбоем при запуске для
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Разрешения    
 Необходимо членство в фиксированной серверной роли sysadmin или предопределенной роли базы данных db_owner.
     
 ## <a name="examples"></a>Примеры    

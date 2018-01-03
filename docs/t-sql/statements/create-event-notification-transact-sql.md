@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 48d7a50927d6fc3e193b54e85dd534aa859d13fa
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: e171027878b85c0df5ce25756f2a223675d21feb
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] включает в себя тип сообщений и контракт исключительно для уведомлений о событии. Таким образом служба вызывающей стороны не должен создаваться, так как он уже существует, компонент Service Broker задает следующее имя контракта:`http://schemas.microsoft.com/SQL/Notifications/PostEventNotification`  
   
  Целевая служба, принимающая уведомления о событиях, должна поддерживать такой уже существующий контракт.  
@@ -121,7 +121,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  Все неудачные попытки отправки уведомления о событии заносятся в журнал.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Чтобы создать уведомление о событии в области базы данных (ON DATABASE), необходимо разрешение CREATE DATABASE DDL EVENT NOTIFICATION в текущей базе данных.  
   
  Чтобы создать уведомление о событии для инструкции DDL в области сервера (ON SERVER), необходимо разрешение CREATE DDL EVENT NOTIFICATION на сервере.  
@@ -140,7 +140,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 ### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>A. Создание уведомления о событии уровня сервера  
  В следующем примере создаются объекты, необходимые для установки целевой службы при помощи компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Конечная служба ссылается на тип сообщения и контракт вызывающей стороны исключительно для уведомлений о событиях. Затем уведомление о событии создается в конечной службе, которая начинает рассылку уведомлений в ответ на событие трассировки `Object_Created` на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 --Create a queue to receive messages.  
 CREATE QUEUE NotifyQueue ;  
 GO  
@@ -167,7 +167,7 @@ TO SERVICE 'NotifyService',
 ### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>Б. Создание уведомления о событии уровня базы данных  
  В следующем примере создается уведомление о событии для той же службы, что и в предыдущем примере. Уведомление о событии срабатывает в ответ на событие `ALTER_TABLE` в образце базы данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 CREATE EVENT NOTIFICATION Notify_ALTER_T1  
 ON DATABASE  
 FOR ALTER_TABLE  
@@ -186,7 +186,7 @@ WHERE name = 'log_ddl1';
 ### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>Г. Получение сведений об уведомлении о событии уровня базы данных  
  В следующем примере у представления каталога `sys.event_notifications` запрашиваются метаданные об уведомлении о событии `Notify_ALTER_T1`, созданном на уровне базы данных.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.event_notifications  
 WHERE name = 'Notify_ALTER_T1';  
 ```  

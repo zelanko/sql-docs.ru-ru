@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 67b5d9300d4be84d16b2a650265e812eba1988a9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: b736272f07e8767840076fc69cbd5ac3d86d377d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="lead-transact-sql"></a>Предложение LEAD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -67,7 +67,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
 ### <a name="a-compare-values-between-years"></a>A. Сравнение значений по годам  
  В запросе используется функция LEAD для возврата разности в квотах продаж для указанного работника за последующие годы. Обратите внимание, что для последней строки возвращается значение по умолчанию, т. е. нуль (0), так как для нее последующие значения отсутствуют.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
@@ -92,7 +92,7 @@ BusinessEntityID SalesYear   CurrentQuota          NextQuota
 ### <a name="b-compare-values-within-partitions"></a>Б. Сравнение значений внутри секций  
  В следующем примере функция LEAD используется для сравнения объемов продаж за текущий год между сотрудниками. Предложение PARTITION BY указывается для секционирования строк результирующего набора по территориям продаж. Функция LEAD применяется к каждой секции отдельно, и вычисление начинается заново для каждой секции. Предложение ORDER BY, указанное в предложении OVER, сортирует строки в каждой из секций перед применением функции. Предложение ORDER BY в инструкции SELECT упорядочивает строки во всем результирующем наборе. Обратите внимание, что для последней строки каждой секции возвращается значение по умолчанию, т. е. нуль (0), так как последующее значение для последней строки отсутствует.  
   
-```t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TerritoryName, BusinessEntityID, SalesYTD,   
@@ -118,7 +118,7 @@ Northwest                280              1352577.1325          0.00
 ### <a name="c-specifying-arbitrary-expressions"></a>В. Указание произвольных выражений  
  В следующем примере демонстрируется указание ряда произвольных выражений в синтаксисе функции LEAD.  
   
-```t-sql  
+```sql  
 CREATE TABLE T (a int, b int, c int);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
@@ -146,7 +146,7 @@ b           c           i
 ### <a name="d-compare-values-between-quarters"></a>D: сравнение значений кварталов  
  В следующем примере функция LEAD. Запрос получает разницы между значениями квоты продаж для указанного работника за последующие календарного квартала. Обратите внимание, что так как не имеет смысла интереса после последней строки, используется значение по умолчанию, ноль (0).  
   
-```t-sql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

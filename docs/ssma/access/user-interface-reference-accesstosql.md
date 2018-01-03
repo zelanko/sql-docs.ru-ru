@@ -1,7 +1,7 @@
 ---
 title: "Справочник по пользовательскому интерфейсу (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: cd30f75d2e579b7a60fb8a50361ae459fdd5ade5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 30ec6486fa8b4af36cdd1ea60c139e739bcecb1d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-interface-reference-accesstosql"></a>Справочник по пользовательскому интерфейсу (AccessToSQL)
 Этот раздел содержит подразделы справки по [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Migration Assistant (SSMA) для доступа.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 |[Параметры проекта (SQL Azure)](http://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|Страница SQL Azure **параметры проекта** для указания суффикс базы данных, а также интервал времени ожидания подтверждения.|  
 |[Сохранить метаданные &#40; AcessToSQL &#41;](../../ssma/access/save-metadata-acesstosql.md)|**Сохранить метаданные** диалоговое окно появляется при попытке сохранить проект, который не удалось обнаружить метаданные.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
 [Начало работы с SQL Server Migration Assistant для Access &#40; AccessToSQL &#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Подготовка к миграции базы данных Access](http://msdn.microsoft.com/9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114)  
 [Миграция баз данных Access в SQL Server](http://msdn.microsoft.com/76a3abcf-2998-4712-9490-fe8d872c89ca)  

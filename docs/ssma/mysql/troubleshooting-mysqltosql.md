@@ -1,7 +1,7 @@
 ---
 title: "Устранение неполадок (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,18 +20,18 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dbf31087434e606191a65a43ac5b2878b70a8a34
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 71c44b5fb2ea394c076acc6f09c855fba4b967f4
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="troubleshooting-mysqltosql"></a>Устранение неполадок (MySQLToSQL)
 Довольно часто для запуска в выполнении консоли скрипты или команды, посередине проблемы миграции.  
   
 Могут быть исправлены ошибки может быть связана с:  
   
-1.  Функция  
+1.  Компонент  
   
 2.  Процедура  
   

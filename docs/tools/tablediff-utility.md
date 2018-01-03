@@ -3,7 +3,7 @@ title: "Программа tablediff | Документы Microsoft"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: tabledif
 ms.reviewer: 
@@ -25,11 +25,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e239a3d36e5e4eed3304d953e887d737b5edd8d6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3ce5fef28718d257baad0c48f9a0c753bc8b4e25
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tablediff-utility"></a>tablediff, программа
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]**Tablediff** служебной программы используется для сравнения данных в двух таблицах на расхождение и особенно полезна для устранения неполадок в топологии репликации. Эта программа может запускаться из командной строки или из пакетного файла и служит для выполнения следующих задач:  
@@ -170,13 +170,13 @@ tablediff
   
 ## <a name="return-value"></a>Возвращаемое значение  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Успешно|  
 |**1**|Критическая ошибка|  
 |**2**|Различия таблиц|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Служебную программу **tablediff** нельзя использовать для обращения к серверам, отличным от[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  Таблицы со столбцами с данными типа **sql_variant** не поддерживаются.  
@@ -204,7 +204,7 @@ tablediff
   
 -   **varchar(max)**  
   
--   **nvarchar(max)**  
+-   **nvarchar(max)**;  
   
 -   **varbinary(max)**  
   

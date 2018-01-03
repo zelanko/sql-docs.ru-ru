@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fead7415e3cb4a951a5ab2ba90b4969682905a0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7470412149bf336be8d07495eab4aa9bdf449a86
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlcolattribute-function"></a>Функция SQLColAttribute
 **Соответствия**  
@@ -131,7 +131,7 @@ SQLRETURN SQLColAttribute (
   
  ODBC 3. *x* драйвер должен возвращать значение для каждого поля дескриптора. Если поле дескриптора не применяется к источнику драйвера или данных, и если не указано иное, драйвер возвращает 0 в \* *StringLengthPtr* или пустая строка в **CharacterAttributePtr*.  
   
-## <a name="backward-compatibility"></a>Обратная совместимость  
+## <a name="backward-compatibility"></a>Backward Compatibility  
  ODBC 3. *x* функция **SQLColAttribute** заменяет устаревшие ODBC 2. *x* функция **SQLColAttributes**. При сопоставлении **SQLColAttributes** для **SQLColAttribute** (когда ODBC 2. *x* при работе с ODBC 3. *x* драйверов), сопоставление и **SQLColAttribute** для **SQLColAttributes** (когда ODBC 3. *x* при работе с ODBC 2. *x* драйверов), диспетчер драйверов либо передается значение *FieldIdentifier* , сопоставляет его с новым значением или возвращает ошибку, как показано ниже:  
   
 > [!NOTE]  

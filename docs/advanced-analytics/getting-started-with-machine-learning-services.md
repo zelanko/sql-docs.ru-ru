@@ -1,11 +1,11 @@
 ---
 title: "Приступая к работе с машинного обучения в SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 11/09/2017
-ms.prod: sql-non-specified
-ms.prod_service: r-services
+ms.date: 12/20/2017
+ms.prod: machine-learning-services
+ms.prod_service: machine-learning-services
 ms.service: 
-ms.component: advanced-analytics
+ms.component: 
 ms.reviewer: 
 ms.suite: sql
 ms.technology: r-services
@@ -15,11 +15,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 98f6498eb042cc79728f8c1fb55e142655842481
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 600f105a3e3fb5fb590ce081633258db3d3d35d5
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-machine-learning-in-sql-server"></a>Приступая к работе с машинного обучения в SQL Server
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/08/2017
     + [Общие сведения об архитектуре для Python в SQL Server](/python/architecture-overview-sql-server-python.md)
     + [Настройка SQL Server R Services или службы обучения машины](../advanced-analytics/r/set-up-sql-server-r-services-in-database.md)
 
-+ SQL Server 2016
++ SQL Server 2016
 
   SQL Server 2016 поддерживает выполнение кода R в SQL Server с помощью хранимых процедур. Это позволяет легко для автоматизации задач машинного обучения с помощью средств SQL. Или возможность выполнения кода R из удаленного ноутбука или среду разработки R, при использовании имени компьютера SQL Server как _контекста вычислений_.
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/08/2017
 
 + [Учебники машины обучения](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)
 
-  Начните здесь получить список всех ресурсов справочные материалы по обучению машины с помощью [!INCLUDE[sscurrent-md](../includes/sscurrent-md.md)] или [!INCLUDE[sssql15-md](../includes/sssql15-md.md)].
+  Начните здесь получить список всех ресурсов для изучения обучению машины с помощью SQL Server 2016 и 2017 г. SQL Server.
 
 ### <a name="r-tutorials"></a>Учебники R
 
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/08/2017
 
 + [Изучить R и ScaleR в 25 малых функций](https://docs.microsoft.com/r-server/r/tutorial-r-to-revoscaler)
 
-   Не знакомы с R? Вас интересует сравнение Microsoft R (или RevoScaleR) на стандартный R? R Server см. Эти быстрого запуска.
+   Не знакомы с R? Вас интересует сравнение Microsoft R (или RevoScaleR) на стандартный R? См. Эти быстрого запуска R и компьютере сервера обучения.
 
 ### <a name="python-tutorials"></a>Учебники Python
 

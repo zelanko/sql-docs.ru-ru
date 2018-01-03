@@ -1,7 +1,7 @@
 ---
 title: "Параметры командной строки в консоли SSMA (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: 7a7f1612f8947a67ec454a4fcc25c7e155d9f23e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c1d26043b33ea902aec4ae7976ad8b215829bf34
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Параметры командной строки в консоли SSMA (AccessToSQL)
 Майкрософт предоставляет широкий набор параметров командной строки для выполнения и контроля над SSMA действий. В дальнейших разделах содержатся дополнительные сведения.  

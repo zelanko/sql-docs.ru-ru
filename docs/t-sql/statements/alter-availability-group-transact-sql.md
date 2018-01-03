@@ -1,7 +1,7 @@
 ---
 title: "ALTER AVAILABILITY GROUP (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/02/2018
 ms.prod: sql-non-specified
 ms.prod_service: sql-database
 ms.service: 
@@ -28,11 +28,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: c31f7eef71570c9c25afe19e26779943678ff509
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8d08fa5b70558b64357338b95f33b8d482775b61
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-availability-group-transact-sql"></a>ALTER AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ ALTER AVAILABILITY GROUP group_name
  Указывает, что вы предпочитаете, чтобы задания резервного копирования пропускали реплики доступности при выборе реплики для создания резервных копий. Примечание. Задания резервного копирования могут учитывать другие факторы, например приоритет резервного копирования каждой реплики доступности в сочетании с ее состоянием работоспособности и соединения.  
   
 > [!IMPORTANT]  
->  Принудительного применения параметра AUTOMATED_BACKUP_PREFERENCE не существует. Интерпретация данного приоритета зависит от логики (при ее наличии), которая внесена в задания резервного копирования для баз данных в указанной группе доступности. Параметр автоматического резервного копирования не влияет на выполнение нерегламентированного резервного копирования. Дополнительные сведения см. в разделе [Настройка резервного копирования в репликах доступности &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
+>  Принудительного применения параметра AUTOMATED_BACKUP_PREFERENCE не существует. Интерпретация данного приоритета зависит от логики (при ее наличии), которая внесена в задания резервного копирования для баз данных в указанной группе доступности. Параметр автоматического резервного копирования не оказывает влияния на выполнение нерегламентированного резервного копирования. Дополнительные сведения см. в разделе [Настройка резервного копирования в репликах доступности &#40; SQL Server &#41; ](../../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).  
   
 > [!NOTE]  
 >  Чтобы просмотреть автоматического резервного копирования для существующей группы доступности, выберите **automated_backup_preference** или **automated_backup_preference_desc** столбец [ sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) представления каталога. Кроме того [sys.fn_hadr_backup_is_preferred_replica &#40; Transact-SQL &#41; ](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) может использоваться для определения предпочитаемой репликой резервного копирования.  Эта функция всегда возвращает значение 1 при наличии хотя бы одной реплики, даже если `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
@@ -302,7 +302,7 @@ ALTER AVAILABILITY GROUP group_name
 
    Дополнительные сведения см. в разделе [конфигурации реплицируют только](../../linux/sql-server-linux-availability-group-ha.md).
     
- AVAILABILITY_MODE обязательно требуется в предложении ADD REPLICA ON и является необязательным в предложении MODIFY REPLICA ON. Дополнительные сведения см. в статье [Режимы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
+ AVAILABILITY_MODE обязательно требуется в предложении ADD REPLICA ON и является необязательным в предложении MODIFY REPLICA ON. Дополнительные сведения см. в разделе [Режимы доступности (группы доступности AlwaysOn)](../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md).  
   
  FAILOVER_MODE  **=**  {АВТОМАТИЧЕСКОГО | ВРУЧНУЮ}  
  Указывает режим отработки отказов определяемой реплики доступности.  
@@ -427,7 +427,7 @@ ALTER AVAILABILITY GROUP group_name
   
  Поддерживается только во вторичной реплике, которая еще не включена в группу доступности.  
   
- Дополнительные сведения см. в статьях [Присоединение вторичной реплики к группе доступности (SQL Server)](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+ Дополнительные сведения см. в разделе [Присоединение вторичной реплики к группе доступности (SQL Server)](../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
  FAILOVER  
  Инициирует переход группы доступности на другой ресурс вручную без потери данных с переходом на вторичную реплику, к которой вы подключились. Реплика, на которой вводится команда отработки отказа цели отработки отказа называется.  Цель перехода на другой ресурс примет на себя роль первичной, восстановит собственные копии каждой базы данных и переведет их в режим «в сети» в качестве баз данных-источников. Бывшая первичная реплика параллельно переходит в роль вторичной, а ее базы данных становятся базами данных-получателями и немедленно приостанавливаются. Эти роли могут меняться местами при последовательных сбоях.  
@@ -542,14 +542,14 @@ ALTER AVAILABILITY GROUP group_name
 > [!IMPORTANT]  
 >  Использовать протокол DHCP в производственной среде не рекомендуется. Если во время простоя аренда IP-адреса протокола DHCP истечет, то на регистрацию нового сетевого IP-адреса протокола DHCP, связанного с именем DNS-прослушивателя, уйдет дополнительное время, что скажется на производительности клиента. Однако протокол DHCP полезен при настройке среды разработки и проверки и позволяет проверить базовые функции групп доступности и их интеграцию с приложениями.  
   
- Например:  
+ Пример:  
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
  С IP-адресом **(** { **("***four_part_ipv4_address***«,»***four_part_ipv4_mask* **')** | **("***ipv6_address***")** } [ **,** ...  *n*  ] **)** [ **,** ПОРТ  **=**  *listener_port* ]  
  Указывает, что вместо использования протокола DHCP прослушиватель группы доступности будет использовать один или несколько статических IP-адресов. Чтобы создать группу доступности, охватывающую несколько подсетей, в конфигурации прослушивателя должен присутствовать один статический IP-адрес для каждой подсети. Для конкретной подсети статический IP-адрес может иметь формат IPv4 или IPv6. Свяжитесь с администратором сети, чтобы получить статический IP-адрес для каждой подсети, в которой будет размещена реплика доступности для новой группы доступности.  
   
- Например:  
+ Пример:  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
@@ -602,7 +602,7 @@ ALTER AVAILABILITY GROUP group_name
 ## <a name="security"></a>безопасность  
   
 ### <a name="permissions"></a>Разрешения  
- Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
+ Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  Кроме того, разрешение ALTER ANY DATABASE.   
   
 ## <a name="examples"></a>Примеры  
   

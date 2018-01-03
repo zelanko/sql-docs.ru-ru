@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46eb86009bf940857788425afd4781ca79ab3686
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c1af0b93536006ba5f7b106c10935b07263a572b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,15 +69,15 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |**Идентификатор файла**|**smallint**|Идентификатор файла.|  
 |**Имя файла**|**nchar(260)**|Имя файла в операционной системе (физическое имя файла).|  
 |**файловая группа**|**nvarchar(128)**|Файловая группа, к которой принадлежит файл.<br /><br /> NULL = файл является файлом журнала. Такой файл никогда не является частью файловой группы.|  
-|**размер**|**nvarchar(18)**|Размер файла в мегабайтах.|  
+|**size**|**nvarchar(18)**|Размер файла в мегабайтах.|  
 |**параметр MaxSize**|**nvarchar(18)**|Определяет максимальный размер, до которого может вырасти файл. Значение UNLIMITED в этом поле означает, что файл может расти, пока диск не будет заполнен.|  
 |**Увеличение размера**|**nvarchar(18)**|Значение прироста размера файла. Размер пространства, добавляемого в файл каждый раз, когда требуется новое пространство.|  
 |**Использование**|**varchar(9)**|Применение файла. Для файла данных, значение равно **«данные»** и файла журнала, оно **только для журнала**.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Состояние** столбец результирующего набора отчетов, какие параметры заданы в значение ON в базе данных. Все параметры базы данных не сообщает о **состояние** столбца. Чтобы просмотреть полный список текущих параметров базы данных, используйте **sys.databases** представления каталога.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  При указании отдельной базы данных, членство в **открытый** требуется роль базы данных. Если база данных не указан, членство в **открытый** роль в **master** необходима база данных.  
   
  Если база данных недоступна, **sp_helpdb** отображает сведения об ошибке номер 15622 и столько о базе данных, как.  
@@ -87,14 +87,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ### <a name="a-returning-information-about-a-single-database"></a>A. Информация, возвращаемая о единственной базе данных  
  В следующем примере отображается информация о базе данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb N'AdventureWorks2012';  
 ```  
   
 ### <a name="b-returning-information-about-all-databases"></a>Б. Информация, возвращаемая обо всех базах данных  
  В следующем примере отображается информация обо всех базах данных, работающих на сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```tsql  
+```sql  
 EXEC sp_helpdb;  
 GO  
 ```  

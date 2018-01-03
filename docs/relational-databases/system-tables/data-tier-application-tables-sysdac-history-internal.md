@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 55bf1ae9625c5b27c7078bbba61704eef195b0ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Таблицы приложения уровня данных — sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 |**action_type**|**tinyint**|Идентификатор типа действия:<br /><br /> **0** = развернуть<br /><br /> **1** = создать<br /><br /> **2** = переименовать<br /><br /> **3** = отсоединить<br /><br /> **4** = удаление|  
 |**action_type_name**|**varchar(19)**|Имя типа действия:<br /><br /> **развертывание**<br /><br /> **Создание**<br /><br /> **Переименование**<br /><br /> **отсоединение**<br /><br /> **удалить**|  
 |**dac_object_type**|**tinyint**|Идентификатор типа объекта, на который влияет действие:<br /><br /> **0** = dacpac<br /><br /> **1** = имя входа<br /><br /> **2** = база данных|  
-|**dac_object_type_name**|**varchar(8)**|Имя типа объекта, на который влияет действие:<br /><br /> **DACPAC** = экземпляр приложения уровня данных<br /><br /> **Имя входа**<br /><br /> **database**|  
+|**dac_object_type_name**|**varchar(8)**|Имя типа объекта, на который влияет действие:<br /><br /> **DACPAC** = экземпляр приложения уровня данных<br /><br /> **Имя входа**<br /><br /> **базой данных**|  
 |**action_status**|**tinyint**|Код, отображающий текущее состояние действия:<br /><br /> **0** = ожидает согласования<br /><br /> **1** = успешное завершение<br /><br /> **2** = ошибка|  
 |**action_status_name**|**varchar(11)**|Текущее состояние действия:<br /><br /> **Ожидание**<br /><br /> **Успех**<br /><br /> **Сбой**|  
 |**Обязательно**|**bit**|Используется компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] при откате операции DAC.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |**date_created**|**datetime**|Дата и время создания записи.|  
 |**date_modified**|**datetime**|Дата и время последнего изменения записи.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Управляющие действия DAC, такие как развертывание или удаление DAC, создают несколько этапов. Каждому из действий присваивается идентификатор действия. Каждому этапу присваивается порядковый номер и строки в **sysdac_history_internal**, где регистрируется состояние этапа. Каждая строка создается при запуске этапа действия и обновляется по мере необходимости для отражения состояния операции. Например, могут быть заданы действие развертывания приложения уровня данных **action_id** 12 и get четыре строки в **sysdac_history_internal**:  
   
 |||||  
@@ -63,12 +63,12 @@ ms.lasthandoff: 11/17/2017
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|создание|пакет DAC|  
 |12|1|создание|login|  
-|12|2|создание|базой данных|  
-|12|3|переименовать|базой данных|  
+|12|2|создание|База данных|  
+|12|3|переименовать|База данных|  
   
  Операции приложения уровня данных, такие как delete, не удаляют строки из **sysdac_history_internal**. Можно выполнить следующий запрос, чтобы вручную удалить строки для тех DAC, которые больше не развернуты в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
-```tsql  
+```sql  
 DELETE FROM msdb.dbo.sysdac_history_internal  
 WHERE instance_id NOT IN  
    (SELECT instance_id  
@@ -80,7 +80,7 @@ WHERE instance_id NOT IN
 > [!NOTE]  
 >  В настоящее время отсутствует механизм удаления **sysdac_history_internal** строк на [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует членства в предопределенной роли сервера sysadmin. Доступ только для чтения к этому представлению доступен всем пользователям с разрешениями на подключение к базе данных master.  
   
 ## <a name="see-also"></a>См. также:  

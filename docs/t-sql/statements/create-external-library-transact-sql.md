@@ -3,7 +3,7 @@ title: "Создание ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL) | Д
 ms.custom: 
 ms.date: 10/05/2017
 ms.prod: sql-non-specified
-ms.prod_service: 
+ms.prod_service: database-engine
 ms.service: 
 ms.component: t-sql|statements
 ms.reviewer: 
@@ -21,15 +21,15 @@ helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8d0f700ba30b77e892b37e98c43996d6e654e7ea
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bf4807943521308cb2907adab8cfc6e701325b8a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-external-library-transact-sql"></a>Создание ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]  
 
 Отправляет пакеты R в базу данных из указанного байтового потока или путь к файлу.
 
@@ -89,7 +89,7 @@ WITH ( LANGUAGE = 'R' )
 
 Указывает платформу для библиотеки содержимого. Значение по умолчанию платформа узла, на котором выполняется SQL Server. Таким образом что пользователь не имеет для указания значения. Он необходим в случае которых поддерживаются несколько платформ, или пользователь должен указать другой платформе. Windows является единственным поддерживаемой платформы.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Пакеты для языка R, при использовании файла, необходимо подготовить в виде ZIP-архив файлов с. ПОЧТОВЫЙ модуль для Windows. В настоящее время поддерживается только на платформу Windows
 
@@ -99,7 +99,7 @@ WITH ( LANGUAGE = 'R' )
 
 Большие двоичные объекты нельзя использовать в качестве источника данных в выпуске 2017 г. SQL Server.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 
 Требуется `CREATE ANY EXTERNAL LIBRARY` разрешение.
 
@@ -189,7 +189,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 > [!NOTE]
 > В отличие от других `DROP` инструкций в [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], эта инструкция поддерживает дополнительный параметр, который задает центр пользователя. Этот параметр позволяет пользователям с ролями владения по удалению библиотек, загруженных с обычных пользователей.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 
 [ALTER ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](alter-external-library-transact-sql.md)  
 [DROP ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](drop-external-library-transact-sql.md)  

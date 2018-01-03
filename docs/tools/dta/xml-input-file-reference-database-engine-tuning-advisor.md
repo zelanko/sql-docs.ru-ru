@@ -3,7 +3,7 @@ title: "Входные XML-ссылку на файл (помощник по н�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cc25f556fdafc18f530ac48e176aba94b55c432d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f9ce7751a34f63d0ef235c86c1d1a993e467f893
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Справочник по входным XML-файлам (помощник по настройке ядра СУБД)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] По настройке ядра СУБД может использовать входной XML-файл для настройки базы данных. Этот XML-файл определяет, какие базы данных, таблицы, файлы или таблицы рабочей нагрузки и параметры настройки должны быть использованы для сеанса настройки. Его можно также использовать в качестве пользовательской конфигурации для выполнения анализа вариантов.  
@@ -119,7 +119,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Элемент Name описания схемы (DTA)](../../tools/dta/name-element-for-schema-dta.md)  
   
--   [Элемент Table описания схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)  
+-   [Элемент Table для схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)  
   
 -   [Элемент Name описания таблицы (DTA)](../../tools/dta/name-element-for-table-dta.md)  
   

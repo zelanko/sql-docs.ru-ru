@@ -4,7 +4,7 @@ description: "В этом разделе описывается, как SQL Serv
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.workload: Active
-ms.openlocfilehash: b598357bb8ebe17ad15fb10e1d74c21c169c1da8
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: a17c62aeddd0ed898d2a43931965bb7052a58412
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="sql-server-on-linux"></a>SQL Server в Linux:
 
@@ -27,7 +27,7 @@ SQL Server 2017 г. теперь работает на платформе Linux.
 
 ## <a name="install"></a>Установить
 
-Чтобы приступить к работе, установка SQL Server в Linux с помощью одного из следующих учебников краткое руководство:
+Чтобы приступить к работе, установите SQL Server в Linux с помощью одного из следующих краткие руководства:
 
 - [Установите на Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
@@ -38,9 +38,9 @@ SQL Server 2017 г. теперь работает на платформе Linux.
 > [!NOTE]
 > Docker сам выполняется на нескольких платформах, что означает, что образ Docker можно запускать в Linux, Mac и Windows.
 
-## <a name="connect"></a>Connect
+## <a name="connect"></a>Подключить
 
-После установки подключения к экземпляру SQL Server на компьютере Linux. Можно подключить локально или удаленно и с помощью различных средств и драйверов. Быстрый запуск учебниках показано, как использовать [sqlcmd](sql-server-linux-setup-tools.md) средство командной строки. Ниже приведены другие средства:
+После установки подключения к экземпляру SQL Server на компьютере Linux. Можно подключить локально или удаленно и с помощью различных средств и драйверов. Примеры использования демонстрируют использование [sqlcmd](sql-server-linux-setup-tools.md) средство командной строки. Ниже приведены другие средства:
 
 | Инструмент | Учебник |
 |-----|-----|
@@ -52,7 +52,7 @@ SQL Server 2017 г. теперь работает на платформе Linux.
 
 2017 г. SQL Server имеет тот же базовый механизм базы данных на всех поддерживаемых платформах, включая Linux. Поэтому многие существующие функции и возможности работают так же, как в Linux. В этой части документации предоставляет некоторые из этих функций с точки зрения Linux. Он также вызывает областей, которые обладают уникальными требованиями в Linux.
 
-Если вы уже знакомы с SQL Server, просмотрите [заметки о выпуске](sql-server-linux-release-notes.md) Общие рекомендации и известные проблемы в этом выпуске. Посмотрите на [новые для SQL Server в Linux](sql-server-linux-whats-new.md) и [новые для SQL Server 2017 г. общей](../sql-server/what-s-new-in-sql-server-2017.md).
+Если вы уже знакомы с SQL Server, просмотрите [заметки о выпуске](sql-server-linux-release-notes.md) Общие рекомендации и известные проблемы в этом выпуске. Посмотрите на [новые для SQL Server в Linux](sql-server-linux-whats-new.md) и [новые для SQL Server 2017 г. общей](../sql-server/what-s-new-in-sql-server-2017.md). Ответы на часто задаваемые вопросы см. в разделе [SQL Server в Linux часто задаваемые вопросы о](sql-server-linux-faq.md).
 
 ##  <a name="infotipmediageneralinfotippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](./media/general/info_tip.png) Общение с командой разработчиков SQL Server
 

@@ -4,7 +4,7 @@ description: "В этом разделе содержатся заметки о 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/12/2017
+ms.date: 12/21/2017
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 5ea64c1c960f623b95891cac198af0bc17cb178c
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/12/2017
 | Подсистема docker 1.8 + в Windows, Mac или Linux | Недоступно | [Руководство по установке](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
-> Просмотрите [требования к системе для](sql-server-linux-setup.md#system) для SQL Server в Linux.
+> Дополнительные сведения см. в статье [требования к системе для](sql-server-linux-setup.md#system) для SQL Server в Linux. Последние политика поддержки для SQL Server 2017 г. в разделе [политика технической поддержки для Microsoft SQL Server](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server).
 
 ## <a name="supported-client-tools"></a>Поддерживаемые клиентские средства
 
@@ -127,14 +127,14 @@ ms.lasthandoff: 12/12/2017
 | &nbsp; | Системные расширенные хранимые процедуры (XP_CMDSHELL, и т. д.) |
 | &nbsp; | Таблицы filetable, FILESTREAM |
 | &nbsp; | Задать сборки среды CLR с EXTERNAL_ACCESS или UNSAFE разрешение |
-| &nbsp; | Расширение буферного пула |
-| **SQL Server, агент** |  Подсистемы: CmdExec, PowerShell, агент чтения очереди, служб SSIS, SSAS, SSRS |
-| &nbsp; | Предупреждения |
+| &nbsp; | Buffer Pool Extension |
+| **Агент SQL Server** |  Подсистемы: CmdExec, PowerShell, агент чтения очереди, служб SSIS, SSAS, SSRS |
+| &nbsp; | видны узлы |
 | &nbsp; | Агент чтения журнала. |
 | &nbsp; | Система отслеживания измененных данных |
 | &nbsp; | Управляемое резервное копирование |
 | **Обеспечение высокого уровня доступности** | Зеркальное отображение базы данных  |
-| **Безопасность** | расширенное управление ключами |
+| **безопасность** | расширенное управление ключами |
 | &nbsp; | Проверки подлинности AD для связанных серверов | 
 | &nbsp; | Проверки подлинности AD для групп доступности (и действий) | 
 | &nbsp; | инструменты сторонних AD (Centrify Vintela, Powerbroker) | 
@@ -143,14 +143,14 @@ ms.lasthandoff: 12/12/2017
 | &nbsp; | StreamInsight |
 | &nbsp; | Службы Analysis Services |
 | &nbsp; | Службы Reporting Services |
-| &nbsp; | Службы Data Quality Services |
+| &nbsp; | Data Quality Services |
 | &nbsp; | Службы Master Data Services |
 
 ### <a name="known-issues"></a>Известные проблемы
 
 В следующих разделах описаны известные проблемы с выпуском Общая доступность (GA) 2017 г. SQL Server в Linux.
 
-#### <a name="general"></a>Общие сведения
+#### <a name="general"></a>Общие
 
 - Обновление до выпуска общедоступной версии 2017 г. SQL Server поддерживается только из CTP-версии 2.1 или более поздней версии. 
 
@@ -289,7 +289,7 @@ ms.lasthandoff: 12/12/2017
 
 ### <a name="next-steps"></a>Следующие шаги
 
-Чтобы приступить к работе, см. в следующих учебниках краткое руководство:
+Чтобы приступить к работе, см. следующие примеры использования:
 
 - [Установите на Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Установите на SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)

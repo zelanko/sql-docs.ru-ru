@@ -32,11 +32,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c0b06e7119f051d5854ae7f5435e8edd7fecf1a0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 8d32038273e727db3b47125b26ad8293ce088672
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +177,7 @@ WINDOWS
   
  Имя асимметричного ключа, связываемого с данным именем входа. Этот ключ должен уже существовать в базе данных master.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В паролях учитывается регистр символов.  
   
  Предварительное хэширование паролей поддерживается только при создании имен входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -212,14 +212,14 @@ WINDOWS
   
  Дополнительные сведения о [!INCLUDE[ssSDS](../../includes/sssds-md.md)] имена входа, в разделе [Управление базами данных и именами входа в базе данных SQL Windows Azure](http://msdn.microsoft.com/library/ee336235.aspx).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], требуется **ALTER ANY LOGIN** разрешение на сервер или членство в **securityadmin** предопределенной роли сервера.  
   
  В службах [!INCLUDE[ssSDS](../../includes/sssds-md.md)] создавать новые имена входа могут только имя входа участника уровня сервера (созданного процессом провизионирования) или члены роли `loginmanager` базы данных в базе данных master.  
   
  Если используется параметр **CREDENTIAL** , также необходимо разрешение **ALTER ANY CREDENTIAL** на сервере.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  После создания имени входа, имя входа подключается к [!INCLUDE[ssDE](../../includes/ssde-md.md)] или [!INCLUDE[ssSDS](../../includes/sssds-md.md)] , но только разрешения, предоставленные **открытый** роли. Попробуйте выполнить некоторые из приведенных ниже действий.  
   
 -   Чтобы подключиться к базе данных, создайте пользователя базы данных для имени входа. Дополнительные сведения см. в разделе [CREATE USER (Transact-SQL)](../../t-sql/statements/create-user-transact-sql.md).  
@@ -228,7 +228,7 @@ WINDOWS
   
 -   Используйте **sp_addsrvrolemember** Добавление имени входа к предопределенной роли сервера. Дополнительные сведения см. в разделе [роли уровня сервера](../../relational-databases/security/authentication-access/server-level-roles.md) и [sp_addsrvrolemember &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
--   Используйте **GRANT** инструкции для предоставления разрешений уровня сервера с новым именем входа или роли, содержащей имя входа. Дополнительные сведения см. в разделе [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
+-   Используйте **GRANT** инструкции для предоставления разрешений уровня сервера с новым именем входа или роли, содержащей имя входа. Дополнительные сведения см. в статье [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
@@ -314,7 +314,7 @@ GO
 ### <a name="g-creating-a-sql-server-authentication-login-with-a-password"></a>Ж. Создание имени входа для проверки подлинности SQL Server с паролем  
  В следующем примере создается имя входа `Mary7` с паролем `A2c3456`.  
   
-```tsql  
+```sql  
 CREATE LOGIN Mary7 WITH PASSWORD = 'A2c3456$#' ;  
 ```  
   
@@ -342,6 +342,6 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [DROP LOGIN &#40; Transact-SQL &#41;](../../t-sql/statements/drop-login-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [Создание имени входа](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Создание имени для входа](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

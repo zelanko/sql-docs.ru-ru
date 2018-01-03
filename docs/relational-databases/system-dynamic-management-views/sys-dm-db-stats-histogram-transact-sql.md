@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 93aec7a71f3522114bc9ef6c2d19edaccaac2e57
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5f43afdac5972dd5f01c192dbbc755911a83a341
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 |distinct_range_rows |**bigint** |Предполагаемое количество строк с различающимся значением столбца в пределах шага гистограммы, исключая верхнюю границу. |
 |average_range_rows |**real** |Среднее количество строк с повторяющимися значениями столбцов в пределах шага гистограммы, исключая верхнюю границу (`RANGE_ROWS / DISTINCT_RANGE_ROWS` для `DISTINCT_RANGE_ROWS > 0`). |
   
- ## <a name="remarks"></a>Замечания  
+ ## <a name="remarks"></a>Remarks  
  
  Результирующий набор для `sys.dm_db_stats_histogram` возвращает информацию, аналогичную `DBCC SHOW_STATISTICS WITH HISTOGRAM` , а также `object_id`, `stats_id`, и `step_number`.
 
@@ -78,19 +78,19 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  На следующей диаграмме показана гистограмма с шестью шагами. Первый шаг — это область слева от первого верхнего граничного значения.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/a0ce6714-01f4-4943-a083-8cbd2d6f617a.gif "a0ce6714-01f4-4943-a083-8cbd2d6f617a")  
+ ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Гистограммы")  
   
  В каждом шаге гистограммы:  
   
--   Полужирной линией верхнее граничное значение (*range_high_key*) и количество его вхождений (*equal_rows*)  
+-   Полужирной линией обозначено верхнее граничное значение (*range_high_key*) и количество его вхождений (*equal_rows*).  
   
--   Закрашенная область слева от *range_high_key* представляет диапазон значений столбца и среднее количество вхождений каждого значения в столбце (*average_range_rows*). *Average_range_rows* для гистограммы первый шаг всегда равно 0.  
+-   Закрашенная область слева от *range_high_key* обозначает диапазон значений столбца и среднее количество вхождений каждого значения столбца (*average_range_rows*). В первом шаге гистограммы значение *average_range_rows* всегда равно 0.  
   
--   Пунктирные линии обозначают выбранные значения, используется для оценки общее количество уникальных значений в диапазоне (*distinct_range_rows*) и общее количество значений в диапазоне (*range_rows*). Оптимизатор запросов использует *range_rows* и *distinct_range_rows* для вычисления *average_range_rows* и не хранит выбранные значения.  
+-   Пунктирные линии обозначают выбранные значения, которые используются для оценки общего числа различающихся значений (*distinct_range_rows*) и общего числа значений в диапазоне (*range_rows*). Оптимизатор запросов использует *range_rows* и *distinct_range_rows* для вычисления *average_range_rows* и не хранит выбранные значения.  
   
  Оптимизатор запросов определяет шаги гистограммы согласно их статистической значимости. Он использует алгоритм максимальной разности для сведения к минимуму числа шагов в гистограмме и вместе с тем максимального увеличения разницы между граничными значениями. Максимальное число шагов — 200. Число шагов гистограммы может быть меньше, чем количество различающихся значений, даже для столбцов, в которых число граничных точек меньше 200. Например, столбец со 100 различающимися значениями может иметь гистограмму, число граничных точек в которой меньше 100.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 
 Требуется наличие у пользователя разрешения на выбор столбцов статистики либо то, чтобы пользователь был владельцем таблицы или членом предопределенной роли сервера `sysadmin`, предопределенной роли базы данных `db_owner` или предопределенной роли базы данных `db_ddladmin`.
 
@@ -99,7 +99,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
 ### <a name="a-simple-example"></a>A. Простой пример    
 Следующий пример создает и заполняет простой таблицы. Затем создает статистику по `Country_Name` столбца.
 
-```tsql
+```sql
 CREATE TABLE Country
 (Country_ID int IDENTITY PRIMARY KEY,
 Country_Name varchar(120) NOT NULL);
@@ -109,13 +109,12 @@ CREATE STATISTICS Country_Stats
     ON Country (Country_Name) ;  
 ```   
 Первичный ключ занимает `stat_id` номер 1, поэтому вызовов `sys.dm_db_stats_histogram` для `stat_id` номер 2, для возврата гистограммы статистики для `Country` таблицы.    
-```tsql     
+```sql     
 SELECT * FROM sys.dm_db_stats_histogram(OBJECT_ID('Country'), 2);
 ```
 
-
 ### <a name="b-useful-query"></a>Б. Удобный запрос:   
-```tsql  
+```sql  
 SELECT hist.step_number, hist.range_high_key, hist.range_rows, 
     hist.equal_rows, hist.distinct_range_rows, hist.average_range_rows
 FROM sys.stats AS s
@@ -126,14 +125,14 @@ WHERE s.[name] = N'<statistic_name>';
 ### <a name="c-useful-query"></a>В. Удобный запрос:
 В следующем примере выбираются из таблицы `Country` с предикатом столбца `Country_Name`.
 
-```tsql  
+```sql  
 SELECT * FROM Country 
 WHERE Country_Name = 'Canada';
 ```
 
 Следующий пример просматривает ранее созданной статистики для таблицы `Country` и столбец `Country_Name` для шага гистограммы, соответствующие предикату в приведенном выше запросе.
 
-```tsql  
+```sql  
 SELECT ss.name, ss.stats_id, shr.steps, shr.rows, shr.rows_sampled, 
     shr.modification_counter, shr.last_updated, sh.range_rows, sh.equal_rows
 FROM sys.stats ss
@@ -149,7 +148,6 @@ WHERE ss.[object_id] = OBJECT_ID('Country')
 ```
   
 ## <a name="see-also"></a>См. также:  
-
 [Инструкция DBCC SHOW_STATISTICS (Transact-SQL)](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
 [Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/object-related-dynamic-management-views-and-functions-transact-sql.md)  
 [sys.dm_db_stats_properties (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md)  

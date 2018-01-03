@@ -1,7 +1,7 @@
 ---
 title: "Найти мастера баз данных (выберите файлы) (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 98f799138330399da6b4f96bbf10574b3878763d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 84759a9bee3439f0a561176a6d8583149770f02d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="find-databases-wizard-select-files-accesstosql"></a>Найти мастера баз данных (выберите файлы) (AccessToSQL)
 На странице Выбор файлов найти мастера баз данных перечислены файлы, которые были обнаружены во время поиска. Чтобы выбрать файл для добавления SSMA, выберите строку, содержащую имя файла. После завершения выбора файлов нажмите кнопку **Далее** для отображения страницы выбора проверки.  

@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31dd44920c1bc814985cd0391f52e035621de89f
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a9343880058cef4ef86ce16613bc43821e8e8a24
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>команду sp_refresh_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0 (успешное завершение) или ненулевое значение (неуспешное завершение)
 
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 Метаданные шифрования параметров модуля могут устаревать по, если:   
 * Свойства шифрования столбца в таблице ссылки module, были обновлены. Например столбец был удален и добавлен новый столбец с тем же именем, но другой тип шифрования, ключ шифрования или алгоритма шифрования.  
@@ -77,7 +77,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 >  [!NOTE]   
 >  Любые подписи, связанные с объектом, удаляются при выполнении `sp_refresh_parameter_encryption`.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 
 Требуется `ALTER` разрешение на выполнение модуля и `REFERENCES` разрешение на все определяемые пользователем типы среды CLR и коллекций XML-схем, на которые ссылается объект.   
 
@@ -92,7 +92,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 Следующий пример создает таблицу и процедуры, ссылающиеся на таблицу, настраивает постоянное шифрование, а затем изменить таблицу и выполнение `sp_refresh_parameter_encryption` процедуры.  
 
 Сначала создайте первоначальной таблицы и хранимой процедуры, ссылающиеся на таблицу.
-```tsql
+```sql
 CREATE TABLE [Patients]([PatientID] [int] IDENTITY(1,1) NOT NULL,
     [SSN] [char](11), 
     [FirstName] [nvarchar](50) NULL,
@@ -121,7 +121,7 @@ GO
 ```
 
 Затем настройте ключей постоянного шифрования.
-```tsql
+```sql
 CREATE COLUMN MASTER KEY [CMK1]
 WITH
 (
@@ -143,7 +143,7 @@ GO
 
 
 Наконец мы заменяем столбца SSN зашифрованный столбец, а затем выполняется `sp_refresh_parameter_encryption` процедуры для обновления компонентов постоянного шифрования.
-```tsql
+```sql
 ALTER TABLE [Patients] DROP COLUMN [SSN];
 GO
 

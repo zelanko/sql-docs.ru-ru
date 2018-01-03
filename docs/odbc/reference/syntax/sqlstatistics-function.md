@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f0e4b82221c78572d24c28717edb0f3209f29ea6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c1e66748edcc81f87c261d6958a766f5b651c31a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlstatistics-function"></a>SQLStatistics, функция
 **Соответствия**  
@@ -82,7 +82,7 @@ SQLRETURN SQLStatistics(
  *Уникальный*  
  [Вход] Тип индекса: SQL_INDEX_UNIQUE или SQL_INDEX_ALL.  
   
- *Зарезервировано*  
+ *Reserved*  
  [Вход] Показывает важность количества ЭЛЕМЕНТОВ и СТРАНИЦАХ столбцов в результирующем наборе. Следующие параметры, влияющие на возврат количества ЭЛЕМЕНТОВ и СТРАНИЦАХ только столбцы; сведения об индексе возвращается, даже если количество ЭЛЕМЕНТОВ и страницы не возвращаются.  
   
  SQL_ENSURE запросов, что драйверу безусловно запрашивать статистическую. (Драйверы, которые соответствуют стандарту Open Group и не поддерживают расширения ODBC не будет поддерживать SQL_ENSURE.)  

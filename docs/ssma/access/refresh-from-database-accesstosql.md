@@ -1,7 +1,7 @@
 ---
 title: "Обновление из базы данных (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6edfa45a12c2fa251960f8e19aa095f8eefc62e0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e9a312f8aef6485c880be227295cde48e2787d6a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="refresh-from-database-accesstosql"></a>Обновление из базы данных (AccessToSQL)
 **Обновление из базы данных** диалоговое окно позволяет выбрать объекты для обновления из базы данных Access. Строки в диалоговом окне отображаются цветовые обозначения, исходя из состояния метаданных:  

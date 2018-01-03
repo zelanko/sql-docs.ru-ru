@@ -3,7 +3,7 @@ title: "Сопоставление Sybase ASE и типов данных SQL Ser
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -23,11 +23,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f1e23b31985fac096a05b2735c19abae8e4002a8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 11a73d901763591930c485020f52d525a6163a41
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Сопоставление Sybase ASE и типов данных SQL Server (SybaseToSQL)
 Типы базы данных Sybase адаптивной Server Enterprise (ASE) отличаются от [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или типов базы данных SQL Azure. При преобразовании ASE объекты базы данных для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты, SQL Azure, необходимо указать способ сопоставления типов данных из ASE для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Вы можете принять сопоставления типов данных по умолчанию или можно настроить сопоставления, как показано в следующих разделах.  
@@ -97,7 +97,7 @@ SSMA имеет набор по умолчанию сопоставлений т
   
         Не удается удалить наследуемые сопоставления. Тем не менее наследуемые сопоставления переопределяются пользовательских сопоставлений на отдельный объект или объект категории.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Следующим шагом в процессе миграции является либо [Создание отчета оценки](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c) или [объектов базы данных Sybase ASE преобразовать в синтаксис SQL Server или SQL Azure](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3). При создании отчета оценки Sybase ASE объекты будут автоматически преобразованы во время оценки.  
   
 ## <a name="see-also"></a>См. также:  

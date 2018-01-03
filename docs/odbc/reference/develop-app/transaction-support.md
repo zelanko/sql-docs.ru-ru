@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ac759747a088f98f1426afedf8623169d91b113f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4964565ce7de30b30fa3dc4c7705c5656ebcb88b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-support"></a>Поддержка транзакций
 Степень поддержки транзакций, определяемым драйвером. ODBC предназначен для реализации для одного пользователя или рабочего стола, базы данных, не требуется управлять несколько обновлений к его данным. Кроме того некоторые базы данных, поддерживающие транзакции будет поддерживаться только инструкции языка обработки данных (DML) SQL; Существуют ограничения или семантика специальные транзакций по использованию языка определения данных (DDL), когда транзакция активна. То есть может быть поддержку транзакций для нескольких одновременных обновления таблиц, но не для изменения числа и определения таблиц во время транзакции.  

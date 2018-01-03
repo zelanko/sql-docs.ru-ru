@@ -1,7 +1,7 @@
 ---
 title: "Выполнение консоли SSMA (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3d749a876fb128f55e653eca6fe8dda613a09dfa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 29f9c2bbce707aa08ce5cff918965e65f66d8370
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Выполнение консоли SSMA (AccessToSQL)
 Майкрософт предоставляет широкий набор команд файла скрипта и параметры командной строки для выполнения и контроля над SSMA действий. В последующих разделах подробно одинаковыми.  
@@ -167,7 +167,7 @@ ms.lasthandoff: 12/05/2017
 ```xml  
 <load-access-database  database-file="<Access-database>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <load-access-database>  
@@ -201,7 +201,7 @@ Force нагрузки-/ target-базы данных источника
   
   metabase="<source/target>"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <force-load>  
@@ -314,7 +314,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <generate-assessment-report  
@@ -386,7 +386,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <convert-schema  
@@ -446,7 +446,7 @@ Force нагрузки-/ target-базы данных источника
   
 </migrate-data>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <migrate-data  
@@ -476,7 +476,7 @@ Force нагрузки-/ target-базы данных источника
   
 </link-tables>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <link-tables>  
@@ -502,7 +502,7 @@ Force нагрузки-/ target-базы данных источника
   
 </unlink-tables>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <unlink-tables>  
@@ -581,7 +581,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target  
@@ -590,7 +590,7 @@ Force нагрузки-/ target-базы данных источника
   
   object-type="category"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <synchronize-target>  
@@ -646,7 +646,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database  
@@ -655,7 +655,7 @@ Force нагрузки-/ target-базы данных источника
   
   object-type="category"/>  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <refresh-from-database>  
@@ -705,7 +705,7 @@ Force нагрузки-/ target-базы данных источника
   
 />  
 ```  
-либо  
+или диспетчер конфигурации служб  
   
 ```xml  
 <save-as-script  

@@ -3,7 +3,7 @@ title: "Установка распределенного воспроизвед
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7ad107252ba6c6dc86e6720a7a07dfa87d82b2a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 99cb53df96c3b675274c5940edcf1e9bd4c8516a
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-distributed-replay"></a>Установка распределенного воспроизведения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Распределенное воспроизведение можно установить одним из трех способов:  
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/05/2017
   
  При разработке скриптов установки из командной строки можно использовать параметры, приведенные в следующей таблице.  
   
-|Параметр|Описание|Поддерживаемые значения|  
+|Параметр|Description|Поддерживаемые значения|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Необязательно**|Учетная запись службы контроллера распределенного воспроизведения.|Проверяет учетную запись и пароль|  
 |/CTLRSVCPASSWORD<br /><br /> **Необязательно**|Пароль учетной записи службы контроллера распределенного воспроизведения.|Проверяет учетную запись и пароль|  

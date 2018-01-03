@@ -33,11 +33,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ea94b26815eb1bc3453a1bcf01eb6b522f41e037
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a095e1de4fdffc97d615a39fd7cf185c99493d02
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,12 +78,12 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  **СЛЕВА** | ПРАВИЛЬНО  
  Указывает, к какой стороне каждого интервала граничных значений, влево или вправо, *boundary_value* [ **,***.. .n* ] принадлежит, когда значения интервалов были отсортированы по [!INCLUDE[ssDE](../../includes/ssde-md.md)]по возрастанию слева направо. Если значение не задано, то по умолчанию используется значение LEFT.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Область действия функции секционирования ограничена базой данных, в которой она была создана. Функции секционирования располагаются в отдельном от других функций пространстве имен внутри базы данных.  
   
  Все строки, которым соответствуют значения NULL столбца секционирования, располагаются в самой левой секции, кроме случая, когда задано пустое граничное значение и параметр RIGHT. В данном случае самая левая секция является пустой, и в нее помещаются значения NULL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения инструкции CREATE PARTITION FUNCTION необходимо наличие одного из следующих разрешений.  
   
 -   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  
@@ -97,7 +97,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
 ### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>A. Создание функции секционирования RANGE LEFT для столбца данных типа int  
  Следующая функция секционирования разбивает таблицу или индекс на четыре секции.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF1 (int)  
 AS RANGE LEFT FOR VALUES (1, 100, 1000);  
 ```  
@@ -111,7 +111,7 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 ### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>Б. Создание функции секционирования RANGE RIGHT для столбца данных типа int  
  Следующая функция секционирования использует те же значения для *boundary_value* [ **,***.. .n* ] аналогичен предыдущему примеру, за исключением того, он указывает RANGE RIGHT.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
 AS RANGE RIGHT FOR VALUES (1, 100, 1000);  
 ```  
@@ -125,7 +125,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
 ### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>В. Создание функции секционирования RANGE RIGHT для столбца данных типа datetime  
  Следующая функция секционирования разбивает таблицу или индекс на 12 секций, по одной на каждый месяц года, за которые значения в **datetime** столбца.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION [myDateRangePF1] (datetime)  
 AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',  
                '20030501', '20030601', '20030701', '20030801',   
@@ -141,7 +141,7 @@ AS RANGE RIGHT FOR VALUES ('20030201', '20030301', '20030401',
 ### <a name="d-creating-a-partition-function-on-a-char-column"></a>Г. Создание функции секционирования для столбца данных типа char  
  Следующая функция секционирования разбивает таблицу или индекс на четыре секции.  
   
-```tsql  
+```sql  
 CREATE PARTITION FUNCTION myRangePF3 (char(20))  
 AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');  
 ```  
@@ -155,7 +155,7 @@ AS RANGE RIGHT FOR VALUES ('EX', 'RXE', 'XR');
 ### <a name="e-creating-15000-partitions"></a>Д. Создание 15 000 секций  
  Следующая функция секционирования разбивает таблицу или индекс на 15 000 секций.  
   
-```tsql  
+```sql  
 --Create integer partition function for 15,000 partitions.  
 DECLARE @IntegerPartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION IntegerPartitionFunction (int) 
@@ -174,7 +174,7 @@ GO
 ### <a name="f-creating-partitions-for-multiple-years"></a>Е. Создание разделов на несколько лет  
  Следующая функция секционирования разбивает таблицу или индекс на 50 секций на **datetime2** столбца. Существует по одному разделу для каждого месяца с января 2007 года по январь 2011 года.  
   
-```tsql  
+```sql  
 --Create date partition function with increment by month.  
 DECLARE @DatePartitionFunction nvarchar(max) = 
     N'CREATE PARTITION FUNCTION DatePartitionFunction (datetime2) 

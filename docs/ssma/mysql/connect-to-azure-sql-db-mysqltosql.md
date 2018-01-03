@@ -1,7 +1,7 @@
 ---
 title: "Подключения к базе данных Azure SQL (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: dadd18eb9f5f2af55b2d68ad69f69fb3c54709fc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f3f0572426b6c90aa7b56c1f81e077f05f01caae
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Подключения к базе данных Azure SQL (MySQLToSQL)
 Подключения в SQL Azure-диалоговое окно можно используйте для подключения к базе данных SQL Azure, которые требуется перенести.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 > [!IMPORTANT]  
 > SSMA для MySQL не поддерживает подключение к базе данных master в SQL Azure.  
   
-**Имя пользователя**  
+**User name**  
   
 Введите имя пользователя, который будет использоваться SSMA для подключения к базе данных SQL Azure  
   

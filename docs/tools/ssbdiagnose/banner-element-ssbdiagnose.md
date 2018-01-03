@@ -3,7 +3,7 @@ title: "Banner (программа ssbdiagnose) элемент | Докумен�
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssbdiagnose
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 57351e5fae1d9cd7a52eab4f1ad441ada4564471
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4da84a33034bc664ddefd264d9346034ac69ba49
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="banner-element-ssbdiagnose"></a>Элемент Banner (программа ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Определяет программу, сформировавшую **ssbdiagnose** выходной XML-файл.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-attributes"></a>Атрибуты элемента  
   
-|Attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |**title**|Определяет программу, сформировавшую выходной XML-файл **ssbdiagnose** .|  
 |**product**|Определяет продукт, сформировавший выходной XML-файл **ssbdiagnose** .|  
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/05/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  

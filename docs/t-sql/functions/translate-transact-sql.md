@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fda4f4793f0692b77ba8a606c904612674e29721
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: a498430f8af12bad1e5ec934dcb60c63aeb96e56
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="translate-transact-sql"></a>ПЕРЕВОД (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ inputString
 ## <a name="return-types"></a>Типы возвращаемых значений   
 Возвращает символьное выражение того же типа, что `inputString` где символов из второй аргумент заменяются сопоставления символов из третьего аргумента.
 
-## <a name="remarks"></a>Замечания   
+## <a name="remarks"></a>Remarks   
 
 `TRANSLATE`функция возвращает ошибку, если имеют разные длины, символы и переводы. `TRANSLATE`функция должна возвращать входных данных без изменений, если значения null, представлены в виде символов или замены аргументов. Поведение `TRANSLATE` функции должен быть идентичен [заменить](../../t-sql/functions/replace-transact-sql.md) функции.   
 
@@ -77,7 +77,7 @@ SELECT TRANSLATE('2*[3+4]/{7-2}', '[]{}', '()()');
 
 ###  <a name="b-convert-geojson-points-into-wkt"></a>Б. Преобразовать GeoJSON точки в формате WKT    
 GeoJSON — это формат для кодирования с различными структурами географические данные. С `TRANSLATE` функции, разработчики можно легко преобразовать GeoJSON точки в формате WKT и наоборот. Следующий запрос заменяет квадратные и фигурные скобки во входном файле регулярного фигурные скобки:   
-```tsql
+```sql
 SELECT TRANSLATE('[137.4, 72.3]' , '[,]', '( )') AS Point,
     TRANSLATE('(137.4 72.3)' , '( )', '[,]') AS Coordinates;
 ```

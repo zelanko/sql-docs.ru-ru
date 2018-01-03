@@ -1,13 +1,12 @@
 ---
 title: "dbo.slo_assignment_history (база данных SQL Azure) | Документы Microsoft"
-ms.custom:
-- MSDN content
-- MSDN - SQL DB
+ms.custom: 
 ms.date: 06/10/2016
 ms.prod: 
 ms.reviewer: 
+ms.suite: sql
+ms.prod_service: sql-database
 ms.service: sql-database
-ms.suite: 
 ms.technology: database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
@@ -26,14 +25,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 61bf1f0541df9085235dc00072624e1e91425cc5
-ms.sourcegitcommit: 9678eba3c2d3100cef408c69bcfe76df49803d63
+ms.openlocfilehash: fcff1c5141e6556f8cb4184284769e3be537f80a
+ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dbosloassignmenthistory-azure-sql-database"></a>dbo.slo_assignment_history (база данных SQL Azure)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
@@ -53,16 +52,16 @@ ms.lasthandoff: 11/09/2017
 |-----------------|---------------|-----------------|  
 |database_name|**sysname**|Имя базы данных.|  
 |database_id|**int**|Идентификатор базы данных.|  
-|create_date|**DateTimeOffset(7)**|Дата создания базы данных.|  
+|create_date|**datetimeoffset(7)**|Дата создания базы данных.|  
 |service_objective_name|**sysname**|Имя цели уровня обслуживания (SLO).|  
 |service_objective_id|**uniqueidentifier**|Идентификатор SLO.|  
 |operation_id|**uniqueidentifier**|Идентификатор операции.|  
-|operation_start_time|**DateTimeOffset(7)**|Время начала запроса на изменение SLO базы данных.|  
-|operation_end_time|**DateTimeOffset(7)**|Время окончания запроса на изменение SLO базы данных.|  
+|operation_start_time|**datetimeoffset(7)**|Время начала запроса на изменение SLO базы данных.|  
+|operation_end_time|**datetimeoffset(7)**|Время окончания запроса на изменение SLO базы данных.|  
 |error_code|**int**|Код ошибки запроса на изменение SLO базы данных.|  
 |error_desc|**nvarchar**|Описание ошибки запроса на изменение SLO базы данных.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к виртуальной **master** базы данных.  
   
 ## <a name="examples"></a>Примеры  

@@ -34,11 +34,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6bf90e58d4956877786dd0d247653e8a99480c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d344044a5ce4a0cd995cc1695b69ac9312d4db74
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ END CATCH
  *statement_block*  
  Любая группа инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в пакете или заключенная в блок BEGIN…END.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Конструкция TRY…CATCH перехватывает все ошибки исполнения с кодом серьезности, большим 10, которые не закрывают подключение к базе данных.  
   
  За блоком TRY сразу же должен следовать блок CATCH. Размещение каких-либо инструкций между инструкциями END TRY и BEGIN CATCH вызовет синтаксическую ошибку.  
@@ -108,7 +108,7 @@ END CATCH
   
  Эти функции возвращают значение NULL, если их вызов происходит вне области блока CATCH. С помощью этих функций сведения об ошибке могут быть получены из любого места внутри блока CATCH. Например, следующий скрипт демонстрирует хранимую процедуру, которая содержит функции обработки ошибок. В блоке `CATCH` конструкции `TRY…CATCH` вызывается хранимая процедура и возвращаются сведения об ошибке.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -161,7 +161,7 @@ END CATCH;
   
  Следующий пример показывает, как ошибка разрешения имени объекта, формируемая инструкцией `SELECT`, не отлавливается конструкцией `TRY…CATCH`, но отлавливается блоком `CATCH`, когда та же самая инструкция `SELECT` выполняется внутри хранимой процедуры.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -178,7 +178,7 @@ END CATCH
   
  Выполнение инструкции `SELECT` внутри хранимой процедуры приведет к ошибке, которая возникнет на уровне ниже, чем блок `TRY`. Такая ошибка будет обработана конструкцией `TRY…CATCH`.  
   
-```t-sql  
+```sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -211,7 +211,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>A. Использование TRY…CATCH  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на нуль. Эта ошибка приводит к передаче управления связанному блоку `CATCH`.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -231,7 +231,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>Б. Использование конструкции TRY…CATCH внутри транзакции  
  В следующем примере показано использование блока `TRY…CATCH` внутри транзакции. Инструкция внутри блока `TRY` приводит к ошибке нарушения ограничения.  
   
-```t-sql  
+```sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -260,7 +260,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>В. Использование TRY…CATCH с XACT_STATE  
  В следующем примере показано, как использовать конструкцию `TRY…CATCH` для обработки ошибок, возникших внутри транзакции. Функция `XACT_STATE` определяет, должна ли транзакция быть зафиксирована или откачена. В данном примере параметр `SET XACT_ABORT` находится в состоянии `ON`. В результате, если произойдет ошибка нарушения ограничения, транзакция станет нефиксируемой.  
   
-```t-sql  
+```sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -329,7 +329,7 @@ GO
 ### <a name="d-using-trycatch"></a>Г. Использование TRY…CATCH  
  В следующем примере приведена инструкция `SELECT`, вызывающая ошибку деления на нуль. Эта ошибка приводит к передаче управления связанному блоку `CATCH`.  
   
-```t-sql  
+```sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

@@ -3,7 +3,7 @@ title: "Занятие 2: С помощью базы данных настрой
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: dta
 ms.reviewer: 
@@ -19,11 +19,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 707c67f64ac8e074f3f0177733c9119eb9095bc3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c7c9ec1efea6c7fa1051e3a527a46236aef21315
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>Занятие 2. Применение помощника по настройке ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Помощник по настройке ядра СУБД позволяет настраивать базы данных, управлять сеансами настройки и просматривать рекомендации по настройке. Пользователи, обладающие углубленными знаниями структур физического проектирования, могут использовать это средство для выполнения пробного анализа настройки базы данных. Новички в настройке баз данных могут использовать этот инструмент для поиска оптимальной конфигурации структур физического проектирования для рабочих нагрузок, настройка которых выполняется. Данное занятие содержит базовые практические задания для администраторов баз данных, незнакомых с графическим пользовательским интерфейсом помощника по настройке ядра СУБД, а также для системных администраторов, которые могут не обладать глубокими знаниями в области структур физического проектирования.  

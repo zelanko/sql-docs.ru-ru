@@ -26,11 +26,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25675b2dc83e5251b381bf95af353deb647d563a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c4314d23f344df87d270f526a64e4d6d0f033dab
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
+```sql  
 managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 'time_2')  
 ```  
   
@@ -59,20 +59,20 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|int|Количество ошибок подключения, когда программа устанавливает соединение с учетной записью хранения Windows Azure.|  
-|number_of_sql_errors|int|Число ошибок, возвращаемых при подключении программы к компоненту SQL Server Engine.|  
-|number_of_invalid_credential_errors|int|Число ошибок, возвращаемых, когда программа пытается выполнить проверку подлинности с использованием учетных данных SQL.|  
-|number_of_other_errors|int|Количество ошибок в других категориях, помимо обмена данными, SQL или учетных данных.|  
-|number_of_corrupted_or_deleted_backups|int|Число удаленных или поврежденных файлов резервных копий.|  
-|number_of_backup_loops|int|Число сканирований агентом резервного копирования всех баз данных, настроенных с помощью [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|number_of_retention_loops|int|Количество сканирований баз данных, выполняемых для оценки заданного срока хранения.|  
+|number_of_storage_connectivity_errors|ssNoversion|Количество ошибок подключения, когда программа устанавливает соединение с учетной записью хранения Windows Azure.|  
+|number_of_sql_errors|ssNoversion|Число ошибок, возвращаемых при подключении программы к компоненту SQL Server Engine.|  
+|number_of_invalid_credential_errors|ssNoversion|Число ошибок, возвращаемых, когда программа пытается выполнить проверку подлинности с использованием учетных данных SQL.|  
+|number_of_other_errors|ssNoversion|Количество ошибок в других категориях, помимо обмена данными, SQL или учетных данных.|  
+|number_of_corrupted_or_deleted_backups|ssNoversion|Число удаленных или поврежденных файлов резервных копий.|  
+|number_of_backup_loops|ssNoversion|Число сканирований агентом резервного копирования всех баз данных, настроенных с помощью [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_retention_loops|ssNoversion|Количество сканирований баз данных, выполняемых для оценки заданного срока хранения.|  
   
 ## <a name="best-practices"></a>Рекомендации  
  Эти суммарные значения можно использовать для контроля состояния работоспособности системы. Например, если столбец number_of_retention_loops получает значение 0 за 30 минут, то, возможно, управление хранением работает слишком долго или неправильно. Ненулевые столбцы ошибок могут означать неполадки, и для обнаружения проблемы следует ознакомиться с журналами расширенных событий. Кроме того, используйте хранимую процедуру **managed_backup.sp_get_backup_diagnostics** для получения списка расширенных событий, чтобы найти сведения об ошибке.  
   
 ## <a name="security"></a>безопасность  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Требуется **ВЫБЕРИТЕ** разрешений на функцию.  
   
 ## <a name="examples"></a>Примеры  

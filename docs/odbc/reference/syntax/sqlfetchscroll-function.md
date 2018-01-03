@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: a21a5e5b390e0798ed4dd25fba164a710298af00
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df50946b183bcd7072f12f67b8f0293ac5eef080
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sqlfetchscroll-function"></a>Функция SQLFetchScroll
 **Соответствия**  
@@ -258,7 +258,7 @@ SQLRETURN SQLFetchScroll(
   
  Если курсор определяет строки, добавленные в результирующий набор или удаляет строки, удаленные из результирующего набора, он отображается, как если бы он обнаруживает эти изменения только в том случае, если он выбирает данные. Это включает случай при **SQLFetchScroll** вызывается с FetchOrientation SQL_FETCH_RELATIVE и FetchOffset, равным 0, чтобы повторно извлечь тот же набор строк, но не включает так, при вызове SQLSetPos присвоено SQL_ fOption ОБНОВЛЕНИЕ. В последнем случае обновляются данные в буферы строк, но не refetched и удаленные строки не удаляются из результирующего набора. Таким образом при вставке в текущем наборе строк или удалены из строки, курсор не изменяет буферы строк. Вместо этого обнаруженных изменений при выборке любому набору строк, ранее включить удаленную строку, и теперь включает вставленной строки.  
   
- Например:  
+ Пример:  
   
 ```  
 // Fetch the next rowset.  

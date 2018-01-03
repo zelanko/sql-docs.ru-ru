@@ -3,7 +3,7 @@ title: "Шаблоны приложения SQL Server Profiler | Докумен
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: sql-server-profiler
 ms.reviewer: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e8426d5f71d74a703270bd27e61730122afa9aa7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7c9214cc22fa5b5368b817e663169cbc97d64103
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sql-server-profiler-templates"></a>Шаблоны приложения SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Можно использовать [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для создания шаблонов, определяющих классы событий и данных столбцы для включения в трассировку. После определения и сохранения шаблона можно запустить трассировку, которая будет записывать данные для каждого выбранного класса событий. Шаблоны можно использовать для многих трассировок; сам шаблон не выполняется.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 |Имя шаблона|Назначение шаблона|Классы событий|  
 |-------------------|----------------------|-------------------|  
 |SP_Counts|Отслеживает поведение при выполнении хранимой процедуры с течением времени.|**SP:Starting**|  
-|Standard Edition|Общая начальная точка для создания трассировки. Перехватывает все хранимые процедуры и выполняемые пакеты инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Используется для мониторинга общей активности сервера баз данных.|**Аудит входа в систему**<br /><br /> **Аудит выхода из системы**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
+|Standard|Общая начальная точка для создания трассировки. Перехватывает все хранимые процедуры и выполняемые пакеты инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Используется для мониторинга общей активности сервера баз данных.|**Аудит входа в систему**<br /><br /> **Аудит выхода из системы**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL|Захватывает все инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , отправленные клиентами на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и время их отправки. Используется для отладки клиентских приложений.|**Аудит входа в систему**<br /><br /> **Аудит выхода из системы**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_Duration|Захватывает все инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , отправленные клиентами на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и время их выполнения (в миллисекундах), и группирует их по длительности. Используется для идентификации медленных запросов.|**RPC:Completed**<br /><br /> **SQL:BatchCompleted**|  
 |TSQL_Grouped|Захватывает все инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , отправленные на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и время их отправки. Группирует сведения по имени пользователя или клиента, который отправил инструкцию. Используется для изучения запросов от определенного клиента или пользователя.|**Аудит входа в систему**<br /><br /> **Аудит выхода из системы**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  

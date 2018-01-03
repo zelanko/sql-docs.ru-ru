@@ -3,7 +3,7 @@ title: "Параметры (миграция) (SybaseToSQL) проекта | Д�
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 25b205d67e1cdc92b47d93942884a9857bd35e2d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b032cb4f1453a3b9a2986e5d554d21c62e606001
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Параметры проекта (миграция) (SybaseToSQL)
 На странице миграции **параметры проекта** диалоговое окно содержит настройки, установленные как SSMA выполняет миграцию данных из Sybase адаптивной Server Enterprise (ASE) для [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)].  

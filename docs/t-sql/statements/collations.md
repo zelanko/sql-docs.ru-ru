@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4192928157e3f6e534b8fb50c34e349dac3f5b8c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7cc579d5f4c5d84dcec335e69d12334725f60741
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="collations"></a>Параметры сортировки
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ COLLATE { <collation_name> | database_default }
  **database_default**  
  Заставляет предложение COLLATE наследовать параметры сортировки текущей базы данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Предложение COLLATE можно указывать на нескольких уровнях. следующие основные параметры.  
   
 1.  Создание или изменение базы данных.  
@@ -113,7 +113,7 @@ FROM fn_helpcollations();
 ### <a name="a-specifying-collation-during-a-select"></a>A. Указание параметров сортировки во время выбора  
  В следующем примере создается простая таблица, а затем вставляются четыре строки. Затем в примере применяются два параметра сортировки при выборе данных из таблицы, при этом демонстрируется, что `Chiapas` сортируется по-разному.  
   
-```tsql  
+```sql  
 CREATE TABLE Locations  
 (Place varchar(15) NOT NULL);  
 GO  

@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91602b959da7ed3b622fcc77e59670cdfc803722
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e024b0147fb716adfba320d2129a7d623bbff85d
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,10 +77,10 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 |**шифрование**|**bit**|1 = текст SQL зашифрован.<br /><br /> 0 = текст SQL не зашифрован.|  
 |**text**|**nvarchar (max** **)**|Текст SQL-запроса.<br /><br /> Имеет значение NULL для зашифрованных объектов.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Для нерегламентированных запросов дескрипторы SQL являются значениями хэша на основе текста SQL, отправляемая на сервер и могут быть получены из любой базы данных. 
 
 Для таких объектов баз данных, как хранимые процедуры, триггеры или функции, дескрипторы SQL создаются на основе идентификатора базы данных, идентификатора объекта, а также номера объекта. 
@@ -96,7 +96,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 Ниже приведен простой пример для иллюстрации передача **sql_handle** напрямую или с **CROSS APPLY**.
   1.  Создайте действие.  
 Выполните следующий запрос T-SQL в новое окно запроса в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
-      ```tsql
+      ```sql
       -- Identify current spid (session_id)
       SELECT @@SPID;
       GO
@@ -108,7 +108,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  С помощью **CROSS APPLY**.  
     Sql_handle из **sys.dm_exec_requests** будет передан **sys.dm_exec_sql_text** с помощью **CROSS APPLY**. Открыть новое окно запроса и передать spid, определенных на шаге 1. В этом примере идентификатор spid оказался `59`.
 
-        ```tsql
+        ```sql
         SELECT t.*
         FROM sys.dm_exec_requests AS r
         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t
@@ -118,7 +118,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
     2.  Передача **sql_handle** напрямую.  
 Получить **sql_handle** из **sys.dm_exec_requests**. Затем передайте **sql_handle** непосредственно к **sys.dm_exec_sql_text**. Открыть новое окно запроса и передать spid, определенных на шаге 1 для **sys.dm_exec_requests**. В этом примере идентификатор spid оказался `59`. Передать возвращенный **sql_handle** как аргумент **sys.dm_exec_sql_text**.
 
-        ```tsql
+        ```sql
         -- acquire sql_handle
         SELECT sql_handle FROM sys.dm_exec_requests WHERE session_id = 59  -- modify this value with your actual spid
         
@@ -130,7 +130,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
 ### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>Б. Получение сведений о первых пяти запросах по среднему времени ЦП  
  Следующий пример возвращает текст инструкции SQL и среднее время ЦП для пяти первых запросов.  
   
-```tsql  
+```sql  
 SELECT TOP 5 total_worker_time/execution_count AS [Avg CPU Time],  
     SUBSTRING(st.text, (qs.statement_start_offset/2)+1,   
         ((CASE qs.statement_end_offset  
@@ -145,7 +145,7 @@ ORDER BY total_worker_time/execution_count DESC;
 ### <a name="c-provide-batch-execution-statistics"></a>В. Предоставляют статистику выполнения пакетов  
  Следующий пример возвращает текст запросов SQL, выполняемых в пакетах, и статистические сведения о них.  
   
-```tsql  
+```sql  
 SELECT s2.dbid,   
     s1.sql_handle,    
     (SELECT TOP 1 SUBSTRING(s2.text,statement_start_offset / 2+1 ,   
@@ -173,7 +173,7 @@ WHERE s2.objectid is null
 ORDER BY s1.sql_handle, s1.statement_start_offset, s1.statement_end_offset;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Динамические административные представления и функции (Transact-SQL)](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   

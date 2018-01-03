@@ -1,6 +1,6 @@
 ---
 title: "Приступая к работе с SQL Server 2017 г. на Docker | Документы Microsoft"
-description: "Этого краткого руководства показано, как использовать Docker для выполнения образ контейнера 2017 г. SQL Server. Затем создайте и запросов к базе данных с помощью sqlcmd."
+description: "Краткого руководства показано, как использовать Docker для выполнения образ контейнера 2017 г. SQL Server. Затем создайте и запросов к базе данных с помощью sqlcmd."
 author: rothja
 ms.author: jroth
 manager: jhubbard
@@ -15,17 +15,17 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 80d3d05fcd693f6290649c2c63446c400c9ad3b2
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Запускать образ контейнера 2017 г. SQL Server с помощью Docker
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-В этом учебнике быстрого запуска использовать Docker для извлечения и запустить образ контейнера 2017 г. SQL Server, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Подключитесь с **sqlcmd** для создания первой базы данных и выполнения запросов.
+В этом кратком руководстве использовать Docker для извлечения и запустить образ контейнера 2017 г. SQL Server, [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/). Подключитесь с **sqlcmd** для создания первой базы данных и выполнения запросов.
 
 Этот образ состоит из SQL Server на основании Ubuntu 16.04 Linux. Он может использоваться с подсистемой Dосker 1.8 + на Linux или Docker для Mac и Windows.
 
@@ -240,6 +240,8 @@ SELECT @@SERVERNAME,
 
 - [Код Visual Studio](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-develop-use-ssms.md)
+- [SQL Server Operations Studio (Предварительная версия)](../sql-operations-studio/what-is.md)
+- [MSSQL-cli (Предварительная версия)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>Удаление контейнера
 
@@ -257,6 +259,12 @@ docker rm sql1
 
 > [!WARNING]
 > Остановка и удаление контейнера окончательно удаляет все данные SQL Server в контейнере. Если необходимо сохранить данные, [создайте и скопируйте файл резервной копии из контейнера](tutorial-restore-backup-in-sql-server-container.md) или использовать [контейнера данных сохраняемости метод](sql-server-linux-configure-docker.md#persist).
+
+## <a name="docker-demo"></a>Демонстрация docker
+
+После вы попытались использовать образ контейнера SQL Server для Docker, можно узнать, как использовать Docker для улучшения разработки и тестирования. В следующем видео показано, как можно использовать Docker в непрерывной интеграции и сценария развертывания.
+
+> [!VIDEO https://channel9.msdn.com/Events/Connect/2017/T152/player]
 
 ## <a name="next-steps"></a>Следующие шаги
 

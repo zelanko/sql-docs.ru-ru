@@ -24,11 +24,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b420b7b73af8f32d2de9dac39cc4f57b41680c7
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f5ce90660a43e5285735a74a01b560ec210ba3f0
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="syntax"></a>Синтаксис  
   
-```tsql  
+```sql  
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -92,14 +92,14 @@ ALTER SECURITY POLICY schema_name.security_policy_name
  table_schema_name.table_name  
  Представляет целевую таблицу, к которой будет применяться предикат безопасности. Для одной таблицы могут быть предназначены несколько отключенных политик безопасности, но только одна может быть включена в любой момент времени.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция ALTER SECURITY POLICY относится к области транзакции. Если выполняется откат транзакции, происходит также откат этой инструкции.  
   
  При использовании функции предикатов с таблицами, оптимизированными для памяти, должен включать политики безопасности **SCHEMABINDING** и использовать **WITH NATIVE_COMPILATION** указание компиляции. Аргумент SCHEMABINDING нельзя изменить с помощью инструкции ALTER, так как он применяется ко всем предикатам. Чтобы изменить привязки к схеме необходимо удалить и заново создайте политику безопасности.  
   
  Предикаты блокировки вычисляются после выполнения операции DML. Таким образом запрос READ UNCOMMITTED отображаются временные значения, будет выполнен откат.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY SECURITY POLICY.  
   
  Кроме того, для каждого добавляемого предиката требуются следующие разрешения:  

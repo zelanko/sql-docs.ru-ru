@@ -26,11 +26,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 41ae9665de08068d1bfa3ed919bbf43f55151a7c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b1fa8f540e8f16d901eb41138bc7ee153339cb5a
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**Decimal (5,2)**|Средний уровень использования вычислительных мощностей в процентах от предела для уровня службы.|  
 |avg_data_io_percent|**Decimal (5,2)**|Среднее использование операций ввода-вывода в процентах от предела для уровня службы данных.|  
 |avg_log_write_percent|**Decimal (5,2)**|Средний уровень использования ресурсов записи в процентах от предела для уровня службы.|  
-|avg_memory_percent|**Decimal (5,2)**|Средний уровень использования памяти в процентах от предела для уровня службы.<br /><br /> Это включает память, используемая для хранения объектов OLTP в памяти.|  
+|avg_memory_usage_percent|**Decimal (5,2)**|Средний уровень использования памяти в процентах от предела для уровня службы.<br /><br /> Это включает память, используемая для хранения объектов OLTP в памяти.|  
 |xtp_storage_percent|**Decimal (5,2)**|Использование хранилища для OLTP в памяти в процентах от предела для уровня службы (в конце отчетного интервала). Это включает память, используемая для хранения следующих объектов в памяти OLTP: оптимизированные для памяти таблицы, индексы и табличные переменные. Он также включает память, используемая для обработки операции ALTER TABLE.<br /><br /> Возвращает 0, если не используется In-Memory OLTP в базе данных.|  
 |max_worker_percent|**Decimal (5,2)**|Максимальная одновременных рабочих процессов (запросов) в процентах от предела для уровня службы базы данных.|  
 |max_session_percent|**Decimal (5,2)**|Максимальное число одновременных сеансов в процентах от предела для уровня службы базы данных.|  
@@ -52,10 +52,10 @@ ms.lasthandoff: 11/17/2017
 > [!TIP]  
 >  Дополнительный контекст об этих ограничениях и уровней обслуживания см. в разделах [уровней обслуживания](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) и [уровня возможности и ограничения службы](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для этого представления необходимо разрешение VIEW DATABASE STATE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Данные, возвращенные **sys.dm_db_resource_stats** выражается в процентах от максимально разрешенных ограничений DTU для уровня производительности или уровня службы, которые выполняются для баз данных Basic, Standard и Premium. Для уровней Web и Business эти числа указывают проценты в условиях уровня производительности Standard S2. Например, если при выполнении в базе данных Web или Business значение avg_cpu_percent возвращает 70 %, это означает 70 % лимита уровня S2. Кроме того, для уровней Web и Business проценты могут отражать количество сверх 100 %, что также основывается на ограничении уровня S2.  
   
  Если база данных переключилась на другой сервер за последние 60 минут, представление будет возвращать только данные за то время, в течение которого она была базой данных-источником с момента отработки отказа.  

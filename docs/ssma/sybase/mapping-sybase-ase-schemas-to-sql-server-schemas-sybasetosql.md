@@ -3,7 +3,7 @@ title: "Сопоставление схем Sybase ASE схемы SQL Server (Sy
 ms.custom: 
 ms.date: 01/19/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-sybase
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2afb2479c801fbc2484b387dfc2a81ea3fc0d782
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e0b8dad8d5742782ed3b3828806c5122092b37b
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Sybase ASE схемы сопоставления для схемы SQL Server (SybaseToSQL)
 В Sybase адаптивной Server Enterprise (ASE), каждая база данных имеет один или несколько схем. По умолчанию SSMA выполняет миграцию всех объектов базы данных и схемы с одной базой данных и схемы в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или SQL Azure. Тем не менее, можно настроить сопоставление между ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или схемы и базы данных SQL Azure.  
@@ -69,7 +69,7 @@ ASE и [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или оба S
   
 1.  На вкладке схемы сопоставления, выберите любую строку и нажмите кнопку **по умолчанию** Чтобы восстановить базу данных по умолчанию и схемы.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Нужно выполнить анализ преобразование Sybase ASE объектов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или объекты, SQL Azure, вы можете [создать отчет о преобразовании](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c). В противном случае вы можете [преобразование определения объектов базы данных ASE](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3) в [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] или определения объектов SQL Azure.  
   
 ## <a name="see-also"></a>См. также:  

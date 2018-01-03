@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2d46d60c67556fe5c779fdd4e68e7f4993074198
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: c86a7a8108e94d07341f5b6ced498b56ab934405
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="set-implicittransactions-transact-sql"></a>SET IMPLICIT_TRANSACTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если, система находится в *неявное* режим транзакции. Это означает, что если @@TRANCOUNT = 0, любой из следующих инструкций Transact-SQL начинает новую транзакцию. Это эквивалентно невидимым BEGIN TRANSACTION, выполняемая сначала:  
   
 ||||  
@@ -56,8 +56,8 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF }
 |ALTER TABLE|FETCH|REVOKE|  
 |BEGIN TRANSACTION|GRANT|SELECT (См. исключение ниже.)|  
 |CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
-|DROP|.|.|  
+|Delete|OPEN|UPDATE|  
+|DROP|, и делает это по-другому.|, и делает это по-другому.|  
   
  При задано значение OFF, каждый из предыдущей инструкции T-SQL связывает невидимым BEGIN TRANSACTION и невидимых инструкции COMMIT TRANSACTION. Если указан аргумент OFF, мы говорим режим транзакции — *autocommit*. Если ваш код T-SQL выдает наглядно BEGIN TRANSACTION, мы говорим режим транзакции — *явных*.  
   
@@ -86,7 +86,7 @@ SELECT @IMPLICIT_TRANSACTIONS AS IMPLICIT_TRANSACTIONS;
 ## <a name="examples"></a>Примеры  
  Следующий сценарий Transact-SQL выполняется несколько разных тестовых случаев. Текстовые выходные данные также предоставляется, который показывает, каким образом подробные и полученный в результате каждого тестового случая.  
   
-```tsql  
+```sql  
 -- Transact-SQL.  
 go  
 -- Preparations.  
@@ -169,7 +169,7 @@ go
   
  Далее следует текстовые выходные данные из предыдущего сценария Transact-SQL.  
   
-```tsql  
+```sql  
 -- Text output from Transact-SQL:  
   
 -------- [Test A] ---- OFF ----  

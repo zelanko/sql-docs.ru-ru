@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 8e4b889d1ee7ec8480c9f41a730ffafcd5888ef4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
 -   триггеры DDL уровня сервера.  
   
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -99,33 +99,33 @@ sys.dm_sql_referencing_entities (
   
  Возвращает ошибку, если заданная упоминаемая сущность является пронумерованной хранимой процедурой.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице перечислены типы сущностей, для которых созданы и обновляются данные о зависимостях. Данные о зависимостях не создаются и не обновляются для правил, значений по умолчанию, временных таблиц, временных хранимых процедур и системных объектов.  
   
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
-|Таблица|Да*|Да|  
+|Table|Да*|Да|  
 |Просмотр|Да|Да|  
 |Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
-|Хранимая процедура CLR|Нет|Да|  
+|Хранимая процедура CLR|нет|Да|  
 |Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
-|Определяемая пользователем функция CLR|Нет|Да|  
-|Триггер CLR (DML и DDL)|Нет|Нет|  
-|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|Нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|Нет|  
-|Расширенные хранимые процедуры|Нет|Да|  
-|Очередь|Нет|Да|  
-|Синоним|Нет|Да|  
-|Тип (псевдоним и определяемый пользователем тип данных CLR)|Нет|Да|  
-|Коллекция схем XML|Нет|Да|  
-|Функция секционирования|Нет|Да|  
+|Определяемая пользователем функция CLR|нет|Да|  
+|Триггер CLR (DML и DDL)|нет|нет|  
+|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|нет|  
+|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|нет|  
+|Расширенные хранимые процедуры|нет|Да|  
+|Очередь|нет|Да|  
+|Синоним|нет|Да|  
+|Тип (псевдоним и определяемый пользователем тип данных CLR)|нет|Да|  
+|Коллекция схем XML|нет|Да|  
+|Функция секционирования|нет|Да|  
   
  \*Таблица отслеживается как ссылающаяся сущность, только в том случае, если оно ссылается на [!INCLUDE[tsql](../../includes/tsql-md.md)] модуля, определяемый пользователем тип или коллекция XML-схем в определении вычисляемого столбца, ограничения CHECK или ограничении DEFAULT.  
   
  ** Пронумерованные хранимые процедуры с целочисленным значением больше 1 не отслеживаются в качестве ссылающихся или упоминаемых сущностей.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
   
 ### <a name="includesskatmaiincludessskatmai-mdmd--includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] – [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]  
   
@@ -148,7 +148,7 @@ sys.dm_sql_referencing_entities (
 ### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Получение списка сущностей, ссылающихся на заданную сущность  
  В следующем примере возвращается список сущностей текущей базы данных, которые ссылаются на указанную таблицу.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  
@@ -159,7 +159,7 @@ GO
 ### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>Б. Получение списка сущностей, ссылающихся на заданный тип  
  В следующем примере возвращается список сущностей, ссылающихся на псевдоним типа `dbo.Flag`. Результирующий набор показывает, что этот тип используется двумя хранимыми процедурами. `dbo.Flag` Тип также используется в определении нескольких столбцов в `HumanResources.Employee` таблица; тем не менее, поскольку тип не является в определении вычисляемого столбца, ограничения CHECK или ограничении DEFAULT в таблице, строки не возвращаются для `HumanResources.Employee`таблицы.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT referencing_schema_name, referencing_entity_name, referencing_id, referencing_class_desc, is_caller_dependent  

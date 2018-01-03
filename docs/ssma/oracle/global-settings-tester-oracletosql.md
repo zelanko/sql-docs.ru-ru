@@ -1,7 +1,7 @@
 ---
 title: "Глобальные параметры (тестировщик) (OracleToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-oracle
 ms.custom: 
@@ -17,11 +17,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.workload: Inactive
-ms.openlocfilehash: 8f539352279a21b6f736616c5425b4f24856cb03
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4aa9d87eefc0b268fbd8fca9cabf26e7cd27b663
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="global-settings-tester-oracletosql"></a>Глобальные параметры (тестировщик) (OracleToSQL)
 Используйте страницу тест-инженер **глобальные параметры** диалогового окна для задания параметров для тест-инженера SSMA.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
 **Дополнительные таблицы, в режиме энергосбережения**  
 Этот параметр определяет способ сохранения внутренних вспомогательных таблицах, созданному в ходе выполнения тестового случая. Для этого конкретного значения параметра можно задать следующие параметры:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
 **Остановить выполнение теста после первой ошибки**  
 Этот параметр указывает, следует ли остановить текущее выполнение тестового случая, если произошла ошибка во время выполнения. Набор параметров по умолчанию — **Да**.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  Да  
   
-2.  Нет  
+2.  нет  
   
 ## <a name="see-also"></a>См. также:  
 [Завершение подготовки тестового случая &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  

@@ -1,7 +1,7 @@
 ---
 title: "Параметры (сопоставление типов) проекта (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 00caaddad937894b416e3289a7d4e96b152ac41b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7ca62e82b85d401f99a6e59f6f440d9a6519e58d
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>Параметры (сопоставление типов) проекта (MySQLToSQL)
 Параметры сопоставления типов проекта позволяют задать сопоставления типов по умолчанию для проекта SSMA.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/05/2017
 ##### <a name="add"></a>Добавить  
 Щелкните, чтобы добавить в список сопоставления типа данных.  
   
-##### <a name="edit"></a>Правка  
+##### <a name="edit"></a>Изменить  
 Щелкните для изменения выбранного типа данных в списке сопоставления.  
   
 ##### <a name="remove"></a>Удалить  
@@ -61,9 +61,9 @@ ms.lasthandoff: 12/05/2017
 |||  
 |-|-|  
 |**Тип данных MySQL**|**Тип данных SQL Server**|  
-|bigint|bigint|  
-|bigint [*.. 255]|bigint|  
-|binary|двоичные [1]|  
+|BIGINT|BIGINT|  
+|bigint [*.. 255]|BIGINT|  
+|BINARY|двоичные [1]|  
 |двоичные [от 0 до 1]|двоичные [1]|  
 |двоичные [2..255]|двоичные [*]|  
 |bit|двоичные [1]|  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/05/2017
 |BLOB-объектов [8001.. *]|varbinary(max)|  
 |bool|bit|  
 |boolean|bit|  
-|char|nchar [1]|  
+|char;|nchar [1]|  
 |char байтов|двоичные [1]|  
 |char байтов [от 0 до 1]|двоичные [1]|  
 |байтов char [2..255]|двоичные [*]|  
@@ -89,35 +89,35 @@ ms.lasthandoff: 12/05/2017
 |char [2..255]|nchar [*]|  
 |character|nchar [1]|  
 |символ varying [от 0 до 1]|nvarchar [1]|  
-|символ varying [2..255]|nvarchar|  
+|символ varying [2..255]|NVARCHAR|  
 |символ [от 0 до 1]|nchar [1]|  
 |символ [2..255]|nchar [*]|  
-|date|date|  
-|datetime|datetime2 [0]|  
-|dec|decimal|  
+|Дата|Дата|  
+|DATETIME|datetime2 [0]|  
+|dec|Decimal|  
 |DEC [*.. 65]|Decimal [*] [0]|  
 |DEC [*.. 65][\*.. 30]|Decimal [*] [\*]|  
-|decimal|decimal|  
+|Decimal|Decimal|  
 |Decimal [*.. 65]|Decimal [*] [0]|  
 |Decimal [*.. 65][\*.. 30]|Decimal [*] [\*]|  
 |double|число с плавающей запятой [53]|  
 |число двойной точности|число с плавающей запятой [53]|  
 |число двойной точности [*.. 255][\*.. 30]|числовой [*] [\*]|  
 |double [*.. 255][\*.. 30]|числовой [*] [\*]|  
-|исправлена|numeric|  
+|исправлена|NUMERIC|  
 |исправлена [*.. 65][\*.. 30]|числовой [*] [\*]|  
-|float|число с плавающей запятой [24]|  
+|FLOAT|число с плавающей запятой [24]|  
 |число с плавающей запятой [*.. 255][\*.. 30]|числовой [*] [\*]|  
 |число с плавающей запятой [*.. 53]|число с плавающей запятой [53]|  
-|int|int|  
-|int [*.. 255]|int|  
-|integer|int|  
-|целое число со знаком [*.. 255]|int|  
+|ssNoversion|ssNoversion|  
+|int [*.. 255]|ssNoversion|  
+|integer|ssNoversion|  
+|целое число со знаком [*.. 255]|ssNoversion|  
 |longblob|varbinary(max)|  
 |LONGTEXT|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|int|  
-|mediumint [*.. 255]|int|  
+|mediumint|ssNoversion|  
+|mediumint [*.. 255]|ssNoversion|  
 |mediumtext|nvarchar(max)|  
 |Национальный char|nchar [1]|  
 |Национальный char [от 0 до 1]|nchar [1]|  
@@ -133,81 +133,81 @@ ms.lasthandoff: 12/05/2017
 |Национальный varchar [от 0 до 1]|nvarchar [1]|  
 |Национальный varchar [2..4000]|nvarchar [*]|  
 |Национальный varchar [4001.. *]|nvarchar(max)|  
-|nchar|nchar [1]|  
+|NCHAR|nchar [1]|  
 |varchar, nchar|nvarchar [1]|  
 |nchar, varchar [от 0 до 1]|nvarchar [1]|  
 |nchar, varchar [2..4000]|nvarchar [*]|  
 |varchar, nchar [4001.. *]|nvarchar(max)|  
 |nchar [от 0 до 1]|nchar [1]|  
 |nchar [2..255]|nchar [*]|  
-|numeric|numeric|  
+|NUMERIC|NUMERIC|  
 |числовые [*.. 65]|числовой [*] [0]|  
 |числовые [*.. 65][\*.. 30]|числовой [*] [\*]|  
-|nvarchar|nvarchar [1]|  
+|NVARCHAR|nvarchar [1]|  
 |nvarchar [от 0 до 1]|nvarchar [1]|  
 |nvarchar [2..4000]|nvarchar [*]|  
 |nvarchar [4001.. *]|nvarchar(max)|  
-|real|число с плавающей запятой [53]|  
+|REAL|число с плавающей запятой [53]|  
 |реальные [*.. 255][\*.. 30]|числовой [*] [\*]|  
-|Последовательный|bigint|  
-|smallint|smallint|  
-|smallint [*.. 255]|smallint|  
+|Последовательный|BIGINT|  
+|SMALLINT|SMALLINT|  
+|smallint [*.. 255]|SMALLINT|  
 |text|nvarchar(max)|  
 |текст [от 0 до 1]|nvarchar [1]|  
 |текст [2..4000]|nvarchar [*]|  
 |текст [4001.. *]|nvarchar(max)|  
 |time|time|  
-|timestamp|datetime|  
+|TIMESTAMP|DATETIME|  
 |tinyblob|varbinary [255]|  
-|tinyint|smallint|  
-|tinyint [*.. 255]|smallint|  
+|TINYINT|SMALLINT|  
+|tinyint [*.. 255]|SMALLINT|  
 |tinytext|nvarchar [255]|  
-|без знака bigint|bigint|  
-|без знака bigint [*.. 255]|bigint|  
-|десятичное число без знака|decimal|  
+|без знака bigint|BIGINT|  
+|без знака bigint [*.. 255]|BIGINT|  
+|десятичное число без знака|Decimal|  
 |десятичное число без знака [*.. 65]|Decimal [*] [0]|  
 |десятичное число без знака [*.. 65][\*.. 30]|Decimal [*] [\*]|  
-|Десятичный значение без знака|decimal|  
+|Десятичный значение без знака|Decimal|  
 |Десятичный значение без знака [*.. 65]|Decimal [*] [0]|  
 |Десятичный значение без знака [*.. 65][\*.. 30]|Decimal [*] [\*]|  
 |без знака типа double|число с плавающей запятой [53]|  
 |без знака двойной точности|число с плавающей запятой [53]|  
 |без знака двойной точности [*.. 255][\*.. 30]|числовой [*] [\*]|  
 |без знака double [*.. 255][\*.. 30]|числовой [*] [\*]|  
-|без знака основных|numeric|  
+|без знака основных|NUMERIC|  
 |без знака основных [*.. 65][\*.. 30]|числовой [*] [\*]|  
 |число с плавающей запятой без знака|число с плавающей запятой [24]|  
 |число с плавающей запятой без знака [*.. 255][\*.. 30]|числовой [*] [\*]|  
 |число с плавающей запятой без знака [*.. 53]|число с плавающей запятой [53]|  
-|Целочисленное число без знака|bigint|  
-|Тип unsigned int [*.. 255]|bigint|  
-|целое число без знака|bigint|  
-|целое число без знака [*.. 255]|bigint|  
-|mediumint число без знака|int|  
-|без знака mediumint [*.. 255]|int|  
-|Числовые без знака|numeric|  
+|Целочисленное число без знака|BIGINT|  
+|Тип unsigned int [*.. 255]|BIGINT|  
+|целое число без знака|BIGINT|  
+|целое число без знака [*.. 255]|BIGINT|  
+|mediumint число без знака|ssNoversion|  
+|без знака mediumint [*.. 255]|ssNoversion|  
+|Числовые без знака|NUMERIC|  
 |без знака числовой [*.. 65]|числовой [*] [0]|  
 |без знака числовой [*.. 65][\*.. 30]|числовой [*] [\*]|  
 |без реальных знака|число с плавающей запятой [53]|  
 |без знака real [*.. 255[[\*.. 30]|числовой [*] [\*]|  
-|smallint без знака|int|  
-|без знака smallint [*.. 255]|int|  
-|тип tinyint и без знака|tinyint|  
-|без знака tinyint [*.. 255]|tinyint|  
+|smallint без знака|ssNoversion|  
+|без знака smallint [*.. 255]|ssNoversion|  
+|тип tinyint и без знака|TINYINT|  
+|без знака tinyint [*.. 255]|TINYINT|  
 |varbinary [от 0 до 1]|varbinary [1]|  
 |varbinary [2..8000]|varbinary [*]|  
 |varbinary [8001.. *]|varbinary(max)|  
 |varchar [от 0 до 1]|nvarchar [1]|  
 |varchar [2..4000]|nvarchar [*]|  
 |varchar [4001.. *]|nvarchar(max)|  
-|year|smallint|  
-|год [2..2]|smallint|  
-|год [4..4]|smallint|  
+|year|SMALLINT|  
+|год [2..2]|SMALLINT|  
+|год [4..4]|SMALLINT|  
   
 ##### <a name="add"></a>Добавить  
 Щелкните, чтобы добавить в список сопоставления типа данных.  
   
-##### <a name="edit"></a>Правка  
+##### <a name="edit"></a>Изменить  
 Щелкните, чтобы изменить тип данных в списке сопоставления.  
   
 ##### <a name="remove"></a>Удалить  

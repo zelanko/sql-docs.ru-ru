@@ -3,7 +3,7 @@ title: "Псевдонимы (диспетчер конфигурации SQL Se
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0c9610506e1565511dab820ef790534740982b2f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1f8b177c6f31b9a8bb9a08f99c7b7e13ee3c7b45
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="aliases-sql-server-configuration-manager"></a>Псевдонимы (диспетчер конфигурации SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Псевдоним является альтернативным именем, которое может использоваться для подключения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Чтобы создать псевдоним для клиентов [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом компьютере, щелкните правой кнопкой мыши элемент **Псевдонимы** в области консоли, а затем выберите команду **Создать псевдоним**. Чтобы настроить существующий псевдоним для клиентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом компьютере, щелкните элемент **Псевдонимы** в области консоли, щелкните правой кнопкой мыши требуемый существующей псевдоним в области сведений, а затем выберите пункт **Свойства**.  

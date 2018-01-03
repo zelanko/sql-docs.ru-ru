@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 537267b15a65dca3035ba79e6bbecb9f7bc4a51c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5a4b8748f024649ec2980e46d8e828afcffc553c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,14 +61,14 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>Результирующие наборы  
 **sp_server_diagnostics** возвращает следующую информацию  
   
-|Столбец|Data type|Description|  
+|столбцом|Data type|Description|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Указывает отметку времени создания строки. Все строки в одном наборе данных имеют одинаковые отметки времени.|  
 |**component_type**|**sysname**|Указывает, содержит ли строка сведения для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] экземпляра на уровне компонента, или для группы доступности Always On:<br /><br /> instance<br /><br /> Always On: группа|  
 |**ИмяКомпонента**|**sysname**|Указывает имя компонента или имя группы доступности:<br /><br /> система<br /><br /> ресурс<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> события<br /><br /> *\<Имя группы доступности >*|  
-|**состояние**|**int**|Указывает состояние работоспособности компонента:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
+|**state**|**int**|Указывает состояние работоспособности компонента:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
 |**state_desc**|**sysname**|Описывает столбец state. Далее представлены описания, соответствующие значениям в столбце state:<br /><br /> 0: неизвестный<br /><br /> 1: очистить<br /><br /> 2: предупреждение<br /><br /> 3: ошибка|  
-|**данные**|**varchar (макс.)**|Указывает данные, свойственные данному компоненту.|  
+|**data**|**varchar (макс.)**|Указывает данные, свойственные данному компоненту.|  
   
  Далее даны описания пяти компонентов.  
   
@@ -84,7 +84,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **\<Имя группы доступности >**: собирает данные для указанной группы доступности (если component_type = «всегда на: AvailabilityGroup»).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Компоненты system, resource и query_processing используются для обнаружения ошибок, а компоненты io_subsystem и events используются только для диагностики.  
   
 В следующей таблице представлены компоненты и связанные с ними состояния работоспособности.  
@@ -102,12 +102,12 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 > [!NOTE]
 > Выполнения внутренней процедуры sp_server_diagnostics реализуется preemptive потоке с высоким приоритетом.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 необходимо разрешение VIEW SERVER STATE на сервере.  
   
 ## <a name="examples"></a>Примеры  
 Рекомендуется использовать расширенные сеансы для записи сведения о работоспособности и записывать их в файл, расположенный вне SQL Server. Это позволит сохранить доступ к файлу в случае сбоя. В следующем примере выходные данные сеанса событий сохраняются в файл:  
-```tsql  
+```sql  
 CREATE EVENT SESSION [diag]  
 ON SERVER  
            ADD EVENT [sp_server_diagnostics_component_result] (set collect_data=1)  
@@ -119,7 +119,7 @@ GO
 ```  
   
 В следующем примере запроса считывается файл журнала расширенного сеанса:  
-```tsql  
+```sql  
 SELECT  
     xml_data.value('(/event/@name)[1]','varchar(max)') AS Name  
   , xml_data.value('(/event/@package)[1]', 'varchar(max)') AS Package  
@@ -142,7 +142,7 @@ ORDER BY time;
 ```  
   
 В следующем примере выходные данные процедуры sp_server_diagnostics записываются в таблице в режиме без повторения:  
-```tsql  
+```sql  
 CREATE TABLE SpServerDiagnosticsResult  
 (  
       create_time DateTime,  
@@ -156,16 +156,16 @@ INSERT INTO SpServerDiagnosticsResult
 EXEC sp_server_diagnostics; 
 ```  
 
-В следующем примере запроса текст сводки выходные данные в таблице:  
-```tsql  
+В примере запроса ниже считываются сводные выходные значения из таблицы:  
+```sql  
 SELECT create_time,
        component_name,
        state_desc 
 FROM SpServerDiagnosticsResult;  
 ``` 
 
-В следующем примере запроса считывает некоторые подробные выходные данные из каждого компонента в таблице:  
-```tsql  
+В примере запроса ниже считываются некоторые подробные выходные сведения из каждого компонента в таблице:  
+```sql  
 -- system
 select data.value('(/system/@systemCpuUtilization)[1]','bigint') as 'System_CPU',
    data.value('(/system/@sqlCpuUtilization)[1]','bigint') as 'SQL_CPU',

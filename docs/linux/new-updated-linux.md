@@ -15,11 +15,11 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 4adfcb675e52b5b73bd4dcc4867bf79350a26d52
-ms.sourcegitcommit: 29265ad41fbe3326c21c6908ec4275a3a38f1c09
+ms.openlocfilehash: 030f30580b0ddb02da2a67990d0c58acf15236c9
+ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Обновление новых и недавно: SQL Server в Linux документы
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/04/2017
 
 
 
-- *Диапазон обновлений дат:* &nbsp; **2017 г-09-28** &nbsp; - в - &nbsp; **2017 г-12-02**
+- *Диапазон дат обновлений:* &nbsp; **28.09.2017**&nbsp;–&nbsp;**02.12.2017**
 - *Предметной области:* &nbsp; **Microsoft SQL Server в Linux**.
 
 
@@ -102,7 +102,7 @@ ms.lasthandoff: 12/04/2017
 
 ### <a name="1-nbsp-run-the-sql-server-2017-container-image-with-dockerquickstart-install-connect-dockermd"></a>1. &nbsp;[Запускать образ контейнера 2017 г. SQL Server с помощью Docker](quickstart-install-connect-docker.md)
 
-*Обновлено: 2017 г-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Далее](#TitleNum_2))
+*Обновление: 30.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Далее](#TitleNum_2))
 
 <!-- Source markdown line 261.  ms.author= jroth.  -->
 
@@ -256,7 +256,7 @@ docker rm sql1
 **<a id="production"></a>Запустите производственного образы контейнеров**
 
 
-Краткого руководства в предыдущем разделе выполняется бесплатный выпуск SQL Server Developer из Docker Hub. Большая часть информации по-прежнему применяется в том случае, если вы хотите запустить производства образы контейнеров, таких как выпуски Enterprise, Standard или Web. Однако существуют некоторые различия, которые здесь описаны.
+Краткое руководство, в предыдущем разделе выполняется бесплатный выпуск SQL Server Developer из Docker Hub. Большая часть информации по-прежнему применяется в том случае, если вы хотите запустить производства образы контейнеров, таких как выпуски Enterprise, Standard или Web. Однако существуют некоторые различия, которые здесь описаны.
 
 - SQL Server можно использовать в производственной среде, только если у вас есть действительная лицензия. Можно получить бесплатную лицензию SQL Server Express рабочей [здесь](https://go.microsoft.com/fwlink/?linkid=857693). Лицензии SQL Server Standard и Enterprise Edition доступны через [корпоративного лицензирования Майкрософт](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx).
 
@@ -272,7 +272,7 @@ docker rm sql1
 
    1. Далее необходимо для получения бесплатной разработчик образ контейнера в хранилище Docker. Последовательно выберите пункты [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), нажмите кнопку **продолжить извлечение**и следуйте инструкциям.
 
-   1. Ознакомьтесь с требованиями к, выполните процедуры [краткого руководства — краткое руководство install подключения docker.md). Однако имеются два отличия. Необходимо получить изображение **хранилище/microsoft/mssql-server-linux:\<имя тега\>**  магазине Docker. При этом необходимо указать производственного выпуска с **MSSQL_PID** переменной среды. Приведенный ниже показано, как выполнять последний образ контейнера 2017 г. SQL Server Enterprise Edition:
+   1. Ознакомьтесь с требованиями и выполнить процедуры из раздела [примеры использования — краткое руководство install подключения docker.md). Однако имеются два отличия. Необходимо получить изображение **хранилище/microsoft/mssql-server-linux:\<имя тега\>**  магазине Docker. При этом необходимо указать производственного выпуска с **MSSQL_PID** переменной среды. Приведенный ниже показано, как выполнять последний образ контейнера 2017 г. SQL Server Enterprise Edition:
 
 
 
@@ -506,7 +506,7 @@ docker rm sql1
 
 ### <a name="9-nbsp-troubleshoot-sql-server-on-linuxsql-server-linux-troubleshooting-guidemd"></a>9. &nbsp;[Устранения неполадок SQL Server в Linux](sql-server-linux-troubleshooting-guide.md)
 
-*Обновлено: 2017 г-11-30* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([предыдущих](#TitleNum_8))
+*Обновлено: 30.11.2017* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ([Назад](#TitleNum_8))
 
 <!-- Source markdown line 125.  ms.author= anshrest.  -->
 
@@ -569,26 +569,26 @@ docker rm sql1
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
 
-- [Новый + обновленные (3 + 14): **Advanced Analytics для SQL** документы](../advanced-analytics/new-updated-advanced-analytics.md)
+- [Новые + обновленные (3+14): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
 - [Новые + обновленные (1+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
-- [Новый + обновленные (87 + 0): **Analytics Platform System для SQL** документы](../analytics-platform-system/new-updated-analytics-platform-system.md)
-- [Новый + обновленные (5 + 4): **подключение к SQL** документы](../connect/new-updated-connect.md)
-- [Новый + обновленные (0 + 1): **СУБД для SQL** документы](../database-engine/new-updated-database-engine.md)
-- [Новый + обновленные (2 + 2): **службы Integration Services для SQL** документы](../integration-services/new-updated-integration-services.md)
-- [Новый + обновленные (10 + 9): **Linux для SQL** документы](../linux/new-updated-linux.md)
-- [Новый + обновленные (2 + 4): **реляционных баз данных для SQL** документы](../relational-databases/new-updated-relational-databases.md)
-- [Новый + обновленные (4 + 2): **служб Reporting Services для SQL** документы](../reporting-services/new-updated-reporting-services.md)
-- [Новый + обновленные (0 + 1): **образцы для SQL** документы](../sample/new-updated-sample.md)
-- [Новый + обновленные (21 + 0): **операций SQL Studio** документы](../sql-operations-studio/new-updated-sql-operations-studio.md)
-- [Новый + обновленные (5 + 1): **Microsoft SQL Server** документы](../sql-server/new-updated-sql-server.md)
+- [Новые + обновленные (87+0): **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
+- [Новые + обновленные (5+4): **Подключение к SQL**](../connect/new-updated-connect.md)
+- [Новые + обновленные (0+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
+- [Новые + обновленные (2+2): **Integration Services для SQL**](../integration-services/new-updated-integration-services.md)
+- [Новые + обновленные (10+9): **Linux для SQL**](../linux/new-updated-linux.md)
+- [Новые + обновленные (2+4): **Реляционные базы данных для SQL**](../relational-databases/new-updated-relational-databases.md)
+- [Новые + обновленные (4+2): **Reporting Services для SQL**](../reporting-services/new-updated-reporting-services.md)
+- [Новые + обновленные (0+1): **примеры для SQL**](../sample/new-updated-sample.md)
+- [Новые + обновленные (21+0): **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
+- [Новые + обновленные(5+1): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
 - [Новые + обновленные (0+1): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
-- [Новый + обновленные (1 + 0): **SQL Server Migration Assistant (SSMA)** документы](../ssma/new-updated-ssma.md)
+- [Новые + обновленные (1+0): **Помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
 - [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
-- [Новый + обновленные (0 + 2): **Transact-SQL** документы](../t-sql/new-updated-t-sql.md)
+- [Новые + обновленные (0+2): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
 
-- [Новый + обновленные (0 + 0): **данных миграции Assistant (DMA) для SQL** документы](../dma/new-updated-dma.md)
+- [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
 - [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
 - [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
 - [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)

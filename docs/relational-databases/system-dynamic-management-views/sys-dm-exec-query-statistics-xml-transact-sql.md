@@ -23,11 +23,11 @@ author: pmasl
 ms.author: pelopes
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 051b93348547603d2e68a007ede531bfa73a6d58
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ea8fbfa2707da63b0b936539281ec578de02285c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 |plan_handle|**varbinary(64)**|Хэш-карта плана запроса. Допускает значение NULL.|
 |query_plan|**xml**|Showplan XML с частичной статистики. Допускает значение NULL.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 Эта функция доступна, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
 Эта функция работает как в **Стандартная** и **упрощенных** инфраструктуры профилирования статистику выполнения запросов.  
@@ -80,7 +80,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 > [!IMPORTANT]
 > В TPC-C, как рабочая нагрузка Включение профилирования инфраструктуру статистики упрощенных добавляет издержки 1,5 до 2 процентов. Напротив инфраструктуру стандартные статистики профилирования можно добавить до 90 процентов затраты для того же сценарий рабочей нагрузки.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение `VIEW SERVER STATE` на сервере.  
 
 ## <a name="examples"></a>Примеры  
@@ -88,14 +88,14 @@ sys.dm_exec_query_statistics_xml(session_id)
 ### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Просмотр динамических запросов плана и Статистика выполнения для выполнения пакета  
  В следующем примере запрос **sys.dm_exec_requests** для поиска необходимого запроса и копирования его `session_id` из выходных данных.  
   
-```t-sql  
+```sql  
 SELECT * FROM sys.dm_exec_requests;  
 GO  
 ```  
   
  Затем, чтобы получить динамическую планирования и выполнения статистику запросов, использовать скопированный `session_id` с помощью системной функции **sys.dm_exec_query_statistics_xml**.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_query_statistics_xml(< copied session_id >);  
 GO  
@@ -103,7 +103,7 @@ GO
 
  Или их комбинация для всех запущенных запросов.  
   
-```t-sql  
+```sql  
 --Run this in a different session than the session in which your query is running.
 SELECT * FROM sys.dm_exec_requests
 CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);  

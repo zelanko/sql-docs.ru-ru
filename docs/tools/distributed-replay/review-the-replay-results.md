@@ -3,7 +3,7 @@ title: "Просмотреть результаты воспроизведени
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: distributed-replay
 ms.reviewer: 
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c51dd81d0d3b0c97a74cbdc42cdf37a79d9dcb83
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ad034ad1cd4bc4f2c2945365e186262d500a6776
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="review-the-replay-results"></a>просмотреть результаты воспроизведения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]После [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонент распределенного воспроизведения завершает распределенное воспроизведение, действие воспроизведения на каждом клиенте могут быть перехвачены и сохраняется в результирующих файлах трассировки на каждом клиенте. Чтобы записать это действие, необходимо использовать параметр **-o** , когда запускается средство администрирования с параметром **replay** . Дополнительные сведения о параметре replay см. в статье [Параметр воспроизведения (средство администрирования распределенного воспроизведения)](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="column-descriptions-for-result-trace"></a>Описания столбцов для результирующей трассировки  
  В следующей таблице описаны столбцы в результирующих данных трассировки.  
   
-|Имя столбца данных|Тип данных|Описание|Идентификатор столбца|  
+|Имя столбца данных|Тип данных|Description|Идентификатор столбца|  
 |----------------------|---------------|-----------------|---------------|  
 |EventClass|**nvarchar**|Имя класса событий.|1|  
 |EventSequence|**bigint**|Для ошибок поставщика, внутренних ошибок и предупреждений это последовательность записи событий, соответствующая ошибке или предупреждению.<br /><br /> Для всех прочих классов событий это последовательность события в исходных данных трассировки.|2|  

@@ -1,7 +1,7 @@
 ---
 title: "Новый проект (DB2ToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-db2
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cab4c08c52237d180ef9d1b76c4e68d76f471de7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 530850701a81d304e6e381292cc91252e2d3d65e
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="new-project-db2tosql"></a>Новый проект (DB2ToSQL)
 Используйте **новый проект** диалоговое окно «» для создания нового проекта SSMA. Чтобы получить доступ к **новый проект** в диалоговом **файл** меню, нажмите кнопку **новый проект**.  

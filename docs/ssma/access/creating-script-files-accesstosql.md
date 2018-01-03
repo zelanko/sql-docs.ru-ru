@@ -1,7 +1,7 @@
 ---
 title: "Создание файлов скрипта (AccessToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-access
 ms.custom: 
@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.workload: Inactive
-ms.openlocfilehash: 2cdefc64512ba0b4b86c6c71b9b59885359ddc7f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d39055374caa0697c073b6abfc8d99e87ed42bb1
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-script-files-accesstosql"></a>Создание файлов скрипта (AccessToSQL)
 В первую очередь перед запуском приложения консоли SSMA для создания файла сценария и при необходимости создания файла значение переменной и файла подключения сервера.  
@@ -402,6 +402,6 @@ ms.lasthandoff: 12/05/2017
 ## <a name="next-step"></a>Следующий шаг
 Следующий шаг в работе консоли — [Создание переменной значение файлов &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
 [Создание файлов значение переменной &#40; AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

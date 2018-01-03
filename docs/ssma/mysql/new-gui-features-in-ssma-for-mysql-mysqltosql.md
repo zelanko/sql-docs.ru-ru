@@ -1,7 +1,7 @@
 ---
-title: New GUI Features in SSMA for MySQL (MySQLToSQL) | Microsoft Docs
+title: "Новые возможности графического пользовательского интерфейса в SSMA для MySQL (MySQLToSQL) | Документы Microsoft"
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssma-mysql
 ms.custom: 
@@ -20,116 +20,116 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6b0c37f47dadcec1de6bde410a23f7feed638889
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d5278d3427e8dc30f4cbc4986745c22ee9bf0f77
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>New GUI Features in SSMA for MySQL (MySQLToSQL)
-This chapter describes new features of SSMA User Interface  
+# <a name="new-gui-features-in-ssma-for-mysql-mysqltosql"></a>Новые возможности графического пользовательского интерфейса в SSMA для MySQL (MySQLToSQL)
+В этой главе описываются новые функции пользовательский интерфейс SSMA  
   
-## <a name="layouts"></a>Layouts  
-This feature allows you to choose one of two predefined windows lay-out or create you own layout. To access layout submenu, on the View menu point to Layouts. There you can choose one of the existing layouts, add current layout or manage layouts.  
+## <a name="layouts"></a>Макеты  
+Эта функция позволяет выбрать один из двух стандартных windows разметка или создать собственный макет. Для доступа к меню разметки, в меню «Вид» укажите макеты. Здесь можно выбрать один из существующих макетов добавить текущий макет или управлять шаблонами.  
   
-### <a name="add-current-layout"></a>Add Current Layout  
-To save current windows layout, on the View menu point to Layouts, then click Add Current Layout.  
+### <a name="add-current-layout"></a>Добавить текущий макет  
+Чтобы сохранить текущий макет windows, в меню Вид макеты последовательно выберите пункты добавить текущий макет.  
   
-### <a name="choose-predefined-layout"></a>Choose predefined layout  
-To choose one of the predefined layouts, on the View menu point to Layouts, then click Default Layout or Without Explorers. You can also use shortcuts Ctrl+Alt+1 or Ctrl+Alt+2 for predefined layouts respectively.  
+### <a name="choose-predefined-layout"></a>Выбор стандартных макета  
+Чтобы выбрать одну из стандартных макетов, в меню Вид макеты, выберите пункты макет по умолчанию или без обозревателей. Можно также использовать сочетания клавиш Ctrl + Alt + 1 или Ctrl + Alt + 2 для стандартных макетов соответственно.  
   
-### <a name="choose-user-defined-layout"></a>Choose user-defined layout  
-To choose user-defined layout, on the View menu point to Layouts, then click one of the user-defined layout. You can also use shortcuts defined for the layouts.  
+### <a name="choose-user-defined-layout"></a>Выбор определяемых пользователем макета  
+Чтобы выбрать макет, определяемых пользователем, в меню Вид макеты последовательно выберите пункты один макет определяемой пользователем. Также можно использовать сочетания клавиш, определенные для макетов.  
   
-### <a name="manage-layouts"></a>Manage layouts  
-To open Manage Layouts dialog, on the View menu point to Layouts and click Manage Layouts. In the Manage Layouts dialog you will find a list of the existing layouts on the left side of the dialog. There you can select the layout to change its settings. Also you can change layouts order in the list or delete the layout using buttons on the top of the list. On the right side of the dialog you can change the following layout settings:  
+### <a name="manage-layouts"></a>Управлять шаблонами  
+Чтобы открыть диалоговое окно Управление макетами, в меню «Вид» укажите макеты и щелкните Управление макетами. В диалоговом окне Управление макетами вы найдете список существующих макетов левой части диалогового окна. Существует можно выбрать макет, чтобы изменить его параметры. Также можно изменить порядок макеты в списке или удалить макет с помощью кнопок в верхней части списка. В правой части диалогового окна можно изменить следующие параметры макета:  
   
--   Layout name  
+-   Имя макета  
   
--   Synchronization of metadata explorers  
+-   Синхронизация метаданных обозревателей  
   
--   Visibility and width of the source and target metadata explorers  
+-   Видимость и ширину обозревателей метаданных исходной и целевой  
   
--   Visibility of the source or target windows and their sizes  
+-   Видимость windows исходная или целевая и размерами  
   
--   Visibility and height of auxiliary windows  
+-   Видимость и высоту вспомогательный windows  
   
-## <a name="bookmarks"></a>Bookmarks  
-This feature allows you to set one or more bookmarks in the source or target code, quick found a bookmark by using shortcuts, manage the bookmarks with a friendly dialog.  
+## <a name="bookmarks"></a>Закладки  
+Эта функция позволяет задать одну или несколько закладок в источнике или целевой код быстрого найти закладку с помощью сочетания клавиш, управление закладками понятное диалоговое окно.  
   
-### <a name="toggle-bookmark"></a>Toggle Bookmark  
-You can set/remove a bookmark in the following ways:  
+### <a name="toggle-bookmark"></a>Закладки.  
+Вы можете набор или удалить закладки одним из следующих способов:  
   
--   Use button Toggle Bookmark on top of source or target SQL window  
+-   Используйте кнопку Закладка над окном SQL источника или целевого объекта  
   
--   Click on the grey area on the left of the SQL window  
+-   Щелкните серую область в левой части окна SQL  
   
--   Use Ctrl+Shift+&lt;0..9&gt; to set numbered bookmark  
+-   Используйте сочетание клавиш Ctrl + Shift +&lt;0..9&gt; присвоить нумерованной закладки  
   
-### <a name="bookmark-navigation"></a>Bookmark navigation  
-You can walk thru the bookmarks in the following ways:  
+### <a name="bookmark-navigation"></a>Закладки навигации  
+Можно пройти через эти закладки одним из следующих способов:  
   
--   Use buttons Next Bookmark, Previous Bookmark on the top of the SQL window  
+-   Используйте кнопки следующей закладке перейти к предыдущей закладке в верхней части окна SQL  
   
--   Use Ctrl+&lt;0..9&gt; to find numbered bookmark  
+-   Нажмите Ctrl +&lt;0..9&gt; для поиска нумерованной закладки  
   
--   Use buttons Go To or View Source in Manage Bookmarks dialog  
+-   Используйте кнопки Перейти к или просмотр исходного кода в диалоговом окне Управление закладками  
   
-### <a name="removing-bookmark"></a>Removing Bookmark  
-You can remove a bookmark in the following ways:  
+### <a name="removing-bookmark"></a>Удаление закладки  
+Закладки можно удалить следующими способами:  
   
--   Use button Clear on the top of the SQL window to remove all bookmarks in the current document  
+-   Используйте кнопку снимите флажок в верхней части окна SQL, чтобы удалить все закладки в текущем документе  
   
--   Use buttons Remove or Remove All in Manage Bookmarks dialog  
+-   Используйте кнопки Удалить или удалить все в диалоговом окне Управление закладками  
   
-### <a name="manage-bookmarks"></a>Manage bookmarks  
-To open Manage Bookmarks dialog, on the Edit menu click Manage Bookmarks. In the dialog you will see a list of existing bookmarks. You can use the buttons on the right side of the dialog to manage the bookmarks.  
+### <a name="manage-bookmarks"></a>Управление закладками  
+Чтобы открыть диалоговое окно Управление закладки, в меню Правка нажмите кнопку Управление закладки. В диалоговом окне вы увидите список существующих закладок. Кнопки в правой части диалогового окна можно использовать для управления закладки.  
   
-## <a name="object-history"></a>Object History  
-GUI Object History lets you the following advantages when you navigate objects:  
+## <a name="object-history"></a>Объект журнала  
+Объект журнала графического пользовательского интерфейса позволяет следующие преимущества во время перемещения объектов:  
   
--   You can use Go Back and Go Forward buttons to navigate the objects you have already visited  
+-   Можно использовать кнопки вернуться назад и вперед для навигации объекты, которые пользователь уже посетил  
   
--   When you back to the object, you back to the same tab that you have left  
+-   Резервное объекту, обратно на одной вкладке, осталось  
   
--   When you back to the object and the tab is SQL, you back to the same cursor position that you have left  
+-   Когда вы обратно в объект и вкладке SQL, обратно в той же позиции курсора, который остался  
   
-## <a name="advanced-search-capabilities"></a>Advanced search capabilities  
-Advanced search capabilities provide the powerful and flexible searching features and let you to find object declaration, get object information, perform quick search, perform advanced object searching in categories using patterns etc.  
+## <a name="advanced-search-capabilities"></a>Возможности расширенного поиска  
+Возможности расширенного поиска предоставляют мощные и гибкие функции поиска и позволяют найти объявление объектов, получить информацию об объекте, выполнять быстрый поиск, выполнить расширенный объект, поиск в категории с помощью шаблонов и т. д.  
   
-### <a name="get-quick-information"></a>Get quick information  
-You can get quick information on the object at the cursor position in the following ways:  
+### <a name="get-quick-information"></a>Для быстрого получения информации  
+Можно получить кратких сведений для объекта в текущей позиции курсора одним из следующих способов:  
   
--   Click button Quick Info on the top of SQL window  
+-   Нажмите кнопку "Краткие сведения" вверху окна SQL  
   
--   Select Quick Info in the right-click pop-up menu  
+-   Выберите в контекстном меню щелкните правой кнопкой мыши краткие сведения  
   
--   Press Ctrl+Shift+Space  
+-   Нажмите клавиши Ctrl + Shift + пробел  
   
-### <a name="find-declaration"></a>Find declaration  
-You can go to the declaration of the object at cursor position in the following ways:  
+### <a name="find-declaration"></a>Найдите объявление  
+Можно перейти к объявлению объект в позиции курсора, одним из следующих способов:  
   
--   Click button Go To Declaration on top of the SQL window  
+-   Нажмите кнопку "Перейти к объявлению" вверху окна SQL  
   
--   Select Go To Declaration in the right-click pop-up menu  
+-   Выберите в контекстном меню щелкните правой кнопкой мыши перейти к объявлению  
   
--   Press F12  
+-   Нажмите клавишу F12  
   
-### <a name="quick-search"></a>Quick search  
-You can perform quick text search using the following features:  
+### <a name="quick-search"></a>Быстрый поиск  
+Можно выполнить поиск краткий текст, с помощью следующих компонентов:  
   
--   You can start searching by using Ctrl+F shortcut  
+-   Можно запустить поиск с помощью клавиш Ctrl + F  
   
--   You can repeat last search forward by using F3  
+-   Можно повторить последний поиск вперед с помощью F3  
   
--   You can repeat last search backward by using Shift+F3  
+-   Можно повторить последнее обратный поиск с помощью клавиши Shift + F3  
   
--   You can find next occurrence of the word at the cursor position by using Ctrl+F3  
+-   Можно найти следующее вхождение слова в текущей позиции курсора с помощью клавиши Ctrl + F3  
   
--   You can find previous occurrence of the word at the cursor position by using Ctrl+Shift+F3  
+-   Можно найти предыдущее вхождение слова в текущей позиции курсора с помощью клавиши Ctrl + Shift + F3  
   
--   You can also perform all these actions with menu items.  
+-   Можно также выполнить эти действия с пунктами меню.  
   
-### <a name="advanced-search"></a>Advanced search  
-To open Advanced Search dialog, on the Edit menu point Find, then click Advanced Search. In the dialog you will be able to find any object using pattern. On the top of the dialog you can choose search area and object categories.  
+### <a name="advanced-search"></a>Расширенный поиск  
+Чтобы открыть диалоговое окно расширенного поиска, для поиска точек редактирования меню, а затем нажмите кнопку расширенного поиска. В диалоговом окне можно будет найти любой объект, с помощью шаблона. В верхней части диалогового окна можно выбрать область и объект категории поиска.  
   

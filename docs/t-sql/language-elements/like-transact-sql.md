@@ -36,11 +36,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8ca323b2431d493edd3db513502f197580b4149d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,12 +86,12 @@ match_expression [ NOT ] LIKE pattern
 ## <a name="result-value"></a>Значение результата  
  КАК и возвращает TRUE, если *match_expression* соответствует указанному *шаблон*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При использовании оператора LIKE для сравнения строк во внимание принимаются все символы строки-шаблона. Это касается начальных и конечных пробелов (« »). Если операция сравнения в запросе должна вернуть все строки, содержащие строки LIKE 'абв ' (с символом пробела на конце), то строка, содержащая «абв» (без пробела), не будет возвращена. Однако завершающие пробелы в выражении, с которым сравнивается шаблон, не учитываются. Если операция сравнения в запросе должна вернуть все строки, содержащие строки LIKE 'абв' (без знака пробела на конце), то будут возвращены все строки, содержащие «абв», как с завершающими пробелами, так и без них.  
   
  Сравнение строк, используя шаблон, который содержит **char** и **varchar** данных не может передать из-за хранение данных использования оператора LIKE. Необходимо знать методы хранения каждого типа данных, чтобы избежать некорректного использования оператора LIKE. В следующем примере передается локальный **char** переменной в хранимую процедуру и использует сопоставление шаблонов для поиска всех сотрудников, чьи фамилии начинаются с указанного набора символов.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName char(20)  
@@ -109,7 +109,7 @@ GO
   
  Однако следующий пример завершается успешно, поскольку конечные пробелы не добавляются в **varchar** переменной.  
   
-```tsql
+```sql
 -- Uses AdventureWorks  
   
 CREATE PROCEDURE FindEmployee @EmpLName varchar(20)  
@@ -137,7 +137,7 @@ EXEC FindEmployee @EmpLName = 'Barb';
   
  Приведенные ниже примеры поясняют различия между результатами сравнения данных с шаблонами оператора LIKE, представленными в Юникоде и ASCII.  
   
-```tsql  
+```sql  
 -- ASCII pattern matching with char column  
 CREATE TABLE t (col1 char(30));  
 INSERT INTO t VALUES ('Robert King');  
@@ -168,7 +168,7 @@ WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row
   
  Например, при выполнении следующего примера отображаются все динамические административные представления базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], так как все они начинаются символами `dm`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT Name  
@@ -207,7 +207,7 @@ GO
 ### <a name="a-using-like-with-the--wildcard-character"></a>A. Применение оператора LIKE с символом-шаблоном %  
  В следующем примере в таблице `415` выполняется поиск всех телефонных номеров с кодом города `PersonPhone`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -241,7 +241,7 @@ GO
 ### <a name="b-using-not-like-with-the--wildcard-character"></a>Б. Применение оператора NOT LIKE с символом-шаблоном %  
  В следующем примере в таблице `PersonPhone` выполняется поиск всех телефонных номеров с региональным кодом, отличным от `415`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT p.FirstName, p.LastName, ph.PhoneNumber  
@@ -272,7 +272,7 @@ Gail                  Westover             305-555-0100
 ### <a name="c-using-the-escape-clause"></a>В. Применение предложения ESCAPE  
  В следующем примере предложение `ESCAPE` и escape-символ используются для поиска символьной строки `10-15%` в столбце `c1` таблицы `mytbl2`.  
   
-```tsql
+```sql
 USE tempdb;  
 GO  
 IF EXISTS(SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES  
@@ -297,7 +297,7 @@ GO
 ### <a name="d-using-the---wildcard-characters"></a>Г. Использование символов-шаблонов [ ]  
  В следующем примере вычисляется сотрудников на `Person` таблицу с имя `Cheryl` или `Sheryl`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT BusinessEntityID, FirstName, LastName   
@@ -308,7 +308,7 @@ GO
   
  В следующем примере выполняется поиск строк в таблице `Person` для сотрудников с фамилией `Zheng` или `Zhang`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LastName, FirstName  
@@ -323,7 +323,7 @@ GO
 ### <a name="e-using-like-with-the--wildcard-character"></a>Д. Применение оператора LIKE с символом-шаблоном %  
  В следующем примере вычисляется всех сотрудников в `DimEmployee` таблицы с помощью телефонных номеров, запускаемые с `612`.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -333,9 +333,9 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>Е. Применение оператора NOT LIKE с символом-шаблоном %  
- Следующий пример выполняется поиск всех телефонных номеров в `DimEmployee` таблицу, не ставьте `612`.  .  
+ Следующий пример выполняется поиск всех телефонных номеров в `DimEmployee` таблицу, не ставьте `612`.  , и делает это по-другому.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  
@@ -347,7 +347,7 @@ ORDER by LastName;
 ### <a name="g-using-like-with-the--wildcard-character"></a>Ж. Применение оператора LIKE с символом-шаблоном _  
  Следующий пример выполняет поиск всех телефонных номеров с кодом города, начиная с `6` и заканчиваются `2` в `DimEmployee` таблицы. Обратите внимание, что символом-шаблоном % также в конце шаблона поиска, так как код города — первая часть номера телефона и существуют дополнительные символы после значения столбца.  
   
-```tsql  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT FirstName, LastName, Phone  

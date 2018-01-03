@@ -3,7 +3,7 @@ title: "Соединение с использованием IPv6 | Докуме
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: configuration-manager
 ms.reviewer: 
@@ -21,11 +21,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7a832ed4aeebc246e6fa612436848e36aa77edd0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4f9ac7393ffe9599eec7811a50ce6a0c575611ec
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connecting-using-ipv6"></a>Соединение с использованием IPv6
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client полностью поддерживают протокол IP версии 4 (IPv4) и протокол IP версии 6 (IPv6). Если в Windows настроен протокол IPv6, то компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]автоматически обнаруживают наличие IPv6. Дополнительно настраивать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не прослушивает протокол IPv4, то соединение по IPv4 должна дождаться истечения тайм-аута перед попыткой соединения по адресу IPv6. Чтобы этого избежать, следует подключаться непосредственно к IP-адресу IPv6 либо задать псевдоним адреса IPv6 на клиенте.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)  
   
   

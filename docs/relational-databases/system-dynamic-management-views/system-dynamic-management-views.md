@@ -29,11 +29,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 97d8db9f9e697b72deecc59f6dbb0674b5061f0d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 803982ea5e9ce81d280eeb4ba09319d671d6a87c
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="system-dynamic-management-views"></a>Динамические административные представления системы
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  Все динамические административные представления и функции существуют в схеме sys и следуют соглашению по именованию следующего вида: dm_*. При использовании динамического административного представления или функции перед именем представления или функции должен стоять префикс схемы sys. Например, для запроса к динамическому административному представлению dm_os_wait_stats выполните следующие инструкции:  
   
- ```tsql
+ ```sql
 SELECT wait_type, wait_time_ms  
 FROM sys.dm_os_wait_stats;  
 ```  
@@ -65,7 +65,7 @@ FROM sys.dm_os_wait_stats;
 > [!NOTE]  
 >  Так как инструкция DENY имеет более высокий приоритет, если пользователю было предоставлено разрешение VIEW SERVER STATE, но был запрет на разрешение VIEW DATABASE STATE, пользователь сможет получать данные области сервера, но не базы данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  Динамические административные представления и функции организованы в следующие категории:  
   
 |||  

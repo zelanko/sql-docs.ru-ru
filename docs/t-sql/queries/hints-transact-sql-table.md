@@ -42,11 +42,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 54104cda5736255ae1cea4205e24f7aadcc0c124
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="hints-transact-sql---table"></a>Указания (Transact-SQL) - таблица
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 > [!IMPORTANT]  
 >  Пропуск ключевого слова WITH является устаревшей возможностью: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Следующие табличные подсказки разрешены с и без ключевого слова WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, моментальных СНИМКОВ и NOEXPAND. Если такие табличные указания указываются без ключевого слова WITH, подсказки следует задавать отдельно. Например:  
+ Следующие табличные подсказки разрешены с и без ключевого слова WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, моментальных СНИМКОВ и NOEXPAND. Если такие табличные указания указываются без ключевого слова WITH, подсказки следует задавать отдельно. Пример:  
   
 ```  
 FROM t (TABLOCK)  
@@ -383,7 +383,7 @@ LEFT JOIN dbo.[Order History] AS oh
  XLOCK  
  Указывает, что монопольные блокировки применяются и удерживаются до завершения транзакции. Если при этом указан аргумент ROWLOCK, PAGLOCK или TABLOCK, монопольная блокировка применяется к соответствующему уровню гранулярности.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Табличные указания пропускаются, если доступ к таблице не предусмотрен планом запроса. Это может быть вызвано тем, что оптимизатор вообще отказался от доступа к таблице или вместо этого получает доступ к индексированному представлению. В последнем случае доступ к индексированному представлению можно предотвратить с помощью подсказки в запросе OPTION (EXPAND VIEWS).  
   
  Все подсказки блокировки распространяются на все таблицы и представления, к которым имеет доступ данный план запроса, в том числе в таблицы и представления, на которые ссылается данное представление. Кроме того, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет соответствующие проверки согласованности блокировок.  
@@ -442,7 +442,7 @@ GO
 ## <a name="using-a-table-hint-as-a-query-hint"></a>Использование табличного указания в качестве указания запроса  
  *Табличные подсказки* также можно указать в качестве указаний запроса с помощью предложения OPTION (TABLE HINT). Мы рекомендуем использовать табличную подсказку в качестве указания запроса только в контексте [плана](../../relational-databases/performance/plan-guides.md). Для нерегламентированных запросов эти указания следует задавать как табличные указания. Дополнительные сведения см. в разделе [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для указаний KEEPIDENTITY, IGNORE_CONSTRAINTS и IGNORE_TRIGGERS требуются разрешения ALTER на таблицу.  
   
 ## <a name="examples"></a>Примеры  
@@ -450,7 +450,7 @@ GO
 ### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>A. Использование подсказки TABLOCK для указания метода блокировки  
  В следующем примере показано, как на таблицу `Production.Product` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] накладывается совмещаемая блокировка, удерживаемая до завершения инструкции UPDATE.  
   
-```tsql  
+```sql  
 UPDATE Production.Product  
 WITH (TABLOCK)  
 SET ListPrice = ListPrice * 1.10  
@@ -474,7 +474,7 @@ GO
   
  В следующем примере указание FORCESEEK с индексом предписывает оптимизатору запросов выполнить операцию поиска по указанному индексу и столбцу индекса.  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   
@@ -489,7 +489,7 @@ GO
 ### <a name="c-using-the-forcescan-hint-to-specify-an-index-scan-operation"></a>В. Использование указания FORCESCAN для назначения операции просмотра индекса  
  В следующем примере показано использование указания FORCESCAN, предписывающего оптимизатору запросов принудительно выполнить операцию просмотра в таблице `Sales.SalesOrderDetail` в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
-```tsql  
+```sql  
 SELECT h.SalesOrderID, h.TotalDue, d.OrderQty  
 FROM Sales.SalesOrderHeader AS h  
     INNER JOIN Sales.SalesOrderDetail AS d   

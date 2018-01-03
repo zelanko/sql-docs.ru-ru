@@ -28,11 +28,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 66c1c5dc3f116cc88b8e61111f626361a1a601b6
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 5b302ea6346c33431d87e1923156253411170ea5
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,18 +54,18 @@ OPENQUERY ( linked_server ,'query' )
  **"** *запроса* **"**  
  Строка запроса, выполненного в связанном сервере. Максимальная длина строки 8 КБ.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В качестве аргументов в функции OPENQUERY нельзя использовать переменные.  
   
- Функцию OPENQUERY нельзя использовать для выполнения расширенных хранимых процедур на связанном сервере. Однако расширенную хранимую процедуру можно выполнить на связанном сервере с помощью четырехкомпонентного имени. Например:  
+ Функцию OPENQUERY нельзя использовать для выполнения расширенных хранимых процедур на связанном сервере. Однако расширенную хранимую процедуру можно выполнить на связанном сервере с помощью четырехкомпонентного имени. Пример:  
   
-```t-sql  
+```sql  
 EXEC SeattleSales.master.dbo.xp_msver  
 ```  
   
  Любой вызов функции OPENDATASOURCE, OPENQUERY или OPENROWSET в предложении FROM вычисляется отдельно и независимо от любого вызова этих функций, используемого как назначение при обновлении, даже если в двух таких вызовах будут заданы идентичные аргументы. В частности, условия фильтра или соединения, применяемые к результатам одного из таких вызовов, никак не влияют на результаты другого.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Функцию OPENQUERY может выполнить любой пользователь. Разрешения, используемые для подключения к удаленному серверу, извлекаются из настроек, определенных для связанного сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -73,7 +73,7 @@ EXEC SeattleSales.master.dbo.xp_msver
 ### <a name="a-executing-an-update-pass-through-query"></a>A. Выполнение передаваемого запроса UPDATE  
  В следующем примере используется передаваемый запрос `UPDATE` к связанному серверу, созданному в примере А.  
   
-```t-sql  
+```sql  
 UPDATE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE id = 101')   
 SET name = 'ADifferentName';  
 ```  
@@ -81,7 +81,7 @@ SET name = 'ADifferentName';
 ### <a name="b-executing-an-insert-pass-through-query"></a>Б. Выполнение передаваемого запроса INSERT  
  В следующем примере используется передаваемый запрос `INSERT` к связанному серверу, созданному в примере А.  
   
-```t-sql  
+```sql  
 INSERT OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles')  
 VALUES ('NewTitle');  
 ```  
@@ -89,14 +89,14 @@ VALUES ('NewTitle');
 ### <a name="c-executing-a-delete-pass-through-query"></a>В. Выполнение передаваемого запроса DELETE  
  В следующем примере используется передаваемый запрос `DELETE` для удаления строки, созданной в примере В.  
   
-```t-sql  
+```sql  
 DELETE OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
   
 ### <a name="d-executing-a-select-pass-through-query"></a>Г. Выполнение передаваемого запроса SELECT  
  В следующем примере используется передаваемый `SELECT` запрос, чтобы выбрать строки, созданной в примере в.  
   
-```t-sql  
+```sql  
 SELECT * FROM OPENQUERY (OracleSvr, 'SELECT name FROM joe.titles WHERE name = ''NewTitle''');  
 ```  
     

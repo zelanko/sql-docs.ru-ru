@@ -5,7 +5,7 @@ ms.date: 01/19/2017
 ms.prod: sql-non-specified
 ms.prod_service: drivers
 ms.service: 
-ms.component: reference
+ms.component: odbc
 ms.reviewer: 
 ms.suite: sql
 ms.technology: drivers
@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 678d44bb439804246b84a7f8d60f59be45a6dce0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b96e4ef1e53fec8361bd96dee81206efdf138538
+ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Разработка драйвера ODBC, поддерживающие пула соединений
 В этом разделе приведены подробные сведения о разработке драйвер ODBC, который содержит сведения о драйвере следует служб пулов подключений.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/20/2017
   
  Драйвер также должен реализовывать следующие существующие функции так, чтобы включить пул учетом драйвера:  
   
-|Функция|Дополнительные возможности|  
+|Компонент|Дополнительные возможности|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|Поддерживает новый тип дескриптора: SQL_HANDLE_DBC_INFO_TOKEN (см. описание ниже).|  
 |[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|Поддерживает новый атрибут соединения только для набора: SQL_ATTR_DBC_INFO_TOKEN для сброса соединения (см. описание ниже).|  

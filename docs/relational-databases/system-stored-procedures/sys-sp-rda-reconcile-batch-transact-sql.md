@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ba2e281c7f5593425bd67b817e02d81ee29a4742
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8aa52f107c3ba3c7332ea207ad0f3fc07e0dd03b
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ sp_rda_reconcile_batch @objname = '@objname'
  @objname = '*@objname*'  
  Имя таблицы с включенным Stretch SQL Server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуются права db_owner.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если вы хотите удалить данные, уже перенесенные в Azure, выполните следующие действия.  
   
 1.  Приостановить перенос данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных &#40; База данных Stretch &#41; ](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
@@ -70,7 +70,7 @@ sp_rda_reconcile_batch @objname = '@objname'
 ## <a name="example"></a>Пример  
  Чтобы согласовать идентификаторов пакетов, выполните следующую инструкцию.  
   
-```tsql  
+```sql  
 EXEC sp_rda_reconcile_batch @objname = N'StretchEnabledTableName';  
 ```  
   
