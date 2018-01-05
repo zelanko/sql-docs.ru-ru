@@ -30,11 +30,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3ef20711fc03d6dac95d62cb8b2bd4a8b0d69528
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 68db78ede26c3e7f8c60ced655d89d0fc9a615ac
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -221,7 +221,7 @@ FIELDQUOTE  **=**  «field_quote»
 Определяет символ, который будет использоваться в качестве символа кавычки в CSV-файле. Если не указан символ кавычки ("") будет использоваться как символ кавычки, определенный в [RFC 4180](https://tools.ietf.org/html/rfc4180) standard.
 
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  `OPENROWSET`может использоваться для доступа к удаленным данным из источников OLE DB данных только тогда, когда **DisallowAdhocAccess** параметр реестра явно установлен в 0 для указанного поставщика, и является Ad Hoc Distributed Queries дополнительный параметр конфигурации включена. Если эти параметры не установлены, поведение по умолчанию запрещает нерегламентированный доступ.  
   
  При удаленном доступе к источнику данных OLE DB автоматическое делегирование идентификатора имени входа доверительных соединений с сервера, к которому подключен клиент, на запрашиваемый сервер не выполняется. Делегирование проверки подлинности должно быть настроено.  
@@ -273,7 +273,7 @@ FIELDQUOTE  **=**  «field_quote»
 |SQLNCHAR или SQLNVARCHAR|Данные отправляются в Юникоде.|  
 |SQLBINARY или SQLVARYBIN|Данные отправляются без преобразования.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  `OPENROWSET`разрешения определяются разрешениями имени пользователя, которое передается поставщику OLE DB. Для использования `BULK` параметра требуется `ADMINISTER BULK OPERATIONS` разрешение.  
   
 ## <a name="examples"></a>Примеры  
@@ -281,7 +281,7 @@ FIELDQUOTE  **=**  «field_quote»
 ### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. Использование функции OPENROWSET с инструкцией SELECT и поставщиком OLE DB для собственного клиента SQL Server  
  В следующем примере используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента для доступа к `HumanResources.Department` в таблицу [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] базы данных на удаленном сервере `Seattle1`. (При использовании SQLNCLI [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] будет использовать последнюю версию поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Инструкция `SELECT` используется для определения возвращаемого набора строк. Строка поставщика содержит ключевые слова `Server` и `Trusted_Connection`. Эти ключевые слова распознаются [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента.  
   
-```tsql  
+```sql  
 SELECT a.*  
 FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',  
      'SELECT GroupName, Name, DepartmentID  
@@ -295,7 +295,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 > [!NOTE]  
 >  В этом примере предполагается, что Access установлен. Для запуска данного примера необходимо установить базу данных Northwind.  
   
-```tsql  
+```sql  
 SELECT CustomerID, CompanyName  
    FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',  
       'C:\Program Files\Microsoft Office\OFFICE11\SAMPLES\Northwind.mdb';  
@@ -309,7 +309,7 @@ GO
 > [!NOTE]  
 >  В этом примере предполагается, что Access установлен. Для запуска данного примера необходимо установить базу данных Northwind.  
   
-```tsql  
+```sql  
 USE Northwind  ;  
 GO  
 SELECT c.*, o.*  
@@ -324,7 +324,7 @@ GO
 ### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>Г. Использование функции OPENROWSET для массовой вставки данных из файла в столбец типа varbinary(max)  
  В следующем примере создается небольшая таблица для демонстрационных целей и вставляются данные из файла с именем `Text1.txt`, расположенного в корневом каталоге диска `C:`, в столбец `varbinary(max)`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE TABLE myTable(FileName nvarchar(60),   
@@ -341,7 +341,7 @@ GO
 ### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>Д. Использование поставщика OPENROWSET BULK с файлом форматирования для получения строк из текстового файла  
  В следующем примере используется файл форматирования для получения строк, разделенных символами табуляции, из файла `values.txt`, который содержит следующие данные:  
   
-```tsql  
+```sql  
 1     Data Item 1  
 2     Data Item 2  
 3     Data Item 3  
@@ -349,7 +349,7 @@ GO
   
  Файл форматирования `values.fmt` описывает столбцы в файле `values.txt`:  
   
-```tsql  
+```sql  
 9.0  
 2  
 1  SQLCHAR  0  10 "\t"        1  ID                SQL_Latin1_General_Cp437_BIN  
@@ -358,7 +358,7 @@ GO
   
  Это запрос, который возвращает данные:  
   
-```tsql  
+```sql  
 SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',   
    FORMATFILE = 'c:\test\values.fmt') AS a;  
 ```  
@@ -366,14 +366,14 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ### <a name="f-specifying-a-format-file-and-code-page"></a>Е. Указание формата файла и код страницы  
  В следующем примере показано, как использовать оба формата файла кода страницы параметров и в то же время.  
   
-```tsql  
+```sql  
 INSERT INTO MyTable SELECT a.* FROM  
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
 ### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>Ж. Доступ к данным из CSV-файла с файлом форматирования  
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-```tsql
+```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
     FORMATFILE = N'D:\XChange\test-csv.fmt', 
@@ -383,7 +383,7 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 
 ### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>З. Доступ к данным из CSV-файла без файла форматирования
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK 'C:\Program Files\Microsoft SQL Server\MSSQL14.CTP1_1\MSSQL\DATA\inv-2017-01-19.csv',
    SINGLE_CLOB) AS DATA;
@@ -393,7 +393,7 @@ SELECT * FROM OPENROWSET(
 **Область применения:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 В следующем примере внешнего источника данных, указывающий на контейнер в учетной записи хранилища Azure и учетные данные уровня базы данных, созданных для подписанного URL-адреса.     
 
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',

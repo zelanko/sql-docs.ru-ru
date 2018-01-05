@@ -24,11 +24,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5cd1687ea44749eea8a777d80026d375fbd841a2
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 233a613024b4e216501ea7baaaf9a363325e5998
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,10 +79,10 @@ CHANGETABLE (
  *column_name*  
  Указывает одно или несколько имен первичных ключевых столбцов. Несколько имен столбцов могут быть указаны в любом порядке.  
   
- *Значение*  
+ *Value*  
  Значение первичного ключа. Если существует несколько первичных ключевых столбцов, значения должен быть указан в том же порядке следования столбцов в *column_name* списка.  
   
- [КАК] *table_alias* [ (*псевдоним_столбца* [ ,...*n* ] ) ]  
+ [КАК] *table_alias* [(*псевдоним_столбца* [,...*n* ] ) ]  
  Задает имена для результатов, возвращаемых функцией CHANGETABLE.  
   
  *table_alias*  
@@ -117,7 +117,7 @@ CHANGETABLE (
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Измените контекст, который указывается дополнительно с использованием предложения WITH как часть инструкции INSERT, UPDATE или DELETE.|  
 |\<значение первичного ключевого столбца >|Такие же, как столбцы таблицы пользователя|Значения первичного ключа для отслеживаемой таблицы. Эти значения уникально идентифицируют каждую строку в таблице пользователя.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция CHANGETABLE обычно используется в предложении FROM запроса, как если бы она была таблицей.  
   
 ## <a name="changetablechanges"></a>CHANGETABLE(CHANGES...)  
@@ -146,7 +146,7 @@ CHANGETABLE (
   
  SYS_CHANGE_VERSION может иметь значение NULL, если никаких изменений не было внесено в течение периода, превышающего срок хранения (например, при очистке была удалена информация об изменениях), или если строка ни разу не изменялась с момента включения отслеживания изменений для таблицы.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимы следующие разрешения для таблицы, который задается параметром *таблицы* значение для получения информации отслеживания изменений:  
   
 -   Разрешение SELECT на первичные ключевые столбцы.  
@@ -158,7 +158,7 @@ CHANGETABLE (
 ### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Возврат строк для начальной синхронизации данных  
  В следующем примере показано, как получить данные для исходной синхронизации данных таблицы. Запрос возвращает все данные строк и их связанные версии. Можно затем вставить или добавить эти данные в систему, где будут содержаться синхронизированные данные.  
   
-```tsql  
+```sql  
 -- Get all current rows with associated version  
 SELECT e.[Emp ID], e.SSN, e.FirstName, e.LastName,  
     c.SYS_CHANGE_VERSION, c.SYS_CHANGE_CONTEXT  
@@ -170,7 +170,7 @@ CROSS APPLY CHANGETABLE
 ### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>Б. Список всех изменений, внесенных после определенной версии  
  В следующем примере показано, как получить список всех изменений, внесенных в таблицу после указанной версии (`@last_sync_version)`. [Emp ID] и SSN являются столбцами составного первичного ключа.  
   
-```tsql  
+```sql  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
 SELECT [Emp ID], SSN,  
@@ -182,7 +182,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS C;
 ### <a name="c-obtaining-all-changed-data-for-a-synchronization"></a>В. Получение всех измененных данных для синхронизации  
  В следующем примере показано, как можно получить все измененные данные. Этим запросом данные отслеживания изменений объединяются с пользовательской таблицей таким образом, чтобы был выполнен возврат данных пользовательской таблицы. Ключевое слово `LEFT OUTER JOIN` используется для возврата строки для удаленных строк.  
   
-```tsql  
+```sql  
 -- Get all changes (inserts, updates, deletes)  
 DECLARE @last_sync_version bigint;  
 SET @last_sync_version = <value obtained from query>;  
@@ -197,7 +197,7 @@ FROM CHANGETABLE (CHANGES Employees, @last_sync_version) AS c
 ### <a name="d-detecting-conflicts-by-using-changetableversion"></a>Г. Выявление конфликтов с помощью инструкции CHANGETABLE(VERSION...)  
  В следующем примере показано, как выполнить обновление строки только в случае, если строка не изменялась после последней синхронизации. Номер версии конкретной строки можно получить с помощью функции `CHANGETABLE`. Если строка была обновлена, изменения не вносятся и запрос возвращает данные о самом последнем изменении, внесенном в строку.  
   
-```tsql  
+```sql  
 -- @last_sync_version must be set to a valid value  
 UPDATE  
     SalesLT.Product  

@@ -23,11 +23,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f3ce5718a35f8411a5333a200d6ea75f2326c79e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c1fabc150e92d9ca23196fbc838e5691267e9f38
+ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  Каждый параметр, включенный в аргумент @stmt, должен иметь соответствующую запись в списке определений параметров @params и в списке значений параметров.  
   
- [ @params=] N'@*parameter_name**data_type* [ ,... *n* ] '  
+ [ @params=] N'@*parameter_name**data_type* [,...*n* ] '  
  Строка, содержащая определения всех параметров, внедренных в @stmt. Строка должна представлять собой константу в Юникоде либо переменную в этом же формате. Определение каждого параметра состоит из имени параметра и типа данных. *n*заполнитель, указывающий Дополнительные определения параметра. Каждый параметр, указанный в @stmtmust определяться в @params. Если инструкция или пакет инструкций языка [!INCLUDE[tsql](../../includes/tsql-md.md)] в аргументе @stmt не содержат параметров, @params может отсутствовать. Этот аргумент по умолчанию принимает значение NULL.  
   
  [ @param1=] '*значение1*"  
@@ -76,10 +76,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает результирующий набор из первой инструкции SQL.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение `ALTER ANY EXTERNAL DATA SOURCE`  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  `sp_execute_remote`параметры должны вводиться в определенном порядке, как описано в разделе "синтаксис" выше. Если параметры вводятся не в этом порядке, будет выдано сообщение об ошибке.  
   
  `sp_execute_remote`ведет себя как [EXECUTE &#40; Transact-SQL &#41; ](../../t-sql/language-elements/execute-transact-sql.md) отношении пакетов и область имен. Выполнение инструкции Transact-SQL или пакета в sp_execute_remote  *@stmt*  не компилируются до выполнения инструкции sp_execute_remote.  
@@ -92,7 +92,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ### <a name="simple-example"></a>Простой пример  
  В следующем примере создается и выполняется простая инструкция SELECT для удаленной базы данных.  
   
-```tsql  
+```sql  
 EXEC sp_execute_remote  
     N'MyExtSrc',  
     N'SELECT COUNT(w_id) AS Count_id FROM warehouse'   
