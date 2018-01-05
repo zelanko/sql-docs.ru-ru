@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_exec_query_stats (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/21/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 89f3fe5797170f85aeb1eff6eae506a5458999f2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cda9fe3ab2bc54f878e45834bca907976cb7793c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,16 +107,24 @@ ms.lasthandoff: 11/17/2017
 |**last_used_threads**|**bigint**|Число используемых параллельных потоков, когда время последнего выполнения плана. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_used_threads**|**bigint**|Минимальное число используемых параллельных потоков, при выполнении одного плана использовали. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**max_used_threads**|**bigint**|Максимальное число используемых параллельных потоков, при выполнении одного плана использовали. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|Идентификатор для узла, это распределение.<br /><br /> **Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**total_columnstore_segment_reads**|**bigint**|Общая сумма columnstore сегментов, считанных запросом. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_reads**|**bigint**|Количество сегментов columnstore, считываемых последнего выполнения запроса. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_reads**|**bigint**|Минимальное количество сегментов columnstore, когда-либо считанных запросом во время выполнения один. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_reads**|**bigint**|Максимальное количество сегментов columnstore, когда-либо считанных запросом во время одного выполнения. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**total_columnstore_segment_skips**|**bigint**|Общая сумма columnstore сегментов, пропущенных с помощью запроса. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**last_columnstore_segment_skips**|**bigint**|Количество сегментов columnstore, пропущенных последнего выполнения запроса. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**min_columnstore_segment_skips**|**bigint**|Минимальное количество сегментов columnstore, когда-либо пропущена по запросу во время выполнения один. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|    
+|**max_columnstore_segment_skips**|**bigint**|Максимальное количество сегментов columnstore, когда-либо пропущена по запросу во время выполнения один. Не может иметь значение null.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|
   
 > [!NOTE]
-> <sup>1</sup> для скомпилированных в собственном коде хранимых процедур при включении сбора статистики времени рабочей роли собираются в миллисекундах. Если запрос выполняется за время меньше миллисекунды, это значение будет равно 0.  
+> <sup>1</sup> для скомпилированных в собственном коде хранимых процедур при включении сбора статистики времени рабочей роли собираются в миллисекундах. Если запрос выполняется за время меньше одной миллисекунды, значение будет равно 0.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Статистика в представлении обновляется после завершения выполнения запроса.  
   
 ## <a name="examples"></a>Примеры  
@@ -124,7 +132,7 @@ ms.lasthandoff: 11/17/2017
 ### <a name="a-finding-the-top-n-queries"></a>A. Поиск запросов TOP N  
  В следующем примере возвращаются сведения о пяти первых запросах, отсортированных по среднему времени ЦП. В этом примере объединяются запросы в соответствии с хэшем запроса таким образом, чтобы обеспечить группировку логически эквивалентных запросов по их совокупному потреблению ресурсов.  
   
-``` t-sql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TOP 5 query_stats.query_hash AS "Query Hash",   
@@ -141,13 +149,12 @@ FROM
      CROSS APPLY sys.dm_exec_sql_text(QS.sql_handle) as ST) as query_stats  
 GROUP BY query_stats.query_hash  
 ORDER BY 2 DESC;  
-  
 ```  
   
 ### <a name="b-returning-row-count-aggregates-for-a-query"></a>Б. Возврат статистического выражения счетчика строк для запроса  
  В следующем примере показан возврат сведений о статистическом выражении счетчика строк (общее число строк, минимальное число строк, максимальное число строк и число строк при последнем выполнении) для запросов.  
   
-``` t-sql  
+```sql  
 SELECT qs.execution_count,  
     SUBSTRING(qt.text,qs.statement_start_offset/2 +1,   
                  (CASE WHEN qs.statement_end_offset = -1   
@@ -164,7 +171,7 @@ WHERE qt.text like '%SELECT%'
 ORDER BY qs.execution_count DESC;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  
  [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   

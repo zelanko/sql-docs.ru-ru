@@ -1,7 +1,7 @@
 ---
 title: "СОЗДАТЬ СТАТИСТИКУ (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 08/10/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b34ea1ffe5a61b8cb7a0ba8b695015a8655c8709
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 088b79e73be6258afc5c664aaf14ba3cad9d2f5f
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,9 +65,10 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
           | SAMPLE number { PERCENT | ROWS }   
             [ [ , ] PERSIST_SAMPLE_PERCENT = { ON | OFF } ]    
-          | STATS_STREAM = stats_stream ] ]   
+          | <update_stats_stream_option> [ ,...n ]    
         [ [ , ] NORECOMPUTE ]   
-        [ [ , ] INCREMENTAL = { ON | OFF } ]  
+        [ [ , ] INCREMENTAL = { ON | OFF } ] 
+        [ [ , ] MAXDOP = max_degree_of_parallelism ]
     ] ;  
   
 <filter_predicate> ::=   
@@ -84,6 +85,11 @@ ON { table_or_indexed_view_name } ( column [ ,...n ] )
   
 <comparison_op> ::=  
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
+    
+<update_stats_stream_option> ::=  
+    [ STATS_STREAM = stats_stream ]  
+    [ ROWCOUNT = numeric_constant ]  
+    [ PAGECOUNT = numeric_contant ] 
 ```  
   
 ```  
@@ -138,11 +144,11 @@ CREATE STATISTICS statistics_name
   
  Далее приведено несколько примеров использования предикатов фильтра для таблицы Production.BillOfMaterials:  
   
- `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
+ * `WHERE StartDate > '20000101' AND EndDate <= '20000630'`  
   
- `WHERE ComponentID IN (533, 324, 753)`  
+ * `WHERE ComponentID IN (533, 324, 753)`  
   
- `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
+ * `WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL`  
   
  Дополнительные сведения о предикатах фильтра см. в разделе [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md).  
   
@@ -184,28 +190,38 @@ CREATE STATISTICS statistics_name
  Если статистики по секциям не поддерживаются, возвращается ошибка. Добавочные статистики не поддерживаются для следующих типов статистических данных.  
   
 -   Статистики, созданные с индексами, не выровненными по секциям для базовой таблицы.  
-  
 -   Статистики, созданные в доступных для чтения базах данных-получателях AlwaysOn.  
-  
 -   Статистики, созданные в базах данных, доступных только для чтения.  
-  
 -   Статистики, созданные по фильтрованным индексам.  
-  
 -   Статистика, созданная по представлениям.  
-  
 -   Статистики, созданные по внутренним таблицам.  
-  
 -   Статистики, созданные с пространственными индексами или XML-индексами.  
   
 **Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
+MAXDOP = *max_degree_of_parallelism*  
+**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3).  
+  
+ Переопределяет **максимальная степень параллелизма** параметр конфигурации в течение операции статистики. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
+  
+ *max_degree_of_parallelism* может быть:  
+  
+ 1  
+ Подавляет формирование параллельных планов.  
+  
+ \>1  
+ Ограничивает максимальное количество процессоров, используемых в операциях параллельных статистики с заданным или меньшим числом в зависимости от текущей рабочей нагрузки системы.  
+  
+ 0 (по умолчанию)  
+ В зависимости от текущей рабочей нагрузки системы использует реальное или меньшее число процессоров.  
+  
+ \<update_stats_stream_option >[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+
 ## <a name="permissions"></a>Разрешения  
  Требуется один из этих разрешений:  
   
 -   ALTER TABLE  
-  
 -   Пользователь является владельцем таблицы  
-  
 -   Членство в **db_ddladmin** предопределенной роли базы данных  
   
 ## <a name="general-remarks"></a>Общие замечания  
@@ -224,8 +240,9 @@ CREATE STATISTICS statistics_name
  [Sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) представление каталога содержит каждый столбец в предикате отфильтрованной статистики как ссылаемую зависимость. Обратите внимание на операции, которые выполняются на столбцах таблицы, созданной до создания отфильтрованной статистики, потому что определение столбца таблицы, указанного в предикате отфильтрованной статистики, невозможно удалить, переименовать или изменить.  
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
-*  Обновление статистики во внешних таблицах не поддерживается. Для обновления статистики в external table, drop и повторного создания статистики.  
-*  Может содержать до 64 столбцов каждый объект статистики.
+* Обновление статистики во внешних таблицах не поддерживается. Для обновления статистики в external table, drop и повторного создания статистики.  
+* Может содержать до 64 столбцов каждый объект статистики.
+* Параметр MAXDOP несовместим с параметрами STATS_STREAM, количество СТРОК и PAGECOUNT.
   
 ## <a name="examples"></a>Примеры  
 

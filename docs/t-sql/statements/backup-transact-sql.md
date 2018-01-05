@@ -51,11 +51,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ef97afb50c2a8d4dcf18ea342b8ac98dc6014863
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1b3cdba9ffe5b8020a0e3d7c64c766cc54d89c71
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ BACKUP LOG { database_name | @database_name_var }
  {  
    { logical_device_name | @logical_device_name_var }   
  | { DISK | TAPE | URL} =   
-     { 'physical_device_name' | @physical_device_name_var }  
+     { 'physical_device_name' | @physical_device_name_var | NUL }  
  }   
   
 <MIRROR TO clause>::=  
@@ -196,7 +196,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  Логическое имя файловой группы или переменная со значением, равным логическому имени файловой группы, которую следует включить в резервную копию. В простой модели восстановления создание резервной копии файловой группы разрешено лишь для файловых групп, доступных только для чтения.  
   
 > [!NOTE]  
->  Рекомендуется использовать резервные копии файлов в случае, если размер базы данных и требования по производительности делают полное резервное копирование базы данных нецелесообразным.  
+>  Рекомендуется использовать резервные копии файлов в случае, если размер базы данных и требования по производительности делают полное резервное копирование базы данных нецелесообразным. Устройство NUL может использоваться для тестирования производительности резервного копирования, но не должны использоваться в производственной среде.
   
  *n*  
  Заполнитель, который показывает, что через запятую можно указать несколько файлов или файловых групп. Их число не ограничено. 
@@ -227,8 +227,11 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  { *logical_device_name* | **@***logical_device_name_var* }  
  Логическое имя устройства резервного копирования, на котором создается резервная копия базы данных. Логическое имя должно соответствовать правилам для идентификаторов. Если предоставляется в качестве переменной (@*logical_device_name_var*), имя устройства резервного копирования может быть указано как строковая константа (@*logical_device_name_var*  **=**  имя логического устройства резервного копирования), так и переменную любого строкового типа данных, за исключением **ntext** или **текст** типов данных.  
   
- {ДИСК | ЛЕНТА | URL-адрес}  **=**  { **"***physical_device_name***"**  |   **@**  *physical_device_name_var* }  
- Определяет файл диска, ленточное устройство или службу хранилища больших двоичных объектов Windows Azure. Формат URL-адрес используется для создания резервных копий в службе хранилища Windows Azure. Дополнительные сведения и примеры см. в разделе [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). См. в разделе [учебника: SQL Server резервного копирования и восстановления для Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
+ {ДИСК | ЛЕНТА | URL-адрес}  **=**  { **"***physical_device_name***"**  |   **@**  *physical_device_name_var* | NUL}  
+ Определяет файл диска, ленточное устройство или службу хранилища больших двоичных объектов Windows Azure. Формат URL-адрес используется для создания резервных копий в службе хранилища Windows Azure. Дополнительные сведения и примеры см. в разделе [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). См. в разделе [учебника: SQL Server резервного копирования и восстановления для Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md). 
+
+[!NOTE] 
+ Дисковое устройство NUL будут потеряны все данные, отправляемые ему и должен использоваться только для тестирования. Это не для использования в рабочей среде.
   
 > [!IMPORTANT]  
 >  С [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 до [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], можно только создать резервную копию для одного устройства при резервном копировании на URL-адрес. Чтобы создать резервную копию на несколько устройств при резервном копировании на URL-адрес, необходимо использовать [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и необходимо использовать маркеры подписи общего доступа (SAS). Примеры создания подписи коллективного доступа см. в разделе [SQL Server Backup to URL-адрес](../../relational-databases/backup-restore/sql-server-backup-to-url.md) и [упростить создание учетных данных SQL с маркерами подписи общего доступа (SAS) в хранилище Azure с помощью Powershell](http://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx).  
@@ -236,6 +239,8 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 **URL-адрес относится к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  Дисковое устройство не обязательно должно существовать до указания в инструкции BACKUP. Если физическое устройство существует и в инструкции BACKUP не указан параметр INIT, то резервная копия дозаписывается на устройство.  
+ 
+ Однако резервная копия по-прежнему будут отмечены все страницы, как резервное копирование, устройство NUL отменит все входные данные, отправленные в этот файл.
   
  Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -346,7 +351,7 @@ DESCRIPTION **=** { **'***text***'** | **@***text_variable* }
 {EXPIREDATE **= "***даты***"**| RETAINDAYS  **=**  *дней* }  
 Указывает время, по истечении которого резервный набор данных для этой резервной копии может быть перезаписан. Если использованы оба этих параметра, то RETAINDAYS имеет приоритет над EXPIREDATE.  
   
-Если ни один из параметров указан, срок действия определяется **mediaretention** параметр конфигурации. Дополнительные сведения см. в статье [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+Если ни один из параметров указан, срок действия определяется **mediaretention** параметр конфигурации. Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 > [!IMPORTANT]  
 >  Данные параметры защищают [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только от перезаписи файла. Ленточные носители могут быть стерты при помощи других методов, а файлы на диске могут быть удалены через операционную систему. Дополнительные сведения о проверке истечения срока действия см. в подразделах «SKIP» и «FORMAT» в этом разделе.  
@@ -359,7 +364,7 @@ EXPIREDATE  **=**  { **"***даты***"** |   **@**  *date_var* }
 -   Объект **smalldatetime**  
 -   Объект **datetime** переменной  
   
-Например:  
+Пример:  
   
 -   `'Dec 31, 2020 11:59 PM'`  
 -   `'1/1/2021'`  
@@ -717,7 +722,7 @@ GO
 ## <a name="security"></a>безопасность  
  Начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], **пароль** и **MEDIAPASSWORD** не поддерживаются при создании резервных копий. Восстановление резервных копий, созданных с применением пароля, остается возможным.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Разрешения BACKUP DATABASE и BACKUP LOG назначены по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенным ролям базы данных **db_owner** и **db_backupoperator** .  
   
  Проблемы, связанные с владельцем и разрешениями у физических файлов на устройстве резервного копирования, могут помешать операции резервного копирования. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] должен иметь возможность считывать и записывать данные на устройстве; учетная запись, от имени которой выполняется служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , должна иметь разрешения на запись. Однако процедура [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), добавляющая запись для устройства резервного копирования в системные таблицы, не проверяет разрешения на доступ к файлу. Проблемы физического файла устройства резервного копирования могут не проявляться до момента доступа к физическому ресурсу во время операции резервного копирования или восстановления.  
@@ -879,7 +884,7 @@ WITH STATS = 5;
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [DBCC SQLPERF &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)   
- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
+ [Инструкция RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
  [RESTORE LABELONLY (Transact-SQL)](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
  [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   

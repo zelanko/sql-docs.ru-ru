@@ -20,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9b6abe63c911f92c661cb7ab4c56b3a2bb61fa14
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 453ce7fe955af4ffe25d13b1ab1abfef0f48cf59
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Правила и ограничения массовой загрузки XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]При использовании массовой загрузки XML, необходимо ознакомиться с следующие правила и ограничения:  
@@ -171,7 +171,7 @@ ms.lasthandoff: 11/17/2017
   
 -   SchemaGen предоставляет только базовую функциональность для создания реляционной схемы из аннотированного XSD. При необходимости пользователь должен изменить созданные таблицы вручную.  
   
--   Если более чем связь существует между таблицами, SchemaGen пытается создать одну связь, который содержит все ключи, между двумя таблицами. Это ограничение может вызвать ошибку [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
+-   Если существует более одного связь между таблицами, SchemaGen пытается создать одну связь, который содержит все ключи, между двумя таблицами. Это ограничение может вызвать ошибку [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 -   При массовой загрузке XML-данных в базу по меньшей мере один атрибут или дочерний элемент в схеме сопоставления должен быть сопоставлен со столбцом базы данных.  
   

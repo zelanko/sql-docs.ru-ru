@@ -33,14 +33,14 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 9e14fa00535414673f5526c6aedb3ec349235a29
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
+ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Сокращает размер файлов данных и файлов журнала в указанной базе данных.
   
@@ -65,14 +65,14 @@ DBCC SHRINKDATABASE
  Процент свободного пространства, которое должно остаться в базе данных после сжатия.  
   
  NOTRUNCATE  
- Сжимает данные в файлах с помощью перемещения распределенных страниц из конца файла на место нераспределенных страниц в начале файла. *target_percent* является необязательным.  
+ Сжимает данные в файлах с помощью перемещения распределенных страниц из конца файла на место нераспределенных страниц в начале файла. *target_percent* является необязательным. Этот параметр не поддерживается с хранилищем данных SQL Azure. 
   
  Свободное место в конце файла операционной системе не возвращается, и физический размер файла не изменяется. Следовательно, если указан аргумент NOTRUNCATE, сжатие файлов данных незначительно.  
   
  Аргумент NOTRUNCATE применим только к файлам данных. Файл журнала не затрагивается.  
   
  TRUNCATEONLY  
- Освобождает все свободное пространство в конце файла операционной системе, но не перемещает страницы внутри файла. Файл данных сокращается только до последнего выделенного экстента. *target_percent* учитывается, если указан аргумент TRUNCATEONLY.  
+ Освобождает все свободное пространство в конце файла операционной системе, но не перемещает страницы внутри файла. Файл данных сокращается только до последнего выделенного экстента. *target_percent* учитывается, если указан аргумент TRUNCATEONLY. Этот параметр не поддерживается с хранилищем данных SQL Azure.
   
  Аргумент TRUNCATEONLY оказывает влияние на файл журнала. Для усечения только файла данных используйте инструкцию DBCC SHRINKFILE.  
   
@@ -94,7 +94,7 @@ DBCC SHRINKDATABASE
 >[!NOTE]
 > Компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не отображает строки для файлов, размер которых не был сокращен.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Чтобы сжать все файлы данных и журналов указанной базы данных, выполните команду DBCC SHRINKDATABASE. Чтобы сжать один данных или файл журнала во время для конкретной базы данных, выполните [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) команды.
   
 Чтобы просмотреть текущий объем свободного (нераспределенного) пространства в базе данных, запустите [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md).
@@ -108,6 +108,9 @@ DBCC SHRINKDATABASE
 Сжимаемая база данных не должна находиться в однопользовательском режиме. Другие пользователи могут работать с базой данных при ее сжатии. Это касается системных баз данных.
   
 Невозможно сжать базу данных во время создания ее резервной копии. И наоборот, нельзя создать резервную копию базы данных во время операции сжатия.
+
+>[!NOTE]
+> В настоящее время хранилище данных SQL Azure не поддерживает команды DBCC SHRINKDATABASE с включено прозрачное шифрование данных.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Работа команды DBCC SHRINKDATABASE  
 Инструкция DBCC SHRINKDATABASE сжимает файлы данных по одному, а файлы журнала так, как будто все они представляют один непрерывный пул журнала. Сжатие файлов всегда ведется с конца.
@@ -147,7 +150,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   Прервите операцию сжатия. Вся завершенная работа будет сохранена.  
 -   Пока операция сжатия ожидает завершения блокирующей транзакции, ничего делать не нужно.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .  
   
 ## <a name="examples"></a>Примеры  
@@ -167,7 +170,7 @@ GO
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKFILE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  

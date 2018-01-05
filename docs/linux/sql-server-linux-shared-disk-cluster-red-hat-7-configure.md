@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.workload: On Demand
-ms.openlocfilehash: ffc0ea6cae32b5801b069748b2c124ef1bd87343
-ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
+ms.openlocfilehash: ce2427d4defca8640d93ea25919fe805ac7c6133
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Настройка кластера общего диска Red Hat Enterprise Linux для SQL Server
 
@@ -180,7 +180,7 @@ NFS-сервера выполните следующие действия.
 
 Выполните следующие действия на всех узлах кластера.
 
-1.  От NFS-сервера Установка`nfs-utils`
+1.  Установка`nfs-utils`
 
    ```bash
    sudo yum -y install nfs-utils
@@ -214,7 +214,7 @@ NFS-сервера выполните следующие действия.
 1.  **На основном узле только**, сохранить во временное расположение файлов базы данных. Следующий скрипт создает новый временный каталог и копирует файлы базы данных в новый каталог удаляет старые файлы базы данных. Как SQL Server выполняется как mssql локального пользователя, необходимо убедитесь в том, что после передачи данных в общую папку подключенного, локальный пользователь имеет доступ для чтения и записи к общей папке. 
 
    ``` 
-   $ su mssql
+   $ sudo su mssql
    $ mkdir /var/opt/mssql/tmp
    $ cp /var/opt/mssql/data/* /var/opt/mssql/tmp
    $ rm /var/opt/mssql/data/*
@@ -240,9 +240,9 @@ NFS-сервера выполните следующие действия.
 1.  Скопируйте файлы базы данных и журналов, сохраненные на `/var/opt/mssql/tmp` к общей папке только что подключенном `/var/opt/mssql/data`. Это необходимо сделать **на основном узле**. Убедитесь, что предоставить разрешения на чтение и запись к «mssql» локального пользователя.
 
    ``` 
-   $ chown mssql /var/opt/mssql/data
-   $ chgrp mssql /var/opt/mssql/data
-   $ su mssql
+   $ sudo chown mssql /var/opt/mssql/data
+   $ sudo chgrp mssql /var/opt/mssql/data
+   $ sudo su mssql
    $ cp /var/opt/mssql/tmp/* /var/opt/mssql/data/
    $ rm /var/opt/mssql/tmp/*
    $ exit
@@ -265,8 +265,8 @@ NFS-сервера выполните следующие действия.
 
    ```bash
    sudo touch /var/opt/mssql/secrets/passwd
-   sudo echo '<loginName>' >> /var/opt/mssql/secrets/passwd
-   sudo echo '<loginPassword>' >> /var/opt/mssql/secrets/passwd
+   echo '<loginName>' | sudo tee -a /var/opt/mssql/secrets/passwd
+   echo '<loginPassword>' | sudo tee -a /var/opt/mssql/secrets/passwd
    sudo chown root:root /var/opt/mssql/secrets/passwd 
    sudo chmod 600 /var/opt/mssql/secrets/passwd    
    ```

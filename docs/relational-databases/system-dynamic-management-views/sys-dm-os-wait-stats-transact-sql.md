@@ -1,7 +1,7 @@
 ---
 title: "sys.dm_os_wait_stats (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 09/18/2017
+ms.date: 01/04/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 98e5e604c815b099d7e66d9fd3720d50d8422a9e
-ms.sourcegitcommit: 61fc9f81c295c2b93781ef194e9a2ebd475f800d
+ms.openlocfilehash: 1e6b1129e76717981e08ff35a97abf516c134ac3
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/29/2017
 |signal_wait_time_ms|**bigint**|Разница между временем сигнализации ожидающего потока и временем начала его выполнения.|  
 |pdw_node_id|**int**|Идентификатор для узла, это распределение. <br/> **Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.  
   
@@ -169,7 +169,8 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXPACKET |При синхронизации итератора обмена обработчика запросов, а также при создании и использовании строк, происходит с планами параллельных запросов. Если ожидание избыточно и не может быть уменьшено путем настройки запросов (например, добавлением индексов), рассмотрите возможность настройки параметра cost threshold for parallelism или уменьшите степень параллелизма.| 
+|CXCONSUMER |Происходит с планами параллельных запросов, когда поток-потребитель ожидает является наличие потока производителя для отправки строк. Это является обычной частью параллельного выполнения запросов. <br /> **Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXPACKET |При синхронизации итератора обмена обработчика запросов, а также при создании и использовании строк, происходит с планами параллельных запросов. Если ожидание избыточно и не может быть уменьшено путем настройки запросов (например, добавлением индексов), рассмотрите возможность настройки параметра cost threshold for parallelism или уменьшите степень параллелизма.<br /> **Примечание:** в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET относится только к синхронизации итератора обмена обработчика запросов и создания строк для потребителя потоков. Потоки потребителя в тип ожидания CXCONSUMER отслеживаются отдельно.| 
 |CXROWSET_SYNC |Имеет место при параллельном просмотре диапазона.| 
 |DAC_INIT |Имеет место при инициализации выделенного административного соединения.| 
 |DBCC_SCALE_OUT_EXPR_CACHE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
@@ -1020,7 +1021,7 @@ GO
   
  Матрицу совместимости блокировок см [sys.dm_tran_locks &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
     
  [Относящиеся к операционной системе SQL Server динамические административные представления &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [sys.dm_exec_session_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   

@@ -14,17 +14,19 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 6ad13c3432daee4fd38b6d46704adc0c00913f7a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c5b01fd8add48b2529c9d4150f153d6aea0b5f6c
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Создание и настройка группы доступности для SQL Server в Linux
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Этот учебник описывает способы создания и настройки группы доступности (AG) для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] в Linux. В отличие от [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] и более ранних версий на Windows, можно включить и действий с или без создания базового кластера Pacemaker сначала. Интеграция с кластером, если требуется, не выполняется до более поздней версии.
+
+Учебник включает следующие задачи:
  
 > [!div class="checklist"]
 > * Включите группы доступности.
@@ -593,11 +595,9 @@ sudo systemctl restart mssql-server
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> --master meta notify=true
     ```
 
->[ПРИМЕЧАНИЕ] На RHEL 7.4 может появиться предупреждение с использованием--master. Чтобы избежать этого, используйте следующий синтаксис:
-    ```bash
-    sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true
-    ```
-
+    >[!NOTE]
+    >На RHEL 7.4 может появиться предупреждение с использованием--master. Чтобы избежать этого, используйте`sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> master notify=true`
+   
     **SUSE Linux Enterprise Server (SLES)**
     
     ```bash
@@ -618,7 +618,7 @@ sudo systemctl restart mssql-server
     commit
     ```
     
-    where *NameForAGResource* is the unique name given to this cluster resource for the AG, and *AGName* is the name of the AG that was created.
+    где *NameForAGResource* уникальное имя, присвоенное этому ресурсу кластера для группы Доступности, и *AGName* имя группы Доступности, который был создан.
  
 2.  Создайте ресурс IP-адреса для группы Доступности, связанного с помощью функции прослушивателя.
 
@@ -647,8 +647,7 @@ sudo systemctl restart mssql-server
     ```bash
     sudo pcs constraint colocation add <NameForIPResource> <NameForAGResource>-master INFINITY with-rsc-role=Master
     ```
-   
-    
+
     **SLES**
     
     ```bash
@@ -690,5 +689,5 @@ sudo systemctl restart mssql-server
 Большая часть группы Доступности задач администрирования, включая обновления и отработка отказа см.:
 
 > [!div class="nextstepaction"]
-> [Работы группы доступности высокого уровня ДОСТУПНОСТИ для SQL Server в Linux](sql-server-linux-availability-group-failover-ha.md).
+> [Работы группы доступности высокого уровня ДОСТУПНОСТИ для SQL Server в Linux](sql-server-linux-availability-group-failover-ha.md)
 
