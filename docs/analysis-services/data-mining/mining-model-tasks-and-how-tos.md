@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +20,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1a90c07acc1ac35f50f4ad1923980f0f65b57d5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8c1eef41d84a8bdbd758c02f4830467b14cd9ebb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Задачи и инструкции по модели интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Используйте **моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для управления и обработки моделей в структуре интеллектуального анализа данных.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [создать измерение интеллектуального анализа данных](../../analysis-services/data-mining/create-a-data-mining-dimension.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)   
  [Модели интеллектуального анализа данных &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
  [Основные понятия интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-concepts.md)  

@@ -5,13 +5,10 @@ ms.date: 06/15/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: d9825f298a0c881a0a8809205bcb46538f081519
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Сравнение табличных и многомерных решений
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services предоставляет несколько подходов для создания семантической модели бизнес-аналитики: табличных, многомерных и Power Pivot для SharePoint.
@@ -60,33 +57,33 @@ ms.lasthandoff: 12/08/2017
 |||| 
 |-|-|-|
 ||Multidimensional|Табличный|
-|Действия|Да|Нет|
-|Aggregations|Да|Нет|
-|Вычисляемый столбец|Нет|Да|  
+|Действия|Да|нет|
+|Aggregations|Да|нет|
+|Вычисляемый столбец|нет|Да|  
 |Вычисляемые меры|Да|Да| 
-|Вычисляемые таблицы|Нет|Да<sup>1</sup>|  
-|Пользовательские сборки|Да|Нет|
-|Пользовательские свертки|Да|Нет| 
-|элемент по умолчанию;|Да|Нет|  
+|Вычисляемые таблицы|нет|Да<sup>1</sup>|  
+|Пользовательские сборки|Да|нет|
+|Пользовательские свертки|Да|нет| 
+|элемент по умолчанию;|Да|нет|  
 |Отображение папок|Да|Да<sup>1</sup>|  
 |Количество различных|Да|Да (посредством DAX)|
 |Детализация|Да|Да (зависит от клиентского приложения)|
 |Иерархии|Да|Да|
 |Ключевые показатели эффективности|Да|Да| 
 |Связанные объекты|Да|Да (связанные таблицы)|
-|Выражения M|Нет|Да<sup>1</sup>|
+|Выражения M|нет|Да<sup>1</sup>|
 |Связи «многие ко многим»|Да|Нет (но [двунаправленные кросс-фильтры,](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) с уровнем совместимости 1200 и выше)| 
-|Именованные наборы|Да|Нет| 
+|Именованные наборы|Да|нет| 
 |Неоднородные иерархии|Да|Да<sup>1</sup>|  
 |Иерархии типа «родители-потомки»|Да|Да (посредством DAX)|
 |Секции|Да|Да| 
-|Перспективы|Да|Да|
+|перспективами|Да|Да|
 |Безопасность на уровне строк|Да|Да| 
 |Безопасность на уровне объекта|Да|Да<sup>1</sup>|
 |Полуаддитивные меры|Да|Да| 
-|Переводы|[Да](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Да| 
+|Translations|[Да](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Да| 
 |Пользовательские иерархии|Да|Да|
-|Обратная запись|Да|Нет| 
+|Обратная запись|Да|нет| 
   
  <sup>1</sup> разделе [уровень совместимости для табличных моделей в службах Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) сведения о функциональных различий между уровнями совместимости.  
   

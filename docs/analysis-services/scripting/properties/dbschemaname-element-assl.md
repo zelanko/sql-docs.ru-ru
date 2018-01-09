@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DbSchemaName Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10a12a99d53b9612515b21a77642304980b44c03
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4a773f56dd67975009eb1904445e56be877b1cc6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dbschemaname-element-assl"></a>Элемент DbSchemaName (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит имя схемы, используемой родительским элементом в таблице, указанной [DbTableName](../../../analysis-services/scripting/properties/dbtablename-element-assl.md) элемента.  
@@ -47,11 +45,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |Родительский элемент|[TableBinding](../../../analysis-services/scripting/data-type/tablebinding-data-type-assl.md), [TableNotification](../../../analysis-services/scripting/objects/tablenotification-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элементы, соответствующие родителям элемента **DbSchemaName** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.TableBinding> и <xref:Microsoft.AnalysisServices.TableNotification>.  
   
 ## <a name="see-also"></a>См. также:  

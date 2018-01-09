@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 993c4005015b18b1ee6f6106e13fae8429ddcaec
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a53d359debe447cc4e1cc94197516c75f53f8d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Технический справочник по алгоритму кластеризации последовательностей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Алгоритм кластеризации последовательностей Майкрософт — это гибридный алгоритм, использующий методы анализа Марковских цепей для определения упорядоченных последовательностей и сочетает результаты этого анализа с технологией кластеризации для построения кластеров на основе последовательностей и других атрибутов в модели. В данном разделе описывается реализация алгоритма и настройка его поведения. Приводятся также ссылки на дополнительную информацию о требованиях к моделям кластеризации последовательностей.  
@@ -137,12 +135,12 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  Алгоритм кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает определенные входные столбцы данных и прогнозируемые столбцы, которые перечислены ниже в таблице. Дополнительные сведения о значении типов содержимого в применении к модели интеллектуального анализа данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Столбец|Типы содержимого|  
+|столбцом|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table и Ordered|  
 |Прогнозируемый атрибут|Continuous, Cyclical, Discrete, Discretized, Table и Ordered|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 -   Для прогнозирования последовательностей используйте функцию [PredictSequence (расширения интеллектуального анализа данных)](../../dmx/predictsequence-dmx.md). Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], поддерживающих прогнозирование последовательностей, см. в разделе [Функции, поддерживаемые различными выпусками SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Алгоритм кластеризации последовательностей [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает детализацию, а также использование моделей и измерений интеллектуального анализа данных OLAP.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
  [Примеры запросов модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей кластеризации последовательностей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  

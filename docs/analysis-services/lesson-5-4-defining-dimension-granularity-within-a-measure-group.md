@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bef441eba4e4aa9353a496282680449bc39fa629
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Занятие 5-4-определение степени гранулярности измерения в группе мер
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Для разных целей пользователям может потребоваться измерять данные фактов с разной степенью гранулярности или точности. Например, сведения о продажах через посредников или о продажах через Интернет могут записываться каждый день, в то время как данные о квотах продаж могут существовать только для уровня месяца или квартала. В таких случаях пользователям требуется, чтобы измерение времени обладало разной степенью гранулярности для каждой из этих разных таблиц фактов. Определить новое измерение базы данных как измерение времени с другой степенью гранулярности проще всего с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

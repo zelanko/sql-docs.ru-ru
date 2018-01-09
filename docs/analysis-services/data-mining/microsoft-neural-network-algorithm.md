@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,13 +30,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dc7c43077650ddee110eb48ad455e7cb1ab5ce8e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8af39f31c569beb4df25d8da1dd933c902d3b4f6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-neural-network-algorithm"></a>Алгоритм нейронной сети (Майкрософт)
+# <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритма нейронной сети представляет собой реализацию архитектуры популярных и настраиваться нейронной сети для машинного обучения.  Алгоритм работает путем тестирования каждого возможного состояния входного атрибута с каждым возможным состоянием прогнозируемого атрибута и использует обучающие данные для вычисления вероятностей каждого сочетания. Эти вероятности можно использовать для задач классификации или регрессии, а также для прогнозирования исхода на основе входных атрибутов. Нейронную сеть можно также использовать для анализа взаимосвязей.  
   
  При создании модели интеллектуального анализа данных с помощью алгоритма нейронной сети [!INCLUDE[msCoName](../../includes/msconame-md.md)] можно включить несколько выходных данных, а алгоритм создаст несколько сетей. Количество сетей, содержащихся в одной модели интеллектуального анализа данных, зависит от числа состояний (или значений атрибута) во входных столбцах, а также от числа прогнозируемых столбцов, используемых в модели интеллектуального анализа данных, и числа состояний в этих столбцах.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
  Общие сведения о создании запроса к модели интеллектуального анализа данных см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 -   Не поддерживается детализация и измерения интеллектуального анализа данных. Это объясняется тем, что структура узлов в модели интеллектуального анализа данных не обязательно однозначно соответствует базовым данным.  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Не поддерживается создание измерений интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Технический справочник по алгоритму нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Содержимое модели интеллектуального анализа данных для модели нейронной сети &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)   

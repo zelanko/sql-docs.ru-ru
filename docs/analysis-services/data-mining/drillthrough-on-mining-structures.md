@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a0b00a3b-f9db-4289-a8cb-ddf600cd64ac
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96d9e924f914822b7eb26b4242c1120113da7c3b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ac35e52322e82cff60dd9f62504db59f8f4b982e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drillthrough-on-mining-structures"></a>Детализация структур интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Детализации* — возможность запрашивать модель интеллектуального анализа данных или структуру интеллектуального анализа данных и получать подробные данные, не представленные в модели.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Если включить детализацию как структуры, так и модели интеллектуального анализа данных, то любой пользователь, являющийся членом роли с разрешениями детализации в модели, также видит столбцы в структуре, даже если эти столбцы не входят в модель интеллектуального анализа данных. Поэтому, чтобы защитить конфиденциальные данные, необходимо настроить в представлении источника данных маскирование персональных данных и разрешать доступ к детализации структуры интеллектуального анализа данных только при необходимости.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения см. в следующих разделах по использованию детализации с моделями интеллектуального анализа данных.  
   
 |||  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |См. примеры запросов детализации для конкретных типов моделей.|[Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)|  
 |Получите сведения о разрешениях, относящихся к конкретным структурам и моделям интеллектуального анализа данных.|[Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Детализация моделей интеллектуального анализа данных](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
   

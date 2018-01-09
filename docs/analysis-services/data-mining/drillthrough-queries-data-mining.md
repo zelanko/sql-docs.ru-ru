@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0d8a4cc823298eb1e1e36dce0141507dc4be05a1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ac1295dcbea5ff575cb0d1d5ab918bad03c6fd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drillthrough-queries-data-mining"></a>Запросы детализации (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект *запрос детализации* позволяет извлекать сведения из базовых вариантов или данных структуры, отсылая запрос к модели интеллектуального анализа данных. Детализация применяется в том случае, если нужно просмотреть варианты, использованные для обучения модели, в отличие от вариантов, которые используются для ее проверки, либо чтобы просмотреть дополнительных сведения из данных варианта.  
@@ -102,11 +100,11 @@ ms.lasthandoff: 12/08/2017
 |Задача|Ссылка|  
 |----------|----------|  
 |Процедуры, описывающие использование детализации в конструкторе интеллектуального анализа данных|[Детализация до данных вариантов из модели интеллектуального анализа данных](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)|  
-|Изменение существующей модели интеллектуального анализа данных для разрешения детализации|[включить детализацию для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
+|Изменение существующей модели интеллектуального анализа данных для разрешения детализации|[Включение детализации для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)|  
 |Включение детализации для структуры интеллектуального анализа данных с помощью предложения DMX WITH DRILLTHROUGH|[СОЗДАНИЕ СТРУКТУРЫ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ (DMX)](../../dmx/create-mining-structure-dmx.md)|  
 |Сведения о присвоении разрешений, относящихся к детализации структур и моделей интеллектуального анализа данных|[Предоставление разрешений структурам интеллектуального анализа данных и моделям интеллектуального анализа данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)  
   

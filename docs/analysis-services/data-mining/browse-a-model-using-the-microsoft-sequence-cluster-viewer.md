@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5de5490ccd81bc62103ea451041bb93011f6426e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6553c3d5077b485d0736f2ffd8589d17a81edc33
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Просмотр модели с помощью средства просмотра кластеризации последовательностей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Средство просмотра кластеризации последовательностей в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает модели интеллектуального анализа данных, построенные с [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритм кластеризации последовательностей. Этот алгоритм [!INCLUDE[msCoName](../../includes/msconame-md.md)] является алгоритмом анализа последовательностей для исследования данных, содержащих события, которые могут быть связаны с помощью следования путям или *последовательностям*. Дополнительные сведения об этом алгоритме см. в статье [Алгоритм кластеризации последовательностей (Майкрософт)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
   
  [В начало](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   

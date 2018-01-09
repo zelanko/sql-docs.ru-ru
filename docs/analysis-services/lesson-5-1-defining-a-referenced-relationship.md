@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8dd3250558baf193890bee80ca272de30510dc5b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe4681b3f4125242e51b41ac594bd556d06f058e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Занятие 5-1-Определение ссылочной связи
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]До этого момента в учебнике каждого измерения куба, определенного был основан на таблице, непосредственно связанной с таблицей фактов для группы мер по первичному ключу для связи по внешнему ключу. В задачах этого раздела измерение **География** будет связано с таблицей фактов через измерение **Торговый посредник** , которое называется *ссылочным измерением*. Это позволяет пользователям распределить товарооборот посредников по географии. Дополнительные сведения см. в разделе [Определение ссылочной связи и свойств ссылочной связи](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  

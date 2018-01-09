@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2927962261f35ea8b5f032853660e3e6bc1d0ad2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 213bc7a17344f42cd10258962f91711a5ee3acba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Создание источника данных (многомерные службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] многомерной модели объект источника данных представляет соединение с источником данных, из которого являются обработки (или импорте) данных. Многомерная модель должна содержать по меньшей мере один объект источника данных, но можно добавить несколько таких объектов, чтобы объединить данные из нескольких хранилищ данных. Для создания объекта источника данных модели воспользуйтесь инструкциями, приведенными в этом разделе. Дополнительные сведения о настройке свойств этого объекта см. в разделе [Задание свойств источника данных (многомерная база данных SSAS)](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md).  
@@ -180,7 +177,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  Найдите и выберите таблицу, которая была добавлена. Щелкните правой кнопкой мыши таблицу и выберите команду **Создать связь**. Выберите исходный и целевой столбцы, содержащие соответствующие данные.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поддерживаемые источники данных (службы SSAS — многомерные базы данных)](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

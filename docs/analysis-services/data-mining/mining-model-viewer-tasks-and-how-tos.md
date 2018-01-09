@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,16 +24,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 61bcf404f76a25b4003bbf96be87a2191c903b0f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 49b33d951d759ea941ad8944db5f9e515698bfc7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Задачи и инструкции средства просмотра моделей интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Конструктор интеллектуального анализа данных в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] содержит несколько средств, которые можно использовать для просмотра моделей интеллектуального анализа данных. Следующие разделы содержат пошаговые инструкции по выполнению задач, для которых характерно использование вкладки конструктора **Средство просмотра моделей интеллектуального анализа данных** .  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Выбор модели интеллектуального анализа данных и средства просмотра интеллектуального анализа данных](../../analysis-services/data-mining/select-a-mining-model-and-a-data-mining-viewer.md)  
   
@@ -47,14 +45,14 @@ ms.lasthandoff: 12/08/2017
   
 -   [Фильтрация набора элементов в модели ассоциативных правил](../../analysis-services/data-mining/filter-an-itemset-in-an-association-rules-model.md)  
   
--   [выполнить детализацию до данных вариантов из модели интеллектуального анализа данных](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
+-   [Детализация до данных вариантов из модели интеллектуального анализа данных](../../analysis-services/data-mining/drill-through-to-case-data-from-a-mining-model.md)  
   
 -   [Просмотр формулы для модели временных рядов (интеллектуальный анализ данных)](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
 -   [изменить цвета, используемые в средстве просмотра интеллектуального анализа данных](../../analysis-services/data-mining/change-the-colors-used-in-the-data-mining-viewer.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Учебник по основам интеллектуального анализа данных](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)   
- [Средства просмотра моделей интеллектуального анализа данных &#40; конструктор моделей интеллектуального анализа данных &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
+ [Средства просмотра моделей интеллектуального анализа данных & #40; конструктор моделей интеллектуального анализа данных & #41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)  
   
   

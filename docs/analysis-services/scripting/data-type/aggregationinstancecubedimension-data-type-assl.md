@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AggregationInstanceCubeDimension Data Type
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3bb94eb27a6f6a475afcc2d8aae46e05ed73fef2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 586b91bc68cef3d6f717b28987e2e52d7204be15
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="aggregationinstancecubedimension-data-type-assl"></a>Тип данных AggregationInstanceCubeDimension (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет тип-примитив, представляющий сведения об измерении куба, который используется экземпляром агрегата.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Базовые типы данных|None|  
 |Производные типы данных|None|  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/08/2017
 |Дочерние элементы|[Attributes](../../../analysis-services/scripting/collections/attributes-element-assl.md), [CubeDimensionID](../../../analysis-services/scripting/properties/cubedimensionid-element-assl.md), [KeyColumns](../../../analysis-services/scripting/collections/keycolumns-element-assl.md)|  
 |Производные элементы|[Dimension](../../../analysis-services/scripting/objects/dimension-element-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>См. также:  
  [Службы Analysis Services сценариев типы данных XML в &#40; ASSL &#41;](../../../analysis-services/scripting/data-type/analysis-services-scripting-language-xml-data-types-assl.md)  

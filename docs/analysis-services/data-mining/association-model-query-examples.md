@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b176b73816fb01ff7659e00f58dd4441bc689866
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1313c2933ba37f161edd4980a6b931388f60e13b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="association-model-query-examples"></a>Примеры запросов моделей взаимосвязей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании запроса к модели интеллектуального анализа данных, можно создать либо запрос содержимого, возвращающие подробные сведения о правилах и наборах элементов, обнаруженных во время анализа, или можно создать прогнозирующий запрос, использующий взаимосвязи, обнаруженные в данных, чтобы сделать прогнозы. Прогнозы для моделей взаимосвязей обычно основаны на правилах, и их можно использовать для рекомендаций, в то время как запросы к содержимому обычно исследуют связи между наборами элементов. Можно также получать метаданные, описывающие модель.  
@@ -243,7 +241,7 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictSupport (расширения интеллектуального анализа данных)](../../dmx/predictsupport-dmx.md)|Возвращает опорное значение для указанного состояния.|  
 |[PredictVariance (расширения интеллектуального анализа данных)](../../dmx/predictvariance-dmx.md)|Возвращает дисперсию для прогнозируемого значения.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритм взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Технический справочник по алгоритму взаимосвязей (Майкрософт)](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей взаимосвязей (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  

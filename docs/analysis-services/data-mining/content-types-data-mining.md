@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -35,11 +33,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d605692200b4e1c056d90070238dcce442c1e29
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c159c5fa111a4c1e04c6ad0871aea5ec13c2191c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="content-types-data-mining"></a>Типы содержимого (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], можно определить как физический тип данных для столбца в структуре интеллектуального анализа данных и логический тип содержимого для столбца, используемого в модели  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  Данный тип содержимого поддерживается следующими типами данных: **Double**, **Long**и **Date**.  
   
-## <a name="table"></a>Таблица  
+## <a name="table"></a>Table  
  Тип содержимого *таблица* указывает, что столбец содержит другую таблицу данных с одним или несколькими столбцами и одной или несколькими строками. Применительно к любой конкретной строке в таблице вариантов этот столбец может содержать несколько значений, причем все они связаны с записью родительского варианта. Например, если основная таблица вариантов содержит список клиентов, то можно предусмотреть несколько столбцов, содержащих вложенные таблицы, например, столбец **ProductsPurchased** , в котором вложенная таблица перечисляет продукты, приобретенные этим клиентом в прошлом, а столбец **Hobbies** содержит перечень увлечений клиента.  
   
  Типом данных этого столбца всегда является **Table**.  

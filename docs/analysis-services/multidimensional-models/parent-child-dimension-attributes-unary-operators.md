@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae826437d790e807998d223f9c8999582311fe7a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a387b74a5e0f1a401249555bb470159394bc1338
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>Атрибуты измерения родители потомки - унарные операторы
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В измерении, содержащем связь родитель потомок в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], укажите унарный (или пользовательской свертки) столбец оператор, который определяет пользовательскую свертку для всех невычисляемых элементов родительского атрибута. Унарный оператор применяется к элементам каждый раз, когда оцениваются значения родительских элементов. Свойство **UnaryOperatorColumn** в родительском атрибуте (**Использование**=Родитель) задает столбец таблицы в представлении источника данных, в которой содержатся унарные операторы. Значения для операторов пользовательской свертки, хранящихся в данном столбце, применяются к каждому элементу атрибута.  
@@ -53,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
  На вкладке **Браузер** конструктора измерений можно просмотреть унарные операторы, расположенные рядом с каждым элементом иерархии. Также унарные операторы можно изменить во время работы с измерением, доступным для записи. Если измерение не доступно для записи, то необходимо воспользоваться средством для изменения источника данных напрямую.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по свойствам атрибута измерения](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [Операторы пользовательской свертки в измерениях родители потомки](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
  [Запуск мастера бизнес-аналитики в конструкторе измерений](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  

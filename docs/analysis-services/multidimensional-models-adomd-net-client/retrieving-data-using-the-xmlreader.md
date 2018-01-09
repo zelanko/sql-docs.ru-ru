@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dbcce4f4a75d2aa8aefedfff4c3b8b8de81d1fe6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 70b268a896a7acbbf515ac49a722eccb17afdfd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-data-using-the-xmlreader"></a>Получение данных с помощью объекта XmlReader
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]**XmlReader** класса часть **System.Xml** пространство имен для библиотеки классов Microsoft .NET Framework аналогично <xref:Microsoft.AnalysisServices.AdomdClient.AdomdDataReader> класса в том, что **XmlReader**класс также предоставляет быстрый некэшируемый однопроходный доступ к данным. Если нет необходимости для представления в памяти и аналитических данных с помощью <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> объекта, **XmlReader** объекта идеально подходит для получения XML-данных, особенно для больших объемов данных. Поскольку **XmlReader** потоки данных, **XmlReader** не должен получать и кэшировать все данные перед передачей вызывающему объекту, как было бы в том случае, если <xref:Microsoft.AnalysisServices.AdomdClient.CellSet> объекта были использованы для преобразования Ответ XML для аналитики в аналитическое представление модели объектов.  

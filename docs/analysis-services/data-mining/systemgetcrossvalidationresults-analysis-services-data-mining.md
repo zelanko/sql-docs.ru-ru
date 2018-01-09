@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5818339f5bcc44770cdf728d93deb1b41b9bf618
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 499e62070cb0ec0fed8e814c926d915f7e69bbe3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Секций, структуры интеллектуального анализа данных в указанное число разрезов, обучает модель для каждой секции, а затем возвращает метрики точности для каждой секции.  
@@ -145,7 +145,7 @@ SystemGetCrossValidationResults(
 |Measure|Имя меры, возвращенной тестом. Меры для каждой модели зависят от типа прогнозируемого значения. Определение каждой меры см. в разделе [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Список мер, возвращаемых для каждого прогнозируемого типа, см. в разделе [Меры в отчете перекрестной проверки](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Значение|Значение указанной проверочной меры.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для возвращения показателей точности для всего набора данных используется [SystemGetAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
   
  Если модель интеллектуального анализа данных уже секционирована на свертки, можно обойти обработку и возвратить только результаты перекрестной проверки с помощью [SystemGetAccuracyResults (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
@@ -172,7 +172,7 @@ NULL
   
  Образец результатов.  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Тест|Measure|Значение|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Тест|Мера|Значение|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Target Mail DT|Покупатель велосипеда|1|1|500|Классификация|Истинный положительный результат|144|  
 |Target Mail DT|Покупатель велосипеда|1|1|500|Классификация|Ложный положительный результат|105|  
@@ -192,7 +192,7 @@ NULL
 ## <a name="requirements"></a>Требования  
  Перекрестная проверка доступна только в версиях [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] , начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [Хранимая процедура SystemGetClusterCrossValidationResults &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   

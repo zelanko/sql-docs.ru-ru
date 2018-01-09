@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 75caf898ac2e79e57e8c85f8b9e5a33b44460cf6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d321050e1568a505e6b3550d3af07fc176ddb566
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-an-olap-mining-structure"></a>Создание структуры интеллектуального анализа данных OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Имеет множество преимуществ для создания модели интеллектуального анализа данных, на основе куба OLAP или другого многомерного хранилища данных. Решение OLAP содержит огромное количество данных, которые уже хорошо организованы, очищены и правильно отформатированы. Однако сложность данных такова, что пользователи вряд ли смогут найти значительные шаблоны путем случайного перебора. Интеллектуальный анализ данных обеспечивает возможность выявления новых связей и принятия соответствующих решений.  
@@ -166,7 +164,7 @@ ms.lasthandoff: 12/08/2017
 > [!WARNING]  
 >  Создание измерений интеллектуального анализа данных поддерживается только следующими типами моделей: модели на основе алгоритма кластеризации (Майкрософт), алгоритм деревьев принятия решений (Майкрософт) или алгоритм взаимосвязей (Майкрософт).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Столбцы структуры интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md)   

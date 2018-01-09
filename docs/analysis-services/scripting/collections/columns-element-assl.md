@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Columns Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 499ee6fdd2d8fbaf9ec5fd3729862ae358487319
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ede10e4bdb4053050dbd299c49a40359450737c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="columns-element-assl"></a>Элемент Columns (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит коллекцию столбцов, связанных с родительским элементом.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |[MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md)|[MiningModelColumn](../../../analysis-services/scripting/data-type/miningmodelcolumn-data-type-assl.md)|  
 |[MiningStructure](../../../analysis-services/scripting/objects/miningstructure-element-assl.md), [TableMiningStructureColumn](../../../analysis-services/scripting/data-type/tableminingstructurecolumn-data-type-assl.md)|[MiningStructureColumn](../../../analysis-services/scripting/data-type/miningstructurecolumn-data-type-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для элементов **DrillThroughAction** коллекция **Columns** обозначает столбцы, которые содержат данные, возвращаемые при выполнении этого действия.  
   
  Для элементов **TableMiningStructureColumn** коллекция **Columns** допускает применение только одного уровня рекурсии. Иными словами, любой элемент **TableMiningStructureColumn** , включенный в эту коллекцию, не может содержать какие-либо элементы **TableMiningStructureColumn** в его коллекции **Columns** .  

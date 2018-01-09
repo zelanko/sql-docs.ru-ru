@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ffd9987c39cdffda3052ed075cb3abb137e4d1b2
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eab8188020685603ba45054b42957f6cc725b638
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Мастер интеллектуального анализа данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускается каждый раз при добавлении новой структуры интеллектуального анализа данных для проекта интеллектуального анализа данных. Мастер помогает выбрать источник данных и создать представление источника данных, которое определяет данные, используемые для анализа, а также создать начальную модель.  
@@ -124,7 +122,7 @@ ms.lasthandoff: 12/08/2017
   
  [Детализация моделей интеллектуального анализа данных](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)   
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)  
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69507d44a55e1879d31e97f75a9f755078c5f36a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Занятие 4-1-использование измененной версии проекта Tutorial служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Оставшиеся занятия этого учебника основаны на улучшенной версии [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] учебного проекта, созданного на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  

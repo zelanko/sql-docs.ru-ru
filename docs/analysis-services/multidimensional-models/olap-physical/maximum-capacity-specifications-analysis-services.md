@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f0ababa5bb354b91df756bd5998967fb9b6ddf3a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e60e818b40d2aa7c266903a23d0fec908039b44
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>Спецификации максимальной вместимости (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В следующих таблицах приведены максимальные размеры и количества различных объектов, определенных в [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] компонентов в разных режимах развертывания сервера.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_OLAP"></a>Многомерный и интеллектуальный анализ данных (DeploymentMode = 0)  
  Режим хранилища MOLAP, в котором хранятся как данные, так и метаданные, устанавливает дополнительные физические ограничения на размеры файлов. Максимальный размер файла хранилища строк по умолчанию равен 4 ГБ. Если для хранения строк требуются файлы большего размера, то можно выбрать другую архитектуру хранения строк. Дополнительные сведения см. в разделе [Настройка хранилища строк для измерений и секций](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-|Объект|Максимальный размер или количество|  
+|Object|Максимальный размер или количество|  
 |------------|----------------------------|  
 |Баз данных в экземпляре|2^31-1 = 2,147,483,647|  
 |Измерений в базе данных|2^31-1 = 2,147,483,647|  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
 ##  <a name="bkmk_sharepoint"></a>SharePoint (DeploymentMode = 1)  
   
-|Объект|Максимальный размер или количество|  
+|Object|Максимальный размер или количество|  
 |------------|----------------------------|  
 |Баз данных в экземпляре|2^31-1 = 2,147,483,647|  
 |Таблицы в базе данных|2^31-1 = 2,147,483,647|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_vertipaq"></a>Табличный (DeploymentMode = 2)  
 Ниже приведены теоретического ограничения. Производительность снизится в более низкие показатели.   
 
-|Объект|Максимальный размер или количество|  
+|Object|Максимальный размер или количество|  
 |------------|----------------------------|  
 |Баз данных в экземпляре|16,000|  
 |Общее количество таблиц и столбцов в базе данных|16,000|  
@@ -105,7 +103,7 @@ ms.lasthandoff: 12/08/2017
 |Размер записи в исходном запросе|64K|  
 |Длина имен объектов|512 символов|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Определение режима работы сервера экземпляра служб Analysis Services](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Общие свойства](../../../analysis-services/server-properties/general-properties.md)  
   

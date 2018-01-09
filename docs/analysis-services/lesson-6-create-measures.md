@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28d9d9b4cda3c97a555cce45db525cfb4a6c26f5
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f3eaadefd65c49f86e4081ba0547f5ca05ae0514
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-create-measures"></a>Занятие 6. Создание мер
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
 Предполагаемое время выполнения данного занятия: **30 минут**  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Этот раздел является частью учебника по табличному моделированию, который необходимо изучать по порядку. Перед выполнением задач этого занятия, необходимо завершить предыдущее занятие: [занятия 5: Создание вычисляемых столбцов](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Создание мер  
@@ -92,16 +92,16 @@ ms.lasthandoff: 12/08/2017
   
 1.  Создайте и назовите следующие меры, используя функцию автосуммирования.  
   
-    |Имя меры|Столбец|Автосуммирование (∑)|Формула|  
+    |Имя меры|столбцом|Автосуммирование (∑)|Формула|  
     |----------------|----------|-----------------|-----------|  
     |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Маржа|Sum|=SUM([маржа])|  
-    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
-    |InternetTotalFreight|фрахт|Sum|=SUM([фрахт])|  
+    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Маржа|SUM|=SUM([маржа])|  
+    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|SUM|=SUM([фрахт])|  
   
 2.  Щелкнув по пустой ячейке в сетке мер, а также с помощью строки формул создайте и назовите следующие меры в порядке.  
   

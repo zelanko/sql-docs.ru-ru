@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6a8e6a7d40efc5c2b6a6dc6a5e7721c2cf999c17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 634586ccc56d55a8678bc63a7ed4eb381f619e02
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Построение проектов служб Analysis Services (среда SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], построении [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] проекта похоже на создание программного проекта в Visual Studio. При создании проекта, в выходном каталоге создается набор XML-файлов. Эти XML-файлы используют язык сценария служб анализа данных (ASSL), который представляет собой XML-диалект клиентских приложений, включающий использование [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для взаимодействия с экземпляром служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в целях создания или изменения объектов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Эти XML-файлы используются для развертывания определений объекта служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в проекте служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на конкретном экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
@@ -66,7 +63,7 @@ ms.lasthandoff: 12/08/2017
   
  Связанные сборки (за исключением стандартной системной сборки и сборки служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) также копируются в выходной каталог. При наличии связей с другими проектами решения, эти проекты сначала собираются, используя соответствующую конфигурацию проекта и зависимости построения, заданные связями проекта, а затем копируются в выходную папку проекта.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по языку ASSL (ASSL для XMLA)](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Развертывание проектов служб Analysis Services (среда SSDT)](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

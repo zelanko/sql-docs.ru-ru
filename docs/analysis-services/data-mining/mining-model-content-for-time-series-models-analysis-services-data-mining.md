@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: db5a4f94951de076e1076bb8b70ff796fecc9edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31909fbe1a60bca85249d7c28b11574a512f442d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Содержимое модели интеллектуального анализа данных для моделей временных рядов (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Все модели интеллектуального анализа данных использовать ту же структуру для хранения содержимого. Эта структура определяется в соответствии с набором строк схемы для содержимого интеллектуального анализа данных. Однако в пределах такой стандартной структуры узлы, содержащие данные, располагаются различным образом, образуя деревья различного типа. В этом разделе описываются правила упорядочения узлов и значение каждого узла в моделях интеллектуального анализа данных, основанных на алгоритме временных рядов [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
@@ -335,7 +333,7 @@ WHERE NODE_TYPE = 27
 |Forecasting|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
 |Forecasting|R250 Europe:Quantity|TA00000003|27|ARIMA (1,0,7)|  
 |Forecasting|R250 North America:Quantity|TA00000004|27|ARIMA (1,0,2)|  
-|Forecasting|R250 Pacific:Quantity|TA00000005|27|ARIMA (2,0,2) X (1,1,2)(12)|  
+|Прогноз|R250 Pacific:Quantity|TA00000005|27|ARIMA (2,0,2) X (1,1,2)(12)|  
 |Forecasting|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Forecasting|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Forecasting|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
@@ -415,9 +413,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION** . Отображает термины формулы во вложенной таблице, которую можно запросить, чтобы получить отдельные термины. Таблица распределения узлов имеет ту же иерархическую структуру, что и XML-правила. В этом случае корневой узел ряда ARIMA (NODE_TYPE = 27) содержит значение отсекаемого отрезка и периодичности для полной формулы, в которую может входить несколько периодичностей. Дочерние же узлы содержат только данные, относящиеся к определенной периодической структуре или к ее дочерним узлам.  
   
-|Тип узла|Attribute|Тип значения|  
+|Тип узла|attribute|Тип значения|  
 |---------------|---------------|----------------|  
-|27 (ARIMA корневой)|Intercept<br /><br /> периодичности|11|  
+|27 (ARIMA корневой)|Intercept<br /><br /> Periodicity|11|  
 |28 (периодическая структура ARIMA)|периодичности<br /><br /> Порядок авторегрессии<br /><br /> разностный порядок<br /><br /> Moving average order|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (ARIMA с авторегрессией)|Coefficient<br /><br /> (дополнение коэффициента)|7|  
 |30 (ARIMA скользящее среднее)|Значение в момент t<br /><br /> Значение в момент t-1<br /><br /> …<br /><br /> Значение в момент t-n|7|  
@@ -441,10 +439,10 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   XML-представление. Используйте XML-запрос.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Получение данных из дерева ARTXP может быть затруднено, поскольку данные для каждого разбиения находятся в разных местах дерева. Таким образом, для модели ARTXP необходимо собрать все компоненты, а затем выполнить определенные операции по обработке, чтобы восстановить полную формулу. Получение формулы из модели ARIMA выполняется проще, поскольку формула доступна по всему дереву. Сведения о создании запроса для получения этих данных см. в разделе [Примеры запросов моделей временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Алгоритм временных рядов (Майкрософт)](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Примеры запросов для модели временных рядов](../../analysis-services/data-mining/time-series-model-query-examples.md)   

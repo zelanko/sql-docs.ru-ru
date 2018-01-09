@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ccb2f4ebb1db848d62f470ed2e37230a95916cb9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b63cc40a5620fc0ae23f2b9d17a52acdea2ae3ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Предоставление разрешений доступа (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Как администратор можно создать роль, предназначенную для осуществления операций обработки службы Analysis Services, которая позволит вам делегировать это отдельное задание другим пользователям или приложениям, используемый для автоматической обработки по расписанию. Разрешения на обработку могут быть предоставлены на уровнях базы данных, куба, измерения и структуры интеллектуального анализа данных. Пока вы не работаете с очень большим кубом или табличной базой данных, мы рекомендуем вам предоставить права на обработку на уровне базы данных, включающие все объекты, включая те, которые зависят друг от друга.  
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  Щелкните кнопку **ОК** для завершения определения роли.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Обработка базы данных, таблицы или секции (службы Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Обработка многомерной модели (службы Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Предоставление разрешений базы данных (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   

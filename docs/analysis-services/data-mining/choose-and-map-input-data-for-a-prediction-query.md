@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d938cefe6996b28e13dc13e5562acfc42ee82e5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6694a4e59637f96240afd1f2b04575ede20c2dfe
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Выбор и сопоставление входных данных для прогнозирующего запроса
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании прогнозов из модели интеллектуального анализа данных, обычно это делается путем передачи в модель новых данных. (Исключение составляют модели временных рядов, в которых прогнозы могут создаваться только на основании исторических данных.) Для передачи в модель новых данных убедитесь, что данные доступны в представлении источника данных. Если заранее известно, какие данные будут использоваться для прогноза, их можно включить в представление источника данных, который использовался для создания модели. В противном случае может понадобиться создать новое представление источника данных. Дополнительные сведения см. в разделе [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -125,7 +123,7 @@ ms.lasthandoff: 12/08/2017
   
      Если связь уже имеется, то столбцы в модели интеллектуального анализа данных автоматически сопоставляются со столбцами, имеющими то же имя во входной таблице. Связь между вложенной таблицей и таблицей вариантов можно изменить, нажав кнопку **Изменить соединение**, после чего откроется диалоговое окно **Создание связи** .  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Прогнозирующие запросы (интеллектуальный анализ данных)](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

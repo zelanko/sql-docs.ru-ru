@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 375e6c59c38d7bcf4eb270c6b007d2fca16d119c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 181b95753ac004aef4da9134ce46347c4cffa304
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Алгоритм кластеризации последовательностей (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм кластеризации последовательностей — это уникальный алгоритм, который объединяет анализа последовательности и кластеризации. Данный алгоритм можно использовать для просмотра данных, содержащих события, которые могут быть связаны в *последовательность*. Алгоритм находит самые распространенные последовательности и выполняет кластеризацию для поиска идентичных последовательностей. Ниже описаны типы последовательностей, которые можно использовать в качестве данных для машинного обучения, чтобы получить сведения о стандартных проблемах или бизнес-сценариях:  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
   
  Дополнительные сведения о создании запросов к модели интеллектуального анализа данных см. в разделе [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md). Примеры использования запросов с моделью кластеризации последовательностей см. в разделе [Примеры запросов к модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 -   Не поддерживается использование языка разметки прогнозирующих моделей (PMML) для создания моделей интеллектуального анализа данных.  
   
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Поддерживается использование моделей интеллектуального анализа OLAP и создание измерений интеллектуального анализа данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Технический справочник по алгоритму кластеризации последовательностей (Microsoft)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Примеры запросов модели кластеризации последовательностей](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   

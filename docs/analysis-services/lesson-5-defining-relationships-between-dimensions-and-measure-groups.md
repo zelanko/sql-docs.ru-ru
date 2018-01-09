@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 55d2ea123600615d64d737cbf9de5a895f1000ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c3000dfc2ecd94fb70061eead07ef92cfd643f73
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Занятие 5. Определение связей между измерениями и группами мер
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]На предыдущем занятии этого учебника вы узнали, добавляемых к кубу измерения базы данных можно использовать как основу для одного или нескольких измерений куба. На этом занятии предстоит изучить, как следует определять различные типы связей между измерениями куба и группами мер, а также изучить определение свойств этих связей.  

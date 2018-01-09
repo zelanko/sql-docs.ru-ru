@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Assembly Data Type
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d3a84ca0eccfb8a700bd69f5d0bdb89f59921017
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34af3fd4c829b78c52370ee7aa73d4ed16c17fb9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assembly-data-type-assl"></a>Тип данных Assembly (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет абстрактный примитивный тип данных, представляющий [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сборку или библиотеку динамической компоновки COM (DLL), связанную с [сервера](../../../analysis-services/scripting/objects/server-element-assl.md) или [базы данных](../../../analysis-services/scripting/objects/database-element-assl.md) элемента.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Базовые типы данных|None|  
 |Производные типы данных|[ClrAssembly](../../../analysis-services/scripting/data-type/clrassembly-data-type-assl.md), [ComAssembly](../../../analysis-services/scripting/data-type/comassembly-data-type-assl.md)|  
@@ -64,9 +62,9 @@ ms.lasthandoff: 12/08/2017
 |------------------|-------------|  
 |Родительские элементы|None|  
 |Дочерние элементы|[Заметки](../../../analysis-services/scripting/collections/annotations-element-assl.md), [CreatedTimestamp](../../../analysis-services/scripting/properties/createdtimestamp-element-assl.md), [описание](../../../analysis-services/scripting/properties/description-element-assl.md), [идентификатор](../../../analysis-services/scripting/properties/id-element-assl.md), [ImpersonationInfo](../../../analysis-services/scripting/properties/impersonationinfo-element-assl.md), [ LastSchemaUpdate](../../../analysis-services/scripting/properties/lastschemaupdate-element-assl.md), [имя](../../../analysis-services/scripting/properties/name-element-assl.md)|  
-|Производные элементы|Нет|  
+|Производные элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Сборки** тип данных служит в качестве базовый тип данных для **ComAssembly** элемента, представляющего библиотеки COM, связанные с экземпляра или базы данных, и **ClrAssembly** элемент, который представляет [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сборок, связанных с экземпляром или базы данных. Дополнительные сведения о сборках см. в разделе [Управление сборками многомерной модели](../../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md).  
   
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Assembly>.  

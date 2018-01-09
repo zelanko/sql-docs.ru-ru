@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a67be24e9b9b9abeb2fb3c09d11e60cc4c18597c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0c8e51a04bc47537adb9085e11511b73b289e2c5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="migrating-from-ado-md-to-adomdnet"></a>Миграция от ADO MD к ADOMD.NET
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Библиотека ADOMD.NET похожа на библиотеку ActiveX данных объектов многомерных (ADO MD) расширение библиотеки объектов данных ActiveX (ADO), используемый для доступа к многомерным данным в приложениях на основе модели COM клиента. ADO MD обеспечивает простой доступ к многомерным данным из таких неуправляемых языков, как C++ и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic. ADOMD.NET обеспечивает простой доступ к аналитическим данным (и многомерным, и используемым в интеллектуальном анализе) из таких управляемых языков, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] C# и [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET. Кроме того, ADOMD.NET предоставляет улучшенную модель объектов метаданных.  

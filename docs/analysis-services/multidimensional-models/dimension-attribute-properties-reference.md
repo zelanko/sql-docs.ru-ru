@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f9acd136bdeb7c286ec4d110b3f5b4b70018685f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9b6cd10e1b2a9a76780b895ecb2325a14bd6386f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimension-attribute-properties-reference"></a>Справочник по свойствам атрибута измерения
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], имеется много свойств, определяющих измерений и атрибутов функции. В следующей таблице представлены и описаны эти свойства атрибутов.  
@@ -42,7 +39,7 @@ ms.lasthandoff: 12/08/2017
 |**CustomRollupColumn**|Указывает столбец, определяющий формулу пользовательской свертки|  
 |**CustomRollupPropertiesColumn**|Указывает столбец, содержащий свойства формулы пользовательской свертки|  
 |**DefaultMember**|Содержит многомерное выражение, определяющее меру для атрибута по умолчанию.|  
-|**Description**|Содержит описание атрибута.|  
+|**Описание**|Содержит описание атрибута.|  
 |**DiscretizationBucketCount**|Содержит количество сегментов дискретизации.|  
 |**DiscretizationMethod**|Определяет метод дискретизации.|  
 |**EstimatedCount**|Указывает предполагаемое количество элементов в атрибуте. До запуска мастера статистических схем значение по умолчанию равно 0. Количество записей может подсчитываться мастером или предполагаемое значение можно ввести вручную. Если число членов известно, введите его вручную, чтобы сократить время на запрос к базе данных. При работе с тестовым подмножеством рабочих данных подсчет рабочих данных можно использовать для оптимизации статистической схемы для рабочих, а не для тестовых данных.|  
@@ -71,7 +68,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Элемент по умолчанию атрибута используется для оценки выражений, когда член иерархии явно не включен в запрос. Элемент по умолчанию для атрибута указывается свойством **DefaultMember** атрибута. Когда иерархия из измерения включается в запрос, все элементы по умолчанию из атрибутов, соответствующих уровням иерархии, пропускаются. Если в запрос не включена иерархия измерения, то элементы по умолчанию используются для всех атрибутов в измерении. Дополнительные сведения об элементах по умолчанию см. в разделе [Определение элемента по умолчанию](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

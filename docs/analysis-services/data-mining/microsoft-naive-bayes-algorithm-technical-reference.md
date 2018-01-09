@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f467621594b3ed81793d0925b600650dfa1e3599
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 93884e29674fa1a96402d23e397cddb3a1fe0bef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Технический справочник по упрощенному алгоритму Байеса (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Упрощенный алгоритм Байеса — это алгоритм классификации, предоставляемый [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для использования в прогнозирующем моделировании. Этот алгоритм вычисляет условную вероятность между входными и прогнозируемыми столбцами и предполагает, что столбцы являются независимыми. Из-за этого предположения о независимости алгоритм и называется упрощенным алгоритмом Байеса.  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  Упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживает определенные входные столбцы данных и прогнозируемые столбцы, которые перечислены ниже в таблице. Дополнительные сведения о значении типов содержимого в применении к модели интеллектуального анализа данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Столбец|Типы содержимого|  
+|столбцом|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Cyclical, Discrete, Discretized, Key, Table и Ordered|  
 |Прогнозируемый атрибут|Cyclical, Discrete, Discretized, Table и Ordered|  
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Упрощенный алгоритм Байеса (Майкрософт)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Примеры запросов к модели упрощенного алгоритма Байеса](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей упрощенного алгоритма Байеса (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  

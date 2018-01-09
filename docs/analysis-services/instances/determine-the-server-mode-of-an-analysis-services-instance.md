@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e556fb1-ca37-4f06-8f8f-f187cb0fdb37
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7242643ec7ac3869f245b069218205ad425692a8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 559a3a65f9a24077bbcac1e0c45506179d2e3da8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Определение режима работы сервера экземпляра служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Службы Analysis Services можно установить в одном из трех серверных режимов: многомерный и интеллектуальный анализ данных (по умолчанию), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и табличный. Режим сервера экземпляра служб Analysis Services определяется во время установки, когда пользователь выбирает параметры для установки сервера.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  Ниже приведены допустимые значения для этого свойства.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0|Это значение по умолчанию. Оно задает многомерный режим, используемый для обслуживания многомерных баз данных с хранилищем MOLAP, HOLAP и ROLAP, а также с моделями интеллектуального анализа данных.|  
 |1|Указывает экземпляры служб Analysis Services, установленные в составе развертывания [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Не следует изменять свойство режима развертывания экземпляра служб Analysis Services, который входит в состав установки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] больше не будут выполняться на сервере.|  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
  Это монопольные режимы. На сервере, где настроен табличный режим, не могут работать базы данных служб Analysis Services, содержащие кубы и измерения. Если позволяет оборудование компьютера, можно установить на одном компьютере несколько экземпляров служб Analysis Services и настроить для каждого экземпляра свой режим развертывания. Следует помнить, что службы Analysis Services являются ресурсоемким приложением. Развертывание нескольких экземпляров на одном компьютере рекомендуется только для мощных серверов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка служб Analysis Services](../../analysis-services/instances/install-windows/install-analysis-services.md)   
  [Установка служб Analysis Services в многомерном режиме и режиме интеллектуального анализа данных](http://msdn.microsoft.com/library/8a1f33e8-2bd6-4fb8-bd46-c86f2a067f60)   
  [Установка Power Pivot для SharePoint 2010](http://msdn.microsoft.com/en-us/8d47dde7-c941-4280-a934-e2fe3f9a938f)   

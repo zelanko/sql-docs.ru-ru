@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 958927bcd5f55fadfd5753702d7be012da3e882c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f340e182d8867a1560d1bf31945aced7ecfa0f22
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Занятие 9-2-Определение и Просмотр переводов
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Перевод является представлением имена [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] объектов на определенном языке. Объекты включают в себя группы мер, меры, измерения, атрибуты, иерархии, ключевые показатели эффективности, действия и вычисляемые элементы. Переводы обеспечивают серверную поддержку клиентских приложений, которые поддерживают несколько языков. Такой клиент передает идентификатор локали экземпляру служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], который на его основе подбирает набор переводов, которые будут использоваться при выдаче метаданных для объектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Если объект служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не содержит перевода для указанного языка или не содержит перевода для конкретного объекта, метаданные будут возвращены клиенту на языке по умолчанию. Например, если пользователь из Франции обращается к кубу с рабочей станции, работающей с французскими настройками локали, ему будут доступны заголовки и значения свойств элементов на французском языке при условии наличия перевода для французского языка. Однако если к тому же кубу обращается пользователь из Германии с рабочей станции, работающий с немецкими настройками локали, то ему будут доступны заголовки и значения свойств элементов на немецком языке. Дополнительные сведения см. в разделах [Переводы измерений](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Переводы куба](../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-translations.md)и [Поддержка параметров перевода в службах Analysis Services](../analysis-services/translation-support-in-analysis-services.md).  
@@ -47,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
     Отобразится новый столбец, где можно задать перевод для французского языка.  
   
-5.  В строке объекта **Заголовок** измерения **Дата** в столбце перевода **испанский (Испания)** введите **Fecha** , а в столбце перевода **французский (Франция)** — **Temps** .  
+5.  В строке объекта **Заголовок** измерения **Дата** в столбце перевода **испанский (Испания)** введите **Fecha**, а в столбце перевода **французский (Франция)** — **Temps**.  
   
 6.  В строке объекта **Заголовок** атрибута **Название месяца** введите в столбце перевода **испанский (Испания)** значение **Mes del Año** , а в столбце перевода **французский (Франция)** — значение **Mois d'Année** .  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 12/08/2017
   
 2.  После успешного окончания развертывания перейдите на вкладку **Браузер** и нажмите кнопку **Повторное соединение**.  
   
-3.  Удалите все иерархии и меры на панели **Данные[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и выберите "Учебник по** " в списке **Перспективы**.  
+3.  Удалите все иерархии и меры на панели **Данные[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и выберите "Учебник по **" в списке **Перспективы**.  
   
 4.  На панели метаданных разверните узел **Меры**, а затем **Продажи через Интернет**.  
   

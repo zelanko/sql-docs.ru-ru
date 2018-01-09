@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4d13b5801cbf011723fa0ec9272819a83364f3f8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 531380e732ea9e2f390328fe22310ba844a8bc57
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="neural-network-model-query-examples"></a>Примеры запросов к модели нейронной сети
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании запроса к модели интеллектуального анализа данных, можно создать запрос содержимого, который предоставляет сведения о закономерностях, обнаруженных при анализе, и прогнозирующие запросы, использующие закономерности, содержащиеся в модели для прогнозирования новых данных. Например, запрос содержимого для модели нейронной сети может вернуть метаданные модели — в частности, число скрытых слоев. Или же прогнозирующий запрос может дать сведения для классификации на основе входа и, по желанию, предоставить значения вероятности для каждой классификации.  
@@ -163,7 +161,7 @@ AND [PARENT_UNIQUE_NAME] = '40000000200000000' FROM [Call Center Default NN].CON
   
  Пример результатов:  
   
-|NODE_UNIQUE_NAME|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
+|NODE_UNIQUE_NAME|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.VALUETYPE|  
 |------------------------|-----------------------|------------------------|-----------------|  
 |70000000200000000|6000000000000000a|-0.178616518|7|  
 |70000000200000000|6000000000000000b|-0.267561918|7|  
@@ -202,7 +200,7 @@ NATURAL PREDICTION JOIN
 13 AS [Level 2 Operators]) AS t  
 ```  
   
- Пример результатов:  
+ Примеры результатов:  
   
 |Спрогнозированное количество заказов|Вероятность|  
 |----------------------|-----------------|  
@@ -230,7 +228,7 @@ NATURAL PREDICTION JOIN
  Список общих функций для всех алгоритмов [!INCLUDE[msCoName](../../includes/msconame-md.md)] см. в статье [Справочник по алгоритмам (службы Analysis Services — интеллектуальный анализ данных)](https://technet.microsoft.com/library/bb895228\(v=sql.105\).aspx). Синтаксис отдельных функций см. в статье [Справочник по функциям расширений интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-function-reference.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Алгоритм нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Технический справочник по алгоритму нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Содержимое модели интеллектуального анализа данных для модели нейронной сети &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Занятие 5: Создание нейронной сети и модели логистической регрессии &#40; учебник по интеллектуальному анализу данных — средний &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  

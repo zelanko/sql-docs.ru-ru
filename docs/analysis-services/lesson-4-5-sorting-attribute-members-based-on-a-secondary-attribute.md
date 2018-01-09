@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7e5210ee745f9ce57c7c621832804d9a90de6b5a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
-ms.translationtype: HT
+ms.openlocfilehash: 33d0192fa992a8f9e6ebb8bfeb7e9155e9b2fc32
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-4-5---sorting-attribute-members-based-on-a-secondary-attribute"></a>Занятие 4-5 - Сортировка элементов атрибута по вторичному атрибуту
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]На занятии 3 вы узнали, как сортировать элементы атрибутов по имени или значению ключа. Кроме того, было показано, как изменять элементы атрибута и порядок сортировки с помощью составных ключей элементов. Дополнительные сведения см. в разделе [Изменение измерения Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md). Однако, если ни имя, ни значение ключа первичного атрибута не обеспечивают требуемого порядка сортировки, можно использовать вторичный атрибут. Посредством определения связи между атрибутами можно использовать второй атрибут для сортировки элементов первого атрибута.  

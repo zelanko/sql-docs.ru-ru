@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c7d6511a36b9a59e20908feffdb0f61a907377ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: af9277de8848136f2123b7acf476dbee80a92ce1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Создание прогнозирующего запроса с помощью построителя прогнозирующих запросов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно создать прогнозирующий запрос можно при построении решения интеллектуального анализа данных в среде BI Development Studio или щелкнув правой кнопкой мыши существующую модель интеллектуального анализа данных в SQL Server Management Studio, и затем выбрав параметр **построить прогнозирующий запрос**.  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/08/2017
   
 8.  Запустите запрос, нажав первую кнопку на панели инструментов вкладки **Прогноз моделей интеллектуального анализа данных** , а затем выбрав пункт **Результат**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание одноэлементного запроса в конструкторе интеллектуального анализа данных](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)  
   

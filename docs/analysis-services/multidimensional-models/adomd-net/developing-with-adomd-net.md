@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,18 +19,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8040113b399c1866b7324961f11c90ff44b7962f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 09678097bbcf09e23b887781ab7d7cdcf646b71c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="developing-with-adomdnet"></a>Разработка с использованием ADOMD.NET
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET — [!INCLUDE[msCoName](../../../includes/msconame-md.md)] поставщика данных .NET Framework, предназначенных для связи с [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. В компоненте ADOMD.NET используется протокол XML для аналитики в целях обеспечения связи с источниками аналитических данных при помощи соединений по протоколу TCP/IP или HTTP, что позволяет передавать и принимать SOAP-запросы и ответы, соответствующие спецификации XML для аналитики. Команды могут передаваться на языке MDX, языке DMX, языке ASSL или даже с использованием ограниченного синтаксиса SQL и могут не возвращать результат. При помощи модели объектов ADOMD.NET можно выполнять запросы к аналитическим данным, ключевым показателям эффективности и моделям интеллектуального анализа данных, а также управлять ими. Компонент ADOMD.NET позволяет также просматривать и работать с метаданными путем извлечения совместимых с OLE DB наборов строк схемы либо при помощи модели объектов ADOMD.NET.  
   
  Поставщик данных ADOMD.NET представлен пространством имен **Microsoft.AnalysisServices.AdomdClient** .  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Раздел|Description|  
 |-----------|-----------------|  

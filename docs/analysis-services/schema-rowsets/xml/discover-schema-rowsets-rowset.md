@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DISCOVER_SCHEMA_ROWSETS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4e5a3923ff0137e81064224fb6a2dfd9ca98f435
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 73fe1580fb43a090a7df04a43432e5b213e86369
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverschemarowsets-rowset"></a>Набор строк DISCOVER_SCHEMA_ROWSETS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает имена, ограничения, описание и другие сведения для всех значений перечисления и дополнительных поставщиком значений перечисления поддерживаемых [!INCLUDE[msCoName](../../../includes/msconame-md.md)] XML для аналитики (XMLA) поставщика.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/08/2017
 |**SchemaName**|**DBTYPE_WSTR**||Имя схемы или запроса. Этот запрос возвращает значения в *RequestTypes* перечисления.|  
 |**SchemaGuid**|**DBTYPE_GUID**||Идентификатор GUID схемы.|  
 |**Ограничения**|**DBTYPE_HCHAPTER**||Массив ограничений, которые поддерживаются поставщиком.|  
-|**Description**|**DBTYPE_WSTR**||Локализованное описание схемы.|  
+|**Описание**|**DBTYPE_WSTR**||Локализованное описание схемы.|  
 |**RestrictionsMask**|**DBTYPE_UI8**|||  
   
  Этот набор строк схемы не отсортирован.  

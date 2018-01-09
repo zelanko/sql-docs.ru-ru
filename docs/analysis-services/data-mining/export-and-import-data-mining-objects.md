@@ -5,12 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d62dc8db6debd9b930c81abb4130a45543010e41
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c801c0b8a4c3b688dc0224dfe31764ee390e3a6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="export-and-import-data-mining-objects"></a>Экспорт и импорт объектов интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В дополнение к функциям, реализованным в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] за резервное копирование, восстановление и перенос решений интеллектуального анализа данных SQL Server обеспечивает возможность быстрой передачи структур интеллектуального анализа данных и моделей между различными серверами с помощью интеллектуального анализа данных Модули (расширения интеллектуального анализа данных).  
@@ -57,10 +55,10 @@ ms.lasthandoff: 12/08/2017
   
  Структуру или модель интеллектуального анализа данных можно также импортировать с помощью команды **Restore** . Модели или структуры будут восстановлены в базе данных с тем же именем, что и в базе данных, из которой они были экспортированы. Дополнительные сведения см. в статье [Restore Options](../../analysis-services/multidimensional-models/restore-options.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Невозможно импортировать модель или структуру на сервер, если на этом сервере уже существует модель или структура с таким же именем. Кроме того, невозможно экспортировать объект интеллектуального анализа данных и затем изменить имя этого объекта в файле экспорта. Следовательно, если предполагается возможность возникновения конфликта имен, следует либо удалить объект интеллектуального анализа данных на целевом сервере, либо переименовать этот объект интеллектуального анализа данных до выполнения операции экспорта определения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление решениями и объектами интеллектуального анализа данных](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   
   

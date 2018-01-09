@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: CellData Element
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee3c480458f793903bedd3ac3833e26a8546fcb8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 10fcbcd71afa8899eb55fe4c83cd2cae12041ea2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="celldata-element-xmla"></a>Элемент CellData (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит коллекцию элементов Cell, представляющих данные ячеек, содержащихся в [корневой](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md) элемент, который использует [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |Родительские элементы|[корень](../../../analysis-services/xmla/xml-elements-properties/root-element-xmla.md)|  
 |Дочерние элементы|[Ячейки](../../../analysis-services/xmla/xml-elements-properties/cell-element-mddataset-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В родительском корневом элементе, за элементом **Axes** следует элемент **CellData** , коллекция элементов **Cell** , которая содержит значения свойств ячейки для каждой ячейки, возвращенной в многомерном наборе данных.  
   
 ## <a name="see-also"></a>См. также:  

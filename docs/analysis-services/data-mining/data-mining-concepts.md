@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,11 +31,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 905a45d6852a7e5e1ed469e65f6082f0282de985
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 03ac65aa1ad896022d12735e4e8f64c132b03734
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-concepts"></a>Основные понятия интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Интеллектуальный анализ данных — это процесс обнаружения пригодных к использованию сведений в крупных наборов данных. В интеллектуальном анализе данных применяется математический анализ для выявления закономерностей и тенденций, существующих в данных. Обычно такие закономерности нельзя обнаружить при традиционном просмотре данных, поскольку связи слишком сложны, или из-за чрезмерного объема данных.  
@@ -184,7 +182,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Динамическое обновление моделей по мере поступления в организацию новых данных и постоянные изменения, направленные на повышение эффективности решения, должны быть частью стратегии развертывания. Дополнительные сведения см. в разделе [Управление решениями и объектами интеллектуального анализа данных](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Решения для интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-solutions.md)   
  [Средства интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-tools.md)  
   

@@ -5,12 +5,10 @@ ms.date: 03/20/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 36c55916f0f1b403ddf248c975151b638a7ccb86
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9fe63b761a9834e53832c1525d8d77ea00a9a508
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект *модели интеллектуального анализа данных* создается путем применения алгоритма к данным, но она будет больше, чем алгоритм или контейнер метаданных: это набор данных, статистики и шаблонов, которые могут применяться к новым данным для формирования прогнозов и вывода о связях.  
@@ -131,7 +129,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="related-content"></a>См. также  
   
-|Разделы|Ссылки|  
+|Подраздел|Ссылки|  
 |------------|-----------|  
 |Создание структур интеллектуального анализа данных, поддерживающих несколько моделей интеллектуального анализа данных. Использование столбцов в моделях.|[Столбцы структуры интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-columns.md)<br /><br /> [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md)<br /><br /> [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md)|  
 |О различных алгоритмах и о влиянии выбора алгоритма на содержимое модели.|[Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)<br /><br /> [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)|  
@@ -140,19 +138,19 @@ ms.lasthandoff: 12/08/2017
 |Использование пользовательских средств просмотра интеллектуального анализа данных в службах [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |Примеры различных типов запросов, которые могут выполняться к моделям интеллектуального анализа данных.|[Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  По следующим ссылкам можно получить более конкретную информацию о работе с моделями интеллектуального анализа данных.  
   
 |Задача|Ссылка|  
 |----------|----------|  
-|Добавление и удаление моделей интеллектуального анализа данных|[добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [удалить модель интеллектуального анализа данных из структуры интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
-|Работа со столбцами модели интеллектуального анализа данных|[исключить столбец из модели интеллектуального анализа данных](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [Создание псевдонима для столбца модели](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [изменить дискретизацию столбца в модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Указание столбца, который будет использоваться в модели в качестве регрессора](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
+|Добавление и удаление моделей интеллектуального анализа данных|[Добавление модели интеллектуального анализа данных к существующей структуре интеллектуального анализа данных](../../analysis-services/data-mining/add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [удалить модель интеллектуального анализа данных из структуры интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-mining-model-from-a-mining-structure.md)|  
+|Работа со столбцами модели интеллектуального анализа данных|[исключить столбец из модели интеллектуального анализа данных](../../analysis-services/data-mining/exclude-a-column-from-a-mining-model.md)<br /><br /> [Создание псевдонима для столбца модели](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)<br /><br /> [Изменение дискретизации столбца в модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Указание столбца, который будет использоваться в модели в качестве регрессора](../../analysis-services/data-mining/specify-a-column-to-use-as-regressor-in-a-model.md)|  
 |Изменение свойств модели интеллектуального анализа данных|[Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)<br /><br /> [Применение фильтра к модели интеллектуального анализа данных](../../analysis-services/data-mining/apply-a-filter-to-a-mining-model.md)<br /><br /> [Удаление фильтра из модели интеллектуального анализа данных](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)<br /><br /> [Включение детализации для модели интеллектуального анализа данных](../../analysis-services/data-mining/enable-drillthrough-for-a-mining-model.md)<br /><br /> [Просмотр или изменение параметров алгоритма](../../analysis-services/data-mining/view-or-change-algorithm-parameters.md)|  
-|Копирование, перемещение и управление моделями|[создать копию модели интеллектуального анализа данных](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [Копирование представления модели интеллектуального анализа данных](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT (расширения интеллектуального анализа данных)](../../dmx/export-dmx.md)<br /><br /> [IMPORT (расширения интеллектуального анализа данных)](../../dmx/import-dmx.md)|  
-|Заполнение моделей данными и обновление данных в модели|[обработать модель интеллектуального анализа данных](../../analysis-services/data-mining/process-a-mining-model.md)|  
-|Работа с моделями OLAP|[создать измерение интеллектуального анализа данных](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
+|Копирование, перемещение и управление моделями|[Создание копии модели интеллектуального анализа данных](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)<br /><br /> [Копирование представления модели интеллектуального анализа данных](../../analysis-services/data-mining/copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT (расширения интеллектуального анализа данных)](../../dmx/export-dmx.md)<br /><br /> [IMPORT (расширения интеллектуального анализа данных)](../../dmx/import-dmx.md)|  
+|Заполнение моделей данными и обновление данных в модели|[Обработка модели интеллектуального анализа данных](../../analysis-services/data-mining/process-a-mining-model.md)|  
+|Работа с моделями OLAP|[Создание измерения интеллектуального анализа данных](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Объекты баз данных (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Mining Model Prediction [Analysis Services], selecting mining models
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6c36ab1bbdb5f2f11b81ddc43fb79b5f073ec9b9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ea29a1f9406014bf684d4c573ed2640bb7d0cf96
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Применение функций прогнозирования к модели
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Создание прогнозирующего запроса в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеллектуального анализа данных, необходимо сначала выбрать модель интеллектуального анализа данных, на котором будет основан это запрос. Можно выбрать любую модель интеллектуального анализа данных, существующую в текущем проекте.  
@@ -125,13 +123,13 @@ ms.lasthandoff: 12/08/2017
   
      В следующей таблице показаны ожидаемые результаты.  
   
-    |Bike Buyer|$Cluster|Псевдоним|CEILING|  
+    |Покупатель велосипеда|$Cluster|Псевдоним|CEILING|  
     |----------------|--------------|-------------|-------------|  
     |0|Кластер 8|954|953.948638926372|  
   
  Если нужно добавить другие предложения в каком-то месте инструкции (например, предложение WHERE), сделать это с помощью сетки невозможно. Необходимо сначала перейти в представление DMX.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запросы интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

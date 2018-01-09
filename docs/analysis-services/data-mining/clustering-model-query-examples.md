@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2b01f01f0ed67f490f32e9310cbb1c239c3cbe17
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 34300c8642dcc48aff1b470a0b027a0e85cf8076
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clustering-model-query-examples"></a>Примеры запросов к модели кластеризации
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании запроса к модели интеллектуального анализа данных, можно получить метаданные о модели или создание запроса содержимого, который предоставляет сведения о закономерностях, обнаруженных при анализе. Кроме того, можно создавать прогнозирующие запросы, которые на основе закономерностей модели создают прогнозы новых данных. Разные типы запросов предоставляют различные виды информации. Например, запрос к содержимому предоставит дополнительные сведения о найденных кластерах, а прогнозирующий запрос определит, к какому кластеру с наибольшей вероятностью будет относиться новая точка данных.  
@@ -85,7 +83,7 @@ WHERE NODE_TYPE = 1
 |NODE_CAPTION|Кластерная модель|  
 |NODE_SUPPORT|12939|  
 |CHILDREN_CARDINALITY|10|  
-|NODE_DESCRIPTION|все|  
+|NODE_DESCRIPTION|All|  
   
  Значение этих столбцов в модели кластеризации см. в разделе [Содержимое моделей интеллектуального анализа данных для моделей кластеризации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md).  
   

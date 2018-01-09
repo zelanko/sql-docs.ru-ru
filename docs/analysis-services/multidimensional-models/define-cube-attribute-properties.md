@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: cubes [Analysis Services], defining
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f051a3372b965e2652dfd6ea4c57826212509c1d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b87146458e6aee0cac066078f1d0dfb302f186d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-cube-attribute-properties"></a>Определение свойств атрибутов куба
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Свойства атрибутов куба позволяют указать уникальные настройки для атрибутов измерений в кубе на основании того же измерения базы данных. В следующей таблице приводится описание свойств атрибутов куба.  
@@ -38,7 +35,7 @@ ms.lasthandoff: 12/08/2017
 |**AttributeHierarchyVisible**|Указывает, видима ли иерархия атрибута в этом измерении куба. Это позволяет иерархии атрибутов быть видимой в определенных кубах или ролях измерения. Эта установка не имеет действия, если основная иерархия атрибутов не видима. Значение по умолчанию — **True**.|  
 |**AttributeID**|Содержит уникальный идентификатор атрибута.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение свойств измерения куба](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
  [Определение свойств иерархии куба](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   

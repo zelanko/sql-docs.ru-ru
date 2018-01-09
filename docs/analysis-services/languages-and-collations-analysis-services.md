@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 keywords: "Тестирование служб Analysis Services"
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e7bb3fd81631b2e442cee440e3e0aa0a89c9e932
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 615b26c5dfc1ea45dfcef2494483ced1235e7cd0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="languages-and-collations-analysis-services"></a>Языки и параметры сортировки (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживает языки и параметры сортировки, предоставляемые [!INCLUDE[msCoName](../includes/msconame-md.md)] операционных систем Windows. Свойства**Language** и **Collation** изначально устанавливаются на уровне экземпляра во время установки, но их можно изменить позже на разных уровнях иерархии объектов.  
@@ -181,7 +181,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_gb18030"></a> Поддержка GB18030 в Analysis Services  
  GB18030 — это отдельный стандарт, который применяется в Китайской Народной Республике для кодирования китайских иероглифов. В кодировке GB18030 введенные данные могут иметь длину 1, 2 или 4 байт. В службах Analysis Services отсутствует преобразование данных при обработке данных из внешних источников. Данные просто сохраняются в Юникоде. Во время запроса выполняется преобразование GB18030 с помощью клиентских библиотек Analysis Services (в частности, поставщика OLE DB MSOLAP.dll) при возвращении текстовых данных в результатах запроса, в зависимости от параметров клиентской ОС. Ядро СУБД также поддерживает GB18030. Дополнительные сведения см. в разделе [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сценарии глобализации для служб Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Глобализация советы и лучшие методики &#40; Службы Analysis Services &#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md)   
  [Поддержка параметров сортировки и Юникода](../relational-databases/collations/collation-and-unicode-support.md)  

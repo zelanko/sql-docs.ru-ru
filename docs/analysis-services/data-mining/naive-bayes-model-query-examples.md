@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5efdf95cb4a87acd7c2b1e626dd20d3105aa1f6b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fa67a1dce190a145588f90b740213f6400612dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="naive-bayes-model-query-examples"></a>Примеры запросов к модели упрощенного алгоритма Байеса
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании запроса к модели интеллектуального анализа данных, можно создать либо запрос содержимого, который предоставляет сведения о закономерностях, обнаруженных при анализе, или можно создать прогнозирующие запросы, использующие закономерности, содержащиеся в модели для прогнозирования новых данных. Получение метаданных модели интеллектуального анализа данных выполняется с помощью запроса к набору строк схемы интеллектуального анализа данных. В этом разделе описывается процесс создания запросов к моделям, основанным на упрощенном алгоритме Байеса (Майкрософт).  
@@ -99,9 +97,9 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Покупатель велосипеда|Missing|0|0|1|  
 |TM_NaiveBayes|Покупатель велосипеда|0|8869|0.507263784|4|  
 |TM_NaiveBayes|Покупатель велосипеда|1|8615|0.492736216|4|  
-|TM_NaiveBayes|Пол|Missing|0|0|1|  
-|TM_NaiveBayes|Пол|Ж|8656|0.495081217|4|  
-|TM_NaiveBayes|Пол|M|8828|0.504918783|4|  
+|TM_NaiveBayes|Gender|Missing|0|0|1|  
+|TM_NaiveBayes|Gender|Ж|8656|0.495081217|4|  
+|TM_NaiveBayes|Gender|M|8828|0.504918783|4|  
   
  Эти результаты, в частности, содержат число обучающих вариантов для каждой дискретной величины (VALUETYPE = 4), а также вычисленную вероятность, скорректированную с поправкой на отсутствующие величины (VALUETYPE = 1).  
   

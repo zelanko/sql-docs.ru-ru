@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -51,11 +48,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e0ff496e40e85387e492fc6cfe355035c0e271ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d448349dfa423810a6bdfd70a5d79a1dfd41f0b1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-measure-properties"></a>Настройка свойств мер
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Меры имеют свойства, которые позволяют определять как функция меры и для управления работой и отображением для пользователей.  
@@ -69,16 +66,16 @@ ms.lasthandoff: 12/08/2017
 |--------------|----------------|  
 |**AggregateFunction**|Обязательный. Определяет, как выполняется статистическое вычисление мер. **Sum** — это агрегирование по умолчанию. Описание каждой функции см. в разделе [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) .|  
 |**DataType**|Обязательный. Указывает тип данных столбца базовой таблицы фактов, к которым привязана мера. Это значение наследуется из исходного столбца по умолчанию.|  
-|**Description**|Содержит описание меры, которое может быть видно в клиентских приложениях.|  
+|**Описание**|Содержит описание меры, которое может быть видно в клиентских приложениях.|  
 |**DisplayFolder**|Указывает папку отображения, в которой будет представлена мера при подключении пользователя к кубу. Если куб содержит множество мер, папки отображения позволяют разбить их по категориям мер, упростив доступ к ним.|  
 |**FormatString**|Можно выбрать формат, используемый для отображения значений меры пользователям, используя свойство **FormatString** меры.<br /><br /> Список форматов отображения представлен в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], но можно указать множество дополнительных форматов, не содержащихся в этом списке. Можно указать любой именованный или определенный пользователем формат, допустимый в языке Microsoft Visual Basic.|  
-|**Идентификатор**|Обязательный. Отображает уникальный идентификатор (ID) меры. Это свойство предназначено только для чтения.|  
+|**Идентификатор**|Обязательный. Отображает уникальный идентификатор (ID) меры. Это свойство доступно только для чтения.|  
 |**MeasureExpression**|Указывает ограниченное многомерное выражение, определяющее значение меры. Выражение вычисляется на конечном уровне до агрегирования и позволяет получить взвешенное значение. Например, конвертация валют, где объем продаж взвешен с учетом обменного курса.|  
 |**Название**|Обязательный. Имя меры.|  
 |**Source**|Обязательный. Столбец в представлении источника данных, к которому привязана мера. См. раздел [Источники данных и привязки (многомерные службы SSAS)](../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md).|  
 |**Visible**|Определяет видимость меры в клиентских приложениях.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка свойств группы мер](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)   
  [Изменение мер](../../analysis-services/lesson-3-1-modifying-measures.md)  
   

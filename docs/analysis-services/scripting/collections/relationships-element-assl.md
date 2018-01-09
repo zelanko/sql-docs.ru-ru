@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2ec8fd1d0b8455c5d382fe4215b3888a547a4bb4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd54fb4aecd5240dc59544c78e711977b4f125a8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-element-assl"></a>Элемент Relationships (язык ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит коллекцию связей для связанного измерения.  
@@ -44,11 +42,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/08/2017
 |Родительские элементы|[CubeDimension](../../../analysis-services/scripting/data-type/cubedimension-data-type-assl.md), [измерения](../../../analysis-services/scripting/objects/dimension-element-assl.md), [PerspectiveDimension](../../../analysis-services/scripting/data-type/perspectivedimension-data-type-assl.md), [RegularMeasureGroupDimension](../../../analysis-services/scripting/data-type/regularmeasuregroupdimension-data-type-assl.md)|  
 |Дочерние элементы|[Связь](../../../analysis-services/scripting/data-type/relationship-data-type-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Соответствующие элементы в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.RelationshipCollection>.  
   
 ## <a name="see-also"></a>См. также:  

@@ -6,7 +6,7 @@ ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8ff5a4306df72d3cb9c81b692d2c1f41c4ce0f37
-ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
+ms.openlocfilehash: 595bdb9cb16b02258d50d1f3d038ad988bbc4dd3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="converting-r-code-for-execution-in-database"></a>Преобразование кода R для выполнения в базе данных
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
 
 + Используемые библиотеки R, доступ к сети или не может устанавливаться на сервере SQL Server.
 + Код выполняет отдельные вызовы к источникам данных за пределами SQL Server, например листов Excel, файлы в общих папках и других баз данных. 
-+ Требуется выполнение кода в  *@script*  параметр [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) и также параметризовать хранимой процедуры.
++ Требуется выполнение кода в * @script * параметр [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) и также параметризовать хранимой процедуры.
 + Исходное решение содержит несколько шагов, которые могут оказаться эффективными в рабочей среде при выполнении независимо друг от друга, такие как Подготовка данных или конструируются сравнение модели обучения, оценки или отчетов.
 + Чтобы улучшить оптимизации производительности путем изменения библиотек, с помощью параллельного выполнения или Разгрузка некоторую обработку для SQL Server. 
 

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 77bad0900d5d636a06ed1b836697e96120d0a7cd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c35cd0e0174ffc94c498007fff8a314d2094856a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="imdembeddeddata-interface"></a>Интерфейс IMDEmbeddedData
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Интерфейс IMDEmbeddedData — открытый интерфейс, используемый для управления встроенный [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] базы данных или базы данных табличной модели. Этот интерфейс наследует интерфейс **IPersistStream** . Этот интерфейс позволяет выполнить следующие операции:  
@@ -90,7 +88,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Возвращает идентификатор, используемый ведущим приложением для внедренного потока в документе-контейнере.  
   
 #### <a name="parameters"></a>Параметры  
@@ -107,12 +105,12 @@ HRESULT GetStreamIdentifier (
  **E_FAIL**  
  При получении доступа к идентификатору потока произошла ошибка.  
   
-#### <a name="remarks"></a>Замечания  
+#### <a name="remarks"></a>Remarks  
  Чтобы проверить, содержит ли текущее соединение внедренную базу данных, пользователь должен проверить значение свойства DBPROP_MSMD_EMBEDDED_DATA, являющееся одним из свойств соединения OLE DB.  
   
  Возможные значения для DBPROP_MSMD_EMBEDDED_DATA.  
   
-|Название|Значение|Определение|  
+|Имя|Значение|Определение|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Доступная внедренная база данных отсутствует|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Текущее приложение содержит внедренную базу данных|  
@@ -134,7 +132,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Задает URL-адрес для файла, содержащего внедренный поток.  
   
 #### <a name="parameters"></a>Параметры  
@@ -164,7 +162,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Задать флаг, указывающий, находится ли внедряющее приложение в размещенной среде.  
   
 #### <a name="parameters"></a>Параметры  
@@ -194,7 +192,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Задать путь к временным файлам, используемым внедряющим приложением.  
   
 #### <a name="parameters"></a>Параметры  
@@ -222,7 +220,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Отменяет текущую операцию внедренной базы данных  
   
 #### <a name="parameters"></a>Параметры  
@@ -253,7 +251,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Возвращает прогнозируемый размер в байтах потока для сохранения внедренного объекта. Наследуется от **IPersistStream**.  
   
 #### <a name="parameters"></a>Параметры  
@@ -273,7 +271,7 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Проверяет, изменилась ли внедренная база данных со времени последнего сохранения. Наследуется от **IPersistStream**.  
   
 #### <a name="parameters"></a>Параметры  
@@ -297,7 +295,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Загружает внедренную базу данных в локальную или внутрипроцессную подсистему. Наследуется от **IPersistStream**.  
   
 #### <a name="parameters"></a>Параметры  
@@ -323,7 +321,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Описание  
+#### <a name="description"></a>Description  
  Сохраняет локальную или внутрипроцессную базу данных во внедренном потоке в документе-контейнере. Наследуется от **IPersistStream**.  
   
 #### <a name="parameters"></a>Параметры  

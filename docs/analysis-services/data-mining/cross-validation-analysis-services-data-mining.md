@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2fd4a0176a291088c9f0ee78b6c12406a3abd7e7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fad4277b58170a555597c9993ee9f681e99397f2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]*Перекрестной проверки* — стандартное средство в аналитике и является важной характеристикой для помощь в разработке и настройке моделей интеллектуального анализа данных. После создания структуры интеллектуального анализа данных и связанных моделей интеллектуального анализа данных можно использовать перекрестную проверку, чтобы оценить допустимость модели.  У перекрестной проверки есть следующие применения.  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
  В этом разделе приводятся сведения, помогающие правильно настроить перекрестную проверку.  
   
 ### <a name="setting-the-number-of-partitions"></a>Установка числа секций  
- Число секций определяет, сколько будет создано временных моделей. Для каждой секции разрез данных помечается для использования в качестве проверочного набора. Новая модель создается путем обучения на оставшихся данных, не вошедших в секцию. Этот процесс повторяется, пока службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не создадут и не проверят указанное число моделей. Данные, указанные как доступные для перекрестной проверки, распределяются равномерно между всеми секциями.  
+ Число секций определяет, сколько будет создано временных моделей.  Для каждой секции разрез данных помечается для использования в качестве проверочного набора. Новая модель создается путем обучения на оставшихся данных, не вошедших в секцию. Этот процесс повторяется, пока службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] не создадут и не проверят указанное число моделей. Данные, указанные как доступные для перекрестной проверки, распределяются равномерно между всеми секциями.  
   
  Пример на этой диаграмме показывает использование данных в том случае, если были заданы три свертки.  
   
@@ -198,7 +196,7 @@ ms.lasthandoff: 12/08/2017
 |См. примеры других типов диаграмм точности.|[Матрица классификации (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)<br /><br /> [Диаграмма точности прогнозов (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Диаграмма роста прибыли (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Точечная диаграмма (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
 |Описывает действия по созданию различных диаграмм точности.|[Задачи и решения по тестированию и проверке (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

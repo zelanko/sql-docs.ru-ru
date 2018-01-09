@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cd6ac80d-b735-4e3e-a024-489f1409ad33
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c988142d87edfe702fa9a0346331c7a1b3b71c95
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 992a09878aece468b52a26241c362cb71ae43ec9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-sql-server-analysis-services"></a>Установка SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services является сервер аналитических баз данных, на котором размещена табличных моделей, многомерных кубов и моделей интеллектуального анализа данных, можно получить из отчетов, электронных таблиц и панелей мониторинга.  
@@ -72,7 +72,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  Параметр**ASSERVERMODE** учитывает регистр.  Все значения должны задаваться в верхнем регистре. В следующей таблице приведены допустимые значения параметра **ASSERVERMODE**.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |TABULAR|Это значение по умолчанию. Если вы не установите **ASSERVERMODE**, сервер будет установлен в табличном режиме.|
 |MULTIDIMENSIONAL|Это значение является необязательным.|  

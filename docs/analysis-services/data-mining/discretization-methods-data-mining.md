@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 40f6c134370c390cb88e9eb52434da6473ca3b57
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1acf124467d3a6c5cdeb35a1d617e0dbc9d34d63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discretization-methods-data-mining"></a>Методы дискретизации (Интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Некоторые алгоритмы, используемые для создания моделей интеллектуального анализа данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] требуют определенных типов содержимого для своей работы. Например, упрощенный алгоритм Байеса [!INCLUDE[msCoName](../../includes/msconame-md.md)] не может использовать непрерывные столбцы на входе и прогнозировать непрерывные значения. Кроме того, некоторые столбцы могут содержать так много значений, что алгоритм будет не в состоянии легко выявить содержательные закономерности в данных, из которых создается модель.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 |**CLUSTERS**|Алгоритм разделяет данные на группы путем создания выборки обучающих данных, инициализации по ряду случайных точек и дальнейшего запуска несколько итераций алгоритма кластеризации (Майкрософт) с помощью метода кластеризации с максимизацией ожидания (EM). Метод **CLUSTERS** полезен, так как он работает с любой кривой распределения. Однако он требует большего времени на обработку, чем другие методы дискретизации.<br /><br /> Этот метод можно использовать только для числовых столбцов.|  
 |**EQUAL_AREAS**|Алгоритм делит данные на группы, содержащие равное число значений. Этот метод лучше всего использовать для кривых нормального распределения, но он не работает, если распределение содержит большое число значений, встречающихся в узкой группе непрерывных данных. Например, если половина элементов имеет значение цены 0, то половина данных окажется в одной точке кривой. При таком распределении, этот метод разрушит данные в попытке установить равномерную дискретизацию по нескольким областям. Это вызовет неточное представление данных.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 -   Метод **EQUAL_AREAS** позволяет выполнять дискретизацию строк.  
   
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
   
   
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md)   
  [Типы содержимого (расширения интеллектуального анализа данных)](../../dmx/content-types-dmx.md)   
  [Алгоритмы интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

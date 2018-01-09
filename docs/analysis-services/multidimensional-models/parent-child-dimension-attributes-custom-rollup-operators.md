@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bf4f123a7c2026fde28f9556957de20905330741
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 84ed7fd34e017fe0ea076822d1931ea1143b5849
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>Атрибуты измерения родители потомки - операторы пользовательской свертки
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Операторы пользовательской свертки предоставляют простой способ управления способа свертки значений элементов в значения родительских элементов в иерархии родители потомки. В измерении, содержащем связь типа «родители-потомки», указывается столбец, содержащий унарные операторы, указывающие свертку для всех невычисляемых элементов родительского атрибута. Унарный оператор применяется к элементам каждый раз, когда оцениваются значения родительских элементов.  
@@ -42,7 +39,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="custom-rollup-precedence"></a>Приоритет пользовательской свертки  
  С точки зрения приоритетов, операторы пользовательской свертки атрибута источника для уровня в иерархии имеют более высокий приоритет, чем нестандартные формулы элементов предыдущего уровня. Однако нестандартные формулы элементов предыдущего уровня имеют более высокий приоритет, чем операторы пользовательской свертки уровня.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение нестандартных формул элементов](../../analysis-services/multidimensional-models/attribute-properties-define-custom-member-formulas.md)   
  [Унарные операторы в измерениях родители потомки](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
   

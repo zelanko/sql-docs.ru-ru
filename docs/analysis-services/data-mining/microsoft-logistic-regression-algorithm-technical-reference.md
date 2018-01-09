@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,13 +26,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 41ce8bab5404398328cef0a769c2163805940e44
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fd3dee20e57342542e271cfb3f153b1c35c0764d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Технический справочник по алгоритму логистической регрессии (Майкрософт)
+# <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>техническом справочнике по алгоритму логистической регрессии (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм логистической регрессии является разновидностью [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритма нейронной сети, где *HIDDEN_NODE_RATIO* параметр имеет значение 0. Эта настройка создает модель нейронной сети, которая не содержит скрытого слоя и, таким образом, эквивалентна логистической регрессии.  
   
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Реализация алгоритма логистической регрессии (Майкрософт)  
@@ -155,12 +153,12 @@ WHERE NODE_TYPE = 23
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  В следующей таблице перечислены конкретные типы содержимого входных столбцов, типы содержимого прогнозируемых столбцов и флаги моделирования, поддерживаемые алгоритмом логистической регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Дополнительные сведения о значении типов содержимого в применении к модели интеллектуального анализа данных см. в разделе [Типы содержимого (интеллектуальный анализ данных)](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Столбец|Типы содержимого|  
+|столбцом|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Continuous, Discrete, Discretized, Key, Table|  
 |Прогнозируемый атрибут|Continuous, Discrete, Discretized|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритм логистической регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [Примеры запросов модели линейной регрессии](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
  [Содержимое моделей интеллектуального анализа данных для моделей логистической регрессии (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   

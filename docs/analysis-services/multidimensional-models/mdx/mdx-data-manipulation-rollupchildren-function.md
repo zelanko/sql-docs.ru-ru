@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c913406650e267cb715267f4a2a91235b6259b4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 1fb9052d74a19941a41a915e12acec04bfc38f1c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---rollupchildren-function"></a>Управление данными MDX - функция RollupChildren
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Функцию многомерных выражений (MDX) [RollupChildren](../../../mdx/rollupchildren-mdx.md) функция свертку потомков некоторого элемента, применяя к каждому потомку, другим унарным оператором и возвращает значение свертки в виде числа. Унарный оператор может браться из свойства, связанного с элементом-потомком, или же оператор может быть строковым выражением, непосредственно заданным для этой функции.  
@@ -81,7 +78,7 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
   
  Инструкция многомерных выражений анализирует унарный оператор дочернего элемента. Если унарный оператор применяется для вычитания (как в случае элементов с внутренними и внешними возвратами), то функция **IIf** заменяет унарный оператор тильду (~). В противном случае функция **IIf** использует унарный оператор дочернего элемента. Наконец вычисленное значение суммы свертки умножается на коэффициент 1,1 для получения значения прогнозируемых валовых внутренних и внешних продаж.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Манипулирование данными (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

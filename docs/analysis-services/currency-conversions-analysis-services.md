@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8565a3599dfd9ef96f1cb4156f4bbbdc8ac60927
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3c2d9626ff12593f6192ab6b3a6bec1bb6ab4a7b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="currency-conversions-analysis-services"></a>Преобразования валюты (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Многомерные только  
@@ -90,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="defining-currency-conversions"></a>Определение конвертаций валют  
  Можно использовать мастер бизнес-аналитики, чтобы определить функционал конвертации валют для куба, также можно вручную определить конвертации валют, используя скрипты многомерных выражений.  
   
-### <a name="prerequisites"></a>Предварительные требования  
+### <a name="prerequisites"></a>предварительные требования  
  Перед тем как определять конвертацию валюты в кубе, используя мастер бизнес-аналитики, вначале необходимо определить хотя бы одно измерение валют, одно измерение времени и одну группу мер курсов. Из этих объектов мастер бизнес-аналитики может получать данные и метаданные, используемые для построения измерения валют отчета и скрипта многомерных выражений, необходимых для обеспечения функционала конвертации валют.  
   
 ### <a name="decisions"></a>Решения  
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/08/2017
   
  При необходимости можно изменять команды скрипта, содержащиеся в конвертации валют. Однако при перезаписи конвертации валют эти изменения будут утеряны.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сценарии глобализации для служб Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)  
   
   

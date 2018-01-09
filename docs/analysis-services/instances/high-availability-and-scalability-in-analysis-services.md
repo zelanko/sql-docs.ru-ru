@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1a1f8208a30e1ff24e76465fd9210a60ef1ec849
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ac8292e9319bef3d535ff6f3977b50ac22805e27
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Высокий уровень доступности и масштабируемость в службах Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этой статье описаны наиболее часто используемые методы для создания баз данных служб Analysis Services высокого уровня доступности и масштабируемости. Несмотря на то что к каждой цели можно обращаться отдельно, в реальности они часто идут рука об руку: от масштабируемого развертывания больших рабочих нагрузок по выполнению запросов или обработке данных обычно ожидается высокая доступность.  
@@ -106,7 +106,7 @@ ms.lasthandoff: 12/08/2017
  
  Подробные инструкции и справочные сведения по развертыванию служб Analysis Services в отказоустойчивом кластере см. в следующем документе [Кластеризация служб SQL Server Analysis Services](https://msdn.microsoft.com/library/dn736073.aspx). Это руководство написано для SQL Server 2012, однако применяется и к более новым версиям служб Analysis Services.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Синхронизация баз данных служб Analysis Services](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
  [Принудительное установление связь NUMA для табличных баз данных служб Analysis Services](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Analysis Services практический пример: Использование табличных моделей в крупномасштабных коммерческих решениях](https://msdn.microsoft.com/library/dn751533.aspx)  

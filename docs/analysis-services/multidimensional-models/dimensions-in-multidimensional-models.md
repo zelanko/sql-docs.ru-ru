@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 33c9c09cdcfae67f469585fa69fda626696f1856
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ae68ab8b879656940827bf8ebffb5c1f40cfa0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Измерения в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Измерение базы данных является коллекцией связанных объектов, называемых атрибутами, которые можно использовать для предоставления сведений о данных фактов в одном или нескольких кубах. Например, типичным атрибутом измерения «Продукт» может быть название, категория, размер, цена продукта или линия товаров. Эти объекты привязаны к одному или нескольким столбцам в одной или нескольких таблицах в представлении источника данных. По умолчанию эти атрибуты отображаются как иерархии атрибутов и позволяют понять смысл данных фактов в кубе. Атрибуты могут быть организованы в пользовательские иерархии, которые обеспечивают различные пути доступа к данным и помогают пользователям при просмотре данных в кубе.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Разрабатывать и настраивать измерения, атрибуты и иерархии можно также программным способом с помощью XML для аналитики или объектов AMO. Дополнительные сведения см. в разделах [Справочник по языку ASSL](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) и [Разработка объектов управления аналитикой (объекты AMO)](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В следующей таблице описаны подразделы, содержащиеся в этом разделе.  
   
  [Определение измерений базы данных](../../analysis-services/multidimensional-models/define-database-dimensions.md)  
@@ -64,7 +61,7 @@ ms.lasthandoff: 12/08/2017
  [Использование мастера бизнес-аналитики для улучшения измерений](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  Описывает, как улучшить измерение базы данных при помощи мастера бизнес-аналитики.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

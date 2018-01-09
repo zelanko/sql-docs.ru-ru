@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: MDSCHEMA_SETS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d83b5638e1151d252fc209688615c1c33b9e7c4c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d861c23e40464535fbde4b666c2e1429f65c772c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdschemasets-rowset"></a>MDSCHEMA_SETS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает любые наборы, определенные в данный момент в базе данных, включая наборы с областью сеанса.  
@@ -56,13 +54,13 @@ ms.lasthandoff: 12/08/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**SET_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**ОБЛАСТЬ ДЕЙСТВИЯ**|**DBTYPE_I4**|Необязательно.|  
-|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**CUBE_SOURCE**|**DBTYPE_UI2**|Необязательно.<br /><br /> Примечание: Только одна иерархия может быть включено, и возвращаются только тех именованных наборов, иерархии которых точно соответствуют ограничению.|  
+|**CATALOG_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SCHEMA_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SET_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**ОБЛАСТЬ ДЕЙСТВИЯ**|**DBTYPE_I4**|Необязательный параметр.|  
+|**HIERARCHY_UNIQUE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CUBE_SOURCE**|**DBTYPE_UI2**|Необязательный параметр.<br /><br /> Примечание: Только одна иерархия может быть включено, и возвращаются только тех именованных наборов, иерархии которых точно соответствуют ограничению.|  
   
 ## <a name="see-also"></a>См. также:  
  [Наборы строк схемы OLE DB для OLAP](../../../analysis-services/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets.md)  

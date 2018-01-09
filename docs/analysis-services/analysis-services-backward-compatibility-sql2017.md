@@ -8,7 +8,7 @@ ms.component:
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1d6a43f2fa5694225a08dbc4e35988e7a76a478d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 97a19e2f1bf40216163208136d22103eddc89cc2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Обратная совместимость служб Analysis (SQL 2017 г.)
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 |Multidimensional|Многомерная обратная запись|  
 |Multidimensional|Связанные измерения|
 |Инструменты|Приложение SQL Server Profiler для перехвата трассировки<br /><br /> В качестве замены можно использовать профилировщик расширенных событий, встроенный в SQL Server Management Studio.  <br /> См. раздел [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
-|Средства|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
+|Инструменты|Воспроизведение трассировки с помощью приложения SQL Server Profiler <br />Замена. Замена отсутствует.|  
 |Объекты управления трассировкой и интерфейсы API трассировки|Объекты Microsoft.AnalysisServices.Trace (содержат интерфейсы API для объектов трассировки и воспроизведения Analysis Services). Замена состоит из нескольких частей:<br /><br /> -Настройка трассировки: Microsoft.SqlServer.Management.xevent;<br />-Чтение трассировки: Microsoft.SqlServer.xevent.Linq.<br />— воспроизведение трассировки: отсутствует.|  
 
 ## <a name="breaking-changes"></a>Критические изменения
@@ -77,5 +77,5 @@ ms.lasthandoff: 12/08/2017
 Изменения в MDSCHEMA_MEASUREGROUP_DIMENSIONS и DISCOVER_CALC_DEPENDENCY, описанные в [новые возможности CTP-версия SQL Server 2017 г 2.1 для служб Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) объявления.
 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 [Обратная совместимость служб Analysis (SQL Server 2016)](analysis-services-backward-compatibility.md)

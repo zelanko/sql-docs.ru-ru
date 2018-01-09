@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: properties [Analysis Services], measure groups
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2f650fd897c68e10044a02d55c08f9545a0e6046
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f7cf2328a6f93ed1c7fe17034af1b42b53baaa39
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-measure-group-properties"></a>Настройка свойств группы мер
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Группы мер имеют свойства, которые позволяют определить функционирование групп мер.  
@@ -37,13 +34,13 @@ ms.lasthandoff: 12/08/2017
 |--------------|----------------|  
 |**AggregationPrefix**|Применяется к режиму хранения ROLAP. Назначает общий префикс для индексированных представлений в SQL Server, используемых для хранения агрегатов для разделов, связанных с этой группой мер.|  
 |**DataAggregation**|Это свойство зарезервировано для будущего использования и в настоящее время не оказывает никакого влияния. Поэтому не рекомендуется изменять этот параметр.|  
-|**Description**|Это свойство можно использовать для документирования группы мер.|  
+|**Описание**|Это свойство можно использовать для документирования группы мер.|  
 |**ErrorConfiguration**|Настраиваемые параметры обработки ошибок для обработки повторяющихся ключей, неизвестных ключей, ключей NULL, предельного количества ошибок, действий при обнаружении ошибки и файла журнала ошибок. См раздел [Конфигурация ошибок при обработке кубов, секций и измерений (службы SSAS — многомерные данные)](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |**EstimatedRows**|Предполагаемое количество строк в таблице фактов.|  
 |**EstimatedSize**|Предполагаемый размер группы мер в байтах.|  
 |**Идентификатор**|Идентификатор объекта.|  
 |**IgnoreUnrelatedDimensions**|Определяет, будут ли несвязанные измерения принудительно перемещаться на верхний уровень, если элементы измерений, не связанных с группой мер, включаются в запрос. Значение по умолчанию — **True**.|  
-|**Название**|Имя меры. Это свойство предназначено только для чтения.|  
+|**Название**|Имя меры. Это свойство доступно только для чтения.|  
 |**ProactiveCaching**|Настраиваемые параметры обработки ошибок для обработки повторяющихся ключей, неизвестных ключей, ключей NULL, предельного количества ошибок, действий при обнаружении ошибки и файла журнала ошибок.|  
 |**ProcessingMode**|Показывает, следует ли производить индексирование и статистическую обработку во время обработки или после нее. Режимы — Regular и LazyAggregations. LazyAggregations можно использовать для выполнения статистической обработки в качестве фоновой задачи.|  
 |**ProcessingPriority**|Определяет приоритет обработки куба во время фоновых операций, например отложенных статистических вычислений или индексирования. Значение по умолчанию — **0**.|  

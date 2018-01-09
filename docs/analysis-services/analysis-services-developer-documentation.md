@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a941a9f08482f78c762cbc25fc3f3eb28d7a8cf4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 12b3c89ac68cd633c50ea96ded258a91cc066ae8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-developer-documentation"></a>Документация для разработчика служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]В службах Analysis Services почти для всех объектов и рабочей нагрузки можно программировать и часто является более чем одним из подходов для выбора.  Варианты написания управляемого кода, скрипта или с помощью открытых стандартах, таких как XML для Аналитики и MSOLAP, если ваш требований к решению исключают с использованием .NET framework.
@@ -73,14 +71,14 @@ ms.lasthandoff: 12/08/2017
 
 [Наборы строк схемы служб Analysis](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md) описывает наборы строк схемы, которые предоставляют сведения о состоянии сервера, операциях сервера и объекты базы данных.
 
-[XML для аналитики &#40; XML для Аналитики &#41; Справочник по](../analysis-services/xmla/xml-for-analysis-xmla-reference.md) XMLA описаны основные понятия, которые помогут вам понять, как влияют XML для Аналитики для пользовательского решения. Также описывается уровень совместимости со спецификацией XMLA 1.1.
+[XML для аналитики & #40; XML для Аналитики & #41; Справочник по](../analysis-services/xmla/xml-for-analysis-xmla-reference.md) XMLA описаны основные понятия, которые помогут вам понять, как влияют XML для Аналитики для пользовательского решения. Также описывается уровень совместимости со спецификацией XMLA 1.1.
 
-[Службы Analysis Services Scripting Language &#40; ASSL для XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) Описывает расширения языка ASSL для XMLA. Язык ASSL — это язык для определения и работы с данными для многомерных моделей служб Analysis Services, дополняющий спецификацию XMLA.
+[Службы Analysis Services Scripting Language & #40; ASSL для XMLA & #41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md) Описывает расширения языка ASSL для XMLA. Язык ASSL — это язык для определения и работы с данными для многомерных моделей служб Analysis Services, дополняющий спецификацию XMLA.
 
-[Скрипты языка &#40; табличной модели TMSL &#41; Справочник по](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) TMSL является JSON-представление табличных моделей на уровне совместимости 1200 и выше. Определения объектов строятся на табличных метаданных конструкций, таких как таблицы, столбца и связи, а не многомерные метаданные, которые могут быть знакомы, если вы не знакомы с моделирования данных служб Analysis Services в табличном режиме.
+[Скрипты языка & #40; табличной модели TMSL & #41; Справочник по](../analysis-services/tabular-model-scripting-language-tmsl-reference.md) TMSL является JSON-представление табличных моделей на уровне совместимости 1200 и выше. Определения объектов строятся на табличных метаданных конструкций, таких как таблицы, столбца и связи, а не многомерные метаданные, которые могут быть знакомы, если вы не знакомы с моделирования данных служб Analysis Services в табличном режиме.
 
 [Analysis Services PowerShell Reference](../analysis-services/powershell/analysis-services-powershell-reference.md) документы командлеты, используемые для административных функций, а также общего назначения **Invoke-ASCmd** командлет, который принимает любой скрипт или запрос в качестве входных данных.
 
 ## <a name="see-also"></a>См. также:
-[Технический справочник по &#40; Службы SSAS &#41; ](../analysis-services/powershell/technical-reference-ssas.md) 
- [Запроса и справочник по языку выражений &#40; Службы Analysis Services &#41;](http://msdn.microsoft.com/library/gg492188.aspx)
+[Технический справочник по & #40; Службы SSAS & #41; ](../analysis-services/powershell/technical-reference-ssas.md) 
+ [Запроса и справочник по языку выражений & #40; Службы Analysis Services & #41;](http://msdn.microsoft.com/library/gg492188.aspx)

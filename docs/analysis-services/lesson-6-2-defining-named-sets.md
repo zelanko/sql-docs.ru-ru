@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 68f500896e8dffa6982c2f15ac3e431bebc4df87
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9d10942e6942e4c307bc6c8fed9c7cb391d5f368
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Урок 6-2 - определении именованных наборов
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Именованный набор является выражением многомерных выражений (MDX), которая возвращает набор элементов измерения. Можно определять именованные наборы и сохранять их как часть определения куба, а также создавать именованные наборы в клиентских приложениях. Для создания именованных наборов используется сочетание данных куба, арифметических операторов, чисел и функций. Именованные наборы могут применяться пользователями в запросах многомерных выражений в клиентских приложениях, а также для определения наборов во вложенных кубах. Вложенный куб представляет собой коллекцию перекрестно соединенных наборов, ограничивающую для последующих инструкций пространство куба заданным подпространством. Определение ограниченного пространства куба является базовой концепцией в построении сценариев многомерных выражений.  

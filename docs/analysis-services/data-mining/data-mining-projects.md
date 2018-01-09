@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 543d70fc-34d2-42dd-8d6d-0543109f94d0
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ba4efe6772c6fcc668d6ce808a6c928a3af63101
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 115db2e7cc02805cd41e79363d8ff0a83d1c719e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-projects"></a>Проекты интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Проект интеллектуального анализа данных является частью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] решения. Во время проектирования объекты, создаваемые в этом проекте, доступны для тестирования и запросов в составе базы данных рабочей области. Чтобы дать пользователям возможность просматривать объекты в проекте и составлять к ним запросы, необходимо развернуть проект в экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , работающем в многомерном режиме.  
@@ -210,7 +208,7 @@ ms.lasthandoff: 12/08/2017
  Эти задачи также можно выполнить с помощью языка ASSL или объектов AMO. Дополнительные сведения см. в разделе [Разработка с использованием XMLA в службах Analysis Services](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).  
   
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  В следующих разделах описывается создание проекта интеллектуального анализа данных и связанных объектов в мастере интеллектуального анализа данных.  
   
 |Задания|Подраздел|  
@@ -223,7 +221,7 @@ ms.lasthandoff: 12/08/2017
 |Сведения о параметрах обработки и разрешениях|[Обработка объектов интеллектуального анализа данных](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
 |Дополнительные сведения о службах Analysis Services|[Базы данных многомерных моделей (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   
  [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [База данных рабочей области (табличные службы SSAS)](../../analysis-services/tabular-models/workspace-database-ssas-tabular.md)  

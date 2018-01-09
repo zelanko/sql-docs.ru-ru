@@ -5,13 +5,10 @@ ms.date: 05/22/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.renametableorcolumn.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bf322e42ce1913eef2a7cf03208192c3b1b6e4ea
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b22cc6d04ca3384accec6b1893a1fcd1297ca022
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Переименование таблицы или столбца (табличные службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Можно изменить имя таблицы во время импорта, введя **понятное имя** в **Выбор таблиц и представлений** страница **мастера импорта таблиц**. Имена таблицы и столбцов также можно изменить, если данные импортируются с помощью запроса на странице **Указание SQL-запроса** **мастера импорта таблиц**.  
