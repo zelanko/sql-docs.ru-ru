@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.kpi.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e0ce1f0c25e472fff95781e2257ddf198ba00a0f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8c8fd81b3f885467db456a4093b56b8e62ef89d5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-kpis-ssas-tabular"></a>Создание ключевых показателей эффективности и управление ими (табличные службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе описывается создание, изменение или удаление KPI (ключевой показатель эффективности) в табличной модели. Чтобы создать ключевой показатель эффективности (KPI), выберите меру для вычисления базового значения KPI. Затем в диалоговом окне «Ключевой показатель эффективности» необходимо выбрать вторую меру или абсолютное значение, на основании которого будет вычисляться целевое значение. Затем можно определить пороговые значения состояний, которые определяют эффективность между базовой и целевой мерами.  
@@ -82,7 +79,7 @@ ms.lasthandoff: 12/08/2017
 |----------------|-----------------|  
 |Базовая мера ключевого показателя эффективности|ALT+B|  
 |Состояние ключевого показателя эффективности|ALT + S|  
-|Мера|ALT+M|  
+|Measure|ALT+M|  
 |Абсолютное значение|ALT + A|  
 |Определение состояния порогов|ALT+U|  
 |Выбор стиля значка|ALT+I|  
@@ -90,7 +87,7 @@ ms.lasthandoff: 12/08/2017
 |Описания|ALT+D|  
 |Тренд|ALT+T|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Ключевые показатели эффективности (табличные службы SSAS)](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Меры (табличные службы SSAS)](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [Создание мер и управление ими (табличные службы SSAS)](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  

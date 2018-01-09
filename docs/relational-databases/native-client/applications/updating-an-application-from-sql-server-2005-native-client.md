@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|applications
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: SQL Server Native Client, updating applications
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: bde56c3efe2231d54463c4d23f311237415a6f53
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ea8bd24944008b1301f02024f9aa77910a7dbe37
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="updating-an-application-from-sql-server-2005-native-client"></a>Обновление приложения с переходом от собственного клиента SQL Server 2005
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 |SQLGetDescRec больше не проверяет согласованность дескрипторов.|До появления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент версии 10.0, SQLGetDescRec выполнить проверку согласованности, если был задан параметр sql_desc_data_ptr. Этого не требовалось по спецификации ODBC, и собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) и более поздних версий уже не проводит эту проверку согласованности.|  
 |При выходе значения даты за пределы диапазона теперь происходит возврат другого значения ошибки.|Для **datetime** типа, другой номер ошибки будут возвращаться [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственного клиента (начиная с версии [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) для вне диапазона дат не был возвращен в более ранних версиях.<br /><br /> В частности [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент версии 9.0 возвращается 22007 для всех выходящих за пределы диапазона значений года при преобразовании строки в **datetime**, и [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, начиная с версии 10.0 ([!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]) возвращает 22008 Если Дата находится в пределах диапазона, поддерживаемого **datetime2** , но за пределами диапазона, поддерживаемого **datetime** или **smalldatetime**.|  
 |**DateTime** значение усекаются доли секунды, а не round if округлении изменится значение дня.|До появления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 10.0, поведение клиента для **datetime** значения, отправляемых на сервер — округлял их до ближайшей 1/300 секунды. Начиная с собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии 10.0, в этой ситуации происходит усечение долей секунды, если округление приводит к изменению значения дня.|  
-|Возможно усечение секунд для **datetime** значение.|В приложении, построенном с помощью собственного клиента [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздних версий), при подключении к серверу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 (или более ранней версии) будут усекаться секунды и доли секунды в части отправленных на сервер данных, относящейся ко времени, если выполняется привязка к столбцу типа datetime с идентификатором типа DBTYPE_DBTIMESTAMP (OLE DB) или SQL_TIMESTAMP (ODBC) и масштабом 0.<br /><br /> Например:<br /><br /> Входные данные: 21:21:36.000 1994-08-21<br /><br /> Данные вставлены: 21:21:00.000 1994-08-21|  
+|Возможно усечение секунд для **datetime** значение.|В приложении, построенном с помощью собственного клиента [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (или более поздних версий), при подключении к серверу [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 2005 (или более ранней версии) будут усекаться секунды и доли секунды в части отправленных на сервер данных, относящейся ко времени, если выполняется привязка к столбцу типа datetime с идентификатором типа DBTYPE_DBTIMESTAMP (OLE DB) или SQL_TIMESTAMP (ODBC) и масштабом 0.<br /><br /> Пример:<br /><br /> Входные данные: 21:21:36.000 1994-08-21<br /><br /> Данные вставлены: 21:21:00.000 1994-08-21|  
 |Преобразование данных OLE DB из типа DBTYPE_DBTIME в DBTYPE_DATE больше не вызывает изменения значения дня.|До появления собственного клиента версии 10.0 для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], если часть времени для значения DBTYPE_DATE отстояла от полуночи не более чем на полсекунды, то применение кода преобразования OLE DB приводило к изменению дня. Начиная с собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии 10.0, день не изменяется (доли секунды усекаются, а не округляются).|  
 |Изменения IBCPSession::BCColFmt преобразования.|Начиная с версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] экспортируется собственный клиент версии 10.0, при использовании IBCPSession::BCOColFmt для преобразования типа SQLDATETIME или SQLDATETIME в строковый тип, а дробные значения. Например, при преобразовании типа SQLDATETIME в тип SQLNVARCHARMAX более ранние версии собственного клиента для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] возвращали следующее:<br /><br /> 1989-02-01 00:00:00. Собственный клиент [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] версии 10.0 и более поздних версий возвращает 1989-02-01 00:00:00.0000000.|  
 |Размер пересылаемых данных должен соответствовать длине, заданной параметром SQL_LEN_DATA_AT_EXEC.|При использовании параметра SQL_LEN_DATA_AT_EXEC размер данных должен соответствовать длине, заданной параметром SQL_LEN_DATA_AT_EXEC. Можно использовать параметр SQL_DATA_AT_EXEC, но SQL_LEN_DATA_AT_EXEC дает некоторый выигрыш в производительности.|  

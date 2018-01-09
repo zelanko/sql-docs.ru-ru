@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [= = (равно) (выражение служб SSIS)](../../integration-services/expressions/equal-ssis-expression.md)  
   
--   [!= (не равно) (выражение служб SSIS)](../../integration-services/expressions/unequal-ssis-expression.md)  
+-   [\!= (не равно) (выражение служб SSIS)](../../integration-services/expressions/unequal-ssis-expression.md)  
   
 -   [&#62; (больше чем) (выражение служб SSIS)](../../integration-services/expressions/greater-than-ssis-expression.md)  
   

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b0f34af9c1c466f09040c7915f53b993cb04ac1b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 150ef98bd2c949f7b4eb47170ec7855173608fbc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linear-regression-model-query-examples"></a>Примеры запросов модели линейной регрессии
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании запроса к модели интеллектуального анализа данных, можно создать запрос содержимого, который предоставляет сведения о закономерностях, обнаруженных при анализе, или можно создать прогнозирующие запросы, использующие закономерности, содержащиеся в модели для прогнозирования новых данных. Например, запрос содержимого предоставит дополнительные сведения о формуле регрессии, а прогнозирующий запрос определит, подходит ли к модели новая точка данных. Запрос также позволяет получить метаданные, описывающие модель.  
@@ -91,13 +89,13 @@ FROM LR_PredictIncome.CONTENT
   
  Ожидаемый результат:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Годовой доход|Missing|0|0,000457142857142857|0|1|  
 |Годовой доход|57220,8876687257|17484|0,999542857142857|1041275619,52776|3|  
 |Возраст|471,687717702463|0|0|126.969442359327|7|  
 |Возраст|234,680904692439|0|0|0|8|  
-|Возраст|45,4269617936399|0|0|126.969442359327|9|  
+|Возраст|45,4269617936399|0|0|126,969442359327|9|  
 ||35793,5477381267|0|0|1012968919,28372|11|  
   
  Для сравнения, в окне **Условные обозначения интеллектуального анализа данных**формула регрессии показана в следующем виде:  

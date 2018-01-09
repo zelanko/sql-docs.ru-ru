@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54ad1954-22e2-4628-b334-8fad8e9433b8
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aa787d2f040ac8065e4df8c68da3b6c730ff9640
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2ad2bc8a5d6d440f9f8c06f17d2857e5343adfce
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Использование шаблонов служб Analysis Services в среде SQL Server Management Studio
+# <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Use Analysis Services Templates in SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предоставляет набор шаблонов, которые помогают быстро создавать скрипты XMLA, запросы многомерных Выражений или расширений интеллектуального анализа данных, Создание ключевых показателей эффективности в кубе или табличной модели, скрипт резервного копирования и операциями восстановления и выполнять многие другие задачи. Шаблоны расположены в **обозревателе шаблонов** в среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
  В этом разделе приводится список шаблонов для многомерных и табличных моделей, а также рассматриваются примеры построения MDX-запросов и инструкций XML для аналитики с помощью обозревателя метаданных и обозревателя шаблонов.  
@@ -217,14 +214,15 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XML для аналитики или Управление|Резервное копирование|Демонстрирует использование команды **Backup** XML для аналитики для создания резервной копии базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] в файле.|  
 ||Отмена|Демонстрирует использование команды **Cancel** XML для аналитики для отмены всех выполняемых операций в текущем сеансе (для пользователей, не являющихся администраторами или администраторами сервера), базе данных (для администраторов) или экземпляре (для администраторов сервера).|  
 ||Создание базы данных с удаленными секциями|Демонстрирует использование команды **Create** XML для аналитики с элементом базы данных языка сценариев служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) для создания базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] и источника данных для хранения удаленных секций.|  
-||Delete|Демонстрирует использование команды **Delete** XML для аналитики для удаления существующей базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+||DELETE|Демонстрирует использование команды **Delete** XML для аналитики для удаления существующей базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Обработка измерения|Демонстрирует использование команды **Batch** XML для аналитики в сочетании с элементом **Parallel** и командой **Process** для обновления атрибутов измерения с использованием параллельной пакетной обработки.|  
 ||Обработка секции|Демонстрирует использование команды **Batch** XML для аналитики в сочетании с элементом **Parallel** и командой **Process** для полной обработки секции с использованием параллельной пакетной обработки.|  
 ||Восстановить|Демонстрирует использование команды **Restore** XML для аналитики для восстановления базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] из существующего файла резервной копии.|  
 ||Synchronize|Демонстрирует применение команды XML для аналитики **Synchronize** для синхронизации текущей базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с другой базой данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с использованием параметра SkipMembership для тега SynchronizeSecurity.|  
 |XML для аналитики или Наборы строк схемы|поиск наборов строк схемы;|Демонстрирует использование метода **Discover** XML для аналитики для получения содержимого набора строк схемы DISCOVER_SCHEMA_ROWSETS.|  
 |XML для аналитики или Состояние сервера|Соединения|Демонстрирует использование метода **Discover** XML для аналитики для получения содержимого набора строк схемы DISCOVER_CONNECTIONS.|  
-||Задания|Демонстрирует использование метода **Discover** XML для аналитики для получения содержимого набора строк схемы DISCOVER_JOBS.|  
+||Задания
+|Демонстрирует использование метода **Discover** XML для аналитики для получения содержимого набора строк схемы DISCOVER_JOBS.|  
 ||Расположения|Демонстрирует использование метода **Discover** XML для аналитики для получения содержимого набора строк схемы DISCOVER_LOCATIONS с указанием пути расположения файлов резервной копии.|  
 ||Блокировки|Демонстрирует использование метода **Discover** XML для аналитики для получения содержимого набора строк схемы DISCOVER_LOCKS.|  
 ||Предоставление памяти|Демонстрирует использование метода **Discover** XML для аналитики для получения содержимого набора строк схемы DISCOVER_MEMORYGRANT.|  
@@ -233,7 +231,7 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ||Трассировки|Демонстрирует использование метода **Discover** XML для аналитики для получения содержимого набора строк схемы DISCOVER_TRACES.|  
 ||Transactions|Демонстрирует использование метода **Discover** XML для аналитики для получения содержимого набора строк схемы DISCOVER_TRANSACTIONS.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по многомерным выражениям (многомерные выражения)](../../mdx/multidimensional-expressions-mdx-reference.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Справочник по языку ASSL (ASSL для XMLA)](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   

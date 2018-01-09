@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 50140fdf-6fd1-41a1-9c14-8ecfb97ba2e1
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ecbf6babc1bfa86cb8c7cdd5d18789be02cf8229
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 264e09ecf72a638230a85ccf64c34ea66ccf86b3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-data-feeds-power-pivot-for-sharepoint"></a>Использование веб-каналов данных (PowerPivot для SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Потоки данных — один или несколько потоков данных, формируемых из источника данных в сети и направляемых в целевой документ или приложение. При использовании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel веб-каналы данных позволяют получать существующие корпоративные данные или бизнес-данные из произвольных источников данных в окне [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] книги Excel 2010. После импорта веб-канала данных в книгу на него можно ссылаться в любых операциях обновления данных, планируемых на сервере SharePoint.  
@@ -97,7 +94,7 @@ ms.lasthandoff: 12/08/2017
   
 6.  Введите в поле **Имя таблицы**по одной таблице на каждый канал. Это значение обязательно. Имя таблицы используется клиентским приложением, получающим веб-канал данных. В [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для Excel имя таблицы используется для таблиц в окне [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , которые будут содержать импортируемые данные.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Включение интеграции функций PowerPivot для семейств веб-сайтов в центре администрирования](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)   
  [Совместное использование веб-каналов данных PowerPivot с помощью библиотеки каналов данных (PowerPivot для SharePoint)](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   

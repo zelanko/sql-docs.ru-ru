@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 360a1567-67ae-459d-8865-9a2bef8d4186
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 45e4461956c78278d367715e8ef665821d487e3f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9c237207731fc7479ab45a0c86c22d13caf5f140
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restore-command-tmsl"></a>RESTORE, команда (TMSL)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Восстанавливает базу данных служб Analysis Services из файла резервной копии.  
@@ -63,8 +61,8 @@ ms.lasthandoff: 12/08/2017
   
 ||||  
 |-|-|-|  
-|**Свойство**|**Default**|**Description**|  
-|базой данных|[Обязательно]|Имя объекта базы данных для восстановления.|  
+|**Свойство**|**Default**|**Описание**|  
+|База данных|[Обязательно]|Имя объекта базы данных для восстановления.|  
 |файл|[Обязательно]|Имя и путь к файлу резервной копии.|  
 |password|Пустой|Пароль, используемый для расшифровки файла резервной копии.|  
 |allowOverwrite|False|Логическое значение, если значение равно true, указывает, где уже существует файл резервной копии будет перезаписан. в противном случае — значение false.|  

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,18 +27,18 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a800041d5a0f98760e1359c5eee93c706859e020
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c8775c33a50d25379f1de53f00b7e66830cbf971
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measures-and-measure-groups"></a>Меры и их группы
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Куб содержит *меры* в *группы мер*, бизнес-логику, а также коллекцию измерений, дающих контекст для вычисления числовых данных, который предоставляет мера. Меры и группы мер являются неотъемлемой частью куба. Куб не может существовать без них.  
   
  В этом разделе описываются [Measures](#bkmk_measure) и [Measure Groups](#bkmk_mg). Здесь также приведена следующая таблица с ссылками на инструкции по созданию и настройке мер и групп мер.  
   
-|**Ссылка**|**Description**|  
+|**Ссылка**|**Описание**|  
 |--------------|---------------------|  
 |[Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Выберите один из способов создания мер и групп мер.|  
 |[Настройка свойств мер](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Если мастер кубов используется для запуска куба, возможно, потребуется изменить метод агрегирования, применить формат данных, настроить видимость для меры в клиентских приложениях или добавить выражение меры для работы с данными, прежде чем значения объединятся.|  
@@ -74,7 +71,7 @@ ms.lasthandoff: 12/08/2017
   
  Простой объект <xref:Microsoft.AnalysisServices.MeasureGroup> состоит из основной информации: имя группы, режим хранения и режим обработки. Он также содержит составные части: меры, измерения и разделы, которые составляют группу мер.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [Создание мер и групп мер в многомерных моделях](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   

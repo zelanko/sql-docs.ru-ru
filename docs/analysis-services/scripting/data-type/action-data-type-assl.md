@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Action Data Type
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f64e47da4c5f17f0e020040af7d95fec150826ef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0f42a42254c97d5f4c9f2aa4a3977e650108b1e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="action-data-type-assl"></a>Тип данных Action (язык ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет абстрактный примитивный тип данных, представляющий действие в [куба](../../../analysis-services/scripting/objects/cube-element-assl.md) элемент или [перспективы](../../../analysis-services/scripting/objects/perspective-element-assl.md) элемента.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Базовые типы данных|None|  
 |Производные типы данных|[DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md), [StandardAction](../../../analysis-services/scripting/data-type/standardaction-data-type-assl.md)|  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/08/2017
 |Дочерние элементы|[Заметки](../../../analysis-services/scripting/collections/annotations-element-assl.md), [приложения](../../../analysis-services/scripting/properties/application-element-assl.md), [заголовок](../../../analysis-services/scripting/properties/caption-element-assl.md), [CaptionIsMdx](../../../analysis-services/scripting/properties/captionismdx-element-assl.md), [условие](../../../analysis-services/scripting/properties/condition-element-assl.md), [описание ](../../../analysis-services/scripting/properties/description-element-assl.md), [Идентификатор](../../../analysis-services/scripting/properties/id-element-assl.md), [вызов](../../../analysis-services/scripting/properties/invocation-element-assl.md), [имя](../../../analysis-services/scripting/properties/name-element-assl.md), [целевой](../../../analysis-services/scripting/properties/target-element-assl.md), [TargetType](../../../analysis-services/scripting/properties/targettype-element-assl.md), [Переводы](../../../analysis-services/scripting/collections/translations-element-assl.md), [типа](../../../analysis-services/scripting/properties/type-element-action-assl.md)|  
 |Производные элементы|[DrillThroughAction](../../../analysis-services/scripting/data-type/drillthroughaction-data-type-assl.md), [ReportAction](../../../analysis-services/scripting/data-type/reportaction-data-type-assl.md), [StandardAction](../../../analysis-services/scripting/data-type/standardaction-data-type-assl.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](../../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
   
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.Action>.  

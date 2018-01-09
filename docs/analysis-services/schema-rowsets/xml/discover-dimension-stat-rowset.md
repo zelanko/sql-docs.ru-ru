@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bfe9352a73c2548bfa092eb88d04605b6721b4ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7fb30b200d930a9827aee4b630d80df6e622842e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverdimensionstat-rowset"></a>Набор строк DISCOVER_DIMENSION_STAT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Сведения об измерении, в том числе имя базы данных, содержащий его, имя измерения, атрибуты и число членов для каждого атрибута. В табличной модели соответствует столбцам в таблице и количеству значений в каждом столбце.  
@@ -36,8 +34,8 @@ ms.lasthandoff: 12/08/2017
   
 |Имя столбца|Индикатор типа|Ограничение|Description|  
 |-----------------|--------------------|-----------------|-----------------|  
-|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Обязательное|Имя базы данных, содержащей измерение.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
-|**DIMENSION_NAME**|**DBTYPE_WSTR**|Обязательное|Имя измерения.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
+|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Обязательно|Имя базы данных, содержащей измерение.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
+|**DIMENSION_NAME**|**DBTYPE_WSTR**|Обязательно|Имя измерения.<br /><br /> Этот столбец является обязательным в списке ограничений.|  
 |**ATTRIBUTE_NAME**|**DBTYPE_WSTR**||Имя атрибута в измерении.|  
 |**ATTRIBUTE_COUNT**|**DBTYPE_I8**||Число значений в именованном атрибуте. Для табличной модели это значение всегда совпадает с количеством строк в таблице.|  
   

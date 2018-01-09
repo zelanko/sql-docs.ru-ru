@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fbe2029742ba4df3c390820effa565055159f7dd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0b7139d1120e9b244ae4bc20e32951c52cc7f37d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="modeling-flags-data-mining"></a>Флаги моделирования (интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Флаги моделирования в можно использовать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для предоставления алгоритм интеллектуального анализа данных дополнительных сведений о данных, которые определены в таблице вариантов. Алгоритм может использовать эти сведения для создания более точной модели интеллектуального анализа данных.  
@@ -107,7 +105,7 @@ WHERE MODEL_NAME = '<model name>'
   
  Можно применить параметр FORCE_REGRESSOR для обеспечения того, чтобы в алгоритме использовался конкретный регрессор. Этот параметр может применяться с алгоритмом дерева принятия решений и алгоритмом линейной регрессии.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Следующие ссылки помогут узнать больше об использовании флагов модели.  
   
 |Задача|Раздел|  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f9303a84fe9bd7b26434d869ec4c2d6216f0938f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 308c7910d408fcb29689484eb71726a669ed6d98
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Автоматизация административных задач служб Analysis Services с помощью служб SSIS
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет автоматизировать выполнение скриптов DDL, куба и обработку задач и задач запросов интеллектуального анализа данных модели интеллектуального анализа данных. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно рассматривать как набор задач потока управления и задач по обслуживанию, которые можно соединять, образуя последовательные и параллельные задания по обработке данных.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="data-mining-query-task"></a>Задача «Запрос интеллектуального анализа данных»  
  Задача «Запрос интеллектуального анализа» в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] позволяет извлекать и сохранять данные из моделей интеллектуального анализа данных. Эти данные часто хранятся в реляционной базе данных и могут использоваться, например для определения списка потенциальных заказчиков для целевой маркетинговой кампании. Интеллектуальный анализ данных может идентифицировать ценность заказчика и вероятность того, что этот заказчик ответит на конкретный маркетинговый ход. Задачу «Запрос интеллектуального анализа» можно использовать для извлечения и изменения данных в предпочтительном формате. Дополнительные сведения о реализации этой задачи см. в разделе [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Назначение обработки секции](../../integration-services/data-flow/partition-processing-destination.md)   
  [Назначение «Обработка измерений»](../../integration-services/data-flow/dimension-processing-destination.md)   
  [Преобразование «запрос интеллектуального анализа данных»](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   

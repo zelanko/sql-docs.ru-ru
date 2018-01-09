@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.tablebehavior.f1
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d1bd1900080d7b41b161461fb715edac4b2b1614
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0f202d090127d93ec0786e0b7cca90f54f7fac0b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View — Настройка свойств работы таблицы для отчетов
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]При использовании табличной модели в качестве модели данных для [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], можно задать свойства поведения таблицы, которые предоставляют строки детализации на более детальном уровне. Задание свойств поведения таблицы изменяет групповую обработку строк и обеспечивает более эффективное размещение идентификационной информации (имен, фотографий, логотипов и т. д.) в мозаичном, карточном или диаграммном виде.  
@@ -141,7 +138,7 @@ ms.lasthandoff: 12/08/2017
   
  ![Диаграмма основана на группирования по Идентификатору строки](../../analysis-services/tabular-models/media/ssas-rptprop-chartrowid.gif "диаграмма основана на группирования по Идентификатору строки")  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  После вычисления таблиц в модели и установки свойств работы таблицы для строк с подробными сведениями, которые должны всегда отображаться как отдельные объекты, можно и дальше оптимизировать модель при помощи дополнительных свойств или настроек.  
   
   

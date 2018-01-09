@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-table-valued-parameters
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,11 +20,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6473fb0962aa6b3a7fc0ac3af5914478adcd2f8c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ffec7d671d4005b2af89b3d1767992eaf36ad11b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Дополнительные метаданные возвращающего табличное значение параметра
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,8 +38,8 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint, не NULL|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar(128), не NULL|Имя типа возвращающего табличное значение параметра.|  
-|COLUMN_SIZE|Integer|NULL|  
-|BUFFER_LENGTH|Integer|0|  
+|COLUMN_SIZE|Целочисленный|NULL|  
+|BUFFER_LENGTH|Целочисленный|0|  
 |DECIMAL_DIGITS|Smallint|NULL|  
 |NUM_PREC_RADIX|Smallint|NULL|  
 |NULLABLE|Smallint, не NULL|SQL_NULLABLE|  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |COLUMN_DEF|WVarchar(4000)|NULL|  
 |SQL_DATA_TYPE|Smallint, не NULL|SQL_SS_TABLE|  
 |SQL_DATETIME_SUB|Smallint|NULL|  
-|CHAR_OCTET_LENGTH|Integer|NULL|  
+|CHAR_OCTET_LENGTH|Целочисленный|NULL|  
 |ORDINAL_POSITION|Integer, не NULL|Порядковый номер параметра.|  
 |IS_NULLABLE|Varchar|"YES"|  
 |SS_TYPE_CATALOG_NAME|WVarchar(128), не NULL|Каталог, содержащий определение табличного типа для возвращающего табличное значение параметра.|  

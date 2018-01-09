@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.bidtoolset.realtime.f1
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 74dc0a734b573c94a4ec32ac9d36b57338be4eae
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e1eae96e5152fa9d16dd20cf1333c03bf2160db4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="directquery-mode"></a>Режим DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе описывается *режим DirectQuery* для табличных моделей служб Analysis Services на уровне совместимости 1200 и выше. Режим DirectQuery можно включить для моделей, разрабатываемых в среде SSDT. Для уже развернутых табличных моделей можно переключиться в режим DirectQuery в среде SSMS. Перед выбором режима DirectQuery важно понять его преимущества и ограничения.
@@ -66,9 +66,9 @@ ms.lasthandoff: 12/08/2017
 Источник данных   |Версии  |Поставщики
 ---------|---------|---------
 Microsoft SQL Server    |  2008 и более поздних версий      |       Поставщик OLE DB для SQL Server, поставщик OLE DB для собственного клиента SQL Server, поставщик данных .NET Framework для клиента SQL Server  
-База данных Microsoft Azure SQL    |   все      |  Поставщик OLE DB для SQL Server, поставщик OLE DB для собственного клиента SQL Server, поставщик данных .NET Framework для клиента SQL Server            
-Хранилище данных SQL Microsoft Azure     |   все     |  Поставщик данных .NET Framework для клиента SQL       
-Системы платформы аналитики Microsoft SQL (APS)     |   все      |  Поставщик OLE DB для SQL Server, поставщик OLE DB для собственного клиента SQL Server, поставщик данных .NET Framework для клиента SQL Server       
+База данных Microsoft Azure SQL    |   All      |  Поставщик OLE DB для SQL Server, поставщик OLE DB для собственного клиента SQL Server, поставщик данных .NET Framework для клиента SQL Server            
+Хранилище данных SQL Microsoft Azure     |   All     |  Поставщик данных .NET Framework для клиента SQL       
+Системы платформы аналитики Microsoft SQL (APS)     |   All      |  Поставщик OLE DB для SQL Server, поставщик OLE DB для собственного клиента SQL Server, поставщик данных .NET Framework для клиента SQL Server       
 Реляционные базы данных Oracle     |  Oracle 9i и более поздних версий       |  Поставщик OLE DB для Oracle       
 Реляционные базы данных Teradata    |  Teradata V2R6 и более поздних версий     | Поставщик данных .NET для Teradata        
 

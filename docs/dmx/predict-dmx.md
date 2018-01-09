@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: PREDICT
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7130d9a4dd3d89e456c53b47c49e14734b670f85
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 448507936bab886a8d081ee487ab323a3a4a2ef4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-dmx"></a>Predict (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +45,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 ## <a name="return-type"></a>Тип возвращаемых данных  
  \<ссылка на скалярный столбец >  
   
- либо  
+ или диспетчер конфигурации служб  
   
  \<ссылка на столбец таблицы >  
   
@@ -56,7 +54,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
 > [!NOTE]  
 >  Параметры INCLUSIVE, EXCLUSIVE, INPUT_ONLY и INCLUDE_STATISTICS применяются только к ссылкам на столбцы таблицы, а EXCLUDE_NULL и INCLUDE_NULL — только к ссылкам на скалярные столбцы.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Имеются следующие параметры: EXCLUDE_NULL (по умолчанию), INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (по умолчанию), INPUT_ONLY и INCLUDE_STATISTICS.  
   
 > [!NOTE]  
@@ -64,7 +62,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  Параметр INCLUDE_NODE_ID в качестве результата возвращает столбец $NODEID. NODE_ID является узлом содержимого, на котором прогнозирование осуществляется для определенного объекта. Этот параметр является необязательным при использовании прогноза на основе столбцов таблицы.  
   
- *n*  Параметр применяется к столбцам таблицы. В зависимости от типа прогноза данный параметр задает количество возвращаемых строк. Если базовые столбцы являются последовательностью, то вызывается **PredictSequence** функции. Если базовые столбцы являются временных рядов, он вызывает метод **PredictTimeSeries** функции. Для ассоциативных типов прогнозирования вызывается **PredictAssociation** функции.  
+  *n*  Параметр применяется к столбцам таблицы. В зависимости от типа прогноза данный параметр задает количество возвращаемых строк. Если базовые столбцы являются последовательностью, то вызывается **PredictSequence** функции. Если базовые столбцы являются временных рядов, он вызывает метод **PredictTimeSeries** функции. Для ассоциативных типов прогнозирования вызывается **PredictAssociation** функции.  
   
  **Predict** функция поддерживает полиморфизм.  
   

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2a32026cfa52b21ed994d8b218d5b80f5b0c03f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: dda2fe632e3a4cae0f36d766d4778f5ff910d649
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Создание измерения путем формирования в источнике данных таблицы, отличной от таблицы времени
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], можно использовать мастер измерений [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Чтобы создать измерение без использования существующего источника данных. Для этого на странице мастера **Выберите метод создания** следует выбрать параметр **Создать в источнике данных таблицу, отличную от таблицы времени** . Для создания новой таблицы измерения в базовом источнике данных нужно иметь разрешение на создание объектов в базовом источнике данных. Определение измерения без стандартного представления источников данных можно выполнить с нуля или с помощью шаблона измерения.  
@@ -98,7 +95,7 @@ ms.lasthandoff: 12/08/2017
   
  Если установлен флажок **Это изменяющееся измерение** , мастер измерений определяет атрибуты, указанные в следующей таблице:  
   
-|Attribute|Тип|  
+|attribute|Тип|  
 |---------------|----------|  
 |Первоначальный идентификатор медленно изменяющегося измерения|SCDOriginalID|  
 |Дата окончания медленно изменяющегося измерения|SCDEndDate|  
@@ -112,7 +109,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="completing-the-dimension-wizard"></a>Завершение работы мастера измерений  
  На странице **Завершение работы мастера** введите имя для нового измерения и просмотрите структуру измерения. Установите флажок **Сформировать схему** , чтобы запустить мастер формирования схем после нажатия кнопки **Готово**. В большинстве случаев не следует устанавливать этот флажок, если запланировано создание дополнительных объектов. Если этот флажок не установлен, то можно использовать конструктор измерений для формирования схемы позже.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание измерения времени посредством формирования таблицы времени](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [Создание измерения времени посредством формирования таблицы времени](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   

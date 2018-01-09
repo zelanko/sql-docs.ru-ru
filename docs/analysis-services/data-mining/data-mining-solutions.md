@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,13 +20,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4b806912f80b6e95a455456a992979953113a330
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 595282e28a55171ed5a528d28f37500a21f71c0d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="data-mining-solutions"></a>Решения для интеллектуального анализа данных
+# <a name="data-mining-solutions"></a>Решения интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Решение по интеллектуальному анализу данных — [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] решение, содержащее один или несколько проектов интеллектуального анализа данных.  
   
  Подразделы этого раздела содержат сведения о том, как спроектировать и внедрить интегрированное решение по интеллектуальному анализу данных с помощью служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Общие сведения о процессе разработки в области интеллектуального анализа данных и связанных с этим средствах см. в разделе [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md).  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/08/2017
  [Создание структуры интеллектуального анализа данных OLAP](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  Создание структуры интеллектуального анализа данных на основе данных куба OLAP. Модели, создаваемые на основе данных OLAP, можно сохранять в виде измерения интеллектуального анализа данных, или же можно сохранить набор данных и модели в виде нового куба.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Проекты интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-projects.md)  
   
  [Обработка объектов интеллектуального анализа данных](../../analysis-services/data-mining/processing-data-mining-objects.md)  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/08/2017
 |Настройка модели интеллектуального анализа данных путем применения фильтров к данным, используемым в обучении модели.|[Добавление моделей интеллектуального анализа данных в структуру (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |Обновление решений по интеллектуальному анализу данных и управление ими.|Ссылка подлежит определению|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Учебники по интеллектуальному анализу данных (службы Analysis Services)](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d83f1264b7eb9f3b306c4540dca9f1407eff0b4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e82aedbca1db294e94a803db8541c2ff88876211
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Определение именованных запросов в представлении источника данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Именованный запрос является выражением SQL, представленным в виде таблицы. В именованном запросе можно указать выражение SQL для выбора строк и столбцов, возвращаемых из одной или нескольких таблиц в одном или нескольких источниках данных. Именованный запрос подобен другим таблицам со строками и связями в представлении источника данных, за исключением того, что он основан на выражении.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  Нажмите кнопку **ОК**. В заголовке таблицы появится значок с двумя пересекающимися таблицами, указывающий на то, что таблица была заменена именованным запросом.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Представления источников данных в многомерных моделях](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 50841f276b204ed30de97636c5d3c5cccd7204e0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0cb0930e6fd3faf0b44c5b8ac46359ec959b85c9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Важный первый шаг предоставления доступа [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] доступен в сети важно определить, требуется ли разблокировать порты в брандмауэре. Для большинства установок необходимо создать по крайней мере одно правило брандмауэра для входящих подключений, которое разрешает подключаться к службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -240,7 +237,7 @@ ms.lasthandoff: 12/08/2017
   
  При использовании SharePoint 2010 открывать порты в брандмауэре Windows не нужно. SharePoint открывает необходимые порты и такие надстройки, как [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, которые работают в пределах среды SharePoint. В установке [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010 системная служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] имеет монопольное право на использование локального экземпляра служб SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]), установленного на том же компьютере. Используются локальные, но не сетевые подключения для доступа к локальному модулю служб Analysis Services, который загружает данные, выполняет запросы и обрабатывает данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сервере SharePoint. Для получения данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] из клиентских приложений запросы направляются через порты, открытые программой установки SharePoint (в частности, определяются правила для входящих подключений при доступе к SharePoint — 80, центру администрирования SharePoint версии 4, веб-службам SharePoint и SPUserCodeV4). Веб-службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] выполняются в пределах фермы SharePoint, поэтому правил брандмауэра SharePoint достаточно для удаленного доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в ферме SharePoint.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Служба обозревателя SQL Server (компонент Database Engine и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [Запуск, остановка, приостановка, возобновление и перезапуск компонента Database Engine, агента SQL и службы браузера SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  

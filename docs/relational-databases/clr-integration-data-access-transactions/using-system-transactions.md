@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 dev_langs:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 40c3ac24cc6be800fea8da1fab407569e4cdab87
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0e365b0ffd041b8457fff3035fbbe4e19f5bcee6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-systemtransactions"></a>Использование System.Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions** пространство имен предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеграция CLR среды выполнения (CLR). Класс **System.Transactions.TransactionScope** делает блок кода транзакционным, неявно прикрепляя соединения к распределенной транзакции. В конце блока **Complete** , перед тем, как выйти из него, необходимо вызвать метод **TransactionScope**. Когда выполнение программы покидает блок кода, вызывается метод **Dispose** , что вызывает прерывание транзакции, если не поддерживается метод **Complete** . При возникновении исключения, в результате которого исполнение кода выходит за пределы области действия, транзакция считается неподдерживаемой.  

@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e8e5f1a6224a72fbda958adf4969f357db58d6d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c7f262045697398e2de2dabf01d59f9422191b55
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="relationships-ssas-tabular"></a>Связи (табличные службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В табличных моделях связь — это соединение между двумя таблицами данных. Связь определяет, как должны соотноситься данные в двух таблицах. Например, таблица «Customers» и таблица «Orders» могут быть связаны, чтобы отображалось имя клиента, соответствующее каждому заказу.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="what"></a> Преимущества  
  Связь представляет собой соединение двух таблиц данных на основании одного или нескольких столбцов в каждой таблице. Чтобы понять, чем полезны связи, представим, что отслеживаются данные для заказов клиентов в бизнесе. Можно отслеживать все данные в одной таблице, имеющей структуру, подобную следующей.  
   
-|CustomerID|Название|EMail|DiscountRate|OrderID|OrderDate|Продукт|количество|  
+|CustomerID|Имя|EMail|DiscountRate|OrderID|OrderDate|Продукт|количество|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Эштон|chris.ashton@contoso.com|0,05|256|2010-01-07|Компактный цифровой|11|  
 |1|Эштон|chris.ashton@contoso.com|0,05|255|2010-01-03|Однообъективный зеркальный фотоаппарат|15|  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
 ### <a name="customers"></a>Заказчики  
   
-|[CustomerID]|Название|EMail|  
+|[CustomerID]|Имя|EMail|  
 |--------------------|----------|-----------|  
 |1|Эштон|chris.ashton@contoso.com|  
 |2|Яворски|michal.jaworski@contoso.com|  
@@ -185,7 +183,7 @@ ms.lasthandoff: 12/08/2017
 |[Удаление связей](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)|Содержит описание того, как удалить связь, а также последствий удаления отношений.|  
 |[Двунаправленные кросс-фильтры для табличных моделей в службах SQL Server 2016 Analysis Services](../../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md)|Содержит описание двунаправленной кросс-фильтрации для связанных таблиц. Если таблицы связаны и определены двунаправленные кросс-фильтры, контекст фильтра одной связи таблиц можно использовать для запросов ко второй связи таблиц.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Таблицы и столбцы](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
  [Импорт данных](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   

@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: StructureColumn
@@ -22,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: bec1bd29c696b64b1b8bbbe2c31da593d1f1c098
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 24b7869462815e6d636572a093a332ecce6dc02c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (расширения интеллектуального анализа данных)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +47,7 @@ StructureColumn('structure column name')
   
  Если же столбец структуры интеллектуального анализа данных содержит вложенную таблицу, то функция возвращает табличное значение. Затем его можно указать в предложении FROM вложенной инструкции SELECT.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция полиморфна и может использоваться в любом месте инструкции, где допустимы выражения, в том числе список выражений инструкции SELECT, выражение WHERE или ORDER BY.  
   
  Имя столбца в структуре интеллектуального анализа данных является строковым значением и таким образом, должны заключаться в одинарные кавычки: например, `StructureColumn('` **столбец 1**`')`. Если несколько столбцов имеют одинаковые имена, то имя определяется в контексте содержащей его инструкции SELECT.  

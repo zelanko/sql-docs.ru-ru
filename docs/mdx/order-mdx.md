@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: ORDER
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: 37a8d5995737933b38b532899c46ec81787bea75
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: c67e4106b760f9218172e7ada5628e34dd308f8a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="order-mdx"></a>Order (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Order(Set_Expression, String_Expression
  *String_Expression*  
  Допустимое строковое выражение (обычно многомерное выражение над координатами ячейки), возвращающее число, представленное в виде строки.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Порядок** функция может быть иерархической (в соответствии с помощью **ASC** или **DESC** флаг) или неиерархической (в соответствии с помощью **BASC** или **BDESC** флаг; **B** означает «break иерархии»). Если **ASC** или **DESC** указано, **порядок** функция сначала упорядочивает элементы согласно их положению в иерархии и затем выполняет сортировку каждого уровня. Если **BASC** или **BDESC** указано, **порядок** функция упорядочивает элементы в наборе, обращая внимания на иерархию. Указанный флаг **ASC** значение по умолчанию.  
   
  Если **порядок** функция используется с набором перекрестного соединения, в которых две или более иерархии и **DESC** флаг используется, только элементы последней иерархии в наборе упорядочены. В этом заключается отличие от версии служб Analysis Services 2000, где сортировались все иерархии в наборе.  

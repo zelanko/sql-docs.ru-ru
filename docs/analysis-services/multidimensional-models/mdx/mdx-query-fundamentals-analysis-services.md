@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -28,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 601c9d365870528a8716091cfc3a1ba60bd2f920
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5fe7b1ece760be2f1058c506306b409cd455edd1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Основные принципы запросов многомерных выражений (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Многомерных выражений (MDX) позволяет запрашивать многомерные объекты, такие как кубы и возвращать многомерные наборы ячеек, содержащие данные куба. Этот раздел и его подразделы содержат общие сведения о многомерных запросах.  
@@ -42,7 +39,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Дополнительные сведения о производительности запросов многомерных выражений и вычислений см. в разделе «Написание эффективных многомерных выражений» [Руководства по производительности служб SQL Server 2005 Analysis Services](http://go.microsoft.com/fwlink/?LinkId=81621).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Раздел|Description|  
 |-----------|-----------------|  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 |[Изменение данных (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)|Использование обратной записи для временного или постоянного изменения многомерных данных.|  
 |[Переменные и параметры (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/using-variables-and-parameters-mdx.md)|Использование переменных и параметров в запросах многомерных выражений.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по многомерным выражениям (многомерные выражения)](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

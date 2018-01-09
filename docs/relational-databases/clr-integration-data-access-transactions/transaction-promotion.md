@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f37528588c5d302036bb39d3de4349c44120e86f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 492191dfa1f3784ccacd8d7f7f12a247f76c9741
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="transaction-promotion"></a>Повышение транзакции
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Транзакции *продвижение* описывает упрощенным локальным транзакциям, который может быть автоматически повышена до свободно распределяемых транзакций при необходимости. Когда управляемая хранимая процедура запускается в рамках транзакции базы данных на сервере, в контексте локальной транзакции запускается код CLR.  Если соединение с удаленным сервером открывается в рамках транзакции базы данных, это соединение с удаленным сервером прикрепляется к распределенной транзакции, а локальная транзакция автоматически повышается до распределенной транзакции. Таким образом повышение транзакции минимизирует избыток распределенных транзакций, откладывая создание распределенной транзакции до тех пор, пока в ней не возникнет необходимость. Повышение транзакций выполняется автоматически, если она была включена с помощью **Enlist** ключевое слово и не требует вмешательства разработчика. Поставщик данных .NET Framework для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает поддержку повышения транзакций с помощью классов в .NET Framework **System.Data.SqlClient** пространства имен.  

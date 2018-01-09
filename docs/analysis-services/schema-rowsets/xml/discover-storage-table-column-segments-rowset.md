@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 66d86e3583b81069f2c1f77a616dac91a022ff9c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 878568721816c90e202727dc3e516370f9c3ee56
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetablecolumnsegments-rowset"></a>Набор строк DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Предоставляет сведения на уровне столбцов и сегментов о таблицах хранилища, используемых в базе данных служб Analysis Services, работающей в табличном или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] режиме. Этот набор строк используется главным образом для анализа и устранения неполадок.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** набор строк содержит следующие столбцы.  
   
-|**Имя столбца**|**Индикатор типа**|**Ограничение**|**Description**|  
+|**Имя столбца**|**Индикатор типа**|**Ограничение**|**Описание**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Да|Указывает табличную базу данных.<br /><br /> **DISCOVER_STORAGE_TABLE_COLUMN_SEGMENTS** строк может быть ограничен с помощью этого столбца. Если отсутствует, используется текущая база данных.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**|Да|Имя модели.<br /><br /> С помощью этого столбца можно ограничить набор строк **DISCOVER_STORAGE_TABLES** .|  

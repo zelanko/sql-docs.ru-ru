@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cc306874fed195a649dd0cc18d43db4a426cefa4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a5139e2e9e9d5bb06d594f9463f6632b6ee9fb78
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="linked-measure-groups"></a>Связанные группы мер
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Связанная группа мер основана на другой группе мер в другом кубе в той же или другой базе данных служб Analysis Services. Можно использовать связанную группу мер, если требуется повторно использовать набор мер и соответствующие значения данных в нескольких кубах.  
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
  Чтобы определить или использовать связанную группу мер, учетная запись службы Windows для экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна принадлежать к роли базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], имеющей права доступа **ReadDefinition** и **Read** в исходном экземпляре служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] на исходный куб и группу мер, или к роли "Администраторы" служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для исходного экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Определите связанные измерения](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   

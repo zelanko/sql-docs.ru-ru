@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90ec951bb5666f28167e0ce704e63ba3bb0972d4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 05f62f6beb2e248fc2e0c3ae405f8893c33c10e9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="understanding-the-database-schemas"></a>Основные сведения о схемах баз данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Мастер формирования схем создает ненормализованную реляционную схему для базы данных предметной области, на основе измерений и групп мер в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Мастер создает реляционную таблицу для каждого измерения (таблица измерения), в которой хранятся данные измерений, которую называют таблицей измерения, и реляционную таблицу для каждой группы мер (таблица фактов), в которой хранятся данные фактов. При создании реляционных таблиц мастер игнорирует связанные измерения, связанные группы мер и серверные измерения времени.  
@@ -66,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Если в измерении, на котором основана таблица измерения, имеется несколько ключевых атрибутов, то возникает ошибка.  
   
- Переводы  
+ Translations  
  Мастер формирует отдельную таблицу для переведенных значений любого атрибута, для которого требуется столбец перевода. Мастер также создает отдельный столбец для каждого из требуемых языков.  
   
 ## <a name="fact-tables"></a>Таблицы фактов  
@@ -87,7 +84,7 @@ ms.lasthandoff: 12/08/2017
   
  Если выбрано задание ссылочной целостности, то между таблицами измерений и таблицами фактов создаются ограничения ссылочной целостности.  
   
- Переводы  
+ Translations  
  Мастер формирует отдельную таблицу для переведенных значений любого свойства в группе мер, для которого требуется столбец перевода. Мастер также создает отдельный столбец для каждого из требуемых языков.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>Конвертация типов данных и длины по умолчанию  
@@ -103,7 +100,7 @@ ms.lasthandoff: 12/08/2017
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные сведения о добавочном создании](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
  [Управление изменениями в источниках данных и представлениях источников данных](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   

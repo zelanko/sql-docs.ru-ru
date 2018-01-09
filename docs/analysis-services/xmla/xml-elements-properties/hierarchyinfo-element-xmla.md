@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: HierarchyInfo Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b1be8931a404d682e1f3007aaa1e0535b91c1552
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a92d08f78348b821cd8ee9cb5ff26a53a8439493
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchyinfo-element-xmla"></a>Элемент HierarchyInfo (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Представляет отдельную иерархию, содержащуюся в элементе [AxisInfo](../../../analysis-services/xmla/xml-elements-properties/axisinfo-element-xmla.md) элемента.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -71,11 +69,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Атрибуты  
   
-|Attribute|Description|  
+|attribute|Description|  
 |---------------|-----------------|  
-|Название|Обязательный атрибут типа **String** . Имя иерархии.|  
+|Имя|Обязательный атрибут типа **String** . Имя иерархии.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="see-also"></a>См. также:  
  [Свойства &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/xml-elements-properties.md)  

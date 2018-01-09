@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5e72bec5f3ff9a0dbc14912fb2bba656744a678d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4467fa9fcf4b695b77d533e358019b020545861c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="time-series-model-query-examples"></a>Примеры запросов моделей временных рядов
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании запроса к модели интеллектуального анализа данных, можно создать либо запрос содержимого, который предоставляет сведения о закономерностях, обнаруженных при анализе, или можно создать прогнозирующие запросы, использующие закономерности, содержащиеся в модели для прогнозирования новых данных. Например, запрос содержимого для модели временных рядов может возвратить дополнительные сведения о найденных периодических структурах; прогнозирующий запрос может выполнить прогнозы для следующих 5 — 10 временных срезов. Запрос также позволяет получить метаданные, описывающие модель.  
@@ -106,7 +104,7 @@ WHERE NODE_NAME = 'TA00000007'
   
  Пример результатов:  
   
-|Краткое выражение|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
+|Краткое выражение|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|  
 |--------------------|-----------------------|------------------------|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Intercept)|15.24….|  
 |ARIMA (2,0,7)x(1,0,2)(12)|R250 Europe:Quantity(Periodicity)|1|  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client|features
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -28,11 +28,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 14cab75f3f5468259504b103bfa0a3e43e23f8ce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 98eadce8ef3ffe948793a6da69a47c209889942d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- Например:  
+ Пример:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -90,7 +90,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  Подписка на уведомления всегда фиксируется независимо от того, выполнялась ли инструкция в рамках пользовательской транзакции или в режиме AUTO COMMIT, а также была ли транзакция, в рамках которой выполнялась инструкция, зафиксирована либо был выполнен ее откат. Уведомление сервера срабатывает при возникновении любого из следующих недопустимых условий: изменение базовых данных или схемы либо по истечении времени ожидания, в зависимости от того, что произойдет первым. Регистрации уведомлений удаляются сразу же после их срабатывания. Поэтому, если приложению требуется получение уведомлений в дальнейшем, оно должно подписаться на них снова сразу после получения уведомления.  
   
- Другое соединение или поток может проверять целевую очередь на наличие уведомлений. Например:  
+ Другое соединение или поток может проверять целевую очередь на наличие уведомлений. Пример:  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   

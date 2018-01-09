@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: StorageLocation Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c70315d8853bc4c4cc0d25154bbf21e341033f0e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9c942079a21d4727e1c125bf15ac837045c162ba
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="storagelocation-element-assl"></a>Элемент StorageLocation (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит папку файловой системы хранения данных для содержимого родительского элемента.  
@@ -47,15 +45,15 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|См. в следующей таблице.|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 |Предок или родитель|Значение по умолчанию|  
 |------------------------|-------------------|  
-|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|Нет|  
+|[Cube](../../../analysis-services/scripting/objects/cube-element-assl.md)|None|  
 |[Группа мер](../../../analysis-services/scripting/objects/measuregroup-element-assl.md)|Значение элемента **StorageLocation** из родительского элемента **Cube** .|  
 |[Секции](../../../analysis-services/scripting/objects/partition-element-assl.md)|Значение элемента **StorageLocation** из родительского элемента **MeasureGroup** .|  
   
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/08/2017
 |Родительские элементы|[Куб](../../../analysis-services/scripting/objects/cube-element-assl.md), [MeasureGroup](../../../analysis-services/scripting/objects/measuregroup-element-assl.md), [секции](../../../analysis-services/scripting/objects/partition-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элементы, соответствующие родителям элемента **StorageLocation** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.Cube>, <xref:Microsoft.AnalysisServices.MeasureGroup>, и <xref:Microsoft.AnalysisServices.Partition>.  
   
 ## <a name="see-also"></a>См. также:  

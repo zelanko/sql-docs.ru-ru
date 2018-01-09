@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: OLE DB, processing results
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e3cfce2d8d8e706fe1fd75821558b651eed7d978
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c1f8d6780c49abd6c087b63aa89e37eb4af0baa8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>Инструкции по обработке результатов (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/17/2017
 
   Обработка результатов приложением OLE DB начинается с определения характеристик множества результирующих наборов. Затем данные считываются в программные переменные. Если команда выполняет хранимую процедуру, необходимо также знать, как обрабатывать коды возврата и выходные параметры хранимых процедур.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Выполнение хранимой процедуры &#40; С помощью синтаксиса ВЫЗОВА ODBC &#41; и обработки возвращаемых кодов и выходные параметры &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-how-to/results/execute-stored-procedure-with-odbc-call-and-process-output.md)  
   

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d2e7e571a9fd2b807375046653953098d722556d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1e6971bd8c1bc228386ad5b39a498f0e0ed5d42
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-partition-writeback"></a>Настройка обратной записи секции
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если разрешить запись группу мер конечные пользователи могут изменять данные куба при их просмотре, где будут сохранены в отдельной таблице, называемой таблицей обратной записи, а не в данных куба или исходных данных. Конечные пользователи, просматривающие секцию, доступную для записи, видят суммарный результат всех изменений в таблице обратной записи для секции.  
@@ -68,7 +65,7 @@ ms.lasthandoff: 12/08/2017
   
  Чтобы преобразовать данные обратной записи в секцию, откройте диалоговое окно **Преобразование в секцию**. Чтобы получить доступ к [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], щелкните правой кнопкой мыши таблицу обратной записи для секции, доступной для записи. Укажите имя секции, а также требуемое время разработки статистического выражения для секции — после или во время создания секции. Чтобы создать агрегат во время выбора секции, необходимо выбрать параметр, позволяющий копировать статистическую схему из существующей секции. Обычно (но не всегда) такой секцией является текущая секция обратной записи. Также можно выбрать параметр, позволяющий обрабатывать секцию при ее создании.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Секции, доступные для записи](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Включение обратной записи в куб OLAP на уровне ячейки в Excel 2010](http://go.microsoft.com/fwlink/p/?LinkId=394952)   
  [Включение и защита ввода данных с помощью обратной записи служб Analysis Services](http://go.microsoft.com/fwlink/p/?LinkId=394953)  

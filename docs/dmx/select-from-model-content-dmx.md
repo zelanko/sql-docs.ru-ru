@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7eaccd559a0898e489bf7befead782c7d3387245
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 24b5a1884994050874cbfd24afbae84b773620d1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;модели&gt;. СОДЕРЖИМОЕ (РАСШИРЕНИЯ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +47,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
   
 ## <a name="arguments"></a>Аргументы  
  *n*  
- Необязательно. Целое число, указывающее количество возвращаемых строк.  
+ Необязательный параметр. Целое число, указывающее количество возвращаемых строк.  
   
  *список выражений*  
  Список столбцов с разделителем-запятой, полученных от набора строк схемы Content.  
@@ -58,12 +56,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Идентификатор модели.  
   
  *Условное выражение*  
- Необязательно. Условие ограничения значений, возвращаемых из списка столбцов.  
+ Необязательный параметр. Условие ограничения значений, возвращаемых из списка столбцов.  
   
  *expression*  
- Необязательно. Выражение, возвращающее скалярное значение.  
+ Необязательный параметр. Выражение, возвращающее скалярное значение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  The **SELECT FROM** *\<model>***. СОДЕРЖИМОЕ** инструкция возвращает содержимое, определенное для каждого алгоритма. Например, можно использовать описания всех правил модели правил взаимосвязей в пользовательском приложении. Можно использовать **SELECT FROM \<модели >. СОДЕРЖИМОГО** инструкции для возврата значений в столбце NODE_RULE модели.  
   
  В следующей таблице перечислены столбцы, включенные в содержимое модели интеллектуального анализа данных.  
@@ -77,9 +75,9 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |MODEL_SCHEMA|Свободное имя схемы. Имеет значение NULL, если поставщик не поддерживает схемы.|  
 |MODEL_NAME|Имя модели. Этот столбец не может содержать значение NULL.|  
 |ATTRIBUTE_NAME|Имя атрибута, соответствующего этому узлу.|  
-|NODE_NAME|Тип узла.|  
+|NODE_NAME|Имя узла.|  
 |NODE_UNIQUE_NAME|Уникальное имя узла внутри модели.|  
-|NODE_TYPE|Целое число, представляющее тип узла. .|  
+|NODE_TYPE|Целое число, представляющее тип узла. , и делает это по-другому.|  
 |NODE_GUID|Идентификатор GUID узла. Имеет значение NULL, если идентификатор GUID отсутствует.|  
 |NODE_CAPTION|Метка или заголовок, связанный с узлом. В основном используется в целях отображения. Если заголовка не существует, возвращается значение NODE_NAME.|  
 |CHILDREN_CARDINALITY|Количество имеющихся у узла потомков.|  
@@ -163,6 +161,6 @@ WHERE NODE_TYPE = 26
 ## <a name="see-also"></a>См. также:  
  [ВЫБЕРИТЕ &#40; РАСШИРЕНИЙ ИНТЕЛЛЕКТУАЛЬНОГО АНАЛИЗА ДАННЫХ &#41;](../dmx/select-dmx.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Инструкции управления данными](../dmx/dmx-statements-data-manipulation.md)   
- [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Справка по инструкции](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

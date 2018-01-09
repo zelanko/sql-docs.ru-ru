@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: aa69c299-b8f4-4969-86d8-b3292fe13f08
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6456879f43d94dbe9883146b8d45cc5f5a433610
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b65634862df0d49c8f20383a873aafe386c2e32c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="what39s-new-in-analysis-services"></a>Какой новые возможности служб Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]SQL Server 2016 Analysis Services включает множество усовершенствований обеспечивая повышение производительности, упрощения разработки решения, управление автоматических базы данных, улучшенные связи с двунаправленной перекрестной фильтрации, параллельная обработка секции, и многое другое. Все усовершенствования, реализованные в этом выпуске, основаны на уровне совместимости 1200 для баз данных табличной модели.     
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/08/2017
 Теперь отображение папок доступно для табличных моделей 1200. Определенные в SQL Server Data Tools и готовые для просмотра в клиентских приложениях, таких как Excel или Power BI Desktop, папки отображения помогают упорядочить большое число мер в отдельные папки и сформировать визуальную иерархию для упрощения переходов по спискам полей.
 ### <a name="bi-directional-cross-filtering"></a>Двунаправленные кросс-фильтры
 Новым в этом выпуске является стандартный подход по включению двунаправленных кросс-фильтров в табличные модели, исключающий необходимость вручную создавать обходные пути DAX для распространения контекста фильтра по связям между таблицами. Фильтры создаются автоматически только в случае высокой вероятности установки направления. Если между связями таблиц существует неоднозначность в виде нескольких путей запроса, фильтр не будет создан автоматически. Дополнительные сведения см. в разделе [Двунаправленные кросс-фильтры для табличных моделей в службах SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) .
- ### <a name="translations"></a>Переводы    
+ ### <a name="translations"></a>Translations    
  Переведенные метаданные можно хранить в табличной модели уровня 1200. Метаданные в модели содержат поля для **Culture**, переведенные заголовки и переведенные описания. Для добавления переводов используйте команду **Модель** > **Переводы** в [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Дополнительные сведения см. в разделе [Переводы в табличных моделях (службы Analysis Services)](../analysis-services/tabular-models/translations-in-tabular-models-analysis-services.md).    
  ### <a name="pasted-tables"></a>Вложенные таблицы    
  Теперь табличную модель 1100 или 1103, содержащую вложенные таблицы, можно обновить до уровня 1200. Мы рекомендуем использовать [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. В SSDT задайте параметру **CompatibilityLevel** значение 1200, а затем разверните экземпляр [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Дополнительные сведения см. в разделе [Compatibility Level for Tabular models in Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) .    
@@ -144,7 +144,7 @@ refresh|Обрабатывает объект. Эквивалент ASSL — PRO
 ### <a name="dax-variables"></a>Переменные DAX    
 В этом выпуске реализована поддержка переменных в DAX. Теперь переменные могут хранить результат выражения в виде именованной переменной, которую затем можно передать в качестве аргумента в другие выражения измерений. Вычисленные итоговые значения для выражения переменной не изменяются, даже если на переменную существует ссылка в другом выражении. Дополнительные сведения см. в описании [функции VAR](http://msdn.microsoft.com/library/mt243785.aspx).    
 ### <a name="new-dax-functions"></a>Новые функции DAX
-В этом выпуске в DAX добавлено более 50 новых функций, призванных ускорить вычисления и улучшить визуализации в Power BI. Дополнительные сведения см. в разделе [Новые функции DAX](http://msdn.microsoft.com/library/mt704075.aspx).
+В этом выпуске в DAX добавлено более&50; новых функций, призванных ускорить вычисления и улучшить визуализации в Power BI. Дополнительные сведения см. в разделе [Новые функции DAX](http://msdn.microsoft.com/library/mt704075.aspx).
 ### <a name="save-incomplete-measures"></a>Сохранение неполных мер
 Теперь неполные меры DAX можно сохранять непосредственно в проекте табличной модели 1200 и выбирать их повторно для продолжения работы.
 ### <a name="additional-dax-enhancements"></a>Дополнительные улучшения DAX
@@ -190,7 +190,7 @@ refresh|Обрабатывает объект. Эквивалент ASSL — PRO
 |Элемент|Определение|    
 |-------------|----------------|    
 |DefaultValue|Свойство, которое указывает значение, используемое при вычислении запроса. Свойство DefaultValue является необязательным, но автоматически выбирается в случае, если невозможно выполнить статистическую обработку значений из элемента.|    
-|Statistics|Набор статистических данных из базовых данных, связанных со столбцом. Эти статистические данные определяются с помощью сложного типа TPropertyStatistics и предоставляются, только если их создание не требует интенсивных вычислений, как описано в разделе 2.1.13.5 документа Conceptual Schema Definition File Format with Business Intelligence Annotations.|    
+|Статистика|Набор статистических данных из базовых данных, связанных со столбцом. Эти статистические данные определяются с помощью сложного типа TPropertyStatistics и предоставляются, только если их создание не требует интенсивных вычислений, как описано в разделе 2.1.13.5 документа Conceptual Schema Definition File Format with Business Intelligence Annotations.|    
     
 ## <a name="directquery"></a>DirectQuery    
 ### <a name="new-directquery-implementation"></a>Новая реализация DirectQuery    

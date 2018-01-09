@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23021f365a349e226194326ed2d4d43acb2e7af8
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bd000979f6a7db2ea3da1b449312193edaa2c6ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Действия (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Действия могут быть разных типов, и они должны осуществляться соответствующим образом. Действия могут представлять собой следующее.  
@@ -68,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |Тип действия|Description|  
 |-----------------|-----------------|  
 |Командная строка|Выполняет команду в командной строке|  
-|Набор данных|Возвращает клиентскому приложению набор данных.|  
+|Dataset|Возвращает клиентскому приложению набор данных.|  
 |Детализация|Возвращает инструкцию детализации в качестве выражения, которое клиент выполняет, чтобы вернуть набор строк|  
 |Html|Выполняет HTML-скрипт в браузере Интернета.|  
 |Частный|Выполняет операцию с использованием интерфейса, отличного от приведенных в данной таблице.|  
@@ -80,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="resolving-and-executing-actions"></a>Разрешение и выполнение действий  
  Когда бизнес-пользователь получает доступ к объекту, для которого был определен командный объект, инструкция, связанная с действием, разрешается автоматически, становясь доступной в клиентском приложении, но действие не выполняется автоматически. Действие выполняется, только когда бизнес-пользователь производит зависящую от клиента операцию, инициирующую действие. Например, клиентское приложение может представлять действия в виде раскрывающегося меню, которое отображается при щелчке правой кнопкой мыши определенного элемента или ячейки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Действия в многомерных моделях](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
   
   

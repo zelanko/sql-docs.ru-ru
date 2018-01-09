@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,11 +40,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9140c9870866538b4f9b192300e41278fdddd8a9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 49a0e62db64a1eb0dc27df9785a90234a4b39207
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Источники данных и привязки (многомерные службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Кубы, измерения и другие [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] объекты могут быть привязаны к источнику данных. Источником данных может быть один из следующих объектов.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 12/08/2017
 |---------------------------------|-----------------|  
 |BigInt|64-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int64 в Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I8 в OLE DB.|  
 |Bool|Значение типа Boolean. Этот тип данных соответствует типу данных Boolean в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_BOOL в OLE DB.|  
-|Измерение валют|Значение валюты от -263 (или -922 337 203 685 477,5808) до 263-1 (или 922 337 203 685 477,5807) с точностью до одной тысячной единицы валюты. Этот тип данных соответствует типу данных Decimal в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_CY в OLE DB.|  
+|CURRENCY|Значение валюты от -263 (или -922 337 203 685 477,5808) до 263-1 (или 922 337 203 685 477,5807) с точностью до одной тысячной единицы валюты. Этот тип данных соответствует типу данных Decimal в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_CY в OLE DB.|  
 |Дата|Данные о дате, сохраненные в виде числа с плавающей запятой двойной точности. Целая часть числа равна числу дней, прошедшему с 30 декабря 1899 г., а десятичная часть равна части дня. Этот тип данных соответствует типу данных DateTime в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_DATE в OLE DB.|  
 |Double|Число с плавающей запятой двойной точности в диапазоне от -1,79E +308 до 1,79E +308. Этот тип данных соответствует типу данных Double в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_R8 в OLE DB.|  
 |Целочисленный|32-разрядное целое число со знаком. Этот тип данных соответствует типу данных Int32 в [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] и типу данных DBTYPE_I4 в OLE DB.|  

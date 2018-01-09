@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 26bae76004b344b15f8f2be3605eb8c600c31039
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91d370b9e71d843aa9a8ef8848b7cd63b38f0880
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tables-and-columns-ssas-tabular"></a>Таблицы и столбцы (табличные службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]После добавления таблиц и данных в модель с помощью мастера импорта таблиц, можно начать работу с таблицами путем добавления новых столбцов данных, создание связей между таблицами, определять вычисления, расширяющие данные, и фильтрации и сортировки данных в таблицы для удобства просмотра.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 12/08/2017
  **Метаданные таблицы**  
  Связи, меры, роли, перспективы и вставленные данные — все это метаданные, определяющие объекты в контексте таблицы.  
   
- **Данные**  
+ **Data**  
  Столбцы таблицы заполняются данными при первоначальном импорте таблицы с помощью мастера импорта таблиц или при создании новых данных в вычисляемых столбцах. Если данные изменились в источнике или модель удаляется из памяти, то необходимо запустить операцию обработки для повторного заполнения таблиц данными.  
   
 ##  <a name="bkmk_working"></a> Работа с таблицами и столбцами  

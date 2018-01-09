@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cde5ecfbcaa904dc4f0f62e0b135dac5780b8ffd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 38c3e0e07fe0a595ccfef997c94dd7bfe43b17fa
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Создание ролей и управление ими (табличные службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Роли в табличных моделях определяют разрешения члена для модели. Роли определяются для проекта модели с помощью диалогового окна «Диспетчер ролей» в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. В развернутой модели администраторы баз данных могут управлять ролями с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -53,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
     |Разрешение|Description|  
     |----------------|-----------------|  
-    |**Нет**|Члены не могут вносить изменения в схему модели и просматривать данные.|  
+    |**None**|Члены не могут вносить изменения в схему модели и просматривать данные.|  
     |**Чтение**|Члены могут просматривать данные (с учетом фильтров строк), но не могут вносить изменения в схему модели.|  
     |**Чтение и обработка**|Члены могут просматривать данные (с учетом фильтров строк), а также выполнять операции «Обработать» и «Обработать все», но не могут вносить изменения в схему модели.|  
     |**Процесс**|Члены могут выполнять операции «Обработать» и «Обработать все». Не могут изменять схему модели и просматривать данные.|  
@@ -72,7 +69,7 @@ ms.lasthandoff: 12/08/2017
   
 9. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Роли (табличные службы SSAS)](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Перспективы (табличные службы SSAS)](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
  [Анализ в Excel &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   

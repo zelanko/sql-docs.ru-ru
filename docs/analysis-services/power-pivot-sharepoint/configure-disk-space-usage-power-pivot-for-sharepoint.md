@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f279adc22305b40d0207b6256e29d42b9b32ef65
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cfac3c1160e6889fe51f1b93a4df87a0ed92a302
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>Настройка использования места на диске (PowerPivot для SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] развертывания для SharePoint использует место на диске главного компьютера кэш [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] баз данных для обеспечения ускоренной перезагрузки. Каждая база данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , загружаемая в память, сначала кэшируется на диске, обеспечивая возможность быстрой перезагрузки при обслуживании новых запросов в будущем. По умолчанию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint использует свободное место на диске для кэширования баз данных, но это можно изменить, задав параметры, ограничивающие использование дискового пространства.  
@@ -99,10 +96,10 @@ ms.lasthandoff: 12/08/2017
   
 5.  Нажмите кнопку **ОК** , чтобы сохранить внесенные изменения.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Установка [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint предусматривает определение правил работоспособности, которые позволяют предпринимать корректирующие действия при обнаружении проблем с работоспособностью сервера, конфигурацией или доступностью. Некоторые из этих правил определяют условия срабатывания правила с помощью параметров конфигурации. Если настройка производительности сервера выполняется своевременно, можно также обратиться к этим параметрам, чтобы удостовериться, что значения по умолчанию наилучшим образом подходят для данной системы. Дополнительные сведения см. в разделе [Настройка правил определения работоспособности PowerPivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

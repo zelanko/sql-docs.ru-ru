@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: RestrictionList Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 96bbf8798521a6661e630115e5a5669ee24d15df
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eeabf1889208ab4cf31b0d0b65d336ccf62ba84e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="restrictionlist-element-xmla"></a>Элемент RestrictionList (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит коллекцию столбцов ограничений и значений, используемых в [Discover](../../../analysis-services/xmla/xml-elements-methods-discover.md) метод.  
@@ -50,11 +48,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |Родительские элементы|[Ограничения](../../../analysis-services/xmla/xml-elements-properties/restrictions-element-xmla.md)|  
 |Дочерние элементы|Столбцы и значения ограничений (см. примечания).|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элемент **RestrictionList** содержит коллекцию столбцов ограничений, которые могут служить в качестве фильтров для данных, возвращаемых методом **Discover** . Каждый столбец ограничений в элементе **RestrictionList** определен с помощью отдельного XML-элемента. Значением столбца ограничений являются данные, содержащиеся в этом XML-элементе, а имя столбца ограничений соответствует имени XML-элемента.  
   
 ## <a name="see-also"></a>См. также:  

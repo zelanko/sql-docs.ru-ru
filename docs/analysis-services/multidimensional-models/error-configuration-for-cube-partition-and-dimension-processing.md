@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 29e105e78a46e1917b2fc2902db4256edc2ba099
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 9dcbefced6fd34dd5fa69537733d7820b0130f4d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing"></a>Конфигурация ошибок для кубов, секций и обработка измерения
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Свойства конфигурации ошибок для кубов, секций и объектов измерения определяют реакцию сервера при возникновения ошибок целостности данных во время обработки. Обычно такие ошибки вызваны повторяющимися или отсутствующими ключами и значения NULL в ключевом столбце. Хоть запись с ошибкой и не будет добавлена в базу данных, можно задать свойства, которые определят дальнейшую реакцию на ошибку. По умолчанию обработка останавливается. Однако во время разработки куба желательно продолжить обработку при возникновении ошибки для тестирования поведения куба с импортированным данными, даже если они не будут полными.  
@@ -90,7 +87,7 @@ ms.lasthandoff: 12/08/2017
   
  **Реакция сервера на определенные ошибки**  
   
-|Свойство|По умолчанию|Другие значения|  
+|Свойство|Default|Другие значения|  
 |--------------|-------------|------------------|  
 |**CalculationError**<br /><br /> Происходит при инициализации конфигурации ошибок.|**IgnoreError** не подсчитывает ошибки и не заносит их в журнал; обработка продолжается, пока количество ошибок меньше максимального предела.|**ReportAndContinue** фиксирует ошибки в журнале и ведет их подсчет.<br /><br /> **ReportAndStop** сообщает об ошибке и сразу же прекращает обработку вне зависимости от значения предельного количества ошибок.|  
 |**KeyNotFound**<br /><br /> Возникает, когда для внешнего ключа в таблице фактов отсутствует совпадающий первичный ключ в связанной таблице измерения (например, таблица фактов Sales имеет запись с кодом продукта, которого нет в таблице измерения Product). Эта ошибка может произойти во время обработки секций или измерений, связанных по схеме «снежинка».|**ReportAndContinue** фиксирует ошибки в журнале и ведет их подсчет.|**ReportAndStop** сообщает об ошибке и сразу же прекращает обработку вне зависимости от значения предельного количества ошибок.<br /><br /> **IgnoreError** не подсчитывает ошибки и не заносит их в журнал; обработка продолжается, пока количество ошибок меньше максимального предела. По умолчанию записи, ведущие к этой ошибке, преобразуются в неизвестный элемент. Однако можно изменить свойство **KeyErrorAction** , тогда такие записи будут отбрасываться.|  
@@ -112,7 +109,7 @@ ms.lasthandoff: 12/08/2017
   
  Конфигурацию ошибок можно задать для любого объекта, который может быть обработан в отдельной операции.  
   
-#### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+#### <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
   
 1.  В обозревателе объектов щелкните правой кнопкой мыши элемент **Свойства** для одного из следующих объектов: измерение, куб или секция.  
   
@@ -189,7 +186,7 @@ ms.lasthandoff: 12/08/2017
   
  Определитесь, следует ли изменить стандартные правила обработки значений NULL. По умолчанию значения NULL в строковом столбце обрабатываются как пустые значения, а NULL в числовом столбце — как нуль. Инструкции по установке правил обработки значений NULL для атрибута см. в разделе [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства журнала](../../analysis-services/server-properties/log-properties.md)   
  [Определение неизвестного элемента и свойств обработки значений Null](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   

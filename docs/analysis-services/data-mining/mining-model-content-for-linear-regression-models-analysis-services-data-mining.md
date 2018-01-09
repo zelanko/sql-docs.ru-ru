@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cb289289301d3837ff2f82848b6fd183354b7e56
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f44a257eb21427252cd611e4bd7cbb052f27df2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей линейной регрессии (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описаны модели интеллектуального анализа данных, характерное для моделей, которые используют [!INCLUDE[msCoName](../../includes/msconame-md.md)] Алгоритм линейной регрессии. Общее описание содержимого модели интеллектуального анализа данных для всех типов моделей см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -146,7 +144,7 @@ ms.lasthandoff: 12/08/2017
  MSOLAP_NODE_SHORT_CAPTION  
  Метка, используемая для отображения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Когда модель создается по алгоритму линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] , подсистема интеллектуального анализа данных создает специальный экземпляр модели дерева принятия решений и передает параметры, которые ограничивают дерево так, что все обучающие данные хранятся в одном узле. Все непрерывные входные данные помечаются флагами и рассматриваются как потенциальные регрессоры, но в конечной модели регрессорами остаются только те, которые подходят для обрабатываемых данных. В результате анализа получается либо одна формула регрессии для каждого регрессора, либо ни одной формулы регрессии.  
   
  Полную формулу регрессии можно просмотреть в окне **Условные обозначения интеллектуального анализа данных**, если щелкнуть узел **(Все)** в [средстве просмотра деревьев (Майкрософт)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
@@ -162,7 +160,7 @@ ms.lasthandoff: 12/08/2017
 |Годовой доход|57220,8876687257|17484|0,999542857142857|1041275619,52776|3|  
 |Возраст|471,687717702463|0|0|126.969442359327|7|  
 |Возраст|234,680904692439|0|0|0|8|  
-|Возраст|45,4269617936399|0|0|126.969442359327|9|  
+|Возраст|45,4269617936399|0|0|126,969442359327|9|  
 ||35793,5477381267|0|0|1012968919,28372|11|  
   
  Таблица NODE_DISTRIBUTION содержит несколько строк, каждая из которых сгруппирована по переменной. Первые две строки всегда имеют типы значения 1 и 3. Эти строки описывают целевой атрибут. Последующие строки содержат сведения о формуле для какого-либо *регрессора*. Регрессор — это входная переменная, которая линейно связана с выходной переменной. Можно создать несколько регрессоров, и в каждом регрессоре будет отдельная строка для коэффициента (VALUETYPE = 7), роста оценки (VALUETYPE = 8) и статистики (VALUETYPE = 9). Наконец, в таблице присутствует строка, содержащая отсекаемый отрезок формулы (VALUETYPE = 11).  
@@ -182,7 +180,7 @@ ms.lasthandoff: 12/08/2017
 #### <a name="score-gain"></a>Рост оценки  
  Рост оценки (VALUETYPE = 8) для каждого регрессора представляет оценку интересности атрибута. Это значение можно использовать, чтобы оценить полезность нескольких регрессоров.  
   
-#### <a name="statistics"></a>Statistics  
+#### <a name="statistics"></a>Статистика  
  Статистика регрессора (VALUETYPE = 9) является средним значением атрибута среди вариантов, имеющих значение. Столбец ATTRIBUTE_VALUE содержит собственно среднее значение, а столбец VARIANCE содержит сумму отклонений от среднего значения.  
   
 #### <a name="intercept"></a>Intercept  
@@ -194,7 +192,7 @@ ms.lasthandoff: 12/08/2017
   
  Тогда, полагая средний возраст около 45, получим, что отсекаемый отрезок (VALUETYPE = 11) формулы регрессии показывает средний доход.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Алгоритм линейной регрессии (Майкрософт)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Технический справочник по алгоритму линейной регрессии Майкрософт](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

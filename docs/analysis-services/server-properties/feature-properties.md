@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -26,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5c78b965e827ad4b355563c7c698db2b8f063c78
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0c12d59deb8a039ed5d8af5033d65e2614d4feb2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="feature-properties"></a>Свойства функций
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Свойства функций служат для настройки возможностей продуктов, большинство из них являются расширенными, включая свойства, управляющие связями между экземплярами сервера.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="properties"></a>Свойства  
   
-|Свойство|По умолчанию|Description|  
+|Свойство|Default|Description|  
 |--------------|-------------|-----------------|  
 |**ManagedCodeEnabled**|1|Логическое свойство, показывающее, включены ли процедуры хранилища среды CLR.|  
 |**LinkInsideInstanceEnabled**|1|Логическое свойство, показывающее, может ли связанный объект быть создан в том же экземпляре сервера.|  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/08/2017
 |**SQMSupportEnabled**|1|Свойство логического типа, показывающее, отправляются ли отчеты об ошибках и использовании компонентов в корпорацию [!INCLUDE[msCoName](../../includes/msconame-md.md)] автоматически.|  
 |**ResourceMonitoringEnabled**|1|Свойство логического типа, показывающее, включены ли счетчики мониторинга внутренних ресурсов. По умолчанию это свойство включено. Будучи включенным, это свойство позволяет счетчикам выполнять сбор данных об использовании ЦП, памяти и работе подсистемы ввода-вывода.<br /><br /> Счетчики мониторинга внутренних ресурсов используются динамическими административными представлениями (DMV), которые предоставляют информацию об использовании ресурсов. Если отключить это свойство, то запросы динамического административного представления по-прежнему будут выполняться, но собранные результаты будут недействительными. Динамические административные представления, зависящие от этого свойства:<br /><br /> **DISCOVER_OBJECT_ACTIVITY**<br /><br /> **DISCOVER_COMMAND_OBJECTS**<br /><br /> **DISCOVER_SESSIONS** (для SESSION_READS, SESSION_WRITES, SESSION_CPU_TIME_MS)<br /><br /> <br /><br /> Примечание. В многоядерной системе с архитектурой NUMA отключение этого свойства может повысить производительность запросов, особенно при высоких многопользовательских рабочих нагрузках. Следует выполнить сравнительные проверки для определения того, можно ли повысить производительность выполнения запросов в результате изменения этого свойства. Рекомендации по выполнению сравнительных проверок (включая способы очистки кэша и предотвращения распространенных ошибок) см. в [руководстве по использованию служб SQL Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Использование динамических административных представлений для мониторинга служб Analysis Services](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  

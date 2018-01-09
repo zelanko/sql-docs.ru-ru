@@ -8,7 +8,7 @@ ms.service:
 ms.component: t-sql|queries
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -19,11 +19,11 @@ helpviewer_keywords: PREDICT clause
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 8cc0e51a83b4c024a25caf2fe6501438a3ef8a18
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f2ed3582341ff2824943a432e5877602b0b9ee7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="predict-transact-sql"></a>ПРОГНОЗ (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ MODEL = @model | model_literal
 
 Объект модели могут создаваться с помощью R, Python или другого средства.
 
-**данные**
+**data**
 
 Параметр данных используется для указания данных, используемых для оценки и прогнозирования. Данные указываются в виде источника таблицы в запросе. Источник таблицы может быть таблицу, псевдоним таблицы, псевдоним обобщенного табличного Выражения, представление или табличную функцию.
 
@@ -91,7 +91,7 @@ MODEL = @model | model_literal
 
 Не удается просмотреть структуру внутренней модели с помощью `PREDICT`. Если вы хотите понять содержимое самой модели, необходимо загрузить объект модели, десериализацию и используйте соответствующий код R для синтаксического анализа модели.
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 
 `PREDICT` Функция поддерживается во всех выпусках SQL Server, включая Linux.
 
@@ -101,7 +101,7 @@ MODEL = @model | model_literal
 
 Модели, которая используется должен быть создан с помощью одного из поддерживаемых алгоритмов из пакета RevoScaleR. Список поддерживаемых в настоящее время моделей см. в разделе [в режиме реального времени оценки](../../advanced-analytics/real-time-scoring.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Разрешения
 
 Разрешения не требуются для `PREDICT`, однако потребности пользователей `EXECUTE` разрешения в базе данных, а также разрешения на любые данные, которые используются в качестве входных данных запроса. Пользователь также должны быть видимы для считывания из таблицы в модели, если модель хранилось в таблице.
 

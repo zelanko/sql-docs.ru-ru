@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -34,11 +34,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 62e51e155dbd230d3db7d6e84d71f5b1635a22be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bbd3cffc1f5db0b07f0868b2ac1b6b6f78989a5
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>Архитектура интеграции со средой CLR - среда размещения CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] взаимодействие с .NET Framework общеязыковая среда выполнения (CLR) позволяет программистам базы данных для использования языков, таких как Visual C#, Visual Basic .NET и Visual C++. С помощью этих языков программисты могут создавать различные объекты бизнес-логики, например: функции, хранимые процедуры, триггеры, типы данных и агрегаты.  
@@ -132,8 +132,8 @@ ms.lasthandoff: 11/17/2017
 |Набор разрешений|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Управление доступом для кода|Только выполнение|Выполнение и доступ к внешним ресурсам|Неограниченный доступ|  
 |Ограничения модели программирования|Да|Да|Без ограничений|  
-|Требование к проверяемости|Да|Да|Нет|  
-|Возможность вызова машинного кода|Нет|Нет|Да|  
+|Требование к проверяемости|Да|Да|нет|  
+|Возможность вызова машинного кода|нет|нет|Да|  
   
  SAFE — самый надежный и безопасный режим с соответствующими ограничениями в отношении разрешенной программной модели. Сборки SAFE получают достаточные разрешения для запуска, выполнения вычислений и доступа к локальной базе данных. Сборки SAFE должны использовать безопасные типы с возможностью проверки этого факта; они также не могут вызывать неуправляемый код.  
   

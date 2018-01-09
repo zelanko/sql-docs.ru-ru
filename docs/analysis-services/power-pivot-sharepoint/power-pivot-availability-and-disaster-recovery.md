@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4aaf008c-3bcb-4dbf-862c-65747d1a668c
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7b2cfe66cc530881a848d7f3d8850c62c0af1486
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5a7e94aeb9f547220a3b3bc836e59ef81ce3bfe9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="power-pivot-availability-and-disaster-recovery"></a>Доступность и аварийное восстановление Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Планы доступности и аварийного восстановления для [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] зависят главным образом от проекта фермы SharePoint, объем простоя, приемлемой для различных компонентов и средств и рекомендации по реализации для поддержания доступности SharePoint. В этом разделе содержатся сведения о технологии и диаграммы с примерами топологий, которые следует рассматривать при планировании доступности и аварийного восстановления для развертывания [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
@@ -50,7 +47,7 @@ ms.lasthandoff: 12/08/2017
   
  ![доступность PowerPivot в 2013](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-services-2013.png "доступность powerpivot в 2013")  
   
--   **(1)** Серверы клиентского веб-интерфейса. Для установки поставщиков данных на каждом сервере используйте надстройку служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013. Дополнительные сведения см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+-   **(1)** Серверы клиентского веб-интерфейса. Для установки поставщиков данных на каждом сервере используйте надстройку служб [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013. Дополнительные сведения см. в разделе [Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2013)](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 -   **(2)** Общая служба [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] работает **на каждом** сервере приложений и позволяет запускать приложение службы **на нескольких** серверах приложений. Поэтому, если один сервер приложений переходит в режим «вне сети», приложение [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] будет по-прежнему доступно.  
   

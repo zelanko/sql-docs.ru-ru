@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs: DMX
@@ -24,18 +22,18 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: f459409c538db56df0664c86022bff36b6250eeb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b5aa5b45c71d32f711e3facecd3846d32b70a769
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Справочник по функциям расширений интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   В службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] поддерживается несколько функций языка расширений интеллектуального анализа данных. С помощью функций результаты прогнозирующих запросов дополняются данными, более подробно описывающими прогноз. Функции также предоставляют дополнительные возможности управления процессом отображения результатов прогноза. В следующей таблице приводятся ссылки на ресурсы, содержащие основные сведения об использовании функций в расширениях интеллектуального анализа данных.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[Общие функции прогнозирования &#40; расширений интеллектуального анализа данных &#41;](../dmx/general-prediction-functions-dmx.md)|Содержит функции, которые можно использовать со всеми типами моделей, и ссылки на дополнительные сведения о том, как формировать конкретные запросы к моделям интеллектуального анализа данных.|  
 |[Структура и использование прогнозирующих запросов в расширении интеллектуального анализа данных](../dmx/structure-and-usage-of-dmx-prediction-queries.md)|Содержит общие сведения о создании прогнозирующих запросов с помощью расширений интеллектуального анализа данных.|  
@@ -43,7 +41,7 @@ ms.lasthandoff: 11/20/2017
   
  В следующей таблице приводятся функции, поддерживаемые расширениями интеллектуального анализа данных.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[BottomCount &#40; расширений интеллектуального анализа данных &#41;](../dmx/bottomcount-dmx.md)|Возвращает строки последних n-элементов табличного выражения, расположенные в порядке возрастания ранжирующего выражения.|  
 |[BottomPercent &#40; расширений интеллектуального анализа данных &#41;](../dmx/bottompercent-dmx.md)|Возвращает таблицу, которая содержит наименьшее количество нижних строк, удовлетворяющих указанному процентному соотношению и расположенных в порядке возрастания их ранга на основании ранжирующего выражения.|  

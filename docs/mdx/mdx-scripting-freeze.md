@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: FREEZE
@@ -22,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: b447ef6b4c4699e652b6093c5d0a10e44ecb4d41
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 981baf5a25d77884444320e832e35d8b16623c46
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-scripting---freeze"></a>Сценарии многомерных Выражений - ЗАКРЕПЛЕНИЯ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  Допустимое многомерное выражение, возвращающее вложенный куб.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **ЗАКРЕПИТЬ** инструкции фиксирует значения ячеек заданного вложенного куба, предотвращает последующие инструкции многомерных выражений передает сценарий изменять их значения в последующих вычислений.  
   
  В следующем примере A и B представляют вложенные кубы в скрипте вычисления многомерного выражения:  

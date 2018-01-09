@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9b8da7c6608b10c5816fafda8129efbf9e393e9b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8368189052f70da2e93b7d87a13787bf1793b006
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Содержимое моделей интеллектуального анализа данных для моделей нейронных сетей (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описаны модели интеллектуального анализа данных, характерное для моделей, в которых используется алгоритм нейронной сети. Объяснение способов интерпретации статистики и описание структуры, общей для всех типов моделей, а также общие определения терминов, связанных с содержимым моделей интеллектуального анализа данных, см. в разделе [Содержимое модели интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |Граничная статистика|Пусто|  
 |Входной слой|Пусто|  
 |Входной узел|Имя входного атрибута|  
-|скрытый слой|Пусто|  
+|Скрытый слой|Пусто|  
 |Скрытый узел|Пусто|  
 |Выходной слой|Пусто|  
 |Выходной узел|Имя выходного атрибута|  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/08/2017
 |Граничная статистика|Пусто|  
 |Входной слой|Пусто|  
 |Входной узел|Имя входного атрибута|  
-|скрытый слой|Пусто|  
+|Скрытый слой|Пусто|  
 |Скрытый узел|Целое число, соответствующее порядковому номеру скрытого узла в списке скрытых узлов.|  
 |Выходной слой|Пусто|  
 |Выходной узел|Если выходной атрибут является непрерывным, этот узел содержит имя выходного атрибута.<br /><br /> Если выходной атрибут является дискретным или дискретизированным, этот узел содержит имя и значение атрибута.|  
@@ -196,7 +194,7 @@ ms.lasthandoff: 12/08/2017
  MSOLAP_NODE_SHORT_CAPTION  
  В моделях нейронных сетей всегда пусто.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Задачей обучения модели нейронной сети является определение весовых коэффициентов, связанных с каждым переходом от входа к промежуточной точке и от промежуточной точки к конечной точке. Поэтому входной слой модели предназначен главным образом для хранения фактических значений, использованных для построения модели. Скрытый слой хранит вычисленные весовые коэффициенты и содержит указатели на входные атрибуты. Выходной узел хранит прогнозируемые значения и также содержит указатели на промежуточные точки в скрытом узле.  
   
 ##  <a name="bkmk_NodeIDs"></a> Использование имен и идентификаторов узлов  
@@ -244,8 +242,8 @@ ms.lasthandoff: 12/08/2017
   
  **Непрерывный атрибут.** Последние две строки таблицы NODE_DISTRIBUTION содержат среднее значение атрибута, коэффициент для узла в целом и дисперсию коэффициента.  
   
-## <a name="see-also"></a>См. также  
- [Алгоритм нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>См. также:  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Технический справочник по алгоритму нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   

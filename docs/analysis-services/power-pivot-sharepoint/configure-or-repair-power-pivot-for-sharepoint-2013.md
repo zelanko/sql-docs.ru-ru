@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bd09ebc71350f37803867f0c610135fd135bd413
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e5f72d312cff6b0660faa1ebbd30890d53c43f2d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Настройка или восстановление Power Pivot для SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Для настройки или восстановления установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013 используйте [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для средства настройки SharePoint. Работа средства настройки начинается со сканирования системы, в результате которого возвращается список действий, необходимых для завершения или восстановления установки. Мастер установки [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] установит средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2010, а также средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. В этом разделе описывается средство настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint 2013. Дополнительные сведения о SharePoint 2010 см. в разделе [Настройка или восстановление PowerPivot для SharePoint 2010 (средство настройки PowerPivot)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046).  
@@ -133,9 +130,9 @@ ms.lasthandoff: 12/08/2017
 ||Порт центра администрирования SharePoint|По умолчанию (при необходимости)|Если ферма не настроена, средство предложит варианты по ее созданию, включая создание конечной точки HTTP для центра администрирования. Для этого выбирается случайно созданный незадействованный номер порта.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для служб Excel ([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Вводимые пользователем данные|Сервер [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] необходим службам Excel для поддержки базовых функций [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Введенное на этой странице имя сервера также добавляется в список на странице **Настройка серверов [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
 |**Настройка новой фермы**|Сервер базы данных<br /><br /> Учетная запись фермы<br /><br /> Парольная фраза<br /><br /> Порт центра администрирования SharePoint|По умолчанию (при необходимости)|Настройки по умолчанию для данных, введенных на главной странице.|  
-|**Создание приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Имя приложения службы|По умолчанию|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Именем по умолчанию является **По умолчанию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. В средстве можно указать другое значение.|  
-||Сервер базы данных|По умолчанию|Сервер базы данных, на котором размещается база данных приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Имя сервера по умолчанию то же, что у сервера базы данных, используемого для фермы. Можно указать другое значение, отличное от имени сервера по умолчанию.|  
-||Имя базы данных|По умолчанию|Имя базы данных, создаваемой для приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Имя базы данных по умолчанию формируется исходя из имени приложения службы, за которым следует идентификатор GUID, обеспечивающий его уникальность. В средстве можно указать другое значение.|  
+|**Создание приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Имя приложения службы|Default|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Именем по умолчанию является **По умолчанию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. В средстве можно указать другое значение.|  
+||Сервер базы данных|Default|Сервер базы данных, на котором размещается база данных приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Имя сервера по умолчанию то же, что у сервера базы данных, используемого для фермы. Можно указать другое значение, отличное от имени сервера по умолчанию.|  
+||Имя базы данных|Default|Имя базы данных, создаваемой для приложения службы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Имя базы данных по умолчанию формируется исходя из имени приложения службы, за которым следует идентификатор GUID, обеспечивающий его уникальность. В средстве можно указать другое значение.|  
 |**Создание веб-приложения по умолчанию**|Имя веб-приложения|По умолчанию (при необходимости)|Если веб-приложений не существует, то средство создает одно веб-приложение. Веб-приложение будет настроено для использования классического режима проверки подлинности и будет прослушивать порт 80. Максимальный размер файла для передачи устанавливается равным 2047, что является максимально допустимым значением в SharePoint. Большой размер файла для передачи позволяет передавать объемные файлы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] на сервер.|  
 ||URL-адрес|По умолчанию (при необходимости)|Средство создает URL-адрес на основании имени сервера с использованием соглашений об именах файлов, принятых в SharePoint.|  
 ||Пул приложений|По умолчанию (при необходимости)|Средство создает пул приложений по умолчанию в службах IIS.|  

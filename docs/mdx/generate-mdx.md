@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: GENERATE
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 4ef13a4355c73458023c7d11663587a771d71c23
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: e78dec45044cc29e375b9116886b183013c74ef1
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="generate-mdx"></a>Generate (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *Разделитель*  
  Допустимый разделитель в виде строкового выражения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если указан второй набор, **формирования** функция возвращает набор, сформированный путем применения кортежей второго набора к каждому кортежу первого набора*,* и последующего объединения результирующих наборов. Если **все** указано, функция сохраняет повторяющиеся значения в результирующем наборе.  
   
  Если строковое выражение указано, **формирования** функция возвращает строку, сформированную путем вычисления выражения указанную строку для каждого кортежа первого набора*,* и последующим объединением результатов. При необходимости строка может содержать разделители, отделяющие результаты в объединенной строке друг от друга.  
@@ -115,7 +115,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>Строковые значения  
+### <a name="string"></a>String  
  В следующем примере показано использование **формирования** для возврата строки:  
   
 ```  

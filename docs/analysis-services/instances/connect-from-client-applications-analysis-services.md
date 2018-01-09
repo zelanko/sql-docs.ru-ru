@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e893df8d4edada2a28d16c341cc8353fd3478625
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 20302da167c1ba1d19fb1b65ab871d81f7170591
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connect-from-client-applications-analysis-services"></a>Подключение из клиентских приложений (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Если вы не знакомы со службами Analysis Services, используйте сведения в этом разделе для подключения к существующему экземпляру объекта [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью стандартных средств и приложений. В этом разделе также объясняется, как подключаться для тестирования под разными удостоверениями пользователей.  
@@ -45,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
  Успешные подключения зависят от допустимой настройки портов и соответствующих разрешений пользователя. Для более подробного знакомства с каждым требованием воспользуйтесь следующими ссылками.  
   
--   [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
+-   [Настройка брандмауэра Windows для разрешения доступа к службам Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [Предоставление доступа к объектам и операциям (службы Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
@@ -140,7 +137,7 @@ ms.lasthandoff: 12/08/2017
   
  [Устранение проблем с возможным подключением для подключений служб SQL Server 2005 Analysis Services](http://technet.microsoft.com/library/cc917670.aspx). Этот документ был опубликован несколько лет назад, но сведения и методологии по-прежнему актуальны.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Методики проверки подлинности, поддерживаемые службами Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Олицетворение &#40; Табличные службы SSAS &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   

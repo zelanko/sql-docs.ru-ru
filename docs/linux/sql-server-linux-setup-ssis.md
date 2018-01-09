@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 13bd5bde7e4e4ec63bb7e3bd7d8959440f499672
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: 3033651c005ce39bd0e2565dd51ed2d2b1089e62
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Установка SQL Server Integration Services (SSIS) для Linux
 
@@ -119,6 +119,29 @@ sudo yum update mssql-server-is
 ```bash
 sudo yum remove mssql-server-is
 ```
+
+## <a name="unattended-installation"></a>Автоматическая установка
+Для выполнения автоматической установки при запуске `ssis-conf setup`, выполните следующие действия:
+1.  Укажите `-n` (без запроса) параметра.
+2.  Укажите необходимые значения, задав переменные среды.
+
+Следующий пример выполняет следующие действия:
+-   Установка служб SSIS.
+-   Указывает выпуск Developer edition, указав значение для `SSIS_PID` переменной среды.
+-   Принимает условия лицензионного соглашения, указав значение для `ACCEPT_EULA` переменной среды.
+-   Запускает автоматическую установку, указав `-n` (без запроса) параметра.
+
+```
+sudo SSIS_PID= Developer ACCEPT_EULA=Y /opt/ssis/bin/ssis-conf -n setup 
+```
+
+### <a name="environment-variables-for-unattended-installation"></a>Переменные среды для автоматической установки
+
+| Переменная среды | Description |
+|---|---|
+| **ACCEPT_EULA** | Принимает лицензионного соглашения SQL Server, если задано любое значение (например, `Y`).|
+| **SSIS_PID** | Задает ключ, выпуск или продукта SQL Server. Ниже приведены возможные значения:<br/>Ознакомительная версия<br/>Разработчик<br/>Express <br/>Web Edition <br/>Standard<br/>Enterprise <br/>Ключ продукта<br/><br/>Если указать ключ продукта, ключ продукта должен быть в форме `#####-#####-#####-#####-#####`, где `#` является буквой или цифрой.  |
+| | |
 
 ## <a name="next-steps"></a>Следующие шаги
 

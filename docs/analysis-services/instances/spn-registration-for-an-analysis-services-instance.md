@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
@@ -20,13 +17,13 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b27946307c6ebb42cf83727e6e6e8c6f98b0e6b6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecb1a5b33ede8c99150fd8b3ce1cf9babdb1f519
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="spn-registration-for-an-analysis-services-instance"></a>Регистрация имени участника-службы для экземпляра служб Analysis Services
+# <a name="spn-registration-for-an-analysis-services-instance"></a>SPN registration for an Analysis Services instance
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Имя участника службы (SPN) однозначно идентифицирует экземпляр службы в домене Active Directory, когда используется протокол Kerberos для взаимной проверки подлинности удостоверений клиента и службы. Имя участника-службы сопоставляется с учетной записью входа, от имени которой выполняется экземпляр службы.  
   
  Для клиентских приложений при подключении к службам Analysis Services через протокол проверки подлинности Kerberos клиентские библиотеки Analysis services формируют имя участника-службы, используя имя узла из строки подключения и других известных переменных, например класс службы, зафиксированных в любой конкретной версии служб Analysis Services.  
@@ -102,7 +99,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Пример синтаксиса для именованного экземпляра, запущенного как NT Service\MSOLAP$\<имя экземпляра >**  
   
- Этот пример демонстрирует синтаксис **setspn** для именованного экземпляра служб Analysis Services, запущенного под стандартной виртуальной учетной записью. В этом примере имя узла — **AW-SRV02**, а имя экземпляра — **AW-FINANCE**. Опять же, это учетная запись, указанный для имени участника-службы, а не виртуальной учетной записи **NT Service\MSOLAP$**\<имя экземпляра >.  
+ Этот пример демонстрирует синтаксис **setspn** для именованного экземпляра служб Analysis Services, запущенного под стандартной виртуальной учетной записью. В этом примере имя узла — **AW-SRV02**, а имя экземпляра — **AW-FINANCE**. Опять же, это учетная запись, указанный для имени участника-службы, а не виртуальной учетной записи **NT Service\MSOLAP$**\<имя экземпляра >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  
@@ -171,7 +168,7 @@ Setspn –s msolapsvc.3/<virtualname.FQDN > <domain user account>
   
  Экземпляр служб Analysis Services может прослушивать только один порт. Использование нескольких портов не поддерживается. Дополнительные сведения о настройке порта см. в разделе [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Взаимная проверка подлинности с помощью Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Настройка SQL Server 2008 Analysis Services и SQL Server 2005 Analysis Services на использование проверки подлинности Kerberos](http://support.microsoft.com/kb/917409)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016 Preview
@@ -20,16 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 25171096f715c5fc9aee4f9c4346a70508fa8f7d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 77aa1ba7d28147c6aa2ba4ea1e7c9deb02544f91
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-programming"></a>Программирование многомерной модели
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет несколько интерфейсов API, можно использовать для программирования экземпляра служб Analysis Services и многомерных баз данных, он делает доступными. В этом разделе описаны подходы, доступные разработчикам, создающим пользовательские приложения, в которых используются многомерные решения служб Analysis Services. Эти сведения помогут выбрать интерфейс программирования, лучше всего подходящий для конкретного проекта. Проекты разработки для служб Analysis Services могут быть основаны на управляемом или неуправляемом коде, запускаемом на платформе Windows или других платформах с поддержкой доступа по протоколу HTTP.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Основные сведения об архитектуре Microsoft OLAP](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture.md)  
   
  [Разработка с использованием ADOMD.NET](../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  

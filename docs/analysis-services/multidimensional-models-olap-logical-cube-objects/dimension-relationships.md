@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -30,11 +28,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5aab3f639f0eb38aa10cac50564c1ad18b7f4336
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0ba0ea6e2797d15134dc6bfbf9a595a1ef83c583
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dimension-relationships"></a>Связи измерений
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Использование измерений определяет связи между измерением куба и группами мер в кубе. Измерение куба представляет собой экземпляр измерения базы данных, используемый в конкретном кубе. Куб может содержать (и часто содержит) измерения, которые не связаны непосредственно с группой мер, но которые могут быть косвенно связаны с ней через другое измерение или группу мер. При добавлении базы данных измерения или группы мер в кубе, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] попытаются определить использование измерения, анализируя связи между таблицами измерений и таблицами фактов в представлении источника данных куба, а также с помощью проверки связи между атрибутами в измерениях. Службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] автоматически устанавливают параметры использования измерений для связей, которые они смогли обнаружить.  

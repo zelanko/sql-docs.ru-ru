@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: LNum Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c5d42bebd4740b7a4c741cfffa9d7762cd2a6bc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c2103608617b5f84f9ea6ae124389b1966a03df7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lnum-element-xmla"></a>Элемент LNum (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит сведения о порядковом положении уровня для родительского [HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md) или [член](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md) элемента.  
@@ -50,9 +48,9 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|int|  
+|Тип данных и длина|ssNoversion|  
 |Значение по умолчанию|None|  
 |Количество элементов|1-1: обязательный элемент, который встречается ровно один раз.|  
   
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/08/2017
 |Родительские элементы|[HierarchyInfo](../../../analysis-services/xmla/xml-elements-properties/hierarchyinfo-element-xmla.md), [Member](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Для **HierarchyInfo** элементов, **LNum** элемент содержит имя свойства, которое предоставляет порядковые позиции уровней иерархии. Это значение эквивалентно значению свойства LEVEL_NUMBER, определенного для набора строк оси в спецификации OLE DB для OLAP.  
   
  Для **член** элементов, **LNum** элемент содержит отсчитываемый от нуля порядковый номер, до корневого уровня иерархии, члена, представленного родительским [член](../../../analysis-services/xmla/xml-elements-properties/member-element-xmla.md)элемент. Нулевое значение представляет корневой уровень иерархии.  

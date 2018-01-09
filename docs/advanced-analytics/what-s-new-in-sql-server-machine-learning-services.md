@@ -1,26 +1,26 @@
 ---
 title: "Какой &#39; новые возможности службы обучения машины | Документы Microsoft"
-ms.date: 11/16/2017
+ms.date: 01/08/2018
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.service: 
 ms.component: 
 ms.reviewer: 
 ms.suite: sql
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6aff043a-8b37-4f3f-9827-10a671e1ad1c
 caps.latest.revision: "36"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 694ec29101c2558cf77b01b56bfbfc14c7da48dd
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: abbc7043f4eefe2c6f33a3f9fbc61fe0a97ceff9
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>Новые возможности службы обучения машины в SQL Server
 
@@ -34,9 +34,11 @@ CATCH, то последняя объявление! [Python в 2017 г. SQL Ser
 
 Машины обучения Server в SQL Server предоставляет полную поддержку построения и развертывания решений машины обучения в R или Python. Вот краткое описание этой версии.
 
-### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>Новые возможности в накопительный пакет обновления 1 для SQL Server 2017 г.
+### <a name="whats-new-in-cumulative-update-3-for-sql-server-2017"></a>Новые возможности в накопительный пакет обновления 3 для SQL Server 2017 г.
 
-Теперь можно обновить компоненты Python и R сервер обучения машины 9.2.1.24. Этот выпуск предлагает множество улучшений в **revoscalepy** и **RevoScaleR**, включая повышение производительности.
+Этот выпуск содержит обновления для компонентов, Python и R. 
+
++ Добавлена поддержка для сериализации модели Python в revoscalepy, используя функцию rx_serialize_model
 
 ### <a name="in-database-python-integration"></a>Интеграция Python в базе данных
 

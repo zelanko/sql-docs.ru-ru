@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLTHROUGH
@@ -23,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 5746ff65d9ad6ce9aae64f01ff7a9f7ad97ec7d7
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7118640d592f34e6ea4da6f866f1bfe22317239d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>Управление данными MDX - ДЕТАЛИЗАЦИИ
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  Список атрибутов и мер измерения, разделенный запятыми.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сквозная детализация — это операция, в которой конечный пользователь выбирает одиночную ячейку из куба и извлекает результирующий набор из исходных данных для данной ячейки для получения более полной информации. По умолчанию результирующий набор сквозной детализации выводится из строк таблицы, на основе которых было вычислено значение выбранной ячейки куба. Для использования сквозной детализации конечными пользователями необходима поддержка этой возможности их клиентскими приложениями. В [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], результаты извлекаются прямо из хранилища MOLAP, если не запрашиваются секции или измерения ROLAP.  
   
 > [!IMPORTANT]  

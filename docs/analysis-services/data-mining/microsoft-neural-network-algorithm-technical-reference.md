@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -37,11 +35,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 932d04a5af5bc4631b5c0c80f0b66891eeedb6da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ceac69e8f44885b16983b1354acea23f43b5b594
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Технический справочник по алгоритму нейронной сети (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Нейронной сети использует *перцептронной* сеть, также называемая *сеть дельта-правила*, состоит из трех слоев нейронов, или  *перцептроны*. Такими слоями являются входной слой, необязательный скрытый слой и выходной слой.  
@@ -167,7 +165,7 @@ ms.lasthandoff: 12/08/2017
   
  Другими словами, если для параметра HOLDOUT_PERCENTAGE задано значение 30, то алгоритм будет использовать либо значение этого параметра, либо значение, равное 70 процентам от общего количества вариантов, в зависимости от того, какое из двух указанных значений меньше.  
   
- Значение по умолчанию — 10 000.  
+ Значение по умолчанию — 10 000.  
   
 ### <a name="modeling-flags"></a>Флаги моделирования  
  Далее перечислены флаги модели, которые поддерживает алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ).  
@@ -200,7 +198,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="input-and-predictable-columns"></a>Входные и прогнозируемые столбцы  
  Алгоритм нейронной сети ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) поддерживает определенные входные столбцы данных и прогнозируемые столбцы, которые перечислены ниже в таблице.  
   
-|Столбец|Типы содержимого|  
+|столбцом|Типы содержимого|  
 |------------|-------------------|  
 |Входной атрибут|Continuous, Cyclical, Discrete, Discretized, Key, Table и Ordered|  
 |Прогнозируемый атрибут|Continuous, Cyclical, Discrete, Discretized и Ordered|  
@@ -208,7 +206,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Типы содержимого Cyclical и Ordered поддерживаются, но алгоритм обрабатывает их как дискретные величины и не производит их особой обработки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Алгоритм нейронной сети (Майкрософт)](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Содержимое модели интеллектуального анализа данных для модели нейронной сети &#40; Службы Analysis Services — Интеллектуальный анализ данных &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Примеры запросов к модели нейронной сети](../../analysis-services/data-mining/neural-network-model-query-examples.md)  

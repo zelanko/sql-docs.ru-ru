@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: measure groups [Analysis Services], defining
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fa140461d48e1059c4eed74a3308b0b70a1e6c10
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a66d433e5b96e8012e8c4c05c14d3078235db958
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Создание мер и групп мер в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Объект *мер* — это агрегат значений числовых данных, таких как sum, count, минимальное, максимальное, среднее или пользовательские Многомерное выражение, которое создается. *Группа мер* — это контейнер для одной или нескольких мер. Все меры находятся в группе мер даже в том случае, если имеется только одна мера. Куб должен иметь как минимум одну меру и группу мер.  
@@ -92,7 +89,7 @@ ms.lasthandoff: 12/08/2017
   
  Можно задать гранулярность группы мер по определенному измерению с помощью вкладки **Использование измерений** конструктора кубов. Дополнительные сведения о связях между измерениями см. в разделе [Dimension Relationships](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [Меры и их группы](../../analysis-services/multidimensional-models/measures-and-measure-groups.md)  
   

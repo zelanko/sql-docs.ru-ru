@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: STRIPCALCULATEDMEMBERS
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 48d71cd1e325e4590a1e9deb56318e07c7293b27
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 643dca97d4d3e4675b07a7b8f9c06a5a78401dd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  Допустимое многомерное выражение, возвращающее набор.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **StripCalculatedMembers** функция удаляет вычисляемые элементы из набора. Вычисляемые элементы можно добавить в набор с помощью [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) функции, которая возвращает вычисляемые элементы, определенные на сервере или вычисляемые элементы, которые были добавлены в самом запросе с помощью конструкции WITH MEMBER.  
   
 ## <a name="example"></a>Пример  

@@ -5,7 +5,7 @@ author: leolimsft
 ms.author: lle
 ms.reviewer: douglasl
 manager: craigg
-ms.date: 10/02/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 83c602be92eae7a907d891a56c85141873b5266e
-ms.sourcegitcommit: 50468887d9c6ff5ba1feb7d02d77ba115f134161
+ms.openlocfilehash: 2ecd66763b0fbcdff8eb0d776b9c7b7df98e60b0
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>Извлечения, преобразования и загрузки данных в Linux с помощью служб SSIS
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/09/2017
 
 Дополнительные сведения о возможностях служб SSIS см. в разделе [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Для запуска пакетов служб SSIS на компьютере Linux, сначала необходимо установить SQL Server Integration Services. Служб SSIS не включается в установке SQL Server на компьютерах Linux. Инструкции по установке см. в разделе [установить SQL Server Integration Services](sql-server-linux-setup-ssis.md).
 
@@ -47,6 +47,34 @@ ms.lasthandoff: 12/09/2017
     $ dtexec /F \<package name \> /DE <protection password>
     ```
 
+## <a name="run-an-encrypted-password-protected-package"></a>Запустите зашифрованный пакет (защищенный паролем)
+Существует три способа выполнения пакета служб SSIS, который зашифрован с паролем:
+
+1.  Задать значение переменной среды `SSIS_PACKAGE_DECRYPT`, как показано в следующем примере:
+
+    ```
+    SSIS_PACKAGE_DECRYPT=test /opt/ssis/bin/dtexec /f package.dtsx
+    ```
+
+2.  Укажите `/de[crypt]` параметр и введите пароль в интерактивном режиме, как показано в следующем примере:
+
+    ```
+    /opt/ssis/bin/dtexec /f package.dtsx /de
+    
+    Enter decryption password:
+    ```
+
+3.  Укажите `/de` параметр, чтобы предоставить пароль в командной строке, как показано в следующем примере. Этот метод не рекомендуется, поскольку она сохраняет пароль для дешифрования с помощью команды в журнале команд.
+
+    ```
+    opt/ssis/bin/dtexec /f package.dtsx /de test
+    
+    Warning: Using /De[crypt] <password> may store decryption password in command history.
+    
+    You can use /De[crypt] instead to enter interactive mode,
+    or use environment variable SSIS_PACKAGE_DECRYPT to set decryption password.
+    ```
+
 ## <a name="design-packages"></a>Проектировать пакеты
 
 **Подключения к источникам данных ODBC**. С помощью служб SSIS на Linux CTP-версии 2.1 обновления и более поздних версий пакетов служб SSIS можно использовать подключения ODBC в Linux. Эта функциональность была протестирована с SQL Server и драйверы MySQL ODBC, но также требуются для работы с любой драйвер ODBC Юникода, отслеживающее спецификации ODBC. Во время разработки укажите имя источника данных или строку подключения для подключения к данным ODBC; Можно также использовать проверку подлинности Windows. Дополнительные сведения см. в разделе [записи блога Представляем поддержка ODBC в Linux](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/).
@@ -56,7 +84,7 @@ ms.lasthandoff: 12/09/2017
 ## <a name="deploy-packages"></a>Развертывание пакетов
 Пакеты можно сохранить только в файловой системе на платформе Linux в этом выпуске. База данных каталога служб SSIS и устаревшие службы SSIS недоступны в Linux для хранения и развертывания пакетов.
 
-## <a name="schedule-packages"></a>Расписание пакетов
+## <a name="schedule-packages"></a>Планирование выполнения пакетов
 Можно использовать системы Linux, таких как средства планирования `cron` планирования пакетов. Для планирования выполнения пакетов в этом выпуске нельзя использовать агента SQL Server в Linux. Дополнительные сведения см. в разделе [пакетов служб SSIS расписания в Linux с cron](sql-server-linux-schedule-ssis-packages.md).
 
 ## <a name="limitations-and-known-issues"></a>Ограничения и известные проблемы
@@ -83,7 +111,7 @@ Microsoft SQL Server Integration Services (SSIS) — это платформа �
 
 Чтобы приступить к работе со службами SSIS, загрузите последнюю версию [SQL Server Data Tools (SSDT)](../integration-services/ssis-how-to-create-an-etl-package.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 - [Дополнительные сведения о SQL Server Integration Services](../integration-services/sql-server-integration-services.md)
 - [SQL Server Integration Services (SSIS) разработки и средства управления](../integration-services/integration-services-ssis-development-and-management-tools.md)
 - [SQL Server Integration Services, учебники](../integration-services/integration-services-tutorials.md)

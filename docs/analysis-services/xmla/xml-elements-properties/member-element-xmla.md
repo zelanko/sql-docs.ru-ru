@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Member Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 54ea0bd96716ae6c11fa1195c9845b721fc76ef6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82690ec66dfcb96787ea592a8d32c3826ee8776f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="member-element-xmla"></a>Элемент Member (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Представляет отдельный элемент родительского элемента [элементы](../../../analysis-services/xmla/xml-elements-properties/members-element-xmla.md) или [кортежа](../../../analysis-services/xmla/xml-elements-properties/tuple-element-xmla.md) элемента.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -83,11 +81,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="attributes"></a>Атрибуты  
   
-|Attribute|Описание|  
+|attribute|Description|  
 |---------------|-----------------|  
 |Иерархия|Обязательный атрибут типа **String** (только для родительских элементов **Tuple** ). Имя иерархии, которой принадлежат члены, представленные элементом **Member** .|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элемент **Member** содержит сведения, необходимые для определения и отображения элементов в рамках заданной иерархии. Для родительских элементов **Members** иерархия уже задана атрибутом **Hierarchy** родительского элемента. Для родительских элементов **Tuple** иерархия задается при помощи атрибута **Hierarchy** элемента **Member** .  
   
 ## <a name="see-also"></a>См. также:  

@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 10c3749dafe92066faed35c4af06444e2fcd55ff
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3fa9fd8e7b7c4722e9acf41f0f7229ee0a1f3ef7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="connection-string-properties-analysis-services"></a>Свойства строки подключения (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В этом разделе описываются свойства строки подключения можно задать в одном из средств конструктора или администрирования или в строках подключения, созданных клиентских приложений, которые подключаются и запрашивают данные служб Analysis Services. Описывается только подмножество доступных свойств. Полный список содержит множество свойств сервера и базы данных, позволяющих настроить соединение для конкретного приложения независимо от того, как экземпляр или база данных настроены на сервере.  
@@ -199,7 +196,7 @@ ms.lasthandoff: 12/08/2017
   
  Службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют отдельный ключ шифрования для шифрования данных строки подключения каждой из баз данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] создают этот ключ при создании базы данных и шифруют данные из строки соединения на основании стартовой учетной записи входа служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . При запуске служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] зашифрованный ключ для каждой из баз данных считывается, расшифровывается и сохраняется. Затем службы[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] используют соответствующий расшифрованный ключ для расшифровки строки подключения к источнику данных, когда службам [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] необходимо подключиться к источнику данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка HTTP-доступа к службам Analysis Services в службах Internet Information Services (IIS) 8.0](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Настройка служб Analysis Services для ограниченного делегирования Kerberos](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md)   
  [Поставщики данных, используемые для соединений со службами Analysis Services](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a8cf7089d9c70b051c3eaa6a43ddbce942500d2b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: df59f83d3f2ce978db817369b513c1cc0678368c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="associationset-element-csdlbi"></a>Элемент AssociationSet (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]**AssociationSet** элемент — сложный тип, который определяет взаимосвязь. В модели данных CSDLBI взаимосвязь представляет собой связь между таблицами.  
@@ -34,10 +32,10 @@ ms.lasthandoff: 12/08/2017
 ## <a name="applicable-attributes"></a>Применимые атрибуты  
  В следующей таблице перечислены элементы и атрибуты, определяющие элемент **AssociationSet** .  
   
-|Название|Обязателен|Описание|  
+|Имя|Обязателен|Description|  
 |----------|-----------------|-----------------|  
 |Состояние|Да|Строка, которая указывает, активна ассоциация или нет. Значение определяется элементом State.|  
-|Скрыта|Нет|Логическое значение, определяющее, является ли связь видимой. По умолчанию значение Hidden — **false**, т. е. все связи видимы в модели.|  
+|Скрытый|нет|Логическое значение, определяющее, является ли связь видимой. По умолчанию значение Hidden — **false**, т. е. все связи видимы в модели.|  
   
 ## <a name="state-element"></a>Элемент State  
  Элемент **State** — простой тип, который описывает, активна ли связь, должен использоваться в вычислениях или оставаться неактивным, но ссылаться на него в вычислениях следует явно.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
  В следующей таблице перечислены значения элемента **State** .  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |Активен|Взаимосвязь активна.|  
 |Неактивный|Взаимосвязь активна.|  

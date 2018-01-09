@@ -5,12 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 47ad74a70236b156db230ed229d2022cd6e057b0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f87ea88579145b0220be7a047d230d2f3d8d9a1e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="mining-structure-columns"></a>Столбцы структуры интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Определить столбцы в структуре интеллектуального анализа данных при создании структуры интеллектуального анализа данных, выбрав столбцы внешних данных и затем указать, каким образом будет использоваться для моделирования данных. Таким образом, столбцы структуры интеллектуального анализа данных — это не просто копии данных из источника данных. Они определяют, как данные из этого источника будут использованы в модели интеллектуального анализа данных. Можно определить свойства, которые определяют, каким образом дискретизируются данные, или свойства, описывающие способ распределения значений данных.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
 |Содержит описание классификационных столбцов, являющихся особым типом столбцов, с помощью которых можно связать один столбец структуры интеллектуального анализа с другим.|[Классифицированные столбцы (интеллектуальный анализ данных)](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |Добавление и изменение столбцов структуры интеллектуального анализа данных.|[Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md)  
   

@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 978279e6-a581-4184-af9d-8701b9826a89
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0055b4c33a489d13ee7feac39f179505d76d50e9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f0b002ac618a9e55da3a433c11817eca716345ef
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Уровень совместимости многомерной базы данных (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], свойство уровня совместимости базы данных определяет функциональный уровень базы данных. Уровень совместимости уникален для каждого типа модели. Например, для многомерной и табличной баз данных уровень совместимости **1100** имеет разное значение.  
@@ -48,7 +45,7 @@ ms.lasthandoff: 12/08/2017
 > [!WARNING]  
 >  Повышение уровня совместимости базы данных необратимо. После повышения уровня совместимости до **1100**работу с базой данных необходимо продолжать на более новых серверах. Выполнить откат до уровня **1050**нельзя. Присоединить или восстановить базу данных с уровнем совместимости **1100** на сервере, версия которого ниже [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] или [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], нельзя.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Уровни совместимости баз данных введены в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Для просмотра или установки уровня совместимости базы данных необходимо наличие служб [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или боле поздней версии.  
   
  База данных не может быть локальным кубом. Локальные кубы не поддерживают свойство **CompatibilityLevel** .  
@@ -97,10 +94,10 @@ ms.lasthandoff: 12/08/2017
   
 3.  Синхронизация серверов поддерживается только для серверов с одинаковой версией и уровнем совместимости баз данных.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  После повышения уровня совместимости базы данных можно задать свойство **StringStoresCompatibilityLevel** в [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Это увеличит строковое хранилище для измерений и мер. Дополнительные сведения об этой функции см. в разделе [Настройка хранилища строк для измерений и секций](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Резервное копирование, восстановление и синхронизация баз данных (XMLA)](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

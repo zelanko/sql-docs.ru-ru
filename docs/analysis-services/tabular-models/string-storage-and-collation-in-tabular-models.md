@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 90b110552e0ea5469258581c1d1e26d4ebd86d36
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b6a2cd9235163e6586edb21e71f24bc8d1d1c4b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Хранение строк и параметры сортировки в табличных моделях
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Строки (текстовые значения) хранятся в формате с большим сжатием в табличных моделей; из-за сжатия при извлечении полных или частичных строк можно получить неожиданные результаты. Кроме того, поскольку языковой стандарт и параметры сортировки строки наследуются в иерархическом порядке у ближайшего родительского объекта, если язык строки не определен явным образом, локаль и параметры сортировки родительского элемента могут повлиять на то, как каждая строка хранится, является строка уникальной или объединена с похожими строками согласно определению параметров сортировки родительского элемента.  

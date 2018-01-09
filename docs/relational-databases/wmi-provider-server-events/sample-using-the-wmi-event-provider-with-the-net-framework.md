@@ -8,7 +8,7 @@ ms.service:
 ms.component: wmi
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c46aa82d1498ff52116280e92ffd7a3ad31b9be6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f137b554dd9a87428b31b161703e3d96cb9113cc
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Пример: Использование поставщика событий WMI с платформой .NET Framework
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Следующий пример создает приложение в C#, который использует поставщик событий WMI для возврата данных о событии для определения всех данных языка DDL-события, возникающие на экземпляр по умолчанию установка [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

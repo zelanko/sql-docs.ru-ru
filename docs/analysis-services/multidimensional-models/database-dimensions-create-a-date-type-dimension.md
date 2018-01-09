@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b3be92a4572e464d23c24c0f7152a7a106e1932c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 0d930adaecb3d2148a07a54797b902162c6d2a89
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-dimensions---create-a-date-type-dimension"></a>Измерения базы данных — Создание измерения типа Date
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], измерение времени является типом измерения, атрибуты которого представляют периоды времени, например годы, семестры, кварталы, месяцы и дни. Периоды в измерении времени обеспечивают временные уровни гранулярности для анализа и создания отчетов. Атрибуты организуются в иерархии, при этом гранулярность измерения времени преимущественно определяется требованиями, предъявляемыми коммерческой деятельностью и отчетностью к данным с предысторией. Например, в приложениях бизнес-аналитики большая часть финансовых данных и данных о продажах использует помесячную или поквартальную гранулярность.  
@@ -76,7 +73,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Мастер бизнес-аналитики не может быть использован для добавления логики операций со временем к серверным измерениям времени. Мастер бизнес-аналитики добавляет иерархию для поддержки логики операций со временем, при этом такая иерархия должна быть привязана к столбцу таблицы измерения времени. Для серверных измерений времени не существует соответствующей таблицы измерения времени, следовательно, такие измерения не могут поддерживать эту дополнительную иерархию.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Создание измерения времени посредством формирования таблицы времени](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
  [Справка F1 мастера бизнес-аналитики](http://msdn.microsoft.com/library/155ac80c-63ae-47aa-9e86-9396e3d920eb)   
  [Типы измерений](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md)  

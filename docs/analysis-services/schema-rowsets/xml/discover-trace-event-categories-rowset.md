@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1adc4b7e60c566ac1c46a4b51c06e2ee505916ee
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: b95fb2824757a4b45001dd5a1eed4871995b86cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertraceeventcategories-rowset"></a>Набор строк DISCOVER_TRACE_EVENT_CATEGORIES
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Отображается список категорий событий, которые поддерживаются поставщиком трассировки.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/08/2017
   
 |Имя столбца|Индикатор типа|Длина|Description|  
 |-----------------|--------------------|------------|-----------------|  
-|**Данные**|**DBTYPE_WSTR**||Содержит закодированную XML-строку, отображающую сведения о категории событий о поставщике трассировки, в том числе имя категории, тип и описание. «Type» — это строка, указывающая на тип категории событий. Возможны следующие значения перечислений:<br /><br /> 0=нормальное<br /><br /> 1=значительное<br /><br /> 2=ошибка|  
+|**Data**|**DBTYPE_WSTR**||Содержит закодированную XML-строку, отображающую сведения о категории событий о поставщике трассировки, в том числе имя категории, тип и описание. «Type» — это строка, указывающая на тип категории событий. Возможны следующие значения перечислений:<br /><br /> 0=нормальное<br /><br /> 1=значительное<br /><br /> 2=ошибка|  
   
  Этот набор строк схемы не отсортирован.  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |Аргумент|Значение|  
 |--------------|-----------|  
 |GUID|a07ccd19-8148-11d0-87bb-00c04fc33942|  
-|Строковые значения|DISCOVER_TRACE_EVENT_CATEGORIES|  
+|String|DISCOVER_TRACE_EVENT_CATEGORIES|  
   
 ## <a name="see-also"></a>См. также:  
  [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

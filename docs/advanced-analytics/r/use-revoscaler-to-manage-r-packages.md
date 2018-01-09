@@ -1,13 +1,13 @@
 ---
 title: "Как использовать функции RevoScaleR для поиска или установить R пакетов на SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 09/29/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: R
@@ -16,11 +16,11 @@ caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
-ms.openlocfilehash: 6d85c95a1aa0cba21c52142fa1a7599b208415ca
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: 1cc59cad6bfb95ee0981604d336087809f9cb932
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Как использовать функции RevoScaleR для поиска или установка пакетов R в SQL Server
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/20/2017
 
 + Если не указать имя пользователя и пароль при создании контекста вычислений, используется идентификатор пользователя, выполняющего этот код R.
 
-+ При использовании этих функций с удаленного клиента R, необходимо создать объект контекста вычислений во-первых, с помощью функции RxInSQLServer. После этого для каждой функции управления пакета, которая используется, передайте контекст вычислений в качестве аргумента.
++ При использовании этих функций с удаленного клиента R, необходимо создать объект контекста вычислений во-первых, с помощью [RxInSqlServer](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinsqlserver) функции. После этого для каждой функции управления пакета, которая используется, передайте контекст вычислений в качестве аргумента.
 
 + Можно запускать с помощью функции управления пакета `sp_execute_external_script`. При этом выполняется функция, используя контекст безопасности вызывающего объекта хранимой процедуры.
 
@@ -46,22 +46,23 @@ ms.lasthandoff: 12/20/2017
 
 Для установки и удаления пакетов в контексте указанной вычислений в RevoScaleR, предусмотрены следующие функции пакета управления:
 
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): найти сведения о пакеты, установленные в контексте указанной вычислений.
++ [rxInstalledPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstalledpackages): найти сведения о пакеты, установленные в контексте указанной вычислений.
 
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): установки пакетов в контексте вычислений, из указанного хранилища или чтении локально сохраненные ZIP-пакеты.
++ [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages): установки пакетов в контексте вычислений, из указанного хранилища или чтении локально сохраненные ZIP-пакеты.
 
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): Удаление установленных пакетов из контекста вычислений.
++ [rxRemovePackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxremovepackages): Удаление установленных пакетов из контекста вычислений.
 
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): получить путь для одного или нескольких пакетов в контексте указанной вычислений.
++ [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage): получить путь для одного или нескольких пакетов в контексте указанной вычислений.
 
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): копирует библиотеку пакета между файловой системы и баз данных в контексте указанной вычислений.
++ [rxSyncPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsyncpackages): копирует библиотеку пакета между файловой системы и баз данных в контексте указанной вычислений.
 
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): получить путь поиска для деревьев библиотеки для пакетов во время выполнения в SQL Server.
++ [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths): получить путь поиска для деревьев библиотеки для пакетов во время выполнения в SQL Server.
 
-Эти пакеты включены по умолчанию в 2017 г. SQL Server. Сведения об этих функциях см. в разделе страницы ссылка функции RevoScaleR: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
+Эти пакеты включены по умолчанию в 2017 г. SQL Server. Сведения об этих функциях см. в разделе страницы ссылка функции RevoScaleR: (https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)
 
 > [!NOTE]
 > Функции R для управления пакетами, доступны, начиная с Microsoft R Server 9.0.1. Если функции не удается найти в RevoScaleR, возможно, необходимо обновление до последней версии. 
+
 ## <a name="examples"></a>Примеры
 
 Этот раздел содержит примеры использования функций пакета управления с экземпляром SQL Server или базы данных. 

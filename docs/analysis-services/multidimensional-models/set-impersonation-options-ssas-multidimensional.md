@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.sqlserverstudio.impersonationinfo.f1
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5758391cdcc5e216bed3ec100b254c8f5f6e3a89
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 55ec66efd96a14bde8a9ea8b26488e18faadac0f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Задание параметров олицетворения (службы SSAS — многомерные)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании **источника данных** объекта в модели служб Analysis Services, один из параметров, которые необходимо настроить, является параметр олицетворения. Этот параметр определяет, действуют ли службы Analysis Services под удостоверением определенной учетной записи пользователя Windows при выполнении локальных операций, связанных с соединением, например загрузки поставщика данных OLE DB или разрешения данных профиля пользователя в средах, поддерживающих перемещаемые профили.  
@@ -105,7 +102,7 @@ ms.lasthandoff: 12/08/2017
 
  Для многомерных баз данных параметр **По умолчанию** означает, что будет использоваться учетная запись службы, а для операций интеллектуального анализа данных — учетная запись текущего пользователя.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [Задание свойств источника данных (многомерные службы SSAS)](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 

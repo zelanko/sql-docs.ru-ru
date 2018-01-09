@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Session Events event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 663170f53391f844b6b94bcb5ffb615f150d0eed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2a11895ad8a966a95b9ea4b78fa78236bc3d88d9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="session-events-data-columns"></a>Столбцы данных о событиях сеанса
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «события сеанса» содержит следующие классы событий:  
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/08/2017
 |---------------------|-------------------|---------------------|----------------------------|  
 |CurrentTime|2|5|Время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Длительность события (в миллисекундах).|  
+|Duration|5|2|Длительность события (в миллисекундах).|  
 |CPUTime|6|2|Объем времени ЦП (в миллисекундах), использованного событием.|  
 |ConnectionID|25|1|Уникальный идентификатор соединения.|  
 |DatabaseName|28|8|Имя базы данных, в которой выполняется инструкция пользователя.|  
@@ -91,7 +91,7 @@ ms.lasthandoff: 12/08/2017
 |ServerName|43|8|Имя сервера, формирующего событие.|  
 |RequestProperties|45|9|Свойства запроса XMLA.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Категория событий «Аудит безопасности»](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

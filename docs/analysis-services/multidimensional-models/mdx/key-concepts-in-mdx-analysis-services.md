@@ -5,13 +5,10 @@ ms.date: 03/13/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cdfe16ab9a3b17d60f8e5a9ba30eeeda82d75b84
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 23aca9e6a5595c8597d13e2e832390988c50be3c
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Основные понятия многомерных выражений (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Перед использованием многомерных выражений (MDX) для запроса многомерных данных или создания Многомерных выражений в кубе, важно знать многомерные основными понятиями и терминами.  
@@ -144,7 +141,7 @@ ms.lasthandoff: 12/08/2017
   
  **Измерения базы данных и измерения куба**. В рамках модели можно определить отдельные измерения, которые затем включаются в любое количество кубов в этой модели. Измерение, добавленное к кубу, называется измерением куба. В рамках проекта измерение само по себе как отдельный элемент в обозревателе объектов называется измерением базы данных. Зачем проводить различие? Это связано с возможностью независимого задания свойств для каждого из типов измерений. В документации по продукту используются оба термина, поэтому важно понять их значения и отличия.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Получив представление о важных понятиях и терминологии, можно перейти к дополнительным разделам, содержащим дальнейшие сведения об основных принципах работы служб Analysis Services.  
   
 -   [Базовый запрос многомерных выражений (многомерные выражения)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
@@ -153,7 +150,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Многомерное моделирование (учебник по Adventure Works)](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Кортежи](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [Автоматическая проверка существования](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   

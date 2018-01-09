@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-how-to
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: 151f2066-1c37-410f-88f4-b27dfca66031
@@ -17,19 +17,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5e3d7e997048778822e6bf8baafc3e697f2b77ae
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6fdd4ba2e98b31d2637641eaded57be1aa4415c3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
-# <a name="odbc-how-to-topics"></a>Инструкции по ODBC
+# <a name="odbc-how-to-topics"></a>ODBC How-to Topics
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
   Для использования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвера ODBC, необходимо быть возможность создания источников данных ODBC и убедиться, что сервер имеет правильную версию хранимых процедур каталога. Для написания приложения ODBC, в котором используется SQL Server, необходимо знать, как выделять дескрипторы ODBC, устанавливать атрибуты, соединяться с экземпляром SQL Server, выполнять запросы и вычислять результаты.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Инструкции по настройке SQL Server ODBC драйвера](http://msdn.microsoft.com/library/e26fbc87-9483-4a2e-99f1-bf52a58360db)  
   

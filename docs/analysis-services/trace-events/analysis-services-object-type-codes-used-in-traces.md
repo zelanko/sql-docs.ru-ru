@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 09c8d0a538d539c54e304d220566345a96a5e2f1
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cd17ad086169a53673d7c9ba48f79058dd87769d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-object-type-codes-used-in-traces"></a>Коды типов объектов служб Analysis Services, используемые для трассировки
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]На этой странице перечислены тип объекта (Шестизначное число) каждого объекта в модели данных служб Analysis Services. Эти коды отображаются в журналах трассировки и используются для определения типа объекта, связанного с определенной блокировкой. Например, время ожидания блокировки в базе данных будет указывать на тип объекта 100002, который является типом объекта базы данных.  
@@ -33,12 +33,12 @@ ms.lasthandoff: 12/08/2017
   
 |Тип объекта|Имя объекта|  
 |-----------------|-----------------|  
-|100000|Server|  
+|100000|Сервер|  
 |100001|Command|  
-|100002|База данных|  
+|100002|база данных|  
 |100003|DataSource|  
 |100004|DatabasePermission|  
-|100005|Роль|  
+|100005|Role|  
 |100006|Измерение|  
 |100007|DimensionAttribute|  
 |100008|Иерархия|  
@@ -79,7 +79,7 @@ ms.lasthandoff: 12/08/2017
 |100053|Command|  
 |100054|Ключевой показатель эффективности|  
 |100055|DataSourceView|  
-|100056|Perspective|  
+|100056|Перспектива|  
 |100100|CommandCollection|  
 |100101|DatabaseCollection|  
 |100102|DataSourceCollection|  

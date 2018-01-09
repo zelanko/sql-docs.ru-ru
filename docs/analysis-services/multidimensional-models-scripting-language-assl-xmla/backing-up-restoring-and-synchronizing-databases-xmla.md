@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7155763db87be5c44ae9e5718d3d72939380038b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a01f7dc9f661ffde071b54a4c738557c4f2c8dad
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Резервное копирование, восстановление и синхронизация баз данных (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В XML для аналитики существует три команды для резервного копирования, восстановления и синхронизации баз данных.  
@@ -152,7 +150,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="synchronizing-rolap-objects"></a>Синхронизация объектов ROLAP  
  **Synchronize** команды не удалось синхронизировать агрегаты или данные для объектов, использующих режим хранения ROLAP, поскольку такие сведения хранятся в таблицах в базовом реляционном источнике данных. Однако метаданные объектов ROLAP синхронизировать можно. Синхронизация метаданных, **Synchronize** команду повторно создает структуру таблицы в реляционном источнике данных.  
   
- Можно использовать **расположение** элемент в команде Synchronize для синхронизации объектов ROLAP. Для каждого **расположение** элемент, используемый для перемещения источника данных, **DataSourceType** свойства должны задаваться явным образом *локальной*. . Также необходимо задать **ConnectionString** свойство **расположение** элемент к строке подключения новое расположение. Во время синхронизации **Synchronize** команда заменит строку подключения для источника данных, определенного **DataSourceID** свойство **расположение** элемент со значением **ConnectionString** свойство **расположение** элемента.  
+ Можно использовать **расположение** элемент в команде Synchronize для синхронизации объектов ROLAP. Для каждого **расположение** элемент, используемый для перемещения источника данных, **DataSourceType** свойства должны задаваться явным образом *локальной*. , и делает это по-другому. Также необходимо задать **ConnectionString** свойство **расположение** элемент к строке подключения новое расположение. Во время синхронизации **Synchronize** команда заменит строку подключения для источника данных, определенного **DataSourceID** свойство **расположение** элемент со значением **ConnectionString** свойство **расположение** элемента.  
   
 ## <a name="see-also"></a>См. также:  
  [Резервный элемент &#40; XML для Аналитики &#41;](../../analysis-services/xmla/xml-elements-commands/backup-element-xmla.md)   

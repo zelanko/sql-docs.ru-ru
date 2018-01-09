@@ -5,12 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: multidimensional-tabular
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5e810707-f58d-4581-8f99-7371fa75b6ac
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bb36d45580332bdff45daae25a7de3a9e7aa2beb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0ffd9fce046edae4098f965f2cc2967fa7f1e3a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bi-directional-cross-filters---tabular-models---analysis-services"></a>Двунаправленные кросс-фильтры служб Analysis Services — табличные модели —
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Новые в SQL Server 2016 является стандартный подход по включению *двунаправленные кросс-фильтры,* в табличных моделях, устраняя необходимость вручную создавать обходные пути DAX для распространения контекста фильтра между связями таблиц.  
@@ -204,7 +202,7 @@ ms.lasthandoff: 12/08/2017
   
  На практике с помощью кросс-фильтрации можно получить такие формы для просмотра данных, которые обычно создаются только с помощью конструкций "многие-ко-многим". Следует отметить, что двунаправленная кросс-фильтрация не является конструкцией "многие-ко-многим".  Реальная табличная конфигурации "многие-ко-многим" не поддерживается в конструкторе для табличных моделей в этом выпуске.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание связей и управление ими в Power BI Desktop](https://support.powerbi.com/knowledgebase/articles/464155-create-and-manage-relationships-in-power-bi-desktop)   
  [Практический пример обработки простых многие manay связей в табличных моделях Power Pivot и служб SSAS](http://social.technet.microsoft.com/wiki/contents/articles/22202.a-practical-example-of-how-to-handle-simple-many-to-many-relationships-in-power-pivotssas-tabular-models.aspx)   
  [Разрешение связей многие ко многим, используя DAX кросс табличной фильтрации](http://blog.gbrueckl.at/2012/05/resolving-many-to-many-relationships-leveraging-dax-cross-table-filtering/)   

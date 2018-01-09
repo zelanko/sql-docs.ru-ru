@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 897e459ef746d90fd8756af0e19c51c076543498
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0a33445fedf93a6dce4f2bf9b4f6a90465b6c60
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2013"></a>Настройка PowerPivot и развертывание решений (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Этом разделе описаны развертывание и настройка расширений среднего уровня [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] функции в [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] включая [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] коллекции, расписания обновления данных, панель управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013** , чтобы выполнить следующее.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 ##  <a name="bkmk_run_configuration_tool"></a> Запуск настройки PowerPivot для SharePoint 2013  
  **Примечание.** Мастер программы установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] устанавливает два различных средства настройки для [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Каждый из них поддерживает разные версии SharePoint.  
   
-|Название|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для настройки SharePoint 2013|SharePoint 2013|  
 |[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Средство настройки|SharePoint 2010 в сочетании с SharePoint 2010 с пакетом обновления 1 (SP1)|  

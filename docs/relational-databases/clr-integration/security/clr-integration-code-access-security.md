@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1bdecb5570f4c139fd42a77d2ef5479758bdf63a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 37d547672455e794854d2143819a445fc25edef2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-code-access-security"></a>Управление доступом для кода на основе интеграции со средой CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Общеязыковая среда выполнения (CLR) поддерживает модель безопасности, называемую управления доступом для кода для управляемого кода. В этой модели разрешения предоставляются сборкам на основе идентификатора кода. Дополнительные сведения см. в разделе «Управление доступом для кода» справочной документации пакета средств разработки программного обеспечения .NET Framework.  
@@ -114,9 +114,9 @@ ms.lasthandoff: 11/17/2017
 ||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
 |**Разрешения управления доступом для кода**|Только выполнение|Выполнение и доступ к внешним ресурсам|Неограниченное (включая P/Invoke)|  
 |**Ограничения модели программирования**|Да|Да|Без ограничений|  
-|**Требование к проверяемости**|Да|Да|Нет|  
+|**Требование к проверяемости**|Да|Да|нет|  
 |**Доступ к локальным данным**|Да|Да|Да|  
-|**Возможность вызова машинного кода**|Нет|Нет|Да|  
+|**Возможность вызова машинного кода**|нет|нет|Да|  
   
 ## <a name="see-also"></a>См. также:  
  [Безопасность интеграции со средой CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Attribute Element
@@ -28,11 +26,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b2100479529d5d7ca15bd8b6dcf0600088617c02
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d8441c406aac47d1c67bc8f24f049c6073043261
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-element-xmla"></a>Элемент Attribute (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Определяет или фильтрует элемент атрибута, на котором родительского [вставить](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [обновление](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md), или [Drop](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md) выполняет команду.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/08/2017
 |[Удалить](../../../analysis-services/xmla/xml-elements-commands/drop-element-xmla.md), [где](../../../analysis-services/xmla/xml-elements-properties/where-element-xmla.md)|[AttributeName](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md), [ключей](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md)|  
 |[Вставить](../../../analysis-services/xmla/xml-elements-commands/insert-element-xmla.md), [обновления](../../../analysis-services/xmla/xml-elements-commands/update-element-xmla.md)|[AttributeName](../../../analysis-services/xmla/xml-elements-properties/attributename-element-xmla.md), [CustomRollup](../../../analysis-services/xmla/xml-elements-properties/customrollup-element-xmla.md), [CustomRollupProperties](../../../analysis-services/xmla/xml-elements-properties/customrollupproperties-element-xmla.md), [ключей](../../../analysis-services/xmla/xml-elements-properties/keys-element-xmla.md), [имя](../../../analysis-services/xmla/xml-elements-properties/name-element-xmla.md), [ SkippedLevels](../../../analysis-services/xmla/xml-elements-properties/skippedlevels-element-xmla.md), [переводы](../../../analysis-services/xmla/xml-elements-properties/translations-element-xmla.md), [UnaryOperator](../../../analysis-services/xmla/xml-elements-properties/unaryoperator-element-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элемент **Attribute** определяет элемент атрибута, который вставлен, обновлен или удален командой **Insert**, **Update**или **Drop** соответственно. Как эти команды могут работать только с одним элемент атрибута одновременно, [атрибуты](../../../analysis-services/xmla/xml-elements-properties/attributes-element-xmla.md) коллекцию **вставить**, **обновление**, и **Drop**команды может содержать только один **атрибут** элемента. Однако коллекция **Attributes** элемента **Where** для команд **Drop** и **Update** может содержать более одного элемента **Attribute** , таким образом возможна фильтрация атрибутов для удаления или обновления в доступном для записи измерении.  
   
 ## <a name="see-also"></a>См. также:  

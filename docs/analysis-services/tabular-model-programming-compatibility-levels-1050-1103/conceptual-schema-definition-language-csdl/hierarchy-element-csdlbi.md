@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 53d88729411c0a353b82923d3f4a3337647902ed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 21e11773cfe402d85d661c009bf1b6a2fef7235a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="hierarchy-element-csdlbi"></a>Элемент Hierarchy (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Элемент Hierarchy — логический контейнер для полей таблицы, которые могут быть связаны друг с другом, образуют иерархию. Элемент Hierarchy является производным элемента языка CSDL Member и расширен так, чтобы поддерживать иерархии, созданные в моделях данных бизнес-аналитики.  
@@ -32,12 +30,12 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Элементы и атрибуты  
  В следующей таблице перечислены элементы и атрибуты, определяющие элемент Hierarchy  
   
-|Название|Обязателен|Описание|  
+|Имя|Обязателен|Description|  
 |----------|-----------------|-----------------|  
-|Документация|Нет|Описание иерархии.|  
+|Документация|нет|Описание иерархии.|  
 |Level|Да|Один или несколько элементов Level, определяющих столбцы, участвующие в иерархии.<br /><br /> См. раздел [Элемент Level (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/level-element-csdlbi.md).|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В табличных моделях иерархии создаются за счет определения отношений «родитель-потомок» между столбцами одной таблицы. Дополнительные сведения см. в разделе [Иерархии (табличные службы SSAS)](../../../analysis-services/tabular-models/hierarchies-ssas-tabular.md).  
   
 ## <a name="example"></a>Пример  

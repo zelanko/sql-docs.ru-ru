@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
@@ -20,17 +17,17 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 91e058351ec0314dced6586c98cde4ca9f781be7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2474c5ec55301da4793ed23272059c2f93e6e730
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Создание надежного расположения для сайтов PowerPivot в центре администрирования
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Службы Excel позволяют указать, какие расположения являются допустимыми репозиториями для книг, открываемых на сервере SharePoint. Эти расположения называются надежными. Можно использовать разные параметры конфигурации для каждого создаваемого надежного расположения. При развертывании [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint может понадобиться создание надежных расположений для сайтов, в которых содержатся книги [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , что позволит применить параметры, наиболее подходящие для доступа к данным [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , во время сохранения параметров по умолчанию для всех остальных расположений фермы.  
   
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Для обозначения URL-адреса как надежного расположения пользователь должен быть администратором фермы или службы.  
   
  Необходимо знать URL-адрес сайта SharePoint, содержащего коллекцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] или другую библиотеку, в которой хранятся книги. Чтобы получить этот адрес, откройте сайт с библиотекой, щелкните правой кнопкой мыши **коллекцию [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, выберите команду **Свойства** и скопируйте первую часть URL-адреса, содержащую имя сервера и путь к сайту.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 12/08/2017
   
 11. Нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Коллекция PowerPivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
  [Создание и настройка коллекции Power Pivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Использование коллекции PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  

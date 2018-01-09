@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -25,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bda0bd4dac6b7f60bbda2fd9562af9fa2ebe9abb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 98e15a75b97eae9c4b2fa4093f03f9c8ccf92000
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-trace-events"></a>События трассировки служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно выполнить действия с экземпляром Microsoft SQL Server Analysis Services (SSAS), отслеживания и анализа событий трассировки, создаваемые экземпляром.  События трассировки сгруппированы для облегчения поиска связанных событий трассировки.  Каждое событие трассировки содержит набор данных, имеющих отношение к событию; не все фрагменты данных имеют отношение к событиям.  
@@ -190,7 +190,7 @@ ms.lasthandoff: 12/08/2017
 |42|Существующий сеанс|Существующий сеанс.|  
 |43|Инициализация сеанса|Инициализация сеанса.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование приложения SQL Server Profiler для мониторинга служб Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

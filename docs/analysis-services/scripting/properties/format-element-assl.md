@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Format Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 01d1202f5868d5d81318d18e4f43856f3a790077
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a21fcaf86fde97f199b88f3248cb53fd8e64d5e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="format-element-assl"></a>Элемент Format (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Содержит требуемый формат параметра [DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md) элемента.  
@@ -47,11 +45,11 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Строковые значения|  
+|Тип данных и длина|String|  
 |Значение по умолчанию|None|  
-|Количество элементов|0—1: необязательный элемент, который может появляться только один раз.|  
+|Количество элементов|0-1: необязательный элемент, который может встречаться только один раз.|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
@@ -60,12 +58,12 @@ ms.lasthandoff: 12/08/2017
 |Родительский элемент|[DataItem](../../../analysis-services/scripting/data-type/dataitem-data-type-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Допустимыми значениями для элемента **Format** являются форматы Microsoft Office Excel, а также строки *TrimRight*, *TrimLeft*, *TrimAll*и *TrimNone*. Для усечения значением по умолчанию является значение *TrimRight* .  
   
  Значением этого элемента может быть только одна из строк в следующей таблице.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |Строка в любом формате Excel|Данные форматируются в соответствии с указанной именованной или пользовательской строкой форматирования. Любая строка форматирования, которую поддерживает Excel, может быть предоставлена.|  
 |*TrimAll*|Данные усекаются слева и справа.|  

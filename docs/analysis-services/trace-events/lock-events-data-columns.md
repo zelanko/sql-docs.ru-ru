@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb35430b89a607cbf11c20099da0e1a616e433fe
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 71b4a1d084d56cdb260ac6ed4dd9688a7e388df3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lock-events-data-columns"></a>Столбцы данных событий блокировки
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория событий «блокировка» имеет следующие классы событий:  
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Время начала события, если оно доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |EndTime|4|5|Время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Длительность события (в миллисекундах).|  
+|Duration|5|2|Длительность события (в миллисекундах).|  
 |IntegerData|10|1|Целочисленные данные.|  
 |ObjectType|12|1|Тип объекта.|  
 |ObjectPath|14|8|Путь к объекту. Разделенный запятыми список родителей, начиная с родителя объекта.|  
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/08/2017
 |TextData|42|9|Текстовые данные, связанные с событием.|  
 |ServerName|43|8|Имя сервера, формирующего событие.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Категория событий Lock](../../analysis-services/trace-events/lock-events-category.md)  
   
   

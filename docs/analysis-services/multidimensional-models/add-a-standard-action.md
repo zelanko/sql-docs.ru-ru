@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ccb2928a-f75d-4acb-8ff8-fa80bb0935b2
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 542b50ce2d0e9f3bee53fd6fa5290a152dd03edd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 72a2181917ded838c8ab538fbd1c017147fc91d6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-standard-action"></a>Добавления стандартного действия
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Добавьте действие в базе данных, используя представление действий в конструкторе кубов. Доступ к этому представлению можно получить из среды [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. После создания действия оно становится доступным пользователям после повторной обработки соответствующего куба. Дополнительные сведения см. в статье [Processing Analysis Services Objects](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md).  
@@ -58,7 +55,7 @@ ms.lasthandoff: 12/08/2017
   
         |Тип|Description|  
         |----------|-----------------|  
-        |Набор данных|Извлекает набор данных.|  
+        |Dataset|Извлекает набор данных.|  
         |Частный|Выполняет операцию с помощью интерфейса, отличного от перечисленных в этой таблице.|  
         |Набор строк|Извлекает набор строк.|  
         |.|Выполняет команду OLE DB.|  

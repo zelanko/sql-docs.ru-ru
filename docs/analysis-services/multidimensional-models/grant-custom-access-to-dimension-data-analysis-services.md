@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.asvs.roledesignerdialog.dimensiondata.f1
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9429721bd5349204d235b40edd3e7a49c7b7f0c0
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95cd49cfac7e318e427a4944182bf21cb16f8c3b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Предоставление настраиваемого доступа к данным измерений (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После включения доступа на чтение к кубу, можно задать дополнительные разрешения, которые явно разрешить или запретить доступ к элементам измерений (включая меры, содержащиеся в измерении мер, содержащих все меры, используемые в кубе). Например, для нескольких категорий торговых посредников может понадобиться задать разрешения, чтобы исключить данные для определенного бизнес-типа. На следующей иллюстрации показан эффект до и после отклонения доступа к бизнес-типу "Хранилище" в измерении "Торговый посредник".  
@@ -52,7 +49,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Следующие инструкции предполагают наличие клиентского подключения, выдающего запросы с многомерными выражениями. Если клиент использует DAX, например Power View в Power BI, безопасность измерения в результатах запроса незаметна. Дополнительные сведения см. в разделе [Основные сведения о Power View для многомерных моделей](understanding-power-view-for-multidimensional-models.md) .
       
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Не все меры или элементы измерения можно использовать в сценариях настраиваемого доступа. Если роль ограничивает доступ либо к мере или элементу по умолчанию, либо к мерам, являющимся частью выражений меры, то произойдет сбой подключения.  
   
  **Проверка наличия помех безопасности измерений: меры по умолчанию, элементы по умолчанию и меры, используемые в выражениях меры**  
@@ -136,7 +133,7 @@ ms.lasthandoff: 12/08/2017
  **Проверить**  
  Щелкните, чтобы проверить синтаксис многомерных выражений, заданный на этой странице.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений кубу или модели (службы Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [Предоставление настраиваемого доступа к ячейке данных &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
  [Предоставление разрешений на &#40; структур интеллектуального анализа данных и моделей Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   

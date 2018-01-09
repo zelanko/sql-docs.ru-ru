@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: f2109157a401082febbaadb2a42f607aba22ee73
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 090f81a3668e91ce8c18e10a1bb7ee5fccc52365
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-service-accounts-analysis-services"></a>Настройка учетных записей служб (службы Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Подготовка учетных записей общесистемных документирован в [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md), теме, которая предоставляет сведения об учетной записи обслуживания для всех [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] служб, включая [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Обратитесь к ней для изучения допустимых типов учетных записей, привилегий Windows, назначенных при установке, разрешений файловой системы, разрешений регистра и другой информации.  
@@ -117,7 +114,7 @@ ms.lasthandoff: 12/08/2017
   
  Группа безопасности содержит только один элемент: идентификатор безопасности службы стартовой учетной записи экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Установка добавляет идентификатор безопасности по службе в локальную группу безопасности. Использование локальной группы безопасности с ее членством идентификатора безопасности службы немного, но заметно отличается от того, как Установка SQL Server обеспечивает службу Analysis Services, в сравнении с ядром СУБД.  
   
- Если вы думаете, что разрешения файла повреждены, следуйте данной инструкции для удостоверения, что служба все еще обеспечена надлежащим образом:  
+ Если вы думаете, что разрешения файла повреждены, следуйте данной инструкции для удостоверения, что служба все еще обеспечена надлежащим образом:   
   
 1.  Используйте средство командной строки Управления службой (sc.exe) для получения идентификатора безопасности службы экземпляра службы по умолчанию.  
   
@@ -157,7 +154,7 @@ ms.lasthandoff: 12/08/2017
 |Обратная запись|Добавьте учетную запись службы к ролям базы данных службы Analysis Services, определенных на удаленном сервере|Обратная запись — функция многомерных моделей, которая может быть включена в клиентских приложениях и которая позволяет создавать новые значения данных во время анализа. Если обратная запись разрешена во всех измерениях или кубах, то учетная запись служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна иметь разрешения на запись в таблицу обратной записи в исходной реляционной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если эта таблица еще не существует и ее необходимо создать, то учетная запись службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна обладать разрешениями для создания таблиц в указанной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |Запись в таблицу журнала запросов в реляционной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Создайте имя для входа в базу данных для учетной записи службы и назначьте разрешения на чтение для таблицы журнала запросов.|Можно включить функцию ведения журнала запросов для сбора сведений об использовании запросов в таблицу базы данных для последующего возможного анализа. Учетная запись службы [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна иметь разрешения на запись в таблицу журнала запросов в указанной базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если эта таблица еще не существует и ее необходимо создать, то учетная запись входа [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] должна обладать разрешениями для создания таблиц в указанной базе данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в блогах [Improve SQL Server Analysis Services Performance with the Usage Based Optimization Wizard](http://www.mssqltips.com/sqlservertip/2876/improve-sql-server-analysis-services-performance-with-the-usage-based-optimization-wizard/) (Улучшение производительности служб SQL Server Analysis Services с помощью мастера оптимизации с учетом использования служб) и [Query Logging in Analysis Servicess](http://weblogs.asp.net/miked/archive/2013/07/31/query-logging-in-analysis-services.aspx)(Ведение журнала запросов в службах Analysis Services).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
  [Учетная запись службы SQL Server и удостоверение безопасности службы (блог)](http://www.travisgan.com/2013/06/sql-server-service-account-and-per.html)   
  [SQL Server использует идентификатор безопасности службы для обеспечения изоляции служб (статья базы Знаний)](http://support.microsoft.com/kb/2620201)   

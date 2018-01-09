@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: aa1db060-95dc-4198-8aeb-cffdda44b140
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 85a9806ca93e6b6216d8327d785803e1de19abde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 59471831fc651827944e958898ad5d2d8e5cb879
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="log-operations-in-analysis-services"></a>Журнал операций в службах Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Экземпляр служб Analysis Services будет записывать журнал уведомлений от сервера, ошибки и предупреждения в журнал msmdsrv.log – для каждого устанавливаемого экземпляра. Администраторы обращаются к этому журналу для анализа как обычных, так и непредвиденных событий. В последних версиях ведение журнала было усовершенствовано, чтобы собирать больше сведений. Записи журнала теперь включают сведения о версии и выпуске продукта, а также о процессоре, памяти, подключении и событиях блокировки. Список всех изменений можно просмотреть в разделе [Улучшения ведения журнала](http://support.microsoft.com/kb/2965035).  
@@ -54,8 +51,8 @@ ms.lasthandoff: 12/08/2017
 |Имя файла или расположение|Тип|Используется для|Включено по умолчанию|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Журнал ошибок|Постоянное наблюдение и устранение основных неполадок|Да|  
-|Таблица OlapQueryLog реляционной базы данных|Журнал запросов|Сбор входных данных для мастера оптимизации использования|Нет|  
-|Файлы SQLDmp\<guid > файлы с расширением mdmp|Сбои и исключения|Устранение серьезных неполадок|Нет|  
+|Таблица OlapQueryLog реляционной базы данных|Журнал запросов|Сбор входных данных для мастера оптимизации использования|нет|  
+|Файлы SQLDmp\<guid > файлы с расширением mdmp|Сбои и исключения|Устранение серьезных неполадок|нет|  
   
  Настоятельно рекомендуется ознакомиться со следующей ссылкой для получения дополнительных сведений, не охваченных в этом разделе. [Подсказки к начальному сбору данных от службы технической поддержки Майкрософт](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
   
@@ -161,7 +158,7 @@ ms.lasthandoff: 12/08/2017
   
  Наиболее вероятный параметр конфигурации, который будет изменен, — **CreateAndSendCrashReports** . Он используется, чтобы определить, будет ли создаваться файл дампа памяти.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0|Отключает файл дампа памяти. Все остальные параметры в разделе Exception игнорируются.|  
 |1|(По умолчанию) Включает, но не отправляет файл дампа памяти.|  
@@ -188,7 +185,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Используйте ASTrace2012 вместо журнала запросов, чтобы узнать, кто отправляет запросы к кубам. Журнал запросов обычно используется для ввода данных в мастер оптимизации с учетом использования, и данные, которые он записывает, не просто прочитать или интерпретировать. ASTrace2012 — это широко используемое средство сообщества, собирающее операции запросов. Ссылки для загрузки см. в разделе [Примеры сообщества Microsoft SQL Server: службы Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление экземплярами служб Analysis Services](../../analysis-services/instances/analysis-services-instance-management.md)   
  [Введение в мониторинг служб Analysis Services в SQL Server Profiler](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Свойства сервера служб Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  

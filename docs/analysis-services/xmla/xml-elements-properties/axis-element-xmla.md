@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: Axis Element
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 790fdec7656fa1af8b273a2a3ca7941933480be4
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: bb0538869453af24bd432a1d7f995e0007e79ec7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="axis-element-xmla"></a>Элемент Axis (XML для аналитики)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../../includes/ssas-appliesto-sqlas-aas.md)]Содержит набор кортежей, используемых для представления единственной оси в многомерном наборе данных, содержащихся в [осей](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md) элемент, который использует [MDDataSet](../../../analysis-services/xmla/xml-data-types/mddataset-data-type-xmla.md) тип данных, возвращенных [Execute](../../../analysis-services/xmla/xml-elements-methods-execute.md) метод.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Тип данных и длина|None|  
 |Значение по умолчанию|None|  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |Родительские элементы|[Оси](../../../analysis-services/xmla/xml-elements-properties/axes-element-xmla.md)|  
 |Дочерние элементы|[CrossProduct](../../../analysis-services/xmla/xml-elements-properties/crossproduct-element-xmla.md) или [кортежей](../../../analysis-services/xmla/xml-elements-properties/tuples-element-xmla.md)|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Содержимое **оси** элемент изменяется в зависимости от значения **AxisFormat** XMLA-свойства, используемые **Execute** метод.  
   
 ## <a name="tupleformat"></a>TupleFormat  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/08/2017
 |Иерархия **Time**|1999|1999|2000|  
 |Иерархия **Category**|Actual|Budget|Budget|  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 <Axes>  
@@ -140,7 +138,7 @@ ms.lasthandoff: 12/08/2017
 |Иерархия **Category**|Actual|Budget|Budget|Budget|  
 |Clusters|Кластер 1|Кластер 1|Кластер 1|Кластер 2|  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 <Axes>  

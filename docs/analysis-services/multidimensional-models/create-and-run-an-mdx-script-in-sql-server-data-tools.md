@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 097d318ddf841e09f53ca90b0266bbd3806f59dc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ec19c9f3c826910b7c5d8a3d5a3737e09228b664
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-and-run-an-mdx-script-in-sql-server-data-tools"></a>Создание и выполнение скрипта многомерных выражений SQL Server Data Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Для создания и выполнения сценария многомерных Выражений [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], вы должны быть в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] с куб уже создан и готовым к редактированию.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 12/08/2017
   
 4.  Чтобы запустить скрипт многомерных выражений, разверните и обработайте куб с вновь внесенными изменениями скрипта многомерных выражений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Базовый скрипт многомерных выражений (многомерные выражения)](../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
  [Основные понятия о сценариях многомерных Выражений &#40; Службы Analysis Services &#41;](../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [Инструкции сценариев многомерных Выражений &#40; Многомерные Выражения &#41;](../../mdx/mdx-scripting-statements-mdx.md)  

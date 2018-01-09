@@ -5,13 +5,10 @@ ms.date: 04/10/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6309c988b279db0e96915e6ae4d17011255d47f6
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 41834c6a734417d6851e055cc63e7e8f89aea954
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="measures"></a>меры
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В табличных моделях мера представляет собой вычисление, созданное с помощью формулы DAX для использования в клиенте отчетов. Меры оцениваются на основании полей, фильтров и срезов, которые пользователи выбирают в клиентском приложении создания отчетов.  
@@ -81,7 +78,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 |Свойство|Параметр по умолчанию|Description|  
 |--------------|---------------------|-----------------|  
-|**Description**|Пусто|Описание меры. Описание не появится с мерой в клиенте отчетов.|  
+|**Описание**|Пусто|Описание меры. Описание не появится с мерой в клиенте отчетов.|  
 |**Формат**|Автоматически определяется по типу данных столбца, на который есть ссылка в выражении формулы.|Формат меры. Например, валюта или процент.|  
 |**Формула**|Формула, введенная в строке формул при создании меры.|Формула меры.|  
 |**Имя меры**|Если используется автосуммирование, имя меры предшествует имени столбца и отделено двоеточием. Если введена пользовательская формула, введите имя и двоеточие, затем введите формулу.|Имя меры, как показано в списке полей клиента отчетов.|  
@@ -91,7 +88,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
  Любая мера может служить базовой мерой для ключевого показателя эффективности. Для создания ключевого показателя эффективности в сетке мер щелкните правой кнопкой мыши меру и выберите **Создать ключевой показатель эффективности**. Появится диалоговое окно «Ключевой показатель эффективности», в котором можно указать целевое значение (определенное мерой или абсолютным значением) и определить пороговые значения состояния и графический тип. Дополнительные сведения см. в разделе [ключевые показатели эффективности](../../analysis-services/tabular-models/kpis-ssas-tabular.md).  
   
-##  <a name="bkmk_rel_tasks"></a> Связанные задачи  
+##  <a name="bkmk_rel_tasks"></a> Related tasks  
   
 |Раздел|Description|  
 |-----------|-----------------|  

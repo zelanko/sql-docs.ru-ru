@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNLEVEL
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 64509c923c21094d9b4c183a8d37273af5109777
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: da071ef3ba43af94caf81e1016cb84a2bffc082f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownlevel-mdx"></a>DrilldownLevel (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ DrilldownLevel(Set_Expression [,[Level_Expression] ,[Index]] [,INCLUDE_CALC_MEMB
  *Include_Calc_Members*  
  (Необязательно.) Флажок, указывающий, следует ли включать вычисленные элементы и должны ли они существовать на уровне детализации углублением.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **DrilldownLevel** функция возвращает набор дочерних элементов в иерархическом порядке, в зависимости от членов, включенных в указанном наборе. Порядок следования исходных элементов указанного набора сохраняется, однако все дочерние элементы, входящие в результирующий набор функции, следуют непосредственно за своим родительским элементом.  
   
  При наличии многоуровневой иерархической структуры данных можно явно выбрать уровень детализации углублением. Существует два взаимоисключающих способа указать уровень. Первый способ заключается в задании **level_expression** аргумента, используя Многомерное выражение, которое возвращает уровень, альтернативный подход заключается в указании **индекс** аргумента, используя числовое выражение, задающее уровень по номеру.  

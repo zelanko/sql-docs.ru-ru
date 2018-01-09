@@ -5,13 +5,10 @@ ms.date: 03/07/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cceb9ce47e059750e1d4cb8dc3fe3b1d45444f82
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 72fb8e7c0f964fe140082d9aed5748b98440fac3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Запуск и остановка службы PowerPivot для SharePoint Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Системная служба и [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] экземпляр работают совместно на одном локальном сервере приложений для поддержки согласованной запросов и обработки данных в ферме SharePoint.  
@@ -70,7 +67,7 @@ ms.lasthandoff: 12/08/2017
 |Новые запросы на данные или обновление данных|Если на ферме только один сервер [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint и он останавливается, новые запросы для данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] не будут обрабатываться и при попытке запросить данные будет выдаваться ошибка "Данные не найдены".<br /><br /> Если есть дополнительные серверы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint, запрос будет передан на один из доступных серверов.|  
 |Данные об использовании|Когда службы остановлены, данные об использовании не собираются.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка учетных записей служб Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

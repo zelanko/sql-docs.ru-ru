@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 664aa30f1b4dca46597ba464e93eb8534e44dca3
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 32dfe1b5c7367121bd36dae57d0175304fc2fe14
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="subselects-in-queries"></a>Подзапросы выборки в запросах
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Выражения подзапросов выборки являются вложенные выражения SELECT, которые используются для ограничения пространства куба, из которой было определено внешней операцией ВЫБОРА внешних. Подзапросы выборки позволяют определять новое пространство, в котором будут выполняться все вычисления.  
@@ -214,7 +211,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |United States|9 389 789,51 $|$ 80 450 596,98|  
 |Орегон|1 170 991,54 $|$ 80 450 596,98|  
 |Portland|110 649,54 $|$ 80 450 596,98|  
-|Вашингтон|2 467 248,34 $|$ 80 450 596,98|  
+|Washington|2 467 248,34 $|$ 80 450 596,98|  
 |Seattle|75 164,86 $|$ 80 450 596,98|  
   
  В приведенном выше примере «Seattle» является дочерним для «Washington», «Portland» — для «Орегона», «Oregon» и «Washington» — дочерние для «United States», а «United States» — для [Customer Geography].[All Customers]. Все элементы, показанные в данном примере, имеют другие элементы с общим родителем, влияющие на статистическое значение родителя, т. е. города Спокане, Такома и Эверетт имеют общего родителя с Сиэтлом и все они будут влиять на сумму для продаж через Интернет в штате Вашингтон. Значение Reseller Sales Amount не зависит от атрибута «Customer Geography», поэтому в результатах отображается значение «Все». Следующее многомерное выражение иллюстрирует влияние фильтра на предложение подзапроса выборки.  
@@ -240,8 +237,8 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|2 467 248,34 $|$ 80 450 596,98|  
 |United States|2 467 248,34 $|$ 80 450 596,98|  
-|Вашингтон|2 467 248,34 $|$ 80 450 596,98|  
-|Seattle|75 164,86 $|$ 80 450 596,98|  
+|Washington|2 467 248,34 $|$ 80 450 596,98|  
+|Seattle|75 164,86 $|80 450 596,98 $|  
   
  Приведенные выше результаты показывают, что только предки и потомки штата Вашингтон входят в подпространство, по которому вычислялась внешняя инструкция SELECT. Орегон и Портленд были удалены из вложенного куба, поскольку Орегон и все другие штаты, имеющие общего родителя, не были упомянуты в подзапросе выборки, тогда как Вашингтон был.  
   
@@ -292,7 +289,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 ||Все продукты|Accessory|Components|Mountain|Road|Touring|  
 |All Customers|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
 |United States|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
-|Вашингтон|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
+|Washington|2 467 248,34 $|62 662,92 $|(null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
 |Seattle|75 164,86 $|2 695,74 $|(null)|19 914,53 $|44 820,06 $|7 734,54 $|  
   
  В приведенном выше результате видим, что значения All Products скорректированы и отражают только данные по штату Вашингтон, как и предполагалось.  
@@ -347,7 +344,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Очевидно, между двумя наборами результатов есть различия. Первый запрос ответил на вопрос, каковы пять наиболее популярных продуктов в пяти наиболее успешных регионах, а второй запрос — где лучше всего продаются пять наиболее популярных продуктов.  
   
-### <a name="remarks"></a>Замечания  
+### <a name="remarks"></a>Remarks  
  Для подзапросов выборки действуют следующие ограничения.  
   
 -   Предложение WHERE не фильтрует подпространство.  

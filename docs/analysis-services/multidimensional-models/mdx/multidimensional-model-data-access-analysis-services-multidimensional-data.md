@@ -5,13 +5,10 @@ ms.date: 03/17/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 678912f45f94b99ce9abf96e864b60dd794f7b1c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 8e1271ca7bf45132f07a9a94ddef70bf5379084f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Используйте сведения в этом разделе, чтобы узнать, как получить доступ к [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] многомерных данных, с помощью программными методами, скриптов или клиентских приложений, включающих встроенную поддержку для подключения к [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в сети.  
@@ -61,12 +58,12 @@ ms.lasthandoff: 12/08/2017
 ### <a name="performancepoint-dashboards"></a>Панели мониторинга PerformancePoint  
  Панели мониторинга PerformancePoint используются для создания в SharePoint оценочных листов, в которых показатели бизнеса сравниваются со стандартными величинами. PerformancePoint включает поддержку соединений с многими мерными данными служб Analysis Services. Дополнительные сведения см. в разделе [Создание подключений к данным служб Analysis Services (службы PerformancePoint)](http://go.microsoft.com/fwlink/?linkid=232471).  
   
-### <a name="sql-server-data-tools"></a>SQL Server Data Tools  
+### <a name="sql-server-data-tools"></a>SQL Server Data Tools (SSDT)  
  Конструкторы моделей и отчетов используют средства SQL Server Data Tools для построения решений, которые включают многомерные модели. При развертывании решения в экземпляре служб Analysis Services создается база данных, к которой в дальнейшем производятся подключения из Excel, служб Reporting Services и других клиентских приложений бизнес-аналитики.  
   
  Средства SQL Server Data Tools основаны на оболочке Visual Studio, и для хранения и упорядочивания моделей в них используются проекты. Дополнительные сведения см. в разделе [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](../../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md).  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
  Для администраторов баз данных среда SQL Server Management Studio служит интегрированной средой управления экземплярами SQL Server, в том числе и экземплярами служб Analysis Services и многомерными базами данных. Дополнительные сведения см. в разделах [Среда SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b) и [Подключение к службам Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md).  
   
 ##  <a name="bkmk_querylang"></a> Языки запросов  
@@ -104,7 +101,7 @@ ms.lasthandoff: 12/08/2017
 |XML для аналитики|XML для аналитики — это API-интерфейс самого низкого уровня из доступных программисту служб Analysis Services; он является общим компонентом в основе всех методик доступа к данным в службах Analysis Services. XML для аналитики (XMLA) — это стандартный отраслевой XML-протокол, основанный на SOAP, поддерживающий универсальный доступ к данным в любом стандартном источнике многомерных данных через соединение по протоколу HTTP. В нем для формулирования запросов к многомерным данным и ответов на запросы используется SOAP. Если приложение будет работать не на платформе Windows, с помощью XML для аналитики можно осуществлять доступ к многомерной базе данных, выполняющейся на сервере Windows в сети. Дополнительные сведения см. в разделе [Разработка с использованием XMLA в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md).|  
 |Язык ASSL|ASSL — это описательный термин, который относится к расширениям протокола XML для аналитики в службах Analysis Services. В то время как методы Execute и Discover описываются протоколом XML для аналитики, ASSL добавляет следующие возможности:<br /><br /> — Скрипт XML для аналитики<br /><br /> — Определения объектов XML для аналитики<br /><br /> — Команды XML для аналитики<br /><br /> Расширения ASSL позволяют службам Analysis Services использовать XML для аналитики за пределами базовых задач протокола, в том числе для определения данных, изменения данных и поддержки управления данными. Дополнительные сведения см. в разделе [Разработка на языке ASSL (язык ASSL)](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подключение к службам Analysis Services](../../../analysis-services/instances/connect-to-analysis-services.md)   
  [Разработка с использованием служб Analysis Services Scripting Language &#40; ASSL &#41;](../../../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)   
  [Разработка с использованием XML для Аналитики в службах Analysis Services](../../../analysis-services/multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)   

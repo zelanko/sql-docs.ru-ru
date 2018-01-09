@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: ODBC, bulk copy operations
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: da9c9153c30e45eaa821c367f5a8b627078f7a9c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 18199adbb78f94a22bedaeb8cedb436174c8add7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc"></a>Изменения массового копирования для расширенные типы даты и времени (OLE DB и ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.lasthandoff: 11/17/2017
 ## <a name="format-files"></a>Файлы форматирования  
  При интерактивном построении файлов форматирования следующая таблица описывает вводные данные для задания типов даты-времени и соответствующих имен типов данных из файлов размещения.  
   
-|Тип файлового хранилища|Тип данных файла|Ответ на приглашение: «Введите тип файлового хранилища для поля < имя_поля > [\<по умолчанию >]:»|  
+|Тип файла хранилища|Тип данных файла|Ответ на приглашение: «Введите тип файлового хранилища для поля < имя_поля > [\<по умолчанию >]:»|  
 |-----------------------|-------------------------|-----------------------------------------------------------------------------------------------------|  
-|DateTime|SQLDATETIME|d|  
+|DATETIME|SQLDATETIME|d|  
 |Smalldatetime|SQLDATETIM4|D|  
 |Дата|SQLDATE|de|  
 |Time|SQLTIME|te|  
@@ -76,9 +76,9 @@ ms.lasthandoff: 11/17/2017
   
 |Тип файла хранилища|Объем памяти в байтах|  
 |-----------------------|---------------------------|  
-|datetime|8|  
+|DATETIME|8|  
 |smalldatetime|4|  
-|date|3|  
+|Дата|3|  
 |time|6|  
 |datetime2|9|  
 |datetimeoffset|11|  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/17/2017
   
 |Тип файла хранилища|Тип данных файла|Введите в файле sqlncli.h для использования с IBCPSession::BCPColFmt|Значение|  
 |-----------------------|-------------------------|-----------------------------------------------------------|-----------|  
-|DateTime|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
+|DATETIME|SQLDATETIME|BCP_TYPE_SQLDATETIME|0x3d|  
 |Smalldatetime|SQLDATETIM4|BCP_TYPE_SQLDATETIME4|0x3a|  
 |Дата|SQLDATE|BCP_TYPE_SQLDATE|0x28|  
 |Time|SQLTIME|BCP_TYPE_SQLTIME|0x29|  
@@ -111,12 +111,12 @@ ms.lasthandoff: 11/17/2017
   
  **Примечание для OLE DB** IBCPSession выполняются следующие преобразования. IRowsetFastLoad использует преобразования OLE DB, как определено в [преобразования, выполняемые от клиента к серверу](../../relational-databases/native-client-ole-db-date-time/conversions-performed-from-client-to-server.md). Следует заметить, что значения даты-времени округляются до 1/300 секунды, а в значениях типа smalldatetime после выполнения клиентских преобразований, описанных ниже, значение секунд становится равным нулю. Округление даты-времени распространяется на часы и минуты, но не на дату.  
   
-|Кому --><br /><br /> От|date|time|smalldatetime|datetime|datetime2|datetimeoffset|char;|wchar|  
+|Кому --><br /><br /> От|Дата|time|smalldatetime|DATETIME|datetime2|datetimeoffset|char;|wchar|  
 |------------------------|----------|----------|-------------------|--------------|---------------|--------------------|----------|-----------|  
 |Дата|1|-|1,6|1,6|1,6|1,5,6|1,3|1,3|  
 |Time|Недоступно|1,10|1,7,10|1,7,10|1,7,10|1,5,7,10|1,3|1,3|  
 |Smalldatetime|1,2|1,4,10|1|1|1,10|1,5,10|1,11|1,11|  
-|DateTime|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
+|DATETIME|1,2|1,4,10|1,12|1|1,10|1,5,10|1,11|1,11|  
 |Datetime2|1,2|1,4,10|1,10 (ODBC)1,12 (OLE DB)|1,10|1,10|1,5,10|1,3|1,3|  
 |Datetimeoffset|1,2,8|1,4,8,10|1,8,10|1,8,10|1,8,10|1,10|1,3|1,3|  
 |Char/wchar (date)|9|-|9,6 (ODBC)9,6,12 (OLE DB)|9,6 (ODBC)9,6,12 (OLE DB)|9,6|9,5,6|Недоступно|Недоступно|  

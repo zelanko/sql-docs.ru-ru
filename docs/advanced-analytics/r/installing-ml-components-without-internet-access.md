@@ -1,13 +1,13 @@
 ---
 title: "Установка компонентов обучения компьютер без доступа к Интернету | Документы Microsoft"
 ms.custom: 
-ms.date: 11/30/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0a90c438-d78b-47be-ac05-479de64378b2
@@ -16,11 +16,11 @@ author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 93adacb061b3bf4c77606294ae8341144eaf24c9
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: b84c15fba4b363eee589b6ff1d2a19d142100c32
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="installing-machine-learning-components-without-internet-access"></a>Установка компонентов обучения компьютер без доступа к Интернету
 
@@ -126,15 +126,20 @@ Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink
 Откройте Microsoft Python     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 Сервер Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 **SQL Server 2017 г. CU1** |
-Microsoft R Open     |использовать предыдущее|
+Microsoft R Open     |без изменений; использовать предыдущее|
 Microsoft R Server      |[SRS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851501)|
-Откройте Microsoft Python     |использовать предыдущее |
+Откройте Microsoft Python     |без изменений; использовать предыдущее |
 Сервер Microsoft Python    |[SPS_9.2.0.100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851500) |
 **SQL Server 2017 г. с накопительным обновлением 2** |
-Microsoft R Open     |использовать предыдущее|
-Microsoft R Server      |использовать предыдущее|
-Откройте Microsoft Python     |использовать предыдущее |
-Сервер Microsoft Python    |использовать предыдущее|
+Microsoft R Open     |без изменений; использовать предыдущее|
+Microsoft R Server      |без изменений; использовать предыдущее|
+Откройте Microsoft Python     |без изменений; использовать предыдущее|
+Сервер Microsoft Python    |без изменений; использовать предыдущее|
+**CU3 SQL Server 2017 г.** |
+Microsoft R Open     |[SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)|
+Microsoft R Server      |[SRS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863893)|
+Откройте Microsoft Python     |без изменений; использовать предыдущее|
+Сервер Microsoft Python    |[SPS_9.2.0.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863892)|
 
 ### <a name="bkmk_2016Installers"></a>Загружаемые файлы для SQL Server 2016
 
@@ -187,7 +192,7 @@ Microsoft R Server    |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlin
 Microsoft R Open     |без изменений; использовать предыдущее|
 Microsoft R Server    |без изменений; использовать предыдущее |
 
-Если вы хотите просмотреть исходный код для Microsoft R, его можно загрузить как архив в формате TAR или: [установщиков загрузки R Server](https://docs.microsoft.com/r-server/install/r-server-install-windows#download)
+Если вы хотите просмотреть исходный код для Microsoft R, его можно загрузить как архив в формате TAR или: [установщиков загрузки R Server](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
 ### <a name = "bkmk_OtherComponents"></a>Предварительные условия
 

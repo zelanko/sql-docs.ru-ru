@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 69cc17afa5a35844a76f838993630cecf49b0bed
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 24a56699bbdb79f811ce0282aee0f1d93a5d43f0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Наблюдение за экземпляром служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно отслеживать производительность [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] с помощью [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или системный монитор, иногда называют приложения **PerfMon**. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] предоставляет возможность создания трассировок и управления ими, а также анализа и воспроизведения результатов трассировок. Системный монитор сообщает состояние сервера, индексированное посредством определенных счетчиков, которые описаны в следующем разделе.  
@@ -37,7 +34,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Дополнительные сведения о мониторинге см. в [руководстве по использованию SQL Server 2008 R2](http://go.microsoft.com/fwlink/?LinkID=225539).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  Дополнительные сведения о мониторинге приведены по следующим ссылкам.  
   
  [События трассировки служб Analysis Services](../../analysis-services/trace-events/analysis-services-trace-events.md)  

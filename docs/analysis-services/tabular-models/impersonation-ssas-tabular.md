@@ -5,13 +5,10 @@ ms.date: 10/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 128cadc90dd4c2fa76d8174e8537598ec805c027
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e0acafbad6d869b31b7560f059adb0a7a3e8da03
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="impersonation"></a>Олицетворение 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]В этом разделе авторы табличных моделей представление о том, как учетные данные для входа используются службами Analysis Services при подключении к источнику данных для импорта и обработки данных (Обновить).  
@@ -81,7 +78,7 @@ ms.lasthandoff: 12/08/2017
 |**Указанные имя пользователя и пароль**|Этот параметр указывает модели использовать учетную запись пользователя Windows для импорта или обработки данных из источника данных. Домен и имя учетной записи пользователя используют следующий формат:**\<имя домена >\\< имя учетной записи пользователя\>**. При создании новой модели с помощью мастера импорта таблиц это значение установлено по умолчанию.|  
 |**Учетная запись службы**|Этот параметр указывает модели использовать учетные данные безопасности, связанные с экземпляром служб Analysis Services, управляющим моделью.|  
   
-##  <a name="bkmk_impers_sec"></a> Безопасность  
+##  <a name="bkmk_impers_sec"></a> безопасность  
  Учетные данные, используемые для олицетворения, сохраняются в памяти, ядро VertiPaq™. Учетные данные не записываются на диск. Если база данных рабочей области не в памяти, при развертывании модели, пользователю будет предложено ввести учетные данные, используемые для подключения к источнику данных и получения данных.  
   
 > [!NOTE]  
@@ -89,7 +86,7 @@ ms.lasthandoff: 12/08/2017
   
 
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Режим DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [Источники данных](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [Развертывание решений табличной модели](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

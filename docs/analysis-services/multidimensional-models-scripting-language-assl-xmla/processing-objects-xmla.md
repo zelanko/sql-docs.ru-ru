@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -31,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9d4b3c24a3bfe2b9babcc13d9e9263a4457676bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d72d5bdfcfc7c3d461dc3bc986c7ff6106e3da51
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="processing-objects-xmla"></a>Обработка объектов (XMLA)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], обработка — это шаг или последовательность шагов, которые преобразуют данные в сведения для бизнес-анализа. Характеристики обработки меняются в зависимости от типа объекта, но обработка всегда является составной частью процесса преобразования данных в сведения.  
@@ -124,7 +122,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="description"></a>Description  
  В следующем примере производится полная обработка образца базы данных [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 <Process xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/08/2017
 ### <a name="description"></a>Description  
  Следующий пример осуществляет добавочную обработку **Internet_Sales_2004** секции в **продажи через Интернет** группе мер, **Adventure Works DW** куба в [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] пример [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] базы данных. **Процесс** команда состоит в добавлении агрегаты для заказа даты позже 31 декабря 2006 г. в секции с помощью привязки запроса вне строки в **привязки** свойство **процесса**  команду для извлечения строк таблицы фактов, из которого должны быть сформированы агрегаты для добавления в секцию.  
   
-### <a name="code"></a>код  
+### <a name="code"></a>Код  
   
 ```  
 <Process ProcessAffectedObjects="true" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">  

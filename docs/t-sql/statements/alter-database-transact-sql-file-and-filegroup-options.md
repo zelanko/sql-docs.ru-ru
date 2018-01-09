@@ -47,11 +47,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0672b00cbb7064bdb889908585b4333865ac75c9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 826b8a5abb14ee677f89f1c77956215ec72f90c6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Параметры инструкции ALTER DATABASE (Transact-SQL) файла и файловой группы 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
 ALTER DATABASE database_name   
 {  
     <add_or_modify_files>  
@@ -135,18 +134,18 @@ ALTER DATABASE database_name
  Логическое имя, используемое в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при обращении к файлу.  
   
 > [!WARNING]  
->  Удаление файла базы данных, имеющий FILE_SNAPSHOT резервные копии, связанные с ним выполняется успешно, однако сделать резервные копии, ссылающийся на файл базы данных не будут удалены все связанные моментальные снимки. Файл будет усечено, но не будут физически удалены для хранения резервных копий FILE_SNAPSHOT без изменений. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
+> Удаление файла базы данных, имеющий FILE_SNAPSHOT резервные копии, связанные с ним выполняется успешно, однако сделать резервные копии, ссылающийся на файл базы данных не будут удалены все связанные моментальные снимки. Файл будет усечено, но не будут физически удалены для хранения резервных копий FILE_SNAPSHOT без изменений. Дополнительные сведения см. в разделе [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). **Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
  MODIFY FILE  
  Указывает файл, который должен быть изменен. Только один \<filespec > свойство можно изменить одновременно. ИМЯ всегда должно быть указано в \<filespec > для идентификации файл будет изменен. Если указано предложение SIZE, новый размер файла должен быть больше, чем текущий.  
   
- Чтобы изменить логическое имя файла данных или файла журнала, укажите логическое имя файла, который будет переименован, в предложении `NAME`, а новое логическое имя для файла — в предложении `NEWNAME`. Например:  
+ Чтобы изменить логическое имя файла данных или файла журнала, укажите логическое имя файла, который будет переименован, в предложении `NAME`, а новое логическое имя для файла — в предложении `NEWNAME`. Пример:  
   
 ```  
 MODIFY FILE ( NAME = logical_file_name, NEWNAME = new_logical_name )   
 ```  
   
- Чтобы переместить файл данных или файл журнала в новое расположение, укажите текущее логическое имя файла в предложении `NAME` и укажите новый путь и имя файла в операционной системе в предложении `FILENAME`. Например:  
+ Чтобы переместить файл данных или файл журнала в новое расположение, укажите текущее логическое имя файла в предложении `NAME` и укажите новый путь и имя файла в операционной системе в предложении `FILENAME`. Пример:  
   
 ```  
 MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )  
@@ -188,7 +187,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  Параметры SIZE, MAXSIZE и FILEGROWTH недоступны, если путь к файлу указан в формате UNC.  
   
 > [!NOTE]  
->  Системные базы данных не могут размещаться в общих каталогах UNC.  
+> Системные базы данных не могут размещаться в общих каталогах UNC.  
   
  Файлы данных не должны располагаться в сжатой файловой системе, кроме случаев, когда файлы являются вторичными файлами только для чтения или база данных находится в режиме только для чтения. Файлы журналов ни в коем случае не должны размещаться в сжатых файловых системах.  
   
@@ -209,7 +208,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
  РАЗМЕР *размер*  
  Указывает размер файла. Параметр SIZE не применяется к файловым группам FILESTREAM.  
   
- *размер*  
+ *size*  
  Размер файла.  
   
  При использовании в инструкции ADD FILE *размер* — это исходный размер файла. При использовании в инструкции MODIFY FILE *размер* является новым размером файла и должен быть больше, чем текущий размер файла.  
@@ -241,8 +240,8 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
 |Version|Значения по умолчанию|  
 |-------------|--------------------|  
-|Начало[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Данные 64 МБ. Файлы журналов 64 МБ.|  
-|Начало[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные 1 МБ. Файлы журнала 10%.|  
+|Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Данные 64 МБ. Файлы журналов 64 МБ.|  
+|Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные 1 МБ. Файлы журнала 10%.|  
 |До версии[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные 10%. Файлы журнала 10%.|  
   
  OFFLINE  
@@ -252,7 +251,7 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
 >  Используйте этот параметр только в том случае, когда файл поврежден и может быть восстановлен. Файл, переведенный в режим OFFLINE, может быть заново включен в режиме в сети только при восстановлении из резервной копии. Дополнительные сведения о восстановлении одного файла см. в разделе [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md).  
   
 > [!NOTE]  
->  \<filespec > параметры недоступны в автономной базе данных.  
+> \<filespec > параметры недоступны в автономной базе данных.  
   
  **\<add_or_modify_filegroups >:: =**  
   
@@ -266,13 +265,13 @@ MODIFY FILE ( NAME = logical_file_name, FILENAME = ' new_path/os_file_name ' )
   
  CONTAINS MEMORY_OPTIMIZED_DATA  
 
-**Применяется к**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Указывает, что файловая группа хранит оптимизируемые для памяти данные в файловой системе. Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). В каждой базе данных может присутствовать только одна файловая группа MEMORY_OPTIMIZED_DATA. Для создания таблицы, оптимизируемой для памяти, файловая группа не может быть пустой. Должно быть не менее одного файла. *filegroup_name* ссылается на путь. Должен существовать путь вплоть до последнего каталога, но последний каталог существовать не должен.  
   
  В следующем примере создается файловая группа, которая добавляется в базу данных с именем xtp_db; кроме того, добавляется файл в файловую группу. В файловой группе хранятся данные memory_optimized.  
   
-```  
+```sql  
 ALTER DATABASE xtp_db ADD FILEGROUP xtp_fg CONTAINS MEMORY_OPTIMIZED_DATA;  
 GO  
 ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO FILEGROUP xtp_fg;  
@@ -282,7 +281,7 @@ ALTER DATABASE xtp_db ADD FILE (NAME='xtp_mod', FILENAME='d:\data\xtp_mod') TO F
  Удаляет файловую группу из базы данных. Файловая группа не может быть удалена, пока она не пустая. Вначале удалите из файловой группы все файлы. Дополнительные сведения см. в разделе «удалить ФАЙЛ *логическое_имя_файла*,» ранее в этом разделе.  
   
 > [!NOTE]  
->  Если сборщик мусора FILESTREAM не удалил все файлы из контейнера FILESTREAM, операция ALTER DATABASE REMOVE FILE по удалению контейнера FILESTREAM завершится неудачей и возвратит ошибку. См. подраздел «Удаление контейнера FILESTREAM» в разделе «Примечания» далее в этом разделе.  
+> Если сборщик мусора FILESTREAM не удалил все файлы из контейнера FILESTREAM, операция ALTER DATABASE REMOVE FILE по удалению контейнера FILESTREAM завершится неудачей и возвратит ошибку. См. подраздел «Удаление контейнера FILESTREAM» в разделе «Примечания» далее в этом разделе.  
   
 MODIFY FILEGROUP *имя_файловой_группы* { \<filegroup_updatability_option > | ПО УМОЛЧАНИЮ | ИМЯ  **=**  *new_filegroup_name* } изменяет файловую группу, задав состояние на READ_ONLY или READ_WRITE, делая ее файловой группой по умолчанию для базы данных, или Изменение имени файловой группы.  
   
@@ -296,13 +295,13 @@ MODIFY FILEGROUP *имя_файловой_группы* { \<filegroup_updatabili
  Изменяет имя файловой группы для *new_filegroup_name*.  
   
  AUTOGROW_SINGLE_FILE  
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Если файл в файловой группе удовлетворяет требованиям порога автоматического увеличения, увеличивается только этот файл. Это значение по умолчанию.  
   
  AUTOGROW_ALL_FILES  
 
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658))
+**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
   
  Если файл в файловой группе удовлетворяет требованиям порога автоматического увеличения, все файлы в файловой группе расти.  
   
@@ -316,9 +315,7 @@ MODIFY FILEGROUP *имя_файловой_группы* { \<filegroup_updatabili
  Поскольку база данных находится в состоянии только для чтения, невозможно производить изменения данных:  
   
 -   при запуске системы будет пропущено автоматическое восстановление;  
-  
 -   сжатие базы данных невозможно;  
-  
 -   в базах данных, находящихся в состоянии только для чтения, невозможны блокировки. Это может привести к более быстрому выполнению запросов.  
   
 > [!NOTE]  
@@ -328,42 +325,39 @@ MODIFY FILEGROUP *имя_файловой_группы* { \<filegroup_updatabili
  Определяет, что файловая группа находится в состоянии READ_WRITE. Разрешено изменять объекты в файловой группе. Чтобы изменить это состояние, необходимо обладать монопольным доступом к базе данных. Дополнительные сведения см. в описании предложения SINGLE_USER.  
   
 > [!NOTE]  
->  Ключевое слово READWRITE будет удалена в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования ключевого слова READWRITE в новых разработках и запланируйте изменение приложений, которые сейчас его используют. Вместо него используйте READ_WRITE.  
+>  Ключевое слово `READWRITE` будет удалена в будущей версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Избегайте использования `READWRITE` работать в новых разработках и запланируйте изменение приложений, которые сейчас используют `READWRITE` использование `READ_WRITE` вместо него.  
   
- Состояние этих параметров можно определить с помощью проверки **is_read_only** столбца в **sys.databases** представления каталога или **обновляемости** свойство Функции DATABASEPROPERTYEX.  
+ Состояние этих параметров можно определить с помощью проверки **is_read_only** столбца в **sys.databases** представления каталога или **обновляемости** свойство `DATABASEPROPERTYEX` функции.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы уменьшить размер базы данных, используйте [DBCC SHRINKDATABASE](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md).  
   
- Добавить или удалить файл во время выполнения инструкции BACKUP невозможно.  
+Невозможно добавить или удалить файл во время `BACKUP` выполняется инструкция.  
   
- Для каждой базы данных может указываться не более 32 767 файлов и 32 767 файловых групп.  
+Для каждой базы данных может указываться не более 32 767 файлов и 32 767 файловых групп.  
   
- В [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версиях состояние файла базы данных (например, в сети или вне сети) поддерживается независимо от состояния базы данных. Дополнительные сведения см. в разделе [состояния файла](../../relational-databases/databases/file-states.md). Состояние файлов в пределах файловой группы определяет доступность файловой группы в целом. Чтобы файловая группа была доступна, необходимо, чтобы все файлы в файловой группе находились в режиме в сети. Если файловая группа вне сети, то любая попытка обращения к файловой группе с помощью инструкции SQL закончится ошибкой. При создании планов запросов для инструкций SELECT оптимизатор запросов избегает некластеризованных индексов и индексированных представлений, которые находятся в файловых группах вне сети. Это позволяет успешно выполнить эти инструкции. Однако если файловая группа, находящаяся в режиме вне  сети, содержит кучу или кластеризованный индекс целевой таблицы, инструкция SELECT не будет выполнена. Кроме того, любая инструкция INSERT, UPDATE или DELETE, изменяющая таблицу с любым индексом в файловой группе, находящихся в режиме вне  сети, также не будет выполнена.  
+Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], состояние файла базы данных (например, сети или вне сети) поддерживается независимо от состояния базы данных. Дополнительные сведения см. в разделе [состояния файла](../../relational-databases/databases/file-states.md). 
+-  Состояние файлов в пределах файловой группы определяет доступность файловой группы в целом. Чтобы файловая группа была доступна, необходимо, чтобы все файлы в файловой группе находились в режиме в сети. 
+-  Если файловая группа вне сети, то любая попытка обращения к файловой группе с помощью инструкции SQL закончится ошибкой. При построении планов запросов для `SELECT` инструкций, оптимизатор запросов избегает некластеризованных индексов и индексированных представлений, принадлежащих файловым группам вне сети. Это позволяет успешно выполнить эти инструкции. Тем не менее, если эту файловую группу, содержит кучу или кластеризованный индекс целевой таблицы, `SELECT` инструкции завершаются ошибкой. Кроме того, любой `INSERT`, `UPDATE`, или `DELETE` инструкции, изменяющая таблицу с любым индексом в файловой группе вне сети завершится ошибкой.  
   
 ## <a name="moving-files"></a>Перемещение файлов  
- Системные или определенные пользователем данные и файлы журналов можно перемещать, указывая новое местоположение в параметре FILENAME. Это может быть полезным в следующих случаях:  
+Системные или определенные пользователем данные и файлы журналов можно перемещать, указывая новое местоположение в параметре FILENAME. Это может быть полезным в следующих случаях:  
   
--   Восстановление после сбоя. Например, база данных находится в подозрительном состоянии или завершила работу по причине сбоя оборудования  
+-   Восстановление после сбоя. Например, база данных находится в подозрительном режиме или завершила работу по причине сбоя оборудования;  
+-   Плановое перемещение.  
+-   Перемещение для запланированного обслуживания дисков.  
   
--   Плановое перемещение  
-  
--   Перемещение при запланированном обслуживании дисков  
-  
- Дополнительные сведения см. в разделе [перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md).  
+Дополнительные сведения см. в разделе [перемещение файлов базы данных](../../relational-databases/databases/move-database-files.md).  
   
 ## <a name="initializing-files"></a>Инициализация файлов  
- По умолчанию файлы данных и журналов инициализируются, заполняясь нулями, при выполнении одной из следующих операций:  
+По умолчанию файлы данных и журналов инициализируются, заполняясь нулями, при выполнении одной из следующих операций:  
   
--   Создание базы данных  
+-   Создание базы данных.   
+-   добавление файлов к существующей базе данных;   
+-   увеличение размера существующего файла;   
+-   Восстановление базы данных или файловой группы.   
   
--   Добавление файлов к существующей базе данных  
-  
--   Увеличение размера существующего файла  
-  
--   Восстановление базы данных или файловой группы  
-  
- Файлы данных могут быть инициализированы мгновенно. Это разрешено для быстрого выполнения этих файловых операций.  
+Файлы данных могут быть инициализированы мгновенно. Это разрешено для быстрого выполнения этих файловых операций. Дополнительные сведения см. в разделе [Инициализация файлов базы данных](../../relational-databases/databases/database-instant-file-initialization.md). 
   
 ## <a name="removing-a-filestream-container"></a>Удаление контейнера FILESTREAM  
  Даже если контейнер FILESTREAM был очищен с использованием операции «DBCC SHRINKFILE», базе данных по-прежнему необходимы ссылки на удаленные файлы по различным причинам, связанным с обслуживанием системы. [sp_filestream_force_garbage_collection &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md) запустит сборщик мусора FILESTREAM, чтобы удалить эти файлы в том случае, когда это будет безопасно. Если сборщик мусора FILESTREAM не удалил все файлы из контейнера FILESTREAM, операция ALTER DATABASE REMOVE FILE по удалению контейнера FILESTREAM завершится неудачей и возвратит ошибку. Для удаления контейнера FILESTREAM рекомендуется следующий процесс.  
@@ -387,7 +381,7 @@ MODIFY FILEGROUP *имя_файловой_группы* { \<filegroup_updatabili
 ### <a name="a-adding-a-file-to-a-database"></a>A. Добавление файла к базе данных  
  В следующем примере к базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] добавляется файл данных размером 5 МБ.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -406,7 +400,7 @@ GO
 ### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>Б. Добавление файловой группы с двумя файлами к базе данных  
  В следующем примере в базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] создается файловая группа `Test1FG1` и добавляется два файла по 5 МБ в эту файловую группу.  
   
-```  
+```sql  
 USE master  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -436,7 +430,7 @@ GO
 ### <a name="c-adding-two-log-files-to-a-database"></a>В. Добавление двух файлов журнала к базе данных  
  В следующем примере к базе данных [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] добавляется два файла журнала размером 5 МБ каждый.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -462,20 +456,19 @@ GO
 ### <a name="d-removing-a-file-from-a-database"></a>Г. Удаление файла из базы данных  
  В следующем примере удаляется один из файлов, добавленных в примере Б.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
 REMOVE FILE test1dat4;  
 GO  
-  
 ```  
   
 ### <a name="e-modifying-a-file"></a>Д. Изменение файла  
 В следующем примере увеличивается размер одного из файлов, добавленных в примере Б.  
  ALTER DATABASE с помощью команды MODIFY FILE можно только увеличить размер файла, поэтому если вам нужно уменьшить размер файла необходимо использовать DBCC SHRINKFILE.  
   
-```  
+```sql  
 USE master;  
 GO
   
@@ -488,7 +481,7 @@ GO
 
 В этом примере уменьшается размер файла данных до 100 МБ, а затем определяют размера, в этот период. 
 
-```
+```sql
 USE AdventureWorks2012;
 GO
 
@@ -510,9 +503,9 @@ GO
  В следующем примере файл `Test1dat2`, созданный в примере A, перемещается в новый каталог.  
   
 > [!NOTE]  
->  Перед выполнением этого примера необходимо физически переместить файл в новый каталог. После выполнения остановите и запустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или переведите базу данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в состояние OFFLINE, а затем назад в ONLINE, чтобы осуществить изменения.  
+> Перед выполнением этого примера необходимо физически переместить файл в новый каталог. После выполнения остановите и запустите экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или переведите базу данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] в состояние OFFLINE, а затем назад в ONLINE, чтобы осуществить изменения.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  
@@ -529,7 +522,7 @@ GO
   
 1.  Определите логические имена файлов базы данных `tempdb` и их текущее расположение на диске.  
   
-    ```  
+    ```sql  
     SELECT name, physical_name  
     FROM sys.master_files  
     WHERE database_id = DB_ID('tempdb');  
@@ -538,7 +531,7 @@ GO
   
 2.  Измените местоположение каждого файла с помощью `ALTER DATABASE`.  
   
-    ```  
+    ```sql  
     USE master;  
     GO  
     ALTER DATABASE tempdb   
@@ -553,7 +546,7 @@ GO
   
 4.  Проверьте изменение файла.  
   
-    ```  
+    ```sql  
     SELECT name, physical_name  
     FROM sys.master_files  
     WHERE database_id = DB_ID('tempdb');  
@@ -564,7 +557,7 @@ GO
 ### <a name="h-making-a-filegroup-the-default"></a>З. Назначение файловой группы по умолчанию  
  В нижеследующем примере `Test1FG1` файловая группа, созданная в примере Б файловую группу по умолчанию. Затем файловая группа по умолчанию будет переназначена на файловую группу `PRIMARY`. Обратите внимание, что слово `PRIMARY` должно быть заключено в скобки или в кавычки.  
   
-```  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012   
@@ -573,13 +566,12 @@ GO
 ALTER DATABASE AdventureWorks2012   
 MODIFY FILEGROUP [PRIMARY] DEFAULT;  
 GO  
-  
 ```  
   
 ### <a name="i-adding-a-filegroup-using-alter-database"></a>И. Добавление файловой группы с помощью инструкции ALTER DATABASE  
  В следующем примере в базу данных `FILEGROUP` добавляется файловая группа `FILESTREAM`, содержащая предложение `FileStreamPhotoDB`.  
   
-```  
+```sql  
 --Create and add a FILEGROUP that CONTAINS the FILESTREAM clause to  
 --the FileStreamPhotoDB database.  
 ALTER DATABASE FileStreamPhotoDB  
@@ -601,7 +593,7 @@ GO
 ### <a name="j-change-filegroup-so-that-when-a-file-in-the-filegroup-meets-the-autogrow-threshold-all-files-in-the-filegroup-grow"></a>К. Измените файловую группу, чтобы когда файл в файловой группе соответствует пороговое значение автоувеличения, все файлы в файловой группе расти
  Следующий пример приводит к возникновению ошибки необходимая `ALTER DATABASE` инструкции для изменения для чтения файловые группы с `AUTOGROW_ALL_FILES` параметр.  
   
-```  
+```sql  
 --Generate ALTER DATABASE ... MODIFY FILEGROUP statements  
 --so that all read-write filegroups grow at the same time.  
 SET NOCOUNT ON;
@@ -661,5 +653,6 @@ GO
  [Большой двоичный объект &#40;BLOB-объект&#41;Данные&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [DBCC SHRINKFILE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)   
  [sp_filestream_force_garbage_collection (Transact-SQL)](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md)  
+ [Инициализация файлов базы данных](../../relational-databases/databases/database-instant-file-initialization.md)    
   
   

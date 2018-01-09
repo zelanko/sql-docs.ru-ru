@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2d1484b3-51d9-48a0-93d2-0c3e4ed22b87
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4842c80e3ac4cd34ec419e1577f7a2354a2ae34a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 4d2bc32eb76882c00b411e7eff81fd3cf5b45b77
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Планирование задач администрирования служб SSAS с помощью агента SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Используя службу агента SQL Server, можно запланировать [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] требуются административные задачи для выполнения в порядке и время. Планирование задач позволяет автоматизировать процессы, выполняющиеся регулярно или с предсказуемой цикличностью. Задачи типа обработки кубов могут быть запланированы на периоды низкой деловой активности. Кроме того, при создании шагов задания агента SQL Server пользователь имеет возможность определить порядок, в котором будут выполняться задачи. Например, можно выполнить обработку куба, а затем создать его резервную копию.  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/08/2017
   
  Данный раздел является пошаговым руководством, демонстрирующим два способа использования агента SQL Server для запуска скрипта XML для аналитики. В первом примере показано, как запланировать обработку одного измерения. Второй пример показывает, как объединить задачи обработки в единый скрипт, выполняемый по расписанию. Для прохождения этого пошагового руководства необходимо выполнить следующие предварительные требования.  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Должна быть установлена служба агента SQL Server.  
   
  По умолчанию задания запускаются под учетной записью службы. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], учетной записи по умолчанию для агента SQL Server является NT Service\SQLAgent$\<имя_экземпляра >. Для выполнения задачи резервного копирования или обработки эта учетная запись должна принадлежать системному администратору в экземпляре служб Analysis Services. Дополнительные сведения см. в разделе [Предоставление прав администратора сервера для экземпляра служб Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  

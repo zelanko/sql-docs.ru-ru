@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-api
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apitype: DLLExport
@@ -19,11 +19,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7c2a8e5c05177ae4a69c69a0776af333d96575c0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2ec92c6f38bec112705e29cda021ab6e5a7b49d0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sqlgetconnectattr"></a>SQLGetConnectAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Стандартный атрибут соединения ODBC SQL_ATTR_CONNECTION_DEAD возвращает последнее по времени состояние соединения. Может оказаться так, что это состояние соединения будет отличаться от текущего.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |SQL_CD_TRUE|Соединение с сервером потеряно.|  
 |SQL_CD_FALSE|Соединение открыто и доступно для обработки инструкций.|  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
  Дополнительные сведения см. в разделе [доступ к диагностической информации в журнале расширенных событий](../../relational-databases/native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |SQL_ERROR|Ошибка соединения.|  
 |SQL_SUCCESS|Подключение выполнено успешно. Идентификатор соединения клиента будет находиться в выходном буфере.|  
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlcoptssperfdata"></a>SQL_COPT_SS_PERF_DATA  
  Атрибут SQL_COPT_SS_PERF_DATA возвращает указатель на структуру SQLPERF, содержащую текущую статистику производительности драйвера. Если ведение журнала производительности не включено, функция**SQLGetConnectAttr** возвращает значение NULL. Драйвер не обновляет статистику в структуре SQLPERF динамически. Каждый раз, когда возникает необходимость обновить статистику производительности, вызывайте функцию **SQLGetConnectAttr** .  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |NULL|Ведение журнала производительности не включено.|  
 |Любое другое значение|Указатель на структуру SQLPERF.|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  Атрибут SQL_COPT_SS_USER_DATA извлекает указатель на данные пользователя. Пользовательские данные хранятся в принадлежащей клиенту памяти и записываются отдельно для каждого соединения. Если указатель на данные пользователя на задан, что соответствует значению SQL_UD_NOTSET, то возвращается указатель NULL.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |SQL_UD_NOTSET|Указатель на данные пользователя не задан.|  
 |Любое другое значение|Указатель на данные пользователя.|  

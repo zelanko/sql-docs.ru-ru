@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4cc8bdd0f4c3a4b212661e4ac9363ce6bdefb64f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 7ca0b129013f5bdced79d8fb8245893a3db7ff06
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovertransactions-rowset"></a>Набор строк DISCOVER_TRANSACTIONS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает текущий набор ожидающих транзакций в системе.  
@@ -49,8 +47,8 @@ ms.lasthandoff: 12/08/2017
   
 |**Имя столбца**|**Индикатор типа**|**Состояние ограничения**|  
 |---------------------|------------------------|---------------------------|  
-|**Идентификатор**|**DBTYPE_WSTR**|Необязательно.|  
-|**SESSION_ID**|**DBTYPE_WSTR**|Необязательно.|  
+|**Идентификатор**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SESSION_ID**|**DBTYPE_WSTR**|Необязательный параметр.|  
   
 ## <a name="using-adomdnet-to-return-the-rowset"></a>Использование ADOMD.NET для возврата набора строк  
  Если для получения метаданных используется ADOMD.NET и набор строк схемы, то для ссылки на объект набора строк схемы в методе GetSchemaDataSet вы можете использовать идентификатор GUID или строку. Дополнительные сведения см. в статье [Working with Schema Rowsets in ADOMD.NET](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets.md).  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |Аргумент|Значение|  
 |--------------|-----------|  
 |GUID|a07ccd28-8148-11d0-87bb-00c04fc33942|  
-|Строковые значения|DISCOVER_TRANSACTIONS|  
+|String|DISCOVER_TRANSACTIONS|  
   
 ## <a name="see-also"></a>См. также:  
  [Наборы строк схемы XML для аналитики](../../../analysis-services/schema-rowsets/xml/xml-for-analysis-schema-rowsets.md)  

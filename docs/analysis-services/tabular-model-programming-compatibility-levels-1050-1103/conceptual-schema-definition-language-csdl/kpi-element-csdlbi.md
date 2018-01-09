@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 10ddf679eb9ede1302120eae9274b79927c3dc9a
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 28f4f65bc65ac1a5d231717ddbc552e83ef302de
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="kpi-element-csdlbi"></a>Элемент KPI (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В элементе Kpi определяется вычисление, которое можно использовать в качестве ключевого индикатора производительности (KPI). В модели данных бизнес-аналитики ключевые показатели эффективности (KPI) основаны на мерах, поэтому определение KPI содержит все метаданные, связанные с мерами, а также сведения, необходимые для представления значений KPI, в том числе рисунок по умолчанию.  
@@ -34,14 +32,14 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Элементы и атрибуты  
  В следующей таблице перечислены элементы и атрибуты, определяющие элемент ключевого показателя эффективности.  
   
-|Название|Обязателен|Описание|  
+|Имя|Обязателен|Description|  
 |----------|-----------------|-----------------|  
-|Документация|Нет|Описание ключевого показателя эффективности.|  
+|Документация|нет|Описание ключевого показателя эффективности.|  
 |KpiGoal|Да|Ссылка на столбец, содержащий значения, которые могут быть использованы в качестве цели.<br /><br /> См. раздел [Элемент PropertyRef (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/propertyref-element-csdlbi.md).|  
 |KpiStatus|Да|Ссылка на столбец, содержащий значения, которые представляют текущее состояние ключевого показателя эффективности.|  
 |StatusGraphic|Да|Ссылка на изображение, которое указывает на отрицательный, нейтральный или положительный результат выполнения с учетом целей, определенных в качестве ключевого показателя эффективности.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При разработке модели можно создать ключевой показатель эффективности,, создав меру и назначив ее в качестве ключевого показателя эффективности. Затем добавляются сведения, относящиеся к ключевым показателям эффективности, например рисунок, который используется при отображении трендов.  
   
 ## <a name="example"></a>Пример  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: LASTPERIODS
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 7b5f43547cdf6a48a35e2a433dcc7a82cdabe054
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a3a9f0940796ecbc8138447fa8dd4ba59febbe96
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ LastPeriods(Index [ ,Member_Expression ] )
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если указанное число периодов положительно, **LastPeriods** функция возвращает набор элементов, которые начинаются с элемента, отстающего *индекс* -1 от указанного выражения элемента и заканчивается указанным элементом. Число элементов, возвращаемых функцией равно *индекса*.  
   
  Если число периодов отрицательно, **LastPeriods** функция возвращает набор, начинающийся с указанного элемента и заканчивающийся элементом (- *индекс* - 1) из заданного элемента. Число элементов, возвращаемых функцией равно абсолютное значение *индекса*.  

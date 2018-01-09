@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4c2347b4bf7a02f61599f0a318ab1660dff50e4d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: fc4dcd60f4a37b1b3f01844369f210a81653160b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Просмотр журнала обновления данных (PowerPivot для SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Журнал обновления данных представляет собой запись всех действий обновления данных для [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] данных в книге Excel. Операции обновления данных выполняются на экземпляре сервера служб Analysis Services на ферме SharePoint по заданному пользователем расписанию. По умолчанию журнал обновления данных хранится в течение одного года. Однако администратор фермы может задать другую политику сохранения для журнала использования и событий, которая будет определять срок хранения записей обновления данных.  
@@ -71,7 +68,7 @@ ms.lasthandoff: 12/08/2017
   
 |Элемент|Description|  
 |----------|-----------------|  
-|Название|Определяет имя файла книги Excel, которая содержит данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Имя|Определяет имя файла книги Excel, которая содержит данные [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |Текущее состояние|В число допустимых значений входят **Запланировано**, **Обновление**, **Выполнено**и **Сбой**.<br /><br /> Состояние**Запланировано** отображается при создании расписания. После первого запуска обновления данных это сообщение о состоянии больше не появляется.<br /><br /> Состояние**Обновление** показывает, что выполняется обновление данных. Запрос находится в очереди или выполняется на сервере.<br /><br /> Состояние**Выполнено** показывает, что последняя операция обновления данных завершилась, а обновленная книга возвращена обратно в библиотеку SharePoint.<br /><br /> Состояние**Сбой** показывает, что последняя операция обновления данных завершилась сбоем. Обновленные данные не были сохранены. Книга содержит те же данные, которые находились в ней до начала обновления данных.|  
 |Последнее успешное обновление|Указывает дату, когда последнее обновление данных завершилось успешно.|  
 |Следующее обновление по расписанию|Указывает дату, на которую запланировано следующее обновление данных.<br /><br /> Ссылка **Настроить расписание** открывает страницу определения расписания. Если для книги есть разрешения уровня "Участие", вы можете щелкнуть ссылку для просмотра и изменения расписания, которое управляет автоматическим обновлением данных [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] в книге.|  
@@ -80,7 +77,7 @@ ms.lasthandoff: 12/08/2017
 |Time|Показывает совокупное время с момента запуска обновления данных до момента завершения.|  
 |Состояние|Показывает запись журнала об успешном завершении операции обновления или сбое.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка сбора данных об использовании с PowerPivot для SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Планирование обновления данных (Power Pivot для SharePoint)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Обновление данных Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  

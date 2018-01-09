@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: c700d7f8-7e01-4052-a9ad-8200dd4009f2
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6a897c2cc561d5a313f2f7c7b30d987c5ad21d01
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Справочник по Скриптовому языку (TMSL) табличной модели
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Табличные языка скриптов модели (TMSL) приведен синтаксис определение команды и объект модели для баз данных табличной модели служб Analysis Services на уровне совместимости 1200 или выше. TMSL взаимодействует со службами Analysis Services через протокол XML для Аналитики, где [XML для Аналитики. Выполнение](../analysis-services/xmla/xml-elements-methods-execute.md) метод ресурс принимает как на основе JSON- **инструкции** скрипты TMSL, а также в традиционные сценарии XML в [язык сценариев служб Analysis Services &#40; ASSL для XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/08/2017
 |**Версия**|**Multidimensional**|**Табличные 110 x**|**Tabular 1200**| **Табличные 1400** |
 |Службы Analysis Services|Н/Д|Н/Д|TMSL|TMSL| 
 |SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
-|SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 
+|SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2014|ASSL|ASSL|Н/Д|Н/Д|   
 |SQL Server 2012|ASSL|ASSL|Н/Д|Н/Д|  
 

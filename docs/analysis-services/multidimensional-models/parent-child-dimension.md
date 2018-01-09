@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -30,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 982fbe970e85718c943ab0c8e31077f90d291606
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2c9416e3035d42db5e2087d14358344671288bb6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parent-child-dimension"></a>Родитель потомок измерения
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Иерархии родители потомки — это иерархия в стандартное измерение, содержащее родительский атрибут. Родительский атрибут описывает *связь, ссылающуюся на себя*(или *самосоединение*) в пределах главной таблицы измерения. Иерархии типа «родители-потомки» создаются из одного родительского атрибута. Иерархии типа «родители-потомки» присваивается только один уровень, поскольку присутствующие в ней уровни наследуют связи типа «родители-потомки» между элементами, связанными с родительским атрибутом. Положение элемента в пределах иерархии типа "родители-потомки" определяется свойствами **KeyColumns** и **RootMemberIf** родительского атрибута, в то время как положение элемента в пределах уровня определяется свойством **OrderBy** родительского атрибута. Дополнительные сведения о свойствах атрибутов см. в статье [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  
@@ -60,7 +57,7 @@ ms.lasthandoff: 12/08/2017
   
  Однако иерархии типа «родители-потомки» могут содержать некоторые неконечные элементы, данные которых выводятся из базовых источников данных в дополнение к данным, статистически вычисленным из дочерних элементов. Для этих неконечных элементов в иерархии типа «родители-потомки» можно создавать специальные дочерние элементы, формируемые системой, которые содержат данные базовых таблиц фактов. Они называются *элементы данных*и содержат значение, которое непосредственно связано с неконечным элементом и независимо от сводного значения, вычисленного на основе наследников неконечного элемента. Дополнительные сведения об элементах данных см. в разделе [Атрибуты в иерархиях типа "родители-потомки"](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты в иерархиях типа "родители-потомки"](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
  [Свойства измерений базы данных](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   

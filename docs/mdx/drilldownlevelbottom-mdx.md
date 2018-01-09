@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNLEVELBOTTOM
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: e6d4637bf9cfcdc2040affc8952ebfd8a711951d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 0811bbd1e0f3cf81ebe87ff200906e2489036092
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,12 +48,12 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  Допустимое многомерное выражение, возвращающее уровень.  
   
  *Numeric_Expression*  
- Необязательно. Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
+ Необязательный параметр. Допустимое числовое выражение (обычно многомерное выражение координат ячейки), возвращающее число.  
   
  *Include_Calc_Members*  
- Необязательно. Ключевое слово, которое добавляет вычисляемые элементы в результаты углубленной детализации.  
+ Необязательный параметр. Ключевое слово, которое добавляет вычисляемые элементы в результаты углубленной детализации.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если числовое выражение указано, **DrilldownLevelBottom** функция сортирует в порядке возрастания, потомков каждого элемента в заданном наборе согласно заданному значению, вычисленному по набору элементов-потомков. Если числовое выражение не задано, эта функция сортирует в порядке возрастания дочерние элементы каждого элемента в указанном наборе согласно значениям ячеек, представленным набором дочерних элементов, в соответствии с определением в контексте запроса. Это поведение аналогично поведению функций многомерных выражений BottomCount и Tail, которые возвращают набор элементов в естественном порядке без какой-либо сортировки.  
   
  После сортировки **DrilldownLevelBottom** функция возвращает набор, содержащий родительские элементы и количество дочерних элементов, указанные в *число*, с наименьшим значением.  

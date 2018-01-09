@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 892d5b6a02edaca9ef4c5613fe45c0719faa3483
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5e7b6cf1a00c650e49282e611eae18bed14b9179
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Примеры запросов к модели кластеризации последовательностей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании запроса к модели интеллектуального анализа данных, можно создать либо запрос содержимого, который предоставляет сведения об информации, содержащейся в модели, или можно создать прогнозирующие запросы, использующие закономерности, содержащиеся в модели для создания прогнозов на основе новых данных предоставить. Что касается модели кластеризации последовательностей, то запросы содержимого обычно возвращают дополнительную информацию об обнаруженных кластерах или о переходах в этих кластерах. Запрос также позволяет получить метаданные, описывающие модель.  
@@ -189,7 +187,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- Дополнительные сведения см. в разделе [SELECT FROM &#60;модель&#60;. SAMPLE_CASES &#40;расширения интеллектуального анализа данных&#41;](../../dmx/select-from-model-sample-cases-dmx.md).  
+ Дополнительные сведения см. в разделе [SELECT FROM <модель>. SAMPLE_CASES (расширения интеллектуального анализа данных)](../../dmx/select-from-model-sample-cases-dmx.md).  
   
 #### <a name="cluster-characteristics-and-cluster-discrimination"></a>Характеристики кластера и сравнение кластеров  
  Вкладка **Характеристики кластера** содержит сводную информацию об основных атрибутах каждого кластера, ранжированную по вероятностям. Можно узнать, сколько вариантов принадлежит к этому кластеру и как выглядит распределение вариантов в этом кластере: у каждой характеристики есть несущее множество определенной мощности. Чтобы увидеть характеристики конкретного кластера, нужно знать его идентификатор.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a73988ba44bc7f72d8541fb6db445c2a3958554
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2f3197d3962f7bce7b8882b9676643bed4a97bdb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Обзор логической архитектуры (службы Analysis Services — многомерные данные)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Службы Analysis Services работает в режиме развертывания сервера, который определяет среду памяти архитектуры и среды выполнения используются различных типов моделей служб Analysis Services. Режим сервера определяется во время установки. **Многомерный и интеллектуальный анализ данных режим** поддерживает традиционные OLAP и интеллектуального анализа данных. **Табличный режим** поддерживает табличные модели. **Режим интеграции с SharePoint** ссылается на экземпляр служб Analysis Services, который был установлен как [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint, используемый для загрузки и запросов к Excel или [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] моделей данных в книге.  

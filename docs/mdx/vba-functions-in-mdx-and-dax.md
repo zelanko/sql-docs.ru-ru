@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 420452fd-9507-4093-8857-71d3e70d96cc
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: On Demand
-ms.openlocfilehash: e56f0c499f16242d3dc6332ee62824c3542d9dd1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9bfce6ce1096e6c0951a0493cfafe9b6b37960cb
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Функции VBA в DAX и многомерных выражениях
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -75,7 +75,7 @@ ms.lasthandoff: 11/27/2017
 |[FileAttr](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007572&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
 |[FileDateTime](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007573&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
 |[FileLen](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007574&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  
-|[Filter](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается|**\*\*Предупреждение \* \***  в многомерных Выражениях реализована другая функция с тем же именем, и функция FILTER (Set_Expression, Logical_Expression) возвращает набор, полученный в результате фильтрации заданного набора на основе условия поиска по заданным аргументам<br /><br /> **\*\*Предупреждение \* \***  DAX реализована другая функция с тем же именем; фильтр (\<таблицы >,\<фильтра >) функция возвращает таблицу, представляющую подмножество другой таблицы или выражения по заданным аргументам|  
+|[Фильтр](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007575&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается|**\*\*Предупреждение \* \***  в многомерных Выражениях реализована другая функция с тем же именем, и функция FILTER (Set_Expression, Logical_Expression) возвращает набор, полученный в результате фильтрации заданного набора на основе условия поиска по заданным аргументам<br /><br /> **\*\*Предупреждение \* \***  DAX реализована другая функция с тем же именем; фильтр (\<таблицы >,\<фильтра >) функция возвращает таблицу, представляющую подмножество другой таблицы или выражения по заданным аргументам|  
 |[Исправление](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007595&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Только многомерные выражения||  
 |[Формат (Visual Basic для приложений)](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007576&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|DAX, многомерные выражения||  
 |[FormatCurrency](http://office.microsoft.com/client/helppreview14.aspx?AssetId=HV080007577&lcid=1033&NS=EXCEL%2EDEV&Version=14&tl=2&pid=CH080007543&CTT=4)|Не поддерживается||  

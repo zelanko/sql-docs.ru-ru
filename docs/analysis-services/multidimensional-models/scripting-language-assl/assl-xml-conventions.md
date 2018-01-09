@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -34,11 +32,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 9627648fa47b750f4b9b98b45b5878cea0806961
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3b7e4c800454a2e2eddac81a2420b5a6d6436c70
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="assl-xml-conventions"></a>Обозначения в XML языка ASSL
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Язык сценариев служб Analysis Services (ASSL) представляет иерархию объектов, как набор типов элементов, каждый из которых определяет дочерние элементы, которые они могут содержать.  
@@ -135,7 +133,7 @@ ms.lasthandoff: 12/08/2017
  **Long**  
  Целое число в диапазоне от -263 до 263 — 1.  
   
- **Строковые значения**  
+ **String**  
  Строковое значение, соответствующее следующим глобальным правилам.  
   
 -   Управляющие символы удалены.  
@@ -158,7 +156,7 @@ ms.lasthandoff: 12/08/2017
 |Тип данных XML|Значение по умолчанию|  
 |-------------------|-------------------|  
 |**Логическое значение**|False|  
-|**Строковые значения**|"" (пустая строка)|  
+|**String**|"" (пустая строка)|  
 |**Целое число со знаком** или **Long**|0 (ноль)|  
 |**Отметка времени**|12:00:00 AM, 1/1/0001 (в зависимости от платформы .NET **System.DateTime** с 0 тактов)|  
   

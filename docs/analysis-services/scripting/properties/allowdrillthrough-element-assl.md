@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: AllowDrillThrough Element
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e2265da7127d8229ee95d04821f72e532ccc5cdc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 3863648b3c8978fa8ac3b8ba981c6fa634c30ef0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="allowdrillthrough-element-assl"></a>Элемент AllowDrillThrough (язык ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет, разрешена ли детализация для родительского элемента.  
@@ -47,9 +45,9 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
-|Тип данных и длина|Boolean|  
+|Тип данных и длина|Логическое значение|  
 |Значение по умолчанию|**False**|  
 |Количество элементов|0—1: необязательный элемент, который может встречаться только один раз.|  
   
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |Родительские элементы|[Элемент MiningModel](../../../analysis-services/scripting/objects/miningmodel-element-assl.md), [MiningModelPermission](../../../analysis-services/scripting/objects/miningmodelpermission-element-assl.md), [MiningStructurePermission](../../../analysis-services/scripting/objects/miningstructurepermission-element-assl.md)|  
 |Дочерние элементы|None|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Элементы, соответствующие родителям элемента **AllowDrillThrough** в модели объектов Analysis Management объекты AMO — <xref:Microsoft.AnalysisServices.MiningModel>, <xref:Microsoft.AnalysisServices.MiningModelPermission>, и <xref:Microsoft.AnalysisServices.MiningStructurePermission>.  
   
 ## <a name="drillthrough-on-mining-structures"></a>Детализация структур интеллектуального анализа данных  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/08/2017
   
  `SELECT * FROM <structure>.CASES`  
   
- либо  
+ или диспетчер конфигурации служб  
   
  `SELECT StructureColumn('<structure-column-name>') FROM <model>.CASES`  
   

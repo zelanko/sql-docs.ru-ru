@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_STRUCTURE_COLUMNS
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 187bba4f2a785eab9c1de4e076c323bcc4d561fc
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 25a6ba694cad584a0c1d6e229ab1f029d288d11e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingstructurecolumns-rowset"></a>Набор строк DMSCHEMA_MINING_STRUCTURE_COLUMNS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Описывает отдельные столбцы всех структур интеллектуального анализа данных, развернутыми на сервере, на котором выполняется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
 |**COLUMN_DEFAULT**|**DBTYPE_WSTR**||Значение по умолчанию для столбца. Поставщик может предоставлять **DBCOLUMN_DEFAULTVALUE** , но не **DBCOLUMN_HASDEFAULT** (для таблиц ISO) в наборе строк, возвращенных **IColumnsRowset::GetColumnsRowset**.<br /><br /> Если значение по умолчанию — **NULL**, **COLUMN_HASDEFAULT** — **TRUE** и **COLUMN_DEFAULT** столбец **значениеNULL** значение.|  
 |**COLUMN_FLAGS**|**DBTYPE_UI4**||Битовая маска, которая описывает характеристики столбца. Перечислимый тип **DBCOLUMNFLAGS** задает биты в битовой маске. Этот столбец не может содержать **NULL** значение. Допустимы следующие значения.<br /><br /> **DBCOLUMNFLAGS_ISNULLABLE** (**0x20**)<br /><br /> **DBCOLUMNFLAGS_MAYBENULL** (**0x40**)<br /><br /> **DBCOLUMNFLAGS_ISLONG** (**0x80**)|  
 |**IS_NULLABLE**|**DBTYPE_BOOL**||Логическое значение, показывающее, имеет ли этот столбец значение по умолчанию.<br /><br /> **Значение TRUE,** , если столбец может содержать **NULL**; **FALSE**, в противном случае.|  
-|**ТИП ДАННЫХ**|**DBTYPE_UI2**||Признак типа данных столбца. Например:<br /><br /> «**ТАБЛИЦЫ**"= **DBTYPE_HCHAPTER**<br /><br /> «**ТЕКСТ**"= **DBTYPE_WCHAR**<br /><br /> «**ДЛИННЫЕ**"= **DBTYPE_I8**<br /><br /> «**ДВОЙНЫЕ**"= **DBTYPE_R8**<br /><br /> «**ДАТЫ**"= **DBTYPE_DATE**|  
+|**ТИП ДАННЫХ**|**DBTYPE_UI2**||Признак типа данных столбца. Пример:<br /><br /> «**ТАБЛИЦЫ**"= **DBTYPE_HCHAPTER**<br /><br /> «**ТЕКСТ**"= **DBTYPE_WCHAR**<br /><br /> «**ДЛИННЫЕ**"= **DBTYPE_I8**<br /><br /> «**ДВОЙНЫЕ**"= **DBTYPE_R8**<br /><br /> «**ДАТЫ**"= **DBTYPE_DATE**|  
 |**TYPE_GUID**|**DBTYPE_GUID**||Идентификатор GUID для типа данных столбца. Поставщики, не использующие идентификаторы GUID для идентификации типов данных, должны возвращать **NULL** в этом столбце.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**DBTYPE_UI4**||Максимально допустимая длина значения данного столбца. Для символьных, двоичных и битовых столбцов это одно из следующих значений.<br /><br /> Максимальная длина столбца в символах, байтах или битах соответственно, если длина определена. Например, столбец `CHAR(5)` в таблице SQL Server имеет максимальную длину в 5 символов.<br /><br /> Максимальная длина типа данных в символах, байтах или битах соответственно, если столбец не имеет определенной длины.<br /><br /> Ноль (0), если ни для столбца, ни для типа данных не определена максимальная длина.<br /><br /> **Значение NULL** для всех других типов столбцов.|  
 |**CHARACTER_OCTET_LENGTH**|**DBTYPE_UI4**||Максимальная длина столбца в октетах (байтах), если столбец имеет символьный или двоичный тип. Нулевое значение (0) означает, что для столбца не задана максимальная длина. **Значение NULL** для всех других типов столбцов.|  
@@ -78,10 +76,10 @@ ms.lasthandoff: 12/08/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Необязательно.|  
-|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Необязательно.|  
-|**STRUCTURE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**COLUMN_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**STRUCTURE_CATALOG**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**STRUCTURE_SCHEMA**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**STRUCTURE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**COLUMN_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
   
 ## <a name="see-also"></a>См. также:  
  [Наборы строк схемы интеллектуального анализа данных](../../../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md)  

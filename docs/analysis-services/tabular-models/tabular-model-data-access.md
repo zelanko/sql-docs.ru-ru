@@ -5,13 +5,10 @@ ms.date: 03/06/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 23f654a293447e562baf7a8785871417b2bfd975
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e004604829a9b7701744d41df53c4bf00afa432d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="tabular-model-data-access"></a>Доступ к данным табличной модели
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Базы данных табличной модели в службах Analysis Services может осуществляться с помощью большинства клиентов, интерфейсов и языков, которые используются для извлечения данных или метаданных из многомерной модели. Дополнительные сведения см. в разделе [Доступ к данным многомерной модели (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -49,14 +46,14 @@ ms.lasthandoff: 12/08/2017
   
  Запросы, отправляемые клиентом [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] к модели, выдаются в виде инструкций DAX, которые можно отслеживать, установив трассировку для модели.  Клиент также выдает запрос серверу на первоначальное определение схемы, которое представляется согласно языку определения концептуальной схемы (CSDL). Дополнительные сведения см. в разделе [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md)  
   
-### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+### <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
  С помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] можно управлять экземплярами, в которых размещаются табличные модели, а также запрашивать из них метаданные и данные. Можно обрабатывать модели или объекты в модели, создавать секции и управлять ими, а также устанавливать параметры безопасности для управления доступом к данным. Дополнительные сведения см. в следующих разделах:  
   
 -   [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
 -   [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  
   
--   [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
+-   [Мониторинг экземпляра Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)  
   
  В среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] для извлечения данных и метаданных из табличного шаблона базы данных можно использовать как многомерные выражения, так и окна запросов XMLA. Однако обратите внимание на следующие ограничения.  
   
@@ -133,7 +130,7 @@ ms.lasthandoff: 12/08/2017
 > [!WARNING]  
 >  Использовать запросы многомерных выражений или расширений интеллектуального анализа данных в базе данных, развернутой в режиме DirectQuery, нельзя; поэтому, если необходимо выполнить запрос к модели DirectQuery с использованием наборов строк схемы, следует использовать XMLA, а не связанное динамическое административное представление. Для динамических административных представлений, которые возвращают результаты для сервера в виде единого целого, например SELECT * from $system.DBSCHEMA_CATALOGS or DISCOVER_TRACES, можно выполнить запрос в содержимом базы данных, развернутой в режиме кэширования.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Соединение с табличным шаблоном базы данных (службы SSAS)](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)   
  [Доступ к данным PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-access.md)   
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)  

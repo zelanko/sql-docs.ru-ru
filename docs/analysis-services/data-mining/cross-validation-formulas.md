@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 041206471791fe8be8b06e407854f96fc021eedd
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2d472fce002938f8305d0429937482181cee990d
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cross-validation-formulas"></a>Формулы перекрестной проверки
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При создании отчета перекрестной проверки, он содержит меры точности для каждой модели, в зависимости от типа модели интеллектуального анализа данных (алгоритм, был использован для создания модели), тип данных прогнозируемого атрибута и прогнозируемого атрибута значение, если таковые имеются.  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/08/2017
 |**Среднеквадратичное отклонение**|Дискретный атрибут. Можно указать целевое значение, но это не является необходимым.|Квадратный корень из среднего значения квадратов дополнений к оценке вероятности, деленный на число случаев в секции, исключая строки с отсутствующими значениями целевого атрибута.|  
 |**Среднеквадратичное отклонение**|Дискретный атрибут, цель не указана.|Квадратный корень из среднего значения квадратов дополнений к оценке вероятности, деленный на число случаев в секции, исключая случаи с отсутствующими значениями целевого атрибута.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Тестирование и проверка (интеллектуальный анализ данных)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [Перекрестная проверка (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   

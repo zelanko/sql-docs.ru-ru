@@ -8,7 +8,7 @@ ms.service:
 ms.component: clr
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 91af8f269dce39e8e707c570aba606f743b1a7e6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 231d1a9904409f36b551cd6c314283dbc753bcde
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clr-integration-and-transactions"></a>Интеграция со средой CLR и транзакции
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**System.Transactions** пространство имен предоставляет новую платформу транзакций, полностью интегрированную с ADO.NET и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интеграция CLR среды выполнения (CLR). **System.Transactions** и ADO.NET работают вместе, чтобы расширить и упростить использование локальных и распределенных транзакций в управляемых приложениях.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
  Дополнительные сведения о транзакциях и платформе .NET Framework см. в разделах «Выполнение транзакций» и «Использование транзакций» пакета SDK для платформы .NET Framework.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Повышение транзакции](../../relational-databases/clr-integration-data-access-transactions/transaction-promotion.md)  
  Содержит описание возможности повысить уровень транзакции и использования этой функции.  
   

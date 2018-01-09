@@ -8,7 +8,7 @@ ms.component: native-client
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2efcd738e4f5e1047f5d265ea063e90a7cdb8de8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 977a231f14b85a6f27fbdfbfdbdb9c1700fc7277
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-native-client"></a>собственный клиент SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +63,7 @@ ODBC в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 
   
 -   [Изменение поведения драйвера ODBC при обработке преобразования символов](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
 [Установить собственный клиент SQL Server](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [Компоненты SQL Server Native Client](../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   

@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services, azure-analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2f17b4df-eea2-48c7-a1f2-a3fb7748c15f
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4910c2033fa0ae50cad8b31f90bd023aa18d219f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 13d0f86ae2413e0d54af32a97fb74100284bacd9
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analyze-in-excel"></a>Анализ в Excel
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]Функция анализа в Excel, в SSDT, дает разработчику табличных моделей возможность быстро выполнить анализ проекта модели во время разработки. Функция «Анализ в Excel» открывает Microsoft Excel, создает соединение с источником данных, которым выступает база данных рабочей области модели, и автоматически добавляет сводную таблицу на рабочий лист. Объекты базы данных рабочей области (таблицы, столбы и меры) включаются в качестве полей в список полей сводной таблицы. Затем объекты и данные можно просмотреть в контексте действующего пользователя или роли и перспективы.  
@@ -49,9 +46,9 @@ ms.lasthandoff: 12/08/2017
   
  В дополнение к действующему пользователю или роли можно указать перспективу. Перспективы позволяют разработчикам модели определять конкретные представления бизнес-сценариев для объектов модели и данных. По умолчанию перспектива не используется. Для использования перспективы в функции анализа в Excel, перспективы уже должны определяться с помощью диалогового окна «перспективы», в SSDT. Если перспектива указана, то список полей сводной таблицы будет содержать только объекты, выбранные в этой перспективе. Дополнительные сведения см. в разделе [Создание и управление перспективами](../../analysis-services/tabular-models/create-and-manage-perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Связанные задачи  
+##  <a name="bkmk_rt"></a> Related tasks  
   
-|**Раздел**|**Description**|  
+|**Раздел**|**Описание**|  
 |---------------|---------------------|  
 |[Анализ табличной модели в Excel](../../analysis-services/tabular-models/analyze-a-tabular-model-in-excel-ssas-tabular.md)|В этом разделе описан порядок использования функции «Анализ в Excel» в конструкторе моделей для открытия Excel, создания соединения с источником данных, которым выступает база данных рабочей области модели, и добавления сводной таблицы на рабочий лист.|  
   

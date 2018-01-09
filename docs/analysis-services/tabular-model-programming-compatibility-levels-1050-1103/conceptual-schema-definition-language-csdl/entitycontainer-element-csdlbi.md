@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 21ad4c6d328c8c299a2ae34c4ac5aab27feec794
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 30b24a87a5d1915b16c18557b93abfabfe99ab12
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="entitycontainer-element-csdlbi"></a>Элемент EntityContainer (CSDLBI)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Элемент EntityContainer — это сложный тип, в зависимости от типа языка CSDL EntityContainer, который определяет коллекцию сущностей в рамках одной модели данных. В приложении бизнес-аналитики модель данных, представленная элементом EntityContainer, может содержать несколько таблиц со столбцами, для которых объединены отношения, а также вычисления, меры и ключевые показатели эффективности. Он концептуально похож на базу данных или источник данных.  
@@ -36,15 +34,15 @@ ms.lasthandoff: 12/08/2017
 ## <a name="elements-and-attributes"></a>Элементы и атрибуты  
  В таблице ниже описаны элементы и атрибуты, определяющие EntityContainer.  
   
-|Название|Обязателен|Описание|  
+|Имя|Обязателен|Description|  
 |----------|-----------------|-----------------|  
-|Название|Да|Имя модели данных.|  
-|Заголовок|Нет|Описание базы данных или модели данных.|  
+|Имя|Да|Имя модели данных.|  
+|Заголовок|нет|Описание базы данных или модели данных.|  
 |Культура|Да|Строка, которая содержит код языка запроса.|  
 |CompareOptions|Да|Параметры сортировки с учетом языка и сравнения строк для модели.|  
-|DirectQueryMode|Нет|Перечисление, указывающее режим запроса при работе модели в режиме DirectQuery.|  
+|DirectQueryMode|нет|Перечисление, указывающее режим запроса при работе модели в режиме DirectQuery.|  
 |Элемент EntitySet|Да|[Элемент EntitySet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/entityset-element-csdlbi.md)|  
-|Элемент AssociationSet|Нет|[Элемент AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
+|Элемент AssociationSet|нет|[Элемент AssociationSet &#40; CSDLBI &#41;](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/associationset-element-csdlbi.md)|  
   
 ## <a name="compareoptions-element"></a>Элемент CompareOptions  
  Атрибут CompareOptions определяет свойства параметров сортировки, которые применяются к модели данных. Свойства, заданные элементом CompareOptions, наследуются из параметров сортировки, учета японской азбуки и чувствительности к регистру, установленными в базе данных Analysis Services во время разработки модели. В следующей таблице описаны значения, которые включены в состав атрибута CompareOptions.  

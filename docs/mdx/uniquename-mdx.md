@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: UNIQUENAME
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 1371b4e28fb7380f250fb1eab9630c5c24b52c87
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9c68a32d649cf9042e173dc3fa79b73a5c820b98
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="uniquename-mdx"></a>UniqueName (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,7 +61,7 @@ Member_Expression.UniqueName
  *Member_Expression.*  
  Допустимое многомерное выражение, возвращающее элемент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **UniqueName** функция возвращает уникальное имя объекта, а не имя, возвращаемое функцией [имя](../mdx/name-mdx.md) функции. Возвращаемое имя не включает имя куба. Возвращаемые результаты зависят от параметров сервера или от свойства многомерных выражений, задающего уникальную строку подключения.  
   
 ## <a name="example"></a>Пример  

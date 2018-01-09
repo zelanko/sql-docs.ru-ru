@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 992175bef13c947a11ed738a135df14d226fa05b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 5b6f6c1561997970811e729a498383cef08f4ac3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Настройка служб Analysis Services для ограниченного делегирования Kerberos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При настройке служб Analysis Services для проверки подлинности Kerberos, то скорее всего, потребуется добиться одного или обоих приведенных ниже результатов: служб Analysis Services олицетворять пользователя при запросе данных; или служб Analysis Services делегировать удостоверение пользователя к службе низкого уровня. У каждого сценария есть свои требования к конфигурации. Для обоих сценариев необходима проверка, чтобы убедиться в правильности настройки.  
@@ -120,7 +117,7 @@ ms.lasthandoff: 12/08/2017
   
  Кроме того, полное описание каждого параметра во вкладке "Делегирование" диалогового окна свойств объекта Active Directory см. в разделе [Самое запутанное диалоговое окно Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) . В этой статье также объясняется, как использовать LDP для тестирования и интерпретации результатов тестирования.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Проверка подлинности для бизнес-аналитики Майкрософт и делегирование удостоверений](http://go.microsoft.com/fwlink/?LinkID=286576)   
  [Взаимная проверка подлинности с помощью Kerberos](http://go.microsoft.com/fwlink/?LinkId=299283)   
  [Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   

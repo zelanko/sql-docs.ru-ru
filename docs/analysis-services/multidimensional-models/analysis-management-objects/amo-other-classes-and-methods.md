@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -29,11 +27,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 50ac79584b61002a71c792fe485bce6f5115a0ef
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: f4de10c612f0338cecbfbd2e106bee41c6115905
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="amo-other-classes-and-methods"></a>Другие классы и методы объектов AMO
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Этот раздел содержит общие классы, которые не относятся к OLAP и интеллектуального анализа данных, и которые являются удобны для администрирования и управления объектами в [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Эти классы охватывают работу с хранимыми процедурами, трассировкой, исключениями, а также резервированием и восстановлением.  
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/08/2017
   
  При возникновении различных проблем объекты AMO формируют исключения. В следующей таблице приведены типы исключений, обрабатываемые объектами AMO. Исключения наследуются от класса <xref:Microsoft.AnalysisServices.AmoException>.  
   
-|Exception|Место возникновения|Description|  
+|Исключение|Место возникновения|Description|  
 |---------------|------------|-----------------|  
 |<xref:Microsoft.AnalysisServices.AmoException>|Базовый класс|Приложение принимает это исключение при отсутствии обязательного родительского объекта, либо когда требуемый элемент не удается найти в коллекции.|  
 |<xref:Microsoft.AnalysisServices.OutOfSyncException>|Наследует AMOException|Приложение принимает это исключение в том случае, когда объекты AMO не синхронизированы с подсистемой, а подсистема вернула ссылку на объект, о котором объектам AMO неизвестно.|  

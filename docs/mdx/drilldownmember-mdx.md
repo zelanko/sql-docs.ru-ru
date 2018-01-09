@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: DRILLDOWNMEMBER
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 35fb3fec36ffc3aacd68bab3baf4612942c5afd8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9f7f9a3cdb4faa7946744d9f4b0913ee866e5a04
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="drilldownmember-mdx"></a>DrilldownMember (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ DrillDownMember(<Set_Expression1>, <Set_Expression2> [,[<Target_Hierarchy>]] [,[
  *Include_Calc_Members*  
  Ключевое слово, позволяющее включать вычисляемые элементы в результаты углубленной детализации.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция возвращает набор дочерних элементов, упорядоченных по иерархии, который включает элементы, указанные в первом наборе, которые также присутствуют во втором наборе. Детализация родительских элементов не производится, если первый набор содержит родительский элемент и один или несколько дочерних элементов. Первый набор может иметь любую размерность, но второй набор должен быть одномерным. Порядок следования исходных элементов первого набора сохраняется, однако все дочерние элементы, входящие в результирующий набор функции, следуют непосредственно за своим родительским элементом. Функция создает результирующий набор, извлекая потомков каждого элемента первого набора, присутствующих во втором наборе. Если **РЕКУРСИВНЫЕ** указано, функция продолжает рекурсивно сравнивать элементы результирующего набора со вторым набором, извлекая потомков каждого элемента результирующего набора, присутствующих во втором наборе, пока не больше из результирующего набора можно будет найти элементы во втором наборе.  
   
  Запрос свойства XMLA **MdpropMdxDrillFunctions** позволяет проверить уровень поддержки, обеспечиваемой сервером для функций детализации; см. раздел [поддерживаемые свойства XMLA &#40; XML для Аналитики &#41; ](../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) подробные сведения.  

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
@@ -19,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb23accde5d3711a97d67aab6750a6a16a6a8b3d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 31ac0cffe6656c5d644b5424b56f150572dc9af6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Использование детализации из средств просмотра моделей
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]В зависимости от типа модели, можно использовать детализацию из средств просмотра на **средство просмотра моделей интеллектуального анализа данных** конструктора интеллектуального анализа данных для изучения вариантов, используемых в модели интеллектуального анализа данных либо для просмотра дополнительных столбцов в структуре интеллектуального анализа данных. Хотя многие типы моделей не поддерживают детализацию, поскольку шаблоны в этой модели нельзя напрямую связывать с конкретными вариантами, приведенные ниже типы моделей поддерживают детализацию.  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/08/2017
   
 5.  Щелкните правой кнопкой мыши в любом месте в результатах и выберите вариант **Копировать все** , чтобы сохранить результаты в буфер обмена. Если модель содержит столбец вложенной таблицы, вставляется только имя столбца вложенной таблицы. Чтобы извлечь значения данных в столбце вложенной таблицы для каждого варианта, необходимо создать запрос к содержимому модели.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Детализация моделей интеллектуального анализа данных](../../analysis-services/data-mining/drillthrough-on-mining-models.md)   
  [Детализация структур интеллектуального анализа данных](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  

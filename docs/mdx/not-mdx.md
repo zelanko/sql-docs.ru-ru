@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: NOT
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: df89fa9d5d8a822680dff5d7185753453a7dee87
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 08bfb5c70fe36e36b62482f51864adf20cc851e4
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="not-mdx"></a>NOT (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ NOT Expression1
 ## <a name="return-value"></a>Возвращаемое значение  
  Логическое значение, которое возвращает **false** Если аргумент принимает значение **true**; в противном случае **true**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Не** оператор рассматривает выражение как логическое значение (ноль, 0 — как **false**; в противном случае **true**), прежде чем оператор выполнит логическое отрицание. В следующей таблице показано, как **не** оператор выполнит логическое отрицание.  
   
 |*Expression1*|Возвращаемое значение|  

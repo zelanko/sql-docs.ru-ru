@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ede498333c2fa7c1967d62e2d403d09a6d50acde
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a60a88bbf9816e4af0260cde3063f5bd6d5240e6
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-a-new-olap-mining-structure"></a>создать новую структуру интеллектуального анализа OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Можно использовать мастер интеллектуального анализа данных в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для создания структуры интеллектуального анализа данных, который использует данные из многомерной модели. Модели интеллектуального анализа данных, основанные на кубах OLAP, способны использовать столбец и его значения в таблицах фактов, измерениях и в группах мер в качестве атрибутов для анализа.  
@@ -137,7 +135,7 @@ ms.lasthandoff: 12/08/2017
   
      **Создать куб с использованием измерения модели интеллектуального анализа данных**: отметьте флажком этот пункт и введите имя нового куба. При использовании этого режима будет создан новый куб, который будет содержать как существующие измерения, которые использовались для построения структуры, так и новое измерение интеллектуального анализа данных, содержащее результаты из модели.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по структуре интеллектуального анализа данных](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

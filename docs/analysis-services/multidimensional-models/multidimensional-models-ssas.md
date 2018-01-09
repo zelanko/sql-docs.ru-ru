@@ -5,13 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 509df042-fdb3-4e2c-a6b8-86943ce1b0fc
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c03d39261ff288832dbbeedc5e2a5cc90175d735
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 276211036c3d977ab0a0b6a61114e7fe58505b63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="multidimensional-modeling-ssas"></a>Многомерное моделирование (службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Многомерные решения служб Analysis Services использует структуры кубов для анализа бизнес-данных по нескольким измерениям. Многомерный режим является режимом сервера по умолчанию для служб Analysis Services. Он включает подсистему запросов и вычислений для данных OLAP с режимами хранения HOLAP, MOLAP и ROLAP, сочетающий производительность с требованиями к масштабируемости данных. Ядро OLAP служб Analysis Services является лучшим в отрасли сервером OLAP, хорошо работающим с широким диапазоном средств бизнес-аналитики. В большинстве случаев службы Analysis Services устанавливаются как обычные серверы OLAP.  
@@ -34,7 +31,7 @@ ms.lasthandoff: 12/08/2017
   
  Другим важным преимуществом использования многомерных баз данных служб Analysis Services является интеграция с распространенными средствами создания отчетов бизнес-аналитики, например Excel, службами Reporting Services и PerformancePoint, а также с пользовательскими приложениями и решениям сторонних производителей.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Решения многомерной модели (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)  
   
  [Базы данных многомерных моделей (службы SSAS)](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  

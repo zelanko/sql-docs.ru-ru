@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 42b139004de7a10c073991613abcbafb84a31688
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 51b5bd319480be4c7757d4fb642859af54f209a3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discoverstoragetables-rowset"></a>Набор строк DISCOVER_STORAGE_TABLES
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Позволяет клиенту определить таблицы, которые включены в базу данных служб Analysis Services, работающую в табличном режиме или режиме SharePoint.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_STORAGE_TABLES** содержит следующие столбцы.  
   
-|**Имя столбца**|**Индикатор типа**|**Длина**|**Description**|  
+|**Имя столбца**|**Индикатор типа**|**Длина**|**Описание**|  
 |---------------------|------------------------|----------------|---------------------|  
 |**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**||Указывает имя базы данных, содержащей эти таблицы.<br /><br /> С помощью этого столбца можно ограничить набор строк **DISCOVER_STORAGE_TABLES** . Если этот столбец не используется для ограничения состава набора строк, используется текущая база данных.|  
 |**CUBE_NAME**|**DBTYPE_WSTR**||Указывает куб или модель, содержащие эти таблицы.<br /><br /> С помощью этого столбца можно ограничить набор строк **DISCOVER_STORAGE_TABLES** .|  
@@ -50,8 +48,8 @@ ms.lasthandoff: 12/08/2017
   
 |**Имя столбца**|**Индикатор типа**|**Состояние ограничения**|  
 |---------------------|------------------------|---------------------------|  
-|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Необязательно.|  
-|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
+|**ИМЯ_БАЗЫ_ДАННЫХ**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**CUBE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
 |**MEASURE_GROUP_NAME**|**DBTYPE_WSTR**|Необязательно|  
 |**ИМЯ_РАЗДЕЛА**|**DBTYPE_WSTR**|Необязательно|  
   

@@ -5,13 +5,10 @@ ms.date: 03/16/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fb3f752fa2a07a2c5e0964cbe91e4fb791bdc3da
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 95a989d092a5b69662fc9f7f542792d9c2895b47
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Вычисляемые элементы в подзапросах выборки и вложенных кубах
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Вычисляемый элемент — это элемент измерения, значение которого вычисляется из выражения во время выполнения и может использоваться в подзапросах выборки и вложенных кубах, чтобы более точно определить пространство куба запроса.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 12/08/2017
   
 |||  
 |-|-|  
-|Value|Описание|  
+|Значение|Description|  
 |0|Вычисляемые элементы не допускаются в подзапросах выборки и вложенных кубах.<br /><br /> Если при вычислении подзапроса выборки или вложенного куба присутствует ссылка на вычисляемый элемент, возникает ошибка.|  
 |1|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, однако в возвращаемое подпространство восходящие элементы не вводятся.|  
 |2|Вычисляемые элементы допускаются в подзапросах выборки и вложенных кубах, и в возвращаемое подпространство вводятся восходящие элементы. Кроме того, в выборке вычисляемых элементов допускается смешанная гранулярность.|  
@@ -128,10 +125,10 @@ Where [Measures].[Reseller Sales Amount]
   
  В приведенных результатах агрегированные значения для [All Geographies], [United States], [Oregon] и [Washington] получаются на основе статической обработки родителей &[Portland]&[OR] и &[Spokane]&[WA]. Из вычисляемого элемента не берется ничего.  
   
-### <a name="remarks"></a>Замечания  
+### <a name="remarks"></a>Remarks  
  В выражениях подзапроса выборки или вложенного куба допускается использование только элементов, вычисляемых в сеансе, или элементов, вычисляемых глобально. Наличие в многомерном запросе элементов, вычисляемых в запросе, приведет к ошибке выполнения выражения подзапроса выборки или вложенного куба.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
  [Подзапросы выборки в запросах](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
  [Поддерживаемые свойства XMLA &#40; XML для Аналитики &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  

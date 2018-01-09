@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-odbc-date-time
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: conversions [ODBC], SQL to C
@@ -18,11 +18,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: f62d1fc4e1a79b61fb9dbdf24076b91a38fe7b3d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 36a60d790397b34ee66020fc3a174ba6df18ce63
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Преобразование типов данных из SQL C DateTime
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,16 +37,16 @@ ms.lasthandoff: 11/17/2017
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
 |SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|ОК|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|ОК|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|ОК|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|ОК|21|16|16|  
+|SQL_TYPE_DATE|OK|12|13|12|13,23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|OK|10,23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7,8|OK|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|OK|21|16|16|  
   
 ## <a name="key-to-symbols"></a>Расшифровка символов  
   
 |Символ|Значение|  
 |------------|-------------|  
-|ОК|Проблемы преобразования отсутствуют.|  
+|OK|Проблемы преобразования отсутствуют.|  
 |1|Применяются правила, использовавшиеся до [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Начальные и конечные пробелы пропускаются.|  
 |3|Выполняется синтаксический анализ строки, при котором из нее извлекается дата, время, часовой пояс или смещение часового пояса, при этом допускается точность задания долей секунды до 9 десятичных знаков. Если при анализе обнаруживается смещение часового пояса, то время преобразуется к часовому поясу клиента. При возникновении ошибки во время преобразования с ошибкой SQLSTATE 22018 и сообщением «Переполнение поля Datetime» создается запись диагностики.|  

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +29,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3cc6f6f1bf2acacc481eb9141bb3dd055cc56113
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e8b7d2277c53293d0ff0a34b1fa6e04c309e37dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="attribute-properties---group-attribute-members"></a>Свойства атрибутов - группирование элементов атрибута
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Группа элементов является созданным системой набором последовательных элементов измерения. В службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]элементы атрибута могут группироваться в различные группы элементов в ходе процесса, называемого дискретизацией. Уровень в иерархии содержит либо группы элементов, либо элементы, но не то и другое сразу. Когда пользователи выполняют обзор уровня, содержащего группы элементов, они видят имена и значения ячеек групп элементов. Элементы, формируемые службами [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] для поддержания групп членов, называются элементами группирования и выглядят как обычные элементы.  
@@ -45,7 +42,7 @@ ms.lasthandoff: 12/08/2017
   
 |Значение**DiscretizationMethod** |Description|  
 |--------------------------------------|-----------------|  
-|**Нет**|Позволяет отобразить элементы.|  
+|**None**|Позволяет отобразить элементы.|  
 |**Автоматически**|Выбирает метод, наилучшим образом представляющий данные: метод **EqualAreas** или метод **Clusters** .|  
 |**EqualAreas**|Пытается разделить элементы в атрибуте на группы, содержащие равное количество элементов.|  
 |**Clusters**|Пытается разделить элементы в атрибуте на группы с помощью выборки обучающих данных, инициализации для определенного количества случайных точек и выполнения нескольких итераций алгоритма кластеризации максимизации ожидания (EM).<br /><br /> Метод полезен, т.к. он работает с любой кривой распределения, но для его выполнения требуется больше времени.|  
@@ -118,7 +115,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Если обновляется таблица измерения для измерения, содержащего группы элементов, и измерение затем полностью обрабатывается, то создается новый набор групп элементов. Имена и потомки новых групп элементов могут отличаться от старых групп элементов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Атрибуты и иерархии атрибутов](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

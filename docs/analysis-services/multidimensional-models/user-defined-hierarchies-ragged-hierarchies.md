@@ -5,13 +5,10 @@ ms.date: 03/04/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: ragged hierarchies [Analysis Services]
@@ -21,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4b3ffa23cdd185c57a86bc34921c3e489870cd2d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: c1a8c252af66d893a6fe540da71d05fcb09ad8e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="user-defined-hierarchies---ragged-hierarchies"></a>Пользовательские иерархии - неоднородные иерархии
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Неровная иерархия — определяемую пользователем иерархию, которая имеет нечетное количество уровней. Распространенные примеры включают организационную диаграмму, на которой менеджеры высокого уровня координируют работу как менеджеров отделов, так и их подчиненных, или географические иерархии, состоящие из страны, региона и города, которые включают города без родительского элемента штата или провинции, например Вашингтон О. К., Ватикан или Новый Дели.  
@@ -78,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 |**1**|Показать значение заполнителя.|Это значение по умолчанию, которое используют Excel, SSDT и SSMS. Оно указывает серверу возвращать значения заполнителей при детализации углублением пустых уровней в неоднородной иерархии. Если щелкнуть значение заполнителя, то детализацию углублением можно будет продолжить вплоть до дочерних (конечных) узлов.<br /><br /> В Excel задается строка подключения к службам Analysis Services. В ней для каждого нового подключения свойство **MDX Compatibility** всегда устанавливается в значение 1. Это сделано для обеспечения обратной совместимости.|  
 |**2**|Скрыть значение заполнителя (значение NULL или копия значения с родительского уровня), но показывать другие уровни и узлы, имеющие соответствующие значения.|Для неоднородных иерархий обычно предпочтительнее указывать**MDX Compatibility**=2. Отчет служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] и некоторые сторонние приложения могут сохранять это значение.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание пользовательских иерархий](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Пользовательские иерархии](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Родитель потомок измерения](../../analysis-services/multidimensional-models/parent-child-dimension.md)   

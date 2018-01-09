@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: DMSCHEMA_MINING_MODELS
@@ -23,16 +21,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 275be85ca3a85147767166ac49cd1d1ee288cf5e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 838f17f1e9725738686635b3000f28929084c122
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="dmschemaminingmodels-rowset"></a>Набор строк DMSCHEMA_MINING_MODELS
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Перечисляет модели интеллектуального анализа данных в текущем каталоге. **DMSCHEMA_MINING_MODELS** набор строк содержит сведения, такие как имена модели, дату обработки и алгоритм интеллектуального анализа данных, связанный с каждой моделью интеллектуального анализа данных.  
   
- . **DMSCHEMA_MINING_MODELS** набора строк схемы очень похож на [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) набора строк схемы и может использоваться так же.  
+ , и делает это по-другому. **DMSCHEMA_MINING_MODELS** набора строк схемы очень похож на [DBSCHEMA_TABLES](../../../analysis-services/schema-rowsets/ole-db/dbschema-tables-rowset.md) набора строк схемы и может использоваться так же.  
   
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  **DMSCHEMA_MINING_MODELS** набор строк содержит следующие столбцы.  
@@ -65,13 +63,13 @@ ms.lasthandoff: 12/08/2017
   
 |Имя столбца|Индикатор типа|Состояние ограничения|  
 |-----------------|--------------------|-----------------------|  
-|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательно.|  
-|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательно.|  
-|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**MODEL_TYPE**|**DBTYPE_WSTR**|Необязательно.|  
-|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательно.|  
-|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Необязательно.|  
-|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Необязательно.|  
+|**MODEL_CATALOG**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MODEL_SCHEMA**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MODEL_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**MODEL_TYPE**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**ПАРАМЕТРЫ SERVICE_NAME**|**DBTYPE_WSTR**|Необязательный параметр.|  
+|**SERVICE_TYPE_ID**|**DBTYPE_UI4**|Необязательный параметр.|  
+|**MINING_STRUCTURE**|**DBTYPE_WSTR**|Необязательный параметр.|  
   
  Примеры запросов этот набор строк. в разделе [запрос, параметры, используемые для создания модели интеллектуального анализа данных](../../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md).  
   

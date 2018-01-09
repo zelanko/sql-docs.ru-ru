@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords: Discover Events event category
@@ -18,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4eeba0ee1a65901b9a767eaa4acae25af56fd23e
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: eee3ed0e00d25e255d1cf8de5cc08f0645cdd0dd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discover-events-data-columns"></a>Столбцы данных событий обнаружения
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Категория события обнаружения имеет следующие классы событий:  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/08/2017
 |CurrentTime|2|5|Содержит текущее время события обнаружения, если доступно. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |StartTime|3|5|Содержит время (если доступно) возникновения события окончания обнаружения. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
 |EndTime|4|5|Содержит время окончания события. Этот столбец не заполняется для таких классов событий запуска, как SQL:BatchStarting или SP:Starting. Ожидаемые форматы фильтрации: «ГГГГ-ММ-ДД» и «ГГГГ-ММ-ДД ЧЧ:ММ:СС».|  
-|Длительность|5|2|Содержит приблизительное количество времени (в миллисекундах), которое заняло событие обнаружения.|  
+|Duration|5|2|Содержит приблизительное количество времени (в миллисекундах), которое заняло событие обнаружения.|  
 |CPUTime|6|2|Содержит время ЦП в миллисекундах, использованного событием.|  
 |Severity|22|1|Содержит степень серьезности исключения.|  
 |Успешно|23|1|Содержит результат события обнаружения. Возможны следующие значения.<br /><br /> 0 = неуспешное завершение;<br /><br /> 1 = успешное завершение.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/08/2017
 |ServerName|43|8|Содержит имя экземпляра служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в котором произошло событие обнаружения.|  
 |RequestProperties|45|9|Содержит свойства в запросе XMLA.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

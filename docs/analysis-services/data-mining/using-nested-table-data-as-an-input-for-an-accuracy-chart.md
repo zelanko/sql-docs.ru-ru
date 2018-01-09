@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 05314d5f52757332c8909f78fd57f8d141ff1696
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d2602a79fd7a9beeffb6057428c71dec7a14f0e0
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Использование данных вложенной таблицы в качестве входных для диаграммы точности
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При проверке точности модели интеллектуального анализа данных с помощью внешних данных, если модель интеллектуального анализа данных содержит вложенные таблицы, внешние данные также должны содержать таблицу вариантов и связанную вложенную таблицу.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/08/2017
   
      Если необходимо изменить связь между вложенной таблицей и таблицей вариантов, нажмите кнопку **Изменить соединение** , после чего откроется диалоговое окно **Создание связи** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выбрать и сопоставить данные проверки модели](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
  [Применение фильтров к данным проверки модели](../../analysis-services/data-mining/apply-filters-to-model-testing-data.md)  
   

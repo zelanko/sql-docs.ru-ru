@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3679e15b62a746cba1322bdf85691e313839ba46
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 91fa99b0a5338f705cecff4d1622a2db0a262154
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="discovercsdlmetadata-rowset"></a>Набор строк DISCOVER_CSDL_METADATA
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Возвращает сведения о [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] данных модели (табличной или многомерной), предоставляя определение модели в формате CSDLBI (язык определения концептуальной схемы с заметками бизнес-Аналитики). CSDLBI основан на языке CSDL, схеме XML, используемой платформой Entity Data Framework, необходимой для обеспечения коммуникации между сервером [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] и клиентом [!INCLUDE[ssCrescent](../../../includes/sscrescent-md.md)] . Заметки бизнес-аналитики (BI) предоставляют дополнительные метаданные о табличных моделях и их объектах. Дополнительные сведения о табличных моделях данных см. в разделе [Заметки языка CSDL для бизнес-аналитики (CSDLBI)](../../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/csdl-annotations-for-business-intelligence-csdlbi.md).  
@@ -36,15 +34,15 @@ ms.lasthandoff: 12/08/2017
 ## <a name="rowset-columns"></a>Столбцы наборов строк  
  Набор строк **DISCOVER_CSDL_METADATA** содержит следующие столбцы.  
   
-|**Имя столбца**|**Индикатор типа**|**Ограничение**|**Description**|  
+|**Имя столбца**|**Индикатор типа**|**Ограничение**|**Описание**|  
 |---------------------|------------------------|---------------------|---------------------|  
 |**CATALOG_NAME**|**DBTYPE_WSTR**|Да|Задает имя базы данных, для которой запрошено описание CSDLBI. Если отсутствует, используется текущая база данных.<br /><br /> Это ограничение необходимо для всех типов моделей.|  
 |**PERSPECTIVE_ID**|**DBTYPE_WSTR**|Да|Задает идентификатор перспективы, определенной в модели, заданной с помощью CATALOG_NAME.<br /><br /> Необязательное ограничение. Все типы моделей.|  
 |**PERSPECTIVE_NAME**|**DBTYPE_WSTR**|Да|Задает имя перспективы, определенной в модели, заданной с помощью CATALOG_NAME.<br /><br /> Это ограничение необходимо, когда табличная модель содержит перспективы или в многомерное решение входит несколько кубов или перспектив.|  
-|**МЕТАДАННЫЕ**|**DBTYPE_WSTR**|Нет|Строка, содержащая XML-определение источника данных и его свойств в соответствии со CSDLBI-схемой.|  
+|**МЕТАДАННЫЕ**|**DBTYPE_WSTR**|нет|Строка, содержащая XML-определение источника данных и его свойств в соответствии со CSDLBI-схемой.|  
 |**CUBE_ID**|**DBTYPE_WSTR**|Да|Идентификатор строки.<br /><br /> Это ограничение необязательно для многомерных баз данных. Если доступно несколько кубов и ограничение не указано, то возвращается куб по умолчанию.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  К DISCOVER_CSDL_METADATA предъявляются следующие требования.  
   
 -   Если база данных не указана с использованием ограничения CATALOG_NAME, запрос DISCOVER завершится неудачей.  

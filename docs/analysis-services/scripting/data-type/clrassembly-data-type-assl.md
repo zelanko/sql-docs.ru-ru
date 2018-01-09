@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 apiname: ClrAssembly Data Type
@@ -25,11 +23,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37d631efd4bd1512730ce646d1e91d5a72744223
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: aefbbf4ed85773ddf29993b35ddf6d3cfa2c482f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="clrassembly-data-type-assl"></a>Тип данных ClrAssembly (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Определяет производный тип данных, представляющий [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сборку, связанную с [базы данных](../../../analysis-services/scripting/objects/database-element-assl.md) или [сервера](../../../analysis-services/scripting/objects/server-element-assl.md) элемент  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/08/2017
   
 ## <a name="data-type-characteristics"></a>Характеристики типа данных  
   
-|Характеристика|Описание|  
+|Характеристика|Description|  
 |--------------------|-----------------|  
 |Базовые типы данных|[Сборки](../../../analysis-services/scripting/objects/assembly-element-assl.md)|  
 |Производные типы данных|None|  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |Дочерние элементы|[Файлы](../../../analysis-services/scripting/collections/files-element-assl.md), [PermissionSet](../../../analysis-services/scripting/properties/permissionset-element-assl.md)|  
 |Производные элементы|В разделе [сборки](../../../analysis-services/scripting/objects/assembly-element-assl.md) ([сборки](../../../analysis-services/scripting/collections/assemblies-element-assl.md) коллекцию [базы данных](../../../analysis-services/scripting/objects/database-element-assl.md) или [сервера](../../../analysis-services/scripting/objects/server-element-assl.md))|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **ClrAssembly** элемент содержит файлы, необходимые для повторного создания [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] сборки, связанной с экземпляром [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] или с конкретной базой данных экземпляра [!INCLUDE[ssAS](../../../includes/ssas-md.md)], а также разрешения, необходимые для выполнения этой сборки.  
   
  Соответствующий элемент в объектной модели Analysis Management объекты AMO — это <xref:Microsoft.AnalysisServices.ClrAssembly>.  

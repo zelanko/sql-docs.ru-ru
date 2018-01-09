@@ -5,13 +5,10 @@ ms.date: 03/03/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 078c21b0af6caeed8700861e315aeeefa53c108f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6c68c3d8eba2ec1519c38a89c7a1b0b71f3be4e3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="actions-in-multidimensional-models"></a>Действия в многомерных моделях
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Действие — инициированную пользователем операцию выбранного куба или его части куба. Эта операция может запускать приложение, для которого в качестве параметра используется выбранный элемент, или получать сведения о выбранном элементе. Дополнительные сведения о действиях см. в разделе [Действия (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -83,7 +80,7 @@ ms.lasthandoff: 12/08/2017
 |--------------|-----------------|  
 |**Вызов**|Указывает способ запуска действия. Интерактивный способ, заданный по умолчанию, указывает на то, что действие будет запущено при открытии пользователем объекта. Допустимые параметры:<br /><br /> Пакет<br /><br /> Интерактивно<br /><br /> При открытии|  
 |**Приложение**|Описывает приложение действия.|  
-|**Description**|Описывает действие.|  
+|**Описание**|Описывает действие.|  
 |**Заголовок**|Указывает заголовок, отображаемый для действия. Если заголовок является многомерным выражением, то укажите значение **True** для свойства **Caption is MDX**.|  
 |**Caption is MDX**|Укажите значение **True** , если заголовок является многомерным выражением, а в обратном случае — значение **False** .|  
   
@@ -123,7 +120,7 @@ parametervalue1
 & ...  
 ```  
   
- Например:  
+ Пример:  
   
 ```  
 http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Region=West  
@@ -135,7 +132,7 @@ http://localhost/ReportServer/Sales/YearlySalesByCategory?rs:Command=Render&Regi
  **Столбцы детализации**  
  Выберите одно или несколько измерений и столбцы детализации для каждого измерения, возвращенные клиентскому приложению действием.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Кубы в многомерных моделях](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
   
   

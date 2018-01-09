@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8b75857391d8c5298db654469ada8c117926dc89
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 79e7bf085f6bd1faab6fe367a2c8319192c7f2f7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="csdlbi-concepts"></a>Основные понятия CSDLBI
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Язык определения концептуальной схемы с заметками бизнес-Аналитики (CSDLBI) основан на данных Entity Framework, которая является абстракцией, представляющей данные способом, который позволяет разрозненные наборы данных программно обращаться, запрашивать или экспортировать. CSDLBI используется для представления моделей данных, созданных с помощью [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], поскольку поддерживает широкий выбор отчетов, управляемых данными, и приложений.  

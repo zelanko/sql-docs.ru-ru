@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords: NONEMPTYCROSSJOIN
@@ -20,11 +20,11 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.workload: Inactive
-ms.openlocfilehash: 356f5c7c807645e798527fc29fc5ccb587e3bac4
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: ffa983a749245022d0815906fe8e17850f9aabdf
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (многомерные выражения)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Счетчик*  
  Допустимое числовое выражение, указывающее количество наборов, которые необходимо вернуть.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **NonEmptyCrossjoin** функция возвращает перекрестное произведение двух или более множеств в виде одного множества, исключая пустые кортежи и кортежи без данных, предоставленных базовым таблицам фактов. Специфика **NonEmptyCrossjoin** работы функции все вычисляемые элементы автоматически исключаются.  
   
  Если *число* не указан, функция выполняет перекрестное соединение всех указанных наборов и исключает из полученного набора пустые элементы. В противном случае функция выполняет перекрестное соединение указанного количества наборов, начиная с первого. **NonEmptyCrossjoin** функция использует остальные наборы, которые заданы в последующих указанных наборов, но которые не были перекрестного присоединены, чтобы определить, какие непустых элементов в результирующем наборе перекрестного соединения. **NonEmptyCrossjoin** функции отношениях **NON_EMPTY_BEHAVIOR** Задание вычисляемых мер.  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e05ba70d4d1593e444cd8735196ddb04e4ef7ae7
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ea027aba8d0d49c752bd31569f84d0f0cec022bd
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="objects-assl"></a>Объекты (ASSL)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе справки содержатся сведения о синтаксисе и использовании для каждого элемента, который выступает в качестве объекта в схеме языка сценариев служб Analysis Services (ASSL).  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/08/2017
   
  В редких случаях конечный элемент в схеме, который выглядит как свойство, классифицируется как объект, поскольку тип элемента является типом объекта. Например **источника** из **измерения** объект имеет тип **DimensionBinding**.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Элемент|Description|  
 |-------------|-----------------|  

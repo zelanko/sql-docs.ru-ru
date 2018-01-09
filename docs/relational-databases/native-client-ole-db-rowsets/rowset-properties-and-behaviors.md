@@ -8,7 +8,7 @@ ms.service:
 ms.component: native-client-ole-db-rowsets
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -22,11 +22,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 68f4ffdbf0408a936d7a2c9b49f18eb8adb32520
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a0c53bff9e68fb0b95ce2876fd9521c0eb40c206
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="rowset-properties-and-behaviors"></a>Свойства и поведение наборов строк
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
 |SSPROP_MAXBLOBLENGTH|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_I4<br /><br /> По умолчанию: Поставщик не ограничивает размер текста, возвращенный сервером, и свойство имеет значение максимальной. Например, 2147483647.<br /><br /> Описание: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента выполняет инструкцию SET TEXTSIZE для ограничения длины данных больших двоичных объектов (BLOB), возвращаемых инструкцией SELECT.|  
 |SSPROP_NOCOUNT_STATUS|Столбец: NoCount<br /><br /> R Чтение и запись: только для чтения<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: значение VARIANT_FALSE<br /><br /> Описание: Логическое значение, представляющее состояние SET NOCOUNT ON/OFF в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: если SET NOCOUNT ON<br /><br /> VARIANT_FALSE: если SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_BSTR (1-2000 символов допускается)<br /><br /> Значение по умолчанию — Пустая строка<br /><br /> Описание: Текст сообщения уведомления о запросе. Определяется пользователем, не имеет формата определения.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_BSTR<br /><br /> Значение по умолчанию — Пустая строка<br /><br /> Описание: Параметры уведомлений о запросах. Указывается в строке `name=value`. За создание службы и считывание уведомлений из очереди отвечает пользователь. Строка параметров уведомлений запросов имеет следующий синтаксис.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Например:<br /><br /> `service=mySSBService;local database=mydb`|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_BSTR<br /><br /> Значение по умолчанию — Пустая строка<br /><br /> Описание: Параметры уведомлений о запросах. Указывается в строке `name=value`. За создание службы и считывание уведомлений из очереди отвечает пользователь. Строка параметров уведомлений запросов имеет следующий синтаксис.<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Пример:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_UI4<br /><br /> Значение по умолчанию — 432000 секунд (5 дней)<br /><br /> Минимум: 1 секунд<br /><br /> Максимум: 2 ^ 31-1 секунд<br /><br /> Описание: Количество секунд, уведомление о запросе будет активным.|  
   
 ## <a name="see-also"></a>См. также:  
