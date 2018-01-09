@@ -31,7 +31,7 @@ SQL Server поддерживает следующие аналитически�
   
 |||  
 |-|-|  
-|[CUME_DIST &#40; Transact-SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)|[РУКОВОДИТЕЛЬ &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)|  
+|[CUME_DIST &#40; Transact-SQL &#41;](../../t-sql/functions/cume-dist-transact-sql.md)|[LEAD &#40; Transact-SQL &#41;](../../t-sql/functions/lead-transact-sql.md)|  
 |[FIRST_VALUE &#40; Transact-SQL &#41;](../../t-sql/functions/first-value-transact-sql.md)|[PERCENTILE_CONT &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-cont-transact-sql.md)|  
 |[LAG &#40; Transact-SQL &#41;](../../t-sql/functions/lag-transact-sql.md)|[Функция PERCENTILE_DISC &#40; Transact-SQL &#41;](../../t-sql/functions/percentile-disc-transact-sql.md)|  
 |[LAST_VALUE &#40; Transact-SQL &#41;](../../t-sql/functions/last-value-transact-sql.md)|[PERCENT_RANK &#40; Transact-SQL &#41;](../../t-sql/functions/percent-rank-transact-sql.md)|  
