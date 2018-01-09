@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -27,11 +25,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 512e5321c0be221e06988dfc1991409a044166bb
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 82cafa346d2347afa9022a61d9ffce018d9d0dd8
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="partitions---write-enabled-partitions"></a>Секции — секции, доступные для записи
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Данные в кубе доступны только для чтения. Однако для определенных сценариев может быть необходимым иметь доступ к секции с возможностью записи. Секции, доступные для записи, позволяют пользователям исследовать сценарии, изменяя значения ячеек и анализируя влияние этих изменений на данные куба. При разрешении записи в секцию клиентские приложения могут записывать изменения данных секции. Эти изменения, называющиеся данными обратной записи, сохраняются в отдельной таблице, и не перезаписывают существующие данные в группе мер. Однако они включены в результаты запросов, поскольку являются частью данных куба.  

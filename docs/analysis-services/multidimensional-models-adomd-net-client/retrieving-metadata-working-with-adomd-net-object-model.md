@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 8e4b99f710a79115233d3872db2bb36a5671ee69
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: e94ba0d7842e40a1535ae865fd6440f4c16eee68
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="retrieving-metadata---working-with-adomdnet-object-model"></a>Извлечение метаданных - работа с объектной моделью ADOMD.NET
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]ADOMD.NET предоставляет модель объектов для просмотра кубов и подчиненных объектов, содержащихся в источниках аналитических данных. Однако эта модель объектов предоставляет доступ не ко всем метаданным для источника аналитических данных. Модель объектов обеспечивает доступ только к наиболее полезным сведениям, которые будет отображать клиентское приложение, чтобы пользователь мог составлять команды в интерактивном режиме. Представляемые метаданные имеют менее высокую сложность, поэтому модель объектов ADOMD.NET проще использовать.  

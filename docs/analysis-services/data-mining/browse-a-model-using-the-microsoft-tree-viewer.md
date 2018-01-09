@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,11 +30,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bb13244b95652917fdf09d017d66f927be915c8b
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 61e3be434f2029216742813178b041b083174362
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Просмотр модели с помощью средства просмотра деревьев (Майкрософт)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] Средство просмотра деревьев в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] отображает деревья принятия решений, построенных с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] алгоритм дерева принятия решений. Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] — это гибридный алгоритм дерева принятия решений, который поддерживает и классификацию, и регрессию. Поэтому это средство просмотра можно использовать для просмотра моделей, основанных на алгоритме линейной регрессии [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Алгоритм дерева принятия решений [!INCLUDE[msCoName](../../includes/msconame-md.md)] используется для прогнозирующего моделирования дискретных и непрерывных атрибутов. Дополнительные сведения об этом алгоритме см. в разделе [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md).  
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/08/2017
   
  [В начало](#BKMK_TabsPanes)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Средства просмотра моделей интеллектуального анализа данных &#40; конструктор моделей интеллектуального анализа данных &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   

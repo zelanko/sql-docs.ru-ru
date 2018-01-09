@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: Profiler [SQL Server Profiler], Analysis Services
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 98bafd9d594d06ea85330d8affc47969bbcab43f
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ed8d92643804b0b73c6d73d304d1cdedfe53b39e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Наблюдение за интеллектуальным анализом данных с помощью приложения SQL Server Profiler (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]При наличии необходимых разрешений можно использовать для наблюдения за интеллектуальным анализом данных, которые выдаются как запросы, отправленные экземпляру служб SQL Server Analysis Services SQL Server Profiler. В это понятие включается обработка моделей и структур, запросы прогнозов и содержимого, а также создание новых моделей и структур.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/08/2017
   
  Просмотр инструкций команд в журнале трассировки дает также возможность ознакомиться с синтаксисом сложных инструкций, передаваемых клиентом серверу служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , включая вызовы системных хранимых процедур. Эти сведения могут оказаться полезными при отладке или в качестве источника шаблонов для создания новых прогнозирующих запросов и моделей. С несколькими примерами вызовов хранимых процедур, которые могут быть получены через трассировку, можно ознакомиться в разделе [Примеры запросов к модели кластеризации](../../analysis-services/data-mining/clustering-model-query-examples.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)   
  [Мониторинг служб Analysis Services с помощью расширенных событий SQL Server](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   

@@ -5,12 +5,10 @@ ms.date: 03/01/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 79d2c8b506cd42bd04ae4fb95f28fa2b3a07f613
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: ecd909a6aeb0fb0b7d0557ba93333709f5ade242
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>добавить модель интеллектуального анализа данных к существующей структуре интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]После первой модели, можно добавить несколько моделей интеллектуального анализа данных к структуре интеллектуального анализа данных. В каждой модели должны содержаться столбцы, существующие в структуре, но использование столбцов можно определять отдельно для каждой модели интеллектуального анализа данных. Дополнительные сведения об определении столбцов моделей интеллектуального анализа данных см. в разделе [Столбцы модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-columns.md).  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/08/2017
   
  На вкладке **Модели интеллектуального анализа данных** появляется новая модель интеллектуального анализа данных. Модель использует столбцы по умолчанию, существующие в структуре. Дополнительные сведения об изменении столбцов см. в разделе [Изменение свойств модели интеллектуального анализа данных](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

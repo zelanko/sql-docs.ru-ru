@@ -8,7 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: analysis-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
@@ -17,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7a4ecab616136579c5a97b92a39ba2e2a2f5c7f9
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 2a8a5e6517b0bbd44d17f07d5185722914ecfc51
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>Установка или удаление надстройки Power Pivot для SharePoint (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] — это совокупность компонентов сервера приложений и служб, которые предоставляют [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] доступа к данным в [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] фермы. Надстройка [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint (**spPowerpivot16.msi**) — это пакет установщика, используемый для установки компонентов сервера приложений.  
@@ -110,7 +110,7 @@ ms.lasthandoff: 12/08/2017
 6.  Нажмите **Установить** , чтобы завершить установку.  
   
 ### <a name="command-line-installation"></a>Установка из командной строки  
- Для установки из командной строки откройте командную строку с правами администратора, а затем запустите файл **spPowerPivot16.msi**. Например:  
+ Для установки из командной строки откройте командную строку с правами администратора, а затем запустите файл **spPowerPivot16.msi**. Пример:  
   
  `Msiexec.exe /i spPowerPivot16.msi`.  
   
@@ -145,7 +145,7 @@ Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt
 Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_ADOMD,SQL_AMO,SQLAS_SP_Common”  
 ```  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |Analysis_Server_SP_addin16|[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] Конфигурация|  
 |SQL_OLAPDM|Поставщик OLE DB служб Analysis Services для SQL Server 2016|  

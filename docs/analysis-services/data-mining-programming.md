@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016 Preview
@@ -22,11 +19,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7deb7ccd395a6dda75ac443f17f4e2b516b99c11
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: a401073a7bcf0d7e8559c65ab6b05d25bd2a681e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-programming"></a>Программирование интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Если выяснится, что встроенные инструменты и средства просмотра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] не удовлетворяет требованиям, можно расширить возможности [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , разработав собственные модули. При таком подходе имеются два варианта.  
@@ -59,7 +56,7 @@ ms.lasthandoff: 12/08/2017
   
      С помощью расширений интеллектуального анализа данных можно инкапсулировать инструкции команд, прогнозирующие запросы и запросы метаданных и возвращать результаты в табличном формате при условии, что было создано соединение с сервером служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [OLE DB для интеллектуального анализа данных](../analysis-services/data-mining-programming-ole-db.md)  
  Приводит описание добавлений в спецификации, предназначенных для поддержки интеллектуального анализа данных и многомерных данных: новые наборы строк схемы и столбцы, язык расширений интеллектуального анализа данных (DMX) для создания и управления структур интеллектуального анализа данных.  
   

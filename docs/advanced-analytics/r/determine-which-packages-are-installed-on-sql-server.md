@@ -1,13 +1,13 @@
 ---
 title: "Определить, какие пакеты R установлены на сервере SQL Server | Документы Microsoft"
 ms.custom: 
-ms.date: 10/09/2016
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
 ms.prod_service: machine-learning-services
 ms.component: r
-ms.technology: r-services
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9a7f7e43-b568-406c-9434-5a2ec64ec5f5
@@ -16,17 +16,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c570f5643880b1111889e29e6de03bbff4b10e1d
-ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
+ms.openlocfilehash: e3f906e0c5290b6aa2cab375e4761390f84e718d
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="determine-which-r-packages-are-installed-on-sql-server"></a>Определить, какие пакеты R установлены на сервере SQL Server
 
-При установке машинного обучения в SQL Server с параметром языка R, программа установки создает библиотеку пакет R, связанные с экземпляром. Каждый экземпляр имеет отдельный пакет библиотеки. Пакет библиотеки, **не** совместно используется экземплярами, в этом случае возможно, что разные пакеты для установки на различных экземплярах.
+При установке машинного обучения в SQL Server с параметром языка R, библиотеки пакета R создается специально для использования в экземпляре. Каждый экземпляр сервера имеет собственную библиотеку пакета. Пакет библиотеки не могут использоваться совместно экземпляров.
 
-В этой статье описывается, как определить, какие пакеты R устанавливаются для конкретного экземпляра.
+В этой статье описывается, как определить, какие пакеты R установлены для указанного экземпляра SQL Server.
 
 ## <a name="generate-r-package-list-using-a-stored-procedure"></a>Создать список пакетов R, с помощью хранимой процедуры
 
@@ -34,36 +34,34 @@ ms.lasthandoff: 12/20/2017
 
 ```SQL
 EXECUTE sp_execute_external_script
-@language=N'R'  
-,@script = N'str(OutputDataSet);  
-packagematrix <- installed.packages();  
-NameOnly <- packagematrix[,1];  
-OutputDataSet <- as.data.frame(NameOnly);'  
-,@input_data_1 = N'SELECT 1 as col'  
-WITH RESULT SETS ((PackageName nvarchar(250) ))  
+@language=N'R'
+,@script = N'str(OutputDataSet);
+packagematrix <- installed.packages();
+NameOnly <- packagematrix[,1];
+OutputDataSet <- as.data.frame(NameOnly);'
+, @input_data_1 = N''
+WITH RESULT SETS ((PackageName nvarchar(250) ))
 ```
 
-Дополнительные сведения о необязательный и поля по умолчанию для файла ОПИСАНИЯ пакета R см. в разделе [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
+Дополнительные сведения о необязательный и поля по умолчанию для поля ОПИСАНИЯ пакета R см. в разделе [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
 
 ## <a name="verify-whether-a-package-is-installed-with-an-instance"></a>Проверьте, установлен ли пакет с помощью экземпляра
 
-Если вы установили пакет и хотели бы убедиться, что он доступен для конкретного экземпляра SQL Server, можно выполнить следующий вызов хранимой процедуры для загрузки пакета и вернуть только сообщения.
+Если вы установили пакет и хотели бы убедиться, что он доступен для конкретного экземпляра SQL Server, можно выполнить следующий вызов хранимой процедуры для загрузки пакета и вернуть только сообщения. В этом примере ищет и загружает библиотеку RevoScaleR, если он доступен.
 
-```SQL
+```sql
 EXEC sp_execute_external_script  @language =N'R',
 @script=N'library("RevoScaleR")'
 GO
 ```
 
-В этом примере ищет и загружает библиотеку RevoScaleR.
++ Если найти пакет, будет возвращено сообщение: «Команд выполнена успешно».
 
-+ Если найти пакет, сообщение, возвращенное должны выглядеть как «Команд выполнена успешно».
-
-+ Если найти или загрузить пакет невозможно, возникает сообщение об ошибке, следующим образом: «произошла ошибка во внешнем сценарии: ошибка в library("RevoScaleR"): не найден пакет называется RevoScaleR»
++ Если найти или загрузить пакет невозможно, возникает ошибка, содержащий текст: «не найден пакет, который называется «MissingPackageName»»
 
 ## <a name="get-a-list-of-installed-packages-using-r"></a>Получение списка установленных пакетов с помощью R
 
-Существует несколько способов получить список установленных или загруженных пакетов с помощью средств и функций R. Многие инструменты разработки R предоставляют обозреватель объектов или список пакетов, которые были установлены или загружены в текущую рабочую область R.
+Существует несколько способов получить список установленных или загруженных пакетов с помощью средств и функций R. Многие инструменты разработки R предоставляют обозреватель объектов или список пакетов, которые были установлены или загружены в текущую рабочую область R. Этот раздел содержит некоторые коротких команд, которые можно использовать из командной строки R или в пакете обновления\_выполнение\_внешних\_сценария.
 
 + Из локальной программу R, используйте базовая функция R, например `installed.packages()`, который входит в `utils` пакета. Чтобы получить список, который является точным для экземпляра, необходимо явно указать путь к библиотеке или использовать средства R, связанных с библиотекой экземпляра.
 
@@ -79,6 +77,37 @@ GO
 sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;")
 sqlPackages <- rxInstalledPackages(computeContext = sqlServerCompute)
 sqlPackages
+```
+
+## <a name="get-library-location-and-version"></a>Получить расположение библиотеки и версии
+
+Следующий пример возвращает расположение библиотеки в локальном контексте и версия пакета RevoScaleR.
+
+```r
+rxFindPackage(RevoScaleR, "local")
+packageVersion("RevoScaleR")
+```
+
+## <a name="determine-path-of-library-used-by-sql-server"></a>Определить путь к библиотеке, используемый сервером SQL Server
+
+Если вы обновили машинного обучения компонентов с помощью привязки, путь к библиотеке R может измениться. В этом случае предыдущих ярлыки средств R может ссылаться на более ранней версии. Чтобы версии путь и пакета, используемый сервером SQL Server, можно выполнить команду, подобную следующей:
+
+```sql
+EXEC sp_execute_external_script
+    @language =N'R',
+    @script=N'
+    sql_r_path <- rxSqlLibPaths("local")
+      print(sql_r_path)
+    version_info <-packageVersion("RevoScaleR")
+      print(version_info)'
+```
+
+**Результаты**
+
+```text
+STDOUT message(s) from external script: 
+[1] "C:/Program Files/Microsoft SQL Server/MSSQL14.MSSQLSERVER1000/R_SERVICES/library"
+[1] '9.2.1'
 ```
 ## <a name="see-also"></a>См. также раздел
 

@@ -5,13 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
@@ -20,11 +17,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6bdd35da02c1679607ce89002a6a2c3edc569c0c
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: cec454c2fe5dc832879a8a320b3e921c4f71ceb2
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="analysis-services-instance-management"></a>Управление экземплярами служб Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Экземпляр служб Analysis Services является копией **msmdsrv.exe** исполняемый файл, который запускается как служба операционной системы. Каждый экземпляр полностью независим от других экземпляров на том же сервере и обладает собственной конфигурацией, разрешениями, портами, стартовыми учетными записями, областью хранения файлов и свойствами режима сервера.  
@@ -51,7 +48,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Единственным исключением является [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Администрирование развернутой на сервере системы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] всегда осуществляется в контексте фермы SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] отличается от других режимов сервера тем, что всегда существует лишь один экземпляр, который управляется либо из центра администрирования SharePoint, либо с помощью средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Подключение [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint к среде SQL Server Management Studio или к среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]возможно, но нежелательно. Ферма SharePoint включает инфраструктуру, выполняющую синхронизацию состояния сервера и отслеживающую доступность сервера. Использование других средств может повлиять на эти операции. Дополнительные сведения об администрировании сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] см. в разделе [Power Pivot для SharePoint (службы SSAS)](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Ссылка|Описание задачи|  
 |----------|----------------------|  
@@ -63,7 +60,7 @@ ms.lasthandoff: 12/08/2017
 |[Журнал операций в службах Analysis Services](../../analysis-services/instances/log-operations-in-analysis-services.md)|Описывает журналы и способы их настройки.|  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сравнение табличных и многомерных решений (службы SSAS)](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

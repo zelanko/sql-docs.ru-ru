@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -26,11 +24,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bde831aea891db84e76ae4d00612663ed315d869
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 175199b7090abc373e0ac39d1e99e81480df4e2e
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="write-enabled-dimensions"></a>Измерения, доступные для записи
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/08/2017
 > [!NOTE]  
 >  Обратная запись в измерения не поддерживается связанными измерениями.  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
  Обновление измерений, доступных для записи, могут выполнять только бизнес-пользователи, которые являются членами ролей базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , и которым было предоставлено разрешение на чтение измерения и запись в него. Для каждой роли можно контролировать возможность обновления тех или иных элементов. Чтобы бизнес-пользователи могли обновлять измерения, доступные для записи, их клиентское приложение должно поддерживать такую возможность. Для таких пользователей измерение, доступное для записи, должно содержаться в кубе, который подвергался обработке с момента последнего изменения измерения. Дополнительные сведения см. в разделе [Предоставление доступа к объектам и операциям (Analysis Services)](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   
  Пользователи и группы, входящие в роль «Администраторы», могут обновлять элементы атрибутов и значения свойств связанных элементов измерения, доступного для записи, даже если оно не включено в куб.  

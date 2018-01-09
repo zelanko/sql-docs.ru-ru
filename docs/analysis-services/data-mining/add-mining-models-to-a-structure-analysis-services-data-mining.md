@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,11 +21,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 074fab70ac5818aeb825691d63aa511f01698c1d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 42ae87b14d6ddff90b78bb3c23a7d536750d8317
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>Добавление моделей интеллектуального анализа данных в структуру (службы Analysis Services — интеллектуальный анализ данных)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Структуры интеллектуального анализа данных должна поддерживать несколько моделей интеллектуального анализа данных. Поэтому после выхода из мастера можно открыть структуру и добавить в нее новые модели интеллектуального анализа данных. Каждый раз при создании модели можно использовать другой алгоритм, изменять параметры или применять фильтры для использования другого подмножества данных.  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="specifying-column-content"></a>Указание содержимого столбцов  
  Для некоторых столбцов нужно также задавать *содержимое столбца*. При интеллектуальном анализе данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] алгоритм обрабатывает данные из столбца в соответствии со свойством «Тип содержимого» этого столбца. Например, если в данных есть столбец «Доход», нужно указать, что этот столбец содержит непрерывный числовой показатель, задав для него тип содержимого «Непрерывный». Можно также указать, что числа в столбце «Доход» следует сгруппировать в контейнеры, задав тип содержимого «Дискретизированный». По желанию можно задать точное число контейнеров. Можно создавать различные модели, которые будут по-разному обрабатывать столбцы. Например, одна модель может разбивать множество всех заказчиков на три возрастных группы, а другая — на десять.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Структуры интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Создание реляционной структуры интеллектуального анализа данных](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [Свойства модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-properties.md)   

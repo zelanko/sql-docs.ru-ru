@@ -8,9 +8,7 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -41,11 +39,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 473861d8ff30f272cdeaa08a0157c6ad1f9a5646
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 47a4d008318277ff684e1c627549187d9aca797a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cube-properties---multidimensional-model-programming"></a>Свойства куба - многомерной модели программирования
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Кубы имеют ряд свойств, которые можно задать для влияния на поведение всего куба. Эти свойства перечислены в следующей таблице.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/08/2017
 |**AggregationPrefix**|Общий префикс, используемый для имен агрегатов.|  
 |**Параметры сортировки**|Код локали (LCID) и флаг сравнения, отделенный символом подчеркивания, например Latin1_General_C1_AS.|  
 |**DefaultMeasure**|Содержит многомерное выражение, определяющее меру для куба по умолчанию.|  
-|**Description**|Содержит описание куба, которое может отображаться в клиентских приложениях.|  
+|**Описание**|Содержит описание куба, которое может отображаться в клиентских приложениях.|  
 |**ErrorConfiguration**|Содержит настраиваемые параметры обработки ошибок, которые относятся к обработке ситуаций с повторяющимися и неизвестными ключами, действиями при обнаружении ошибок и их предельному числу, файлам журналов ошибок и обработки ключей NULL.|  
 |**EstimatedRows**|Указывает предполагаемое количество строк в кубе.|  
 |**Идентификатор**|Содержит уникальный идентификатор куба.|  

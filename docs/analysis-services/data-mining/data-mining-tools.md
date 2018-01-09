@@ -5,12 +5,10 @@ ms.date: 03/14/2017
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,11 +22,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d47b9015ba7635a7392639fbc8a7e1ca5ff73d13
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 130c8098a7083019671b3b799246b16757fd1b5b
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-tools"></a>Средства интеллектуального анализа данных
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предоставляет следующие средства, которые можно использовать для создания решений интеллектуального анализа данных:  
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/08/2017
   
  **Дополнительные сведения см. в разделе** [Мастер интеллектуального анализа данных (службы Analysis Services — интеллектуальный анализ данных)](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md).  
   
-## <a name="data-mining-designer"></a>конструктор интеллектуального анализа данных  
+## <a name="data-mining-designer"></a>Конструктора моделей интеллектуального анализа данных  
  После создания структуры и модели интеллектуального анализа с помощью мастера интеллектуального анализа данных работать с существующими моделями и структурами можно с помощью конструктора интеллектуального анализа данных приложений в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] или [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] .  
   
  Конструктор содержит средства для решения следующих задач.  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Создание прогнозов и запросы содержания существующей модели интеллектуального анализа данных. Построение запросов с неизвестным компонентом, а также настройка запросов для формирования прогнозов для полных таблиц внешних данных.  
   
-## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a>Среда SQL Server Management Studio  
  После создания и развертывания моделей интеллектуального анализа данных на сервере можно в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] работать с базой данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , в которой размещены объекты интеллектуального анализа базы данных. Можно также продолжить выполнять задачи, в которых используется созданная модель, — исследование моделей, обработку новых данных и создание прогнозов.  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] также содержит редакторы запросов, которые могут быть использованы для проектирования и выполнения расширений интеллектуального анализа данных либо для работы с объектами интеллектуального анализа данных средствами XMLA.  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/08/2017
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Преобразования и задачи интеллектуальной обработки данных служб Integration Services  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают множество компонентов, которые поддерживают интеллектуальный анализ данных.  
   
- Некоторые средства служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] направлены на автоматизацию наиболее часто выполняемых задач интеллектуального анализа данных — прогнозирования, построения и обработки моделей. Например:  
+ Некоторые средства служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] направлены на автоматизацию наиболее часто выполняемых задач интеллектуального анализа данных — прогнозирования, построения и обработки моделей. Пример:  
   
 -   Создание пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , которые будут автоматически обновлять модель при каждом пополнении набора данных новыми клиентами.  
   
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Автоматическое создание моделей на основе переданных параметров.  
   
- В пакетном рабочем процессе интеллектуальный анализ данных можно использовать в качестве вводных данных для других процессов. Например:  
+ В пакетном рабочем процессе интеллектуальный анализ данных можно использовать в качестве вводных данных для других процессов. Пример:  
   
 -   Вероятностные значения, созданные моделью, могут использоваться для оценки показателей интеллектуального анализа текстовых данных, а также для других задач, требующих классификации.  
   
@@ -95,7 +93,7 @@ ms.lasthandoff: 12/08/2017
   
  **Дополнительные сведения см. в разделе** [Связанные проекты для решений интеллектуального анализа данных](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-reference.md)   
  [Задачи и инструкции по модели интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Задачи и инструкции средства просмотра моделей интеллектуального анализа данных](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   

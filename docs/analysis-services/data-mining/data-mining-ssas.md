@@ -5,12 +5,10 @@ ms.date: 03/02/2016
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
-ms.component: 
+ms.component: data-mining
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- analysis-services
-- analysis-services/data-mining
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data mining [Analysis Services], about data mining
@@ -20,11 +18,11 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ac8390ebf0ffd45388d4fcea1dfbf846146b3b0d
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: 6ccc1faad28913133cc0870899f20b443fc28eb7
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="data-mining-ssas"></a>Интеллектуальный анализ данных (службы SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был лидером в прогнозной аналитики с момента выпуска 2000, предоставляя интеллектуального анализа данных в [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Сочетание [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]и интеллектуального анализа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует интегрированную платформу для прогнозной аналитики, которая охватывает решения по очистке и подготовке данных, машинному обучению и отчетности. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Интеллектуальный анализ данных включает в себя несколько стандартных алгоритмов, включая модели кластеризации EM и K-средние, нейронные сети, логистическую регрессию и линейную регрессию, деревья принятия решений и классификаторы упрощенного алгоритма Байеса. Все модели располагают интегрированными визуальными элементами для упрощения разработки, уточнения и оценки моделей.  Интеграция интеллектуального анализа данных в решения бизнес-аналитики помогает принимать обоснованные решения по сложным вопросам.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/08/2017
   
 -   Защита и развертывание: обеспечивает безопасность на основе ролей через [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], в том числе раздельные разрешения для детализации на моделирование и структурирование данных. Простота развертывания моделей на других серверах, которая предоставляет пользователям доступ к закономерностям и прогнозированию  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В подразделах этого раздела описаны основные возможности интеллектуального анализа данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и связанные с ним задачи.  
   
 -   [Основные понятия интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-concepts.md)  
@@ -76,7 +74,7 @@ ms.lasthandoff: 12/08/2017
   
 -   [Общие сведения о безопасности (интеллектуальный анализ данных)](../../analysis-services/data-mining/security-overview-data-mining.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Службы R SQL Server](../../advanced-analytics/r-services/sql-server-r-services.md)  
   
   

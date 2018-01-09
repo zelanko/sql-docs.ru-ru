@@ -108,6 +108,8 @@
 
 ### [Установка новых пакетов R в SQL Server](r/install-additional-r-packages-on-sql-server.md)
 
+### [Установка новых пакетов Python в SQL Server](python/install-additional-python-packages-on-sql-server.md)
+
 ### [Включение управления пакетами R для экземпляра SQL Server](r/r-package-how-to-enable-or-disable.md)
 
 ### [Определение установленных пакетов на SQL Server](r/determine-which-packages-are-installed-on-sql-server.md)
