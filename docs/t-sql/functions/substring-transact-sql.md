@@ -89,12 +89,12 @@ WHERE database_id < 5;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|имя |Initial |ThirdAndFourthCharacters|
+|name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |ST |
-|tempdb  |t  |пакет управления |
+|master  |m  |st |
+|tempdb  |t  |mp |
 |model   |m  |de |
-|msdb    |m  |DB |
+|msdb    |m  |db |
 
 
   
