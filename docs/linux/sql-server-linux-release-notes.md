@@ -4,7 +4,7 @@ description: "В этом разделе содержатся заметки о 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 12/21/2017
+ms.date: 01/09/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.workload: Active
-ms.openlocfilehash: 2e43e6f3ae6761886b2279910a69a83e756dc35f
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 5b66fa7db6547bfbb9340ce5738dff064f6a48c9
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Заметки о выпуске для 2017 г. SQL Server в Linux
 
@@ -49,8 +49,9 @@ ms.lasthandoff: 12/23/2017
 
 В следующей таблице перечислены журнал выпуска для 2017 г. SQL Server.
 
-| Выпуск | Version | Дата выпуска |
+| Выпуск | Версия | Дата выпуска |
 |-----|-----|-----|
+| [CU3](#CU3) | 14.0.3015.40| 1-2018 |
 | [НАКОПИТЕЛЬНЫМ ОБНОВЛЕНИЕМ 2](#CU2) | 14.0.3008.27 | 11-2017 |
 | [CU1](#CU1) | 14.0.3006.16 | 10-2017 |
 | [ГЛОБАЛЬНЫЙ АДМИНИСТРАТОР](#GA) | 14.0.1000.169 | 10-2017 |
@@ -65,6 +66,20 @@ ms.lasthandoff: 12/23/2017
 - [Установить пакет Full-text Search](sql-server-linux-setup-full-text-search.md)
 - [Установить пакет агента SQL Server](sql-server-linux-setup-sql-agent.md)
 - [Установка служб SQL Server Integration Services](sql-server-linux-setup-ssis.md)
+
+## <A id="CU2"></a>Накопительный пакет обновления 3 (января 2018)
+
+Это накопительный пакет обновления 3 (CU3) выпуска 2017 г. SQL Server. Версия ядра SQL Server для этого выпуска, 14.0.3015.40. Сведения о исправления и улучшения в этом выпуске см. в разделе [https://support.microsoft.com/en-us/help/4052987](https://support.microsoft.com/en-us/help/4052987).
+
+### <a name="package-details"></a>Сведения о пакете
+
+Для установки пакетов вне сети или вручную можно загрузить пакеты RPM и Debian с информацией в таблице ниже:
+
+| Пакет | версия пакета | Файлы для загрузки |
+|-----|-----|-----|
+| Пакет Red Hat RPM | 14.0.3015.40-1 | [Пакет RPM ядра](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm)</br>[Пакет служб SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Пакет SLES RPM | 14.0.3015.40-1 | [пакет RPM ядра сервера MSSQL](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Высокий уровень доступности RPM пакета](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Пакет полнотекстового поиска об/мин](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Пакет RPM агента SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
+| Пакет Debian Ubuntu 16.04 | 14.0.3015.40-1 | [Пакет Debian ядра](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[Высокий уровень доступности Debian пакета](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[Пакет Debian полнотекстового поиска](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[Пакет Debian SQL Server, агент](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[Пакет служб SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <A id="CU2"></a>Накопительный пакет обновления 2 (ноябрь 2017 г.)
 
@@ -127,14 +142,14 @@ ms.lasthandoff: 12/23/2017
 | &nbsp; | Системные расширенные хранимые процедуры (XP_CMDSHELL, и т. д.) |
 | &nbsp; | Таблицы filetable, FILESTREAM |
 | &nbsp; | Задать сборки среды CLR с EXTERNAL_ACCESS или UNSAFE разрешение |
-| &nbsp; | Buffer Pool Extension |
+| &nbsp; | Расширение буферного пула |
 | **Агент SQL Server** |  Подсистемы: CmdExec, PowerShell, агент чтения очереди, служб SSIS, SSAS, SSRS |
-| &nbsp; | видны узлы |
+| &nbsp; | Предупреждения |
 | &nbsp; | Агент чтения журнала. |
 | &nbsp; | Система отслеживания измененных данных |
 | &nbsp; | Управляемое резервное копирование |
 | **Обеспечение высокого уровня доступности** | Зеркальное отображение базы данных  |
-| **безопасность** | расширенное управление ключами |
+| **Безопасность** | расширенное управление ключами |
 | &nbsp; | Проверки подлинности AD для связанных серверов | 
 | &nbsp; | Проверки подлинности AD для групп доступности (и действий) | 
 | &nbsp; | инструменты сторонних AD (Centrify Vintela, Powerbroker) | 
@@ -150,7 +165,7 @@ ms.lasthandoff: 12/23/2017
 
 В следующих разделах описаны известные проблемы с выпуском Общая доступность (GA) 2017 г. SQL Server в Linux.
 
-#### <a name="general"></a>Общие
+#### <a name="general"></a>Общие сведения
 
 - Обновление до выпуска общедоступной версии 2017 г. SQL Server поддерживается только из CTP-версии 2.1 или более поздней версии. 
 
@@ -247,7 +262,7 @@ ms.lasthandoff: 12/23/2017
 
 - При установке mssql conf и выполнению установки локализованной SQL Server, неправильные символы национального алфавита отображаются после локализованный текст «Настройка SQL Server...». Или для установок на основе нелатинских предложение может отсутствовать полностью. Отсутствует предложение должны отображаться следующие Локализованная строка: «лицензирования продукта успешно обработана.  Новый выпуск [\<имя\> выпуск]». Эта строка выводится только в информационных целях и далее накопительное обновление SQL Server решает эту для всех языков. Это не влияет на установки SQL Server каким-либо образом. 
 
-#### <a name="full-text-search"></a>Компонент Full-text Search
+#### <a name="full-text-search"></a>Full-Text Search
 
 - В этом выпуске, включая фильтры для документов Office доступны не все фильтры. Список поддерживаемых фильтров см. в разделе [установить SQL Server Full-Text Search в Linux](sql-server-linux-setup-full-text-search.md#filters).
 
