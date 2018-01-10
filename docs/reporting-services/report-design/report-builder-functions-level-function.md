@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 41235402-bb9e-4cb7-b91e-431e77db19cf
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5ed59cf792bb62b1930ce3bcf6cf9ea0e505b028
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07c04ef8576eaeec00b629c045c54136cb10e463
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---level-function"></a>Функции построителя отчетов — функция Level
   Возвращает текущий уровень глубины в рекурсивной иерархии.  
@@ -45,7 +43,7 @@ Level(scope)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Возвращает значение типа **Integer**. Если параметр *scope* определяет набор данных, область данных или нерекурсивное группирование (т. е. группирование без элемента **Parent** ), функция **Level** возвращает значение 0. Если параметр *scope* не указан, то возвращается уровень текущей области.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возвращаемые функцией **Level** значения отсчитываются от нуля, т. е. первым уровнем в иерархии является 0.  
   
  Функция **Level** может использоваться для обеспечения автоматического определения отступов в рекурсивной иерархии, такой как список сотрудников.  
@@ -59,7 +57,7 @@ Level(scope)
 =Level("Employees")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

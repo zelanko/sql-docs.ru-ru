@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - device information settings [Reporting Services], CSV rendering
 ms.assetid: f96f83a6-50bc-48ce-9fcd-fd9e1952d40a
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b3de919b1994f93f2ae63e94aeae98d6aaec6042
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 31825a3ad82d7dd48be2f062242f890489e117e4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="csv-device-information-settings"></a>Настройки сведений об устройстве CSV
   Настройки сведений об устройстве для модуля подготовки отчетов CSV позволяет изменять разделители и квалификаторы, а также указывать правила обработки разрывов строк. Также можно указать расширение файла, кодировку и определить включение строк заголовка в выходные данные. Поскольку разделителями, скорее всего, будут специальные символы, их следует кодировать в разделе CDATA, если параметры записываются в формате XML.  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/05/2017
 |**SuppressLineBreaks**|Показывает, удаляются ли разрывы строк из данных, включаемых в выходной документ. Значение по умолчанию — **false**. Если задано значение **true**, то значением параметров **FieldDelimiter**, **RecordDelimiter**и **Qualifier** не может быть пробельный символ.|  
 |**UseFormattedValues**|Показывает, помещаются ли форматированные строки в выходной CSV-документ. По умолчанию используется значение **true** , если параметр **ExcelMode** имеет значение **true**. В противном случае используется значение **false**.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   

@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.newschedule.f1
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 caps.latest.revision: "32"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f0c57efec1f1e0c06f516cef9d53bae19272d568
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e85eaa93ebeb16e9e5aff25bbe1f77e4fab3781f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="new-shared-schedule-management-studio"></a>Создание общего расписания (среда Management Studio)
   Используйте эту страницу для создания общего расписания для выполнения опубликованных отчетов и подписок. Общие расписания могут использоваться вместо расписаний отчетов или подписок. Двумя основными особенностями, которые отличают общие расписания от расписаний, относящихся к конкретным элементам, являются централизация данных расписания и возможность приостанавливать и возобновлять запланированные операции.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/05/2017
  **Однократно**  
  Этот параметр выбирается для создания расписания, выполняющегося только один раз, в определенную дату и в определенное время.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Создание, изменение и удаление расписаний](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   

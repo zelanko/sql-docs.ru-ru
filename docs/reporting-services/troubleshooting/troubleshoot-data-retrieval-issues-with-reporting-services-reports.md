@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7680946a-1660-4b59-a03a-c4d474cd8ed3
 caps.latest.revision: "4"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ae2ec9a548d851f8494d144401e043547d68e4b8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e58fa865cfa0465e6256bda88819ad2a73253cc4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-data-retrieval-issues-with-reporting-services-reports"></a>Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services
 Первым этапом обработки отчета является получение данных отчета для каждого набора данных при помощи выполнения запроса набора данных. При локальном просмотре отчета соединения с источниками данных и учетные данные должны использовать разрешения, достаточные для извлечения данных в компьютер. При выполнении отчета на сервере отчетов соединения с источниками данных и учетные данные должны использовать разрешения, достаточные для извлечения данных на сервере отчетов. Материал этого раздела используется для устранения проблем, связанных с получением данных отчета.   
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 * Запустите запрос в панели запроса в диалоговом окне **Свойства набора данных** . Дополнительные сведения см. в статье, посвященной [наборам данных для отчетов (построитель отчетов 3.0 и службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md).  
 * Поля добавляются вручную. Дополнительные сведения см. в статье, посвященной [добавлению, изменению и обновлению полей в области данных отчета (построитель отчетов 3.0 и службы SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

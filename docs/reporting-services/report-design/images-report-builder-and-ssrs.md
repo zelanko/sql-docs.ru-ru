@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cace97e0d65e0e3e4f8d6ce59ffd480ce1359ce5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 28a94267b7f2f53a84880a105bf7f6a348543db6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="images-report-builder-and-ssrs"></a>Изображения (построитель отчетов и службы SSRS)
   Изображение — это элемент отчета, содержащий ссылку на изображение, которое внедрено в отчет или хранится в базе данных, на сервере отчетов или где-либо еще в Интернете. Изображение может быть рисунком, повторяющимся в строках данных. Изображение можно также использовать в качестве фона некоторых элементов отчета.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
  [Добавление привязанного к данным изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Экспорт в файл изображения (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/exporting-to-an-image-file-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

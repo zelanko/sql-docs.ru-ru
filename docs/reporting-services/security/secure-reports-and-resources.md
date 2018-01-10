@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
 caps.latest.revision: "47"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 27a166e56c39fcaef49913838e44e32506a11d49
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8d759eccca2ea7d1c7b0803f3a44cb258ffb981
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-reports-and-resources"></a>Защищенные отчеты и ресурсы
   Можно управлять степенью предоставляемого пользователям доступа к отдельным отчетам и ресурсам. По умолчанию только пользователи, являющиеся членами встроенной группы **Администраторы** , могут выполнять отчеты, просматривать ресурсы, изменять свойства и удалять элементы. Остальные пользователи должны иметь созданные для них назначения ролей, предоставляющие доступ к отчету или ресурсу.  
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="securing-confidential-reports"></a>Защита конфиденциальных отчетов  
  Отчеты, содержащие конфиденциальные данные, следует защищать на уровне доступа к данным, требуя от пользователей, чтобы они предоставили учетные данные, дающие право на доступ к этим данным. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Кроме того, можно защитить папку, сделав ее недоступной для неавторизованных пользователей. Дополнительные сведения см. в подразделе [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [настроить доступ к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   

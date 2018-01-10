@@ -8,9 +8,7 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - events [Reporting Services]
 ms.assetid: 818b4cc1-e65d-4f1a-bf7d-fe269e6dd739
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 81987c0d3de479bf0779da8f6d248444dbdec71f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9cf4c5c0764d1525fd0f33c16b1303d6a23ae1a1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Справочник по ошибкам и событиям (службы Reporting Services)
   Этот раздел содержит сведения об ошибках и событиях служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Файлы журналов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также содержат сведения об ошибках. Дополнительные сведения о доступных типах файлов журналов и способах просмотра журналов см. в разделе [Файлы и источники журналов служб Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
 |133|Ошибка|Управление|Сервер отчетов<br /><br /> Диспетчер отчетов<br /><br /> обработчик планирования и доставки|Не удалось загрузить файл конфигурации. Возможная причина ошибки заключается в неправильных XML-данных.|  
 |134|Ошибка|Управление|Сервер отчетов|Серверу отчетов не удалось зашифровать значения настройки из файла конфигурации.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Отслеживание подписок служб Reporting Services](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)   
  [Файлы и источники журналов Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)  
   

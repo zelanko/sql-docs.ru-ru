@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c8de922f602a743fb0c2cdf6a247355f3794ef01
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7d8b0e4051da1cbcfc2ae641c2eb99102a13ac45
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Учебник. Добавление параметра к отчету (построитель отчетов)
 В этом учебнике вы добавите параметр к отчету [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, чтобы его читатели могли фильтровать данные по одному или нескольким значениям. 
@@ -505,7 +505,7 @@ For *@StoreID*в средстве просмотра отчетов отобра
   
 Отчет будет сохранен на сервере отчетов. Сервер отчетов, с которым установлено соединение, будет отображен в строке состояния в нижней части окна.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 На этом пошаговое руководство по добавлению параметра в отчет завершается. Дополнительные сведения о параметрах см. в разделе [Параметры отчета &#40;построитель отчетов и конструктор отчетов&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>См. также:  

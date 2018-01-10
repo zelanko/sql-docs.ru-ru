@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2cbb1fa3-959e-4df6-9887-ebc93cc1b686
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 946210d52bfd883e4cf26e2664fef9254f7e6086
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9a7cc41553ca20061bebb29a5956cf48ebede673
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="manage-shared-datasets"></a>Управление общими наборами данных
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]общие наборы данных получают данные из общих источников данных, которые подключены к внешним источникам данных. Общий набор данных предоставляет способ совместного использования запроса в целях предоставления согласованного набора данных для нескольких отчетов. Запрос к набору данных может включать параметры набора данных. Общий набор данных можно настроить для кэширования результатов запроса для конкретных сочетаний параметров при первом использовании или по расписанию. Кэширование общего набора данных можно использовать в сочетании с кэшированием отчета и потоками данных отчета в целях управления доступом к источнику данных.  
@@ -100,7 +98,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
 |Изменение свойств элемента общего набора данных.|Диспетчер отчетов|[Страница "Общие свойства" — "Общие наборы данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/10798e41-24c3-4e69-893b-7ee6af7fc958)|  
 |Указание дополнительных свойств общего набора данных для экземпляра общего набора данных в отчете.|Конструктор отчетов построителя отчетов|[Диалоговое окно «Свойства набора данных» — «Запрос»](http://msdn.microsoft.com/library/1fa34a4b-7de0-4e92-99fa-bc28a206773f)|  
 |Привязка к другому общему источнику данных для общего набора данных.|Диспетчер отчетов|[Страница "Выбор источника данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb)|  
-|Проверка значений по умолчанию для параметров набора данных.|Открытие в построителе отчетов или использование синтаксиса доступа через URL-адрес.|Например:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
+|Проверка значений по умолчанию для параметров набора данных.|Открытие в построителе отчетов или использование синтаксиса доступа через URL-адрес.|Пример:<br /><br /> `http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition`|  
 |Включение кэширования|Диспетчер отчетов|[Общие наборы данных в кэше (службы SSRS)](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)<br /><br /> [Страница "Кэширование", "Общие наборы данных" (диспетчер отчетов)](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)|  
 |Создание или изменение плана обновления кэша|Диспетчер отчетов|[Параметры обновления кэша (диспетчер отчетов)](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)|  
 |Просмотр схемы определения общего набора данных.|Диспетчер отчетов|`http://<reportserver>/shareddatasetdefinition.xsd`|  
@@ -127,7 +125,7 @@ http://localhost/reportserver/?/DataSet1&rs:command=GetShareddatasetDefinition
   
 -   Общие наборы данных следуют тем же правилам указания значений параметров, что и подписки.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,15 +17,15 @@ f1_keywords:
 - "10160"
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 caps.latest.revision: "12"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03a8561e921834373686c6582f6630c8047417b4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f733d1c6013bb6f8110a52007e1a3cfa682bfecd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Диалоговое окно «Свойства набора данных» — «Запрос» (построитель отчетов)
   Выберите **Запрос** в диалоговом окне **Свойства набора данных** , чтобы выбрать общий набор данных на сервере отчетов или создать внедренный набор данных. Для внедренного набора данных необходимо выбрать источник данных и создать запрос.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
  **Обновление полей**  
  Выполните команду запроса, чтобы обновить список полей в диалоговом окне [Свойства набора данных — страница "Поля"](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42) .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Справка построителя отчетов для диалоговых окон, панелей и мастеров](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  

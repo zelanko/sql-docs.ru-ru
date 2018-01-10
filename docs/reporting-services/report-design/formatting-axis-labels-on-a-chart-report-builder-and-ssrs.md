@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,13 +31,13 @@ ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: af8006697c18785e110a4b88b1549b6587e71ba1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c5fd2ef17552e0f27fd2206b4a14acdb1e1231bd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)
   Диаграммы, основанные на системе координат (гистограммы, линейчатые диаграммы, диаграммы с областями, точечные, графики, диаграммы диапазонов), имеют две оси, использующиеся для классификации и отображения связей между данными. Для каждой оси применимы свои виды форматирования.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Пример вычисления меток оси  
  В таблице содержится образец данных по продажам, которые должны быть показаны на гистограмме. Поле Nameдобавляется для области групп категорий, поле Quantity — для области значений.  
   
-|Название|Количество|  
+|Имя|Количество|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Добавление или удаление боковых полей с оси категорий  
  В линейчатой диаграмме, гистограмме и точечной диаграмме боковые поля автоматически добавляются по краям оси X. Размер поля изменить нельзя. Для всех остальных диаграмм боковые поля не добавляются. Дополнительные сведения см. в разделе [Добавление или удаление полей из диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Форматирование меток оси в виде значений даты или валюты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
  [Размещение меток на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md)  
@@ -132,7 +130,7 @@ ms.lasthandoff: 12/05/2017
   
  [Задание логарифмической шкалы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Форматирование точек данных на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  

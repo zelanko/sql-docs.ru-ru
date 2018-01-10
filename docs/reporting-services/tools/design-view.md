@@ -8,24 +8,22 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.rtp.rptdesigner.layoutview.f1
 helpviewer_keywords: Layout View dialog box
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 6d683ce26988ec3edda4706f3fa6903bb52ca556
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 43b324699b0e462f452b106846fe86d5e5e0919a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="design-view"></a>Конструктор
 В конструкторе отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] расположить элементы в отчете можно в режиме конструктора. Конструктор иногда называют областью конструктора или макетом.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="properties-pane"></a>Панель «Свойства»  
  Панель «Свойства» предназначена для просмотра свойств текущего выбранного в области конструктора элемента отчета или текущей выбранной группы в панели «Группирование». Можно также щелкнуть выбранный элемент отчета правой кнопкой мыши, а затем выбрать пункт **Свойства** , открыв соответствующее диалоговое окно **Свойства** для элемента или группы отчета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Советы по конструированию отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   

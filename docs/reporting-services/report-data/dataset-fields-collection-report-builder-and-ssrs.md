@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3884576-1f7e-4d40-bb7d-168312333bb3
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dfd2de97c1ed49e559ae4b991b6fc1b6ecfc05ff
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 93e0f3ac2c38d3fa61ec63c65c3a5ceb664bc4d8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>Коллекция полей набора данных (построитель отчетов и службы SSRS)
   Поля набора представляют данные из соединения с данными. Поле может использоваться для представления как числовых, так и нечисловых данных. Примеры включают в себя следующее: объемы продаж, итоговые суммы продаж, имена клиентов, идентификаторы баз данных, URL-адреса, изображения, пространственные данные и адреса электронной почты. В области конструктора поля отображаются в виде выражений в элементах отчета, таких как текстовые поля, таблицы и диаграммы.  
@@ -101,8 +99,8 @@ ms.lasthandoff: 12/05/2017
   
     |Тип данных SQL|Тип данных CLR|Description|  
     |-------------------|-------------------|-----------------|  
-    |**Date**|**DateTime**|Только тип данных Date|  
-    |**Time**|**TimeSpan**|Только время|  
+    |**Дата**|**DateTime**|Только тип данных Date|  
+    |**Time**|**TimeSpan**|Только тип данных Time|  
     |**DateTimeTZ**|**DateTimeOffset**|Дата и время со смещением часового пояса|  
     |**DateTime2**|**DateTime**|Дата и время с долями миллисекунд|  
   

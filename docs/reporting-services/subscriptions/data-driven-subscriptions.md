@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - data-driven subscriptions
 ms.assetid: ba009f62-0d4f-45e7-a27c-36fd5f0cd3a8
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5c58c81a095d072c807d61fcfd5571febb247ca9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8deb6531b2bc14cb156787c6de115af34f402cc4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-driven-subscriptions"></a>управляемая данными подписка
   Управляемая данными подписка обеспечивает возможность использования данных динамической подписки, получаемых от внешнего источника данных во время выполнения. В управляемой данными подписке можно также использовать статический текст и значения по умолчанию, указываемые при определении подписки. С помощью управляемых данными подписок можно осуществлять следующее.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
 |[Создание управляемой данными подписки (учебник по службам SSRS)](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)|Содержит пошаговые инструкции для изучения того, как создать управляемую данными подписку.|  
 |[Кэширование отчетов (службы SSRS)](../../reporting-services/report-server/caching-reports-ssrs.md)|Описывает использование с управляемой данными подпиской отсутствующего поставщика доставки для предварительной загрузки кэша.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Страница "Создание управляемой данными подписки" (диспетчер отчетов)](http://msdn.microsoft.com/library/814b4653-572a-48c7-847f-b310ba0f3046)   
  [Предварительная загрузка кэша (диспетчер отчетов)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  

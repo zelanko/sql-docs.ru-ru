@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: "52"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e470d64c425f967b37a42eed2467b925f05ad0e4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77666065993e86cbee7fa90beb4865a1562580c2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками
   Стандартная подписка — это подписка, созданная конкретным пользователем, который хочет получать отчет по электронной почте или в общую папку. В этом подразделе содержатся сведения о стандартных подписках, создаваемых и управляемых отдельными пользователями. К подпискам, управляемым данными, предъявляются другие требования, и они содержат другие шаги, обсуждаемые в отдельном подразделе. Дополнительные сведения см. в разделе [Создание, изменение и удаление управляемых данными подписок](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md).  
@@ -187,7 +185,7 @@ ms.lasthandoff: 12/05/2017
   
  Подписка удаляется автоматически, когда удаляется отчет, на котором она основана. Если подписка удаляется во время ее обработки, она останавливается, если операция удаления происходит до того, как модуль доставки получит данные подписки. В противном случае ее обработка будет продолжена.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   

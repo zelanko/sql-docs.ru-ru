@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10156"
@@ -18,13 +16,13 @@ ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: eb1182dfe11c9750d765d626d89fbc4b9d0d9d17
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ecb0a252a500086bf3b802d4c63085472543745c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Эффекты диаграммы — трехмерное отображение, багетная рамка и другие (построитель отчетов)
   Объемные (трехмерные) эффекты можно использовать, чтобы добавить глубину и увеличить визуальную привлекательность диаграммы в отчетах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы. Например, если нужно выделить отдельный срез разрезанной круговой диаграммы, можно повернуть диаграмму и изменить перспективу так, что пользователи обратят внимание на этот сегмент в первую очередь. После применения объемных эффектов к диаграмме все цвета градиента и стили штриховки отключаются.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="highlighting-3d-effects"></a>Выделение объемных эффектов  
  Можно добавить стили выделения в объемную диаграмму через свойство **Заливка** , которое отображается под Area3DStyle на панели «Свойства» при выборе области диаграмм. Простой стиль освещения применяет тот же оттенок к элементам области диаграммы. Реалистичный стиль изменяет оттенки элементов области диаграммы в зависимости от определенного угла освещения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [Добавление в диаграмму объемных эффектов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  

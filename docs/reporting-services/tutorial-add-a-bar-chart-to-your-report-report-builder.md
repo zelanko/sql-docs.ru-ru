@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 6039892e8cdd711102c2c3f647b0a201723b0eef
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8d12b916eaa9ae355730e71a5564fb3d13b5740
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Учебник. Добавление линейчатой диаграммы к отчету (построитель отчетов)
 В этом учебнике с помощью мастера в [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] будет создана линейчатая диаграмма в отчете [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы. Затем вы добавите фильтр и расширите возможности диаграммы. 
@@ -302,7 +302,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Нажмите кнопку **Сохранить**.   
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Учебник «Добавление линейчатой диаграммы в отчет» успешно завершен. Дополнительные сведения о диаграммах см. в разделах [Диаграммы](../reporting-services/report-design/charts-report-builder-and-ssrs.md) и [Линейчатые диаграммы](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>См. также:  

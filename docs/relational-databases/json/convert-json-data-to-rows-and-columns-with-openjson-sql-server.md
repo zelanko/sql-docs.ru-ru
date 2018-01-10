@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 07/18/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
-ms.service: 
 ms.component: json
 ms.reviewer: 
 ms.suite: sql
@@ -21,11 +20,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b40959b38860bc9e31bf093d7498c4391be19fce
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8cef7629fe382a5011e71e371c999e0aef84c35e
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="convert-json-data-to-rows-and-columns-with-openjson-sql-server"></a>Преобразование данных JSON в строки и столбцы с помощью функции OPENJSON (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,9 +59,9 @@ FROM OPENJSON(@json);
   
 **Результаты**  
   
-|ключ|value|type|  
+|ключ|value|Тип|  
 |---------|-----------|----------|  
-|имя|Джон|1|  
+|NAME|Джон|1|  
 |surname|Doe|1|  
 |age|45|2|  
 |навыки|["SQL","C#","MVC"]|4|

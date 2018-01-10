@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c2d8c81a-da1e-4a8a-9845-fff9a0903d24
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad9fcf05d0320850a1623bc62637299c0e4e9cf3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 167e448c51792ca91dfcdf01dd7e9ae32c1c82c7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cache-a-shared-dataset"></a>кэшировать общий набор данных
   Один из способов повышения производительности состоит в настройке свойств кэширования общего набора данных. При кэшировании общего набора данных копия результатов запроса сохраняется на указанный период времени. Первый пользователь, запрашивающий отчет, в котором используется общий набор данных, должен будет дождаться получения результатов запроса и завершения всех процессов обработки до просмотра отчета. Производительность работы последующих пользователей, запрашивающих тот же отчет в пределах времени кэширования, будет значительно повышена, поскольку запрос и обработка уже выполнены. Также можно указать расписание обновления кэша для выполнения запроса и кэширования результатов до истечения указанного периода кэширования.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  Нажмите кнопку **Применить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление общими наборами данных](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

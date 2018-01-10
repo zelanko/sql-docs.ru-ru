@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cd2500d7c1d3dff0ee0a3c41b40e6f35bb4060d5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 048406ef86bc2442e4d065f5461f85dbbd328495
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Основные понятия служб Reporting Services (SSRS)
   Этот раздел содержит краткий обзор основных понятий служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -106,7 +104,7 @@ ms.lasthandoff: 12/05/2017
   
      Внедренный источник данных представляет собой подключение к данным, которое сохраняется в определении отчета. Эти сведения могут использоваться только тем отчетом, в который они внедрены.  
   
--   **Учетные данные.** Учетные данные — это сведения для проверки подлинности, которые необходимы для получения доступа к внешним данным.  
+-   **Учетные данные.** .   Учетные данные — это сведения для проверки подлинности, которые необходимы для получения доступа к внешним данным.  
   
      Учетные данные используются для создания внедренного источника данных, для запуска запроса, а также для извлечения данных в процессе обработки отчета. Владелец источника данных определяет тип учетных данных, которые необходимо использовать для получения доступа к данным. Учетные данные управляются независимо от подключения к данным на сервере отчетов, на сайте SharePoint или на локальном компьютере в среде создания отчетов. В зависимости от типа источника данных учетные данные могут быть сохранены или настроены таким образом, чтобы их должен был вводить самостоятельно каждый пользователь. Необходимые учетные данные могут отличаться в зависимости от того, производится ли подключение к источнику данных с локального компьютера или с сервера отчетов. Дополнительные сведения см. в разделе [Указание учетных данных в построителе отчетов](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
   

@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: e1b43b9caff7c01c9e95249a18a2fe5c13bdbf3b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 234f87e2bcb222e318a5c935a7d8addca1d8c2fc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Настройка веб-части "Средство просмотра отчетов"
 
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
   
  Область «Параметры» предоставляет поля для ввода значений перед выполнением отчета. Она используется только в том случае, если определение отчета содержит параметры. Если отображается любая из областей "Параметры" или "Учетные данные", то представление отчета занимает оставшуюся ширину веб-части. Вы можете задать свойства веб-части, чтобы настроить ширину области "Параметры". Можно также определить метки, которые появляются рядом с конкретными параметрами страницы. Дополнительные сведения об изменении меток параметров см. в разделе [Настройка параметров опубликованного отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md).  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
  [Веб-часть "Средство просмотра отчетов" на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Добавление на страницу веб-части средства просмотра отчетов](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  

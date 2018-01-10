@@ -8,7 +8,7 @@ ms.service:
 ms.component: run-manage-packages-programmatically
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -24,11 +24,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 58548ba72a81257c14b2db3535fd1131c4983099
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 55cab9d27200b6a81979a357f89e3b5f55838978
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Загрузка выхода локального пакета
   Клиентские приложения могут считывать значения на выходе пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], если этот выход сохранен в назначения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с использованием [!INCLUDE[vstecado](../../includes/vstecado-md.md)], либо если выход сохранен в назначение "Неструктурированный файл" с использованием классов в пространстве имен **System.IO**. Кроме того, клиентское приложение может считывать выход пакета непосредственно из памяти, без необходимости промежуточного шага для сохранения данных. Это можно сделать с помощью пространства имен **Microsoft.SqlServer.Dts.DtsClient**, содержащего специализированные реализации интерфейсов **IDbConnection**, **IDbCommand** и **IDbDataParameter** из пространства имен **System.Data**. По умолчанию сборка Microsoft.SqlServer.Dts.DtsClient.dll устанавливается в каталог **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 4.  Создайте объект типа **DtsClient.DtsCommand**, использующий ранее созданный объект **DtsConnection**, и присвойте его свойству **CommandText** в качестве значения имя назначения DataReader в пакете. Затем вызовите метод **ExecuteReader** командного объекта, чтобы загрузить результаты пакета в новое назначение DataReader.  
   
-5.  При необходимости можно косвенно параметризовать выход пакета с использованием коллекции объектов **DtsDataParameter** для объекта **DtsCommand**, чтобы передать значения переменным, определенным в пакете. В рамках пакета можно использовать эти переменные в качестве параметров запроса или в выражениях для воздействия на результаты, возвращаемые в назначение DataReader. Необходимо определить эти переменные в пакете в пространстве имен **DtsClient**, прежде чем можно будет использовать их с объектом **DtsDataParameter** из клиентского приложения. (Может понадобиться нажать кнопку панели инструментов **Выбор столбцов переменных** в окне **Переменные**, чтобы отобразить столбец **Namespace**.) В клиентском коде при добавлении параметра **DtsDataParameter** в коллекцию **Parameters** объекта **DtsCommand** опустите ссылку на пространство имен DtsClient в имени переменной. Например:  
+5.  При необходимости можно косвенно параметризовать выход пакета с использованием коллекции объектов **DtsDataParameter** для объекта **DtsCommand**, чтобы передать значения переменным, определенным в пакете. В рамках пакета можно использовать эти переменные в качестве параметров запроса или в выражениях для воздействия на результаты, возвращаемые в назначение DataReader. Необходимо определить эти переменные в пакете в пространстве имен **DtsClient**, прежде чем можно будет использовать их с объектом **DtsDataParameter** из клиентского приложения. (Может понадобиться нажать кнопку панели инструментов **Выбор столбцов переменных** в окне **Переменные**, чтобы отобразить столбец **Namespace**.) В клиентском коде при добавлении параметра **DtsDataParameter** в коллекцию **Parameters** объекта **DtsCommand** опустите ссылку на пространство имен DtsClient в имени переменной. Пример:  
   
     ```  
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  

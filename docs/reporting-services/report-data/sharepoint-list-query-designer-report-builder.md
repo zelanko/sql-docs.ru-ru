@@ -8,23 +8,21 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: "7"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b1426e5e1de818317a391101149b3285c0b133bf
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f4b92fd68ee2202a6998b8d772d36e3aa08bd484
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Конструктор запросов к спискам SharePoint (построитель отчетов)
   Построитель и конструктор отчетов предоставляют как графический, так и текстовый конструктор запросов, которые помогают создавать запросы, указывающие, какие данные следует получить с сайта SharePoint для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных списка SharePoint, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, для его изменения или ввода команд запроса. Также можно импортировать существующий запрос из файла или отчета.  
@@ -101,7 +99,7 @@ ms.lasthandoff: 12/05/2017
 |**Выполнить запрос**|Выполните запрос. Результирующий набор отображается на панели результатов запроса.|  
 |**Показать скрытые поля**|Переключите, чтобы показать или скрыть поля, которые создаются SharePoint автоматически (например, ProgId и Level для элементов ссылок SharePoint), но, как правило, не используются в отчетах. Скрытие этих полей позволяет сделать список полей короче и удобнее в использовании.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструкторы запросов (построитель отчетов)](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

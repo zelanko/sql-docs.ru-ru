@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 caps.latest.revision: "13"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 763199247d5c6b1c86f7e078c4687c78dfc12650
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 106fb25d4fd8f58d34881e692a3bf508d6571d8c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Предоставление разрешений для элементов сервера отчетов на сайте SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] предоставляют встроенные средства безопасности, которые можно использовать для предоставления права доступа к элементам сервера отчетов, к которым предоставляется доступ с сайтов и из библиотек SharePoint. Если пользователям уже назначены разрешения, они получат и доступ к элементам и операциям сервера отчетов сразу после настройки параметров интеграции служб [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] и сервера отчетов. Можно использовать имеющиеся разрешения для передачи определений отчетов и других документов, просмотра отчетов, создания подписок и управления элементами.  
@@ -82,11 +80,11 @@ ms.lasthandoff: 12/05/2017
   
  Для использования встроенных средств безопасности необходимо назначить учетным записям пользователей или групп Windows группы SharePoint. За исключением администратора сервера и владельца сайта портала, которые имеют автоматический доступ к службам [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] после установки ПО, остальным пользователям должны быть предоставлены разрешения для доступа к серверу.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Объясняется, как использовать стандартные группы и уровни разрешений SharePoint для доступа к элементам сервера отчетов.  
   
- [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [Справочная таблица по разрешениям на доступ к спискам и сайтам SharePoint для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  Предоставляет ссылку на все разрешения продукта SharePoint, которые могут использоваться для получения доступа к операциям сервера отчетов.  
   
  [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
@@ -98,7 +96,7 @@ ms.lasthandoff: 12/05/2017
  [Задание разрешений для элементов сервера отчетов на сайте SharePoint (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Содержит инструкции по созданию новых групп SharePoint, имеющих разрешение на запуск построителя отчетов и установки параметров безопасности элементов модели. Этот раздел содержит также общее руководство по настройке пользовательских разрешений на любые элементы и операции сервера отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Защита и обеспечение безопасности служб Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   

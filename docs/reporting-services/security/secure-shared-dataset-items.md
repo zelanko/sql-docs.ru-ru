@@ -8,22 +8,20 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 08e6d8b5-d88c-4ed2-9c05-55c757e00014
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 17b7cc091c2723a35260665c30dc947171a8d6f1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f167edb4e9391a14682e46c3a7e839c48bc43396
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-shared-dataset-items"></a>Защита элементов общего набора данных
   На сервере отчетов элементы общего набора данных могут использоваться в нескольких отчетах. В целях управления уровнем доступа, предоставляемого пользователям, общие наборы данных можно защитить. По умолчанию только пользователи, являющиеся членами встроенной группы **Администраторы** , могут просматривать общие наборы данных, изменять свойства, включать кэширование, создавать планы обновления кэша и удалять элементы. Остальные пользователи должны иметь созданные для них назначения ролей, предоставляющие доступ к общему набору данных.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/05/2017
   
  Дополнительные сведения см. в разделах [Задачи уровня элемента](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md) и [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Управление общими наборами данных](../../reporting-services/report-data/manage-shared-datasets.md)   
  [Защита папок](../../reporting-services/security/secure-folders.md)   
  [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md)   

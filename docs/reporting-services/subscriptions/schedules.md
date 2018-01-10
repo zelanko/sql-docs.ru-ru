@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: "51"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e23823f0e372964e6193a8c7a67a349fa170f514
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d148c29185b72fe433a34034993342afa61970be
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="schedules"></a>Расписания
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют **общие расписания** и **расписания отчетов** , что позволяет управлять обработкой и распространением отчетов. Различие между двумя типами расписаний состоит в том, как они определяются, хранятся и управляются. Внутреннее строение обоих типов расписаний одинаково. В каждом расписании указывается тип повторения: ежемесячно, еженедельно или ежедневно. В пределах одного типа повторений можно указать интервалы и диапазон, определяющий частоту повторения события. Шаблон типа повторения и способ его задания одинаков при создании как общих расписаний, так и расписаний для отчетов.
@@ -140,7 +138,7 @@ ms.lasthandoff: 12/05/2017
 ###  <a name="bkmk_stoppingservice"></a> Последствия остановки службы сервера отчетов  
  При остановке службы сервера отчетов агент SQL Server продолжает добавлять запросы на обработку отчета в очередь. Сведения о состоянии от агента SQL Server указывают на то, что задание успешно завершилось. Однако из-за того, что служба сервера отчетов была остановлена, фактически обработка отчета не выполнялась. Запросы будут накапливаться в очереди до тех пор, пока служба сервера отчетов не будет перезапущена. Как только служба сервера отчетов будет перезапущена, все запросы на обработку отчета, находящиеся в очереди, начнут обрабатываться по очереди.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание, изменение и удаление моментальных снимков в журнале отчетов](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Подписки, управляемые данными](../../reporting-services/subscriptions/data-driven-subscriptions.md)   

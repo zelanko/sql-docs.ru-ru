@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
 caps.latest.revision: "17"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 14e26b4d8f398fcfc8d648f757e782e0afda2101
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a03feca8dfe4da40235745087577e307af69ba7f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Задание разрешений для работы сервера отчетов в веб-приложении SharePoint
   Для сервера отчетов, работающего в режиме интеграции с SharePoint, настройки безопасности, определенные на сайте SharePoint, определяют также, каким образом производится просмотр и управление отчетами, моделями отчетов и общими источниками данных. Если используются группы SharePoint, уровни разрешений и назначения разрешений по умолчанию, то работать с отчетами и другими документами можно с использованием текущих настроек безопасности.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Использование удаленных интерфейсов  
   
--   Открытие  
+-   Открыть  
   
 -   Просмотр страниц приложения  
   
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Разрешений на изменение моделей отчетов не существует. Модели отчетов могут создаваться и удаляться, но изменить их на сайте SharePoint нельзя. Для изменения модели отчета необходим конструктор моделей — клиентское средство разработки, на работу которого разрешения, предоставляемые в службах SharePoint, не влияют.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   

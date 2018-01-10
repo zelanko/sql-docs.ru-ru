@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 7ae2972cdb62c24ed9299b18d3b44de30e17caa8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9b1777520453efb9a38b687825249705bf66fd81
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---lookup-function"></a>Функции построителя отчетов — функция Lookup
   Возвращает первое совпадающее значение для заданного имени из набора данных, содержащего пары «имя-значение».  
@@ -54,7 +52,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Возвращает  
  Возвращает значение **Variant**или **Nothing** , если совпадения нет.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция **Lookup** позволяет извлечь значение из указанного набора данных, состоящего из пар "имя-значение" с отношением "один к одному". Например, для поля ID в таблице функция **Lookup** может быть использована для поиска соответствующего поля Name в наборе данных, не привязанном к области данных.  
   
  Функция**Lookup** выполняет следующие действия.  
@@ -104,7 +102,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 =Lookup(Fields!ProductID.Value, Fields!ID.Value, Fields!Name.Value, "Product")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: cf1b96c3-7f0f-4c94-ad08-5239c77ccfe4
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 63b61913ff8df9f2f822e83e5722f0a8895395bd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f1c37142936d631a6a01fbc805dcedc381679133
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs"></a>Добавление итога в группу или область данных табликса (построитель отчетов и службы SSRS)
  В отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] можно добавлять итоги к области данных табликса или ко всей области данных. По умолчанию итогом считается сумма данных с числовыми значениями, отличными от NULL, в группе или в области данных, вычисленная после применения фильтров. Чтобы добавить итоги к группе, выберите пункт **Добавить итоги** в контекстном меню для группы на панели «Группирование». Для добавления итогов в отдельную ячейку области тела табликса нужно в контекстном меню для этой ячейки выбрать пункт **Добавить итог** . Команда **Добавить итог** чувствительна к контексту и доступна только для числовых полей. В зависимости от выбранной ячейки табликса можно добавить итог для одной ячейки, выбрав эту ячейку в области тела табликса, или для всей группы, выбрав ячейку в области группы строк либо в области группы столбцов табликса. Дополнительные сведения об областях табликса см. в разделе [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md).  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/05/2017
   
      К области данных за пределами текущей группы добавляется новый столбец, после чего к каждому числовому полю в столбце добавляется итог по умолчанию.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Область выражения для суммирования, агрегатных функций и встроенных коллекций (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)   
  [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [Таблицы, матрицы и списки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  

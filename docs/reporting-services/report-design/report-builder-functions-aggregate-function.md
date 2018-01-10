@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 834118e295a58af22a0e0cdd3817af2f33cb023c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a1d7035d148f104a7661f2741c8e3ad6bac2a2ca
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---aggregate-function"></a>Функции построителя отчетов — агрегатная функция
   Возвращает пользовательские статистические данные заданного выражения в соответствии с определением поставщика данных.  
@@ -48,7 +46,7 @@ Aggregate(expression, scope)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Тип возвращаемых данных определяется поставщиком данных. Возвращает **Nothing** , если поставщик данных не поддерживает эту функцию или данные недоступны.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция **Aggregate** предоставляет способ использования статистических значений, вычисленных на внешнем источнике данных. Поддержка этой функции определяется модулем обработки данных. Например, модуль обработки данных служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] получает плоские наборы строк из запроса многомерных выражений. Некоторые строки результирующего набора могут содержать статистические значения, вычисленные на сервере источника данных. Они известны как *серверные статистические значения*. Чтобы просмотреть серверные статистические выражения в графическом конструкторе запросов служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], можно использовать кнопку **Показать статистическое выражение** на панели инструментов. Дополнительные сведения см. в статье [Пользовательский интерфейс конструктора запросов многомерных выражений служб Analysis Services (построитель отчетов)](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26).  
   
  При отображении сочетания значений статистического выражения и набора данных строк с подробными сведениями области данных табликса серверные статистические выражения обычно не отображаются, так как они не имеют подробных данных. Однако может потребоваться отображение всех значений, полученных для набора данных, и настройка способа вычисления и отображения статистических данных.  
@@ -84,7 +82,7 @@ Aggregate(expression, scope)
 =Aggregate(Fields!LineTotal.Value, "GroupbyOrder")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

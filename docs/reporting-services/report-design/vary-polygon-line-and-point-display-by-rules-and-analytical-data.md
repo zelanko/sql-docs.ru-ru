@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,13 +25,13 @@ ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 464731c279d55f20b725193cde9db1e5f2974bf2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 428f89c51b60f1e9f33170ab03cb43a87caf6a78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>Изменение параметров отображения многоугольников, линий и точек с помощью правил и аналитических данных
   Параметры отображения многоугольников, линий и точек слоя карты управляются настройками слоя, правилами для элементов слоя карты или переопределенными параметрами отдельных внедренных элементов слоя карты.  
@@ -136,7 +134,7 @@ ms.lasthandoff: 12/05/2017
 |`#TOVALUE`|Отображает действительное числовое значение поля данных.|10000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Отображает текущее числовое значение начала и конца диапазона.|10–790|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [Мастер карт и мастер слоев карт (построитель отчетов и службы SSRS)](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

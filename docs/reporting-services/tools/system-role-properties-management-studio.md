@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.systemroleproperties.f1
 ms.assetid: 0210fc2a-74fb-41dd-8e39-4830047ec417
 caps.latest.revision: "30"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c2f2b1cbdb4d32c87af4614f4d8907b2d621c99b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8028ef472cd23de251ab791e4099703640fdabc3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="system-role-properties-management-studio"></a>Свойства системной роли (среда Management Studio)
   Страница «Системные роли» используется для просмотра определений системных ролей, определенных в настоящее время для сервера отчетов. Определение системной роли содержит именованную коллекцию задач, которые выполняются применительно ко всему сайту, а не к отдельному объекту. Определения ролей присваиваются пользователям или группам для создания назначения ролей. Задачи в определении ролей задают, какие действия может выполнять пользователь или группа.  
@@ -38,16 +36,16 @@ ms.lasthandoff: 12/05/2017
  **Название**  
  Определяет имя определения системной роли.  
   
- **Description**  
+ **Описание**  
  Отображает описание определения системной роли. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]это описание отображается только на данной странице. Пользователи, просматривающие этот элемент с помощью диспетчера отчетов, могут видеть это описание при просмотре данной иерархии папок.  
   
  **Задача**  
  Выводит список задач на уровне системы, которые можно выбрать для данного определения роли. Можно добавлять или удалять элементы из списка предопределенных задач, чтобы определить, какой доступ к данному элементу будет у пользователей с данной ролью. Нельзя создавать новые задачи или изменять уже существующие.  
   
- **Description**  
+ **Описание**  
  Выводит сведения по каждой из задач. Нельзя изменять описания задач.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Задачи системного уровня](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
  [Задачи и разрешения](../../reporting-services/security/tasks-and-permissions.md)   

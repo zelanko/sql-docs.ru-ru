@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2520ae24-0609-4890-807d-3267018aba8e
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 32cf33ed4a4039b15a519698e31db8b9ba24063f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 353568e422543eb0e059ce5820ad6ce27d0e6b90
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>Точечные диаграммы (построитель отчетов и службы SSRS)
   В точечной диаграмме ряды отображаются как наборы точек. Значения представлены расположением точки на плоскости диаграммы. Категории представлены различными маркерами. Точечные диаграммы обычно используются для сравнения агрегированных значений разных категорий. Дополнительные сведения о добавлении данных в точечные диаграммы см. в разделе [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
 -   По умолчанию на точечных диаграммах точки данных выводятся в виде точек. Если на точечной диаграмме необходимо вывести несколько рядов, рекомендуется использовать маркеры разной формы — треугольные, квадратные, ромбические или иные.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

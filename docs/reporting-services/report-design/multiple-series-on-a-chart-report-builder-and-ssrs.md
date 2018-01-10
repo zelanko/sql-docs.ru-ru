@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 16a279d3927c4bc5241b8316bc9c740fc8a07c8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: cb205dc96ea7279ce4fc9048ab09b738fc38051d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Несколько рядов на диаграмме (построитель отчетов и службы SSRS)
   Если в диаграмме представлено несколько рядов, необходимо определить лучший способ сравнения рядов. Для отображения относительных пропорций каждого ряда можно использовать диаграмму с накоплением. Если сравниваются только два ряда с общей осью категорий (x), используйте вспомогательную ось. Это удобно при отображении двух связанных рядов данных, например, цены и количества или доходов и налогов. Если диаграмма становится трудной для восприятия, попробуйте использовать несколько областей диаграммы, чтобы визуально отделить ряды друг от друга.  

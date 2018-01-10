@@ -23,18 +23,19 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ffdc6534621597002d4b3f54a5b3c1960c9ccad8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 075ad5ecefdef03acb8428cc199c35f6116c442b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Что нового в SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)] Благодаря SQL Server 2016 вы сможете создавать важные аналитические приложения с помощью масштабируемой гибридной платформы баз данных, в которую уже встроено все необходимое — от возможностей эффективной обработки в памяти и повышенной безопасности до функций аналитики в базе данных. В выпуске SQL Server 2016 добавлены новые средства безопасности, возможности выполнения запросов, интеграции Hadoop, облачной интеграции, аналитики R, а также множество других усовершенствований. 
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+ Благодаря SQL Server 2016 вы сможете создавать важные аналитические приложения с помощью масштабируемой гибридной платформы баз данных, в которую уже встроено все необходимое — от возможностей эффективной обработки в памяти и повышенной безопасности до функций аналитики в базе данных. В выпуске SQL Server 2016 добавлены новые средства безопасности, возможности выполнения запросов, интеграции Hadoop, облачной интеграции, аналитики R, а также множество других усовершенствований. 
 
 На этой странице представлен краткий обзор новых возможностей и ссылки на подробные сведения о них для каждого компонента SQL Server 2016. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
 
  **Оцените SQL Server уже сегодня!** 
 - Скачайте **бесплатный** [**выпуск SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers).

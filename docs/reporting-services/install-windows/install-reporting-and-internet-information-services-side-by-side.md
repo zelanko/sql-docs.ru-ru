@@ -8,21 +8,21 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: deploying [Reporting Services], IIS
 ms.assetid: 9b651fa5-f582-4f18-a77d-0dde95d9d211
 caps.latest.revision: "40"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 751e6e715cc660cadb66c927d24b63d01361f581
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 7645b04a492c182283c79c814be0c59baa23fbc6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="install-reporting-and-internet-information-services-side-by-side"></a>Параллельная установка служб Reporting Services и служб IIS
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 
 Службы SQL Server Reporting Services (SSRS) и IIS могут быть установлены и запущены на одном и том же компьютере. От используемой версии служб IIS будет зависеть, какие возникнут проблемы совместимости.  
   
-|Версия служб IIS|Проблемы|Описание|  
+|Версия служб IIS|Проблемы|Description|  
 |-----------------|------------|-----------------|  
 |8.0, 8.5|Запросы, предназначенные для одного приложения, принимаются другим приложением.<br /><br /> Компонент HTTP.SYS предписывает правила приоритета для резервирования URL-адресов. Запросы, передаваемые в приложения, которые имеют одинаковое имя виртуального каталога и совместно отслеживают запросы, поступающие через порт 80, могут не достичь намеченной цели, если применяемое резервирование URL-адресов слабее резервирования URL-адресов другого приложения.|При определенных условиях зарегистрированная конечная точка, URL-адрес которой предшествует URL-адресу другой конечной точки в схеме резервирования URL-адресов, может получать HTTP-запросы, предназначенные для другого приложения.<br /><br /> Использование уникальных имен виртуальных каталогов для таких компонентов, как веб-служба сервера отчетов и [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] , поможет избежать этого конфликта.<br /><br /> Подробные сведения об этом сценарии приведены в этом разделе.|  
   
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="url-reservations-for-iis-80-85-with-sql-server-reporting-services"></a>Резервирование URL-адресов для служб IIS 8.0, 8.5 со службами SQL Server Reporting Services  
  Изучение правил приоритета, приведенных в предыдущем разделе, позволяет разобраться, как резервирования URL-адресов, определенные для служб Reporting Services и IIS, поддерживают совместимость. Службы Reporting Services получают запросы, в которых явно указаны имена виртуальных каталогов для их приложений; службы IIS получают все остальные запросы, которые могут затем быть направлены приложениям, запущенным в рамках модели процесса IIS.  
   
-|Приложение|Резервирование URL-адресов|Описание|Прием запроса|  
+|Приложение|Резервирование URL-адресов|Description|Прием запроса|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Сервер отчетов|`http://+:80/ReportServer`|Сильный шаблон для доступа к порту 80, с указанием виртуального каталога сервера отчетов.|Получает все запросы на порт 80, в которых указан виртуальный каталог сервера отчетов. Веб-служба сервера отчетов получает все запросы, отправленные по адресу http://\<имя_компьютера>/reportserver.|  
 |Веб-портал|`http://+:80/Reports`|Сильный шаблон для доступа к порту 80, с указанием виртуального каталога Reports.|Получает все запросы на порт 80, в которых указан виртуальный каталог reports. [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] получает все запросы, отправленные по адресу http://\<имя_компьютера>/reports.|  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: "53"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2bb9f43c7a19513edfa469779e6de9a53ce3b1be
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fc63cde6f20cda1b6d302c881ca6bf5b8a294ba8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Создание, изменение и удаление общих источников данных (SSRS)
   Общий источник данных — это набор свойств соединения с источником данных, на который могут ссылаться несколько отчетов, моделей и управляемых данными подписок, работающих на сервере отчетов служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Общие источники данных предоставляют удобный способ управления часто изменяющимися свойствами источника данных. Если изменились свойства учетной записи пользователя или пароль или база данных перенесена на другой сервер, все сведения о соединении можно изменить в одном месте.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
   
 |Часть|Description|  
 |----------|-----------------|  
-|Название|Имя, которое идентифицирует элемент в иерархии папок сервера отчетов.|  
+|Имя|Имя, которое идентифицирует элемент в иерархии папок сервера отчетов.|  
 |Description|Описание, которое отображается вместе с элементом в диспетчере отчетов при просмотре содержимого папки.|  
 |Тип соединений|Модуль обработки данных, используемый с источником данных. Можно использовать только модули обработки данных, развернутые на сервере отчетов. Дополнительные сведения о модулях обработки данных, включенных в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Строка соединения|Строка соединения для базы данных. Дополнительные сведения о строках соединения и примеры их использования с часто используемыми источниками данных см. в разделе [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
@@ -236,7 +234,7 @@ ms.lasthandoff: 12/05/2017
   
      Для моделей отчетов список зависимых элементов содержит отчеты, созданные в построителе отчетов. Для общих источников данных список зависимых элементов может включать как отчеты, так и модели отчетов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание общих источников данных и управление ими (службы Reporting Services в режиме интеграции с SharePoint)](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)   

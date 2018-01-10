@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - export
 ms.assetid: 4dc2045f-8025-41a3-8f9d-5635fb24cf4a
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 03664a60aaa111295491985de103882091bb43aa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0b83a1cd9142dab2b74f5dbb3148576d851faf24
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="pptx-device-information-settings"></a>Настройки сведений об устройстве PPTX
   В следующей таблице перечислены настройки сведений об устройстве, предназначенные для подготовки отчетов [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] к просмотру в формате PPTX.  
@@ -47,9 +45,9 @@ ms.lasthandoff: 12/05/2017
 |**PageHeight**|Задаваемая высота страницы отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка "in" (например, **11in**). Это значение переопределяет исходные параметры отчета.|  
 |**PageWidth**|Задаваемая ширина страницы отчета, в дюймах. Необходимо включить целочисленное или десятичное значение, за которым следует строка "in" (например, **8,5in**). Это значение переопределяет исходные параметры отчета.|  
 |**StartPage**|Первая подготавливаемая к просмотру страница отчета. Значение **0** указывает, что к просмотру подготовлены все страницы. Значение по умолчанию — **1**.|  
-|**UseReportPageSize**|Если UseReportPageSize =**false** , то размер слайда по умолчанию соответствует стандартному значению PowerPoint — 13,333 x 7,5 дюйма (пропорции 16:9). Если UseReportPageSize = true, то размер слайда по умолчанию соответствует заданному размеру страницы отчета.<br /><br /> Значение по умолчанию равно **false**.<br /><br /> Обратите внимание, что параметры PageWidth и PageHeight переопределяют стандартную ширину и высоту.|  
+|**UseReportPageSize**|Если UseReportPageSize =**false** , то размер слайда по умолчанию соответствует стандартному значению PowerPoint — 13,333 x 7,5 дюйма (пропорции 16:9). Если UseReportPageSize = true, то размер слайда по умолчанию соответствует заданному размеру страницы отчета.<br /><br /> Значение по умолчанию — **false**.<br /><br /> Обратите внимание, что параметры PageWidth и PageHeight переопределяют стандартную ширину и высоту.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Передача настроек сведений об устройстве модулям подготовки отчетов к просмотру](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
  [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   

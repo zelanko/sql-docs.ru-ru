@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - data-driven subscriptions
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 caps.latest.revision: "51"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e7c1db188f30f6fbf47099ca3d62530f4d5dd63f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 92aab81d1e8bb487b3cbf671c4e15034abe09341
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Создание, изменение и удаление управляемых данными подписок
   Управляемая данными подписка — это подписка на основе запроса, которая получает необходимые данные во время выполнения. При запуске такой подписки обрабатывается запрос на получение обновленной информации о получателях, параметрах доставки отчета, форматах подготовки и установки параметров. Результаты запроса объединены с определением подписки для создания динамической подписки, использующей данные, которые уже введены в базу данных служащего, клиента или любую другую базу данных, содержащую информацию, которая может использоваться как данные подписчика.  
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_run_subscription"></a> Запуск подписки  
  Необходимо определить условия обработки подписки. Можно определить расписание или установить ее выполнение при обновлении снимка состояния выполнения отчета. Обработка зависимых от данных подписок аналогична обработке стандартных подписок.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание подписок для работающих в основном режиме серверов отчетов и управление этими подписками](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3ce7daac84995cae0c3dbc3e039acfcab5f41e13
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 07726f5c911579650bbd73a9973841ebfeb482e6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Добавление интерактивной сортировки в таблицу или матрицу (построитель отчетов и службы SSRS)
   Добавьте кнопки интерактивной сортировки, чтобы дать пользователям возможность менять порядок сортировки строк и столбцов в таблицах или матрицах. Эта возможность доступна только в форматах подготовки к просмотру, поддерживающих взаимодействие с пользователем, например HTML.  

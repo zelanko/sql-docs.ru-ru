@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -33,15 +31,15 @@ helpviewer_keywords:
 - Windows integrated security [Reporting Services]
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 caps.latest.revision: "61"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 4dca189f8895ebe919a91fa390777c7bf3b1fdd7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9cea8af15340bcc5cbf744e59678e04d6ab6e8b6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Задание учетных данных и сведениях о соединении для источников данных отчета
   Сервер отчетов использует учетные данные для подключения к внешним источникам данных, предоставляющих содержимое для отчетов или сведения о получателе для подписок, управляемых данными. Можно задать учетные данные, использующие проверку подлинности Windows, проверку подлинности базы данных, нестандартную проверку подлинности, или учетные данные, не использующие проверку подлинности. При отправке по сети запроса на соединение сервер отчетов олицетворяет или учетную запись пользователя, или учетную запись автоматического выполнения. Дополнительные сведения о контексте безопасности, в котором выполняется запрос соединения, см. в подразделе [Настройка источника данных и сетевые подключения](#DataSourceConfigurationConnections) далее в этом разделе.  
@@ -164,12 +162,12 @@ ms.lasthandoff: 12/05/2017
 |Встроенные функции безопасности|Олицетворение текущего пользователя|Для всех типов источников данных при соединении используется учетная запись текущего пользователя.|  
 |Учетные данные Windows|Олицетворение заданного пользователя|Для источников [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC и OLE DB установите соединение с помощью олицетворенной учетной записи.|  
 |Учетные данные базы данных|Олицетворение учетной записи автоматического выполнения или учетной записи службы<br /><br /> (Службы Reporting Services удаляют разрешения администратора при отправке запроса на соединение при помощи идентификатора служб.)|Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC и OLE DB:<br /><br /> добавление имени пользователя и пароля к строке соединения.<br /><br /> Для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> соединение выполняется успешно при использовании протокола TCP/IP, в противном случае происходит сбой соединения.<br /><br /> Для XML:<br /><br /> сбой соединения на сервере отчетов при использовании учетных данных базы данных.|  
-|Нет|Олицетворение учетной записи автоматического выполнения|Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC и OLE DB:<br /><br /> используются учетные данные, определенные в строке соединения. Сбой соединения на сервере отчетов, если не задана учетная запись автоматического выполнения.<br /><br /> Для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> всегда сбой соединения, если не заданы учетные данные, даже если определена учетная запись автоматического выполнения.<br /><br /> Для XML:<br /><br /> соединение в качестве анонимного пользователя, если определена учетная запись автоматического выполнения, в противном случае сбой соединения.|  
+|None|Олицетворение учетной записи автоматического выполнения|Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC и OLE DB:<br /><br /> используются учетные данные, определенные в строке соединения. Сбой соединения на сервере отчетов, если не задана учетная запись автоматического выполнения.<br /><br /> Для служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]:<br /><br /> всегда сбой соединения, если не заданы учетные данные, даже если определена учетная запись автоматического выполнения.<br /><br /> Для XML:<br /><br /> соединение в качестве анонимного пользователя, если определена учетная запись автоматического выполнения, в противном случае сбой соединения.|  
   
 ## <a name="setting-credentials-programmatically"></a>Программная установка учетных данных  
  Чтобы контролировать доступ к отчету и серверу отчетов, можно задать учетные данные в своем коде. Дополнительные сведения см. в статье [Data Sources and Connection Methods](../../reporting-services/report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Источники данных, поддерживаемые службами Reporting Services (SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
  [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Управление источниками данных отчета](../../reporting-services/report-data/manage-report-data-sources.md)   

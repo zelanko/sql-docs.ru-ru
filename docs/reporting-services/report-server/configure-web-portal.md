@@ -8,27 +8,27 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: the web portal [Reporting Services], configuring
 ms.assetid: e918986c-af15-48f6-8178-256aed829c6a
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 740191557130edaa87688733ea6b1d61d254826b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0a6316978d5799462526a28c196bd70100bf3c09
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-the-web-portal"></a>Настройка веб-портала
 
 Веб-портал — это клиентский веб-интерфейс, используемый для просмотра отчетов, управления содержимым сервера отчетов и предоставления пользователям доступа к серверу отчетов в собственном режиме. Веб-портал устанавливается вместе с веб-службой сервера отчетов внутри того же экземпляра сервера отчетов и при необходимости настраивается, если в программе установки пользователь выбирает параметр **Установить конфигурацию по умолчанию для работы в собственном режиме**. Кроме того, веб-портал можно настроить как задачу, которая будет выполняться после установки. В этом разделе содержатся сведения о следующих сценариях настройки веб-портала.
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Чтобы использовать веб-портал, должны быть выполнены следующие предварительные условия.
 

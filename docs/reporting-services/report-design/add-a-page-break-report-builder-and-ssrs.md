@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3846cd48-2787-47e9-b13b-7fc45a205f68
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d3beec0ea94190d84836e41e5ee5863c5e04c913
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f264f0fc3f601ba9433f5ec591674bfa03b07779
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-page-break-report-builder-and-ssrs"></a>Добавление разрыва страницы (построитель отчетов и службы SSRS)
   Разрыв страницы можно добавить в прямоугольники, области данных или в группы в областях данных, чтобы управлять количеством информации на каждой странице. Добавление разрывов страницы может повысить производительность опубликованных отчетов, т. к. при просмотре отчета будут обрабатываться только элементы на каждой странице. Если отчет содержит одну страницу, все элементы должны быть обработаны перед просмотром отчета.  
@@ -68,7 +66,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Кроме того, можно выбрать параметр **Также в начале группы** или **Также в конце группы** , чтобы указать, что разрыв страницы должен добавляться, когда группа в таблице начинается или заканчивается.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  

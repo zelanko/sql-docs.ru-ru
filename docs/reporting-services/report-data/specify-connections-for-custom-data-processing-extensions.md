@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], connections
 ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 caps.latest.revision: "20"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: bbfdb365ac9c57233fddcbb4a5054eb563af5219
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5d9cab28d5b6ebe7a9675cffaf6f594a1230c45d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Указание соединений для пользовательских модулей обработки данных
   Для расширения возможностей поддерживаемых источников данных или поддержки их дополнительных типов, недоступных при стандартной установке служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , на сервере отчетов можно создавать пользовательские модули обработки данных или использовать модули сторонних разработчиков. Соединения обрабатываются по-разному, в зависимости от реализации. Для модулей обработки данных существуют следующие реализации.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
 |Учетные данные базы данных|Для настройки соединений для пользовательских модулей обработки данных, использующих интерфейс **IDbConnectionExtension**, можно применить проверку подлинности базы данных.|  
 |Без учетных данных|Если указана автоматическая учетная запись выполнения, строка соединения использует ее учетные данные.<br /><br /> Если автоматическая учетная запись выполнения не определена, серверу отчетов не удастся установить соединение.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка учетной записи автоматического выполнения (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Подключения к данным, источники данных и строки подключения &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   

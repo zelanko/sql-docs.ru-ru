@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - Reporting Services, data sources
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 454c87f8c7ced0404681f500c00453f69433c08c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 90600a0b51f489dcb2a1bd21038bf30562b7f144
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Регистрация стандартного поставщика данных .NET Framework (службы SSRS)
   Чтобы набор данных отчета служб [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] получал данные с помощью поставщика данных [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] сторонней разработки, необходимо развернуть и зарегистрировать сборку поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] в двух местах: на клиенте, используемом для разработки отчета, и на сервере отчетов. На клиенте поставщик данных должен быть зарегистрирован в качестве типа источника данных и связан с конструктором запросов. После этого этот поставщик может быть выбран в качестве типа источника данных при создании набора данных для отчета. При этом откроется связанный конструктор запросов, помогающий создавать запросы для этого типа источников данных. На сервере отчетов поставщик данных необходимо зарегистрировать в качестве типа источника данных. После этого может производиться обработка опубликованных отчетов, которые в качестве источника данных используют этот поставщик.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Добавьте элемент для поставщика данных [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
   
-    |Attribute|Description|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**Название**|Уникальное имя поставщика данных, например **MyNETDataProvider**. Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации. Указываемое здесь значение выводится в раскрывающемся списке типов источников данных при создании нового источника данных.|  
     |**Тип**|Список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейс <xref:System.Data.IDbConnection> , а затем имя сборки поставщика [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (без расширения DLL).|  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/05/2017
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     При загрузке сборки в глобальный кэш сборок необходимо указать свойства строгого имени. Например:  
+     При загрузке сборки в глобальный кэш сборок необходимо указать свойства строгого имени. Пример:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Добавьте элемент для поставщика данных.  
   
-    |Attribute|Description|  
+    |attribute|Description|  
     |---------------|-----------------|  
     |**Название**|Уникальное имя поставщика данных, например **MyNETDataProvider**. Длина атрибута **Name** не должна превышать 255 символов. Имя должно быть уникальным среди всех элементов, вложенных в элемент **Extension** файла конфигурации. Указанное здесь значение отображается в раскрывающемся списке типов источников данных при создании нового источника данных.|  
     |**Тип**|Список с разделителями-запятыми, включающий полное имя пространства имен для класса, реализующего интерфейс <xref:System.Data.IDbConnection> , а затем имя сборки поставщика [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] (без расширения DLL).|  
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/05/2017
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Если сборка загружена в глобальный кэш сборок, необходимо задать свойства строгого имени. Например:  
+     Если сборка загружена в глобальный кэш сборок, необходимо задать свойства строгого имени. Пример:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  

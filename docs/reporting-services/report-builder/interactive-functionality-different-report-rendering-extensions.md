@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0bd1c4c-e8b5-467f-b5a1-541f19c7e3e2
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2a3a1e2dc58250da1a2d0d8e0a3a1e78374ba2cc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4b6eb94e8511be6d1e2f5ccf2cc12eea7ced9198
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>Интерактивные возможности различных модулей подготовки отчетов к просмотру
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет функции для взаимодействия с отчетом с разбиением на страницы во время выполнения. Не все выходные форматы отчета поддерживают полный диапазон интерактивных возможностей. Чтобы понять, как интерактивные возможности работают с конкретными выходными форматами, воспользуйтесь приведенной ниже таблицей.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/05/2017
 |Word|Сервер отчетов экспортирует отчет в формат Word, используя в данном отчете отфильтрованные данные.|  
 |Другое|Сервер отчетов экспортирует отчет в другие форматы, используя в данном отчете отфильтрованные данные.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     

@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,14 +19,14 @@ helpviewer_keywords:
 - deleting role assignments
 ms.assetid: 086d0987-b43c-4834-8372-e08fb4b432f8
 caps.latest.revision: "39"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: febbd48dbe572a668ad8811eec0cff11cb43a849
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 0e8cc3d577c678b60ead9a5e5e7983980059a728
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-role-assignments"></a>Создание назначений ролей и управление ими
   *Назначение ролей* представляет собой политику безопасности, определяющую, может ли пользователь или группа получить доступ к определенному элементу сервера отчетов или выполнить над ним операцию. Назначение ролей состоит из одного имени учетной записи пользователя или группы пользователей и одного или более определений роли.  
@@ -69,7 +67,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="deleting-a-role-assignment"></a>Удаление назначения ролей  
  Для удаления назначений ролей установите флажок возле каждого назначения, которое нужно удалить, и нажмите **Удалить**. Также назначения ролей можно удалить, нажав кнопку **Сбросить до значений безопасности родительского уровня**. При нажатии этой кнопки существующие назначения ролей элемента удаляются, и вместо них используются те назначения, которые обеспечиваются через родительский элемент.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
  [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [Назначения ролей](../../reporting-services/security/role-assignments.md)   

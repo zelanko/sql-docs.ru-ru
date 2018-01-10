@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 f1_keywords: "10428"
@@ -21,13 +19,13 @@ ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 caps.latest.revision: "35"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: c84b428355b76b69e15aa14fad713c5fdd9b575e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5009b0c7ebe8fae67fe51a885dd9f5bf92dc69f9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-in-sql-server-2016"></a>Построитель отчетов в SQL Server 2016
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] — это инструмент создания отчетов с разбиением на страницы, предназначенный для корпоративных пользователей, которые предпочитают работать в автономной среде вместо использования конструктора отчетов в Visual Studio.  Во время проектирования отчета с разбиением на страницы вы создаете определение отчета, в котором указано, откуда и какие брать данные, а также как их отображать. При запуске отчета обработчик получает заданное определение отчета, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Отчеты можно предварительно просмотреть из [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] , опубликовать в собственном режиме или в режиме интеграции с SharePoint на сервере отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , откуда его смогут запустить другие пользователи.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Опубликованные отчеты управляются на сервере отчетов или сервере отчетов в режиме интеграции с SharePoint администратором сервера отчетов. Администраторы сервера отчетов могут определить безопасность, задать свойства и задать расписание операций, таких как журнал отчета и доставка отчета по электронной почте. Они могут создать общие расписания и источники данных, и сделать их доступными для общего использования. Администраторы также управляют всеми каталогами сервера отчетов. Возможности управления зависят от назначенных пользователю разрешений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
   [Запуск построителя отчетов](../../reporting-services/report-builder/start-report-builder.md)  
   
   [Установка построителя отчетов](../../reporting-services/install-windows/install-report-builder.md)

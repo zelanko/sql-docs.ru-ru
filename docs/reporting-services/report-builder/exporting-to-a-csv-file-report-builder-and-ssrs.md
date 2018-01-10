@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a41d99b7087463d5583e9cbb194175118dcab583
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9ff683e7c226812f8e5045464ea7f226dabb2fee
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Экспорт в CSV-файл (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов в формате с разделителями-запятыми (CSV) готовит отчеты с разбиением на страницы для просмотра в виде плоских представлений данных стандартизованного текстового вида. Этот формат легко читается и может использоваться для обмена со многими приложениями.  
@@ -65,9 +63,9 @@ ms.lasthandoff: 12/05/2017
   
 -   Линия  
   
--   Изображение  
+-   image  
   
--   прямоугольник;  
+-   Прямоугольник  
   
 -   Автоматические подытоги  
   
@@ -151,7 +149,7 @@ ms.lasthandoff: 12/05/2017
  Некоторые настройки по умолчанию для этого модуля подготовки отчетов можно изменить с помощью изменения настроек сведений об устройстве. Можно, например, указать, в каком режиме готовить отчет, какие символы использовать в качестве разделителей, а какие — в качестве ограничителей текста. Дополнительные сведения см. в разделе [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md).  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Разбиение на страницы в службах Reporting Services (построитель отчетов и службы SSRS)](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   

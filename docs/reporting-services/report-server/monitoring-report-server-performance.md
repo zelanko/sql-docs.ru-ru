@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - Reporting Services, performance
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 caps.latest.revision: "64"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 23375f636a34936e891ebd36fa5680ff10173867
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 85e5df10c4473b9a311f4efbc7d30d91e96aa5e4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="monitoring-report-server-performance"></a>Наблюдение за производительностью сервера отчетов
   Для наблюдения за производительностью сервера отчетов используются средства наблюдения за производительностью, позволяющие оценить активность сервера, наблюдать тренды, диагностировать узкие места системы и собирать данные, помогающие определить адекватность текущей конфигурации системы. Для настройки производительности сервера можно задать частоту очистки домена приложений сервера отчетов. Дополнительные сведения см. в разделе [Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="sharepoint-events"></a>События SharePoint  
  Кроме объектов производительности служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , можно также настроить события SharePoint, если сервер отчетов запущен в режиме интеграции с SharePoint, а среда создания отчетов настроена для использования продукта SharePoint. В данном разделе используйте события для сервера отчетов в режиме интеграции с SharePoint для просмотра диагностических событий компонента, которые могут предоставить полезные сведения, в случае если среда подготовки отчетов интегрирована с SharePoint.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Счетчики производительности для объектов производительности веб-службы MSRS 2011 и службы Windows MSRS 2011 (собственный режим)](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)  
  Содержит описание счетчиков производительности, используемых веб-службой сервера отчетов.  
   
@@ -99,7 +97,7 @@ ms.lasthandoff: 12/05/2017
  События для сервера отчетов в режиме интеграции с SharePoint  
  Содержит описание полезных диагностических событий, возникающих при запуске среды создания отчетов с продуктом SharePoint.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   
  [Сервер отчетов служб Reporting Services (основной режим)](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)  

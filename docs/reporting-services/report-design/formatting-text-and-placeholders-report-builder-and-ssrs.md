@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,13 +22,13 @@ ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e3dbe51460c639d7574df42ad9d0a275e80cdbd5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 18a17ad4befad58d70db0f52f08fe9c8bea98e06
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Форматирование текста и заполнителей (построитель отчетов и службы SSRS)
   Текстовое поле может представлять собой элемент отчета или отдельную ячейку в области данных, которая содержит текст, вычисляемое поле, указатель на поле в базе данных или сочетание всех этих трех элементов. Предусмотрена возможность смешивать шрифты и цвета, добавлять полужирный и курсивный стили и использовать такие стили абзаца, как выравнивание и выступы. Можно форматировать все текстовое поле или конкретный текст, числа, выражения или поля в текстовом поле.  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="aligning-horizontal-text-using-general"></a>Выравнивание горизонтального текста с использованием общих свойств  
  В поле **Выравнивание** в диалоговом окне **Свойства текстового поля** можно указать, как текст будет выравниваться по горизонтали. Если значение для выравнивания не задано, то применяется выравнивание, определяемое значением **По умолчанию**. Это означает, что текст выравнивается с учетом типа поля применяемого значения заполнителя. Если задано выражение, вычисление которого приводит к получению нестрокового значения, то текст выравнивается по правому краю. Если при вычислении выражения получается строковое значение, то текст выравнивается по левому краю.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Форматирование меток оси на диаграмме (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   

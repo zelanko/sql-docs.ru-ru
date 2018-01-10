@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 22674e21246c98201fdb1ed9ae56d303e4f66756
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 94e39c709c030c29d88bd874b279024c60f57fd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-3-defining-a-data-driven-subscription"></a>Lesson 3: Defining a Data-Driven Subscription
 На этом занятии учебника по [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] будут использоваться страницы управляемой данными подписки на веб-порталах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] для подключения к источнику данных подписки, построен запрос, получающий данные для этой подписки, а также сопоставлен результирующий набор с отчетом и параметрами доставки.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="destination"></a>Назначение  
 1.  В разделе "Назначение" выберите **Общая папка Windows** в качестве способа доставки.  
 
-## <a name="dataset"></a>Набор данных
+## <a name="dataset"></a>Dataset
 1. Щелкните **Изменить набор данных**.
 2. Выберите **Пользовательский источник данных**.
 3. Выберите **Microsoft SQL Server** в качестве типа **подключения** к источнику данных.
@@ -95,7 +95,7 @@ ms.lasthandoff: 12/05/2017
  1. В поле **OrderNumber** выберите **Получить значение из набора данных**. В поле «Значение параметра» выберите **Order**. 
  2. Щелкните **Создать подписку**.
    
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 При выполнении подписки в указанную общую папку будут доставлены четыре файла отчетов, по одному для каждого заказа из источника данных *Подписчики* . Каждая доставка должна содержать уникальные данные (данные должны различаться в зависимости от заказа), иметь свой формат подготовки и формат файла. Можно открыть любой отчет из общей папки, чтобы убедиться, что каждая версия настроена в соответствии с указанными параметрами подписки.  
   
 ![Список файлов, созданных подпиской](../reporting-services/media/ssrs-tutorial-datadriven-subscription-filelist.gif "Список файлов, созданных подпиской")  

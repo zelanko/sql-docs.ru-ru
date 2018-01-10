@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4265d5ba1e75e5436e84efd1ecff6a9af75053e4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 46f75cd92e385c6992678444f68e9e7c1f2e2d8d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-authoring-environment-ssrs"></a>Среда разработки построителя отчетов (службы SSRS)
   Построитель отчетов [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] — изолированная среда разработки для создания отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы вне Visual Studio. При создании отчета задается, откуда брать данные, какие данные брать и как их отображать. При запуске отчета обработчик получает все указанные сведения, извлекает данные и объединяет их с макетом отчета, чтобы создать отчет. Его можно установить с веб-портала [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] или из Центра загрузки Майкрософт.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/05/2017
   
  У построителя отчетов и конструктора отчетов много общего. Подробнее см. в разделе [Report Builder in SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Install Report Builder](../../reporting-services/install-windows/install-report-builder.md)   
  [настроить доступ к построителю отчетов](../../reporting-services/report-server/configure-report-builder-access.md)   
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   

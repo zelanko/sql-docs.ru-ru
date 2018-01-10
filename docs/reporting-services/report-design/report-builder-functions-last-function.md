@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 123b78a0-d6c9-4f78-b0e7-73b21854a250
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c78b4bd43eb810354cdcff6bcfd243315e46b947
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 87a8b6d568b6c752e3cdd4b166479e08715bd297
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---last-function"></a>Функции построителя отчетов — функция Last
   Возвращает последнее значение указанного выражения для заданной области.  
@@ -48,7 +46,7 @@ Last(expression, scope)
 ## <a name="return-type"></a>Тип возвращаемых данных  
  Определяется типом выражения.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция **Last** возвращает конечное значение в набор данных после сортировки и фильтрации, примененных к заданной области.  
   
  Функция **Last** не может использоваться в критериях фильтра группирования с какой-либо областью, кроме текущей области (по умолчанию).  
@@ -78,7 +76,7 @@ Last(expression, scope)
 =Last(Fields!ProductNumber.Value, "Category")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

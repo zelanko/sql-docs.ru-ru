@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 caps.latest.revision: "13"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e3e6194d510371b5a7aed8cad4f2efe5d188687
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4c0e21bcd1d4695aaf7a55891c7b6d3c9231cdd7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Учебник. Добавление в отчет ключевого показателя эффективности (построитель отчетов)
 В этом учебнике по [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] вы добавите ключевой показатель эффективности к отчету [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы.  
@@ -344,7 +344,7 @@ ms.lasthandoff: 12/05/2017
   
 2.  Нажмите кнопку **Сохранить**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Учебник «Добавление ключевого показателя эффективности в отчет» успешно завершен. Дополнительные сведения см. в разделе:
 *  [Датчики](../reporting-services/report-design/gauges-report-builder-and-ssrs.md)
 * [Индикаторы](../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  

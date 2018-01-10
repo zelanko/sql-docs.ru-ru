@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - denial of service attacks [Reporting Services]
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 caps.latest.revision: "48"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d433a0ea0b586929858ca4fe83fcf1a48274f59e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9498eab0fb3117567aab18207f3a207fd0410c2c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-and-snapshot-size-limits"></a>Максимальные размеры отчетов и моментальных снимков
   Администраторы, которые управляют развертыванием служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , могут использовать этот раздел, чтобы получить основные сведения об ограничениях максимального размера отчета при публикации на сервере отчетов, о подготовке к просмотру во время выполнения и сохранении в файловой системе. В этом разделе содержатся практические рекомендации по определению размера базы данных сервера отчетов, а также описывается влияние размера моментальных снимков на производительность сервера.  
@@ -87,7 +85,7 @@ EXEC sp_spaceused
   
  Размер моментального снимка, который хранится в базе данных сервера отчетов, сам по себе не является фактором, определяющим производительность системы. Можно хранить большое число моментальных снимков без влияния на производительность сервера. Можно сохранить неограниченное количество моментальных снимков. Однако нужно иметь в виду, что журнал отчетов можно настраивать. Если администратор сервера отчетов уменьшит объем журнала отчетов, то можно потерять журналы отчетов, которые планировалось сохранить. Если удалить отчет, то все журналы отчета будут удалены вместе с ним.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
  [База данных сервера отчетов (службы Reporting Services в собственном режиме)](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Обработка больших отчетов](../../reporting-services/report-server/process-large-reports.md)  

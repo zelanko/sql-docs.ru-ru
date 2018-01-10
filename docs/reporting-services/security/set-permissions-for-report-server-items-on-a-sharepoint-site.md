@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], permissions
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fee98875fa2724a660844db868b591283c832f3d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1b82638222e8fcf0a0fe6867954fc1e6f38dd071
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site"></a>задать разрешения для элементов сервера отчетов на сайте SharePoint
   Если параметры безопасности по умолчанию не обеспечивают нужного уровня доступа, можно создать разрешения, чтобы предоставить доступ к определенным элементам или операциям сервера отчетов. Пользовательские параметры безопасности могут оказаться полезными, если требуется ограничить доступ к конкретному отчету.  
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/05/2017
   
 12. Нажмите кнопку **ОК**. После того как пользователь получил возможность изменять разрешения на конкретную модель, он может открыть модель для изменения ее внутренних разрешений.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Использование встроенных средств безопасности служб Windows SharePoint Services при работе с элементами сервера отчетов](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [Задание разрешений для работы сервера отчетов в веб-приложении SharePoint](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   

@@ -8,9 +8,7 @@ ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: aea0b5ff0ec119cc19744220442761ae74e9bf86
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 77dfb20f08e02c035cc4898fa9a5157dadd03f41
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>настроить сервер отчетов для удаленного администрирования
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]экземпляры сервера отчетов можно настраивать локально или удаленно. Чтобы настроить удаленный экземпляр сервера отчетов, можно использовать программу настройки служб Reporting Services. Также можно написать пользовательский код, который будет использовать поставщик инструментария управления Windows (WMI) служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Программа настройки служб Reporting Services предоставляет графический интерфейс поставщика WMI, поэтому такая настройка сервера отчетов не требует написания кода. При запуске программы можно указать, к какому удаленному серверу необходимо подключаться.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/05/2017
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Чтобы изменить настройки брандмауэра, нужно войти в систему локально и быть членом локальной группы «Администраторы». Через удаленное соединение невозможно изменить настройки брандмауэра Windows на удаленном компьютере.  
   
  Чтобы включить возможности удаленного администрирования для пользователя, не обладающего правами администратора, учетной записи необходимо предоставить права удаленной активации с помощью распределенной модели объектов (DCOM). В этом разделе предоставлены инструкции по настройке сервера для доступа пользователя, не обладающего правами администратора.  
@@ -148,7 +146,7 @@ ms.lasthandoff: 12/05/2017
   
 13. В столбце **Разрешить** установите флажки **Включить учетную запись**, **Включить удаленно**и **Прочесть безопасность**, затем нажмите кнопку **ОК**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование диспетчера конфигурации служб Reporting Services (собственный режим)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   

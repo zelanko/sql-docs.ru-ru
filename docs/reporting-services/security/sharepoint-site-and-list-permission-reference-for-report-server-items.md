@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: "14"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3eff319ce6f754b7e602b26bf1b5032d11a7b0f3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b2f7a54c6f2cb7f404635971edd3650b2d9e92ae
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов
   В этом разделе содержится список разрешений в SharePoint, которые могут быть использованы для предоставления доступа к операциям сервера отчетов, работающего в режиме интеграции с SharePoint. Данный раздел может использоваться в качестве справки при создании пользовательских уровней разрешений.  
@@ -80,7 +78,7 @@ ms.lasthandoff: 12/05/2017
 |Использование удаленных интерфейсов|Использование интерфейсов Use SOAP, Web DAV или приложения SharePoint Designer для доступа к веб-сайту.|X|X|X|Используется для вызова URL-адреса конечной точки учетной записи-посредника при соединении с сервером отчетов.|  
 |Открытие|Открывает веб-сайт, список либо папку для доступа к элементам внутри контейнера.|X|X|X|Чтение расписаний и свойств элементов.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Сравнение ролей и задач служб Reporting Services с группами и разрешениями SharePoint](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

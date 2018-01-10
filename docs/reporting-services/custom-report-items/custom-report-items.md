@@ -8,9 +8,7 @@ ms.service:
 ms.component: custom-report-items
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 caps.latest.revision: "22"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 224b29e8df95d5ec83f385e62edf872a9a0a4341
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4c5d87cbad10c4b453f46093b515936b1061cf1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="custom-report-items"></a>Пользовательские элементы отчета
   Службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предлагают широкий выбор средств для построения и публикации отчетов предприятия, управления безопасностью и подписками. Эти средства позволяют расширить функциональные возможности по созданию отчетов через всеобъемлющий API-интерфейс. Отчеты определяются с помощью языка, основанного на языке XML, называемого языком определения отчетов Report Definition Language (RDL). Язык определения отчетов предоставляет ясный набор инструкций, описывающих макет, сведения о запросах и типы элементов для отчетов. Язык определения отчетов возможно расширить, создав пользовательские элементы отчетов. Пользовательский элемент отчета состоит из исполняемого компонента, который вызывается обработчиком отчетов во время выполнения, и компонента времени разработки, который делает пользовательский элемент отчета доступным в конструкторе отчетов.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
  В дополнение к предоставлению возможностей, которые изначально не поддерживались, некоторые разработчики могут захотеть расширить функциональные возможности, создав альтернативные версии элементов управления, изначально присутствовавших в службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. В данном сценарии разработчик может предоставить три компонента: компонент времени выполнения, компонент времени разработки и компонент преобразования элемента отчета времени разработки, по запросу преобразующий существующий элемент отчета в пользовательский элемент отчета.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Архитектура пользовательских элементов отчета](../../reporting-services/custom-report-items/custom-report-item-architecture.md)  
  Описывает компоненты, из которых состоит пользовательский элемент отчета.  
   

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83f524dbbd4062735ea596b58d460ba93d590366
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 74f7d68b9e3feb4e65c1a287b69a580802719199
+ms.sourcegitcommit: fbbb050f43ecb780281b370ec73fdcd472eb0ecc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>Импорт и экспорт данных в SQL Server и базе данных SQL Azure
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Вы можете использовать в SQL Server и базе данных SQL Azure различные методы импорта и экспорта данных. Сюда входят инструкции Transact-SQL, программы командной строки и мастеры.
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 Вы можете выполнять импорт и экспорт данных в виде неструктурированных файлов, а также во множестве других форматов, в виде реляционных баз данных и облачных служб. Дополнительные сведения об использовании этих вариантов в конкретных инструментах см. в следующих разделах.
 -   Сведения о мастере импорта и экспорта SQL Server см. в разделе [Подключение к источникам данных с помощью мастера импорта и экспорта SQL Server](../../integration-services/import-export-data/connect-to-data-sources-with-the-sql-server-import-and-export-wizard.md).
 -   Сведения о SQL Server Integration Services см. в разделе [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md).
--   Сведения о фабрике данных Azure см. в разделе [Соединители фабрики данных Azure](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-amazon-redshift-connector).
+-   Сведения о фабрике данных Azure см. в разделе [Соединители фабрики данных Azure](https://docs.microsoft.com/azure/data-factory/data-factory-amazon-redshift-connector).
 
 ### <a name="commonly-used-data-formats"></a>Часто используемые форматы данных
 

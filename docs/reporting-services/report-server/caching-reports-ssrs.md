@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - snapshots [Reporting Services], caching
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 caps.latest.revision: "44"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 31a4eb9c303fe2c7d676cca535de3c64272f0caa
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: be5dfff54e54b9e5fd768f3b438f9e378bf34c9a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="caching-reports-ssrs"></a>Кэширование отчетов (службы SSRS)
   Сервер отчетов может кэшировать копию обработанного отчета и вернуть эту копию при открытии отчета пользователем. Единственным свидетельством того, что отчет является копией сохраненного в кэш отчета, являются дата и время выполнения отчета. Если дата или время не являются текущими, и отчет представляет собой моментальный снимок, то отчет был извлечен из кэша.  
@@ -77,7 +75,7 @@ ms.lasthandoff: 12/05/2017
   
  Если отчет не может быть по какой-то причине передан для обработки из экземпляра, хранящегося в кэше (например, если значения параметра отличаются от используемых для создания кэшированного отчета), то сервер отчетов повторно запускает отчет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Установка параметров обработки (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Установка свойств обработки отчетов](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Основные понятия служб Reporting Services (SSRS)](../../reporting-services/reporting-services-concepts-ssrs.md)   

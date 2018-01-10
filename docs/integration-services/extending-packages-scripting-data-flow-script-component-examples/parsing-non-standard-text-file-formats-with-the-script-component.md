@@ -8,7 +8,7 @@ ms.service:
 ms.component: extending-packages-scripting-data-flow-script-component-examples
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -23,11 +23,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 71d6dc8817b80e99fa5aece9fd5c581f22c69c4f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d46fd5f3b773397d3d256774bd77b587985a0101
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Синтаксический анализ текстовых файлов нестандартного формата в компоненте скрипта
   Если исходные данные организованы в нестандартном формате, может оказаться удобнее объединить всю логику синтаксического анализа в единый скрипт вместо создания цепочки преобразований служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], приводящих к тому же результату.  

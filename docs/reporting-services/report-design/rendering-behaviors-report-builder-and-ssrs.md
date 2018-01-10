@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a053cd0065c28b3bbad3a46b25c68aad46bea6b9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fda90a3b613306b1dcb162f55e007225eb03b181
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)
   В зависимости от выбранного модуля подготовки отчетов, при обработке отчета к его тексту и содержимому будут применяться некоторые правила. Размещение элементов отчета на странице определяется сочетанием этих факторов.  
@@ -135,7 +133,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Логические разрывы страниц, заданные в таблице или ячейках матрикса, не сохраняются. Это не относится к элементам списков.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Интерактивные возможности различных модулей подготовки отчетов к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Подготовка к просмотру в виде HTML (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Макет страницы и подготовка к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  

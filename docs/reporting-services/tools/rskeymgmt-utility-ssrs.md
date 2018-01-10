@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -26,15 +24,15 @@ helpviewer_keywords:
 - scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f6d98e612a8f2033cb72ab59caa6eaab94ed5754
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3e78a5b9e393dc24c1bfdb1ccc72cd05a0675bfd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Программа rskeymgmt (SSRS)
   Извлекает, восстанавливает, создает и удаляет симметричный ключ, используемый для защиты важных данных сервера отчетов от несанкционированного доступа. Эта программа также используется для соединения экземпляров сервера отчетов в конфигурацию с масштабным развертыванием. *Конфигурация сервера отчетов с масштабным развертыванием* означает множество экземпляров сервера отчетов, которые совместно используют одну базу данных сервера отчетов.  
@@ -114,7 +112,7 @@ rskeymgmt {-?}
  **-t**  *трассировка*  
  Выводит сообщения об ошибках в журнал трассировки. Этот аргумент не принимает значения. Дополнительные сведения см. в статье [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для запуска этого средства необходимо быть локальным администратором. Запускать его необходимо локально на компьютере, где размещается сервер отчетов. Программа rskeymgmt работает с локальным экземпляром сервера отчетов Windows (программа не может подключиться к удаленным экземплярам службы сервера отчетов Windows, и поэтому она не может использоваться для управления ключами шифрования удаленного экземпляра сервера отчетов).  
   
 > [!NOTE]  
@@ -175,7 +173,7 @@ rskeymgmt -r <installationID>
 ## <a name="file-location"></a>Размещение файла  
  Программа Rskeymgmt.exe находится в каталоге **\<*диск*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** или **\<*диск*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**. Программу можно запустить из любой папки файловой системы.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Сервер отчетов шифрует сохраненные учетные данные и сведения о соединении. Для шифрования данных используются открытый ключ и симметричный ключ. Для запуска сервера отчетов в базе данных сервера отчетов должен находиться набор допустимых ключей. Программу **rskeymgmt** можно использовать для создания резервных копий, удаления или восстановления ключей. Если ключи не могут быть восстановлены, это средство предоставляет возможность удаления зашифрованного содержимого, которое больше не может использоваться.  
   
  Программа **rskeymgmt** используется для управления набором ключей, указанным во время установки или при инициализации. Она подключается к локальной службе Windows сервера отчетов через конечную точку удаленного вызова процедур (RPC). Чтобы эта программа могла работать, должна быть запущена служба Windows сервера отчетов.  

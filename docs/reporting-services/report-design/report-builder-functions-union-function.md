@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c87e16fe-c12a-4c9d-a9df-7a94e229fd04
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4abee11e2e258561f3b5db40af11b057b8061588
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 64ca7e19f9f9246bf5b5fd130244fe8b29715d19
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---union-function"></a>Функции построителя отчетов — функция Union
   Возвращает объединение всех числовых значений, отличных от NULL, заданных выражением, вычисляемым для данной области.  
@@ -43,7 +41,7 @@ Union(expression, scope, recursive)
  (**SqlGeometry** или **SqlGeography**) Выражение, к которому применяется статистическая обработка.  
   
  *область*  
- (**String**) Необязательно. Имя набора данных, группы или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
+ (**String**) необязательно. Имя набора данных, группы или области данных, содержащих элементы отчета, к которым применяется агрегатная функция. Если аргумент *scope* не задан, используется текущая область.  
   
  *рекурсивные*  
  (**Перечислимый тип**) Необязательно. **Simple** (по умолчанию) или **RdlRecursive**. Указывает, нужно ли выполнять статистическую обработку рекурсивно.  
@@ -51,7 +49,7 @@ Union(expression, scope, recursive)
 ## <a name="return"></a>Возвращает  
  Возвращает пространственный объект, или **SqlGeometry** , или **SqlGeography**, в зависимости от типа выражения. Дополнительные сведения о пространственных типах данных **SqlGeometry** и **SqlGeography** в разделе [Основные сведения о типах пространственных данных](../../relational-databases/spatial/spatial-data-types-overview.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Данные в наборе, указанном в выражении, должны иметь один и тот же тип.  
   
  Значение *scope* должно быть строковой константой и не может быть выражением. Для внешних агрегатов и агрегатов, в которых не задаются другие агрегаты, параметр *scope* должен ссылаться не текущую область или включающую область. Области наборов данных не поддерживаются. Для агрегатов, содержащих агрегаты, во вложенных агрегатах может указываться дочерняя область.  
@@ -85,7 +83,7 @@ Union(expression, scope, recursive)
 =Union(Fields!PolygonDefinition.Value, "Group1")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

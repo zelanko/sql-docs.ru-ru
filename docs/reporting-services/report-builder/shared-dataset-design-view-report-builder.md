@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c73190521b714859b76ffbf11ec404e4ff791f1d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e1301fbcb05441ea09d6eb6e7450ce0d050aaa65
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Представление конструктора общих наборов данных (построитель отчетов)
   Набор данных в отчете представляет данные отчета, возвращаемые из запроса к внешнему источнику данных. Общие наборы данных публикуются на сервере отчетов и могут использоваться в нескольких отчетах. Можно создавать наборы данных для совместного использования с другими пользователями. В окне создания общего набора данных можно выбрать общий источник данных, указать свойства для общего набора данных и создать запрос в конструкторе запросов.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
   
  Дополнительные сведения см. в разделе [Data Connections, Data Sources, and Connection Strings in Report Builder](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
   
-### <a name="dataset"></a>Набор данных  
+### <a name="dataset"></a>Dataset  
  Кнопка **Параметры набора** служит для изменения свойств общего набора данных, следующие основные параметры.  
   
 -   Поля. В коллекции полей можно добавлять или изменять поля.  
@@ -99,7 +97,7 @@ ms.lasthandoff: 12/05/2017
  Чтобы сохранить созданный запрос, на кнопке **Построитель отчетов** щелкните **Сохранить** или **Сохранить как**. Перейдите в соответствующую папку на сервере отчетов и сохраните определение общего набора данных. Общий набор данных будет доступен для других пользователей только после его сохранения на сервере отчетов.  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Наборы данных отчетов (службы SSRS)](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  

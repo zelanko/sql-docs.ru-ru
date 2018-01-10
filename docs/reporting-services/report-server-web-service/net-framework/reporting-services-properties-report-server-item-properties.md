@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server-web-service
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 1c874a823a27a10f0b915aa7bf6bf221b7dc6ac0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c254ee33efb4ddd644690747c407cce237fb9112
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-properties---report-server-item-properties"></a>Свойства Reporting Services — свойства элементов сервера отчетов
   Свойства элементов являются свойствами, зависящими от элементов в базе данных сервера отчетов. Такие элементы включают отчеты, связанные отчеты, папки, ресурсы, модели и источники данных.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|-----------------|  
 |**CreatedBy**|Имя пользователя, изначально добавившего элемент в базу данных сервера отчетов.|  
 |**CreationDate**|Дата и время, когда элемент был добавлен в базу данных сервера отчетов.|  
-|**Description**|Описание элемента.|  
+|**Описание**|Описание элемента.|  
 |**Скрыта**|Значение, указывающее, видим и доступен ли элемент пользователям.|  
 |**Идентификатор**|Идентификатор элемента в базе данных сервера отчетов.|  
 |**ModifiedBy**|Имя пользователя, выполнившего последнее изменение элемента в базе данных сервера отчетов.|  

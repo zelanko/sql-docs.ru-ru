@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - recycling application domains
 ms.assetid: a455e2e6-8764-493d-a1bc-abe80829f543
 caps.latest.revision: "18"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ce02d45295537bf9eef80816f7099a4697ddfd1c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f892ef4a4849385e0a48272dd7eef826e4b49635
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="application-domains-for-report-server-applications"></a>Домены приложений для приложений сервера отчетов
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]сервер отчетов реализован как единственная служба, включающая веб-службу сервера отчетов, диспетчер отчетов и приложение фоновой обработки. Каждое приложение эксплуатируется в собственном домене приложения, в составе общего процесса сервера отчетов. Создание, настройка и управление доменами приложений обычно осуществляются внутри процесса. Однако знание того, как происходят операции очистки для доменов приложений сервера отчетов, может быть полезным при исследовании проблем производительности или использования памяти и при устранении неполадок в работе службы.  
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  Хотя веб-служба сервера отчетов и диспетчер отчетов являются приложениями [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , они не реагируют на плановую очистку домена приложений, которая может быть указана в файле machine.config для приложений [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , развернутых на сервере служб IIS.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Изменение файла конфигурации служб Reporting Services (RSreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Настройка доступной памяти для приложений сервера отчетов](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)  

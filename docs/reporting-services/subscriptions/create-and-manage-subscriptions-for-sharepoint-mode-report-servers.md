@@ -8,9 +8,7 @@ ms.service:
 ms.component: subscriptions
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1679abc5cdec550cd1c81208e71532613996e2cd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 31d672c16ed9cf4854be7b64507daaf381a6a175
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Создание подписок для серверов отчетов, работающих в режиме интеграции с SharePoint, и управление этими подписками
   Вы можете создать подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] на доставку отчетов из веб-приложения SharePoint, работающим в режиме интеграции с SharePoint. Подписки могут доставлять отчеты в библиотеку документов, папку с файлами или по электронной почте. В этой статье приведена сводка по требованиям и шагам для создания подписки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -164,7 +162,7 @@ ms.lasthandoff: 12/05/2017
   
 3.  Установите флажок рядом с подпиской и нажмите кнопку **Удалить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подписки и доставка (службы Reporting Services)](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Доставка по электронной почте в службах Reporting Services](../../reporting-services/subscriptions/e-mail-delivery-in-reporting-services.md)   
  [Доставка отчетов в общие папки с помощью служб Reporting Services](../../reporting-services/subscriptions/file-share-delivery-in-reporting-services.md)   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 54cb861a-8cec-445c-875d-599fb9bd1973
 caps.latest.revision: "5"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7e74c53736485e3ee7745937e9e9dbd1de1b75e2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d102444b30ad5ddadcd6dcfe8fe25b072f230a63
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>Примеры URL-адресов для элементов на сервере отчетов в режиме интеграции с SharePoint
   Чтобы опубликовать отчеты и связанные с ними элементы в библиотеке SharePoint, можно опубликовать содержимое с помощью таких средств разработки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , как конструктор отчетов, или передать содержимое средствами сайта SharePoint.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/05/2017
   
  Для доступа к содержимому сервера отчетов и его защите могут быть использованы следующие элементы веб-иерархии. Прочие объекты (списки, страницы и т. д.) не используются для доступа к содержимому сервера отчетов и в данной таблице не описаны.  
   
-|Объект|Description|  
+|Object|Description|  
 |------------|-----------------|  
 |Веб-приложение SharePoint|Веб-приложение SharePoint может быть установлено как на изолированном сервере, так и в составе фермы, содержащей коллекцию виртуальных серверов. Веб-приложение имеет URL-адрес (например, `http:*//servername*`) и может содержать несколько сайтов.|  
 |Сайт|Сайт является либо родительским сайтом для веб-приложения, либо вложенным сайтом.|  
@@ -142,7 +140,7 @@ ms.lasthandoff: 12/05/2017
   
  Когда сервер отчетов работает в режиме интеграции с SharePoint, для ресурса используется более узкое определение. Сервер отчетов поддерживает ресурсы для хранимых отчетов, ссылающихся на внешние изображения. Это относится к отчетам, которые являются моментальными снимками или копиями, сохраняемыми для внутреннего использования.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [опубликовать отчет в библиотеке SharePoint](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
  [Публикация общего источника данных в библиотеку SharePoint](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Диалоговое окно страниц свойств проекта](../../reporting-services/tools/project-property-pages-dialog-box.md)  

@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - deploying reports [Reporting Services]
 ms.assetid: 18201ca0-bf4a-484f-b3a2-95d1046a6a9b
 caps.latest.revision: "44"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3485cc9a08bb868a16c731ccf3d2d684a110e46e
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 618bdebcd05306a94a661ef4001d446b509e18dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Задание свойства развертывания (службы Reporting Services)
   В[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]необходимо задать сервер отчетов. Можно также указать папки для отчетов и общие источники данных, что позволит публиковать элементы в проекте "Сервер отчетов" на сервере отчетов. Свойства и значения, необходимые среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] для построения, предварительного просмотра и развертывания отчетов, хранятся в конфигурациях проектов в проекте "Сервер отчетов". Можно создать несколько именованных наборов для этих свойств проекта, чтобы можно было просто переключаться с одного набора свойств на другой. Каждый набор свойств представляет собой конфигурацию. Например, может существовать одна конфигурация для публикации отчетов на тестовом сервере и другая конфигурация для публикации отчетов на рабочем сервере.  
@@ -88,7 +86,7 @@ ms.lasthandoff: 12/05/2017
     > [!NOTE]  
     >  Если установлен флажок **Создать** , конструктор отчетов создает проект отчета и осуществляет его проверку перед предварительным просмотром или публикацией на сервере отчетов. Если установлен флажок **Развернуть** , конструктор отчетов публикует отчет на сервере отчетов согласно свойствам развертывания. Если флажок **Развернуть** не установлен, конструктор отчетов отображает отчет, указанный в свойстве **StartItem** в локальном окне предварительного просмотра.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Публикация источников данных и отчетов](../../reporting-services/reports/publishing-data-sources-and-reports.md)   
  [Предварительный просмотр отчетов](../../reporting-services/reports/previewing-reports.md)   
  [Справка F1 конструктора отчетов](../../reporting-services/tools/report-designer-f1-help.md)   

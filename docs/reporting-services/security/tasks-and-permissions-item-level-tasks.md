@@ -8,23 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: item-level tasks [Reporting Services]
 ms.assetid: fdeb7bc3-167a-4342-84e3-32e3faa1fa39
 caps.latest.revision: "37"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3abea80a4ddfee5eddd4c4070b79b338d4b398ae
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6a824675df700ba1910d21acea217061acb0879d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tasks-and-permissions---item-level-tasks"></a>Разрешения в задачах на уровне элемента
   Задача уровня элемента представляет собой коллекцию разрешений, связанных с отчетом, папкой, моделью отчета, ресурсом или общим источником данных. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] также располагают задачами на уровне системы, которые применяются к сайту сервера отчетов в целом. Дополнительные сведения см. в разделе [Задачи уровня системы](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md). Дополнительные сведения о задачах и правах в целом см. в разделе [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
@@ -37,14 +35,14 @@ ms.lasthandoff: 12/05/2017
   
  Общие наборы данных используют те же наборы разрешений, что и отчеты. Элементы отчета используют те же наборы разрешений, что и ресурсы.  
   
-|Задача|Применяется к элементу|Permissions|  
+|Задача|Применяется к элементу|Разрешения|  
 |----------|---------------------|-----------------|  
 |Использование отчетов|Отчеты|Читать содержимое<br /><br /> Читать определения отчета<br /><br /> Читать свойства|  
 |Использование отчетов|Общие наборы данных|Читать содержимое<br /><br /> Читать определения отчета<br /><br /> Читать свойства|  
 |Создание связанных отчетов|Отчеты|Создавать ссылки<br /><br /> Читать свойства|  
 |Управление всеми подписками|Отчеты|Читать свойства<br /><br /> Читать любую подписку<br /><br /> Создавать любую подписку<br /><br /> Удалять любую подписку<br /><br /> Обновлять любую подписку|  
 |Управление источниками данных|Папки|Создавать источник данных|  
-|Управление источниками данных|Источники данных|Обновлять свойства<br /><br /> Удалять обновление содержимого<br /><br /> Читать свойства|  
+|Управление источниками данных|обозревателе решений|Обновлять свойства<br /><br /> Удалять обновление содержимого<br /><br /> Читать свойства|  
 |Управление папками|Папки|Создавать папку<br /><br /> Удалять обновление свойств<br /><br /> Читать свойства|  
 |Управление отдельными подписками|Отчеты|Читать свойства<br /><br /> Создавать подписку<br /><br /> Удалять подписку<br /><br /> Читать подписку<br /><br /> Обновлять подписку|  
 |Управление моделями|Папки|Создавать модель|  
@@ -65,7 +63,7 @@ ms.lasthandoff: 12/05/2017
 |Просмотр ресурсов|Ресурсы|Читать содержимое<br /><br /> Читать свойства|  
 |Просмотр ресурсов|Элементы отчетов|Читать содержимое<br /><br /> Читать свойства|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

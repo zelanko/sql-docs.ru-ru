@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,13 +32,13 @@ ms.assetid: b035b2e0-ab1e-4a37-bff7-a42d1e914bac
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 878743f3b95871cab938fb85fb683c99bcfdf6f8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6671b7465773e0c0f27b2ba2ec5bf1d16e2b1b2c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="chart-legend---formatting-report-builder"></a>Условные обозначения диаграммы — форматирование (построитель отчетов)
   Условные обозначения диаграммы содержат описание каждой категории на диаграмме. Условные обозначения всегда содержат один или несколько элементов, каждый из которых состоит из цветного прямоугольника, представляющего ряд, и текстовую строку, описывающую этот ряд, как показано на следующем рисунке.  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
   
  По умолчанию текст условных обозначений не оптимизируется для совпадения с областью условных обозначений. Чтобы текст условных обозначений автоматически совпадал с размером выделенного пространства, присвойте свойству AutoFitTextDisabled значение **False** и установите минимально удовлетворяющий размер шрифта для свойства MinFontSize.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно "Свойства условных обозначений"  — "Общие" (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/library/db718f8f-f185-422f-871c-96f0749e5893)   
  [Изменение текста элемента условных обозначений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)   
  [Форматирование диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

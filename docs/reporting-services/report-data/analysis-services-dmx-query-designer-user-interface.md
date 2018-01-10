@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - query designers [DMX]
 ms.assetid: 5fd726a4-aed7-4e6c-9404-ccb2db66cf26
 caps.latest.revision: "35"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b700fa12cce715af2c5c188ca7453eb12daf5ce2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 31f5564fa0e8704ea2400be8746b80d398ac5e2c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Пользовательский интерфейс конструктора DMX-запросов служб Analysis Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графические конструкторы запросов для построения DMX-запросов и запросов многомерных выражений из источника данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . В этом разделе описан конструктор DMX-запросов. Дополнительные сведения о конструкторе запросов многомерных выражений см. в разделе [Analysis Services MDX Query Designer User Interface](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md).  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
   
  В следующей таблице описываются функции каждой панели.  
   
-|Панель|Функция|  
+|Панель|Компонент|  
 |----------|--------------|  
 |Панель конструктора запросов|Использует диалоговые окна **Модель интеллектуального анализа данных** и **Выбор входных таблиц** для построения DMX-запроса.|  
 |Панель сетки|Для каждой строки сетки используйте раскрывающийся список **Источник** для выбора функции или выражения, и выберите поля, группы и критерии или аргументы для использования в DMX-запросе. Для просмотра текста DMX-запроса, сформированного в соответствии с выбранными значениями, нажмите кнопку **Режим конструктора** на панели инструментов.|  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/05/2017
   
  В следующей таблице описываются функции каждой панели.  
   
-|Панель|Функция|  
+|Панель|Компонент|  
 |----------|--------------|  
 |Панель конструктора запросов|Использует диалоговые окна **Модель интеллектуального анализа данных** и **Выбор входных таблиц** для построения DMX-запроса.|  
 |Панель запросов|Просмотр или изменение текста DMX-запроса непосредственно в этой панели. Изменения в тексте DMX-запроса не сохранятся при возвращении в режим **Конструктор** .|  
@@ -91,7 +89,7 @@ ms.lasthandoff: 12/05/2017
   
  Для переключения обратно в режим конструктора или запроса щелкните правой кнопкой мыши панель "Результат" и выберите пункт **Конструктор** или **Запрос**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Определение параметров в конструкторе запросов многомерных выражений для служб Analysis Services (построитель отчетов и службы SSRS)](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Тип соединения служб Analysis Services для расширений интеллектуального анализа данных (службы SSRS)](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - roles [Reporting Services], modifying
 ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5fb32b134be7425c12573c6971c0e537a6c0e7d8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6029146092b3aabb2861cafa9ce4cdffa4a397ac
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-definitions---create-delete-or-modify"></a>Создание, удаление или изменение определений ролей
   Службы Reporting Services предоставляют стандартные роли, определяющие уровень доступа к серверу отчетов. Каждый пользователь или группа, которым требуется доступ к серверу отчетов, получают его с помощью роли, описывающей задачи, которые может выполнять пользователь или группа. Роли определяются для сервера отчетов в целом. Нельзя изменить определение роли для конкретной части сервера отчетов или указать, что роль будет использоваться в зависимости от обстоятельств.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/05/2017
   
          Укажите задачи, которые могут выполнять члены этой роли, а затем нажмите кнопку **ОК** , чтобы применить изменения.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подключение к серверу отчетов в среде Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   
  [Службы Reporting Services в среде SQL Server Management Studio (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  

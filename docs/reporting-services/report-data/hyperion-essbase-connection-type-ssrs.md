@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 108a00b6-799f-4066-b796-da59e95c09fd
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: d89029ffc521d08ea3152ca164d3985de4644a32
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b70d9cbcbca9a8898d6b838f667f786cecf64805
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="hyperion-essbase-connection-type-ssrs"></a>Тип соединения Hyperion Essbase (службы SSRS)
   Чтобы включить данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] в отчет, пользователь должен иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[extEssbase](../../includes/extessbase-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для [!INCLUDE[extEssbase](../../includes/extessbase-md.md)], позволяющего извлекать многомерные данные из внешнего источника данных [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] .  
@@ -91,10 +89,10 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Объект**|Указывает значение данных поля.<br /><br /> Для свойства измерения оно сопоставлено с параметром MEMBER_CAPTION. Для меры оно сопоставлено со значением данных.|  
 |**IsMissing**|**Логическое значение**|Указывает, найдено ли поле в результирующем наборе данных.|  
-|**FormattedValue**|**Строковые значения**|Возвращает форматированное значение для ключевой цифры.<br /><br /> В многомерном выражении сопоставляется с FORMATTED_VALUE.|  
-|**BackgroundColor**|**Строковые значения**|Возвращает цвет фона, заданный в базе данных для этого поля.<br /><br /> В многомерном выражении сопоставляется с BACK_COLOR.|  
-|**Color**|**Строковые значения**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.<br /><br /> В многомерном выражении сопоставляется с FORE_COLOR.|  
-|**UniqueName**|**Строковые значения**|Возвращает полное имя уровня.<br /><br /> В многомерном выражении сопоставляется с MEMBER_UNIQUE_NAME.|  
+|**FormattedValue**|**String**|Возвращает форматированное значение для ключевой цифры.<br /><br /> В многомерном выражении сопоставляется с FORMATTED_VALUE.|  
+|**BackgroundColor**|**String**|Возвращает цвет фона, заданный в базе данных для этого поля.<br /><br /> В многомерном выражении сопоставляется с BACK_COLOR.|  
+|**Color**|**String**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.<br /><br /> В многомерном выражении сопоставляется с FORE_COLOR.|  
+|**UniqueName**|**String**|Возвращает полное имя уровня.<br /><br /> В многомерном выражении сопоставляется с MEMBER_UNIQUE_NAME.|  
   
  Дополнительные сведения об использовании полей и свойств полей в выражении см. в разделе [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -110,7 +108,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
 |**Свойство**|**Тип**|**Описание или ожидаемое значение**|  
 |------------------|--------------|---------------------------------------|  
-|**FORMAT_STRING**|**Строковые значения**|Определяется для меры, это **FormattedValue** , доступное в виде типа String.|  
+|**FORMAT_STRING**|**String**|Определяется для меры, это **FormattedValue** , доступное в виде типа String.|  
   
   
 ##  <a name="Remarks"></a> Замечания  
@@ -151,7 +149,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
  Предоставляет подробные сведения о работе с этим модулем обработки данных.  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

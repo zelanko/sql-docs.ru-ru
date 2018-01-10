@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: "45"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3345eedb8d1d8fa933deb6ac5f543fdb6e82f51
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5aa30529e45f4436d6e3d5b7a366993f5f9fa909
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="securable-items"></a>Защищаемые элементы
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют безопасность на основе ролей для управления доступом к элементам, которые хранятся на сервере отчетов. Предоставление пользователю доступа к серверу отчетов обычно выполняется созданием пары назначений ролей:  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
 |Общие источники данных|Защита общих источников данных позволяет ограничить доступ к элементу и страницам его свойств. Дополнительные сведения см. в разделе [Защита совместно используемых элементов источника данных](../../reporting-services/security/secure-shared-data-source-items.md).|  
 |Общие наборы данных|Общие наборы данных могут быть защищены, чтобы управлять диапазоном действий, которые могут выполнять пользователи, таких как просмотр или смена определения или же изменение свойств данного общего набора данных.<br /><br /> Дополнительные сведения см. в разделе [Защита элементов общего набора данных](../../reporting-services/security/secure-shared-dataset-items.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 caps.latest.revision: "26"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 93d078f0d9209c7ee4a9a19f9cd9b2d8d757f81c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 9f0429e82811f1acc05d50f579f9b8d46e975246
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reports-report-parts-and-report-definitions-report-builder-and-ssrs"></a>Отчеты, элементы отчетов и определения отчетов (построитель отчетов и службы SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] использует различные термины, описывающие отчеты с разбиением на страницы в разных состояниях, применяемые в том числе для отчета во время начального определения, для опубликованного отчета и отчета, просматриваемого пользователем.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 12/05/2017
   
  Подпишитесь на отчет, который доставляется в папку «Входящие» электронной почты или в указанную общую папку в выбранном формате. HTML 4.0 является форматом подготовки к просмотру отчета по умолчанию. Помимо HTML, отчеты можно подготавливать к просмотру и во многих других форматах, например в форматах Excel, Word, XML, PDF, TIFF и CSV. Как и опубликованные отчеты, отчеты, готовые для просмотра, нельзя отредактировать и снова сохранить на сервере отчетов. Дополнительные сведения см. в разделах [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Построитель отчетов в SQL Server 2016](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

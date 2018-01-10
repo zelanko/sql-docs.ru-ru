@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,13 +18,13 @@ ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0c1057911b1443b5d83777ec7a6e7fff90d73ece
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eb7d195139e3fd34ad6ac749bf0e09e7b13e0d3d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-parameters-on-a-published-report---sharepoint-integrated-mode"></a>Настройка параметров опубликованного отчета в режиме интеграции с SharePoint
   Параметризованным называется отчет, который принимает вводимые значения, используемые для фильтрации данных при запуске отчета. Параметры определяются на этапе создания отчета. В зависимости от того, как параметр отчета определяется в определении отчета, этот параметр может принимать одно значение, несколько значений или динамические значения, изменяющиеся в ответ на предшествующий выбор (например, когда пользователь выбирает категорию продукта, его следующим шагом может быть выбор конкретного продукта из этой категории). Параметр может иметь значение по умолчанию, которое используется для запуска отфильтрованной версии отчета в автоматическом режиме и может быть заменено другим значением.  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/05/2017
   
 7.  Нажмите кнопку **Применить**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочная таблица по разрешениям на сайты SharePoint и списки для элементов сервера отчетов](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   

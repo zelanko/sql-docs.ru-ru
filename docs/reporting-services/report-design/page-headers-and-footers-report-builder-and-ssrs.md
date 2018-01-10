@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,13 +28,13 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: "6"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5b230522d04db42f66884acfcd110e1f1594df5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 0c03ea200e96115c78fcb824f8a1327f6a4fd55a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Верхние и нижние колонтитулы страницы (построитель отчетов и службы SSRS)
   Отчет может содержать верхний и нижний колонтитулы, которые располагаются в верхней и нижней части каждой страницы соответственно. Верхние и нижние колонтитулы могут содержать статический текст, изображения, линии, прямоугольники, границы, цвет фона, фоновые изображения и выражения. Выражения включают ссылки на поля набора данных для отчетов, имеющих один и только один набор данных, а также вызовы агрегатных функций, которые включают набор данных в качестве области.  
@@ -65,12 +63,12 @@ ms.lasthandoff: 12/05/2017
   
 |Поддерживается в выражении|Статистические выражения ReportItems|Статистические выражения набора данных (в качестве области должно быть указано имя набора данных)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Текстовые поля в тексте отчета|Да|Нет|  
-|&PageNumber|Да|Нет|  
-|&TotalPages|Да|Нет|  
-|Агрегатная функция|Да. Например:<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Да. Например:<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
-|Коллекция полей для элементов на странице|Косвенно. Например:<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Да. Например:<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
-|Изображение, привязанное к данным|Косвенно. Например: `=ReportItems!TXT_Photo.Value`|Да. Например:<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
+|Текстовые поля в тексте отчета|Да|нет|  
+|&PageNumber|Да|нет|  
+|&TotalPages|Да|нет|  
+|Агрегатная функция|Да. Например,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Да. Например,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
+|Коллекция полей для элементов на странице|Косвенно. Например,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Да. Например,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
+|Изображение, привязанное к данным|Косвенно. Например: `=ReportItems!TXT_Photo.Value`|Да. Например,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
   
  Следующие подразделы этого раздела содержат готовые к использованию выражения, получающие переменные данные, обычно используемые в колонтитулах. Этот раздел также содержит сведения о том, как модуль подготовки отчетов в формате Excel обрабатывает верхние и нижние колонтитулы. Дополнительные сведения о выражениях см. в разделе [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md).  
   

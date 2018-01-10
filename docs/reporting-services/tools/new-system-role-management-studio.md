@@ -8,23 +8,21 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: sql13.swb.reportserver.newsystemrole.f1
 ms.assetid: 7b4a0b98-975b-478a-8359-7db39ccbb347
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 700c6a1daf1f0e8b9fcce693d6972ab9032d3fce
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: fb7dc039f225328a96d135ff584c1d3a54b619da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="new-system-role-management-studio"></a>Создание системной роли (среда Management Studio)
   Используйте эту страницу, чтобы создать определение роли на уровне системы. Определение системной роли указывает набор задач на системном уровне, применимых к серверу отчетов в целом.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/05/2017
   
  " /  
   
- **Description**  
+ **Описание**  
  Введите описание, объясняющее, как использовать роль, и перечисляющее функции, которые поддерживаются ролью.  
   
  **Задача**  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/05/2017
  **Описание задачи**  
  Описание задачи с указанием поддерживаемых ею операций и разрешений.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справка F1 по использованию сервера отчетов среде Management Studio](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Определение ролей](../../reporting-services/security/role-definitions.md)  
   

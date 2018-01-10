@@ -8,22 +8,20 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 caps.latest.revision: "3"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 65f5adb42afa0ec3217e5726cb4b53f4547a29fd
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ef2e6405ce01442ca8a9709db2f1aa61a4934dc3
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>Возможности служб Reporting Services, поддерживаемые различными выпусками SQL Server 2016
 
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/05/2017
 
 ##  <a name="SSRS"></a> Службы Reporting Services  
   
-|Имя функции|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|Имя функции|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Мобильные отчеты и ключевые показатели эффективности|Да||||||Да|  
 |Поддерживаемый выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для базы данных каталога|Standard Edition или более многофункциональный|Standard Edition или более многофункциональный|Web Edition|Express|||Standard Edition или более многофункциональный|  
@@ -89,7 +87,7 @@ ms.lasthandoff: 12/05/2017
 |Для данного выпуска службы [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services|Используйте данный выпуск экземпляра компонента Database Engine для хранения базы данных|  
 |----------------------------------------------------------------------|---------------------------------------------------------------------------|  
 |Enterprise|Выпуски Enterprise или Standard (локальные или удаленные)|  
-|Standard Edition|Выпуски Enterprise или Standard (локальные или удаленные)|  
+|Standard|Выпуски Enterprise или Standard (локальные или удаленные)|  
 |Web Edition|Выпуск Web edition (только локально)|  
 |Express с дополнительными службами|Express с дополнительными службами (только локальная версия).|  
 |Ознакомительная версия|Ознакомительная версия|  
@@ -97,7 +95,7 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="BIC"></a> Клиенты бизнес-аналитики  
  Следующие клиентские приложения доступны в центре загрузки Майкрософт и предоставляются с целью упростить создание документов бизнес-аналитики, запускаемых в экземпляре [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . При размещении этих документов в серверной среде используйте выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , поддерживающий этот тип документов. В следующей таблице показано, какой выпуск [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит компоненты сервера, необходимые для размещения документов, созданных в этих клиентских приложениях.  
   
-|Имя средства|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|Имя средства|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |---------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] (.rdl и .rds)|Да|Да|||||Да|  
 |[!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] (.rsmobile)|Да||||||Да|  

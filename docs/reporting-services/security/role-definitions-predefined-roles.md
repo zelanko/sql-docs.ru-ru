@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 caps.latest.revision: "42"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: e424561065b7fa6889fd680335f56d1b7082ee60
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 492f85664f3a1068d32fca9910717d794fb6dc6e
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="role-definitions---predefined-roles"></a>Предварительно определенные роли
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] устанавливаются с набором стандартных ролей, которые можно использовать для предоставления доступа к операциям сервера отчетов. Каждой стандартной ролью описывается набор взаимосвязанных задач. Можно назначить учетные записи групп и пользователей для стандартных ролей, чтобы обеспечить немедленный доступ к операциям сервера отчетов.  
@@ -54,8 +52,8 @@ ms.lasthandoff: 12/05/2017
 |[Роль «Браузер»](#bkmk_browser)|Элемент|Пользователи, которым назначена эта роль, имеют право выполнять отчеты, подписываться на отчеты и перемещаться по структуре папок.|  
 |[Роль «Построитель отчетов»](#bkmk_reportbuilder)|Элемент|Пользователи, которым назначена эта роль, имеют право создавать и изменять отчеты в построителе отчетов.|  
 |[Роль «Мои отчеты»](#bkmk_myreports)|Элемент|Пользователи, которым назначена эта роль, имеют право управлять персональной рабочей областью для хранения и использования отчетов и других элементов.|  
-|[Роль «Системный администратор»](#bkmk_systemadministrator)|System|Пользователи, которым назначена эта роль, имеют право включать функции, задавать значения по умолчанию, определять безопасность в пределах веб-сайта, создавать определения ролей в среде Management Studio и управлять заданиями.|  
-|[Роль «Пользователь системы»](#bkmk_systemuser)|System|Пользователи, которым назначена эта роль, имеют право просматривать основные сведения о сервере отчетов, например сведения из общего расписания.|  
+|[Роль «Системный администратор»](#bkmk_systemadministrator)|Система|Пользователи, которым назначена эта роль, имеют право включать функции, задавать значения по умолчанию, определять безопасность в пределах веб-сайта, создавать определения ролей в среде Management Studio и управлять заданиями.|  
+|[Роль «Пользователь системы»](#bkmk_systemuser)|Система|Пользователи, которым назначена эта роль, имеют право просматривать основные сведения о сервере отчетов, например сведения из общего расписания.|  
   
 ##  <a name="bkmk_content"></a> Роль «Диспетчер содержимого»  
  Роль **Диспетчер содержимого** — это стандартная роль, включающая задания, полезные для пользователя, управляющего отчетами и веб-содержимым, но не обязательно составляющего отчеты или управляющего веб-сервером либо экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Диспетчер содержимого разворачивает отчеты, управляет моделями отчетов и соединениями с источниками данных, а также принимает решения о способе использования отчетов. Для определения роли **Диспетчер содержимого** по умолчанию выбраны все задачи уровня элемента.  
@@ -217,7 +215,7 @@ ms.lasthandoff: 12/05/2017
   
  Роль **System User** можно использовать в качестве дополнения к мерам безопасности по умолчанию. Можно включать эту роль в новые назначения ролей, позволяющие пользователям отчетов получить доступ к серверу отчетов. Дополнительные сведения см. в статье [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
  [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)   

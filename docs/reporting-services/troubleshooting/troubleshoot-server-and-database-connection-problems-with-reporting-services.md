@@ -8,22 +8,20 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8bbb88df-72fd-4c27-91b7-b255afedd345
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5dd30097deb23e911e43789e10e81685f1ce0743
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d6544043e8925c77dc88d7d1191e8ccd690b7a00
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>Устранение неполадок с подключением к серверу и базе данных в Reporting Services
 Используйте этот раздел, чтобы решать проблемы, возникающие при подключении к серверу отчетов. Также в этом разделе описываются сообщения о непредвиденных ошибках. Дополнительные сведения о настройке источников данных и настройке данных о подключении сервера отчетов см. в разделах [Задание учетных данных и сведений о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) и [Настройка соединения с базой данных сервера отчетов (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
@@ -119,10 +117,10 @@ ms.lasthandoff: 12/05/2017
 ## <a name="unable-to-connect-to-the-reports-and-reportserver-directories-when-the-report-server-databases-are-created-on-a-virtual-sql-server-that-runs-in-a-microsoft-cluster-services-mscs-cluster"></a>Невозможность соединения с каталогами /reports и /reportserver при создании баз данных сервера отчетов на виртуальном сервере SQL Server, запущенном в кластере службы кластеров (Майкрософт)  
 При создании баз данных сервера отчетов ( **ReportServer** и **ReportServerTempDB**) на виртуальном сервере SQL Server, запущенном в кластере MSCS, удаленное имя в формате `<domain>\<computer_name>$` может быть не зарегистрировано в качестве имени входа для SQL Server. Если настроить учетную запись службы сервера отчетов как учетную запись, требующую это удаленное имя для подключений, то пользователи не смогут подключиться к каталогам /reports и /reportserver в службах Reporting Services. Например, встроенная в Windows учетная запись NetworkService требует удаленное имя. Чтобы избежать этой проблемы, используйте для соединения с базами данных сервера отчетов явную учетную запись домена или имя входа для SQL Server.  
     
-  ## <a name="see-also"></a>См. также  
+  ## <a name="see-also"></a>См. также:  
 [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [Справочник по ошибкам и событиям (службы Reporting Services)](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-[Устранение неполадок при извлечении данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
+[Устранение неполадок с извлечением данных с помощью отчетов служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 [Устранение неполадок, связанных с подписками и доставкой служб Reporting Services](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
   
   

@@ -8,7 +8,7 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 applies_to: SQL Server 2016 Preview
@@ -22,11 +22,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb1ef22a3a460926dc99f2afda21d7c1ecc0ad11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f9f002cf0de0f7e6e78cd529182cb5e3d63ee3f
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="replication-programming-concepts"></a>Основные понятия программирования репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
 |<xref:Microsoft.SqlServer.Replication>|Управляемый код|Синхронизация.|  
 |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|Управляемый код|Создание обработчиков бизнес-логики для интеграции пользовательской логики с процессом синхронизации слиянием.|  
 |[Хранимые процедуры репликации (Transact-SQL)](../../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)|Создание скриптов|Администрирование и текущее наблюдение.|  
-|[Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Создание скриптов|Синхронизация.|  
+|[Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)|Создание скриптов|Синхронизация.|  
   
 ## <a name="example"></a>Пример  
  В [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] должна обеспечиваться публикация данных для 200 торговых представителей во всем мире. Торговые представители часто находятся в командировках и вынуждены использовать переносные компьютеры или карманные компьютеры для обмена данными с заказчиком и добавления новых заказов. Затем изменения в данных должны быть синхронизированы с издателем, после подключения торговым представителем своего переносного компьютера к сети.  

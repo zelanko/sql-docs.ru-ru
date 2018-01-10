@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ee561435c401a1b0e3299216172bf4e25e146137
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5cd348cbc4968f915203ff1b0e0fa1d1f13f955c
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Включение и отключение "песочницы" для языка определения отчетов для служб Reporting Services в режиме интеграции с SharePoint
 
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
 |**Allow**|Тип или набор типов, разрешенных для выражений языка определения отчетов.|  
 |**Пространство имен**|Атрибут для элемента **Allow** , представляющий пространство имен, содержащее один или несколько типов, применимых к атрибуту Value. Это свойство учитывает регистр символов.|  
 |**AllowNew**|Логический атрибут элемента **Allow**, указывающий, разрешено ли создание новых экземпляров этого типа в выражениях языка определения отчетов или в элементах языка определения отчетов **\<Class>**.<br /><br /> Если режим **RDLSandboxing** включен, то новые массивы не могут создаваться в выражениях языка определения отчетов, независимо от значения **AllowNew**.|  
-|**Значение**|Значение элемента **Allow** , представляющее имя типа, разрешенного в выражениях языка определения отчетов. Значение **\*** показывает, что разрешены все типы в пространстве имен. Это свойство учитывает регистр символов.|  
+|**Value**|Значение элемента **Allow** , представляющее имя типа, разрешенного в выражениях языка определения отчетов. Значение **\*** показывает, что разрешены все типы в пространстве имен. Это свойство учитывает регистр символов.|  
 |**Члены**|Для списка типов, включенных в элемент **\<Types>**, представляет список имен членов, запрещенных в выражениях языка определения отчетов.|  
 |**Запретить**|Имя члена, запрещенного в выражении языка определения отчетов. Это свойство учитывает регистр символов.<br /><br /> Если для члена указано **Deny**, то все члены всех типов с этим именем будут запрещены.|  
   
@@ -183,7 +181,7 @@ ms.lasthandoff: 12/05/2017
   
 -   добавьте этот класс к списку разрешений.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
  [Файл конфигурации RsReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Журнал трассировки службы сервера отчетов](../../reporting-services/report-server/report-server-service-trace-log.md)  

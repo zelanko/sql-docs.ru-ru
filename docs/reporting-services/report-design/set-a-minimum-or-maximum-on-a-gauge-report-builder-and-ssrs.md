@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b4c260c0-5a88-4f30-8977-eb5cc78fc146
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ad8907105a44ee24cfb160204dec2186f803eb4d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e772f394e0f6ef3aa762f85405097a15a90ede9d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>Установка минимума и максимума на датчике (построитель отчетов и службы SSRS)
   В отличие от диаграммы в отчете с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , где определяется несколько групп, датчики выводят только одно значение. Поскольку построитель отчетов и конструктор отчетов определяют контекст или относительную значимость значения, отображаемого на датчике, необходимо определить минимум и максимум шкалы.   
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
   
 4.  Если значения минимума и максимума очень большие, укажите значение для параметра **Умножить значения меток шкалы на** (необязательно). Чтобы задать множитель, сокращающий шкалу, используйте десятичное число. Например, если имеется шкала от 0 до 1000, можно задать значение множителя 0,01, чтобы уменьшить значения шкалы от 0 до 10.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Форматирование указателей на датчике &#40;построитель отчетов и службы SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

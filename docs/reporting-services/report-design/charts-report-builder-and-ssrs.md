@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,13 +25,13 @@ ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 caps.latest.revision: "12"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: dceea2cc64f540c492b5883da3949f335f99c8d0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 84aa1b349c9667b1f9dba44c6b29476081956c53
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Диаграммы (построитель отчетов и службы SSRS)
 Узнайте, как использовать области данных на диаграммах, чтобы помочь читателям ваших отчетов [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбивкой на страницы в восприятии больших объемов статистических данных.  
@@ -114,7 +112,7 @@ ms.lasthandoff: 12/05/2017
   
  Дополнительные сведения об агрегатных выражениях см. в разделе [Справочник по агрегатным функциям (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md).  
    
-##  <a name="InThisSection"></a> В этом разделе  
+##  <a name="InThisSection"></a> в этом разделе  
  [Добавление диаграммы в отчет (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  Описание первых шагов при добавлении диаграммы в отчет.  
   
@@ -145,7 +143,7 @@ ms.lasthandoff: 12/05/2017
  [Устранение неполадок с диаграммами (построитель отчетов и службы SSRS)](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
  Описание подсказок по работе с диаграммами.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Изображения, текстовые поля, прямоугольники и линии (построитель отчетов и службы SSRS)](../../reporting-services/report-design/images-text-boxes-rectangles-and-lines-report-builder-and-ssrs.md)   
  [Интерактивная сортировка, схемы документов и ссылки (построитель отчетов и службы SSRS)](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [Вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   

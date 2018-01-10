@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3b5c2254a10b9effafd6ac0640ddc5233a3efd8f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 13a935d3281eae92baacc6741d7e276b3046f2ba
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Функции построителя отчетов — функция Multilookup
   Возвращает набор первых подходящих значений для указанного набора имен из набора данных, содержащего пары «имя-значение».  
@@ -54,7 +52,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>Возвращает  
  Возвращает значение **VariantArray**или **Nothing** , если совпадения нет.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция **Multilookup** служит для извлечения набора значений из набора данных, содержащего пары "имя-значение" со связью "один к одному". Функция**MultiLookup** является эквивалентом функции **Lookup** для набора имен или ключей. Например, для параметра с несколькими значениями на основе идентификаторов первичных ключей функция **Multilookup** может быть использована в выражении в текстовом поле таблицы для извлечения связанных значений из набора данных, не привязанного к параметру или таблице.  
   
  Функция**Multilookup** выполняет следующие действия.  
@@ -98,7 +96,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Набор данных «CategoryNames» содержит идентификатор и название категории, как показано в следующей таблице.  
   
-|Идентификатор|Название|  
+|ID|Имя|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
@@ -130,7 +128,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 =Join(MultiLookup(Parameters!MyColors.Value,Fields!ColorID.Value,Fields!Color.Value,"ProductColors"),", ")  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [Типы данных в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   

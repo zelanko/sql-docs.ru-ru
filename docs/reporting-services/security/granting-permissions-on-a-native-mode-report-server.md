@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,15 +25,15 @@ helpviewer_keywords:
 - security [Reporting Services], role-based
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 caps.latest.revision: "60"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2075a15c7c179a6a3b81da4f139536282505f663
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b97ba436eeedf30521b22fb0231ace07cdacbefc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Предоставление разрешений на сервер отчетов в собственном режиме
   Службы SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] используют авторизацию, основанную на ролях, и подсистему проверки подлинности для определения того, кто может выполнять операции и обращаться к элементам на сервере отчетов. Основанная на ролях авторизация разбивает на категории (роли) множество действий, которые может выполнять отдельный пользователь или группа. Проверка подлинности основывается на встроенной проверке подлинности Windows либо в пользовательском модуле проверки подлинности, предоставленном пользователем. Можно использовать стандартные или настраиваемые роли с любым типом проверки подлинности.  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/05/2017
 |Среда Management Studio — используется для просмотра, изменения, создания и удаления определений ролей.|[Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
 |Диспетчер отчетов — используется для присвоения ролей пользователям и группам.|[Предоставление пользователям доступа к серверу отчетов (диспетчер отчетов)](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Изменение или удаление назначения ролей (диспетчер отчетов)](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Стандартные роли](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Предоставление разрешений для элементов сервера отчетов на сайте SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md)   

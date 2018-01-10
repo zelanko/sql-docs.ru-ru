@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords: Reporting Services, report creation
@@ -18,13 +16,13 @@ ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 caps.latest.revision: "54"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b5d023c1f2fa7c8795f83e610c49e03f50f38032
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 11bf9da4b78262f75a411f847c721309abc2457b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services (SSRS), отчеты служб
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] — отчеты с разбивкой на страницы — это основанные на XML определения отчетов, включающие данные отчетов и элементы макета отчетов. В клиентской файловой системе определения отчетов имеют расширение RDL. После публикации отчета с разбивкой на страницы он становится элементом отчета, хранящимся на сервере отчетов или на сайте SharePoint. Отчеты с разбивкой на страницы — это лишь одна из частей серверной платформы создания отчетов, предоставляемой службами [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Вам также доступно [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="create-notifications-based-on-report-data"></a>Создание уведомлений на основе данных отчета  
  Можно создать предупреждения об изменении данных для опубликованных отчетов на сайте SharePoint. Предупреждения об изменении данных основываются на потоках данных из областей данных в отчете. По умолчанию имена для областей данных присваиваются автоматически. Авторы отчетов могут облегчить создание предупреждений об изменении данных в своих отчетах, присваивая областям данных имена с учетом их делового назначения. После создания предупреждения об изменении данных на электронную почту создавшего пользователя будут приходить письма в случае, если данные удовлетворяют указанным условиям. Дополнительные сведения см. в разделах [Формирование веб-каналов данных из отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Создание предупреждения данных в конструкторе предупреждений данных](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) и [Предупреждения об изменении данных в службах Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
   
-## <a name="upgrade-reports"></a>Обновление отчетов  
+## <a name="upgrade-reports"></a>Upgrade Reports  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] поддерживают различные версии определений отчетов, серверов отчетов и сайтов SharePoint. Обновить отчет можно следующим образом.  
   
 -   Обновление установки сервера отчетов. Скомпилированные отчеты, хранящиеся на сервере отчетов, будут автоматически обновлены при первом использовании. Определение отчета (RDL-файл) не будет изменено. Дополнительные сведения см. в разделе [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
@@ -182,7 +180,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Узнайте, где можно найти дополнительные сведения.** Например, если в отчет включены выражения, то в средстве «Конструктор отчетов» можно будет найти больше сведений о проблемах вычисления выражений, чем в средстве «Построитель отчетов». Подробные сведения об ошибках обработки отчетов содержатся в файлах журналов.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Расширения (SSRS)](../../reporting-services/extensions-ssrs.md)   
  [Сервер отчетов служб Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

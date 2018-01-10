@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,20 +18,20 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 caps.latest.revision: "19"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ed5e5031c00a8a4f638f3d3226ae331896e4a35d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d66415bd5318a98bb45f92ed262f0324c61416a1
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="planning-a-report-report-builder"></a>Планирование отчета (построитель отчетов)
   Построитель отчетов позволяет создавать отчеты с разбиением на страницы нескольких видов. Например, можно создавать отчеты, которые отображают сводку подробных данных о продажах, тенденции в маркетинге и продажах, рабочие отчеты или панели мониторинга. Можно также создавать отчеты, в которых используются преимущества текста со сложным форматированием, например заказы на продажу, каталоги продукции или стандартные письма. Все эти отчеты создаются с использованием различных сочетаний одних и тех же строительных блоков в построителе отчетов. Чтобы создать полезный, легкочитаемый отчет, рекомендуется сначала составить план. Перед началом работы полезно рассмотреть следующие вопросы.  
   
 -   **В каком формате должен отображаться отчет?**  
   
-     Отчеты можно подготовить к просмотру в режиме в сети в браузере, таком как веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , или экспортировать в другие форматы, например Excel, Word или PDF. Очень важно определить окончательную форму отчета, поскольку не все функции доступны во всех форматах экспорта. Дополнительные сведения см. в разделе [Export Reports &#40;Report Builder and SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
+     Отчеты можно подготовить к просмотру в режиме в сети в браузере, таком как веб-портал [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , или экспортировать в другие форматы, например Excel, Word или PDF. Очень важно определить окончательную форму отчета, поскольку не все функции доступны во всех форматах экспорта. Дополнительные сведения см. в разделе [Экспорт отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).  
   
 -   **Какая структура должна использоваться для представления данных в отчете?**  
   

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 caps.latest.revision: "9"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: a39e08df689767b289bbe319b3de65f053303ae8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: dbba8f48545494c706445e9ab35fe919025d8484
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Поиск и просмотр отчетов на веб-портале (построитель отчетов и службы SSRS)
   Диспетчер отчетов — это веб-инструмент, включающее в себя функции просмотра отчетов и управления ими. Он устанавливается как часть сервера отчетов. Чтобы открыть диспетчер отчетов, введите в окне браузера его URL-адрес. Дополнительные сведения о требованиях к браузеру см. в разделе [Поддержка браузера для служб Reporting Services и Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Для получения дополнительных сведений о настройке URL-адреса диспетчера отчетов на сервере отчетов свяжитесь с системным администратором. Дополнительные сведения см. в разделе [Настройка диспетчера отчетов (собственный режим)](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Для поиска определенного текста в отчете используется панель инструментов, расположенная в верхней части отчета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поиск отчетов и других элементов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

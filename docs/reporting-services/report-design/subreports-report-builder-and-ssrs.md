@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 caps.latest.revision: "10"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 41f4a2d11e3eb3200ddd992c6321cca242c8bb2c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b60e6a1156fb9b00b2c74bb4c23a18e2da56b93b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Вложенные отчеты (построитель отчетов и службы SSRS)
   Вложенный отчет представляет собой элемент отчета, отображающий другой отчет в тексте главного отчета. Концептуально вложенный отчет в отчете напоминает фрейм на веб-странице. Он используется для внедрения отчета в другой отчет. В качестве вложенного отчета можно использовать любой отчет. Отчет, отображаемый в качестве вложенного отчета, обычно хранится на сервере отчетов в той же папке, что и родительский отчет. Можно настроить родительский отчет таким образом, чтобы он передавал вложенному отчету параметры. Вложенный отчет может повторяться в пределах областей данных с использованием параметра для фильтрации данных в каждом экземпляре вложенного отчета.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
  В построителе отчетов для предварительного просмотра вложенного отчета в основном отчете оба отчета должны находиться на одном сервере отчетов либо нужно указать полный путь к вложенному отчету.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Детализация, углубленная детализация, вложенные отчеты и вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -42,13 +40,13 @@ ms.assetid: 9dcf3fc8-bf9c-4a14-a03d-e78254aa4098
 caps.latest.revision: "11"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 310e1f5c45187d5065203f86cafd384318d72ed3
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1caed0f401f74ad420475aae125ba47558d0163a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Таблицы, матрицы и списки (построитель отчетов и службы SSRS)
  В [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]таблицы, матрицы и списки — это *области данных* , где данные отчета с разбиением на страницы отображаются в ячейках, распределенных по строкам и столбцам. Ячейки, как правило, содержат текстовые данные, например текст, даты и числа, но могут также содержать датчики, диаграммы или элементы отчетов, такие как изображения. К таблицам, матрицам и спискам часто применяется общее название — области данных *табликса* .  
@@ -147,7 +145,7 @@ ms.lasthandoff: 12/05/2017
   
 -   [Добавление, перемещение или удаление таблицы, матрицы или списка (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
-##  <a name="InThisSection"></a> В этом разделе  
+##  <a name="InThisSection"></a> в этом разделе  
  В следующих разделах приведены сведения о работе с областью данных табликса.  
   
  [Область данных табликса (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/05/2017
  [Основные сведения о группах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)  
  Объясняет, что представляют собой группы и когда они используются, а также описывает группы, доступные для других областей данных табликса.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Вложенные области данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
  [Связывание нескольких областей данных с одним набором данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   

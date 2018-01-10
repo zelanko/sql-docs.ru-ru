@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 479cf6630c2ea2b208c30a4a582e30c55b7c9616
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: eaee62d06fd3ab67d10b64cb44282377ace28914
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Форматирование указателей на датчике (построитель отчетов и службы SSRS)
  В отчете [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] с разбиением на страницы указатель датчика показывает текущее значение датчика.   
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/05/2017
   
  Если изображение указателя имеет неправильную форму, то необходимо определить прозрачный цвет, чтобы скрыть области изображения, которые не должны отображаться на датчике. При определении прозрачного цвета датчик транспонирует изображение поверх существующего указателя и усекает его таким образом, чтобы отображалась только форма указателя. Датчик подгоняет размер изображения под размеры указателя. При задании изображения указателя все последующие указатели, добавляемые к этому датчику, будут отрисовываться под этим изображением. Поэтому лучше не задавать изображение для указателя, если на датчике несколько указателей. Дополнительные сведения см. в разделе [Задание изображения для указателя на датчике (построитель отчетов и службы SSRS)](http://msdn.microsoft.com/en-us/9d73b3c3-a068-4868-a2be-0cd261b6e92b).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование шкал на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Форматирование диапазонов на датчике (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-ranges-on-a-gauge-report-builder-and-ssrs.md)   
  [Датчики (построитель отчетов и службы SSRS)](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  

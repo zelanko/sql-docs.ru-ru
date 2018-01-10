@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - report snapshots [Reporting Services]
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 caps.latest.revision: "40"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 725cf2ab029fcaa7385a1321f4c7bacc3fcc008c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d3f31eeab1cd9bf01b3d0525a1599678c7912ac7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Создание, изменение и удаление моментальных снимков в журнале отчетов
   Журнал отчета — это коллекция моментальных снимков отчета. Журнал отчета можно изменять, добавляя и удаляя моментальные снимки или редактируя свойства, от которых зависит его сохранение. Журнал отчета может быть создан вручную или по расписанию.  
@@ -67,7 +65,7 @@ ms.lasthandoff: 12/05/2017
   
  Но весь журнал целиком удаляется при удалении отчета. Например, при удалении месячного отчета по продажам по причине замещения его более новой версией, весь связанный с отчетом журнал будет утрачен. Однако при перемещении отчета весь журнал перемещается вместе с ним.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание журнала отчета (службы Reporting Services в режиме интеграции с SharePoint)](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
  [Диспетчер отчетов (службы Reporting Services в основном режиме)](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Управление содержимым сервера отчетов (службы Reporting Services в основном режиме)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   

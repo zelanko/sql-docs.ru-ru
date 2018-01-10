@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c89659ad5743675a4e8503c40367eea0eabacac1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5a084d3bb236100728b5decab3569c37f46600f8
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Встроенные коллекции — ссылки на коллекцию ReportItems (построитель отчетов)
   Встроенная коллекция **ReportItems** является набором текстовых полей из элементов отчета, например строк области данных или текстовых полей в области конструктора отчетов. Коллекция **ReportItems** включает текстовые поля, находящиеся в текущей области верхнего колонтитула, нижнего колонтитула или текста отчета. Эта коллекция определяется во время выполнения обработчика отчетов и модуля подготовки отчетов. Текущая область изменяется после успешного объединения обработчиком отчетов данных отчета и элементов макета элементов отчета, когда пользователь просматривает страницы отчета. Встроенная коллекция **ReportItems** может использоваться для формирования верхних колонтитулов страницы в стиле словаря, отображающих первый и последний элемент на каждой странице.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="using-the-reportitems-value-property"></a>Использования свойства значения ReportItems  
  Элементы коллекции **ReportItems** имеют только одно свойство: Value. Значение элемента **ReportItems** может использоваться для отображения или вычисления данных из другого поля отчета. Чтобы получить доступ к значению текущего текстового поля, можно использовать встроенное в [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] глобальное выражение Me.Value или просто Value. Однако в функциях отчета, таких как First и агрегатных функциях, необходимо использовать полный синтаксис.  
   
- Например:  
+ Пример:  
   
 -   Это выражение, помещенное в текстовое поле, отображает значение текстового поля **ReportItem** с именем `Textbox1`:  
   

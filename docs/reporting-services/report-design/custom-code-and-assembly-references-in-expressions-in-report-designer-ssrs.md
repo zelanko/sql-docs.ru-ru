@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,15 +22,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 caps.latest.revision: "77"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5c6bb20022e7766e66b47c51995eef4fe7fb785c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e17e5820a54eb2328edc9efe31239ca31a1fef09
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Пользовательский код и ссылок на сборки в выражениях в конструкторе отчетов (службы SSRS)
   Можно добавлять ссылки на пользовательский код, внедренный в отчет, или пользовательские сборки, построенные и сохраненные на компьютере и развернутые на сервере отчетов. Используйте внедренный код для пользовательских констант, сложных функций или функций, которые используются в одном отчете несколько раз. Сборки с пользовательским кодом используйте для сохранения кода в одном месте и его общего использования в нескольких отчетах. Пользовательский код может включать новые пользовательские константы, переменные, функции или подпрограммы. Можно включать ссылки, доступные только для чтения, во встроенные коллекции, например коллекцию Parameters. Однако эти наборы значений данных отчета невозможно передать пользовательским функциям (в частности, не поддерживаются пользовательские статистические вычисления).  
@@ -198,7 +196,7 @@ End Function
   
  Поскольку содержимое коллекций *Fields* и *ReportItems* может динамически изменяться во время выполнения, доступ к нему не следует производить посредством вызовов пользовательской сборки (например, в переменной члена). Та же самая рекомендация применяется обычно для всех встроенных коллекций.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление кода в отчет (службы SSRS)](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
  [Использование пользовательских сборок с отчетами](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [Добавление в отчет ссылки на сборку (службы SSRS)](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   

@@ -8,9 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,22 +18,22 @@ helpviewer_keywords:
 - F1 Help [Reporting Services]
 ms.assetid: 01daf21c-19c6-448d-ac30-accb54ad83da
 caps.latest.revision: "28"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4a6d0e82fcfde8c0cc1cde1daf124bdf6b191ac7
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 8c0339ff6e6662c4deb271cf38b744ac33678f2f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="feature-reference-reporting-services"></a>Справочник по функциям (службы Reporting Services)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] включают несколько средств и приложений, которые могут использоваться для создания, управления и просмотра отчетов. В этом разделе приводятся конкретные подразделы, описывающие диалоговые окна, веб-страницы и мастера этих инструментальных средств и приложений.  
   
  Чтобы получить доступ к разделу пользовательского интерфейса во время работы средства или приложения, нажмите клавишу F1 или кнопку **Справка** в открытом диалоговом окне, веб-странице или мастере. Дополнительные сведения о запуске средств [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] см. в разделе [Учебник. Инструкции по поиску и запуску средств служб Reporting Services (SSRS)](../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Справка F1 конструктора отчетов](../reporting-services/tools/report-designer-f1-help.md)  
  Предоставляет справку для конструктора отчетов и его диалоговых окон, мастера отчетов и мастера изображений.  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/05/2017
  [Средство просмотра HTML-страниц и панель инструментов отчета](../reporting-services/html-viewer-and-the-report-toolbar.md)  
  Предоставляет справку для компонента средств просмотра HTML-страниц для просмотра отчетов в веб-браузере.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Основные понятия служб Reporting Services (SSRS)](../reporting-services/reporting-services-concepts-ssrs.md)   
  [Отчеты служб Reporting Services (службы SSRS)](../reporting-services/reports/reporting-services-reports-ssrs.md)   
  [Наборы данных отчетов (службы SSRS)](../reporting-services/report-data/report-datasets-ssrs.md)   

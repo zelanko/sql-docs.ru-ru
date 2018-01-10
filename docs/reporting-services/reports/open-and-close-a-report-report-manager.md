@@ -8,9 +8,7 @@ ms.service:
 ms.component: reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - reports [Reporting Services], opening
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 caps.latest.revision: "51"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cca7f1627bfa5169912c242a0d81a4877f6848a4
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 739f52788b8f8d4d47e8aa0a6b20f9479f087e1d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Открытие и закрытие отчетов (диспетчер отчетов)
   Диспетчер отчетов можно использовать для просмотра отчетов, опубликованных на сервере отчетов. По умолчанию все отчеты открываются в формате HTML. После открытия отчета, его можно экспортировать для просмотра в формате других приложений. Если отчет содержит интерактивные функции, либо разработан в построителе отчетов и содержит интерактивные данные, можно щелкать ссылки для просмотра дополнительных отчетов или данных.  
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/05/2017
   
      Закрываемый отчет не удаляется из кэша браузера. Для отключения от отчета необходимо закрыть браузер.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поиск отчетов и других элементов (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Страница "Содержимое" (диспетчер отчетов)](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

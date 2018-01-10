@@ -8,21 +8,19 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
 caps.latest.revision: "15"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
-ms.openlocfilehash: efcee36bb392786b5af57492e919da902f423679
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 6f554b9ec04d894fbcd3da37e1bd326b39508571
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Расширенная защита для проверки подлинности служб Reporting Services
 
@@ -52,7 +50,7 @@ ms.lasthandoff: 12/05/2017
 >   
 >  В документации по технологии доступа к данным должны быть сведения о поддержке расширенной защиты.  
   
-### <a name="upgrade"></a>Обновление  
+### <a name="upgrade"></a>UPGRADE  
   
 -   При обновлении сервера служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] до версии SQL Server 2016 в файл **rsreportserver.config** добавляются параметры конфигурации со значениями по умолчанию. Если параметры уже имелись, то при установке SQL Server 2016 они будут сохранены в файле **rsreportserver.config**.  
   

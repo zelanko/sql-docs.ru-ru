@@ -8,23 +8,21 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: system-level tasks [Reporting Services]
 ms.assetid: 7023b388-40b2-4590-b227-115cf380a1e7
 caps.latest.revision: "36"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fcfb30e90a7e5e387b6a7e244a842a41c8ce7012
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 035467f28ebd5e5b8cd6a2269688d1b65db09874
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>Задачи и разрешения — задачи на уровне системы
   Задача системного уровня представляет собой коллекцию разрешений, касающихся операций, применяемых ко всему сайту сервера отчетов в целом. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] включают также задачи уровня элемента, которые относятся к конкретным элементам. Дополнительные сведения см. в разделе [Задачи уровня элемента](../../reporting-services/security/tasks-and-permissions-item-level-tasks.md). Дополнительные сведения о задачах и правах в целом см. в разделе [Tasks and Permissions](../../reporting-services/security/tasks-and-permissions.md).  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="permissions-in-system-level-tasks"></a>Разрешения в задачах системного уровня  
  Следующая таблица указывает совокупность разрешений для каждой системной задачи. Разрешения перечисляются только в справочных целях, чтобы обеспечить более детальное описание функций, доступных с помощью каждой задачи.  
   
-|Задача|Permissions|  
+|Задача|Разрешения|  
 |----------|-----------------|  
 |Выполнение определений отчета|Выполнение определений отчетов (имена разрешения и задачи одинаковы)|  
 |Создание событий|Создание событий|  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/05/2017
 |Просмотр свойств сервера отчетов|Считывание системных свойств|  
 |Просмотр общих расписаний|Считывание расписаний|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

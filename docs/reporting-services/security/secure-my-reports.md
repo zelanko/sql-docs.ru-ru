@@ -8,9 +8,7 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,15 +19,15 @@ helpviewer_keywords:
 - My Reports folder [Reporting Services]
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 caps.latest.revision: "34"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: ff08b3c8e78fb337a97cbdf491a745157d52fd53
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1777c84f25373806c3aab4f1c05a0a676b78097f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="secure-my-reports"></a>Обеспечение безопасности «Моих отчетов»
   В компоненте «Мои отчеты» представлено управляемое пользователем рабочее пространство для работы с отчетами. Чтобы обеспечить соответствие своему назначению, для папки «Мои отчеты» требуются более широкие права доступа, чем для других папок, доступных для общего пользования. Пользователям, имеющим разрешения в других папках только на просмотр и запуск отчетов, могут потребоваться дополнительные разрешения для управления их папками My Reports и содержимым, которое им принадлежит. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляет для этого специальный механизм назначения и определения ролей.  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/05/2017
   
  При отключении папки «Мои отчеты» ссылка на папку «Мои отчеты» удаляется из диспетчера отчетов. Доступ к соответствующей структуре папки, поддерживающей папку «Мои отчеты» (т.е. папка «Users Folders» и ее вложенные папки), все еще возможен и может быть осуществлен, если пользователь знает путь к папке. Удаление задач из роли папки **Мои отчеты** предотвращает доступ к ней.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Защищенные отчеты и ресурсы](../../reporting-services/security/secure-reports-and-resources.md)   
  [Защита папок](../../reporting-services/security/secure-folders.md)   
  [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  

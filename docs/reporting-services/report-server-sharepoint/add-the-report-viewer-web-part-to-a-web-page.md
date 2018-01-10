@@ -8,20 +8,18 @@ ms.service:
 ms.component: report-server-sharepoint
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5382e543e659463ee299d323912f4bf6acd752c8
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ff1ed8a3dd760b02ed2c4db209009a310f0ace91
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>Добавление веб-части "Средство просмотра отчетов" на страницу
 
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/05/2017
   
 9. Нажмите кнопку **Применить** в нижней части панели средств, а затем кнопку **ОК** , чтобы закрыть панель.  
   
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
  [Веб-часть "Средство просмотра отчетов" на сайте SharePoint](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
  [Настройка веб-части "Средство просмотра отчетов"](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   

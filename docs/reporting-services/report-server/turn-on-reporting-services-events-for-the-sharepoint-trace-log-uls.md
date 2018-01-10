@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 caps.latest.revision: "19"
-author: guyinacube
-ms.author: asaxton
+author: markingmyname
+ms.author: maghan
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7dfb7020fe79961b4b52a5a6b36919e7abdbb7b6
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 89baca75b96115ac70e6f520cd2248f03497cbda
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Включение событий служб Reporting Services для журнала трассировки SharePoint (ULS)
 
@@ -50,11 +48,11 @@ ms.lasthandoff: 12/05/2017
   
 |Категория|Level|Description|  
 |--------------|-----------|-----------------|  
-|База данных|Подробно|Регистрирует события, требующие доступа к базе данных.|  
-|Общие сведения|Подробно|Регистрирует события, требующие доступа к следующим элементам.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Обработчик HTTP-данных средства просмотра отчетов.<br /><br /> Доступ к отчету (RDL-файлы).<br /><br /> Источники данных (RSDS-файлы).<br /><br /> URL-адреса на сайте SharePoint (SMDL-файлы).|  
+|база данных|Подробный|Регистрирует события, требующие доступа к базе данных.|  
+|Общие|Подробный|Регистрирует события, требующие доступа к следующим элементам.<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Обработчик HTTP-данных средства просмотра отчетов.<br /><br /> Доступ к отчету (RDL-файлы).<br /><br /> Источники данных (RSDS-файлы).<br /><br /> URL-адреса на сайте SharePoint (SMDL-файлы).|  
 |Office Server General|Exception|Регистрирует ошибки входа.|  
-|Топология|Подробно|Регистрирует текущую информацию пользователя.|  
-|веб-части|Подробно|Регистрирует события, для которых требуется доступ к веб-части средства просмотра отчетов.|  
+|Топология|Verbose|Регистрирует текущую информацию пользователя.|  
+|веб-части|Подробный|Регистрирует события, для которых требуется доступ к веб-части средства просмотра отчетов.|  
   
 ##  <a name="bkmk_turnon"></a> Включение и отключение событий служб Reporting Services в категории служб Reporting Services  
   

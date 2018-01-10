@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ae8c138b-e356-4ad8-862c-a4a8d0c04149
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 7f962314d1c4b4c3c3c342c668979081d8c7305c
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 41f82ebf47951b2935fda6d604c17f0640fe9ee7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Гистограммы (построитель отчетов и службы SSRS)
   Гистограмма отображает ряды в виде набора вертикальных прямоугольников, сгруппированных по категориям. Гистограммы удобны для показа изменения данных за период времени и для наглядного сравнения элементов. Простая гистограмма очень похожа на линейчатую диаграмму, которая отображает ряды в виде наборов горизонтальных прямоугольников, и гистограмму диапазонов, которая показывает ряды как наборы вертикальных прямоугольников с различными начальными и конечными точками. Дополнительные сведения см. в разделах [Линейчатые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md) и [Диаграммы диапазонов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/range-charts-report-builder-and-ssrs.md).  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Гистограмма имеет уникальное свойство — возможность отображения в виде гистограммы или диаграммы Парето. Чтобы воспользоваться этой возможностью, нужно в окне свойств выбрать для параметра свойства ShowColumnAs **Гистограмма** или **Парето** значение **true**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [Типы диаграмм (построитель отчетов и службы SSRS)](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [Линейчатые диаграммы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   

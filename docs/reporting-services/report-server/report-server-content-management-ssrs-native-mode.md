@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-server
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: "50"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 21bafd5c07350c38ee14f7de27aaeab265f22e59
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 5f40de7d519da0def4ad65cf5f1d96a592489b5a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Управление содержимым сервера отчетов (службы Reporting Services в собственном режиме)
   В службах [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]управление содержимым относится к управлению элементами сервера отчетов. Всеми этими элементами можно управлять независимо друг от друга посредством свойств и настроек безопасности. Любой элемент можно переместить в другое место в пространстве имен папок сервера отчетов. Для эффективного управления элементами необходимо знать, какие задачи выполняет диспетчер содержимого. Начиная с CTP-версии 3.2 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] доступен веб-портал  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . В этой статье содержатся сведения о диспетчере отчетов и использовании нового веб-портала.  
@@ -193,7 +191,7 @@ ms.lasthandoff: 12/05/2017
   
  [Передача файлов в папку](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструментальные средства служб Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Роли и разрешения &#40;службы Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Отчеты служб Reporting Services &#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

@@ -8,7 +8,7 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 applies_to: SQL Server 2016
@@ -16,13 +16,13 @@ ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
 caps.latest.revision: "15"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 5148e4416998d69822fb7aea96304c92b8c2a1e1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d20db364a19a96b40ac1087485978604c24012dd
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Учебник. Создание матричного отчета (построитель отчетов)
 В этом учебнике вы создадите отчет [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с разбивкой на страницы, содержащий матрицу образца данных по продажам во вложенных группах строк и столбцов. 
@@ -361,7 +361,7 @@ ms.lasthandoff: 12/05/2017
   
 Название территории написано по вертикали, снизу вверх. Высота группы строк Territory изменяется в зависимости от длины названия территории.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 На этом работа с учебником по созданию матричного отчета закончена. Дополнительные сведения о матрицах см. в следующих разделах: 
 -    [Таблицы, матрицы и списки](../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)
 -    [Создание матрицы](../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)

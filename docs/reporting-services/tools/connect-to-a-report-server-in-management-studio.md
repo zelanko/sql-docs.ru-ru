@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,15 +23,15 @@ helpviewer_keywords:
 - Connect to Server dialog box, Reporting Services
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 caps.latest.revision: "53"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1b6a12b85b69cb6bb8ae1b5bc138a47d1a58c1a0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 951f22989a1fb2bb725073cd27da6f1307c71551
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Подключение к серверу отчетов в среде Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] предоставляет обозреватель объектов, позволяющий подключиться к любому серверу семейства [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и просматривать его содержимое в графическом виде. Применительно к службам Reporting Services, обозреватель объектов можно использовать для следующих операций.  
@@ -113,14 +111,14 @@ ms.lasthandoff: 12/05/2017
   
  Если в качестве «Типа сервера» в диалоговом окне [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Соединение с сервером **указаны службы** , то можно указать имя сервера отчетов или конечную точку для веб-службы.  
   
-|Соединение|Задачи|Permissions|  
+|Соединение|Задачи|Разрешения|  
 |----------------|-----------|-----------------|  
 |Сервер отчетов в собственном режиме, подключенный как экземпляр по умолчанию или именованный экземпляр:<br /><br /> \<имя_сервера>\<_экземпляр><br /><br /> Соединение с сервером отчетов выполнено через поставщик WMI сервера отчетов.|Просмотр и задание свойств сервера и значений по умолчанию.<br /><br /> Просмотр и отмена заданий.<br /><br /> Создание общих расписаний и управление ими.<br /><br /> Создание, изменение и удаление определений ролей.|Назначено роли системного администратора.|  
 |Сервер отчетов в собственном режиме, подключенный как экземпляр по умолчанию или именованный экземпляр, через конечную точку для веб-службы сервера отчетов:<br /><br /> `http://<servername>/reportserver`<br /><br /> Альтернативный способ подключения к серверу отчетов — указать URL-адрес сервера отчетов.|Просмотр и задание свойств сервера и значений по умолчанию.<br /><br /> Просмотр и отмена заданий.<br /><br /> Создание общих расписаний и управление ими.<br /><br /> Создание, изменение и удаление определений ролей.|Назначено роли системного администратора.|  
 |Сервер отчетов в режиме интеграции с SharePoint, подключенный через сайт SharePoint:<br /><br /> `http://<webserver>/<SharePointSite>`|Просмотр и задание свойств сервера и значений по умолчанию.<br /><br /> Просмотр и отмена заданий.<br /><br /> Создание и управление общими расписаниями, определенными для сайта, с которым установлено соединение.<br /><br /> Просмотр уровней разрешений, определенных для сайта, с которым установлено соединение.|Уровень разрешений «Полный доступ» на сайте SharePoint, с которым установлено соединение.|  
 |Сервер отчетов в режиме интеграции с SharePoint, подсоединенный с использованием имени экземпляра сервера отчетов:<br /><br /> \<имя_сервера>\<_экземпляр>|Просмотр и задание свойств сервера и значений по умолчанию.<br /><br /> Просмотр и отмена заданий.|Уровень разрешений «Полный доступ» на сайте SharePoint, интегрированном с сервером отчетов.<br /><br /> Обратите внимание, что при соединении с сервером отчетов, а не с сайтом SharePoint, число выполняемых задач существенно уменьшается. Это происходит потому, что сервер отчетов может возвратить данные приложений, которые сохранены или управляются в базе данных сервера отчетов, а не в базах данных конфигурации и содержимого SharePoint.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка подключения к базе данных сервера отчетов (диспетчер конфигураций служб Reporting Services)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Службы Reporting Services в среде SQL Server Management Studio (SSRS)](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
