@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,13 +20,13 @@ ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 caps.latest.revision: "36"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a5c79a0e5645cb3cd462e24f3981adcf7d95b112
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bc8f2253699c71300ba234dfc24f7ee9c3193540
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Часто используемые фильтры (построитель отчетов и службы SSRS)
   Чтобы создать фильтр, необходимо указать одно или несколько уравнений фильтра. Уравнение фильтра состоит из выражения, типа данных, оператора и значения. В этом разделе приведены примеры распространенных фильтров.  
@@ -41,9 +39,9 @@ ms.lasthandoff: 12/05/2017
   
 |Простое выражение|Тип данных|Оператор|Значение|Description|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
-|`[SUM(Quantity)]`|**Целочисленный**|**>**|`7`|Включает все значения данных, превышающие 7.|  
-|`[SUM(Quantity)]`|**Целочисленный**|**TOP N**|`10`|Включает 10 верхних значений данных.|  
-|`[SUM(Quantity)]`|**Целочисленный**|**TOP %**|`20`|Включает верхние 20% значений данных.|  
+|`[SUM(Quantity)]`|**Integer**|**>**|`7`|Включает все значения данных, превышающие 7.|  
+|`[SUM(Quantity)]`|**Integer**|**TOP N**|`10`|Включает 10 верхних значений данных.|  
+|`[SUM(Quantity)]`|**Integer**|**TOP %**|`20`|Включает верхние 20% значений данных.|  
 |`[Sales]`|**Текст**|**>**|`=CDec(100)`|Включает все значения типа System.Decimal (тип данных, используемый в SQL для денежных сумм), превышающие 100.|  
 |`[OrderDate]`|**DateTime**|**>**|`2088-01-01`|Включает все даты с 1 января 2008 года по сегодняшний день.|  
 |`[OrderDate]`|**DateTime**|**BETWEEN**|`2008-01-01`<br /><br /> `2008-02-01`|Включает все даты с 1 января 2008 года до 1 февраля 2008 года включительно.|  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/05/2017
 |Однозначный|`[EmployeeID]`|=|`[@EmployeeID]`|Целочисленный|  
 |Многозначный|`[EmployeeID]`|IN|`[@EmployeeID]`|Целочисленный|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Использование выражений в отчетах (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   

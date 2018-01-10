@@ -8,27 +8,25 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947b0ee1-bb35-4b4e-9527-dc501566e7d1
 caps.latest.revision: "6"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: dffc0db9598a8f31690cebfe6a7ecb8c6b52cfbc
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 6ad004b9e6c01b1bddc61019f64ae9bd1999850f
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Параметры сведений об устройстве для модулей подготовки отчетов к просмотру (службы Reporting Services)
   В службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]настройки сведений об устройстве используются для передачи параметров подготовки к просмотру модуля подготовки отчетов. Каждый модуль подготовки отчетов принимает определенный набор параметров.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |Раздел|Description|  
 |-----------|-----------------|  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 |[Настройки сведений об устройстве RGDI](../reporting-services/rgdi-device-information-settings.md)|Описывает настройки сведений об устройстве, связанные с подготовкой к просмотру в формате RGDI.|  
 |[Настройки сведений об устройстве PPTX](../reporting-services/pptx-device-information-settings.md)|Описывает настройки сведений об устройстве, связанные с подготовкой к просмотру в формате PPTX.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка параметров модулей подготовки отчетов в RSReportServer.Config](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   

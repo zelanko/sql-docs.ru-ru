@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +16,15 @@ helpviewer_keywords:
 - XML [Reporting Services], data retrieval
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71d13409c7905b64f4b91b365b07f9b53b58264d
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 643ad56c8c758c4711d731a6c5121206e8ce0998
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Синтаксис пути к элементу для XML-данных отчета (SSRS)
   В конструкторе отчетов для определения данных из источника данных XML, которые должны использоваться в отчете, указывается путь к элементу с учетом регистра. Путь к элементу — это путь по иерархическим XML-узлам в источнике XML-данных и атрибуты этих узлов. Чтобы использовать путь к элементу по умолчанию, оставьте пустым запрос набора данных или XML **ElementPath** для XML- **Query** . При получении данных из источника XML-данных узлы элементов, которые имеют текстовые значения и атрибуты узла элемента, преобразуются в столбцы результирующего набора. При выполнении запроса значения этих узлов и атрибуты преобразуются в данные строк. Эти столбцы появляются в качестве коллекции полей набора данных в области данных отчета. В этом разделе содержится информация о синтаксисе пути к элементу.  
@@ -74,7 +72,7 @@ XMLLocalName :: =
     Identifier in the XML tag.   
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице указаны термины пути к элементу. Примеры в этой таблице ссылаются на учебный XML-документ Customers.xml в подразделе «Примеры» этого раздела.  
   
 > [!NOTE]  
@@ -84,12 +82,12 @@ XMLLocalName :: =
 |----------|----------------|  
 |Путь к элементу|Определяет последовательность узлов, которые необходимо пройти в XML-документе, чтобы получить поля данных для набора данных из источника XML-данных.|  
 |**ElementNode**|XML-узел в XML-документе. Узлы обозначаются тегами и находятся в иерархической связи с другими узлами. Например, \<Customers> является корневым элементом узла. \<Customer> является подэлементом \<Customers>.|  
-|**XMLName**|Тип узла. Например, именем узла Customers является Customers. Чтобы дать каждому узлу уникальное имя, **XMLName** может иметь префикс с идентификатором пространства имен.|  
+|**XMLName**|Имя узла. Например, именем узла Customers является Customers. Чтобы дать каждому узлу уникальное имя, **XMLName** может иметь префикс с идентификатором пространства имен.|  
 |**Кодировка**|Указывает, что **Value** для этого элемента закодировано на языке XML, требует декодирования и включается как подэлемент этого элемента.|  
 |**FieldList**|Определяет набор элементов и атрибутов, используемых для получения данных.<br /><br /> Если не указано иное, все атрибуты и подэлементы используются в качестве полей. Если указан список пустых полей (**{}**), поля из этого узла не используются.<br /><br /> **FieldList** не может одновременно содержать **Value** и **Element** или **ElementNode**.|  
 |**Поле**|Определяет данные, извлекаемые как поле набора данных.|  
 |**Attribute**|Пара "имя-значение" в **ElementNode**. Например, в узле элемента \<Customer ID="1">, **ID** является атрибутом, а **@ID(Integer)** возвращает "1" как целочисленный тип данных в соответствующем поле данных **ID**.|  
-|**Значение**|Значение элемента. **Value** может использоваться для последнего **ElementNode** в пути к элементу. Например, \<Return> является конечным узлом. Если включить его в конце пути к элементу, значением **Return {@}** будет **Chair**.|  
+|**Value**|Значение элемента. **Value** может использоваться для последнего **ElementNode** в пути к элементу. Например, \<Return> является конечным узлом. Если включить его в конце пути к элементу, значением **Return {@}** будет **Chair**.|  
 |**Element**|Значение именованного подэлемента. Например, Customers {}/Customer {}/LastName извлекает значения только для элемента LastName.|  
 |**Тип**|Необязательный тип данных, который должен использоваться для поля, созданного из этого элемента.|  
 |**NamespacePrefix**|**NamespacePrefix** определяется в элементе XML-запроса. Если элемента XML-запроса не существует, пространства имен в XML **ElementPath** не обрабатываются. Если элемент XML-запроса существует, XML **ElementPath** имеет необязательный атрибут **IgnoreNamespaces**. Если IgnoreNamespaces имеет значение **true**, пространства имен в XML **ElementPath** и XML-документ не обрабатываются. Дополнительные сведения см. в разделе [Синтаксис запроса XML для XML-данных отчета &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md).|  
@@ -105,7 +103,7 @@ XMLLocalName :: =
 |Порядок|Qty|ID|FirstName|LastName|Customer.ID|xmlns|  
 |-----------|---------|--------|---------------|--------------|-----------------|-----------|  
 |Chair|6|1|Bobby|Moore|11|http://www.adventure-works.com|  
-|Таблица|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
+|Table|1|2|Bobby|Moore|11|http://www.adventure-works.com|  
 |Sofa|2|8|Crystal|Hu|20|http://www.adventure-works.com|  
 |EndTables|2|15|Wyatt|Diaz|33|http://www.adventure-works.com|  
   
@@ -130,7 +128,7 @@ XMLLocalName :: =
 |Порядок|Qty|  
 |-----------|---------|  
 |Chair|6|  
-|Таблица|1|  
+|Table|1|  
 |Sofa|2|  
 |EndTables|2|  
   
@@ -211,7 +209,7 @@ XMLLocalName :: =
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Тип соединения XML (службы SSRS)](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Учебники по службам Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [Добавление, изменение и обновление полей в области данных отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  

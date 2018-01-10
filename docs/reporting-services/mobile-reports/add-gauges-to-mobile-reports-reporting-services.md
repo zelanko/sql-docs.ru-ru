@@ -8,20 +8,20 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
 caps.latest.revision: "5"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0702ee29dfab00296971fe36f2397720fd63ee28
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 1e06346c3562f438e962eda3ff01a4068bafa750
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Добавление датчиков в мобильные отчеты | Службы Reporting Services
 Датчики представляют собой самые простые и широко используемые визуальные элементы в мобильных отчетах. Они отображают одно значение в наборе данных — просто значение или значение, сравниваемое с целью.
@@ -89,10 +89,10 @@ ms.lasthandoff: 12/05/2017
 
 Он определяет способ форматирования чисел, отображаемых в датчике (например, валюта, процент, время или общее). Форматирование чисел задается для каждого элемента мобильного отчета.
   
-### <a name="see-also"></a>См. также: 
+### <a name="see-also"></a>См. также раздел 
 
 * [Создание мобильных отчетов с помощью издателя мобильных отчетов SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)
-* [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
+* [Карты в мобильных отчетах служб Reporting Services](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)
 * [Navigators in Reporting Services mobile reports (Навигаторы в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-navigators-to-reporting-services-mobile-reports.md)
 * [Visualizations in Reporting Services mobile reports (Визуализации в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-visualizations-to-reporting-services-mobile-reports.md)
 * [Data grids in Reporting Services mobile reports (Сетки данных в мобильных отчетах служб Reporting Services)](../../reporting-services/mobile-reports/add-data-grids-to-mobile-reports-reporting-services.md) 

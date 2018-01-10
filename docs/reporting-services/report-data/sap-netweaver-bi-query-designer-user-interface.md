@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,15 +20,15 @@ helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 102da66e-ca31-41aa-ab4b-c9b5ab752a72
 caps.latest.revision: "38"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: de1c6c8cba305d1d21781ecd0ee591e4cb1a72be
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: c965dc09098b955fde99748258202d23f6cf3519
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-query-designer-user-interface"></a>Пользовательский интерфейс конструктора запросов BI SAP NetWeaver
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] предоставляют графический конструктор запросов, предназначенный для построения запросов многомерных выражений к источнику данных SAP NetWeaver® Business Intelligence. Графический конструктор запросов многомерных выражений имеет два режима: режим конструктора и режим запросов. В каждом режиме имеется панель «Метаданные», из которой можно перетащить элементы из InfoCube, MultiProvider или запроса с поддержкой веб-доступа, определенного на источнике данных, для построения запроса многомерных выражений, получающего данные при обработке отчета.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/05/2017
   
  В следующей таблице приводится список панелей в этом режиме.  
   
-|Панель|Функция|  
+|Панель|Компонент|  
 |----------|--------------|  
 |Кнопка «Выбрать куб»|Отображается текущий выбранный InfoCube, MultiProvider или запрос с поддержкой веб-доступа.|  
 |Панель «Метаданные»|Отображается иерархический список InfoCube, MultiProvider и запросов. Запросы, созданные в источнике данных, появляются под соответствующим кубом.|  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/05/2017
   
  В следующей таблице описываются функции каждой панели.  
   
-|Панель|Функция|  
+|Панель|Компонент|  
 |----------|--------------|  
 |Кнопка «Выбрать куб»|Отображает текущий выбранный InfoCube, MultiProvider или другой куб.|  
 |Панель «Метаданные/Функции»|Отображает окно с вкладками, содержащее список доступных метаданных и функций, которые можно использовать при создании текста запроса.|  
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/05/2017
   
 -   **Удалить** (![Удалить](../../reporting-services/report-data/media/rsqdicon-delete.gif "Удалить"))  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание общего или внедренного набора данных (построитель отчетов и службы SSRS)](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Файл конфигурации RSReportDesigner](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   

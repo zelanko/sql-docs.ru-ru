@@ -8,7 +8,7 @@ ms.service:
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services], virtual directories
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 caps.latest.revision: "10"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 87c3c32e3068d9b3d1303697b846664d2e5cadb0
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 4128ec3ec665dc5dff90b6d82b7aa7838d4e5d99
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Настройка URL-адресов сервера отчетов (диспетчер конфигурации служб SSRS)
   В [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL-адреса используются для доступа к веб-службам сервера отчетов и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Прежде чем использовать любое приложение, необходимо настроить по крайней мере по одному URL-адресу для веб-службы и [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] для URL-адресов обоих приложений предоставляет значения по умолчанию, которые подходят для большинства сценариев развертывания, в том числе развертывания параллельно с другими веб-службами и приложениями.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="defining-a-report-server-url"></a>Определение URL-адреса сервера отчетов  
  URL-адрес точно определяет расположение экземпляра приложения сервера отчетов в сети. При создании URL-адреса сервера отчетов необходимо указать следующие элементы.  
   
-|Часть|Описание|  
+|Часть|Description|  
 |----------|-----------------|  
 |Имя узла|IP-адрес позволяет однозначно идентифицировать устройство в сети TCP/IP. Это физический IP-адрес каждого сетевого адаптера, установленного в компьютер. Если IP-адрес указывает на заголовок узла, можно указать заголовок узла. Если сервер отчетов развертывается в сети организации, то можно использовать сетевое имя компьютера.|  
 |Порт|TCP-порт является конечной точкой в устройстве. Сервер отчетов прослушивает запросы, проходящие через определенный порт.|  
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/05/2017
 ## <a name="authenticating-client-requests-sent-to-a-report-server-url"></a>Проверка подлинности клиентских запросов, отправленных на URL-адрес сервера отчетов  
  По умолчанию в конечных точках URL-адресов поддерживается проверка подлинности Windows. Это модуль безопасности, используемый по умолчанию. При реализации пользовательской проверки или поставщика проверки подлинности с помощью форм необходимо изменить параметры проверки подлинности на сервере отчетов. При необходимости параметры проверки подлинности Windows можно также изменить, чтобы они соответствовали подсистеме проверки подлинности, используемой в сети. Дополнительные сведения см. в разделе [Проверка подлинности с использованием сервера отчетов](../../reporting-services/security/authentication-with-the-report-server.md) электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Настройка URL-адреса (диспетчер конфигурации служб SSRS)](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
  В этом разделе содержатся инструкции по настройке и изменению резервирования URL-адресов в программе настройки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   

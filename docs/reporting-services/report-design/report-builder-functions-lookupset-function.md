@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7685acfd-1c8d-420c-993c-903236fbe1ff
 caps.latest.revision: "7"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 04ec945b59d77ad8b885d5c8403f833ab4c73ab2
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 54455fd8ab820d9f32525308220c5dd427470d07
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="report-builder-functions---lookupset-function"></a>Функции построителя отчетов — функция LookupSet
   Возвращает набор совпадающих значений для заданного имени из набора данных, содержащего пары «имя-значение».  
@@ -54,7 +52,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Возвращает  
  Возвращает значение **VariantArray**или **Nothing** , если совпадения нет.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция **LookupSet** служит для извлечения набора значений из указанного набора данных, состоящего из пар "имя-значение" со связью "один ко многим". Например, функция **LookupSet** позволяет извлечь по идентификатору пользователя в таблице все связанные с ним телефонные номера из набора данных, не привязанного к этой области данных.  
   
  Функция**LookupSet** выполняет следующие действия.  

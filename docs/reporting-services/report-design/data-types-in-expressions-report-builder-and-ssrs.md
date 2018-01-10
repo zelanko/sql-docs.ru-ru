@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 51b8f1249bb257d3aea3752b6b593e470ae8c775
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e8f9aac801e823f364070fc2b3ce2e6b4b015f78
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Типы данных в выражениях (построитель отчетов и службы SSRS)
   Типы данных представляют разные виды данных, чтобы их можно было эффективно хранить и обрабатывать. Стандартные типы данных включают текст (строки), числа с десятичными разрядами или без них, даты и время, а также изображения. Значения в отчете должны быть представлены с помощью типов данных языка определения отчетов. При отображении значения в отчете его можно отформатировать в соответствии с конкретными предпочтениями. Например, поле, представляющее валюту, может храниться в определении отчета как число с плавающей запятой, но отображаться в различных форматах в зависимости от выбранного свойства формата.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/05/2017
   
 |Тип RDL|Типы CLR|  
 |--------------|---------------|  
-|Строковые значения|По умолчанию: String<br /><br /> Chart, GUID, Timespan|  
+|String|По умолчанию: String<br /><br /> Chart, GUID, Timespan|  
 |Логическое значение|По умолчанию: Boolean|  
 |Целочисленный|По умолчанию: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |DateTime|По умолчанию: DateTime<br /><br /> DateTimeOffset|  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/05/2017
   
  Для преобразования этой даты в одно или несколько значений CLR можно воспользоваться одним из следующих способов.  
   
--   В текстовом поле получите часть строки с помощью выражения. Например:  
+-   В текстовом поле получите часть строки с помощью выражения. Пример:  
   
     -   Следующее выражение возвращает часть строки, относящуюся к часу смещения часового пояса времени в формате UTC, и преобразует ее в минуты: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -150,7 +148,7 @@ ms.lasthandoff: 12/05/2017
   
  Дополнительные сведения о типах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] см. в разделе [Типы данных в службах Analysis Services](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) [SQL Server Books Onle](http://go.microsoft.com/fwlink/?linkid=120955).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Форматирование элементов отчета (построитель отчетов и службы SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
   
   

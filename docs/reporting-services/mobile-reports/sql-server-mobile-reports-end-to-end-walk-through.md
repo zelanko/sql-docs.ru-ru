@@ -8,7 +8,7 @@ ms.service:
 ms.component: mobile-reports
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 4d6caec3b829d7cad2434397e68f1ec97d27f6b1
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 3233c1433d1e09038d66af3db7e84a732e81926a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Мобильные отчеты SQL Server: руководство по использованию
 Используйте пошаговые инструкции по созданию мобильных отчетов для экрана любого размера с помощью [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] на веб-портале [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] и по просмотру отчетов в мобильных приложениях Power BI.
@@ -305,7 +305,7 @@ ms.lasthandoff: 12/05/2017
   
 Ключевые показатели эффективности и мобильные отчеты отображаются в тех же папках,в которых они хранятся на веб-портале служб Reporting Services.   
   
-### <a name="see-also"></a>См. также:  
+### <a name="see-also"></a>См. также раздел  
  
 -  См. статью [Просмотр мобильных отчетов и ключевых показателей эффективности Reporting Services в приложении для iPad](https://powerbi.microsoft.com/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  (Power BI для iOS).  
 -  См. статью [Просмотр мобильных отчетов и ключевых показателей эффективности Reporting Services в приложении для iPhone](https://powerbi.microsoft.com/documentation/powerbi-mobile-iphone-kpis-mobile-reports) (Power BI для iOS).  

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 74f726fc-2167-47af-9093-1644e03ef01f
 caps.latest.revision: "28"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 8d8013c5673a63c80f037ffab76064193db21a36
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 604952211abf63d6dacb111c8170d678acd2d80a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Экспорт в Microsoft Excel (построитель отчетов и службы SSRS)
   Модуль подготовки отчетов [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Excel подготавливает отчет [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] с разбиением на страницы в формате [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (XLSX). Благодаря модулю для подготовки отчетов, ширина столбцов в Excel более аккуратно отражает ширину столбцов в отчете.  
@@ -181,7 +179,7 @@ ms.lasthandoff: 12/05/2017
 |Максимальное число столбцов на листе|256|16 384|  
 |Максимальное число строк на листе|65 536|1 048 576|  
 |Количество цветов, допустимых на листе|56 (палитра)<br /><br /> Если в отчете используется более 56 цветов, модуль подготовки отчетов подбирает требуемый цвет к одному из 56 цветов, которые уже доступны в пользовательской палитре.|Приблизительно 16 миллионов (24-разрядный цвет)|  
-|Сжатые файлы в формате ZIP|Нет|Сжатие в формате ZIP|  
+|Сжатые файлы в формате ZIP|None|Сжатие в формате ZIP|  
 |Семейство шрифтов по умолчанию|Arial|Calibri|  
 |Размер шрифта по умолчанию|10 пт|11 пт|  
 |Высота строки по умолчанию|12,75 пт|15 пт|  

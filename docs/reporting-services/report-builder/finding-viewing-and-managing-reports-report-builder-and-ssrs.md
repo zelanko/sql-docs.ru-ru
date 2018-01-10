@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 caps.latest.revision: "11"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fc5a838e47221f6686cb417ae4c20e9ac95d09f5
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: ca04c9558b827539bdb6dac8431a768e8d68f414
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Поиск, просмотр отчетов и управление ими (построитель отчетов и службы SSRS)
   В построителе отчетов можно просматривать папки на сервере отчетов или на сайте SharePoint для поиска отчетов, общих источников данных, моделей и других связанных элементов отчета, а также просматривать конкретный компьютер для поиска локальных отчетов. Чтобы было проще находить отчеты, построитель отчетов поддерживает список недавно использованных серверов и сайтов и предоставляет прямой доступ к папкам «Рабочий стол», «Мои документы» и «Мой компьютер» в файловой системе компьютера.  
@@ -144,7 +142,7 @@ ms.lasthandoff: 12/05/2017
  Сведения о сеансах хранятся во временной базе данных сервера отчетов. Сервер отчетов не использует управление сеансами [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . При перезапуске сервера или выполнении операции восстановления базы данных состояние сеанса не восстанавливается. Дополнительные сведения об управлении сеансами см. в разделе [Определение состояния выполнения](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).  
   
  
-##  <a name="InThisSection"></a> В этом разделе  
+##  <a name="InThisSection"></a> в этом разделе  
  Следующие подразделы содержат дополнительные сведения о просмотре отчетов и управлении ими.  
   
   [Поиск, просмотр отчетов и управление ими](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)

@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f985856b-31d5-4e56-844b-8a8ee38da67e
 caps.latest.revision: "8"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: f3a004db77f5c137742542a729ced6e79c708c43
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 22a2d5eec19c545771fb5791b37aa50b90124b94
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Тип соединения SAP NetWeaver BI (службы SSRS)
   Чтобы включить данные из внешнего источника данных SAP NetWeaver® Business Intelligence в отчет, необходимо иметь набор данных, основанный на источнике данных отчета типа [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Этот встроенный тип источника данных основан на модуле обработки данных для поставщика данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 для [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  
@@ -93,13 +91,13 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
 |------------------|--------------|---------------------------------------|  
 |**Value**|**Объект**|Указывает значение данных поля.|  
 |**IsMissing**|**Логическое значение**|Указывает, найдено ли поле в результирующем наборе данных.|  
-|**FormattedValue**|**Строковые значения**|Возвращает форматированное значение для ключевой цифры.|  
-|**BackgroundColor**|**Строковые значения**|Возвращает цвет фона, заданный в базе данных для этого поля.|  
-|**Color**|**Строковые значения**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.|  
+|**FormattedValue**|**String**|Возвращает форматированное значение для ключевой цифры.|  
+|**BackgroundColor**|**String**|Возвращает цвет фона, заданный в базе данных для этого поля.|  
+|**Color**|**String**|Возвращает цвет переднего плана, заданный в базе данных для этого элемента.|  
 |**Key**|**Объект**|Возвращает ключ для уровня.|  
-|**LevelNumber**|**Целочисленный**|Для иерархий типа «родители-потомки» возвращает номер уровня или измерения.|  
-|**ParentUniqueName**|**Строковые значения**|Для иерархий типа «родители-потомки» это свойство возвращает полное имя родительского уровня.|  
-|**UniqueName**|**Строковые значения**|Возвращает полное имя уровня. Например, значением **UniqueName** для сотрудника может быть *[0D_Company].[10D_Department].[11]*.|  
+|**LevelNumber**|**Integer**|Для иерархий типа «родители-потомки» возвращает номер уровня или измерения.|  
+|**ParentUniqueName**|**String**|Для иерархий типа «родители-потомки» это свойство возвращает полное имя родительского уровня.|  
+|**UniqueName**|**String**|Возвращает полное имя уровня. Например, значением **UniqueName** для сотрудника может быть *[0D_Company].[10D_Department].[11]*.|  
   
  Дополнительные сведения об использовании полей и свойств полей в выражении см. в разделе [Встроенные коллекции в выражениях (построитель отчетов и службы SSRS)](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
@@ -139,7 +137,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  Предоставляет подробные сведения о поддержке платформ и версий для каждого модуля обработки данных.  
   
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Параметры отчета (построитель отчетов и конструктор отчетов)](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Фильтрация, группирование и сортировка данных (построитель отчетов и службы SSRS)](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  

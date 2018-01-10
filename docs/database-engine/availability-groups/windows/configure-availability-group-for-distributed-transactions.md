@@ -22,11 +22,11 @@ caps.latest.revision: "33"
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.openlocfilehash: aeb43f32eba3a900be154abf3beeb457836d730a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 198d9e8f67003e23a6c94094b7e559249a2d3fad
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="configure-availability-group-for-distributed-transactions"></a>Настройка группы доступности для распределенных транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/20/2017
 
 [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] не запрещает распределенные транзакции для баз данных в группе доступности, даже если эта группа доступности не настроена для распределенных транзакций. При этом в случае, если группа доступности не настроена для распределенных транзакций, отработка отказа может завершаться ошибкой. В частности, экземпляр новой первичной реплики [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] может не получить результат транзакции из DTC. Чтобы включить экземпляр [!INCLUDE[SQLServer](../../../includes/ssnoversion_md.md)] и получить результат сомнительной транзакции из DTC после отработки отказа, настройте группу доступности для распределенных транзакций. 
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Перед настройкой группы доступности для поддержки распределенных транзакций необходимо выполнить следующие предварительные требования:
 
@@ -86,7 +86,7 @@ CREATE AVAILABILITY GROUP MyAG
 
 ```transact-sql
 ALTER AVAILABILITY GROUP MyaAG
-   WITH (
+   SET (
       DTC_SUPPORT = PER_DB  
       );
 ```
@@ -187,7 +187,7 @@ following the guideline for Troubleshooting DTC Transactions.
 
 Дополнительные сведения об обработке сомнительных транзакций см. в статье [Обработка транзакций вручную](http://technet.microsoft.com/library/cc754134.aspx).
 
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 
 [Распределенные транзакции](http://docs.microsoft.com/dotnet/framework/data/adonet/distributed-transactions)
 

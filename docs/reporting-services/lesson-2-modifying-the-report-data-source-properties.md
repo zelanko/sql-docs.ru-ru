@@ -8,21 +8,21 @@ ms.service:
 ms.component: reporting-services
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
 caps.latest.revision: "43"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: ba7880d9cc6f316b7ce06b73dda896becd892797
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 52547af895d362214e6a33c69c29fe2cd2c3cb8a
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 На этом занятии учебника по службам [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с помощью веб-портала будет выбран отчет, который необходимо доставить получателям. Управляемая данными подписка, которую вы создадите, будет распространять отчет **Заказ на продажу** , созданный при работе с учебником [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  В последующих шагах будут изменены сведения о соединении с источником данных, используемые в отчете для получения данных. Только отчеты, использующие **сохраненные учетные данные** для доступа к источнику данных для отчета, могут распространяться с помощью управляемой данными подписки. Сохраненные учетные данные нужны для автоматической обработки отчета.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/05/2017
   
 1.  Перейдите на веб-портал [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] с правами администратора. Например, щелкните значок Internet Explorer правой кнопкой мыши и выберите пункт **Запуск от имени администратора**.  
  
-2.    Перейдите по URL-адресу веб-портала.  Например:   
+2.    Перейдите по URL-адресу веб-портала.  Пример:   
     `http://<server name>/reports`.  
     `http://localhost/reports`
  **Примечание** . URL-адресом веб- *портала* является "Reports", но URL-адресом *сервера* отчетов не является "Reportserver".  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/05/2017
 10. Нажмите кнопку **Сохранить**.
 11. Нажмите кнопку **Отмена**.  
   
-11. Просмотрите отчет, чтобы убедиться, что он выполняется с указанными учетными данными. .  
+11. Просмотрите отчет, чтобы убедиться, что он выполняется с указанными учетными данными. , и делает это по-другому.  
   
 ## <a name="bkmk_modify_dataset"></a>Изменение набора данных AdventureWorksDataset  
  В последующих шагах вы измените набор данных так, чтобы использовался параметр для фильтрации набора данных по номеру заказа.
@@ -118,13 +118,13 @@ ms.lasthandoff: 12/05/2017
   
 2.  На панели инструментов щелкните **Построить** , а затем ― **Развернуть учебник**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 + Отчет успешно настроен для получения данных с применением сохраненных учетных данных. Данные можно фильтровать с помощью параметра. 
 + На следующем занятии вы настроите подписку с помощью страниц управляемой данными подписки на веб-портале. См. [Занятие 3. Определение управляемой данными подписки](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
 ## <a name="see-also"></a>См. также:  
 [Управление источниками данных отчета](../reporting-services/report-data/manage-report-data-sources.md)  
-[Задание учетных данных и сведениях о соединении для источников данных отчета](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+[Определение учетных данных и сведениях о подключении для источников данных отчета](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [Создание управляемой данными подписки (учебник по службам SSRS)](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
 [Создание простого табличного отчета (учебник по службам SSRS)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
   

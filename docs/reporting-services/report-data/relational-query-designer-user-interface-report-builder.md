@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-data
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: "10012"
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: "23"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 20cfc19fedbf8bc1369804c2795f180228b6a88b
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: e563d196486a20a9d7df43d807f8a1726df3c7cc
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>Пользовательский интерфейс конструктора реляционных запросов (построитель отчетов)
   Построитель и конструктор отчетов в [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]включают как графический, так и текстовый конструктор запросов, которые помогают создавать запросы, указывающие, какие данные следует получить из реляционных баз данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases и [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] для набора данных отчета. Графический конструктор запросов используется для просмотра метаданных, интерактивного создания запроса, а также для просмотра его результатов. Текстовый конструктор запросов используется для просмотра запроса, созданного графическим конструктором запросов, или для его изменения. Также можно импортировать существующий запрос из файла или отчета.  
@@ -111,7 +109,7 @@ ms.lasthandoff: 12/05/2017
 |Max|Возвращает максимальное значение в группе. Реализует статистическое выражение SQL MAX.|  
 |StDev|Возвращает статистическое стандартное отклонение всех значений в группе. Реализует статистическое выражение SQL STDEV.|  
 |StDevP|Возвращает статистическое среднеквадратичное отклонение совокупности всех значений в указанном группой выражении. Реализует статистическое выражение SQL STDEVP.|  
-|Sum|Возвращает сумму всех значений в группе. Реализует статистическое выражение SQL SUM.|  
+|SUM|Возвращает сумму всех значений в группе. Реализует статистическое выражение SQL SUM.|  
 |Var|Возвращает статистическую дисперсию всех значений в группе. Реализует статистическое выражение SQL VAR.|  
 |VarP|Возвращает статистическую дисперсию для заполнения по всем значениям в группе. Реализует статистическое выражение SQL VARP.|  
 |Avg Distinct|Возвращает уникальные средние значения. Реализует сочетание статистического выражения AVG и ключевого слова DISTINCT.|  

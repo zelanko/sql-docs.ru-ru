@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,13 +18,13 @@ ms.assetid: 94f960f8-a629-4f1e-8277-c3b8f0680d98
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 2ad2eeac8c2758be74150e0ccbb262beb39ef3af
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bef0babb7531e4ef6c513175515fb8e92ac89e6b
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>Добавление вложенного отчета и параметров (построитель отчетов и службы SSRS)
   Вложенные отчеты следует использовать в том случае, если необходимо создать основной отчет, являющийся контейнером для нескольких связанных отчетов. Вложенный отчет — это ссылка на другой отчет. Чтобы связать отчеты посредством значений данных (например, для отображения данных из нескольких отчетов одному клиенту), необходимо разработать параметризованный отчет (например отчет, показывающий сведения об определенном клиенте), который будет служить в качестве вложенного отчета. При добавлении вложенного отчета в основной отчет можно указать параметры, которые будут переданы вложенному отчету.  
@@ -79,7 +77,7 @@ ms.lasthandoff: 12/05/2017
   
      Изменение порядка параметров вложенного отчета не скажется на обработке вложенного отчета.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Вложенные отчеты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
  [Поведение при подготовке к просмотру (построитель отчетов и службы SSRS)](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

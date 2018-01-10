@@ -8,7 +8,7 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -20,16 +20,16 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: b836c6af9d5862949ec7844d7a88dbc0d349228d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5c135d96f93aea211b260c104b260eb9378a5d2a
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-engine-developer-documentation"></a>Документация для разработчиков ядра СУБД
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] содержит богатый набор средств разработки, администрирования приложений баз данных и управления ими.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Основные понятия о программировании интеграции со средой CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
  Объясняет интеграцию компонента среды CLR платформы .NET Framework для [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Это означает, что хранимые процедуры, триггеры, определяемые пользователем типы, функции и агрегатные функции, а также потоковые функции с табличным значением теперь можно разрабатывать с использованием любого языка .NET Framework, включая [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET и [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   

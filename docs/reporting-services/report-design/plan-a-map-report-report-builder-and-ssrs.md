@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: dc0c27a4-7e31-4a15-a0bc-3a02479d5b02
 caps.latest.revision: "9"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b6581db08d67cef66d9ea4134493b3c83a4b0d80
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d934c4314aa149c4e220fc0b91a9cc182083f6d6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Планирование отчета-карты (построитель отчетов и службы SSRS)
 Хорошее представление сведений в отчетах может помочь их пониманию и выполнению действий. Для представления аналитических данных в отчете, например данных о продажах или демографических данных по географическим районам, можно добавить в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] карту. Карта может содержать несколько уровней, каждый уровень содержит элементы карты, определенные в конкретном типе пространственных данных: точки, представляющие расположение, линии, представляющие маршруты, или многоугольники, представляющие области. Можно соотнести аналитические данные с каждым элементом карты на каждом уровне.  
@@ -115,8 +113,8 @@ ms.lasthandoff: 12/05/2017
   
 |Значок мастера|Стиль слоя|Тип слоя|Описание и параметры|  
 |-----------------|-----------------|----------------|-----------------------------|  
-|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Базовая карта|Многоугольник|Карта, содержащая только области, например территории продаж.<br /><br /> Параметры: цвет изменяется согласно палитре, или используется отдельный цвет. Палитра — это стандартный набор цветов. Если использованы все цвета палитры, начинают использоваться оттенки цветов.|  
-|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Цветная аналитическая карта|Многоугольник|Карта, которая отображает аналитические данные путем изменения цвета, например данные о продажах по области.|  
+|![rs_MapType_Polygon_Basic](../../reporting-services/report-design/media/rs-maptype-polygon-basic.gif "rs_MapType_Polygon_Basic")|Базовая карта|Polygon|Карта, содержащая только области, например территории продаж.<br /><br /> Параметры: цвет изменяется согласно палитре, или используется отдельный цвет. Палитра — это стандартный набор цветов. Если использованы все цвета палитры, начинают использоваться оттенки цветов.|  
+|![rs_MapType_Polygon_ColorAnalytical](../../reporting-services/report-design/media/rs-maptype-polygon-coloranalytical.gif "rs_MapType_Polygon_ColorAnalytical")|Цветная аналитическая карта|Polygon|Карта, которая отображает аналитические данные путем изменения цвета, например данные о продажах по области.|  
 |![rs_MapType_Polygon_Bubble](../../reporting-services/report-design/media/rs-maptype-polygon-bubble.gif "rs_MapType_Polygon_Bubble")|Пузырьковая карта|Многоугольник|Карта, которая отображает аналитические данные путем изменения размера пузырьков в центре областей, например данные о продажах по области.<br /><br /> Параметры: цвет областей изменяется в зависимости от второго аналитического поля, и задаются цветовые правила.|  
 |![rs_MapType_Line_Basic](../../reporting-services/report-design/media/rs-maptype-line-basic.gif "rs_MapType_Line_Basic")|Базовая карта линий|Линия|Карта, отображающая только линии, например маршруты доставки.<br /><br /> Параметры: цвет изменяется согласно палитре, или используется отдельный цвет.|  
 |![rs_MapType_Line_Analytical](../../reporting-services/report-design/media/rs-maptype-line-analytical.gif "rs_MapType_Line_Analytical")|Аналитическая карта линий|Линия|Карта, на которой изменяются цвет и толщина линий, например количество доставленных пакетов и метрика своевременности для маршрута.<br /><br /> Параметры: толщина линии изменяется в зависимости от одного аналитического поля, ее цвет — в зависимости от другого, и задаются цветовые правила.|  
@@ -158,7 +156,7 @@ ms.lasthandoff: 12/05/2017
   
  Чтобы использовать динамические пространственные данные, следует расположить источник пространственных данных на сервере отчетов. Если отчет конструируется в среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], источники пространственных данных могут быть добавлены в проект и опубликованы на сервере отчетов вместе с определением отчета. Если же для создания отчета используется построитель отчетов, следует сперва передать пространственные данные на сервер отчетов, а затем в мастере или в свойствах слоя указать источник пространственных данных для слоя карты.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка данных и отображения карты или слоя карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [Учебник. Отчет-карта (построитель отчетов)](../../reporting-services/tutorial-map-report-report-builder.md)   
  [Карты (построитель отчетов и службы SSRS)](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   

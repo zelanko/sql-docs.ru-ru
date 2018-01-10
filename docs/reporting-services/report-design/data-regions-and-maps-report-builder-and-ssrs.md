@@ -8,9 +8,7 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: data regions
@@ -18,13 +16,13 @@ ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
 caps.latest.revision: "14"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 5fc5666464075a418dbb9490095209856fb68a56
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: a2609574eeb2c41bb4eeab2c85bebd483867ee16
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Области данных и карты (построитель отчетов и службы SSRS)
   Область данных — это объект отчета, в котором отображаются данные из набора данных отчета. Данные отчета могут выводиться в виде чисел и текста в таблице, матрице или списка, а также представляться графически на диаграмме или на датчике либо в географическом контексте на карте. Таблицы, матрицы и списки основаны на области данных *табликса* , которая разворачивается так, чтобы отобразить все данные из набора данных. Область данных табликса поддерживает несколько групп статических и динамических строк и столбцов. На диаграмме показано несколько рядов и групп категорий в разнообразных форматах диаграммы. На датчике выводится единичное или сводное значение для набора данных. На карте пространственные данные отображаются как различные элементы карты, внешний вид которых может различаться в зависимости от сводных данных набора данных.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/05/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## <a name="table"></a>Таблица  
+## <a name="table"></a>Table  
  Таблица — это область данных, в которой данные представлены построчно. Столбцы таблицы являются статическими: количество столбцов определяется во время проектирования отчета. Строки таблицы являются динамическими: при заполнении данными они расширяются вниз. К таблицам могут быть добавлены группы, которые упорядочивают данные в соответствии с указанными полями или выражениями. Дополнительные сведения о добавлении таблицы в отчет см. в разделе [Таблицы (построитель отчетов и службы SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>Матрица  

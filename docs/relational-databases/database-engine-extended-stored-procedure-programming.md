@@ -8,7 +8,7 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: docset-sql-devref
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
 helpviewer_keywords:
@@ -23,11 +23,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 2fbf4a216b71b68f6ac8101e2a3ab404f62cf86c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f67e296f88598bbcde596e9bbcdbe22fef816ad3
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Программирование расширенных хранимых процедур ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Расширенные хранимые процедуры позволяют создавать собственные внешние подпрограммы на языках программирования, подобных C. Расширенные хранимые процедуры представляются пользователям как обычные хранимые процедуры и выполняются тем же способом. Расширенным хранимым процедурам могут передаваться аргументы, и эти процедуры могут возвращать результаты и статус.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Программирование расширенных хранимых процедур](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)  
  Содержит описание способов создания, управления и использования расширенных хранимых процедур.  
   

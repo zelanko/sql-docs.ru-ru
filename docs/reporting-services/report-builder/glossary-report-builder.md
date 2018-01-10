@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-builder
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 37bfede873cdcfebd34c8fba985614adc41305e9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: d4189ef6535396998bf9e250a3714efc102201b4
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="glossary-report-builder"></a>Словарь (построитель отчетов)
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/05/2017
 |имя источника данных|В отчете — имя объекта источника данных.|  
 |тип данных|Атрибут, который определяет тип сведений для хранения в столбце, параметре или переменной.|  
 |хранилище данных|База данных, структура которой оптимизирована для запросов и анализа.|  
-|базой данных|Совокупность данных, таблиц и других объектов, организованная для выполнения определенных задач, таких как поиск, сортировка и комбинирование данных.|  
+|База данных|Совокупность данных, таблиц и других объектов, организованная для выполнения определенных задач, таких как поиск, сортировка и комбинирование данных.|  
 |каталог базы данных|Часть базы данных, содержащая определения всех объектов базы данных и самой базы данных.|  
 |Database Engine|Программный модуль или модули, предоставляющие доступ к системе управления базами данных (СУБД).|  
 |файл базы данных|Один из физических файлов, из которых состоит база данных.|  
@@ -377,7 +375,7 @@ ms.lasthandoff: 12/05/2017
 |ось x|См. другой элемент: ось категорий (x)|  
 |ось y|См. другой элемент: ось значений (y)|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Основные понятия разработки отчетов (построитель отчетов и службы SSRS)](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   
