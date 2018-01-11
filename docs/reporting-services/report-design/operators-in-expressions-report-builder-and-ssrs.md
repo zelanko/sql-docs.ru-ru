@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d22dc8b6-4353-40e7-91a1-65e8dae6325d
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0507f28c6850aeab6a691ec594bdbf7e02423c81
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: f90af50c60fdb4a67bfcd2a423a1a21f66427a2d
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Операторы в выражениях (построитель отчетов и службы SSRS)
   Оператор — это символ, который означает действия, применяемые к одному или более элементам выражения. В выражениях поддерживаются следующие типы операторов: арифметические, сравнения, объединения, логические (поразрядные) и сдвига.  
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/05/2017
 |--------------|-----------------|  
 |And|Выполняет логическое умножение двух выражений типа Boolean или побитовое логическое умножение двух числовых выражений.|  
 |Not|Выполняет логическое отрицание в выражении типа Boolean или побитовое отрицание в числовом выражении.|  
-|или|Выполняет логическое сложение двух выражений типа Boolean или побитовое логическое сложение двух числовых выражений.|  
+|либо|Выполняет логическое сложение двух выражений типа Boolean или побитовое логическое сложение двух числовых выражений.|  
 |Xor|Выполняет операцию логического сложения по модулю двух логических выражений или побитового логического сложения по модулю двух числовых выражений.|  
 |AndAlso|Выполняет логическое умножение двух выражений.|  
 |OrElse|Выполняет логическое деление двух выражений.|  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/05/2017
 |<\<|Выполняет арифметический сдвиг битового шаблона влево.|  
 |>>|Выполняет арифметический сдвиг битового шаблона вправо.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диалоговое окно «Выражение»](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)   
  [Выражения (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
