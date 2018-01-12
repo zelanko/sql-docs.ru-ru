@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ee66a454da8bfdc23e9beb382c0ac22939268e80
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 31f39703450ba5fdb157a7d3fd88f6459d222c77
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>Обзор начальных областей в выполняющейся в памяти OLTP
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ SQL Server позволяет использовать функции выпол
 Увеличение производительности в результате применения In-Memory OLTP демонстрируется в следующих статьях:  
   
 - [Демонстрация. Улучшение производительности выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) . Маленькая демонстрация больших возможностей получения выигрыша в производительности.  
-- [Пример базы данных для выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) . Демонстрация большего масштаба.  
+- [Пример базы данных для выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md). Демонстрация большего масштаба.  
   
   
   
@@ -414,30 +414,25 @@ SQL Server позволяет использовать функции выпол
 - [Секционирование уровня приложения](../../relational-databases/in-memory-oltp/application-level-partitioning.md)  
 - [Модель приложения для секционирования таблиц, оптимизированных для памяти](../../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md)  
   
-  
 <a name="trade-offs-of-native-procs-38p"></a>  
   
 ### <a name="trade-offs-of-native-procs"></a>Преимущества и недостатки скомпилированных в собственном коде хранимых процедур  
   
-  
 - Скомпилированная в собственном коде хранимая процедура не может обращаться к дисковой таблице. Скомпилированная в собственном коде хранимая процедура может обращаться только к таблицам, оптимизированным для памяти.  
 - Когда скомпилированная в собственном коде хранимая процедура запускается в первый раз после того, как сервер или база данных возвращается в оперативный режим, процедура должна быть перекомпилирована один раз. Это приводит к задержке перед началом выполнения процедуры.  
-  
   
 <a name="advanced-considerations-for-memory-optimized-tables-39n"></a>  
   
 ## <a name="advanced-considerations-for-memory-optimized-tables"></a>Дополнительные соображения по оптимизированным для памяти таблицам  
   
-  
-[Индексы для таблиц, оптимизированные для памяти](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) отличаются от индексов в обычных таблицах на диске.  
-  
-- [Хэш-индексы](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) доступны только в таблицах, оптимизированных для памяти.  
-  
+[Индексы для таблиц, оптимизированные для памяти](../../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md) отличаются от индексов в обычных таблицах на диске. Хэш-индексы доступны только в таблицах, оптимизированных для памяти.
+    
+- [Хэш-индексы для оптимизированных для памяти таблиц](../../relational-databases/sql-server-index-design-guide.md#hash_index)
+- [Некластеризованный индекс для таблиц, оптимизированных для памяти](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index) 
   
 Необходимо убедиться, что для планируемой оптимизированной для памяти таблицы и ее индексов будет достаточно места в активной памяти. См.  
   
 - [Создание и управление хранилищем для оптимизированных для памяти объектов](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
-  
   
 Объявить таблицу, оптимизированную для памяти, позволяет параметр DURABILITY = SCHEMA_ONLY:  
   
@@ -445,17 +440,13 @@ SQL Server позволяет использовать функции выпол
 - Когда база данных переходит в оперативный режим, оптимизированная для памяти таблица загружается обратно в активную память (без данных).  
 - Если речь идет о множестве тысяч строк, таблицы SCHEMA_ONLY могут служить [альтернативой таблицам #temporary](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md) в базе данных tempdb.  
   
-  
 Табличные переменные также можно объявлять как оптимизированные для памяти. См.  
   
 - [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)  
   
-  
-  
 <a name="advanced-considerations-for-natively-compiled-modules-40k"></a>  
   
 ## <a name="advanced-considerations-for-natively-compiled-modules"></a>Дополнительные соображения по скомпилированным в собственном коде модулям  
-  
   
 Ниже приведены типы скомпилированных в собственном коде модулей, доступные через Transact-SQL.  
   
@@ -465,7 +456,6 @@ SQL Server позволяет использовать функции выпол
   - В таблицах, оптимизированных для памяти, разрешаются только триггеры, скомпилированные в собственном коде.  
 - Скомпилированные в собственном коде [функции с табличными значениями](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   - [Улучшение производительности временной таблицы и табличной переменной с помощью оптимизации памяти](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)  
-  
   
 Скомпилированная определяемая пользователем функция выполняется быстрее, чем интерпретированная определяемая пользователем функция. При работе с определяемыми пользователем функциями необходимо учитывать следующее:  
   
@@ -477,17 +467,15 @@ SQL Server позволяет использовать функции выпол
 Данные тестов и сведения о производительности определяемых пользователем функций в собственном коде см. в следующих статьях:  
   
   - [Смягчение последствий RBAR с использованием скомпилированных в собственном коде определяемых пользователем функций в SQL Server 2016](https://blogs.msdn.microsoft.com/sqlcat/2016/02/17/soften-the-rbar-impact-with-native-compiled-udfs-in-sql-server-2016/)  
-  - [Прекрасная публикация в блоге, написанная Гейлом Шо (Gail Shaw)](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/), выпущенная в январе 2016 г.  
-  
+  - Запись [Пользовательские функции, скомпилированные в машинный код](http://sqlinthewild.co.za/index.php/2016/01/12/natively-compiled-user-defined-functions/) в блоге Гейл Шоу (Gail Shaw) за январь 2016 г.  
   
 <a name="documentation-guide-for-memory-optimized-tables-41z"></a>  
   
 ## <a name="documentation-guide-for-memory-optimized-tables"></a>Руководство по документации по оптимизированным для памяти таблицам  
   
+Обратитесь к следующим статьям, посвященным некоторым соображениям, касающимся оптимизированных для памяти таблиц:  
   
-Ниже приведены ссылки на другие статьи, посвященные некоторым соображениям, касающимся оптимизированных для памяти таблиц.  
-  
-- [Миграция в выполняющуюся в памяти OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+- [Миграция в In-Memory OLTP](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   - [Определение, должна ли таблица или хранимая процедура быть перенесена в выполняющуюся в памяти OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)  
   - Отчет об анализе производительности транзакции в SQL Server Management Studio позволяет оценить, улучшится ли производительность приложения в базе данных с помощью выполняемой в памяти OLTP.  
   - Инструкции по перемещению таблицы из дисковой базы данных в выполняемую в памяти OLTP см. в [Помощнике по оптимизации памяти](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) .   
@@ -498,9 +486,7 @@ SQL Server позволяет использовать функции выпол
 - [Поддержка Transact-SQL для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   - Поддерживаемые и неподдерживаемые инструкции T-SQL и типы данных для оптимизированной для памяти таблицы и скомпилированных в собственном коде хранимых процедур.  
 - [Привязка базы данных с таблицами, оптимизированными для памяти, к пулу ресурсов](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)(Обсуждаются дополнительные расширенные рассмотрения).  
-  
-  
-  
+
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>Руководство по документации по скомпилированным в собственном коде хранимым процедурам  
@@ -513,9 +499,8 @@ SQL Server позволяет использовать функции выпол
   
 ## <a name="related-links"></a>Связанные ссылки  
   
-- Первая статья: [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
-  
-  
+- Первая статья: [Выполняющаяся в памяти OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
+    
 Следующие статьи содержат примеры кода и демонстрируют повышение производительности за счет применения In-Memory OLTP:  
   
 - [Демонстрация. Улучшение производительности выполняемой в памяти OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) . Маленькая демонстрация больших возможностей получения выигрыша в производительности.  

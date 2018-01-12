@@ -1,12 +1,13 @@
 ---
 title: "Изменение учетной записи для ведения журнала служб SSIS Scale Out | Документы Майкрософт"
+ms.description: This article describes how to change the user account for SSIS Scale Out logging
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
 ms.component: scale-out
-ms.reviewer: 
+ms.reviewer: douglasl
 ms.suite: sql
 ms.technology: integration-services
 ms.tgt_pltfrm: 
@@ -14,36 +15,41 @@ ms.topic: article
 caps.latest.revision: "1"
 author: haoqian
 ms.author: haoqian
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dcedbe0d2c2ef2c2089af1e2a8b31fbeb75ce2fc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8976c44653ea37b7571d4e54d405be223f9728a4
+ms.sourcegitcommit: 23433249be7ee3502c5b4d442179ea47305ceeea
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/20/2017
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Изменение учетной записи для ведения журнала служб SSIS Scale Out
-При выполнении пакетов в Scale Out сообщения событий регистрируются в журнале SSISDB с помощью создаваемого автоматически пользователя **##MS_SSISLogDBWorkerAgentLogin##**. Для входа этого пользователя в систему применяется проверка подлинности SQL Server. Чтобы изменить учетную запись, выполните следующие действия:
+При выполнении пакетов SSIS в Scale Out сообщения о событиях записываются в базу данных SSISDB с помощью создаваемой автоматически учетной записи пользователя **##MS_SSISLogDBWorkerAgentLogin##**. Для входа этого пользователя в систему применяется проверка подлинности SQL Server.
 
-## <a name="1-create-a-user-of-ssisdb"></a>1. Создание пользователя SSISDB
-Инструкции по созданию пользователя базы данных см. в разделе [Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md).
-
-## <a name="2-add-the-user-to-database-role-ssisclusterworker"></a>2. Добавление пользователя в роль базы данных ssis_cluster_worker
-
-Инструкции по присоединению к роли базы данных см. в разделе [Присоединение к роли](../../relational-databases/security/authentication-access/join-a-role.md).
-
-## <a name="3-update-logging-information-in-ssisdb"></a>3. Обновление сведений о ведении журнала SSISDB
-Вызовите хранимую процедуру [catalog].[update_logdb_info], передав в качестве параметров имя SQL Server и строку подключения.
-
-#### <a name="example"></a>Пример
-```sql
-SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
-SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
-EXEC [internal].[update_logdb_info] @serverName, @connectionString
-GO
-```
-
-## <a name="4-restart-scale-out-worker-service"></a>4. Перезапуск службы рабочей роли Scale Out
+Чтобы сменить учетную запись, используемую для ведения журнала Scale Out, выполните указанные ниже действия.
 
 > [!NOTE]
-> Если для ведения журналов применяется учетная запись пользователя Windows, под этой же учетной записью должна выполняться служба рабочей роли Scale Out. В противном случае произойдет ошибка входа в SQL Server.
+> Если для ведения журналов применяется учетная запись пользователя Windows, используйте ту же учетную запись, что и для выполнения службы рабочей роли Scale Out. В противном случае произойдет ошибка входа в SQL Server.
+
+## <a name="1-create-a-user-for-ssisdb"></a>1. Создание пользователя SSISDB
+Инструкции по созданию пользователя базы данных см. в разделе [Создание пользователя базы данных](../../relational-databases/security/authentication-access/create-a-database-user.md).
+
+## <a name="2-add-the-user-to-the-database-role-ssisclusterworker"></a>2. Добавление пользователя в роль базы данных ssis_cluster_worker
+
+Инструкции по присоединению роли базы данных см. в разделе [Присоединение к роли](../../relational-databases/security/authentication-access/join-a-role.md).
+
+## <a name="3-update-the-logging-information-in-ssisdb"></a>3. Обновление сведений о ведении журнала в SSISDB
+Вызовите хранимую процедуру `[catalog].[update_logdb_info]` с именем SQL Server и строкой подключения в качестве параметров, как показано в следующем примере:
+
+    ```sql
+    SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
+    SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
+    EXEC [internal].[update_logdb_info] @serverName, @connectionString
+    GO
+    ```
+
+## <a name="4-restart-the-scale-out-worker-service"></a>4. Перезапуск службы рабочей роли Scale Out
+Перезапустите службу рабочей роли Scale Out, чтобы изменение вступило в силу.
+
+## <a name="next-steps"></a>Следующие шаги
+-   [Диспетчер Integration Services Scale Out](integration-services-ssis-scale-out-manager.md)

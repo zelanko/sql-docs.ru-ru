@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a50727ec3560bf2d5f0cef41c13be050026366df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8e9500bdeffd9c7e9e9480f30a87e1678074cc57
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sql-server-2016-express-localdb"></a>SQL Server 2016 Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.lasthandoff: 11/20/2017
 ## <a name="install-localdb"></a>Установка LocalDB  
  Установите **LocalDB** с помощью мастера установки или программы SqlLocalDB.msi. Параметр**LocalDB** применяется для установки [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. 
  
-Выберите **LocalDB** на странице **Выбор компонентов/общие компоненты** во время установки. Двоичные файлы **LocalDB** можно устанавливать лишь по одному разу для каждой основной версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Можно запускать несколько процессов [!INCLUDE[ssDE](../../includes/ssde-md.md)] , которые будут использовать одни и те же двоичные файлы. Экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , запущенный как **LocalDB** , имеет те же ограничения, что и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
+Выберите **LocalDB** на странице **Выбор компонентов/общие компоненты** во время установки. Двоичные файлы **LocalDB** можно устанавливать лишь по одному разу для каждой основной версии [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Можно запускать несколько процессов [!INCLUDE[ssDE](../../includes/ssde-md.md)] , которые будут использовать одни и те же двоичные файлы. Экземпляр [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], запущенный как **LocalDB**, имеет те же ограничения, что и [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
 
  Управление экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** осуществляется с помощью служебной программы **SqlLocalDB.exe** . [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **LocalDB** следует использовать вместо устаревшей функции пользовательского экземпляра [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] . 
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Программа установки **LocalDB** использует программу SqlLocalDB.msi для установки необходимых файлов на компьютере. После установки **LocalDB** становится экземпляром [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , который способен создавать и открывать базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Файлы системной базы данных, как правило, хранятся в каталоге AppData пользователя, который обычно скрыт. Например, **C:\Users\\<пользователь\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Файлы пользовательской базы данных хранятся в месте, указанном пользователем, как правило, в папке **C:\Users\\<пользователь\>\Documents\\**.  
   
  Дополнительные сведения о включении **LocalDB** в приложение см. в документации [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Общие сведения о локальных данных](http://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), [Пошаговое руководство. Создание базы данных LocalDB SQL Server](http://msdn.microsoft.com/library/ms233763\(VS.110\).aspx) и [Пошаговое руководство. Подключение к данным в базе данных LocalDB SQL Server (формы Windows)](http://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
@@ -109,11 +109,11 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|Название|«LocalDBApp1»|  
+|Имя|«LocalDBApp1»|  
 |Version|\<текущая версия>|  
 |Общее имя|""|  
 |Владелец|"\<пользователь Windows>"|  
-|Автоматическое создание|Нет|  
+|Автоматическое создание|нет|  
 |Состояние|запуск|  
 |Время последнего запуска|\<дата и время>|  
 |Имя канала экземпляра|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  

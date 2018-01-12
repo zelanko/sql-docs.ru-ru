@@ -1,7 +1,7 @@
 ---
 title: "Включение зашифрованных соединений для ядра СУБД | Документы Майкрософт"
 ms.custom: 
-ms.date: 09/11/2017
+ms.date: 12/21/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -27,11 +27,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0408459ba5ef287cb583962a536d1780fa9f6769
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1123fe0698e9b5e38ba77f5ca1aa634904281e3b
+ms.sourcegitcommit: ed9335fe62c0c8d94ee87006c6957925d09ee301
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Включение зашифрованных соединений для ядра СУБД
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Чтобы сохранить файл сертификата в удобном расположении, выполните **мастер экспорта сертификатов**.  
   
-##  <a name="ConfigureServerConnections"></a> Настройка сервера на прием зашифрованных соединений  
+##  <a name="ConfigureServerConnections"></a> Настройка принудительного использования зашифрованных соединений на сервере  
   
 1.  В **диспетчере конфигурации SQL Server** разверните узел **Сетевая конфигурация SQL Server**, щелкните правой кнопкой мыши элемент **Протоколы для** *\<экземпляр сервера>* и выберите пункт **Свойства**.  
   
@@ -90,11 +90,18 @@ ms.lasthandoff: 11/20/2017
   
 4.  Перезапустите службу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
+
+> [!NOTE]
+> Чтобы обеспечить безопасный обмен данными между клиентом и сервером, настройте клиент так, чтобы он запрашивал зашифрованные соединения. Дополнительные сведения приводятся [далее в этой статье](#client-request-encrypt-connect-23h).
+
+
+
 ### <a name="wildcard-certificates"></a>Групповые сертификаты  
 Начиная с версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client поддерживают групповые сертификаты. Другие клиенты могут их не поддерживать. Дополнительные сведения см. в документации клиента. Групповые сертификаты не выбираются с помощью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Чтобы использовать групповой сертификат, нужно изменить раздел реестра `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` и ввести отпечаток сертификата без пробелов в качестве значения **Сертификат**.  
 > [!WARNING]  
 > [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
-  
+
+<a name="client-request-encrypt-connect-23h"/>
 ##  <a name="ConfigureClientConnections"></a> Настройка клиента на прием зашифрованных соединений  
   
 1.  Скопируйте на компьютер клиента исходный сертификат или экспортированный файл сертификата.  

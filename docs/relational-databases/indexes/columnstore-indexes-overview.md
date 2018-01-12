@@ -1,5 +1,5 @@
 ---
-title: "Общие сведения об индексах columnstore | Документация Майкрософт"
+title: "Общие сведения об индексах columnstore | Документы Майкрософт"
 ms.custom: 
 ms.date: 03/07/2016
 ms.prod: sql-non-specified
@@ -23,21 +23,20 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7ee09bc377beed53a4af3a43111deeec03830e98
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: aa5fedd940718a69baf8afabcee503a3c1f356e6
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="columnstore-indexes---overview"></a>Общие сведения об индексах columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  *Индекс columnstore* — это стандарт хранения и запрашивания больших объемов данных, в которых хранятся таблицы фактов. Хранение данных и обработка запросов по индексам позволяют **до 10 раз** увеличить производительность запросов к хранилищу данных по сравнению с традиционным хранилищем, в котором данные хранятся по строкам, и уменьшить размеры данных **до 10 раз** по сравнению с несжатыми данными. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], индексы columnstore позволяют получать оперативную аналитику и анализировать рабочую нагрузку по обработке транзакций в режиме реального времени.  
+*Индексы columnstore* — это стандарт хранения и запроса больших объемов данных в таблицах фактов. Хранение данных и обработка запросов по индексам позволяют **до 10 раз** увеличить производительность запросов к хранилищу данных по сравнению с традиционным хранилищем, в котором данные хранятся по строкам, и уменьшить размеры данных **до 10 раз** по сравнению с несжатыми данными. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], индексы columnstore позволяют получать оперативную аналитику и анализировать рабочую нагрузку по обработке транзакций в режиме реального времени.  
   
  Сценарии:  
   
--   [Индексы сolumnstore для хранилищ данных](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
-  
+-   [Индексы сolumnstore для хранилищ данных](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)  
 -   [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)  
   
 ## <a name="what-is-a-columnstore-index"></a>Что такое индекс columnstore?  
@@ -50,21 +49,19 @@ ms.lasthandoff: 11/17/2017
  *columnstore* — это данные, логически организованные в виде таблицы, состоящей из строк и столбцов, и физически хранящиеся в формате данных в столбцах.  
   
  rowstore  
- *rowstore* — это данные, логически организованные в виде таблицы, состоящей из строк и столбцов, и физически хранящиеся в формате данных в столбцах. Это стандартный способ хранения реляционных данных таблиц. В SQL Server rowstore — это таблица с базовым форматом хранения данных "куча", "кластеризованный индекс" или "таблица в памяти".  
+ *rowstore* — это данные, логически организованные в виде таблицы, состоящей из строк и столбцов, и физически хранящиеся в формате данных в столбцах. Это стандартный способ хранения реляционных данных таблиц. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rowstore — это таблица с базовым форматом хранения данных "куча", "кластеризованный индекс" или "таблица, оптимизированная для памяти".  
   
 > [!NOTE]  
->  В обсуждениях индексов columnstore для обозначения формата хранения данных используются термины *rowstore* и *columnstore* .  
+> В обсуждениях индексов columnstore для обозначения формата хранения данных используются термины *rowstore* и *columnstore* .  
   
  rowgroup  
  *Rowgroup* — это группа строк, сжимаемых в формате columnstore одновременно. Группа строк обычно содержит максимальное число строк для группы строк, 1 048 576 строк.  
   
  Чтобы добиться высокой производительности и высокого уровня сжатия, индекс columnstore разделяет таблицы в группы строк, называемые группами строк, каждая из которых затем сжимается на уровне столбцов. Число строк в группе строк должно быть достаточно большим, чтобы повысить скорость сжатия, и достаточно малым для использования преимуществ использования операций в памяти.  
-  
  Сегмент столбца  
  *Сегмент столбца* — это столбец данных из группы строк.  
   
 -   Каждая rowgroup содержит один сегмент столбца для каждого столбца в таблице.  
-  
 -   Каждый сегмент столбца сжимается одновременно и сохраняется на физическом носителе.  
   
  ![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
@@ -121,41 +118,25 @@ ms.lasthandoff: 11/17/2017
 ### <a name="can-i-combine-rowstore-and-columnstore-on-the-same-table"></a>Можно ли использовать индексы rowstore и columnstore в одной и той же таблице?  
  Да. Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], можно создавать обновляемый некластеризованный индекс columnstore в таблице rowstore. В индексе columnstore хранится копия выбранных столбцов, которые сжимаются в среднем в 10 раз и не требуют дополнительного пространства. Таким образом, вы сможете выполнять аналитику на основе индекса columnstore и транзакции на основе индекса rowstore одновременно. Хранилище столбцов обновляется при каждом изменении данных в таблице rowstore, поэтому оба индекса работают с одними и теми же данными.  
   
- Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], индекс columnstore может включать один или несколько некластеризованных индексов rowstore. Это обеспечивает эффективность поиска по таблицам на основе базового индекса columnstore. Кроме того, появляется доступ к другим возможностям. Например, можно принудительно задать ограничение PRIMARY KEY, применив к таблице rowstore ограничение UNIQUE. Поскольку неуникальное значение в таблицу rowstore не вставляется, SQL Server не может вставить значение в columnstore.  
+ Начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], индекс columnstore может включать один или несколько некластеризованных индексов rowstore. Это обеспечивает эффективность поиска по таблицам на основе базового индекса columnstore. Кроме того, появляется доступ к другим возможностям. Например, можно принудительно задать ограничение PRIMARY KEY, применив к таблице rowstore ограничение UNIQUE. Так как неуникальное значение в таблицу rowstore не вставляется, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не может вставить значение в columnstore.  
   
 ## <a name="metadata"></a>Метаданные  
  Все столбцы в индексе columnstore хранятся в метаданных как включенные столбцы. Индекс columnstore не имеет ключевых столбцов.  
+
+|||
+|-|-|  
+|[sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)|[sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)|  
+|[sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)|[sys.internal_partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|  
+|[sys.column_store_segments (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)|[sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)|  
+|[sys.column_store_row_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)|[sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)|[sys.dm_column_store_object_pool (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)|  
+|[sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|  
+|[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
--   [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
+## <a name="related-tasks"></a>Related Tasks  
+ Для всех реляционных таблиц, не заданных как кластеризованный индекс columnstore, в качестве базового формата данных используется индекс rowstore. `CREATE TABLE` создает таблицу rowstore, если не указан параметр `WITH CLUSTERED COLUMNSTORE INDEX`.  
   
--   [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
-  
--   [sys.partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md)  
-  
--   [sys.internal_partitions (Transact-SQL)](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)  
-  
--   [sys.column_store_segments (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  
-  
--   [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
-  
--   [sys.column_store_row_groups (Transact-SQL)](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md)  
-  
--   [sys.dm_column_store_object_pool (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-column-store-object-pool-transact-sql.md)  
-  
--   [sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_operational_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)  
-  
--   [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
-  
-## <a name="related-tasks"></a>Связанные задачи  
- Для всех реляционных таблиц, не заданных как кластеризованный индекс columnstore, в качестве базового формата данных используется индекс rowstore. Инструкция CREATE TABLE создает таблицу rowstore, если не задан параметр WITH CLUSTERED COLUMNSTORE INDEX.  
-  
- При создании таблицы с помощью инструкции CREATE TABLE можно создать таблицу с индексом columnstore, указав параметр WITH CLUSTERED COLUMNSTORE INDEX. Чтобы конвертировать таблицу rowstore в columnstore, используйте операцию CREATE COLUMNSTORE INDEX. См. примеры.  
+ При создании таблицы с помощью инструкции `CREATE TABLE` можно создать таблицу с индексом columnstore, указав параметр `WITH CLUSTERED COLUMNSTORE INDEX`. Чтобы конвертировать таблицу rowstore в columnstore, используйте инструкцию `CREATE COLUMNSTORE INDEX`.  
   
 |Задача|Справочные разделы|Примечания|  
 |----------|----------------------|-----------|  
@@ -181,7 +162,9 @@ ms.lasthandoff: 11/17/2017
  [Производительность запросов индексов columnstore](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [Начало работы с Columnstore для получения операционной аналитики в реальном времени](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Индексы сolumnstore для хранилищ данных](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Дефрагментация индексов columnstore](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)  
+ [Дефрагментация индексов columnstore](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)   
+ [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)   
+ [Архитектура индексов columnstore](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
   
   
 

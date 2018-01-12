@@ -13,15 +13,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0b8dbc635523b33a480ad887b73d9f395d71c8d
-ms.sourcegitcommit: ffa4ce9bd71ecf363604966c20cbd2710d029831
+ms.openlocfilehash: 26160f982982b1a8163662f57cb317e7252ab0e4
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Планирование выполнения пакета служб SSIS в Azure
 Вы можете запланировать выполнение пакетов, хранящихся в базе данных каталога SSISDB на сервере базы данных SQL Azure, выбрав один из следующих вариантов планирования:
--   [SQL Server, агент](#agent)
+-   [Агент SQL Server](#agent)
 -   [Задания обработки эластичных баз данных SQL](#elastic)
 -   [Операция хранимой процедуры SQL Server для фабрики данных Azure](#sproc)
 
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/12/2017
 
 Дополнительные сведения о заданиях обработки эластичных баз данных SQL см. в разделе [Управление облачными базами данных с горизонтальным масштабированием](https://docs.microsoft.com/azure/sql-database/sql-database-elastic-jobs-overview).
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>предварительные требования
 
 Прежде чем использовать задания обработки эластичных баз данных для планирования пакетов SSIS, хранящихся в каталоге базы данных SSISDB на сервере базы данных SQL Azure, необходимо выполнить следующие действия:
 
@@ -108,162 +108,11 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 ## <a name="sproc"></a> Планирование пакета с использованием операции хранимой процедуры SQL Server для фабрики данных Azure
 
-> [!IMPORTANT]
-> Используйте скрипты JSON в следующем примере с операцией хранимой процедуры для фабрики данных Azure версии 1.
+Сведения о планировании пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure см. в следующих статьях:
 
-Чтобы запланировать выполнение пакета с использованием операции хранимой процедуры SQL Server для фабрики данных Azure, выполните следующие действия:
+-   для фабрики данных версии 2: [Вызов пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-stored-procedure-activity);
 
-1.  Создайте фабрику данных.
-
-2.  Создайте связанную службу для базы данных SQL, в которой размещается SSISDB.
-
-3.  Создайте выходной набор данных, который управляет планированием.
-
-4.  Создайте конвейер фабрики данных, который использует операцию хранимой процедуры SQL Server для выполнения пакета SSIS.
-
-В этом разделе приводится обзор необходимых действий. Полное руководство по работе с фабрикой данных выходит за рамки этой статьи. Дополнительные сведения см. в разделе [Операция хранимой процедуры SQL Server](https://docs.microsoft.com/azure/data-factory/data-factory-stored-proc-activity).
-
-Если происходит сбой запланированного выполнения и в ходе операции хранимой процедуры ADF предоставляется идентификатор для этого выполнения, просмотрите этот идентификатор в отчете о выполнении в среде SSMS в каталоге служб SSIS.
-
-### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>Создание связанной службы для базы данных SQL, в которой размещается SSISDB
-Связанная служба обеспечивает подключение фабрики данных к SSISDB.
-
-```json
-{
-    "name": "AzureSqlLinkedService",
-    "properties": {
-        "description": "",
-        "type": "AzureSqlDatabase",
-        "typeProperties": {
-            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
-        }
-    }
-}
-```
-
-### <a name="create-an-output-dataset"></a>Создание выходного набора данных
-Выходной набор данных содержит сведения о планировании.
-
-```json
-{
-    "name": "sprocsampleout",
-    "properties": {
-        "type": "AzureSqlTable",
-        "linkedServiceName": "AzureSqlLinkedService",
-        "typeProperties": {
-            "tableName": "sampletable"
-        },
-        "availability": {
-            "frequency": "Hour",
-            "interval": 1
-        }
-    }
-}
-```
-### <a name="create-a-data-factory-pipeline"></a>Создание конвейера фабрики данных
-Конвейер использует операцию хранимой процедуры SQL Server для выполнения пакета SSIS.
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [{
-            "name": "SprocActivitySample",
-            "type": "SqlServerStoredProcedure",
-            "typeProperties": {
-                "storedProcedureName": "sp_executesql",
-                "storedProcedureParameters": {
-                    "stmt": "Transact-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures"
-                }
-            },
-            "outputs": [{
-                "name": "sprocsampleout"
-            }],
-            "scheduler": {
-                "frequency": "Hour",
-                "interval": 1
-            }
-        }],
-        "start": "2017-10-01T00:00:00Z",
-        "end": "2017-10-01T05:00:00Z",
-        "isPaused": false
-    }
-}
-```
-
-Вам не нужно создавать новую хранимую процедуру для инкапсуляции команд Transact-SQL, необходимых для создания и запуска выполнения пакета SSIS. Вы можете передать весь скрипт в качестве значения параметра `stmt` в приведенном выше примере JSON. Пример скрипта:
-
-```sql
--- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
-DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
-
--- Create the exectuion
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-
--- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
-EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
-
--- Start the execution                                                         
-EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
-                                          
--- Raise an error for unsuccessful package execution
--- Execution status values include the following:
--- created (1)
--- running (2)
--- canceled (3)
--- failed (4)
--- pending (5)
--- ended unexpectedly (6)
--- succeeded (7)
--- stopping (8)
--- completed (9) 
-IF(SELECT [status]
-   FROM [SSISDB].[catalog].[executions]
-   WHERE execution_id=@exe_id)<>7
-BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
-    RAISERROR(@err_msg,15,1)
-END
-GO
-```
-
-Как правило, чтобы указать приведенный выше скрипт SQL, в качестве значения параметра `stmt`, требуется добавить весь скрипт в одну строку, как показано в следующем примере. [Стандарт JSON](https://json.org/) не поддерживает управляющие символы, включая управляющий символ новой строки `\n`, используемый в других языках для разделения строк в строке из нескольких строк.
-
-```json
-{
-    "name": "SprocActivitySamplePipeline",
-    "properties": {
-        "activities": [
-            {
-                "type": "SqlServerStoredProcedure",
-                "typeProperties": {
-                    "storedProcedureName": "sp_executesql",
-                    "storedProcedureParameters": {
-                        "stmt": "DECLARE @return_value INT, @exe_id BIGINT, @err_msg NVARCHAR(150)    EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'test', @project_name=N'TestProject', @package_name=N'STestPackage.dtsx', @use32bitruntime=0, @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT    EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1    EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id, @retry_count=0    IF(SELECT [status] FROM [SSISDB].[catalog].[executions] WHERE execution_id=@exe_id)<>7 BEGIN SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20)) RAISERROR(@err_msg,15,1) END"
-                    }
-                },
-                "outputs": [
-                    {
-                        "name": "sprocsampleout"
-                    }
-                ],
-                "scheduler": {
-                    "frequency": "Minute",
-                    "interval": 15
-                },
-                "name": "SprocActivitySample"
-            }
-        ],
-        "start": "2017-12-06T12:00:00Z",
-        "end": "2017-12-06T12:30:00Z",
-        "isPaused": false,
-        "hubName": "test_hub",
-        "pipelineMode": "Scheduled"
-    }
-}
-```
-
-Дополнительные сведения о коде в этом скрипте см. в разделе [Развертывание и выполнение пакетов служб SSIS с помощью хранимых процедур](../packages/deploy-integration-services-ssis-projects-and-packages.md#deploy-and-execute-ssis-packages-using-stored-procedures).
+-   для фабрики данных версии 1: [Вызов пакета SSIS с помощью операции хранимой процедуры в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/v1/how-to-invoke-ssis-package-stored-procedure-activity).
 
 ## <a name="next-steps"></a>Следующие шаги
 Дополнительные сведения об агенте SQL Server см. в разделе [Пакеты служб из заданий агента SQL Server](../packages/sql-server-agent-jobs-for-packages.md).

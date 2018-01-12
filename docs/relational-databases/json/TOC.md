@@ -1,7 +1,7 @@
 # [Обзор](json-data-sql-server.md)  
 # [Хранение документов JSON в SQL Server](store-json-documents-in-sql-tables.md)
-# [Импорт документов JSON в SQL Server](import-json-documents-into-sql-server.md)  
 # [Индексирование данных JSON](index-json-data.md)  
+# [Импорт документов JSON в SQL Server](import-json-documents-into-sql-server.md)  
 # [Преобразование результатов запроса в формат JSON с помощью предложения FOR JSON (SQL Server)](format-query-results-as-json-with-for-json-sql-server.md)  
 ## [Форматирование вложенных выходных данных JSON в режиме PATH](format-nested-json-output-with-path-mode-sql-server.md)  
 ## [Автоматическое форматирование выходных данных JSON в режиме AUTO](format-json-output-automatically-with-auto-mode-sql-server.md)  

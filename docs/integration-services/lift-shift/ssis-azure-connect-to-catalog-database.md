@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 10be16cbc85cccce51fafbcd733045c653b7be0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9b3a63d93d9d1e27147783f6c745addcd31fac8
+ms.sourcegitcommit: 6e016a4ffd28b09456008f40ff88aef3d911c7ba
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Подключение к базе данных каталога SSISDB в Azure
 
@@ -26,7 +26,10 @@ ms.lasthandoff: 11/20/2017
 - Имя базы данных
 - Данные для входа 
 
-## <a name="prerequisites"></a>Предварительные требования
+> [!IMPORTANT]
+> В настоящее время невозможно создать базу данных каталога SSISDB в базе данных SQL Azure независимо от создания среды выполнения интеграции (IR) Azure-SSIS в фабрике данных Azure версии 2. Среда Azure-SSIS IR необходима для выполнения пакетов SSIS в Azure. Дополнительные сведения и пример скрипта PowerShell см. в статье [Развертывание пакетов служб SQL Server Integration Services в Azure](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure). 
+
+## <a name="prerequisites"></a>предварительные требования
 Прежде чем начать, убедитесь в наличии SQL Server Management Studio версии 17.2 или более поздней. Чтобы скачать последнюю версию SSMS, перейдите на страницу [скачивания SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 ## <a name="get-the-connection-info-from-the-azure-portal"></a>Получение сведений о подключении с портала Azure

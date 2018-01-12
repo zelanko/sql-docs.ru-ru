@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 523dcd99da61b11e42848ea77037baf59a3ea00b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: eb0da34dd83cd9e7b10a21a4a89047902e656ab3
+ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/18/2017
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>Приступая к работе с простым примером мастера импорта и экспорта
 Сведения о том, что следует ожидать от мастера экспорта и импорта SQL Server, на примере типичного сценария — импорта данных из электронной таблицы Excel в базу данных SQL Server. Даже если вы планируете использовать другой источник и другое назначение, в этом разделе вы найдете основную часть сведений о работе с мастером.

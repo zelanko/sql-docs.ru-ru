@@ -1,7 +1,8 @@
 ---
 title: "SQL Server Integration Services (SSIS) Scale Out | Документы Майкрософт"
+ms.description: This article provides an overview of the SQL Server Integration Services (SSIS) Scale Out feature, which provides high-performance execution of SSIS packages
 ms.custom: 
-ms.date: 07/18/2017
+ms.date: 12/13/2017
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
 ms.service: 
@@ -15,20 +16,39 @@ ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
 caps.latest.revision: "6"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0277d312ce4dab14e7ba64529e3eb2251a0d2d02
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3dc41da860382173076afafd768de09bd20366e
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="integration-services-ssis-scale-out"></a>Масштабное развертывание служб Integration Services (SSIS)
-Масштабное развертывание [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] обеспечивает высокопроизводительное выполнение пакетов путем распределения выполнения по нескольким компьютерам. Вы можете отправить запрос на несколько выполнений пакетов в SQL Server Management Studio. Эти пакеты будут выполняться параллельно в режиме масштабного развертывания.  
+Компонент SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out обеспечивает выполнение пакетов SSIS с высокой производительностью, распределяя его по нескольким компьютерам. После настройки Scale Out можно выполнять несколько пакетов параллельно, в режиме горизонтального масштабирования, из SQL Server Management Studio (SSMS).
 
-[!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out состоит из мастера [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out и одной или нескольких рабочих ролей [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out. Главная роль масштабного развертывания отвечает за управление масштабным развертыванием и получает запросы на выполнение пакетов от пользователей. Рабочие роли масштабного развертывания получают задачи на выполнение от главной роли и осуществляют выполнение пакетов. Дополнительные сведения см. в разделах [Scale Out Master](integration-services-ssis-scale-out-master.md) (Главная роль масштабного развертывания), [Scale Out Worker](integration-services-ssis-scale-out-worker.md) (Рабочая роль масштабного развертывания).
+## <a name="components"></a>Components
+[!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out состоит из мастера [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out и одной или нескольких рабочих ролей [!INCLUDE[ssIS_md](../../includes/ssis-md.md)] Scale Out.
 
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out может настраиваться на одном компьютере, где мастер и рабочая роль Scale Out работают параллельно. Кроме того, масштабное развертывание может выполняться на нескольких компьютерах, где каждая рабочая роль масштабного развертывания находится на отдельном компьютере.
-- [Пошаговое руководство. Настройка масштабного развертывания Integration Services](walkthrough-set-up-integration-services-scale-out.md)
+-   Главная роль масштабного развертывания отвечает за управление масштабным развертыванием и получает запросы на выполнение пакетов от пользователей. Дополнительные сведения см. в разделе [Мастер Scale Out](integration-services-ssis-scale-out-master.md).
 
-Масштабное развертывание поддерживает параллельное выполнение нескольких пакетов в каталоге SSISDB. Дополнительные сведения см. в разделе [Выполнение пакетов в масштабном развертывании](run-packages-in-integration-services-ssis-scale-out.md).
+-   Рабочие роли Scale Out получают задачи на выполнение от мастера Scale Out и выполняют пакеты. Дополнительные сведения см. в разделе [Рабочая роль Scale Out](integration-services-ssis-scale-out-worker.md).
+
+## <a name="configuration-options"></a>Параметры конфигурации
+Компонент Scale Out можно настроить в следующих конфигурациях:
+
+-   **с одним компьютером**: мастер Scale Out и рабочая роль Scale Out выполняются на одном компьютере;
+
+-   **с несколькими компьютерами**: каждая рабочая роль Scale Out находится на отдельном компьютере.
+
+## <a name="what-you-can-do"></a>Возможные действия
+После настройки Scale Out вы можете выполнять указанные ниже действия.
+
+-   Параллельно выполнять несколько пакетов, развернутых в каталоге SSISDB. Дополнительные сведения см. в статье [Выполнение пакетов в масштабном развертывании](run-packages-in-integration-services-ssis-scale-out.md).
+
+-   Управлять топологией Scale Out в диспетчере Scale Out. Дополнительные сведения см. в статье [Диспетчер Integration Services Scale Out](integration-services-ssis-scale-out-manager.md).
+
+## <a name="next-steps"></a>Следующие шаги
+-   [Начало работы с SSIS Scale Out на одном компьютере](get-started-with-ssis-scale-out-onebox.md)
+
+-   [Пошаговое руководство. Настройка масштабного развертывания Integration Services](walkthrough-set-up-integration-services-scale-out.md)

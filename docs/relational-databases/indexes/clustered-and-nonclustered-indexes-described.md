@@ -1,7 +1,7 @@
 ---
 title: "Описание кластеризованных и некластеризованных индексов | Документация Майкрософт"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 11/28/2017
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -20,17 +20,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 55498dc339c081da3e9c5fbeca1c464a93b2395e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c7267f4ab8ca17f2f4eefff78e34b55f5bd43b57
+ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Описания кластеризованных и некластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  > Материалы по предыдущим версиям SQL Server см. в разделе [Описание кластеризованных и некластеризованных индексов](https://msdn.microsoft.com/en-US/library/ms190457(SQL.120).aspx).
-
 
   Индекс является структурой на диске, которая связана с таблицей или представлением и ускоряет получение строк из таблицы или представления. Индекс содержит ключи, построенные из одного или нескольких столбцов в таблице или представлении. Эти ключи хранятся в виде структуры сбалансированного дерева, которая поддерживает быстрый поиск строк по их ключевым значениям в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -68,9 +67,12 @@ ms.lasthandoff: 11/17/2017
   
  Оптимизатор запросов обычно выбирает наиболее эффективный метод при выполнении запросов. Но если отсутствуют доступные индексы, оптимизатор запросов должен использовать просмотр таблицы. Ваша задача — спроектировать и создать индексы, которые лучше всего подходят для конкретной среды, чтобы оптимизатор запросов мог выбирать из нескольких эффективных индексов. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] включает [помощник по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md) , который может помочь при анализе среды базы данных и при выборе соответствующих индексов.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+> [!IMPORTANT] 
+> Дополнительные сведения о правилах и принципах проектирования индексов см. в статье [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md).
+
+## <a name="related-content"></a>См. также  
+ [Руководство по проектированию индексов SQL Server](../../relational-databases/sql-server-index-design-guide.md)     
  [Создание кластеризованных индексов](../../relational-databases/indexes/create-clustered-indexes.md)  
-  
  [Создание некластеризованных индексов](../../relational-databases/indexes/create-nonclustered-indexes.md)  
   
   
