@@ -1,14 +1,14 @@
 ---
-title: "Установка сервера отчетов служб Reporting Services в собственном режиме | Документы Майкрософт"
+title: "Установка сервера отчетов служб Reporting Services 2016 в собственном режиме | Документы Майкрософт"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 12/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 helpviewer_keywords:
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - installation options [Reporting Services]
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 caps.latest.revision: "68"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 9feeb8c3f7e9d2c1d365e8d6ad7f327e20d80b4f
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 23104fa56aeb157b19d43b332c2d570613ed5a62
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-reporting-services-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services в основном режиме
+# <a name="install-reporting-services-2016-native-mode-report-server"></a>Установка сервера отчетов служб Reporting Services 2016 в собственном режиме
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -91,9 +91,9 @@ ms.lasthandoff: 12/05/2017
 ##  <a name="bkmk_defaultURLreservations"></a> Резервирование URL-адресов по умолчанию  
  Резервирование URL-адреса состоит из префикса, имени узла, номера порта и имени виртуального каталога.  
   
-|Часть|Описание|  
+|Часть|Description|  
 |----------|-----------------|  
-|Префикс|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|  
+|Prefix|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|  
 |Имя узла|Именем узла по умолчанию является строгий шаблон (+). Он указывает, что сервер отчетов принимает все HTTP-запросы в заданном порте для любого имени узла, который соответствует компьютеру, включая `http://<computername>/reportserver`, `http://localhost/reportserver` или `http://<IPAddress>/reportserver`|  
 |Порт|По умолчанию используется порт 80. Следует иметь в виду, что если используется порт, отличный от 80, то его необходимо явным образом указывать в URL-адресе при открытии веб-приложения служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в окне браузера.|  
 |Виртуальный каталог|По умолчанию имена виртуальных каталогов формируются по модели ReportServer_\<*имя_экземпляра*> для веб-службы сервера отчетов и по модели Reports_\<*имя_экземпляра*> — для [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]. Для веб-службы сервера отчетов по умолчанию используется виртуальный каталог **reportserver**. Для [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]используется виртуальный каталог по умолчанию **reports**.|  

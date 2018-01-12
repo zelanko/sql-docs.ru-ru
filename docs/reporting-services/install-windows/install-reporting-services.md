@@ -1,33 +1,31 @@
 ---
-title: "Установка служб SQL Server Reporting Services | Документы Майкрософт"
-ms.date: 10/10/2017
+title: "Установка служб SQL Server Reporting Services (2017 или более поздней версии) | Документы Майкрософт"
+ms.date: 12/20/2017
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.service: 
 ms.component: install-windows
 ms.reviewer: 
 ms.suite: pro-bi
 ms.custom: 
-ms.technology:
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: 
 ms.tgt_pltfrm: 
-ms.topic: article
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+ms.topic: get-started-article
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3cc3d78c22bbb4b32696692074e2dad2d6809a3a
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 2f09b475d42657c8c9ce8ef60d6b5b7c36b30cc2
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="install-sql-server-reporting-services"></a>Установите службы SQL Server Reporting Services
+# <a name="install-sql-server-reporting-services-2017-and-later"></a>Установка служб SQL Server Reporting Services (2017 или более поздней версии)
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2017-and-later](../../includes/ssrs-appliesto-2017-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-Установка служб SQL Server Reporting Services включает в себя серверные компоненты для хранения элементов отчета, подготовки отчетов к просмотру, а также для обработки подписок и других служб отчетов.  Узнайте, как установить сервер отчетов Power BI.
+Установка служб SQL Server Reporting Services включает в себя серверные компоненты для хранения элементов отчета, подготовки отчетов к просмотру, а также для обработки подписок и других служб отчетов. 
 
 Чтобы скачать службы Microsoft SQL Server 2017 Reporting Services, перейдите в [Центр загрузки Майкрософт](https://www.microsoft.com/download/details.aspx?id=55252).
 
@@ -55,11 +53,11 @@ ms.lasthandoff: 12/05/2017
 
     ![Выбор выпуска](media/install-reporting-services/report-server-install-edition.png)
 
-    В раскрывающемся списке выберите выпуск Evaluation или Developer.
+    Для бесплатного выпуска в раскрывающемся списке выберите выпуск Evaluation или Developer.
 
     ![Выпуск Evaluation или Developer](media/install-reporting-services/report-server-install-edition-select.png)
 
-    Можно также ввести ключ продукта.
+    В противном случае введите ключ продукта. [Как найти ключ продукта для SQL Server Reporting Services 2017](find-reporting-services-product-key-ssrs.md)
 
 4. Прочтите и примите условия лицензионного соглашения, а затем нажмите кнопку **Далее**.
 
@@ -104,9 +102,9 @@ ms.lasthandoff: 12/05/2017
 
 Резервирование URL-адреса состоит из префикса, имени узла, номера порта и имени виртуального каталога.
 
-|Часть|Описание|
+|Часть|Description|
 |----------|-----------------|
-|Префикс|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|
+|Prefix|Префиксом по умолчанию является HTTP. Если сертификат SSL уже установлен, программа установки попытается создать резервирование URL-адресов с префиксом HTTPS.|
 |Имя узла|Именем узла по умолчанию является строгий шаблон (+). Он указывает, что сервер отчетов принимает все HTTP-запросы в заданном порте для любого имени узла, который соответствует компьютеру, включая `http://<computername>/reportserver`, `http://localhost/reportserver` или `http://<IPAddress>/reportserver.`|
 |Порт|По умолчанию используется порт 80. Если используется порт, отличный от 80, то его необходимо явным образом указывать в URL-адресе при открытии веб-портала в окне браузера.|
 |Виртуальный каталог|По умолчанию имена виртуальных каталогов создаются в формате ReportServer — для веб-службы сервера отчетов и в формате Reports — для диспетчера отчетов. Для веб-службы сервера отчетов по умолчанию используется виртуальный каталог **reportserver**. Для веб-портала используется виртуальный каталог по умолчанию **reports**.|
