@@ -1,7 +1,10 @@
 ---
 title: "Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012 | Документы Майкрософт"
 ms.date: 11/10/2017
-ms.prod: sql-server-2017
+ms.suite: sql
+ms.prod: sql-non-specified
+ms.prod_service: database engine
+ms.component: failover-clustuers
 ms.technology: dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -13,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 91fe880168482d29e796c2bbe23c278c60bfa6c1
-ms.sourcegitcommit: f2fde1c324466530f92006561a9a29decb711e1b
+ms.openlocfilehash: bac006539f14341ff07d6af2ba7fd73c1e73a917
+ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Обновление экземпляров SQL Server, работающих в кластерах Windows Server 2008, Windows Server 2008 R2 или Windows Server 2012
 
@@ -127,7 +130,7 @@ ms.lasthandoff: 12/19/2017
 
 Если в установке [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] не используются автономные экземпляры [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)], а только экземпляры отказоустойчивого кластера SQL, которые включены по крайней мере в одну группу доступности, выполнить миграцию в новый кластер можно с помощью методов, схожих с применяемыми в сценарии без групп доступности и автономных экземпляров. Перед копированием системных таблиц в общие диски конечных экземпляров отказоустойчивого кластера необходимо удалить все группы доступности в исходной среде. После переноса всех баз данных на конечные компьютеры следует повторно создать группы доступности, используя ту же схему и имена прослушивателей. Благодаря этому ресурсы отказоустойчивого кластера Windows Server будут правильно сформированы в конечном кластере, и управление ими будет осуществляться корректно. **Перед миграцией необходимо включить функцию AlwaysOn в диспетчере конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)] на каждом компьютере в конечной среде.**
 
-###  <a name="to-perform-the-upgrade"></a>Выполнение обновления
+### <a name="to-perform-the-upgrade"></a>Выполнение обновления
 
 1.  Остановите передачу трафика в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion.md)].
 

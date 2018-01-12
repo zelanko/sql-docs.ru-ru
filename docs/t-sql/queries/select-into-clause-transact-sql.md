@@ -34,14 +34,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 022786e7c6b1e23780b7acf373efe677f121686b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5501732e0551a1142ea5bf1a8bc48122aaff6a25
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - INTO, предложение (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Инструкция SELECT…INTO создает новую таблицу в файловой группе по умолчанию и вставляет в нее результирующие строки из запроса. Чтобы просмотреть полный синтаксис SELECT, в разделе [ВЫБЕРИТЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 01/02/2018
  Если в список выбора входит вычисляемый столбец, соответствующий столбец новой таблицы не будет вычисляемым. Значениями нового столбца становятся значения, вычисленные при выполнении инструкции SELECT...INTO.  
   
 ## <a name="logging-behavior"></a>Режим ведения журнала  
- Объем информации, записываемой в журнал для операции SELECT...INTO, зависит от модели восстановления, действующей для базы данных. В модели восстановления с неполным протоколированием и в простой модели массовые операции минимально протоколируются. С минимальным протоколированием, с помощью SELECT... В инструкции может быть более эффективным, чем создание таблицы и заполнение таблицы с инструкцией INSERT. Дополнительные сведения см. в статье [Журнал транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
+ Объем информации, записываемой в журнал для операции SELECT...INTO, зависит от модели восстановления, действующей для базы данных. В модели восстановления с неполным протоколированием и в простой модели массовые операции минимально протоколируются. С минимальным протоколированием, с помощью SELECT... В инструкции может быть более эффективным, чем создание таблицы и заполнение таблицы с инструкцией INSERT. Дополнительные сведения см. в разделе [Резервная копия журнала транзакций (SQL Server)](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
 ## <a name="permissions"></a>Разрешения  
  Требуется разрешение CREATE TABLE в целевой базе данных.  
@@ -230,7 +230,7 @@ ORDER BY YearlyIncome
   
 ```  
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>Е. Создание новой таблицы как копию другой таблицы и их открытии указанной файловой группе
-Следующий пример demostrates Создание новой таблицы как копию другой таблицы и их загрузки в указанной файловой группе, отличается от файловой группой по умолчанию для пользователя.
+В следующем примере показано создание новой таблицы как копию другой таблицы и их загрузки в указанной файловой группе, отличается от файловой группой по умолчанию для пользователя.
 
  **Применяется к:**[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]
 
@@ -247,7 +247,7 @@ GO
 SELECT *  INTO [dbo].[FactResellerSalesXL] ON FG2 from [dbo].[FactResellerSales]
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   
  [ВЫБЕРИТЕ примеры &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
