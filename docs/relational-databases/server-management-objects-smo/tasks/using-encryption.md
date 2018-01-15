@@ -22,18 +22,20 @@ helpviewer_keywords:
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a5069931c6e144dc574664e71c8f2a5d8964403
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ad74e5242702ace386fb8c14a034a56886f27191
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-encryption"></a>Использование шифрования
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В SMO главный ключ службы, представленного <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> объекта. Это ссылается <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Server> объекта. Его можно сформировать заново с помощью <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> метод.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  В SMO главный ключ службы, представленного <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey> объекта. Это ссылается <xref:Microsoft.SqlServer.Management.Smo.Server.ServiceMasterKey%2A> свойство <xref:Microsoft.SqlServer.Management.Smo.Server> объекта. Его можно сформировать заново с помощью <xref:Microsoft.SqlServer.Management.Smo.ServiceMasterKey.Regenerate%2A> метод.  
   
  Главный ключ базы данных представлена <xref:Microsoft.SqlServer.Management.Smo.MasterKey> объекта. <xref:Microsoft.SqlServer.Management.Smo.MasterKey.IsEncryptedByServer%2A> Свойство указывает, зашифрован ли главный ключ базы данных с помощью главного ключа службы. Зашифрованная копия в базе данных master обновляется автоматически при любом изменении главного ключа базы данных.  
   
@@ -96,7 +98,7 @@ $c.Create("pGFD4bb925DGvbd2439587y")
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [С помощью ключей шифрования](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
   
   

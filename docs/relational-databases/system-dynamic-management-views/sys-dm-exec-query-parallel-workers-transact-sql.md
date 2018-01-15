@@ -24,18 +24,18 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 ms.workload: Inactive
-ms.openlocfilehash: dd0653ae9177673026eb07bbc14f2b6769315e00
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 99165e38dc4f1ad0b25a754f2c0f38b4ae413e84
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   Возвращает рабочий сведений о доступности на каждом узле.  
   
-|Имя|Тип данных|Description|  
+|Название|Тип данных|Описание|  
 |----------|---------------|-----------------|  
 |**NODE_ID**|**int**|Идентификатор узла NUMA.|  
 |**scheduler_count**|**int**|Количество планировщиков на данном узле.|  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
 |**free_worker_count**|**int**|Количество рабочих потоков, доступных для задач.<br /><br />**Примечание:** по крайней мере 1 worker вычитается из число свободных рабочих потребляет каждого входящего запроса.  Это возможно, что число свободных рабочих может быть отрицательным числом на сильно загруженном сервере.| 
 |**used_worker_count**|**int**|Число рабочих процессов, используемых параллельных запросов.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо разрешение VIEW SERVER STATE на сервере.  
   
  На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Premium необходимо разрешение VIEW DATABASE STATE в базе данных. На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Standard и Basic требуется [!INCLUDE[ssSDS](../../includes/sssds-md.md)] учетная запись администратора.  
@@ -53,11 +53,11 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="a-viewing-current-parallel-worker-availability"></a>A. Просмотр текущего параллельных доступности  
 
-``` tsql 
+```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_os_workers &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md)

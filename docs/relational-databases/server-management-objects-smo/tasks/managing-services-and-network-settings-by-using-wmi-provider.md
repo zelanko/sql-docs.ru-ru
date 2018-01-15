@@ -18,18 +18,20 @@ helpviewer_keywords:
 - monitoring [SMO]
 ms.assetid: ef8c3986-1098-4f21-b03a-f1f6bdb51c26
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7a8626731b1fde43a1713ba4afbc6a98988e2c2d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 326c98022af0adbb6e508cc9ba8c6e63f7fd6d23
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Управление службами и сетевыми настройками с помощью поставщика WMI
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Поставщик WMI представляет собой опубликованный интерфейс, который используется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] консоли управления (MMC) для управления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служб и сетевых протоколов. В SMO <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> представляет поставщик инструментария WMI.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Поставщик WMI представляет собой опубликованный интерфейс, который используется [!INCLUDE[msCoName](../../../includes/msconame-md.md)] консоли управления (MMC) для управления [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] служб и сетевых протоколов. В SMO <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> представляет поставщик инструментария WMI.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer> Действует независимо от соединения, установленного <xref:Microsoft.SqlServer.Management.Smo.Server> объекта на экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]и использует учетные данные Windows для подключения к службе WMI.  
   
@@ -215,7 +217,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия о поставщике WMI для управления конфигурацией](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

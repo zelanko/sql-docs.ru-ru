@@ -13,18 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: reference
 ms.assetid: e988f9e8-6801-41d1-8069-726f487244d5
 caps.latest.revision: "69"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 96293d1bf121ac3697d494f1c5a6fc22f4dffb64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8121a42034c748e6acd1265dee06f1552cae1cc0
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="overview-smo"></a>Общие сведения об SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Управляющих объектов (SMO) представляют собой объекты, предназначенных для программного управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Объекты управления (SMO) представляют собой объекты, предназначенных для программного управления [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Объекты SMO можно использовать для создания специализированных приложений управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Хотя среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] является мощным и универсальным приложением для управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], иногда удобнее работать с приложением SMO.  
   
  К примеру, для удовлетворения потребностей новых пользователей, а также с целью сокращения издержек на подготовку персонала может возникнуть необходимость упрощения пользовательских приложений, выполняющих задачи управления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может возникнуть необходимость в создании специализированных баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или в создании приложения для формирования индексов и наблюдения за их эффективностью. Кроме того, приложение SMO можно использовать для бесшовной интеграции аппаратных или программных компонентов от независимых поставщиков в приложение управления базами данных.  
   
@@ -175,7 +177,7 @@ ms.lasthandoff: 01/08/2018
   
  Улучшенные возможности индексов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] представлены новыми свойствами объекта <xref:Microsoft.SqlServer.Management.Smo.Index>.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Основные понятия объектов RMO](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)  
   
   

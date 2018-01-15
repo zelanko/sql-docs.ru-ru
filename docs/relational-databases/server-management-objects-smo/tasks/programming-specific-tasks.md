@@ -21,20 +21,22 @@ helpviewer_keywords:
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8fb3927a735f0dddfa753bb939947e8d40b6ef88
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7c9e3323e743360d3a6ce2a340c87ab7dac7720b
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="programming-specific-tasks"></a>Задачи, связанные с программированием
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]С помощью объектов SMO задачи, связанные с программированием включают сложные вопросы, которые необходимы лишь программам, выполняющим специальные функции, например резервное копирование, статистику наблюдения, репликацию, управление объектами экземпляра и настройка параметров конфигурации.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Задачи, связанные с программированием объектов SMO, которые затрагивают сложные вопросы, которые необходимы лишь программам, выполняющим специальные функции, например резервное копирование, статистику наблюдения, репликацию, управление объектами экземпляра и настройка параметров конфигурации.  
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Использование связанных серверов в объектах SMO](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|Описывает описание использования объектами SMO объекта <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> для связи с сервером OLE-DB.|  
 |[Настройка SQL Server в SMO](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|Описывает просмотр и изменение параметров конфигурации для экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] в объектах SMO.|  

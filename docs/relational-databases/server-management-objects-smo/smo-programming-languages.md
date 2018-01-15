@@ -20,20 +20,22 @@ helpviewer_keywords:
 - development environments [SMO]
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e32199079e4ceb4ec503298eb9e0fe420e6a00e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: b32c1a9341e7cba418501d7292f8028b0d8e3ee5
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="smo-programming-languages"></a>Языки программирования объектов SMO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В этом разделе описываются способы программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .NET.
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  В этом разделе описываются способы программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] управляющих объектов (SMO) в [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .NET.
   
-|Раздел|Description|  
+|Раздел|Описание|  
 |-----------|-----------------|  
 |[Приступая к работе с Visual C &#35; .NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Предоставляет сведения о том, как начать программирование объекта SMO в Visual C# .NET|  
   

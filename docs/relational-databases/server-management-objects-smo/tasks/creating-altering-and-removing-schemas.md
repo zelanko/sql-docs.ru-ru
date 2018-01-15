@@ -14,18 +14,20 @@ ms.topic: reference
 helpviewer_keywords: schemas [SMO]
 ms.assetid: 3e3619de-c6a2-4280-b2be-4ec9924608fb
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 615e7513018ef686be549f10f2d6ae708d6eb6d3
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: dda6526ab21fca7285166dc9c5196eb1d2afa01a
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="creating-altering-and-removing-schemas"></a>Создание, изменение и удаление схем
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]<xref:Microsoft.SqlServer.Management.Smo.Schema> Представляет контекст владения для объекта базы данных. Свойство <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Database> представляет коллекцию объектов <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+
+  Объект <xref:Microsoft.SqlServer.Management.Smo.Schema> представляет контекст владения для объекта базы данных. Свойство <xref:Microsoft.SqlServer.Management.Smo.Database.Schemas%2A> объекта <xref:Microsoft.SqlServer.Management.Smo.Database> представляет коллекцию объектов <xref:Microsoft.SqlServer.Management.Smo.Schema>.  
   
 ## <a name="example"></a>Пример  
  Чтобы использовать какой-либо из представленных примеров кода, нужно выбрать среду, шаблон и язык программирования, с помощью которых будет создаваться приложение. Дополнительные сведения см. в разделе [Create Visual C# 35; Проект SMO в Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  

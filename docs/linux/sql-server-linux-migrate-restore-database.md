@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.workload: On Demand
-ms.openlocfilehash: 6d54a849630bece0fba6456a516cbd68aecf2eb5
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7658d69ae0b59e079e40348962d11fe202a85235
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Миграция базы данных SQL Server с Windows и Linux с помощью резервного копирования и восстановления
 
@@ -34,7 +34,7 @@ SQL Server резервного копирования, и функция вос
 > * Восстановление резервной копии файла в Linux с помощью Transact-SQL
 > * Выполните запрос, чтобы проверка миграции
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 С этим учебником требуются следующие необходимые компоненты:
 
@@ -195,6 +195,7 @@ SQL Server резервного копирования, и функция вос
 > * Переместить файл резервной копии для подготовки к восстановлению
 > * Используйте **sqlcmd** для выполнения команд Transact-SQL
 > * Восстановите резервную копию базы данных с **RESTORE DATABASE** команды 
+> * Выполните запрос, чтобы проверка миграции
 
 Затем исследовать другие сценарии миграции для SQL Server в Linux. 
 
