@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 3396d9d6ec351550509300f760db8e5fc58836d6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2a1254e44ac2fcc110a81d9ac7f566a348812f80
+ms.sourcegitcommit: 1eac335235847c3578e376e0854413710d345dee
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="tail-log-backups-sql-server"></a>Резервные копии заключительного фрагмента журнала (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В данном разделе рассматриваются вопросы резервного копирования и восстановления только тех баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые используют модель полного восстановления или восстановления с неполным протоколированием.  
@@ -52,10 +52,10 @@ ms.lasthandoff: 11/17/2017
   
 |Параметр BACKUP LOG|Комментарии|  
 |-----------------------|--------------|  
-|NORECOVERY|Если планируется продолжить операцию восстановления базы данных, используйте параметр NORECOVERY. NORECOVERY переводит базу данных в состояние восстановления. Это гарантирует, что после создания резервной копии заключительного фрагмента журнала база данных не изменится. Если параметры NO_TRUNCATE или COPY_ONLY не заданы, журнал усекается.<br /><br /> **\*\* Важно! \*\*** Рекомендуется использовать параметр NO_TRUNCATE исключительно в том случае, если база данных повреждена.|  
+|NORECOVERY|Если планируется продолжить операцию восстановления базы данных, используйте параметр NORECOVERY. NORECOVERY переводит базу данных в состояние восстановления. Это гарантирует, что после создания резервной копии заключительного фрагмента журнала база данных не изменится. Если параметры NO_TRUNCATE или COPY_ONLY не заданы, журнал усекается.<br /><br /> **Важно!** Параметр NO_TRUNCATE рекомендуется использовать, только если база данных повреждена.|  
 |CONTINUE_AFTER_ERROR|Параметр CONTINUE_AFTER_ERROR следует указывать только в том случае, если создается резервная копия заключительного фрагмента журнала поврежденной базы данных.<br /><br /> При резервном копировании заключительного фрагмента журнала поврежденной базы данных, некоторые метаданные, захватываемые обычно в резервные копии журналов, могут быть недоступны. Дополнительные сведения см. в подразделе [Резервное копирование заключительного фрагмента журнала с неполными метаданными резервной копии](#IncompleteMetadata)этого раздела.|  
   
-##  <a name="IncompleteMetadata"></a> Резервное копирование заключительного фрагмента журнала с неполными метаданными резервной копии  
+##  <a name="IncompleteMetadata"></a> Резервные копии заключительного фрагмента журнала с неполными метаданными  
  Резервное копирование заключительного фрагмента журнала захватывает конец журнала даже в тех случаях, когда база данных работает вне сети, повреждена или в ней не хватает файлов данных. В результате этого метаданные команд восстановления данных и базы данных **msdb**могут быть неполными. Однако несмотря на неполноту метаданных, захваченный журнал будет полным и готовым к использованию.  
   
  Если резервная копия заключительного фрагмента журнала содержит неполные метаданные, то параметр [has_incomplete_metadata](../../relational-databases/system-tables/backupset-transact-sql.md) в таблице **backupset** принимает значение **1**. Кроме того, выходной аргумент [HasIncompleteMetadata](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)инструкции **RESTORE HEADERONLY** принимает значение **1**.  
@@ -63,13 +63,9 @@ ms.lasthandoff: 11/17/2017
  Если метаданные в резервной копии заключительного фрагмента журнала неполные, то в таблице [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) большая часть сведений о файловых группах того времени в резервной копии заключительного фрагмента журнала будет утеряна. Большинство столбцов таблицы **backupfilegroup** содержит значение NULL, другие значения имеют следующие столбцы:  
   
 -   **backup_set_id**  
-  
 -   **filegroup_id**  
-  
 -   **type**  
-  
 -   **type_desc**  
-  
 -   **is_readonly**  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
@@ -83,6 +79,6 @@ ms.lasthandoff: 11/17/2017
  [Резервное копирование и восстановление баз данных SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Резервные копии только для копирования (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [Резервные копии журналов транзакций (SQL Server)](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
-  
+ [Применение резервных копий журналов транзакций (SQL Server)](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)    
+ [Руководство по архитектуре журнала транзакций SQL Server и управлению им](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)
   

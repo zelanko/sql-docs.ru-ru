@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5f9c6d6327b2f658ce2e71ecf7107d3c8636bcbf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
+ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +62,20 @@ catalog.create_execution [@folder_name = folder_name
  [@runinscaleout =] *runinscaleout*  
  Указывает, осуществляется ли выполнение в Scale Out. Используйте значение 1 для выполнения пакета в Scale Out. Используйте значение 0 для выполнения пакета вне Scale Out. Этот параметр является необязательным. Если этот параметр не указан, присваивается значение DEFAULT_EXECUTION_MODE в [SSISDB].[catalog].[catalog_properties]. Параметр *runinscaleout* имеет тип **bit**. 
  
- [@useanyworker =] *useanyworker*  
-  Указывает, разрешено ли выполнение с помощью любой рабочей роли Scale Out. Используйте значение 1 для выполнения пакета с помощью любой рабочей роли Scale Out. Значение 0 указывает, что выполнение пакета с помощью любой рабочей роли Scale Out не разрешено. Этот параметр является необязательным. Если параметр не задан, используется значение 1. Параметр *useanyworker* имеет тип **bit**. 
+[@useanyworker =] *useanyworker*  
+Указывает, разрешено ли выполнение с помощью любой рабочей роли Scale Out.
+
+-   Используйте значение 1 для выполнения пакета с помощью любой рабочей роли Scale Out. При задании `@useanyworker` значения "Истина" любая рабочая роль, максимальное количество задач которой (как указано в файле конфигурации рабочей роли) еще не достигнуто, может запускать пакет.
+
+-   Значение 0 указывает, что выполнение пакета с помощью любой рабочей роли Scale Out не разрешено. При задании `@useanyworker` значения "Ложь" вам нужно будет указать рабочие роли, которым разрешен запуск пакета, с помощью диспетчера Scale Out или вызова хранимой процедуры `[catalog].[add_execution_worker]`.
+
+Этот параметр является необязательным. Если параметр не задан, используется значение 1. Параметр *useanyworker* имеет тип **bit**. 
   
  [@execution_id =] *execution_id*  
  Возвращает уникальный идентификатор для экземпляра выполнения. Параметр *execution_id* имеет тип **bigint**.  
 
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Выполнение применяется для задания значений параметров, которые будут использоваться пакетом во время выполнения одного экземпляра пакета.  
   
  Если ссылка на среду задается параметром *reference_id*, хранимая процедура заполняет параметры проекта и пакета литеральными значениями или ссылочными значениями из соответствующих переменных среды. Если указана ссылка на среду, при выполнении пакета используются значения параметров по умолчанию. Чтобы определить, какие именно значения используются в конкретном экземпляре выполнения, воспользуйтесь значением выходного параметра *execution_id* из этой хранимой процедуры и выполните запрос к представлению [execution_parameter_values](../../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md).  
@@ -97,9 +103,9 @@ GO
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   разрешения READ и EXECUTE на проект, а также, если применимо, разрешение READ на среду, указанную в ссылке  

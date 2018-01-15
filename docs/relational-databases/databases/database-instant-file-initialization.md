@@ -1,7 +1,7 @@
 ---
 title: "Мгновенная инициализация файлов базы данных | Документация Майкрософт"
 ms.custom: 
-ms.date: 11/24/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -14,46 +14,45 @@ ms.topic: article
 helpviewer_keywords:
 - initializing files [SQL Server]
 - instant file initialization [SQL Server]
-- fast file initialization (SQL Server)
+- fast file initialization [SQL Server]
 - file initialization [SQL Server]
 - IFI [SQL Server]
+- database instant file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 caps.latest.revision: "33"
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3f0ef2d2c733a0ab1f349d42d621303cc6c133a5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: cf0f0006186bde39228ac9b0039e5a45b42431b7
+ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="database-file-initialization"></a>Инициализация файлов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Файлы данных и журналов инициализируются, чтобы перезаписать все существующие данные на диске, оставшиеся после удаленных файлов. Файлы данных и журналов сначала инициализируются путем обнуления (заполнения нулями) при выполнении одной из следующих операций:  
   
 - Создание базы данных.  
-  
 - Добавление файлов данных и журналов к существующей базе данных.  
-  
 - Увеличение размера существующего файла (включая операции автоувеличения).  
-  
 - Восстановление базы данных или файловой группы.  
   
 Вследствие инициализации файлов эти операции занимают больше времени. Однако, если данные записываются в файлы первый раз, операционной системе не требуется заполнять файлы нулями.  
   
-# <a name="instant-file-initialization-ifi"></a>Мгновенная инициализация файлов (IFI)  
+## <a name="instant-file-initialization-ifi"></a>Мгновенная инициализация файлов (IFI)  
 В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] файлы данных могут инициализироваться мгновенно во избежание операций обнуления. Мгновенная инициализация файлов позволяет быстро выполнять упомянутые ранее файловые операции. Мгновенная инициализация файлов освобождает место на диске, не заполняя пространство нулями. Вместо этого содержимое диска перезаписывается, поскольку в файлы записываются новые данные. Файлы журналов не могут быть инициализированы мгновенно.  
   
 > [!NOTE]  
->  Мгновенная инициализация файлов доступна только в [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] , [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] или более поздних версиях.  
+> Мгновенная инициализация файлов доступна только в [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] , [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] или более поздних версиях.  
 
 > [!IMPORTANT]
 > Мгновенная инициализация файлов доступна только для файлов данных. Файлы журналов всегда будут обнуляться при создании или увеличении размера.
   
 Мгновенная инициализация файлов доступна, только если стартовой учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлено разрешение *SE_MANAGE_VOLUME_NAME*. Участники группы администраторов Windows обладают этим правом и могут предоставить его другим пользователям, добавив их в политику безопасности **Выполнение задач обслуживания томов** .  
   
-Некоторые условия, например [прозрачное шифрование данных](../../relational-databases/security/encryption/transparent-data-encryption.md), могут не допускать мгновенную инициализацию файлов.  
+> [!IMPORTANT]
+> Некоторые условия, например [прозрачное шифрование данных](../../relational-databases/security/encryption/transparent-data-encryption.md), могут не допускать мгновенную инициализацию файлов.  
   
 Предоставление учетной записи разрешения `Perform volume maintenance tasks` .  
   
@@ -66,17 +65,41 @@ ms.lasthandoff: 11/27/2017
 4.  Щелкните кнопку **Добавить пользователя или группу** и добавьте любые учетные записи пользователя, которые использовались для резервного копирования.  
   
 5.  Нажмите кнопку **Применить**и закройте все диалоговые окна **Локальная политика безопасности** .  
-  
-### <a name="security-considerations"></a>Вопросы безопасности  
- Поскольку удаленное содержимое диска перезаписывается только по мере записи новых данных в файлы, доступ к удаленному содержимому может получить неавторизованный субъект, пока в эту область файла данных не будут записаны другие данные. По мере подключения файла базы данных к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] риск раскрытия информации уменьшается благодаря списку управления доступом на уровне пользователей (DACL) в файле. DACL разрешает доступ к файлу только учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и локальному администратору. Но при отсоединении файла доступ к нему может получить пользователь или служба, которым не предоставлено разрешение *SE_MANAGE_VOLUME_NAME*. Аналогичная проблема существует при резервном копировании базы данных. Если файл резервной копии не защищен с помощью соответствующего DACL, удаленное содержимое может стать доступным неавторизованному пользователю или службе.  
+
+> [!NOTE]
+> Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], это разрешение можно предоставлять учетной записи службы во время установки. При использовании [установки из командной строки](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md) добавьте аргумент /SQLSVCINSTANTFILEINIT либо установите флажок *Предоставить право на выполнение задач обслуживания тома службе ядра СУБД SQL Server* в [мастере установки](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
+
+> [!NOTE]
+> Начиная с версий [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 4 (SP4) и [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] с пакетом обновления 1 (SP1), вплоть до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], вы можете использовать столбец *instant_file_initialization_enabled* в динамическом административном представлении [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) для определения, включена ли мгновенная инициализация файлов.
+
+## <a name="remarks"></a>Remarks
+Если учетной записи запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставлено разрешение *SE_MANAGE_VOLUME_NAME*, во время запуска в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется подобное информационное сообщение. 
+
+```
+Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+```
+
+Если учетной записи запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **не предоставлено** разрешение *SE_MANAGE_VOLUME_NAME*, во время запуска в журнале ошибок [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] регистрируется подобное информационное сообщение. 
+
+```
+Database Instant File Initialization: disabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.
+```
+
+**Применимо к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с версии [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] с пакетом обновления 4 (SP4), [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] с пакетом обновления 2 (SP2) и версий с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
+
+## <a name="security-considerations"></a>Соображения безопасности  
+При использовании мгновенной инициализации файлов (IFI), так как удаленное содержимое диска перезаписывается только по мере записи в файлы новых данных, пока в помеченную удаленной область файла данных не будут записаны другие данные, неавторизованный субъект может получить доступ к удаленному содержимому. По мере подключения файла базы данных к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] риск раскрытия информации уменьшается благодаря списку управления доступом на уровне пользователей (DACL) в файле. DACL разрешает доступ к файлу только учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и локальному администратору. Но при отсоединении файла доступ к нему может получить пользователь или служба, которым не предоставлено разрешение *SE_MANAGE_VOLUME_NAME*. Аналогичная проблема существует при резервном копировании базы данных. Если файл резервной копии не защищен с помощью соответствующего DACL, удаленное содержимое может стать доступным неавторизованному пользователю или службе.  
  
- Если сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен в защищенной среде, преимущества производительности от включения IFI могут превысить риск нарушения безопасности и, следовательно, эта рекомендация будет не актуальна.
+> [!NOTE]
+> Если сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен в защищенной физической среде, выигрыш в производительности от мгновенной инициализации файлов может перевесить риск нарушения безопасности. Именно поэтому мы приводим здесь эту рекомендацию.
   
- Если вероятность раскрытия удаленного содержимого является серьезной проблемой, необходимо выполнить одно следующее действие или оба.  
+Если вероятность раскрытия удаленного содержимого является серьезной проблемой, необходимо выполнить одно следующее действие или оба.  
   
 - Всегда проверяйте, что все отсоединенные файлы данных и резервные копии имеют ограничивающие DACL.  
-  
-- Отключите мгновенную инициализацию файлов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отменив разрешение *SE_MANAGE_VOLUME_NAME* стартовой учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+- Отключите мгновенную инициализацию файлов для экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отменив разрешение *SE_MANAGE_VOLUME_NAME* стартовой учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+
+> [!IMPORTANT]
+> Отключение мгновенной инициализации файлов приведет к увеличению времени распределения файлов данных.  
   
 > [!NOTE]  
 > Отключение мгновенной инициализации файлов влияет только на создаваемые или увеличивающиеся в размере файлы после отзыва прав пользователя.  

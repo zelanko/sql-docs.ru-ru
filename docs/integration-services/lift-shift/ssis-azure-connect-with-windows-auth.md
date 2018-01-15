@@ -1,5 +1,5 @@
 ---
-title: "Подключение к локальным источникам данных и общим папкам Azure с помощью проверки подлинности Windows | Документы Майкрософт"
+title: "Подключение к источникам данных и общим папкам с помощью проверки подлинности Windows | Microsoft Docs"
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c0f5e1e2319e58e9013b1f67e8a81efa9a07d556
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Подключение к локальным источникам данных и общим папкам Azure с помощью проверки подлинности Windows
 В этой статье описывается, как настроить каталог служб SQL Server Integration Services в базе данных SQL Azure для запуска пакетов, которые используют проверку подлинности Windows для подключения к локальным источникам данных и общим папкам Azure. С помощью проверки подлинности Windows можно подключаться к источникам данных в той же виртуальной сети, в которой размещена среда Azure SSIS Integration Runtime. Источники могут находиться в локальной среде, в виртуальных машинах Azure и в службе файлов Azure.
@@ -80,7 +80,7 @@ ms.lasthandoff: 12/12/2017
 
 3.  В среде SSMS проверьте возможность подключения к требуемому локальному серверу SQL Server.
 
-### <a name="prerequisites"></a>Предварительные требования
+### <a name="prerequisites"></a>предварительные требования
 Чтобы подключиться к локальному серверу SQL Server, используя пакет, запущенный в Azure, нужно включить следующие необходимые компоненты:
 
 1.  В диспетчере конфигурации SQL Server включите протокол TCP/IP.

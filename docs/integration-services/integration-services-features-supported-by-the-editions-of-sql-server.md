@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 7123c7dde876fb5ec8cceb3088816df9a92360d0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bd1193331cc9658a4703a39201219896c0e921d0
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>Функции служб Integration Services, поддерживаемые различными выпусками SQL Server
  В этом разделе подробно описаны функции служб SQL Server Integration Services (SSIS), поддерживаемые различными выпусками [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  
@@ -63,7 +63,7 @@ ms.lasthandoff: 12/21/2017
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Встроенные соединители источника данных|Да|Да|||| 
 |Встроенные задачи и преобразования|Да|Да||||  
-|Источник и назначение Oracle от Attunity|Да|Да|||| 
+|Источник и назначение ODBC |Да|Да|||| 
 |Соединители источника данных Azure и задачи|Да|Да||||  
 |Соединители и задачи Hadoop и HDFS|Да|Да||||  
 |Средства профилирования основных данных|Да|Да|||| 

@@ -20,11 +20,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3ac86ebd88dd793a0da204ace0feba02f2a055fa
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2050eed47dbe036cf0b51c9acb3fb823f4c6fa60
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="add-enhanced-database-failover-to-an-availability-group-sql-server"></a>Добавление улучшенной отработки отказа базы данных в группу доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ SQL Server 2016 представляет новую функцию под наз
 
 Группа доступности настраивается между экземпляром А и экземпляром В, содержащим две базы данных с именами DB1 и DB2. В качестве режима доступности устанавливается синхронная фиксация с автоматическим переходом в режим отработки отказа и активируется улучшенная отработка отказа базы данных. Доступ к диску, содержащему данные DB2 и файлы журнала транзакций, будет утерян. При обнаружении проблемы группа доступности будет автоматически переведена на экземпляр B.
 
-## <a name="configure-and-viewv-the-enhanced-database-failover-option"></a>Настройка и просмотр параметра улучшенной отработки отказа базы данных
+## <a name="configure-and-view-the-enhanced-database-failover-option"></a>Настройка и просмотр улучшенной отработки отказа базы данных
 
 Улучшенную отработку отказа базы данных можно настроить с помощью SQL Server Management Studio или Transact-SQL. Командлеты PowerShell пока не дают такой возможности. По умолчанию улучшенная отработка отказа базы данных отключена.
 
@@ -79,7 +79,7 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = ON)
 ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
 ```
 ### <a name="dynamic-management-view"></a>Динамическое административное представление
-Чтобы узнать, включена ли в группе доступности улучшенная отработка отказа базы данных, запросите динамическое административное представление `sys.availablity_groups`. Если данная функция отключена, в столбце `db_failover` будет указано значение 0, а если включена — значение 1. 
+Чтобы узнать, включена ли в группе доступности улучшенная отработка отказа базы данных, запросите динамическое административное представление `sys.availability_groups`. Если данная функция отключена, в столбце `db_failover` будет указано значение 0, а если включена — значение 1. 
 
 ## <a name="next-steps"></a>Следующие шаги 
 

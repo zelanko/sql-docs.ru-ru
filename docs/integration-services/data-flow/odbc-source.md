@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8af8fe7422b0f58c99fa95dd63bd2c0408b6e624
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 42eb0885558003d4810e873d95876bd8ac6da14b
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-source"></a>ODBC-источник
   Источник ODBC извлекает данные из базы данных с поддержкой ODBC с использованием таблицы базы данных, представления или инструкции SQL.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/20/2017
  В зависимости от настройки поведения в случае ошибки, источник ODBC поддерживает возврат ошибок (преобразование данных, усечение), которые обнаруживаются в процессе извлечения в выводе ошибок. Дополнительные сведения см. в статье [Редактор назначения ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md).  
   
 ## <a name="data-type-support"></a>Поддержка типов данных  
- Сведения о типах данных, поддерживаемых источником ODBC, см. в документе «Соединитель для ODBC» компании Attunity.  
+ Сведения о типах данных, поддерживаемых источником ODBC, см. в информации о компоненте "Соединитель для ODBC".  
   
 ## <a name="extract-options"></a>Параметры извлечения  
  Источник ODBC работает в пакетном ( **Batch** ) или построчном ( **Row-by-Row** ) режиме. Используемый режим определяется свойством **FetchMethod** . Описания режимов приведены в следующем списке.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения о свойстве **FetchMethod** см. в разделе [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="parallelism"></a>Параллелизм  
+## <a name="parallelism"></a>Parallelism  
  Какие-либо ограничения на количество исходных компонентов ODBC, которые могут запускаться параллельно по отношению к одной и той же таблице или к разным таблицам, на одном и том же компьютере или на разных компьютерах (кроме обычных глобальных предельных параметров сеанса), отсутствуют.  
   
  Однако количество параллельных соединений через поставщика может быть ограничено в используемом поставщике ODBC. Эти ограничения задают количество параллельных экземпляров, которые могут поддерживаться для источника ODBC. Разработчик служб SSIS должен знать ограничения всех используемых поставщиков ODBC и учитывать их при построении пакетов служб SSIS.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне «Расширенный редактор», см. в разделе [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Извлечение данных с помощью источника «ODBC»](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 11/20/2017
 #### <a name="inputoutput"></a>Ввод-вывод  
  Просмотр имени источника данных.  
   
-#### <a name="column"></a>Столбец  
+#### <a name="column"></a>столбцом  
  Не используется.  
   
 #### <a name="error"></a>Ошибка  

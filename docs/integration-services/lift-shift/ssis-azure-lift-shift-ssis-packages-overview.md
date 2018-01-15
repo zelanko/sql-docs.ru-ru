@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1fd45ef05d5469acb83a80e3463329976b9a843
-ms.sourcegitcommit: f1a6944f95dd015d3774a25c14a919421b09151b
+ms.openlocfilehash: d534f3118cbc8d9516d7db6033c490a9ab59dd1c
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>Перенос рабочих нагрузок SQL Server Integration Services в облако
 Пакеты и рабочие нагрузки служб SQL Server Integration Services (SSIS) теперь можно переносить в облако Azure.
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/08/2017
 
 Фабрика данных также поддерживает другие типы сред Integration Runtime. Дополнительные сведения об SSIS IR и других типах сред Integration Runtime см. в статье [Среда выполнения интеграции в фабрике данных Azure](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime).
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 Для возможностей, которые описаны в этой статье, не требуется SQL Server 2017 или SQL Server 2016.
 
 Для этих возможностей требуются следующие версии SQL Server Data Tools (SSDT):
@@ -68,7 +68,7 @@ ms.lasthandoff: 12/08/2017
 
 ## <a name="ssis-features-on-azure"></a>Компоненты служб SQL Server Integration Services в Azure
 
-При подготовке экземпляра базы данных SQL для размещения базы данных SSISDB также устанавливаются пакет дополнительных компонентов Azure для служб SSIS и распространяемый компонент Access. Эти компоненты обеспечивают подключение к файлам **Excel и Access**, а также к различным источникам данных **Azure** в дополнение к источникам данных, поддерживаемым встроенными компонентами. В настоящее время установка **компонентов сторонних поставщиков** для служб SSIS (включая сторонние компоненты от корпорации Майкрософт, такие как Attunity и SAP BI) невозможна.
+При подготовке экземпляра базы данных SQL для размещения базы данных SSISDB также устанавливаются пакет дополнительных компонентов Azure для служб SSIS и распространяемый компонент Access. Эти компоненты обеспечивают подключение к файлам **Excel и Access**, а также к различным источникам данных **Azure** в дополнение к источникам данных, поддерживаемым встроенными компонентами. В настоящее время установка **компонентов сторонних поставщиков** для служб SSIS (включая сторонние компоненты от корпорации Майкрософт, например компоненты Oracle и Teradata от Attunity и компоненты SAP BI) не поддерживается.
 
 **Имя базы данных SQL**, в которой размещается база данных SSISDB, становится первой частью четырехкомпонентного имени, которое применяется при развертывании пакетов и управлении ими в SSDT и SSMS: `<sql_database_name>.database.windows.net`.
 

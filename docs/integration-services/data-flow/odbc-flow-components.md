@@ -17,16 +17,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e447f20374700fa1e6e64837a336ba17d2b7570b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 514818fce9654a720dac0a0721697b30bdcab787
+ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="odbc-flow-components"></a>Компоненты потока ODBC
   Этот раздел содержит описание основных понятий, необходимых для создания потока данных ODBC с использованием [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- Соединитель для ODBC компании Attunity для [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] позволяет разработчикам служб SSIS легко создавать пакеты, которые загружают и выгружают данные из баз данных с поддержкой ODBC.  
+ Соединитель для ODBC для [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] помогает разработчикам служб SSIS легко создавать пакеты, которые загружают и выгружают данные из поддерживающих ODBC баз данных.  
   
  Соединитель ODBC предназначен для достижения оптимальной производительности при загрузке или выгрузке данных из базы данных с поддержкой ODBC в контексте [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [ODBC-источник](../../integration-services/data-flow/odbc-source.md)  
   
--   [Назначение ODBC](../../integration-services/data-flow/odbc-destination.md)  
+-   [Назначение «ODBC»](../../integration-services/data-flow/odbc-destination.md)  
   
  Источник и назначение ODBC предоставляют простой способ выгрузки и загрузки данных, а также передачи данных из базы данных-источника с поддержкой ODBC в целевую базу данных с поддержкой ODBC.  
   
@@ -135,9 +135,9 @@ ms.lasthandoff: 11/20/2017
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |Типы данных для конкретных поставщиков|DT_BYTES<br /><br />DT_IMAGE|Тип DT_BYTES используется, если длина столбца меньше или равна 8000.<br /><br />Тип DT_IMAGE используется, если длина столбца равна нулю или больше 8000.|  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [ODBC-источник](../../integration-services/data-flow/odbc-source.md)  
+-   [Источник «ODBC»](../../integration-services/data-flow/odbc-source.md)  
   
 -   [Назначение ODBC](../../integration-services/data-flow/odbc-destination.md)  
   

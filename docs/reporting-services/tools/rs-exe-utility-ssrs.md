@@ -8,9 +8,7 @@ ms.service:
 ms.component: tools
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,15 +21,15 @@ helpviewer_keywords:
 - deploying reports [Reporting Services]
 ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 caps.latest.revision: "56"
-author: guyinacube
-ms.author: asaxton
-manager: erikre
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 28da6b7f73721a99937dcfca82264463367830c9
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: bf442aad4542358644835a64111ca63ed59b51a6
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="rsexe-utility-ssrs"></a>Служебная программа RS.exe (SSRS)
   Скрипт, предоставленный во входном файле, обрабатывается служебной программой rs.exe. Используйте эту программу для автоматизации развертывания сервера отчетов и административных задач.  
@@ -71,7 +69,7 @@ rs {-?}
  **-u** [*домен*\\]*имя_пользователя*  
  (Необязательный) Определяет учетную запись пользователя, используемую для подключения к серверу отчетов. В случае отсутствия **-u** и **-p** используется текущая учетная запись пользователя Windows.  
   
- **-p** *пароль*  
+ **-p** *<пароль>*  
  (Обязательный, если задан **-u** .) Определяет пароль для использования с аргументом **-u** . Это значение учитывает регистр.  
   
  **-e**  
@@ -107,7 +105,7 @@ rs {-?}
  **-t**  
  (Необязательный) Записывает сообщения об ошибках в журнал трассировки. Этот аргумент не принимает значения. Дополнительные сведения см. в статье [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> разрешения  
  Для запуска этого средства необходимо иметь разрешение на подключение к экземпляру сервера отчетов, с которым работает выполняемый скрипт. Можно выполнять скрипты для внесения изменений на локальном или удаленном компьютере. Для внесения изменений на сервере отчетов, установленном на удаленном компьютере, укажите удаленный компьютер в аргументе **-s** .  
   
 ##  <a name="bkmk_examples"></a> Примеры  
@@ -121,7 +119,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
   
  Дополнительные примеры см. в разделе [Запуск файла скрипта для служб Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Можно определять скрипты, устанавливать системные свойства, публиковать отчеты и так далее. Создаваемые скрипты могут включать любые методы API-интерфейса служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о доступных методах и свойствах см. в разделе [Report Server Web Service](../../reporting-services/report-server-web-service/report-server-web-service.md).  
   
  Скрипт должен быть написан на языке [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET и храниться в текстовом файле в кодировке Юникод или UTF-8 с расширением RSS. Отладить скрипт с помощью программы **rs** невозможно. Для отладки скрипта выполните код в [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
@@ -129,7 +127,7 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 > [!TIP]  
 >  Подробный пример см. в разделе [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
 - [Запуск файла скрипта для служб Reporting Services](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
 - [Написание скриптов для задач развертывания и администрирования](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
 - [Создание скриптов с помощью программы rs.exe и веб-службы](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   

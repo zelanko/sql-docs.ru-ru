@@ -8,22 +8,20 @@ ms.service:
 ms.component: report-design
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology:
-- reporting-services-sharepoint
-- reporting-services-native
+ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 caps.latest.revision: "8"
 author: maggiesMSFT
 ms.author: maggies
-manager: erikre
+manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b4b5fa050cbb69944039c143f3140086851a68ab
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: 469b28cd43b2e5fd03063e0031b487a7959345e9
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="built-in-collections---parameters-collection-references-report-builder"></a>Встроенные коллекции — ссылки на коллекцию параметров (построитель отчетов)
   Параметры отчета являются одной из встроенных коллекций, на которые можно ссылаться из выражения. Включая в выражение параметры, можно настраивать внешний вид и данные отчета в соответствии с выбором пользователя. Выражения могут использоваться в любом свойстве элемента отчета или текстового поля, имеющего параметр (*Fx*) или \<**Expression**>. Кроме того, выражения применяются для дополнительного управления содержимым отчета и его внешним видом. Дополнительные сведения см. в разделе [Примеры выражений (построитель отчетов и службы SSRS)](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md).  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/05/2017
 |`=Parameters!` *\<Имя_параметра>* `.Count`|Возвращает целочисленное значение 1. Для однозначного параметра счетчик всегда равен 1.|  
 |`=Parameters!` *\<Имя_параметра>* `.Label`|Возвращает метку параметра, часто используемую в качестве отображаемого имени в раскрывающемся списке допустимых значений.|  
 |`=Parameters!` *\<Имя_параметра>* `.Value`|Возвращает значение параметра. Если свойство Label не было задано, это значение появляется в раскрывающемся списке допустимых значений.|  
-|`=CStr(Parameters!` *\<Имя_параметра>* `.Value)`|Возвращает значение параметра в виде строки.|  
+|`=CStr(Parameters!`  *\<Имя_параметра>* `.Value)`|Возвращает значение параметра в виде строки.|  
 |`=Fields(Parameters!` *\<Имя_параметра>* `.Value).Value`|Возвращает значение поля с таким же именем, как и у параметра.|  
   
  Дополнительные сведения о добавлении параметров в фильтр см. в разделе [Добавление фильтров набора данных, фильтров области данных и групповых фильтров (построитель отчетов и службы SSRS)](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md).  
