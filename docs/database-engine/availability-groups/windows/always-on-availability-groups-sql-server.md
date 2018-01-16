@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 7221637a17f0e21b2448a10cb9c7458fa0c4f161
-ms.sourcegitcommit: 8b774eff53c1043dc3d4305ce8329fcab8945615
+ms.openlocfilehash: 2a5b0a3732526db27416e3dc5cf9256e898d57b7
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/18/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Группы доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/18/2017
   
  Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Переход на другой ресурс не вызывается проблемами баз данных, например обозначением базы данных как подозрительной в связи с потерей файла данных, удалением базы данных или повреждением журнала транзакций.  
  
- >[ПРИМЕЧАНИЕ] Полное официальное название этой функции обеспечения доступности — группы доступности AlwaysOn. В качестве сокращения используется вариант AG, но не AOAG или AAG. 
+ >[Примечание.] Полное официальное название этой функции обеспечения доступности — группы доступности Always On. В качестве сокращения используется вариант AG, но не AOAG или AAG. 
   
 ##  <a name="Benefits"></a> Преимущества  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] предоставляет широкий набор параметров, позволяющих повысить уровень доступности баз данных и улучшить использование ресурсов. Ключевыми компонентами являются:  

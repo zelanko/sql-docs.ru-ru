@@ -26,6 +26,7 @@
 ### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
 ## [7_Развертывание кластера Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md)
 ## [8_Создание и настройка групп доступности](sql-server-linux-create-availability-group.md)
+## [9_Настройка Kubernetes для высокого уровня доступности](tutorial-sql-server-containers-kubernetes.md)
 
 # Основные понятия
 ## Установить
@@ -85,7 +86,7 @@
 #### [Создание только для чтения и масштабирования]()
 ##### [Настройка группы доступности](sql-server-linux-availability-group-configure-rs.md)
 
-## [Безопасность](sql-server-linux-security-overview.md)
+## [безопасность](sql-server-linux-security-overview.md)
 ### [Начало работы с функциями безопасности](sql-server-linux-security-get-started.md)
 ### [Шифрование подключений](sql-server-linux-encrypted-connections.md)
 

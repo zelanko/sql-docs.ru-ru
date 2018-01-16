@@ -17,11 +17,11 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 24426c82299598fbf80b31b8d2a1ee24b6142d9a
-ms.sourcegitcommit: ea68e8a68ee58584dd52035ed3d611a69b6c3818
+ms.openlocfilehash: 65aaaf68cd32204b7447807ebce247ba3e977459
+ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Новые возможности индексов columnstore
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ ms.lasthandoff: 12/15/2017
 |Параметр задержки сжатия для индексов columnstore в инструкциях `CREATE TABLE` и `ALTER TABLE`|||да|да|да|да|
 |Индекс columnstore может содержать нематериализованный вычисляемый столбец||||да|||   
   
- <sup>1</sup> Чтобы создать некластеризованный индекс columnstore для чтения, сохраните индекс в файловой группе только для чтения.  
+ <sup>1</sup> Чтобы создать некластеризованный индекс columnstore, доступный только для чтения, сохраните индекс в файловой группе только для чтения.  
 
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] добавляет указанные новые возможности.

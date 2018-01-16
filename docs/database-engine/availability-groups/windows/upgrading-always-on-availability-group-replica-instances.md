@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: b4be12e82f4df3c15fbf465863174b0cdde051af
-ms.sourcegitcommit: e904c2a85347a93dcb15bb6b801afd39613d3ae7
+ms.openlocfilehash: 76d8f9fd55eb9129f31dba4dcbea9799e09148da
+ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/16/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Обновление экземпляров реплики группы доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/16/2017
 -   [Требования к оборудованию и программному обеспечению для установки SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). Ознакомьтесь с требованиями к оборудованию и ПО для установки [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Если требуется дополнительное программное обеспечение, установите его на каждом узле перед запуском обновления, чтобы минимизировать время простоя.  
 
 > [!NOTE]  
->  Использование разных версий SQL Server в одной группе доступности не поддерживается. Единственный поддерживаемый способ перехода на новую версию с помощью групп доступности — это распределенная группа доступности, которая имеется в SQL Server 2016 Enterprise Edition или более поздней версии.
+>  Использование различных версий SQL Server в одной и той же группе доступности не поддерживается вне последовательного обновления, при котором обновляются реплики на месте. Это означает, что вы не можете добавить в существующую группу доступности новую реплику с более поздней версией SQL Server. Например, реплика с SQL Server 2017 не добавляется в имеющуюся группу доступности SQL Server 2016. Единственный поддерживаемый способ перехода на новую версию SQL Server с группами доступности — использовать распределенную группу доступности с SQL Server 2016 Enterprise Edition или более поздней версией.
 
 ## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Рекомендации по последовательному обновлению групп доступности AlwaysOn  
  Следует руководствоваться следующими рекомендациями при модернизации или обновлении сервера, чтобы минимизировать время простоя и потерю данных для групп доступности.  

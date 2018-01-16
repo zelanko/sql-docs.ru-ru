@@ -1,9 +1,9 @@
 ---
 title: "Загрузка SQL Server Data Tools (SSDT) | Документация Майкрософт"
 ms.custom: 
-ms.date: 10/19/2017
+ms.date: 01/05/2018
 ms.prod: sql-non-specified
-ms.prod_service: sql-non-specified
+ms.prod_service: sql-tools
 ms.service: 
 ms.component: ssdt
 ms.reviewer: 
@@ -18,38 +18,40 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49651680f2b420da6fd3402b05f54524e346cd1e
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: 554993ec4b6b687a2335c3ea6192c40ead327820
+ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>Скачать SQL Server Data Tools (SSDT)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 **[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)** — это современное средство разработки, позволяющее создавать реляционные базы данных SQL Server, базы данных SQL Azure, пакеты Integration Services, модели данных Analysis Services и отчеты Reporting Services. Вы можете скачать его бесплатно. С помощью SSDT вы можете проектировать и развертывать любые типы содержимого SQL Server так же просто, как разрабатывать приложения в Visual Studio. 
 
-Сейчас доступна версия SSDT для Visual Studio 2017 (предварительная версия 15.4.0). В этом выпуске появилась поддержка автономной установки с веб-интерфейсом для проектов баз данных SQL Server, Analysis Services, Reporting Services и Integration Services в Visual Studio 2017 15.4 и более поздних версиях.
+Средства SSDT для Visual Studio 2017 (15.5.1) прошли этап предварительной версии и стали первым общедоступным выпуском. В этом выпуске имеется поддержка автономной установки с веб-интерфейсом для проектов баз данных SQL Server, Analysis Services, Reporting Services и Integration Services в Visual Studio 2017 15.5 и более поздних версиях.
 
-| SSDT для Visual Studio 2017 (предварительная версия) | SSDT для Visual Studio 2015 | 
+| SSDT для Visual Studio 2017 | SSDT для Visual Studio 2015 | 
 |:--|:--|
-|[![скачать](../ssdt/media/download.png) Скачать SSDT для Visual Studio 2017 (предварительная версия 15.4.0) ](https://go.microsoft.com/fwlink/?LinkId=860015) | [![скачать](../ssdt/media/download.png) Скачать SSDT для Visual Studio 2015 (17.3)](https://go.microsoft.com/fwlink/?linkid=858660)|
+|[![скачать](../ssdt/media/download.png) Скачать SSDT для Visual Studio 2017 (15.5.1)](https://go.microsoft.com/fwlink/?LinkId=865748) | [![скачать](../ssdt/media/download.png) Скачать SSDT для Visual Studio 2015 (17.4)](https://go.microsoft.com/fwlink/?linkid=863440)|
 |||
 
 > [!IMPORTANT]
-> Перед установкой SSDT для Visual Studio 2017 (предварительная версия 15.4.0) закройте все экземпляры VS и удалите расширения "Проекты служб Microsoft Analysis Services" и "Проекты служб Microsoft Reporting Services", если они уже установлены в VS 2017. 
+> Выпуск Visual Studio 2017 (15.5.1) аналогичен версии 15.5.0 за исключением исправления нескольких ошибок в установщике. Так как это практически одинаковые выпуски, не пытайтесь обновлять версию 15.5.0 до 15.5.1. Если у вас уже установлена версия Visual Studio 2017 (15.5.0), переходить на версию 15.5.1 нет смысла, так как проблемы с установщиком вам уже удалось решить. 
 > 
-> "SSDT для Visual Studio 2017 (предварительная версия 15.3.0)" не поддерживает обновления, поэтому ее необходимо удалить перед установкой "SSDT для Visual Studio 2017 (предварительная версия 15.4.0)". 
+> Перед установкой SSDT для Visual Studio 2017 (15.5.1) удалите расширения "Проекты служб Microsoft Analysis Services" и "Проекты служб Microsoft Reporting Services", если они уже установлены в Visual Studio 2017, и закройте все экземпляры Visual Studio. 
+> 
+> Локализованные версии SSDT для Visual Studio 2017 15.5.1 не поддерживают обновление с предварительной версии 15.4.0 на английском языке. Перед установкой версии 15.5.1 на других языках необходимо удалить предварительную версию 15.4.0 на английском языке. 
 
 
-SSDT для Visual Studio 2015 и SSDT для Visual Studio 2017 используют DacFx 17.3: [скачайте Data-Tier Application Framework (DacFx) 17.3](https://www.microsoft.com/download/details.aspx?id=56048)
+SSDT для Visual Studio 2015 и SSDT для Visual Studio 2017 используют DacFx 17.4: [скачайте Data-Tier Application Framework (DacFx) 17.4](https://www.microsoft.com/download/details.aspx?id=56356)
 
 
 
 ## <a name="ssdt-for-visual-studio-2017"></a>SSDT для Visual Studio 2017
 **Сведения о версии**  
   
-Номер выпуска: предварительная версия 15.4.0  
-Номер сборки для этого выпуска: 14.0.16134.0
+Номер выпуска: 15.5.1  
+Номер сборки для этого выпуска: 14.0.16148.0
 
 Полный список изменений доступен в [журнале изменений](changelog-for-sql-server-data-tools-ssdt.md).
 
@@ -57,51 +59,63 @@ SSDT для Visual Studio 2015 и SSDT для Visual Studio 2017 исполь�
 
 ### <a name="available-languages---ssdt-for-vs-2017"></a>Доступные языки — SSDT для VS 2017
   
- Эта предварительная версия SSDT сейчас доступна только на английском языке.
+Этот выпуск **SSDT для Visual Studio 2017** можно установить на следующих языках:  
 
-
-
+[Китайский (КНР)]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x804) | 
+[Китайский (Тайвань)]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x404) | 
+[Английский (США)]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x409) | 
+[Французский]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x40c)  
+[Немецкий]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x407) | 
+[Итальянский]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x410) | 
+[Японский]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x411) | 
+[Корейский]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x412) | 
+[Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x416) | 
+[Русский]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x419) | 
+[Испанский]( https://go.microsoft.com/fwlink/?linkid=865748&clcid=0x40a)  
 
 ## <a name="ssdt-for-visual-studio-2015"></a>SSDT для Visual Studio 2015
 **Сведения о версии**  
   
-Номер выпуска: 17.3
+Номер выпуска: 17.4
 
-Номер сборки для этого выпуска: 14.0.61709.290
+Номер сборки для этого выпуска: 14.0.61712.050
   
 Полный список изменений доступен в [журнале изменений](changelog-for-sql-server-data-tools-ssdt.md).
 
 ### <a name="available-languages---ssdt-for-vs-2015"></a>Доступные языки — SSDT для VS 2015
   
-Этот выпуск SSDT можно установить на следующих языках.  
+Этот выпуск **SSDT для Visual Studio 2015** можно установить на следующих языках:  
 
-[Китайский (КНР)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x804) | 
-[Китайский (Тайвань)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x404) | 
-[Английский (США)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x409) | 
-[Французский]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40c)  
-[Немецкий]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x407) | 
-[Итальянский]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x410) | 
-[Японский]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x411) | 
-[Корейский]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x412) | 
-[Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x416) | 
-[Русский]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x419) | 
-[Испанский]( https://go.microsoft.com/fwlink/?linkid=858660&clcid=0x40a)  
+[Китайский (КНР)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x804) | 
+[Китайский (Тайвань)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x404) | 
+[Английский (США)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x409) | 
+[Французский]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40c)  
+[Немецкий]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x407) | 
+[Итальянский]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x410) | 
+[Японский]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x411) | 
+[Корейский]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x412) | 
+[Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x416) | 
+[Русский]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x419) | 
+[Испанский]( https://go.microsoft.com/fwlink/?linkid=863440&clcid=0x40a)  
 
 ### <a name="iso-images---ssdt-for-vs-2015"></a>Образы ISO — SSDT для VS 2015
 
 ISO-образ SSDT можно использовать в качестве альтернативного способа установки SSDT или для настройки административной точки установки. ISO-образ представляет собой автономный файл, который содержит все компоненты, необходимые для SSDT, и его можно скачать с помощью диспетчера возобновляемой загрузки, который требуется при ограниченной или менее надежной пропускной способности сети. После скачивания ISO-образ можно подключить как диск или записать на DVD-диск.
 
-[Китайский (КНР)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x804) |
-[Китайский (Тайвань)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x404) |
-[Английский (США)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x409) |
-[Французский]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40c)  
-[Немецкий]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x407) |
-[Итальянский]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x410) |
-[Японский]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x411) |
-[Корейский]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x412) |
-[Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x416) |
-[Русский]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x419) |
-[Испанский]( https://go.microsoft.com/fwlink/?linkid=858663&clcid=0x40a)
+> [!NOTE]
+> Теперь доступны ISO-образы SSDT для VS 2015 версии 17.4.
+
+[Китайский (КНР)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x804) |
+[Китайский (Тайвань)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x404) |
+[Английский (США)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x409) |
+[Французский]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40c)  
+[Немецкий]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x407) |
+[Итальянский]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x410) |
+[Японский]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x411) |
+[Корейский]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x412) |
+[Португальский (Бразилия)]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x416) |
+[Русский]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x419) |
+[Испанский]( https://go.microsoft.com/fwlink/?linkid=863443&clcid=0x40a)
 
 
 ## <a name="download-visual-studio"></a>Скачивание Visual Studio
