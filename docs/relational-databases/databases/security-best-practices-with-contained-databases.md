@@ -18,14 +18,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fd6636cc4e2ee383fbd178b0f6b1e304f996570c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 612ee0b5301554b2a078493ed2df419d992b4391
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Рекомендации по обеспечению безопасности автономных баз данных
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   С автономными базами данных связаны некоторые уникальные угрозы, о которых администраторы [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] должны знать (и принимать меры по их устранению). Большая часть угроз связана с процессом проверки подлинности **USER WITH PASSWORD** , который перемещает границу проверки подлинности с уровня компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на уровень базы данных.  
   

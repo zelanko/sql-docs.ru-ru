@@ -3,7 +3,7 @@ title: "Создание секционированных таблиц и инд
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-non-specified
-ms.prod_service: database-engine
+ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: partitions
 ms.reviewer: 
@@ -35,14 +35,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 6f3f7e6d9f23ccebb49ac1f2c4bbc70acdff12d2
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 416bba81433e35e34c053aafc5412cca3875b4ae
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Создание секционированных таблиц и индексов
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Вы можете создать секционированную таблицу или индекс в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные в секционированной таблице и индексах горизонтально разделены на блоки, которые могут быть распределены между несколькими файловыми группами в базе данных. Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Вы можете создать секционированную таблицу или индекс в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Данные в секционированной таблице и индексах горизонтально разделены на блоки, которые могут быть распределены между несколькими файловыми группами в базе данных. Секционирование может улучшить управляемость и масштабируемость больших таблиц и индексов.  
   
  Создание секционированной таблицы или индекса обычно включает четыре этапа:  
   
@@ -56,11 +56,11 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Создание секционированной таблицы или индекса с использованием следующих средств:**  
   
@@ -76,9 +76,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Если у каких-либо строк в функции секционирования имеются столбцы секционирования со значениями NULL, эти строки размещаются в крайней левой секции. Однако если значение NULL указано в качестве граничного значения и указан параметр RIGHT, крайняя левая секция остается пустой, а значения NULL располагаются во второй секции.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для создания секционированной таблицы требуется разрешение CREATE TABLE в базе данных и разрешение ALTER для схемы, в которой создается таблица. Для создания секционированного индекса требуется разрешение ALTER на таблицу или представление, в которых создается индекс. Создание секционированной таблицы или индекса требует любого из следующих дополнительных разрешений:  
   
 -   Разрешение ALTER ANY DATASPACE. Это разрешение назначено по умолчанию членам предопределенной роли сервера **sysadmin** и предопределенных ролей базы данных **db_owner** и **db_ddladmin** .  

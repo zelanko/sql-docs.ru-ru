@@ -20,14 +20,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d318e818800a2f1cf8591ba6f35f31d55b0cd564
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f6613fd3036a141f018082f988aa4c3365d0325b
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="manage-and-monitor-semantic-search"></a>Управление и наблюдение за семантическим поиском
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Описывает процесс семантического индексирования и задачи, связанные с наблюдением за индексами и управлением ими.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Описывает процесс семантического индексирования и задачи, связанные с наблюдением за индексами и управлением ими.  
   
 ##  <a name="HowToMonitorStatus"></a> Проверка состояния семантической индексации  
 ### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>Завершен ли первый этап семантического индексирования?

@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ae86d774a168a3e68ca4cb0bbcec1f3a741f801b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 19e15b0c56bc673bff3bd88bc3b5a639e54ea48c
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,10 +65,10 @@ RETCODE bcp_init (
  *eDirection*  
  Направление копирования (DB_IN или DB_OUT). Значение DB_IN указывает на копирование из переменных программы или пользовательского файла в таблицу. Значение DB_OUT указывает на копирование из таблицы базы данных в пользовательский файл. Если используется значение DB_OUT, необходимо указать имя пользовательского файла.  
   
-## <a name="returns"></a>Возврат  
+## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Вызовите **bcp_init** перед вызовом любой другой функции массового копирования. **bcp_init** выполняет необходимую инициализацию массового копирования данных между рабочей станцией и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Bcp_init** функции должен быть предоставлен с дескриптором соединения ODBC для использования с функциями массового копирования. Чтобы включить дескриптор, используйте [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) с параметром sql_copt_ss_bcp, установленным в значение SQL_BCP_ON, для дескриптора соединения выделенного, но не подключен. Попытка назначения атрибута для подключенного дескриптора приведет к ошибке.  
@@ -222,7 +222,7 @@ int main() {
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

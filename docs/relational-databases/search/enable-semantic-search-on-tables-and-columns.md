@@ -18,14 +18,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c036b75d93fe75cf0feb5e047223cb5bb285aad5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2064da501f20a9e27f6d06d018f91a1eda4cb1b0
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>Включение семантического поиска на таблицы и столбцы
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Описывается способ включения или отключения статистической семантической индексации в выбранных столбцах, содержащих документы или текст.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Описывается способ включения или отключения статистической семантической индексации в выбранных столбцах, содержащих документы или текст.  
   
  При выполнении статистического семантического поиска используются индексы, полученные при полнотекстовом поиске, а также создаются дополнительные индексы. Из-за этой зависимости от полнотекстового поиска приходится создавать при определении нового или изменении существующего полнотекстового индекса новый семантический индекс. Вы можете создать новый семантический индекс с помощью инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] или с помощью мастера полнотекстового индексирования и других диалоговых окон среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], как описано в данном разделе.  
   

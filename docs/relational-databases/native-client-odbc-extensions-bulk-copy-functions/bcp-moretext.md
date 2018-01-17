@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7cf6f4c23f600403c7061d9ed5cb2bfd337660e7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f41069ec5254bec0ad40b250a3a9361190ba9b5
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,10 +56,10 @@ RETCODE bcp_moretext (
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция может использоваться в сочетании с [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) и [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) для копирования длинного значения данных переменной длины в SQL Server на число небольшими фрагментами. **bcp_moretext** может использоваться со столбцами, имеющими следующие типы данных SQL Server: **текст**, **ntext**, **изображения**, **varchar(max)** , **nvarchar(max)**, **varbinary(max)**, определяемых пользователем типов (UDT) и XML. **bcp_moretext** не поддерживает преобразование данных, передаваемых данных должен соответствовать типу данных целевого столбца.  
   
- Если **bcp_bind** вызывается с помощью аргумента *pData* параметров для типов данных, которые поддерживаются **bcp_moretext**, **bcp_sendrow** отправляет значения типа данных, независимо от его длины. Если, однако **bcp_bind** имеет значение NULL *pData* параметр для поддерживаемых типов данных, **bcp_moretext** можно использовать для копирования данных непосредственно после успешного возвращения из **bcp_sendrow** , указывающее, что все привязанные столбцы, данные были обработаны.  
+ Если **bcp_bind** вызывается с НЕНУЛЕВОЙ *pData* параметров для типов данных, которые поддерживаются **bcp_moretext**, **bcp_sendrow** отправляет значения типа данных, независимо от его длины. Если, однако **bcp_bind** имеет значение NULL *pData* параметр для поддерживаемых типов данных, **bcp_moretext** можно использовать для копирования данных непосредственно после успешного возвращения из **bcp_sendrow** , указывающее, что все привязанные столбцы, данные были обработаны.  
   
  Если вы используете **bcp_moretext** Чтобы отправить один столбец типа данных, поддерживаемые в строке, необходимо также использовать его для отправки всех остальных столбцов типа данных, поддерживаемые в строке. Ни один столбец не может быть пропущен. Поддерживаемыми типами данных являются SQLTEXT, SQLNTEXT, SQLIMAGE, SQLUDT и SQLXML. То же относится к типам данных SQLCHARACTER, SQLVARCHAR, SQNCHAR, SQLBINARY и SQLVARBINARY, если столбец имеет тип varchar(max), nvarchar(max) или varbinary(max) соответственно.  
   
@@ -168,7 +168,7 @@ nRowsProcessed = bcp_done(hdbc);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

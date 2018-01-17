@@ -21,11 +21,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 0af6c90954aff66d17d7fafb3115138e7d71708f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77f8e1c2faa9900f8b41f356e3dd7411f12ff6c0
+ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,7 +61,7 @@ RETCODE bcp_control (
   
  Ошибка последовательности также возникает при вызове метода `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)FALSE)` после вызова `bcp_control(hdbc,` BCPDELAYREADFMT`, (void *)TRUE)` и bcp_writefmt.  
   
- Дополнительные сведения см. в разделе [обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).  
+ Дополнительные сведения см. в разделе [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* содержит номер кодовой страницы для файла данных. Можно указать номер кодовой страницы, например 1252 или 850, либо одно из следующих значений.  
@@ -113,10 +113,10 @@ RETCODE bcp_control (
  *IValue* предполагается, что параметр является адрес 64-разрядного целого числа со знаком содержащий значение. Максимальное значение, передаваемое в BCPLASTEX, составляет 2^63-1.  
   
  BCPMAXERRS  
- Число ошибок, после которого произойдет сбой операции массового копирования. Значение по умолчанию — 10. Этот параметр сбрасывается в значение меньше 1 по умолчанию. В операции массового копирования допускается не более 65 535 ошибок. Если выполнить попытку установить этот параметр в значение, превышающее 65 535, будет установлено значение 65 535.  
+ Число ошибок, после которого произойдет сбой операции массового копирования. Значение по умолчанию — 10. Этот параметр сбрасывается в значение меньше 1 по умолчанию. В операции массового копирования допускается не более 65 535 ошибок. Если выполнить попытку установить этот параметр в значение, превышающее 65 535, будет установлено значение 65 535.  
   
  BCPODBC  
- При значении TRUE указывает, что **datetime** и **smalldatetime** будет использовать значения, сохраненные в символьном формате, управляющие последовательности ODBC timestamp префикс и суффикс. Параметр BCPODBC применяется только к BCP_OUT.  
+ При значении TRUE указывает, что **datetime** и **smalldatetime** будет использовать значения, сохраненные в символьном формате, управляющие последовательности ODBC timestamp префикс и суффикс. Параметр BCPODBC применяется только к DB_OUT.  
   
  Если задано значение FALSE, **datetime** значение, представляющее 1 января 1997 преобразуется в символьную строку: 00:00:00.000 1997-01-01. При значении TRUE, то **datetime** значение представляется в виде: {ts ' 00:00:00.000 1997-01-01 "}.  
   
@@ -132,10 +132,10 @@ RETCODE bcp_control (
  *iValue*  
  Значение для указанного *eOption*. *iValue* приведен целое (longlong, ПРИВЕДЕННЫМ) к пустому указателю, чтобы обеспечить расширение в будущем до 64-разрядных значений.  
   
-## <a name="returns"></a>Возврат  
+## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция задает различные параметры управления для операций массового копирования, включая число ошибок, после которого массовое копирование будет отменено, номера первой и последней строк для копирования из файла данных, а также размер пакета.  
   
  Эта функция также используется для указания инструкции SELECT при массовом копировании результирующего набора инструкции SELECT из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Задать *eOption* значение BCPHINTS, а также набор *iValue* указатель на строку SQLTCHAR, содержащую инструкцию SELECT.  
@@ -206,7 +206,7 @@ printf_s("%ld rows processed by bulk copy.", nRowsProcessed);
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   
