@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 785eb6fb-f67e-449d-b1c8-c38dfbb95ef6
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e721666582366b9c9f141723e7f4d6f14fbe4552
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f3a919a46740dc3f7511f23bb660870fa37be49c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="new-alias-alias-tab"></a>Создание псевдонима (вкладка «Псевдоним»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Псевдоним является альтернативным именем, которое может использоваться для подключения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Используйте страницу **Псевдоним** в диалоговом окне **Псевдоним — новый**, чтобы задать элементы строки подключения для псевдонима. Сведения об изменении строки подключения существующего псевдонима см. в разделе [Свойства &#60;Псевдоним&#62; (вкладка "Псевдоним")](../../tools/configuration-manager/alias-properties-alias-tab.md).  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/21/2017
   
 ### <a name="examples"></a>Примеры  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает установленный по умолчанию порт TCP/IP под номером 1433, поэтому необходимо использовать строку подключения с другим номером порта.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает установленный по умолчанию порт TCP/IP под номером 1433, поэтому необходимо использовать строку соединения с другим номером порта.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не прослушивает именованный канал по умолчанию, поэтому необходимо использовать строку соединения с другим именем канала.  
   
@@ -56,8 +56,8 @@ ms.lasthandoff: 12/21/2017
   
 -   [Создание допустимой строки соединения с использованием протокола общей памяти](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)  
   
--   [Создание допустимой строки подключения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
+-   [Создание допустимой строки соединения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   
--   [Создание допустимой строки соединения, использующей протокол именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
+-   [Создание допустимой строки соединения с использованием именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)  
   
   

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2ffd10fd-bac1-478f-9cff-96ed6c8b787f
 caps.latest.revision: "19"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f1e84232f8ef7287e3b3c2447c364284b024d8ea
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0ccb4a7798b1517d21e8a3c656cb94b9b4a9a8a4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-advanced-tab"></a>Свойства SQL Server (вкладка «Дополнительно»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Следующие свойства отображаются на **Дополнительно** по умолчанию. Если определены пользовательские свойства, они также отображаются на этой вкладке вместе со значениями.  

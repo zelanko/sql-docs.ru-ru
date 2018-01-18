@@ -28,15 +28,15 @@ helpviewer_keywords:
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 caps.latest.revision: "46"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1fc967826c92981266156cf9a3655ff0a80478af
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8a6f1151141c3f0641ba35b92d8c9cd8b1639a14
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler"></a>Приложение SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] — это интерфейс для создания и управления трассировки и анализа и воспроизведения результатов трассировок. События сохраняются в файле трассировки, который затем может быть проанализирован или использован для воспроизведения определенных последовательностей шагов для выявления возникших проблем.  
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/21/2017
   
 ||||  
 |-|-|-|  
-|**Функция\целевая рабочая нагрузка**|**Реляционный механизм**|**службы Analysis Services**|  
+|**Функция\целевая рабочая нагрузка**|**Реляционный механизм**|**службы Analysis Services**;|  
 |**Захват трассировки**|Графический пользовательский интерфейс[расширенных событий](../../relational-databases/extended-events/extended-events.md) в среде SQL Server Management Studio|Приложение SQL Server Profiler|  
 |**Воспроизведение трассировки**|[Распределенное воспроизведение](../distributed-replay/sql-server-distributed-replay.md)|Приложение SQL Server Profiler|  
   
@@ -134,7 +134,7 @@ ms.lasthandoff: 12/21/2017
   
  В SQL Server предусмотрено два способа трассировки экземпляра SQL Server: с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или системных хранимых процедур.  
   
- **Filter**  
+ **Фильтр**  
  При создании трассировки или шаблона можно определить критерии для фильтрации данных, собираемых событием. Чтобы трассировки не становились слишком большими, можно устанавливать фильтры, чтобы собирать только подмножества данных о событиях. Например, в трассировке можно указать определенные имена пользователей Microsoft Windows, тем самым уменьшив объем выходных данных.  
   
  Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий.  
@@ -184,7 +184,7 @@ ms.lasthandoff: 12/21/2017
 |Содержит описание процесса экспорта шаблона трассировки.|[Экспорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)|  
 |Содержит описание процесса импорта шаблона трассировки.|[Импорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)|  
 |Содержит описание процесса извлечения скрипта из трассировки.|[Извлечение скрипта из трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|Содержит описание процесса согласования трассировки с данными журнала производительности Windows.|[Сопоставление трассировки с журналом производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|Содержит описание процесса согласования трассировки с данными журнала производительности Windows.|[Сопоставить трассировку с данными журнала производительности Windows (приложение SQL Server Profiler)](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
 |Содержит описание процесса упорядочения столбцов, отображаемых в трассировке.|[Упорядочивание столбцов, отображаемых в трассировке (приложение SQL Server Profiler)](../../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
 |Содержит описание процесса запуска приложения SQL Server Profiler.|[Запуск приложения SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |Содержит описание процесса сохранения трассировок и шаблонов трассировок.|[Сохранение трассировок и шаблонов трассировок](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
@@ -198,11 +198,11 @@ ms.lasthandoff: 12/21/2017
 |Позволяет получить список контекстной справки по разделам приложения SQL Server Profiler.|[Справка F1 приложения SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |Позволяет получить список системных хранимых процедур, используемых [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для контроля производительности и активности.|[Хранимые процедуры приложения SQL Server Profiler (Transact-SQL)](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Категория событий locks](../../relational-databases/event-classes/locks-event-category.md)   
  [Категория событий Sessions](../../relational-databases/event-classes/sessions-event-category.md)   
  [Категория событий Stored Procedures](../../relational-databases/event-classes/stored-procedures-event-category.md)   
  [Категория событий TSQL](../../relational-databases/event-classes/tsql-event-category.md)   
- [Мониторинг производительности и действий сервера](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+ [Производительность сервера и мониторинг активности](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

@@ -18,17 +18,17 @@ helpviewer_keywords:
 - TSQL_Replay template [SQL Server]
 ms.assetid: 0e01dfc7-84b9-47f6-8bf7-b0656df4fa7d
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d76f9ac6450ffd473b91831416a26f6f313ccad7
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: fe999b92d34b9070a1c461340919c839468c02c9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="replay-requirements"></a>Replay Requirements
+# <a name="replay-requirements"></a>Требования к воспроизведению
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Для воспроизведения данных трассировки с [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] или программы распределенного воспроизведения, определенный набор классов событий и столбцов должен быть записан в трассировке. Если для настройки трассировки, которая в дальнейшем будет использоваться для воспроизведения, применяется шаблон трассировки **TSQL_Replay** , то по умолчанию эти параметры включены. В этом разделе приводится описание этих параметров и других требований к воспроизведению.  
   
 > [!NOTE]  
@@ -129,7 +129,7 @@ ms.lasthandoff: 12/21/2017
  Сведения о разрешениях, необходимых для воспроизведения трассировки, см. в разделе [Permissions Required to Run SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Воспроизведение таблицы трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Воспроизведение таблицы трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Воспроизведение файла трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Руководство по классам событий SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [sp_defaultdb (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)   

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - aliases [SQL Server], shared memory
 ms.assetid: 5fff42e8-377f-4b40-b0c8-b02393f8a1af
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 64005912a185443249487d710eeb6d8a7630ed1f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a1fa347661bb252d658c7c08c5d5a3b033cec3c1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="creating-a-valid-connection-string-using-shared-memory-protocol"></a>Создание допустимой строки соединения с использованием протокола общей памяти
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Подключения к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с клиента, запущенного на том же компьютере используется протокол общей памяти. У общей памяти нет настраиваемых свойств. Протокол общей памяти всегда используется первым и его нельзя переместить с верхней строчки списка **Включенные протоколы** окна **Свойства клиентских протоколов** . Протокол общей памяти может быть отключен, что бывает полезным при устранении неполадок в одном из других протоколов.  
@@ -60,8 +60,8 @@ WHERE session_id = @@SPID;
 > [!NOTE]  
 >  При указании IP-адреса в поле **Сервер** будет установлено соединение TCP/IP.  
   
-## <a name="see-also"></a>См. также:  
- [Создание допустимой строки подключения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+## <a name="see-also"></a>См. также  
+ [Создание допустимой строки соединения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Создание допустимой строки соединения с использованием именованных каналов](http://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
  [Выбор сетевого протокола](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  
   

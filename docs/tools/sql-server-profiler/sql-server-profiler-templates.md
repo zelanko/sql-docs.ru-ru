@@ -20,15 +20,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: b674e491-dc58-47a1-acdd-7028e9a201fc
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c9214cc22fa5b5368b817e663169cbc97d64103
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: b02daf16a7cb1be9d7b0f12d1b75c217575a5e4b
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-profiler-templates"></a>Шаблоны приложения SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Можно использовать [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] для создания шаблонов, определяющих классы событий и данных столбцы для включения в трассировку. После определения и сохранения шаблона можно запустить трассировку, которая будет записывать данные для каждого выбранного класса событий. Шаблоны можно использовать для многих трассировок; сам шаблон не выполняется.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
 |Имя шаблона|Назначение шаблона|Классы событий|  
 |-------------------|----------------------|-------------------|  
 |SP_Counts|Отслеживает поведение при выполнении хранимой процедуры с течением времени.|**SP:Starting**|  
-|Standard|Общая начальная точка для создания трассировки. Перехватывает все хранимые процедуры и выполняемые пакеты инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Используется для мониторинга общей активности сервера баз данных.|**Аудит входа в систему**<br /><br /> **Аудит выхода из системы**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
+|Standard Edition|Общая начальная точка для создания трассировки. Перехватывает все хранимые процедуры и выполняемые пакеты инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Используется для мониторинга общей активности сервера баз данных.|**Аудит входа в систему**<br /><br /> **Аудит выхода из системы**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Completed**<br /><br /> **SQL:BatchCompleted**<br /><br /> **SQL:BatchStarting**|  
 |TSQL|Захватывает все инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , отправленные клиентами на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и время их отправки. Используется для отладки клиентских приложений.|**Аудит входа в систему**<br /><br /> **Аудит выхода из системы**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
 |TSQL_Duration|Захватывает все инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , отправленные клиентами на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и время их выполнения (в миллисекундах), и группирует их по длительности. Используется для идентификации медленных запросов.|**RPC:Completed**<br /><br /> **SQL:BatchCompleted**|  
 |TSQL_Grouped|Захватывает все инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , отправленные на [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , и время их отправки. Группирует сведения по имени пользователя или клиента, который отправил инструкцию. Используется для изучения запросов от определенного клиента или пользователя.|**Аудит входа в систему**<br /><br /> **Аудит выхода из системы**<br /><br /> **ExistingConnection**<br /><br /> **RPC:Starting**<br /><br /> **SQL:BatchStarting**|  
@@ -65,10 +65,10 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]  
 >  Для каждого типа сервера существует свой шаблон по умолчанию. Изменения шаблона по умолчанию для одного типа сервера не влияет на шаблон по умолчанию для сервера другого типа. Дополнительные сведения о настройке шаблона по умолчанию для определенного типа сервера см. в разделе [Установка значений по умолчанию для определения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md).  
   
-## <a name="see-also"></a>См. также:  
- [Создание шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Изменение шаблона трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
- [Экспорт шаблона трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
+## <a name="see-also"></a>См. также  
+ [Создание шаблона трассировки &#40;Приложение SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Изменение шаблона трассировки &#40;Приложение SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Экспорт шаблона трассировки &#40;Приложение SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Импорт шаблона трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
   
   

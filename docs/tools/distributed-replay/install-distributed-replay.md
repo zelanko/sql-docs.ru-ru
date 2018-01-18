@@ -15,13 +15,13 @@ ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: "21"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 99cb53df96c3b675274c5940edcf1e9bd4c8516a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 88758300356023e7a97df0b87cce3a44ed06897f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="install-distributed-replay"></a>Установка распределенного воспроизведения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Распределенное воспроизведение можно установить одним из трех способов:  
@@ -159,7 +159,7 @@ ms.lasthandoff: 12/21/2017
   
  При разработке скриптов установки из командной строки можно использовать параметры, приведенные в следующей таблице.  
   
-|Параметр|Description|Поддерживаемые значения|  
+|Параметр|Описание|Поддерживаемые значения|  
 |---------------|-----------------|----------------------|  
 |/CTLRSVCACCOUNT<br /><br /> **Необязательно**|Учетная запись службы контроллера распределенного воспроизведения.|Проверяет учетную запись и пароль|  
 |/CTLRSVCPASSWORD<br /><br /> **Необязательно**|Пароль учетной записи службы контроллера распределенного воспроизведения.|Проверяет учетную запись и пароль|  
@@ -220,11 +220,11 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Необходимо указать оба пароля в командной строке, так как их нельзя задать в файле конфигурации.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Возможности, поддерживаемые различными выпусками SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Требования распределенного воспроизведения](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Параметры командной строки средства администрирования &#40; программа распределенного воспроизведения &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

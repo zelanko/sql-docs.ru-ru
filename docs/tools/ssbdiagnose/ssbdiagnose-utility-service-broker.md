@@ -28,15 +28,15 @@ helpviewer_keywords:
 - ssbdiagnose
 ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cac73fa5276aeb6d3323201a59979979c999a61
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ee4dfdfeb9dd22130a287000731d656fbcfb803c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Программа ssbdiagnose (компонент Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Ssbdiagnose** программа сообщает о проблемах в [!INCLUDE[ssSB](../../includes/sssb-md.md)] диалогов или конфигурация [!INCLUDE[ssSB](../../includes/sssb-md.md)] служб. Проверка конфигурации может быть выполнена для одной или для двух служб. Сведения о неполадках могут выводиться в окне командной строки в виде удобочитаемого текста или в формате XML, который может быть перенаправлен в файл или в другую программу.  
@@ -122,7 +122,7 @@ ssbdiagnose
  **-IGNORE** *error_id*  
  Указывает, что ошибки и сообщения, имеющие заданное значение *error_id* , не будут включены в отчет. Параметр **-IGNORE** можно указать несколько раз, чтобы запретить вывод сообщений с различными идентификаторами.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  Задает основные сведения о соединении, которые используются программой **ssbdiagnose** , если параметры соединения не включены в определенное предложение. Сведения о соединении, заданные в специальном предложении, переопределяют сведения **baseconnectionoption** . Приоритеты учитываются по каждому параметру отдельно. Например, если в **baseconnetionoptions** указываются оба параметра **-S** и **-d**, а в **toconnetionoptions** указывается только **-d**, то **ssbdiagnose** использует -S из **baseconnetionoptions** и -d из **toconnetionoptions**.  
   
  **CONFIGURATION**  
@@ -153,7 +153,7 @@ WHERE database_id = DB_ID();
  **MIRROR**  
  Указывает, что связанная служба [!INCLUDE[ssSB](../../includes/sssb-md.md)] размещается в зеркальной базе данных. Программа**ssbdiagnose** проверяет, является ли маршрут к службе зеркальным маршрутом, где в инструкции CREATE ROUTE был указан параметр MIRROR_ADDRESS.  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  Позволяет задать сведения, необходимые для соединения с зеркальной базой данных. Если параметры **mirrorconnectionoptions** не указаны, то **ssbdiagnose** использует для подключения к зеркальной базе данных сведения о соединении из **baseconnectionoptions** .  
   
  **ON CONTRACT** *contract_name*  
@@ -208,7 +208,7 @@ WHERE database_id = DB_ID();
  **-TIMEOUT** *timeout_interval*  
  Задает время выполнения отчета **RUNTIME** в секундах. Если параметр **-TIMEOUT** не задан, то отчет может выполняться бесконечно долго. Параметр **-TIMEOUT** используется только для отчетов **RUNTIME**, а не для отчетов **CONFIGURATION**. Работу программы **ssbdiagnose** можно завершить нажатием клавиш CTRL+C, если параметр **-TIMEOUT** не указан, а также если нужно завершить отчет до истечения времени**-**ожидания. Параметр*timeout_interval* должен быть числом от 1 до 2 147 483 647.  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  Задает сведения для соединения с базой данных, где содержатся службы, связанные с отслеживаемыми элементами диалога. Если все службы расположены в одной базе данных, нужно указать только одно предложение **CONNECT TO** . Если службы находятся в разных базах данных, то предложение **CONNECT TO** необходимо указать для каждой базы данных. Если параметры **runtimeconnectionoptions** не указаны, то **ssbdiagnose** использует сведения о подключении из **baseconnectionoptions**.  
   
  **–E**  
@@ -220,14 +220,14 @@ WHERE database_id = DB_ID();
   
  Если параметр **-E** используется в сочетании с параметром **-U** или **-P** , выдается сообщение об ошибке.  
   
- **-U** *идентификатор_входа*  
+ **-U** *login_id*  
  Откройте соединение, использующее проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , с помощью указанного идентификатора входа. Имя входа должно быть членом предопределенной роли сервера **sysadmin** .  
   
  Если не указан ни параметр **-E** , ни параметр **-U** , то программа **ssbdiagnose** использует значение из переменной среды SQLCMDUSER. Если переменная SQLCMDUSER также не задана, то программа **ssbdiagnose** пытается установить соединение в режиме проверки подлинности Windows на основании учетных данных Windows пользователя, запустившего программу **ssbdiagnose**.  
   
  Если параметр **-U** указан одновременно с параметром **-E** , то выдается сообщение об ошибке. Если после параметра **-U** указано более одного аргумента, выдается сообщение об ошибке и программа завершает работу.  
   
- **-P** *пароль*  
+ **-P** *password*  
  Указывает пароль для идентификатора имени входа **-U** . Пароли учитывают регистр. Если параметр **-U** указан, а параметр **-P** не указан, то программа **ssbdiagnose** использует значение из переменной среды SQLCMDPASSWORD. Если переменная SQLCMDPASSWORD также не задана, то программа **ssbdiagnose** запросит пароль у пользователя.  
   
 > [!IMPORTANT]  
@@ -249,7 +249,7 @@ WHERE database_id = DB_ID();
  **baseconnetionoptions** *server_name*[\\*instance_name*]  
  Задает экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] , где размещаются службы компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для анализа.  
   
- Укажите значение *server_name* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на этом сервере. Укажите *server_name***\\***instance_name* , чтобы подключиться к именованному экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] на этом сервере. Если параметр **-S** не указан, то программа **ssbdiagnose** использует значение переменной среды SQLCMDSERVER. Если переменная SQLCMDSERVER также не задана, то программа **ssbdiagnose** соединяется с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
+ Укажите значение *server_name* , чтобы подключиться к экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на этом сервере. Укажите *имя_сервера***\\***имя_экземпляра* для подключения к именованному экземпляру [!INCLUDE[ssDE](../../includes/ssde-md.md)] на этом сервере. Если параметр **-S** не указан, то программа **ssbdiagnose** использует значение переменной среды SQLCMDSERVER. Если переменная SQLCMDSERVER также не задана, то программа **ssbdiagnose** соединяется с экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] по умолчанию на локальном компьютере.  
   
  **-S** *database_name*  
  Задает базу данных, где размещаются службы компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] для анализа. Если такой базы данных не существует, то выдается ошибка. Если параметр **-d** не задан, то по умолчанию используется база данных, указанная в свойстве default-database текущего имени входа.  
@@ -451,7 +451,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
 /test/initiator TO SERVICE /test/target  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [СОЗДАТЬ ПРИОРИТЕТ БРОКЕРА &#40; Transact-SQL &#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)   
@@ -466,7 +466,7 @@ ssbdiagnose -XML -E -d MyDatabase CONFIGURATION FROM SERVICE
  [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)   
  [ПОЛУЧИТЬ &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
  [sys.transmission_queue &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-transmission-queue-transact-sql.md)   
- [sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
- [sys.conversation_groups &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)   
+ [sys.conversation_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-groups-transact-sql.md)  
   
   

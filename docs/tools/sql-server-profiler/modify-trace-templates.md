@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Profiler, templates
 ms.assetid: 75b62a54-8d16-4599-bd2d-c42cfcc209f4
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27893076b4ec4ba25fb431d577b967571341bec5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 5809ba42694110cc26cc7d9f14db9048cfa2420f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modify-trace-templates"></a>Изменение шаблонов трассировки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Можно изменить шаблоны, сохраняемые в файле на локальном компьютере, на котором [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] запущена. Можно также изменить шаблоны, производные от этих файлов. При изменении существующих шаблонов выполняется редактирование таких свойств шаблонов, как классы событий и столбцы данных в том же порядке, в котором эти свойства были установлены первоначально, на вкладке **Выбор событий** диалогового окна **Свойства трассировки** . Классы событий и столбцы данных можно добавлять и удалять, а фильтры изменять. После изменения шаблона создается пользовательский шаблон и исходный системный шаблон остается без изменений. Дополнительные сведения см. в разделе [Сохранение трассировок и шаблонов трассировок](../../tools/sql-server-profiler/save-traces-and-trace-templates.md).  
@@ -55,5 +55,5 @@ ms.lasthandoff: 12/21/2017
 [Создание трассировки](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)  
 [Изменение существующей трассировки с помощью Transact-SQL](../../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md)  
 [Указать столбцы событий и данных трассировки с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)  
-[SP трассировки setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
+[sp-trace-setevent-transact-sql](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

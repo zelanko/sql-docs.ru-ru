@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 35692d5068e1dfcbe446d3a9bd79ee7f35ef1e18
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e33c1452d14aecf1d5120ff876ae55aea6b83830
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>упорядочить столбцы, отображаемые в трассировке (приложение SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Столбцы данных трассировки можно сгруппировать, нажав кнопку **систематизировать столбцы** в таблице трассировки или **свойства файла трассировки** диалоговое окно, или при определении трассировки. Группировка столбцов данных упрощает анализ результатов трассировки в приложении [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] . Дополнительные сведения см. в статье [Просмотр и анализ трассировок с помощью приложения SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
@@ -89,7 +89,7 @@ ms.lasthandoff: 12/21/2017
 7.  Чтобы вернуться к обычному отображению данных трассировки, снимите флажок **Суммирование** в меню **Вид** . Чтобы восстановить суммирование, заново установите флажок **Суммирование** в меню **Вид** . Кроме того, можно установить флажок **Группировка** в меню **Вид** , чтобы отображать сгруппированные события трассировки, не сворачивая их.  
   
 ## <a name="see-also"></a>См. также:  
- [Создание трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Создать трассировку &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Открыть таблицу трассировки &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Открыть файл трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   

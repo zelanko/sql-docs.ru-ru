@@ -16,15 +16,15 @@ helpviewer_keywords:
 - client protocols [SQL Server]
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a8d82ee917afc74c5fba0a0bbcc01451b99cb645
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 238c3e5c75ed1fafe9e6fbdc600212d1ba1eb934
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="client-protocols---tcp-ip-properties-protocol-tab"></a>Клиентские протоколы — свойства TCP/IP (вкладка "Протокол")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, используйте **протокола** на вкладке **свойства TCP/IP** диалогового окна для просмотра или указания следующих параметров. Чтобы подключиться к другому порту, введите номер порта в поле **Порт по умолчанию** . Дополнительные сведения о строках подключения см. в разделе [Создание допустимой строки подключения с использованием протокола TCP/IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
@@ -37,7 +37,7 @@ ms.lasthandoff: 12/21/2017
   
  При подключении к именованному экземпляру компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]клиент будет пытаться получить номер порта от службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запущенной на компьютере сервера. Если служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не запущена, номер порта должен предоставляться через этот параметр или как часть строки соединения.  
   
- **Enabled**  
+ **Включено**  
  Возможные значения: **Да** и **Нет**.  
   
  **Keep Alive**  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/21/2017
  **Интервал проверки активности**  
  Этот параметр (в миллисекундах) определяет интервал, разделяющий повторные передачи пакета **KEEPALIVE** , пока не происходит получение ответа. Значение по умолчанию — 1 000 миллисекунд.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выбор сетевого протокола](http://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)   
  [Создание псевдонима &#40; Вкладка "псевдоним" &#41;](../../tools/configuration-manager/new-alias-alias-tab.md)   
  [Свойства &#60;Псевдоним&#62; (вкладка "Псевдоним")](../../tools/configuration-manager/alias-properties-alias-tab.md)  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - traces [SQL Server], events
 ms.assetid: 0fd63573-3b35-4f67-9e1e-ed9aabee11a8
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aa5c7ca6a19c0ae5d7afb854645a99fb2aed6131
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e6d6716cfcdf8bd6ce495f8aefe0e0df34fddb1c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="filter-events-in-a-trace-sql-server-profiler"></a>фильтровать события в трассировке (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Фильтры ограничивают сбор событий в трассировке. Если фильтр не установлен, то на выход трассировки возвращаются все события выбранных классов событий. Установка фильтра трассировки необязательна. Однако фильтр минимизирует затраты ресурсов при трассировке.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/21/2017
   
     -   Дата введена в формате `YYYY/MM/DD HH:mm:sec`.  
   
-         -или-  
+         -ИЛИ-  
   
     -   В диалоговом окне**Общие параметры** выбран параметр **Применять региональные настройки для отображения даты и времени** . Чтобы открыть диалоговое окно **Общие параметры** , в меню [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **приложения** выберите пункт **Параметры**.  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Если события трассируются из программы **osql** или **sqlcmd** , то всегда добавляйте **%** к фильтрам для столбца данных **TextData** .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

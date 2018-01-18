@@ -16,15 +16,15 @@ helpviewer_keywords:
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9db69a0432f5f9f85001c4443e27c5b08a272f5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f40f56dcf2f46f78ebad2e8095e21cd5e012b3c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Свойства TCP/IP (вкладка "IP-адреса")
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Используйте **свойства TCP/IP (вкладка IP адресов)** диалоговое окно «», чтобы настроить параметры протокола TCP/IP для конкретного IP-адреса. Для всех адресов одновременно посредством выбора пункта **Все IP** можно настроить только **Динамические TCP-порты** и **TCP-порт**.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/21/2017
  **Активен**  
  Указывает на то, что IP-адрес активен на компьютере. Недоступно для параметра **Все IP**.  
   
- **Enabled**  
+ **Включено**  
  Если для свойства **Прослушивать все** в диалоговом окне **Свойства TCP/IP (вкладка "Протокол")** установлено значение **Нет**, это свойство указывает на то, что SQL Server прослушивает IP-адрес. Если для свойства **Прослушивать все** в диалоговом окне **Свойства TCP/IP (вкладка "Протокол")** установлено значение **Да**, это свойство не учитывается. Недоступно для параметра **Все IP**.  
   
  **IP-адрес**  
@@ -65,7 +65,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="additional-topics-in-books-online"></a>Дополнительные разделы электронной документации  
  Изучите статьи MSDN **Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)** и **Настройка компонента Database Engine на прослушивание нескольких портов TCP**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выбор сетевого протокола](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Создание допустимой строки соединения с использованием протокола TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Служба обозревателя SQL Server](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  

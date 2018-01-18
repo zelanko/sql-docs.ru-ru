@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d98cbf2e1e18538fe20fd4ff76319b8b69d1e05
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ec4a757306f0e63e2e85b70526a211667a70f6e6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqllogship-application"></a>Приложение sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]**Sqllogship** приложение выполняет резервной копии, копирования или операции восстановления и связанные с ними задачи очистки для конфигурации доставки журналов. Операция выполняется на определенном экземпляре [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] для определенной базы данных.  
@@ -58,7 +58,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
  **–verboselevel** *level*  
  Определяет уровень сообщений, добавляемых в журнал доставки журналов. *level* может быть одним из следующих целочисленных значений:  
   
-|level|Description|  
+|level|Описание|  
 |-----------|-----------------|  
 |0|Не выводить сообщения трассировки и отладки.|  
 |1|Выводить сообщения обработки ошибок.|  
@@ -67,10 +67,10 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|Выводить все сообщения отладки и трассировки.|  
   
  **–logintimeout** *timeout_value*  
- Определяет период времени, достаточного для попытки подключения к экземпляру сервера. Значение по умолчанию составляет 15 секунд. *timeout_value* — **int***.*  
+ Определяет период времени, достаточного для попытки подключения к экземпляру сервера. Значение по умолчанию — 15 секунд. *timeout_value* — **int ***.*  
   
  **-querytimeout** *timeout_value*  
- Определяет период времени, достаточного для запуска определенной операции. Значение по умолчанию — до бесконечности. *timeout_value* — **int***.*  
+ Определяет период времени, достаточного для запуска определенной операции. Значение по умолчанию — до бесконечности. *timeout_value* — **int ***.*  
   
 ## <a name="remarks"></a>Remarks  
  Рекомендуется по возможности применять для выполнения резервирования, копирования и восстановления соответствующие задания. Их запуск производится через вызов хранимой процедуры [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
@@ -91,7 +91,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 > [!NOTE]  
 >  Чтобы выяснить пути к каталогам резервной копии и копии, необходимо запустить хранимую процедуру **sp_help_log_shipping_secondary_database** или просмотреть таблицу **log_shipping_secondary** в базе данных **msdb**. Пути к каталогам резервной копии и назначения находятся в столбцах **backup_source_directory** и **backup_destination_directory** соответственно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сведения о доставке журналов (SQL Server)](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
  [log_shipping_secondary &#40; Transact-SQL &#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   

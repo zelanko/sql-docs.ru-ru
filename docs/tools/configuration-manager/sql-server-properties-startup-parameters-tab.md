@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 15243df46fad807a3078c9dfcd2c9043670ab05f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 91141f2ae083baf9792e4de9248de488b4146d07
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Свойства SQL Server (вкладка «Параметры запуска»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Используйте это диалоговое окно предназначено для добавления или удаления параметров запуска для [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Параметры запуска могут сильно влиять на производительность компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Прежде чем добавлять или изменять параметры запуска, ознакомьтесь с разделом «Использование параметров запуска службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » в электронной документации по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
  Чтобы удалить параметр, выберите его и нажмите кнопку **Удалить**.  
   
 ## <a name="parameter-format"></a>Формат параметров  
- Не вводите разделитель между параметрами. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавит разделитель автоматически. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существуют следующие требования к параметрам.  
+ Не вводите разделитель между параметрами. Диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] добавит разделитель автоматически. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager обеспечивает следующие требования к параметрам.  
   
 -   Начальные и конечные пробелы любого параметра запуска отсекаются.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/21/2017
   
 |Параметр|Краткое описание|  
 |---------------|-----------------------|  
-|-M|Запускает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.|  
+|-m|Запускает экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в однопользовательском режиме.|  
 |-T1204|Возвращает ресурсы и типы блокировки, участвующие во взаимоблокировке и текущую команду, на которую влияет взаимоблокировка.|  
 |-T1224|Отключает укрупнение блокировок на основе количества блокировок.|  
 |-T3608|Запрещает автоматический запуск [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и восстановление любых баз данных, кроме базы данных master.|  
