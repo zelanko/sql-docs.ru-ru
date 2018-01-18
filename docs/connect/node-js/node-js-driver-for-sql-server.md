@@ -24,9 +24,9 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Драйвер node.js для SQL Server
 
-![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[для загрузки драйвер Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Загрузка стрелка вниз обведен](../../ssdt/media/download.png)[Скачать драйвер Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Модуль трудоемкой — реализация javascript протокола потока табличных данных, которую поддерживают все современные версии SQL Server. Драйвер не проекта с открытым кодом, на сайте Github.  
+Модуль Tedious — реализация javascript протокола потока табличных данных, которую поддерживают все современные версии SQL Server. Драйвер проекта с открытым кодом, на сайте Github.  
   
 Можно подключиться к базе данных SQL с помощью Node.js в Windows, Linux или Mac.  
   
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="documentation"></a>Документация  
   
-[Модуль трудоемкой документации на Github](http://tediousjs.github.io/tedious/)  
+[Документация по модулю Tedious на Github](http://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>Сообщество  
 * [Центр разработчиков Azure Node.js](https://azure.microsoft.com/develop/nodejs/)  
