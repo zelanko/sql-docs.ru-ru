@@ -24,11 +24,11 @@ ms.prod_service: database-engine, sql-database
 ms.service: 
 ms.component: indexes
 ms.workload: On Demand
-ms.openlocfilehash: 5e0705c480157e7958b18ff8bdb6d996ae2f94ff
-ms.sourcegitcommit: 4a462c7339dac7d3951a4e1f6f7fb02a3e01b331
+ms.openlocfilehash: c69295e84e5bd6ef1162bb007c206b0addd8656c
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="guidelines-for-online-index-operations"></a>Руководящие принципы для операций с индексами
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,8 +95,7 @@ ms.lasthandoff: 12/07/2017
 ## <a name="resumable-index-rebuild-considerations"></a>Вопросы перестроения возобновляемого индекса
 
 > [!NOTE]
-> См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
->
+> Возобновляемый индекс применяется к SQL Server (начиная с SQL Server 2017) и базе данных SQL. См. раздел [Alter Index](../../t-sql/statements/alter-index-transact-sql.md). 
 
 При перестраивании возобновляемого индекса в режиме "в сети" следует учитывать следующие рекомендации:
 -   Управление, планирование и разворачивание окна обслуживания индексов. Операцию перестраивания индексов в периоды обслуживания можно приостанавливать и снова запускать многократно.
@@ -108,7 +107,6 @@ ms.lasthandoff: 12/07/2017
 
 > [!IMPORTANT]
 > Возобновляемые перестроения не требуют открытых долгосрочных транзакций, что позволяет усекать журналы во время этой операции и управлять пространством в журнале более эффективно. Новая структура позволяет хранить необходимые данные в базе данных вместе со всеми ссылками, необходимыми для перезапуска возобновляемой операции.
->
 
 Как правило, возобновляемые и невозобновляемые операции перестроения индекса в режиме "в сети" выполняются с одинаковой производительностью. Если возобновляемый индекс обновляется, пока операция перестроения индекса приостановлена:
 - Для рабочей нагрузки, связанной в основном с чтением, производительность существенно не снижается. 
@@ -121,7 +119,7 @@ ms.lasthandoff: 12/07/2017
   
  [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md)  
   
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
+ [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   

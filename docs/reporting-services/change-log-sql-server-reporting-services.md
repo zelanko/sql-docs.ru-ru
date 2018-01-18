@@ -15,11 +15,11 @@ author: casualoak
 ms.author: deliant
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: ebf8e75c505d75206de798bc2682cefc3623075e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d4cf71c25d2c1a6f7aadb57d6417fc4818c9ff2f
+ms.sourcegitcommit: 5763d63a3c455ec8743b75c057a2254a96a1d4fe
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="change-log-for-sql-server-reporting-services"></a>Журнал изменений для SQL Server Reporting Services
 
@@ -28,6 +28,9 @@ ms.lasthandoff: 01/08/2018
 В этой статье описываются изменения в [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. 
 
 ## <a name="sql-server-2017-reporting-services"></a>Службы SQL Server 2017 Reporting Services 
+  - *Версия 14.0.600.594. Дата выпуска: 9 января 2018 г.*
+    - Обновления для системы безопасности
+
   - *Версия 14.0.600.490. Дата выпуска: 1 ноября 2017 г.* 
     - Исправления ошибок:
         - Устранены проблемы с обновлением SKU

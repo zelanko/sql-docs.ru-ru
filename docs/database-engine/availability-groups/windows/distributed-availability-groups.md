@@ -1,7 +1,7 @@
 ---
 title: "Распределенные группы доступности (SQL Server) | Документы Майкрософт"
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 01/12/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -18,11 +18,11 @@ author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 245eb466e756017c3ae70a5fc408d4ce876370d4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: efa0ea34a2b5432f3c7059d98cee4cbd35fa18ab
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="distributed-availability-groups"></a>Распределенные группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Распределенные группы доступности — это новая функция SQL Server 2016, схожая с функцией групп доступности AlwaysOn. Данная статья разъясняет некоторые аспекты распределенных групп доступности и дополняет существующую [документацию по SQL Server](https://docs.microsoft.com/en-us/sql/sql-server/sql-server-technical-documentation).
@@ -147,7 +147,11 @@ ms.lasthandoff: 11/20/2017
 
 В каждом из приведенных выше примеров может быть до 27 реплик, распределенных между тремя группами доступности, и любая из них может использоваться для выполнения запросов на чтение. 
 
-[Маршрутизация только для чтения]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) пока не работает с распределенными группами доступности. Все запросы, которые используются для подключения прослушивателя, направляются в первичную реплику. Если это не так, необходимо настроить каждую реплику так, чтобы она принимала все подключения как вторичная реплика и обращалась к ним напрямую. Это поведение может измениться в обновлении для SQL Server 2016 или в будущей версии SQL Server.
+[Маршрутизация только для чтения]( https://docs.microsoft.com/en-us/sql/database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server) нестабильно работает с распределенными группами доступности. В частности
+
+1. Маршрутизация только для чтения, может быть настроена и будет работать для первичной группы доступности распределенной группы доступности. 
+2. Маршрутизация только для чтения, может быть настроена, но не будет работать для вторичной группы доступности распределенной группы доступности. Все запросы, если они используют прослушиватель для подключения к вторичной группе доступности, поступают на первичную реплику вторичной группы доступности. Если это не так, необходимо настроить каждую реплику так, чтобы она принимала все подключения как вторичная реплика и обращалась к ним напрямую. Маршрутизация только для чтения будет работать, если вторичная группа доступности становится первичной после отработки отказа. Это поведение может измениться в обновлении для SQL Server 2016 или в будущей версии SQL Server.
+
 
 ## <a name="initialize-secondary-availability-groups-in-a-distributed-availability-group"></a>Инициализация вторичных групп доступности в распределенной группе доступности
 

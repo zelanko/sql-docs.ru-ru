@@ -18,11 +18,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 7b5587d6def935cf31d4bf96056b21cfd2c263a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 492a21e51a6bdc1dbcf0a39451a81caee737dba4
+ms.sourcegitcommit: d28d9e3413b6fab26599966112117d45ec2c7045
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="review-and-generate-supplemental-logging-scripts"></a>Обзор и создание скриптов дополнительного журналирования
   Вкладка **Скрипты** служит для запуска или повторного запуска скрипта в базе данных-источнике Oracle, для которой задано дополнительное журналирование.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  При выполнении скриптов дополнительного журналирования открывается диалоговое окно «Учетные данные Oracle для выполнения скриптов», в которое необходимо ввести допустимые имя пользователя Oracle и пароль. Сведения об указании надлежащих учетных данных Oracle см. в разделе [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md).  
   
- При необходимости скрипты также можно запускать вручную с помощью SQL*Plus.  
+ При необходимости скрипты также можно запускать вручную с помощью SQL\*Plus.  
   
 ### <a name="to-run-the-scripts-manually"></a>Запуск скрипта вручную  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Введите имя файла и нажмите кнопку **Сохранить** , чтобы сохранить файл.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как изменить свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Учетные данные Oracle для выполнения скрипта](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)  
   

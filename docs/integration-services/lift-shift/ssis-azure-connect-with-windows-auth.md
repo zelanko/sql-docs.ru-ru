@@ -1,6 +1,6 @@
 ---
 title: "Подключение к источникам данных и общим папкам с помощью проверки подлинности Windows | Microsoft Docs"
-ms.date: 11/27/2017
+ms.date: 01/12/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: integration-services
@@ -13,16 +13,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b84fdd15fa4a6393b2350aaf75985653b6273f31
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a8dc3c1f39ca65e9616372fee7995dfa41cd89a1
+ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="connect-to-on-premises-data-sources-and-azure-file-shares-with-windows-authentication"></a>Подключение к локальным источникам данных и общим папкам Azure с помощью проверки подлинности Windows
 В этой статье описывается, как настроить каталог служб SQL Server Integration Services в базе данных SQL Azure для запуска пакетов, которые используют проверку подлинности Windows для подключения к локальным источникам данных и общим папкам Azure. С помощью проверки подлинности Windows можно подключаться к источникам данных в той же виртуальной сети, в которой размещена среда Azure SSIS Integration Runtime. Источники могут находиться в локальной среде, в виртуальных машинах Azure и в службе файлов Azure.
 
-Учетные данные домена, указываемые при выполнении инструкций в этой статье, применяются ко всем операциям выполнения пакетов в экземпляре базы данных SQL, пока эти данные не будут изменены или удалены.
+> [!WARNING]
+> Если вы не указали допустимые учетные данные домена для проверки подлинности Windows, выполнив `catalog`.`set_execution_credential`, как описано в этой статье, пакеты, которые зависят от проверки подлинности Windows, не смогут подключиться к источникам данных и завершатся ошибкой во время выполнения.
+
+Учетные данные домена, указываемые при выполнении инструкций в этой статье, применяются ко всем операциям (интерактивным или запланированным) выполнения пакетов в экземпляре базы данных SQL, пока эти данные не будут изменены или удалены.
 
 ## <a name="provide-domain-credentials-for-windows-authentication"></a>Указание учетных данных домена для проверки подлинности Windows
 Чтобы задать учетные данные домена, с помощью которых пакеты смогут подключаться к локальным источникам данных, используя проверку подлинности Windows, выполните указанные ниже действия.
