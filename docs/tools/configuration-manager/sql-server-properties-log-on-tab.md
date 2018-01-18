@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 405073fc-eaa3-43c6-bf82-2cd58cacc1c3
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 623948bfc41640e1aebe0b492872fbc095c056f6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb658dd1907f8f78259c82b89f8aaeef3616906d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-properties-log-on-tab"></a>Свойства SQL Server (вкладка «Вход в систему»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Используйте **вход в систему** вкладке **свойства SQL Server** для указания учетной записи, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] службы, чтобы изменить пароль учетной записи, а также для запуска и остановки службы. Изменение пароля учетной записи вступает в силу немедленно.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="options"></a>Параметры  
  **Встроенная учетная запись**  
- **Локальная система**  
+ **Локальная система.**  
  -   Укажите учетную запись локальной системы. Для этой учетной записи пароль не нужен. Однако локальная системная учетная запись может препятствовать взаимодействию служб с другими серверами, в зависимости от прав доступа, предоставленных этой учетной записи.  
   
  **Локальная служба.**  

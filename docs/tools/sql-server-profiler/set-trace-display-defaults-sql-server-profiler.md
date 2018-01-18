@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: traces [SQL Server], defaults
 ms.assetid: d471aaed-c40c-4c55-a993-835e6394b5d2
 caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 80fe4bde3fdbd2aad03ca328f4efcbffbecba183
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: ea66415c239ddceeb7ee75997b3052a3f34a472f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-trace-display-defaults-sql-server-profiler"></a>установить параметры по умолчанию для отображения трассировки (приложение SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В этом разделе описывает способ задания инструментальных параметров, которые определяют типы шрифт, размер и начертание, [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] используется для отображения трассировок в окне трассировки. Также можно указывать отображение приложением [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] всех дат и времени с региональными настройками из операционной системы.  

@@ -13,20 +13,20 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e9b35cb5-d8ae-42ea-b59e-deedc99c4823
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de5b7be856ee9425c1471ae9bdcc8dedd9d60f61
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d38fdf90187b82df02a6b3cc297afaeb53c89580
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="unknown-service-log-on-tab"></a>Неизвестная служба (вкладка «Вход в систему»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager не удается идентифицировать эту службу.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] получает служебные данные от поставщика инструментария WMI на компьютере, где запущена служба. Произошла ошибка при считывании свойств службы или свойства службы являются неполными. Чтобы разрешить проблему, попытайтесь закрыть и заново открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или проверьте поставщика инструментария WMI на компьютере, где запущена служба.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager получает служебные данные от поставщика инструментария WMI на компьютере, где выполняется служба. Произошла ошибка при считывании свойств службы или свойства службы являются неполными. Чтобы разрешить проблему, попытайтесь закрыть и заново открыть диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или проверьте поставщика инструментария WMI на компьютере, где запущена служба.  
   
  Поставщик WMI является компонентом Windows. Сведения о том, как проверить разрешения на поставщика WMI, см. в статье "Инструкции. Настройка инструментария WMI для отображения состояния сервера в средствах SQL Server" в электронной документации по SQL Server.  
   

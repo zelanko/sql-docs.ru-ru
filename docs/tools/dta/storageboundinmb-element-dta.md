@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: StorageBoundInMB element
 ms.assetid: a8374910-bf68-4edb-b464-53a3a705e7f4
 caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da0825fe578e3c908fd4b0728b98fb9e6b8c1326
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e0584999dc8e98243c00f4bbd174d1bfa8b14ba2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="storageboundinmb-element-dta"></a>Элемент StorageBoundInMB (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Определяет максимальный размер в мегабайтах, который может быть использован помощник по настройке ядра СУБД рекомендации по настройке (набора индексов и секционирования).  
@@ -40,20 +40,20 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|**unsignedInt**, неограниченная длина|  
 |**Значение по умолчанию**|Нет.|  
-|**Наличие**|Необязательный параметр. Может быть использован только один раз для элемента **TuningOptions** .|  
+|**Применяемость**|Необязательно. Может быть использован только один раз для элемента **TuningOptions** .|  
   
 ## <a name="element-relationships"></a>Связи элемента  
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент TuningOptions (DTA)](../../tools/dta/tuningoptions-element-dta.md)|  
+|**Родительский элемент**|[Элемент TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Дочерние элементы**|None|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  При настройке нескольких баз данных учитываются рекомендации по пространству всех баз данных. По умолчанию помощник по настройке ядра СУБД принимает минимальный из следующих размеров хранилищ:  
   
 -   в 3 раза больше текущего размера необработанных данных, включая общий размер кучи и кластеризованных индексов таблиц;  
@@ -66,10 +66,10 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="example"></a>Пример  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>Описание  
  В следующем примере кода показано, как установить предел в 1 500 мегабайт в качестве максимального места на диске, которое может быть занято согласно рекомендациям.  
   
-## <a name="code"></a>Код  
+## <a name="code"></a>код  
   
 ```  
 <DTAInput>  

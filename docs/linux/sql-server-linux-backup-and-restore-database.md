@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: bd807454b9b1b946dc396ec53a920fd198c5b5c0
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0b12200da9b4e0967c8057d807d19919fb07f331
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Резервное копирование и восстановление баз данных SQL Server в Linux
 
@@ -59,7 +59,7 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 Если в модели полного восстановления базы данных, вы также можете резервных копий журналов транзакций для более детального параметры восстановления. В следующем примере **sqlcmd** подключается к локальному экземпляру SQL Server и принимает резервного копирования журнала транзакций.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
 ## <a name="restore-a-database"></a>Восстановление базы данных
@@ -67,7 +67,7 @@ sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/da
 В следующем примере **sqlcmd** подключается к локальному экземпляру SQL Server и восстанавливает базу данных demodb. Обратите внимание, что `NORECOVERY` параметр используется для разрешения для дополнительных восстанавливает резервные копии файла журнала. Если вы не планируете восстановить дополнительные файлы журналов, удалите `NORECOVERY` параметр.
 
 ```bash
-sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE, NORECOVERY, STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM DISK = N'/var/opt/mssql/data/demodb.bak' WITH FILE = 1, NOUNLOAD, REPLACE, NORECOVERY, STATS = 5"
 ```
 
 > [!TIP]
@@ -112,7 +112,7 @@ SQL Server завершает резервной копии базы данны�
 
 1. SQL Server восстанавливает базу данных. 
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 
 * [Создание полной резервной копии (SQL Server)](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)
 * [Резервное копирование журнала транзакций (SQL Server)](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)

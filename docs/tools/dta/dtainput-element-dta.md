@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: DTAInput element
 ms.assetid: 40c19abf-ded5-43de-be96-5b43b1b81b03
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0ee58e6b5ec7215353296a1b17151b2354eb5e2
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 2ac4b1252abed4d02100e3891cdc2a22e4c3854e
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="dtainput-element-dta"></a>Элемент DTAInput (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Содержит определение входных XML-данных для ядра СУБД.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристики|Description|  
+|Характеристики|Описание|  
 |---------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -50,10 +50,10 @@ ms.lasthandoff: 12/21/2017
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент DTAXML (DTA)](../../tools/dta/dtaxml-element-dta.md)|  
-|**Дочерние элементы**|[Элемент Server (DTA)](../../tools/dta/server-element-dta.md)<br /><br /> [Элемент Workload (DTA)](../../tools/dta/workload-element-dta.md)<br /><br /> [Элемент TuningOptions (DTA)](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Элемент Configuration (DTA)](../../tools/dta/configuration-element-dta.md)|  
+|**Родительский элемент**|[Элемент DTAXML &#40; DTA &#41;](../../tools/dta/dtaxml-element-dta.md)|  
+|**Дочерние элементы**|[Элемент Server &#40; DTA &#41;](../../tools/dta/server-element-dta.md)<br /><br /> [Элемент Workload &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)<br /><br /> [Элемент TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)<br /><br /> [Элемент конфигурации &#40; DTA &#41;](../../tools/dta/configuration-element-dta.md)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Замечания  
  Этот элемент является корневым в иерархии входной схемы помощника по настройке ядра СУБД. С помощью входных аргументов помощника по настройке ядра СУБД можно задавать серверы с подлежащими настройке базами данных, рабочие нагрузки, параметры настройки или пользовательскую конфигурацию.  
   
 ## <a name="example"></a>Пример  

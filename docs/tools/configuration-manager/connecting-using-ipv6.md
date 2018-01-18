@@ -17,15 +17,15 @@ helpviewer_keywords:
 - IPv6
 ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4f9ac7393ffe9599eec7811a50ce6a0c575611ec
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f66c4dde6dbf2b14709f8bcac291a81cd7136b90
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connecting-using-ipv6"></a>Соединение с использованием IPv6
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client полностью поддерживают протокол IP версии 4 (IPv4) и протокол IP версии 6 (IPv6). Если в Windows настроен протокол IPv6, то компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]автоматически обнаруживают наличие IPv6. Дополнительно настраивать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  
@@ -36,12 +36,12 @@ ms.lasthandoff: 12/21/2017
   
 -   Если служба « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , браузер» выполняется в системе с поддержкой IPv4 и IPv6 и поступает запрос на адрес IPv4, то в ответ выдается адрес IPv4 и первый TCP-порт IPv4 из списка. При запросе адреса IPv6 возвращается адрес IPv6 и первый TCP-порт IPv6 из списка. Во избежание несогласованности рекомендуется настроить средства прослушивания IPv4 и IPv6 на один и тот же порт.  
   
--   Такие средства, как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , допускают IP-адреса в форматах IPv4 и IPv6. В большинстве случаев строка подключения не требуется изменить, если \< *имя_компьютера*>\\<*имя_экземпляра*> задается с помощью имени узла сервера либо полного доменного имени (FQDN). Если на сервере установлена поддержка IPv4 и IPv6, имя узла либо FQDN разрешается в несколько IP-адресов, в том числе не менее одного адреса IPv4 и нескольких адресов IPv6. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Собственный клиент пытается установить соединения с помощью этих IP-адресов в порядке, заданном TCP/IP, и использует первое успешное соединение. Поскольку порядок попыток соединения не может быть спрогнозирован собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , его следует рассматривать как случайный. Если присутствуют адреса IPv4 и IPv6, то первыми проверяются адреса IPv4. Эта логика прозрачна для пользователей ODBC, OLE DB и ADO.NET.  
+-   Такие средства, как среда [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] и диспетчер конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , допускают IP-адреса в форматах IPv4 и IPv6. В большинстве случаев строка подключения не требуется изменить, если \< *имя_компьютера*>\\<*имя_экземпляра*> задается с помощью имени узла сервера либо полного доменного имени (FQDN). Если на сервере установлена поддержка IPv4 и IPv6, имя узла либо FQDN разрешается в несколько IP-адресов, в том числе не менее одного адреса IPv4 и нескольких адресов IPv6. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client пытается установить соединения с помощью этих IP-адресов в порядке, заданном TCP/IP и использует первое успешное соединение. Поскольку порядок попыток соединения не может быть спрогнозирован собственным клиентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , его следует рассматривать как случайный. Если присутствуют адреса IPv4 и IPv6, то первыми проверяются адреса IPv4. Эта логика прозрачна для пользователей ODBC, OLE DB и ADO.NET.  
   
     > [!NOTE]  
     >  Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] не прослушивает протокол IPv4, то соединение по IPv4 должна дождаться истечения тайм-аута перед попыткой соединения по адресу IPv6. Чтобы этого избежать, следует подключаться непосредственно к IP-адресу IPv6 либо задать псевдоним адреса IPv6 на клиенте.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Диспетчер конфигурации SQL Server](../../relational-databases/sql-server-configuration-manager.md)  
   
   

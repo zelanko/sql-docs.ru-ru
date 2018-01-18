@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c49b865f8db2b57e95f4c2c5746e1d40090b15d1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 3779b55923a5fd3ac803060c0ed8990dcffcead8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="distributed-replay-security"></a>Безопасность распределенного воспроизведения
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Перед установкой и использованием [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] программы распределенного воспроизведения следует просмотреть сведения о безопасности в этом разделе. В этом разделе описываются шаги настройки мер безопасности после установки, необходимые перед началом использования распределенного воспроизведения. В этом разделе также описываются важные соображения по защите данных и важные шаги удаления.  
@@ -134,7 +134,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Удалите все файлы трассировки, промежуточные, сообщений и базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , которые использовались в ходе тестирования. Промежуточные и переданные файлы хранятся в рабочем каталоге на контроллере и клиенте соответственно.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Распределенное воспроизведение SQL Server](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Установка распределенного воспроизведения — обзор](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   

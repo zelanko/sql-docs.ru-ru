@@ -14,18 +14,18 @@ ms.topic: article
 helpviewer_keywords: MSSQLSERVER property protocols
 ms.assetid: 4d38e6e9-f95f-4e79-ae45-89f631037528
 caps.latest.revision: "32"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ed0d315ee6b469fddcf3f6e10d8016f43653eda
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: db816ac16fa53afeb3c7f8f5434d3123f5a4dc00
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="protocols-for-mssqlserver-properties-flags-tab"></a>Протоколы для свойств MSSQLSERVER (вкладка «Флаги»)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Если на сервере установлен сертификат, используйте **флаги** на вкладке **протоколы для свойств MSSQLSERVER** диалоговое окно «», чтобы просмотреть или указать шифрования протокола и скрыть параметры экземпляра. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо перезапустить **ForceEncryption** .  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Если на сервере установлен сертификат, используйте **флаги** на вкладке **протоколы для свойств MSSQLSERVER** диалоговое окно «», чтобы просмотреть или указать шифрования протокола и скрыть параметры экземпляра. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] необходимо перезапустить, чтобы включить или отключить **ForceEncryption** параметр.  
   
  Для шифрования соединений необходимо обеспечить сертификат для компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Если сертификат не установлен, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует сертификат с собственной подписью при запуске экземпляра. Самозаверяющий сертификат можно использовать вместо сертификата, предоставленного доверенным центром сертификации, однако он не обеспечивает проверку подлинности и нет гарантии, что он не будет аннулирован.  
   

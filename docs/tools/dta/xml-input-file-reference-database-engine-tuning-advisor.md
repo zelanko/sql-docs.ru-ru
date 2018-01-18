@@ -18,15 +18,15 @@ helpviewer_keywords:
 - XML input files [Database Engine Tuning Advisor]
 ms.assetid: 05e5e5f0-d6df-4336-b18e-e9bc2835a766
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f9ce7751a34f63d0ef235c86c1d1a993e467f893
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d507c858f2103af6521e57ffca3385a23c913cd2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>Справочник по входным XML-файлам (помощник по настройке ядра СУБД)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] По настройке ядра СУБД может использовать входной XML-файл для настройки базы данных. Этот XML-файл определяет, какие базы данных, таблицы, файлы или таблицы рабочей нагрузки и параметры настройки должны быть использованы для сеанса настройки. Его можно также использовать в качестве пользовательской конфигурации для выполнения анализа вариантов.  
@@ -43,85 +43,85 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="dtaxml-root-element"></a>Корневой элемент DTAXML  
   
--   [Элемент DTAXML (DTA)](../../tools/dta/dtaxml-element-dta.md)  
+-   [Элемент DTAXML &#40; DTA &#41;](../../tools/dta/dtaxml-element-dta.md)  
   
 ## <a name="dtainput-elements"></a>Элементы DTAInput  
   
--   [Элемент DTAInput (DTA)](../../tools/dta/dtainput-element-dta.md)  
+-   [Элемент DTAInput &#40; DTA &#41;](../../tools/dta/dtainput-element-dta.md)  
   
--   [Элемент Server (DTA)](../../tools/dta/server-element-dta.md)  
+-   [Элемент Server &#40; DTA &#41;](../../tools/dta/server-element-dta.md)  
   
--   [Элемент Workload (DTA)](../../tools/dta/workload-element-dta.md)  
+-   [Элемент Workload &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)  
   
--   [Элемент TuningOptions (DTA)](../../tools/dta/tuningoptions-element-dta.md)  
+-   [Элемент TuningOptions &#40; DTA &#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
--   [Элемент Configuration (DTA)](../../tools/dta/configuration-element-dta.md)  
+-   [Элемент конфигурации &#40; DTA &#41;](../../tools/dta/configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>Элементы для описания сервера  
   
--   [Элемент Name описания сервера (DTA)](../../tools/dta/name-element-for-server-dta.md)  
+-   [Элемент Name описания сервера &#40; DTA &#41;](../../tools/dta/name-element-for-server-dta.md)  
   
--   [Элемент Database описания сервера (DTA)](../../tools/dta/database-element-for-server-dta.md)  
+-   [Элемент Database описания сервера &#40; DTA &#41;](../../tools/dta/database-element-for-server-dta.md)  
   
 ## <a name="workload-elements"></a>Элементы рабочей нагрузки  
   
--   [Элемент File (DTA)](../../tools/dta/file-element-dta.md)  
+-   [Элемент файла &#40; DTA &#41;](../../tools/dta/file-element-dta.md)  
   
--   [Элемент Database для рабочей нагрузки (DTA)](../../tools/dta/database-element-for-workload-dta.md)  
+-   [Элемент Database описания рабочей нагрузки &#40; DTA &#41;](../../tools/dta/database-element-for-workload-dta.md)  
   
--   [Элемент EventString (DTA)](../../tools/dta/eventstring-element-dta.md)  
+-   [Элемент EventString &#40; DTA &#41;](../../tools/dta/eventstring-element-dta.md)  
   
 ## <a name="tuning-options-elements"></a>Элементы для описания параметров настройки  
   
--   [Элемент TuningTimeInMin (DTA)](../../tools/dta/tuningtimeinmin-element-dta.md)  
+-   [Элемент TuningTimeInMin &#40; DTA &#41;](../../tools/dta/tuningtimeinmin-element-dta.md)  
   
--   [Элемент StorageBoundInMB (DTA)](../../tools/dta/storageboundinmb-element-dta.md)  
+-   [Элемент StorageBoundInMB &#40; DTA &#41;](../../tools/dta/storageboundinmb-element-dta.md)  
   
--   [Элемент TestServer (DTA)](../../tools/dta/testserver-element-dta.md)  
+-   [Элемент TestServer &#40; DTA &#41;](../../tools/dta/testserver-element-dta.md)  
   
--   [Элемент FeatureSet (DTA)](../../tools/dta/featureset-element-dta.md)  
+-   [Элемент FeatureSet &#40; DTA &#41;](../../tools/dta/featureset-element-dta.md)  
   
--   [Элемент Partitioning (DTA)](../../tools/dta/partitioning-element-dta.md)  
+-   [Секционирование элемент &#40; DTA &#41;](../../tools/dta/partitioning-element-dta.md)  
   
--   [Элемент DropOnlyMode (DTA)](../../tools/dta/droponlymode-element-dta.md)  
+-   [Элемент DropOnlyMode &#40; DTA &#41;](../../tools/dta/droponlymode-element-dta.md)  
   
--   [Элемент KeepExisting (DTA)](../../tools/dta/keepexisting-element-dta.md)  
+-   [Элемент KeepExisting &#40; DTA &#41;](../../tools/dta/keepexisting-element-dta.md)  
   
--   [Элемент OnlineIndexOperation (DTA)](../../tools/dta/onlineindexoperation-element-dta.md)  
+-   [Элемент OnlineIndexOperation &#40; DTA &#41;](../../tools/dta/onlineindexoperation-element-dta.md)  
   
--   [Элемент DatabaseToConnect (DTA)](../../tools/dta/databasetoconnect-element-dta.md)  
+-   [Элемент DatabaseToConnect &#40; DTA &#41;](../../tools/dta/databasetoconnect-element-dta.md)  
   
 ## <a name="configuration-elements"></a>Элементы для описания конфигурации  
   
--   [Элемент Server описания конфигурации (DTA)](../../tools/dta/server-element-for-configuration-dta.md)  
+-   [Элемент Server описания конфигурации &#40; DTA &#41;](../../tools/dta/server-element-for-configuration-dta.md)  
   
--   [Элемент Database описания конфигурации (DTA)](../../tools/dta/database-element-for-configuration-dta.md)  
+-   [Элемент Database описания конфигурации &#40; DTA &#41;](../../tools/dta/database-element-for-configuration-dta.md)  
   
--   [Элемент Recommendation (DTA)](../../tools/dta/recommendation-element-dta.md)  
+-   [Элемент Recommendation &#40; DTA &#41;](../../tools/dta/recommendation-element-dta.md)  
   
--   [Элемент Create (DTA)](../../tools/dta/create-element-dta.md)  
+-   [Создать элемент &#40; DTA &#41;](../../tools/dta/create-element-dta.md)  
   
--   [Элемент Index (DTA)](../../tools/dta/index-element-dta.md)  
+-   [Элемент index &#40; DTA &#41;](../../tools/dta/index-element-dta.md)  
   
--   [Элемент Name описания индекса (DTA)](../../tools/dta/name-element-for-index-dta.md)  
+-   [Элемент Name описания индекса &#40; DTA &#41;](../../tools/dta/name-element-for-index-dta.md)  
   
--   [Элемент Column описания индекса (DTA)](../../tools/dta/column-element-for-index-dta.md)  
+-   [Элемент COLUMN описания индекса &#40; DTA &#41;](../../tools/dta/column-element-for-index-dta.md)  
   
--   [Элемент Name описания столбца (DTA)](../../tools/dta/name-element-for-column-dta.md)  
+-   [Элемент Name описания столбца &#40; DTA &#41;](../../tools/dta/name-element-for-column-dta.md)  
   
--   [Элемент Filegroup описания индекса (DTA)](../../tools/dta/filegroup-element-for-index-dta.md)  
+-   [Элемент FILEGROUP описания индекса &#40; DTA &#41;](../../tools/dta/filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>Элементы для описания базы данных  
   
--   [Элемент Name описания базы данных (DTA)](../../tools/dta/name-element-for-database-dta.md)  
+-   [Элемент Name описания базы данных &#40; DTA &#41;](../../tools/dta/name-element-for-database-dta.md)  
   
--   [Элемент Schema описания базы данных (DTA)](../../tools/dta/schema-element-for-database-dta.md)  
+-   [Элемент schema описания базы данных &#40; DTA &#41;](../../tools/dta/schema-element-for-database-dta.md)  
   
--   [Элемент Name описания схемы (DTA)](../../tools/dta/name-element-for-schema-dta.md)  
+-   [Элемент Name описания схемы &#40; DTA &#41;](../../tools/dta/name-element-for-schema-dta.md)  
   
--   [Элемент Table для схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)  
+-   [Элемент TABLE описания схемы &#40; DTA &#41;](../../tools/dta/table-element-for-schema-dta.md)  
   
--   [Элемент Name описания таблицы (DTA)](../../tools/dta/name-element-for-table-dta.md)  
+-   [Элемент Name описания таблицы &#40; DTA &#41;](../../tools/dta/name-element-for-table-dta.md)  
   
 ## <a name="see-also"></a>См. также:  
  [помощник по настройке ядра СУБД](../../relational-databases/performance/database-engine-tuning-advisor.md)  

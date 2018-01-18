@@ -2,7 +2,7 @@
 title: "Загрузите и установите Microsoft SQL Studio операций (Предварительная версия) | Документы Microsoft"
 description: "Загрузка и установка Microsoft SQL операций Studio (Предварительная версия) для Windows, macOS или Linux"
 ms.custom: tools|sos
-ms.date: 12/19/2017
+ms.date: 01/17/2018
 ms.prod: sql-non-specified
 ms.reviewer: alayu; erickang; sstein
 ms.suite: sql
@@ -14,23 +14,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a34a03b447e26f072b6c8064cd115333600fef4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0621d5af62b5f5b8b694d47cf16d766215a0c819
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="download-and-install-sql-operations-studio-preview"></a>Загрузите и установите Studio операций SQL (Предварительная версия)
 
 [!INCLUDE[name-sos](../includes/name-sos.md)]выполняется на Windows, macOS и Linux.
 
-Загрузить и установить последний выпуск *общедоступной предварительной версии декабря*:
+Загрузить и установить последний выпуск *общедоступной предварительной версии января*:
 
 |Платформа|Загрузить|Дата выпуска|
 |:---|:---|:---|
-|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=865305)<br>[.ZIP](https://go.microsoft.com/fwlink/?linkid=865304)|19 декабря 2017 г. |
-|MacOS|[.ZIP](https://go.microsoft.com/fwlink/?linkid=865306)|19 декабря 2017 г. |
-|Linux|[.DEB](https://go.microsoft.com/fwlink/?linkid=865308)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=865309)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=865307)|19 декабря 2017 г.|
+|Windows|[Установщик](https://go.microsoft.com/fwlink/?linkid=866480)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=866479)|17 января 2018 |
+|MacOS|[.zip](https://go.microsoft.com/fwlink/?linkid=866481)|17 января 2018 |
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=866484)<br>[.RPM](https://go.microsoft.com/fwlink/?linkid=866483)<br>[. tar.gz](https://go.microsoft.com/fwlink/?linkid=866482)|17 января 2018|
 
 Дополнительные сведения о последнем выпуске см. в разделе [заметки о выпуске](release-notes.md).
 
@@ -40,27 +40,27 @@ ms.lasthandoff: 12/21/2017
 
 **Установщик**
 
-1. Загрузите и запустите [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] установщик Windows](https://go.microsoft.com/fwlink/?linkid=865305).
+1. Загрузите и запустите [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] установщик Windows](https://go.microsoft.com/fwlink/?linkid=866480).
 1. Запуск [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] приложения.
 
 
 **ZIP-файл**
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip для Windows](https://go.microsoft.com/fwlink/?linkid=865304).
+1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip для Windows](https://go.microsoft.com/fwlink/?linkid=866479).
 2. Найдите загруженный файл и извлеките его.
 3. Выполнить `\sqlops-windows\sqlops.exe`
 
 
 ## <a name="get-sql-operations-studio-preview-for-macos"></a>Получить для macOS Studio операций SQL (Предварительная версия)
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=865306).
+1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для macOS](https://go.microsoft.com/fwlink/?linkid=866481).
 2. Чтобы развернуть содержимое ZIP-файл, дважды щелкните его.
 3. Чтобы сделать [!INCLUDE[name-sos](../includes/name-sos-short.md)] в *запуска*, перетащите *sqlops.app* для *приложений* папки.
 
 
 ## <a name="get-sql-operations-studio-preview-for-linux"></a>Получить Studio операций SQL (Предварительная версия) для Linux
 
-1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux](https://go.microsoft.com/fwlink/?linkid=865307).
+1. Загрузить [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] для Linux](https://go.microsoft.com/fwlink/?linkid=866482).
 1. Чтобы извлечь файл и запустите [!INCLUDE[name-sos](../includes/name-sos-short.md)], откройте новое окно терминала и введите следующие команды:
 
    ```bash
@@ -84,7 +84,7 @@ ms.lasthandoff: 12/21/2017
    sudo apt-get install libunwind8
    ```
 
-   **RedHat:** 
+   **Redhat:** 
    ```bash
    yum install libXScrnSaver
    ```
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/21/2017
 
 
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>Следующие шаги
 
 См. один из следующих краткие руководства, чтобы приступить к работе:
 - [Подключиться & запрос SQL Server](quickstart-sql-server.md)

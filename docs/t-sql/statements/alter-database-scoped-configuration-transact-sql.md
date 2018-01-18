@@ -28,30 +28,24 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cc17063b8f74e296562a460677121c5ef1c85016
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: 9638d94c2bd6f461650b15f96c7a75c95eaeb861
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Эта инструкция включает несколько параметров конфигурации базы данных на **отдельная база данных** уровне. Эта инструкция доступна в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] и в SQL Server, начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Эти значения.  
+  Эта инструкция включает несколько параметров конфигурации базы данных на **отдельная база данных** уровне. Эта инструкция доступна в [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Эти значения.  
   
 - очистить кэш процедур;  
-  
 - Значение параметра MAXDOP произвольное значение (1, 2,...) для базы данных-источника на основании, что лучше всего подходит для конкретной базы данных и задать другое значение (например, 0) для всех баз данных-получателей используется (например, для запросов отчетов).  
-  
 - настроить модель оценки кратности оптимизатора запросов независимо от уровня совместимости базы данных;  
-  
 - включить или выключить перехват параметров на уровне базы данных;
-  
 - включить или выключить исправления оптимизации запросов на уровне базы данных.
-
 - Включить или отключить кэш идентификации на уровне базы данных.
-
-- Включить или отключить заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета. 
+- Включить или отключить заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета.    
   
  ![значок ссылки](../../database-engine/configure-windows/media/topic-link.gif "значок ссылки") [синтаксические обозначения Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -84,7 +78,7 @@ ALTER DATABASE SCOPED CONFIGURATION
 Задает параметры для баз данных-получателей (все базы данных-получатели должны иметь одинаковые значения).  
   
 MAXDOP  **=**  {\<значение > | ОСНОВНОЙ}  
-**\<Значение >**  
+**\<value>**  
   
 Указывает значение по умолчанию, следует использовать параметр MAXDOP для инструкций. значение по умолчанию 0 и указывает, что конфигурация сервера будет использоваться вместо этого. Переопределяет MAXDOP на уровне базы данных (если он установлен в 0) **максимальная степень параллелизма** заданы на уровне сервера с процедуры sp_configure. Указания запросов по-прежнему можно переопределить DB области для настройки определенных запросов, требующих другой параметр MAXDOP. Эти параметры ограничены MAXDOP для группы рабочей нагрузки.   
 
@@ -145,13 +139,13 @@ IDENTITY_CACHE  **=**  { **ON** | {OFF}
 > [!NOTE] 
 > Этот параметр можно задать только для ПЕРВИЧНОЙ. Дополнительные сведения см. в разделе [столбцы идентификаторов](create-table-transact-sql-identity-property.md).  
 
-OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }  
+OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }  
 
 **Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
 Включает или отключает заглушка скомпилированного плана для сохранения в кэше при первой компиляции пакета. Значение по умолчанию — OFF. После конфигурации уровня базы данных, которые OPTIMIZE_FOR_AD_HOC_WORKLOADS включен для базы данных, заглушка скомпилированного плана будет храниться в кэше, когда пакет компилируется в первый раз. Заглушки плана имеют меньше памяти по сравнению с размером полное скомпилированного плана.  При компиляции или повторного выполнения пакета, скомпилированная заглушка плана будут удалены и заменены полное скомпилированного плана.
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Разрешения  
  Необходимо изменить любой конфигурации области базы данных   
 в базе данных. Это разрешение можно предоставить пользователем, имеющим разрешение CONTROL на базу данных.  
   
@@ -163,6 +157,8 @@ OPTIMIZE_FOR_AD_HOC_WORKLOADS  **=**  {ON | **OFF** }
  Для запросов трехчастным, параметры для подключения к текущей базе данных для запроса обрабатывается, отличных от для модулей SQL (например, процедуры, функции и триггеры), которые компилируются в текущем контексте базы данных и таким образом использует параметры База данных, в которой они находятся.  
   
  Событие ALTER_DATABASE_SCOPED_CONFIGURATION добавляется как события DDL, который может использоваться для запуска триггера DDL. Это дочерние группы ALTER_DATABASE_EVENTS триггера.  
+ 
+ В области базы данных конфигурации, параметры будут перенесены с базой данных. Это означает, что при заданной базы данных была восстановлена или прикреплена, существующие параметры конфигурации будет оставаться.
   
 ## <a name="limitations-and-restrictions"></a>Ограничения  
 **MAXDOP**  
@@ -282,7 +278,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ; 
 ```
 
-### <a name="h-set-optimizeforadhocworkloads"></a>З. Набор OPTIMIZE_FOR_AD_HOC_WORKLOADS
+### <a name="h-set-optimizeforadhocworkloads"></a>З. Set OPTIMIZE_FOR_AD_HOC_WORKLOADS
 
 **Область применения**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
 
@@ -312,7 +308,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 
 ## <a name="more-information"></a>Дополнительные сведения  
  [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
- [sys.Configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [Представления каталога файлов и баз данных](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [Параметры конфигурации сервера](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
  

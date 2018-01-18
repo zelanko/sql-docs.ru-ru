@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: File element
 ms.assetid: 73dce835-9a80-4aef-8e0f-9dcf07dd5b80
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 18132a9eaf3be086e2508c7508a4823e290b65db
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65d4f2334b180c7307d95bea0cb13a2c6ce33a5a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="file-element-dta"></a>Элемент File (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Указывает файл рабочей нагрузки. Рабочая нагрузка представляет собой набор инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] , выполняемый в одной или нескольких базах данных, которые необходимо настроить. Файлы рабочей нагрузки могут представлять собой скрипты [!INCLUDE[tsql](../../includes/tsql-md.md)] (SQL) или файлы трассировки (TRC). Дополнительные сведения см. в разделе[Start and Use the Database Engine Tuning Advisor](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md).  
@@ -41,9 +41,9 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
-|**Тип данных и длина**|Для задания пути к каталогу, в котором находится файл рабочей загрузки, используется тип данных **string** . Пример:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Помните, что ограничение на длину устанавливается сервером.|  
+|**Тип данных и длина**|Для задания пути к каталогу, в котором находится файл рабочей загрузки, используется тип данных **string** . Например:<br /><br /> `<File>C:\Tuning\tun.sql</File>`<br /><br /> Помните, что ограничение на длину устанавливается сервером.|  
 |**Значение по умолчанию**|Нет.|  
 |**Наличие**|Необходимо наличие одного такого элемента, если не задан никакой другой тип рабочей нагрузки. Для родительского элемента **Workload**необходимо задать дочерний элемент **EventString**, **File** или **Database** , однако одновременно может использоваться только один из них. Например, если рабочая нагрузка задана элементом **File** , то в том же входном XML-файле уже нельзя задать рабочую нагрузку элементом **Database** .|  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/21/2017
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Workload (DTA)](../../tools/dta/workload-element-dta.md)|  
+|**Родительский элемент**|[Элемент Workload &#40; DTA &#41;](../../tools/dta/workload-element-dta.md)|  
 |**Дочерние элементы**|Нет.|  
   
 ## <a name="example"></a>Пример  

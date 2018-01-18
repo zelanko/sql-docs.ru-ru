@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
 ms.workload: Inactive
-ms.openlocfilehash: 501fd7eac7f7905a03a2861a462d4c1179beb15c
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 797cc24d46fc5a51f514508dd35226d07cda74f4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Настройка кластера Ubuntu и ресурс группы доступности
 
@@ -116,7 +116,7 @@ sudo systemctl enable pacemaker
 1. Создание кластера. 
 
    >[!WARNING]
-   >Связи с известной проблемой, кластеризации поставщика над этой проблемой, начиная кластера («компьютеры кластера start»), будут завершаться под ошибкой. Это потому, что файл журнала, настроенные в /etc/corosync/corosync.conf неверна. Чтобы обойти эту проблему, измените файл журнала, чтобы: /var/log/corosync/corosync.log. В качестве альтернативы можно создать файл /var/log/cluster/corosync.log.
+   >Связи с известной проблемой, кластеризации поставщика над этой проблемой, начиная кластера («компьютеры кластера start»), будут завершаться под ошибкой. Это так, как настроить файл журнала в /etc/corosync/corosync.conf которого создается при запуске команды установки кластера, не так. Чтобы обойти эту проблему, измените файл журнала, чтобы: /var/log/corosync/corosync.log. В качестве альтернативы можно создать файл /var/log/cluster/corosync.log.
  
    ```Error
    Job for corosync.service failed because the control process exited with error code. 

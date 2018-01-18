@@ -1,7 +1,7 @@
 ---
 title: "sys.database_scoped_configurations (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 06/29/2016
+ms.date: 01/16/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -23,31 +23,33 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 70b0f5c2ecb1f15828d5ac1c219033c337bb3a8f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e9df8c18b3ca7556b10e3e2d453c41735a07e52
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sysdatabasescopedconfigurations-transact-sql"></a>sys.database_scoped_configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Содержит по одной строке для каждой конфигурации. 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Идентификатор параметра конфигурации.|  
 |**name**|**nvarchar(60)**|Имя параметра конфигурации. Сведения о возможных конфигурациях см. в разделе [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).|  
-|**значение**|**SQLVARIANT**|Значение, заданное для этого параметра конфигурации для первичной реплики.|  
-|**value_for_secondary**|**SQLVARIANT**|Значение, заданное для этого параметра конфигурации для вторичных реплик.|  
+|**value**|**sqlvariant**|Значение, заданное для этого параметра конфигурации для первичной реплики.|  
+|**value_for_secondary**|**sqlvariant**|Значение, заданное для этого параметра конфигурации для вторичных реплик.|  
   
 ##  <a name="Permissions"></a> Разрешения  
  Необходимо быть членом роли **public** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если возвращается значение NULL как значение для **value_for_secondary**, это означает, что сервер-получатель является первичной.  
+ 
+ В области базы данных конфигурации, параметры будут перенесены с базой данных. Это означает, что при заданной базы данных была восстановлена или прикреплена, существующие параметры конфигурации будет оставаться.
   
-## <a name="see-also"></a>См. также:  
- [ALTER DATABASE SCOPED CONFIGURATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)  
   
   

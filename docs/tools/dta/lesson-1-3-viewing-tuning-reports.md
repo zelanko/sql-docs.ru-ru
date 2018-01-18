@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: tuning reports [SQL Server]
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9a1a567a2f29073f73033182fd14867540a95b93
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c986b13e3c38e168f7384a6552befca085f9be2f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-3---viewing-tuning-reports"></a>Занятие 1-3 - Просмотр отчетов настройки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]В предыдущей практической на этом занятии вы просмотрели [!INCLUDE[tsql](../../includes/tsql-md.md)] скрипты, создающие или удаляющие объекты базы данных в рекомендациях по настройке ядра СУБД, которые были созданы в результате сеанс настройки MySession. Сеанс настройки MySession был создан в разделе [Tuning a Workload](../../tools/dta/lesson-1-1-tuning-a-workload.md).  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/21/2017
 Изучена вкладка **Отчеты** графического интерфейса помощника по настройке ядра СУБД для сеанса настройки MySession. Выполните эти шаги, чтобы ознакомиться с отчетами, созданными для сеанса настройки EvaluateMySession. Дважды щелкните сеанс **EvaluateMySession** на панели **Монитор сеансов** .  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 3. Использование программы командной строки dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
+[Занятие 3: С помощью программы командной строки dta](../../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md)  
   
   
   

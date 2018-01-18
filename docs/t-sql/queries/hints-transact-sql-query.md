@@ -60,11 +60,11 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c678854df4be6f4d228ad3c02edd8ee29bc9d0e8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b394e34eaf3a8389f4aae97e2676e07ece301c2d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="hints-transact-sql---query"></a>Указания (Transact-SQL) - запросов
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -158,7 +158,7 @@ ms.lasthandoff: 01/02/2018
   
  Это указание запроса виртуально запрещает прямое использование индексированных представлений и индексов для индексированных представлений в плане запроса.  
   
- Индексированное представление не разворачивается только в том случае, если представление существует прямая ссылка в части SELECT запроса и WITH (NOEXPAND) или WITH (NOEXPAND, INDEX ( *index_value* [ **,***.. .n*])) указан. Дополнительные сведения о подсказке в запросе WITH (NOEXPAND) см. в разделе [FROM](../../t-sql/queries/from-transact-sql.md).  
+ Индексированное представление не разворачивается только в том случае, если представление существует прямая ссылка в части SELECT запроса и WITH (NOEXPAND) или WITH (NOEXPAND, INDEX ( *index_value* [**, ***.. .n* ])) указан. Дополнительные сведения о подсказке в запросе WITH (NOEXPAND) см. в разделе [FROM](../../t-sql/queries/from-transact-sql.md).  
   
  Действию этого указания подвержены только представления в части SELECT инструкций, включая находящиеся в инструкциях INSERT, UPDATEMERGE и DELETE.  
   
@@ -185,12 +185,12 @@ ms.lasthandoff: 01/02/2018
   
  Предотвращает использование памяти некластеризованный индекс columnstore с оптимизацией запросов. Если в запросе содержится указание запроса, исключающее использование индекса columnstore, а также указание индекса для использования индекса columnstore, то данные указания будут конфликтовать между собой, и запрос вернет ошибку.  
   
- MAX_GRANT_PERCENT = *процентов*  
+ MAX_GRANT_PERCENT = *percent*  
  Максимальный объем предоставленной памяти в ПРОЦЕНТАХ. Запрос гарантированно не должно превышать это ограничение. Реальное ограничение предела может быть ниже, если это меньше параметра регулятора ресурсов. Допустимые значения находятся в диапазоне от 0,0 до 100,0.  
   
 **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- MIN_GRANT_PERCENT = *процентов*  
+ MIN_GRANT_PERCENT = *percent*  
  Размер в ПРОЦЕНТАХ предоставления минимального объема памяти = % ограничение по умолчанию. Запрос будет гарантированно получить MAX (требуемый объем памяти, предоставьте min), поскольку по крайней мере, необходимые для запуска запроса требуется память. Допустимые значения находятся в диапазоне от 0,0 до 100,0.  
   
 **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -201,7 +201,7 @@ ms.lasthandoff: 01/02/2018
  Переопределяет **максимальная степень параллелизма** параметр конфигурации **sp_configure** и регулятора ресурсов для запросов, указывающих этот параметр. Указание запроса MAXDOP может превысить значение, настроенное с помощью sp_configure. Если MAXDOP превышает значение, настроенное с помощью регулятора ресурсов [!INCLUDE[ssDE](../../includes/ssde-md.md)] использует значение MAXDOP регулятора ресурсов, описанное в [ALTER WORKLOAD GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-workload-group-transact-sql.md). Все семантические правила, используемые **максимальная степень параллелизма** параметра конфигурации, применимы при использовании указания запроса MAXDOP. Дополнительные сведения см. в разделе [Настройка параметра конфигурации сервера max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
 > [!WARNING]  
->  Если значение MAXDOP равно нулю, то сервер выбирает максимальную степень параллелизма.  
+> Если значение MAXDOP равно нулю, то сервер выбирает максимальную степень параллелизма.  
   
  Подсказка MAXRECURSION *номер*  
  Указывает максимальное число рекурсий, допустимых для данного запроса. *номер* неотрицательное целое число от 0 до 32767. Если указано значение 0, ограничения не применяются. Если этот параметр не указан, ограничение по умолчанию равно 100.  
@@ -223,10 +223,10 @@ ms.lasthandoff: 01/02/2018
  *@variable_name*  
  Имя локальной переменной, используемой в запросе, которой может быть присвоено значение для использования с указанием запроса OPTIMIZE FOR.  
   
- *НЕИЗВЕСТНЫЙ*  
+ *UNKNOWN*  
  Указывает, что оптимизатор запросов использует статистические данные вместо начального значения, чтобы определить значение локальной переменной при оптимизации запроса.  
   
- *значение literal_constant*  
+ *literal_constant*  
  Представляет собой литеральное значение константы могут быть назначены  *@variable_name*  для использования с указанием запроса OPTIMIZE FOR. *значение literal_constant* используется только во время оптимизации запроса, а не как значение  *@variable_name*  во время выполнения запроса. *значение literal_constant* может быть любым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] системный тип данных, который может быть выражен как символьная константа. Тип данных *значение literal_constant* должен быть неявно преобразован к данным типов,  *@variable_name*  ссылки в запросе.  
   
  Подсказка OPTIMIZE FOR может использоваться для отмены определения параметров по умолчанию в оптимизаторе или при создании структуры плана. Дополнительные сведения см. в разделе [Перекомпиляция хранимой процедуры](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
@@ -240,7 +240,7 @@ ms.lasthandoff: 01/02/2018
  Указывает правила параметризации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которые оптимизатор запросов применяет к запросу при его компиляции.  
   
 > [!IMPORTANT]  
->  Указание запроса PARAMETERIZATION может быть задано только внутри структуры плана. Она не может быть определена напрямую в запросе.  
+> Указание запроса PARAMETERIZATION может быть задано только внутри структуры плана. Она не может быть определена напрямую в запросе.  
   
  Значение SIMPLE дает оптимизатору запросов указание использовать простую параметризацию. Значение FORCED дает оптимизатору запросов рекомендацию использовать принудительную параметризацию. Указание запроса PARAMETERIZATION используется для переопределения текущих настроек параметра PARAMETERIZATION в структуре плана базы данных. Дополнительные сведения см. в разделе [укажите параметризации запросов с помощью планов](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md).  
   
@@ -254,29 +254,28 @@ ms.lasthandoff: 01/02/2018
   
  Если такой план невозможен, оптимизатор запросов возвращает ошибку сразу, не откладывая обнаружение ошибок на момент выполнения запроса. Строки могут содержать столбцы переменной длины; компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] позволяет указать для строк максимальный потенциальный размер, при превышении которого компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может не суметь обработать их. В основном, несмотря на максимальный потенциальный размер, приложение сохраняет строки, имеющие актуальные размеры с ограничениями, которые компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] может обработать. Если компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] встречает слишком длинную строку, возвращается ошибка выполнения.  
  
- УКАЗАНИЕ использования ( **"***hint_name***"** )  
- **Применяется к**: относится к SQL Server (начиная с 2016 SP1) и базы данных SQL Azure.
+<a name="use_hint"></a>УКАЗАНИЕ использования ( **"***hint_name***"** )  
+ **Применяется к**: применяется к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
  
  Предоставляет одно или несколько дополнительных указаний в обработчике запросов в соответствии с именем указание **в одиночных кавычках**. 
-  **Применяется к**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1.
 
  Поддерживаются следующие имена подсказка:
  
-*  «DISABLE_OPTIMIZED_NESTED_LOOP»  
+*  'DISABLE_OPTIMIZED_NESTED_LOOP'  
  Указывает, что обработчик запросов не будет использовать операцию сортировки (пакета сортировка) для оптимизированного вложенного цикла соединения, при формировании плана запроса. Это эквивалентно [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  «FORCE_LEGACY_CARDINALITY_ESTIMATION»  
  Заставляет оптимизатор запросов использовать [кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) модель [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версий. Это эквивалентно [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 или [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) параметр LEGACY_CARDINALITY_ESTIMATION = ON.
-*  «ENABLE_QUERY_OPTIMIZER_HOTFIXES»  
+*  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'  
  Позволяет запросу исправлений оптимизатора (изменения, выпущенные в SQL Server накопительные пакеты обновления и пакеты обновления). Это эквивалентно [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 или [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) параметр QUERY_OPTIMIZER_HOTFIXES = ON.
 *  «DISABLE_PARAMETER_SNIFFING»  
  Указывает, что оптимизатор запросов использовать распространения среднего значения данных во время компиляции запроса с одним или несколькими параметрами, что независимых план запроса на значение параметра, который сначала был использован при компиляции запроса. Это эквивалентно [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 или [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) параметр PARAMETER_SNIFFING = OFF.
-*  «ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES»  
+*  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES'  
  В результате SQL Server для создания плана с помощью минимального избирательность при оценке и предикаты фильтров для учетной записи для корреляции. Это эквивалентно [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 при использовании модели оценки количества элементов из [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более ранних версий, и действует как при [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 используется с количеством элементов Модель оценки [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздней версии.
-*  «DISABLE_OPTIMIZER_ROWGOAL»  
+*  'DISABLE_OPTIMIZER_ROWGOAL'  
  Вызывает SQL Server, чтобы создать план, который не использует корректировки цель строки с помощью запросов, содержащих предложение TOP, OPTION (FAST N) в, или СУЩЕСТВУЕТ ключевые слова. Это эквивалентно [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
-*  «ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS»  
+*  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'  
  Позволяет автоматически созданный быстрого статистики (гистограммы поправка) для любой начальные столбца индекса, для которой размерность требуется оценки. Гистограмма, используемое для оценки количества элементов будет изменен во время компиляции запроса с учетом фактического максимальное или минимальное значение этого столбца. Это эквивалентно [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
-*  «ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS»  
+*  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS'  
  SQL Server, чтобы создать план запроса, вместо допущения вложенности допущения базы вложения по умолчанию для соединений в оптимизатор запросов вызывает [кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) модель [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] или более поздней версии. Это эквивалентно [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  «FORCE_DEFAULT_CARDINALITY_ESTIMATION»  
  Заставляет оптимизатор запросов использовать [кратности](../../relational-databases/performance/cardinality-estimation-sql-server.md) модели, соответствующий уровень совместимости текущей базы данных. Используйте это указание, чтобы переопределить [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) параметр LEGACY_CARDINALITY_ESTIMATION = ON или [флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
@@ -291,7 +290,7 @@ ms.lasthandoff: 01/02/2018
  USE PLAN N**"***xml_plan***"**  
  Заставляет оптимизатор запросов использовать существующий план запроса для запроса, который задается параметром **"***xml_plan***"**. Подсказку USE PLAN нельзя указывать в инструкциях INSERT, UPDATE MERGE и DELETE.  
   
-ТАБЛИЧНАЯ ПОДСКАЗКА **(***exposed_object_name* [ **,** \<table_hint > [ [**,** ]...  *n*  ] ] **)** Применяет заданную табличную подсказку в таблицу или представление, которое соответствует *exposed_object_name*. Мы рекомендуем использовать табличную подсказку в качестве указания запроса только в контексте [плана](../../relational-databases/performance/plan-guides.md).  
+ТАБЛИЧНАЯ ПОДСКАЗКА  **(*** exposed_object_name* [ **,** \<table_hint > [[**,**]...  *n*  ]] **)** Применяет заданную табличную подсказку в таблицу или представление, которое соответствует *exposed_object_name*. Мы рекомендуем использовать табличную подсказку в качестве указания запроса только в контексте [плана](../../relational-databases/performance/plan-guides.md).  
   
  *exposed_object_name* может принимать одно из следующих ссылок:  
   
@@ -301,7 +300,7 @@ ms.lasthandoff: 01/02/2018
   
  Когда *exposed_object_name* указан без указания табличной подсказки, все индексы, заданные в запросе как часть табличную подсказку для объекта не учитываются, а использование индексов определяется оптимизатором запросов. Этот метод можно использовать для устранения влияния табличного указания INDEX, если невозможно изменить первоначальный запрос. См. пример К.  
   
-**\<table_hint >:: =** {[NOEXPAND] {ИНДЕКСА ( *index_value* [,...*n* ] ) | Индекс = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**...] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | АРГУМЕНТ READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | СЕРИАЛИЗУЕМЫЕ | МОМЕНТАЛЬНЫЙ СНИМОК | SPATIAL_WINDOW_MAX_CELLS | АРГУМЕНТ TABLOCK | TABLOCKX | UPDLOCK | XLOCK} является табличной подсказки для применения в таблицу или представление, которое соответствует *exposed_object_name* как указания запроса. Описание этих подсказок см. в разделе [табличные подсказки &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( *index_value* [ ,...*n* ] ) | INDEX = ( *index_value* ) | FORCESEEK [**(***index_value***(***index_column_name* [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. Описание этих подсказок см. в разделе [табличные подсказки &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Табличные указания, за исключением INDEX, FORCESCAN и FORCESEEK, не могут использоваться как указания запроса, кроме тех случаев, когда в запросе уже содержится предложение WITH, задающее табличное указание. Дополнительные сведения см. в подразделе «Примечания».  
   
@@ -553,7 +552,7 @@ OPTION (RECOMPILE, USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 'DIS
 GO  
 ```  
     
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Указания &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
  [sp_create_plan_guide (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_control_plan_guide &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  

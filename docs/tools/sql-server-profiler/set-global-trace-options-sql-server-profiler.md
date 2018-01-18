@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ffb801e92dfaa141be2b5e942a1c0bd95c19a6cb
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6a830b25f8719953dec13a2ad43d0d7db275ee8a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-global-trace-options-sql-server-profiler"></a>установить глобальные параметры трассировки (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Описывается, как настроить параметры, влияющие на все трассировки, созданные с определенным экземпляром [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/21/2017
   
     -   **Число потоков воспроизведения по умолчанию** позволяет управлять количеством потоков процессора, которые применяются во время воспроизведения. С увеличением количества потоков, воспроизведение выполняется быстрее, но снижается производительность сервера во время воспроизведения. Рекомендуется установить значение **4**. Доступные параметры перечислены в следующей таблице:  
   
-        |Значение|Description|  
+        |Значение|Описание|  
         |-----------|-----------------|  
         |**2**|Минимальное значение. Для воспроизведения используется два потока.|  
         |**4**|Значение по умолчанию.|  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/21/2017
   
     -   **Интервал опроса монитора исправности по умолчанию (сек.)** определяет максимальное время в секундах, в течение которого поток воспроизведения может блокировать другие процессы. Допустимые значения описаны в следующей таблице.  
   
-        |Значение|Description|  
+        |Значение|Описание|  
         |-----------|-----------------|  
         |**0**|Минимальное значение. Значение **0** означает, что [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] никогда не будет останавливать блокирующий процесс.|  
         |**3600**|Значение по умолчанию. Разрешает использовать блокирующие процессы, продолжительность которых не превышает **3600** секунд (один час).|  
@@ -65,14 +65,14 @@ ms.lasthandoff: 12/21/2017
   
     -   **Интервал опроса монитора исправности по умолчанию (сек.)** задает частоту опроса потоков воспроизведения для блокирующих процессов. Допустимые значения описаны в следующей таблице.  
   
-        |Значение|Description|  
+        |Значение|Описание|  
         |-----------|-----------------|  
         |**1**|Минимальное значение. Значение **1** означает, что [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] будет опрашивать блокирующие процессы один раз в секунду.|  
         |**60**|Значение по умолчанию. Опрос блокирующих процессов выполняется один раз в минуту.|  
         |**86400**|Максимальное значение. Блокирующие процессы опрашиваются один раз в **86400** секунд (один день).|  
   
 ## <a name="see-also"></a>См. также:  
- [Задание значений по умолчанию для отображения трассировки (приложение SQL Server Profiler)](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Настройка отображения трассировки по умолчанию &#40; Приложение SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [Приложение SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

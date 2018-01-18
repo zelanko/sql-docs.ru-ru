@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 01fc6329-5d6b-4186-9565-395f375477bb
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e73063d89a2557f82fded4a426873c6d27604c9f
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6c2dd6c43d22f82a0628d7af0f34d4882819e5ff
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-agent-properties-log-on-tab"></a>Свойства агента SQL Server (вкладка «Вход в систему»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Используйте **вход в систему** вкладке **свойства агента SQL Server** для указания учетной записи, используемой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] агент, а также для запуска и остановки службы. Изменение пароля учетной записи вступает в силу немедленно, без перезапуска службы.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/21/2017
  Укажите локальную системную учетную запись, для которой не требуется пароль. Однако локальная системная учетная запись может ограничить взаимодействие служб с другими серверами, это зависит от прав доступа, предоставленных этой учетной записи.  
   
  **Эта учетная запись**  
- Укажите локальную или доменную учетную запись, использующую аутентификацию Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать доменную учетную запись пользователя с минимальными правами. Дополнительные сведения о выборе учетной записи см. в разделе «Настройка учетных записей служб Windows» электронной документации.  
+ Укажите локальную или доменную учетную запись, использующую аутентификацию Windows. [!INCLUDE[msCoName](../../includes/msconame-md.md)]Корпорация Майкрософт рекомендует использовать учетную запись пользователя домена с минимальными правами для службы. Дополнительные сведения о выборе учетной записи см. в разделе «Настройка учетных записей служб Windows» электронной документации.  
   
  **Имя учетной записи**  
  Укажите имя локальной или доменной учетной записи.  

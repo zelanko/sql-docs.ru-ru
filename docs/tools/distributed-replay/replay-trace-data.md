@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 820558d326ceb54cc6324f08b147e83dfcc670f1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1b63690aadee587a51f910cfc43915a04aa39bf4
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="replay-trace-data"></a>Воспроизведение данные трассировки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Можно запустить распределенное воспроизведение с помощью [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] компонент распределенного воспроизведения после подготовки входных данных трассировки. Дополнительные сведения см. в статье [Подготовка входных данных трассировки](../../tools/distributed-replay/prepare-the-input-trace-data.md).  
@@ -72,8 +72,8 @@ ms.lasthandoff: 12/21/2017
 3.  По завершении распределенного воспроизведения средство администрирования возвращает сводные данные о результатах. Если задан параметр **-o** , то действие воспроизведения сохраняется в результирующих файлах трассировки на каждом клиенте. Дополнительные сведения о файлах результатов трассировки см. в статье [Просмотр результатов воспроизведения](../../tools/distributed-replay/review-the-replay-results.md).  
   
 ## <a name="see-also"></a>См. также:  
- [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [Параметры командной строки средства администрирования (программа распределенного воспроизведения)](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Требования распределенного воспроизведения](../../tools/distributed-replay/distributed-replay-requirements.md)   
+ [Параметры командной строки средства администрирования &#40; программа распределенного воспроизведения &#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Настройка распределенного воспроизведения](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

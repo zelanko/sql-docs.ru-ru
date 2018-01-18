@@ -14,11 +14,11 @@ author: yualan
 ms.author: alayu
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2edea069c05e7ac0316042250f336f1a8c455af0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6e87461fb2973bec630ed21975a80cdbc17cd1cd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-and-workspace-settings"></a>Пользователь и параметры рабочей области
 
@@ -47,12 +47,22 @@ ms.lasthandoff: 12/21/2017
 
 В зависимости от используемой платформы файла параметров пользователя находится здесь:
 
-* **Windows**`%APPDATA%\sqlops\User\settings.json`
+* **Windows** `%APPDATA%\sqlops\User\settings.json`
 * **Mac**`$HOME/Library/Application Support/sqlops/User/settings.json`
 * **Linux**`$HOME/.config/sqlops/User/settings.json`
 
 Файл параметров рабочей области находится в разделе `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` в папке проекта.
 
+## <a name="hot-exit"></a>Горячий выхода
+
+Операции SQL Studio запоминает несохраненные изменения в файлы при выходе по умолчанию. Это то же, что функция горячей выхода в Visual Studio Code.
+
+По умолчанию горячей выхода — off. Включить активную выход путем редактирования `files.hotExit` параметр. Дополнительные сведения см. в разделе [горячей выхода (в документации по Visual Studio Code)](https://code.visualstudio.com/docs/editor/codebasics#_hot-exit).
+
+
+## <a name="tab-color"></a>Цвета вкладки
+
+Для упрощения идентификации вы работаете с подключений, открытых вкладок в редакторе может иметь их цвета в соответствии цвет соединение входит в группу серверов. По умолчанию цвета по умолчанию отключены. Включить путем изменения цвета вкладок `sql.tabColorMode` параметр.
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 

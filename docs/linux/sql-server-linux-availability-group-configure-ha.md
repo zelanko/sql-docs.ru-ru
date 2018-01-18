@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: On Demand
-ms.openlocfilehash: 25fc141818d0e0d638cf463990da8d44955fef17
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: e75ae9a6f3c48f0ece0c95be9f3836c8205a1b8c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Настройка группы доступности AlwaysOn для SQL Server в Linux
 
@@ -92,7 +92,7 @@ ms.lasthandoff: 12/01/2017
 
 - [Создание группы доступности с тремя синхронными репликами](#threeSynch).
 - [Создание группы доступности с двумя синхронными репликами и конфигурации реплики](#configOnly)
-- [Создание группы доступности с тремя синхронными репликами](#readScale).
+- [Создание группы доступности с двумя синхронными репликами](#readScale).
 
 <a name="threeSynch"></a>
 

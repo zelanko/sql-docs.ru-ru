@@ -15,15 +15,15 @@ dev_langs: XML
 helpviewer_keywords: Schema element
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 89c36f9df5ab507edad6254e6c09ccb8039878df
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c2b4da3d22c91ad05ba53736eb17a2210b0c0b5d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="schema-element-for-database-dta"></a>Элемент Schema описания базы данных (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Указывает схему базы данных, которую необходимо настроить.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="element-characteristics"></a>Характеристики элемента  
   
-|Характеристика|Description|  
+|Характеристика|Описание|  
 |--------------------|-----------------|  
 |**Тип данных и длина**|Нет.|  
 |**Значение по умолчанию**|Нет.|  
@@ -49,8 +49,8 @@ ms.lasthandoff: 12/21/2017
   
 |Связь|Элементы|  
 |------------------|--------------|  
-|**Родительский элемент**|[Элемент Database описания сервера (DTA)](../../tools/dta/database-element-for-server-dta.md)|  
-|**Дочерние элементы**|[Элемент Name для схемы (DTA)](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [Элемент Table для схемы (DTA)](../../tools/dta/table-element-for-schema-dta.md)|  
+|**Родительский элемент**|[Элемент Database описания сервера &#40; DTA &#41;](../../tools/dta/database-element-for-server-dta.md)|  
+|**Дочерние элементы**|[Элемент Name описания схемы &#40; DTA &#41;](../../tools/dta/name-element-for-schema-dta.md)<br /><br /> [Элемент TABLE описания схемы &#40; DTA &#41;](../../tools/dta/table-element-for-schema-dta.md)|  
   
 ## <a name="example"></a>Пример  
  Пример использования этого элемента см. в разделе [Элемент Server (DTA)](../../tools/dta/server-element-dta.md).  

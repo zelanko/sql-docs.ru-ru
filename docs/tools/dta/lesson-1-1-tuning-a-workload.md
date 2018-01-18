@@ -15,15 +15,15 @@ applies_to: SQL Server 2016
 helpviewer_keywords: workloads [SQL Server], tuning
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 534f4ab58ee49d3bfce6899bf3858404fb7b3fd0
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6acb93ddde56546e170b01c093dff843a2ea5968
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-1-1---tuning-a-workload"></a>Занятие 1-1 — Настройка рабочей нагрузки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]Помощник по настройке ядра СУБД можно использовать для поиска наиболее физической структуры баз данных и таблицами, выбранными для настройки производительности запросов.  
