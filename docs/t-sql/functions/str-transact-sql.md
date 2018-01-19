@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d8792951add2462067bc21ed22ef1e5ce005c0f0
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 04386cd8dafb69d08c72b460f3794963c8b6da36
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="str-transact-sql"></a>STR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
  *float_expression*  
  Выражение приближенного числового (**float**) типа данных с десятичной запятой.  
   
- *length*  
+ *длина*  
  Общая длина. Она включает десятичную запятую, знак, цифры и пробелы. Значение по умолчанию равно 10.  
   
  *decimal*  
@@ -58,7 +58,7 @@ STR ( float_expression [ , length [ , decimal ] ] )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **varchar**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если указано, то значения для *длина* и *десятичное* параметров в функции STR должны быть положительными. Число округляется до целого или по умолчанию, или если десятичный параметр равен 0. Указанная длина должна быть больше или равна части числа до запятой плюс знак числа (если имеется). Короткие *float_expression* — по правому краю в указанной длины, а длинное *float_expression* усекается до заданного числа десятичных знаков. Например, STR (12**,**10) дает значение 12. Выравнивается в результирующем наборе вправо. Однако STR (1223**,**2) усекает результирующий набор до **. Строковые функции могут быть вложенными.  
   
 > [!NOTE]  
@@ -113,7 +113,9 @@ GO
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
+ [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [ФОРМАТ &#40; Transact-SQL &#41;](../../t-sql/functions/format-transact-sql.md)  
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

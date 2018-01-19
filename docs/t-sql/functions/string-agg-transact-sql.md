@@ -21,11 +21,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5eab0444f036b05f23982b6f21455bfc5ab408a8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f2bcc8b02b0228dc403fffc4ef1c6b82557872a4
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringagg-transact-sql"></a>STRING_AGG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ STRING_AGG ( expression, separator ) [ <order_clause> ]
 — [Выражение](../../t-sql/language-elements/expressions-transact-sql.md) любого типа. Выражения преобразуются в `NVARCHAR` или `VARCHAR` типов во время объединения. Типы строк не преобразуются в `NVARCHAR` типа.
 
 
-< order_clause >   
+<order_clause>   
 При необходимости укажите порядок объединенных результатов, с помощью `WITHIN GROUP` предложения:
 ```
 WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 ```   
-< order_by_expression_list >   
+<order_by_expression_list>   
  
   Список неконстантное [выражений](../../t-sql/language-elements/expressions-transact-sql.md) может использоваться для сортировки результатов. Только один `order_by_expression` допускается для каждого запроса. По умолчанию задан порядок сортировки по возрастанию.   
   
@@ -71,13 +71,13 @@ WITHIN GROUP ( ORDER BY <order_by_expression_list> [ ASC | DESC ] )
 |NVARCHAR(MAX) |NVARCHAR(MAX) |
 |VARCHAR(MAX) |VARCHAR(MAX) |
 |NVARCHAR (1... 4000) |NVARCHAR(4000) |
-|VARCHAR (1... 8000) |VARCHAR(8000) |
+|VARCHAR(1…8000) |VARCHAR(8000) |
 |int, bigint, smallint, tinyint, числовых, float, real, бит, decimal, smallmoney, money, datetime, datetime2, |NVARCHAR(4000) |
 
 
 ## <a name="remarks"></a>Remarks  
  
-`STRING_AGG`Статистическая функция принимает все выражения из строк и объединяет их в одну строку. Выражение значения являются неявно преобразуются в строковые типы и затем объединяются. Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразованиях типов данных см. в разделе [CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
+`STRING_AGG`является агрегатной функцией, которая принимает все выражения из строк и объединяет их в одну строку. Выражение значения являются неявно преобразуются в строковые типы и затем объединяются. Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразованиях типов данных см. в разделе [CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
 Если входное выражение имеет тип `VARCHAR`, разделитель не может быть типом `NVARCHAR`. 
 
@@ -117,7 +117,7 @@ FROM Person.Person;
 
 |CSV | 
 |--- |
-|Джон, н/д, Майк, Питер, н/д, н/д, Alice, Bob |  
+|John,N/A,Mike,Peter,N/A,N/A,Alice,Bob |  
 
 
 ### <a name="c-generate-comma-separated-values"></a>В. Создать значения с разделителями запятыми 
@@ -193,7 +193,16 @@ GROUP BY town;
 |LA |hazem0@adventure-works.com;sam1@adventure-works.com |
 
 
-## <a name="see-also"></a>См. также:  
-
-[Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [CONCAT &#40; Transact-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [ПРЕОБРАЗОВАТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Агрегатные функции &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

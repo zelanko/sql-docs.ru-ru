@@ -22,15 +22,15 @@ helpviewer_keywords:
 - reversing Boolean expression values
 ms.assetid: dc07cc35-20f1-46e6-9995-2938390dc19a
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ff42c9ff5ea914ae1488517dadcaf907346ae9db
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6b4e19873d64cf38ad662b27ba2ecfdf94e9fd5f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="not-transact-sql"></a>NOT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="result-value"></a>Значение результата  
  Оператор NOT изменяет значение любого логического выражения на противоположное.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Использование оператора NOT инвертирует выражение.  
   
  В следующей таблице показаны результаты сравнения значений TRUE и FALSE при использовании оператора NOT.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 11/17/2017
 |------|---------|  
 |**ЗНАЧЕНИЕ TRUE**|FALSE|  
 |**ЗНАЧЕНИЕ FALSE**|TRUE|  
-|**НЕИЗВЕСТНЫЙ**|UNKNOWN|  
+|**UNKNOWN**|UNKNOWN|  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере производится поиск всех велосипедов серебристого цвета по цене не выше 400 долларов США.  
@@ -102,7 +102,7 @@ FROM FactInternetSales
 WHERE SalesOrderNumber LIKE 'SO6%' AND NOT ProductKey < 400;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   

@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 898016ca9940dfa587e57e18ac1c8516f5c2bc64
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ed2f5334c0c76288ca31cf07857a87f2d1c72033
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="charindex-transact-sql"></a>CHARINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +49,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 *expressionToFind*  
 Символом [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , содержащее последовательность искомых. *expressionToFind* не должна превышать 8000 символов.
   
-*выражения expressionToSearch*  
+*expressionToSearch*  
 Символьное выражение, в котором производится поиск.
   
 *start_location*  
@@ -58,7 +58,7 @@ CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )
 ## <a name="return-types"></a>Возвращаемые типы
 **bigint** Если *выражения expressionToSearch* имеет **varchar(max)**, **nvarchar(max)**, или **varbinary(max)** данных типы; в противном случае **int**.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Если параметр *expressionToFind* или *выражения expressionToSearch* имеет тип данных Юникода (**nvarchar** или **nchar**), а другой — нет, другие преобразуется в тип данных Юникода. Функция CHARINDEX не может использоваться с **текст**, **ntext**, и **изображение** типов данных.
   
 Если параметр *expressionToFind* или *выражения expressionToSearch* имеет значение NULL, функция CHARINDEX возвращает NULL.
@@ -238,9 +238,11 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 ```  
   
 ## <a name="see-also"></a>См. также:
-[Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-[+ &#40; Объединение строк &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
-[Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)
+ [Функция LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
+ [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
+ [+ &#40; Объединение строк &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/string-concatenation-transact-sql.md)  
+ [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)  
   
   
 

@@ -1,7 +1,7 @@
 ---
 title: "sp_rename (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database
 ms.service: 
@@ -26,11 +26,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: eb402624e8b25f43a1969a91df85cfe5fa85d9af
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 158974d93e031d689318ea22f3bd0ba8189553ee
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,21 +51,21 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @objname =] '*object_name*"  
+ [ @objname = ] '*object_name*'  
  Текущее полное или неполное имя пользовательского объекта или типа данных. Если переименовываемый объект представляет собой столбец в таблице, *object_name* должно быть в форме *таблица.столбец* или *столбце schema.table.column*. Если переименовываемый объект представляет собой индекс, *object_name* должно быть в форме *table.index* или *schema.table.index*. Если переименовываемый объект представляет собой ограничение, *object_name* должно быть в форме *schema.constraint*.  
   
  Кавычки необходимы, только если указан объект с полным именем. Если предоставлено полное имя таблицы, включая имя базы данных, в качестве последнего должно использоваться имя текущей базы данных. *object_name* — **nvarchar(776)**, не имеет значения по умолчанию.  
   
- [ @newname =] '*новое_имя*"  
+ [ @newname = ] '*new_name*'  
  Новое имя для указанного объекта. *новое_имя* должен быть однокомпонентного имени и должны соответствовать правилам для идентификаторов. *Параметр newname* — **sysname**, не имеет значения по умолчанию.  
   
 > [!NOTE]  
 >  Имена триггеров не могут начинаться с символов # или ##.  
   
- [ @objtype =] '*object_type*"  
+ [ @objtype = ] '*object_type*'  
  Тип переименовываемого объекта. *object_type* — **varchar(13)**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |COLUMN|Столбец, который будет переименован.|  
 |DATABASE|Пользовательская база данных. Этот тип объекта необходим при переименовании базы данных.|  
@@ -77,18 +77,18 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или ненулевое значение (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Изменить имя объекта или типа данных можно только в текущей базе данных. Имена большинства системных типов данных и системных объектов изменить нельзя.  
   
  Процедура sp_rename автоматически переименовывает ассоциированный индекс каждый раз при переименовании ограничения PRIMARY KEY или UNIQUE. Если переименованный индекс привязан к ограничению PRIMARY KEY, то ограничение PRIMARY KEY также автоматически переименовывается хранимой процедурой sp_rename.  
   
  Процедура sp_rename может использоваться для переименования первичных и вторичных XML-индексов.  
   
- Переименование хранимой процедуры, функции, представления или триггера не изменит имени соответствующего объекта в определении столбца имя [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога. Поэтому не рекомендуется использовать процедуру sp_rename для переименования объектов этих типов. Лучше удалить и создать объект повторно с новым именем.  
+ Переименование хранимой процедуры, функции, представления или триггера не изменит имени соответствующего объекта в определении столбца [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога или получить с помощью [OBJECT_ ОПРЕДЕЛЕНИЕ](../../t-sql/functions/object-definition-transact-sql.md) встроенной функции. Поэтому не рекомендуется использовать процедуру sp_rename для переименования объектов этих типов. Лучше удалить и создать объект повторно с новым именем.  
   
- Переименование такого объекта, как таблица или столбец не приводит к автоматическому переименованию ссылок на этот объект. Необходимо вручную изменить любые объекты, которые ссылаются на переименованный объект. Например, если переименован столбец таблицы и на этот столбец имеется ссылка в триггере, то необходимо изменить триггер, указав новое имя столбца. Используйте[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) Чтобы составить список зависимостей для объекта перед его переименованием.  
+ Переименование такого объекта, как таблица или столбец не приводит к автоматическому переименованию ссылок на этот объект. Необходимо вручную изменить любые объекты, которые ссылаются на переименованный объект. Например, если переименован столбец таблицы и на этот столбец имеется ссылка в триггере, то необходимо изменить триггер, указав новое имя столбца. Используйте [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) , чтобы составить список зависимостей для объекта перед его переименованием.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для переименования объектов, столбцов и индексов требуется разрешение ALTER на объект. Для переименования определенных пользователем типов требуется разрешение CONTROL на тип. Для переименования базы данных требуется членство в предопределенных ролях сервера sysadmin или dbcreator.  
   
 ## <a name="examples"></a>Примеры  
@@ -207,7 +207,7 @@ sp_rename 'Person.Person.ContactMail1', 'NewContact','Statistics';
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представление каталога sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)   
  [sys.sql_modules (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

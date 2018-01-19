@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd0df5a4dba946748dc39c245fcd54d50f1e97e5
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 95a86e78aad7ea01a7f57a046b250825c9e37192
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ PATINDEX ( '%pattern%' , expression )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *шаблон*  
+ *pattern*  
  Символьное выражение, содержащее последовательность символов, которую надо найти. Можно использовать подстановочные знаки; Тем не менее, необходимо следовать после и выполнить знак % *шаблон* (за исключением того, когда производится поиск первых или последних символов). *шаблон* выражение относится к символьному типу данных. *шаблон* ограничен 8000 символов.  
   
  *expression*  
@@ -56,7 +56,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **bigint** Если *выражение* имеет **varchar(max)** или **nvarchar(max)** типов данных; в противном случае **int**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если параметр *шаблон* или *выражение* имеет значение NULL, функция PATINDEX возвращает NULL.  
   
  Функция PATINDEX выполняет сравнение с учетом параметров сортировки входных значений. Для выполнения сравнения в указанных параметрах сортировки можно воспользоваться функцией COLLATE, чтобы явно указать параметры сортировки для входных данных.  
@@ -146,7 +146,9 @@ WHERE DocumentNode = 0x7B40;
   
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
+ [Функция CHARINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [Функция LEN &#40; Transact-SQL &#41;](../../t-sql/functions/len-transact-sql.md)  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [&#40; Подстановочный знак — символ &#40; s &#41; для соответствия &#41; &#40; Transact-SQL &#41;](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   

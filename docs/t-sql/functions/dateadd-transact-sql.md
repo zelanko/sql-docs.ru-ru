@@ -31,11 +31,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: db5499d73b4eab7ff4ba3079469412cc30a111a3
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: f3aa417b85782fa806961b107658403e51f7afe6
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,24 +53,24 @@ DATEADD (datepart , number , date )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*часть_даты*  
-— Это часть *даты* к которому **целое***номер* добавляется. В следующей таблице перечислены все допустимые *datepart* аргументы. Эквивалентные переменные, определяемые пользователем, являются недопустимыми.
+*datepart*  
+— Это часть *даты* к которому **целое число со знаком *** номер* добавляется. В следующей таблице перечислены все допустимые *datepart* аргументы. Эквивалентные переменные, определяемые пользователем, являются недопустимыми.
   
-|*часть_даты*|Сокращения|  
+|*datepart*|Сокращения|  
 |---|---|
-|**год**|**гг**, **гггг**|  
-|**квартал**|**б**, **q**|  
+|**год**|**yy**, **yyyy**|  
+|**quarter**|**qq**, **q**|  
 |**месяц**|**мм**, **m**|  
-|**день года**|**dy**, **y**|  
-|**день**|**дд**, **d**|  
-|**Неделя**|**нед**, **ww**|  
-|**день недели**|**DW**, **w**|  
+|**dayofyear**|**dy**, **y**|  
+|**day**|**dd**, **d**|  
+|**week**|**wk**, **ww**|  
+|**weekday**|**dw**, **w**|  
 |**час**|**чч**|  
-|**минуты**|**mi**,**n**|  
-|**второй**|**SS**, **s**|  
-|**миллисекунды**|**MS**|  
-|**микросекунды**|**MCS**|  
-|**наносекундных**|**NS**|  
+|**минуты**|**mi**, **n**|  
+|**second**|**ss**, **s**|  
+|**millisecond**|**ms**|  
+|**microsecond**|**mcs**|  
+|**nanosecond**|**ns**|  
   
 *number*  
 Выражение, которое разрешается к [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md) , добавленного *datepart* из *даты*. Допускаются пользовательские переменные.  
@@ -93,24 +93,24 @@ DATEADD (datepart , number , date )
 Если *datepart* — **месяц** и *даты* месяц имеется больше дней, чем в возвращаемом месяце и *даты* день не существует в этом месяце, возвращается последний день месяца. Например, в сентябре 30 дней, поэтому следующие две инструкции возвращают 2006-09-30 00:00:00.000:
   
 ```sql
-SELECT DATEADD(month, 1, '2006-08-30');
-SELECT DATEADD(month, 1, '2006-08-31');
+SELECT DATEADD(month, 1, '20060830');
+SELECT DATEADD(month, 1, '20060831');
 ```
   
 ## <a name="number-argument"></a>Аргумент number  
 *Номер* аргумент не может превышать диапазон **int**. В следующих инструкциях аргумент для *номер* выходит за пределы типа **int** на 1. Возвращается сообщение об ошибке: "`Msg 8115, Level 16, State 2, Line 1. Arithmetic overflow error converting expression to data type int."`
   
 ```sql
-SELECT DATEADD(year,2147483648, '2006-07-31');  
-SELECT DATEADD(year,-2147483649, '2006-07-31');  
+SELECT DATEADD(year,2147483648, '20060731');  
+SELECT DATEADD(year,-2147483649, '20060731');  
 ```  
   
 ## <a name="date-argument"></a>Аргумент date  
 *Даты* аргумент не может быть увеличено значение за пределами диапазона типа данных. В следующих инструкциях *номер* величина, добавляемая к *даты* значение превышает диапазон, равный *даты* тип данных. Возвращается сообщение об ошибке: «`Msg 517, Level 16, State 1, Line 1 Adding a value to a 'datetime' column caused overflow`.»
   
 ```sql
-SELECT DATEADD(year,2147483647, '2006-07-31');  
-SELECT DATEADD(year,-2147483647, '2006-07-31');  
+SELECT DATEADD(year,2147483647, '20060731');  
+SELECT DATEADD(year,-2147483647, '20060731');  
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Возвращаемые значения дат с типом данных smalldatetime и частью даты в виде секунд или долей секунды.  
@@ -120,7 +120,7 @@ SELECT DATEADD(year,-2147483647, '2006-07-31');
 -   Если *datepart* — **миллисекунды** и *номер* находится в диапазоне от-30001 и + 29998, добавление не выполняется.  
 -   Если *datepart* — **миллисекунды** и *номер* является менее -30001 или более + 29998, выполняется начиная с одной минуты.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Функция DATEADD может использоваться в инструкции SELECT \<список >, ГДЕ HAVING, предложения GROUP BY и ORDER BY.
   
 ## <a name="fractional-seconds-precision"></a>Точность в долях секунды

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - combining expressions
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 34014541d124b0226218012d907fd2f99e0b1610
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f85ca8eceabd8e07a376be0b9d958190cb663de0
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="and-transact-sql"></a>AND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,14 +56,14 @@ boolean_expression AND boolean_expression
 ## <a name="result-value"></a>Значение результата  
  Возвращает значение TRUE, если оба выражения — TRUE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей диаграмме показаны результаты сравнения значений TRUE и FALSE с использованием оператора AND.  
   
 ||TRUE|FALSE|UNKNOWN|  
 |------|----------|-----------|-------------|  
 |**ЗНАЧЕНИЕ TRUE**|TRUE|FALSE|UNKNOWN|  
 |**ЗНАЧЕНИЕ FALSE**|FALSE|FALSE|FALSE|  
-|**НЕИЗВЕСТНЫЙ**|UNKNOWN|FALSE|UNKNOWN|  
+|**UNKNOWN**|UNKNOWN|FALSE|UNKNOWN|  
   
 ## <a name="examples"></a>Примеры  
   
@@ -98,7 +98,7 @@ ELSE PRINT 'Second Example is FALSE' ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   

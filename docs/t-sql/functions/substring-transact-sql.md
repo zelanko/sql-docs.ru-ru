@@ -29,11 +29,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 4407538e956f268f4d9bb868c1fcb70c2447cf6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 2c78c77953dc60bdcd73ec29ba542a12478783fb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="substring-transact-sql"></a>SUBSTRING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,10 +52,10 @@ SUBSTRING ( expression ,start , length )
  *expression*  
  — **Символ**, **двоичных**, **текст**, **ntext**, или **изображения**[выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *Запуск*  
+ *start*  
  Должно быть целым числом или **bigint** выражение, которое указывает, где начала возвращаемых символов. (Нумерация достигается, когда 1 на основе, что первый символ в выражении равен 1). Если *запустить* меньше 1, возвращаемое выражение начинается с первого символа, который указан в *выражение*. В этом случае количество возвращаемых символов является наибольшим значением либо суммы *запустить* + *длина*- 1 или 0. Если *запустить* больше, чем количество символов в выражении значения, возвращается выражение нулевой длины.  
   
- *length*  
+ *длина*  
  Положительное целое число или **bigint** выражение, которое указывает, сколько символов *выражение* будут возвращены. Если *длина* имеет отрицательное значение, выводится сообщение об ошибке и выполнение инструкции прервано. Если сумма *запустить* и *длина* больше, чем количество символов в *выражение*, всего значения выражения, начиная с *запустить*возвращается.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -63,11 +63,11 @@ SUBSTRING ( expression ,start , length )
   
 |Заданное выражение|Возвращаемый тип|  
 |--------------------------|-----------------|  
-|**char**/**varchar**/**текста**|**varchar**|  
+|**char**/**varchar**/**text**|**varchar**|  
 |**nchar**/**nvarchar**/**ntext**|**nvarchar**|  
 |**двоичный**/**varbinary**/**изображения**|**varbinary**|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значения для *запустить* и *длина* должен быть указан в символах для **ntext**, **char**, или **varchar**  и байтов для типов данных **текст**, **изображения**, **двоичных**, или **varbinary** типов данных.  
   
  *Выражение* должно быть **varchar(max)** или **varbinary(max)** при *запустить* или *длина* содержит значение размером более 2147483647.  
@@ -91,7 +91,7 @@ WHERE database_id < 5;
 
 |имя |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master  |m  |ST |
+|master  |m  |st |
 |tempdb  |t  |пакет управления |
 |model   |m  |de |
 |msdb    |m  |DB |
@@ -221,7 +221,13 @@ x
 bcd
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
+ [Левый &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
+ [Функция LTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
+ [STRING_SPLIT &#40; Transact-SQL &#41;](../../t-sql/functions/string-split-transact-sql.md)  
+ [Функция TRIM &#40; Transact-SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   

@@ -40,11 +40,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dd3db7627c4190a51db01082138677bc2b6d40d9
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 56326d7862c004ac056e329e6cc05f7bbe056aea
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="cast-and-convert-transact-sql"></a>Функции CAST и CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int,
     CONVERT(decimal(6,4), 9.5) AS decimal;
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-|Исходный текст   |int    |decimal |  
+|Исходный текст   |int    |Decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
@@ -81,13 +81,13 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 *expression*  
 Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).
   
-*Тип данных*  
+*data_type*  
 Целевой тип данных. Сюда входят **xml**, **bigint**, и **sql_variant**. Псевдонимы типов данных недопустимы.
   
-*length*  
+*длина*  
 Указываемое дополнительно целое число, обозначающее длину целевого типа данных. Значение по умолчанию — 30.
   
-*стиль*  
+*style*  
 Целочисленное выражение, указывающее, как функцию CONVERT для преобразования *выражение*. Если стиль имеет значение NULL, возвращается NULL. Диапазон определяется *data_type*. 
   
 ## <a name="return-types"></a>Возвращаемые типы
@@ -166,7 +166,7 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 |**126**|Эквивалентно стилю 2 при преобразовании в char(n) или varchar(n)|  
   
 ## <a name="xml-styles"></a>стили данных XML
-Когда *выражение* — **xml***, стиль* может принимать одно из значений, приведенных в следующей таблице. Другие значения обрабатываются как 0.
+Когда *выражение* — **xml ***, стиль* может принимать одно из значений, приведенных в следующей таблице. Другие значения обрабатываются как 0.
   
 |Значение|Вывод|  
 |---|---|
@@ -711,8 +711,10 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 ```  
   
 ## <a name="see-also"></a>См. также:
-[Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
-[SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
-[Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
-[Написание инструкций Transact-SQL, адаптированных к международному использованию](../../relational-databases/collations/write-international-transact-sql-statements.md)
+ [Преобразование типов данных &#40; компонент Database Engine &#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)  
+ [ФОРМАТ &#40; Transact-SQL &#41;](../../t-sql/functions/format-transact-sql.md)  
+ [СТРУ &#40; Transact-SQL &#41;](../../t-sql/functions/str-transact-sql.md)  
+ [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  
+ [Системные функции &#40; Transact-SQL &#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  
+ [Написание инструкций Transact-SQL, адаптированных к международному использованию](../../relational-databases/collations/write-international-transact-sql-statements.md)
   

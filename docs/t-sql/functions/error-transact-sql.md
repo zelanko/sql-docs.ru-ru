@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5481957e399f072e400a042825c2966f06d2e782
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 9ce2b79b12af1ae4894cd33867bccc27b2354185
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="x40x40error-transact-sql"></a>&#x40;&#x40; Ошибка (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="return-types"></a>Типы возвращаемых значений  
  integer  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возвращает 0, если в предыдущей инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] не возникло ошибок.  
   
  Возвращает номер ошибки, если в предыдущей инструкции возникла ошибка. Если ошибка была одной из ошибок, в представлении каталога sys.messages, в затем@ERROR содержит значение из столбца sys.messages.message_id для этой ошибки. Можно просмотреть текст, связанный с @@ERROR номер ошибки в представлении каталога sys.messages.  
@@ -73,7 +73,7 @@ GO
 ```  
   
 ### <a name="b-using-error-to-conditionally-exit-a-procedure"></a>Б. С помощью @@ERROR чтобы условно выхода из процедуры  
- В следующем примере используется `IF...ELSE` инструкции для проверки `@@ERROR` после `INSERT` инструкции в хранимой процедуре. Значение переменной `@@ERROR` определяет код возврата, который отправляется вызывающей программе и указывает на успешное или неуспешное выполнение процедуры.  
+ В следующем примере используется `IF...ELSE` инструкции для проверки `@@ERROR` после `DELETE` инструкции в хранимой процедуре. Значение переменной `@@ERROR` определяет код возврата, который отправляется вызывающей программе и указывает на успешное или неуспешное выполнение процедуры.  
   
 ```  
 USE AdventureWorks2012;  
@@ -170,7 +170,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [TRY...CATCH (Transact-SQL)](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   
  [ERROR_MESSAGE (Transact-SQL)](../../t-sql/functions/error-message-transact-sql.md)   

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - hints [SQL Server], locking
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
-ms.openlocfilehash: 7f13bd2886aaf2363cde83461f246bf034c89de5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 220cbbb856bc96aa4e44ea5a3d665fc9ce09da77
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transaction-isolation-levels"></a>Уровни изоляции транзакций
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  Внутри системы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использует для доступа к метаданным только уровень изоляции READ COMMITTED. Если у трансляции есть уровень изоляции, например SERIALIZABLE, а внутри транзакции делается попытка осуществления доступа к метаданным при помощи представления каталога или встроенных функций, создающих метаданные, то эти запросы будут выполняться до завершения выполнения как READ COMMITTED. Однако в изоляции моментальных снимков доступ к метаданным будет запрещен из-за одновременных операций DDL. Это происходит из-за несоответствия версий метаданных. Таким образом, доступ в изоляции моментальных снимков может быть запрещен из-за:  
   
--   Представления каталога  
+-   представлений каталога;  
   
 -   представлений совместимости;  
   
@@ -54,10 +54,10 @@ ms.lasthandoff: 11/17/2017
   
 |Уровень изоляции|Поддерживается|Соблюдается|  
 |---------------------|---------------|-------------|  
-|READ UNCOMMITTED|Нет|Не гарантируется|  
+|READ UNCOMMITTED|нет|Не гарантируется|  
 |READ COMMITTED|Да|Да|  
-|REPEATABLE READ|Нет|Нет|  
-|SNAPSHOT ISOLATION|Нет|Нет|  
-|SERIALIZABLE|Нет|Нет|  
+|REPEATABLE READ|нет|нет|  
+|SNAPSHOT ISOLATION|нет|нет|  
+|SERIALIZABLE|нет|нет|  
   
   

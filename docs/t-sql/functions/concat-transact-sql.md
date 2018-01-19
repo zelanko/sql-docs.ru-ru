@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a924bb7f9eb521e3c9637e69aeb5055c69bfeb11
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 1f3a1ef2b55b2f67b6b2e01ceb1965a5076e8476
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="concat-transact-sql"></a>CONCAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -48,7 +48,7 @@ CONCAT ( string_value1, string_value2 [, string_valueN ] )
 ## <a name="return-types"></a>Возвращаемые типы
 Строка, длина и тип которой зависят от входных данных.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 **CONCAT** принимает переменное количество строковых аргументов и объединяет их в одну строку. Для этого требуется не менее двух входных значений. В противном случае возникает ошибка. Все аргументы неявно преобразуются в строковые типы и затем объединяются. Значения NULL неявно преобразуются в пустую строку. Если все аргументы имеют значение null, возвращается пустая строка типа **varchar**(1) возвращается. Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразованиях типов данных см. в разделе [CAST и CONVERT &#40; Transact-SQL &#41; ](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 Тип возвращаемого значения зависит от типа аргументов. Описанные выше основные понятия проиллюстрированы в следующей таблице.
@@ -108,8 +108,16 @@ NameLastname
 ```  
   
 ## <a name="see-also"></a>См. также:
-[Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-[CONCAT_WS (Transact-SQL)](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)   
+ [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [ПРЕОБРАЗОВАТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
 
 

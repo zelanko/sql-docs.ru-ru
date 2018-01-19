@@ -24,11 +24,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 48af63d80b801b677d9f0f6225f84ba63c09f344
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5e0cd35b044d4a5016442ddae4384aea094cc655
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ ms.lasthandoff: 01/02/2018
 |reads|**bigint**|Количество операций чтения, выполненных запросами данного сеанса. Не допускает значение NULL.|  
 |writes|**bigint**|Количество операций записи, выполненных запросами данного сеанса. Не допускает значение NULL.|  
 |logical_reads|**bigint**|Количество логических операций чтения, выполненных в данном сеансе. Не допускает значение NULL.|  
-|is_user_process|**bit**|0, если сеанс является системным. В противном случае значение равно 1. Не допускает значение NULL.|  
+|is_user_process|**бит**|0, если сеанс является системным. В противном случае значение равно 1. Не допускает значение NULL.|  
 |text_size|**int**|Значение параметра TEXTSIZE для данного сеанса. Не допускает значение NULL.|  
 |language|**nvarchar(128)**|Значение параметра LANGUAGE для данного сеанса. Допускает значение NULL.|  
 |date_format|**nvarchar(3)**|Значение параметра DATEFORMAT для данного сеанса. Допускает значение NULL.|  
 |date_first|**smallint**|Значение параметра DATEFIRST для данного сеанса. Не допускает значение NULL.|  
-|quoted_identifier|**bit**|Значение параметра QUOTED_IDENTIFIER для данного сеанса. Не допускает значение NULL.|  
-|arithabort|**bit**|Значение параметра ARITHABORT для данного сеанса. Не допускает значение NULL.|  
-|ansi_null_dflt_on|**bit**|Значение параметра ANSI_NULL_DFLT_ON для данного сеанса. Не допускает значение NULL.|  
-|ansi_defaults|**bit**|Значение параметра ANSI_DEFAULTS для данного сеанса. Не допускает значение NULL.|  
-|ansi_warnings|**bit**|Значение параметра ANSI_WARNINGS для данного сеанса. Не допускает значение NULL.|  
-|ansi_padding|**bit**|Значение параметра ANSI_PADDING для данного сеанса. Не допускает значение NULL.|  
-|ansi_nulls|**bit**|Значение параметра ANSI_NULLS для данного сеанса. Не допускает значение NULL.|  
-|concat_null_yields_null|**bit**|Значение параметра CONCAT_NULL_YIELDS_NULL для данного сеанса. Не допускает значение NULL.|  
+|quoted_identifier|**бит**|Значение параметра QUOTED_IDENTIFIER для данного сеанса. Не допускает значение NULL.|  
+|arithabort|**бит**|Значение параметра ARITHABORT для данного сеанса. Не допускает значение NULL.|  
+|ansi_null_dflt_on|**бит**|Значение параметра ANSI_NULL_DFLT_ON для данного сеанса. Не допускает значение NULL.|  
+|ansi_defaults|**бит**|Значение параметра ANSI_DEFAULTS для данного сеанса. Не допускает значение NULL.|  
+|ansi_warnings|**бит**|Значение параметра ANSI_WARNINGS для данного сеанса. Не допускает значение NULL.|  
+|ansi_padding|**бит**|Значение параметра ANSI_PADDING для данного сеанса. Не допускает значение NULL.|  
+|ansi_nulls|**бит**|Значение параметра ANSI_NULLS для данного сеанса. Не допускает значение NULL.|  
+|concat_null_yields_null|**бит**|Значение параметра CONCAT_NULL_YIELDS_NULL для данного сеанса. Не допускает значение NULL.|  
 |transaction_isolation_level|**smallint**|Уровень изоляции транзакции данного сеанса:<br /><br /> 0 = не указан;<br /><br /> 1 = читать незафиксированные;<br /><br /> 2 = читать зафиксированные;<br /><br /> 3 = повторяемые результаты;<br /><br /> 4 = сериализуемые;<br /><br /> 5 = моментальный снимок.<br /><br /> Не допускает значение NULL.|  
 |lock_timeout|**int**|Значение параметра LOCK_TIMEOUT для данного сеанса. Значение указывается в миллисекундах. Не допускает значение NULL.|  
 |deadlock_priority|**int**|Значение параметра DEADLOCK_PRIORITY для данного сеанса. Не допускает значение NULL.|  
@@ -109,6 +109,10 @@ ms.lasthandoff: 01/02/2018
 -   unsuccessful_logons  
   
  Если этот параметр не включен, то данные столбцы будут возвращать значения NULL. Дополнительные сведения о настройке этого параметра конфигурации сервера см. в разделе [соответствие стандарту common criteria включенный параметр конфигурации сервера](../../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md).  
+ 
+ 
+ Соединения администратора в базе данных SQL Azure будет отображаться одну строку для авторизованного сеанса подключения без прав администратора будет видеть только сведения, относящиеся к их сеансов пользователей базы данных. 
+ 
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
   
@@ -181,7 +185,7 @@ JOIN sys.dm_exec_sessions AS s
 WHERE c.session_id = @@SPID;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   

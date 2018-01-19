@@ -1,7 +1,7 @@
 ---
 title: "sys.column_store_segments (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 12/30/2016
+ms.date: 01/15/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
@@ -24,29 +24,29 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 322cd5a22f3d23db02984e13f87989c0585db13e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: f73379d3ae23570f95209631444d1335279a5ef5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
 Возвращает по одной строке для каждого сегмента столбца в индексе columnstore. Имеется один сегмент столбца для каждого столбца группы строк. Например таблица с 10 групп строк и столбцов 34 возвращает 340 строки. 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|Указывает идентификатор секции. Уникален в базе данных.|  
 |**hobt_id**|**bigint**|Идентификатор кучи или индекс сбалансированного дерева (hobt) для таблицы, в которой содержится индекс columnstore.|  
-|**Идентификатор column_id**|**int**|Идентификатор столбца columnstore.|  
+|**column_id**|**int**|Идентификатор столбца columnstore.|  
 |**segment_id**|**int**|Идентификатор группы строк. Для обеспечения обратной совместимости имя столбца по-прежнему вызываться segment_id, несмотря на то, что это идентификатор группы строк Можно однозначно определить сегмент с помощью \<hobt_id partition_id, column_id >, < segment_id >.|  
 |**version**|**int**|Версия формата сегмента столбца.|  
 |**encoding_type**|**int**|Тип кодировки, используемой для этого сегмента:<br /><br /> 1 = VALUE_BASED - строка/недвоичные с словарь (очень похоже на 4 с некоторые варианты внутренний)<br /><br /> 2 = VALUE_HASH_BASED - не строки или двоичного столбца с общими значениями в словаре<br /><br /> 3 = STRING_HASH_BASED - строка и двоичный столбец с общими значениями в словаре<br /><br /> 4 = STORE_BY_VALUE_BASED - строка/недвоичные с словарь<br /><br /> 5 = STRING_STORE_BY_VALUE_BASED - строка и двоичный файл с словарь<br /><br /> Все кодировки воспользоваться бит упаковки и длин кодирования, когда это возможно.|  
 |**row_count**|**int**|Число строк в группе строк.|  
 |**has_nulls**|**int**|Значение 1, если сегмент столбца содержит значения NULL.|  
-|**base_id**|**bigint**|Идентификатор базового значения, если используется тип кодирования 1.  Если тип кодирования 1 не используется, значение base_id устанавливается значение 1.|  
-|**Величина**|**float**|Значение величины, если используется тип кодирования 1.  Если тип кодирования 1 не используется, то величина равен 1.|  
+|**base_id**|**bigint**|Идентификатор базового значения, если используется тип кодирования 1.  Если тип кодирования 1 не используется, значение base_id устанавливается равным -1.|  
+|**Величина**|**float**|Значение величины, если используется тип кодирования 1.  Если тип кодирования 1 не используется, величина имеет значение -1.|  
 |**primary_dictionary_id**|**int**|Значение 0 представляет словарь глобального. Значение-1 соответствует без глобального словарь, созданный для этого столбца.|  
 |**secondary_dictionary_id**|**int**|Ненулевое значение указывает на локальный словарь для данного столбца в текущем сегменте (т. е. группу строк). Значение -1 указывает, что отсутствует локальный словарь для этого сегмента.|  
 |**min_data_id**|**bigint**|Минимальный идентификатор данных в сегменте столбца.|  
@@ -75,13 +75,13 @@ GO
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога объектов &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Запросив системный каталог SQL Server часто задаваемые вопросы](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
  [sys.all_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [sys.computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [Руководство по индексам columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md)    
  [sys.column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-dictionaries-transact-sql.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: "Разрешение ALTER SCHEMA (Transact-SQL) | Документы Microsoft"
 ms.custom: 
-ms.date: 05/01/2017
+ms.date: 01/09/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.service: 
@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bcbc6cf4ed18bef5d4736375dd7eddaaa1167a33
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 30ef553ccfba1f30be9b75f8d0290115be395925
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="alter-schema-transact-sql"></a>ALTER SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,13 +67,13 @@ ALTER SCHEMA schema_name
  *schema_name*  
  Имя схемы в текущей базе данных, в которую будет перемещена защищаемая сущность. Не может иметь значение SYS или INFORMATION_SCHEMA.  
   
- \<entity_type >  
+ \<entity_type>  
  Класс сущности, для которой изменяется владелец. По умолчанию это объект.  
   
  *securable_name*  
- Одно- или двухкомпонентное имя содержащейся в схеме защищаемой сущности, которая должна быть перемещена в другую схему.  
+ Одно- или двухкомпонентное имя схемы является защищаемой сущности, перемещена в другую схему.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Пользователи и схемы полностью разделены.  
   
  Инструкция ALTER SCHEMA применяется только для перемещения защищаемых объектов между схемами в пределах одной базы данных. Для изменения или удаления защищаемой сущности в схеме используйте инструкцию ALTER или DROP, специфичную для этой сущности.  
@@ -82,15 +82,19 @@ ALTER SCHEMA schema_name
   
  Все разрешения, связанные с защищаемой сущностью, при перемещении в другую схему будут удалены. Если владелец защищаемой сущности был явно указан, он не изменится. Если для владельца защищаемой схемы было установлено значение SCHEMA OWNER, то владельцем останется SCHEMA OWNER. Однако после перемещения SCHEMA OWNER будет относиться к владельцу новой схемы. Значение principal_id нового владельца будет равно NULL.  
   
- Чтобы изменить схему таблицы или представления с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], в обозревателе объектов щелкните правой кнопкой мыши таблицу или представление и нажмите кнопку **конструктора**. Нажмите клавишу **F4** для открытия окна «Свойства». В **схемы** выберите новую схему.  
+ Перемещение хранимой процедуры, функции, представления или триггера не изменит имя схемы, если присутствует соответствующего объекта в определении столбца [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) представления каталога или получить с помощью [ OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) встроенной функции. Таким образом рекомендуется не использовать ALTER SCHEMA для перемещения объектов этих типов. Вместо этого удалите и повторно создать объект в его новой схемы.  
+  
+ Перемещение объекта, например таблицы или синоним не будут автоматически обновляться ссылки на этот объект. Необходимо изменить все объекты, которые ссылаются на переносятся объект вручную. Например если переместить таблицу и эту таблицу имеется ссылка в триггере, необходимо изменить триггер, указав новое имя схемы. Используйте [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) Чтобы составить список зависимостей для объекта перед его перемещением.  
+
+ Чтобы изменить схему таблицы с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], в обозревателе объектов щелкните правой кнопкой мыши в таблице и нажмите кнопку **конструктора**. Нажмите клавишу **F4** для открытия окна «Свойства». В **схемы** выберите новую схему.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для передачи защищаемой сущности из другой схемы текущий пользователь должен иметь разрешения CONTROL на эту сущность (а не на схему) и разрешения ALTER на целевую схему.  
   
- Если защищаемая сущность имеет спецификацию EXECUTE AS OWNER, а ее владельцем является SCHEMA OWNER, у пользователя также должно быть разрешение IMPERSONATION на владельца целевой схемы.  
+ Если Защищаемая сущность имеет спецификацию EXECUTE AS OWNER на нем и владельца, установлено значение SCHEMA OWNER, пользователь должен также иметь разрешение IMPERSONATE для владельца целевой схемы.  
   
  Все разрешения, связанные с перемещаемой защищаемой сущностью, при перемещении удаляются.  
   
@@ -154,7 +158,7 @@ ALTER SCHEMA Sales TRANSFER OBJECT::dbo.Region;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание СХЕМЫ &#40; Transact-SQL &#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [Удаление СХЕМЫ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  

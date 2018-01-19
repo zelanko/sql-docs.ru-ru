@@ -1,7 +1,7 @@
 # [Начальная страница документации](sql-server-technical-documentation.md)
 
 # Обзор
-## [Что нового в SQL Server 2016](what-s-new-in-sql-server-2016.md)
+## [Что нового в SQL Server 2016](what-s-new-in-sql-server-2016.md)
 ## [Новые возможности в SQL Server 2017](what-s-new-in-sql-server-2017.md)
 ## [Выпуски и поддерживаемых функций SQL Server 2016](editions-and-components-of-sql-server-2016.md)
 ## [Выпуски и поддерживаемых функций SQL Server 2017](editions-and-components-of-sql-server-2017.md)
@@ -49,9 +49,9 @@
 ### [Безопасность SQL Server](https://blogs.msdn.microsoft.com/sqlsecurity/)
 
 ## Справка и обратная связь
+### [Рекомендации по SQL Server](https://feedback.azure.com/forums/908035-sql-server)
 ### [Stack Exchange DBA](https://dba.stackexchange.com/questions/tagged/sql-server)
 ### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ### [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
 ### [Reddit](https://www.reddit.com/r/SQLServer)
 ## [Отображение локального содержимого в окне справки](sql-server-help-installation.md)

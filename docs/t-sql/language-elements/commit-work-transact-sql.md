@@ -24,15 +24,15 @@ helpviewer_keywords:
 - COMMIT WORK statement
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2301ba70dbe7ee92a8eb7eac2c3aefed0471e909
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e3dc8d465e48b4d0113175347c4158370dbcfa6e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="commit-work-transact-sql"></a>COMMIT WORK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,10 +49,10 @@ COMMIT [ WORK ]
 [ ; ]  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта инструкция действует идентично инструкции COMMIT TRANSACTION, но в отличие от COMMIT TRANSACTION не принимает пользовательское имя транзакции. С указанием или без указания дополнительного ключевого слова WORK этот синтаксис COMMIT совместим с SQL-92.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

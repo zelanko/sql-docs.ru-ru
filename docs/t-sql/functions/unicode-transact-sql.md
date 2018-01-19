@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 345fa8bd8abe4f26b2c3def6c48e1dc49fa37a7c
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: ce87bcab037ff99b7eaa03a443727db17db19b74
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="unicode-transact-sql"></a>UNICODE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,13 +45,13 @@ UNICODE ( 'ncharacter_expression' )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *ncharacter_expression* **"**  
+ **'** *ncharacter_expression* **'**  
  — **Nchar** или **nvarchar** выражение.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
  **int**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], более ранних, чем [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], и в [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] функция Юникода возвращала кодовую точку UCS-2 в диапазоне от 0 до 0xFFFF. В [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и более поздних версиях при использовании параметров сортировки SC функция UNICODE возвращает кодовую точку UCS-16 в диапазоне от 0 до 0x10FFFF.  
   
 ## <a name="examples"></a>Примеры  
@@ -143,7 +143,9 @@ Character # Unicode Character UNICODE Value
 12          4                 52  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
+ [ASCII &#40; Transact-SQL &#41;](../../t-sql/functions/ascii-transact-sql.md)  
+ [ДИА &#40; Transact-SQL &#41;](../../t-sql/functions/char-transact-sql.md)  
  [NCHAR &#40; Transact-SQL &#41;](../../t-sql/functions/nchar-transact-sql.md)   
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
  [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md)  

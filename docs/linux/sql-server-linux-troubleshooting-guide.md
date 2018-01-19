@@ -3,8 +3,8 @@ title: "Устранение неполадок SQL Server для Linux | Док
 description: "Содержит советы по устранению неполадок для использования 2017 г. SQL Server в Linux."
 author: annashres
 ms.author: anshrest
-manager: jhubbard
-ms.date: 05/08/2017
+manager: craigg
+ms.date: 01/18/2018
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.workload: On Demand
-ms.openlocfilehash: a65ee3607cb2bbe2a1a30135950e611e4456f8ba
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: da16bc7126d39bcdf86152b3ae8b21d7b58805eb
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Устранение неполадок SQL Server в Linux
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/01/2017
 
 - Убедитесь, что имя пользователя и пароль не должен содержать опечаток, лишних пробелов и неправильный регистр символов.
 
-- Попробуйте явно задать номер порта и протокола с указанием имени сервера следующим образом: **tcp:servername 1433**.
+- Попробуйте явно задать протокол и номер порта на имя сервера имеет следующий вид: **tcp:servername 1433**.
 
 - Также могут вызвать проблемы с сетевым соединением, значения времени ожидания и ошибок подключения. После проверки того, сведения о соединении и подключение к сети, повторите попытку подключения.
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="manage-the-mssql-server-service-in-red-hat-enterprise-linux-rhel-and-ubuntu"></a>Управление службой mssql server в Red Hat Enterprise Linux (RHEL) и Ubuntu 
 
-Проверьте состояние состояние службы SQL Server, с помощью этой команды.
+Проверьте состояние службы SQL Server, с помощью этой команды.
 
    ```bash
    sudo systemctl status mssql-server
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/01/2017
 
 ### <a name="manage-the-execution-of-the-mssql-docker-container"></a>Управление выполнение в контейнер Docker mssql
 
-Состояние и контейнер идентификатор последней созданной контейнера SQL Server Docker можно получить, выполнив следующую команду (идентификатор будет в столбце «Идентификатор КОНТЕЙНЕРА»):
+Состояние и контейнер идентификатор последней созданной контейнера SQL Server Docker можно получить, выполнив следующую команду (идентификатор находится в **идентификатор КОНТЕЙНЕРА** столбца):
 
    ```bash
    sudo docker ps -l
@@ -151,7 +151,7 @@ ms.lasthandoff: 12/01/2017
 > [!WARNING]  
 >  Чтобы избежать проблем с запуском в дальнейшем, SQL Server в Linux следует запускать с указанием пользователя "mssql". Пример: "sudo -u mssql /opt/mssql/bin/sqlservr [параметры запуска]" 
 
-Если вы случайно начали SQL Server с другим пользователем, необходимо будет изменить владельца файлов базы данных SQL Server для пользователя «mssql» перед запуском SQL Server с systemd. Например для изменения владельца всех файлов базы данных в группе /var/opt/mssql для пользователя «mssql», выполните следующую команду
+Случайно с другим пользователем после запуска SQL Server, необходимо изменить владельца файлов базы данных SQL Server для пользователя «mssql» перед запуском SQL Server с systemd. Например для изменения владельца всех файлов базы данных в группе /var/opt/mssql для пользователя «mssql», выполните следующую команду
 
    ```bash
    chown -R mssql:mssql /var/opt/mssql/
@@ -161,7 +161,7 @@ ms.lasthandoff: 12/01/2017
 
 1. Не удается подключиться к удаленному экземпляру SQL Server.
 
-   В разделе об устранении неполадок см. в разделе [подключение к SQL Server в Linux](#connection).
+   В разделе об устранении неполадок статьи, [подключение к SQL Server в Linux](#connection).
 
 2. Ошибка: Имя узла должно быть 15 символов или меньше.
 
@@ -172,7 +172,7 @@ ms.lasthandoff: 12/01/2017
    Если вы забыли пароль системного администратора (SA) или его потребуется сбросить по другой причине, выполните следующие действия.
 
    > [!NOTE]
-   > После выполнения этих действий останавливает службу SQL Server в временно.
+   > Следующие шаги временно остановите службу SQL Server.
 
    Войдите на узел терминалов, выполните следующие команды и следуйте инструкциям на экране, чтобы сбросить пароль учетной записи SA:
 
@@ -183,7 +183,7 @@ ms.lasthandoff: 12/01/2017
 
 4. Использование специальных символов в пароле.
 
-   При использовании некоторых символов в пароле имя входа SQL Server может потребоваться экранировать их при их использовании в терминале Linux. Необходимо экранировать $ в любое время с помощью обратной косой черты используется в терминалов команда или сценарий:
+   При использовании некоторых символов в пароле имя входа SQL Server может потребоваться экранировать их при их использовании в терминале Linux. $ Необходимо экранировать в любое время с помощью обратной косой черты используется в терминалов команда или сценарий:
 
    Не работает:
 
@@ -207,5 +207,5 @@ ms.lasthandoff: 12/01/2017
 - [Администратор базы данных Exchange стека](https://dba.stackexchange.com/questions/tagged/sql-server): задать вопросы администрирования базы данных
 - [Переполнение стека](http://stackoverflow.com/questions/tagged/sql-server): вопросы разработки
 - [Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver): задавайте технические вопросы
-- [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback): ошибки и запрос функции отчетов
+- [Отправить отзыв о](https://feedback.azure.com/forums/908035-sql-server): ошибки и запрос функции отчетов
 - [Reddit](https://www.reddit.com/r/SQLServer/): обсудить SQL Server

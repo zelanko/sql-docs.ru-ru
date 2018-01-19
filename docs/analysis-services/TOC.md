@@ -19,7 +19,7 @@
 ## [Примеры Analysis Services](analysis-services-samples.md)
 
 # Учебники
-## [Табличное моделирование (учебное руководство по Adventure Works)](tabular-modeling-adventure-works-tutorial.md)  
+## [Табличное моделирование (с уровнем совместимости 1200)](tabular-modeling-adventure-works-tutorial.md)  
 ### [Урок 1. Создание проекта табличной модели](lesson-1-create-a-new-tabular-model-project.md)  
 ### [Урок 2. Добавление данных](lesson-2-add-data.md)  
 ### [Урок 3. Отметка в качестве таблицы дат](lesson-3-mark-as-date-table.md)  
@@ -36,7 +36,7 @@
 ### [Дополнительный урок. Реализация динамической безопасности с помощью строковых фильтров](supplemental-lesson-implement-dynamic-security-by-using-row-filters.md)  
 ### [Дополнительный урок. Настройка свойств отчетов Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)  
 
-## [Многомерное моделирование (учебное руководство по Adventure Works)](multidimensional-modeling-adventure-works-tutorial.md)  
+## [Многомерное моделирование](multidimensional-modeling-adventure-works-tutorial.md)  
 ### [Учебный сценарий](analysis-services-tutorial-scenario.md)  
 ### [Установка образцов проектов и данных для учебника по многомерному моделированию Analysis Services](install-sample-data-and-projects.md)  
 ### [Урок 1. Определение представления источников данных в проекте Analysis Services](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)  

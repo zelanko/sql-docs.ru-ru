@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 43d702accc0611030c1c7ad0eda74d456711b694
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46c7becb151b1942b411aefe337717172f207bb9
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="format-transact-sql"></a>FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ FORMAT ( value, format [, culture ] )
  *value*  
  Выражение поддерживаемого типа данных для форматирования. Список допустимых типов см. в таблице в последующем разделе «Примечания».  
   
- *Формат*  
+ *format*  
  **nvarchar** шаблон формата.  
   
  *Формат* аргумент должен содержать допустимую строку форматирования .NET Framework, как строка стандартного формата (например, «C» или «D») или в виде шаблона пользовательских символов для дат и числовые значения (например, «мммм дд, гггг (дддд)») . Составное форматирование не поддерживается. Полное описание этих шаблонах форматирования см. в документации .NET Framework по форматированию строк в целом, настраиваемые дата и форматы времени и пользовательские числовые форматы. Хорошей отправной точкой является раздел «[типы форматирования](http://go.microsoft.com/fwlink/?LinkId=211776).»  
@@ -60,7 +60,7 @@ FORMAT ( value, format [, culture ] )
   
  Длина возвращаемого значения определяется *формат*.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  ФОРМАТ возвращает значение NULL для ошибки, отличный от *языка и региональных параметров* , не *допустимый*. Например, возвращается значение NULL, если значение, указанное в *формат* является недопустимым.  
  
  Функция FORMAT не детерминирована.   
@@ -210,7 +210,9 @@ SELECT FORMAT(cast('07:35' as time), N'hh\.mm');  --> returns 07.35
 SELECT FORMAT(cast('07:35' as time), N'hh\:mm');  --> returns 07:35  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции CAST и CONVERT (Transact-SQL)](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+ [СТРУ &#40; Transact-SQL &#41;](../../t-sql/functions/str-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

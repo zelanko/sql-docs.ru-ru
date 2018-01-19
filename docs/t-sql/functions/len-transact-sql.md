@@ -25,11 +25,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3c04897ed4143db632f2e96401caa02ecabe2f6b
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 4f81bca5986279d53ea1fce44c50ab400ad03d50
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="len-transact-sql"></a>LEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ LEN ( string_expression )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *String_Expression*  
+ *string_expression*  
  Строка, [выражение](../../t-sql/language-elements/expressions-transact-sql.md) для оценки. *String_Expression* может быть константой, переменной или столбцом символьных или двоичных данных.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -56,7 +56,7 @@ LEN ( string_expression )
   
  Если используются параметры сортировки SC, то возвращаемое целое значение рассматривает суррогатные пары Юникода UTF-16 как один символ. Дополнительные сведения см. в статье [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция LEN исключает конечные пробелы. Если это проблемы, рассмотрите возможность использования [DATALENGTH &#40; Transact-SQL &#41; ](../../t-sql/functions/datalength-transact-sql.md) функцию, в которой не усекал строку. При обработке строки в Юникоде, DATALENGTH возвращает вдвое превышает число символов. В следующем примере показано LEN и DATALENGTH с пробелом.  
   
 ```  
@@ -101,12 +101,14 @@ FNameLength  FirstName  LastName
 4            Lynn       Tsoflias
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>См. также  
  [DATALENGTH &#40; Transact-SQL &#41;](../../t-sql/functions/datalength-transact-sql.md)   
+ [Функция CHARINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/charindex-transact-sql.md)  
+ [Функция PATINDEX &#40; Transact-SQL &#41;](../../t-sql/functions/patindex-transact-sql.md)  
  [Левый &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)   
  [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   
 

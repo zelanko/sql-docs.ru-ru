@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: b73433578de0f3f0f0311778e10569a26b84ce0a
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 7d7932c1887c82b2a10702f9054706e4cf9bce71
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="concatws-transact-sql"></a>CONCAT_WS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ CONCAT_WS ( separator, argument1, argument1 [, argumentN]… )
 ## <a name="return-types"></a>Возвращаемые типы
 Строка. Длина и тип зависят от входных данных.
 
-## <a name="remarks"></a>Замечания   
+## <a name="remarks"></a>Remarks   
 `CONCAT_WS`принимает переменное число аргументов и объединяет их в одну строку, используя первый аргумент в качестве разделителя. Требуется разделитель, а также как минимум из двух аргументов; в противном случае возникает ошибка. Все аргументы неявно преобразуются в строковые типы, а затем объединяются. 
 
 Неявное преобразование в строки выполняется по существующим правилам преобразования типов данных. Дополнительные сведения о преобразованиях типов данных см. в разделе [CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md).
@@ -127,6 +127,14 @@ FROM sys.databases;
 ```
 
 ## <a name="see-also"></a>См. также:
-[Строковые функции (Transact-SQL)](../../t-sql/functions/string-functions-transact-sql.md)  
-[CONCAT (Transact-SQL)](../../t-sql/functions/concat-transact-sql.md)      
+ [CONCAT &#40; Transact-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [QUOTENAME &#40; Transact-SQL &#41;](../../t-sql/functions/quotename-transact-sql.md)  
+ [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [ПРЕОБРАЗОВАТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
 

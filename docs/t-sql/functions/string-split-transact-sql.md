@@ -22,11 +22,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: bfcb6ae66bc431304e70e2db52801c9788f5f92d
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 00debf90f1b79a0e38cb883f31479ae5731f40d3
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="stringsplit-transact-sql"></a>STRING_SPLIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ STRING_SPLIT ( string , separator )
 ## <a name="return-types"></a>Типы возвращаемых значений  
  Возвращает один столбец таблицы с помощью фрагментов. Имя столбца — **значение**. Возвращает **nvarchar** Если какой-либо из входных аргументов **nvarchar** или **nchar**. В противном случае возвращает **varchar**. Длина возвращаемого типа является таким же, как длина строковый аргумент.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **STRING_SPLIT** принимает строку, которая должна быть разделена и разделитель, который будет использоваться для разделения строки. Он возвращает один столбец таблицы с подстроками. Например, следующая инструкция `SELECT value FROM STRING_SPLIT('Lorem ipsum dolor sit amet.', ' ');` с помощью символа пробела в качестве разделителя, возвращаются следующие таблицы результатов:  
   
 |value|  
@@ -92,7 +92,7 @@ WHERE RTRIM(value) <> '';
 ### <a name="b-split-comma-separated-value-string-in-a-column"></a>Б. Разделить запятыми строковое значение в столбце  
  Таблица Product содержит столбец с разделителями отдельные список тегов, показано в следующем примере:  
   
-|productId|Имя|Теги|  
+|productId|Название|Теги|  
 |---------------|----------|----------|  
 |1|Full пальцем перчатки|одежда, дорожный, туристического велосипеда|  
 |2|Головные LL|велосипеда|  
@@ -108,7 +108,7 @@ FROM Product
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|productId|Имя|value|  
+|productId|Название|value|  
 |---------------|----------|-----------|  
 |1|Full пальцем перчатки|одежда|  
 |1|Full пальцем перчатки|дорога|  
@@ -170,8 +170,13 @@ FROM Product
 WHERE ',1,2,3,' LIKE '%,' + CAST(ProductId AS VARCHAR(20)) + ',%';  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [Левый &#40; Transact-SQL &#41;](../../t-sql/functions/left-transact-sql.md)  
+ [Функция LTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/ltrim-transact-sql.md)  
+ [ПРАВО &#40; Transact-SQL &#41;](../../t-sql/functions/right-transact-sql.md)  
+ [RTRIM &#40; Transact-SQL &#41;](../../t-sql/functions/rtrim-transact-sql.md)  
  [ПОДСТРОКА &#40; Transact-SQL &#41;](../../t-sql/functions/substring-transact-sql.md)  
+ [Функция TRIM &#40; Transact-SQL &#41;](../../t-sql/functions/trim-transact-sql.md)  
+ [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)   
   
   

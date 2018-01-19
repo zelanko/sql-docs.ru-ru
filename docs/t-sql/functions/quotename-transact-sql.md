@@ -27,11 +27,11 @@ author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 650892048daea0a86dc357ebbe2dd08b7eea5184
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 701d229ae745cee4a237f35b69cd00e899d5c6a5
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="quotename-transact-sql"></a>QUOTENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,14 +47,14 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- "*character_string*"  
+ '*character_string*'  
  Строка символьных данных в Юникоде. *character_string* — **sysname** и не должна превышать 128 символов. Если ввести более 128 символов, будет возвращено значение NULL.  
   
  "*значение аргумента quote_character*"  
  Односимвольная строка, используемая в качестве разделителя. Может быть одинарной кавычки ( **"** ), левую или правую скобку ( **[]** ), или двойной кавычкой ( **»** ). Если *значение аргумента quote_character* не указан, используются скобки.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
- **тип nvarchar(258)**  
+ **nvarchar(258)**  
   
 ## <a name="examples"></a>Примеры  
  В следующем примере из строки `abc[]def` и символов `[` и `]` создается правильный идентификатор с разделителем [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -88,7 +88,17 @@ SELECT QUOTENAME('abc def');
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
+ [PARSENAME &#40; Transact-SQL &#41;](../../t-sql/functions/parsename-transact-sql.md)  
+ [CONCAT &#40; Transact-SQL &#41;](../../t-sql/functions/concat-transact-sql.md)  
+ [CONCAT_WS &#40;Transact-SQL&#41;](../../t-sql/functions/concat-ws-transact-sql.md)  
+ [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)  
+ [Заменить &#40; Transact-SQL &#41;](../../t-sql/functions/replace-transact-sql.md)  
+ [ОБРАТИТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/reverse-transact-sql.md)  
+ [STRING_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/string-agg-transact-sql.md)  
+ [STRING_ESCAPE &#40; Transact-SQL &#41;](../../t-sql/functions/string-escape-transact-sql.md)  
+ [STUFF &#40; Transact-SQL &#41;](../../t-sql/functions/stuff-transact-sql.md)  
+ [ПРЕОБРАЗОВАТЬ &#40; Transact-SQL &#41;](../../t-sql/functions/translate-transact-sql.md)  
  [Строковые функции &#40; Transact-SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
   
   
