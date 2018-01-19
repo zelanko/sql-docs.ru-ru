@@ -75,7 +75,7 @@
 
 # [Каталог и сервер](catalog/integration-services-ssis-server-and-catalog.md)
 # [Обслуживание (для прежних версий)](../integration-services/service/integration-services-service-ssis-service.md)
-# [Безопасность](../integration-services/security/security-overview-integration-services.md)
+# [безопасность](../integration-services/security/security-overview-integration-services.md)
 # [Производительность](../integration-services/performance/monitor-running-packages-and-other-operations.md)
 # [Устранение неполадок](../integration-services/troubleshooting/troubleshoot-integration-services-ssis-packages.md)
 # [Системные представления](../integration-services/system-views/views-integration-services-catalog.md)
@@ -181,5 +181,5 @@
 ### [Форум о службах SSIS на сайте MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
 ### [Тег служб SSIS на сайте Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
 ## Оставить отзыв
-### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+### [SQL Server Форум отзывов](https://feedback.azure.com/forums/908035-sql-server)  
 ## [Получить документы на ПК](../sql-server/sql-server-help-installation.md)

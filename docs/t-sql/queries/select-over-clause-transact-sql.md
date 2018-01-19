@@ -26,15 +26,15 @@ helpviewer_keywords:
 - OVER clause
 ms.assetid: ddcef3a6-0341-43e0-ae73-630484b7b398
 caps.latest.revision: "75"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3bb439adf4e60fec1eeda76d2fefce440b9d8700
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: d70183e7c52c4fb9eabed51a8df5acc68625397d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select---over-clause-transact-sql"></a>ВЫБЕРИТЕ - OVER, предложение (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +121,7 @@ OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )
  \<Предложение ORDER BY >  
  Определяет логический порядок строк в каждой секции результирующего набора. То есть он указывает логический порядок, в котором выполняется вычисление оконной функции.  
   
- *выражении order_by_expression*  
+ *order_by_expression*  
  Указывает столбец или выражение, по которому производится сортировка. *выражении order_by_expression* может ссылаться только на столбцы, которые становятся доступными с помощью предложения FROM. Нельзя указывать целое число для обозначения имени или псевдонима столбца.  
   
  COLLATE *collation_name*  
@@ -547,7 +547,7 @@ ORDER BY SalesOrderNumber,ProductKey;
  SO43659      229      2    16     18.75  
  ```
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агрегатные функции &#40; Transact-SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [Аналитические функции &#40; Transact-SQL &#41;](../../t-sql/functions/analytic-functions-transact-sql.md)   
  [Лучший в блоге о Оконные функции и при СБОЕ на sqlmag.com Ицик Бен-Gan](http://sqlmag.com/sql-server-2012/how-use-microsoft-sql-server-2012s-window-functions-part-1)  
