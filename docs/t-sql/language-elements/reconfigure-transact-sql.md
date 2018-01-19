@@ -24,15 +24,15 @@ helpviewer_keywords:
 - RECONFIGURE, WITH OVERRIDE statement
 ms.assetid: 2e6e4eeb-b70b-4f45-a253-28ac4e595d75
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 363a7f12b0be75dd73a2a72402c82be4ba403ed6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80e8f951e053441b15716c8fc1f8c79abbe026b9
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reconfigure-transact-sql"></a>RECONFIGURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +57,14 @@ RECONFIGURE [ WITH OVERRIDE ]
     
  Практически с любого параметра конфигурации можно перенастроить с помощью параметра WITH OVERRIDE, однако некоторые неустранимые ошибки по-прежнему не могут. Например **параметре min server memory** параметр конфигурации не может быть настроен значение больше значения, указанного в **Макс. памяти сервера** параметра конфигурации.
       
-## <a name="remarks"></a>Замечания    
+## <a name="remarks"></a>Remarks    
  **sp_configure** не принимает новые значения параметров конфигурации вне документированные допустимых диапазонов для каждого параметра конфигурации.    
     
  Недопустимо использование RECONFIGURE в явной или неявной транзакции. При одновременной перенастройке нескольких параметров в случае сбоя какой-либо из операций перенастройки ни одна из этих операций не вступит в силу.    
     
  При перенастройке регулятора ресурсов, в описании RECONFIGURE параметра [ALTER RESOURCE GOVERNOR &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-resource-governor-transact-sql.md).    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Разрешения    
  Разрешения для RECONFIGURE по умолчанию предоставляются участникам, которым предоставлено разрешение ALTER SETTINGS. **Sysadmin** и **serveradmin** этим разрешением неявно обладают предопределенных ролей сервера.    
     
 ## <a name="examples"></a>Примеры    
@@ -76,7 +76,7 @@ RECONFIGURE WITH OVERRIDE;
 GO    
 ```    
     
-## <a name="see-also"></a>См. также:    
+## <a name="see-also"></a>См. также    
  [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md)     
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)    
     

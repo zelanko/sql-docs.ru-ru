@@ -32,15 +32,15 @@ helpviewer_keywords:
 - NOT LIKE keyword
 ms.assetid: 581fb289-29f9-412b-869c-18d33a9e93d5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: d8883f7a71a72a005323458bc96ca1d795d86513
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 993ba7467ada3a69fed043e2d6322efa7538b190
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,10 +67,10 @@ match_expression [ NOT ] LIKE pattern
  *match_expression*  
  Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md) символьного типа данных.  
   
- *шаблон*  
+ *pattern*  
  Конкретная строка символов для поиска в *match_expression*и могут включать следующие допустимые символы-шаблоны. *шаблон* не может превышать 8 000 байт.  
   
-|Символ-шаблон|Description|Пример|  
+|Символ-шаблон|Описание|Пример|  
 |------------------------|-----------------|-------------|  
 |%|Любая строка, содержащая ноль или более символов.|Инструкция WHERE Название LIKE '%компьютер%' выполняет поиск и выдает все названия книг, содержащие слово «компьютер».|  
 |_ (подчеркивание)|Любой одиночный символ.|Инструкция WHERE фамилия_автора LIKE '_етров' выполняет поиск и выдает все имена, состоящие из шести букв и заканчивающиеся сочетанием «етров» (Петров, Ветров и т.п.).|  
@@ -333,7 +333,7 @@ ORDER by LastName;
 ```  
   
 ### <a name="f-using-not-like-with-the--wildcard-character"></a>Е. Применение оператора NOT LIKE с символом-шаблоном %  
- Следующий пример выполняется поиск всех телефонных номеров в `DimEmployee` таблицу, не ставьте `612`.  , и делает это по-другому.  
+ Следующий пример выполняется поиск всех телефонных номеров в `DimEmployee` таблицу, не ставьте `612`.  .  
   
 ```sql  
 -- Uses AdventureWorks  
@@ -356,7 +356,7 @@ WHERE phone LIKE '6_2%'
 ORDER by LastName;   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   

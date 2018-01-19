@@ -30,15 +30,15 @@ helpviewer_keywords:
 - messages [SQL Server], RAISERROR statement
 ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: eaebe21d731916e0ed6906e7d916df4c8cac2d90
-ms.sourcegitcommit: 2713f8e7b504101f9298a0706bacd84bf2eaa174
+ms.openlocfilehash: de9b90e46c344c4d287d677c9aa17e5d635aca6d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -82,11 +82,11 @@ RAISERROR ( { msg_str | @local_variable }
   
  Параметры, которые могут использоваться в *msg_str* являются:  
   
- *флаг*  
+ *flag*  
   
  Код, определяющий промежутки и выравнивание подставляемого значения.  
   
-|код|Префикс или выравнивание|Description|  
+|код|Префикс или выравнивание|Описание|  
 |----------|-----------------------------|-----------------|  
 |- (знак «минус»)|Выравнивать слева|Выравнивает значение аргумента по левой границе поля заданной ширины.|  
 |+ (знак «плюс»)|Префикс знака|Добавляет перед значением аргумента знак «плюс» (+) или «минус» (-), если значение принадлежит к типу со знаком.|  
@@ -127,9 +127,9 @@ RAISERROR ( { msg_str | @local_variable }
 >  Чтобы преобразовать значение в [!INCLUDE[tsql](../../includes/tsql-md.md)] **bigint** тип данных, укажите **% I64d**.  
   
  **@***local_variable*  
- Переменная любого допустимого символьного типа данных, содержащий строку, форматированную в так же, как *msg_str*. **@***local_variable* должно быть **char** или **varchar**, или может быть неявно преобразован в этих типов данных.  
+ Переменная любого допустимого символьного типа данных, содержащий строку, форматированную в так же, как *msg_str*. **@*** local_variable* должно быть **char** или **varchar**, или может быть неявно преобразован в этих типов данных.  
   
- *Серьезность*  
+ *severity*  
  Определенная пользователем степень серьезности, связанный с этим сообщением. При использовании *msg_id* для вызова пользовательского сообщения, созданные с помощью процедуры sp_addmessage, уровень серьезности, указанный в инструкции RAISERROR, переопределяет уровень серьезности, указанный в sp_addmessage.  
   
  Степень серьезности от 0 до 18 может указать любой пользователь. Уровни серьезности от 19 до 25 указываются только членами предопределенной роли сервера или пользователи с разрешениями ALTER TRACE sysadmin. Для степеней серьезности от 19 до 25 требуется параметр WITH LOG. Степени серьезности меньше 0 интерпретируются как 0. Степени серьезности больше 25 интерпретируются как 25.  
@@ -150,7 +150,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  An invalid parameter or option was specified for procedure 'mysp_CreateCustomer'.
  ```  
   
- *состояние*  
+ *state*  
  Целое число от 0 до 255. Отрицательные значения по умолчанию 1. Не следует использовать значения больше 255. 
   
  Если одна и та же пользовательская ошибка возникает в нескольких местах, то при помощи уникального номера состояния для каждого местоположения можно определить, в каком месте кода появилась ошибка.  
@@ -161,13 +161,13 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *Параметр*  
  Настраиваемый параметр для ошибки может принимать одно из значений, находящихся в следующей таблице.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |LOG|Ошибка регистрируется в журнале ошибок и журнал приложений для экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Сообщения об ошибках в журнале ошибок ограничены размером в 440 байт. Только члены фиксированной серверной роли sysadmin или пользователь с разрешениями ALTER TRACE можно указать ключевое слово WITH LOG.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Немедленно посылает сообщения клиенту.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Задает @@ERROR и значения ERROR_NUMBER *msg_id* или 50 000, независимо от уровня серьезности.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Ошибки, созданные инструкцией RAISERROR, аналогичны ошибкам, созданным кодом компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Значения, указанные в инструкции RAISERROR, выводятся ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE и @@ERROR системные функции. Если инструкция RAISERROR с уровнем серьезности 11 или выше выполняется в блоке TRY, управление передается соответствующему блоку CATCH. Ошибка возвращается вызывающему объекту, если инструкция RAISERROR вызывается:  
   
 -   за пределами области любого блока TRY;  
@@ -285,7 +285,7 @@ RAISERROR (@StringVariable, -- Message text.
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [PRINT (Transact-SQL)](../../t-sql/language-elements/print-transact-sql.md)   

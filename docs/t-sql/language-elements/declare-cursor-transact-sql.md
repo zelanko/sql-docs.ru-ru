@@ -26,15 +26,15 @@ helpviewer_keywords:
 - global cursors [SQL Server]
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 0641f87c36d3dbed886dc7bb81aa1f179148a8cd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1f09a8eb025af56d5edee0a3a4d0861b7edb515f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  ДЛЯ обновления [OF *column_name* [**,**... *n*]]  
  Определяет обновляемые столбцы в курсоре. Если OF *column_name* [**,**...  *n* ] определено, только перечисленные столбцы позволяют вносить изменения. Если инструкция UPDATE используется без списка столбцов, то обновление возможно для всех столбцов, за исключением случая, когда был указан параметр параллелизма READ_ONLY.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция DECLARE CURSOR определяет такие атрибуты серверного курсора языка [!INCLUDE[tsql](../../includes/tsql-md.md)], как свойства просмотра и запрос, используемый для построения результирующего набора, на котором работает курсор. Инструкция OPEN заполняет результирующий набор, а оператор FETCH возвращает из него строку. Инструкция CLOSE очищает текущий результирующий набор, связанный с курсором. Инструкция DEALLOCATE освобождает ресурсы, используемые курсором.  
   
  Первая форма инструкции DECLARE CURSOR использует синтаксис ISO для задания параметров работы курсора. Вторая форма инструкции DECLARE CURSOR использует расширения языка [!INCLUDE[tsql](../../includes/tsql-md.md)], позволяющие определять курсоры с помощью таких же типов, как типы, используемые в курсорных функциях API баз данных, таких как ODBC и ADO.  
@@ -161,7 +161,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
  Приведенные ниже хранимые процедуры могут быть использованы для определения свойств курсора после его объявления.  
   
-|Системные хранимые процедуры.|Description|  
+|Системные хранимые процедуры.|Описание|  
 |------------------------------|-----------------|  
 |**sp_cursor_list**|Возвращает список курсоров, доступных для соединения в настоящий момент времени, а также их атрибуты.|  
 |**sp_describe_cursor**|Описывает атрибуты курсора, например имеет ли он тип «forward-only» или «scrolling».|  
@@ -170,7 +170,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
   
  Переменные могут использоваться как часть *select_statement* , в котором объявлен курсор. Значения переменных курсора после его объявления не изменяются.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию разрешения DECLARE CURSOR предоставляются всем пользователям, имеющим разрешение SELECT для используемых курсором представлений, таблиц и столбцов.
  
 ## <a name="limitations-and-restrictions"></a>Ограничения
@@ -254,7 +254,7 @@ CLOSE vendor_cursor;
 DEALLOCATE vendor_cursor;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)   
  [ЗАКРЫТЬ &#40; Transact-SQL &#41;](../../t-sql/language-elements/close-transact-sql.md)   
  [Курсоры (Transact-SQL)](../../t-sql/language-elements/cursors-transact-sql.md)   

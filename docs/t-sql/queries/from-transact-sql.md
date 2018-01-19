@@ -35,15 +35,15 @@ helpviewer_keywords:
 - derived tables
 ms.assetid: 36b19e68-94f6-4539-aeb1-79f5312e4263
 caps.latest.revision: "97"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: cafa4381c52b3b884883f61e6e5f232ac894ee8a
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 9ddc3ee291d4e3b498dd6dfd9bbb49ca4299bea6
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="from-transact-sql"></a>Предложение FROM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -161,7 +161,7 @@ FROM { <table_source> [ ,...n ] }
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-\<table_source >  
+\<table_source>  
  Указывает таблицу, представление, табличную переменную или источник производной таблицы с указанием или без указания псевдонима для использования в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)]. В инструкции можно использовать до 256 источников таблиц, хотя предел изменяется в зависимости от доступной памяти и сложности других выражений в запросе. Отдельные запросы могут не поддерживать 256 источников таблиц.  
   
 > [!NOTE]  
@@ -169,14 +169,14 @@ FROM { <table_source> [ ,...n ] }
   
  Порядок источников таблицы после ключевого слова FROM не влияет на возвращаемый результирующий набор. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибки, если в предложении FROM появляются повторяющиеся имена.  
   
- *представления table_or_view_name*  
+ *table_or_view_name*  
  Имя таблицы или представления.  
   
  Если таблица или представление существует в другой базе данных на том же экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте полное доменное имя в форме *базы данных*. *схемы*. *object_name*.  
   
  Если таблица или представление существует вне экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]l, используйте четырехчастное имя в форме *связанный_сервер*. *каталог*. *схемы*. *Объект*. Дополнительные сведения см. в статье [sp_addlinkedserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). Четырехсоставного имени, которое создается с использованием [OPENDATASOURCE](../../t-sql/functions/opendatasource-transact-sql.md) работать так, как серверная часть имени может также использоваться для указания удаленного источника таблицы. Если указана функция OPENDATASOURCE, *имя_базы_данных* и *schema_name* могут применяться не ко всем источникам данных, зависит от возможностей поставщика OLE DB, который обращается к удаленному объекту.  
   
- [КАК] *table_alias*  
+ [AS] *table_alias*  
  Является псевдонимом для *table_source* , можно использовать либо для удобства и для различения таблицы или представления в самосоединении или во вложенном запросе. Псевдоним часто является сокращенным именем таблицы, использующимся для соотнесения с определенными столбцами таблиц в соединении. Если имя столбца существует более чем в одной таблице соединения, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] потребует, чтобы имя столбца было уточнено именем таблицы, представления или псевдонима. Если определен псевдоним, нельзя использовать имя таблицы.  
   
  При использовании производной таблицы, набора строк или табличной функции либо предложения оператора (как PIVOT или UNPIVOT), необходимая *table_alias* в конце предложения является соответствующим именем таблицы для всех столбцов, включая группирующие столбцы возвращается.  
@@ -218,7 +218,7 @@ FROM { <table_source> [ ,...n ] }
   
  *Производный* *_table* можно использовать [!INCLUDE[tsql](../../includes/tsql-md.md)] конструктором табличных значений для указания нескольких строк. Например, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. Дополнительные сведения см. в разделе [конструктор табличных значений &#40; Transact-SQL &#41; ](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
- *псевдоним_столбца*  
+ *column_alias*  
  Дополнительный псевдоним для замены имени столбца в результирующем наборе производной таблицы. Для каждого столбца в списке выбора следует включить по одному псевдониму столбца и заключить весь список псевдонимов столбцов в скобки.  
   
  *представления table_or_view_name* FOR SYSTEM_TIME \<system_time >  
@@ -228,7 +228,7 @@ FROM { <table_source> [ ,...n ] }
   
  Указывает, что возвращаются конкретной версии данных из указанного темпоральной таблицей и соответствующей таблицей журнала связанных с системным управлением версиями  
   
-\<tablesample_clause >  
+\<tablesample_clause>  
  Указывает, что из таблицы возвращается выборка данных. Выборка может быть приблизительной. Это предложение может быть использовано в инструкциях SELECT, UPDATE или DELETE в отношении любой первичной или соединяемой таблицы. TABLESAMPLE не может быть указано для представлений.  
   
 > [!NOTE]  
@@ -252,10 +252,10 @@ FROM { <table_source> [ ,...n ] }
  *repeat_seed*  
  Константное целочисленное выражение, используемое [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для формирования случайного числа. *repeat_seed* — **bigint**. Если *repeat_seed* не указан, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присваивает значение случайным образом. Для конкретной *repeat_seed* значение, результат выборки всегда равно Если изменения не были применены к таблице. *Repeat_seed* выражение должно иметь целое число больше нуля.  
   
- \<joined_table >  
+ \<joined_table>  
  Результирующий набор, полученный из двух или более таблиц. Для нескольких соединений следует использовать скобки, чтобы изменить естественный порядок соединений.  
   
-\<join_type >  
+\<join_type>  
  Указание типа операции соединения.  
   
  **ВНУТРЕННЕЕ**  
@@ -270,7 +270,7 @@ FROM { <table_source> [ ,...n ] }
  RIGHT [ OUTER ]  
  Указывает, что все строки из правой таблицы, не соответствующие условиям соединения, включаются в результирующий набор, а выходные столбцы, соответствующие оставшейся таблице, устанавливаются в значение NULL в дополнение ко всем строкам, возвращаемым внутренним соединением.  
   
-\<join_hint >  
+\<join_hint>  
  Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], указывает, что [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] запроса, оптимизатор использовать Указание одного соединения, или алгоритм выполнения каждого соединения, указанного в предложении FROM запроса. Дополнительные сведения см. в разделе [указания соединения &#40; Transact-SQL &#41; ](../../t-sql/queries/hints-transact-sql-join.md).  
   
  Для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], эти указания соединения применяются для внутренних соединений по двум столбцам несовместимые распространения. Они могут повысить производительность запросов, ограничивая объем перемещения данных, которая происходит во время обработки запросов. Указания допустимого соединения для [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] , как показано ниже:  
@@ -853,7 +853,7 @@ INNER REDISTRIBUTE JOIN FactInternetSales AS fis
     ON dp.ProductKey = fis.ProductKey;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CONTAINSTABLE (Transact-SQL)](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE (Transact-SQL)](../../relational-databases/system-functions/freetexttable-transact-sql.md)   

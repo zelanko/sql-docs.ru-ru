@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 12b9abd82133c7f2c42f43dd436e223b1b0173f1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 777f5d7a412cccc8b5757b2bf4f22404d12a9a77
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *расстояние*  
+ *distance*  
  — **Float** указывает максимальное расстояние, на котором точки, составляющие буфер, могут находиться от экземпляра географического объекта.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 -   **Значение NULL** передается методу, например`@g.BufferWithCurves(NULL)`  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице показаны результаты, возвращенные для разных значений расстояния.  
   
 |Значение расстояния|Измерения типа|Возвращенный пространственный тип|  
@@ -143,7 +143,7 @@ ms.lasthandoff: 11/17/2017
   
  Обратите внимание на то, что в предыдущих двух примерах передавался строковый литерал методу `BufferWithCurves()`. Первый пример будет работать, поскольку строковый литерал может быть преобразован в числовое значение. Но во втором примере возникнет исключение `ArgumentException`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы в экземплярах географических объектов](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   

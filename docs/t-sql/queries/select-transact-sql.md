@@ -26,15 +26,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 caps.latest.revision: "51"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 012853c97e01250bf5aee62d95ae7971549f5094
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6dba1b14498cef9e06d9bde5741cb9e37cd31633
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  [Из *table_source* ] [ГДЕ *search_condition* ]  
   
- [GROUP BY *group_by_expression* ]  
+ [ GROUP BY *group_by_expression* ]  
   
  [НАЛИЧИЕ *search_condition* ]  
   
@@ -104,13 +104,13 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Учитывая сложность инструкции SELECT, элементы ее синтаксиса и аргументы подробно представлены в предложении:  
   
 |||  
 |-|-|  
 |[WITH XMLNAMESPACES](../../t-sql/xml/with-xmlnamespaces.md)<br /><br /> [WITH <обобщенное_табличное_выражение>](../../t-sql/queries/with-common-table-expression-transact-sql.md)|[НАЛИЧИЕ](../../t-sql/queries/select-having-transact-sql.md)|  
-|[Предложение SELECT](../../t-sql/queries/select-clause-transact-sql.md)|[ОБЪЕДИНЕНИЕ](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
+|[Предложение SELECT](../../t-sql/queries/select-clause-transact-sql.md)|[UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md)|  
 |[Предложение INTO](../../t-sql/queries/select-into-clause-transact-sql.md)|[EXCEPT и INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md)|  
 |[FROM](../../t-sql/queries/from-transact-sql.md)|[ORDER BY](../../t-sql/queries/select-order-by-clause-transact-sql.md)|  
 |[WHERE](../../t-sql/queries/where-transact-sql.md)|[Предложение FOR](../../t-sql/queries/select-for-clause-transact-sql.md)|  
@@ -144,7 +144,7 @@ SELECT <select_criteria>
 >
 > Предположим, у вас есть кластеризованный индекс в представлении и представлении исключает некоторые строки таблицы и список ВЫБИРАЕМЫХ столбцов в представлении использует ПРЕОБРАЗОВАНИЯ, который изменяет тип данных из *varchar* для *целое*. В этом случае ПРЕОБРАЗОВАНИЯ, может выполняться перед выполняет предложение WHERE. Нередко на самом деле. Часто имеется возможность изменить представление во избежание различные последовательности, если он имеет значение в случае. 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выборки данных требуется разрешение **SELECT** на таблицу или представление, которое может быть унаследовано из области более высокого уровня, например разрешение **SELECT** на схему или разрешение **CONTROL** на таблицу. Или членство в **db_datareader** или **db_owner** предопределенных ролей базы данных или **sysadmin** предопределенной роли сервера. Создание новой таблицы с помощью **SELECTINTO** также необходимы **CREATETABLE** разрешение и **ALTERSCHEMA** на схему, которой принадлежит новая таблица.  
   
 ## <a name="examples"></a>Примеры:   
@@ -267,7 +267,7 @@ HAVING OrderDateKey > 20010000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ВЫБЕРИТЕ примеры &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [Указания &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)
   

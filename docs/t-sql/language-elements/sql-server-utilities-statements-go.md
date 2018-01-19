@@ -22,15 +22,15 @@ helpviewer_keywords:
 - GO command
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 60c121767ffbf4e4ab222968eb27e4e170fa7fdd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c6c23d90905f0250da74037fcf64082dd87360f7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-utilities-statements---go"></a>Инструкции служебных программ SQL Server - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ GO [count]
  *count*  
  Целое положительное число. Пакет, предшествующий команде GO, будет выполняться заданное количество раз.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Ключевое слово GO является не [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции; оно команду распознается **sqlcmd** и **osql** служебные программы и [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] редактор кода.  
   
  Программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] интерпретируют команду GO как сигнал о том, что им следует отправить текущий пакет инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Текущий пакет инструкций состоит из всех инструкций, введенных за время, прошедшее с момента обработки последней команды GO, или, если данная команда GO является первой, с момента начала нерегламентированного сеанса или скрипта.  
@@ -85,7 +85,7 @@ GO
   
  Не используйте точку с запятой в качестве признака конца инструкции после команды GO.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения команды GO не требуются какие-либо разрешения. Она может быть выполнена любым пользователем.  
   
 ```  

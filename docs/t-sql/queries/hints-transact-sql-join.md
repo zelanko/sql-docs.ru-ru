@@ -24,15 +24,15 @@ helpviewer_keywords:
 - hints [SQL Server], join
 ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 44b5dde989c0c40c2afc9202921d5a80c33fdc99
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84f00c9acef803cd84be1c2be2fadf417d3b9bff
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---join"></a>Указания (Transact-SQL) - соединения
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
  Аргумент REMOTE может быть использован только при операциях INNER JOIN.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Указания по соединению задаются в запросе в предложении FROM. Указания по соединению принудительно активируют стратегию соединения между двумя таблицами. При задании указаний соединений для любых двух таблиц оптимизатор запросов принудительно автоматически активирует порядок соединения для всех соединенных таблиц в запросе, основанном на положении ключевого слова ON. При использовании CROSS JOIN без предложения ON для определения порядка соединения могут использоваться скобки.  
   
 ## <a name="examples"></a>Примеры  
@@ -112,7 +112,7 @@ INNER MERGE JOIN Purchasing.PurchaseOrderDetail AS pod
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Указания &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)  
   
   

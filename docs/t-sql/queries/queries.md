@@ -14,22 +14,22 @@ ms.topic: language-reference
 dev_langs: TSQL
 ms.assetid: 5ff02a32-e8d3-479c-ae8b-07581e41f5f8
 caps.latest.revision: "8"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 8d7e4bf6357fe56f3c9b6a1e67e9e6aeb3675930
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 52d44604fc6e67ecc95d4f81ceabadb16fbbda19
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="queries"></a>Запросы
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Язык обработки данных (DML) — это словарь, используемый для получения и работы с данными в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и базы данных SQL. Наиболее работают также в хранилище данных SQL и PDW (просмотрите каждая отдельная инструкция подробные сведения). Эти инструкции предназначены для добавления данных, изменения данных, запроса данных и удаления данных из базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
  В следующей таблице перечислены инструкции DML, используемые [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |||  

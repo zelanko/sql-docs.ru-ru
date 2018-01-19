@@ -38,15 +38,15 @@ helpviewer_keywords:
 - PAGLOCK table hint
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 caps.latest.revision: "174"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 92740f196f2bd0c79a84eb43826f764e93930e67
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 2ca76e248bc8f3fe0c3b0edff73254e05a6f4f26
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hints-transact-sql---table"></a>Указания (Transact-SQL) - таблица
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 > [!IMPORTANT]  
 >  Пропуск ключевого слова WITH является устаревшей возможностью: [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Следующие табличные подсказки разрешены с и без ключевого слова WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, моментальных СНИМКОВ и NOEXPAND. Если такие табличные указания указываются без ключевого слова WITH, подсказки следует задавать отдельно. Пример:  
+ Следующие табличные подсказки разрешены с и без ключевого слова WITH: NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, моментальных СНИМКОВ и NOEXPAND. Если такие табличные указания указываются без ключевого слова WITH, подсказки следует задавать отдельно. Например:  
   
 ```  
 FROM t (TABLOCK)  
@@ -153,7 +153,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
  NOEXPAND  
  Указывает, что при обработке запроса оптимизатором запросов никакие индексированные представления не расширяются для доступа к базовым таблицам. Оптимизатор запросов обрабатывает представление так же, как и таблицу с кластеризованным индексом. Аргумент NOEXPAND применяется только для индексированных представлений. Дополнительные сведения см. в подразделе «Примечания».  
   
- Индекс **(***index_value* [**,**... *n* ] ) | Индекс = ( *index_value***)**  
+ INDEX  **(***index_value* [**,**... *n* ] ) | INDEX =  ( *index_value***)**  
  Синтаксис INDEX() указывает имя или идентификатор одного или более индексов, используемых при обработке инструкции оптимизатором запросов. Альтернативный синтаксис «INDEX =» позволяет задать отдельное значение индекса. Для каждой таблицы можно задать только одно указание индекса.  
   
  Если имеется кластеризованный индекс, аргумент INDEX(0) приводит к просмотру кластеризованного индекса, а INDEX(1) — к просмотру или поиску по кластеризованному индексу. Если кластеризованного индекса нет, аргумент INDEX(0) приводит к просмотру таблицы, а INDEX(1) интерпретируется как ошибка.  
@@ -184,7 +184,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Пример использования данного указания в инструкции INSERT… ВЫБЕРИТЕ * из инструкции OPENROWSET(BULK...), в разделе [сохранение значений NULL или использование по умолчанию значения во время массового импорта &#40; SQL Server &#41; ](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
- FORCESEEK [ **(***index_value***(***index_column_name* [ **,**... *n* ] **))** ]  
+ FORCESEEK [**(***index_value***(*** index_column_name* [ **,**... *n* ] **))** ]  
  Указывает, что в качестве пути доступа к данным таблиц или представлений оптимизатор запросов использует только операцию поиска в индексе. Начиная с SQL Server 2008 R2 с пакетом обновления 1 (SP1) также могут указываться параметры индекса. В таком случае оптимизатор запросов будет использовать при выполнении операций поиска в индексе по указанному индексу как минимум все указанные столбцы индекса.  
   
  *index_value*  
@@ -195,7 +195,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
   
  Подсказка FORCESEEK может быть указана следующим образом.  
   
-|Синтаксис|Пример|Description|  
+|Синтаксис|Пример|Описание|  
 |------------|-------------|-----------------|  
 |Без указания INDEX или индекса|`FROM dbo.MyTable WITH (FORCESEEK)`|Оптимизатор запросов использует только операции поиска в индексе для доступа к таблицам или представлениям через любой подходящий индекс.|  
 |В сочетании с подсказкой INDEX|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|Оптимизатор запросов будет использовать при доступе к таблице или представлению через указанный индекс только операции поиска по индексу.|  
@@ -499,7 +499,7 @@ WHERE h.TotalDue > 100
 AND (d.OrderQty > 5 OR d.LineTotal < 1000.00);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md)   
  [Указания &#40; Transact-SQL &#41;](../../t-sql/queries/hints-transact-sql.md)   
  [Указания запросов (Transact-SQL)](../../t-sql/queries/hints-transact-sql-query.md)  

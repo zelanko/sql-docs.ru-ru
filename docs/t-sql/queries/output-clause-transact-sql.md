@@ -32,15 +32,15 @@ helpviewer_keywords:
 - UPDATE statement [SQL Server], OUTPUT clause
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 caps.latest.revision: "94"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 1c56150f81604473f87ae9c220ac916be30ce3c8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a709097e12b435cbf32f88e13c067135aa3e77ad
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="output-clause-transact-sql"></a>Предложение OUTPUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -138,13 +138,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- Явное указание столбца. Все ссылки в изменяемой таблице должно быть правильно дополнено INSERTED или DELETED соответствующим префиксом, например: INSERTED**.** *column_name*.  
+ Явное указание столбца. Все ссылки в изменяемой таблице должно быть правильно дополнено INSERTED или DELETED соответствующим префиксом, например: INSERTED **. *** column_name*.  
   
  $action  
  Доступен только для инструкции MERGE. Указывает столбец типа **nvarchar(10)** в предложении OUTPUT инструкции MERGE, которая возвращает одно из трех значений для каждой строки: «INSERT», «UPDATE» или «DELETE», согласно действию, которое было выполнено в этой строке.  
   
-## <a name="remarks"></a>Замечания  
- Выходные данные \<dml_select_list > предложения и выходные данные \<dml_select_list > INTO {  **@**  *table_variable*  |   *output_table* } предложения, которые могут быть определены в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
+## <a name="remarks"></a>Remarks  
+ Выходные данные \<dml_select_list > предложения и выходные данные \<dml_select_list > INTO {**@*** table_variable* | *output_table* } предложение может быть определено в одной инструкции INSERT, UPDATE, DELETE или MERGE.  
   
 > [!NOTE]  
 >  Если не указано иное, ссылки на предложение OUTPUT относятся как к предложению OUTPUT, так и к предложению OUTPUT INTO.  
@@ -311,7 +311,7 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  Если сценарий позволяет нескольким приложениям производить разрушающее чтение из одной таблицы, в инструкциях UPDATE и DELETE следует указывать табличную подсказку READPAST. Это предотвратит блокировку, которая может возникнуть, если другое приложение уже считывает из таблицы первую подходящую запись.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимы разрешения SELECT на все столбцы, извлекаемые с помощью \<dml_select_list >, либо использоваться в \<scalar_expression >.  
   
  Разрешения INSERT необходимы на все таблицы, указанные в \<output_table >.  
@@ -668,7 +668,7 @@ SELECT DeletedProductID, RemovedOnDate FROM Production.ZeroInventory;
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE (Transact-SQL)](../../t-sql/queries/update-transact-sql.md)   

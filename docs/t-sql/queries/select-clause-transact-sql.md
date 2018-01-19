@@ -28,15 +28,15 @@ helpviewer_keywords:
 - queries [SQL Server], results
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 caps.latest.revision: "54"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: acc0566abe5865284a39680136f0535e8b801d90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8aa26314b450d859760f69b61887827b73b456fc
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="select-clause-transact-sql"></a>Выражение SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ SELECT [ ALL | DISTINCT ]
  \*  
  Указывает на то, что все столбцы из всех таблиц и представлений в предложении FROM должны быть возвращены. Столбцы возвращаются таблицей или представлением, как указано в предложении FROM, и в порядке, в котором они находятся в таблице или представлении.  
   
- *имя_таблицы* | *view_name* | *таблицы*_*псевдоним*. *  
+ *table_name* | *view_name* | *table*_*alias*.*  
  Ограничивает область \* для указанной таблицы или представления.  
   
  *column_name*  
@@ -116,10 +116,10 @@ SELECT [ ALL | DISTINCT ]
  *property_name*  
  Представляет открытое свойство *udt_column_name*.  
   
- *имя_поля*  
+ *field_name*  
  Является членом открытых данных *udt_column_name*.  
   
- *имя_метода*  
+ *method_name*  
  — Это открытый метод *udt_column_name* , принимающий один или несколько аргументов. *имя_метода* не может быть методом мутатора.  
   
  В следующем примере выбираются значения столбца `Location`, определенного типом `point`, из таблицы `Cities` путем обращения к методу типа, названного `Distance`:  
@@ -150,7 +150,7 @@ FROM Cities;
   
  *column_alias* может использоваться в предложении ORDER BY. Однако он не может быть использован в предложениях WHERE, GROUP BY или HAVING. Если выражение запроса является частью инструкции DECLARE CURSOR, *псевдоним_столбца* не может использоваться в предложении FOR UPDATE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Длина возвращаемых данных для **текст** или **ntext** столбцов, включенных в список выбора устанавливается в минимальное значение из следующих: фактический размер **текста** столбец, TEXTSIZE сеанса по умолчанию или жестко запрограммированное ограничение. Чтобы изменить длину возвращаемого текста для сеанса, используйте инструкцию SET. По умолчанию ограничение на длину возвращаемых при помощи инструкции SELECT текстовых данных равно 4 000 байт.  
   
  Компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] вызывает исключение номер 511 и осуществляет откат транзакции до момента выполнения текущей инструкции, если наблюдается одно из следующих явлений.  
@@ -161,7 +161,7 @@ FROM Cities;
   
  Ошибка возникает в случае, если не указано имя столбца, созданного при помощи инструкции SELECT INTO или CREATE VIEW.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ВЫБЕРИТЕ примеры &#40; Transact-SQL &#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)  

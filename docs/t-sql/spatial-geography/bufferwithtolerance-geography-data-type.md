@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BefferWithTolerance method
 ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: fea21e57554a1ff68e83ba8cc85ea004d250ca2c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 07c9278bc7c277a0991f0f55cad18f496c514cde
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *расстояние*  
+ *distance*  
  — **Float** выражение, задающее расстояние от **geography** , вокруг которого вычисляется буфер.  
   
  Максимальное расстояние буфера не может превышать 0,999 \* *π* * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 окружности Земли) или полного земного шара.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  Минимальный предел составляет 0,1% от расстояния, и любая меньшая погрешность будет округлена до этого значения.  
   
- *относительный*  
+ *relative*  
  — **Бит** указание ли *отклонения* значение — относительный или абсолютный. Если 'TRUE' "или" 1 ", относительное и рассчитывается как произведение *отклонения* и углового экстента \* экваториальный радиус эллипсоида. Если значение «FALSE», или 0, погрешность является абсолютной и *отклонения* значение — задает максимальное абсолютное отклонение в идеальном буферном расстоянии для возвращенной линейной аппроксимации.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
  Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод вызывает исключение **ArgumentException** Если *расстояние* не является числом (NAN), или если *расстояние* является положительной или отрицательной бесконечности.  Этот метод также вызывает **ArgumentException** Если *отклонения* является ноль (0), не является числом (NaN), отрицательное, или положительная или отрицательная бесконечность.  
   
  `STBuffer()`Возвращает **FullGlobe** экземпляра в определенных случаях; например, `STBuffer()` возвращает **FullGlobe** экземпляра на двух полюсах, когда буферное расстояние больше, чем расстояние от экватора к полюса.  
@@ -87,7 +87,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [STBuffer &#40; тип данных geography &#41;](../../t-sql/spatial-geography/stbuffer-geography-data-type.md)   
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

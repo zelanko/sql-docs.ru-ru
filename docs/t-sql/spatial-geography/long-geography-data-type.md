@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: Long method
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 883ae205fde68963a588765b1617ea98dbf600ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d88f9cdf318296b48a47efdd6b9e9b13c1ac2e43
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="long-geography-data-type"></a>Long (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Тип CLR: **SqlDouble**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В модели OpenGIS долго определен только для **geography** экземпляров состоит из одной точки. Это свойство будет возвращать значение NULL, если **geography** экземпляры содержат более одной точки. Это свойство является точным и доступно только для чтения.  
   
 ## <a name="examples"></a>Примеры  
@@ -57,7 +57,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Long;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

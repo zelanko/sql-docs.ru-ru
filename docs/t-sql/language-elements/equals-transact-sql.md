@@ -22,15 +22,15 @@ helpviewer_keywords:
 - = (equals operator)
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d985df87124a7d682673e92fd92ebf6b54629563
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5a5d95986bdf4000682790113c9558ff5102f2cd
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-equals-transact-sql"></a>= (равно) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,9 +50,9 @@ expression = expression
  Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md). Если выражения не того же типа данных, необходимо неявно преобразовываться в тип данных другого типа данных одного выражения. Преобразование основано на правилах [приоритетов типов данных](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ## <a name="result-types"></a>Типы результата  
- Логическое значение  
+ Boolean  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При сравнении двух выражений со значениями NULL результат зависит от `ANSI_NULLS` параметр:  
   
 -   Если `ANSI_NULLS` имеет значение ON, результатом является значение NULL, в соответствии со стандартом ANSI NULL (или неизвестное) значение не равно другому значению NULL или unknown.  
@@ -224,7 +224,7 @@ NULL
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Операторы &#40; Transact-SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  

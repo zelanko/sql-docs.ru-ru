@@ -24,15 +24,15 @@ helpviewer_keywords:
 - INTERSECT operator
 ms.assetid: b1019300-171a-4a1a-854f-e1e751de3565
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: e3580ace2c5b4295c0fecbfd7239a988137f8949
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 706aeaab949399ab6d235a368fa354c32cc54d98
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="set-operators---except-and-intersect-transact-sql"></a>Задать операторы — и INTERSECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -73,7 +73,7 @@ ms.lasthandoff: 11/17/2017
  INTERSECT  
  Возвращает все различные значения, входящие в результаты выполнения запросов, указанных как слева, так и справа от оператора INTERSECT.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если типы данных сравниваемых столбцов, возвращенных запросами, слева и справа от оператора EXCEPT или INTERSECT операторы являются символьными типами с разными параметрами сортировки, сравнение выполняется в соответствии с правилами [ Очередность параметров сортировки](../../t-sql/statements/collation-precedence-transact-sql.md). Если нужное преобразование выполнить не удается, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] возвращает ошибку.  
   
  Если сравниваются значения столбцов с целью определения различных строк, два значения NULL считаются равными.  

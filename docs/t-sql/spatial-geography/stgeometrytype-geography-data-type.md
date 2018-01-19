@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STGeometryType method
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 814958f4cafd98266529e9ee237aaf3375ea6a4b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7d77afb909987ce56d7922116a954c4f94751bea
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stgeometrytype-geography-data-type"></a>STGeometryType (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Возвращаемый тип CLR: **SqlString**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Имена типов OGC, которые могут быть возвращены `STGeometryType()` , **точки**, **LineString**, **CircularString**, **CompoundCurve**, **Многоугольника**, **CurvePolygon**, **GeometryCollection**, **MultiPoint**, **MultiLineString**, и **MultiPolygon**.  
   
 ## <a name="examples"></a>Примеры  
@@ -57,7 +57,7 @@ SET @g = geometry::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -1
 SELECT @g.STGeometryType();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

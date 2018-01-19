@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: BufferWithTolerance (geometry Data Type)
 ms.assetid: 7049d37a-3e72-4e93-87a1-c96a6f0e2b99
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1a6a932ffe43e978bdc9e06f96cac300d45a035b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d929476cd48275249c5ac78a75ed22d6822fb21a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="bufferwithtolerance-geometry-data-type"></a>BufferWithTolerance (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *расстояние*  
+ *distance*  
  — **Float** выражение, задающее расстояние от **geometry** , вокруг которого вычисляется буфер.  
   
  *отказоустойчивость*  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  Например, идеальной границей буфера для точки является окружность, однако ее необходимо приблизительно изобразить многоугольником. Чем меньше заданная погрешность, тем из большего числа точек должен состоять многоугольник. Это увеличивает сложность результата, но уменьшает его погрешность.  
   
- *относительный*  
+ *relative*  
  — **Бит** указание ли *отклонения* значение — относительный или абсолютный. Если «TRUE» или 1, затем отклонения относительное и рассчитывается как произведение *отклонения* и диаметра ограничивающего прямоугольника экземпляра. Если значение «FALSE», или 0, погрешность является абсолютной и *отклонения* значение — задает максимальное абсолютное отклонение в идеальном буферном расстоянии для возвращенной линейной аппроксимации.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Поскольку *отклонения* — **float** типа, `System.Runtime.InteropServices.COMException` выводится, если значение, заданное в качестве допуска очень мал из-за особенностей округления типов с плавающей запятой.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Когда *расстояние* > 0, то **многоугольника** или **MultiPolygon** возвращается экземпляр.  
   
 > [!NOTE]  
@@ -95,7 +95,7 @@ SET @g = geometry::STGeomFromText('POINT(3 3)', 0);
 SELECT @g.BufferWithTolerance(1, .5, 0).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [STBuffer &#40; тип данных geometry &#41;](../../t-sql/spatial-geometry/stbuffer-geometry-data-type.md)   
  [Расширенные методы экземпляров Geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
   

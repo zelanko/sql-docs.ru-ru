@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: THROW statement
 ms.assetid: 43661b89-8f13-4480-ad53-70306cbb14c5
 caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 67c842da8894bc7fe33be69a35a88949c6e441b7
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: bed4670dc0d683eea4920ddd39aec781177f7cc5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="throw-transact-sql"></a>THROW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -45,7 +45,7 @@ THROW [ { error_number | @local_variable },
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *ERROR_NUMBER*  
+ *error_number*  
  Константа или переменная, представляющая исключение. *ERROR_NUMBER* — **int** и должно быть больше или равен 50 000 и меньше или равно 2147483647.  
   
  *message*  
@@ -144,7 +144,7 @@ THROW 60000, @msg, 1;
  This is a test message with one numeric parameter (500), one string parameter (First string), and another string parameter (second string).
  ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция FORMATMESSAGE &#40; Transact-SQL &#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [Уровни серьезности ошибок ядра базы данных](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE (Transact-SQL)](../../t-sql/functions/error-line-transact-sql.md)   

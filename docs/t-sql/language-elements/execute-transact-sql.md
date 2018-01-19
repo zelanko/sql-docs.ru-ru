@@ -32,15 +32,15 @@ helpviewer_keywords:
 - EXECUTE statement
 ms.assetid: bc806b71-cc55-470a-913e-c5f761d5c4b7
 caps.latest.revision: "104"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 52a896293ad991509884b45979be0129bd56f287
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 5c9081d53346bda14d507688547f37589bd153da
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="execute-transact-sql"></a>EXECUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,7 +206,7 @@ Execute a character string
   
  При вызове скалярной определяемой пользователем функции, @*return_status* переменная может иметь любой скалярный тип данных.  
   
- *имя_модуля*  
+ *module_name*  
  Полное или неполное имя вызываемой хранимой процедуры или скалярной пользовательской функции. Имена модулей должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md). В именах расширенных хранимых процедур учитывается регистр, вне зависимости от параметров сортировки сервера.  
   
  Допускается выполнение модуля, созданного в другой базе данных, если пользователь, выполняющий этот модуль, является его владельцем или имеет соответствующие разрешения на его выполнение в этой базе данных. Модуль может быть выполнен на другом сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], если пользователь, запускающий модуль на выполнение, имеет соответствующие разрешения на этом сервере (удаленный доступ) и на выполнение модуля в этой базе данных. Если указано имя сервера, а имя базы данных не указано, компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ищет модуль в базе данных пользователя по умолчанию.  
@@ -262,7 +262,7 @@ Execute a character string
  @*string_variable*  
  Имя локальной переменной. @*string_variable* может быть любой **char**, **varchar**, **nchar**, или **nvarchar** тип данных. К ним относятся **(max)** типы данных.  
   
- [N] '*tsql_string*"  
+ [N] '*tsql_string*'  
  Строковая константа. *tsql_string* может быть любой **nvarchar** или **varchar** тип данных. Если указано «N», строка интерпретируется как **nvarchar** тип данных.  
   
  AS \<context_specification >  
@@ -286,13 +286,13 @@ Execute a character string
   
  Дополнительные сведения см. в разделе [Указание имени пользователя или имя входа](#_user) далее в этом разделе.  
   
- [N] '*command_string*"  
+ [N] '*command_string*'  
  Строковая константа, содержащая транзитную команду, передаваемую связанному серверу. Если указано «N», строка интерпретируется как **nvarchar** тип данных.  
   
  [?]  
  Указывает параметры, для которых значения передаются в \<список аргументов > транзитных команд, которые используются в EXEC('...', \<arg-list>) на \<linkedsrv > инструкции.  
   
- В *linked_server_name*  
+ AT *linked_server_name*  
 **Применяется к**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] через[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Указывает, что *command_string* выполняется для *имя_связанного_сервера* и результаты, если таковые имеются, возвращаются клиенту. *linked_server_name* должен ссылаться на существующее определение связанного сервера на локальном сервере. Связанные серверы определяются с помощью [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
@@ -305,7 +305,7 @@ Execute a character string
 |RECOMPILE|Инициирует перекомпиляцию нового плана, его использование и удаление после выполнения модуля. Если для модуля имеется существующий план запроса, то он остается в кэше.<br /><br /> Следует указывать этот параметр в тех случаях, когда передаются нетипичные аргументы или если данные существенно изменились. Он не предназначен для расширенных хранимых процедур. Рекомендуется реже пользоваться этим параметром, поскольку он очень ресурсоемок.<br /><br /> **Примечание:** нельзя использовать с параметром WITH RECOMPILE при вызове хранимой процедуры, которая применяется синтаксис OPENDATASOURCE. Параметр WITH RECOMPILE не учитывается при указании четырехкомпонентного имени объекта.<br /><br /> **Примечание:** RECOMPILE не поддерживается со скомпилированными в собственном коде скалярные определяемые пользователем функции. Если потребуется выполнить повторную компиляцию, используйте [sp_recompile &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md).|  
 |**РЕЗУЛЬТИРУЮЩИЕ НАБОРЫ НЕ ОПРЕДЕЛЕНО**|**Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Этот параметр не дает гарантии, какие результаты, если они есть, будут возвращены. Определение также не предоставляется. Инструкция выполняется без ошибок, независимо от того, возвращаются ли какие-либо результаты. RESULT SETS UNDEFINED — действие по умолчанию, если не указан result_sets_option.<br /><br /> Интерпретируемого скалярные определяемые пользователем функции и скомпилированных в собственном коде скалярные определяемые пользователем функции, этот параметр не работает, так как функция никогда не возвращает результирующий набор.|  
 |RESULT SETS NONE|**Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Гарантирует, что выполняемая инструкция не вернет никаких результатов. Если возвращены какие-либо результаты, то пакет отменяется.<br /><br /> Интерпретируемого скалярные определяемые пользователем функции и скомпилированных в собственном коде скалярные определяемые пользователем функции, этот параметр не работает, так как функция никогда не возвращает результирующий набор.|  
-|*\<result_sets_definition >*|**Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Обеспечивает гарантию, что результат будет возвращен в виде, определенном в result_sets_definition. Доя выражений, которые возвращают несколько результирующих наборов, обеспечьте множество *result_sets_definition* разделы. Включите каждое *result_sets_definition* в круглые скобки, разделенные запятыми. Дополнительные сведения см. в разделе \<result_sets_definition > Далее в этом разделе.<br /><br /> Этот параметр всегда приводит к ошибке для скомпилированных в собственном коде скалярные определяемые пользователем функции, потому что функция никогда не возвращает результирующий набор.|
+|*\<result_sets_definition>*|**Применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Обеспечивает гарантию, что результат будет возвращен в виде, определенном в result_sets_definition. Доя выражений, которые возвращают несколько результирующих наборов, обеспечьте множество *result_sets_definition* разделы. Включите каждое *result_sets_definition* в круглые скобки, разделенные запятыми. Дополнительные сведения см. в разделе \<result_sets_definition > Далее в этом разделе.<br /><br /> Этот параметр всегда приводит к ошибке для скомпилированных в собственном коде скалярные определяемые пользователем функции, потому что функция никогда не возвращает результирующий набор.|
   
 \<result_sets_definition > **применяется к**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
@@ -726,7 +726,7 @@ EXEC ProcWithParameters @color = N'Black', @name = N'%arm%';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [Предложение EXECUTE AS (Transact-SQL)](../../t-sql/statements/execute-as-clause-transact-sql.md)   
@@ -739,7 +739,7 @@ GO
  [sys.database_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [sys.server_principals (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [Имя_пользователя &#40; Transact-SQL &#41;](../../t-sql/functions/user-name-transact-sql.md)   
- [OPENDATASOURCE (Transact-SQL)](../../t-sql/functions/opendatasource-transact-sql.md)   
+ [Функция OPENDATASOURCE &#40; Transact-SQL &#41;](../../t-sql/functions/opendatasource-transact-sql.md)   
  [Скалярные пользовательские функции для выполняющейся в памяти OLTP](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)  
   
   

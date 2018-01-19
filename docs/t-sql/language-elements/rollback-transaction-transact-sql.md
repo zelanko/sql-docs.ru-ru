@@ -26,15 +26,15 @@ helpviewer_keywords:
 - savepoints [SQL Server]
 ms.assetid: 6882c5bc-ff74-476a-984b-164aeb036c66
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: be1bbb9e63ccb710b42e007c91c1c588a1e8ae1d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c0480f1c295c45f32f4ca3bdaec761a6bd2fa924
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
@@ -57,13 +57,13 @@ ROLLBACK { TRAN | TRANSACTION }
  *transaction_name*  
  Имя, присвоенное транзакции в BEGIN TRANSACTION. *transaction_name* должны соответствовать правилам для идентификаторов, но используются только первые 32 символа имени транзакции. При вложении транзакций *transaction_name* должно быть имя из внешней инструкции BEGIN TRANSACTION. *transaction_name* всегда учитывается регистр, даже если экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не учитывается регистр знаков.  
   
- **@***tran_name_variable*  
+ **@** *tran_name_variable*  
  Имя определенной пользователем переменной, содержащей допустимое имя транзакции. Переменная должна быть объявлена с **char**, **varchar**, **nchar**, или **nvarchar** тип данных.  
   
  *savepoint_name*  
  — *Savepoint_name* из инструкции SAVE TRANSACTION. *savepoint_name* должны соответствовать правилам для идентификаторов. Используйте *savepoint_name* при откат по условию должен влиять только часть транзакции.  
   
- **@***savepoint_variable*  
+ **@** *savepoint_variable*  
  Имя пользовательской переменной, содержащей допустимое имя точки сохранения. Переменная должна быть объявлена с **char**, **varchar**, **nchar**, или **nvarchar** тип данных.  
   
 ## <a name="error-handling"></a>Обработка ошибок  
@@ -104,7 +104,7 @@ ROLLBACK { TRAN | TRANSACTION }
 ## <a name="locking-behavior"></a>Режим блокировки  
  Значение типа, указывающее инструкцию ROLLBACK TRANSACTION *savepoint_name* снимает все блокировки, полученные после точки сохранения, за исключением укрупненных и блокировок преобразования. Такие блокировки не освобождаются и не переводятся в прежний режим.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** .  
   
 ## <a name="examples"></a>Примеры  
@@ -137,7 +137,7 @@ value
 ```  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   

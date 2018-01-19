@@ -22,15 +22,15 @@ helpviewer_keywords:
 - declaring variables
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
 caps.latest.revision: "76"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 182e3443a9baf73fdbda096c11b4320feb53edda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 70bfea2777f5f96769d4296c8fbb7f2acbd20e4f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="declare-localvariable-transact-sql"></a>ОБЪЯВИТЕ @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +90,7 @@ DECLARE
 @*local_variable*  
  Имя переменной. Имена переменных должны начинаться с символа @. Имена локальных переменных должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
   
-*Тип данных*  
+*data_type*  
  Любой системный тип данных, определяемый пользователем табличный тип среды CLR или псевдоним типа данных. Переменная не может быть **текст**, **ntext**, или **изображения** тип данных.  
   
  Дополнительные сведения о системных типах данных см. в разделе [типы данных &#40; Transact-SQL &#41; ](../../t-sql/data-types/data-types-transact-sql.md). Дополнительные сведения об определяемых пользователем типов CLR и псевдонимов типов данных см. в разделе [CREATE TYPE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-type-transact-sql.md).  
@@ -138,7 +138,7 @@ CURSOR
  IDENTITY  
  Указывает, что новый столбец является столбцом идентификаторов. При добавлении в таблицу новой строки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] формирует для столбца уникальное, последовательное значение. Столбцы идентификаторов наиболее часто используются в сочетании с ограничениями PRIMARY KEY для выполнения функции уникального идентификатора строки таблицы. Свойство IDENTITY может назначаться **tinyint**, **smallint**, **int**, **decimal(p,0)**, или **numeric(p,0)** столбцов. Для каждой таблицы можно создать только один столбец идентификаторов. Ограниченные значения по умолчанию и ограничения DEFAULT не могут использоваться в столбце идентификаторов. Необходимо указывать либо оба значения seed и increment, либо ни тот, ни другой. Если ничего не указано, применяется значение по умолчанию (1,1).  
   
- *Начальное значение*  
+ *seed*  
  Значение, используемое для самой первой строки, загружаемой в таблицу.  
   
  *приращение*  
@@ -159,10 +159,10 @@ CURSOR
  CHECK  
  Ограничение, обеспечивающее целостность домена путем ограничения возможных значений, которые могут быть введены в столбец или столбцы.  
   
- *Logical_Expression*  
+ *logical_expression*  
  Логическое выражение, возвращающее значения TRUE или FALSE.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Переменные часто используются в пакете или процедуре в качестве счетчиков для циклов WHILE, LOOP или в блоке IF…ELSE.  
   
  Переменные могут использоваться только в выражениях, но не вместо имен объектов или ключевых слов. Для построения динамических инструкций SQL используйте EXECUTE.  
@@ -317,7 +317,7 @@ FROM DimEmployee
 WHERE LastName LIKE @lastName AND FirstName LIKE @firstName;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [EXECUTE (Transact-SQL)](../../t-sql/language-elements/execute-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   
  [SELECT (Transact-SQL)](../../t-sql/queries/select-transact-sql.md)   

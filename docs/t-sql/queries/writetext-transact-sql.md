@@ -25,15 +25,15 @@ helpviewer_keywords:
 - data updates [SQL Server], WRITETEXT statement
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 caps.latest.revision: "52"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 534fa1494ec97efb8258222f512902d15efa1f36
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d8c66e4a785fd1d731bd55730a8439f5e796b01f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ WRITETEXT [BULK]
  WITH LOG  
  Не учитывается [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ведение журнала определяется моделью восстановления, действующей для базы данных.  
   
- *данные*  
+ *data*  
  Представляет собой фактические **текст**, **ntext** или **изображения** данные для хранения. *данные* может быть литералом или параметром. Максимальная длина текста, который можно вставить интерактивно с помощью инструкции WRITETEXT — приблизительно 120 КБ для **текст**, **ntext**, и **изображения** данные.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте WRITETEXT для замены **текст**, **ntext**, и **изображения** данных и UPDATETEXT для изменения **текст**, **ntext**, и **изображения** данные. UPDATETEXT является более гибкой, так как изменяется только часть **текст**, **ntext**, или **изображения** столбца, а не весь столбец.  
   
  Для наилучшей производительности рекомендуется **текст**, **ntext**, и **изображения** вставлять или обновлять фрагментами, кратными 8040 байт данных.  
@@ -91,7 +91,7 @@ WRITETEXT [BULK]
   
  В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]в текстовые указатели на строки **текст**, **ntext**, или **изображения** данных могут существовать, но могут оказаться недопустимыми. Сведения о текста в строке см. в разделе [sp_tableoption &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Сведения о допустимости указателей текста см. в разделе [sp_invalidate_textptr &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение UPDATE на указанную таблицу. Разрешение может передаваться, если передано разрешение UPDATE.  
   
 ## <a name="examples"></a>Примеры  
@@ -116,7 +116,7 @@ ALTER DATABASE pubs SET RECOVERY SIMPLE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы данных (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable (Transact-SQL)](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DELETE (Transact-SQL)](../../t-sql/statements/delete-transact-sql.md)   

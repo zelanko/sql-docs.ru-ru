@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: STPointN (geometry Data Type)
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 6e35a1bc7b4466a688274a825de3a34081149207
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb3933aee8f8880b23bb4883753acb85d83ddb1e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (тип данных geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
  Открытый тип Geospatial Consortium (OGC): **точки**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если **geometry** экземпляр является пользователем, созданным, `STPointN()` возвращает точку, указанную *выражение* путем упорядочения точек в том порядке, в котором они были первоначально введены.  
   
  Если **geometry** экземпляр был создан системой, `STPointN()` возвращает точку, указанную *выражение* путем упорядочения всех точек в том же порядке, они должны быть выведены: сначала по геометрическим объектам, затем по кольцам внутри геометрического объекта (если применимо), а затем по точкам внутри кольца. Это порядок является детерминированным.  
@@ -69,7 +69,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы OGC в экземплярах Geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

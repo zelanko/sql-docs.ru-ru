@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting transactions
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e0b4cf5509bf68801938a93aac339108539a0ea1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 86f89cd7d2e8198383a548dbfbcabb39e5f1738c
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="begin-distributed-transaction-transact-sql"></a>BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
  @*tran_name_variable*  
  Имя пользовательской переменной, содержащей имя транзакции, которая используется для отслеживания распределенной транзакции в служебных программах координатора MS DTC. Переменная должна быть объявлена с **char**, **varchar**, **nchar**, или **nvarchar** тип данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Экземпляр компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], на котором выполняется инструкция BEGIN DISTRIBUTED TRANSACTION, является инициатором транзакции, контролирующим ее завершение. Если после этого в сеансе выполняется инструкция COMMIT TRANSACTION или ROLLBACK TRANSACTION, управляющий экземпляр передает координатору MS DTC управление распределенной транзакцией во всех экземплярах.  
   
  Изоляция моментального снимка уровня транзакции не поддерживает распределенные транзакции.  
@@ -81,7 +81,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
   
  Дополнительные сведения о процессе и среды распределенных транзакций см. в разделе [!INCLUDE[msCoName](../../includes/msconame-md.md)] документации координатора распределенных транзакций.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в роли public.  
   
 ## <a name="examples"></a>Примеры  
@@ -104,7 +104,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN TRANSACTION (Transact-SQL)](../../t-sql/language-elements/begin-transaction-transact-sql.md)   
  [COMMIT TRANSACTION (Transact-SQL)](../../t-sql/language-elements/commit-transaction-transact-sql.md)   
  [ФИКСАЦИЯ РАБОЧЕГО &#40; Transact-SQL &#41;](../../t-sql/language-elements/commit-work-transact-sql.md)   

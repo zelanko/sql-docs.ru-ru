@@ -16,15 +16,15 @@ dev_langs: TSQL
 helpviewer_keywords: IsNull method
 ms.assetid: c031074f-bfda-4584-a3bf-4e7c324f237f
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3873babae0514b35626872b1b592f287a884be1c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 79b35adec55e9a029335e5f4f402bb86e5afc688
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="isnull-geography-data-type"></a>IsNull (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,14 +43,14 @@ ms.lasthandoff: 11/17/2017
   
  Тип CLR: **SqlBoolean**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  `IsNull`можно использовать для тестирования ли **geography** экземпляр имеет значение null. Это может привести к неочевидному результату, так как, если экземпляр имеет значение, отличное от NULL, возвращается значение 0, а если экземпляр имеет значение NULL, возвращается значение NULL.  
   
  Этот метод в основном используется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] инфраструктуре; рекомендуется использовать предикат T-SQL IS NULL, чтобы проверить ли **geography** экземпляр имеет значение null. Дополнительные сведения о T-SQL, предикат IS NULL см. в разделе [IS NULL &#40; Transact-SQL &#41; ](../../t-sql/queries/is-null-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

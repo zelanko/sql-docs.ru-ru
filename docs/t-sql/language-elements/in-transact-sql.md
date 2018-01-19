@@ -24,15 +24,15 @@ helpviewer_keywords:
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 487c576ea2323ea7da9726dfb161889e12aff0d9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 610c374bb6d935495779362d8dd7f1e0a53931d8
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ test_expression [ NOT ] IN
  *test_expression*  
  Любое допустимое [выражение](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- *вложенный запрос*  
+ *subquery*  
  Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Этот столбец должен иметь тот же тип данных, *test_expression*.  
   
  *выражение*[ **,**... *n* ]  
@@ -70,7 +70,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Пустые значения, возвращаемые методом *вложенный запрос* или *выражение* , по сравнению с *test_expression* с помощью предложения IN или NOT IN, возвращается UNKNOWN. Использование значений NULL с предложениями IN или NOT IN может привести к непредвиденным результатам.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Намеренное Включение очень большого количества значений (много тысяч значений, разделенных запятыми) в круглых скобках в предложение IN может использовать ресурсы и возвратить ошибки 8623 или 8632. Чтобы обойти эту проблему, храните элементы списка IN в таблице и использовать вложенный запрос SELECT внутри предложения.  
   
  Ошибки 8623:  
@@ -209,7 +209,7 @@ FROM DimEmployee
 WHERE FirstName IN ('Mike', 'Michael');  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Выражения &#40; Transact-SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   

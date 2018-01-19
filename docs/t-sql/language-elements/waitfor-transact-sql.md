@@ -28,15 +28,15 @@ helpviewer_keywords:
 - timing executions
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: a434aeca7601637ae5e0231497ad07293d6d83ca
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 75a3c1d272d39d17fbd35f10a797ce52a9310241
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,13 +62,13 @@ WAITFOR
  DELAY  
  Заданный период времени (не более 24 часов), который должен пройти до выполнения пакета, хранимой процедуры или продолжения транзакции.  
   
- "*time_to_pass*"  
+ '*time_to_pass*'  
  Период времени ожидания. *time_to_pass* может быть указан в одном из допустимых форматов для **datetime** данных или его можно указать как локальная переменная. Невозможно указать даты; Таким образом, часть даты **datetime** значение недопустимо.  
   
  TIME  
  Заданное время выполнения пакета, хранимой процедуры или транзакции.  
   
- "*time_to_execute*"  
+ '*time_to_execute*'  
  Время, в которое инструкция WAITFOR завершает работу. *time_to_execute* может быть указан в одном из допустимых форматов для **datetime** данных или его можно указать как локальная переменная. Невозможно указать даты; Таким образом, часть даты **datetime** значение недопустимо.  
   
  *receive_statement*  
@@ -89,7 +89,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  Инструкция WAITFOR с аргументом TIMEOUT применима только к сообщениям компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Дополнительные сведения см. в разделе [RECEIVE &#40; Transact-SQL &#41; ](../../t-sql/statements/receive-transact-sql.md) и [GET CONVERSATION GROUP &#40; Transact-SQL &#41; ](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Во время выполнения инструкции WAITFOR выполняется транзакция, и другие запросы не могут быть выполнены в рамках этой транзакции.  
   
  Действительная продолжительность задержки может отличаться от времени, указанного в *time_to_pass*, *time_to_execute*, или *время ожидания* и зависит от уровня активности сервера. Счетчик времени запускается, когда запланирован поток, связанный с инструкцией WAITFOR. Если сервер занят, запланированный запуск потока может оказаться невозможным, поэтому время задержки может оказаться больше заданного.  
@@ -173,7 +173,7 @@ GO
   
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Язык управления выполнением &#40; Transact-SQL &#41;](~/t-sql/language-elements/control-of-flow.md)   
  [DateTime &#40; Transact-SQL &#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  

@@ -26,15 +26,15 @@ helpviewer_keywords:
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 caps.latest.revision: "41"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f962702faec170262f50c3c2ca5c328af3bc266d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0f99a9d507b74dfd12bbdaf273683f857ceec881
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,16 +61,16 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  SOME | ANY  
  Указывает на необходимость сравнения.  
   
- *вложенный запрос*  
+ *subquery*  
  Вложенный запрос, содержащий результирующий набор, состоящий из одного столбца. Тип данных возвращаемого столбца должен быть тот же тип данных, как *scalar_expression*.  
   
 ## <a name="result-types"></a>Типы результата  
  **Логическое значение**  
   
 ## <a name="result-value"></a>Значение результата  
- SOME или ANY возвращает **TRUE** Если указанное сравнение имеет значение TRUE для любой пары (*scalar_expression***,***x*) где *x* это значение в наборе один столбец; в противном случае возвращает **FALSE**.  
+ SOME или ANY возвращает **TRUE** Если указанное сравнение имеет значение TRUE для любой пары (*scalar_expression***,***x*) где *x* в значении набор одного столбца; в противном случае возвращает **FALSE**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  SOME необходим *scalar_expression* для сравнения по крайней мере одного значения, возвращаемого вложенным запросом. Для инструкций, которые требуют *scalar_expression* сравнения каждого значения, возвращаемого вложенным запросом, перечислены в разделе [все &#40; Transact-SQL &#41; ](../../t-sql/language-elements/all-transact-sql.md). Например, если вложенный запрос возвращает значения 2 и 3, *scalar_expression* = SOME (вложенными запросами) будет возвращаться TRUE для *scalar_express* 2. Если вложенный запрос возвращает значения 2 и 3, *scalar_expression* = ALL (вложенными запросами) будет возвращаться FALSE, так как некоторые значения вложенного запроса (значение 3) не отвечают критериям этого выражения.  
   
 ## <a name="examples"></a>Примеры  
@@ -147,7 +147,7 @@ EXECUTE ManyDaysToComplete 49080, 1 ;
   
  `At least one item for this order cannot be manufactured in specified number of days.`  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ВСЕ &#40; Transact-SQL &#41;](../../t-sql/language-elements/all-transact-sql.md)   
  [РЕГИСТР &#40; Transact-SQL &#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Встроенные функции (Transact-SQL)](~/t-sql/functions/functions.md)   

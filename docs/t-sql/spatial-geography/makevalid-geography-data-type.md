@@ -15,15 +15,15 @@ dev_langs: TSQL
 helpviewer_keywords: MakeValid method (geography)
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: becd452525b999e0a23810aefd2455ee74ab0c67
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 796b06fb230cffbfe813d204017dc58c24d8c5b2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (тип данных geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
  Возвращаемый тип CLR: **SqlGeography**  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод может изменить тип **geography** экземпляра. Кроме того, точки **geography** экземпляр может переместиться немного. Некоторые методы, такие как NumPoint() результаты могут быть изменены.  
   
  В случаях, когда недопустимый пространственный экземпляр пересекает экватор и имеет EnvelopeAngle() = 180, **FullGlobe** экземпляра будут возвращены. `MakeValid()` **Geography** метода типа данных сделает лучший попытка вернуть допустимый экземпляр, но точность результатов не гарантируется.  
@@ -84,7 +84,7 @@ SELECT @g.ToString();
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [STIsValid (тип данных geometry)](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Расширенные методы в экземплярах Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

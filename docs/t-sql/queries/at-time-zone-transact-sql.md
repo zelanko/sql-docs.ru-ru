@@ -17,15 +17,15 @@ f1_keywords:
 helpviewer_keywords: AT TIME ZONE function
 ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 2265efe9fab240d25d03e3e1ef16009d294166af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9fc240d76c2939e0ed96d87fdbfee35ec8208ce
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="at-time-zone-transact-sql"></a>В ЧАСОВОМ ПОЯСЕ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ inputdate AT TIME ZONE timezone
  *inputdate*  
  Выражение, которое разрешается к **smalldatetime**, **datetime**, **datetime2**, или **datetimeoffset** значение.  
   
- *часовой пояс*  
+ *timezone*  
  Имя часового пояса назначения. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]зависит от часовых поясов, которые хранятся в реестре Windows. Все часовые пояса, установленных на компьютере, хранятся в следующих куст реестра: **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time зоны**. Список установленных часовые пояса также предоставляются через [sys.time_zone_info &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md) представления.  
   
 ## <a name="return-types"></a>Типы возвращаемых значений  
@@ -55,7 +55,7 @@ inputdate AT TIME ZONE timezone
 ## <a name="return-value"></a>Возвращаемое значение  
  **Datetimeoffset** значение в целевой часовой пояс.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **В ЧАСОВОМ ПОЯСЕ** применяет специальные правила для преобразования входных значений в **smalldatetime**, **datetime** и **datetime2** типы данных, которые попадают в интервал, затрагиваемых изменением летнего времени:  
   
 -   Если часы имеет значение заранее, то имеется разрыв в формате местного времени, длительность которого зависит от времени взаимных часов (обычно 1 час, но он может быть 30-45 минут, в зависимости от часового пояса). В этом случае при преобразовании моменты времени, принадлежащих пропуска смещение *после* перехода на летнее.  
@@ -170,7 +170,7 @@ FROM  Person.Person_Temporal
 FOR SYSTEM_TIME AS OF @ASOF;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Типы даты и времени](../../t-sql/data-types/date-and-time-types.md)   
  [Данных даты и времени типы и функции &#40; Transact-SQL &#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
   
