@@ -17,11 +17,11 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
-ms.openlocfilehash: 307c9e4774037560884c7e2da43c1fed1c405a14
-ms.sourcegitcommit: 779f3398e4e3f4c626d81ae8cedad153bee69540
+ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
+ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование постоянного шифрования с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -378,13 +378,13 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 В следующей строке соединения показывают, как проходить проверку подлинности в хранилище ключей Azure с двумя типами учетных данных:
 
-**ClientID/Secret**:
+**ClientID/секрет**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Username/Password**
+**Имя пользователя и пароль**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -526,7 +526,7 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 Пока драйвер ODBC разрешает использование [асинхронных операций](../../relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md) с постоянным шифрованием, повлиять на производительность операций при есть постоянное шифрование включено. Вызов `sys.sp_describe_parameter_encryption` для определения метаданных шифрования для инструкции блокируется и драйвер ожидания сервер для возврата метаданных перед возвратом `SQL_STILL_EXECUTING`.
 
 ### <a name="retrieve-data-in-parts-with-sqlgetdata"></a>Получить данные в частях с SQLGetData
-Перед шифрованием 17 драйвер ODBC для SQL Server, символьных и двоичных столбцов не удается получить в частях с SQLGetData. Можно сделать только один вызов SQLGetData, с буфером достаточной длины для хранения данных всего столбца. В 17 драйвер ODBC для SQL Server, шифрование **varbinary(max)** столбцов не удается получить в частях с SQLGetData и тип C SQL_C_BINARY.
+Перед шифрованием 17 драйвер ODBC для SQL Server, символьных и двоичных столбцов не удается получить в частях с SQLGetData. Можно сделать только один вызов SQLGetData, с буфером достаточной длины для хранения данных всего столбца.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Отправлять данные в частях с SQLPutData
 Невозможно отправить данные для вставки или сравнения в частях с SQLPutData. Только один вызов SQLPutData можно сделать с помощью буфер, содержащий все данные. Для вставки данных long в зашифрованных столбцах, используйте массового копирования API-Интерфейсе, описанные в следующем разделе, с помощью входных данных файла.
