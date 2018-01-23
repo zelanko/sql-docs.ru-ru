@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 19d9c5cae52ed4eee5ee553905475bcbf62c38c4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d6717a94aeacf2891c48050b6bb33f706cb2c2c0
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Занятие 2 – 5 – развертывание проекта служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Для просмотра данных куба и измерения для объектов в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] куба учебника по службам в [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] учебного проекта, необходимо развернуть проект в указанном экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] и последующей обработки куба и его измерений. *Развертывание* [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проект создает определенные объекты в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. При*обработке* объектов в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] данные из базовых источников данных копируются в объекты кубов. Дополнительные сведения см. в разделах [Развертывание проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) и [Настройка свойств проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)создаются определенные объекты.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Чтобы просмотреть куб и данные измерения для объектов куба «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]» проекта «Учебник по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]», необходимо развернуть проект на указанном экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], а затем выполнить обработку куба и его измерений. В процессе*развертывания* проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] project creates the defined objects in проекта служб instпроекта службce of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]создаются определенные объекты. При*обработке* объектов в экземпляре [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] данные из базовых источников данных копируются в объекты кубов. Дополнительные сведения см. в разделах [Развертывание проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md) и [Настройка свойств проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
 На этой стадии процесса разработки развертывание куба обычно производится в экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на сервере разработки. После завершения разработки проекта бизнес-аналитики обычно производится развертывание данных на рабочем сервере с помощью мастера развертывания служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Дополнительные сведения см. в разделах [Развертывание решений многомерных моделей](../analysis-services/multidimensional-models/multidimensional-model-solution-deployment.md) и [Развертывание решений модели с использованием мастера развертывания](../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
@@ -39,10 +41,10 @@ ms.lasthandoff: 01/08/2018
   
 2.  В узле **Свойства конфигурации** на левой панели щелкните элемент **Развертывание**.  
   
-    Просмотрите свойства развертывания проекта. По умолчанию шаблон проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] настроен таким образом, что выполняется последовательное развертывание всех проектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для указанного по умолчанию экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на локальном компьютере, создается база данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с именем проекта, а также выполняется обработка объектов с параметрами по умолчанию после завершения развертывания. Дополнительные сведения см. в разделах [Настройка свойств проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)создаются определенные объекты.  
+    Просмотрите свойства развертывания проекта. По умолчанию шаблон проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] настроен таким образом, что выполняется последовательное развертывание всех проектов служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] для указанного по умолчанию экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на локальном компьютере, создается база данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с именем проекта, а также выполняется обработка объектов с параметрами по умолчанию после завершения развертывания. Подробнее: [Настройка свойств проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > Если вы хотите развернуть проект на именованный экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на локальном компьютере или к экземпляру на удаленном сервере, изменить **сервера** свойство к соответствующему экземпляру имя, такое как \< * ServerName**>\\<**InstanceName**>*.  
+    > Если вы хотите развернуть проект на именованный экземпляр [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на локальном компьютере или к экземпляру на удаленном сервере, изменить **сервера** свойство к соответствующему экземпляру имя, такое как \<  *ServerName**>\\<**InstanceName ** >*.  
   
 3.  Нажмите кнопку **ОК**.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/08/2018
     > [!NOTE]  
     > Если при развертывании возникают ошибки, проверьте разрешения на базу данных с помощью среды SQL Server Management Studio. У учетной записи, указанной для соединения с источником данных, должно быть имя входа в экземпляр SQL Server. Дважды щелкните имя пользователя для просмотра свойств сопоставления пользователей. Эта учетная запись должна иметь разрешения db_datareader для базы данных **AdventureWorksDW2012** .  
   
-    [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] собирается и развертывается проект учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в указанном экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с использованием скрипта развертывания. Ход выполнения развертывания отображается в двух окнах: **Вывод** и **Выполнение развертывания — учебник по службам Analysis Services** .  
+    В среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] собирается и развертывается проект учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] на указанном экземпляре служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с использованием скрипта развертывания. Ход выполнения развертывания отображается в двух окнах: **Вывод** и **Выполнение развертывания — учебник по службам Analysis Services** .  
   
     Откройте окно вывода, если необходимо, выбрав пункт **Вывод** в меню **Вид** . В окне **Вывод** отображается общий ход выполнения развертывания. Окно **Выполнение развертывания — учебник по службам Analysis Services** отображает подробные сведения о каждом шаге, выполняемом в процессе развертывания. Дополнительные сведения см. в разделах [Построение проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md) и [Развертывание проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
@@ -66,8 +68,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Просмотр куба](../analysis-services/lesson-2-6-browsing-the-cube.md)  
   
-## <a name="see-also"></a>См. также:  
-[Развертывание проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+## <a name="see-also"></a>См. также  
+[Развертывание проектов служб Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
 [Настройка свойств проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

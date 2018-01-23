@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 25f648f53ca3af33b846711076eb91b3548174a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0a6a1056c4b778dbc4cb71faa4e7b05111512285
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-1---defining-a-dimension"></a>Занятие 2-1-Определение измерения
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]В следующей задаче будет использовать мастер измерений для создания измерения даты.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+В следующей задаче с помощью мастера измерений создается измерение Date.  
   
 > [!NOTE]  
 > Приступать к этому занятию нужно только после завершения всех процедур из занятия 1.  
@@ -60,13 +62,13 @@ ms.lasthandoff: 01/08/2018
   
 8.  Для атрибута **Резервный ключ полной даты** в столбце **Тип атрибута** вместо значения **Обычный** выберите **Дата**. Для этого щелкните значение **Обычный** в столбце **Тип атрибута** . Щелкните стрелку, чтобы раскрыть список параметров. Далее щелкните **Дата** > **Календарь** > **Дата**. Нажмите кнопку **ОК**. Повторите эти действия, чтобы изменить тип атрибута в других атрибутах следующим образом:  
   
-    -   **English Month Name** выберите **Месяц**  
+    -   **English Month Name** to **Month**  
   
-    -   **Calendar Quarter** выберите **Квартал**  
+    -   **Calendar Quarter** to **Quarter**  
   
-    -   **Calendar Year** выберите **Год**  
+    -   **Calendar Year** to **Year**  
   
-    -   **Calendar Semester** выберите **Полугодие**  
+    -   **Calendar Semester** to **Half Year**  
   
 9. Нажмите кнопку **Далее**.  
   
@@ -81,7 +83,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение куба](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Измерения в многомерных моделях](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [Создание измерения с помощью существующей таблицы](../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
 [Создание измерения с помощью мастера измерений](../analysis-services/multidimensional-models/create-a-dimension-using-the-dimension-wizard.md)  

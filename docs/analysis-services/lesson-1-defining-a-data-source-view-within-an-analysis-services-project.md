@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: d8f91c18a5150bd769c53ac24ad49346a4c6af60
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 0fe40b4deeb6fa929be969a0d84a61bcad85f9a1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Занятие 1. Определение представления источников данных в проекте служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Проектирование приложения бизнес-аналитики в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] начинается с создания [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта в [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В этом проекте будут определены все элементы решения, начиная с представления источников данных.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Разработка приложения бизнес-аналитики в [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] начинается с создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в среде [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. В этом проекте будут определены все элементы решения, начиная с представления источников данных.  
   
 Это занятие содержит следующие задачи.  
   
@@ -44,12 +46,12 @@ ms.lasthandoff: 01/08/2018
 Сравните свои результаты с образцом файла проекта, созданным на этом занятии. Дополнительные сведения о скачивании образцов проектов для этого учебника см. в разделе [Проекты многомерных моделей служб SSAS для SQL Server 2012](http://go.microsoft.com/fwlink/p/?LinkID=221866) на странице образцов продуктов на сайте CodePlex.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 2. Определение и развертывание куба](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[Занятие 2: Определение и развертывание куба](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
 [Поддерживаемые источники данных (службы SSAS — многомерные базы данных)](https://msdn.microsoft.com/library/ms175608(v=sql.110).aspx)  
 [Представления источников данных в многомерных моделях](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   

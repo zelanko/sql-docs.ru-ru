@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: fe4681b3f4125242e51b41ac594bd556d06f058e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f388389edcd3546f94bc120862e8933b3f790c7c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-1---defining-a-referenced-relationship"></a>Занятие 5-1-Определение ссылочной связи
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]До этого момента в учебнике каждого измерения куба, определенного был основан на таблице, непосредственно связанной с таблицей фактов для группы мер по первичному ключу для связи по внешнему ключу. В задачах этого раздела измерение **География** будет связано с таблицей фактов через измерение **Торговый посредник** , которое называется *ссылочным измерением*. Это позволяет пользователям распределить товарооборот посредников по географии. Дополнительные сведения см. в разделе [Определение ссылочной связи и свойств ссылочной связи](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+До сих пор в этом учебнике каждое определенное измерение куба основывалось на таблице, непосредственно связанной с таблицей фактов для группы мер через связь «внешний ключ — первичный ключ». В задачах этого раздела измерение **География** будет связано с таблицей фактов через измерение **Торговый посредник** , которое называется *ссылочным измерением*. Это позволяет пользователям распределить товарооборот посредников по географии. Дополнительные сведения см. в разделе [Определение ссылочной связи и свойств ссылочной связи](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md).  
   
 ## <a name="dimensioning-reseller-sales-by-geography"></a>Распределение показателя «Товарооборот посредников» по измерению «География»  
   
@@ -130,7 +132,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение связи фактов](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Связи атрибутов](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
 [Определение ссылочной связи и свойств ссылочной связи](../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   

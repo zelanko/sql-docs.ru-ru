@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 876c15beb1fc62e805a4c86718da0590c19244bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 969a3952f113521b5f584533fd0676b33b873b53
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Сравнение табличных и многомерных решений
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]SQL Server Analysis Services предоставляет несколько подходов для создания семантической модели бизнес-аналитики: табличных, многомерных и Power Pivot для SharePoint.
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  SQL Server Analysis Services предоставляет несколько подходов для создания семантической модели бизнес-аналитики: табличных, многомерных и Power Pivot для SharePoint.
   
  Это позволяет использовать процессы моделирования, адаптированные для разных пользовательских и бизнес-требований. Многомерный подход — это надежная технология, основанная на открытых стандартах, которая используется множеством поставщиков программного обеспечения бизнес-аналитики, но овладеть ей не так просто. Табличный подход использует реляционные модели, которые многим разработчикам кажутся более понятными. Power Pivot еще проще — эта технология предоставляет возможности визуального моделирования данных в Excel с поддержкой серверов через SharePoint.  
   
@@ -77,11 +79,11 @@ ms.lasthandoff: 01/08/2018
 |Неоднородные иерархии|Да|Да<sup>1</sup>|  
 |Иерархии типа «родители-потомки»|Да|Да (посредством DAX)|
 |Секции|Да|Да| 
-|перспективами|Да|Да|
+|Перспективы|Да|Да|
 |Безопасность на уровне строк|Да|Да| 
 |Безопасность на уровне объекта|Да|Да<sup>1</sup>|
 |Полуаддитивные меры|Да|Да| 
-|Translations|[Да](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Да| 
+|Переводы|[Да](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Да| 
 |Пользовательские иерархии|Да|Да|
 |Обратная запись|Да|нет| 
   
@@ -174,7 +176,7 @@ ms.lasthandoff: 01/08/2018
  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление экземплярами служб Analysis Services](../analysis-services/instances/analysis-services-instance-management.md)   
  [Новые возможности в службах Analysis Services](../analysis-services/what-s-new-in-analysis-services.md)     
 

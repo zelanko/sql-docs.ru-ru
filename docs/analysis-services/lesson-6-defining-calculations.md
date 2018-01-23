@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1e7d887c9c25ee62cf9fe37ca16c9538c3c646db
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 9491f840fdf7d1848fd4cc6bdf23bf98a4acd4b3
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-6-defining-calculations"></a>Занятие 6. Определение вычислений
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]На этом занятии вы узнаете, как определять вычисления, являющиеся многомерных выражений (MDX) или сценариев. Вычисления позволяют определять вычисляемые элементы, именованные наборы и другие команды скриптов, расширяющие возможности куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Например, с помощью команды скрипта можно определить вложенный куб и присвоить вычисление его ячейкам.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+На этом занятии будет показано, как определять вычисления, являющиеся многомерными выражениями или сценариями многомерных выражений. Вычисления позволяют определять вычисляемые элементы, именованные наборы и другие команды скриптов, расширяющие возможности куба служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Например, с помощью команды скрипта можно определить вложенный куб и присвоить вычисление его ячейкам.  
   
 При определении нового вычисления в конструкторе кубов оно добавляется на панель **Организатор скриптов** на вкладке **Вычисления** конструктора кубов, а поля для конкретного типа вычисления отображаются в форме вычислений на панели **Выражения вычисления** . Вычисления выполняются в порядке, в котором они перечислены на панели **Организатор скриптов** . Вы можете изменить порядок вычислений, щелкнув отдельное вычисление правой кнопкой мыши и выбрав команду **Переместить вверх** или **Переместить вниз**или выбрав вычисление и воспользовавшись значками **Переместить вверх** или **Переместить вниз** на панели инструментов вкладки **Вычисления** .  
   
@@ -59,12 +61,12 @@ ms.lasthandoff: 01/08/2018
 В этой задаче предстоит определить именованные наборы.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 7. Определение ключевых показателей эффективности](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Занятие 7: Определение ключевых показателей эффективности &#40; Ключевые показатели эффективности &#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[Создание именованных наборов](../analysis-services/multidimensional-models/create-named-sets.md)  
+[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Для создания именованных наборов](../analysis-services/multidimensional-models/create-named-sets.md)  
 [Создание вычисляемых элементов](../analysis-services/multidimensional-models/create-calculated-members.md)  
   
   

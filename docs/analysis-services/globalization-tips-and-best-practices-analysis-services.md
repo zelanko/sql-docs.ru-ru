@@ -23,14 +23,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3f357bd8ded53f636b0b930733a2562277b3e0dd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 88a6b0a3948e7a29ef97c0bdce85cddcd3f2b6da
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="globalization-tips-and-best-practices-analysis-services"></a>Советы и рекомендации по глобализации (службы Analysis Services)
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)][!INCLUDE[applies](../includes/applies-md.md)] Многомерные только  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  [!INCLUDE[applies](../includes/applies-md.md)] Только многомерные  
   
  Эти советы и рекомендации помогут улучшить переносимость решений для бизнес-аналитики и избежать ошибок, которые непосредственно связаны с языковыми параметрами и параметрами сортировки.  
   
@@ -152,7 +154,7 @@ ms.lasthandoff: 01/08/2018
   
     ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарии глобализации для служб Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Написание инструкций Transact-SQL, адаптированных к международному использованию](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 726cab6d57171e33d30ea61d397e54f7926cf00b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7a3e3a80a6792791a601f83d011429203da79272
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>Урок 1-4 - изменение имен таблиц по умолчанию
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Можно изменить значение **FriendlyName** свойства для объектов в представлении источника данных, чтобы сделать их более понятными использовать.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Значение свойства **FriendlyName** для объектов в представлении источника данных можно изменить, сделав его имя более понятным и простым в использовании.  
   
 В следующей задаче будет изменено понятное имя каждой из таблиц в представлении источника данных посредством удаления из их имен префиксов**Dim**и**Fact**. Это сделает более понятными имена объектов куба и измерений, которые будут определены на следующем занятии.  
   
@@ -53,9 +55,9 @@ ms.lasthandoff: 01/08/2018
 7.  В меню **Файл** выберите пункт [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]Сохранить все **(или нажмите соответствующую кнопку на панели инструментов среды** ), чтобы сохранить изменения, внесенные в проект учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Если необходимо, здесь можно прервать работу с учебником, чтобы продолжить ее позже.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 2. Определение и развертывание куба](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
+[Занятие 2: Определение и развертывание куба](../analysis-services/lesson-2-defining-and-deploying-a-cube.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Представления источников данных в многомерных моделях](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
 [Изменение свойств в представлении источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/change-properties-in-a-data-source-view-analysis-services.md)  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 00b1110e3deba08207cda1c71c75d6603660c019
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 322abebe579106c03f4855f7b9e2e7573f5d5580
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-1---modifying-measures"></a>Занятие 3-1-изменение мер
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Можно использовать **FormatString** свойство, чтобы определить параметры форматирования, управляющие способом отображения мер для пользователей. В этой задаче предстоит указать свойства форматирования мер валюты и процентов в кубе учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Свойство **FormatString** позволяет определить параметры форматирования, управляющие способом отображения мер для пользователей. В этой задаче предстоит указать свойства форматирования мер валюты и процентов в кубе учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 ### <a name="to-modify-the-measures-of-the-cube"></a>Изменение мер куба  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Изменение измерения «Заказчик»](../analysis-services/lesson-3-2-modifying-the-customer-dimension.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Определение измерений базы данных](../analysis-services/multidimensional-models/define-database-dimensions.md)  
 [Настройка свойств мер](../analysis-services/multidimensional-models/configure-measure-properties.md)  
   

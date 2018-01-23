@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9cdbd57f570c79b3efaabf5d07fb09ea4cc20c8b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d2dbc32284d43c15c5e07206137f5a8253ed7040
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-1---creating-an-analysis-services-project"></a>Урок 1-1-Создание проекта служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]В следующей задаче используется [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания нового [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проект с именем **учебник по службам Analysis Services**, основываясь на [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] шаблона проекта. *Проект* представляет собой коллекцию связанных объектов. Проекты содержатся в решении, которое может включать несколько проектов. Дополнительные сведения см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+В следующей задаче будет использована среда [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] для создания нового проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] с именем **Учебник по службам Analysis Services**на основе шаблона проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . *Проект* представляет собой коллекцию связанных объектов. Проекты содержатся в решении, которое может включать несколько проектов. Дополнительные сведения см. в разделе [Создание проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md).  
   
 ### <a name="to-create-a-new-analysis-services-project"></a>Создание нового проекта служб Analysis Services  
   
@@ -43,9 +45,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение источника данных](../analysis-services/lesson-1-2-defining-a-data-source.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание многомерных моделей с помощью SQL Server Data Tools (SSDT)](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
-[Создание проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+[Создание проекта служб Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   
   

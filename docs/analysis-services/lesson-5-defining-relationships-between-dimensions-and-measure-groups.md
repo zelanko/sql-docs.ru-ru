@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c3000dfc2ecd94fb70061eead07ef92cfd643f73
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b3637cc09617b51663ac2bc65dea13c764981c2
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Занятие 5. Определение связей между измерениями и группами мер
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]На предыдущем занятии этого учебника вы узнали, добавляемых к кубу измерения базы данных можно использовать как основу для одного или нескольких измерений куба. На этом занятии предстоит изучить, как следует определять различные типы связей между измерениями куба и группами мер, а также изучить определение свойств этих связей.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+На предыдущем занятии было рассмотрено, что измерения баз данных, добавленные к кубу, могут использоваться как основа для одного или нескольких измерений куба. На этом занятии предстоит изучить, как следует определять различные типы связей между измерениями куба и группами мер, а также изучить определение свойств этих связей.  
   
 Дополнительные сведения см. в разделе [Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
@@ -47,12 +49,12 @@ ms.lasthandoff: 01/08/2018
 В этой задаче будет изучено, как изменить степень гранулярности измерения для конкретной группы показателей.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 6. Определение вычислений](../analysis-services/lesson-6-defining-calculations.md)  
+[Урок 6: Создание вычислений коэффициента](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
-[Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Связей измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
   
   
   

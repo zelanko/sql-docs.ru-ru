@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: a09461909c86014aeb459cdc602ee9e96985d88a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6cfbba4598bad19dc0b581131f977fa2f3e9b40e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-2---defining-a-cube"></a>Занятие 2-2-определение куба
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Мастер кубов помогает определить группы мер и измерения для куба. В следующей задаче с помощью мастера кубов будет построен куб.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Мастер кубов помогает определить для куба группы мер и измерения. В следующей задаче с помощью мастера кубов будет построен куб.  
   
 ### <a name="to-define-a-cube-and-its-properties"></a>Определение куба и его свойств  
   
@@ -76,7 +78,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Добавление атрибутов к измерениям](../analysis-services/lesson-2-3-adding-attributes-to-dimensions.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Кубы в многомерных моделях](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
 [Измерения в многомерных моделях](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

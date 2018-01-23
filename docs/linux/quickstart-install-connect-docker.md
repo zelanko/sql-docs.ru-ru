@@ -15,11 +15,11 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.workload: Active
-ms.openlocfilehash: 0fcd5cefc02359d407b1799e4cc31ed5afa3c818
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 0cfea0b32221f6aa1ebb8cb947640de3b670c79c
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Запускать образ контейнера 2017 г. SQL Server с помощью Docker
 
@@ -68,17 +68,20 @@ ms.lasthandoff: 12/23/2017
    ```
 
    > [!NOTE]
+   > Пароль должен соответствовать политика паролей по умолчанию SQL Server, в противном случае программа установки SQL server не может контейнера и прекратит работу. По умолчанию пароль должен содержать по крайней мере 8 символов и содержать символы трех из следующих четырех: прописные буквы, строчные буквы, цифры и символы. Можно проверить журнал ошибок при выполнении [docker журналы](https://docs.docker.com/engine/reference/commandline/logs/) команды.
+
+   > [!NOTE]
    > По умолчанию это создает контейнер выпуск Developer 2017 г. SQL Server. Процесс запуска выпуски производства в контейнерах немного отличается. Дополнительные сведения см. в разделе [запуска производства образы контейнеров](sql-server-linux-configure-docker.md#production).
 
    Ниже приводится описание этих параметров в предыдущем `docker run` пример:
 
-   | Параметр | Description |
+   | Параметр | Описание |
    |-----|-----|
    | **-e "ACCEPT_EULA = Y"** |  Задать **ACCEPT_EULA** переменную, чтобы любое значение, чтобы подтвердить свое согласие с [лицензионное соглашение конечного пользователя](http://go.microsoft.com/fwlink/?LinkId=746388). Требуется для образа SQL Server. |
-   | **-e "MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>"** | Укажите свои собственные надежный пароль, по крайней мере 8 символов и соответствует [требования к паролю для SQL Server](../relational-databases/security/password-policy.md). Требуется для образа SQL Server. |
-   | **1401:1433 -p** | Сопоставление порта TCP на хост-среды (первое значение) с TCP-порт в контейнере (второе значение). В этом примере SQL Server прослушивает TCP 1433 в контейнере, и оно предоставляется на порт 1401 на узле. |
+   | **-e 'MSSQL_SA_PASSWORD=\<YourStrong!Passw0rd\>'** | Укажите свои собственные надежный пароль, по крайней мере 8 символов и соответствует [требования к паролю для SQL Server](../relational-databases/security/password-policy.md). Требуется для образа SQL Server. |
+   | **-p 1401:1433** | Сопоставление порта TCP на хост-среды (первое значение) с TCP-порт в контейнере (второе значение). В этом примере SQL Server прослушивает TCP 1433 в контейнере, и оно предоставляется на порт 1401 на узле. |
    | **— Имя sql1** | Укажите имя файла для контейнера, а не случайным. Если выполняется более одного контейнера, не может использовать таким же именем. |
-   | **mssql/Microsoft-server-linux:2017-последние** | Образ контейнера Linux 2017 г. SQL Server. |
+   | **microsoft/mssql-server-linux:2017-latest** | Образ контейнера Linux 2017 г. SQL Server. |
 
 1. Чтобы просмотреть в контейнеры Docker, используйте `docker ps` команды.
 
@@ -241,7 +244,7 @@ SELECT @@SERVERNAME,
 - [Код Visual Studio](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) в Windows](sql-server-linux-develop-use-ssms.md)
 - [SQL Server Operations Studio (Предварительная версия)](../sql-operations-studio/what-is.md)
-- [MSSQL-cli (Предварительная версия)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
+- [mssql-cli (Preview)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)
 
 ## <a name="remove-your-container"></a>Удаление контейнера
 

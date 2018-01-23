@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 2c9d71ea7710736a17a404a997e43e6683894cd7
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77b8a5621b71eec40546d79d73ab1672dfff6a7e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="4-6-specifying-attribute-relationships-in-user-defined-hierarchy"></a>Указание 4-6 связей атрибутов в определенной пользователем иерархии
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Как вы уже знаете, в этом учебнике, иерархии атрибутов можно организовать в уровнях в пользовательские иерархии для предоставления путей перемещения для пользователей в кубе. Пользовательская иерархия может отражать естественную иерархию, такую как города, область и страна, или просто путь перемещения,например фамилию сотрудника, его должность и название отдела. Для пользователя, перемещающегося по иерархии, нет разницы между этими двумя типами пользовательских иерархий.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Как уже было рассмотрено в этом учебнике, иерархии атрибутов внутри пользовательских иерархий можно упорядочивать по уровням, чтобы предоставлять пользователям пути перемещения в кубе. Пользовательская иерархия может отражать естественную иерархию, такую как города, область и страна, или просто путь перемещения,например фамилию сотрудника, его должность и название отдела. Для пользователя, перемещающегося по иерархии, нет разницы между этими двумя типами пользовательских иерархий.  
   
 В естественной иерархии, если определены связи между атрибутами, составляющими уровни, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] могут использовать статистические вычисления по одному атрибуту для получения результатов из связанного атрибута. Если связи атрибутов не определены, в службах [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] будут выполняться статистические вычисления по всем неключевым атрибутам из ключевого атрибута. Таким образом, если базовые данные позволяют, необходимо определить связи между атрибутами. Это повышает производительность обработки измерений, секций и выполнения запросов. Дополнительные сведения см. в разделах [Определение связей атрибутов](../analysis-services/multidimensional-models/attribute-relationships-define.md) и [Связи атрибутов](../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
@@ -188,9 +190,9 @@ ms.lasthandoff: 01/08/2018
 14. В меню **Построение** среды [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]выберите команду **Развернуть Analysis Services Tutorial**.  
   
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
-[Определение свойств Unknown Member и Null Processing](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+[Определение неизвестного элемента и свойств обработки значений Null](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Определение связей атрибутов](../analysis-services/multidimensional-models/attribute-relationships-define.md)  
 [Свойства пользовательской иерархии](../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)  
   

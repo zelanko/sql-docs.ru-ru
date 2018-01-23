@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: e73736896056f0d9b6a925292260243381046d34
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 609d8f220df38081e5f14b3aa9154eb86350e014
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="install-sample-data-and-projects"></a>Установка образцов данных и проекты 
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Используйте указания и ссылки, приведенные в этом разделе для установки всех файлов данных и проектов, используемых в учебниках по Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+Используйте указания и ссылки, приведенные в этом разделе, для установки всех файлов данных и проектов, используемых в учебниках по службам Analysis Services.  
   
 ## <a name="step-1-install-sql-server-software"></a>Шаг 1. Установка SQL Server  
 В занятиях этого учебника предполагается, что установлено следующее программное обеспечение. Все перечисленное ниже программное обеспечение устанавливается с установочного носителя SQL Server. Для простоты развертывания все компоненты можно установить на одном компьютере. Для установки этих компонентов запустите программу установки SQL Server и выберите их на странице «Выбор компонентов». Дополнительные сведения см. в разделе [Установка SQL Server 2016 с помощью мастера установки (программа установки)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
@@ -154,7 +156,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-step"></a>Следующий шаг  
 Теперь вы готовы к работе с учебником. Дополнительные сведения о том, как приступить к работе, см. в разделе [Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Установка SQL Server 2016 с помощью мастера установки (программа установки)](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
 [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
 [Configure the Windows Firewall to Allow SQL Server Access](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 9f8206a854379bd95a41d271d3c5f9dc45bd200c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a7430bd3692788b8977d4c1849a599ada77dfc59
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-2---defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Занятие 4-2-Определение свойств родительского атрибута в иерархии родители потомки
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Иерархии родители потомки представляет собой иерархию в измерении, основанный на два столбца из таблицы. Вместе эти столбцы определяют иерархическую связь между элементами измерения. Первый столбец, называемый *ключевым столбцом элемента*, идентифицирует каждый элемент измерения. Второй столбец, называемый *родительским столбцом*, идентифицирует родителя для каждого из элементов измерения. Свойство **NamingTemplate** родительского атрибута определяет имя каждого уровня в иерархии типа "родители-потомки", а свойство **MembersWithData** — будут ли отображаться данные для родительских элементов.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Иерархия типа «родители-потомки» представляет собой иерархию в измерении, которая основана на двух столбцах таблицы. Вместе эти столбцы определяют иерархическую связь между элементами измерения. Первый столбец, называемый *ключевым столбцом элемента*, идентифицирует каждый элемент измерения. Второй столбец, называемый *родительским столбцом*, идентифицирует родителя для каждого из элементов измерения. Свойство **NamingTemplate** родительского атрибута определяет имя каждого уровня в иерархии типа "родители-потомки", а свойство **MembersWithData** — будут ли отображаться данные для родительских элементов.  
   
 Дополнительные сведения см. в разделе [Измерения "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension.md), [Атрибуты в иерархиях типа "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
@@ -113,7 +115,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Автоматическое группирование элементов атрибута](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Измерения "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension.md)  
 [Атрибуты в иерархиях типа "родители-потомки"](../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 4352e05555c713c5b979e4ac8e3fc279d6099fe1
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8bbed44f2b02b0d94678513185dbf682a537e9e5
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-3---modifying-the-product-dimension"></a>Занятие 3 — 3 — изменение измерения «продукт»
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]В задачах этого раздела используется именованное вычисление для обеспечения более описательные имена для линий товаров, определена иерархия в измерении Product и указать имя элемента «все» для иерархии. Также атрибуты будут сгруппированы в папки отображения.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+При выполнении задач этого раздела будут использованы именованные вычисления, чтобы предоставить понятные имена для линий товаров, определена иерархия в измерении «Продукт» и указано имя элемента «(Все)» для иерархии. Также атрибуты будут сгруппированы в папки отображения.  
   
 ## <a name="adding-a-named-calculation"></a>Добавление именованного вычисления  
 К таблице в представлении источника данных может быть добавлено именованное вычисление. В следующей задаче будет создано именованное вычисление, которое отображает полное наименование линейки продуктов.  
@@ -188,8 +190,8 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Изменение измерения Date](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>См. также:  
-[Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>См. также  
+[Определение именованных вычислений в представлении источника данных &#40; Службы Analysis Services &#41;](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
 [Создание пользовательских иерархий](../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
 [Настройка уровня (Все) для иерархий атрибутов](../analysis-services/multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   

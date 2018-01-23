@@ -21,20 +21,22 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 3fae54870409e11ed94050dd621784e57625eb02
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d6d0c4561b4c913799857774fa19dd35999614d1
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="data-mining-programming---ole-db"></a>Программирование интеллектуального анализа данных — OLE DB
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Функции интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] соответствовать [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB для интеллектуального анализа данных 1.0 спецификации, выпущенной в июне 2000.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+  Функции интеллектуального анализа данных в [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] соответствовать [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB для интеллектуального анализа данных 1.0 спецификации, выпущенной в июне 2000.  
   
  Службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] расширяют эту спецификацию, добавляя новые наборы строк для схемы, столбцы в существующие наборы строк схемы и новый синтаксис в язык расширения интеллектуального анализа данных (DMX) для создания структур интеллектуального анализа данных и управления ими.  
   
  **Дополнительные сведения:** [наборы строк схемы интеллектуального анализа данных](../analysis-services/schema-rowsets/data-mining/data-mining-schema-rowsets.md), [СОЗДАНИЯ СТРУКТУРЫ интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41;](../dmx/create-mining-structure-dmx.md), [ALTER СТРУКТУРЫ интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41;](../dmx/alter-mining-structure-dmx.md) , [Удаления СТРУКТУРЫ интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41;](../dmx/drop-mining-structure-dmx.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Службы Analysis Services наборы строк схемы](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)   
  [Расширения интеллектуального анализа данных &#40; расширений интеллектуального анализа данных &#41; Ссылка](../dmx/data-mining-extensions-dmx-reference.md)  
   

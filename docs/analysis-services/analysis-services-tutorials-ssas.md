@@ -18,19 +18,21 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 3d535cf6f8bc65ef44393527a46441332fd5aea0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6a2578633c1ccce72d866c40882eaf4c95669d6c
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Учебники по службам Analysis Services (SSAS)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Этот раздел содержит учебники для служб SQL Server Analysis Services.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Этот раздел содержит учебники для служб SQL Server Analysis Services.  
   
 [Табличное моделирование (учебник по Adventure Works)](../analysis-services/tabular-modeling-adventure-works-tutorial.md)  
 Этот учебник содержит уроки по созданию табличной модели для служб Analysis Services для вымышленной компании Adventure Works с помощью SQL Server Data Tools (SSDT).  
   
-[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 Этот учебник дает базовые навыки и концепции многомерного моделирования в SSDT. После завершения будет иметь базу данных куба на основе данных Adventure Works, к которой можно обращаться из Excel, службы Reporting Services или любого другого клиентского приложения, которое подключается к службам Analysis Services.  
   
 [Интеллектуальный анализ данных](../analysis-services/data-mining-tutorials-analysis-services.md)  

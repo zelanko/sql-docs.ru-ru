@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: fe5945d4d6dce5b6afff025289793127cb8c9988
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d37f4c7e9c21231e99bf8cce8e588969d824b40b
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-1---using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Занятие 4-1-использование измененной версии проекта Tutorial служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Оставшиеся занятия этого учебника основаны на улучшенной версии [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] учебного проекта, созданного на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Оставшиеся занятия этого учебника основаны на улучшенной версии проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial, с которым велась работа на первых трех занятиях. В представление источника данных **Adventure Works DW 2012** были добавлены некоторые таблицы и именованные вычисления, в проект были добавлены дополнительные измерения, которые также были добавлены в куб учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Кроме того, была добавлена вторая группа мер, которая содержит меры из второй таблицы фактов. Улучшенная версия проекта позволит продолжить изучение добавления новых функций в приложение бизнес-аналитики без необходимости повторного применения полученных навыков.  
   
 Перед продолжением работы с учебником необходимо загрузить, извлечь, выполнить и обработать улучшенную версию проекта учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  Инструкции в этом разделе помогут выполнить все эти шаги.  
   
@@ -123,6 +125,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение свойств родительского атрибута в иерархии «родители-потомки»](../analysis-services/lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Развертывание проекта служб Analysis Services](../analysis-services/lesson-2-5-deploying-an-analysis-services-project.md)  
   

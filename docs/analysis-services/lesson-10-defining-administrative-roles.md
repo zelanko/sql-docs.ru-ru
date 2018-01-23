@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b08ad3c2373234688e70633298f474e4c8254fb4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ed03cf00101a8e36760571a89c9bfe25dff98bca
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>Занятие 10. Определение ролей администрирования
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]На этом занятии предстоит определить роли безопасности для задач администрирования.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+На данном занятии предстоит определить роли безопасности для задач администрирования.  
   
 > [!NOTE]  
 > Завершенные проекты для всех занятий в этом учебнике доступны через Интернет. Можно перейти вперед к любому занятию, используя в качестве отправной точки завершенный проект из предыдущего урока. [Щелкните здесь](http://go.microsoft.com/fwlink/?LinkID=221866) для загрузки образцов проектов, прилагаемых к этому учебнику.  
@@ -35,9 +37,9 @@ ms.lasthandoff: 01/08/2018
 [Предоставление разрешений на обработку базы данных](../analysis-services/lesson-10-granting-process-database-permissions.md)  
 В этой задаче будет задана роль безопасности с разрешениями на обработку базы данных служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , после чего будет выполнена проверка созданной роли безопасности.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
   
   

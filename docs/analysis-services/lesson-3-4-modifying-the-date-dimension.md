@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3d71a404f2b91606ec12ac08689a2c8ebefea85f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2241d24c13fa2d31a6789387f165d8285903fa0b
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-4---modifying-the-date-dimension"></a>Занятие 3-4-изменение измерения «Дата»
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]В задачах этого раздела создайте пользовательскую иерархию и изменить имена элементов, отображаемых для атрибутов даты, месяца, квартала и Календарное полугодие. Также мы определим составные ключи для атрибутов, настроим порядок сортировки элементов измерения и зададим связи атрибутов.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+В ходе выполнения задач этого раздела мы создадим определяемую пользователем иерархию и изменим имена элементов, отображаемых для атрибутов «Дата», «Месяц», «Календарный квартал» и «Календарное полугодие». Также мы определим составные ключи для атрибутов, настроим порядок сортировки элементов измерения и зададим связи атрибутов.  
   
 ## <a name="adding-a-named-calculation"></a>Добавление именованного вычисления  
 К таблице в представлении источника данных можно добавить именованное вычисление, которое является выражением SQL и представляет собой вычисляемый столбец, Это выражение имеет вид и функции столбца таблицы. Именованные вычисления позволяют расширять реляционную схему таблиц, существующих в представлении источника данных, не изменяя таблицы в базовом источнике данных. Дополнительные сведения см. в разделе [Определение именованных вычислений в представлении источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
@@ -306,6 +308,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Просмотр развернутого куба](../analysis-services/lesson-3-5-browsing-the-deployed-cube.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Измерения в многомерных моделях](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   

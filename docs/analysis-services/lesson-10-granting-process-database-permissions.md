@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 71f92a11e25c8e766871fd682e77220bb9d36b57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: f7a6e9524efcebab174073290983a20f7f242d81
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-10---granting-process-database-permissions"></a>Занятие 10 — Предоставление разрешений на обработку базы данных
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]После установки экземпляра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], все члены [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] роли администратора сервера в этом экземпляре получают разрешения уровня сервера для выполнения любой задачи в пределах экземпляра [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. По умолчанию другие пользователи не имеют разрешения на администрирование или просмотр объектов данного экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+После установки экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] все члены роли администратора сервера [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] в этом экземпляре получают разрешения уровня сервера для выполнения любых задач в пределах этого экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. По умолчанию другие пользователи не имеют разрешения на администрирование или просмотр объектов данного экземпляра служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 Член роли администратора сервера может предоставлять пользователям административный доступ на уровне сервера, включая их в эту роль. Член роли администратора сервера имеет ограниченные права, но также может открывать пользователям доступ, предоставляя им ограниченный или полный набор разрешений на администрирование или доступ на уровне базы данных. Ограниченные права на администрирование включают в себя разрешения на обработку или определение чтения на уровне базы данных, куба или измерения.  
   
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/08/2018
 > Завершенный проект десятого занятия доступен для загрузки и установки образцов. Дополнительные сведения см. в статье [Установка образцов данных и проектов для учебника по многомерному моделированию в службах Analysis Services](../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>См. также:  
-[Роли и разрешения (службы Analysis Services)](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+[Роли и разрешения &#40; Службы Analysis Services &#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

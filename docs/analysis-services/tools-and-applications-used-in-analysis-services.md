@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: b92074c5a43c81673cb3464780ae878d78c14276
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6dbb05ab73e9994d4f3c14a9bdfd919ec48c6f29
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>Средства и приложения, использующиеся в службах Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Найдите средства и приложения, которые понадобятся для создания моделей Analysis Services и управление развертывания базы данных.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Найдите средства и приложения, которые понадобятся для создания моделей Analysis Services и управление развертывания базы данных.  
   
 ## <a name="analysis-services-model-designers"></a>Конструкторы моделей Analysis Services  
  Модели создаются с помощью шаблонов проектов в SQL Server Data Tools (SSDT), оболочка Visual Studio. Шаблоны проектов предоставляют конструкторы моделей для создания объектов модели данных, составляющих решение Analysis Services. Средство SSDT доступно для бесплатной загрузки обновляется ежемесячно.
@@ -54,7 +56,7 @@ ms.lasthandoff: 01/08/2018
 ### <a name="community-and-third-party-tools"></a>Средства сообщества и сторонние средства  
  Примеры кодов сообщества см. на [странице CodePlex Analysis Services](http://sqlsrvanalysissrvcs.codeplex.com/) . Рекомендации по сторонним средствам, которые поддерживают Analysis Services, см. на[Форумах](http://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровень совместимости многомерной базы данных](../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Уровень совместимости для табличных моделей](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   

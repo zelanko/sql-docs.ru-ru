@@ -24,14 +24,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: c6417a0f9f52f4b1fe6974928f534e8fafa04bca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fc97336300fef2dd621f1f151ff39a04cc3fbfe6
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="translation-support-in-analysis-services"></a>Поддержка параметров перевода в службах Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]В [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] моделей данных можно внедрять несколько переводов заголовка или описания, чтобы предоставлять локализованные версии строк в зависимости от кода языка. В многомерных моделях переводы можно добавлять для имени базы данных, объектов куба и объектов измерений базы данных. В табличных моделях можно переводить названия и описания таблиц и столбцов.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  В многомерные модели данных [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] вы можете включать несколько переводов заголовка или описания, чтобы предоставлять локализованные версии строк в зависимости от кода языка. В многомерных моделях переводы можно добавлять для имени базы данных, объектов куба и объектов измерений базы данных. В табличных моделях можно переводить названия и описания таблиц и столбцов.  
   
  При определении перевода внутри модели создаются метаданные и переведенный заголовок. Но чтобы локализованные строки отображались в клиентском приложении, следует задать для объекта свойство **Language** либо передать параметр **Culture** или **Locale Identifier** в строке подключения (например, параметр `LocaleIdentifier=1036` указывает, что нужно возвращать строки на французском языке).  
   
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/08/2018
  Перевод содержит код языка (LCID), переведенный заголовок для объекта (например, измерения или имени атрибута) и при необходимости привязку к столбцу, предоставляющую значения данных на целевом языке. Может быть несколько переводов, но для любого соединения можно использовать только один. Нет теоретического ограничения для количества переводов, которые можно внедрить в модель, но каждый перевод усложняет тестирование, а все переводы должны совместно использовать одинаковые параметры сортировки, поэтому при разработке решения учитывайте эти естественные ограничения.  
   
 > [!TIP]  
->  Можно использовать клиентские приложения, например Excel, Management Studio и SQL Server Profiler, для возврата переведенных строк. Дополнительные сведения см. в разделе [Советы и рекомендации по глобализации (службы Analysis Services)](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
+>  Можно использовать клиентские приложения, например Excel, Management Studio и SQL Server Profiler, для возврата переведенных строк. Дополнительные сведения см. в разделе [Globalization Tips and Best Practices &#40;Analysis Services&#41;](../analysis-services/globalization-tips-and-best-practices-analysis-services.md) .  
   
 ## <a name="how-to-add-translated-metadata-to-model-in-analysis-services"></a>Добавление переведенных метаданных в модель служб Analysis Services  
  Пошаговые инструкции приводятся в следующих статьях:  
@@ -49,7 +51,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [Переводы в многомерных моделях (службы Analysis Services)](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сценарии глобализации для служб Analysis Services](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [Языки и параметры сортировки &#40; Службы Analysis Services &#41;](../analysis-services/languages-and-collations-analysis-services.md)   
  [Задание или изменение параметров сортировки столбца](../relational-databases/collations/set-or-change-the-column-collation.md)   

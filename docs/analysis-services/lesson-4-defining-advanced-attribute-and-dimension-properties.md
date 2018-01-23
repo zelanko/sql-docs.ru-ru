@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 486d4c78c92f9de8f70a8d3cdb70cced525b3e4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de9c7debe0b21d3f5d72a021f8bf6eb03bf7d06f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Урок 4. Определение расширенных свойств атрибутов и измерений
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]На этом занятии вы узнаете, как использовать некоторые расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+На этом занятии изучается использование расширенных свойств атрибутов, иерархий атрибутов и свойств измерений.  
   
 > [!NOTE]  
 > Это занятие проводится на основе улучшенной версии проекта Tutorial служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , созданного на первых трех занятиях данного учебного курса. В первой задаче занятия рассмотрено, где следует размещать соответствующий образец проекта для данного занятия, а также объясняется разница между этим проектом и проектом, созданным на первых трех занятиях.  
@@ -56,9 +58,9 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-lesson"></a>Следующее занятие  
 [Занятие 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Измерения в многомерных моделях](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

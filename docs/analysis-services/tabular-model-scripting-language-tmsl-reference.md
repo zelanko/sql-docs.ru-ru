@@ -17,14 +17,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3e1a38f2d4466c70259d9f58787b88c939459f59
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: de637476cd0aa2577c850062dffebc0e4fc66238
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="tabular-model-scripting-language-tmsl-reference"></a>Справочник по Скриптовому языку (TMSL) табличной модели
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Табличные языка скриптов модели (TMSL) приведен синтаксис определение команды и объект модели для баз данных табличной модели служб Analysis Services на уровне совместимости 1200 или выше. TMSL взаимодействует со службами Analysis Services через протокол XML для Аналитики, где [XML для Аналитики. Выполнение](../analysis-services/xmla/xml-elements-methods-execute.md) метод ресурс принимает как на основе JSON- **инструкции** скрипты TMSL, а также в традиционные сценарии XML в [язык сценариев служб Analysis Services &#40; ASSL для XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Табличные языка скриптов модели (TMSL) приведен синтаксис определение команды и объект модели для баз данных табличной модели служб Analysis Services на уровне совместимости 1200 или выше. TMSL взаимодействует со службами Analysis Services через протокол XML для Аналитики, где [XML для Аналитики. Выполнение](../analysis-services/xmla/xml-elements-methods-execute.md) метод ресурс принимает как на основе JSON- **инструкции** скрипты TMSL, а также в традиционные сценарии XML в [язык сценариев служб Analysis Services &#40; ASSL для XMLA &#41; ](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
   
  Ниже приведены ключевые элементы TMSL:  
   
@@ -68,15 +70,15 @@ ms.lasthandoff: 01/08/2018
 
 ||||||  
 |-|-|-|-|-|  
-|**Версия**|**Multidimensional**|**Табличные 110 x**|**Tabular 1200**| **Табличные 1400** |
+|**Версия**|**Многомерные**|**Табличные 110 x**|**Tabular 1200**| **Табличные 1400** |
 |Службы Analysis Services|Н/Д|Н/Д|TMSL|TMSL| 
 |SQL Server 2017|ASSL|ASSL|TMSL|TMSL| 
-|SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 
+|SQL Server 2016|ASSL|ASSL|TMSL|TMSL| 
 |SQL Server 2014|ASSL|ASSL|Н/Д|Н/Д|   
 |SQL Server 2012|ASSL|ASSL|Н/Д|Н/Д|  
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровень совместимости для табличных моделей в службах Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Службы Analysis Services Scripting Language &#40; ASSL для XMLA &#41;](../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  

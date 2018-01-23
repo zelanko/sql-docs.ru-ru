@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: caa23a04caddbe488111cd2fcb9cf68eb134b59f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8ccb4cd8fc3b9c71b2edec58b57172c4ecb60515
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Занятие 2. Определение и развертывание куба
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]После определения представления источника данных в вашей [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта, вы будете готовы определить исходный [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] куба.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+После определения представления источников данных в проекте служб [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно определить исходный куб служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
 Кроме того, можно определить куб и его измерения за один проход с помощью мастера кубов. Также можно определить одно или несколько измерений, а затем с помощью мастера кубов определить куб, в котором они будут использоваться. Разработку сложного решения обычно начинают с определения измерений. Дополнительные сведения см. в разделе [Измерения в многомерных моделях](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md) или [Кубы в многомерных моделях](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md).  
   
@@ -53,14 +55,14 @@ ms.lasthandoff: 01/08/2018
 В этой задаче будут просмотрены данные куба и измерения с помощью Excel и конструктора запросов многомерных выражений.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Урок 3. Изменение мер, атрибутов и иерархий](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+[Урок 3: Изменение мер, атрибутов и иерархий](../analysis-services/lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Сценарий учебника по службам Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Многомерное моделирование (учебник по Adventure Works)](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Многомерное моделирование &#40; Учебник по Adventure Works &#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Измерения в многомерных моделях](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
 [Кубы в многомерных моделях](../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)  
-[Настройка свойств проекта служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+[Настройка свойств проекта служб Analysis Services &#40; SSDT &#41;](../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
 [Построение проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)  
 [Развертывание проектов служб Analysis Services (среда SSDT)](../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   

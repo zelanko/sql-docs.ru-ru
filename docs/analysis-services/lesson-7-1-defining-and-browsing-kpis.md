@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 88b23c96ad23f4761ca05dafa685cdba026a484a
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 304f42d1e177e25a0aa44c071af27c4723647802
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-7-1---defining-and-browsing-kpis"></a>Занятие 7-1-Определение и поиск ключевых показателей эффективности
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Чтобы определить ключевые показатели эффективности (KPI), сначала необходимо определить имя ключевого показателя Эффективности и группой мер, с которой он связан. Ключевой показатель эффективности может быть связан со всеми группами мер или с одной из них. Затем предстоит определить следующие элементы ключевого показателя эффективности:  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Чтобы определить ключевые показатели эффективности, сначала задается имя показателя и группа мер, с которой он будет связан. Ключевой показатель эффективности может быть связан со всеми группами мер или с одной из них. Затем предстоит определить следующие элементы ключевого показателя эффективности:  
   
 -   Выражение значения  
   
@@ -275,5 +277,5 @@ ms.lasthandoff: 01/08/2018
     Выводится коэффициент валовой прибыли для продажи велосипедов через посредников в Северной Америке для Q3 CY 2007.  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 8. Определение действий](../analysis-services/lesson-8-defining-actions.md)  
+[Занятие 8: Определение действий](../analysis-services/lesson-8-defining-actions.md)  
   

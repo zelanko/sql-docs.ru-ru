@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 1cf1f2d08108f5516ad0249d1f8e3c4314b6adf8
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d3140b2022e312094df84693acb69b2ea04917a7
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Занятие 5-4-определение степени гранулярности измерения в группе мер
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Для разных целей пользователям может потребоваться измерять данные фактов с разной степенью гранулярности или точности. Например, сведения о продажах через посредников или о продажах через Интернет могут записываться каждый день, в то время как данные о квотах продаж могут существовать только для уровня месяца или квартала. В таких случаях пользователям требуется, чтобы измерение времени обладало разной степенью гранулярности для каждой из этих разных таблиц фактов. Определить новое измерение базы данных как измерение времени с другой степенью гранулярности проще всего с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Для разных целей пользователям может понадобиться измерять данные фактов с разной степенью гранулярности или точности. Например, сведения о продажах через посредников или о продажах через Интернет могут записываться каждый день, в то время как данные о квотах продаж могут существовать только для уровня месяца или квартала. В таких случаях пользователям требуется, чтобы измерение времени обладало разной степенью гранулярности для каждой из этих разных таблиц фактов. Определить новое измерение базы данных как измерение времени с другой степенью гранулярности проще всего с помощью служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
 По умолчанию, если измерение используется в группе мер, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]выполняют грануляцию данных в этом измерении на основе ключевого атрибута измерения. Например, если измерение времени включено в группу мер и применяемая по умолчанию степень гранулярности измерения времени составляет один день, то применяемая по умолчанию степень детализации этого измерения в группе мер также равна одному дню. Это применимо во многих случаях, например для групп мер **Internet Sales** и **Товарооборот посредников** в этом учебнике. Но когда такое измерение включается в иные типы групп мер, такие как квоты продаж или группа бюджетных показателей, более подходящей степенью гранулярности будет месяц или квартал.  
   
@@ -227,10 +229,10 @@ ms.lasthandoff: 01/08/2018
     ![Группа мер продаж распределена](../analysis-services/media/l5-granularity-7.gif "группа мер Sales quota правильно распределена по измерениям")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 6. Определение вычислений](../analysis-services/lesson-6-defining-calculations.md)  
+[Урок 6: Создание вычислений коэффициента](../analysis-services/lesson-6-defining-calculations.md)  
   
-## <a name="see-also"></a>См. также:  
-[Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
+## <a name="see-also"></a>См. также  
+[Связей измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  
 [Определение обычной связи и ее свойств](../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)  
 [Работа с диаграммами в конструкторе представлений источника данных (службы Analysis Services)](../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: c409654fe8ae5ae504dcf4cad42c552ccb11ca22
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d15da8a4d463cbe2e8b0b05abf163400dc354749
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Занятие 8-1-Определение и использование действия детализации
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Распределение данных фактов по измерениям фактов без верной фильтрации данных, которые возвращает запрос может привести к замедлить выполнение запроса. Чтобы избежать этого, можно определить действие детализации, которое ограничит общее число возвращаемых строк. Это позволит значительно повысить производительность выполнения запросов.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Распределение данных фактов по измерениям фактов без верной фильтрации данных, возвращаемых запросом, может привести к снижению его производительности. Чтобы избежать этого, можно определить действие детализации, которое ограничит общее число возвращаемых строк. Это позволит значительно повысить производительность выполнения запросов.  
   
 В задачах этого раздела предстоит создать действие детализации, возвращающее пользователям через Интернет подробные сведения о заказе на продажу.  
   
@@ -150,9 +152,9 @@ ms.lasthandoff: 01/08/2018
     ![Заказы, доставленные Адаму Пауэлу](../analysis-services/media/l8-action8.gif "заказы доставленные Адаму Пауэлу")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 9. Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+[Занятие 9: Определение перспектив и переводов](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Действия (службы Analysis Services — многомерные данные)](../analysis-services/multidimensional-models/actions-analysis-services-multidimensional-data.md)  
 [Действия в многомерных моделях](../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)  
 [Связи измерений](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

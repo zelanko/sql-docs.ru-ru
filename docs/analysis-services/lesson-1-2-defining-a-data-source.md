@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 3c1504d26e2c7cbdbdacf943e17d7514ba20b786
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 81bdb79296ca864999d31c487cabf490ba0e0659
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Занятие 1-2-Определение источника данных
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]После создания [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] проекта, обычно началом работы с проектом путем определения одного или нескольких источников данных, использующих проекта. Для определения источника данных нужно задать строку соединения, которая будет использована для подключения к этому источнику данных. Дополнительные сведения см. в разделе [Создание источника данных (многомерные службы SSAS)](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+После создания проекта служб [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] работа с проектом обычно начинается с определения одного или нескольких источников данных, которые будут использоваться в этом проекте. Для определения источника данных нужно задать строку соединения, которая будет использована для подключения к этому источнику данных. Дополнительные сведения см. в разделе [Создание источника данных (многомерные службы SSAS)](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
 В следующей задаче предстоит определить образец базы данных AdventureWorksDWSQLServer2012 в качестве источника данных для проекта учебника по службам [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Хотя эта база данных в данном случае расположена на локальном компьютере, часто исходные базы данных размещаются на одном или нескольких удаленных компьютерах.  
   
@@ -61,6 +63,6 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Определение представления источников данных](../analysis-services/lesson-1-3-defining-a-data-source-view.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание источника данных (многомерные службы SSAS)](../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   

@@ -25,14 +25,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Active
-ms.openlocfilehash: 0a11280eca74da75737d30fe795c856988d422ae
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 00b88b320118df9649b546b35259ec1c8acdc7cf
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="what-is-analysis-services"></a>Новые возможности служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]Службы Analysis Services — это ядро аналитических данных, используемых в поддержки принятия решений и бизнес-аналитика, предоставляя аналитические данные для бизнес-отчеты и клиентские приложения, такие как Power BI, Excel, отчеты служб Reporting Services и других инструментах визуализации данных.  
+[!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
+
+  Службы Analysis Services — это ядро аналитических данных, используемых в поддержки принятия решений и бизнес-аналитика, предоставляя аналитические данные для бизнес-отчеты и клиентские приложения, такие как Power BI, Excel, отчеты служб Reporting Services и других инструментах визуализации данных.  
   
  Типичный рабочий процесс включает создание модели, многомерные или табличные данные, развертывание модели в качестве базы данных на экземпляре сервера для локальных служб SQL Server Analysis Services или служб Azure Analysis Services, Настройка повторяющегося обработки данных и назначение разрешения на доступ к данным конечным пользователем. Когда она будет готова к работе, вашей семантическую модель данных может осуществляться любым клиентским приложениям, поддерживающих служб Analysis Services в качестве источника данных.  
  

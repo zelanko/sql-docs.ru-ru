@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: bfb369e21e5d57768d79e07cfe066d89033909ca
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4fe3a7adab5e0c4f87abaf09b04efa64f27e124f
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Занятие 3-2-изменение измерения «Заказчик»
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Существует много способов повысить удобство использования и функциональность измерений в кубе. При выполнении задач этого раздела будет изменено измерение «Заказчик».  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+Существует много способов повысить удобство использования и функциональность измерений куба. При выполнении задач этого раздела будет изменено измерение «Заказчик».  
   
 ## <a name="renaming-attributes"></a>Переименование атрибутов  
 Имена атрибутов можно изменить на вкладке **Структура измерения** конструктора измерений.  
@@ -271,7 +273,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="next-task-in-lesson"></a>Следующая задача занятия  
 [Изменение измерения Product](../analysis-services/lesson-3-3-modifying-the-product-dimension.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Справочник по свойствам атрибута измерения](../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
 [Удаление атрибута из измерения](../analysis-services/multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)  
 [переименовать атрибут](../analysis-services/multidimensional-models/attribute-properties-rename-an-attribute.md)  

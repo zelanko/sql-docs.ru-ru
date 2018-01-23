@@ -18,14 +18,16 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8bcf00aa80484209477179ef34e4a795000f4cdc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 7fca2e2c4920130ba3387d7881c63fdefa6ed4eb
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Занятие 4-7-Определение неизвестного элемента и свойств обработки значений Null
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]Когда [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] обработки измерения, все уникальные значения из базовых столбцов таблиц или представлений в представлении источника данных, заполнение атрибуты в измерении. Если при обработке службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] обнаруживают значение NULL, по умолчанию оно преобразуется в нулевое значение для числовых столбцов или в пустую строку — для строковых. Можно изменить значения по умолчанию или преобразовывать значения NULL в процессе извлечения, преобразования или загрузки данных (если они выполняются) из базового реляционного хранилища данных. Кроме того, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно настроить для преобразования значения NULL в указанное значение настройкой трех свойств: **UnknownMember** и **UnknownMemberName** для измерения и **NullProcessing** для ключевого атрибута измерения.  
+[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+
+В процессе обработки измерения службами [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] его атрибуты заполняются всеми уникальными значениями, полученными из базовых столбцов представлений и таблиц в представлении источника данных. Если при обработке службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] обнаруживают значение NULL, по умолчанию оно преобразуется в нулевое значение для числовых столбцов или в пустую строку — для строковых. Можно изменить значения по умолчанию или преобразовывать значения NULL в процессе извлечения, преобразования или загрузки данных (если они выполняются) из базового реляционного хранилища данных. Кроме того, службы [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] можно настроить для преобразования значения NULL в указанное значение настройкой трех свойств: **UnknownMember** и **UnknownMemberName** для измерения и **NullProcessing** для ключевого атрибута измерения.  
   
 Мастер измерений и мастер кубов включают эти свойства в том случае, если ключевой атрибут измерения допускает значения NULL или корневой атрибут измерения, связанного по схеме «снежинка», основан на столбце, который допускает значения NULL. В этих случаях свойству **NullProcessing** ключевого атрибута будет присвоено значение **UnknownMember** , а свойству **UnknownMember** — значение **Visible**.  
   
@@ -185,7 +187,7 @@ ms.lasthandoff: 01/08/2018
     ![Уровню имени товара компонентами сборки](../analysis-services/media/l4-assemblycomponents-1.gif "уровень название продукта, компонентами сборки")  
   
 ## <a name="next-lesson"></a>Следующее занятие  
-[Занятие 5. Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Занятие 5: Определение связей между измерениями и группами мер](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

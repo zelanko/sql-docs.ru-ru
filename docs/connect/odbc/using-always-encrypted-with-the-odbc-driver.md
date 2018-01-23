@@ -18,10 +18,10 @@ manager: jhubbard
 author: MightyPen
 ms.workload: On Demand
 ms.openlocfilehash: a7e2679b04f55f528de1d90070593f6197160d79
-ms.sourcegitcommit: b054e7ab07fe2db3d37aa6dfc6ec9103daee160e
+ms.sourcegitcommit: 82c9868b5bf95e5b0c68137ba434ddd37fc61072
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Использование постоянного шифрования с драйвером ODBC для SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -378,13 +378,13 @@ SQLSetDescField(ipd, paramNum, SQL_CA_SS_FORCE_ENCRYPT, (SQLPOINTER)TRUE, SQL_IS
 
 В следующей строке соединения показывают, как проходить проверку подлинности в хранилище ключей Azure с двумя типами учетных данных:
 
-**ClientID/секрет**:
+**ClientID/Secret**:
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Имя пользователя и пароль**
+**Username/Password**
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
