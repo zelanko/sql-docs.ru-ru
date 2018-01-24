@@ -17,26 +17,26 @@ helpviewer_keywords:
 - modifying database configuration settings
 ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 76fc7be632f91868204d3126f4324bafcd12cc8b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d211e743cdefd7a69416a743f39d2859a54c2cc0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-the-configuration-settings-for-a-database"></a>Изменение настроек конфигурации базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается изменение параметров уровня базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Эти параметры уникальны для каждой базы данных и не влияют на другие базы данных.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Изменение настроек параметров для базы данных с помощью различных средств.**  
   
@@ -50,9 +50,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Только системный администратор, владелец базы данных, члены предопределенной роли сервера **sysadmin** и **dbcreator** и предопределенной роли базы данных **db_owner** могут изменять эти параметры.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  

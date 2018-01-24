@@ -21,22 +21,22 @@ ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: "34"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9d5ba23f6c1433ef7177720a1dd67b0382e0b93c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b0a7e1410e77a0ca4be95bd85d2afea58abc777
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Приостановка или возобновление сеанса зеркального отображения базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как приостановить и возобновить зеркальное отображение базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или с помощью [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Выполнение ReplaceThisText с помощью:**  
   
@@ -52,9 +52,9 @@ ms.lasthandoff: 11/20/2017
 > [!CAUTION]  
 >  После принудительного обслуживания при повторном подключении исходного основного сервера зеркальное отображение приостанавливается. Возобновление зеркального отображения в данной ситуации может привести к потере данных исходным основным сервером. Дополнительные сведения о том, как действовать при возможной потере данных, см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  

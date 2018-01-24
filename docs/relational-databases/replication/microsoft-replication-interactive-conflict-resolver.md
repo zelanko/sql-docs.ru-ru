@@ -14,21 +14,21 @@ ms.topic: article
 f1_keywords: sql13.rep.replconflictviewer.interactiveresolver.f1
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0fa8710dcfc61ffd964cb868a8ba646170087796
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4adb16fde11736a167fb77ab7671777afb617016
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="microsoft-replication-interactive-conflict-resolver"></a>Интерактивный сопоставитель конфликтов репликации (Microsoft)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Интерактивный арбитр конфликтов может применяться для подписок на публикации слиянием, которые синхронизируются с помощью диспетчера синхронизации Windows. Он позволяет просматривать, сравнивать, редактировать и выбирать результаты для конфликтов данных. Репликация также содержит средство просмотра конфликтов, позволяющее просматривать и изменять результаты конфликта после их фиксации. Интерактивный сопоставитель конфликтов позволяет выбирать результаты во время выполнения синхронизации.  
   
 > [!NOTE]  
->  Конфликты, затрагивающие логические записи, не отображаются в интерактивном сопоставителе. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
+>  Конфликты, затрагивающие логические записи, не отображаются в интерактивном сопоставителе. Для просмотра сведений о таких конфликтах используются хранимые процедуры репликации. Дополнительные сведения см. в статье [Просмотр сведений о конфликтах для публикаций слиянием &#40;программирование репликации на языке Transact-SQL&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md).  
   
 ## <a name="options"></a>Параметры  
  **Имя столбца**  

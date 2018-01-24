@@ -19,20 +19,20 @@ helpviewer_keywords:
 - merge replication [SQL Server replication], administering
 ms.assetid: a3d4e7c6-feb5-411b-8bb9-70b6d943420c
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 86a4e432940b36b3ebb8a8dfec58d768b2a036fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a93507645a081f1e0fdc245eae439cf932a44360
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administration-replication"></a>Администрирование (репликация)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел содержит сведения по администрированию топологий репликации. Рекомендуется сначала ознакомиться с рекомендациями, а затем перейти по ссылкам этого раздела к более подробным сведениям в этом или других разделах.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  [Рекомендации по администрированию репликации](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
  Описывается множество рекомендаций, включая сведения о резервном копировании и восстановлении, о задачах наблюдения, эксплуатации и обслуживания.  
   

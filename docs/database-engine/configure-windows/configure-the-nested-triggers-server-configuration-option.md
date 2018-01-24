@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: nested triggers option
 ms.assetid: 29d7372b-d406-4a5b-80c6-a2d231d25211
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 56948a68f8e026882566072ddaa8dee9fb87a23e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 47c74bc3622b2c817736dcf316f5e332b1b780a4
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-nested-triggers-server-configuration-option"></a>Настройка конфигурации сервера nested triggers
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ ms.lasthandoff: 11/20/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Настройка параметра nested triggers с использованием следующих средств:**  
   
@@ -45,9 +45,9 @@ ms.lasthandoff: 11/20/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Разрешения на выполнение хранимой процедуры **sp_configure** без параметров или только с первым параметром по умолчанию предоставляются всем пользователям. Для выполнения процедуры **sp_configure** с обоими параметрами для изменения параметра конфигурации или запуска инструкции RECONFIGURE необходимо иметь разрешение ALTER SETTINGS на уровне сервера. Разрешение ALTER SETTINGS неявным образом предоставлено предопределенным ролям сервера **sysadmin** и **serveradmin** .  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -82,7 +82,7 @@ GO
   
 ```  
   
- Дополнительные сведения см. в статье [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
+ Дополнительные сведения см. в разделе [Параметры конфигурации сервера (SQL Server)](../../database-engine/configure-windows/server-configuration-options-sql-server.md).  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки параметра nested triggers  
  Параметр вступает в силу немедленно, без перезапуска сервера.  

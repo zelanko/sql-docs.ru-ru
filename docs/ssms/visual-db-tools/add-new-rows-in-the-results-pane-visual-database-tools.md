@@ -22,13 +22,13 @@ ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 456b54e01cf02c27f1dcb0714104365b53e8a875
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7e6585253bd81c11059d8021cf972ca57129730a
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>Добавление новых строк на панель результатов (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Новые данные можно добавлять, вводя их или копируя из другой программы, например из блокнота или приложения Excel. Чтобы можно было вставить строку, в ней должно быть ровно то же число столбцов тех же типов, что и в таблице, куда производится вставка. За раз на панель результатов можно вставить несколько строк.  

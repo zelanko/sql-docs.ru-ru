@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.p2pwizard.DA.f1
 ms.assetid: def6bf26-c640-4caf-ad30-05d1e649541d
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d2719c816be19a18f3042e9bcd2e9e8d139f5d84
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e354a3eb26c6742e7b75109781187dcc2c183368
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>Безопасность агента распространителя (одноранговая репликация)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На странице **Безопасность агента распространителя** можно указать учетные записи, с которыми агент распространения будет выполняться и устанавливать соединения с компьютерами в одноранговой топологии. Сведения о разрешениях, требуемых агентами, и об оптимальных методах защиты репликации см. в статьях [Модель безопасности агента репликации](../../relational-databases/replication/security/replication-agent-security-model.md) и [Рекомендации по защите репликации](../../relational-databases/replication/security/replication-security-best-practices.md).  
@@ -49,6 +49,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>См. также:  
  [Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Одноранговая репликация транзакций](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

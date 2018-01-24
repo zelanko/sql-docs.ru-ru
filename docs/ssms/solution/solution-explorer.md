@@ -22,13 +22,13 @@ ms.assetid: 0df09843-0d4f-4925-bc6c-99265035a0c1
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3652c94ce57fa5200e846c922f4d6a245478965c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f4d77dde666a8fb751e637265333a334075807af
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="solution-explorer"></a>Обозреватель решений
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Панель обозревателя решений в среде [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] содержит контейнеры (проекты) для управления такими элементами, как скрипты базы данных, запросы, подключения к данным и файлы. Один или несколько связанных между собой проектов могут быть объединены в контейнер, который называется решением.  

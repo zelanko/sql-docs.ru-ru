@@ -17,13 +17,13 @@ ms.assetid: 7ec5b337-7201-4a66-a541-7560f8b18784
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d12b5859cd2748d9d1c8aa527e6240d8869bcfea
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8403618aff372ee20f04114a6bad31e5a9137fa6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="some-availability-replicas-do-not-have-a-healthy-role"></a>Некоторые реплики доступности не имеют исправной роли
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/20/2017
 |**Имя политики**|Состояние роли реплик доступности|  
 |**Проблема**|Некоторые реплики доступности не имеют исправной роли.|  
 |**Категория**|**Предупреждение**|  
-|**Аспект**|Группа доступности|  
+|**Аспект**|группа доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика опрашивает состояние подключения всех реплик доступности и проверяет наличие реплик, не имеющих исправной роли. Политика имеет неисправное состояние, когда любая из реплик доступности не является первичной или вторичной. В остальном политика находится в рабочем состоянии.  
   
 > [!NOTE]  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - XPath queries [SQL Server]
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: f7745dfa2459958ce4c7e2aa02b418850ad1b1a7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dce5f60b6224cfcb2904244a5d84a6a997abe49d
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-path-mode-with-for-xml"></a>Использование режима PATH совместно с FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Как описано в разделе [Создание XML с помощью предложения FOR XML](../../relational-databases/xml/for-xml-sql-server.md), режим PATH является простым способом смешивания элементов и атрибутов. Режим PATH является также простым способом создания дополнительных вложенных объектов для отражения сложных свойств. Для построения таких XML-документов из набора строк можно использовать запросы FOR XML в режиме EXPLICIT, но режим PATH является более простой альтернативой зачастую громоздким запросам в режиме EXPLICIT. Режим PATH дополнительно к возможности записи вложенных запросов FOR XML и возвращения экземпляров типа **xml** с помощью директивы TYPE позволяет писать менее сложные запросы.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
  В этом разделе описано сопоставление столбцов в наборе строк в различных условиях и представлены соответствующие примеры.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Столбцы без имени](../../relational-databases/xml/columns-without-a-name.md)  
   

@@ -19,25 +19,25 @@ ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f4000d8f7c14b3a3a2cf601411117b1c6479a4ba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 59ef0f8eae527598c8ba08e236a1916c5454ab05
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Переключение сеанса зеркального отображения базы данных на другой ресурс вручную (среда SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Когда зеркальная база данных синхронизирована (то есть находится в состоянии SYNCHRONIZED), владелец базы данных может инициировать отработку отказа на зеркальном сервере вручную.  
   
  При отработке отказа вручную основная и зеркальная роли сервера для базы данных, в которых произошла отработка отказа, меняются местами. Зеркальная база данных становится основной базой данных, а основная — зеркальной. Например в следующей таблице показано, как отработка отказа вручную меняет местами роли двух участников зеркального отображения: `SQLDBENGINE0_1` и `SQLDBENGINE0_2`.  
   
-|Server|До отработки отказа|После отработки отказа|  
+|Сервер|До отработки отказа|После отработки отказа|  
 |------------|---------------------|--------------------|  
 |`SQLDBENGINE0_1`|PRINCIPAL|MIRROR|  
 |`SQLDBENGINE0_2`|MIRROR|PRINCIPAL|  
   
- Обратите внимание на то, что роли сервера для других сеансов зеркального отображения баз данных не подвергаются изменению. Дополнительные сведения см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+ Обратите внимание на то, что роли сервера для других сеансов зеркального отображения баз данных не подвергаются изменению. Дополнительные сведения см. в статье [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
 ### <a name="to-manually-fail-over-database-mirroring"></a>Ручное переключение зеркального отображения базы данных  
   

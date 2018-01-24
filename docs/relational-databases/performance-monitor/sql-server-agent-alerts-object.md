@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLAgent:Alerts
 ms.assetid: e5e37f74-ee88-46d0-ad8f-71fd1b1fa64a
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3e3ea50bd513ac40995ac4ff0fc9d7eea906b0a9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c411f3cf4621eb352f6bfc34793e46511cf65187
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-agent-alerts-object"></a>Агент SQL Server, объект Alerts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект производительности **Alerts** агента SQL Server содержит счетчики производительности, которые предоставляют сведения о предупреждениях агента SQL Server. В следующей таблице перечислены счетчики этого объекта.  
   
  В таблице ниже перечислены счетчики **SQLAgent:Alerts** .  
   
-|Название|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |**Активированные предупреждения**|Этот счетчик показывает полное число предупреждений, которые активировал агент SQL Server со своего последнего перезапуска.|  
 |**Предупреждения, активированные за минуту**|Этот счетчик показывает количество предупреждений, активированных агентом SQL Server за последнюю минуту.|  

@@ -19,13 +19,13 @@ ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 caps.latest.revision: "15"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 34e417de72fa1f35b6e6a262f4ce32907959a3c1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4a646f21807f25c293602c1a1a9de7d8bb05afd0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Настройка зеркальной базы данных на использование свойства TRUSTWORTHY (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При резервном копировании базы данных свойство базы данных TRUSTWORTHY принимает значение OFF. Поэтому в новой зеркальной базе данных оно всегда будет иметь значение OFF. Если для базы данных после отработки отказа с переходом на другой ресурс требуется доверие, это потребует дополнительных действий по настройке после начала зеркального отображения.  

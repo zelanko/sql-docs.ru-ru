@@ -19,13 +19,13 @@ ms.assetid: 40c72091-8f03-4037-8b55-5e95309fe145
 caps.latest.revision: "32"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1d92b7b233cd5aa6e744c5c1d09875e2603eb327
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dcfb8099213533ca37c467a758d63f456d993a67
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Удаление зеркального отображения базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Владелец базы данных может в любое время и на любом из участников вручную остановить сеанс зеркального отображения базы данных.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/20/2017
   
      Если участники в момент остановки сеанса обмениваются данными друг с другом, их связь немедленно обрывается на обоих компьютерах. Если участники не обмениваются данными (база данных во время остановки находится в состоянии DISCONNECTED), связь немедленно обрывается на участнике, с которого останавливается зеркальное отображение. Когда другой участник пытается восстановить соединение, он обнаруживает, что сеанс зеркального отображения завершен.  
   
--   Удаляются сведения о сеансе зеркального отображения (в этом заключается отличие от приостановки сеанса). Зеркальное отображение удаляется и на основной, и на зеркальной базе данных. В представлении **sys.databases** столбец **mirroring_state** и все остальные столбцы зеркального отображения получают значение NULL. Дополнительные сведения см. в статье [sys.database_mirroring (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
+-   Удаляются сведения о сеансе зеркального отображения (в этом заключается отличие от приостановки сеанса). Зеркальное отображение удаляется и на основной, и на зеркальной базе данных. В представлении **sys.databases** столбец **mirroring_state** и все остальные столбцы зеркального отображения получают значение NULL. Дополнительные сведения см. в разделе [sys.database_mirroring (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
 -   На каждом из экземпляров серверов-партнеров остается собственная копия базы данных.  
   

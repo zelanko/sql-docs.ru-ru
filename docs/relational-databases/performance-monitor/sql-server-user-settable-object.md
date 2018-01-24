@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:User Settable
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 97c5a83f9a773f2d0894ed0ed7e4b11e3c7384d9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4d60d2059230ed74f72ef4e5ad7f32a3f91aa40b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, объект User Settable
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] объект **User Settable** позволяет создавать пользовательские экземпляры счетчиков, которые используются для контроля тех характеристик сервера, которые нельзя отследить при использовании существующих счетчиков, какими являются, например компоненты, уникальные для вашей базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : число зарегистрированных заказов или опись продукции.  
@@ -36,13 +36,13 @@ ms.lasthandoff: 11/17/2017
   
  В этой таблице приводится описание объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **User Settable** .  
   
-|SQL Server, счетчики User Settable|Описание|  
+|SQL Server, счетчики User Settable|Description|  
 |---------------------------------------|-----------------|  
 |**Запрос**|Объект **User Settable** содержит счетчик запроса. Пользователи настраивают **User counters** в рамках объекта запроса.|  
   
  В данной таблице приводится описание **экземпляров** счетчика **Query** .  
   
-|Экземпляры счетчиков запросов|Описание|  
+|Экземпляры счетчиков запросов|Description|  
 |-----------------------------|-----------------|  
 |**User counter 1**|Определяется хранимой процедурой **sp_user_counter1**.|  
 |**User counter 2**|Определяется хранимой процедурой **sp_user_counter2**.|  

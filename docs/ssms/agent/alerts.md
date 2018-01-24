@@ -27,13 +27,13 @@ ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8210d7acf8121f616f89f3f87b0cb2d2ba34b36
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 64de30ec59f69764c5f4fe0a1f28570da2b4d0a0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="alerts"></a>видны узлы
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] События генерируются [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и регистрируются в журнале приложений Windows [!INCLUDE[msCoName](../../includes/msconame_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Агент считывает этот журнал и сравнивает события, которые там содержатся, с определенными пользователем предупреждениями. Как только агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] обнаруживает такое соответствие, в ответ на это событие автоматически создается предупреждение. Кроме событий [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] может отслеживать условия производительности и события инструментария управления Windows (WMI).  

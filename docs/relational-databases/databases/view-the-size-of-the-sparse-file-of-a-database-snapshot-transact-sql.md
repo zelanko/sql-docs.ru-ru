@@ -21,15 +21,15 @@ helpviewer_keywords:
 - space [SQL Server], database snapshots
 ms.assetid: 1867c5f8-d57c-46d3-933d-3642ab0a8e24
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a84f5bfb08b3824f908b7b38a1da0dddcd8a71c
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 1696e51f0f523a98f3bc3acdbb36bd97b9cf0f22
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Просмотр размера разреженного файла снимка базы данных (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается использование [!INCLUDE[tsql](../../includes/tsql-md.md)] для проверки того, является ли файл базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] разреженным файлом, и для определения фактического и максимального размеров. Разреженные файлы, которые являются средством файловой системы NTFS, используются моментальными снимками базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

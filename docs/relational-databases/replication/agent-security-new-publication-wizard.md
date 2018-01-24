@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.agentsecurity.articles.f1
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6286d56ca93a397684550b40884f28a799d2df4c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 29e770bf4a90282f2ba0d5a1cd6ad7662a83c897
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="agent-security-new-publication-wizard"></a>Безопасность агентов (мастер создания публикаций)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Безопасность агентов** позволяет указать учетные записи, от имени которых следующие агенты запускаются и подключаются к компьютерам в топологии репликации:  
@@ -64,6 +64,6 @@ ms.lasthandoff: 11/17/2017
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Управление именами для входа и паролями при репликации](../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md)   
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [Replication Agents Overview](../../relational-databases/replication/agents/replication-agents-overview.md)  
+ [Обзор агентов репликации](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

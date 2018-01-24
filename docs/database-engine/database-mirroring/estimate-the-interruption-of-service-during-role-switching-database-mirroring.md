@@ -22,13 +22,13 @@ ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 caps.latest.revision: "41"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2083d1c82e4557e4de96cd8841ce043563b25f90
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3b506d1897f7de298a3f9bbe9259eab106ffcbda
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>Оценка прерывания обслуживания во время переключения ролей (зеркальное отображение базы данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Во время переключения ролей интервал времени, в течение которого зеркальное отображение базы данных не будет обслуживаться, зависит от типа переключения ролей и его причины.  

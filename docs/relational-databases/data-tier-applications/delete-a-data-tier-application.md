@@ -23,20 +23,20 @@ helpviewer_keywords:
 - delete DAC
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 caps.latest.revision: "16"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7181ebd6219df4a3b016ea0b366fae7c883399d8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d54016fe377d7ed10fffd8831bfe07d5c26e1ce8
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-a-data-tier-application"></a>Удаление приложения уровня данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для удаления приложения уровня данных (DAC) используйте мастер удаления приложения уровня данных или скрипт Windows PowerShell. Можно указать, будет ли связанная база данных сохранена, отсоединена или уничтожена.  
   
--   **Перед началом работы:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
 -   **Обновление приложения уровня данных с использованием следующих средств:**  [мастер регистрации приложения уровня данных](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: "48"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 634f38525ab7809da0ade7f002312cb203b767ad
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 86cebd3ab2286cc34ff25d45ec1837d75716c16f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-agent-administration"></a>Администрирование агента репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Агенты репликации выполняют множество задач, связанных с репликацией, включая создание копий схемы и данных, обнаружение обновлений в издателе или подписчике и распространение изменений между серверами. По умолчанию агенты репликации выполняются в рамках отдельных шагов задания агента [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Агенты являются обычными исполняемыми приложениями, поэтому их можно вызывать непосредственно из командной строки или пакетных скриптов. Каждый агент репликации поддерживает набор параметров исполнения, используемых для управления его работой. Эти параметры задаются в профиле агента или в командной строке.  
@@ -46,10 +46,10 @@ ms.lasthandoff: 11/17/2017
 |Исполняемый объект агента|Имя файла|  
 |----------------------|---------------|  
 |[Агент моментальных снимков репликации](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
-|[Агент распространения репликации](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
+|[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[Агент чтения журнала репликации](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[Агент чтения очереди репликации](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
-|[Агент слияния репликации](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
+|[Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)|replmerg.exe|  
   
  Кроме агентов репликации, для репликации существует ряд заданий, выполняющих обслуживание по расписанию и по требованию.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="replication-maintenance-jobs"></a>Задания обслуживания репликации  
  Следующие задания используются службой репликаций для выполнения обслуживания по расписанию или обслуживания по требованию.  
   
-|Задание очистки|Описание|Расписание по умолчанию|  
+|Задание очистки|Description|Расписание по умолчанию|  
 |------------------|-----------------|----------------------|  
 |Очистка журнала агента: распространитель|Удаляется журнал агента репликации из базы данных распространителя.|Запускается каждые десять минут|  
 |Очистка распространения: распространитель|Удаляются реплицированные транзакции из базы данных распространителя. Деактивируются подписки, которые не были синхронизированы в течение максимального срока хранения распространения.|Запускается каждые десять минут|  

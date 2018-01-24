@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3c43d7eaae7a8286252048d75102e27688b4bcd3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9070b4ea757325e2f037140383bc525be75e1fe2
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Импорт доменов из файла Excel при обнаружении набора знаний
   В этом разделе описывается, как импортировать один или несколько доменов из файла Excel в действие обнаружения знаний [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Процесс импорта упрощает процесс формирования набора знаний, экономя время и силы. Это позволяет пользователям, у которых данные хранятся в файлах Excel или текстовых файлах, создавать базу знаний с применением этих данных. (Дополнительные сведения об импорте значений в домен существующей базы знаний см. в разделе [Импорт значений в домен из файла Excel](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).) Экспорт в файл Excel не поддерживается.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Security"></a> Безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для импорта доменов из файла Excel необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Import"></a> Импорт доменов из файла Excel в базу знаний  

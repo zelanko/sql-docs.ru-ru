@@ -18,13 +18,13 @@ ms.assetid: 76af8692-324f-4f5e-b1a0-d72ca8a107e3
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cb69584a15d223d21076c136ee1ce94c809b4f3b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 7c8d4906eb124daff7a754522d4ecb46eb3933bd
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-new-items-to-a-project"></a>Добавление в проект новые элементы
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Добавление новых элементов в проект с целью расширения функциональности приложений. В качестве нового элемента может быть выбран запрос или соединение. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] имеет два типа проектов: проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] и проект скрипта служб Analysis Services. Тип проекта определяет элементы, которые можно добавлять в проект. Например, запрос [!INCLUDE[tsql](../../includes/tsql_md.md)] (SQL-файл) можно добавить в проект скрипта [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] , но нельзя добавить в проект скрипта служб Analysis Services.  

@@ -22,13 +22,13 @@ ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 caps.latest.revision: "20"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1db9a711e770bc21c3917816010e3810da240d9a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b8208251edaeccba14b4da06e44f053893d0c5aa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Обмен ролями между сервером-источником и сервером-получателем доставки журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] После перевода конфигурации доставки журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на сервер-получатель можно настроить базу данных-получатель для работы в качестве базы данных-источника. Затем базу данных-источник и базу данных-получатель можно менять местами по необходимости.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/20/2017
 3.  Включите задание резервного копирования в доставке журналов на исходном сервере-получателе (новом сервере-источнике) и задания копирования и восстановления на исходном сервере-источнике (новом сервере-получателе).  
   
 > [!IMPORTANT]  
->  Чтобы обеспечить согласованную работу пользователей и приложений при изменении базы данных-получателя на базу данных-источник, необходимо повторно создать часть или все метаданные базы данных, такие как имена входа и задания, в новом экземпляре сервера-источника. Дополнительные сведения см. в разделе [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+>  Чтобы обеспечить согласованную работу пользователей и приложений при изменении базы данных-получателя на базу данных-источник, необходимо повторно создать часть или все метаданные базы данных, такие как имена входа и задания, в новом экземпляре сервера-источника. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   

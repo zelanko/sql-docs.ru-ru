@@ -18,13 +18,13 @@ ms.assetid: 4ffd62c1-da72-4daf-832b-cc1268abf351
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8acff0ca01947c905615542de85bd2da9b0c5be6
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 0371541072278482e26b2e7487ff9641ab62aeed
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="choose-target-table-for-insert-results-dialog-box-visual-database-tools"></a>Диалоговое окно «Выбор целевой таблицы для результатов вставки» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] В этом диалоговом окне можно указать таблицу, в которую будут добавлены строки данных с результатами запроса INSERT RESULTS. Это диалоговое окно доступно после запуска запроса INSERT RESULTS.  

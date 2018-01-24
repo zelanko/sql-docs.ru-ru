@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: refreshing data
 ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 caps.latest.revision: "17"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d1a2cd6083e3c3243d1a4930499851fc74b491e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 994079c72210858454dc9b649dda406ea57d6128
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Обновление данных в мониторе репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В мониторе репликации главное окно и окна сведений (окна, запущенные из главного окна) можно обновлять автоматически или вручную. Чтобы обновить окно вручную, нажмите F5. По умолчанию главное окно обновляется автоматически каждые пять секунд. Частота обновления может быть установлена для каждого издателя.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
 ### <a name="to-specify-that-a-detail-window-should-automatically-refresh"></a>Установка автоматического обновления окна сведений  
   
-1.  Откройте окно сведений в мониторе репликации. Например:  
+1.  Откройте окно сведений в мониторе репликации. Пример:  
   
     1.  Раскройте на левой панели группу издателей, раскройте издатель и выберите нужную публикацию.  
   

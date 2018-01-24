@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Database Engine [SQL Server], what's new
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 caps.latest.revision: "431"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0ca847dd4e836fbfd350a8c92df263f50347ae99
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e5018b6b111790d2ff0415180e0608798da44ac
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Новые возможности в ядре СУБД SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ ms.lasthandoff: 11/20/2017
 
 
 
-##### <a name="statistics"></a>Statistics
+##### <a name="statistics"></a>Статистика
 
 [Статистика для таблиц, оптимизированных для памяти,](../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md) теперь обновляется автоматически. Кроме того, выборка теперь является поддерживаемым методом сбора статистики, который позволяет избежать более затратного метода полного сканирования.
 
@@ -181,7 +181,7 @@ ms.lasthandoff: 11/20/2017
 
 Общие сведения см. в следующих разделах:
 
-- [Конструкции языка Transact-SQL, не поддерживаемые в выполняющейся в памяти OLTP](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
+- [Конструкции языка Transact-SQL, неподдерживаемые в In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
 - [Неподдерживаемые функции SQL Server для выполняющейся в памяти OLTP](~/relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
 
@@ -452,10 +452,10 @@ SQL Server 2016 Upgrade Advisor Preview — это автономное сред
 
  Вы можете скачать Upgrade Advisor Preview [здесь](https://www.microsoft.com/en-us/download/details.aspx?id=48119) или установить его с помощью установщика веб-платформы.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 [Что нового в SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)
  
-[Заметки о выпуске для SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
+[Заметки о выпуске SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
 [Установка средств управления SQL Server со средой SSMS](http://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
 

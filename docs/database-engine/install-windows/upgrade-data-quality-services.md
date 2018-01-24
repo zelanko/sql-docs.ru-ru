@@ -15,12 +15,12 @@ ms.assetid: f396666b-7754-4efc-9507-0fd114cc32d5
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: bc1b70a3c4707976539d13222b088bd744e2d436
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 42f27ae342fdd30ac608e1071029eb2415c9b896
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-data-quality-services"></a>Обновление служб Data Quality Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел содержит сведения о том, как обновить существующую установку служб [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Data Quality Services (DQS). В процессе обновления сервера служб DQS в [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] необходимо обновить схему базы данных служб DQS.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Выводится запись для каждой операции обновления, а также дата создания обновления. Максимальное VERSION_ID и ASSEMBLY_VERSION на самой последней даты текущую версию. Значение 2 в столбце STATUS означает успешное выполнение процедуры. Если возникла ошибка, то ОШИБКА перечисляются в столбец. Образец вывода:  
   
-    |Идентификатор|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|ERROR|  
+    |ID|UPGRADE_DATE|VERSION_ID|ASSEMBLY_VERSION|USER_NAME|STATUS|Ошибка|  
     |--------|-------------------|-----------------|-----------------------|----------------|------------|-----------|  
     |1000|2013-08-11 05:26:39.567|1200|11.0.3000.0|\<Домен\имя_пользователя>|2||  
     |1001|2013-09-19 15:09:37.750|1600|12.0.xxxx.0|\<Домен\имя_пользователя>|2||  

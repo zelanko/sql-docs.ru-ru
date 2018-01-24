@@ -19,13 +19,13 @@ ms.assetid: 91f13086-371f-46a2-9f46-804c1415f3ed
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3367ee27128e5083828813d3ed2bab6e4db430ce
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: c8b0ff1b05425ef55e68a9f49f100b9aef5cf684
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>Диалоговое окно «Обнаружены изменения базы данных» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно появляется при попытке сохранить диаграмму базы данных или выбранных таблиц, но при этом некоторые объекты базы данных, на которых распространяется действие сохранения, являются устаревшими по сравнению с базой данных. Принятие изменений, показанных в диалоговом окне, обновит базу данных до соответствия с диаграммой и перезапишет изменения, сделанные другими пользователями.  

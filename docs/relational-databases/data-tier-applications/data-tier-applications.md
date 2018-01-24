@@ -18,15 +18,15 @@ helpviewer_keywords:
 - wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 102a18fdb5a3f183a15ef719e6d85e9d1bbb28bf
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d42c7d587e18e306a15a95e4576e312a0e7c31c0
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="data-tier-applications"></a>Приложения уровня данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Приложение уровня данных (DAC) является логической сущностью управления базой данных, которая определяет все объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], например таблицы, представления и объекты экземпляров, в том числе имена входов, связанные с базой данных пользователя. Приложение уровня данных — это автономная единица развертывания базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], которая позволяет разработчикам уровня данных и администраторам базы данных группировать объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в переносимый артефакт, называемый пакетом приложения уровня данных или пакетом DAC.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 11/17/2017
 |Описывает процесс размещения содержимого пакета приложения уровня данных в папке, где администратор базы данных может следить за действиями DAC перед развертыванием приложения на рабочем сервере.|[Распаковка пакета приложения уровня данных](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
 |Описывает использование мастера для развертывания существующей базы данных. Для выполнения развертывания мастер использует приложения уровня данных.|[Развертывание базы данных с помощью приложения уровня данных](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Поддержка приложений уровня данных для объектов и версий SQL Server](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   

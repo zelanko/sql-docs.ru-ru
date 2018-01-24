@@ -21,13 +21,13 @@ ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 caps.latest.revision: "38"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bd23a2cbf2548e1626367e2d9b84d94637f14011
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc747146c4629010438f26c5d4a29d9c5da252d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Возобновление базы данных доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] можно возобновить выполнение приостановленной базы данных доступности с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Возобновление приостановленной базы данных переводит базу данных в состояние SYNCHRONIZING. Возобновление базы данных-источника возобновляет также все ее базы данных-получатели, которые были приостановлены в результате приостановки базы данных-источника. Если какая-либо база данных-получатель была приостановлена локально на экземпляре сервера, на котором размещена вторичная реплика, эта база данных-получатель должна быть возобновлена локально. Как только определенная база данных-получатель и соответствующая база данных-источник вместе переходят в состояние SYNCHRONIZING, возобновляется синхронизация данных для базы данных-получателя.  
@@ -35,11 +35,11 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Приостановка и возобновление базы данных-получателя AlwaysOn непосредственно не влияет на доступность базы данных-источника. Но приостановка базы данных-получателя может повлиять на избыточность и возможности отработки отказа для базы данных-источника, эти возможности снижены до тех пор, пока не будет возобновлена база данных-получатель. Этим она отличается от зеркального отображения базы данных, где состояние зеркального отображения приостанавливается как в зеркальной базе данных, так и в основной базе данных, до тех пор пока не возобновится зеркальное отображение. Приостановка базы данных-источника AlwaysOn приостанавливает перемещение данных для всех соответствующих баз данных-получателей, а функции избыточности и отработки отказа для этой базы данных не работают до тех пор, пока работа базы данных-источника не будет возобновлена.  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Предварительные требования](#Prerequisites)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Возобновление базы данных-получателя с помощью:**  
   
@@ -64,9 +64,9 @@ ms.lasthandoff: 11/20/2017
   
 -   База данных-источник должна быть в сети и доступна.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER на базу данных.  
   
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
@@ -111,11 +111,11 @@ ms.lasthandoff: 11/20/2017
     ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   

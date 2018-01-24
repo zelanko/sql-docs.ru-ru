@@ -19,15 +19,15 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 caps.latest.revision: "72"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8fecac050a6b6be1ff2605d1926d975647e84a3a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 81c8212ce3e85c15e6015e64474b50be394f7869
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="database-mirroring-witness"></a>Следящий сервер зеркального отображения базы данных
+# <a name="database-mirroring-witness"></a>Database Mirroring Witness
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для поддержки автоматического перехода на другой ресурс сеанс зеркального отображения базы данных должен быть настроен в режиме высокой безопасности, а также должен присутствовать третий экземпляр сервера, называемый *следящим сервером*. Следящий сервер это дополнительный экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , позволяющий зеркальному серверу в сеансе режима высокой безопасности определить, следует ли начать процедуру автоматической отработки отказа. В отличие от двух участников зеркального отображения, следящий сервер не обслуживает базу данных. Его единственная функция заключается в поддержке автоматического перехода на другой ресурс.  
   
 > [!NOTE]  
