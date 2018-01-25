@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.general.f1
 ms.assetid: 7912362f-c4d6-4f60-bd39-dee1f656ed18
 caps.latest.revision: "25"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8bbcc75b2e04f5bfa9e96fa0f0b39099eaa9872a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dcf399256c9dd1a691211e7d6188ec869abafd21
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-general"></a>Свойства публикации, страница «Общие»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Общие** диалогового окна **Свойства публикации** содержит основные сведения о публикации, включая ее имя, описание и политику срока действия.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
   
  Для репликации слиянием [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует использовать в качестве значения по умолчанию **Подписки со сроком действия** и установить наиболее низкое значение из всех возможных для параметра **Интервал**. При увеличении срока действия подписки увеличивается и объем сохраняемых метаданных, что может негативно влиять на производительность системы. Найдите баланс между вероятностью возможных проблем с производительностью системы при обработке больших объемов метаданных и необходимостью для подписчиков не поддерживать соединение или хотя бы не осуществлять синхронизацию в течение продолжительного периода времени.  
   
- Дополнительные сведения см. в статье [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
+ Дополнительные сведения см. в разделе [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
  **Уровень совместимости**  
  Только для[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] и более поздних версий и только для публикаций слиянием. Выберите минимально допустимую версию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимую подписчикам для синхронизации с этой публикацией. Существует ряд правил, связанных с определением уровня совместимости.  

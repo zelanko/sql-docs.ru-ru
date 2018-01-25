@@ -18,13 +18,13 @@ ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ebf89f25956ed529ffb75c6f9d92f15c9e95a5c3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d6287138ff84e1604539b346eb67ef95ac532740
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>Диалоговое окно «Свойства описания» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Диалоговое окно **Свойства описания** предоставляет текстовое поле, в котором можно ввести подробное описание объектов базы данных — таблиц, столбцов и ограничений внешнего ключа. Это диалоговое окно можно открыть из окна "Свойства" для таких объектов, как таблицы и представления, когда они выбираются в конструкторе, из диалоговых окон для таких объектов, как индексы и проверочные ограничения, а также из вкладки **Свойства столбца** в конструкторе таблиц для столбцов таблиц. Это описание сохраняется как расширенное свойство для данного объекта.  

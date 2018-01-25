@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: "18"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c58756989760d56c2f7906c0493cefb2b30d2b0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f4618510f90d373aaba8a602b3f473cd6ed3a4a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-encryption"></a>Шифрование резервной копии
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе приводится общее описание параметров шифрования для резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Он содержит сведения об использовании, преимуществах и рекомендациях для шифрования при резервном копировании.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 -   Присоединение к существующему резервному набору данных для зашифрованных резервных копий не поддерживается.  
   
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  **Для шифрования резервной копии или восстановления из зашифрованной резервной копии требуется следующее:**  
   
  Разрешение**VIEW DEFINITION** на сертификат или асимметричный ключ, используемый для шифрования резервной копии базы данных.  
@@ -138,7 +138,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   
-|Раздел или задача|Описание|  
+|Раздел или задача|Description|  
 |-----------------|-----------------|  
 |[Создание зашифрованной резервной копии](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|Описывает основные шаги, которые необходимо выполнить, чтобы создать зашифрованную резервную копию.|  
 |[Расширенное управление ключами с помощью хранилища ключей Azure (SQL Server)](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Предоставлен пример создания зашифрованной резервной копии, защищенной ключами в хранилище ключей Azure.|  

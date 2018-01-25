@@ -16,22 +16,22 @@ helpviewer_keywords:
 - SQLServer:Cursor Manager by Type
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4b896d5a57046912fec183be926120dc98398bbd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b818f7a5222dc92896e9624ef7cbc89f05fe2af8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server: объект Cursor Manager by Type
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:Cursor Manager by Type** содержит счетчики для отслеживания курсоров с группировкой по типу.  
   
  Следующая таблица описывает счетчики SQL Server **диспетчер курсоров по типу** .  
   
-|Счетчики «Cursor Manager by Type»|Описание|  
+|Счетчики «Cursor Manager by Type»|Description|  
 |-------------------------------------|-----------------|  
 |**Активные курсоры**|Число активных курсоров.|  
 |**Коэффициент попадания в кэш**|Соотношение между числом попаданий в кэш и числом уточняющих запросов.|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
  Каждый из счетчиков объекта содержит следующие экземпляры.  
   
-|Экземпляр диспетчера курсоров|Описание|  
+|Экземпляр диспетчера курсоров|Description|  
 |-----------------------------|-----------------|  
 |**_Total**|Сведения обо всех курсорах.|  
 |**API Cursor**|Только сведения об API курсора.|  

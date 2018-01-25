@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Policy-Based Management, tutorials
 ms.assetid: 7de96e7b-9fb8-4cc8-8d85-61345d68a1e8
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4bda7d7ffbd562dc27acad4ee8eb5d427d3f542f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ae72070feb083068eb173bd551773727d4a3528f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Учебник. Администрирование серверов с помощью управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Добро пожаловать в учебник по администрированию серверов с помощью политик управления на основе политик. Этот учебник предназначен для пользователей, знакомых с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , но новичков в управлении на основе политик.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 [Урок 1. Создание и применение политики, отключенной по умолчанию](../../relational-databases/policy-based-management/lesson-1-create-and-apply-an-off-by-default-policy.md)  
 На данном занятии создается политика, указывающая, что компонент Database Mail не включен на сервере. Затем выполняется проверка сервера на соответствие политике и его настройка путем отключения компонента Database Mail.  
   
-[Занятие 2. Создание и применение политики стандартов именования](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Занятие 2. Создание и применение политики стандартов именования](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
 Данное занятие создает политику, определяющую и обеспечивающую стандарт именования таблиц.  
   
 ## <a name="requirements"></a>Требования  

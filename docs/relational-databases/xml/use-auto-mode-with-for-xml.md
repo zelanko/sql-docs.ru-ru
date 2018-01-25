@@ -18,17 +18,17 @@ helpviewer_keywords:
 - AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2e830183ed89e7d9496809fd7545219b1b978079
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 23c8ca2f784e6893ddd5af0a65a8387ee2778dde
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="use-auto-mode-with-for-xml"></a>Использование режима AUTO совместно с FOR XML
+# <a name="use-auto-mode-with-for-xml"></a>Использование с AUTO Mode для FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Как описано в статье [FOR XML (SQL Server)](../../relational-databases/xml/for-xml-sql-server.md), в режиме AUTO результаты запросов возвращаются в виде вложенных XML-элементов. Такой механизм не обеспечивает достаточное управление структурой XML, формируемой из результатов запроса. Запросы в режиме AUTO полезны, если необходимо формировать простые иерархии. При этом [использование режима EXPLICIT совместно с предложением FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) и [использование режима PATH совместно с FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md) дают больше контроля и гибкости при выборе формы XML из результатов запроса.  
   
  Каждая таблица в предложении FROM, из которой по крайней мере один столбец присутствует в предложении SELECT, представляется как элемент XML. Столбцы, перечисляемые в предложении SELECT, сопоставляются атрибутам или подчиненным элементам, если в предложении FOR XML указан необязательный аргумент ELEMENTS.  
@@ -135,7 +135,7 @@ FOR XML AUTO, ELEMENTS
   
  Если в предложении SELECT задается символ-шаблон «*», вложенность определяется таким же образом, как это описано выше, на основании порядка, в котором строки возвращаются механизмом запроса.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В следующих подразделах представлены дополнительные сведения о режиме AUTO.  
   
 -   [Использование параметра BINARY BASE64](../../relational-databases/xml/use-the-binary-base64-option.md)  

@@ -26,17 +26,17 @@ helpviewer_keywords:
 - transactional replication, subscribing
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 caps.latest.revision: "44"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d4613a7ee6306ba86b5748377f20c1cf48117815
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a8f88fca63abe24ce7093d628062c4ae90b40733
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="subscribe-to-publications"></a>Подписка на публикации
+# <a name="subscribe-to-publications"></a>Subscribe to Publications
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Подписка представляет собой запрос на копию данных и объектов из базы данных в публикации. Подписка определяет получаемую публикацию, а также место и время ее получения. При планировании подписок необходимо определить место обработки агентом. Выбранный тип подписки определяет место запуска агента. В случае принудительной подписки агент слияния или агент распространителя запускается у распространителя, а в случае подписки по запросу агент запускается у подписчиков. После того, как подписка создана, ее тип нельзя изменить.  
   
 |Подписка|Характеристики|Использовать|  
@@ -96,6 +96,6 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="see-also"></a>См. также:  
  [Защита подписчика](../../relational-databases/replication/security/secure-the-subscriber.md)   
- [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
+ [Окончание срока действия и отключение подписки](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
   

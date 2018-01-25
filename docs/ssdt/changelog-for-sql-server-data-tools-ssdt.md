@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 98c27d595b2cb849bdca3ccd72bd51cc8378a8b7
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: e516b5d29e975236e9fa002a7d258caca706663d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>Журнал изменений для SQL Server Data Tools (SSDT)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это журнал изменений для [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md).  
@@ -251,7 +251,6 @@ ms.lasthandoff: 12/22/2017
 - Службы SSIS не локализованы.
 - Задача запуска пакетов в службах SSIS не поддерживает отладку, если параметр *ExecuteOutofProcess* имеет значение *True*. Эта проблема относится только к отладке. Она не влияет на сохранение, развертывание и запуск с использованием DTExec.exe или каталога SSIS.
 - Полный список изменений доступен в [журнале изменений](changelog-for-sql-server-data-tools-ssdt.md).
-- Сообщить о проблемах можно на сайте [SSDT Connect Feedback](https://connect.microsoft.com/SQLServer/Feedback).
 - Для пакетов SSIS, содержащих расширения сторонних разработчиков, невозможно выбирать другие целевые версии сервера.
 
 

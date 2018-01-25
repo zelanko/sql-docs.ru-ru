@@ -20,15 +20,15 @@ helpviewer_keywords:
 - publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: "73"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8ef239563e768ee5044e07e8bca666bdd4169158
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: b37e7cc96300a3bba0e83f2458820afd20d1b004
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Внесение изменений схем в базы данных публикации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Репликация поддерживает широкий диапазон изменений схем для опубликованных объектов. Когда вы вносите любое из следующих изменений схемы в соответствующий опубликованный объект в издателе [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], это изменение распространяется по умолчанию на всех подписчиков [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/05/2017
   
 -   Чтобы включить имеющийся столбец в существующую публикацию, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
-     Дополнительные сведения см. в статье [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
+     Дополнительные сведения см. в разделе [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует повторной инициализации подписок.  
   
 -   Добавление столбца идентификаторов в опубликованную таблицу не поддерживается, поскольку это может привести к расхождению данных при репликации столбца на подписчик. Значения в столбце идентификаторов на издателе зависят от порядка, в котором строки изменяемой таблицы хранятся физически. Строки могут храниться по-разному на подписчике. Поэтому значение для столбца идентификаторов может быть разным для одинаковых строк.  
   
@@ -109,11 +109,11 @@ ms.lasthandoff: 12/05/2017
   
 -   Чтобы удалить столбец из имеющейся публикации, но сохранить его в таблице на издателе, используйте [sp_articlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) или диалоговое окно **Свойства публикации — \<публикация>**.  
   
-     Дополнительные сведения см. в статье [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
+     Дополнительные сведения см. в разделе [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Это потребует создания нового моментального снимка.  
   
 -   Удаляемый столбец не может использоваться в предложениях фильтра любой статьи любой публикации в базе данных.  
   
--   При удалении столбца из опубликованной статьи имейте в виду возможное влияние на базу данных ограничений, индексов и свойств столбца. Например:  
+-   При удалении столбца из опубликованной статьи имейте в виду возможное влияние на базу данных ограничений, индексов и свойств столбца. Пример:  
   
     -   Нельзя удалить столбцы, используемые первичным ключом, из статей в публикациях транзакций, потому что они используются репликацией.  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/05/2017
   
     -   Ограничения следует именовать явным образом для удаления. Дополнительные сведения см. в подразделе «Общие вопросы» этого раздела.  
   
-### <a name="transactional-replication"></a>Репликация транзакций  
+### <a name="transactional-replication"></a>репликация транзакций  
   
 -   Изменения схемы распространяются на подписчики, использующие предыдущие версии [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], однако инструкция DDL должна содержать только тот синтаксис, который поддерживается версией подписчика.  
   

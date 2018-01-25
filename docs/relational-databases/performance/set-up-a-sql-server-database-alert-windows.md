@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: alerts [SQL Server], creating
 ms.assetid: 65d2c5c1-921f-4eff-9ef7-149170ab61e8
 caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 459c324ac13d950f99643e839026d5090e99df78
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 447c615f57a71a321a85315cb9de40df5fca8cfc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-up-a-sql-server-database-alert-windows"></a>Настройка предупреждения базы данных SQL Server (Windows)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Вы можете использовать системный монитор для создания предупреждения, которое будет выводиться, когда счетчик системного монитора достигает порогового значения. В ответ на оповещение системный монитор может запустить то или иное приложение — скажем, приложение, решающее связанную с оповещением проблему. Например, можно создать предупреждение, которое будет выводиться, когда число взаимоблокировок превысит заданное значение. 
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 10. На вкладке **Расписание** укажите время начала и прекращения наблюдения за оповещениями.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Создание предупреждения для базы данных SQL Server](../../relational-databases/performance-monitor/create-a-sql-server-database-alert.md)  
   
   

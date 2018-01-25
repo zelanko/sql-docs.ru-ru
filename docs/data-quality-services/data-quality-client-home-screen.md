@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: "14"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 518ea2fbf0a3e6f667a2d7a488de19d64b1b20ac
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 370c6cc6e18c7064db092a92d3b8a5d826927689
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-client-home-screen"></a>Главный экран клиента DQS
   Этот экран обеспечивает доступ к пользовательским интерфейсам каждой из трех основных групп задач служб [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS): управление базами знаний, проекты служб DQS и администрирование.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
  **Мониторинг активности**  
  Отображает состояние всех действий (как текущих, так и прошлых), которые связаны с подключенным [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]. Типы отслеживаемых действий включают управление базами знаний, проекты качества данных и исправление данных на основе служб SSIS.  
   
- **Конфигурация**  
+ **Configuration**  
  Показывает свойства конфигурации для учетных записей службы эталонных данных (через Windows Azure Marketplace и непосредственно в службы эталонных данных), общие параметры (интерактивная очистка, сопоставление и профилирование) и параметры серьезности журнала.  
   
 ## <a name="see-also"></a>См. также:  

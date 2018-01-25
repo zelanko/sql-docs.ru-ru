@@ -17,15 +17,15 @@ helpviewer_keywords:
 - events [SQL Server], Showplan XML
 ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c213109a08829f1007ac3af8d729b397406b855
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 106a627a50964d482776401bf27db6f2c83ac0ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Раздельное сохранение событий Showplan XML (приложение SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано сохранение событий инструкции **Showplan XML**, захваченных при трассировке в отдельные файлы .SQLPlan с помощью приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Файлы событий **Showplan XML** можно открыть в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], позволяющей просматривать графическое представление плана выполнения для каждого события.  
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
   
 11. Для просмотра события **Showplan XML** в среде SQL Server Management Studio выберите в меню **Файл** пункт **Открыть**, затем выберите **Файл**. Чтобы выбрать и открыть один из файлов событий **Showplan XML**, перейдите в каталог с этими файлами. Файлы событий**Showplan XML** имеют расширение .SQLPlan.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Анализ запросов с помощью результатов инструкции Showplan в приложении SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

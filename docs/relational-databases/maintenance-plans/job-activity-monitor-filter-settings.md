@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.jobactivitymon.filter.f1
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff338e1a2fd9fa170d880d6f7719ce3a08ac599
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b03932c680b2f46485ec633ba31149b3e5d41235
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="job-activity-monitor-filter-settings"></a>Монитор активности заданий (настройки фильтра)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Эта страница используется для уменьшения числа строк, видимых в мониторе активности заданий. Введите критерии в одно или несколько из доступных полей для отображения только строк, удовлетворяющих заданным условиям. Для некоторых полей, например **Состояние** или **Тип блокировки** , имеется ограниченное количество возможных значений, представленных в раскрывающемся списке. Другие, например **Приложение** , позволяют вводить не только любое значение, но и любое их количество в виде списка, разделенного запятыми. Значки панели инструментов позволяют сортировать доступные поля по категориям или в алфавитном порядке. Щелкните каждый из критериев для просмотра краткого его описания.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
  **Результат последнего запуска**  
  Фильтрация заданий по состоянию последнего их запуска.  
   
- **Включено**  
+ **Enabled**  
  Просмотр только включенных или отключенных заданий  
   
  **Категория**  

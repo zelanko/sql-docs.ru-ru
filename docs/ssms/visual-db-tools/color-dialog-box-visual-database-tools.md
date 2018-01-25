@@ -16,13 +16,13 @@ ms.assetid: 89a19608-f24c-41fa-a1a9-6e2e2cd952fa
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c769d37bb4ebda8299498f54c22b87099e788fb4
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f94edb00fc680bdfb3731e2d492c79e2f7cb09f2
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Диалоговое окно «Цвет» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Диалоговое окно **Цвет** возвращает RGB-значение цвета, выбранного пользователем. Пользователь может выбрать базовые цвета, определяемые видеодрайвером, или использовать набор собственных цветов. Выберите из Базовых цветов или создайте собственные цвета. Определите цвет, щелкнув по цветовой матрице или заполнив поля **Оттенок**, **Насыщенность**, **Свет**, **Красный**, **Зеленый**и **Синий** .  

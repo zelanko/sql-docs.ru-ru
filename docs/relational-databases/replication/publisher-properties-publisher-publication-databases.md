@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.configdistwizard.pubproperties.pubdb.f1
 helpviewer_keywords: Publisher Properties dialog box
 ms.assetid: 574ea2e7-4e7b-4733-ab52-429ca93c7b0a
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b10464b7d1b222bad0dc36144a700eb621820d88
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f1e1dd60cd4f786acfb560525c558a954e6e25aa
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publisher-properties---publisher-publication-databases"></a>Свойства издателя — издатель, базы данных публикации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Базы данных публикации** диалогового окна **Свойства издателя** позволяет пользователю в предопределенной роли сервера **sysadmin** включить базы данных для репликации. Включение базы данных не приводит к публикации базы данных, но позволяет любому пользователю в предопределенной роли базы данных **db_owner** создать одну или несколько публикаций этой базы данных.  

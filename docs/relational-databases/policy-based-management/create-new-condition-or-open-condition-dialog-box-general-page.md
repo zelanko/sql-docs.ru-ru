@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.dmf.condition.f1
 ms.assetid: 106954bf-e4ba-412b-9c1a-907d06153dcd
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1e539a7565fa1dc42f5c27cb9025f1dad362a95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 69116441118315b2fa9bcf92ab5b20fcc725b73e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-general-page"></a>Диалоговое окно «Создание нового условия» или «Открытие условия», страница «Общие»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью этого диалогового окна можно создать или изменить условие управления на основе политик. Условие — это логическое выражение, задающее набор допустимых состояний для управляемой цели управления на основе политик по отношению к аспектам. Свойства, которые можно выбрать в поле **Выражение/поле** , зависят от используемого аспекта. Дополнительные сведения о связи условий с аспектами и политиками см. в статье [Администрирование серверов с помощью управления на основе политик](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
  **Оператор**  
  Выберите оператор сравнения для этого выражения. Доступны следующие операторы: =, !=, >, >=, <, <=, [NOT]LIKE, [NOT]IN. Для некоторых свойств доступны не все операторы.  
   
- **Значение**  
+ **Value**  
  Установленное значение для данного выражения. Доступные значения зависят от аспекта. Значения могут быть истинными или ложными, строковыми или числовыми. Строковые значения необходимо заключать в одинарные кавычки, например **'AdventureWorks'**. Для некоторых свойств доступны не все операторы.  
   
 ## <a name="group-clauses"></a>Предложения группы  

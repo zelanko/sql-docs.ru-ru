@@ -16,15 +16,15 @@ helpviewer_keywords:
 - join filters
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a173f1d639d95a300e20a7d6dcf232159dbbb08a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3ad22d47f8673b81ce7cc8c8f2bda399f59f9b96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-generate-join-filters-between-merge-articles"></a>Автоматическое создание фильтров соединения между статьями публикации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Набор фильтров соединения можно автоматически сформировать на странице **Фильтрация строк таблицы** мастера создания публикаций или на странице **Фильтрация строк** диалогового окна **Свойства публикации — \<Публикация>**. Дополнительные сведения об использовании мастера и доступе к этому диалоговому окну см. в статьях [Создание публикации](../../../relational-databases/replication/publish/create-a-publication.md) и [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
   
      После синтаксического анализа инструкции система репликации создает необходимые фильтры соединения и показывает их на панели **Отфильтрованные таблицы: таблицы** на страницах **Фильтрация строк таблицы** или **Фильтрация строк** . Если фильтры формируются в мастере создания публикаций, а распространитель для издателя, для которого выполняется мастер, еще не настроен, появляется подсказка о необходимости настроить распространитель.  
   
-4.  Если вы находитесь в диалоговом окне **Свойства публикации — \<Публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
+4.  Если вы находитесь в диалоговом окне **Свойства публикации — \<публикация>**, нажмите кнопку **ОК**, чтобы сохранить изменения и закрыть диалоговое окно.  
   
 ### <a name="to-modify-a-filter-that-was-automatically-generated"></a>Изменение автоматически созданного фильтра  
   

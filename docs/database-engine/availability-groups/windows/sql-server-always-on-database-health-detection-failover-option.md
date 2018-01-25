@@ -22,13 +22,13 @@ ms.assetid: d74afd28-25c3-48a1-bc3f-e353bee615c2
 caps.latest.revision: "4"
 author: JasonWHowell
 ms.author: jasonh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c9f10162900579bcf871b2a1bf63d8aa5cc4ac6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe422c7445debc085f9d610550f365ccc4f1b8f2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-database-level-health-detection-failover-option"></a>Параметр определения уровня работоспособности базы данных группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Начиная с SQL Server 2016, при настройке группы доступности AlwaysOn стал доступен параметр определения уровня работоспособности базы данных (DB_FAILOVER). Функция определения уровня работоспособности баз данных замечает, когда база данных выходит из сетевого режима, в случае если возникают какие-либо неполадки, и инициирует автоматический переход группы доступности на другой ресурс. 
@@ -102,7 +102,7 @@ select name, db_failover from sys.availability_groups
 
 Пример выходных данных DMV:
 
-имя  |  db_failover  
+NAME  |  db_failover  
 ---------|---------
 | Contoso-ag |  1  |
 

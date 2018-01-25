@@ -18,13 +18,13 @@ ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 caps.latest.revision: "30"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 074a97f74e322b75030d5a921ba4e2b453a59a49
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a80220d2c963dcf5879422ae9e754963a1bb287d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Репликация и доставка журналов (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Доставка журналов использует две копии одной базы данных, которые обычно хранится на разных компьютерах. В любой момент только одна копия базы данных доступна клиентам. Эта копия известна как база данных-источник. Обновления, вносимые клиентами в базу данных-источник, распространяются при помощи доставки журналов в другую копию базы данных, которая называется база данных-получатель. Доставка журналов включает применение каждой вставки, обновления или удаления, сделанных в базе данных-источнике, к базе данных-получателю с помощью журнала транзакций.  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/20/2017
   
  **Настройка репликации слиянием и доставки журналов**  
   
-1.  Настройте доставку журналов для базы данных публикации. Дополнительные сведения см. в статьях [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
+1.  Настройте доставку журналов для базы данных публикации. Дополнительные сведения см. в разделе [Настройка доставки журналов (SQL Server)](../../database-engine/log-shipping/configure-log-shipping-sql-server.md).  
   
 2.  Если издатель завершает работу по ошибке, переименуйте компьютер сервера-получателя, а затем переименуйте экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы имя совпадало с именем сервера-источника. Сведения о переименовании компьютера см. в документации по операционной системе Windows. Сведения о переименовании сервера см. в разделах [Переименование компьютера, на который установлен изолированный экземпляр SQL Server](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md) и [Переименование экземпляра отказоустойчивого кластера SQL Server](../../sql-server/failover-clusters/install/rename-a-sql-server-failover-cluster-instance.md).  
   

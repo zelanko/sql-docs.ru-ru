@@ -16,13 +16,13 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: "59"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c8aaf28bcecf61984bdf524e02031325600a0c2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e2aae5c92052e2a08c2b6ab5ef1d48fd8f3f83dd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Обновление доставки журналов до SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Если вы обновляете конфигурацию доставки журналов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] либо устанавливаете новый пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или накопительный пакет обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], обновление серверов доставки журналов в правильном порядке позволит сохранить ваше решение для аварийного восстановления доставки журналов.  

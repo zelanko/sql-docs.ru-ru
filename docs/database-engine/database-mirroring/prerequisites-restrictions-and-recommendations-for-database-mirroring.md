@@ -23,13 +23,13 @@ ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: "55"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab5346433b15163cf6bf9a757923e06d32d0985
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99a526a432e0e7567022891e28129a12d5b09ef3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Предварительные условия, ограничения и рекомендации по зеркальному отображению базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  Если вы уверены, что функционирование в асинхронном режиме удовлетворяет рабочим требованиям, можно опробовать работу в синхронном режиме, чтобы улучшить защиту данных. При тестировании синхронного режима зеркального отображения в среде рекомендуется в первую очередь протестировать режим высокого уровня безопасности без автоматической отработки отказа на другой ресурс. Главная цель тестирования — увидеть, как синхронный режим влияет на производительность базы данных. Дополнительные сведения см. в статье [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).  
   
-3.  Не торопитесь включать автоматическую отработку отказа до тех пор, пока не убедитесь, что режим высокого уровня безопасности без автоматической отработки отказа удовлетворяет требованиям вашего предприятия и сетевые ошибки не вызывают сбои. Дополнительные сведения см. в разделе [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+3.  Не торопитесь включать автоматическую отработку отказа до тех пор, пока не убедитесь, что режим высокого уровня безопасности без автоматической отработки отказа удовлетворяет требованиям вашего предприятия и сетевые ошибки не вызывают сбои. Дополнительные сведения см. в статье [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
   
 ## <a name="see-also"></a>См. также:  

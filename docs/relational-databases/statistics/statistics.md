@@ -26,15 +26,15 @@ helpviewer_keywords:
 - statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 caps.latest.revision: "70"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c4fc025cd2026ee0310f67c80a3a05fbd3da45c7
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 2ed0124e677f79bd25b11a4ac994f60e65f8fe82
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="statistics"></a>Статистика
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Оптимизатор запросов использует статистику для создания планов запросов, которые повышают производительность запросов. Для большинства запросов оптимизатор уже создает необходимую статистику, которая позволяет сформировать высококачественный план запроса. Но в некоторых случаях для достижения наилучших результатов нужно создать дополнительные статистические данные или изменить структуру запроса. В этом разделе обсуждаются основные статистические понятия и предоставляются рекомендации по эффективному использованию статистики для оптимизации запросов.  

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 8288f4c535ab583ae154d18a76faac42b8fc4c62
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a8edc9f350dea037b60d66add0b97ada84241f1e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Пример: конструирование одноуровневых элементов в режиме EXPLICIT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Предположим, что требуется создать XML, который предоставляет сведения о заказах на продажу. Обратите внимание на то, что элементы <`SalesPerson`> и <`OrderDetail`> имеют одного и того же родителя. Каждый заказ имеет один элемент <`OrderHeader`>, один элемент <`SalesPerson`> или один или несколько элементов <`OrderDetail`>.  

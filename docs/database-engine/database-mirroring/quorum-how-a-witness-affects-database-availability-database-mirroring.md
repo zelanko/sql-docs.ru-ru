@@ -26,13 +26,13 @@ ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: dae91182bc6cbfc48f06ebfa8b079969a088e86b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f01ca52594ddf49dc65f48099822b2a61a92f11
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Кворум. Как следящий сервер влияет на доступность базы данных (зеркальное отображение базы данных)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Когда для сеанса зеркального отображения базы данных назначен следящий сервер, обязательно наличие *кворума*. Кворум — это связь, возникающая, когда два или несколько экземпляров сервера в сеансе зеркального отображения подключаются друг к другу. Обычно кворум включает три соединенных друг с другом экземпляра сервера. Если указан следящий сервер, то кворум необходим, чтобы сделать базу данных доступной. Кворум, рассчитанный на режим высокого уровня безопасности с автоматической отработкой отказа, гарантирует, что в любой момент времени база данных принадлежит только одному участнику.  

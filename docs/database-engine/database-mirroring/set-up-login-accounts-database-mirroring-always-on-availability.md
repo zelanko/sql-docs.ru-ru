@@ -18,13 +18,13 @@ ms.assetid: e9f5287b-1325-4cda-88a6-19eaaa52a652
 caps.latest.revision: "19"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5fd604580eac3afd23bd2f2c43b13dbcc9e2fac0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76210708a7919048470047c3d8634fbdf57cdd88
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-up-login-accounts---database-mirroring-always-on-availability"></a>Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/20/2017
 >  Можно подключиться, используя учетную запись сетевой службы, если вместо пользователя домена указать учетную запись компьютера. При использовании учетной записи компьютера ее необходимо добавить в качестве пользователя на другом экземпляре сервера.  
   
 ##  <a name="GrantConnect"></a> Предоставление разрешения на подключение  
- После создания имени входа на экземпляре сервера имени входа должно быть предоставлено разрешение на соединение с конечной точкой зеркального отображения базы данных на другом экземпляре. Системный администратор предоставляет разрешение на подключение с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] GRANT. Дополнительные сведения см. в разделе [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
+ После создания имени входа на экземпляре сервера имени входа должно быть предоставлено разрешение на соединение с конечной точкой зеркального отображения базы данных на другом экземпляре. Системный администратор предоставляет разрешение на подключение с помощью инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] GRANT. Дополнительные сведения см. в статье [GRANT (Transact-SQL)](../../t-sql/statements/grant-transact-sql.md).  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
   

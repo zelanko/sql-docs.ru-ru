@@ -16,13 +16,13 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 caps.latest.revision: "16"
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85ecfe90f8821623156f5a343197cc7b20ce8802
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3d3f5dd740387c0ba38cf9ad54f915ef2fd1f5eb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Урок 1. Создание и применение политики, отключенной по умолчанию
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью политик управления на основе политик можно администрировать один или несколько экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], один или несколько объектов экземпляра, экземпляров сервера, баз данных, а также один или несколько объектов базы данных. Администратор базы данных должен убедиться, что определенные серверы компонента Database Mail отключены. На этом занятии создаются условие и политика, задающие этот параметр сервера. Выполняется проверка сервера на предмет соответствия политике. Затем используется политика для изменения настройки сервера с целью приведения его в соответствие.  

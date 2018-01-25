@@ -19,19 +19,19 @@ ms.assetid: 97931fdc-d943-48dd-81b9-ae8b8d2c6dad
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: 9dae46b18a46e4457bfe999f9cfdb71d60ec6651
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 9c95fa0d45f4d4734030e871e09acfe254ca2450
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="add-features-to-an-instance-of-sql-server-setup"></a>Добавление компонентов в экземпляр SQL Server (программа установки)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе приведена пошаговая процедура добавления компонентов в экземпляр [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Некоторые компоненты и службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] принадлежат определенному экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Такие компоненты называются привязанными к экземпляру. Они имеют ту же версию, что и экземпляр, которому они принадлежат, и используются только для этого экземпляра. К экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]можно добавить привязанные к экземпляру компоненты и общие компоненты, если они еще не установлены. Список функций, поддерживаемых различными выпусками [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], см. в статье [Выпуски и поддерживаемые функции SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
  Сведения о добавлении функций к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из командной строки см. в разделе [Установка SQL Server из командной строки](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Перед продолжением изучите разделы [Planning a SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md).  
   
 > [!NOTE]  
@@ -50,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  Средство проверки конфигурации системы запустит операцию обнаружения на компьютере. Щелкните **Просмотр подробностей**, чтобы просмотреть подробности проверки. Чтобы продолжить, [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
-4.  На странице «Обновление продукта» приведены последние обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если устанавливать обновления не требуется, снимите флажок **Включить обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Если обновлений продукта не обнаружено, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выводит на экран эту страницу и сразу переходит на страницу **Установка файлов** .  
+4.  На странице «Обновление продукта» приведены последние обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если устанавливать обновления не требуется, снимите флажок **Включить обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Если обновлений продукта не обнаружено, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выводит на экран эту страницу и сразу переходит на страницу **Установка файлов** .  
   
 5.  На странице «Установка установочных файлов» программа установки отображает индикаторы хода загрузки, извлечения и установки установочных файлов. При обнаружении обновления программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оно также будет установлено, если указано, что его следует использовать. Чтобы установить файлы поддержки программы установки, нажмите кнопку **Установить** .  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 11/20/2017
   
 26. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения о файлах журналов установки см. в разделе [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  Настройте установку [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 -   Чтобы сократить уязвимую для атак контактную зону системы, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выборочно устанавливает и активирует ключевые службы и функции. Дополнительные сведения см. в разделе [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  

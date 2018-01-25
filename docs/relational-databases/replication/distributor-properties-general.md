@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.configdistwizard.distproperties.general.f1
 helpviewer_keywords: Distributor Properties dialog box
 ms.assetid: ab4120ec-e524-4c0c-8b48-f2f40adb1a3b
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 873a936699c825048e6d7f21c89b561a9b621b96
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6ca8eee800c47b047b27097ce84a425f1cf251d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-properties-general"></a>Диалоговое окно «Свойства распространителя», страница «Общие»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На странице **Общие** диалогового окна **Свойства распространителя** можно добавлять и удалять базы данных распространителя, а также менять их свойства.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
  **Создать**  
  Нажмите для создания новой базы данных распространителя.  
   
- **Delete**  
+ **Удаление**  
  Выберите существующую базу данных распространителя в сетке свойств **Базы данных** и нажмите **Удалить** для удаления этой базы данных. Нельзя удалить базу данных распространителя, если существует только одна такая база данных; каждый распространитель должен иметь, по крайней мере, одну базу данных распространителя. Для удаления всех баз данных распространителя необходимо отключить распространение на компьютере. Дополнительные сведения см. в статье [Отключение публикации и распространения](../../relational-databases/replication/disable-publishing-and-distribution.md).  
   
  **Параметры профиля по умолчанию**  

@@ -18,13 +18,13 @@ ms.assetid: 56a60bfd-1353-4228-b23e-e887da2228a2
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eef8997bfbe61cf5f56dac6e026559d2b50243f5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 9faedaacdacf9d2722ca1ae335d8f43af86d455f
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>Диалоговое окно «Удаление таблицы» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Данное диалоговое окно позволяет задать таблицу, из которой нужно удалить записи. Это диалоговое окно отображается только в том случае, если на панели диаграмм отображается несколько таблиц при изменении типа запроса на запрос DELETE.  

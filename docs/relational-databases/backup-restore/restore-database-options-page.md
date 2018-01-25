@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: "68"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 83d6c271c6d346881f7d1e7fdc7a0c3e4e0a5c25
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0bdd383335126a36265bc917c1679dbd5ab0dc3e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="restore-database-options-page"></a>Восстановление базы данных (страница «Параметры»)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Параметры** диалогового окна **Восстановление базы данных** используется для изменения поведения и результата операции восстановления.  
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/17/2017
   
  Выбор этого параметра равнозначен использованию параметра KEEP_REPLICATION в инструкции [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) .  
   
- Дополнительные сведения см. в разделе [Резервное копирование и восстановление реплицируемых баз данных](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
+ Дополнительные сведения см. в разделе [Создание резервных копий реплицируемых баз данных и восстановление из них](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
  **Ограничить доступ к восстановленной базе данных [WITH RESTRICTED_USER]**  
  Доступ к восстановленной базе данных будет только у пользователей **db_owner**, **dbcreator**или **sysadmin**.  

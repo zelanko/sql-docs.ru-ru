@@ -18,15 +18,15 @@ f1_keywords:
 helpviewer_keywords: Shrink Database Task dialog box
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 977d851af5e4b044527a196417ea32504a44a65f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0b71a3f5cf438b4ac5f3cce071329a81cff88d25
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>Задача «Сжатие базы данных» (план обслуживания)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Задача "Сжатие базы данных"** используется для создания задачи, которая пытается уменьшить размер выбранных баз данных. Перечисленные ниже параметры используются для определения количества неиспользуемого пространства, которое должно остаться в базе данных после сжатия (чем больше процент, тем меньше сжимается база данных). Это значение определяется долей фактических данных в базе данных. Например: 100-мегабайтная база данных, содержащая 60 МБ данных и 40 МБ свободного пространства с заданным значением свободного пространства, равным 50 процентам, будет содержать 60 МБ данных и 30 МБ свободного пространства (поскольку 50 процентов от 60 МБ равно 30 МБ). Удаляется только лишнее пространство в базе данных. Допустимые значения: от 0 до 100.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/17/2017
  **Использовать указанные имя пользователя и пароль**  
  Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
- **Имя пользователя**  
+ **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
  **Пароль**  

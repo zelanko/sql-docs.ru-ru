@@ -25,15 +25,15 @@ helpviewer_keywords:
 - databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 caps.latest.revision: "91"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 2fe7ef3aca47080afb896ddb7e89470fda06e9e9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 959fea6c816396c70883a47c1d9f00cbd11be9dc
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Резервное копирование и восстановление баз данных SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +104,7 @@ ms.lasthandoff: 11/17/2017
  ##  <a name="backup-and-restore-strategies"></a>Стратегии резервного копирования и восстановления  
  Операции резервирования и восстановления данных следует адаптировать под конкретную среду с учетом доступных ресурсов. Таким образом, для надежной работы операций резервирования и восстановления необходима стратегия резервирования и восстановления. Правильно созданная стратегия резервирования и восстановления увеличивает доступность данных и уменьшает их потери, учитывая требования пользователей.  
   
-#### <a name="important"></a>Внимание! 
+#### <a name="important"></a>Важно! 
 **Базу данных и резервные копии следует размещать на разных устройствах. В противном случае при сбое устройства, содержащего базу данных, резервные копии окажутся недоступными. Кроме того, размещение данных и их резервных копий на отдельных устройствах повышает производительность ввода-вывода как при записи резервных копий, так и в процессе эксплуатации базы данных.**  
   
  Стратегия резервирования и восстановления состоит из части, относящейся к резервированию, и части, относящейся к восстановлению. Часть, относящаяся к резервированию, определяет тип и частоту создания резервных копий, тип и скоростные характеристики оборудования, необходимого для их создания, способ проверки резервных копий, а также местонахождение и тип носителя резервных копий (включая и вопросы безопасности). Часть, относящаяся к восстановлению, определяет ответственного за проведение операций восстановления, а также методы их проведения, позволяющие удовлетворить требования пользователей по доступности данных и минимизации их потерь. Рекомендуется документировать процедуры резервирования и восстановления и хранить копию этой документации в документации по задаче.  
@@ -192,7 +192,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Создание резервной копии журнала транзакций (SQL Server)](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [Создание резервных копий файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
+-   [Резервное копирование файлов и файловых групп (SQL Server)](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)  
   
 -   [Создание разностной резервной копии базы данных (SQL Server)](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   

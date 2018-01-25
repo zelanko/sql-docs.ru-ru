@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Memory Manager object
 ms.assetid: dbf49000-eeb0-4e9c-a361-5092363920dc
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c4994f77321278c9f923cb5899e70c10a688d95
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 3e385362666a573b97579a3f0e99924152b1bcdd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-manager-object"></a>SQL Server, объект Memory Manager
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **Диспетчер памяти** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для контроля общего использования памяти на сервере. Контроль над использованием памяти всего сервера для оценки действий пользователя и использования ресурсов может помочь идентифицировать нехватку производительности. Контроль над памятью, используемый экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , может помочь определить:  
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="memory-manager-counters"></a>Счетчики диспетчера памяти  
  Данная таблица описывает счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Диспетчер памяти** .  
   
-|SQL Server, счетчики диспетчера памяти|Описание|  
+|SQL Server, счетчики диспетчера памяти|Description|  
 |----------------------------------------|-----------------|  
 |**Память соединения (КБ)**|Указывает общий объем динамической памяти, которую использует сервер для обслуживания соединений.|  
 |**Кэш-память базы данных (КБ)**|Указывает объем памяти, который используется в настоящий момент сервером для кэша страниц базы данных.|  

@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.newsubwizard.subproperties.publisher.f1
 helpviewer_keywords: Subscription Properties dialog box
 ms.assetid: d4b2bc8b-0431-4331-8305-8992c96d0d34
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2f971a24eaa58022a12a139bc6a6bd960b0dec76
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: baba517b574179be16ef1376d0b1eff113c6338d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="subscription-properties---publisher"></a>Свойства подписки — издатель
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью диалогового окна **Свойства подписки** на издателе можно просмотреть и установить свойства принудительных подписок. Можно также просматривать некоторые свойства подписок по запросу, но в диалоговом окне **Свойства подписки** на подписчике отображаются дополнительные свойства и их можно изменять.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
  Если параметр отображается в режиме только для чтения, он может быть установлен только при создании подписки. Если необходимо установить параметры, недоступные в мастере создания подписок, создайте подписку с хранимыми процедурами. Дополнительные сведения см. в разделах [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) и [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md).  
   
 ## <a name="options-for-all-subscriptions"></a>Параметры для всех подписок  
- **Безопасность**  
+ **безопасность**  
  Чтобы изменить учетную запись, под которой агент распространителя или агент слияния выполняются на распространителе, щелкните строку **Учетная запись процесса агента** , затем нажмите кнопку свойств (**...**). Чтобы изменить учетную запись, под которой агент распространителя или агент слияния устанавливает соединения с подписчиком, щелкните **Соединение с подписчиком**, а затем нажмите кнопку свойств (**…**).  
   
  Дополнительные сведения о разрешениях, необходимых для каждого агента, см. в разделе [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/17/2017
  При выборе серверного типа подписки в мастере создания подписок подписчику назначается приоритет, используемый при разрешении конфликтов.  
   
  **Интерактивное разрешение конфликтов**  
- Указывается, использовать ли пользовательский интерфейс интерактивного сопоставителя при синхронизации слиянием. Для этого необходимо установить значение **Включено** для параметра **Использовать диспетчер синхронизации Windows**. Дополнительные сведения см. в разделе [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
+ Указывается, использовать ли пользовательский интерфейс интерактивного сопоставителя при синхронизации слиянием. Для этого необходимо установить значение **Включено** для параметра **Использовать диспетчер синхронизации Windows**. Дополнительные сведения см. в статье [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Просмотр и изменение свойств подписки по запросу](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   

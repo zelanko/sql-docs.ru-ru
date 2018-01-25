@@ -24,15 +24,15 @@ helpviewer_keywords:
 - schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 581c46bbb59d9339bc91712a4e100d922e76813f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e32ecad2ca9d89f31e7a6b7e05c650a66ffc8c3a
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-schema-collections-sql-server"></a>Коллекции XML-схем (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Как указано в разделе [xml (Transact-SQL)](../../t-sql/xml/xml-transact-sql.md), SQL Server предоставляет собственное хранилище для данных XML посредством типа данных **xml**. При помощи коллекции XML-схем можно связать с переменной или столбцом типа **xml** XSD-схемы. Коллекция XML-схем хранит импортированные XML-схемы и используется для решения следующих задач:  
@@ -117,7 +117,7 @@ ms.lasthandoff: 11/17/2017
   
 -   MODELGROUP.  
   
- Например:  
+ Пример:  
   
 -   **SomeAttribute** является компонентом ATTRIBUTE.  
   
@@ -214,6 +214,6 @@ N'http://www.microsoft.com/books')
 ## <a name="see-also"></a>См. также:  
  [Просмотр хранимой коллекции схем XML](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Предпроцессор схемы для слияния включаемых схем](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
- [Требования и ограничения для коллекций XML-схем на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
+ [Требования и ограничения для коллекций схем XML на сервере](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

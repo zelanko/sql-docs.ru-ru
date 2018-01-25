@@ -18,15 +18,15 @@ helpviewer_keywords:
 - msdb database [SQL Server]
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d4f6256d3c0b3be70f32b246ef24b996d7545fc5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d749784b0a89d8307e0f2be23f25a836ba9a9c14
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="msdb-database"></a>База данных msdb
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.lasthandoff: 11/17/2017
   
 |Параметр базы данных|Значение по умолчанию|Можно ли изменить|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Нет|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|нет|  
 |ANSI_NULL_DEFAULT|OFF|Да|  
 |ANSI_NULLS|OFF|Да|  
 |ANSI_PADDING|OFF|Да|  
@@ -66,20 +66,20 @@ ms.lasthandoff: 11/17/2017
 |AUTO_SHRINK|OFF|Да|  
 |AUTO_UPDATE_STATISTICS|ON|Да|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Да|  
-|CHANGE_TRACKING|OFF|Нет|  
+|CHANGE_TRACKING|OFF|нет|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Да|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Да|  
 |CURSOR_DEFAULT|GLOBAL|Да|  
-|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Нет<br /><br /> Да<br /><br /> Да|  
+|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|нет<br /><br /> Да<br /><br /> Да|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Да|  
 |DB_CHAINING|ON|Да|  
-|ENCRYPTION|OFF|Нет|  
-|MIXED_PAGE_ALLOCATION|ON|Нет|  
+|ENCRYPTION|OFF|нет|  
+|MIXED_PAGE_ALLOCATION|ON|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
 |PARAMETERIZATION|SIMPLE|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
-|READ_COMMITTED_SNAPSHOT|OFF|Нет|  
+|READ_COMMITTED_SNAPSHOT|OFF|нет|  
 |RECOVERY|SIMPLE|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
 |Параметры компонента Service Broker|ENABLE_BROKER|Да|  

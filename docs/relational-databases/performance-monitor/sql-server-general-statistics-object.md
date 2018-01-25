@@ -16,22 +16,22 @@ helpviewer_keywords:
 - General Statistics object
 ms.assetid: c738e549-d7e7-4211-9ec3-064ac140af7c
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cce63071cd5e87dee3558df803da4388b2af90a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d9d3c24bb7875975221d3af721fe29d6dd3b0433
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-general-statistics-object"></a>SQL Server, объект General Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:General Statistics** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, позволяющие наблюдать общую активность сервера, например количество одновременных соединений и количество пользователей в секунду, подключающихся или отключающихся от компьютера, где запущен экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эти показатели полезно использовать в больших системах оперативной обработки транзакций (OLTP), где большое количество клиентов постоянно подключаются и отключаются от экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  В следующей таблице описаны счетчики объекта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **общая статистика** .  
   
-|Счетчики объекта общей статистики сервера SQL Server|Описание|  
+|Счетчики объекта общей статистики сервера SQL Server|Description|  
 |--------------------------------------------|-----------------|  
 |**Активных временных таблиц**|Количество используемых временных таблиц/табличных переменных.|  
 |**Число сбросов соединений в сек.**|Общее число входов в систему из пула соединений.|  

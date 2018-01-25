@@ -18,20 +18,20 @@ helpviewer_keywords:
 - Database Mirroring object
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 49461bb2ff928355259b66e4c468eed5ce4e8879
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 751d65e88be75199a2f6f6a892e5cc221b0a8006
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, объект Database Mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект производительности **SQLServer:Database Mirroring** содержит счетчики производительности, сообщающие сведения о зеркальном отображении базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В следующей таблице перечислены счетчики этого объекта.  
   
-|Название|Описание|  
+|Имя|Description|  
 |----------|-----------------|  
 |**Получено байт/с**|Число байт, получаемых в секунду.|  
 |**Отправлено байт/с**|Число байт, отправляемых в секунду.|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Для каждого участника некоторые из счетчиков показывают нулевое значение, в зависимости от того, в какой роли в настоящий момент выступает участник.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Счетчики производительности позволяют отслеживать производительность при зеркальном отображении баз данных. Например, можно просмотреть счетчик **Задержка транзакции** , чтобы узнать, влияет ли зеркальное отображение базы данных на производительность основного сервера, или просмотреть счетчики **Очередь на повтор** и **Очередь отправки журнала** , чтобы узнать, насколько быстро зеркальная база данных воспроизводит изменения основной базы данных. Можно просмотреть счетчик **Отправлено байтов журнала/с** , чтобы отследить объем данных журнала, пересылаемый за секунду.  
   
 ## <a name="see-also"></a>См. также:  

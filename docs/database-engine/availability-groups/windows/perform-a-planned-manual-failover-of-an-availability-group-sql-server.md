@@ -19,13 +19,13 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 caps.latest.revision: "36"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e5bb5c28e35464ef46641d33600a53c2d4cb79cc
-ms.sourcegitcommit: c41e1bf5a53e96855b4424de4e0897153070bb28
+ms.openlocfilehash: f4df88a913bd97cfdc632fe8e1fb365c5d8e81c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>Запланированный переход на другой ресурс вручную для группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел описывает, как выполнить переход на другой ресурс вручную без потери данных (*запланированный переход на другой ресурс вручную*) в группе доступности AlwaysOn с помощью [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Группа доступности выполняет переход на другой ресурс на уровне реплики доступности. Запланированный переход на другой ресурс вручную, как и любая другая отработка отказа для группы доступности AlwaysOn, переводит вторичную реплику на основную роль. При этом бывшая первичная реплика принимает роль вторичной.  
@@ -57,9 +57,9 @@ ms.lasthandoff: 11/28/2017
     >  Чтобы определить готовность вторичной реплики к отработке отказа, запросите столбец **is_failover_ready** в динамическом административном представлении [sys.dm_hadr_database_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md). Либо проверьте значение столбца **Готовность к отработке отказа** в [панели мониторинга группы AlwaysOn](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md). 
 -   Эта задача поддерживается только в целевой вторичной реплике. Необходимо подключиться к экземпляру сервера, на котором размещается целевая вторичная реплика. 
   
-###  <a name="Security"></a> Безопасность 
+###  <a name="Security"></a> безопасность 
   
-####  <a name="Permissions"></a> Разрешения 
+####  <a name="Permissions"></a> Permissions 
  Группе доступности необходимо предоставить разрешение ALTER AVAILABILITY GROUP. Также необходимо разрешение CONTROL AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER. 
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio 
@@ -98,7 +98,7 @@ ms.lasthandoff: 11/28/2017
 2. Используйте командлет **Switch-SqlAvailabilityGroup** . 
   
     > [!NOTE] 
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell. Дополнительные сведения: [Получение справки по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md). 
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] . Дополнительные сведения: [Получение справки по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md). 
   
      В следующем примере выполняется ручная отработка отказа группы доступности *MyAg* на вторичную реплику по указанному пути: 
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 11/28/2017
 
 [!INCLUDE[Force failover](../../../includes/ss-force-failover-read-scale-out.md)]
 
-## <a name="see-also"></a>См. также: 
+## <a name="see-also"></a>См. также раздел 
 
  * [Обзор групп доступности AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
  * [Отработка отказа и режимы отработки отказа &#40;группы доступности AlwaysOn&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md) 

@@ -19,13 +19,13 @@ ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f8b3e3b72900fe64a8925b6ebc9e8901b63e2dde
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 06f9d525bc46843dcf5456fc70db0cdd4bd78b74
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrading-mirrored-instances"></a>Обновление зеркальных экземпляров
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При обновлении зеркального экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с установкой новой версии [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], нового пакета обновления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или накопительного пакета обновления, а также при установке нового пакета обновления Windows или накопительного пакета обновления Windows вы можете выполнить последовательное обновление, что позволит сократить время простоя каждой зеркальной базы данных до одного цикла перехода на другой ресурс вручную (или двух циклов перехода на другой ресурс вручную, если нужно вернуться к исходной первичной реплике). Последовательное обновление является многоэтапным процессом, который в самом простом случае заключается в обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , выступающего в роли зеркального сервера в сеансе зеркального отображения, последующем переходе на зеркальную базу данных вручную, обновлении экземпляра [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , бывшего основным, и возобновлении зеркального отображения. Набор операций, фактически применяемый на практике, будет зависеть от режима работы, а также от количества и структуры сеансов зеркального отображения, активных в обновляемых экземплярах [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Для получения сведений об использовании зеркального отображения базы данных с доставкой журналов во время миграции скачайте [технический документ "Зеркальное отображение баз данных и доставка журналов"](https://t.co/RmO6ruCT4J).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
  Перед установкой ознакомьтесь со следующими важными сведениями.  
   
 -   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md). Убедитесь, что текущая версия операционной системы Windows позволяет обновить текущую версию SQL Server до версии SQL Server 2016. Например, вы не можете напрямую обновить экземпляр SQL Server 2005 до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -168,6 +168,6 @@ ms.lasthandoff: 11/20/2017
  [Переключение ролей во время сеанса зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Принудительный запуск службы в сеансе зеркального отображения базы данных (Transact-SQL)](../../database-engine/database-mirroring/force-service-in-a-database-mirroring-session-transact-sql.md)   
  [Запуск монитора зеркального отображения баз данных (среда SQL Server Management Studio)](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Режимы работы зеркального отображения базы данных](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   
   

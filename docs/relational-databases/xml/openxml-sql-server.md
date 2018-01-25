@@ -26,15 +26,15 @@ helpviewer_keywords:
 - element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 493e78f36abc0e45c74278407f607a56b1572d88
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fd801f6a94a10e43432fc650b689ffccf88ced7b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="openxml-sql-server"></a>Инструкция OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Ключевое слово OPENXML языка [!INCLUDE[tsql](../../includes/tsql-md.md)] предоставляет набор строк по XML-документам в памяти, подобный таблице или представлению. OPENXML позволяет получить доступ к XML-данным так, как если бы это был реляционный набор строк. Это делается при помощи представления внутреннего отображения XML-документа в виде набора строк. Записи в наборе строк могут храниться в таблицах базы данных.  
@@ -143,7 +143,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  В следующей таблице описывается структура краевой таблицы.  
   
-|Имя столбца|Тип данных|Описание|  
+|Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**bigint**|Уникальный идентификатор узла документов.<br /><br /> Корневой элемент имеет значение идентификатора, равное 0. Отрицательные значения идентификаторов зарезервированы.|  
 |**parentid**|**bigint**|Идентифицирует родителя узла. Родительский узел, определенный этим идентификатором, необязательно является родительским элементом. Однако это зависит от типа узла, родительский узел которого определен этим идентификатором. Например, если узел является текстовым, его родительский узел может быть узлом атрибута.<br /><br /> Если узел находится на верхнем уровне XML-документа, то его столбец **ParentID** принимает значение NULL.|  

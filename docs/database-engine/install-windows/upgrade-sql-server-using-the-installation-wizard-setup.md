@@ -18,12 +18,12 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 caps.latest.revision: "65"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: feadacaccd6f2ba025de359de6f581a7e3685550
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 07ad726c7ba7c4c51bc98881aafbb2dd15228f78
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Обновление SQL Server с помощью мастера установки (программа установки)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Мастер установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечивает обновление на месте всех компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до последней версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] с помощью единого дерева компонентов.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 > * [Обновление служб Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md)
 > * [Обновление Power Pivot для SharePoint](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md).  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Необходимо запустить программу установки с правами администратора. При установке [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] из удаленной общей папки необходимо пользоваться учетной записью домена, имеющей разрешения на чтение и выполнение в удаленной общей папке и являющейся локальным администратором.  
   
 > [!WARNING]  
@@ -113,7 +113,7 @@ ms.lasthandoff: 11/20/2017
   
 14. На странице «Конфигурация сервера: учетные записи служб» для служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] отображаются учетные записи по умолчанию. Набор служб, которые можно настроить на этой странице, зависит от компонентов, выбранных для обновления.  
   
-     Сведения для проверки подлинности и имена входа будут перенесены из предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб индивидуально, предоставляя каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] минимальные разрешения, необходимые для выполнения ее задач. Дополнительные сведения см. в разделе [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+     Сведения для проверки подлинности и имена входа будут перенесены из предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно назначить одну учетную запись входа всем службам [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или настроить учетные записи служб индивидуально. Можно также указать, будут службы запускаться автоматически или вручную либо будут отключены. [!INCLUDE[msCoName](../../includes/msconame-md.md)] рекомендует настраивать учетные записи служб индивидуально, предоставляя каждой из служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] минимальные разрешения, необходимые для выполнения ее задач. Дополнительные сведения см. в статье [Настройка учетных записей службы Windows и разрешений](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      Чтобы задать одну учетную запись входа для всех учетных записей служб этого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], укажите учетные данные в полях, которые находятся в нижней части страницы.  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 11/20/2017
   
 20. Если будет предложено перезагрузить компьютер, выполните перезагрузку. После завершения установки важно прочитать сообщение мастера установки. Дополнительные сведения о файлах журналов установки см. в разделе [Просмотр и чтение файлов журналов программы установки SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
  После обновления до [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]выполните следующие задачи.  
   
 -   **Регистрация серверов:** в процессе обновления удаляются настройки реестра для предыдущего экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После обновления необходимо заново зарегистрировать серверы.  

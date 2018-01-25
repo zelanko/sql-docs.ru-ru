@@ -20,13 +20,13 @@ ms.assetid: d80b14eb-60db-4351-90ad-6c179d235aa3
 caps.latest.revision: "9"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0f95b84f259ba5abf6f74574e315c767aa1acbc9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b05916edacd132c1e151b77f3be7935a369fe85a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="results-page-always-on-availability-group-wizards"></a>Страница результатов (мастера групп доступности AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/20/2017
  **Результат**  
  Для каждого завершенного шага отображается один из следующих текстов гиперссылок.  
   
-|Результат|Описание|  
+|Результат|Description|  
 |------------|-----------------|  
 |**Ошибка**|Указывает, что шаг проверки выполнен неудачно. Щелкните ссылку, чтобы просмотреть сообщение об ошибке.|  
 |**Успешно**|Указывает, что шаг проверки завершен удачно.|  

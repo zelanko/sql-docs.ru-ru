@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 4aa8dd433a02aff0dbca1b2d6e3843b7f9cf64d5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c8ff28a3194600f1783158deb5e56d96b036963
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reference-data-services-in-dqs"></a>Службы эталонных данных в DQS
   Эталонными данными называется точный и полный набор взаимосвязанных или категорированных глобальных данных (выходящих за пределы предприятия), доступных в доверенных общедоступных доменах или у поставщиков дополнительного коммерческого содержания.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  **Использование сопоставленных доменов для операции очистки в проекте качества данных**. При создании проекта качества данных для операции **Очистка** выберите базу знаний, которая содержит домены/составные домены, сопоставленные со службами ссылочных данных в шаге 2, и выполните операцию очистки.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

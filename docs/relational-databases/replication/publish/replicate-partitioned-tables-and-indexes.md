@@ -19,15 +19,15 @@ helpviewer_keywords:
 - transactional replication, partitioned tables
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8b4646767b43c910b0d5ca272c04594cee3740b8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7f46631c080c868aa56331b2c6fba8497e344e79
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Репликация секционированных таблиц и индексов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Секционирование делает большие таблицы и индексы более управляемыми, так как позволяет быстро и эффективно получать доступ к подмножествам данных и управлять ими, при этом сохраняя целостность всей коллекции данных. Дополнительные сведения см. в разделе [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Репликация поддерживает секционирование, предоставляя набор свойств, которые указывают, как работать с секционированными таблицами и индексами.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>Свойства статьи для репликации слиянием и репликации транзакций  
  В таблице перечислены объекты, применяемые для секционирования данных.  
   
-|Объект|Создан с помощью|  
+|Object|Создан с помощью|  
 |------------|----------------------|  
 |Секционированная таблица или индекс|CREATE TABLE или CREATE INDEX|  
 |Функция секционирования|CREATE PARTITION FUNCTION|  

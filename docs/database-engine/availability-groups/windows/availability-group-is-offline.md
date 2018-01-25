@@ -17,13 +17,13 @@ ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: "14"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 75eb4d860db21dad91aac45c3a681254b2601210
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a4f9ba321f43cd58c210e68f399de0d2f10ef8da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="availability-group-is-offline"></a>Группа доступности в режиме вне сети
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +35,9 @@ ms.lasthandoff: 11/20/2017
 |**Имя политики**|Режим «в сети» группы доступности|  
 |**Проблема**|Группа доступности находится в режиме «вне сети».|  
 |**Категория**|**Критическая**|  
-|**Аспект**|Группа доступности|  
+|**Аспект**|группа доступности|  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Description  
  Эта политика проверяет состояние группы доступности (режим «в сети» или режим «вне сети»). Политика находится в нерабочем состоянии и при переходе кластерного ресурса группы доступности в режим «вне сети» и отсутствии у группы доступности первичной реплики формируется предупреждение.  
   
  Политика находится в рабочем состоянии, если кластерный ресурс группы доступности находится в режиме «в сети», а у группы доступности имеется первичная реплика.  

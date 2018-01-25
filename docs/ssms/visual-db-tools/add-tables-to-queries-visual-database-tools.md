@@ -19,13 +19,13 @@ ms.assetid: 6551aa7e-31a1-4636-852a-819bc53d658b
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 92cadb859c17ffc53bb0aaa59063d1939e1f1049
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: f19aca315ef01bc4a329d6b03ca9c07b6f2a52f6
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="add-tables-to-queries-visual-database-tools"></a>Добавление таблиц в запросы (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При создании запроса извлекаются данные из таблицы или других объектов, структурированных подобно таблицам, таких как представления и некоторые пользовательские функции. Чтобы любые из этих объектов можно было использовать в запросе, их следует добавить на **панель диаграммы**.  

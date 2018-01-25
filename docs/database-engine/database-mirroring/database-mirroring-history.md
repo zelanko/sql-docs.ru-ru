@@ -16,13 +16,13 @@ ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: "25"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c06fd5ffe8a889b1decb3083f517c5ecae86bc0b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3e3bf2700f9570a41f07d18d376332080daa99cd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-mirroring-history"></a>Журнал зеркального отображения базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Это диалоговое окно используется для просмотра журнала состояния зеркального отображения для зеркально отображаемой базы данных в указанном экземпляре сервера.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 11/20/2017
  **Журнал**  
  Отображает список журнала. Щелкните заголовок столбца для сортировки сетки по этому столбцу. Список содержит следующие столбцы.  
   
-|Имя столбца|Описание|  
+|Имя столбца|Description|  
 |-----------------|-----------------|  
 |**Время записи**|Отметка времени строки журнала.|  
 |**Роль**|Текущая роль в зеркальном отображении, выполняемая экземпляром сервера применительно к этой базе данных, либо «Основной», либо «Зеркальный».|  

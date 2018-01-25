@@ -16,13 +16,13 @@ ms.assetid:
 caps.latest.revision: 
 author: allanhirt
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 52fc22dc74afa25194dcf6c0883a2ae3aec26a27
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 61014dfd6113a16e37b4be9a1a06e6901abba37f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="domain-independent-availability-groups"></a>Группы доступности, независимые от домена
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ CREATE USER InstanceA_User FOR LOGIN InstanceA_Login;
 GO
 ```
 10. Для любой реплики, которая может быть основной, создайте имя входа и пользователя во всех соответствующих вторичных репликах.
-11. На каждом экземпляре восстановите сертификаты для других экземпляров, в которых вы создали имя входа и пользователя. В первичной реплике восстановите все сертификаты вторичных реплик. В каждой вторичной реплике восстановите сертификат первичной реплики, а также выполните это действие в любой другой реплике, которая может служить первичной. Например:
+11. На каждом экземпляре восстановите сертификаты для других экземпляров, в которых вы создали имя входа и пользователя. В первичной реплике восстановите все сертификаты вторичных реплик. В каждой вторичной реплике восстановите сертификат первичной реплики, а также выполните это действие в любой другой реплике, которая может служить первичной. Пример:
 ```
 CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
@@ -147,7 +147,7 @@ GO
 
 ### <a name="next-steps"></a>Следующие шаги 
 
-- [Использование мастера групп доступности (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+- [Использование мастера добавления базы данных в группу доступности (среда SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
 - [Использование диалогового окна "Создание группы доступности" (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  

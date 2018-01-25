@@ -19,17 +19,17 @@ helpviewer_keywords:
 - bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1a9e6acfbb01944f13ebdb0ed132ac931500edd6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9a158e04296fd1932c14428a00e38cbd4d91ab66
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Предварительные условия для минимального протоколирования массового импорта данных
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   В базе данных, использующей модель полного восстановления, все операции вставки строк, выполняющиеся при массовом импорте, полностью записываются в журнал транзакций. Если используется модель полного восстановления, импорт большого количества данных может привести к быстрому заполнению журнала транзакций. При использовании простой модели восстановления или модели восстановления с неполным протоколированием минимальное протоколирование операций массового импорта, напротив, снижает вероятность того, что операция массового импорта заполнит все пространство журнала. Минимальное протоколирование также более эффективно, чем полное.  

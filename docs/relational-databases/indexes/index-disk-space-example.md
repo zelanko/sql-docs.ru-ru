@@ -20,15 +20,15 @@ helpviewer_keywords:
 - offline index disk space [SQL Server]
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 3a9fb062940b786528ea4e0f19395391a2b84b19
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 518387e552f754ecb6be3b43772255c45d32ed03
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="index-disk-space-example"></a>Пример места на диске для индекса
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Каждый раз, когда создается, перестраивается или удаляется индекс, требуется место на диске как для старых (исходных), так и для новых (целевых) структур в соответствующих файлах и файловых группах. Место, занимаемое старой структурой, не освобождается до тех пор, пока транзакция создания индекса не будет зафиксирована. Может также потребоваться дополнительное временное место на диске для операций сортировки. Дополнительные сведения см. в статье [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md).  

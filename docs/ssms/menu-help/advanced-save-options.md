@@ -17,13 +17,13 @@ ms.assetid: 6e11159f-df1f-4681-9b37-c4a5e5f2fca1
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 394f15a46fe16b06585c262ea5dbf542746e614b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: cb0587036168b77e50da5e1ed26cb9eac66a9b9c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="advanced-save-options"></a>Дополнительные параметры сохранения
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используйте это диалоговое окно, чтобы выбрать схему языковой кодировки и указать символы, которые должны вставляться в конце каждой строки. Для доступа к диалоговому окну **Дополнительные параметры сохранения** в меню **файл** нажмите кнопку **Сохранить** <query name>**.sql как** , чтобы открыть диалоговое окно **Сохранить файл As** , щелкните стрелку вниз на кнопке **Сохранить** , а затем выберите **Сохранить with Encoding**.  

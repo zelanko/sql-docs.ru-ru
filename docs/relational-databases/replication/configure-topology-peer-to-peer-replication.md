@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.p2pwizard.peers.f1
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc8f91a4da3bfa31f6eab0bcb492e16c9bccba0d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ba3f308aaa3e5eea99a7cae23630c8462414a1fb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Настройка топологии (одноранговая репликация)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Для выполнения таких наиболее типичных задач конфигурации, как добавление и удаление узлов, а также добавления новых соединений между существующими узлами служит страница **Настройка топологии**. Узел, выбранный на странице **Публикация** этого мастера, отображается в области конструктора. Чтобы задать параметры конфигурации, щелкните правой кнопкой мыши узел, соединение или область конструктора.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="options"></a>Параметры  
  Страница **Настройка топологии** содержит элементы интерфейса и параметры, доступные при щелчке правой кнопкой мыши. В следующей таблице содержатся описания всех элементов интерфейса.  
   
-|Элемент интерфейса|Описание|  
+|Элемент интерфейса|Description|  
 |-----------------------|-----------------|  
 |Область конструктора|Отображает другие элементы интерфейса. Для добавления элементов щелкните правой кнопкой область конструктора.|  
 |![Первый узел в топологии](../../relational-databases/replication/media/p2pwizard-firstnode.gif "Первый узел в топологии")|Исходный узел в топологии. Новые узлы инициализируются с помощью копии базы данных публикации исходного узла.|  
@@ -88,6 +88,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>См. также:  
  [Настройка публикации и распространения](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Администрирование одноранговой топологии (программирование репликации на языке Transact-SQL)](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [Одноранговая репликация транзакций](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

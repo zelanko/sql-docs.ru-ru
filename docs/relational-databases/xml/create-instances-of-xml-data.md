@@ -22,15 +22,15 @@ helpviewer_keywords:
 - white space [XML in SQL Server]
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: ec51663f65f5673888ef20ee462078e545848334
-ms.sourcegitcommit: 16347f3f5ed110b5ce4cc47e6ac52b880eba9f5f
+ms.openlocfilehash: 24a96c4692a8ce096a766fa534a1f939abb60bb4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-instances-of-xml-data"></a>Создание экземпляров XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] В этом разделе описывается формирование экземпляров XML.  
@@ -77,7 +77,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
 -   атрибут `xml:space` , действующий на элемент или на одного из его родителей, имеет значение по умолчанию.  
   
- Например:  
+ Пример:  
   
 ```  
 declare @x xml  
@@ -91,7 +91,7 @@ select @x
 <root><child/></root>  
 ```  
   
- Однако можно изменить это поведение. Чтобы сохранить пробел для экземпляра xml DT, необходимо использовать оператор CONVERT и его дополнительный параметр *style* , установленный в значение 1. Например:  
+ Однако можно изменить это поведение. Чтобы сохранить пробел для экземпляра xml DT, необходимо использовать оператор CONVERT и его дополнительный параметр *style* , установленный в значение 1. Пример:  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -139,7 +139,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Использование инструкции SELECT с предложением FOR XML  
- Чтобы получить результаты в виде XML, можно использовать предложение FOR XML в инструкции SELECT. Например:  
+ Чтобы получить результаты в виде XML, можно использовать предложение FOR XML в инструкции SELECT. Пример:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -189,7 +189,7 @@ go
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает экземпляры типа данных **xml** клиенту в результате выполнения различных серверных конструкций, таких как запросы FOR XML с директивой TYPE или запросы, в которых тип данных **xml** используется для возвращения XML из столбцов, переменных и выходных параметров SQL. В коде клиентского приложения поставщик ADO.NET требует, чтобы информация типа данных **xml** отправлялась сервером в двоичном представлении. Однако в запросах FOR XML без директивы TYPE XML-данные возвращаются в строковом формате. В любом случае поставщик клиента всегда будет иметь возможность обрабатывать XML-данные в любом из форматов.  
   
 ## <a name="using-constant-assignments"></a>Использование постоянных назначений  
- Строковая константа может быть использована там, где ожидается экземпляр **xml** -типа. Это то же самое, что и неявное приведение (CAST) строки в XML. Например:  
+ Строковая константа может быть использована там, где ожидается экземпляр **xml** -типа. Это то же самое, что и неявное приведение (CAST) строки в XML. Пример:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -213,9 +213,9 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 ## <a name="using-bulk-load"></a>Использование массовой загрузки  
  Улучшенная функциональность [OPENROWSET (Transact-SQL)](../../t-sql/functions/openrowset-transact-sql.md) позволяет произвести массовую загрузку XML-документов в базу данных. Можно выполнить массовую загрузку XML-экземпляров из файлов в **xml** -столбец базы данных. Дополнительные сведения см. в статье [Примеры массового импорта и экспорта XML-документов (SQL Server)](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Дополнительные сведения о загрузке XML-документов см. в статье [Загрузка XML-данных](../../relational-databases/xml/load-xml-data.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Получение и запрос XML-данных](../../relational-databases/xml/retrieve-and-query-xml-data.md)|Описывает компоненты экземпляров XML, не фиксируемых при сохранении экземпляров в базах данных.|  
   

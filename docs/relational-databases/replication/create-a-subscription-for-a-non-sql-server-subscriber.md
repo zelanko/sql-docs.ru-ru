@@ -17,15 +17,15 @@ helpviewer_keywords:
 - non-SQL Server Subscribers, subscriptions
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 caps.latest.revision: "28"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c2de231ff458d52de6aa4caf4ecda59eb6785490
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 528537bd5cf2e1b0d3020b8a22fe532e5c616cbb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>Создание подписки для подписчика, отличного от подписчика SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается, как создать в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] подписку для подписчика, отличного от подписчика SQL Server, с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Репликация транзакций и репликация моментальных снимков поддерживают публикацию данных на подписчики, отличные от[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Сведения о поддерживаемых платформах подписчиков см. в разделе [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md).  
@@ -108,7 +108,7 @@ ms.lasthandoff: 11/17/2017
   
     -   Введите в поля **Учетная запись процесса**, **Пароль**и **Подтверждение пароля** учетную запись и пароль [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, под которыми будет выполняться агент распространителя, и установите локальное соединение с распространителем.  
   
-         Эта учетная запись должна иметь следующие минимальные разрешения: членство в предопределенной роли базы данных **db_owner** в базе данных распространителя; членство в списке доступа к публикации (PAL); разрешения на чтение хранилища моментального снимка; разрешение на чтение каталога установки поставщика OLE DB. Дополнительные сведения о списке доступа к публикации см. в статье [Защита издателя](../../relational-databases/replication/security/secure-the-publisher.md).  
+         Эта учетная запись должна иметь следующие минимальные разрешения: членство в предопределенной роли базы данных **db_owner** в базе данных распространителя; членство в списке доступа к публикации (PAL); разрешения на чтение хранилища моментального снимка; разрешение на чтение каталога установки поставщика OLE DB. Дополнительные сведения о списке доступа к публикации см. в статье [Организация безопасности издателя](../../relational-databases/replication/security/secure-the-publisher.md).  
   
     -   Под полем **Соединиться с подписчиком**введите в поля **Имя входа**, **Пароль**и **Подтверждение пароля** имя входа и пароль, которые следует использовать для соединения с подписчиком. Это имя входа уже должно быть сконфигурировано и иметь разрешения, достаточные для создания объектов в базе данных подписки.  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 11/17/2017
     -   Расписание задания агента распространителя для этой подписки. Дополнительные сведения см. в статье [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
     > [!IMPORTANT]  
-    >  При создании принудительной подписки на издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, передаются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  При создании принудительной подписки на издателе с удаленным распространителем значения, указываемые для всех параметров, включая *job_login* и *job_password*, передаются распространителю в виде обычного текста. Прежде чем выполнять эту хранимую процедуру, необходимо зашифровать соединение между издателем и его удаленным распространителем. Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 ## <a name="see-also"></a>См. также:  
  [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)   

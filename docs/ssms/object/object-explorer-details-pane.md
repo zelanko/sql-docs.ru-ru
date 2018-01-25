@@ -23,13 +23,13 @@ ms.assetid: b963e3c2-dc9e-4d38-bd28-2e00fe9e0e47
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6bf7fdbd0c791ae6302774116769b91fcd4a6ee3
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 8798c67cc730cef471e28de51ae27213bc04565d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="object-explorer-details-pane"></a>Область сведений обозревателя объектов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Подробности обозревателя объектов — это компонент среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)], который обеспечивает просмотр всех объектов сервера и пользовательский интерфейс для управления ими. Возможности обозревателя объектов могут незначительно отличаться в зависимости от типа сервера, но в общем случае они включают функции разработки для баз данных, а также функции управления для всех типов серверов.  

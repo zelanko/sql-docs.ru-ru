@@ -16,11 +16,11 @@ ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: 6f14ac21-a086-4c05-861f-0a12bf278259
 caps.latest.revision: "43"
-ms.openlocfilehash: 391b088af58f7c231d9d95e6940332f8f78dd1d5
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 65a10ada824b291e37e61a421882cf012c7b8ddc
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="configure-polybase-connectivity-to-external-data"></a>Настройка подключения к PolyBase для внешних данных
 В этой статье описывается настройка PolyBase в SQL Server PDW для подключения к внешней Hadoop или Microsoft Azure BLOB-объектов источников данных службы хранилища. С помощью PolyBase для запуска запросов, объединяющие данные из нескольких источников, включая Hadoop, хранилища BLOB-объектов Azure и SQL Server PDW.  
@@ -132,8 +132,36 @@ ms.lasthandoff: 12/21/2017
 10. Также для подключения к WASB требуется пересылки DNS настроены на устройстве. Настройка пересылки DNS, в разделе [использовать DNS-сервер пересылки для разрешения DNS-имена устройств не &#40; Система платформы аналитики &#41; ](use-a-dns-forwarder-to-resolve-non-appliance-dns-names.md).  
   
 Авторизованные пользователи теперь можно создать внешние источники данных, внешние форматы файлов и внешних таблиц. Их можно использовать для интеграции данных из нескольких источников, включая Hadoop, хранилище больших двоичных объектов Microsoft Azure и SQL Server PDW.  
+
+## <a name="kerberos-configuration"></a>Конфигурация Kerberos  
+Когда PolyBase выполняет проверку подлинности для защищенного кластера Kerberos, необходимо задать для проверки подлинности параметр hadoop.rpc.protection. При этом обмен данными между узлами Hadoop останется в незашифрованном виде. 
+
+ Чтобы подключиться к защищенному с помощью Kerberos кластеру Hadoop [с помощью MIT KDC], сделайте следующее.
+   
   
-## <a name="see-also"></a>См. также:  
+1.  Найдите каталог конфигурации Hadoop в каталоге установки на узле управления:  
+  
+    ```  
+    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf
+    ```  
+  
+2.  Найдите значение конфигурации для ключей конфигурации, перечисленных в таблице, на компьютере с Hadoop. (Найдите файлы в каталоге конфигурации Hadoop на этом же компьютере.)  
+  
+3.  Скопируйте значения конфигурации в свойство value соответствующих файлов на компьютере с SQL Server.  
+  
+    |**#**|**Файл конфигурации**|**Ключ конфигурации**|**Действие**|  
+    |------------|----------------|---------------------|----------|   
+    |1|core-site.xml|polybase.kerberos.kdchost|Укажите имя узла KDC. Например, kerberos.your-realm.com|  
+    |2|core-site.xml|polybase.kerberos.realm|Укажите область Kerberos. Например, YOUR-REALM.COM|  
+    |3|core-site.xml|hadoop.security.authentication|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например, KERBEROS<br></br>**Примечание о безопасности:** слово KERBEROS должно быть написано прописными буквами. При использовании строчных букв функция может не включиться.|   
+    |4|hdfs-site.xml|dfs.namenode.kerberos.principal|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например: hdfs/_HOST@YOUR-REALM.COM.|  
+    |5|mapred-site.xml|mapreduce.jobhistory.principal|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например: mapred/_HOST@YOUR-REALM.COM.|  
+    |6|mapred-site.xml|mapreduce.jobhistory.address|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например, 10.193.26.174:10020|  
+    |7|yarn-site.xml yarn|yarn.resourcemanager.principal|Найдите конфигурацию для Hadoop и скопируйте ее на компьютер с SQL Server. Например: yarn/_HOST@YOUR-REALM.COM.|  
+  
+4.  Создайте объект учетных данных для базы данных, чтобы указать аутентификационные сведения для каждого пользователя Hadoop. См. статью [Объекты T-SQL PolyBase](../relational-databases/polybase/polybase-t-sql-objects.md).  
+ 
+## <a name="see-also"></a>См. также  
 [Конфигурация устройства &#40; Система платформы аналитики &#41;](appliance-configuration.md)  
 <!-- MISSING LINKS [PolyBase &#40;SQL Server PDW&#41;](../sqlpdw/polybase-sql-server-pdw.md)  -->  
   

@@ -18,13 +18,13 @@ ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 caps.latest.revision: "5"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: af99082f7ec0d39d59c7aa20fc1f6ba1d51596ed
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 94bba147f35fe23d2276f4f32596c5a2890f56f1
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="user-assistance-in-sql-server-management-studio"></a>Справка и поддержка пользователей в среде SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Справка и поддержка пользователей в среде [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] доступна через меню "Справка" и в электронной документации [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. В меню «Справка» в [!INCLUDE[ssManStudio](../includes/ssmanstudio_md.md)] предлагается несколько вариантов доступа к сведениям об [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)]. Оно также предоставляет доступ к сообществу [!INCLUDE[ssNoVersion](../includes/ssnoversion_md.md)] и ресурсам интерактивной библиотеки MSDN, ранее недоступным из справочной среды. Справочная среда теперь также может быть настроена как на запуск из среды [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)] , так и в собственном внешнем окне.  

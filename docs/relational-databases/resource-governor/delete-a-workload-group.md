@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: "19"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1eff1229f3dd8cbc2b23558a28736cef0487c17f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8027e697f08d9e31e463015ca929e64f5fa3d182
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-a-workload-group"></a>Удаление группы рабочей нагрузки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Группу рабочей нагрузки или пул ресурсов можно удалить в среде [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] либо с помощью Transact-SQL.  
   
--   **Перед началом работы:**  [ограничения](#LimitationsRestrictions), [разрешения](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **Удаление группы рабочей нагрузки с использованием следующих средств:**  [обозреватель объектов](#DelWGObjEx), [свойства регулятора ресурсов](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
+-   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
  Группу рабочей нагрузки нельзя удалить, если она содержит активные сеансы.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Перезапустите сервер. После завершения процесса перезапуска удаленная группа не будет создана, а перемещенная группа будет использовать новое назначение пула ресурсов.  
   
-###  <a name="Permissions"></a> разрешения  
+###  <a name="Permissions"></a> Permissions  
  Для удаления группы рабочей нагрузки требуется разрешение CONTROL SERVER.  
   
 ##  <a name="DelWGObjEx"></a> Удаление группы рабочей нагрузки с помощью обозревателя объектов  
@@ -98,7 +98,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
  [Создание пула ресурсов](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Создание группы рабочей нагрузки](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [Удаление пула ресурсов](../../relational-databases/resource-governor/delete-a-resource-pool.md)   

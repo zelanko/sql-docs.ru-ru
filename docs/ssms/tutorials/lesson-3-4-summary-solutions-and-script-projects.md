@@ -14,15 +14,15 @@ ms.topic: article
 applies_to: SQL Server 2016
 ms.assetid: 9421d20f-0c8b-48e2-8e97-31f3047b8177
 caps.latest.revision: "30"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7fe194806dc60a604bcae54a3d170bf691a1b09a
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d4a59808877873110ff96bf8f88676aa473d3488
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="lesson-3-4---summary---solutions-and-script-projects"></a>Занятие 3–4. Сводка. Решения и проекты скриптов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Используя расширенные функции среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio для разработки, среда [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] предлагает разработчикам необходимые возможности по управлению кодом на уровне предприятия. Вы можете создавать пользовательские шаблоны для выполнения повторяющихся задач, сохранения и управления сложными проектами знаков в централизованной и координируемой среде.  

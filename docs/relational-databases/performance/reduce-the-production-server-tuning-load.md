@@ -21,15 +21,15 @@ helpviewer_keywords:
 - offload tuning overhead [SQL Server]
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0da94113a0d79705e95790584302e6c17e6f9970
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 17d4f6a412677dbdfa580baeec777ed069cdc7d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Уменьшение настроечной загрузки рабочего сервера
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Помощник по настройке [!INCLUDE[ssDE](../../includes/ssde-md.md)] полагается на оптимизатор запросов, который анализирует рабочую нагрузку и создает рекомендации по настройке. Выполнение этого анализа на рабочем сервере добавляет нагрузки этому серверу и может снизить его производительность на время сеанса настройки. Чтобы уменьшить дополнительную нагрузку сервера во время сеанса настройки, можно использовать тестовый сервер в дополнение к рабочему серверу.  

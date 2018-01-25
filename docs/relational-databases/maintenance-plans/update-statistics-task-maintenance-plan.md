@@ -15,15 +15,15 @@ f1_keywords: sql13.swb.maint.statistics.f1
 helpviewer_keywords: Updates Statistics Task dialog box
 ms.assetid: 22902fd0-eb39-4f18-af94-3fcb69d2a3a4
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 74685382e97db6911db1b45ca778099c921c562a
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 77bdf027ea3354d11c9877f03f20f2ebfe92afba
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="update-statistics-task-maintenance-plan"></a>Задача «Обновление статистики» (план обслуживания)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Задача "Обновление статистики"** служит для обновления сведений [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] о данных в таблицах и индексах. Эта задача осуществляет повторную выборку статистики распределения каждой пользовательской таблицы или индекса. При помощи статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оптимизирует перемещение по таблицам во время обработки инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)] . Для автоматического сбора статистики распределения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] периодически осуществляет выборку данных в соответствующей таблице по каждому индексу. Размер выборки зависит от количества строк в таблице и частоты изменения данных. Данный параметр используется для дополнительной выборки с использованием заданного процента данных в таблице. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] эти сведения используются для оптимизации планов запросов.  
@@ -107,7 +107,7 @@ ms.lasthandoff: 11/17/2017
  **Использовать указанные имя пользователя и пароль**  
  Подключиться к экземпляру компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] с использованием проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
- **Имя пользователя**  
+ **User name**  
  Укажите имя входа, используемое при проверке подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Этот параметр недоступен.  
   
  **Пароль**  

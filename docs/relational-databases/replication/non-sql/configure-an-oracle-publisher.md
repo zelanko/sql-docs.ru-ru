@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Oracle publishing [SQL Server replication], configuring
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 57b1971bbd25071242b35f32b25ffebbaf4fe6f5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 674e78687e89e01126205971a3a070924c6e664f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-an-oracle-publisher"></a>Настройка издателя Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Публикации издателей Oracle создаются таким же способом, как и публикации моментальных снимков и публикации транзакций, но прежде чем создать публикацию от издателя Oracle, нужно выполнить следующие шаги (в данном разделе подробно описаны шаги 1, 3 и 4):  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
  В универсальном установщике Oracle необходимо ввести следующие сведения:  
   
-|Сведения|Описание|  
+|Сведения|Description|  
 |-----------------|-----------------|  
 |Oracle Home|Это путь к каталогу, в который устанавливается программное обеспечение Oracle. Примите значение по умолчанию (C:\oracle\ora90 или похожее) или задайте другой путь. Дополнительные сведения о каталоге Oracle Home см. в подразделе «Рассмотрение Oracle Home» далее в этом разделе.|  
 |Имя каталога Oracle Home|Псевдоним для пути к каталогу Oracle Home.|  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/17/2017
   
  После того как установка Oracle завершена, для настройки сетевых подключений используйте компонент Net Configuration Assistant. Для настройки сетевых подключений необходимо ввести сведения в четырех разделах. Администратор базы данных Oracle настраивает сеть, когда устанавливает базу данных и прослушиватель, поэтому он должен быть способен предоставить эти сведения, если они отсутствуют. Необходимо выполнить следующие действия:  
   
-|Действие|Описание|  
+|Действие|Description|  
 |------------|-----------------|  
 |Идентификация базы данных|Существует два способа идентификации базы данных. Первый способ использует компонент Oracle System Identifier (SID), который доступен во всех версиях Oracle. Второй метод использует компонент Service Name, доступный в версиях Oracle, начиная с 8.0. Оба метода используют значение, которое конфигурируется при создании базы данных, и важно, чтобы конфигурация сетевого клиента использовала тот же метод именования, что и администратор при конфигурации прослушивателя базы данных.|  
 |Идентификация сетевого псевдонима базы данных|Необходимо указать сетевой псевдоним, который будет использоваться для доступа к базе данных Oracle. Этот же псевдоним следует использовать при идентификации базы данных Oracle в качестве издателя на распространителе [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Сетевой псевдоним — это, по существу, указатель на удаленный SID или имя службы, сконфигурированное при создании базы данных. Это относится к нескольким названиям в различных версиях и продуктах Oracle, включая Net Service Name и TNS Alias. SQL*Plus запрашивает этот псевдоним как параметр «Host String» при входе.|  
@@ -150,6 +150,6 @@ ms.lasthandoff: 11/17/2017
  [Вопросы управления издателями Oracle](../../../relational-databases/replication/non-sql/administrative-considerations-for-oracle-publishers.md)   
  [Сопоставление типов данных для издателей Oracle](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Глоссарий терминов по публикации Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
- [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Обзор публикации Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

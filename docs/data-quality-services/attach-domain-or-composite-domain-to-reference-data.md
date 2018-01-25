@@ -16,15 +16,15 @@ f1_keywords:
 - sql13.dqs.dm.refcatalog.f1
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: e5ed6d30db3643d9e027d7d7c2a537a9deb72d60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d87911a70dd4f1c891fade863804af7c7f5fd3ea
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Добавление домена или составного домена к ссылочным данным
   В этом разделе описывается процесс добавления доменов или составных доменов базы знаний в службу ссылочных данных на Windows Azure Marketplace с целью создания набора знаний по высококачественным данным в ссылочных данных. Каждая служба ссылочных данных содержит схему (столбцы данных). После добавления домена или составного домена к службе ссылочных данных необходимо сопоставить добавленный домен или отдельные домены в составе составного домена с соответствующими столбцами в схеме службы ссылочных данных. Добавление составного домена в службу ссылочных данных позволяет добавить только один домен в службу ссылочных данных, а затем сопоставить отдельные домены в составе составного домена с соответствующими столбцами в схеме службы ссылочных данных.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Необходимо настроить [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) для использования служб ссылочных данных. См. раздел [Настройка служб DQS для использования эталонных данных](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
 #### <a name="permissions"></a>Разрешения  
  Для сопоставления доменов со ссылочными данными необходимо иметь роль dqs_kb_editor в базе данных DQS_MAIN.  

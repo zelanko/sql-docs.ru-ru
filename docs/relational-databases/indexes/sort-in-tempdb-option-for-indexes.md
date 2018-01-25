@@ -20,20 +20,20 @@ helpviewer_keywords:
 - index creation [SQL Server], tempdb database
 ms.assetid: 754a003f-fe51-4d10-975a-f6b8c04ebd35
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: d0d85ca3709065461adb4615e9da09410c6d6650
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca84d493ede9087ec3e41db12e2d7da6cc8e1e13
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sortintempdb-option-for-indexes"></a>Параметр SORT_IN_TEMPDB для индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  При создании или перестроении индекса можно установить параметр SORT_IN_TEMPDB в значение ON, чтобы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовал базу данных **tempdb** для хранения промежуточных результатов сортировки, которые применяются для построения индекса. Данный параметр увеличивает место на диске, временно занимаемое при построении индекса, но с его помощью можно сократить время, необходимое для создания или перестроения индекса, когда **tempdb** находится в наборе дисков, отличном от набора, используемого для размещения пользовательской базы данных. Дополнительные сведения о параметре **tempdb**см. в разделе [Настроить опцию конфигурации сервера конфигурации памяти](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
+  При создании или перестроении индекса можно установить параметр SORT_IN_TEMPDB в значение ON, чтобы компонент [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] использовал базу данных **tempdb** для хранения промежуточных результатов сортировки, которые применяются для построения индекса. Данный параметр увеличивает место на диске, временно занимаемое при построении индекса, но с его помощью можно сократить время, необходимое для создания или перестроения индекса, когда **tempdb** находится в наборе дисков, отличном от набора, используемого для размещения пользовательской базы данных. Дополнительные сведения о параметре **tempdb**см. в разделе [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md).  
   
 ## <a name="phases-of-index-building"></a>Фазы построения индекса  
  Процесс построения индекса компонентой [!INCLUDE[ssDE](../../includes/ssde-md.md)] состоит из следующих фаз.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
   
 -   если параметр SORT_IN_TEMPDB имеет значение OFF, с целью сохранения окончательной таблицы должно быть свободное пространство для целевой файловой группы. Это включает структуры всех индексов. При наличии большего объема свободного пространства может быть повышена степень непрерывности экстента таблицы и индекса.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
   
  [Реорганизация и перестроение индексов](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
@@ -87,7 +87,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="related-content"></a>См. также  
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   
- [Настроить опцию конфигурации сервера конфигурации памяти](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
+ [Configure the index create memory Server Configuration Option](../../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md)  
   
  [Требования к месту на диске для DDL-операций индекса](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   

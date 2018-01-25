@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 0e15b684c3bce4b0f4c0b08f915077c68afb05e4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 92da55879e2d7dddd982eaba66fb2ff5c2c7ba27
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-quality-client-application"></a>Клиентское приложение DQS
   Приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] позволяет выполнять операции по обеспечению качества данных с помощью изолированного средства. Это приложение позволяет создавать базы знаний, создавать и выполнять проекты качества данных и выполнять административные задачи.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="installing-the-data-quality-client-application"></a>Установка клиентского приложения DQS  
  Приложение [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] устанавливается программой установки SQL Server. Клиентское приложение вы можете устанавливать на одном компьютере с [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]или на удаленном компьютере. Дополнительные сведения об установке приложения [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] см. в разделе [Установка служб Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

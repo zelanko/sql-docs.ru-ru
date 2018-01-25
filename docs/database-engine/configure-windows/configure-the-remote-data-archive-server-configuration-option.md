@@ -15,13 +15,13 @@ ms.assetid: b5817b5a-f39a-4faf-b11e-a47b54fd9f32
 caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0644ac41ab6157ee658935e0a41d545096f3be48
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b3a44b337e360d93aa5e9b66d7b23aeee9ba9175
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-remote-data-archive-server-configuration-option"></a>Настройка параметра конфигурации сервера remote data archive
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/20/2017
   
  Параметр **remote data archive** может иметь следующие значения:  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0|Stretch нельзя использовать для баз данных и таблиц на сервере.|  
 |1|Stretch можно использовать для баз данных и таблиц на сервере.|  

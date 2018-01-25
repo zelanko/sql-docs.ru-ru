@@ -13,22 +13,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 830e33bc-dd15-4f8e-a4ac-d8634b78fe45
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 87883705cb8af3f2e5d1d9cc8bb457ec94773441
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a068286adbcacf5edf77e44e4f9b91059663e58f
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="detaching-and-attaching-dqs-databases"></a>Присоединение и отсоединение баз данных DQS
   В этом разделе описывается, как отсоединять и присоединять базы данных DQS.  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Limitations"></a> Ограничения  
+###  <a name="Limitations"></a> ограничения  
  Список ограничений см. в статье [Присоединение и отсоединение базы данных (SQL Server)](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
 ###  <a name="Prerequisites"></a> Предварительные требования  
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/20/2017
   
 -   Убедитесь, что на сервере [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]нет подключенных пользователей.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 -   Для отсоединения баз данных DQS учетная запись пользователя Windows должна входить в предопределенную роль сервера db_owner на экземпляре SQL Server.  
   

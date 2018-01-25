@@ -15,12 +15,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 caps.latest.revision: "29"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: f8f670c4eb380a5fb4a43d547133c64d616e1b54
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 87615ca4a3601ab92b37e97a8392b392accb1695
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="install-sql-server-with-sysprep"></a>Установка SQL Server с помощью SysPrep
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/20/2017
   
 - [Установка SQL Server с помощью файла конфигурации](../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)  
   
-## <a name="prerequisites"></a>Предварительные требования  
+## <a name="prerequisites"></a>предварительные требования  
 Перед установкой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]изучите разделы в статье [Планирование установки SQL Server](../../sql-server/install/planning-a-sql-server-installation.md). 
   
 Дополнительные сведения о выпусках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и требованиях к аппаратному и программному обеспечению см. в разделе [Требования к оборудованию и программному обеспечению для установки SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md). 
@@ -54,7 +54,7 @@ ms.lasthandoff: 11/20/2017
   
 3. Создание кластера отработки отказа Windows. 
   
-4. Запустите файл setup.exe с параметром **/Action = PrepareFailoverCluster** для всех узлов. Например:  
+4. Запустите файл setup.exe с параметром **/Action = PrepareFailoverCluster** для всех узлов. Пример:  
   
     ```  
     setup.exe /q /ACTION=PrepareFailoverCluster /InstanceName=<InstanceName> /Features=SQLEngine  /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="xxxxxxxxxxx"  /IACCEPTSQLSERVERLICENSETERMS  
@@ -90,7 +90,7 @@ ms.lasthandoff: 11/20/2017
   
 3. Средство проверки конфигурации системы запускает операцию обнаружения на компьютере. Чтобы продолжить, нажмите кнопку **ОК**. Подробные сведения можно просмотреть на экране, нажав кнопку **Показать подробности**, или в виде HTML-отчета, нажав кнопку **Просмотр подробного отчета**. 
   
-4. На странице «Обновление продукта» приведены последние обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если устанавливать обновления не требуется, снимите флажок **Включить обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Если обновлений продукта не обнаружено, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выводит на экран эту страницу и сразу переходит на страницу **Установка файлов** . 
+4. На странице «Обновление продукта» приведены последние обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Если устанавливать обновления не требуется, снимите флажок **Включить обновления продукта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Если обновлений продукта не обнаружено, программа установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не выводит на экран эту страницу и сразу переходит на страницу **Установка файлов** . 
   
 5. На странице «Установка установочных файлов» программа установки отображает индикаторы хода загрузки, извлечения и установки установочных файлов. При обнаружении обновления программы установки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оно также будет установлено, если указано, что его следует использовать. 
   
@@ -106,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
     |||  
     |-|-|  
-    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Средство SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Репликация<br /><br /> Полнотекстовые компоненты<br /><br /> Службы Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Распространяемые компоненты<br /><br /> Общие функции|  
+    |[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Средство SysPrep|[!INCLUDE[ssDE](../../includes/ssde-md.md)]<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Репликация<br /><br /> Полнотекстовые компоненты<br /><br /> Data Quality Services<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] в собственном режиме<br /><br /> [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]<br /><br /> Распространяемые компоненты<br /><br /> Общие функции|  
   
      После выбора имени компонента описание его группы отображается на правой панели окна. Можно установить любое сочетание компонентов (устанавливаемые компоненты отмечаются флажками). Дополнительные сведения см. в статье [Выпуски и поддерживаемые функции SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md). 
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 11/20/2017
   
 15. Чтобы включить FILESTREAM в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] , используйте страницу «Конфигурация компонента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]— FILESTREAM». Дополнительные сведения см. в разделе [Настройка компонента Database Engine — Filestream](http://msdn.microsoft.com/library/641a10a1-ae52-4d26-8f1c-a032a4aeff02). 
   
-16. На странице «Конфигурация служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]» укажите тип установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Дополнительные сведения о режимах конфигурации [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Параметры конфигурации служб Reporting Services (SSRS)](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391). 
+16. На странице «Конфигурация служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] » укажите тип установки служб [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Дополнительные сведения о режимах настройки [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] см. в разделе [Параметры конфигурации служб Reporting Services (SSRS)](http://msdn.microsoft.com/library/e4561f6c-bc7f-467e-821a-cde8e5cd7391). 
   
 17. На странице **Отчеты об ошибках** укажите сведения, которые будут отправлены в [!INCLUDE[msCoName](../../includes/msconame-md.md)] и помогут улучшить [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. По умолчанию параметры создания отчетов об ошибках включены. 
   

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - aliases [SQL Server], creating
 ms.assetid: b687e376-ee33-470d-b65a-87246bfefe6f
 caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fc0dda4917ab08272ecc4ef1ba079826a0d8f70f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d88c538a8398404e1f6010050d405df4837dae5c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-or-delete-a-server-alias-for-use-by-a-client"></a>Создание или удаление псевдонима сервера для использования клиентом
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как создать или удалить псевдоним сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. Псевдоним является альтернативным именем, которое можно использовать для создания соединения. Псевдоним инкапсулирует необходимые элементы строки соединения и представляет их с помощью имени, выбранного пользователем. Псевдонимы могут использоваться с любым клиентским приложением. После создания псевдонима сервера клиент может соединяться с несколькими серверами по разным сетевым протоколам, не указывая протокол и сведения о соединении для каждого из них. Кроме того, можно также держать постоянно включенными несколько сетевых протоколов, даже если некоторые из них используются время от времени. Если сервер настроен на прослушивание порта или именованного канала, отличных от используемых по умолчанию, и служба браузера SQL Server отключена, то можно создать псевдоним, который будет определять другой номер порта или именованный канал.  

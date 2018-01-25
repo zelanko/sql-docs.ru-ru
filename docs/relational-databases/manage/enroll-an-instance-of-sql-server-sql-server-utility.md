@@ -22,15 +22,15 @@ f1_keywords:
 helpviewer_keywords: Enroll instance
 ms.assetid: a801c619-611b-4e82-a8d8-d1e01691b7a1
 caps.latest.revision: "13"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4558a53ee9cadafe974a77820f954ae8726d9754
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2f9da7c9a59a50974dbfeed860db63a513719fc6
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Регистрация экземпляра SQL Server (служебная программа SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Зарегистрируйте экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в существующей служебной программе [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для наблюдения за его производительностью и конфигурацией в виде управляемого экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Точка управления служебной программой (UCP) выполняет сбор данных о конфигурации и производительности от управляемых экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] каждые 15 минут. Эти сведения хранятся в хранилище данных управления для программы (UMDW) в UCP, имя файла UMDW — sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сравниваются с политиками с целью определения того, в каких местах отмечается нехватка ресурсов, а также возможностей консолидации.  

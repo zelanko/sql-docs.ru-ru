@@ -16,22 +16,22 @@ helpviewer_keywords:
 - 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc179bf580e3499f64eb2ca9f3ec73c0b08f8350
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 80da02219c14d213d758af746eb13acb35d2f433
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-workload-group-stats-object"></a>SQL Server, объект Workload Group Stats
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект SQLServer:Workload Group Stats содержит счетчики производительности, сообщающие данные статистики для группы рабочей нагрузки Resource Governor.  
   
  Каждая активная группа рабочей нагрузки создает экземпляр объекта статистики группы рабочей нагрузки SQLServer:Workload Group Stats, при этом имя экземпляра совпадает с именем группы рабочей нагрузки в регуляторе ресурсов. В следующей таблице описываются счетчики, поддерживаемые этим экземпляром.  
   
-|Имя счетчика|Описание|  
+|Имя счетчика|Description|  
 |------------------|-----------------|  
 |**Активные параллельные потоки**|Текущее число используемых параллельных потоков.|  
 |**Активные запросы**|Число запросов, выполняющихся в настоящее время в этой группе рабочей нагрузки. Это значение должно быть равно количеству строк в представлении sys.dm_exec_requests, отфильтрованных по идентификатору группы.|  
@@ -54,6 +54,6 @@ ms.lasthandoff: 11/17/2017
 ## <a name="see-also"></a>См. также:  
  [Наблюдение за использованием ресурсов (системный монитор)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, объект Resource Pool Stats](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
- [регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
+ [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)  
   
   

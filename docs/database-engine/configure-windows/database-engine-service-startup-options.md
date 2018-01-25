@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting SQL Server, parameters
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 caps.latest.revision: "80"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7b603e31a37884e7c436a184767f8572412e2ec3
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 2d73b39465c5f0f05244cd4d1d20b3e2fad6eac9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-engine-service-startup-options"></a>Параметры запуска службы Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Параметры запуска задают определенные расположения файлов, необходимых для запуска, а также некоторые условия для всего сервера. Большинству пользователей не нужно задавать параметры запуска за исключением случаев, когда устраняются проблемы служб [!INCLUDE[ssDE](../../includes/ssde-md.md)] , либо если возникла неожиданная проблема и необходимо использовать параметр запуска по указанию поддержки пользователей служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/27/2017
 ## <a name="compatibility-support"></a>Поддержка совместимости  
  Параметр **-h**  не поддерживается в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Этот параметр использовался в более ранних версиях 32-битных экземпляров [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для резервирования виртуального адресного пространства для метаданных памяти с «горячей» заменой при включенных расширениях AWE. Дополнительные сведения см. в разделе [Неподдерживаемые функции SQL Server 2016](http://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
 [Настройка параметра конфигураци и сервера scan for startup procs](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [Запуск, остановка, приостановка, возобновление и перезапуск ядра СУБД, агента SQL Server или службы обозревателя SQL Server](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)
 [Настройка параметров запуска сервера &#40;Диспетчер конфигурации SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)

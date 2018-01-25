@@ -15,13 +15,13 @@ ms.assetid: 60e5d6f6-a26d-4bba-aada-42e382bbcd38
 caps.latest.revision: "9"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5470d1d28d874404df4506127f38ee8d19b97d15
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5c86f951c3e6f8d553ea61ed959cac6ade235b54
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="temporal-table-security"></a>Безопасность темпоральных таблиц
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="security-principles"></a>Принципы безопасности  
  В следующей таблице описаны принципы безопасности, применимые к темпоральным таблицам.  
   
-|Принцип|Описание|  
+|Принцип|Description|  
 |---------------|-----------------|  
 |Включение и отключение системного управления версиями требует наивысших прав на затронутые объекты|Для включения и отключения SYSTEM_VERSIONING необходимо разрешение CONTROL как для текущей, так и для прежней таблицы|  
 |Данные за прошедший период нельзя изменить напрямую|Если параметр SYSTEM_VERSIONING включен (ON), пользователи не могут изменять данные за прошедший период независимо от своих фактических разрешений для текущей или прежней таблицы. Это относится к изменениям как данных, так и схемы.|  

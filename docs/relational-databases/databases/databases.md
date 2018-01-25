@@ -17,15 +17,15 @@ helpviewer_keywords:
 - databases [SQL Server], about databases
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 013855b3dee3d610a34ec3171c98bdae03ccc1d4
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 947bbd87fca45f0647bffe38af8e51591799778c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="databases"></a>Базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] База данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит из коллекции таблиц, в которой хранится определенный набор структурированных данных. Таблица содержит коллекцию строк, также называемых записями или кортежами, и столбцов, также называемых атрибутами. Каждый столбец в таблице предназначен для хранения конкретного типа данных, например дат, имен, денежных сумм или чисел.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="working-with-databases"></a>Работа с базами данных  
  Большинство пользователей, работающих с базами данных, используют средство [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] . Средство [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] предоставляет графический пользовательский интерфейс для создания баз данных и их объектов. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] также содержит редактор запросов, позволяющий взаимодействовать с базами данных при написании инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] можно установить с установочного диска [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или загрузить с MSDN.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 |||  
 |-|-|  
@@ -51,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 |[Файлы данных SQL Server в Microsoft Azure](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)|[Увеличение размера базы данных](../../relational-databases/databases/increase-the-size-of-a-database.md)|  
 |[Файлы и файловые группы базы данных](../../relational-databases/databases/database-files-and-filegroups.md)|[Переименование базы данных](../../relational-databases/databases/rename-a-database.md)|  
 |[Состояния базы данных](../../relational-databases/databases/database-states.md)|[Установка однопользовательского режима базы данных](../../relational-databases/databases/set-a-database-to-single-user-mode.md)|  
-|[Состояния файла](../../relational-databases/databases/file-states.md)|[Сжатие базы данных](../../relational-databases/databases/shrink-a-database.md)|  
+|[Состояния файлов](../../relational-databases/databases/file-states.md)|[Сжатие базы данных](../../relational-databases/databases/shrink-a-database.md)|  
 |[Оценка размера базы данных](../../relational-databases/databases/estimate-the-size-of-a-database.md)|[Сжатие файла](../../relational-databases/databases/shrink-a-file.md)|  
 |[Копирование баз данных на другие серверы](../../relational-databases/databases/copy-databases-to-other-servers.md)|[Просмотр или изменение свойств базы данных](../../relational-databases/databases/view-or-change-the-properties-of-a-database.md)|  
 |[Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)|[Просмотр списка баз данных в экземпляре SQL Server](../../relational-databases/databases/view-a-list-of-databases-on-an-instance-of-sql-server.md)|  

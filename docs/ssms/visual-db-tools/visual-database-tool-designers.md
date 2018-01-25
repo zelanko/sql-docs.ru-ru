@@ -25,13 +25,13 @@ ms.assetid: bd0ca68e-6f69-42dd-bcb5-ce511673769c
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 69528faf39230c9c268457896e6c692a6fc93305
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 6f9174882f49b0307617ddc0576c146cabe6d22d
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="visual-database-tool-designers"></a>Конструкторы визуальных инструментов для баз данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Визуальные инструменты для баз данных представляют собой сочетание средств проектирования, которые можно использовать для работы с источниками данных. С их помощью можно создавать запросы, конструировать и менять структуру базы данных и обновлять данные. В число этих средств входят конструктор диаграмм баз данных, конструктор таблиц и конструктор запросов и представлений.  

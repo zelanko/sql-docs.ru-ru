@@ -22,15 +22,15 @@ helpviewer_keywords:
 - database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf70035387f68c17913ba152101cf1417f6e8741
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 110cea8f6a219fad5121e88a19ed5608b2afcb59
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Развертывание базы данных с помощью приложения уровня данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] С помощью мастера **развертывания базы данных в SQL Azure** разверните базу данных между экземпляром компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] и сервером [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] либо между двумя серверами [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -43,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  Некоторые параметры баз данных, например TRUSTWORTHY, DB_CHAINING и HONOR_BROKER_PRIORITY, нельзя изменить в рамках процедуры развертывания. Физические свойства, например количество файловых групп или количество и размер файлов, нельзя изменять в рамках процедуры развертывания. После завершения развертывания можно настроить базу данных с помощью инструкции ALTER DATABASE, среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]или программы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell.  
   
-###  <a name="LimitationsRestrictions"></a> Ограничения  
+###  <a name="LimitationsRestrictions"></a> ограничения  
  Мастер **Развертывание базы данных** поддерживает развертывание базы данных:  
   
 -   C экземпляра компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)].  
@@ -56,7 +56,7 @@ ms.lasthandoff: 11/17/2017
   
  Для работы с мастером на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен быть запущен [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] с пакетом обновления 4 (SP4) или более поздней версии. Если база данных на экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] содержит объекты, неподдерживаемые в [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], то использовать мастер развертывания базы данных на [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]нельзя. Если база данных на [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] содержит объекты, неподдерживаемые в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то использовать мастер для развертывания базы данных на экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]нельзя.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
  В целях повышения безопасности имена входа в SQL Server хранятся в файле экспорта приложения уровня данных BACPAC без пароля. При импорте файла BACPAC имя входа создается как отключенное имя входа с созданным паролем. Чтобы включить имена входа, войдите в систему под учетной записью, имеющей разрешение ALTER ANY LOGIN и с помощью команды ALTER LOGIN включите имя входа и присвойте ему новый пароль, который можно передать пользователю. Это не требуется для имен входа, использующих проверку подлинности Windows, поскольку SQL Server не управляет их паролями.  
   
 #### <a name="permissions"></a>Разрешения  

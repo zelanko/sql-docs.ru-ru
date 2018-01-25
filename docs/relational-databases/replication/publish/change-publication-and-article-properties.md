@@ -19,22 +19,22 @@ helpviewer_keywords:
 - articles [SQL Server replication], properties
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d43da2c0314c2b724a7d5b04db3a56ff5ceb664f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 2322ccf6cb2543f772aa72218ab0dcddce876223
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-publication-and-article-properties"></a>Изменение свойств публикации и статьи
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] После того как публикация создана, большинство свойств публикаций и статей можно изменить, но для некоторых изменений требуется повторное создание моментального снимка и (или) повторная инициализация подписок. В этом разделе содержатся сведения обо всех свойствах, требуемых для одного или обоих этих действий (если они изменяются).  
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Свойства публикации для репликации моментальных снимков и репликации транзакций.  
   
-|Описание|Хранимая процедура|Свойства|Требования|  
+|Description|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Изменение формата моментального снимка.|**sp_changepublication**|**sync_method**|Создание моментального снимка.|  
 |Изменение расположения моментального снимка.|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Создание моментального снимка.|  
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Свойства статьи для репликации моментальных снимков и репликации транзакций.  
   
-|Описание|Хранимая процедура|Свойства|Требования|  
+|Description|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Удаление статьи|**sp_droparticle**|Все параметры.|Статьи могут быть удалены до создания подписок. С помощью хранимых процедур можно удалить подписку на статью. При использовании [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]вся подписка должна быть удалена, создана повторно и синхронизирована. Дополнительные сведения см. в статье [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Изменение фильтра столбцов.|**sp_articlecolumn**|**@column**<br /><br /> **@operation**|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="publication-properties-for-merge-replication"></a>Свойства публикации для репликации слиянием  
   
-|Описание|Хранимая процедура|Свойства|Требования|  
+|Description|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Изменение формата моментального снимка|**sp_changemergepublication**|**sync_mode**|Создание моментального снимка.|  
 |Изменение расположения моментального снимка.|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Создание моментального снимка.|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
 ## <a name="article-properties-for-merge-replication"></a>Свойства статьи для репликации слиянием  
   
-|Описание|Хранимая процедура|Свойства|Требования|  
+|Description|Хранимая процедура|Свойства|Требования|  
 |-----------------|----------------------|----------------|------------------|  
 |Удаление статьи с последним параметризованным фильтром в публикации.|**sp_dropmergearticle**|Все параметры|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  
 |Удаление статьи, являющейся родителем в фильтре соединения или в логической записи (это побочный эффект удаления соединения).|**sp_dropmergearticle**|Все параметры|Создание моментального снимка.<br /><br /> Повторная инициализация подписок.|  

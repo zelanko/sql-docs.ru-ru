@@ -1,7 +1,7 @@
 ---
 title: "Свойства памяти | Документы Microsoft"
 ms.custom: 
-ms.date: 11/17/2016
+ms.date: 01/23/2018
 ms.prod: analysis-services
 ms.prod_service: analysis-services
 ms.service: 
@@ -30,18 +30,20 @@ author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 8aa2f5f5c3e39680a9b0fe41e1b92443db4c8509
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 15e0fc6fa123fd4d9ca71f35804d2f06d0342b5a
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="memory-properties"></a>Свойства памяти
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] предварительно размещает небольшой объем памяти в начале вверх, чтобы немедленно обработки запросов. Дополнительная память выделяется по мере увеличения числа запросов и рабочей нагрузки. 
   
   С помощью параметров конфигурации можно контролировать пороговые уровни нагрузки, при которых будет выделяться дополнительная память. Например, параметр **HardMemoryLimit** задает принудительное состояние нехватки памяти (по умолчанию этот порог неактивен), при котором запросы отклоняются до тех пор, пока не будет доступно больше ресурсов.
+
+Дополнительные сведения о максимальный объем используемой памяти на экземпляре служб Analysis Services в выпуске см. в разделе [выпуски и поддерживаемых функций SQL Server](../../sql-server/editions-and-components-of-sql-server-2017.md#Cross-BoxScaleLimits).
   
- **Область применения:** многомерный или табличный режим сервера, если не указано иное.  
+ Следующие параметры применяются оба режима сервера многомерные и табличные в том случае, если не указано иное.  
  
 ## <a name="default-memory-configuration"></a>Конфигурация памяти по умолчанию
 
@@ -51,7 +53,7 @@ ms.lasthandoff: 01/08/2018
 
 В приведенной ниже таблице дается краткое описание самых распространенных параметров памяти (более подробные сведения см. в справочнике). Эти параметры настраиваются, если службы Analysis Services делят ресурсы памяти с другими приложениями на том же сервере.
 
-Настройка | Description
+Настройка | Описание
 --------|------------
 LowMemoryLimit | Нижнее пороговое значение, при достижении которого сервер начинает высвобождать память, выделенную редко используемым объектам (для многомерных экземпляров).
 VertiPaqMemoryLimit | Нижнее пороговое значение, при достижении которого сервер начинает высвобождать память, выделенную редко используемым объектам (для табличных экземпляров).
@@ -81,7 +83,7 @@ HardMemoryLimit | Еще одно пороговое значение, при д
   
   
 
-Настройка  |Description  
+Настройка  |Описание  
 ---------|---------
 **0**     |  Отключает механизм подкачки страниц. При недостатке памяти обработка прерывается с ошибкой нехватки памяти. Если подкачка запрещена, вы должны предоставить права доступа Windows учетной записи службы. Инструкции см. в разделе [Настройка учетных записей служб (службы Analysis Services)](../../analysis-services/instances/configure-service-accounts-analysis-services.md). 
 **1**     |  Это значение по умолчанию, которое разрешает подкачку на диск с использованием файла подкачки операционной системы (pagefile.sys).   
@@ -103,7 +105,7 @@ HardMemoryLimit | Еще одно пороговое значение, при д
  **MemoryHeapType**  
   Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Ниже приведены допустимые значения в службах Analysis Services в SQL Server 2016 с пакетом обновления 1 (SP1) и более поздних версий.
   
-  Настройка | Description
+  Настройка | Описание
 --------|------------
 **-1** | Automatic (по умолчанию). Подсистема самостоятельно определяет, что следует использовать.
 **1** | Куча служб Analysis Services.
@@ -115,7 +117,7 @@ HardMemoryLimit | Еще одно пороговое значение, при д
  **HeapTypeForObjects**  
   Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Допустимы следующие значения:
   
-   Настройка | Description
+   Настройка | Описание
 --------|------------
 **0** | Куча LFH Windows.
 **1** | Распределитель слотов Analysis Services.
@@ -143,8 +145,6 @@ HardMemoryLimit | Еще одно пороговое значение, при д
  **WaitCountIfHighMemory**  
  Дополнительное свойство, которое следует изменять только под руководством службы поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Свойства сервера в службах Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Определение режима работы сервера экземпляра служб Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
-  [Руководство по использованию Server 2008 R2 Analysis Services](http://go.microsoft.com/fwlink/?LinkID=225539)
-  

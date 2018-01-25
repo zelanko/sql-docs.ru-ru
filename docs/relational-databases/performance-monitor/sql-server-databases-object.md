@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], performance counters
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 caps.latest.revision: "40"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 03d12d8216ce6b92251355c41b1f0bdc90303003
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c92dc55eedaf801ad283ecb18bb55a25ba49f4b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, объект Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:Databases** в SQL Server содержит счетчики для контроля и отслеживания операций массового копирования, пропускной способности создания и восстановления резервных копий, а также действий, связанных с журналом транзакций. Контроль и отслеживание транзакций и журнала транзакций позволяют определить, насколько интенсивна деятельность пользователей в базе данных, и как быстро заполняется журнал транзакций. Уровень активности пользователей определяет производительность базы данных и влияет на размеры журналов, блокировку и репликацию. Отслеживание низкоуровневых операций в журнале для оценки активности пользователей и использования ресурсов помогает определить критические факторы производительности.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  Эта таблица описывает счетчики объекта **Databases** SQL Server.  
   
-|Счетчики объекта Databases SQL Server|Описание|  
+|Счетчики объекта Databases SQL Server|Description|  
 |-----------------------------------|-----------------|  
 |**Активные транзакции**|Количество активных транзакций в базе данных.|  
 |**Среднее расстояние от конца журнала на запрос к пулу журналов**|Среднее расстояние в байтах от конца журнала на запрос к пулу журналов (указывается для запросов в последнем виртуальном файле журнала).| 

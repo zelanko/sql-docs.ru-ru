@@ -21,15 +21,15 @@ helpviewer_keywords:
 - database backups [SQL Server], copying databases
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 caps.latest.revision: "61"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 61898f292e44da04152eeb3ebeb2e7221eb1bb68
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f5555b305edf4ac249959e77d4a68c07c72efef5
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Копирование баз данных путем создания и восстановления резервных копий
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.lasthandoff: 11/17/2017
  Во избежание ошибок и непредвиденных последствий перед операцией восстановления можно использовать таблицы журнала [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) , чтобы найти в резервной копии файлы базы данных и журнала, которые планируется восстановить.  
   
 ## <a name="moving-the-database-files"></a>Перемещение файлов баз данных  
- Если файлы резервной копии базы данных невозможно восстановить на целевом компьютере, необходимо переместить файлы в новое место назначения, где они могут быть восстановлены. Например:  
+ Если файлы резервной копии базы данных невозможно восстановить на целевом компьютере, необходимо переместить файлы в новое место назначения, где они могут быть восстановлены. Пример:  
   
 -   Нужно восстановить базу данных из резервных копий, созданных в месте расположения по умолчанию для предыдущей версии.  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
  При восстановлении базы данных на другом компьютере имя входа пользователя [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, начавшего процесс восстановления, автоматически становится именем владельца базы данных. При восстановлении базы данных системный администратор или владелец новой базы данных могут сменить ее владельца. Для предотвращения несанкционированного восстановления базы данных устанавливайте пароли на носители или сами резервные копии.  
   
 ## <a name="managing-metadata-when-restoring-to-another-server-instance"></a>Управление метаданными при восстановлении базы данных на другой экземпляр сервера  
- Чтобы обеспечить целостность работы пользователей и приложений при восстановлении базы данных на другой экземпляр сервера, на новом экземпляре необходимо повторно создать некоторые или все метаданные, например имена входа и задания. Дополнительные сведения см. в статье [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Чтобы обеспечить целостность работы пользователей и приложений при восстановлении базы данных на другой экземпляр сервера, на новом экземпляре необходимо повторно создать некоторые или все метаданные, например имена входа и задания. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
  **Просмотр файлов данных и журналов в резервном наборе данных**  
   
@@ -139,10 +139,10 @@ ms.lasthandoff: 11/17/2017
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore>  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Копирование баз данных на другие серверы](../../relational-databases/databases/copy-databases-to-other-servers.md)   
  [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)   
- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
+ [Инструкция RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
  [RESTORE (Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

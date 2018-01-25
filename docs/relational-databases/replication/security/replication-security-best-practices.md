@@ -18,22 +18,22 @@ helpviewer_keywords:
 - Internet [SQL Server replication], security
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 caps.latest.revision: "42"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7c2ef09b09e2505d8771d5e16d7b9bea9b97308b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 85ab9523752bc1f72c1535cc00e51e50dbac946e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="replication-security-best-practices"></a>Рекомендации по защите репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Репликация перемещает данные в распределенных средах, начиная с внутренних сетей в рамках одного домена и заканчивая приложениями, обеспечивающими передачу данных между доменами без доверия, а также через Интернет. Чтобы обеспечить безопасность соединения при репликации, важно выбрать способ, соответствующий конкретным обстоятельствам.  
   
  Сведения, указанные ниже, необходимо учитывать при проведении репликации в любых средах:  
   
--   При шифровании соединения между компьютерами, занятыми в топологии репликации, необходимо использовать общепризнанную стандартную технологию, такую как виртуальная частная сеть (VPN), протокол безопасных соединений (SSL) или IP-безопасность (IPSEC). Дополнительные сведения см. в разделе [Включение шифрования соединений в ядре СУБД (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Сведения об использовании VPN и SSL для репликации данных через Интернет см. в разделе [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
+-   При шифровании соединения между компьютерами, занятыми в топологии репликации, необходимо использовать общепризнанную стандартную технологию, такую как виртуальная частная сеть (VPN), протокол безопасных соединений (SSL) или IP-безопасность (IPSEC). Дополнительные сведения см. в разделе [Включение шифрования соединений в компоненте Database Engine (диспетчер конфигураций SQL Server)](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Сведения об использовании VPN и SSL для репликации данных через Интернет см. в разделе [Securing Replication Over the Internet](../../../relational-databases/replication/security/securing-replication-over-the-internet.md).  
   
      Если используется протокол SSL для защиты соединений между компьютерами в топологии репликации, задайте значение **1** или **2** для параметра **-EncryptionLevel** каждого агента репликации (рекомендуется значение **2** ). Значение **1** указывает, что шифрование будет использоваться, но агент не будет проверять, подписан ли SSL-сертификат сервера доверенным издателем; значение **2** указывает, что будет проверяться подпись сертификата. Параметры агента могут задаваться в профилях агента или в командной строке. Дополнительные сведения см. в разделе:  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [Просмотр и изменение параметров командной строки агента репликации (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   При запуске каждого агента репликации необходимо использовать новую учетную запись Windows, а в отношении всех соединений агента репликации применять проверку подлинности Windows. Дополнительные сведения об указании учетных записей см. в статье [Управление именами для входа и паролями в репликации](../../../relational-databases/replication/security/manage-logins-and-passwords-in-replication.md).  
   

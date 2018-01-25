@@ -22,13 +22,13 @@ ms.assetid: 605c63af-f91e-410d-8d60-5cf6f899d756
 caps.latest.revision: "3"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e7ab7fc0efacbcd2f777c7c64154d98661d8318
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a4ed95b7a25ccf553de9e37d12cef8d7d65436fc
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>Отображение панелей конструкторов запросов и представлений (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Конструктор запросов и представлений содержит четыре отдельные панели: панель диаграмм, панель критериев, панель "SQL" и панель результатов. Обычно при открытии представления или создании нового запроса открыты все четыре области, но при необходимости любую из них можно открыть из конструктора запросов и представлений.  

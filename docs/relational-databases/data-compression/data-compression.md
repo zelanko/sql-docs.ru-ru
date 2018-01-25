@@ -25,15 +25,15 @@ helpviewer_keywords:
 - compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: "60"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 996f547876031c29f975d85949d2ff300afdee5b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: d999c313752ccbb23f31b9763463fc69e10ac20b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -191,7 +191,7 @@ REBUILD PARTITION = ALL WITH (
 |Выполнить сжатие таблицы на подписчике при условии, что на издателе были сжаты все секции, но не выполнять репликацию схемы секционирования.|False|True|Проверить, что для всех секций включено сжатие.<br /><br /> Создать скрипт сжатия на уровне таблицы.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>Влияние сжатия на другие компоненты SQL Server 
-**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Применимо к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
  Сжатие происходит в подсистеме хранилища, и данные предоставляются большинству других компонентов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в распакованном состоянии. Это ограничивает влияние сжатия на другие компоненты следующим.  
 -   Операции массового импорта и экспорта  

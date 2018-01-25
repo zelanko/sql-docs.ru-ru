@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQLServer:Access Methods
 ms.assetid: 27558585-e780-48bb-a042-30d664662ebc
 caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 771047d7d21f79827c9ca073d22f2094f8603f0f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: dfbbfd6ac0e746fc8165186745006a1834f5aebe
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, объект Access Methods
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **Access Methods** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики, помогающие следить за доступом к логическим данным в рамках базы данных. Физический доступ к страницам базы данных на диске контролируется при помощи счетчиков **диспетчера буферов** . Наблюдение за методами доступа к данным в базе данных помогает определить, можно ли увеличить производительность запросов путем добавления или изменения индексов, добавления или перемещения секций, добавления файлов или групп файлов, дефрагментации индексов или изменения текста запросов. Кроме того, при помощи счетчиков объекта **Access Methods** можно следить за размером данных, индексов и свободного пространства в базе данных, контролируя объем и фрагментацию для каждого экземпляра сервера. Чрезмерная фрагментация индексов может значительно снизить производительность.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  В этой таблице приводится описание счетчиков [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **методы доступа** .  
   
-|Счетчики объекта SQL Server Access Methods|Описание|  
+|Счетчики объекта SQL Server Access Methods|Description|  
 |----------------------------------------|-----------------|  
 |**Пакетов очистки единиц распределения/с**|Количество пакетов в секунду, успешно выполненных фоновой задачей, которая очищает отложенные удаленные единицы распределения.|  
 |**Очисток единиц распределения/с**|Количество единиц распределения в секунду, успешно удаленных фоновой задачей, которая очищает отложенные удаленные единицы распределения. Каждое удаление единицы распределения требует нескольких пакетов.|  

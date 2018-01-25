@@ -18,22 +18,22 @@ helpviewer_keywords:
 - system databases [SQL Server], rebuilding
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 8c204e1ed53a4969b903d7821e151dd6cb183848
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c267615cb7970d7833821662cfd97662093a2edb
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rebuild-system-databases"></a>Перестроение системных баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Системные базы данных нужно перестроить, чтобы устранить повреждения данных в системных базах данных [master](../../relational-databases/databases/master-database.md), [model](../../relational-databases/databases/model-database.md), [msdb](../../relational-databases/databases/msdb-database.md) и [resource](../../relational-databases/databases/resource-database.md) или изменить параметры сортировки по умолчанию на уровне сервера. В этом разделе приводятся пошаговые инструкции по перестроению системных баз данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
   
      **Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=ИмяЭкземпляра /SQLSYSADMINACCOUNTS=учетные записи [ /SAPWD= НадежныйПароль ] [ /SQLCOLLATION=ИмяПараметровСортировки]**  
   
-    |Имя параметра|Описание|  
+    |Имя параметра|Description|  
     |--------------------|-----------------|  
     |/QUIET или /Q|Указывает, что программа установки будет работать без пользовательского интерфейса.|  
     |/ACTION=REBUILDDATABASE|Указывает, что программа установки создает системные базы данных заново.|  
@@ -128,7 +128,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="post-rebuild-tasks"></a>Задачи, выполняемые после перестроения  
  После перестроения базы данных, возможно, придется выполнить следующие дополнительные задачи.  
   
--   Восстановить наиболее поздние полные резервные копии баз данных master, model и msdb. Дополнительные сведения см. в разделе [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
+-   Восстановить наиболее поздние полные резервные копии баз данных master, model и msdb. Дополнительные сведения см. в статье [Резервное копирование и восстановление системных баз данных (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md).  
   
     > [!IMPORTANT]  
     >  Если изменены параметры сортировки сервера, не следует восстанавливать системные базы данных. В противном случае новые параметры сортировки будут заменены старыми.  

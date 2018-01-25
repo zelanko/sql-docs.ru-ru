@@ -31,15 +31,15 @@ helpviewer_keywords:
 - monitoring server performance [SQL Server], about monitoring server performance
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f9825e46e8f39d8077df64a2e15b6a2eeec47c03
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 32bb41096ecb83b0a1bd5b9cd51f406788419b4d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitor-and-tune-for-performance"></a>Наблюдение и настройка производительности
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Наблюдение за базами данных выполняется с целью оценки производительности сервера. Эффективное наблюдение подразумевает регулярное создание моментальных снимков текущей производительности для обнаружения процессов, вызывающих неполадки, и постоянный сбор данных для отслеживания тенденций роста или изменения производительности.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 11/17/2017
 |[Формирование базовых показателей производительности](../../relational-databases/performance/establish-a-performance-baseline.md)|Инструкции по формированию базовых показателей производительности.|  
 |[Локализация проблем производительности](../../relational-databases/performance/isolate-performance-problems.md)|Локализация проблем производительности базы данных.|  
 |[Выявление узких мест](../../relational-databases/performance/identify-bottlenecks.md)|Наблюдение за производительностью сервера и отслеживание его работы для выявления узких мест.|  
-|[Производительность сервера и мониторинг активности](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Использование средств наблюдения за производительностью и активностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
+|[Мониторинг производительности и действий сервера](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Использование средств наблюдения за производительностью и активностью [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
 |[Отображение и сохранение планов выполнения](../../relational-databases/performance/display-and-save-execution-plans.md)|Вывод и сохранение планов выполнения в файле в формате XML.|  
 |[Динамическая статистика запросов](../../relational-databases/performance/live-query-statistics.md)|Вывод статистических данных по этапам выполнения запроса в режиме реального времени.|  
 |[Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)|Использование хранилища запросов для автоматической регистрации журнала запросов, планов и статистики выполнения и сохранение этих данных для просмотра.|  

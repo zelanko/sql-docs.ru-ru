@@ -18,13 +18,13 @@ ms.assetid: fc76e234-ec9c-4a19-a65b-cb558ec8268e
 caps.latest.revision: "4"
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b5aaee99afbfe7eb4a5bb3ad3fd3f16ffd40d1b
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a32d24abfb608d41e83e58ee9be10d0144fa6cee
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="validation-warnings-dialog-box-visual-database-tools"></a>Диалоговое окно «Предупреждения проверки» (визуальные инструменты для баз данных)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Это диалоговое окно появляется при попытке сохранить изменения с потенциально опасными побочными эффектами или в случае вероятной неудачи операции фиксации базы данных. Это диалоговое окно указывает возможные побочные эффекты или возможные причины неудачи операции фиксации. Диалоговое окно предоставляет возможность продолжить действие или отменить его.  

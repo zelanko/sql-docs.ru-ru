@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Subscribers [SQL Server replication], republishing data
 ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d0db0fb6d7469e431b9248a173a3cf2606fbdefb
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f560429493fe0182159ad66e89535ff017739678
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="republish-data"></a>Повторная публикация данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В модели переиздания издатель посылает данные подписчику, который затем переиздает данные для других подписчиков. Эта модель полезна в ситуациях, когда издатель должен отослать данные подписчикам через медленный или дорогостоящий канал передачи данных. Если на другом конце такого канала существует несколько подписчиков, использование переиздающего подписчика позволяет сместить большую часть нагрузки распространения на сторону канала, где находятся подписчики.  

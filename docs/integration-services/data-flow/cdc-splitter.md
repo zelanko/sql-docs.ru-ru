@@ -16,20 +16,20 @@ ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
 caps.latest.revision: "8"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5a680f3d08dcc3cc9e6cb196e02bc3429ac526a6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 19b09b99c30e0dffd81b1778c3df25596d455110
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="cdc-splitter"></a>Разделитель CDC
   Разделитель CDC разбивает один поток строк изменений из потока исходных данных CDC на различные потоки данных, относящиеся к операциям Insert, Update и Delete. Разбиение потока данных осуществляется на основе обязательного столбца `__$operation` и его стандартных значений в таблицах изменений [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
 |Значение операции|Вывод|Description|  
 |------------------------|------------|-----------------|  
-|1|Delete|Удаленная строка|  
+|1|DELETE|Удаленная строка|  
 |2|Insert|Вставленная строка (недоступно при использовании режима CDC **Суммарные со слиянием** )|  
 |3|Update|Строка перед обновлением (доступно только при использовании режима CDC **Все со старыми значениями** )|  
 |4|Update|Строка после обновления (следует за строкой, которая имела место перед обновлением)|  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
 -   На экране **Поток данных** вашего проекта [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] щелкните правой кнопкой мыши разделитель CDC и выберите элемент **Показать расширенный редактор**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выбор направления потока CDC в соответствии с типом изменения](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
   

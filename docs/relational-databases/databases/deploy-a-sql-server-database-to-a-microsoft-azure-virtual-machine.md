@@ -37,15 +37,15 @@ helpviewer_keywords:
 - Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a571327d912f4b9f8ee96477db49be0ffa69e829
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: cbec6e7020dce77da6fc3a78c97e676b7bb81cad
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Развертывание базы данных SQL Server в виртуальной машине Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Используйте **мастер развертывания базы данных в виртуальной машине Microsoft Azure** для развертывания базы данных из экземпляра [!INCLUDE[ssDE](../../includes/ssde-md.md)] в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в виртуальной машине Microsoft Azure. Мастер использует операцию полного резервного копирования базы данных, поэтому он всегда копирует всю схему базы данных и данные из пользовательской базы данных SQL Server. Мастер также выполняет всю настройку ВМ Azure, поэтому дополнительные действия для задания параметров ВМ не требуются.  
@@ -118,7 +118,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Включите JavaScript: Internet Explorer > Свойства обозревателя > Безопасность > Уровень пользователя > Скрипты > Активные скрипты: **Включить**.  
   
-###  <a name="limitations"></a> Ограничения  
+###  <a name="limitations"></a> ограничения  
 Эта функция развертывания предназначена для использования только с учетной записью хранения Azure, созданной с помощью (классической) модели развертывания управления службами. Дополнительные сведения о моделях развертывания Azure см. в статье [Azure Resource Manager и классическое развертывание](https://azure.microsoft.com/en-us/documentation/articles/resource-manager-deployment-model/).
 
  Размер базы данных для этой операции не может превышать 1 ТБ.  

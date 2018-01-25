@@ -15,12 +15,12 @@ ms.assetid: 67c6a601-677a-402b-b3d1-8c65494e9e96
 caps.latest.revision: "18"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
-ms.openlocfilehash: 083530811bd1dcee460e10566d9ddf94b8aa5f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: aa2ce39b4cf932d5659adb2ccc1a85b4ff547cac
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="automatically-initialize-always-on-availability-group"></a>Автоматическая инициализация группы доступности Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/20/2017
 
 Дополнительные сведения см. в разделе [Автоматическое заполнение для вторичных реплик](automatic-seeding-secondary-replicas.md).
  
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 В SQL Server 2016 для работы автоматического заполнения пути к файлам данных и файлам журналов должны быть одинаковыми на всех экземплярах SQL Server, входящих в группу доступности. В SQL Server 2017 можно использовать разные пути, но корпорация Майкрософт рекомендует использовать одинаковые пути, если все реплики размещаются на одной и той же платформе (например, Windows или Linux). В кроссплатформенных группах доступности используются разные пути для реплик. Дополнительные сведения см. в разделе [Разметка диска](automatic-seeding-secondary-replicas.md#disklayout).
 
@@ -150,7 +150,7 @@ GO
 
 **sys.dm_hadr_automatic_seeding** 
 
-На первичной реплике выполните запрос к `sys.dm_hadr_automatic_seeding` для проверки состояния процесса автоматического заполнения. Представление возвращает одну строку для каждого процесса заполнения. Например:
+На первичной реплике выполните запрос к `sys.dm_hadr_automatic_seeding` для проверки состояния процесса автоматического заполнения. Представление возвращает одну строку для каждого процесса заполнения. Пример:
 
 ```sql
 SELECT start_time, 
@@ -215,7 +215,7 @@ GO
 
 В таблице ниже перечислены расширенные события, связанные с автоматическим заполнением. 
 
-| Название | Описание|
+| Имя | Description|
 |------------ |---------------| 
 |hadr_db_manager_seeding_request_msg |  Заполнение сообщения запроса.
 |hadr_physical_seeding_backup_state_change |    Изменение состояния на стороне резервного копирования при физическом заполнении.
@@ -236,7 +236,7 @@ GO
 
 **Мониторинг автоматического заполнения**
 
-Выполните запрос `sys.dm_hadr_physical_seeding_stats` о текущих выполняющихся процессах автоматического заполнения. Представление возвращает одну строку для каждой базы данных. Например:
+Выполните запрос `sys.dm_hadr_physical_seeding_stats` о текущих выполняющихся процессах автоматического заполнения. Представление возвращает одну строку для каждой базы данных. Пример:
 
 ```sql
 SELECT local_database_name, 

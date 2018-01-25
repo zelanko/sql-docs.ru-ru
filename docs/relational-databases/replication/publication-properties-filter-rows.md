@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.filterrows.f1
 ms.assetid: 2c5fdbed-9b10-4818-98cc-cc6b01351318
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9101fca39dc70f29e1681bdb6718d8847a66df67
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b9f279d06d1be056edf486e0a9a8c4ee0184a9bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-filter-rows"></a>Свойства публикации, фильтрация строк
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Фильтрация строк** диалогового окна **Свойства публикации** дает возможность добавлять, изменять и удалять следующее:  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/17/2017
  **Правка**  
  Выберите фильтр строк или фильтр соединения на панели фильтров и нажмите кнопку **Изменить** для запуска диалогового окна **Изменение фильтра** или **Изменение соединения** .  
   
- **Delete**  
+ **Удаление**  
  Выберите фильтр строк или фильтр соединения на панели фильтров и нажмите кнопку **Удалить** для его удаления.  
   
  **Найти таблицу**  
@@ -82,7 +82,7 @@ ms.lasthandoff: 11/17/2017
   
  Выберите узел ярлыка на панели и нажмите **Найти таблицу** . Панель разворачивается с выделенной таблицей. Если нажать кнопку **Найти таблицу** без указания ссылки на узел, открывается диалоговое окно **Найти таблицу** .  
   
- **Фильтр**  
+ **Filter**  
  Содержит определение на языке [!INCLUDE[tsql](../../includes/tsql-md.md)] для фильтра, выбранного на панели фильтров.  
   
 ## <a name="see-also"></a>См. также:  
@@ -91,7 +91,7 @@ ms.lasthandoff: 11/17/2017
  [Повторная инициализация подписки](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [Просмотр и изменение свойств публикации](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Фильтрация опубликованных данных](../../relational-databases/replication/publish/filter-published-data.md)   
- [Фильтры соединения](../../relational-databases/replication/merge/join-filters.md)   
+ [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Публикация данных и объектов базы данных](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

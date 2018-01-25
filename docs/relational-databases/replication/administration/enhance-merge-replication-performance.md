@@ -22,15 +22,15 @@ helpviewer_keywords:
 - agents [SQL Server replication], performance
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 caps.latest.revision: "47"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7c9b6f552ef52af748dcce74977bfc74806c9546
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 10bc53216b65298837a5086adf89550ad97606a7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="enhance-merge-replication-performance"></a>Повышение производительности репликации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] После рассмотрения советов по повышению общей производительности, описанных в разделе [Увеличение общей производительности репликации](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), ознакомьтесь с этими дополнительными сведениями, относящимися к репликации слиянием.  
@@ -69,11 +69,11 @@ ms.lasthandoff: 11/17/2017
   
 -   Используйте предварительно вычисляемые секции с параметризованными фильтрами (применяются по умолчанию). Дополнительные сведения см. в статье [Оптимизация производительности параметризованного фильтра с помощью предварительно вычисляемых секций](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
-     Предварительно вычисляемые секции накладывают ряд ограничений на поведение фильтра. Если для приложения невозможно соблюдение этих ограничений, установите для параметр **keep_partition_changes** значение **True**, что обеспечит выигрыш в производительности. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Предварительно вычисляемые секции накладывают ряд ограничений на поведение фильтра. Если для приложения невозможно соблюдение этих ограничений, установите для параметр **keep_partition_changes** значение **True**, что обеспечит выигрыш в производительности. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Используйте неперекрывающиеся секции, если данные фильтруются, но не являются общими для пользователей.  
   
-     Репликация может оптимизировать производительность для данных, не разделяемых между секциями или подписками. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Репликация может оптимизировать производительность для данных, не разделяемых между секциями или подписками. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Не создавайте сложные иерархии фильтров соединения.  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 11/17/2017
   
     -   [Просмотр и изменение параметров командной строки агента репликации (SQL Server Management Studio)](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Основные понятия исполняемых файлов агента репликации](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+    -   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
 -   Попробуйте увеличить значение параметра **-MakeGenerationInterval** , особенно если при синхронизации чаще происходят передачи с подписчиков, нежели загрузки на подписчики.  
   

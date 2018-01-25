@@ -18,11 +18,11 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 3e1562fc0cf2cd1c3f037dab1ee275beeaeffeea
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
-ms.translationtype: MT
+ms.openlocfilehash: 9c0896ca67df3d8000fae8f3cd3d336b047ee481
+ms.sourcegitcommit: d7dcbcebbf416298f838a39dd5de6a46ca9f77aa
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="using-r-code-in-transact-sql-r-in-sql-quickstart"></a>С помощью кода R в Transact-SQL (R в быстрый запуск SQL Server)
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/08/2018
 
 Для выполнения запросов SQL, включающие скрипты R, можно использовать любое приложение, можно подключиться к базе данных и выполнить код T-SQL. Специалисты SQL можно использовать Visual Studio или SQL Server Management Studio (SSMS).
 
-Для этого учебника, чтобы показать, как просто можно запускать в SQL Server, мы используем новый **mssql расширения для Visual Studio Code**. VS Code является бесплатной среды разработки, можно запустить в Windows, Linux или macOS. **Mssql*** расширения представляют собой упрощенные расширение SLq запросов. Инструкции по ее установке см. в статье [Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode) (Использование Visual Studio Code для создания и выполнения скрипта Transact-SQL для SQL Server).
+Для этого учебника, чтобы показать, как просто можно запускать в SQL Server, мы используем новый **mssql расширения для Visual Studio Code**. VS Code является бесплатной среды разработки, можно запустить в Windows, Linux или macOS. **Mssql** расширения представляют собой упрощенные расширение выполнение запросов T-SQL. Инструкции по ее установке см. в статье [Use Visual Studio Code to create and run Transact-SQL scripts for SQL Server](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-vscode) (Использование Visual Studio Code для создания и выполнения скрипта Transact-SQL для SQL Server).
 
 ## <a name="connect-to-a-database-and-run-a-hello-world-test-script"></a>Подключение к базе данных и выполнение тестового скрипта Hello World
 

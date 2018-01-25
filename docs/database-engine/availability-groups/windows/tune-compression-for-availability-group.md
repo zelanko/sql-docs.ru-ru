@@ -15,13 +15,13 @@ ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: "12"
 author: MikeRayMSFT
 ms.author: v-saume
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ad722c68fa1cf60e8b253892f093fcdae24b751a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 36179f5848f1e5bd78176fc4dd508de5c31f70bd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="tune-compression-for-availability-group"></a>Настройка сжатия для группы доступности
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] По умолчанию SQL Server сжимает потоки данных для групп доступности, где это необходимо. Сжатие позволяет сократить объем сетевого трафика, увеличить загрузку ЦП и может вызывать задержки. Включить сжатие могут только члены предопределенной роли сервера sysadmin. В следующей таблице приведены ситуации, в которых SQL Server использует сжатие для потоков журнала группы доступности.

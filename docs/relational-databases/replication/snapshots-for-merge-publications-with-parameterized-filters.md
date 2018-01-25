@@ -19,15 +19,15 @@ helpviewer_keywords:
 - initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 99d7ae15-5457-4ad4-886b-19c17371f72c
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83e1c3bcb6cc4a435f3db4b3e96812a0c308c8b9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ec934637b86851a4d6fdc57722ac46aeebd0429e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>Моментальные снимки для публикаций слиянием с параметризованными фильтрами
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Когда в публикации слиянием применяются параметризованные фильтры строк, репликация инициализирует каждую подписку с помощью моментального снимка, состоящего из двух частей. В первую очередь создается моментальный снимок схемы, содержащий все объекты, требуемые репликацией, и схемы опубликованных объектов, но не данные. Затем каждая подписка инициализируется с помощью моментального снимка, включающего объекты и схему из моментального снимка схемы, а также данные, принадлежащие секции подписки. Если несколько подписок получают заданную секцию (другими словами, они получают ту же схему и данные), моментальный снимок для этой секции создается один раз; несколько подписок инициализируются из одного и того же моментального снимка. Дополнительные сведения о параметризованных фильтрах строк см. в разделе [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  

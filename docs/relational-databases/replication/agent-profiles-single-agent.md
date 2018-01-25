@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.profiles.perfprofileagentname.f1
 helpviewer_keywords: Agent Profile dialog box
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 39849c5a7cd991e45b16520744d4022d8c7b6dfa
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6984179c2dacffa2d6c2ebcb816114e1fcfdcfd0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="agent-profiles-single-agent"></a>Профили агента (один агент)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Профили агентов** служит для управления профилями агента. Профили агентов предоставляют удобный способ управления параметрами среды выполнения для каждого агента. Каждый агент имеет профиль по умолчанию, а некоторые агенты имеют и дополнительные предопределенные профили. Например, агент слияния имеет профиль «медленной связи», предназначенный для соединений с низкой пропускной способностью. Предопределенных профилей достаточно для создания большинства приложений, однако существует возможность создания пользовательских профилей, позволяющих настроить поведение агента.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 11/17/2017
  **Создать**  
  Нажмите для создания нового профиля.  
   
- **Delete**  
+ **Удаление**  
  Выберите пользовательский профиль и нажмите кнопку **Удалить** , чтобы удалить его. Предопределенные профили удалить нельзя.  
   
  **Изменить существующие агенты**  

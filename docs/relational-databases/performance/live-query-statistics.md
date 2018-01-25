@@ -18,15 +18,15 @@ helpviewer_keywords:
 - statistics [SQL Server], live query statistics
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e81e49b14a91f809c4c3452369069ff4d856a99f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bff144ba100fe72dcc036299138e656362977b96
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="live-query-statistics"></a>Динамическая статистика запросов
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] позволяет просматривать динамический план выполнения активного запроса. Этот динамический план запроса позволяет анализировать процесс выполнения запроса в режиме реального времени по мере передачи управления от одного оператора плана запроса другому. Динамический план запроса отображает общий ход выполнения запроса и текущую статистику выполнения на уровне оператора, например число полученных строк, затраченное время, ход выполнения оператора и т. д. Так как эти данные доступны в режиме реального времени и, чтобы их увидеть, не нужно дожидаться завершения запроса, такая статистика чрезвычайно полезна для отладки проблем с производительностью запросов. Эта функция доступна начиная с версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], но она может работать и с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
@@ -54,14 +54,14 @@ ms.lasthandoff: 11/17/2017
   
  ![Кнопка динамической статистики запросов в мониторе активности](../../relational-databases/performance/media/livequerystatsactmon.png "Кнопка динамической статистики запросов в мониторе активности")  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы функция динамической статистики запросов могла собирать данные о ходе выполнения, необходимо включить инфраструктуру профиля статистики. Выбор параметра **Включить динамическую статистику запроса** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] включает инфраструктуру статистики для текущего сеанса запроса. 
  
 До версии [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]есть еще два способа включить инфраструктуру статистики, с помощью которой можно просматривать динамическую статистику запросов из других сеансов (например, из монитора активности).  
   
 -   Выполните команды `SET STATISTICS XML ON;` или `SET STATISTICS PROFILE ON;` в нужном сеансе.  
   
- или  
+ или диспетчер конфигурации служб  
   
 -   Включите расширенное событие **query_post_execution_showplan** . Этот параметр применяется ко всему серверу и включает динамическую статистку запросов для всех сеансов. Сведения о включении расширенных событий см. в статье [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).  
 
@@ -69,7 +69,7 @@ ms.lasthandoff: 11/17/2017
 
 -   Используйте глобальный флаг трассировки 7412.  
   
- либо  
+ или диспетчер конфигурации служб  
   
 -   Включите расширенное событие **query_thread_profile** . Этот параметр применяется ко всему серверу и включает динамическую статистку запросов для всех сеансов. Сведения о включении расширенных событий см. в статье [Monitor System Activity Using Extended Events](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md).
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="permissions"></a>Разрешения  
  Для заполнения страницы результатов **Динамическая статистика запросов** требуется разрешение **SHOWPLAN** уровня базы данных. Для просмотра динамической статистики нужно разрешение **VIEW SERVER STATE** уровня сервера. А для выполнения запроса требуются все разрешения, необходимые для этого.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Средства контроля и настройки производительности](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)   
  [Открытие монитора активности (среда SQL Server Management Studio)](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)   

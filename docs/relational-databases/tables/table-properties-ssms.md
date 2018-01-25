@@ -19,15 +19,15 @@ f1_keywords:
 - sql13.swb.tableproperties.filetable.f1
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 caps.latest.revision: "43"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6df40ee96e268428259bd3c1f198467442dd5747
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4afb3c196e046c7f7517df5489c4c62f10da6ec2
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="table-properties---ssms"></a>Table Properties - SSMS
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -105,7 +105,7 @@ ms.lasthandoff: 11/17/2017
  Дополнительные сведения об отслеживании изменений см. в статье [Об отслеживании изменений (SQL Server)](../../relational-databases/track-changes/about-change-tracking-sql-server.md).  
   
 ##  <a name="FileTable"></a> Страница FileTable  
- Отображаются свойства таблицы, относящиеся к таблицам FileTable. Дополнительные сведения см в статье [Таблицы FileTable (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
+ Отображаются свойства таблицы, относящиеся к таблицам FileTable. Дополнительные сведения см в разделе [FileTables (SQL Server)](../../relational-databases/blob/filetables-sql-server.md).  
   
  **Параметры сортировки столбцов с именами в FileTable**  
  Параметры сортировки, применяемые к столбцу **Имя** в FileTable. Столбец **Name** содержит имена файлов и каталогов.  
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/17/2017
   
  Если таблица не содержит данных FILESTREAM, то это поле пусто.  
   
-### <a name="general"></a>Общие сведения  
+### <a name="general"></a>Общие  
  **Включен формат хранения Vardecimal**  
  Если задано **True**, это доступное только для чтения значение указывает, что типы данных **decimal** и **numeric** хранятся в формате vardecimal. Изменить его можно параметром **vardecimal storage format** хранимой процедуры [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Формат хранения Vardecimal устарел. Вместо этого используйте сжатие ROW.  
   

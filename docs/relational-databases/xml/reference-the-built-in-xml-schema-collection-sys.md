@@ -19,15 +19,15 @@ helpviewer_keywords:
 - built-in XML schema collections [SQL Server]
 ms.assetid: 1e118303-5df0-4ee4-bd8d-14ced7544144
 caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5c5edc5eb8bde1089fa63b36a134e32a00e94f56
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2bcdb9f2df0955ff0bb30f9b55d0080b9446391e
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reference-the-built-in-xml-schema-collection-sys"></a>Создание ссылки на встроенную коллекцию XML-схем (sys)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Любая созданная база данных содержит предопределенную коллекцию схем XML **sys** в реляционной схеме **sys**. Она содержит эти предопределенные схемы, к которым можно получить доступ из любой другой созданной пользователем коллекции XML-схем. В языке XQuery имеют значение префиксы, используемые для предопределенных схем. К зарезервированным относится только префикс **xml** .  

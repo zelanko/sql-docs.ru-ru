@@ -21,15 +21,15 @@ helpviewer_keywords:
 - server configuration [SQL Server]
 ms.assetid: 890c09a1-6dad-4931-aceb-901c02ae34c5
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 88db862493213badd36cfcaf4301cc1be6da5881
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4dbf50b3d48d83d3df69ec285a22379164f883e0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="server-network-configuration"></a>Сетевая конфигурация сервера
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Задачи настройки сети для сервера включают активацию протоколов, изменение порта или канала, используемого протоколом, настройку шифрования, настройку службы браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], отображение или скрытие компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в сети и регистрацию имени участника на уровне сервера. Обычно изменять сетевую конфигурацию сервера не требуется. Проводить перенастройку сетевых протоколов сервера следует только в случае особых требований сети.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
  Для повышения защищенности проверки подлинности пользователя при соединении с NTLM можно также использовать SPN. Дополнительные сведения см. в разделе [Соединение с компонентом Database Engine с использованием расширенной защиты](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md).  
   
-## <a name="sql-server-browser-service"></a>Служба браузера SQL Server  
+## <a name="sql-server-browser-service"></a>служба «SQL Server, браузер»  
  Служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется на сервере и позволяет клиентским компьютерам находить экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Служба браузера [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требует настройки, но она должна быть запущена для некоторых сценариев соединения. Дополнительные сведения о браузере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] см. в разделе [Служба обозревателя SQL Server (компоненты Database Engine и SSAS)](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)  
   
 ## <a name="hiding-sql-server"></a>Скрытие экземпляра SQL Server  

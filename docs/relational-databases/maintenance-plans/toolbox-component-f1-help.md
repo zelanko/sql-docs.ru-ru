@@ -15,15 +15,15 @@ f1_keywords: vs.toolbox
 helpviewer_keywords: Toolbox [SQL Server Management Studio]
 ms.assetid: d8401ecc-7d47-49df-aae5-22a148eeb23f
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7d1295c3b760386380c626e1afde9b98401ef3bd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a339068c7fe7f467a40f0b04bb3f08a6eecaefa9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="toolbox-component-f1-help"></a>Справка F1 компонента «Область элементов»
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В окне **Панель элементов** отображаются разнообразные элементы, используемые в проектах среды [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Окно **Область элементов** может быть открыто из меню **Вид** , после чего это окно может быть расположено в любом удобном месте. Для пристыкованного окна **Область элементов** можно указать — сохранять открытое окно или **Скрывать автоматически** , когда оно не используется.  

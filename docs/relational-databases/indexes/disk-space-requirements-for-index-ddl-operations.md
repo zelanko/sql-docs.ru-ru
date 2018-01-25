@@ -19,17 +19,17 @@ helpviewer_keywords:
 - temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: ddf19430350de7403cc3c9d46416cbc6cfa409c1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5479835a035a5a70a58463c3ed04f5540fdb1554
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="disk-space-requirements-for-index-ddl-operations"></a>Требования к месту на диске для DDL-операций индекса
+# <a name="disk-space-requirements-for-index-ddl-operations"></a>Disk Space Requirements for Index DDL Operations
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Наличие свободного места на диске имеет особое значение при создании, перестроении или удалении индексов. Недостаток места на диске может понизить производительность и даже вызвать ошибку операции с индексом. В этом разделе приведены общие сведения о том, как определить объем места на диске, необходимый для DDL-операций индекса.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 11/17/2017
   
  Для действий с индексами в оперативном режиме применяется управление версиями строк, позволяющее изолировать действия с индексами от воздействия изменений, внесенных другими транзакциями. Это исключает необходимость запрашивать общую блокировку уже считанных записей. Для одновременных операций обновления и удаления, выполняемых пользователями во время операций с индексами в сети, требуется место в базе данных **tempdb**для сохранения записей версий. Дополнительные сведения см. в статье [Выполнение операции с индексами в сети](../../relational-databases/indexes/perform-index-operations-online.md) .  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [Место на диске журнала транзакций для операций обработки индекса](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
@@ -99,7 +99,7 @@ ms.lasthandoff: 11/17/2017
  [Оценка размера кучи](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
   
 ## <a name="related-content"></a>См. также  
- [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   

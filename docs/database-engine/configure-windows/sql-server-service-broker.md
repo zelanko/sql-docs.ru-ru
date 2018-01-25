@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Service Broker
 ms.assetid: 8b8b3b57-fd46-44de-9a4e-e3a8e3999c1e
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: be698f252ad69b10178777216fe6e9b1ab789e81
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20407c3b614ed6e977e2ba69ba687b75f7d18fdf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSB](../../includes/sssb-md.md)] обеспечивает собственную поддержку приложений обмена сообщениями и приложений с очередями в компоненте [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Это облегчает разработчикам создание сложных приложений, использующих компоненты [!INCLUDE[ssDE](../../includes/ssde-md.md)] для связи между разнородными базами данных. Разработчики могут использовать компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] для облегчения создания распределенных и надежных приложений.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 11/20/2017
  Очереди содержат новый столбец **message_enqueue_time**, в котором показано время нахождения сообщения в очереди.  
   
 ### <a name="poison-message-handling-can-be-disabled"></a>Можно отключить обработку сообщений о сбое  
- Теперь в инструкциях [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md) и [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md) можно включать или отключать обработку сообщений о сбое, добавляя предложение `POISON_MESSAGE_HANDLING (STATUS = ON | OFF)`. Представление каталога **sys.service_queues** теперь содержит столбец **is_poison_message_handling_enabled**, показывающий, включено ли сообщение об ошибке.  
+ Теперь в инструкциях [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md) и [ALTER QUEUE (Transact-SQL)](../../t-sql/statements/alter-queue-transact-sql.md) можно включать или отключать обработку сообщений о сбое, добавляя предложение `POISON_MESSAGE_HANDLING (STATUS = ON | OFF)`. Представление каталога **sys.service_queues** теперь содержит столбец **is_poison_message_handling_enabled** , показывающий, включено ли сообщение об ошибке.  
   
 ### <a name="always-on-support-in-service-broker"></a>Поддержка AlwaysOn в компоненте Service Broker  
  Дополнительные сведения см. в статье [Компонент Service Broker с группами доступности AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/service-broker-with-always-on-availability-groups-sql-server.md).  

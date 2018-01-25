@@ -23,22 +23,22 @@ helpviewer_keywords:
 - articles [SQL Server replication], properties
 ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 caps.latest.revision: "37"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63dedf143ed8bd1ea568ad5d6b749557249f4b29
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 51288d9e67c380178a5987bf8d8c24cad41ce401
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-and-modify-article-properties"></a>Просмотр и изменение свойств статьи
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается, как просматривать и изменять свойства статьи в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов Replication Management Objects (RMO).  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 11/17/2017
 1.  Выполните хранимую процедуру [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md), указав изменяемое свойство статьи в параметре **@property** , а его новое значение — в параметре **@value** имя публикации и имя статьи соответственно.  
   
     > [!NOTE]  
-    >  Если в результате изменения необходимо создать новый моментальный снимок, необходимо также задать значение **1** в параметре **@force_invalidate_snapshot**, а если в результате изменения необходима повторная инициализация подписчиков, также необходимо указать значение **1** в параметре **@force_reinit_subscription**. Дополнительные сведения о свойствах, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
+    >  Если в результате изменения необходимо создать новый моментальный снимок, необходимо также задать значение **1** в параметре **@force_invalidate_snapshot**, а если в результате изменения необходима повторная инициализация подписчиков, также необходимо указать значение **1** в параметре **@force_reinit_subscription**. Дополнительные сведения о свойствах публикации и статьи, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Просмотр свойств статьи, принадлежащей публикации слиянием  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Если в результате изменения необходимо создать новый моментальный снимок, необходимо также задать значение **1** в параметре **@force_invalidate_snapshot**, а если в результате изменения необходима повторная инициализация подписчиков, также необходимо указать значение **1** в параметре **@force_reinit_subscription**. Дополнительные сведения о свойствах, при изменении которых требуется создание нового моментального снимка или повторная инициализация, см. в [этой статье](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  
   
-###  <a name="TsqlExample"></a> Пример (Transact-SQL)  
+###  <a name="TsqlExample"></a> Примеры (Transact-SQL)  
  Следующий пример репликации транзакций производит получение свойств опубликованной статьи.  
   
  [!code-sql[HowTo#sp_helptranarticle](../../../relational-databases/replication/codesnippet/tsql/view-and-modify-article-_1.sql)]  

@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
 caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 9389568b31c445d66713b68efea8c312f5df9dec
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e336447f1719999505d03fff77d0343ff5adf5ef
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-dqs-speller"></a>Использование средства проверки орфографии DQS
   Средство проверки орфографии [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) проверяет синтаксис, орфографию и структуру предложения для строковых значений в домене. Средство проверки орфографии — это автономная, клиентская функция, которая не имеет интеграции с серверными подсистемами и не оказывает влияния на текущие потоки или состояния. Средство проверки орфографии выявляет те строковые значения, которые в нем рассматриваются как потенциальные ошибки, а затем отмечает их подчеркиванием красной линией в том же месте, где вручную вносятся другие изменения в значениях домена. Это следующие места:  
@@ -39,9 +39,9 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Для работы со средством проверки орфографии необходимо наличие базы знаний и домена, открытого в действии «Обнаружение знаний» или «Управление доменами». Средство проверки орфографии должно быть включено для домена и включено на странице, на которой оно должно использоваться, кроме того, для домена должны быть указаны реквизиты языка.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для работы со средством проверки орфографии необходимо иметь роль dqs_kb_editor или dqs_administrator в базе данных DQS_MAIN.  
   
 ##  <a name="Enable"></a> Включение средства проверки орфографии  

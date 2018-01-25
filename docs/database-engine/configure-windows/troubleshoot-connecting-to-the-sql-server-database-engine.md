@@ -16,15 +16,15 @@ helpviewer_keywords:
 - connecting to Database Engine, troubleshooting
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 5963e9521c9c54cad7cee997f246d31b1b198549
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5ff7baa53924206192db30e8ae9f50cef02cff
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Устранение неполадок при соединении с компонентом SQL Server Database Engine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ ms.lasthandoff: 11/20/2017
 >    [!NOTE] 
 >    В некоторых сообщениях об ошибках, передаваемых клиенту, намеренно отсутствуют сведения, необходимые для устранения неполадок. Это связано с обеспечением безопасности, так как в этом случае злоумышленник не может получить данные о SQL Server. Чтобы просмотреть полные сведения об ошибке, обратитесь к журналу ошибок SQL Server. Там вы найдете все подробности. Если возникает ошибка **18456 Ошибка входа пользователя**, дополнительные сведения о кодах ошибок см. в статье [MSSQLSERVER_18456](http://msdn.microsoft.com/library/cc645917) электронной документации. Очень большой список кодов ошибок приведен в блоке Аарона Бертрана (Aaron Bertrand) в статье [Troubleshooting Error 18456](http://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Журнал ошибок можно просмотреть помощью среды SSMS (при наличии соединения) в разделе "Управление" обозревателя объектов. В противном случае журнал можно просмотреть с помощью программы Блокнот Windows. Расположение по умолчанию зависит от версии и может быть изменено во время установки. Расположением по умолчанию для [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] является `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
-4.   Если соединение устанавливается с помощью общей памяти, проверьте его с использованием TCP. Чтобы активировать TCP-подключение, укажите **tcp:** перед именем. Например:
+4.   Если соединение устанавливается с помощью общей памяти, проверьте его с использованием TCP. Чтобы активировать TCP-подключение, укажите **tcp:** перед именем. Пример:
 
 |Подключение к|Тип:|Пример|
 |-----------------|---------------|-----------------|

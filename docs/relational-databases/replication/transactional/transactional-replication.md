@@ -16,17 +16,17 @@ helpviewer_keywords:
 - transactional replication
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 caps.latest.revision: "38"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 316e3e56bae45eacf7f833115cecb546ed396821
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26ff46dbe2f3a404f09ee4d30741f38f941205a1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
-# <a name="transactional-replication"></a>Репликация транзакций
+# <a name="transactional-replication"></a>репликация транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Репликация транзакций обычно начинается с создания моментального снимка объектов и данных базы данных публикации. Как только создан исходный моментальный снимок, последующие изменения данных и схемы на издателе обычно доставляются подписчику без задержек (практически в реальном времени). Изменения данных применяются на подписчике в том же порядке и в тех же рамках транзакций, в которых они выполнялись у издателя. Поэтому в пределах публикации гарантируется согласованность транзакций.  
   
  Репликация транзакций обычно используется в серверных средах и пригодна в следующих случаях:  

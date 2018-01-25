@@ -36,15 +36,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
 caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1b9dccca2e644bf5d02d47165b02d75241e40695
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ca2fd82971fa8d4eb8c874b809961f5052d5fbf5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-indexes-sql-server"></a>XML-индексы (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Для столбцов типа **xml** можно создавать XML-индексы. При этом индексируются все теги, значения и пути хранимых в столбце экземпляров XML и повышается эффективность обработки запросов. Применение XML-индекса может дать преимущества в следующих ситуациях.  
@@ -99,7 +99,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   первичный ключ базовой таблицы. Дублируется в первичном XML-индексе для обратного соединения с базовой таблицей, а максимальное количество столбцов в первичном ключе базовой таблицы ограничено значением 15.  
   
- Перечисленные сведения об узле предназначены для вычисления и построения XML-результатов для указанного запроса. В целях оптимизации имя тега и данные о типе узла кодируются как целые значения, при этом в столбце Path используется такая же кодировка. Кроме того, пути сохраняются в обратном порядке, что позволяет сопоставлять их в тех случаях, когда известен только суффикс пути, Например:  
+ Перечисленные сведения об узле предназначены для вычисления и построения XML-результатов для указанного запроса. В целях оптимизации имя тега и данные о типе узла кодируются как целые значения, при этом в столбце Path используется такая же кодировка. Кроме того, пути сохраняются в обратном порядке, что позволяет сопоставлять их в тех случаях, когда известен только суффикс пути, Пример:  
   
 -   `//ContactRecord/PhoneNumber` , где известны только два последних элемента  
   
@@ -206,7 +206,7 @@ WHERE ProductModelID = 19
   
  За исключением отличий, описанных ниже в этом подразделе, создание XML-индекса для столбца типа**xml** аналогично созданию индекса для столбца типа данных, отличного от**xml** . Для создания XML-индексов и управления ими могут использоваться следующие DDL-инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   
--   [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
+-   [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
 -   [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
   

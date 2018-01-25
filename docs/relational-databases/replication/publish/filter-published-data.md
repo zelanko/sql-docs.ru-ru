@@ -23,15 +23,15 @@ helpviewer_keywords:
 - column filters [SQL Server replication]
 ms.assetid: 8a914947-72dc-4119-b631-b39c8070c71b
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d6b8a32e40c44b7cdc0ec8bb082ebc08a95d2221
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c33c6903f664437076c06f12fb2be3b231f7e0f1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="filter-published-data"></a>Фильтрация опубликованных данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Фильтрация статей таблиц позволяет создавать секции публикуемых данных. С помощью фильтрации опубликованных данных можно достичь следующих целей:  
@@ -58,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Параметризованные фильтры строк, доступные только с репликацией слиянием.  
   
-     Используя параметризованные фильтры строк, можно выбрать для публикации подмножество строк. В отличие от статических фильтров, которые отправляют одно и то же подмножество строк всем подписчикам, параметризованные фильтры строк используют получаемые от подписчиков значения данных для отправки подписчикам разных подмножеств строк. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+     Используя параметризованные фильтры строк, можно выбрать для публикации подмножество строк. В отличие от статических фильтров, которые отправляют одно и то же подмножество строк всем подписчикам, параметризованные фильтры строк используют получаемые от подписчиков значения данных для отправки подписчикам разных подмножеств строк. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 -   Фильтры соединения, доступные только с репликацией слиянием.  
   

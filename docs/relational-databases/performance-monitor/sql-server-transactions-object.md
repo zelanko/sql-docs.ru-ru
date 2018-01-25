@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Transactions object
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 711aaff1e0692bcf377117026692f508fd881798
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 757b2b72fe2066f452e53087e2ae73ea67d45aa8
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, объект Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **Transactions** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для мониторинга количества активных транзакций в экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)] и влияния этих транзакций на ресурсы, такие как хранилище версий строк изоляции моментальных снимков **tempdb**. Транзакции представляют собой логические блоки проделанной работы — наборы операций, которые должны либо все завершиться успешно, либо быть стертыми из базы данных, чтобы соблюсти логическую целостность данных. Все изменения данных в базах данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] осуществляются в транзакциях.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/17/2017
   
  В этой таблице перечислены счетчики **SQLServer:Transactions** .  
   
-|Счетчики Transactions в SQL Server|Описание|  
+|Счетчики Transactions в SQL Server|Description|  
 |--------------------------------------|-----------------|  
 |**Свободное пространство в базе данных tempdb (КБ)**|Объем (в КБ) свободного пространства в базе данных **tempdb**. Должно быть достаточно свободного места для того, чтобы вместить и хранилище версий уровня изоляции моментальных снимков, и все новые временные объекты, создаваемые в данном экземпляре [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Наиболее продолжительное время выполнения транзакции**|Время (в секундах) с момента запуска транзакции, которая оставалась активной дольше любой другой текущей транзакции. Этот счетчик показывает только действия, произошедшие при базе данных на уровне изоляции зафиксированной операции чтения с моментальным снимком. Он не регистрирует других действий, если база данных находится в другом уровне изоляции.|  

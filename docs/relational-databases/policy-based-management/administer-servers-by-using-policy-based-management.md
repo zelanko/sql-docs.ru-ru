@@ -23,15 +23,15 @@ helpviewer_keywords:
 - PolicyAdministratorRole role
 ms.assetid: ef2a7b3b-614b-405d-a04a-2464a019df40
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c8ed9f06fc87d159af34b32ebeb061a872eb9429
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 928ac23212fc1941db34ee409d6adec44142b79e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Администрирование серверов с помощью управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Управление на основе политик — это основанная на политиках система для управления одним или несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте его для создания условий, содержащих выражения условия. Затем создайте политики, применяющие условия к целевым объектам базы данных.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 11/17/2017
  ## <a name="examples"></a>Примеры
  - [Создание политики, отключенной по умолчанию](lesson-1-1-create-the-off-by-default-policy.md)
   - [Настройка сервера для выполнения политики «Отключено по умолчанию»](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Административные представления на основе политик (Transact-SQL)](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

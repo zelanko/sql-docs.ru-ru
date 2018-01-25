@@ -24,13 +24,13 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 caps.latest.revision: "151"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d54b7d77cb265f2ba8ee79ce993ce30ce8fdf441
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d127b3479e6bb38483d39556884d1498d9c662c2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="prereqs-restrictions-recommendations---always-on-availability-groups"></a>Предварительные требования, ограничения и рекомендации для групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -188,7 +188,7 @@ ms.lasthandoff: 11/20/2017
   
 |Задача|Необходимые разрешения|  
 |----------|--------------------------|  
-|Создание конечной точки зеркального отображения базы данных|Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера **sysadmin** .  Также требуется разрешение CONTROL ON ENDPOINT. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечные точки (Transact-SQL)](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).|  
+|Создание конечной точки зеркального отображения базы данных|Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера **sysadmin** .  Также требуется разрешение CONTROL ON ENDPOINT. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений конечной точке (Transact-SQL)](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).|  
 |Включение [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]|Требуется членство в группе **Администратор** на локальном компьютере и полный контроль над кластером WSFC.|  
   
 ###  <a name="RelatedTasksSI"></a> Связанные задачи (экземпляр сервера)  
@@ -281,7 +281,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Не используйте диспетчер отказоустойчивости кластеров для управления группами доступности.**  
   
-     Например:  
+     Пример:  
   
     -   Не изменяйте свойства групп доступности, такие как список возможных владельцев.  
   
@@ -314,7 +314,7 @@ ms.lasthandoff: 11/20/2017
   
 |Задача|Необходимые разрешения|  
 |----------|--------------------------|  
-|Создание группы доступности|Требуется членство в предопределенной роли сервера **sysadmin** и разрешение сервера CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
+|Создание группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение группы доступности.|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.<br /><br /> Кроме того, для присоединения базы данных к группе доступности требуется членство в предопределенной роли базы данных **db_owner** .|  
 |Удаление группы доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER. Для удаления группы доступности, которая не размещена в локальной реплике, необходимо разрешение CONTROL SERVER или разрешение CONTROL на эту группу доступности.|  
   

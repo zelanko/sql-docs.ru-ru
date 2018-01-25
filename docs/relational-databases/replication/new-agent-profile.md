@@ -15,15 +15,15 @@ f1_keywords: sql13.rep.profiles.newperfprofile.f1
 helpviewer_keywords: New Agent Profile dialog box
 ms.assetid: ebf59330-a421-45a5-9020-0484a96852bc
 caps.latest.revision: "21"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7f73501091ce352164db71ebf4ebf8758d0c40e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b456153f06f449086e5ba740f1a4a0e896de3440
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="new-agent-profile"></a>Создать профиль агента
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Диалоговое окно **Создать профиль агента** позволяет создать профиль. Новые профили всегда основываются на существующих, но их можно изменить для соответствия требованиям приложения. После создания профиля его можно применить к текущим и будущим заданиям агента в диалоговом окне **Профили агента** . Значения параметров агента можно изменить в диалоговом окне \<Свойства **имя_профиля_агента>**.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
  **Параметр**  
  Параметры агента, включенные в профиль. Профиль, на котором основан новый профиль, не обязательно указывает значения всех параметров. Для просмотра всех допустимых для данного агента параметров снимите флажок **Показывать только параметры, используемые в этом профиле** . Описание каждого параметра см. в разделах:  
   
--   [Агент моментальных снимков репликации](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+-   [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
 -   [Агент чтения журнала репликации](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Агент слияния репликации](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
--   [Агент чтения очереди репликации](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
+-   [Replication Queue Reader Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
  **Значение по умолчанию**  
  Значение по умолчанию для каждого параметра агента.  

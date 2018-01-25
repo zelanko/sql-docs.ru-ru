@@ -13,17 +13,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 1cd79492a145f17a4602c96159d2e64a4fc28f2e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5a437f93e76b78a9d335ab846c83a9765eb1b4d5
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="data-quality-services"></a>Службы Data Quality Services
+# <a name="data-quality-services"></a>Data Quality Services
   [!INCLUDE[ssDQSnoversionLong](../includes/ssdqsnoversionlong-md.md)] (DQS) — это продукт, предназначенный для повышения качества данных на основе знаний. DQS позволяет построить базу знаний и использовать ее для выполнения разнообразных важных задач по обеспечению качества данных, включая исправление, дополнение, стандартизацию и устранение дубликатов данных. DQS позволяет выполнять очистку данных с использованием служб эталонных данных, расположенных в облаке и предоставляемых поставщиками эталонных данных. DQS также предоставляет функции профилирования, встроенные в задачи по обеспечению качества данных, что позволяет анализировать целостность данных.  
   
  DQS состоит из [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] и [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], которые устанавливаются в составе [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] — это компонент экземпляра SQL Server, состоящий из трех каталогов SQL Server с функциями обеспечения качества данных и хранения. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] — это общий компонент SQL Server, который используется бизнес-пользователями, информационными работниками и ИТ-специалистами для выполнения автоматизированного анализа качества данных и интерактивного управления качеством данных. Также вы можете выполнять процессы обеспечения качества данных с помощью функций, доступных в [!INCLUDE[ssDQSCleansingLong](../includes/ssdqscleansinglong-md.md)] и службах Master Data Services (MDS), которые основаны на DQS.  

@@ -19,13 +19,13 @@ ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 caps.latest.revision: "83"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ef796792b50508d43361a86dd7a276990954bfdd
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ae777b30e9222f32833b862bfabee2f65a5db76c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="perform-a-forced-manual-failover-of-an-availability-group-sql-server"></a>Выполнение принудительного перехода на другой ресурс вручную для группы доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается выполнение принудительной отработки отказа (с возможной потерей данных) в группе доступности AlwaysOn с использованием [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Принудительная отработка отказа — это форма перехода на другой ресурс вручную, предназначенная исключительно для аварийного восстановления в случаях, когда невозможно выполнить [запланированную отработку отказа вручную](../../../database-engine/availability-groups/windows/perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) . Если выполняется принудительный переход на несинхронизированную вторичную реплику, возможна потеря данных. Поэтому мы настоятельно рекомендуем выполнять принудительную отработку отказа только в том случае, если необходимо немедленно возобновить работу группы доступности и вы готовы пойти на риск потери данных.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Дополнительные сведения о требованиях и рекомендациях для принудительной отработки отказа, а также пример использования принудительного перехода на другой ресурс для восстановления из ситуации критического сбоя см. в статье [Example Scenario: Using a Forced Failover to Recover from a Catastrophic Failure](../../../database-engine/availability-groups/windows/perform-a-forced-manual-failover-of-an-availability-group-sql-server.md#ExampleRecoveryFromCatastrophy)далее в этой статье.  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
      [Потенциальные методы избежания потери данных после принудительного создания кворума](#WaysToAvoidDataLoss)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Принудительная отработка отказа (с возможной потерей данных) с помощью:**  
   
@@ -143,9 +143,9 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  При выполнении принудительного перехода на вторичную реплику объем потерянных данных зависит от того, насколько сильно цель перехода отстает от первичной реплики. К сожалению, если у кластера WSFC нет кворума или если был обеспечен принудительный кворум, нельзя определить объем возможной потери данных. Однако после восстановления работоспособности кворума кластера WSFC можно начать отслеживать возможную потерю данных. Дополнительные сведения см. в разделе "Отслеживание возможной потери данных" статьи [Отработка отказа и режимы отработки отказа (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -212,13 +212,13 @@ ms.lasthandoff: 11/20/2017
         ```  
   
     > [!NOTE]  
-    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+    >  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
 3.  После принудительной отработки отказа группой доступности выполните необходимые дополнительные действия. Дополнительные сведения см. в разделе [Дальнейшие действия. Основные задачи после принудительной отработки отказа](#FollowUp)далее в этой статье.  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. Основные задачи после принудительной отработки отказа  
   
@@ -231,9 +231,9 @@ ms.lasthandoff: 11/20/2017
   
          **Настройка голосов кворума**  
   
-        -   [Просмотр параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+        -   [Просмотр параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
-        -   [Настройка параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+        -   [Настройка параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
         -   [Принудительный запуск кластера WSFC без кворума](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
@@ -330,9 +330,9 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="RelatedTasks"></a> Связанные задачи  
  **Настройка голосов кворума**  
   
--   [Просмотр параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
+-   [Просмотр параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)  
   
--   [Настройка параметров NodeWeight кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
+-   [Настройка параметров NodeWeight для кворума кластера](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
 -   [Принудительный запуск кластера WSFC без кворума](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   

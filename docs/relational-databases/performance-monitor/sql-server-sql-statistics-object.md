@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: "31"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7290b3701425411f0ba7d05e6790737057274762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5ab8c2fa693b264707e89f4438d408f4c513e565
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-sql-statistics-object"></a>SQL Server, объект SQL Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **SQLServer:SQL Statistics** в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для наблюдения за компиляцией и типами запросов, отправляемых экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Наблюдение за числом компиляций и повторных компиляций запросов и числа пакетов, полученных экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , дает представление о том, как быстро [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет запросы пользователей и насколько эффективно их обрабатывает оптимизатор запросов.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   
  Это счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Статистика SQL** .  
   
-|Счетчики SQL Server статистика SQL|Описание|  
+|Счетчики SQL Server статистика SQL|Description|  
 |----------------------------------------|-----------------|  
 |**Попыток автопараметризации/с**|Число попыток автоматической параметризации, выполненных за секунду. Общий итог должен быть равен сумме ошибочных, надежных и ненадежных автоматических параметризаций. Автоматическая параметризация возникает в том случае, когда экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пытается параметризовать запрос [!INCLUDE[tsql](../../includes/tsql-md.md)] , замещая некоторые из литералов параметрами, чтобы повторно использовать из кэша как можно больше похожих планов выполнения. Автоматическая параметризация в более поздних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]называется «простой параметризацией». Этот счетчик не учитывает принудительные параметризации.|  
 |**Запросов пакетов/с**|Число пакетов команд [!INCLUDE[tsql](../../includes/tsql-md.md)] , полученных за секунду. На эту статистику влияют любые ограничения (ввод-вывод, число пользователей, размер кэша, сложность запросов и т. д.). Высокое число запросов пакетов свидетельствует о высокой пропускной способности.|  

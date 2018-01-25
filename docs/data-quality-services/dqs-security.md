@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: c8783392c318700bd5cc7c4e9db02f086741b098
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0cc0bda4d4985082fee6c2da0625d0dbecda8509
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dqs-security"></a>Безопасность DQS
   Инфраструктура обеспечения безопасности [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) основана на инфраструктуре обеспечения безопасности SQL Server. Администратор базы данных предоставляет пользователю набор разрешений, объединяя пользователя с ролью DQS. Это определяет ресурсы служб DQS, к которым пользователь имеет доступ, а также функциональные операции, которые позволено выполнять пользователю.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="user-management"></a>Управление пользователями  
  Администратор базы данных (DBA) создает пользователей DQS и связывает их с ролями DQS в среде SQL Server Management Studio. Администратор базы данных управляет их разрешениями, добавляя имена входа SQL в качестве пользователей базы данных DQS_MAIN и связывая каждого пользователям с одной из ролей DQS. Каждой роли предоставляются разрешения для набора хранимых процедур в базе данных DQS_MAIN. Эти три роли DQS недоступны для баз данных DQS_PROJECTS и DQS_STAGING_DATA.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  

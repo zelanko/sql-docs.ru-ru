@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 94e8301b0df36349494fbfc9e900957dee5e8852
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ba77e475bd530b362b4a2f918c6ee7c0b901443
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Профилирование данных и уведомления в DQS
   Профилирование данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) — это процесс анализа данных в существующем источнике данных и отображения статистики по данным в действиях DQS. Оно дает возможности автоматического измерения качества данных. Профилирование DQS интегрировано в проекты управления наборами знаний и качества данных в службах DQS. Это динамический и настраиваемый процесс. Профилирование служит двум основным задачам: во-первых, оно предоставляет рекомендации по процессам обеспечения качества данных и поддержке решений, во-вторых, помогает оценивать эффективность процессов. Процесс профилирования DQS имеет следующие преимущества.  
@@ -100,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Запуск проекта сопоставления](../data-quality-services/run-a-matching-project.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Описание задачи|Раздел|  
 |----------------------|-----------|  
