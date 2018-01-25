@@ -24,13 +24,13 @@ ms.assetid: c1600289-c990-454a-b279-dba0ebd5d63e
 caps.latest.revision: "44"
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d097f90cfabc250921c3212ed0a89e85362c0f6
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 82fdb4b104a0be0aa0d6469ccdd23f361f55618b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-availability-group-transact-sql"></a>DROP AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ DROP AVAILABILITY GROUP group_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_группы*  
+ *group_name*  
  Указывает имя удаляемой группы доступности.  
   
 ## <a name="limitations-and-recommendations"></a>Ограничения  
@@ -69,9 +69,9 @@ DROP AVAILABILITY GROUP group_name
   
 -   На вторичной реплике **DROP AVAILABILITY GROUP** следует использовать только в экстренных случаях. Это связано с тем, что удаление группы доступности переводит группу в режим «вне сети». При удалении группы доступности из вторичной реплики первичная реплика не может определить, является ли **OFFLINE** состояние возникло из-за потери кворума, принудительного перехода на другой ресурс или **DROP AVAILABILITY GROUP**команды. Первичная реплика переходит **RESTORING** состояние, чтобы избежать возможной ситуации с дроблением. Дополнительные сведения см. в статье [Поведение инструкции DROP AVAILABILITY GROUP](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server).  
   
-## <a name="security"></a>Безопасность  
+## <a name="security"></a>безопасность  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Требуется **ALTER AVAILABILITY GROUP** разрешение для группы доступности, **CONTROL AVAILABILITY GROUP** разрешение, **ALTER ANY AVAILABILITY GROUP** разрешение, или **CONTROL SERVER** разрешение. Для удаления группы доступности, которая не размещена на экземпляре локального сервера, необходимо **CONTROL SERVER** разрешение или **УПРАВЛЕНИЯ** разрешение для этой группы доступности.  
   
 ## <a name="examples"></a>Примеры  
@@ -81,13 +81,13 @@ DROP AVAILABILITY GROUP group_name
 DROP AVAILABILITY GROUP AccountsAG;  
 ```  
   
-##  <a name="RelatedContent"></a> См. также  
+##  <a name="RelatedContent"></a> Related Content  
   
 -   [Принцип работы. Поведение инструкции DROP AVAILABILITY GROUP](http://blogs.msdn.com/b/psssql/archive/2012/06/13/how-it-works-drop-availability-group-behaviors.aspx) (блог инженеров CSS SQL Server)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/alter-availability-group-transact-sql.md)   
- [CREATE AVAILABILITY GROUP (Transact-SQL)](../../t-sql/statements/create-availability-group-transact-sql.md)   
- [Удаление группы доступности (SQL Server)](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
+ [Создание группы ДОСТУПНОСТИ &#40; Transact-SQL &#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
+ [Удаление группы доступности &#40; SQL Server &#41;](../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md)  
   
   

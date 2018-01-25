@@ -25,15 +25,15 @@ helpviewer_keywords:
 - services [Service Broker], permissions
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c63c3d62d0104642953545da75b0f7fa1b988eb0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 100c447d3a258ecf8a590173a7c0ef161f0fad3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY, запрет разрешений компонента Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,21 +60,21 @@ DENY permission  [ ,...n ] ON
   
 ## <a name="arguments"></a>Аргументы  
  *разрешение*  
- Указывает разрешение, которое может быть запрещено для защищаемых элементов компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе «Примечания» далее в этом разделе.  
+ Указывает разрешение, которое может быть запрещено для защищаемых элементов компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Список разрешений см. в подразделе "Примечания" далее в этом разделе.  
   
- КОНТРАКТ **::***contract_name*  
+ CONTRACT **::***contract_name*  
  Указывает контракт, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- Тип сообщения **::***message_type_name*  
+ MESSAGE TYPE **::***message_type_name*  
  Указывает тип сообщений, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- REMOTE SERVICE BINDING **::***remote_binding_name*  
+ REMOTE SERVICE BINDING **:: *** remote_binding_name*  
  Указывает привязку удаленной службы, для которой запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- МАРШРУТ **::***route_name*  
+ ROUTE **::***route_name*  
  Указывает маршрут, для которого запрещено разрешение. Квалификатор области **::** является обязательным.  
   
- Служба **::***message_type_name*  
+ SERVICE **::***message_type_name*  
  Указывает службу, для которой запрещено разрешение. Квалификатор области **::** является обязательным.  
   
  *database_principal*  
@@ -104,7 +104,7 @@ CASCADE
 -   Пользователь базы данных, сопоставленный асимметричному ключу  
 -   Пользователь базы данных, не сопоставленный серверу-участнику  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="service-broker-contracts"></a>Контракты компонента Service Broker  
  Контракт компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] — это защищаемый объект уровня базы данных, находящийся в базе данных, которая является родительской в иерархии разрешений. Наиболее специфичные и ограниченные разрешения, которые могут быть запрещены на [!INCLUDE[ssSB](../../includes/sssb-md.md)] контракта, перечислены в следующей таблице вместе с более общими разрешениями, неявно их содержащими.  
@@ -159,10 +159,10 @@ CASCADE
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения CONTROL по контрактам, типам сообщений, привязкам удаленной службы, маршрутам или службам компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)]. При использовании предложения AS указанный участник должен быть владельцем защищаемого объекта, разрешения на который для него запрещаются.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Участники (компонент Database Engine)](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [ОТЗЫВ разрешений компонента Service Broker &#40; Transact-SQL &#41;](../../t-sql/statements/revoke-service-broker-permissions-transact-sql.md)   
  [DENY (Transact-SQL)](../../t-sql/statements/deny-transact-sql.md)   

@@ -16,13 +16,13 @@ ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bda2e9c6813e53bffeab974e5e01b475cdfebe26
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d869ed18b07f824ffa4cc3fc8b746ded5242ed99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>Создание СЕАНСА диагностики (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -67,7 +67,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *max_item_count_num*  
  Число событий, должна быть сохранена в представлении. Например если указано значение 100, 100 последних событий, соответствующих условиям фильтра будут сохраняться в сеанс диагностики. При обнаружении менее 100 сопоставления событий сеанса диагностики будет содержать не более 100 событий. *max_item_count_num* должно быть по крайней мере 100 и меньше или равно 100 000.  
   
- *имя_события*  
+ *event_name*  
  Определяет фактическое сбор событий в сеансе диагностики.  *имя_события* является одним из событий, перечисленных в [sys.pdw_diag_events](http://msdn.microsoft.com/en-us/d813aac0-cea1-4f53-b8e8-d26824bc2587) где `sys.pdw_diag_events.is_enabled='True'`.  
   
  *filter_property_name*  
@@ -82,7 +82,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
  *property_name*  
  Свойства, связанные с событием.  Имена свойств могут быть частью тега захвата или используется как один из критериев фильтрации.  
   
-|Имя свойства|Description|  
+|Имя свойства|Описание|  
 |-------------------|-----------------|  
 |UserName|Имя пользователя (имя входа).|  
 |SessionId|Идентификатор сеанса.|  
@@ -93,12 +93,12 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 |Длительность|Длительность события.|  
 |SPID|Идентификатор процесса службы.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Каждый пользователь может более 10 одновременных диагностические сеансы. В разделе [sys.pdw_diag_sessions](http://msdn.microsoft.com/en-us/ca111ddc-2787-4205-baf0-1a242c0257a9) список текущих сеансов и drop все ненужные сеансов с помощью `DROP DIAGNOSTICS SESSION`.  
   
  Диагностические сеансы будут продолжать собирать метаданных до удаления.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **ALTER SERVER STATE** разрешение.  
   
 ## <a name="locking"></a>Блокировка  

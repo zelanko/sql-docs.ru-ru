@@ -19,15 +19,15 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
 caps.latest.revision: "59"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 08cca5788a9e3908fd72fd415feaab72533b1480
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 218228de964e75a7d67961ba7d8cd812497d8729
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="initialization-and-authorization-properties"></a>Свойства инициализации и авторизации
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
  В специфический для поставщика наборе свойств DBPROPSET_SQLSERVERDATASOURCEINFO [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поставщик OLE DB для собственного клиента определяет дополнительные свойства см. в разделе [свойства сведений об источнике данных](../../relational-databases/native-client-ole-db-data-source-objects/data-source-information-properties.md) для получения дополнительной информации.  
   
 ## <a name="the-sql-server-native-client-ole-db-provider-string"></a>Строка поставщика OLE DB для собственного клиента SQL Server  
- Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] распознает синтаксис ODBC в значениях свойств строки поставщика. Свойство строки поставщика задается как значение свойства инициализации DBPROP_INIT_PROVIDERSTRING при установлении соединения с источником данных OLE DB. Это свойство содержит данные для подключения, определяемые поставщиком OLE DB и необходимые для установления соединения с источником данных OLE DB. В этой строке элементы разделяются точкой с запятой. За последним элементом в строке также должна стоять точка с запятой. Каждый элемент состоит из ключевого слова, символа «=» и значения, переданного при инициализации. Пример:  
+ Поставщик OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] распознает синтаксис ODBC в значениях свойств строки поставщика. Свойство строки поставщика задается как значение свойства инициализации DBPROP_INIT_PROVIDERSTRING при установлении соединения с источником данных OLE DB. Это свойство содержит данные для подключения, определяемые поставщиком OLE DB и необходимые для установления соединения с источником данных OLE DB. В этой строке элементы разделяются точкой с запятой. За последним элементом в строке также должна стоять точка с запятой. Каждый элемент состоит из ключевого слова, символа «=» и значения, переданного при инициализации. Например:  
   
 ```  
 Server=MyServer;UID=MyUserName;  

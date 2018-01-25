@@ -24,15 +24,15 @@ helpviewer_keywords:
 - modifying passwords
 ms.assetid: 624ad949-5fed-4ce5-b319-878549f9487b
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5907fb8f99e17de6396adac479213ae9a87cf4d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: bb5e1dbff4a9a528690ff3172da2329ae9a5c28e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="changing-passwords-programmatically"></a>Смена пароля программным способом
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -124,7 +124,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Драйвер ODBC собственного клиента возвращает SQL_ERROR в четырех случаях для этого компонента: срок действия пароля, конфликт политик пароля, блокировка учетной записи, и установка свойства старого пароля при использовании проверки подлинности Windows. Драйвер возвращает пользователю соответствующие сообщения об ошибках при [SQLGetDiagField](../../../relational-databases/native-client-odbc-api/sqlgetdiagfield.md) вызывается.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

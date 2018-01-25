@@ -28,15 +28,15 @@ helpviewer_keywords:
 - unloading DLLs
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ac9dfc9becff3b708f3bc09ff8b4aacde40fd902
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0ad6b900d45ef1c87c0aca0d961685c68a72a33d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname (FREE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]Выгружает указанный расширенной хранимой процедуры DLL из памяти.
@@ -49,13 +49,13 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- \<*имя DLL-библиотеки*>  
+ \<*dllname*>  
  Имя DLL-библиотеки, подлежащей удалению из памяти.  
   
  WITH NO_INFOMSGS  
  Подавляет вывод всех информационных сообщений.  
   
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 При выполнении расширенной хранимой процедуры DLL-библиотека остается загруженной экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] до момента отключения сервера. Эта инструкция позволяет выгружать библиотеку DLL из памяти без отключения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Для отображения DLL-файлов, загруженных в данный момент с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], выполнение **sp_helpextendedproc**
   
 ## <a name="result-sets"></a>Результирующие наборы  
@@ -65,7 +65,7 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .
   
 ## <a name="examples"></a>Примеры  
@@ -75,7 +75,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC xp_sample (FREE);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Характеристики выполнения расширенных хранимых процедур](../../relational-databases/extended-stored-procedures-programming/execution-characteristics-of-extended-stored-procedures.md)  
 [sp_addextendedproc &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)  

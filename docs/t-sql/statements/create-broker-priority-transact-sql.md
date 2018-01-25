@@ -26,15 +26,15 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE BROKER PRIORITY statement
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 256536ee8fc56891b0b957498c7c5bcf4881f235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 524909a3f12040460950448e77c177f3b1aeef8d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ FOR CONVERSATION
   
  *RemoteServiceName* — это литерал типа **nvarchar(256)**. [!INCLUDE[ssSB](../../includes/sssb-md.md)]использует сравнение байт за байтом *RemoteServiceName* строка. При сравнении учитывается регистр и не применяются текущие параметры сортировки. Целевая служба может располагаться в текущем экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] или в удаленном экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
- "*RemoteServiceName*"  
+ '*RemoteServiceName*'  
  Указывает, что объектом применения приоритета диалога может быть:  
   
 -   Любая конечная точка диалога инициатора, имя целевой службы соответствует *RemoteServiceName*.  
@@ -114,7 +114,7 @@ FOR CONVERSATION
  Параметра PRIORITY_LEVEL = { *PriorityValue* | **по умолчанию** }  
  Указывает приоритет, который назначается любой конечной точке диалога, использующей контракты и службы, указанные в приоритете диалога. *PriorityValue* должно быть целым литералом в диапазоне от 1 (наименьший приоритет) до 10 (наибольший приоритет). Значение по умолчанию — 5.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] назначает уровни приоритета конечным точкам диалога. Уровни приоритета управляют приоритетом операций, связанных с конечной точкой. У каждого диалога есть две конечные точки:  
   
 -   Конечная точка — инициатор диалога связывает одну сторону диалога со службой и очередью инициатора. Конечная — точка-инициатор диалога создается во время выполнения инструкции BEGIN DIALOG. С конечной точкой — инициатором диалога связаны следующие операции:  
@@ -162,7 +162,7 @@ FOR CONVERSATION
   
 -   Все [!INCLUDE[ssSB](../../includes/sssb-md.md)] операций в базе данных назначаются приоритеты по умолчанию 5, если были созданы приоритеты диалога в базе данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешение на создание приоритета диалога по умолчанию предоставляется членам предопределенных ролей базы данных db_ddladmin и db_owner, а также членам предопределенной роли сервера sysadmin. Необходимо разрешение ALTER на базу данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -287,7 +287,7 @@ CREATE BROKER PRIORITY BronzePriority
          PRIORITY_LEVEL = 2);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкция ALTER BROKER PRIORITY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-broker-priority-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [Создание КОНТРАКТА &#40; Transact-SQL &#41;](../../t-sql/statements/create-contract-transact-sql.md)   
@@ -297,6 +297,6 @@ CREATE BROKER PRIORITY BronzePriority
  [GET CONVERSATION GROUP &#40; Transact-SQL &#41;](../../t-sql/statements/get-conversation-group-transact-sql.md)   
  [ПОЛУЧИТЬ &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)   
  [Отправить &#40; Transact-SQL &#41;](../../t-sql/statements/send-transact-sql.md)   
- [sys.conversation_priorities &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
+ [sys.conversation_priorities &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-priorities-transact-sql.md)  
   
   

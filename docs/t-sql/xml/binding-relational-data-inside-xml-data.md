@@ -23,13 +23,13 @@ ms.assetid: 03d013a9-b53f-46c3-9628-da77f099c74a
 caps.latest.revision: "36"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ef249a7482610419873604637290cab3ef18e34b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87dca9b5bcd70335a6121b1be1e49f4cc352826e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="binding-relational-data-inside-xml-data"></a>Привязка реляционных данных внутри XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ WHERE   xCol.exist ('/book/@ISBN[. = sql:variable("@isbn")]') = 1
   
  **SQL: column()** можно использовать так же, как и дает дополнительные преимущества. Для повышения эффективности могут использоваться индексы столбца — это решает оптимизатор запросов на основе траты ресурсов. В вычисляемом столбце можно хранить свойство, для которого было выполнено продвижение.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Методы для типа данных XML](../../t-sql/xml/xml-data-type-methods.md)  
   
   

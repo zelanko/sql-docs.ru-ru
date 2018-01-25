@@ -26,15 +26,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 caps.latest.revision: "78"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 85822d9351e0f0ce5a8c5a7542fbd7df57d13d74
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb7faf36132e131c0fd771480e89318492c71372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ DBCC SHOWCONTIG
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_таблицы* | *table_id* | *view_name* | *view_id*  
+ *table_name* | *table_id* | *view_name* | *view_id*  
  Таблица или представление, для которых проверяются сведения о фрагментации. Если этот аргумент не указан, проверяются все таблицы и индексированные представления из текущей базы данных. Чтобы получить таблицу или просмотреть код, используйте [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) функции.  
   
  *index_name* | *index_id*  
@@ -95,7 +95,7 @@ DBCC SHOWCONTIG
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице описаны сведения в результирующем наборе.
   
-|Статистика|Description|  
+|Статистика|Описание|  
 |---|---|
 |**Просмотрено страниц**|Количество страниц в таблице или индексе.|  
 |**Сканирование экстентов**|Количество экстентов в таблице или индексе.|  
@@ -116,11 +116,11 @@ DBCC SHOWCONTIG
   
 Если указан параметр TABLERESULTS, инструкция DBCC SHOWCONTIG возвращает следующие столбцы дополнительно к девяти столбцам, описанным в предыдущей таблице.
   
-|Статистика|Description|  
+|Статистика|Описание|  
 |---|---|
 |**Имени объекта**|Имя обработанной таблицы или представления.|  
 |**ObjectId**|Идентификатор объекта.|  
-|**Имя_индекса**|Имя обработанного индекса. Для кучи это значение NULL.|  
+|**IndexName**|Имя обработанного индекса. Для кучи это значение NULL.|  
 |**IndexId**|Идентификатор индекса. Для кучи равен 0.|  
 |**Level**|Уровень индекса. Уровень 0 представляет собой конечный уровень или уровень данных индекса.<br /><br /> Для кучи уровень равен 0.|  
 |**Страницы**|Количество страниц, образующих данный уровень индекса или всю кучу.|  
@@ -148,7 +148,7 @@ DBCC SHOWCONTIG
 |**AverageRecordSize**|**ExtentFragmentation**|  
 |**ForwardedRecords**||  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Инструкция DBCC SHOWCONTIG обходит цепочку страниц на конечном уровне заданного индексом, когда *index_id* указано. Если только *table_id* указан или если *index_id* равно 0, просматриваются страницы данных указанной таблицы. Для этой операции достаточно блокировки намерения (IS) таблицы. Таким способом можно выполнять все операции обновления и вставки, кроме операций, требующих монопольной (X) блокировки таблицы. Это позволяет достичь компромисса между скоростью выполнения без снижения параллелизма и числом возвращаемых статистических показателей. Однако, если команда используется только для оценки фрагментации, рекомендуется использовать параметр WITH FAST для оптимальной производительности. При быстром просмотре не считываются страницы индекса конечного уровня или уровня данных. Параметр WITH FAST неприменим к куче.
   
 ## <a name="restrictions"></a>Ограничения  
@@ -170,7 +170,7 @@ DBCC SHOWCONTIG
 -   Повторно упорядочить страницы индекса конечного уровня в логическом порядке.  
      Повторно упорядочить страницы индекса конечного уровня в логическом порядке можно с помощью инструкции ALTER INDEX…REORGANIZE. Так как эта операция производится в режиме в сети, в процессе выполнения инструкции индекс остается доступным. Кроме того, операция может быть прервана без потери выполненной работы. Недостаток этого метода — эффективность реорганизации данных с его помощью ниже, чем при удалении и повторном создании кластеризованного индекса.  
 -   Перестроить индекс.  
-     Перестроить индекс можно с помощью инструкции ALTER INDEX с параметром REBUILD. Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
+     Перестроить индекс можно с помощью инструкции ALTER INDEX с параметром REBUILD. Дополнительные сведения см. в статье [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   
 **Avg. Байт свободно на каждой странице** и **Avg. Страница плотность (полное)** статистики в результирующем наборе указывают на заполнение страниц индекса. **Avg. Байт свободно на каждой странице** должен быть низким и **Avg. Страница плотность (полное)** высоким для индекса, не будет большого количества случайных вставок. При удалении и повторном создании индекса с параметром FILLFACTOR показатели могут улучшиться. Кроме того, инструкция ALTER INDEX с параметром REORGANIZE позволяет сжать индекс, принимая во внимание его фактор заполнения FILLFACTOR, что также улучшит показатели.
   
@@ -190,7 +190,7 @@ DBCC SHOWCONTIG
     > [!NOTE]  
     >  **Extent Scan Fragmentation** будет высоким, если индекс охватывает несколько файлов. Для снижения этих значений необходимо снизить уровень фрагментации индекса.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Пользователь должен быть владельцем таблицы или быть членом **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или **db_ddladmin** предопределенной роли базы данных.
   
 ## <a name="examples"></a>Примеры  
@@ -347,12 +347,12 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
-[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
-[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)  
+[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DROP INDEX (Transact-SQL)](../../t-sql/statements/drop-index-transact-sql.md)  
-[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+[sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [OBJECT_ID (Transact-SQL)](../../t-sql/functions/object-id-transact-sql.md)  
 [sys.indexes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
   

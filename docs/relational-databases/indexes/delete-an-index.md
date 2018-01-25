@@ -19,15 +19,15 @@ helpviewer_keywords:
 - index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: f076878916c402070c4a2808209b30f2bb7ae495
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: c48c04746b81c1b635630fda279e6519edd1da53
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-an-index"></a>Удаление индекса
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ ms.lasthandoff: 12/21/2017
   
 1.  В обозревателе объектов разверните базу данных, содержащую таблицу, в которой необходимо удалить индекс.  
   
-2.  Разверните папку **Таблицы** .  
+2.  Разверните папку **Таблицы**.  
   
 3.  Разверните таблицу, содержащую индекс, который нужно удалить.  
   
-4.  Разверните папку **Индексы** .  
+4.  Разверните папку **Индексы**.  
   
 5.  Щелкните правой кнопкой мыши индекс, который необходимо удалить, и выберите пункт **Удалить**.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  В обозревателе объектов разверните базу данных, содержащую таблицу, в которой необходимо удалить индекс.  
   
-2.  Разверните папку **Таблицы** .  
+2.  Разверните папку **Таблицы**.  
   
 3.  Правой кнопкой мыши щелкните таблицу, содержащую индекс, который необходимо удалить, и выберите «Конструктор».  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 12/21/2017
   
 7.  Щелкните **Закрыть**.  
   
-8.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+8.  В меню **Файл** выберите пункт **Сохранить***<имя_таблицы>*.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

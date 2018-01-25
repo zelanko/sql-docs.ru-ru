@@ -16,13 +16,13 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 caps.latest.revision: "40"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 68cdce96ae6c8e6f98b3c6d922101c6f830ff208
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 429c2dc727d844c35943fa599e6fbcb911df04ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>Создание TABLE AS SELECT (хранилище данных Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -111,15 +111,15 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
 ### <a name="select-options"></a>Выберите параметры
 Инструкция select является принципиальные различия между CTAS и CREATE TABLE.  
 
- `WITH`*обобщенное_табличное_выражение*  
+ `WITH` *common_table_expression*  
  Задается временно именованный результирующий набор, называемый обобщенным табличным выражением (ОТВ). Дополнительные сведения см. в разделе [с общее_табличное_выражение &#40; Transact-SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- `SELECT`*select_criteria*  
+ `SELECT` *select_criteria*  
  Заполняет новую таблицу с результатами из инструкции SELECT. *select_criteria* текст инструкции SELECT, которое определяет, какие данные необходимо скопировать в новую таблицу. Сведения об инструкциях SELECT см. в разделе [ВЫБЕРИТЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
 <a name="permissions-bk"></a>  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Требуется CTAS `SELECT` разрешений на любые объекты, на которые ссылается *select_criteria*.
 
 Разрешения на создание таблицы в разделе [разрешений](https://msdn.microsoft.com/library/mt203953/#Permissions) в инструкции CREATE TABLE. 
@@ -827,7 +827,7 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 
 Вы увидите таким образом, согласованности типов и поддержка свойства допустимости значений NULL на CTAS все же рекомендуется хорошо реконструирования. Он помогает поддерживать целостность в вычислениях и также гарантирует, что переключение секций невозможно.
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   

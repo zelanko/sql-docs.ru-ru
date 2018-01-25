@@ -15,13 +15,13 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3aa20ea08fe34eab316a41d46ea955a78e4be512
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 515c21cbf7874c0268eeedad0b67e0ce7cf3726d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="explain-transact-sql"></a>ОБЪЯСНЯЕТСЯ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ EXPLAIN SQL_statement
  *SQL_statement*  
  [!INCLUDE[DWsql](../../includes/dwsql-md.md)] Инструкции, на котором **объяснение** будет выполняться. *SQL_statement* может иметь любое из следующих команд: **ВЫБЕРИТЕ**, **вставить**, **обновление**, **удаление**,  **CREATE TABLE AS SELECT**, **создать УДАЛЕННУЮ ТАБЛИЦУ**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **SHOWPLAN** разрешение и разрешение на выполнение *SQL_statement*. В разделе [разрешения: GRANT, DENY, REVOKE &#40; Хранилище данных Azure SQL, параллельное хранилище данных &#41; ](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Возвращаемое значение  
@@ -68,11 +68,11 @@ EXPLAIN SQL_statement
   
 |XML-тег|Сводка, атрибуты и содержимое|  
 |-------------|--------------------------------------|  
-|\<dsql_query >|Элемент верхнего уровня или документа.|
-|\<SQL >|Эха *SQL_statement*.|  
+|\<dsql_query>|Элемент верхнего уровня или документа.|
+|\<sql>|Эха *SQL_statement*.|  
 |\<params >|Этот тег в настоящее время не используется.|  
-|\<dsql_operations >|Обобщает и содержит действия запроса и включает сведения о стоимости для запроса. Также содержит все `<dsql_operation>` блоков. Этот тег содержит сведения о подсчете для всего запроса.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* общее предполагаемое время для запроса в мс.<br /><br /> *total_number_operations* — общее количество операций запроса. Операция, которая будет обработан параллельно и выполняются на нескольких узлах считается за одну операцию.|  
-|\<dsql_operation >|Описывает одной операции в плане запроса. \<Dsql_operation > тег содержит тип операции, как атрибут:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* является одним из значений, найденных в [запрос данных (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Содержимое в `\<dsql_operation>` блока зависит от типа операции.<br /><br /> См. в следующей таблице.|  
+|\<dsql_operations>|Обобщает и содержит действия запроса и включает сведения о стоимости для запроса. Также содержит все `<dsql_operation>` блоков. Этот тег содержит сведения о подсчете для всего запроса.<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* общее предполагаемое время для запроса в мс.<br /><br /> *total_number_operations* — общее количество операций запроса. Операция, которая будет обработан параллельно и выполняются на нескольких узлах считается за одну операцию.|  
+|\<dsql_operation>|Описывает одной операции в плане запроса. \<Dsql_operation > тег содержит тип операции, как атрибут:<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* является одним из значений, найденных в [запрос данных (SQL Server PDW)](http://msdn.microsoft.com/en-us/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Содержимое в `\<dsql_operation>` блока зависит от типа операции.<br /><br /> См. в следующей таблице.|  
   
 |Тип операции|Содержимое|Пример|  
 |--------------------|-------------|-------------|  

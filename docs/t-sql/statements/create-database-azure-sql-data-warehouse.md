@@ -14,12 +14,12 @@ ms.topic: language-reference
 dev_langs: TSQL
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 7406a538eb4c0f236f2e0d444e96fd2c4fa5d585
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 51db5c7cbaa2932cfcb819538d743fe1368f6442
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-azure-sql-data-warehouse"></a>Создание базы данных (хранилище данных Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -81,7 +81,7 @@ SERVICE_OBJECTIVE
 
 Хранилище данных SQL имеет значение COMPATIBILITY_LEVEL 130 и не может быть изменено. Дополнительные сведения см. в разделе [повысить производительность запросов с 130 уровень совместимости базы данных SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-compatibility-level-query-performance-130/).
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Требуемые разрешения:  
   
 -   Сервер уровня имя входа субъекта, созданное процессом подготовки или  
@@ -116,7 +116,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 (MAXSIZE = 10240 GB, EDITION = 'datawarehouse', SERVICE_OBJECTIVE = 'DW1000');  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [ALTER DATABASE &#40; Хранилище данных Azure SQL &#40; ](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md) 
  [Создание таблицы &#40; Хранилище данных Azure SQL &#41; ](../../t-sql/statements/create-table-azure-sql-data-warehouse.md)  
  [Удалить базы данных &#40; Transact-SQL &#40;](../../t-sql/statements/drop-database-transact-sql.md) 

@@ -16,12 +16,12 @@ ms.assetid: da712a46-5f8a-4888-9d33-773e828ba845
 caps.latest.revision: "20"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
-ms.openlocfilehash: 758f303efd228d806db53075f92cc8dd4664d40b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+manager: craigg
+ms.openlocfilehash: 71737beb817cfeebed195c90d056768aef678a3e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-azure-sql-data-warehouse"></a>Инструкции ALTER DATABASE (хранилище данных Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -74,7 +74,7 @@ MAXSIZE
 SERVICE_OBJECTIVE  
 Определяет уровень производительности. Дополнительные сведения о цели обслуживания для [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], в разделе [уровни производительности](https://azure.microsoft.com/documentation/articles/performance-tiers/).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Требуются следующие разрешения.  
   
 -   Имя входа субъекта серверного уровня (один, созданное процессом подготовки) или  
@@ -127,7 +127,7 @@ ALTER DATABASE dw1 MODIFY ( SERVICE_OBJECTIVE= 'DW1200' );
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Создание базы данных (хранилище данных SQL Azure)](../../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 [хранилище данных SQL список разделов справки](https://azure.microsoft.com/en-us/documentation/articles/sql-data-warehouse-overview-reference/)  
   

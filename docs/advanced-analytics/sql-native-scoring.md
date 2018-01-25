@@ -13,12 +13,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: a252feae8b3e3cdb049278d2e60234dda8f14319
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: 0f728b0e15372f9027dac84c3f58b09438444f95
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="native-scoring"></a>Машинный код оценки
 
@@ -88,7 +88,7 @@ _Оценки_ состоит из двух этапов. Во-первых мо
 
     Можно также выполнить оценки в реальном времени с помощью sp_rxPredict. Для использования этой хранимой процедуры необходимо включить [интеграция со средой CLR для SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
 
-+ SQL Server 2016
++ SQL Server 2016
 
    Оценки с помощью sp_rxPredict в реальном времени возможна с помощью SQL Server 2016, а также можно запустить на сервере Microsoft R. Этот параметр требует SQLCLR, чтобы включить и установить обновления Microsoft R Server.
    Дополнительные сведения см. в разделе [оценки в реальном времени](Real-time-scoring.md)

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - functions [ODBC]
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec3ca1363dd571b04b67b987725ad6fa280dd3bd
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 77d2f7de5e43df5cfc559b12bb88dcdd4412af6e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-catalog-functions"></a>Использование функций каталога
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/08/2018
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает распределенные запросы, в которых доступ к нескольким разнородным источникам данных OLE DB осуществляется одним запросом. Одним из методов доступа к удаленному источнику данных OLE DB является определение источника данных как связанного сервера. Это можно сделать с помощью [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md). После определения связанного сервера на объекты этого сервера могут ссылаться инструкции Transact-SQL, используя четырехкомпонентное имя:  
   
- *имя_связанного_сервера.каталог.схема.имя_объекта*.  
+ *linked_server_name.catalog.schema.object_name*.  
   
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поддерживает две зависящие от драйвера функции, помогающие получить сведения о каталоге от связанных серверов.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/08/2018
   
      Возвращает список каталогов, содержащихся на связанном сервере.  
   
- После того как вы имя связанного сервера и имя каталога, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента поддерживает получение сведений из каталога, используя двухкомпонентное имя *имя_связанного_сервера***.** *каталога* для *CatalogName* на ODBC следующие функции каталога:  
+ После того как вы имя связанного сервера и имя каталога, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента поддерживает получение сведений из каталога, используя двухкомпонентное имя *имя_связанного_сервера***.*** каталог* для *CatalogName* на ODBC следующие функции каталога:  
   
 -   **SQLColumnPrivileges**  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **SQLTables**  
   
- В два этапа *имя_связанного_сервера***.** *каталога* также поддерживается для *FKCatalogName* и *PKCatalogName* на [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ В два этапа *имя_связанного_сервера***.*** каталог* также поддерживается для *FKCatalogName* и *PKCatalogName* на [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  Использование SQLLinkedServers и SQLLinkedCatalogs требует следующих файлов.  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 01/08/2018
   
      Необходима во время выполнения. Файл sqlncli11.dll поставляется вместе с драйвером ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Собственный клиент SQL Server &#40; ODBC &#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
  [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   

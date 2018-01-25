@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8f452b3c5e12b76ba2d1327b59f1cfa17f16bb46
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ccb5d8652421aa0d52fd941e99cbcd01a0cfb6b2
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,16 +43,16 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *маркер*  
+ *token*  
  Значение, указывающее токен типа BCP.  
   
- *поле*  
+ *field*  
  Указывает, запрашивает ли токен тип max.  
   
 ## <a name="returns"></a>Возвращает  
  Строка, содержащая имя типа SQL, соответствующего типу BCP. Если указывается недопустимый тип BCP, возвращается пустая строка.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Токены типа BCP определены в файле заголовка sqlncli.h и библиотеке sqlncli11.lib.  
   
  В следующей таблице указаны возможные типы BCP, независимо от того, являются ли они типами max или нет, а также ожидаемые выходные данные.  
@@ -67,22 +67,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|Допустим любой вариант|**money**|  
 |**SQLFLT8**|Допустим любой вариант|**float**|  
 |**SQLDATETIME**|Допустим любой вариант|**datetime**|  
-|**SQLBITN**|Допустим любой вариант|**бит null**|  
-|**SQLBIT**|Допустим любой вариант|**bit**|  
-|**SQLBIGCHAR**|Нет|**char**|  
-|**SQLCHARACTER**|Нет|**char**|  
-|**SQLBIGVARCHAR**|Нет|**varchar**|  
-|**SQLVARCHAR**|Нет|**varchar**|  
+|**SQLBITN**|Допустим любой вариант|**bit-null**|  
+|**SQLBIT**|Допустим любой вариант|**бит**|  
+|**SQLBIGCHAR**|нет|**char**|  
+|**SQLCHARACTER**|нет|**char**|  
+|**SQLBIGVARCHAR**|нет|**varchar**|  
+|**SQLVARCHAR**|нет|**varchar**|  
 |**SQLTEXT**|Допустим любой вариант|**text**|  
-|**SQLBIGBINARY**|Нет|**binary**|  
-|**SQLBINARY**|Нет|**Двоичный**|  
-|**SQLBIGVARBINARY**|Нет|**Varbinary**|  
-|**SQLVARBINARY**|Нет|**Varbinary**|  
+|**SQLBIGBINARY**|нет|**binary**|  
+|**SQLBINARY**|нет|**Двоичный**|  
+|**SQLBIGVARBINARY**|нет|**Varbinary**|  
+|**SQLVARBINARY**|нет|**Varbinary**|  
 |**SQLIMAGE**|Допустим любой вариант|**Изображение**|  
-|**SQLINTN**|Допустим любой вариант|**int null**|  
-|**SQLDATETIMN**|Допустим любой вариант|**значение null типа DateTime**|  
-|**SQLMONEYN**|Допустим любой вариант|**Money null**|  
-|**SQLFLTN**|Допустим любой вариант|**число с плавающей запятой от null**|  
+|**SQLINTN**|Допустим любой вариант|**int-null**|  
+|**SQLDATETIMN**|Допустим любой вариант|**datetime-null**|  
+|**SQLMONEYN**|Допустим любой вариант|**money-null**|  
+|**SQLFLTN**|Допустим любой вариант|**float-null**|  
 |**SQLAOPSUM**|Допустим любой вариант|**Sum**|  
 |**SQLAOPAVG**|Допустим любой вариант|**Avg**|  
 |**SQLAOPCNT**|Допустим любой вариант|**Count**|  
@@ -92,8 +92,8 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|Допустим любой вариант|**Smallmoney**|  
 |**SQLFLT4**|Допустим любой вариант|**Real**|  
 |**SQLUNIQUEID**|Допустим любой вариант|**uniqueidentifier**|  
-|**SQLNCHAR**|Нет|**Nchar**|  
-|**SQLNVARCHAR**|Нет|**Nvarchar**|  
+|**SQLNCHAR**|нет|**Nchar**|  
+|**SQLNVARCHAR**|нет|**Nvarchar**|  
 |**SQLNTEXT**|Допустим любой вариант|**Ntext**|  
 |**SQLVARIANT**|Допустим любой вариант|**sql_variant**|  
 |**SQLINT8**|Допустим любой вариант|**Bigint**|  
@@ -115,7 +115,7 @@ RETCODE bcp_gettypename (
   
  Дополнительные сведения см. в разделе [даты и времени усовершенствования &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

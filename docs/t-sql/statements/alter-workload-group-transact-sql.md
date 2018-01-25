@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: ALTER WORKLOAD GROUP statement
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0103b63c883e1d3f9a263cf5fdb4e4ef4ca9521f
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: d48a892ef00610cc0d69ff8d2a36e0fce4be7704
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  Значение IMPORTANCE локально для пула ресурсов; группы рабочей нагрузки разной важности внутри одного пула ресурсов влияют друг на друга, но не влияют на рабочие группы в других пулов ресурсов.  
   
- REQUEST_MAX_MEMORY_GRANT_PERCENT =*значение*  
+ REQUEST_MAX_MEMORY_GRANT_PERCENT =*value*  
  Указывает максимальное количество памяти, которое может понадобиться одному запросу из пула. Это процентное соотношение относительно к размеру пула ресурсов, указанного в MAX_MEMORY_PERCENT.  
   
 > [!NOTE]  
@@ -98,7 +98,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 >   
 >  Учтите, что в обоих случаях может возникнуть ошибка 8645 (истечение времени ожидания), если на сервере недостаточно физической памяти.  
   
- REQUEST_MAX_CPU_TIME_SEC =*значение*  
+ REQUEST_MAX_CPU_TIME_SEC =*value*  
  Указывает максимальное количество времени ЦП в секундах, которое может использоваться запросом. *значение* должно быть 0 или положительным целым числом. Значение по умолчанию для *значение* равно 0, что означает неограниченное время.  
   
 > [!NOTE]  
@@ -107,7 +107,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
 > [!IMPORTANT]
 > Начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и с помощью [2422 флаг трассировки](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md), при превышении максимального времени регулятор ресурсов приведет к прерыванию запроса.
   
- REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*значение*  
+ REQUEST_MEMORY_GRANT_TIMEOUT_SEC =*value*  
  Задает максимальное время (в секундах), которое запрос может ожидать предоставления памяти (памяти рабочего буфера).  
   
 > [!NOTE]  
@@ -115,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  *значение* должно быть положительным целым числом. Значение по умолчанию для *значение*, 0, использует внутренние вычисления, основанные на затратах запроса для определения максимального времени.  
   
- MAX_DOP =*значение*  
+ MAX_DOP =*value*  
  Указывает максимальную степень параллелизма (DOP) для параллельных запросов. *значение* должно быть 0 или положительное целое число 1 до 255. Когда *значение* равно 0, то сервер выбирает максимальную степень параллелизма. Это значение по умолчанию, которое рекомендуется использовать.  
   
 > [!NOTE]  
@@ -136,7 +136,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  После того как DOP настроен, он может быть только снижен при нехватке доступной памяти. Перенастройка группы рабочей нагрузки невидима при ожидании в очереди на предоставление памяти.  
   
- GROUP_MAX_REQUESTS =*значение*  
+ GROUP_MAX_REQUESTS =*value*  
  Указывает максимальное число одновременных запросов, разрешенных для выполнения в группе рабочей нагрузки. *значение* должно быть 0 или положительным целым числом. Значение по умолчанию для *значение*(0) означает отсутствие ограничений. Если достигнуто максимальное количество параллельных запросов, пользователь из этой группы сможет войти в систему, но переводится в состоянии ожидания до тех пор, пока количество параллельных запросов не станет меньше указанного значения.  
   
  С помощью { *pool_name* | «**по умолчанию**"}  
@@ -191,13 +191,13 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Регулятор ресурсов](../../relational-databases/resource-governor/resource-governor.md)   
- [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md)   
+ [СОЗДАНИЕ ГРУППЫ рабочей НАГРУЗКИ и &#40; Transact-SQL и &#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/drop-workload-group-transact-sql.md)   
- [CREATE RESOURCE POOL (Transact-SQL)](../../t-sql/statements/create-resource-pool-transact-sql.md)   
+ [СОЗДАТЬ ПУЛ РЕСУРСОВ &#40; Transact-SQL и &#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL (Transact-SQL)](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL (Transact-SQL)](../../t-sql/statements/drop-resource-pool-transact-sql.md)   
- [ALTER RESOURCE GOVERNOR (Transact-SQL)](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
+ [ALTER RESOURCE GOVERNOR &#40; Transact-SQL и &#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

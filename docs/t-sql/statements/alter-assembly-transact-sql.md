@@ -25,15 +25,15 @@ helpviewer_keywords:
 - ALTER ASSEMBLY statement
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 caps.latest.revision: "76"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0b1a0a6da27bc534e22da2995fa592d6b430d418
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8b8918d653d6d9ff5f26588ad1626bfc62e3679d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ ALTER ASSEMBLY assembly_name
   
  Дополнительные сведения см. в разделе [реализации сборки](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [DROP FILE { *имя_файла*[ **,***.. .n*] | ВСЕ}]  
+ [DROP FILE { *имя_файла*[**, ***.. .n*] | ВСЕ}]  
  Удаляет из базы данных файл, связанный со сборкой, или все файлы, связанные со сборкой. Если следующей является инструкция ADD FILE, инструкция DROP FILE выполняется в первую очередь. Это позволяет заменить файл другим файлом с тем же именем.  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция ALTER ASSEMBLY не нарушает сеансы, в которых в настоящий момент работает код изменяемой сборки. Текущие сеансы завершают выполнение с неизмененной сборкой.  
   
  Если указывается предложение FROM, инструкция ALTER ASSEMBLY обновляет сборку в соответствии с последними предоставленными копиями модулей. Так как в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] могут быть функции среды CLR, хранимые процедуры, триггеры, типы данных и пользовательские агрегатные функции, уже использующие сборку, инструкция ALTER ASSEMBLY привязывает их к последней реализации сборки. Для выполнения этой привязки в измененной сборке должны существовать методы с подписями, с которыми сопоставлены функции CLR, хранимые процедуры и триггеры. Классы, реализующие определяемые пользователем типы данных CLR и пользовательские агрегатные функции, должны удовлетворять требованиям для определяемых пользователем типов или агрегатных функций.  
@@ -169,7 +169,7 @@ ALTER ASSEMBLY assembly_name
   
  Если инструкция ALTER ASSEMBLY выполняется без предложения UNCHECKED для данных, выполняются проверки того, что новая версия сборки не влияет на существующие данные в таблицах. В зависимости от объема данных, для которых необходима проверка, это может повлиять на производительность.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER на сборку. Дополнительные требования.  
   
 -   Для изменения сборки, права которого существующий набор является EXTERNAL_ACCESS, требует**EXTERNAL ACCESS ASSEMBLY**разрешение на сервере.  
@@ -221,7 +221,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [СОЗДАТЬ СБОРКУ &#40; Transact-SQL &#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [УДАЛИТЬ СБОРКУ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  

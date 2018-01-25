@@ -24,13 +24,13 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 caps.latest.revision: "30"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: eab36ee612c3e559bf13db948c128ea6428063ae
-ms.sourcegitcommit: 3cc7ffde800b451923c523fd549e8f4b4994f052
+ms.openlocfilehash: 97381b5381491b98c81a6863b3cfcdc6a340c79e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-transact-sql"></a>СОЗДАЙТЕ ВНЕШНЮЮ ТАБЛИЦУ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -135,7 +135,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *database_name* . [schema_name]. | schema_name. ] *имя_таблицы*  
+ *database_name* . [ schema_name ] . | schema_name. ] *table_name*  
  Одно для трех - часть имя создаваемой таблицы. Для внешней таблицы только метаданные таблицы хранятся в SQL вместе с базовую статистику о файл или папку, указанную в хранилище больших двоичных объектов Azure или Hadoop. Никакие данные перемещается или хранящихся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  \<column_definition > [,...  *n*  ] Одно или несколько определений столбца позволяет создать ВНЕШНЮЮ ТАБЛИЦУ. CREATE EXTERNAL TABLE и CREATE TABLE используется тот же синтаксис для определения столбца. Исключение, нельзя использовать ограничение по умолчанию во внешних таблицах. Подробная информация о определения столбцов и их типы данных, в разделе [CREATE TABLE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-table-transact-sql.md) и [создание таблицы в базе данных Azure SQL](http://msdn.microsoft.com/library/d53c529a-1d5f-417f-9a77-64ccc6eddca1).  
@@ -154,23 +154,23 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
 |smallint|Int16|smallint|ShortWritable||  
 |int|Int32|int|IntWritable||  
 |bigint|Int64|bigint|LongWritable||  
-|bit|Логическое значение|boolean|BooleanWritable||  
+|bit|Boolean|boolean|BooleanWritable||  
 |float|Double|double|DoubleWritable||  
 |real|Один|float|FloatWritable||  
 |money|Decimal|double|DoubleWritable||  
 |smallmoney|Decimal|double|DoubleWritable||  
-|nchar|Строковые значения<br /><br /> Char]|строка|text||  
+|NCHAR|Строковые значения<br /><br /> Char]|строка|text||  
 |nvarchar|Строковые значения<br /><br /> Char]|строка|Текст||  
-|char|Строковые значения<br /><br /> Char]|строка|Текст||  
+|char;|Строковые значения<br /><br /> Char]|строка|Текст||  
 |varchar|Строковые значения<br /><br /> Char]|строка|Текст||  
-|binary|Byte[]|binary|BytesWritable|Применяется к Hive 0,8 и более поздней версии.|  
-|varbinary|Byte[]|binary|BytesWritable|Применяется к Hive 0,8 и более поздней версии.|  
-|date|DateTime|timestamp|TimestampWritable||  
-|smalldatetime|DateTime|timestamp|TimestampWritable||  
-|datetime2|DateTime|timestamp|TimestampWritable||  
-|datetime|DateTime|timestamp|TimestampWritable||  
-|time|TimeSpan|timestamp|TimestampWritable||  
-|decimal|Decimal|decimal|BigDecimalWritable|Применяется к Hive0.11 и более поздней версии.|  
+|BINARY|Byte[]|BINARY|BytesWritable|Применяется к Hive 0,8 и более поздней версии.|  
+|varbinary|Byte[]|BINARY|BytesWritable|Применяется к Hive 0,8 и более поздней версии.|  
+|date|DateTime|TIMESTAMP|TimestampWritable||  
+|smalldatetime|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime2|DateTime|TIMESTAMP|TimestampWritable||  
+|datetime|DateTime|TIMESTAMP|TimestampWritable||  
+|time|TimeSpan|TIMESTAMP|TimestampWritable||  
+|Decimal|Decimal|Decimal|BigDecimalWritable|Применяется к Hive0.11 и более поздней версии.|  
   
  РАСПОЛОЖЕНИЕ = "*folder_or_filepath*"  
  Указывает папки или путь к файлу и имя файла для фактических данных в хранилище больших двоичных объектов Azure или Hadoop. Расположение начинается с корневой папки; Корневая папка — расположение данных, указанные в источнике внешних данных.  
@@ -183,7 +183,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
   
  Чтобы изменить только на чтение и по умолчанию в корневой папке, задайте для атрибута \<polybase.recursive.traversal > значение «false» в файле core-site.xml конфигурации. Этот файл находится в папке `<SqlBinRoot>\Polybase\Hadoop\Conf with SqlBinRoot the bin root of SQl Server`. Например, `C:\\Program Files\\Microsoft SQL Server\\MSSQL13.XD14\\MSSQL\\Binn`.  
   
- Источник_данных = *external_data_source_name*  
+ DATA_SOURCE = *external_data_source_name*  
  Задает имя внешнего источника данных, содержащий расположение внешних данных. Это расположение, хранилище больших двоичных объектов Azure или Hadoop. Для создания внешнего источника данных, используйте [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
  FILE_FORMAT = *external_file_format_name*  
@@ -239,7 +239,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  Параметры сегментированных внешней таблицы  
  Указывает внешний источник данных (источник данных SQL Server) и способ распространения [запроса эластичной базы данных](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-overview/).  
   
- ИСТОЧНИК_ДАННЫХ  
+ DATA_SOURCE  
  Источника внешних данных, таких как данные, хранящиеся в файловой системе Hadoop хранилище больших двоичных объектов или [диспетчера карты сегментов](https://azure.microsoft.com/documentation/articles/sql-database-elastic-scale-shard-map-management/).  
   
  SCHEMA_NAME  
@@ -251,7 +251,7 @@ CREATE EXTERNAL TABLE [ database_name . [ schema_name ] . | schema_name. ] table
  РАСПРОСТРАНЕНИЯ  
  Необязательно. Это только является обязательным только для баз данных SHARD_MAP_MANAGER типа. Это свойство задает обработку таблицы как сегментированной таблице или реплицируемой таблицы. С **SHARDED** (*имя столбца*) таблицы, данные из различных таблиц не перекрываются. **РЕПЛИКАЦИЯ** указывает, что таблицы имеют те же данные на каждый сегмент. **ROUND_ROBIN** указывает, что метод конкретного приложения используется для распределения данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуются следующие разрешения пользователя.  
   
 -   **CREATE TABLE**  
@@ -559,7 +559,7 @@ FROM ClickStream
 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Общие примеры запросов метаданных (SQL Server PDW)](http://msdn.microsoft.com/en-us/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   

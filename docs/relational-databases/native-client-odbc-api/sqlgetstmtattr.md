@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLGetStmtAttr function
 ms.assetid: e64f4f94-eb73-4477-9745-080b6cbdc751
 caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1f1c3a65fed07267090b0294a7f427a63b33e57
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 713d2d18ab07c270865db355da3b0989851904e0
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlsoptssnocountstatus"></a>SQL_SOPT_SS_NOCOUNT_STATUS  
  Атрибут SQL_SOPT_SS_NOCOUNT_STATUS указывает текущее значение параметра NOCOUNT параметра, управляющим ли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] сообщает количество строк, затронутых инструкцией при [SQLRowCount](../../relational-databases/native-client-odbc-api/sqlrowcount.md) вызывается. Значение аргумента *ValuePtr* имеет тип SQLLEN.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |SQL_NC_OFF|Значение NOCOUNT — OFF. SQLRowCount возвращает число затронутых строк.|  
 |SQL_NC_ON|Значение NOCOUNT — ON. Число обработанных строк не возвращается, то эта функция, и возвращаемое значение равно 0.|  
@@ -56,8 +56,8 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения о возвращающих табличные значения параметров см. в разделе [табличное значение параметры &#40; ODBC &#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLSetStmtAttr](http://go.microsoft.com/fwlink/?LinkId=59370)   
- [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Сведения о реализации API-интерфейса ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

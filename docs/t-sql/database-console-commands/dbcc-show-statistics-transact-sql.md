@@ -34,15 +34,15 @@ helpviewer_keywords:
 - displaying distribution statistics
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 caps.latest.revision: "75"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c6b82cb2c44d049f44378cd86955373004bb0cb5
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 66f00526254a3592c3bb980ecf22c390b88cb687
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>Инструкция DBCC SHOW_STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -90,7 +90,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  Подавляет все информационные сообщения со степенями серьезности от 0 до 10.  
   
- STAT_HEADER | DENSITY_VECTOR | ГИСТОГРАММА | STATS_STREAM [ **,**  *n*  ]  
+ STAT_HEADER | DENSITY_VECTOR | ГИСТОГРАММА | STATS_STREAM [**, *** n* ]  
  Указание одного или более из этих параметров ограничивает результирующие наборы. Если параметры не указаны, то возвращаются все статистические данные.  
   
  Аргумент STATS_STREAM имеет тип [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -98,9 +98,9 @@ DBCC SHOW_STATISTICS ( table_name , target )
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице описываются столбцы, возвращаемые в результирующем наборе, если указан параметр STAT_HEADER.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
-|Имя|Имя объекта статистики.|  
+|Название|Имя объекта статистики.|  
 |Обновлен|Дата и время последнего обновления статистики. [STATS_DATE](../../t-sql/functions/stats-date-transact-sql.md) функция представляет собой альтернативный способ получения этих сведений. Дополнительные сведения см. в разделе [примечания](#Remarks) разделу на этой странице.|  
 |Строки|Общее число строк в таблице или индексированном представлении при последнем обновлении статистики. Если статистика отфильтрована или соответствует отфильтрованному индексу, количество строк может быть меньше, чем количество строк в таблице. Дополнительные сведения см. в разделе[статистики](../../relational-databases/statistics/statistics.md).|  
 |Rows Sampled|Общее количество строк, выбранных для статистических вычислений. Если имеет место условие «количество строк выборки < количество строк таблицы», то отображаемые результаты определения гистограммы и вычисления плотности представляют собой оценки, основанные на строках выборки.|  
@@ -114,7 +114,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 Следующая таблица описывает столбцы, возвращаемые в результирующий набор, если указан параметр DENSITY_VECTOR.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |Общая плотность|Плотность равна 1 / *различающиеся значения*. В результатах отображаются плотности для каждого префикса столбцов объекта статистики, по одной строке на плотность. Различающееся значение — это отдельный список значений столбцов на строку и на префикс столбцов. Например, если объект статистики содержит ключевые столбцы (A, B, C), то в результатах приводится плотность отдельных списков значений в каждом из следующих префиксов столбцов: (A), (A, B) и (A, B, C). При использовании префикса (A, B, C) каждый из этих списков является отдельным списком значений: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). При использовании префикса (A, B) одинаковые значения столбцов имеют следующие отдельные списки значений: (3, 5) (4, 4) и (4, 5)|  
 |Средняя длина|Средняя длина (в байтах) для хранения списка значений столбца для данного префикса столбца. Если каждому значению в списке (3, 5, 6), например, требуется по 4 байта, то длина составляет 12 байт.|  
@@ -122,7 +122,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
   
 Следующая таблица описывает столбцы, возвращаемые в результирующий набор, если указан параметр HISTOGRAM.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |---|---|
 |RANGE_HI_KEY|Верхнее граничное значение столбца для шага гистограммы. Это значение столбца называется также ключевым значением.|  
 |RANGE_ROWS|Предполагаемое количество строк, значение столбцов которых находится в пределах шага гистограммы, исключая верхнюю границу.|  
@@ -218,9 +218,9 @@ GO
   
 ![Результаты DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/media/aps-sql-dbccshow-statistics.JPG "результаты DBCC SHOW_STATISTICS")
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [Статистика](../../relational-databases/statistics/statistics.md)  
-[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
+[CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)  
 [CREATE STATISTICS (Transact-SQL)](../../t-sql/statements/create-statistics-transact-sql.md)  
 [DROP STATISTICS &#40; Transact-SQL &#41;](../../t-sql/statements/drop-statistics-transact-sql.md)  
 [sp_autostats &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-autostats-transact-sql.md)  

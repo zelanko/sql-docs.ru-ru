@@ -15,13 +15,13 @@ dev_langs: TSQL
 caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fb41140783d4c334e7ee701f44d523ec68e41435
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fa9c4e335fddbe4851562f4aada8d55011d99b98
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>PDW_SHOWPARTITIONSTATS DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -39,16 +39,16 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ *имя_базы_данных* . [ *schema_name* ]. | *schema_name* . ] *имя_таблицы*  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  Одно-, двух или трех частей имя таблицы для отображения.  Для двух или трех частей таблицы имен, имя необходимо заключать в двойные кавычки (»»). Использование в кавычки имя одной части таблицы является необязательным.  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 Требуется **VIEW SERVER STATE** разрешение.
   
 ## <a name="result-sets"></a>Результирующие наборы  
 Это результаты для команды DBCC PDW_SHOWPARTITIONSTATS.
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |partition_number|int|Номер секции.|  
 |used_page_count|bigint|Количество страниц, используемых для данных.|  

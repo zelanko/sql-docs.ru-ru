@@ -12,12 +12,12 @@ ms.tgt_pltfrm:
 ms.topic: article
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: aa07f181ef8a17b79bd978ffd58174bf28d870f0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: cgronlund
+ms.openlocfilehash: dd64f680a288f144e14104aedc99d4c6eda85934
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="introducing-revoscalepy"></a>Знакомство с приложением revoscalepy
 
@@ -81,7 +81,7 @@ SQL Server и Python используют разные типы данных в 
 
 Следующие алгоритмы машинного обучения и Сводка функций из RevoScaleR, включаются в SQL Server 2017 г., начиная с CTP-версии 2.0.
 
-| Компонент| Description|Примечания|
+| Функция| Описание|Примечания|
 | ------ | ------ |------ |
 |`rx_btrees` | Вписать вероятностного градиентного повышенные деревья принятия решений|`rx_btrees_ex`в CTP 2.0.|
 |`rx_dforest` | Вписать классификации и регрессии леса принятия решений|`rx_dforest_ex`в CTP 2.0.|
@@ -93,7 +93,7 @@ SQL Server и Python используют разные типы данных в 
 
 Версия Python также предоставляются новые алгоритмы машинного обучения [MicrosoftML](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package):
 
-| Компонент| Description|
+| Функция| Описание|
 | ------ | ------ |
 |`rx_fast_forest` |Создание модели леса принятия решений|
 |`rx_fast_linear` | Линейной регрессии с помощью вероятностного Восхождение двух координат|
@@ -169,6 +169,6 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 
 При использовании средства Python для Visual Studio, можно использовать IntelliSense для получения справки синтаксиса и аргументов. Дополнительные сведения см. в разделе [поддержка Python в Visual Studio](http://docs.microsoft.com/visualstudio/python/installation)и загрузить модуль, который соответствует вашей версии Visual Studio. Можно использовать Python с Visual Studio 2015 и 2017 г. или более ранних версий.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 
 [Учебники по Python](../tutorials/sql-server-python-tutorials.md)

@@ -16,13 +16,13 @@ ms.assetid: 02a6a236-0756-4570-abfa-6f677a7df042
 caps.latest.revision: "12"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3de77f0fd34519d29222dd4c16fb7ae353db1806
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e29508550528b1f98318bec26676707c72f0b5fc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="drop-external-table-transact-sql"></a>DROP EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -40,10 +40,10 @@ DROP EXTERNAL TABLE [ database_name . [schema_name ] . | schema_name . ] table_n
   
 
 ## <a name="arguments"></a>Аргументы  
- [ *имя_базы_данных* . [*schema_name*]. | *schema_name* . ] *имя_таблицы*  
+ [ *database_name* . [*schema_name*] . | *schema_name* . ] *table_name*  
  Имя внешней таблицы для удаления одной - трех частей. При необходимости может включать имя таблицы, схемы или базы данных и схемы.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
   
 -   Требуется **ALTER** разрешения на схему, которой принадлежит таблица.  
   
@@ -74,7 +74,7 @@ DROP EXTERNAL TABLE ProductVendor1;
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   

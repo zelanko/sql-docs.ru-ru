@@ -20,13 +20,13 @@ ms.assetid:
 caps.latest.revision: "1"
 author: shkale-msft
 ms.author: shkale
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8089e82d6e6bb04c8e25af3603c4522a820a7a83
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6bac7f1d7da67f319a9c84425b370bb61a35ca19
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="insert-sql-graph"></a>INSERT (граф SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -120,7 +120,7 @@ INSERT
  Пользователи должны предоставить значения для `$from_id` и `$to_id` при вставке в граница. Если значение не указано или пустые значения вставляются в этих столбцах, будет возвращена ошибка. 
   
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Вставка в узел — то же, что вставка в любой реляционной таблицы. Значения для столбца node_id $ создаются автоматически.
 
 При вставке в краевую таблицу, пользователи должны предоставить значения для `$from_id` и `$to_id` столбцов.   
@@ -130,7 +130,7 @@ INSERT
 Перед массовой вставки в краевую таблицу необходимо импортировать узел таблиц. Значения для `$from_id` и `$to_id` можно извлечь из `$node_id` узел таблицы и вставляются в качестве границ. 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  Требуется разрешение INSERT на целевую таблицу.  
   
  Вставить разрешения по умолчанию предоставляются членам **sysadmin** предопределенной роли сервера **db_owner** и **db_datawriter** фиксированной роли базы данных, а также владельцу таблицы. Члены **sysadmin**, **db_owner**и **db_securityadmin** ролей, а также владелец таблицы могут передавать разрешения другим пользователям.  
@@ -165,7 +165,7 @@ INSERT
  ```
 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Вставить ТАБЛИЦУ &#40; Transact-SQL &#41;](../../t-sql/statements/insert-transact-sql.md)   
  [График обработка с помощью SQL Server 2017 г.](../../relational-databases/graphs/sql-graph-overview.md)  
 

@@ -18,15 +18,15 @@ dev_langs: TSQL
 helpviewer_keywords: GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
 caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ca5d2fac23dfa3c74689265915c498a4d6858fbc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bab9267495b6e5f41507bf058f84ca571f9728e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ GET_FILESTREAM_TRANSACTION_CONTEXT ()
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращается значение NULL, если транзакция не была запущена, а также, если она отменена или зафиксирована.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Транзакция должна быть явной. Используйте инструкцию BEGIN TRANSACTION, за которой следует инструкция COMMIT TRANSACTION или ROLLBACK TRANSACTION.  
   
  Если вызывается функция GET_FILESTREAM_TRANSACTION_CONTEXT, участнику предоставляется доступ к файловой системе для транзакции в течение транзакции. Чтобы разрешить доступ другому пользователю к транзакции через файловую систему, используйте инструкцию EXECUTE AS для запуска функции GET_FILESTREAM_TRANSACTION_CONTEXT от имени другого пользователя.  
@@ -279,7 +279,7 @@ Namespace ConsoleApplication
 End Namespace  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Путь к &#40; Transact-SQL &#41;](../../relational-databases/system-functions/pathname-transact-sql.md)   
  [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)  
   

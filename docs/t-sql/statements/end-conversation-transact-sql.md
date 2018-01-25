@@ -26,15 +26,15 @@ helpviewer_keywords:
 - ending conversations [SQL Server]
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5f7f2dd42fd3d34073bbdfc223af339f2e867539
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d68dcecf84cb24b0c06876d40742c8f5ffe8124d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ END CONVERSATION conversation_handle
  WITH CLEANUP  
  Удаляет все сообщения и записи представлений каталога для одной стороны диалога, которая не может завершиться нормально. Другая сторона диалога не уведомляется об очистке. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляет конечную точку диалога, все сообщения диалога в очереди передачи и все сообщения диалога в очереди обслуживания. Администраторы могут использовать этот параметр для удаления диалогов, которые не могут быть нормально завершены. Например, если удаленная служба безвозвратно удалена, администратор может использовать параметр WITH CLEANUP для удаления диалогов, работающих с этой службой. Не используйте WITH CLEANUP в коде [!INCLUDE[ssSB](../../includes/sssb-md.md)] приложения. Если инструкция END CONVERSATION WITH CLEANUP будет запущена до того, как получающая конечная точка подтвердит получение сообщения, то отправляющая конечная точка пошлет сообщение повторно. Потенциально это может вызвать повторный запуск диалога.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Завершение диалога блокирует группу сообщений, предоставленный *conversation_handle* принадлежит. При завершении диалога компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] удаляет из очереди обслуживания все сообщения, относящиеся к этому диалогу.  
   
  После того как диалог завершен, приложение больше не может отправлять и получать сообщения. Оба участника диалога должны вызвать инструкцию END CONVERSATION для его завершения. Если компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] не получил от второго участника ни сообщения об окончании диалога, ни сообщения об ошибке, то компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] уведомляет его о том, что диалог завершен. В этом случае, несмотря на то, что дескриптор диалога уже недействителен, конечная точка диалога остается активной до тех пор, пока экземпляр, на котором находится служба, не подтвердит сообщение.  
@@ -88,7 +88,7 @@ END CONVERSATION conversation_handle
   
  Инструкция END CONVERSATION не может применяться в определяемой пользователем функции.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для завершения активного диалога текущий пользователь должен быть его владельцем, членом предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner.  
   
  Член предопределенной роли сервера sysadmin или предопределенной роли базы данных db_owner может указывать предложение WITH CLEANUP для удаления метаданных диалога, который уже завершен.  
@@ -134,9 +134,9 @@ COMMIT TRANSACTION ;
 END CONVERSATION @dialog_handle WITH CLEANUP ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN CONVERSATION TIMER &#40; Transact-SQL &#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
- [sys.conversation_endpoints &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
+ [sys.conversation_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-conversation-endpoints-transact-sql.md)  
   
   

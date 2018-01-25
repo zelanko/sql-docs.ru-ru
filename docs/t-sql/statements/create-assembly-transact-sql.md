@@ -24,15 +24,15 @@ helpviewer_keywords:
 - assemblies [CLR integration], creating
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
 caps.latest.revision: "94"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4e7587bfb20c110dd28e6b59bba0fde1e937cb6e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3f937dc219eb317347cceeafcdcd8753244bcb07
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
  АВТОРИЗАЦИЯ *owner_name*  
  Указывает имя пользователя или роли в качестве владельца сборки. *owner_name* должен быть именем роли, которой является текущий пользователь членом, либо текущий пользователь должен иметь разрешение IMPERSONATE *owner_name*. Если атрибут не указан, владельцем становится текущий пользователь.  
   
- \<client_assembly_specifier >  
+ \<client_assembly_specifier>  
 Задает локальный путь или местоположение в сети, где расположена передаваемая сборка, а также имя файла манифеста, соответствующее сборке.  \<client_assembly_specifier > может быть выражено в виде фиксированной строки или выражения в строку фиксированной с переменными. Инструкция CREATE ASSEMBLY не поддерживает загрузку многомодульных сборок. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] также ищет любые зависимые сборки данной сборки в том же месте и передает их с тем же владельцем в качестве сборки корневого уровня. Если зависимые сборки не найдены и если они уже не загружены в текущую базу данных, CREATE ASSEMBLY завершается неудачно. Если зависимые сборки уже загружены в текущую базу данных, владелец этих сборок должен быть тот же, что и у только что созданной сборки.
   
  \<client_assembly_specifier > не может быть указан, если пользователь олицетворяется.  
@@ -111,7 +111,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  Дополнительные сведения о наборах разрешений сборки см. в разделе [проектирование сборки](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  CREATE ASSEMBLY передает сборку, предварительно скомпилированную в виде файла DLL из управляемого кода для использования внутри экземпляра SQL Server.  
  
 Если параметр `PERMISSION_SET` включен, операторы `CREATE ASSEMBLY` и `ALTER ASSEMBLY` игнорируются во время выполнения, а параметры `PERMISSION_SET` сохраняются в метаданных. Игнорирование параметра минимизирует сбои в выполнении имеющихся в коде операторов.
@@ -149,7 +149,7 @@ FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }
   
  Дополнительные сведения см. в разделе [проектирование сборки](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется наличие разрешения на CREATE ASSEMBLY.  
   
  Если PERMISSION_SET = EXTERNAL_ACCESS указан, необходимо**EXTERNAL ACCESS ASSEMBLY** разрешение на сервере. Если PERMISSION_SET = UNSAFE указан, необходимо **UNSAFE ASSEMBLY** разрешение на сервере.  
@@ -192,10 +192,10 @@ CREATE ASSEMBLY HelloWorld
 WITH PERMISSION_SET = SAFE;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкцию ALTER ASSEMBLY &#40; Transact-SQL &#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [УДАЛИТЬ СБОРКУ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
- [CREATE FUNCTION (Transact-SQL)](../../t-sql/statements/create-function-transact-sql.md)   
+ [СОЗДАТЬ ФУНКЦИЮ &#40; Transact-SQL и &#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER (Transact-SQL)](../../t-sql/statements/create-trigger-transact-sql.md)   
  [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md)   

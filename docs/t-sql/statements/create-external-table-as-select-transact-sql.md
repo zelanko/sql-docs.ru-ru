@@ -24,13 +24,13 @@ ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 caps.latest.revision: "16"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5742453b2465aa06c425e81d2e8c45d79e0c5e72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f2ca379cf30fe2e7d359a294a18804f0b5e6faeb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>Создание ВНЕШНЕГО TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +78,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [[ *имя_базы_данных* . [ *schema_name* ]. ] | *schema_name* . ] *имя_таблицы*  
+ [ [ *database_name* . [ *schema_name* ] . ] | *schema_name* . ] *table_name*  
  Одно для трех - частей имя таблицы для создания базы данных. Для внешней таблицы только метаданные таблицы хранятся в реляционной базе данных.  
   
  РАСПОЛОЖЕНИЕ = "*hdfs_folder*"  
@@ -86,7 +86,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  Внешние файлы записываются в *hdfs_folder* и именованные *Идзапроса_дата_время_ид.формат*, где *идентификатор* — это нарастающий идентификатор и *формат* — это формат экспортированных данных. Пример: QID776_20160130_182739_0.orc.  
   
- Источник_данных = *external_data_source_name*  
+ DATA_SOURCE = *external_data_source_name*  
  Задает имя объекта источника внешних данных, содержащий местоположение, где хранятся внешние данные, или будет сохранен. Расположение — кластер Hadoop или BLOB-объект хранилища Azure. Для создания внешнего источника данных, используйте [CREATE EXTERNAL DATA SOURCE &#40; Transact-SQL &#41; ](../../t-sql/statements/create-external-data-source-transact-sql.md).  
   
  FILE_FORMAT = *external_file_format_name*  
@@ -136,7 +136,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  ВЫБЕРИТЕ \<select_criteria > заполняет новую таблицу с результатами из инструкции SELECT. *select_criteria* текст инструкции SELECT, которое определяет, какие данные необходимо скопировать в новую таблицу. Сведения об инструкциях SELECT см. в разделе [ВЫБЕРИТЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения этой команды **пользователя базы данных** должен все эти разрешения или членства:  
   
 -   **ALTER SCHEMA** разрешение на локальный схему, которой будет содержаться новая таблица или членство в роли **db_ddladmin** предопределенной роли базы данных.  
@@ -254,7 +254,7 @@ ON ( T1.CustomerKey = T2.CustomerKey )
 OPTION ( HASH JOIN );  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   

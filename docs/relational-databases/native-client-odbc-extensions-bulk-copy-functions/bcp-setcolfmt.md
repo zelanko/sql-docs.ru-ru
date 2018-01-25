@@ -17,15 +17,15 @@ apitype: DLLExport
 helpviewer_keywords: bcp_setcolfmt function
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c01a4e7098524e14c8198894a4f282b602cb1166
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 553681c7e0e56978f5df44b23041e52a66f129a9
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ RETCODE bcp_setcolfmt (
  *HDBC*  
  Дескриптор соединения ODBC с поддержкой массового копирования.  
   
- *поле*  
+ *field*  
  Это порядковый номер столбца, для которого устанавливается значение свойства.  
   
  *Свойство*  
@@ -71,13 +71,13 @@ RETCODE bcp_setcolfmt (
  *pValue*  
  Является указателем на значение, связанное со *свойством*. Это позволяет установить отдельно каждое свойство формата столбца.  
   
- *cbValue*  
+ *cbvalue*  
  Длина буфера свойств, в байтах.  
   
 ## <a name="returns"></a>Возвращает  
  SUCCEED или FAIL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция заменяет функцию **bcp_colfmt** . Вся функциональность **bcp_colfmt** реализована в функции **bcp_setcolfmt** . Дополнительно реализована поддержка параметров сортировки столбца. Рекомендуется устанавливать следующие атрибуты формата столбца в данной последовательности:  
   
  BCP_FMT_SERVER_COL  
@@ -115,7 +115,7 @@ RETCODE bcp_setcolfmt (
   
  Дополнительные сведения см. в разделе [даты и времени усовершенствования &#40; ODBC &#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

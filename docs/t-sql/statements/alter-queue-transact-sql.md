@@ -25,15 +25,15 @@ helpviewer_keywords:
 - activation stored procedures [Service Broker]
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2774da9a0a75c4645a4bd64237ec99a7cf92d771
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7f97bd0a341ecc5e960c94c4c8bdabe30b572fd9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ WITH
  *schema_name* (object)  
  Имя схемы, которой принадлежит новая очередь. Если аргумент *schema_name* указан, по умолчанию используется схема по умолчанию для текущего пользователя.  
   
- *имя_очереди*  
+ *queue_name*  
  Имя изменяемой очереди.  
   
  STATUS (очередь)  
@@ -142,7 +142,7 @@ WITH
  *schema_name* (процедура)  
  Имя схемы, которой принадлежит хранимая процедура.  
   
- *имя_хранимой_процедуры*  
+ *stored_procedure_name*  
  Имя хранимой процедуры.  
   
  MAX_QUEUE_READERS =*max_reader*  
@@ -154,7 +154,7 @@ WITH
  SELF  
  Указывает, что хранимая процедура выполняется как текущий пользователь. (Участник базы данных, выполняющий эту инструкцию ALTER QUEUE)  
   
- "*имя_пользователя*"  
+ '*user_name*'  
  Имя пользователя, от имени которого выполняется хранимая процедура. *имя_пользователя* должен быть допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователя, указанного как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификатор. Текущий пользователь должен иметь разрешение IMPERSONATE для *имя_пользователя* указанного.  
   
  OWNER  
@@ -168,7 +168,7 @@ WITH
   
  Очередь, в которой параметру обработки сообщений о сбое задано значение OFF, не будет отключена после пяти последовательных откатов транзакций. Это позволяет приложению определить пользовательскую систему обработки опасных сообщений.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если очередь с указанной хранимой процедурой активации содержит сообщения, которые изменяют состояние активации с OFF на ON, тут же активирует хранимую процедуру активации. Изменение состояния активации с ON на OFF прекращает активацию экземпляров хранимой процедуры брокером, но не останавливает экземпляры хранимой процедуры, которые уже запущены.  
   
  Изменение очереди для добавления хранимой процедуры активации не изменяет состояния активации очереди. Изменение хранимой процедуры активации для очереди не влияет на экземпляры хранимых процедур активации, которые уже запущены.  
@@ -179,7 +179,7 @@ WITH
   
  Если инструкция RECEIVE или инструкция GET CONVERSATION GROUP указывает недоступную очередь, выполнение инструкции завершается ошибкой языка [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию разрешением на изменения значений очереди обладает владелец типа сообщений, члены предопределенной роли базы данных db_ddladmin или db_owner и члены предопределенной роли сервера sysadmin.  
   
 ## <a name="examples"></a>Примеры  
@@ -260,10 +260,10 @@ ALTER QUEUE ExpenseQueue REORGANIZE
 ALTER QUEUE ExpenseQueue MOVE TO [NewFilegroup]   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE QUEUE (Transact-SQL)](../../t-sql/statements/create-queue-transact-sql.md)   
  [Удаление ОЧЕРЕДИ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+ [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
   
   

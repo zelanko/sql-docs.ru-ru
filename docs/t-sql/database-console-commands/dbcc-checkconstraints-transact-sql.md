@@ -25,15 +25,15 @@ helpviewer_keywords:
 - integrity [SQL Server], constraints
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 caps.latest.revision: "45"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 358dddc25f1265f344387cc75ef12f79182c27e3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ff75ba3c32d138d9124eba5cfe170cf146d5778
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DBCC CHECKCONSTRAINTS
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *имя_таблицы* | *table_id* | *constraint_name* | *constraint_id*  
+ *table_name* | *table_id* | *constraint_name* | *constraint_id*  
  Проверяемая таблица или ограничение. Когда *table_name* или *table_id* будет указан, проверяются все включенные ограничения на данной таблице. Когда *constraint_name* или *constraint_id* будет указан, проверяется только ограничение. Если не указаны ни идентификатор таблицы, ни идентификатор ограничения, проверяются все включенные ограничения всех таблиц в текущей базе данных.  
  Имя ограничения однозначно определяет таблицу, к которой оно принадлежит. Дополнительные сведения см. в разделе [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -74,7 +74,7 @@ DBCC CHECKCONSTRAINTS
  NO_INFOMSGS  
  Подавляет вывод всех информационных сообщений.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Команда DBCC CHECKCONSTRAINTS создает и выполняет запрос для всех ограничений FOREIGN KEY и CHECK в таблице.
   
 Например, запрос внешних ключей имеет такой вид:
@@ -110,13 +110,13 @@ DBCC CHECKCONSTRAINTS проверяет целостность ограниче
 ## <a name="result-sets"></a>Результирующие наборы  
 DBCC CHECKCONSTRAINTS возвращает набор строк со следующими столбцами.
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |Имя таблицы|**varchar**|Имя таблицы.|  
 |Constraint Name|**varchar**|Имя нарушенного ограничения.|  
 |Where|**varchar**|Значения столбцов, которые идентифицируют строку или строки, которые нарушают ограничение.<br /><br /> Значение этого столбца может быть использовано в предложении WHERE инструкции SELECT, которая запрашивает строки, нарушающие ограничение.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .
   
 ## <a name="examples"></a>Примеры  
@@ -155,7 +155,7 @@ DBCC CHECKCONSTRAINTS WITH ALL_CONSTRAINTS;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC CHECKDB (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [DBCC CHECKTABLE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)

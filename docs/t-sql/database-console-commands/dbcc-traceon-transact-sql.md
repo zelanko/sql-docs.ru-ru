@@ -22,15 +22,15 @@ helpviewer_keywords:
 - trace flags [SQL Server], enabling
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 27fd6427cf4916cc9bbbf20f365aeb600c088be2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c173779833562123c9ba3820fef76bf23b80a43
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +58,10 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 WITH NO_INFOMSGS  
 Подавляет вывод всех информационных сообщений.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 На рабочем сервере, чтобы избежать непредсказуемого поведения, рекомендуется активировать флаги трассировки по всему серверу используя только следующие способы.
 -   Используйте **-T** параметр командной строки при запуске Sqlservr.exe. Этот метод рекомендуется как наилучший, поскольку обеспечивает выполнение всех инструкций с установленным флагом трассировки. Сюда относятся команды в скриптах запуска. Дополнительные сведения см. в статье [sqlservr Application](../../tools/sqlservr-application.md).  
--   Используйте DBCC TRACEON **(***trace #* [**,** ... *.n*]**, -1)** только в том случае, пока пользователи или приложения не выполняют параллельно инструкции в системе.  
+-   Используйте DBCC TRACEON  **(*** trace #* [**,**... *.n*]**, -1)** только в том случае, пока пользователи или приложения не выполняют параллельно инструкции в системе.  
 
 Флаги трассировки используются для пользовательской настройки определенных характеристик в целях управления работой [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. После активации флаги трассировки остаются включенными на сервере до отключения их посредством выполнения инструкции DBCC TRACEOFF. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] существуют два типа флагов трассировки: для сеанса и глобальные. Флаги трассировки сеанса действуют во время данного соединения и доступны только для этого соединения. Глобальные флаги трассировки устанавливаются на уровне сервера и доступны для каждого соединения с этим сервером. Чтобы определить состояние флага трассировки, используйте инструкцию DBCC TRACESTATUS. Чтобы отключить флаги трассировки, используйте инструкцию DBCC TRACEOFF.
   
@@ -74,7 +74,7 @@ WITH NO_INFOMSGS
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо членство в предопределенной роли сервера **sysadmin** .
   
 ## <a name="examples"></a>Примеры  
@@ -99,7 +99,7 @@ DBCC TRACEON (3205, 260, -1);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [Инструкция DBCC TRACESTATUS &#40; Transact-SQL &#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  

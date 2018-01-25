@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: statement execution
 ms.assetid: b690f9de-66e1-4ee5-ab6a-121346fb5f85
 caps.latest.revision: "12"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59846868f34d756ad1575ade730e08ec5ed882e2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 4471b9f4d85240a51d456ea90973c852f5e5db76
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-a-statement-directly-odbc"></a>Непосредственное выполнение инструкции (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.lasthandoff: 01/08/2018
   
 2.  Чтобы выполнить инструкцию, вызовите метод [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) .  
   
-3.  При использовании входных параметров с данными времени выполнения вызов [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) и [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+3.  При использовании входных параметров с данными времени выполнения вызов [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) возвращает SQL_NEED_DATA. Данные передаются фрагментами при помощи методов [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) и [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
 ### <a name="to-execute-a-statement-multiple-times-by-using-column-wise-parameter-binding"></a>Выполнение инструкции несколько раз при помощи привязки параметра на уровне столбца  
   
@@ -89,11 +89,11 @@ ms.lasthandoff: 01/08/2018
   
 5.  Чтобы выполнить инструкцию, вызовите метод [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) . Драйвер эффективно выполнит инструкцию S раз, по одному разу для каждого набора параметров.  
   
-6.  При использовании входных параметров с данными времени выполнения вызов [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) возвращает SQL_NEED_DATA. Отправьте данные по фрагментам при помощи функций [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) и [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
+6.  При использовании входных параметров с данными времени выполнения вызов [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399) возвращает SQL_NEED_DATA. Данные передаются фрагментами при помощи методов [SQLParamData](http://go.microsoft.com/fwlink/?LinkId=58405) и [SQLPutData](../../../relational-databases/native-client-odbc-api/sqlputdata.md).  
   
  **Примечание.** Привязка на уровне столбцов и строк используется чаще совместно с функциями [SQLPrepare](http://go.microsoft.com/fwlink/?LinkId=59360) и [SQLExecute](http://go.microsoft.com/fwlink/?LinkId=58400) , чем с функцией [SQLExecDirect](http://go.microsoft.com/fwlink/?LinkId=58399).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение инструкции запросов &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

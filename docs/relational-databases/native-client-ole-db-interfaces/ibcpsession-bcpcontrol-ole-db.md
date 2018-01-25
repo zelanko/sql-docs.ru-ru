@@ -16,15 +16,15 @@ apitype: COM
 helpviewer_keywords: BCPControl method
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72969fb998915015b59e47c602df075921f46a0e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 123232c2815dcb2e7086a58e363a0003d747f80d
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>Метод IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ HRESULT BCPControl(
       void *iValue);  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Метод **BCPControl** задает различные параметры управления для операций массового копирования, в том числе количество ошибок, допустимых перед отменой массового копирования, номера первой и последней строк, копируемых из файла данных, и размер пакетов.  
   
  Этот метод также применяется, чтобы указать на использование инструкции SELECT при массовом копировании данных из [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Можно присвоить аргументу **eOption** значение BCP_OPTION_HINTS, а аргументу **iValue** указатель на строку знаков в Юникоде, содержащую инструкцию SELECT.  
@@ -52,7 +52,7 @@ HRESULT BCPControl(
 |------------|-----------------|  
 |BCP_OPTION_ABORT|Останавливает текущую операцию массового копирования. Можно вызвать метод **BCPControl** с аргументом *eOption* , имеющим значение BCP_OPTION_ABORT, из другого потока, чтобы остановить текущую операцию массового копирования. Аргумент *iValue* не учитывается.|  
 |BCP_OPTION_BATCH|Количество строк на пакет. Значение по умолчанию равно 0. Оно обозначает все строки в таблице при извлечении данных или все строки в файле пользовательских данных при копировании данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. При значении меньше 1 параметр BCP_OPTION_BATCH принимает значение по умолчанию.|  
-|BCP_OPTION_DELAYREADFMT|Логическое значение. Если задано значение true, приведет к [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) для чтения во время выполнения. Если false (по умолчанию), IBCPSession::BCPReadFmt будет немедленно считать файл форматирования. Если возникнет ошибка последовательности **BCP_OPTION_DELAYREADFMT** имеет значение true, при вызове метода IBCPSession::BCPColumns или IBCPSession::BCPColFmt.<br /><br /> Ошибка последовательности также возникает при вызове метода `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` после вызова метода `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` и IBCPSession::BCPWriteFmt.<br /><br /> Дополнительные сведения см. в разделе [обнаружение метаданных](../../relational-databases/native-client/features/metadata-discovery.md).|  
+|BCP_OPTION_DELAYREADFMT|Логическое значение. Если задано значение true, приведет к [IBCPSession::BCPReadFmt](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpreadfmt-ole-db.md) для чтения во время выполнения. Если false (по умолчанию), IBCPSession::BCPReadFmt будет немедленно считать файл форматирования. Если возникнет ошибка последовательности **BCP_OPTION_DELAYREADFMT** имеет значение true, при вызове метода IBCPSession::BCPColumns или IBCPSession::BCPColFmt.<br /><br /> Ошибка последовательности также возникает при вызове метода `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)FALSE))` после вызова метода `IBCPSession::BCPControl(BCPDELAYREADFMT, (void *)TRUE)` и IBCPSession::BCPWriteFmt.<br /><br /> Дополнительные сведения см. в разделе [Metadata Discovery](../../relational-databases/native-client/features/metadata-discovery.md).|  
 |BCP_OPTION_FILECP|Аргумент *iValue* содержит номер кодовой страницы для файла данных. Можно указать номер кодовой страницы, такой как 1252 или 850, или одно из следующих значений.<br /><br /> BCP_FILECP_ACP: данные в файле находятся в кодовой странице Microsoft Windows® клиента.<br /><br /> BCP_FILECP_OEMCP: данные в файле находятся в кодовой странице изготовителя оборудования (OEM) клиента (по умолчанию).<br /><br /> BCP_FILECP_RAW: данные в файле находятся в кодовой странице [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |BCP_OPTION_FILEFMT|Номер версии для формата файла данных. Может иметь значение 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] или [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) или 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 используется по умолчанию. Это может оказаться полезным при экспорте или импорте данных в форматах, которые поддерживались прежними версиями сервера.  Например, полученный для импорта данных из текстового столбца на [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера в **varchar(max)** столбца в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] или более поздней версии, следует указать значение 80. Аналогично Если указать 80 при экспорте данных из **varchar(max)** столбец, он будет сохранен так же, как сохраняются текстовые столбцы в [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] форматирование и могут быть импортированы в текстовый столбец [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] сервера.|  
 |BCP_OPTION_FIRST|Первая строка данных копируемого файла или таблицы. Значение по умолчанию равно 1. Если задать для этого параметра значение меньше 1, то будет установлено значение по умолчанию.|  
@@ -88,7 +88,7 @@ HRESULT BCPControl(
  E_OUTOFMEMORY  
  Недостаточно памяти.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IBCPSession &#40; OLE DB &#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)   
  [Выполнение операций массового копирования](../../relational-databases/native-client/features/performing-bulk-copy-operations.md)  
   

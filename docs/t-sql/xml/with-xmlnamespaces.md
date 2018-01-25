@@ -25,13 +25,13 @@ ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 caps.latest.revision: "17"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: db002fd372fd69972b4f150c14c95342686f85f3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2ac45cd469430bd6fd9852ca6eb6b58831b29fef
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ DEFAULT <xml_namespace_uri>
  *xml_namespace_prefix*  
  Задает префикс, сопоставляемый и связываемый со значением URI пространства имен, указанным в *xml_namespace_uri*. *xml_namespace_prefix* должно быть [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификатор.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При использовании предложения WITH XMLNAMESPACES в инструкции, включающей также обобщенное табличное выражение, предложение WITH XMLNAMESPACES должно предшествовать этому выражению.  
   
  Ниже приведены общие синтаксические правила, которые следует соблюдать при использовании предложения WITH XMLNAMESPACES.  
@@ -105,7 +105,7 @@ DEFAULT <xml_namespace_uri>
 ## <a name="examples"></a>Примеры  
  Примеры см. в разделе [добавление пространств имен в запросы с WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Справочник по языку XQuery (SQL Server)](../../xquery/xquery-language-reference-sql-server.md)  
   
   

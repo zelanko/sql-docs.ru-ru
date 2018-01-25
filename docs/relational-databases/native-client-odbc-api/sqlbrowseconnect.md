@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLBrowseConnect function
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 caps.latest.revision: "54"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ee1ff2472f603b6caca690d5ed83c73968ae5cc
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 8af521c2bd56d8d66386be324477b7f094052d73
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,18 +35,18 @@ ms.lasthandoff: 01/08/2018
   
 |Ключевое слово|Возвращает список?|Является необязательным?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|Недоступно|нет|Имя источника данных, возвращенных **SQLDataSources**. Ключевое слово DSN нельзя использовать, если используется ключевое слово DRIVER.|  
-|DRIVER|Недоступно|нет|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя драйвера ODBC для собственного клиента {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Ключевое слово DRIVER нельзя использовать, если используется ключевое слово DSN.|  
+|DSN|Недоступно|Нет|Имя источника данных, возвращенных **SQLDataSources**. Ключевое слово DSN нельзя использовать, если используется ключевое слово DRIVER.|  
+|DRIVER|Недоступно|Нет|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя драйвера ODBC для собственного клиента {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. Ключевое слово DRIVER нельзя использовать, если используется ключевое слово DSN.|  
   
 ## <a name="level-2"></a>Уровень 2  
   
 |Ключевое слово|Возвращает список?|Является необязательным?|Description|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Да|нет|Имя сервера источника данных в сети. В качестве сервера можно ввести термин «(local)»; в этом случае можно использовать локальную копию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], даже если это не сетевая версия.|  
-|UID|нет|Да|Идентификатор входа пользователя.|  
-|PWD|нет|Да (зависит от пользователя)|Определяемый пользователем пароль.|  
-|APP|нет|Да|Имя приложения, вызывающего функцию **SQLBrowseConnect**.|  
-|WSID|нет|Да|Идентификатор рабочей станции. Обычно это сетевое имя компьютера, на котором работает приложение.|  
+|SERVER|Да|Нет|Имя сервера источника данных в сети. В качестве сервера можно ввести термин «(local)»; в этом случае можно использовать локальную копию [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], даже если это не сетевая версия.|  
+|UID|Нет|Да|Идентификатор входа пользователя.|  
+|PWD|Нет|Да (зависит от пользователя)|Определяемый пользователем пароль.|  
+|APP|Нет|Да|Имя приложения, вызывающего функцию **SQLBrowseConnect**.|  
+|WSID|Нет|Да|Идентификатор рабочей станции. Обычно это сетевое имя компьютера, на котором работает приложение.|  
   
 ## <a name="level-3"></a>Уровень 3  
   
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
   
  Следующие атрибуты, которые устанавливаются путем вызова [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), определяют результирующий набор, возвращенный **SQLBrowseConnect**.  
   
-|attribute|Description|  
+|Attribute|Description|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Если установлено значение SQL_MORE_INFO_YES, **SQLBrowseConnect** возвращает расширенную строку свойств сервера.<br /><br /> Ниже приведен пример расширенной строки, возвращенные **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> В этой строке различные порции данных о сервере разделяются точками с запятой. Для разделения различных экземпляров сервера используйте запятые.|  
 |SQL_COPT_SS_BROWSE_SERVER|Если указано имя сервера, **SQLBrowseConnect** возвращает сведения об указанном сервере. Если для SQL_COPT_SS_BROWSE_SERVER задано значение NULL, **SQLBrowseConnect** возвращает сведения обо всех серверах в домене.<br /><br /> <br /><br /> Обратите внимание, что из-за неполадок сети, **SQLBrowseConnect** может не получить своевременный ответ от всех серверов. Поэтому возвращаемый список серверов может отличаться от запроса к запросу.|  
@@ -81,6 +81,6 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="see-also"></a>См. также:  
  [Функция SQLBrowseConnect](http://go.microsoft.com/fwlink/?LinkId=59329)   
- [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Сведения о реализации API-интерфейса ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

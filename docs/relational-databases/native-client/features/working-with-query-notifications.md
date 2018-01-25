@@ -24,15 +24,15 @@ helpviewer_keywords:
 - consumer notification for rowset changes [SQL Server Native Client]
 ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 caps.latest.revision: "40"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 98eadce8ef3ffe948793a6da69a47c209889942d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 6405ed5efa051a7b8c5bb7865b9f2a469c640592
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-query-notifications"></a>Работа с уведомлениями запросов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
  `service=<service-name>[;(local database=<database> | broker instance=<broker instance>)]`  
   
- Пример:  
+ Например:  
   
  `service=mySSBService;local database=mydb`  
   
@@ -82,7 +82,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Набор свойств DBPROPSET_SQLSERVERROWSET  
  Для поддержки уведомлений о запросах через OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] собственный клиент добавляет в набор свойств DBPROPSET_SQLSERVERROWSET следующие новые свойства.  
   
-|Имя|Тип|Description|  
+|Название|Тип|Описание|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|время в секундах, в течение которого уведомление запроса должно оставаться активным.<br /><br /> Значение по умолчанию — 432000 секунд (5 дней). Минимальное значение — 1 секунда, а максимальное значение — 2^31-1 секунд.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Текст сообщения уведомления. Определяется пользователем и не имеет стандартного формата.<br /><br /> По умолчанию эта строка пуста. В сообщении можно использовать от 1 до 2000 символов.|  
@@ -90,7 +90,7 @@ CREATE SERVICE myService ON QUEUE myQueue
   
  Подписка на уведомления всегда фиксируется независимо от того, выполнялась ли инструкция в рамках пользовательской транзакции или в режиме AUTO COMMIT, а также была ли транзакция, в рамках которой выполнялась инструкция, зафиксирована либо был выполнен ее откат. Уведомление сервера срабатывает при возникновении любого из следующих недопустимых условий: изменение базовых данных или схемы либо по истечении времени ожидания, в зависимости от того, что произойдет первым. Регистрации уведомлений удаляются сразу же после их срабатывания. Поэтому, если приложению требуется получение уведомлений в дальнейшем, оно должно подписаться на них снова сразу после получения уведомления.  
   
- Другое соединение или поток может проверять целевую очередь на наличие уведомлений. Пример:  
+ Другое соединение или поток может проверять целевую очередь на наличие уведомлений. Например:  
   
 ```  
 WAITFOR (RECEIVE * FROM MyQueue);   // Where MyQueue is the queue name.   
@@ -142,7 +142,7 @@ RECEIVE * FROM MyQueue
   
  При подаче запроса на уведомление от того же пользователя в том же контексте базы данных, имеющего такой же шаблон, такие же значения параметров, такой же идентификатор уведомления и такое же расположение доставки, как у существующей активной подписки, существующая подписка будет обновлена с установкой вновь заданного времени ожидания. Это значит, что, если уведомление затребовано для одинаковых запросов, будет отправлено только одно уведомление. Данные условия применяются к запросам, повторяющимся в пакетах, или к запросам, которые вызываются несколько раз в хранимой процедуре.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

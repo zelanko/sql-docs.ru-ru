@@ -27,13 +27,13 @@ ms.assetid: a467a1b3-10a5-43c4-9085-13d8aed549c9
 caps.latest.revision: "48"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2b51e19f70b0ff2119cfe3f89404fe61accf4656
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: bd4e6309f65bea4a71cc9e2de7d5bb5b806ab005
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="set-showplanxml-transact-sql"></a>SET SHOWPLAN_XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 SET SHOWPLAN_XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Значение SET SHOWPLAN_XML устанавливается во время запуска или выполнения, а не во время синтаксического анализа.  
   
  Если SET SHOWPLAN_XML равно ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает сведения о плане выполнения для каждой инструкции, выполняя ее и [!INCLUDE[tsql](../../includes/tsql-md.md)] инструкции, не выполняются. Когда параметру присвоено значение ON, возвращаются сведения по планам выполнения всех последующих инструкций [!INCLUDE[tsql](../../includes/tsql-md.md)], пока параметру не будет снова присвоено значение OFF. Например, если инструкция CREATE TABLE будет выполнена при установленном в ON значении SET SHOWPLAN_XML, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] вернет сообщение об ошибке в последующей инструкции SELECT, относящейся к той же таблице, сообщая пользователю, что указанной таблицы не существует. Следовательно, последующие ссылки на эту таблицу не действуют. Когда параметр SET SHOWPLAN_XML установлен в OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняет инструкции, не создавая отчетов.  
@@ -72,7 +72,7 @@ SET SHOWPLAN_XML { ON | OFF }
 > [!NOTE]  
 >  Если **Включить действительный план выполнения** выбран в [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], этот параметр SET не создает выходных данных инструкции Showplan XML. Очистить **Включить действительный план выполнения** перед с помощью этого ПАРАМЕТРА.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для использования инструкции SET SHOWPLAN_XML требуются достаточные разрешения на выполнение инструкций, которые будут выполняться с после инструкции SET SHOWPLAN_XML, а также разрешение SHOWPLAN для всех баз данных, содержащих объекты, на которые ссылаются инструкции.  
   
  Для SELECT, INSERT, UPDATE, DELETE, EXEC *stored_procedure*и EXEC *user_defined_function* инструкции для получения инструкции Showplan, пользователь должен:  
@@ -106,7 +106,7 @@ GO
 SET SHOWPLAN_XML OFF;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Инструкции SET (Transact-SQL)](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

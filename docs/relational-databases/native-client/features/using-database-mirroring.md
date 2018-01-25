@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SQL Server Native Client OLE DB provider, database mirroring
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
 caps.latest.revision: "55"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b57f77a051e2490238d88f8bc336ce34fb0e380b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 63e362b186725b5e9adf15721fcfd4154be3148d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-database-mirroring"></a>Использование зеркального отображения базы данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]Используйте [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] вместо него.  
   
  Зеркальное отображение базы данных, впервые представленное в [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], — это решение, предназначенное для повышения доступности баз данных и избыточности данных. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Собственный клиент предоставляет неявную поддержку зеркального отображения базы данных, поэтому разработчику не требуется писать дополнительный код или выполнять другие действия после настройки для базы данных.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Диспетчер драйвера ODBC улучшен для поддержки спецификации имени сервера отработки отказа.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Зеркальное отображение базы данных (SQL Server)](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

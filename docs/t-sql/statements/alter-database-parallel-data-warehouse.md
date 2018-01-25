@@ -15,13 +15,13 @@ ms.assetid: 5751656b-7aae-4152-a314-4c631bea4fc4
 caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 522f8c8404e80943e093ebeb0a56698fa790b6c9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7db44d9c9f02618e4d95a9d3eb9dfc581438dea5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-parallel-data-warehouse"></a>Инструкции ALTER DATABASE (параллельное хранилище данных)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -63,13 +63,13 @@ ALTER DATABASE database_name
  DISTRIBUTED_SIZE = *размер* [ГБ]  
  Задает новый максимальный гигабайт в базу данных для хранения всех распределенных таблиц в базе данных изменения. Размер распределяется по всем вычислительных узлов в устройстве.  
   
- LOG_SIZE = *размер* [ГБ]  
+ LOG_SIZE = *size* [GB]  
  Задает новый максимальный гигабайт в базу данных для хранения всех журналов транзакций в базе данных изменения. Размер распределяется по всем вычислительных узлов в устройстве.  
   
  ШИФРОВАНИЕ {ON | {OFF}  
  Включает шифрование базы данных (ON) или отключает его (OFF). Шифрование можно задавать только для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] при [sp_pdw_database_encryption](http://msdn.microsoft.com/5011bb7b-1793-4b2b-bd9c-d4a8c8626b6e) ему было присвоено **1**. Ключ шифрования базы данных должны создаваться, прежде чем можно будет настроить прозрачное шифрование данных. Дополнительные сведения о шифровании баз данных см. в разделе [прозрачное шифрование данных &#40; Прозрачное шифрование данных &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER на базу данных.  
   
 ## <a name="general-remarks"></a>Общие замечания  
@@ -167,7 +167,7 @@ ALTER DATABASE CustomerSales
     SET ( LOG_SIZE = 10 GB );  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание базы данных &#40; Параллельное хранилище данных &#41;](../../t-sql/statements/create-database-parallel-data-warehouse.md)   
  [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md)  
   

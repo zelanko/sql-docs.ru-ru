@@ -15,13 +15,13 @@ ms.assetid: 73c8d465-b36b-4727-b9f3-368e98677c64
 caps.latest.revision: "11"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ced03c90d0f30a1e8749d09f00d293bdee53b06e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cc87423b3444daf6d44f590c283b52ce948da193
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="backup-database-parallel-data-warehouse"></a>Резервное копирование базы данных (параллельное хранилище данных)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -103,7 +103,7 @@ BACKUP DATABASE database_name
   
  `BACKUP DATABASE Customer TO DISK = '\\xxx.xxx.xxx.xxx\backups\CustomerDiff' WITH DIFFERENTIAL;`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **BACKUP DATABASE** разрешения или членства в **db_backupoperator** предопределенной роли базы данных. Базы данных master не удается создать резервную копию, но обычный пользователь, который был добавлен в **db_backupoperator** предопределенной роли базы данных. База данных master только резервное копирование по **sa**, администратор структуры или члены **sysadmin** предопределенной роли сервера.  
   
  Требуется учетная запись Windows, имеющую разрешение на доступ, создание и запись в каталоге резервных копий. Необходимо также сохранить имя учетной записи Windows и пароль в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Чтобы добавить эти сетевые учетные данные для [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте [sp_pdw_add_network_credentials &#40; Хранилище данных SQL &#41; ](../../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md) хранимой процедуры.  
@@ -160,11 +160,11 @@ BACKUP DATABASE database_name
 ## <a name="metadata"></a>Метаданные  
  Эти динамические административные представления содержат сведения о всех резервного копирования, восстановления и операции загрузки. Сведения, сохраняются после перезагрузки системы.  
   
--   [sys.pdw_loader_backup_runs &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+-   [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
--   [sys.pdw_loader_backup_run_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+-   [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
--   [sys.pdw_loader_run_stages &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+-   [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="performance"></a>Производительность  
  Создание резервной копии, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] первый создает резервную копию метаданных, а затем выполняет параллельных операций резервного копирования базы данных, хранящихся на вычислительных узлах. Данные копируются напрямую из каждого вычислительных узлов в каталог резервного копирования. Для достижения наилучшей производительности для переноса данных из вычислительных узлов в каталоге резервных копий [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] управляет количеством вычислительных узлов, которые копируются данные одновременно.  
@@ -246,7 +246,7 @@ WITH (
 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ВОССТАНОВЛЕНИЕ базы данных &#40; Параллельное хранилище данных &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   

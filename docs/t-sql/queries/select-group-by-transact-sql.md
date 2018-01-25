@@ -35,13 +35,13 @@ ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 caps.latest.revision: "80"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 49b572a8ce91287faa4c162efa8de8e7f0113235
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e99efe49620003de40659dd4bfd959dacef986c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select---group-by--transact-sql"></a>ВЫБЕРИТЕ - GROUP BY - Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ GROUP BY {
   
 ## <a name="arguments"></a>Аргументы 
  
-### <a name="column-expression"></a>*выражение столбца*  
+### <a name="column-expression"></a>*column-expression*  
 Указывает на столбец столбцом или нестатистическим вычисления. Этот столбец может принадлежать таблице, производную таблицу или представление. Столбец должен быть указан в предложении FROM инструкции SELECT, но не обязательно должен отображаться в списке ВЫБОРА. 
 
 Допустимые выражения. в разделе [выражение](~/t-sql/language-elements/expressions-transact-sql.md).    
@@ -177,9 +177,9 @@ GROUP BY Country, Region;
 Например `GROUP BY ROLLUP (col1, col2, col3, col4)` создает группы для каждой комбинации столбцов выражений в следующих списках.  
 
 - Col1, col2, col3, col4 
-- Col1, col2, col3 NULL
-- Col1, col2, NULL, значение NULL
-- Col1, NULL, NULL, значение NULL
+- col1, col2, col3, NULL
+- col1, col2, NULL, NULL
+- col1, NULL, NULL, NULL
 - Значение NULL, NULL, NULL, NULL — это общий итог
 
 С помощью таблицы из предыдущего примера, этот код запускает операцию GROUP BY ROLLUP вместо простого предложения GROUP BY.
@@ -347,7 +347,7 @@ GROUP BY GROUPING SETS ( Country, () );
 |Компонент|службы SQL Server Integration Services|Уровень совместимости SQL Server — 100 или более|Уровень совместимости SQL Server 2008 или более поздней версии — 90.|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |Статистические функции DISTINCT|Не поддерживаются для конструкций WITH CUBE или WITH ROLLUP.|Поддерживаются для конструкций WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE или ROLLUP.|Аналогично уровню совместимости 100.|  
-|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube (***arg1***,***.. .argN***)** или  **dbo.ROLLUP (***arg1***,**... *argN***)** предложение допустимо в GROUP BY.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.|Определяемая пользователем функция **dbo.cube (***arg1***,**.. .argN**)** или **dbo.rollup (**arg1**,***.. .argN***)** в GROUP BY предложение не допускается.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.<br /><br /> Возвращается сообщение об ошибке: «неправильный синтаксис около ключевого слова «куба» &#124; " Свертка ".»<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Определяемая пользователем функция **dbo.cube (***arg1***,***.. .argN*) или **dbo.rollup (** *arg1***,***.. .argN***)** предложение допустимо в GROUP BY<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`.|  
+|Определяемая пользователем функция с именем CUBE или ROLLUP в предложении GROUP BY|Определяемая пользователем функция **dbo.cube (***arg1***,***.. .argN***)** или **dbo.rollup (***arg1***,**... *argN ***)* * предложение допустимо в GROUP BY.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|Определяемая пользователем функция **dbo.cube (***arg1***,**.. .argN**)** или **dbo.rollup (**arg1**,***.. .argN*** )** в GROUP BY предложение не допускается.<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> Возвращается сообщение об ошибке: «неправильный синтаксис около ключевого слова «куба» &#124; " Свертка ".»<br /><br /> Чтобы избежать этой проблемы, замените конструкцию `dbo.cube` на `[dbo].[cube]` или конструкцию `dbo.rollup` на `[dbo].[rollup]`.<br /><br /> Следующий пример является допустимым:`SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|Определяемая пользователем функция **dbo.cube (***arg1***, ***.. .argN*) или **dbo.rollup (***arg1***,***.. .argN***)**предложение допустимо в GROUP BY<br /><br /> Например: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|Не поддерживается|Поддерживается|Поддерживается|  
 |CUBE|Не поддерживается|Поддерживается|Не поддерживается|  
 |ROLLUP|Не поддерживается|Поддерживается|Не поддерживается|  
@@ -467,7 +467,7 @@ HAVING OrderDateKey > 20040000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [GROUPING_ID &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-id-transact-sql.md)   
  [ГРУППИРОВАНИЕ &#40; Transact-SQL &#41;](~/t-sql/functions/grouping-transact-sql.md)   
  [SELECT (Transact-SQL)](~/t-sql/queries/select-transact-sql.md)   

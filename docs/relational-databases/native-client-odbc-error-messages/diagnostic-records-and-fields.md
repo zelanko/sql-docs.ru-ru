@@ -23,15 +23,15 @@ helpviewer_keywords:
 - status information [ODBC]
 ms.assetid: 4949530c-62d1-4f1a-b592-144244444ce0
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ced62a96f94fa4cb929f295f7a390c60b42e15d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 5b2c800550b992735c0af6854a83d5ea28a2c597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="diagnostic-records-and-fields"></a>Диагностические записи и поля
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/08/2018
   
  Поля в записях состояния содержат сведения об конкретных ошибках и предупреждениях, возвращаемых диспетчером драйверов ODBC, драйвером или источником данных, включая значение SQLSTATE, номер собственной ошибки, диагностическое сообщение, номер столбца и номер строки. Записи состояния создаются только в том случае, если функция возвращает SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA или SQL_STILL_EXECUTING. Полный список полей в записях состояния см. в разделе **SQLGetDiagField**.  
   
- **SQLGetDiagRec** получает единую диагностическую запись вместе с его ODBC SQLSTATE, номер внутренней ошибки и полями диагностического сообщения. Эта функциональность аналогична ODBC 2. *x***SQLError** функции. Простейшая функция обработки ошибок в ODBC 3. *x* состоит в повторяющемся вызове **SQLGetDiagRec** начиная с *RecNumber* равным 1 и увеличивая *RecNumber* с 1 до **SQLGetDiagRec** не вернет значение SQL_NO_DATA. Это эквивалентно ODBC 2. *x* приложением, вызывающим метод **SQLError** пока она не возвратит SQL_NO_DATA_FOUND.  
+ **SQLGetDiagRec** получает единую диагностическую запись вместе с его ODBC SQLSTATE, номер внутренней ошибки и полями диагностического сообщения. Эта функциональность аналогична ODBC 2. *x *** SQLError** функция. Простейшая функция обработки ошибок в ODBC 3. *x* состоит в повторяющемся вызове **SQLGetDiagRec** начиная с *RecNumber* равным 1 и увеличивая *RecNumber* с 1 до **SQLGetDiagRec** не вернет значение SQL_NO_DATA. Это эквивалентно ODBC 2. *x* приложением, вызывающим метод **SQLError** пока она не возвратит SQL_NO_DATA_FOUND.  
   
  ODBC 3. *x* поддерживает намного больше диагностических сведений, чем ODBC 2. *x*. Эти сведения хранятся в дополнительных полях в диагностических записях, получаемых с помощью **SQLGetDiagField**.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 01/08/2018
   
  Большинство ошибок, о которых сообщили [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента могут быть эффективно обнаружены с помощью сведений, возвращенных представлением **SQLGetDiagRec**. Однако в некоторых случаях сведения, возвращаемые в специфических для драйвера диагностических полях, важны для диагностирования ошибки. При написании обработчика ошибок ODBC для приложений, использующих [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента рекомендуется также использовать **SQLGetDiagField** для извлечения по крайней мере SQL_DIAG_SS_MSGSTATE и SQL_DIAG_SS_SEVERITY специфические для драйвера поля. Если какая-то ошибка может быть вызвана в нескольких местах кода [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], то SQL_DIAG_SS_MSGSTATE показывает сотруднику отдела службы технической поддержки корпорации Майкрософт, где именно ошибка была вызвана, и это может иногда помочь при диагностике проблемы.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Обработка ошибок и сообщений](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

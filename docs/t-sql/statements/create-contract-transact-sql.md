@@ -23,15 +23,15 @@ helpviewer_keywords:
 - message types [Service Broker], contracts
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 caps.latest.revision: "48"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3b77fba7800b8533793f9b26574d442bb0c087b8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 26a8d2c2826e091322a1cec35d6ffe1d9ca379e0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-contract-transact-sql"></a>Инструкция CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  Указывает на то, что данный контракт поддерживает сообщения с установленным по умолчанию типом сообщений. По умолчанию во всех базах данных содержится тип сообщений с названием DEFAULT. Этот тип данных использует проверку типа NONE.  В контексте данного предложения слово DEFAULT не является ключевым словом и должно быть отделено как идентификатор. Microsoft SQL Server также предоставляет контракт DEFAULT, указывающий тип сообщения DEFAULT.   
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Порядок типов сообщений в контракте не важен. После того, как цель получает первое сообщение, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] позволяет каждому участнику диалога в любое время посылать любые сообщения, разрешенные для этого участника. Например, если инициатор диалога может посылать сообщения типа **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] позволяет инициатору посылать произвольное количество **SubmitExpense**сообщения во время диалога.  
   
  Типы и направление сообщений в контракте не могут быть изменены. Чтобы изменить параметр AUTHORIZATION для контракта, следует воспользоваться инструкцией ALTER AUTHORIZATION.  
@@ -91,7 +91,7 @@ CREATE CONTRACT contract_name
   
  Контракт не может быть временным объектом. Контракты могут иметь имена, начинающиеся с символа #, но являются постоянными объектами.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию члены **db_ddladmin** или **db_owner** предопределенных ролей базы данных и **sysadmin** предопределенной роли сервера можно создавать контракты.  
   
  По умолчанию, владелец контракта, члены **db_ddladmin** или **db_owner** фиксированной роли базы данных и члены **sysadmin** предопределенной роли сервера имеют ссылки разрешения на контракт.  
@@ -127,7 +127,7 @@ CREATE CONTRACT
     ) ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [УДАЛИТЬ КОНТРАКТ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   

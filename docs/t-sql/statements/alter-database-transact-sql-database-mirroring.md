@@ -19,22 +19,22 @@ helpviewer_keywords:
 - database mirroring [SQL Server], Transact-SQL
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b08f208ce80eb1e8c79d2e47a06fdd9f1de8a986
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 54396925abb0e8eb2d6006ffdd4048551792d6db
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Базы данных ALTER DATABASE (Transact-SQL) зеркального отображения 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] вместо него.  
   
  Управляет зеркальным отображением базы данных. Значения, указанные с параметрами зеркального отображения базы данных, применяются к обеим копиям базы данных и к сеансу зеркального отображения базы данных в целом. Только один \<database_mirroring_option > разрешенных в инструкции ALTER DATABASE.  
   
@@ -88,19 +88,19 @@ SET { <partner_option> | <witness_option> }
 SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
 ```  
   
- **\<partner_option >:: =**  
+ **\<partner_option> ::=**  
   
 > [!NOTE]  
 >  Только один \<partner_option > предложении SET PARTNER.  
   
- **"** *сервер_участник* **"**  
+ **'** *partner_server* **'**  
  Указывает сетевой адрес сервера экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], чтобы задействовать его как партнера по обеспечению отработки отказа в новом сеансе зеркального отображения базы данных. Для каждого сеанса необходимы два участника: один запускается как основной сервер, второй — как зеркальный сервер. Рекомендуется, чтобы эти партнеры находились на разных компьютерах.  
   
- Этот параметр указывается один раз для сеанса на каждом участнике. Запуск сеанса зеркального отображения базы данных требуется два ALTER DATABASE *базы данных* SET PARTNER **= "***сервер_участник***"** инструкций . Их порядок важен. Во-первых, подключитесь к зеркальному серверу и укажите экземпляр основного сервера, как *сервер_участник* (SET PARTNER **= "***основной_сервер***"**). Во-вторых, подключитесь к основному серверу и укажите зеркальный экземпляр сервера как *сервер_участник* (SET PARTNER **= "***mirror_server***"**); команда запускает сеанс между этими двумя партнерами зеркального отображения базы данных. Дополнительные сведения см. в подразделе [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
+ Этот параметр указывается один раз для сеанса на каждом участнике. Запуск сеанса зеркального отображения базы данных требуется два ALTER DATABASE *базы данных* SET PARTNER **= "***сервер_участник***"** инструкции. Их порядок важен. Во-первых, подключитесь к зеркальному серверу и укажите экземпляр основного сервера, как *сервер_участник* (SET PARTNER **= "***основной_сервер***"**). Во-вторых, подключитесь к основному серверу и укажите зеркальный экземпляр сервера как *сервер_участник* (SET PARTNER **= "***mirror_server***"**); запустится базы данных зеркальное отображение сеанса между этими двумя партнерами. Дополнительные сведения см. в подразделе [Настройка зеркального отображения базы данных (SQL Server)](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
  Значение *сервер_участник* является сетевого адреса сервера. Оно имеет следующий синтаксис:  
   
- TCP**://***\<системный_адрес>***:***\<порт>*  
+ TCP**://***\<system-address>***:***\<port>*  
   
  где  
   
@@ -194,20 +194,20 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]  
 >  Свойства базы данных не могут быть установлены на свидетеле.  
   
- **\<witness_option >:: =**  
+ **\<witness_option> ::=**  
   
 > [!NOTE]  
 >  Только один \<witness_option > предложении SET WITNESS.  
   
- **"** *witness_server* **"**  
+ **'** *witness_server* **'**  
  Указывает экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)], чтобы задействовать его в качестве следящего сервера для сеанса зеркального отображения базы данных. Инструкции SET WITNESS можно указывать только на основном сервере.  
   
- В SET WITNESS **= "***witness_server***"** оператор, синтаксис *witness_server* является таким же, как синтаксис  *partner_server*.  
+ В SET WITNESS **= "***witness_server***"** оператор, синтаксис *witness_server* является таким же, как синтаксис *сервер_участник*.  
   
  OFF  
  Удаляет свидетеля из сеанса зеркального отображения базы данных. При установке свидетеля в состояние OFF отключается автоматическая отработка отказа. Если база данных установлена в состояние FULL SAFETY, а свидетель установлен в состояние OFF, отказ зеркального сервера заставит основной сервер сделать базу данных недоступной.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 ## <a name="examples"></a>Примеры  
   
@@ -250,7 +250,7 @@ GO
   
      Текущее значение параметра `mirroring_role_desc` теперь `Mirror`.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [DATABASEPROPERTYEX (Transact-SQL)](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)  

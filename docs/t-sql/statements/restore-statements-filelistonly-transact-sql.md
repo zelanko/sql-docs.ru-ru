@@ -23,15 +23,15 @@ helpviewer_keywords:
 - listing backed up files
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 caps.latest.revision: "83"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 54e5a186bc7beaa13cfb1fef8d69cc1fbf34cbf0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e6776115033e6e7222abc610673dd8b0aaff81dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>Инструкции - RESTORE FILELISTONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Результирующие наборы  
  Клиент может использовать RESTORE FILELISTONLY для получения списка файлов, содержащихся в резервном наборе данных. Эти данные возвращаются как результирующий набор, содержащий одну строку для каждого файла.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Логическое имя файла.|  
 |PhysicalName|**nvarchar(260)**|Физическое имя или имя файла в операционной системе.|  
@@ -106,8 +106,8 @@ FROM <backup_device>
 |LogGroupGUID|**uniqueidentifier NULL**|NULL.|  
 |DifferentialBaseLSN|**numeric(25,0)** значение NULL|Для разностных резервных копий изменения номера LSN больше или равно **DifferentialBaseLSN** включаются в разностную резервную копию.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
 |DifferentialBaseGUID|**uniqueidentifier**|Для разностных резервных копий — уникальный идентификатор базовой копии для разностного копирования.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
-|IsReadOnly|**bit**|**1** = файл доступен только для чтения.|  
-|IsPresent|**bit**|**1** = файл присутствует в резервной копии.|  
+|IsReadOnly|**бит**|**1** = файл доступен только для чтения.|  
+|IsPresent|**бит**|**1** = файл присутствует в резервной копии.|  
 |TDEThumbprint|**varbinary(32)**|Показывает отпечаток ключа шифрования базы данных. Отпечатком шифратора является хэш SHA-1 сертификата, с которым шифруется ключ. Сведения о шифровании базы данных см. в разделе [прозрачное шифрование данных &#40; Прозрачное шифрование данных &#41; ](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)**|URL-адрес для файла базы данных, содержащихся в резервном FILE_SNAPSHOT Azure моментального снимка. Возвращает значение NULL, если резервное копирование не FILE_SNAPSHOT.|  
   
@@ -117,7 +117,7 @@ FROM <backup_device>
 > [!IMPORTANT]  
 >  Данный пароль не обеспечивает надежную защиту. Он предназначен для предотвращения неверного восстановления при использовании средств [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] авторизованными или неавторизованными пользователями. При этом остается возможным чтение данных резервных копий с помощью других средств или замена пароля. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Рекомендуемым способом защиты резервных копий является хранение лент с резервными копиями в безопасном месте или создание резервных копий на диске в виде файлов, защищенных соответствующими списками управления доступом (ACL). Списки ACL должны располагаться в корневом каталоге, в котором создаются резервные копии.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  В [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и более поздних версиях, чтобы получить сведения о резервном наборе данных или устройстве резервного копирования, необходимо разрешение CREATE DATABASE. Дополнительные сведения см. в разделе [GRANT, предоставление разрешений для базы данных (Transact-SQL)](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
 ## <a name="examples"></a>Примеры  
@@ -129,7 +129,7 @@ RESTORE FILELISTONLY FROM AdventureWorksBackups
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Наборы носителей, семейства носителей и резервные наборы данных (SQL Server)](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   

@@ -25,11 +25,11 @@
 
 # [Перенос пакетов SSIS в Azure методом lift-and-shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
 ## [Учебник: развертывание, запуск и отслеживание пакета в Azure](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
-## [Подключение к каталогу служб SSIS в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
-## [Планирование выполнения пакета в Azure](lift-shift/ssis-azure-schedule-packages.md)
-## [Проверка пакетов, развертываемых в Azure](lift-shift/ssis-azure-validate-packages.md)
 ## [Подключения к источникам данных с проверкой подлинности Windows](lift-shift/ssis-azure-connect-with-windows-auth.md)
 ## [Подключение к файлам и общим папкам](lift-shift/ssis-azure-files-file-shares.md)
+## [Проверка пакетов, развертываемых в Azure](lift-shift/ssis-azure-validate-packages.md)
+## [Подключение к каталогу служб SSIS в Azure](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Планирование выполнения пакета в Azure](lift-shift/ssis-azure-schedule-packages.md)
 
 # [Установка или обновление](../integration-services/install-windows/install-integration-services.md)
 
@@ -175,11 +175,8 @@
 #### [Занятие 3-3. Тестирование развернутых пакетов](lesson-3-3-testing-the-deployed-packages.md)
 
 # Ресурсы
-## Просмотреть блог
-### [Блог группы разработки служб SSIS](https://blogs.msdn.microsoft.com/ssis/)
-## Получить справку
-### [Форум о службах SSIS на сайте MSDN](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
-### [Тег служб SSIS на сайте Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
-## Оставить отзыв
-### [SQL Server Форум отзывов](https://feedback.azure.com/forums/908035-sql-server)  
+## [Получить справку на форуме SSIS](https://social.msdn.microsoft.com/Forums/home?forum=sqlintegrationservices)
+## [Получить справку на сайте Stack Overflow](http://stackoverflow.com/questions/tagged/ssis)  
+## [Читать блог группы разработки служб SSIS](https://blogs.msdn.microsoft.com/ssis/)
+## [Сообщить о проблемах или запросить новые функции](https://feedback.azure.com/forums/908035-sql-server)
 ## [Получить документы на ПК](../sql-server/sql-server-help-installation.md)

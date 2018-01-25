@@ -14,13 +14,13 @@ ms.assetid: 5933c72c-ba63-4966-b882-75719ef8428e
 caps.latest.revision: "13"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: bc294fafecfa2a74d8e97be386e5be32a18ff8d4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 141d0e3114a59a9b280ceee6d599f97ef16919c7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Наблюдение за службами обучения на компьютере с помощью пользовательских отчетов в среде Management Studio
 
@@ -115,7 +115,7 @@ ms.lasthandoff: 01/08/2018
 
   Используйте этот отчет для просмотра потребление ресурсов ЦП, памяти и ввода-вывода при выполнении внешних скриптов. Кроме того, можно просмотреть настройки памяти для внешних пулов ресурсов.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [Мониторинг служб R](../../advanced-analytics/r-services/monitoring-r-services.md)
 

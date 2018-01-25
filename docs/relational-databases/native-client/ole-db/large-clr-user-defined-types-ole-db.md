@@ -14,15 +14,15 @@ ms.topic: reference
 helpviewer_keywords: large CLR user-defined types [OLE DB]
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fd1b3396b763d6ca8eb8c3f3f6f2559f3ef4c44e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a6bdb5767937e4fbfdf7dd92cc683fe7830e066a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Большие определяемые пользователем типы данных CLR (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +59,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="icommandwithparametersgetparameterinfo"></a>ICommandWithParameters::GetParameterInfo  
  Сведения, возвращаемые в структуру DBPARAMINFO через **prgParamInfo** выглядит следующим образом:  
   
-|Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* флаг DBPARAMFLAGS_ISLONG|  
+|Тип параметра|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|"DBTYPE_UDT"|*n*|неопределенный|неопределенный|сброшен|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|"DBTYPE_UDT"|~0|неопределенный|неопределенный|набора|  
@@ -67,7 +67,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  Сведения, предоставленные в структуре DBPARAMBINDINFO, должны соответствовать следующим требованиям.  
   
-|Тип параметра|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* флаг DBPARAMFLAGS_ISLONG|  
+|Тип параметра|*pwszDataSourceType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|--------------------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (длина не более 8 000 байт)|DBTYPE_UDT|*n*|не учитывается|не учитывается|Должен быть задан, если параметр передается с помощью DBTYPE_IUNKNOWN.|  
 |DBTYPE_UDT<br /><br /> (длина более 8 000 байт)|DBTYPE_UDT|~0|не учитывается|не учитывается|не учитывается|  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/08/2018
   
  Для определяемых пользователем типов определяются также следующие столбцы.  
   
-|Идентификатор столбца|Тип|Description|  
+|Идентификатор столбца|Тип|Описание|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  
@@ -110,7 +110,7 @@ ms.lasthandoff: 01/08/2018
   
  Для определяемых пользователем типов определяются также следующие дополнительные столбцы.  
   
-|Идентификатор столбца|Тип|Description|  
+|Идентификатор столбца|Тип|Описание|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя каталога, в котором определен тип, определяемый пользователем.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Для столбцов определяемого пользователем типа — имя схемы, в которой определен тип, определяемый пользователем.|  
@@ -131,7 +131,7 @@ ms.lasthandoff: 01/08/2018
 |DBTYPE_BSTR|Поддерживается (2), (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
 |DBTYPE_STR|Поддерживается (2), (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
 |DBTYPE_IUNKNOWN|Поддерживаемые (6)|Недоступно|Поддерживаемые (6)|Недоступно|  
-|DBTYPE_VARIANT (VT_UI1 &#124; ТО ЕСТЬ VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Поддерживается (5)|Недоступно|Поддерживаемые (3), (5)|Недоступно|  
 |DBTYPE_VARIANT (VT_BSTR)|Поддерживается (2), (5)|Недоступно|Недоступно|Недоступно|  
   
 ### <a name="key-to-symbols"></a>Расшифровка символов  
@@ -177,7 +177,7 @@ ms.lasthandoff: 01/08/2018
   
  Когда **DataTypeCompatibility** (SSPROP_INIT_DATATYPECOMPATIBILITY) имеет значение «80», большие определяемые Пользователем типы представляются клиентам таким же образом, они будут отображаться для клиентов нижнего уровня.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Большие определяемые пользователем типы данных CLR](~/relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

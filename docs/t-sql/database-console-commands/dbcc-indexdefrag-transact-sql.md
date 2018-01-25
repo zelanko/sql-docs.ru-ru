@@ -25,15 +25,15 @@ helpviewer_keywords:
 - index defragmenting [SQL Server]
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2444d6510e680d2ca3ab9938df92b839a7d04ac
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7e601ebb9a795445e4b49e0f60e134923edba104
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ DBCC INDEXDEFRAG
  *database_name* | *database_id* | 0  
  База данных, содержащая индекс для дефрагментации. Если указано значение 0, используется текущая база данных. Имена баз данных должны соответствовать правилам для [идентификаторы](../../relational-databases/databases/database-identifiers.md).  
   
- *имя_таблицы* | *table_id* | *view_name* | *view_id*  
+ *table_name* | *table_id* | *view_name* | *view_id*  
  Таблица или представление, содержащие индекс для дефрагментации. Имена таблиц и представлений должны соответствовать требованиям, предъявляемым к идентификаторам.  
   
  *index_name* | *index_id*  
@@ -75,7 +75,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Подавляет все информационные сообщения со степенями серьезности от 0 до 10.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Инструкция DBCC INDEXDEFRAG дефрагментирует конечный уровень индекса, приводя физический порядок страниц в соответствие логическому порядку конечных узлов слева направо, что повышает эффективность сканирования индекса.
   
 > [!NOTE]  
@@ -89,7 +89,7 @@ DBCC INDEXDEFRAG
   
 В отличие от инструкции DBCC DBREINDEX и операций создания индексов вообще, инструкция DBCC INDEXDEFRAG выполняется в режиме в сети. Она не удерживает блокировки длительное время. Таким образом, она не блокирует выполнение запросов или обновлений. Так как время дефрагментации зависит от степени фрагментации, сравнительно нефрагментированный индекс иногда можно дефрагментировать быстрее, чем создать новый индекс. На дефрагментацию сильно фрагментированного индекса может уйти гораздо больше времени, чем на его создание заново.
   
-Процесс дефрагментации всегда полностью регистрируется в журнале независимо от модели восстановления баз данных. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md). Дефрагментация сильно фрагментированного индекса может привести к записи большего объема данных, чем создание индекса с полной регистрацией в журнале. Однако дефрагментация выполняется как ряд кратких транзакций, поэтому она не требует большого журнала, если часто создаются резервные копии журнала или если применяется простая (SIMPLE) модель восстановления.
+Процесс дефрагментации всегда полностью регистрируется в журнале независимо от модели восстановления баз данных. Дополнительные сведения см. в статье [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md). Дефрагментация сильно фрагментированного индекса может привести к записи большего объема данных, чем создание индекса с полной регистрацией в журнале. Однако дефрагментация выполняется как ряд кратких транзакций, поэтому она не требует большого журнала, если часто создаются резервные копии журнала или если применяется простая (SIMPLE) модель восстановления.
   
 ## <a name="restrictions"></a>Ограничения  
 Инструкция DBCC INDEXDEFRAG перемещает конечные страницы индекса в произвольном порядке. Таким образом, если содержимое индекса чередуется на диске с содержимым других индексов, выполнение инструкции DBCC INDEXDEFRAG для этого индекса не приведет к расположению всех конечных страниц индекса в последовательном порядке. Чтобы улучшить кластеризацию страниц, создайте индекс заново.
@@ -113,7 +113,7 @@ Pages Scanned Pages Moved Pages Removed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Вызывающий объект должен быть владельцем таблицы или быть членом **sysadmin** предопределенной роли сервера **db_owner** предопределенной роли базы данных или **db_ddladmin** предопределенной роли базы данных.
   
 ## <a name="examples"></a>Примеры  
@@ -232,12 +232,12 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
+[sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE (Transact-SQL)](../../t-sql/statements/create-table-transact-sql.md)  
 [ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)  
-[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
+[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)
   
   
 

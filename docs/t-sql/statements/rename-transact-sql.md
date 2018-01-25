@@ -15,13 +15,13 @@ ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 caps.latest.revision: "15"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee5395145b72108b63256a7e3742eca6a9289e06
-ms.sourcegitcommit: ef1fa818beea435f58986af3379853dc28f5efd8
+ms.openlocfilehash: 3c08b4d991717d877ca33cd2d136d0dbf0d30483
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/20/2017
   Переименование таблицы, созданные пользователем, в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Переименовывает пользовательской таблицы или базы данных в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
 > [!NOTE]  
->  Переименование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте хранимую процедуру [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Чтобы переименовать базу данных в базе данных SQL Azure, используйте [инструкции ALTER DATABASE (база данных SQL Azure)](/statements/alter-database-azure-sql-database.md) инструкции. 
+>  Переименование базы данных в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], используйте хранимую процедуру [sp_renamedb &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-renamedb-transact-sql.md). Чтобы переименовать базу данных в службе базы данных SQL Azure, используйте инструкцию [ALTER DATABASE (база данных SQL Azure)](/statements/alter-database-azure-sql-database.md). 
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,13 +56,13 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 ## <a name="arguments"></a>Аргументы  
  ПЕРЕИМЕНОВАТЬ ОБЪЕКТ [:]   
-          [[*имя_базы_данных* . [ *schema_name* ]. ] | [ *schema_name* . []]*table_name* TO *new_table_name*  
+          [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*  
  **ПРИМЕНЯЕТСЯ К:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)],  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Измените имя определяемой пользователем таблицей. Укажите таблицу для переименования с одно-, двух- или трехкомпонентное имя.    Укажите новую таблицу *new_table_name* виде однокомпонентного имени.  
   
  ПЕРЕИМЕНОВАНИЕ БАЗЫ ДАННЫХ [:]   
-          [ *имя_базы_данных* TO *новое_имя_базы_данных*  
+          [ *database_name* TO *new_database_name*  
  **ОБЛАСТЬ ПРИМЕНЕНИЯ:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  Измените имя пользовательской базы данных из *имя_базы_данных* для *новое_имя_базы_данных*.  Невозможно переименовать базу данных на любой из этих [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]зарезервированные имена баз данных:  
@@ -85,7 +85,7 @@ RENAME DATABASE [::] database_name TO new_database_name
   
 -   DWQueue  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения этой команды требуется это разрешение:  
   
 -   **ALTER** разрешение на таблицу  

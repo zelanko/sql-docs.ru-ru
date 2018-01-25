@@ -23,15 +23,15 @@ helpviewer_keywords:
 - routes [Service Broker], modifying
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 221fcf4d801d062d491935c8380abd4f75b83285
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: e9ae2ef58b234919dab8057b00afd64efa0cc89b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ WITH
  на  
  Представляет предложения, определяющие изменяемый маршрут.  
   
- Параметры SERVICE_NAME **= "***service_name***"**  
+ SERVICE_NAME **='***service_name***'**  
  Указывает имя удаленной службы, находящейся по этому маршруту. *Service_name* должно точно совпадать, используется имя удаленной службы. [!INCLUDE[ssSB](../../includes/sssb-md.md)]использует сравнение байт за байтом *service_name*. Другими словами, при сравнении учитывается регистр и не применяются текущие параметры сортировки. Маршрут с именем службы **«SQL/ServiceBroker/BrokerConfiguration»** маршрут для службы уведомления конфигурации брокера. В маршруте к этой службе может не указываться экземпляр компонента Service Broker.  
   
  Если опущено предложение SERVICE_NAME, имя службы для маршрута не меняется.  
@@ -81,13 +81,13 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- Время СУЩЕСТВОВАНИЯ  **=**  *route_lifetime*  
+ LIFETIME **=***route_lifetime*  
  Время в секундах, в течение которого [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранит маршрут в таблице маршрутизации. По истечении этого времени действие маршрута истекает, и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при выборе маршрута для новых диалогов далее его не рассматривает. Если данное предложение опущено, срок жизни маршрута не меняется.  
   
- АДРЕС **= "***next_hop_address*  
+ ADDRESS **='***next_hop_address'*  
  Указывает сетевой адрес для данного маршрута. *Next_hop_address* задает адрес TCP/IP в следующем формате:  
   
- **TCP: / /** { *dns_name* | *netbios_name* |*ip_address* } **:**  *номер_порта*  
+ **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
   
  Указанный *Номер_порта* должен соответствовать номеру порта для [!INCLUDE[ssSB](../../includes/sssb-md.md)] конечной точки экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном компьютере. Его можно получить, выполнив к выбранной базе данных следующий запрос:  
   
@@ -108,10 +108,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
- Параметр MIRROR_ADDRESS **= "***next_hop_mirror_address***"**  
+ MIRROR_ADDRESS **='***next_hop_mirror_address***'**  
  Указывает сетевой адрес для зеркального сервера зеркальной пары, чей основной сервер находится в *next_hop_address*. *Next_hop_mirror_address* задает адрес TCP/IP в следующем формате:  
   
- **TCP: / /**{ *dns_name* | *netbios_name* | *ip_address* } **:**  *номер_порта*  
+ **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Указанный *Номер_порта* должен соответствовать номеру порта для [!INCLUDE[ssSB](../../includes/sssb-md.md)] конечной точки экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на указанном компьютере. Его можно получить, выполнив к выбранной базе данных следующий запрос:  
   
@@ -128,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Этот параметр недоступен в автономной базе данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Таблица маршрутизации, хранящая маршруты представляет таблицу метаданных, могут быть получены с помощью **sys.routes** представления каталога. Таблица маршрутизации может быть обновлена только с помощью инструкций CREATE ROUTE, ALTER ROUTE и DROP ROUTE.  
   
  Предложения, не указанные в команде ALTER ROUTE, остаются неизменными. Таким образом, инструкция ALTER не может быть использована для указания того, что маршрут не блокируется по времени, что он соответствует какому-либо имени службы или экземпляру брокера. Чтобы изменить эти параметры маршрута, необходимо удалить существующий маршрут и создать новый с обновленными сведениями.  
@@ -139,7 +139,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Чтобы изменить свойство AUTHORIZATION для службы, используйте инструкцию ALTER AUTHORIZATION.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешение на изменение маршрута по умолчанию обладает владелец маршрута, члены **db_ddladmin** или **db_owner** фиксированной роли базы данных и члены **sysadmin** исправлена роль сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -181,7 +181,7 @@ ALTER ROUTE ExpenseRoute
      ADDRESS = 'TCP://www.Adventure-Works.com:1234';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE ROUTE (Transact-SQL)](../../t-sql/statements/create-route-transact-sql.md)   
  [DROP ROUTE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  

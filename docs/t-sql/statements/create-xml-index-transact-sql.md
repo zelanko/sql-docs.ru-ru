@@ -31,13 +31,13 @@ ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 caps.latest.revision: "38"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7949376e26e184013b9a31258ff757991f4bdd19
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 133c957937d1c05cd108eeb2deb0847cd7944771
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  FOR { VALUE | PATH | PROPERTY }  
  Указывает тип вторичного XML-индекса.  
   
- Value  
+ VALUE  
  Создает вторичный XML-индекс для столбцов, где ключевые столбцы (значение узла и путь) входят в первичный XML-индекс.  
   
  PATH  
@@ -127,7 +127,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  PROPERTY  
  Создает вторичный XML-индекс по столбцам первичного XML-индекса (PK, путь и узел), где PK — первичный ключ базовой таблицы.  
   
- **\<Объект >:: =**  
+ **\<object>::=**  
   
  Полное или неполное имя индексируемого объекта.  
   
@@ -140,7 +140,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *имя_таблицы*  
  Имя таблицы для индексирования.  
   
- **\<xml_index_option >:: =** 
+ **\<xml_index_option> ::=** 
   
  Указывает параметры, которые должны использоваться при создании индекса.  
   
@@ -155,7 +155,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Параметр PAD_INDEX имеет смысл только в случае, если указан параметр FILLFACTOR, так как использует процентное значение, указанное в нем. Если процент, заданный аргументом FILLFACTOR, недостаточно велик для размещения одной строки, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] внутренне переопределит это значение, чтобы обеспечить минимум. Количество строк на странице промежуточного уровня никогда не будет меньше двух независимо от того, каким образом нижнего значения *fillfactor*.  
   
- Значение коэффициента ЗАПОЛНЕНИЯ  **=**  *fillfactor*  
+ FILLFACTOR **= *** fillfactor*  
  Определяет величину в процентах, показывающую, насколько компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] должен заполнять конечный уровень каждой страницы индекса во время его создания или перестроения. *значение коэффициента заполнения* должно быть целым числом от 1 до 100. Значение по умолчанию равно 0. Если *fillfactor* равен 100 или 0, [!INCLUDE[ssDE](../../includes/ssde-md.md)] создает индексы с заполненными страницами конечного.  
   
 > [!NOTE]  
@@ -179,7 +179,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  Кроме места в базе данных пользователя, необходимого для создания индекса **tempdb** должен иметь примерно столько же дополнительного места на диске для хранения промежуточных результатов сортировки. Дополнительные сведения см. в разделе [параметр SORT_IN_TEMPDB для индексов](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
- IGNORE_DUP_KEY **= OFF**  
+ IGNORE_DUP_KEY **=OFF**  
  Не влияет на XML-индексы, поскольку этот тип индекса никогда не уникален. Не устанавливайте этот параметр в значение ON, иначе произойдет ошибка.  
   
  DROP_EXISTING  **=**  {ON | **OFF** }  
@@ -219,7 +219,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  Блокировки страниц не используются.  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP **=***max_degree_of_parallelism*  
  Переопределяет [Настройка параметра max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) параметр конфигурации в течение операции с индексами. MAXDOP можно использовать для ограничения числа процессоров, используемых при параллельном выполнении планов. Максимальное число процессоров — 64.  
   
 > [!IMPORTANT]  
@@ -286,7 +286,7 @@ CREATE XML INDEX IXML_ProductModel_CatalogDescription_Path
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION (Transact-SQL)](../../t-sql/statements/create-partition-function-transact-sql.md)   
@@ -302,7 +302,7 @@ GO
  [sys.index_columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)   
  [sys.xml_indexes &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)   
- [XML-индексы (SQL Server)](../../relational-databases/xml/xml-indexes-sql-server.md)  
+ [XML-индексы &#40; SQL Server и &#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   
 

@@ -23,13 +23,13 @@ ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 caps.latest.revision: "25"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1d7b64d907e0474361a342dbdbc6e581f2c898ed
-ms.sourcegitcommit: 05e2814fac4d308196b84f1f0fbac6755e8ef876
+ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>СОЗДАЙТЕ ФОРМАТ ВНЕШНЕГО файла (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -110,7 +110,7 @@ WITH (
   
  PARQUET формат Parquet.
   
- ORC.  
+ ORC  
  Указывает формат оптимизирован строк по столбцам (ORC.). Этот параметр требует версию 0.11 или более поздней версии на внешних кластера Hadoop Hive. В Hadoop формат файлов ORC обеспечивает повышения сжатия и производительность по сравнению с RCFILE формат файла.
   
  RCFILE (в сочетании с SERDE_METHOD = *SERDE_method*) задает формат столбцов записи файла (RcFile). Этот параметр, необходимо указать сериализатор Hive и метод десериализатор (SerDe). Это требование одинаково при использовании Hive или HiveQL в Hadoop для запроса RC-файлы. Обратите внимание, что "метод serde" с учетом регистра.
@@ -148,7 +148,7 @@ WITH (
   
 -   STRING_DELIMITER = "*"  
   
--   STRING_DELIMITER = Ꞌ Ꞌ  
+-   STRING_DELIMITER = ꞌ,ꞌ  
   
 -   STRING_DELIMITER = «0x7E0x7E»--два тильдой (например, ~ ~)
   
@@ -180,7 +180,7 @@ PolyBase использует только пользовательский фо
   
 -   AM, pm (tt) не является обязательным. Значение по умолчанию — AM.
   
-|Date-тип|Пример|Description|  
+|Date-тип|Пример|Описание|  
 |---------------|-------------|-----------------|  
 |DateTime|DATE_FORMAT = «гггг мм дд чч:мм:сс.мс»|В дополнение к год, месяц и день, этот формат включает 00 – 24 часа 00-59 минут 00-59 секунд и миллисекунд 3 цифр.|  
 |DateTime|DATE_FORMAT = «гггг мм дд hh:mm:ss.ffftt»|В дополнение к год, месяц и день, этот формат включает 00 12 часов 00-59 минут 00-59 секунд, 3 цифр для миллисекунд и AM, am, PM или pm. |  
@@ -198,17 +198,17 @@ PolyBase использует только пользовательский фо
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  
-|[M [M]] -M [d]-d [гг] ГГ ЧЧ [.fff]|[M [M]] -M [d]-d [гг] ГГ ЧЧ: мм [: 00]|[M [M]] -M [d]-d [гг] гг|[M [M]] -M [d]-d [гг] ГГ ЧЧ [.fffffff]|[M [M]] M — [d]-d [гг] ГГ ЧЧ [.fffffff] zzz|  
+|[M [M]] -M [d]-d [гг] ГГ ЧЧ [.fff]|[M [M]] -M [d]-d [гг] ГГ ЧЧ: мм [: 00]|[M[M]]M-[d]d-[yy]yy|[M [M]] -M [d]-d [гг] ГГ ЧЧ [.fffffff]|[M [M]] M — [d]-d [гг] ГГ ЧЧ [.fffffff] zzz|  
 |[M [M]] M — [d]-d [гг] ГГ ЧЧ [.fff] [Тт]|[M [M]] M — [d]-d [гг] ГГ ЧЧ: мм [: 00] [Тт]||[M [M]] M — [d]-d [гг] ГГ ЧЧ [.fffffff] [Тт]|[M [M]] M — [d]-d [гг] ГГ ЧЧ [.fffffff] [Тт] zzz|  
-|[M [M]] -M [гг] гг-[d] d чч [.fff]|[M [M]] -M [гг] гг-[d] d hh: mm [: 00]|[M [M]] -M [гг] гг-[d] d|[M [M]] -M [гг] гг-[d] d чч [.fffffff]|[M [M]] -M [гг] гг-[d] d zzz чч [.fffffff]|  
+|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fff]|[M [M]] -M [гг] гг-[d] d hh: mm [: 00]|[M[M]]M-[yy]yy-[d]d|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff]|[M[M]]M-[yy]yy-[d]d HH:mm:ss[.fffffff] zzz|  
 |[M [M]] M — [гг] гг-[d] чч d [.fff] [Тт]|[M [M]] M — [гг] гг-[d] d hh: mm [: 00] [Тт]||[M [M]] M — [гг] гг-[d] чч d [.fffffff] [Тт]|[M [M]] M — [гг] гг-[d] чч d [.fffffff] [Тт] zzz|  
-|[гг] гг-[M [M]]-M [d] d чч [.fff]|[гг] гг-[M [M]]-M [d] d hh: mm [: 00]|[гг] гг-[M [M]]-M [d] d|[гг] гг-[M [M]]-M [d] d чч [.fffffff]|[гг] гг-[M [M]]-M [d] чч d [.fffffff] zzz|  
+|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fff]|[гг] гг-[M [M]]-M [d] d hh: mm [: 00]|[yy]yy-[M[M]]M-[d]d|[yy]yy-[M[M]]M-[d]d HH:mm:ss[.fffffff]|[гг] гг-[M [M]]-M [d] чч d [.fffffff] zzz|  
 |[гг] гг-[M [M]]-M [d] d чч [.fff] [Тт]|[гг] гг-[M [M]]-M [d] d hh: mm [: 00] [Тт]||[гг] гг-[M [M]]-M [d] d чч [.fffffff] [Тт]|[гг] гг-[M [M]]-M [d] d чч [.fffffff] [Тт] zzz|  
-|[гг] гг-[d]-d [M [M]] M чч [.fff]|[гг] гг-[d]-d [M [M]] M hh: mm [: 00]|[гг] гг - d [d] - M [M [M]]|[гг] гг-[d]-d [M [M]] M чч [.fffffff]|[гг] гг-[d]-d [M [M]] чч M [.fffffff] zzz|  
+|[гг] гг-[d]-d [M [M]] M чч [.fff]|[гг] гг-[d]-d [M [M]] M hh: mm [: 00]|[yy]yy-[d]d-[M[M]]M|[гг] гг-[d]-d [M [M]] M чч [.fffffff]|[гг] гг-[d]-d [M [M]] чч M [.fffffff] zzz|  
 |[гг] гг-[d]-d [M [M]] M чч [.fff] [Тт]|[гг] гг-[d]-d [M [M]] M hh: mm [: 00] [Тт]||[гг] гг-[d]-d [M [M]] M чч [.fffffff] [Тт]|[гг] гг-[d]-d [M [M]] M чч [.fffffff] [Тт] zzz|  
-|[d]-d [M [M]]-M [гг] ГГ ЧЧ [.fff]|[d]-d [M [M]]-M [гг] ГГ ЧЧ: мм [: 00]|[d]-d [M [M]]-M [гг] гг|[d]-d [M [M]]-M [гг] ГГ ЧЧ [.fffffff]|[d]-d [M [M]]-M [гг] ГГ ЧЧ [.fffffff] zzz|  
+|[d]-d [M [M]]-M [гг] ГГ ЧЧ [.fff]|[d]-d [M [M]]-M [гг] ГГ ЧЧ: мм [: 00]|[d]d-[M[M]]M-[yy]yy|[d]-d [M [M]]-M [гг] ГГ ЧЧ [.fffffff]|[d]-d [M [M]]-M [гг] ГГ ЧЧ [.fffffff] zzz|  
 |[d]-d [M [M]]-M [гг] ГГ ЧЧ [.fff] [Тт]|[d]-d [M [M]]-M [гг] ГГ ЧЧ: мм [: 00] [Тт]||[d]-d [M [M]]-M [гг] ГГ ЧЧ [.fffffff] [Тт]|[d]-d [M [M]]-M [гг] ГГ ЧЧ [.fffffff] [Тт] zzz|  
-|[d] d-[гг] гг-[M [M]] M чч [.fff]|[d] d-[гг] гг-[M [M]] M hh: mm [: 00]|[d] d-[гг] гг-[M [M]] M|[d] d-[гг] гг-[M [M]] M чч [.fffffff]|[d]-d [гг] гг-[M [M]] чч M [.fffffff] zzz|  
+|[d] d-[гг] гг-[M [M]] M чч [.fff]|[d] d-[гг] гг-[M [M]] M hh: mm [: 00]|[d]d-[yy]yy-[M[M]]M|[d] d-[гг] гг-[M [M]] M чч [.fffffff]|[d]-d [гг] гг-[M [M]] чч M [.fffffff] zzz|  
 |[d]-d [гг] гг-[M [M]] M чч [.fff] [Тт]|[d]-d [гг] гг-[M [M]] M hh: mm [: 00] [Тт]||[d]-d [гг] гг-[M [M]] M чч [.fffffff] [Тт]|[d]-d [гг] гг-[M [M]] M чч [.fffffff] [Тт] zzz|  
   
  Подробные сведения:  
@@ -264,7 +264,7 @@ PolyBase использует только пользовательский фо
   
 -   СЖАТИЕ данных = «org.apache.hadoop.io.compress.SnappyCodec»
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение ALTER ANY EXTERNAL FILE FORMAT.
   
 ## <a name="general-remarks"></a>Общие замечания
@@ -346,7 +346,7 @@ WITH (
 );  
 ```  
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
  [CREATE EXTERNAL DATA SOURCE (Transact-SQL)](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
  [СОЗДАТЬ внешний TABLE AS SELECT &#40; Transact-SQL &#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

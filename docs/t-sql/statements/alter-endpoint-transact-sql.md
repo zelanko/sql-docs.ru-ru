@@ -21,15 +21,15 @@ helpviewer_keywords:
 - endpoints [SQL Server], modifying
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a035e71325993e088b9910d6538c8bdd61e03f7e
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f33dfa3c49397a5f69a59420b74e3cfdeae25857
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +115,7 @@ FOR DATABASE_MIRRORING (
  **ДЛЯ** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  Невозможно изменить тип полезных данных с **ALTER ENDPOINT**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При использовании ALTER ENDPOINT укажите только те параметры, которые необходимо обновить. При отсутствии явного изменения все свойства существующей конечной точки остаются прежними.  
   
  Инструкции ENDPOINT DDL внутри пользовательской транзакции выполняться не могут.  
@@ -127,15 +127,15 @@ FOR DATABASE_MIRRORING (
 >   
 >  RC4 — относительно слабый алгоритм, а AES — относительно сильный. Однако AES заметно медленнее RC4. Если приоритет защиты выше скорости, рекомендуется использовать алгоритм AES.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователь должен быть членом **sysadmin** предопределенной роли сервера, владельцем конечной точки, или разрешение ALTER ANY ENDPOINT.  
   
  Чтобы изменить принадлежность существующей конечной точки, необходимо применить инструкцию ALTER AUTHORIZATION. Дополнительные сведения см. в разделе [ALTER AUTHORIZATION &#40; Transact-SQL &#41; ](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
- Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечные точки (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+ Дополнительные сведения см. в разделе [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
-## <a name="see-also"></a>См. также:  
- [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [DROP ENDPOINT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

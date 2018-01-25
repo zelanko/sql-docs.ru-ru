@@ -26,15 +26,15 @@ helpviewer_keywords:
 - conversations [Service Broker], groups
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66f405811e867b6c9212cd0b650c497f31a75011
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 04035a9ccbe406b9fa50b5003ab109c3f1ff997d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,13 +75,13 @@ ms.lasthandoff: 11/17/2017
  *schema_name*  
  Имя схемы, владеющей очередью, из которой должна быть получена группа сообщений. Если аргумент *schema_name* указано, по умолчанию используется схема по умолчанию для текущего пользователя.  
   
- *имя_очереди*  
+ *queue_name*  
  Имя очереди, из которой должна быть получена группа сообщений.  
   
  Время ОЖИДАНИЯ *время ожидания*  
  Указывает продолжительность времени (в миллисекундах), в течение которого компонент Service Broker ожидает поступления сообщения в очередь. Это предложение может быть использовано только вместе с предложением WAITFOR. Если инструкция, использующая WAITFOR не содержит это предложение или *время ожидания* равно -1, время ожидания не ограничено. Если время ожидания истекает, GET CONVERSATION GROUP присваивает  *@conversation_group_id*  переменной значение NULL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
 >  Если инструкция GET CONVERSATION GROUP не является первой инструкцией в пакете или хранимой процедуре, предыдущая инструкция должна заканчиваться точкой с запятой (**;**), [!INCLUDE[tsql](../../includes/tsql-md.md)] признак конца инструкции.  
@@ -102,7 +102,7 @@ ms.lasthandoff: 11/17/2017
   
  GET CONVERSATION GROUP недействительна в пользовательской функции.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для получения идентификатора группы сообщений из очереди текущий пользователь должен иметь для очереди разрешение RECEIVE.  
   
 ## <a name="examples"></a>Примеры  
@@ -141,7 +141,7 @@ GET CONVERSATION GROUP @conversation_group_id
 FROM AdventureWorks.dbo.ExpenseQueue ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [ПЕРЕМЕСТИТЬ ДИАЛОГА &#40; Transact-SQL &#41;](../../t-sql/statements/move-conversation-transact-sql.md)  
   

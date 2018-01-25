@@ -16,13 +16,13 @@ ms.assetid: 87e5e593-a121-4428-9d3c-3af876224e35
 caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 66e897341fa06f2666969677f7a3a2305b52cf46
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ea7244857dcd25b1e36f3420811ef035d4ee3b2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transactions-sql-data-warehouse"></a>Транзакции (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -54,7 +54,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  ФИКСАЦИЯ [ТРУДОЗАТРАТЫ]  
  Отмечает завершение явной или автоматической фиксации транзакции. Эта инструкция вызывает изменения в транзакцию, чтобы быть зафиксированы в базе данных без возможности восстановления. Инструкция COMMIT идентична COMMIT WORK, инструкция COMMIT TRANSACTION и COMMIT TRAN.  
   
- ОТКАТ [ТРУДОЗАТРАТЫ]  
+ ROLLBACK [ WORK ]  
  Откат транзакции до начала транзакции. Нет изменений для транзакции не фиксируются в базе данных. Инструкция ROLLBACK идентична ROLLBACK WORK, ROLLBACK TRAN и ROLLBACK TRANSACTION.  
   
  РЕЖИМ АВТОМАТИЧЕСКОЙ ФИКСАЦИИ НАБОР { **ON** | {OFF}  
@@ -73,7 +73,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
  SET IMPLICIT_TRANSACTIONS {ON | **OFF** }  
  Это сочетание переключает режимы же, как ЗАДАТЬ режим автоматической ФИКСАЦИИ. Присвоение параметру SET IMPLICIT_TRANSACTIONS значения ON устанавливает для соединения режим неявных транзакций. При значении OFF возвращает соединение в режим автоматической фиксации.  Дополнительные сведения см. в разделе [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41; ](../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Нет специальные разрешения необходимы для выполнения инструкций, связанных с транзакциями. Необходимые разрешения для запуска инструкций внутри транзакции.  
   
 ## <a name="error-handling"></a>Обработка ошибок  
@@ -149,7 +149,7 @@ INSERT INTO ValueTable VALUES(2);
 COMMIT;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [SET IMPLICIT_TRANSACTIONS &#40; Transact-SQL &#41;](../../t-sql/statements/set-implicit-transactions-transact-sql.md)   
  [SET TRANSACTION ISOLATION LEVEL &#40; Transact-SQL &#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
  [@@TRANCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/trancount-transact-sql.md)  

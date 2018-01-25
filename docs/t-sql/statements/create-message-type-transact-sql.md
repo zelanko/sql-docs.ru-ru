@@ -30,15 +30,15 @@ helpviewer_keywords:
 - CREATE MESSAGE TYPE statement
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 caps.latest.revision: "41"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 78606c8f9f058acec660a7fe20a392f93c8dee49
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ab3cf42da615c6ec303abb80b3a5d3f961edf888
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,14 +82,14 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *данные*  
  Указывает, что текст сообщения должен содержать XML, который соответствует схеме в указанной коллекции схем *данные* должно быть именем существующей коллекции схем XML.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] проверяет входящие сообщения. Если сообщение содержит текст, который не соответствует указанному типу проверки, компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] удаляет неправильное сообщение и возвращает службе, которая его отправила, сообщение об ошибке.  
   
  Обе стороны диалога должны задать одинаковые имена типа сообщений. В целях оказания помощи при поиске и устранении неполадок, обе стороны диалога обычно указывают одинаковые проверки для типа сообщений, хотя компонент [!INCLUDE[ssSB](../../includes/sssb-md.md)] не требует использования обеими сторонами одинаковой проверки.  
   
  Тип сообщений не может быть временным объектом. Начиная с имена типов сообщений  **#**  разрешены, но являются постоянными объектами.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешение на создание типа сообщений по умолчанию имеют члены **db_ddladmin** или **db_owner** предопределенных ролей базы данных и **sysadmin** предопределенной роли сервера.  
   
  По умолчанию используется разрешение REFERENCES для типа сообщений обладает владелец типа сообщений, члены **db_owner** фиксированной роли базы данных, а также члены **sysadmin** предопределенной роли сервера.  
@@ -164,7 +164,7 @@ CREATE MESSAGE TYPE
     VALIDATION = NONE ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER MESSAGE TYPE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40; Transact-SQL &#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  

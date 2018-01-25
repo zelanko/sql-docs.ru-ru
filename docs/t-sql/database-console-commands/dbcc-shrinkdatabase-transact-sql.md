@@ -29,15 +29,15 @@ helpviewer_keywords:
 - reducing database size
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 3a4ce958ed481b33f4785af2f0d7b32fb5baf519
-ms.sourcegitcommit: 9b8c7883a6c5ba38b6393a9e05367fd66355d9a9
+ms.openlocfilehash: b8ca8cceddccd4066b7c1762bc75dffee02be842
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -82,12 +82,12 @@ DBCC SHRINKDATABASE
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице отображены столбцы результирующего набора.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**DbId**|Идентификатор базы данных, файл которой компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
-|**Идентификатор файла**|Идентификатор файла, который компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
+|**FileId**|Идентификатор файла, который компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
 |**CurrentSize**|Количество 8-килобайтных страниц, занятых файлом в настоящее время.|  
-|**Минимальный размер**|Минимальное количество 8-килобайтных страниц, которое может занимать файл. Оно соответствует минимальному размеру или размеру файла, указанному при создании.|  
+|**MinimumSize**|Минимальное количество 8-килобайтных страниц, которое может занимать файл. Оно соответствует минимальному размеру или размеру файла, указанному при создании.|  
 |**UsedPages**|Количество 8-килобайтных страниц, используемых файлом в настоящее время.|  
 |**EstimatedPages**|Количество 8-килобайтных страниц, до которого можно было бы сжать файл по оценке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
@@ -170,7 +170,7 @@ GO
 DBCC SHRINKDATABASE (AdventureWorks2012, TRUNCATEONLY);  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKFILE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md)  

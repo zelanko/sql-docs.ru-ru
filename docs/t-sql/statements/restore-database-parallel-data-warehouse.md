@@ -15,13 +15,13 @@ ms.assetid: d915bfc1-e392-4a3a-9d94-08682cf3c864
 caps.latest.revision: "8"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4cd72d13f4c953f9b15963655d437709bfc71fa7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5ba8aa12f38fce6ac00f88f0015008da25a59b88
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restore-database-parallel-data-warehouse"></a>ВОССТАНОВЛЕНИЕ базы данных (параллельное хранилище данных)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -90,7 +90,7 @@ RESTORE HEADERONLY
   
  Результаты инструкции RESTORE HEADERONLY созданный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] результатов инструкции RESTORE HEADERONLY. Результат имеет более 50 столбцов, которые используют не все [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. Описание столбцов в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] результатов инструкции RESTORE HEADERONLY см. в разделе [RESTORE HEADERONLY &#40; Transact-SQL &#41; ](../../t-sql/statements/restore-statements-headeronly-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **CREATE ANY DATABASE** разрешение.  
   
  Требуется учетная запись Windows, имеющую разрешение на доступ и чтение из каталога резервного копирования. Необходимо также сохранить имя учетной записи Windows и пароль в [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
@@ -182,7 +182,7 @@ RESTORE HEADERONLY
   
  Данные заголовка можно использовать для проверки содержимого резервной копии, или чтобы убедиться в том, что устройства цели восстановления совместима с исходного устройства резервного копирования, прежде чем пытаться восстановить резервную копию.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервное копирование базы данных &#40; Параллельное хранилище данных &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   

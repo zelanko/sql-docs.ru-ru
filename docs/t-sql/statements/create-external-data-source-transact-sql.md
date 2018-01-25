@@ -23,13 +23,13 @@ ms.assetid: 75d8a220-0f4d-4d91-8ba4-9d852b945509
 caps.latest.revision: "58"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 283971bbd1bfe04b26860f56601c315ac5244717
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8e5f0a03ef6efa09218cc6740df4439a25eb7265
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-data-source-transact-sql"></a>СОЗДАЙТЕ внешний ИСТОЧНИК данных (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -177,7 +177,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 
 Пошаговое руководство см. в разделе [Приступая к работе с эластичной запросов для сегментирования (горизонтальное секционирование)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
-**РЕЛЯЦИОННОЙ СУБД**   
+**RDBMS**   
 Для реляционной СУБД указывает имя логического сервера удаленной базы данных в базе данных SQL Azure.  
 
 ```  
@@ -259,7 +259,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
  Учетные данные = *credential_name*  
  Указывает учетные данные уровня базы данных для проверки подлинности на внешнем источнике данных. Пример см. в разделе [. Создание источника внешних данных хранилища больших двоичных объектов Azure](../../t-sql/statements/create-external-data-source-transact-sql.md#credential). Создание учетных данных, в разделе [CREATE CREDENTIAL (Transact-SQL)](../../t-sql/statements/create-credential-transact-sql.md). Обратите внимание, что учетные данные не требуется для общих наборов данных, которые разрешить анонимный доступ. 
   
- DATABASE_NAME = *«QueryDatabaseName»*  
+ DATABASE_NAME = *'QueryDatabaseName'*  
  Имя базы данных, которое работает в качестве диспетчера карты сегментов (для SHARD_MAP_MANAGER) или удаленной базы данных (для реляционной СУБД).  
   
  SHARD_MAP_NAME = *«ShardMapName»*  
@@ -479,7 +479,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 В этом примере используется см. в разделе [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md).
   
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также
 [Изменение ВНЕШНЕГО источника данных (Transact-SQL)](../../t-sql/statements/alter-external-data-source-transact-sql.md)  
 [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   

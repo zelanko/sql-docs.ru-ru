@@ -19,13 +19,13 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 caps.latest.revision: "39"
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e083c0b7376b1cac9433e19eee8fc25c93ea09b4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f75f08164b84e803a6a54d039a09cf481a1886e9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="nodes-method-xml-data-type"></a>Метод nodes() (тип данных xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ nodes (XQuery) as Table(Column)
  *Таблица*(*столбца*)  
  Имя таблицы и имя столбца для результирующего набора строк.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В качестве примера предположим, что имеется следующая таблица:  
   
 ```  
@@ -301,7 +301,7 @@ WHERE ProductModelID=7
 GO    
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Добавление пространств имен в запросы с WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Создание экземпляров XML-данных](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [Методы для типа данных XML](../../t-sql/xml/xml-data-type-methods.md)  

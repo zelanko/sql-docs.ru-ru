@@ -15,13 +15,13 @@ ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 caps.latest.revision: "9"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5b1c445662f29241d8a2a1a547ef498f7491590b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1a44f5f46a60959b38b3e8121847e0c80c1ba82b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>Создание УДАЛЕННОГО TABLE AS SELECT (параллельное хранилище данных)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -61,7 +61,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  Удаленная таблица создается как кучи. Он не имеет ограничений проверки или триггеров. Параметры сортировки удаленных столбцов таблицы совпадает с параметрами сортировки столбцы исходной таблицы. Это относится к столбцам типа **char**, **nchar**, **varchar**, и **nvarchar**.  
   
- *строка_соединения*  
+ *connection_string*  
  Строка символов, указывающая `Data Source`, `User ID`, и `Password` параметры для подключения к удаленному серверу и базе данных.  
   
  Строка подключения является разделенный точками с запятой список пар "ключ-значение". Ключевые слова не учитывают регистр. Пробелы между парами «ключ-значение» учитываются. Однако значения могут быть с учетом регистра, в зависимости от источника данных.  
@@ -78,10 +78,10 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
 > [!NOTE]  
 >  Корпорация Майкрософт рекомендует подключение к удаленному серверу с использованием IP-адрес. В зависимости от конфигурации сети подключение по имени компьютера могут потребовать дополнительных шагов для использования не является специализированным DNS-сервера для разрешения имени к правильному серверу. Этот шаг необязателен, при соединении с IP-адрес. Дополнительные сведения см. в разделе «Использовать DNS-сервер пересылки для DNS-устройство без разрешения имен (Analytics Platform System)» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
- *имя_пользователя*  
+ *user_name*  
  Является допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя входа для проверки подлинности. Максимальное количество символов — 128.  
   
- *пароль*  
+ *password*  
  Пароль имени входа. Максимальное количество символов — 128.  
   
  *batch_size*  
@@ -92,7 +92,7 @@ CREATE REMOTE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_n
   
  ВЫБЕРИТЕ \<select_criteria > запрос предикат, который указывает, какие данные будут заполнять новые удаленной таблицы. Сведения об инструкции SELECT см. в разделе [ВЫБЕРИТЕ &#40; Transact-SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется:  
   
 -   Разрешение SELECT для каждого объекта в предложении SELECT.  

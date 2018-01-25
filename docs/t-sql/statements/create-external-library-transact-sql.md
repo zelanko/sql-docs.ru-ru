@@ -20,12 +20,12 @@ dev_langs: TSQL
 helpviewer_keywords: CREATE EXTERNAL LIBRARY
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
-ms.openlocfilehash: f52205803e3ab44e7c72808255dbe93fd61de336
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+manager: craigg
+ms.openlocfilehash: fe1cb90bce5717d194defd2c684d7b20fc29a061
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-external-library-transact-sql"></a>Создание ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)  
 
@@ -189,7 +189,7 @@ DROP EXTERNAL LIBRARY customPackage <user_name>;
 > [!NOTE]
 > В отличие от других `DROP` инструкций в [!INCLUDE[ssnoversion](../../includes/ssnoversion.md)], эта инструкция поддерживает дополнительный параметр, который задает центр пользователя. Этот параметр позволяет пользователям с ролями владения по удалению библиотек, загруженных с обычных пользователей.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также:
 
 [ALTER ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](alter-external-library-transact-sql.md)  
 [DROP ВНЕШНЕЙ БИБЛИОТЕКИ (Transact-SQL)](drop-external-library-transact-sql.md)  

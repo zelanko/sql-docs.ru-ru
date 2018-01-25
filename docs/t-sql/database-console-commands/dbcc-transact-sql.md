@@ -38,15 +38,15 @@ helpviewer_keywords:
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 caps.latest.revision: "50"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: dc78b7c08447ecaa8e5ad01f46c0a88e70f83094
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 24092c692e25010d284d083a1632cffbfe0ed599
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +101,7 @@ ms.lasthandoff: 11/17/2017
   
 Определение единицы хода выполнения зависит от текущего этапа выполнения команды DBCC. Иногда отчет о состоянии формируется на уровне гранулярности страницы базы данных, на других этапах — на уровне гранулярности одной базы данных или исправления распределения пространства. В следующей таблице представлены все этапы выполнения и уровень гранулярности, на котором команда формирует отчет о состоянии.
   
-|Этап выполнения|Description|Уровень гранулярности отчетов о состоянии|  
+|Этап выполнения|Описание|Уровень гранулярности отчетов о состоянии|  
 |---------------------|-----------------|------------------------------------|  
 |DBCC TABLE CHECK|Во время этого этапа проверяется логическая и физическая согласованность объектов в базе данных.|Отчет о состоянии сформирован на уровне страниц базы данных.<br /><br /> Значение отчета о состоянии обновляется через каждые 1000 проверенных страниц базы данных.|  
 |DBCC TABLE REPAIR|Во время этого этапа выполняются исправления базы данных, если указывается параметр REPAIR_FAST, REPAIR_REBUILD или REPAIR_ALLOW_DATA_LOSS и имеются ошибки на уровне объектов.|Отчет о состоянии сформирован на уровне отдельных исправлений.<br /><br /> Счетчик обновляется для каждой завершенной операции исправления.|  

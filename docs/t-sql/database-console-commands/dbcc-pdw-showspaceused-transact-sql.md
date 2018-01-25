@@ -16,13 +16,13 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 caps.latest.revision: "10"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ce89806ad869f18333d535402c1d112ae5873de
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8c564a6debb9c110cb41f8fc90a7cc1c0c5a01f7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-pdwshowspaceused-transact-sql"></a>PDW_SHOWSPACEUSED DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -44,16 +44,16 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ *имя_базы_данных* . [ *schema_name* ]. | *schema_name* . ] *имя_таблицы*  
+ [ *database_name* . [ *schema_name* ] . | *schema_name* . ] *table_name*  
  Одно-, двух или трех частей имя таблицы для отображения. Для двух или трех частей таблицы имен, имя необходимо заключать в двойные кавычки (»»). Использование в кавычки имя одной части таблицы является необязательным. Если имя таблицы не указан, отображается текст в текущей базе данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо разрешение VIEW SERVER STATE.
   
 ## <a name="result-sets"></a>Результирующие наборы  
 Это результирующий набор для всех таблиц.
   
-|Столбец|Тип данных|Description|  
+|Столбец|Тип данных|Описание|  
 |------------|---------------|-----------------|  
 |reserved_space|bigint|Общее пространство, используемые в базе данных, в КБ.|  
 |data_space|bigint|Пространство, используемое для данных, в КБ.|  
@@ -63,7 +63,7 @@ DBCC PDW_SHOWSPACEUSED ( " [ database_name . [ schema_name ] . ] | [ schema_name
   
 Это результирующий набор для одной таблицы.
   
-|Столбец|Тип данных|Description|Диапазон|  
+|Столбец|Тип данных|Описание|Диапазон|  
 |------------|---------------|-----------------|-----------|  
 |rows|bigint|Количество строк.||  
 |reserved_space|bigint|Общее пространство, зарезервированное для объекта, в КБ.||  

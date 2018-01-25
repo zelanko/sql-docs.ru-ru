@@ -33,15 +33,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], endpoint
 ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 caps.latest.revision: "135"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a8ce3df8a9b6e7ead8e775b6bd0b2d31720b38a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c1d87ac5214da9a3458cdffd41bdd457a433afab
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -149,10 +149,10 @@ FOR DATABASE_MIRRORING (
   
  Следующие аргументы относятся только к протоколу TCP.  
   
- LISTENER_PORT  **=**  *listenerPort*  
+ LISTENER_PORT **=***listenerPort*  
  Указывает номер порта протокола TCP/IP, прослушиваемого компонентом Service Broker на предмет соединений. По соглашению используется порт 4022, но допустим любой порт от 1024 до 32767.  
   
- LISTENER_IP  **=**  все | **(***4 частей ip* **)** | **(** »*ip_address_v6*»  **)**  
+ LISTENER_IP  **=**  все |  **(*** 4 частей ip* **)** | **(** »*ip_address_v6 *» **)**  
  Указывает IP-адрес, с которым конечная точка будет ожидать соединения. По умолчанию значение установлено в ALL. Это значит, что средство прослушивания примет соединение с любым верным IP-адресом.  
   
  Если зеркальное отображение базы данных настраивается с использованием IP-адреса, а не полного имени домена (`ALTER DATABASE SET PARTNER = partner_IP_address` или `ALTER DATABASE SET WITNESS = witness_IP_address`), необходимо указать `LISTENER_IP =IP_address` вместо `LISTENER_IP=ALL` при создании конечных точек зеркального отображения.  
@@ -171,7 +171,7 @@ FOR DATABASE_MIRRORING (
 > [!IMPORTANT]  
 >  Все соединения зеркального отображения на экземпляре сервера используют одну конечную точку зеркального отображения базы данных. Любая попытка создания дополнительной конечной точки зеркального отображения баз данных приведет к ошибке.  
   
- **\<authentication_options >:: =**  
+ **\<authentication_options> ::=**  
   
  **WINDOWS** [{NTLM | KERBEROS | **NEGOTIATE** }]  
  Указывает, что конечная точка будет подключена с использованием протокола проверки подлинности Windows. Это значение по умолчанию.  
@@ -234,7 +234,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Удаляет сообщения, предназначенные для служб, расположенных в других местах. Это значение по умолчанию.  
   
- MESSAGE_FORWARD_SIZE  **=**  *forward_size*  
+ MESSAGE_FORWARD_SIZE **= *** forward_size*  
  Указывает максимальный объем хранилища в мегабайтах для размещения в нем сообщений конечной точки, предназначенных для перенаправления.  
   
  **Параметры DATABASE_MIRRORING**  
@@ -261,7 +261,7 @@ FOR DATABASE_MIRRORING (
 > [!NOTE]  
 >  Также для аргумента DATABASE_MIRRORING не определен порт по умолчанию.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкции DDL ENDPOINT не могут выполняться внутри пользовательской транзакции. Инструкции ENDPOINT DDL не будут вызывать ошибки даже в случае, если активная транзакция уровня изоляции моментального снимка использует изменяемую конечную точку.  
   
  Запросы к объекту ENDPOINT могут быть выполнены следующими пользователями:  
@@ -272,8 +272,8 @@ FOR DATABASE_MIRRORING (
   
 -   пользователями или группами, которым предоставлено разрешение CONNECT на конечную точку.  
   
-## <a name="permissions"></a>Permissions  
- Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера **sysadmin** . Дополнительные сведения см. в разделе [GRANT, предоставление разрешений на конечные точки (Transact-SQL)](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+## <a name="permissions"></a>Разрешения  
+ Требуется разрешение CREATE ENDPOINT или членство в предопределенной роли сервера **sysadmin** . Дополнительные сведения см. в разделе [GRANT Endpoint Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ## <a name="example"></a>Пример  
   
@@ -294,7 +294,7 @@ GO
 ## <a name="see-also"></a>См. также:  
  [ALTER ENDPOINT (Transact-SQL)](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Выбор алгоритма шифрования](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   
+ [DROP ENDPOINT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA (Transact-SQL)](../../t-sql/functions/eventdata-transact-sql.md)  
   
   

@@ -15,13 +15,13 @@ ms.assetid: 40cacde4-ac72-45f7-9564-d76e2b4a741a
 caps.latest.revision: "13"
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 622dd3433ad5cb900dbbcb23777add948ea5474b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e9ff76a4d260604a93f59baa3b61f5c37b4952f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-database-parallel-data-warehouse"></a>Создание базы данных (параллельное хранилище данных)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -62,14 +62,14 @@ WITH (
   
  Если автоматическое РАСШИРЕНИЕ установлено в OFF, возвращается ошибка при попытке создания новой реплицируемой таблицы, вставка данных в существующей репликации таблицы или обновляет существующую реплицированная таблица таким образом, чтобы увеличит размер за пределы *replicated_size*.  
   
- *distributed_size* [ГБ]  
+ *distributed_size* [ GB ]  
  Положительное число. Размер в гигабайтах целого или десятичного, для свободное место, выделенное для распределенных таблицы (и соответствующие данные) *через устройство*. Для максимального и минимального *distributed_size* требования, см. в «Минимальное и максимальное значения» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
  Если включено автоматическое УВЕЛИЧЕНИЕ, распределенных таблиц будет разрешено превысит это ограничение.  
   
  Если АВТОУВЕЛИЧЕНИЕ отключено, если пользователь пытается создать новую таблицу распределенной, вставки данных в существующей распределенной таблицы или обновление существующей распределенной таблицы таким образом, чтобы увеличит размер за пределами будет возвращена ошибка *distributed_size* .  
   
- *log_size* [ГБ]  
+ *log_size* [ GB ]  
  Положительное число. Размер (в гигабайтах целого или десятичного) для журнала транзакций *через устройство*.  
   
  Для максимального и минимального *log_size* требования, см. в «Минимальное и максимальное значения» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
@@ -78,7 +78,7 @@ WITH (
   
  Если АВТОУВЕЛИЧЕНИЕ отключено, будет возвращена ошибка пользователю для любое действие, которое будет увеличить размер журнала в отдельных вычислительном узле за *log_size*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **CREATE ANY DATABASE** разрешение в базе данных master или членство в группе **sysadmin** предопределенной роли сервера.  
   
  В следующем примере предоставляется разрешение на создание базы данных для пользователя Fay базы данных.  
@@ -147,7 +147,7 @@ CREATE DATABASE mytest
    LOG_SIZE = 10 GB);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER DATABASE &#40; Параллельное хранилище данных &#41;](../../t-sql/statements/alter-database-parallel-data-warehouse.md)   
  [DROP DATABASE (Transact-SQL)](../../t-sql/statements/drop-database-transact-sql.md)  
   

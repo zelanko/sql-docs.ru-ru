@@ -34,15 +34,15 @@ helpviewer_keywords:
 - http://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3772f81727b60f5c7932671fa10f5ca6454047c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6f85695e3d8263936d053979074a92b52fba7259
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
  TIMEOUT   
  Указывает время ожидания (в секундах) перед добавлением сообщения в очередь.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Таймер диалога предоставляет приложению способ получения сообщения в диалоге по истечении заданного времени. Вызов BEGIN CONVERSATION TIMER в диалоге до истечения времени ожидания устанавливает новое значение времени ожидания. В отличие от времени жизни диалога у каждой стороны диалога имеется свой таймер диалога. **DialogTimer** сообщение поступает в локальной очереди без влияния на удаленной стороне диалога. Поэтому приложение может использовать сообщение таймера для любых нужд.  
   
  Например, можно использовать таймер диалога для предотвращения слишком долгого ожидания приложением запоздалого отклика. Если завершение диалога ожидается в течение 30 секунд, то можно установить таймер для этого диалога на 60 секунд (30 секунд плюс 30 секунд допустимой задержки). Если диалог все еще открыт по истечении 60 секунд, приложение получит в очереди этого диалога сообщение об истечении времени ожидания.  
@@ -76,7 +76,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
   
  Инструкция BEGIN CONVERSATION TIMER не может использоваться в пользовательских функциях.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешением на установку таймера диалога значения по умолчанию для пользователей, которые есть разрешение SEND для службы в диалоге, члены **sysadmin** фиксированной серверной роли и члены **db_owner** предопределенной роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -90,7 +90,7 @@ BEGIN CONVERSATION TIMER (@dialog_handle)
 TIMEOUT = 120 ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [BEGIN DIALOG CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [END CONVERSATION &#40; Transact-SQL &#41;](../../t-sql/statements/end-conversation-transact-sql.md)   
  [ПОЛУЧИТЬ &#40; Transact-SQL &#41;](../../t-sql/statements/receive-transact-sql.md)  

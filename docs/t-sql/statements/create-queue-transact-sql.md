@@ -27,15 +27,15 @@ helpviewer_keywords:
 - queues [Service Broker], creating
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 168ba93fdfbf999cb325d985c3c29601cc21b4ed
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7bd20267a78f9a0fcaf2d854b6e94553b7c80167
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ CREATE QUEUE <object>
  *schema_name* (object)  
  Имя схемы, которой принадлежит новая очередь. Значения по умолчанию для схемы по умолчанию текущего пользователя, выполняющего инструкцию. Если инструкция CREATE QUEUE выполняется членом фиксированной серверной роли sysadmin или членом db_dbowner или db_ddladmin предопределенных ролей базы данных в базы данных, указанной *имя_базы_данных*, *schema_name* может определять схему, не связанную с именем входа текущего соединения. В противном случае *schema_name* должно быть схемой по умолчанию для пользователя, выполняющего инструкцию.  
   
- *имя_очереди*  
+ *queue_name*  
  Имя создаваемой очереди. Это имя должно соответствовать правилам для идентификаторов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  STATUS (очередь)  
@@ -108,13 +108,13 @@ CREATE QUEUE <object>
  *database_name*(процедура)  
  Имя базы данных, которая содержит хранимую процедуру.  
   
- *schema_name*(процедура)  
+ *schema_name*(procedure)  
  Имя схемы, которая содержит хранимую процедуру.  
   
  *procedure_name*  
  Имя хранимой процедуры.  
   
- MAX_QUEUE_READERS =*аргумента max_readers*  
+ MAX_QUEUE_READERS =*max_readers*  
  Определяет максимальное количество экземпляров хранимой процедуры активации, запускаемых очередью одновременно. Значение *аргумента max_readers* должно быть числом в диапазоне от **0** и **32767**.  
   
  EXECUTE AS  
@@ -123,7 +123,7 @@ CREATE QUEUE <object>
  SELF  
  Указывает, что хранимая процедура выполняется как текущий пользователь. (участника базы данных, выполняющего эту инструкцию CREATE QUEUE).  
   
- "*имя_пользователя*"  
+ '*user_name*'  
  Имя пользователя, от имени которого выполняется хранимая процедура. *Имя_пользователя* параметр должен быть допустимым [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] пользователя, указанного как [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] идентификатор. Текущий пользователь должен иметь разрешение IMPERSONATE для *имя_пользователя* указанного.  
   
  OWNER  
@@ -137,7 +137,7 @@ CREATE QUEUE <object>
  ON *файловая группа |* [**По умолчанию**]  
  Указывает файловую группу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], на основании которой должна создаваться эта очередь. Можно использовать *файловой группы* параметр для идентификации файловой группы или использовать идентификатор по умолчанию, чтобы использовать файловую группу по умолчанию для базы данных service broker. В контексте данного предложения слово DEFAULT не является ключевым словом и должно быть отделено как идентификатор. Если файловая группа не задана, то очередь использует файловую группу по умолчанию для базы данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Очередь может быть использована как целевой объект инструкции SELECT. Однако содержимое очереди может быть изменено только с помощью инструкций, которые выполняются в таких диалогах компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)], как SEND, RECEIVE и END CONVERSATION. Очередь не может быть целевым объектом инструкций INSERT, UPDATE, DELETE и TRUNCATE.  
   
  Очередь не может быть временным объектом. Таким образом, очередь имена, начинающиеся с  **#**  являются недопустимыми.  
@@ -154,7 +154,7 @@ CREATE QUEUE <object>
   
  Следующая таблица содержит столбцы в очереди.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |status|**tinyint**|Состояние сообщения. Инструкция RECEIVE возвращает все сообщения, которые имеют состояние **1**. Если хранение сообщений включено, то значение состояния устанавливается в 0. Если хранение сообщений выключено, то сообщение удаляется из очереди. Сообщения в очереди могут иметь одно из следующих состояний:<br /><br /> **0**= сохраненное полученное сообщение<br /><br /> **1**= готовность к получению<br /><br /> **2**= еще не завершено<br /><br /> **3**= сохраненное отправленное сообщение|  
 |priority|**tinyint**|Уровень приоритета, назначенный для этого сообщения.|  
@@ -172,7 +172,7 @@ CREATE QUEUE <object>
 |message_body|**varbinary(max)**|Содержимое сообщения.|  
 |message_id|**uniqueidentifier**|Уникальный идентификатор для сообщения.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешение на создание службы имеют члены предопределенных ролей базы данных db_ddladmin и db_owner  и предопределенной роли сервера sysadmin.  
   
  Разрешение REFERENCES на очередь по умолчанию имеет владелец очереди, члены предопределенных ролей db_admin или db_owner базы данных, а также члены предопределенной роли сервера sysadmin.  
@@ -229,7 +229,7 @@ CREATE QUEUE ExpenseQueue
     ON [DEFAULT] ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER QUEUE &#40; Transact-SQL &#41;](../../t-sql/statements/alter-queue-transact-sql.md)   
  [CREATE SERVICE (Transact-SQL)](../../t-sql/statements/create-service-transact-sql.md)   
  [Удаление ОЧЕРЕДИ &#40; Transact-SQL &#41;](../../t-sql/statements/drop-queue-transact-sql.md)   

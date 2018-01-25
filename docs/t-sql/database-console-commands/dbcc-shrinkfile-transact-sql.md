@@ -31,15 +31,15 @@ helpviewer_keywords:
 - DBCC SHRINKFILE statement
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 caps.latest.revision: "87"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: barbkess
+ms.author: barbkess
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f1b96b92738d3f44c21f4e6056798da74e26872a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 94ad5652920129790045e33c93e2a8fbb83816bd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ DBCC SHRINKFILE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
-*имя_файла*  
+*file_name*  
 Логическое имя файла, предназначенного для сжатия.
   
 *file_id*  
@@ -100,16 +100,16 @@ WITH NO_INFOMSGS
 ## <a name="result-sets"></a>Результирующие наборы  
 В следующей таблице отображены столбцы результирующего набора.
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |---|---|
 |**DbId**|Идентификатор базы данных, файл которой компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] пытался сжать.|  
-|**Идентификатор файла**|Идентификационный номер файла, сжатие которого было предпринято компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
+|**FileId**|Идентификационный номер файла, сжатие которого было предпринято компонентом [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**CurrentSize**|Количество 8-килобайтных страниц, занятых файлом в настоящее время.|  
-|**Минимальный размер**|Минимальное количество 8-килобайтных страниц, которое может занимать файл. Оно соответствует минимальному размеру или размеру файла, указанному при создании.|  
+|**MinimumSize**|Минимальное количество 8-килобайтных страниц, которое может занимать файл. Оно соответствует минимальному размеру или размеру файла, указанному при создании.|  
 |**UsedPages**|Количество 8-килобайтных страниц, используемых файлом в настоящее время.|  
 |**EstimatedPages**|Количество 8-килобайтных страниц, до которого можно было бы сжать файл по оценке компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 Инструкция DBCC SHRINKFILE применяется к файлам в текущей базе данных. Дополнительные сведения об изменении текущей базы данных см. в разделе [использовать &#40; Transact-SQL &#41; ](../../t-sql/language-elements/use-transact-sql.md).
   
 Операции DBCC SHRINKFILE могут быть остановлены на любом этапе процесса, при этом вся выполненная работа сохраняется.
@@ -163,7 +163,7 @@ timestamp 15 or with timestamps older than 109 to finish.
 -   Прервите операцию сжатия. Если операция сжатия прервана, любая завершенная работа сохранена.  
 -   Пока операция сжатия ожидает завершения блокирующей транзакции, ничего делать не нужно.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 Необходимо быть членом предопределенной роли сервера **sysadmin** или предопределенной роли базы данных **db_owner** .
   
 ## <a name="examples"></a>Примеры  
@@ -232,7 +232,7 @@ REMOVE FILE Test1data;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
 [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC (Transact-SQL)](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE (Transact-SQL)](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  
