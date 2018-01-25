@@ -16,15 +16,15 @@ helpviewer_keywords:
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: d0280a49bf91f078355dedab297ffd75102f5faa
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7374751ae2fd74f93ed0744853eb472689538347
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Продвижение часто используемых XML-значений с помощью вычисляемых столбцов
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Если часто запрашивается небольшое количество значений элементов и атрибутов, можно повысить их уровень до реляционных столбцов. Это полезно, если запрос выполняется для небольшой части XML-данных, тогда как извлекается весь экземпляр XML. Создавать XML-индекс для XML-столбца не требуется. Вместо этого можно проиндексировать столбец, созданный на основе свойства. В запросах необходимо использовать этот столбец, потому что оптимизатор запросов не перенаправляет запросы XML-столбца столбцу, созданному на основе свойства.  
@@ -161,7 +161,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Пример: поиск экземпляров XML, включающих авторов с одним и тем же именем  
- Можно составить такой запрос для XML-столбца или найти в таблице свойств записи с именами David и выполнить обратное соединение с базовой таблицей для возврата экземпляра XML. Например:  
+ Можно составить такой запрос для XML-столбца или найти в таблице свойств записи с именами David и выполнить обратное соединение с базовой таблицей для возврата экземпляра XML. Пример:  
   
 ```  
 SELECT xCol   

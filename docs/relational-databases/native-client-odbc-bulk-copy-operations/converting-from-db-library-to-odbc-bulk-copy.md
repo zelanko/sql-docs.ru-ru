@@ -19,15 +19,15 @@ helpviewer_keywords:
 - DB-Library bulk copy
 ms.assetid: 0bc15bdb-f19f-4537-ac6c-f249f42cf07f
 caps.latest.revision: "30"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df98f0513252765781d2030b1597aec50bbd246e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: abdb8b529914a3ebb09ed0d5d933c30e0ef43f9d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="converting-from-db-library-to-odbc-bulk-copy"></a>Перевод массового копирования с DB-Library на ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +46,7 @@ ms.lasthandoff: 01/08/2018
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Драйвер ODBC для собственного клиента не поддерживает обработчики сообщений и ошибок DB-Library; необходимо вызвать **SQLGetDiagRec** для получения ошибок и сообщений, формируемых функциями массового копирования ODBC. Версии ODBC функций массового копирования возвращают стандартные коды возврата массового копирования SUCCEED или FAILED, а не коды возврата ODBC, такие как SQL_SUCCESS или SQL_ERROR.  
   
--   Значения, указанные для DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* интерпретируются не так, как ODBC **bcp_bind***cbData*параметра.  
+-   Значения, указанные для DB-Library [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)*varlen* интерпретируются не так, как ODBC **bcp_bind *** cbData* параметра.  
   
     |Указанное условие|DB-Library *varlen* значение|ODBC *cbData* значение|  
     |-------------------------|--------------------------------|-------------------------|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/08/2018
   
      В DB-Library *varlen* значение -1 указывает, что предоставлены данные переменной длины, а в ODBC *cbData* означает, что предоставлены только значения NULL. Изменить DB-Library *varlen* -1 в значение SQL_VARLEN_DATA, а также любые *varlen* спецификации от 0 до SQL_NULL_DATA.  
   
--   DB-Library **bcp_colfmt***file_collen* и ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData* та же проблема как  **bcp_bind***varlen* и *cbData* описанных выше параметров. Изменить DB-Library *file_collen* -1 в значение SQL_VARLEN_DATA, а также любые *file_collen* спецификации от 0 до SQL_NULL_DATA.  
+-   DB-Library  **bcp_colfmt *** file_collen* и ODBC [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)*cbUserData * уже же проблема **bcp_bind *** varlen*и *cbData* описанных выше параметров. Изменить DB-Library *file_collen* -1 в значение SQL_VARLEN_DATA, а также любые *file_collen* спецификации от 0 до SQL_NULL_DATA.  
   
 -   *IValue* параметр ODBC [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) функция является указателем на void. В DB-Library *iValue* имело тип integer. Приведение значений для ODBC *iValue* на тип void *.  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 01/08/2018
   
 -   При выводе **money** значения в символьном формате, ODBC массового копирования функции питания четыре цифры точности и без запятых-разделителей; Только версии DB-Library предоставить двух цифр, точности и включают запятые-разделители.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение операций массового копирования &#40; ODBC &#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)   
  [Функции массового копирования](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   

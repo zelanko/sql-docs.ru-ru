@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 caps.latest.revision: "32"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: cb35ff2046a3e744ebe759f51eeaedda58ea38d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 039357d36d63b485eff66febbf4bf1df53a0e359
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>Базы знаний и домены DQS
   В этом разделе описывается значение базы знаний в службах [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Для очистки данных необходимо иметь знания об этих данных. Чтобы подготовить знания для проекта качества данных, строится и ведется база знаний, которая используется DQS для выявления неверных или недопустимых данных. DQS позволяет использовать автоматические и интерактивные процессы для создания, построения и обновления базы знаний. Знания в базе знаний хранятся в доменах, каждый из которых относится к некоторому полю данных. База знаний является репозиторием знаний о данных, который дает представление о данных и помогает поддерживать их целостность.  
@@ -147,7 +147,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения о базе знаний и сопоставлении данных см. в разделе [Сопоставление данных](../data-quality-services/data-matching.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В базе знаний и ее доменах вы можете выполнять следующие операции:  
   
 |||  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Unicode [SQL Server], bulk importing and exporting
 ms.assetid: 74342a11-c1c0-4746-b482-7f3537744a70
 caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 5fd105a2da0e4822ee3da0b2f8929f70d0185cb5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca0bca9210691a4c53cc2c39cb0110159994192b
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>Использование символьного формата Юникода для импорта и экспорта данных (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Символьный формат Юникода рекомендуется для массового переноса данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через файл данных, содержащий символы расширенной или двухбайтовой кодировки (DBCS). Формат символьных данных Юникода позволяет экспортировать данные из сервера в кодовой странице, отличающейся от кодовой страницы, используемой выполняющим операцию клиентом. В этих случаях использование символьного формата Юникода имеет следующие преимущества.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 
 * По умолчанию [программа bcp](../../tools/bcp-utility.md) разделяет символьные поля данных символом табуляции, а записи — символом перевода строки.  Сведения о том, как указать другой признак конца поля, см. в статье [Определение признаков конца поля и строки (SQL Server)](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).
 
-* Данные типа [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md), хранящиеся в файле данных символьного формата Юникод, обрабатываются таким же образом, что и данные файла данных символьного формата, за исключением того, что они хранятся как данные типа данных [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), а не как данные типа [char](../../t-sql/data-types/char-and-varchar-transact-sql.md). Дополнительные сведения о формате символов см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
+* Данные типа [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) , хранящиеся в файле данных символьного формата Юникод, обрабатываются таким же образом, что и данные файла данных символьного формата, за исключением того, что они хранятся как данные типа данных [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) , а не как данные типа [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) . Дополнительные сведения о формате символов см. в разделе [Поддержка параметров сортировки и Юникода](../../relational-databases/collations/collation-and-unicode-support.md).  
 
 ## Особые рекомендации по использованию символьного формата Юникода, bcp и файла форматирования<a name="special_considerations"></a>
 Файлы данных символьного формата Юникода следуют соглашениям для файлов Юникода.  Первые два байта файла являются шестнадцатеричными числами 0xFFFE.  Эти байты служат в качестве меток порядка байтов, определяющих, хранится ли старший байт в файле первым или последним.  [Программа bcp](../../tools/bcp-utility.md) может неправильно интерпретировать метки порядка байтов и вызвать сбой части импорта. Вы можете получить сообщение об ошибке, аналогичное следующему:
@@ -86,7 +86,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
   
 Символьный формат Юникода поддерживается следующими параметрами командной строки:  
   
-|Command|Параметр|Описание|  
+|Command|Параметр|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-w**|Использует символьный формат Юникода.|  
 |BULK INSERT|DATAFILETYPE **="widechar"**|Использует символьный формат Юникода при массовом импорте данных.|  

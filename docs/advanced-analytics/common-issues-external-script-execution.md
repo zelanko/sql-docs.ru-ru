@@ -14,13 +14,13 @@ ms.topic: article
 caps.latest.revision: "1"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 6ce80d7ca50b9410120bdb61a347d4b8a90c39b4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 2920cfae6e23845a9ac1643a17d6f133adaaf70d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>Распространенные проблемы с выполнением внешних скриптов в SQL Server
 
@@ -319,7 +319,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 *[1]» C:\\программные файлы\\Microsoft SQL Server\\MSSQL13. SQL2016\\R_SERVICES»*
 
-*[1]» C:/Program файлы или Microsoft SQL Server/MSSQL13. SQL2016/R_SERVICES/библиотека»*
+*[1] "C:/Program Files/Microsoft SQL Server/MSSQL13.SQL2016/R_SERVICES/library"*
 
 Чтобы устранить проблему, необходимо переустановить пакет библиотеку экземпляра SQL Server.
 

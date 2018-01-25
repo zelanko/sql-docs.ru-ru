@@ -27,15 +27,15 @@ helpviewer_keywords:
 - lexical representation
 ms.assetid: c2314fd5-4c6d-40cb-a128-07e532b40946
 caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 5cd69a363f823d5d5ef197524d2fe5a3f393d438
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d12b4ae5ef18aadaf580945f5326dc08f00c11ac
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Требования и ограничения для коллекций XML-схем на сервере
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Язык определения схемы XML (XSD) имеет некоторые ограничения при проверке правильности столбцов SQL, использующих тип данных **xml**. В следующей таблице содержатся подробные сведения об этих ограничениях и рекомендации по изменению XSD-схемы, таким образом, чтобы обеспечить возможность работы с [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Темы данного раздела содержат дополнительные сведения об определенных ограничениях и рекомендации по работе с ними.  
@@ -66,9 +66,9 @@ ms.lasthandoff: 11/17/2017
 |Типы объединения|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает ограничения от типов объединений.|  
 |Десятичные числа переменной точности|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не поддерживает десятичные числа переменной точности. Тип **xs:decimal** представляет десятичные числа произвольной точности. Обработчики XML, соответствующие минимальным требованиям, должны поддерживать десятичные числа как минимум `totalDigits=18`знаков. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] поддерживает количество знаков `totalDigits=38,` , но ограничивает число знаков после запятой десятью. Все экземпляры значений **xs:decimal** внутренне представляются сервером в виде числового типа SQL (38, 10).|  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-----------|-----------------|  
 |[Canonical Forms and Pattern Restrictions](../../relational-databases/xml/canonical-forms-and-pattern-restrictions.md)|Объясняет канонические формы и ограничения шаблона.|  
 |[Компоненты-шаблоны и проверка достоверности содержимого](../../relational-databases/xml/wildcard-components-and-content-validation.md)|Описывает ограничения использования символов-шаблонов, нестрогой проверки и элементов anyType с коллекциями XML-схем.|  

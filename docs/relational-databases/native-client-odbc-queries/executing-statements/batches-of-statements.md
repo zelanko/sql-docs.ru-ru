@@ -20,21 +20,21 @@ helpviewer_keywords:
 - SQLExecDirect function
 ms.assetid: 057d7c1c-1428-4780-9447-a002ea741188
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 27345751dba7376371150acb15330a6e39a70c1c
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 3f9e5a1416170b7b1cf2516ec25bc578141dfd36
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="batches-of-statements"></a>Пакеты инструкций
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  Пакет [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций содержит два или более инструкций, разделенных точкой с запятой (;), встроенные в одной строки, переданной в **SQLExecDirect** или [SQLPrepare, функция](http://go.microsoft.com/fwlink/?LinkId=59360). Пример:  
+  Пакет [!INCLUDE[tsql](../../../includes/tsql-md.md)] инструкций содержит два или более инструкций, разделенных точкой с запятой (;), встроенные в одной строки, переданной в **SQLExecDirect** или [SQLPrepare, функция](http://go.microsoft.com/fwlink/?LinkId=59360). Например:  
   
 ```  
 SQLExecDirect(hstmt,   
@@ -53,7 +53,7 @@ szSqlState = "01S02", pfNativeError = 0
 szErrorMsg = "[Microsoft][SQL Server Native Server Native Client]Cursor type changed."  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Выполнение инструкции &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-queries/executing-statements/executing-statements-odbc.md)  
   
   

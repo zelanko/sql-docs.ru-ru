@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e4ed295cab6b932ba39a2a6417b8977dc5791e6e
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 336fea7b5f3ea9fec4dc559933477086f4cca5ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, объект Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -273,7 +273,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Параметр таблицы «text in row»|Обнаружены ссылки на параметр таблицы «text in row». Вместо этого используйте параметр хранимой процедуры sp_tableoption «large value types out of row». Происходит один раз для каждого запроса.|  
 |TEXTPTR|Обнаружены ссылки на функцию TEXTPTR. Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
 |TEXTVALID|Обнаружены ссылки на функцию TEXTVALID. Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
-|TIMESTAMP|Общее число вхождений нерекомендуемого типа данных **timestamp** , обнаруженных в инструкции DDL. Используйте вместо него тип данных **rowversion** .|  
+|timestamp|Общее число вхождений нерекомендуемого типа данных **timestamp** , обнаруженных в инструкции DDL. Используйте вместо него тип данных **rowversion** .|  
 |UPDATETEXT или WRITETEXT|Обнаружена инструкция UPDATETEXT или WRITETEXT. Перепишите приложения, чтобы использовался тип данных **varchar(max)** , и удалите типы данных **text**, **ntext**и **image** . Происходит один раз для каждого запроса.|  
 |USER_ID|Обнаружены ссылки на функцию USER_ID. Вместо этого используйте функцию DATABASE_PRINCIPAL_ID. Происходит один раз на каждую компиляцию.|  
 |Использование OLEDB для связанных серверов||  

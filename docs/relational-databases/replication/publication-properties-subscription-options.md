@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.newpubwizard.pubproperties.subscriptionoptions.f1
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5517df85eefa69980aa212e573165ef7cf0c1d5d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5272dd5ecda16685468431245c91b1c03c7296da
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publication-properties-subscription-options"></a>Свойства публикации, параметры подписки
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Параметры подписки** диалогового окна **Свойства публикации** позволяет просматривать и устанавливать свойства уровня публикации, связанные с подписками. Свойства сгруппированы по следующим категориям.  
@@ -92,7 +92,7 @@ ms.lasthandoff: 11/17/2017
  Определяет, могут ли изменения данных на подписчике немедленно реплицироваться на издателя. Этот параметр доступен только для чтения; обновляемые подписки можно включить только при создании публикации. Дополнительные сведения см. в разделе [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  **Разрешить обновляемые посредством очередей подписки**  
- Определяет, могут ли изменения данных на подписчике помещаться в очередь и реплицироваться на издателя позже. Этот параметр доступен только для чтения; обновляемые подписки можно включить только при создании публикации. Дополнительные сведения см. в разделе [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
+ Определяет, могут ли изменения данных на подписчике помещаться в очередь и реплицироваться на издателя позже. Этот параметр доступен только для чтения; обновляемые подписки можно включить только при создании публикации. Дополнительные сведения см. в статье [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
  **Сообщать о конфликтах централизованно**  
  Определяет, сообщать ли о конфликтных изменениях данных только на издателе или как на издателе, так и на подписчике (требует установки параметра **Разрешить обновляемые посредством очередей подписки**). Этот параметр доступен только для чтения. По умолчанию он равен **True** для публикаций, созданных с помощью мастера создания публикаций, и его нельзя изменить после создания публикации. Значение **True** означает, что сообщения о конфликтах выдаются только на издателе. Конфликты можно просматривать только в месте получения сообщения.  

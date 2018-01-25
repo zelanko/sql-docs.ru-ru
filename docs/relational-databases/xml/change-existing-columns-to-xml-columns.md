@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: tables [XML]
 ms.assetid: 0d951424-9862-41fe-bd46-127f1c059bcb
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 1773816e8d536415d83a09afc0995f46ceb0b17a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 6ad32b6c56b01be8b31d6be358faf158248b3fa4
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="change-existing-columns-to-xml-columns"></a>Замена существующих столбцов на XML-столбцы
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] Инструкция ALTER TABLE поддерживает тип данных **xml**. Например, можно преобразовать столбец любого строкового типа в тип данных **xml** . Учтите, что в этом случае документы, содержащиеся в этом столбце, должны быть корректными. Также при изменении типа столбца со строкового на типизированный xml, содержащиеся в столбце документы должны проходить проверку по указанным XSD-схемам.  
@@ -38,7 +38,7 @@ ALTER COLUMN Col2 xml
 GO  
 ```  
   
- Можно изменить тип содержащихся в столбце `xml` данных с нетипизированного на типизированный XML. Например:  
+ Можно изменить тип содержащихся в столбце `xml` данных с нетипизированного на типизированный XML. Пример:  
   
 ```  
 CREATE TABLE T (Col1 int primary key, Col2 xml)  

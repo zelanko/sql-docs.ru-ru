@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: format files [SQL Server], creating
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
 caps.latest.revision: "57"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: c3aa7d6569f8a4390f249c032641978fb5382313
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e4eb0b49bbf52926536293cf26cd47046329abaf
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-a-format-file-sql-server"></a>Создание файла форматирования (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] При массовом импорте в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] или массовом экспорте данных из таблицы вы можете воспользоваться файлом форматирования, который обеспечивает гибкую структуру записи файлов данных и практически не требует изменений для обеспечения соответствия с другими форматами данных или для считывания данных из других программ.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="creating-a-non-xml-format-file"></a>Создание файла форматирования в формате, отличном от XML  
  Чтобы создать файл форматирования с помощью служебной программы **bcp** , укажите аргумент **format** , а вместо пути файла данных задайте значение **nul** . Параметр **format** также требует наличия параметра **-f** , например:  
   
- **bcp** *таблица_или_представление* **format** nul **-f***имя_файла_формата*  
+ **bcp** *table_or_view* **format** nul **-f***format_file_name*  
   
 > [!NOTE]  
 >  Для файлов форматирования в формате, отличном от XML рекомендуется использовать расширение FMT, например MyTable.fmt.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 11/17/2017
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Задает файл форматирования в формате, отличном от XML.|  
 |**-n**|Указывает собственные типы данных.|  
@@ -96,7 +96,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|Задает файл форматирования в формате, отличном от XML.|  
 |**-c**|Задает символьные данные.|  
@@ -195,7 +195,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Задает XML-файл форматирования.|  
 |**-c**|Задает символьные данные.|  
@@ -235,7 +235,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Команда **bcp** содержит следующие квалификаторы:  
   
-|Квалификаторы|Описание|  
+|Квалификаторы|Description|  
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|Задает XML-файл форматирования.|  
 |**-n**|Указывает собственные типы данных.|  
@@ -279,7 +279,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..
 -   [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a>См. также:  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [Программа bcp](../../tools/bcp-utility.md)   
  [Использование файла форматирования для сопоставления столбцов таблицы с полями файла данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)   
  [Пропуск столбца таблицы с помощью файла форматирования (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Использование файла форматирования для пропуска поля данных (SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-data-field-sql-server.md)   

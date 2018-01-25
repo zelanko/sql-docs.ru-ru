@@ -30,15 +30,15 @@ helpviewer_keywords:
 - snapshot replication [SQL Server], monitoring
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 caps.latest.revision: "34"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: caa7d7966fee784794884d7e840f0802c4a7774d
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a687248919676d1193682a983f8ba71b1827cc3c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="programmatically-monitor-replication"></a>Наблюдение за репликацией программным образом
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Монитор репликации — это графическое средство, позволяющее осуществлять мониторинг топологии репликации. К данным мониторинга можно обращаться программным путем с помощью хранимых процедур репликации [!INCLUDE[tsql](../../../includes/tsql-md.md)] или объектов RMO. Эти объекты позволяют программировать следующие задачи:  
@@ -271,7 +271,7 @@ ms.lasthandoff: 11/17/2017
   
     -   *metricID* — это значение <xref:System.Int32> , представляющее пороговую метрику из следующей таблицы.  
   
-        |Значение|Описание|  
+        |Значение|Description|  
         |-----------|-----------------|  
         |1|**expiration** следит за приближающимся истечением срока подписки на публикации транзакций.|  
         |2|**latency** следит за производительностью подписки на публикации транзакций.|  

@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72e1970bf68219376f3f2a9d16d03e133ec0832b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 50e8f4fdae89572403ec8e5b7a5575b6ea61b132
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="how-query-store-collects-data"></a>Сбор данных в хранилище запросов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.lasthandoff: 11/17/2017
   
  **Описания представлений**  
   
-|Просмотр|Описание|  
+|Просмотр|Description|  
 |----------|-----------------|  
 |**sys.query_store_query_text**|Показывает тексты уникальных запросов к базе данных. Комментарии и пробелы до и после текста запроса игнорируются. Комментарии и пробелы внутри текста учитываются. Каждая инструкция в пакете создает текстовую запись отдельного запроса.|  
 |**sys.query_context_settings**|Показывает уникальные комбинации влияющих на план параметров, при которых выполняются запросы. Тот же текст запроса, выполненного с другими влияющими на план параметрами, создает запись отдельного запроса в хранилище запросов, так как элемент `context_settings_id` является частью ключа запроса.|  

@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.replicationutilities.selectdistributor.f1
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 caps.latest.revision: "22"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fc3ea91c6a657c0bdc09c6b8f927aa2b74489fe
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eda1d3fc60baeea0f657561febb9f188ea78b16a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor"></a>Распространитель
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Страница **Распространитель** доступна в мастере настройки распространения и в мастере создания публикаций. Распространитель — это сервер, который содержит базу данных распространителя и хранит метаданные и данные журнала всех типов репликации. Распространитель также хранит транзакции для репликации транзакций. Распространителем может быть тот же сервер, который является издателем (локальный распространитель), либо отдельный сервер (удаленный распространитель). Роль распространителя различна в зависимости от реализуемого типа репликации. В целом, его роль существенно важнее для репликации транзакций, чем для репликации слиянием и репликации моментальных снимков. Для репликации слиянием и репликации моментальных снимков, как правило, используется локальный распространитель, но для репликации транзакций на очень сильно загруженной системе может оказаться полезным удаленный распространитель.  

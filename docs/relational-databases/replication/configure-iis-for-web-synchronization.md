@@ -17,22 +17,22 @@ helpviewer_keywords:
 - Web synchronization, IIS servers
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 caps.latest.revision: "88"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e5c661e39ca7e011e185b68867be5955e2cfc280
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c524b1ad61453b835402816102a8f428adfe42d1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-iis-for-web-synchronization"></a>настроить сервер IIS для веб-синхронизации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Описанные в этом разделе процедуры составляют второй этап настройки веб-синхронизации при репликации слиянием. Эти процедуры выполняют после включения веб-синхронизации для публикации. Обзор этого процесса настройки см. в разделе [Настроить веб-синхронизацию](../../relational-databases/replication/configure-web-synchronization.md). После завершения выполнения процедур, описанных в этом разделе, перейдите к третьему этапу — настройке подписки для использования веб-синхронизации. Этот этап описывается в следующих разделах:  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Как настроить подписку для использования веб-синхронизации \(среда SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Программирование репликации [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Как настроить подписку для использования веб-синхронизации (программирование репликации на языке Transact-SQL)](http://msdn.microsoft.com/library/ms345206.aspx)  
+-   Программирование репликации [!INCLUDE[tsql](../../includes/tsql-md.md)] : [How to: Configure a Subscription to Use Web Synchronization (Программирование репликации Transact-SQL Programming)](http://msdn.microsoft.com/library/ms345206.aspx).  
   
 -   RMO: [Как настроить подписку для использования веб-синхронизации (программирование объектов RMO)](http://msdn.microsoft.com/library/ms345207.aspx).  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 11/17/2017
   
     2.  Введите путь виртуального каталога в поле **Путь** . Например, если вы ввели **websync1** в поле **Псевдоним** , введите **C:\Inetpub\wwwroot\websync1** в поле **Путь** . Нажмите кнопку **Далее**.  
   
-    3.  В обоих диалоговых окнах нажмите кнопку **Да**. Это означает, что нужно создать новую папку и скопировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL. .  
+    3.  В обоих диалоговых окнах нажмите кнопку **Да**. Это означает, что нужно создать новую папку и скопировать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Internet Server API (ISAPI) DLL. , и делает это по-другому.  
   
 7.  На странице **Доступ с проверкой подлинности** выполните следующие действия:  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 11/17/2017
   
  Чтобы установить минимальные разрешения для учетной записи, под которой может запускаться средство прослушивания репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , выполните следующую процедуру. Шаги, описанные в этой процедуре, применимы к [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] , на котором установлены службы IIS 6.0.  
   
- Помимо выполнения следующих шагов, убедитесь в том, что все необходимые имена входа содержатся в списке доступа к публикации (PAL). Дополнительные сведения о списке доступа к публикации см. в статье [Защита издателя](../../relational-databases/replication/security/secure-the-publisher.md).  
+ Помимо выполнения следующих шагов, убедитесь в том, что все необходимые имена входа содержатся в списке доступа к публикации (PAL). Дополнительные сведения о списке доступа к публикации см. в статье [Организация безопасности издателя](../../relational-databases/replication/security/secure-the-publisher.md).  
   
 #### <a name="to-configure-the-account-and-permissions"></a>Настройка учетной записи и разрешений  
   
@@ -329,7 +329,7 @@ ms.lasthandoff: 11/17/2017
   
     5.  Нажмите кнопку **ОК**.  
   
-2.  В обозревателе Internet Explorer на подписчике подключитесь к серверу в диагностическом режиме, добавив параметр `?diag` к адресу replisapi.dll. Например: `https://server.domain.com/directory/replisapi.dll?diag`.  
+2.  В обозревателе Internet Explorer на подписчике подключитесь к серверу в диагностическом режиме, добавив параметр `?diag` к адресу replisapi.dll. Например, `https://server.domain.com/directory/replisapi.dll?diag`.  
   
 3.  Если сертификат, заданный для сервера IIS, не распознается операционной системой Windows, отображается диалоговое окно **Предупреждение безопасности** . Это предупреждение может возникать из-за того, что это проверочный сертификат или сертификат, выданный центром сертификации, который не распознается Windows.  
   

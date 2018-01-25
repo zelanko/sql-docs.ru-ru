@@ -14,15 +14,15 @@ ms.topic: article
 helpviewer_keywords: best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e69e6e0cd9c17b7fdd8f47480e5f47f3611b0bc6
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ecfd4a72f00c5b8199f7db64ec0c9175c2487e7e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Оптимальные методы для фильтров строк на основе времени
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Пользователям приложений часто требуется подмножество данных из таблицы, относящихся к определенному времени. Например, менеджеру по продажам могут понадобиться данные заказов за последнюю неделю, или планировщику событий требуются данные о событиях на следующей неделе. Во многих случаях приложения используют для этого запросы, содержащие функцию **GETDATE()** . Рассмотрим следующую инструкцию фильтра строк:  
@@ -98,6 +98,6 @@ GO
 ## <a name="see-also"></a>См. также:  
  [GETDATE (Transact-SQL)](../../../t-sql/functions/getdate-transact-sql.md)   
  [Реализация заданий](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
- [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

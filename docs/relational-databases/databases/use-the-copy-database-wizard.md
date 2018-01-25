@@ -28,15 +28,15 @@ helpviewer_keywords:
 - starting Copy Database Wizard
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 28f18fd090691e5aae6023fe7282ef235b12778c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 534d9cd96831bfc79475f99111580e36f3603add
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-the-copy-database-wizard"></a>Использование мастера копирования базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Мастер копирования баз данных легко перемещает или копирует базы данных и определенные объекты серверов из одного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в другой, не создавая простоев сервера. С помощью этого мастера можно сделать следующее. 
@@ -98,11 +98,11 @@ ms.lasthandoff: 11/17/2017
   
 -   Для обеспечения оптимальной производительности обновленной базы данных выполните процедуру [sp_updatestats (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) (обновление статистики) для обновленной базы данных.  
   
--   Если база данных перемещается или копируется с одного экземпляра сервера на другой, для обеспечения однородности среды для пользователей и приложений может потребоваться повторное создание некоторых (или даже всех) метаданных базы данных: имен входа, заданий и т. д. Дополнительные сведения см. в статье [Manage Metadata When Making a Database Available on Another Server Instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+-   Если база данных перемещается или копируется с одного экземпляра сервера на другой, для обеспечения однородности среды для пользователей и приложений может потребоваться повторное создание некоторых (или даже всех) метаданных базы данных: имен входа, заданий и т. д. Дополнительные сведения см. в статье [Управление метаданными при обеспечении доступности базы данных на другом экземпляре сервера (SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 
   
-###  <a name="Permissions"></a> Разрешения  
+###  <a name="Permissions"></a> Permissions  
  Вы должны быть членом предопределенной роли сервера **sysadmin** как на исходном, так и на целевом сервере.  
   
 ##  <a name="Overview"></a> Страницы мастера копирования баз данных 
@@ -121,7 +121,7 @@ ms.lasthandoff: 11/17/2017
 -    **Использовать проверку подлинности SQL Server**  
 Позволяет установить подключение, указав имя пользователя и пароль для проверки подлинности SQL Server.
 
-     -    **Имя пользователя**  
+     -    **User name**  
 Позволяет ввести имя пользователя для соединения. Этот параметр доступен только при выборе **проверки подлинности SQL Server**.
 
      -    **Пароль**  
@@ -141,7 +141,7 @@ ms.lasthandoff: 11/17/2017
 -    **Использовать проверку подлинности SQL Server**  
 Позволяет установить подключение, указав имя пользователя и пароль для проверки подлинности SQL Server.
 
-     -    **Имя пользователя**  
+     -    **User name**  
 Позволяет ввести имя пользователя для соединения. Этот параметр доступен только при выборе **проверки подлинности SQL Server**.
 
      -    **Пароль**  
@@ -315,7 +315,7 @@ ms.lasthandoff: 11/17/2017
 
      > **ПРИМЕЧАНИЕ.** Мастер копирования базы данных можно запустить из любой базы данных.  Мастер можно использовать как на исходном, так и на целевом сервере.
   
-### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**A.  Перемещение базы данных в экземпляр на другом физическом сервере с использованием метода отсоединения и присоединения.  Также перемещаются имя входа и задание агента SQL Server.**  
+### <a name="a--move-database-using-detach-and-attach-method-to-an-instance-on-a-different-physical-server--a-login-and-sql-server-agent-job-will-be-moved-as-well"></a>**А.  Перемещение базы данных в экземпляр на другом физическом сервере с использованием метода отсоединения и присоединения.  Также перемещаются имя входа и задание агента SQL Server.**  
 В следующем примере база данных `Sales` , имя входа Windows `contoso\Jennie` и задание агента SQL Server `Jennie’s Report` переносятся из экземпляра SQL Server 2008 на сервера `Server1` в экземпляр SQL Server 2016 на сервере `Server2`.  `Jennie’s Report` использует базу данных `Sales` .  `Sales` еще не существует на целевом сервере `Server2`.  `Server1` после перемещения базы данных будет назначен другой команде.
   
 6.  Как было указано выше в разделе [Ограничения](#Restrictions), при переносе задания агента SQL Server, который ссылается на базу данных, не существующую на целевом сервере, необходимо создать на целевом сервере базу данных оболочки.  Создайте на целевом сервере базу данных оболочки с именем `Sales` . 

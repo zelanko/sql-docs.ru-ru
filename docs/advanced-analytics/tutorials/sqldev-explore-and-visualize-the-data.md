@@ -18,13 +18,13 @@ ms.assetid: 7fe670f3-5e62-43ef-97eb-b9af54df9128
 caps.latest.revision: "11"
 author: jeannt
 ms.author: jeannt
-manager: jhubbard
+manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 8048bc1eff7437e2a96bd8995f0362b341cbf092
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: e9ebd9be2603222f3faecfcd84314014bc6229c1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-3-explore-and-visualize-the-data"></a>Занятие 3: Анализ и визуализация данных
 
@@ -130,7 +130,7 @@ ms.lasthandoff: 01/08/2018
   
     **Результаты**
     
-    *построения*
+    *plot*
     *0xFFD8FFE000104A4649...*
   
 2.  Откройте окно командной строки PowerShell и выполните следующую команду, указав в качестве аргументов соответствующие имя экземпляра, имя базы данных, имя пользователя и учетные данные:

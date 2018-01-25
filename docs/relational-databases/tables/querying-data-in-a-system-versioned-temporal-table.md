@@ -15,20 +15,20 @@ ms.assetid: 2d358c2e-ebd8-4eb3-9bff-cfa598a39125
 caps.latest.revision: "7"
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: bdac67ec17d4dd47ce413822833db543cbbe6043
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5bd4678f0a17e570f089f3c532df5a32e284787d
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="querying-data-in-a-system-versioned-temporal-table"></a>Запрос данных в темпоральной таблице с системным управлением версиями
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Если требуется получить новейшее (актуальное) состояние данных в темпоральной таблице, можно отправить запрос точно так же, как и в нетемпоральной таблице. Если столбцы PERIOD не скрыты, их значения отобразятся в запросе SELECT \* . Если столбцы **PERIOD** указаны как скрытые, их значения не отобразятся в запросе SELECT \* . Если столбцы **PERIOD** скрыты, следует специально указать столбцы **PERIOD** в предложении SELECT, чтобы вернуть значения этих столбцов.  
   
- Для выполнения всех видов анализа на основе времени следует использовать новое предложение  **FOR SYSTEM_TIME** с четырьмя вложенными предложениями для темпоральных таблиц, чтобы запрашивать данные в текущих и прежних таблицах. Дополнительные сведения об этих предложениях см. в разделах [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md) и [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md)  
+ Для выполнения всех видов анализа на основе времени следует использовать новое предложение  **FOR SYSTEM_TIME** с четырьмя вложенными предложениями для темпоральных таблиц, чтобы запрашивать данные в текущих и прежних таблицах. Дополнительные сведения об этих предложениях см. в разделах [Темпоральные таблицы](../../relational-databases/tables/temporal-tables.md) и [FROM (Transact-SQL)](../../t-sql/queries/from-transact-sql.md).  
   
 -   AS OF <date_time>  
   

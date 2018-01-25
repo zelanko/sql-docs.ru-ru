@@ -17,15 +17,15 @@ f1_keywords:
 - sql13.dqs.matchingproject.export.f1
 ms.assetid: 6aa9d199-83ce-4b5d-8497-71eef9258745
 caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 284e081f53fe047a257d22020d0792897c8623ed
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9874323ad1bef8199d2ebc969bb3673826b946fb
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="run-a-matching-project"></a>Запуск проекта сопоставления
   В этом разделе описано, как выполнить сопоставление данных в [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). В процессе сопоставления выявляются кластеры соответствующих друг другу записей согласно правилам сопоставления в политике сопоставления, одна запись из каждого кластера обозначается как «выжившая» согласно правилу выживания, и результаты экспортируются. Процесс сопоставления в службах DQS, называемый также удалением дубликатов, является автоматизированным, однако правила сопоставления можно создавать интерактивно, также можно выбирать правило выживания из нескольких вариантов, таким образом можно управлять процессом сопоставления.  
@@ -42,9 +42,9 @@ ms.lasthandoff: 11/20/2017
   
 -   На компьютере [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] должна быть установлена программа Microsoft Excel, если исходные данные, подлежащие сопоставлению, находятся в файле Excel. В противном случае на стадии сопоставления невозможно будет выбрать файл Excel. Файлы, созданные Microsoft Excel, могут иметь расширение XLSX, XLS или CSV. При использовании 64-разрядной версии Excel поддерживаются только файлы Excel 2003 (.xls), файлы Excel 2007 и 2010 (.xlsx) не поддерживаются. При использовании 64-разрядной версии Excel 2007 или 2010 сохраните файл как XLS- или CSV-файл либо вместо этого установите 32-разрядную версию Excel.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Для запуска проекта сопоставления необходимо иметь роль dqs_administrator или dqs_kb_editor в базе данных DQS_MAIN.  
   
 ##  <a name="StartingaMatchingProject"></a> Первый шаг. Запуск проекта сопоставления  

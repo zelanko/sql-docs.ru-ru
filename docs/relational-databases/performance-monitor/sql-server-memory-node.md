@@ -13,15 +13,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 55b28ba9-b6d5-4ea9-8103-db8a72f42982
 caps.latest.revision: "10"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 96613902dd4167a7bbb8dd41454532129f3093ca
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: f8e499aec26a962e6d4e70afcdd81bf021b6e0ec
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="sql-server-memory-node"></a>SQL Server, память узла
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Объект **Memory Node** в Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет счетчики для мониторинга использования памяти сервера на узлах NUMA.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="memory-node-counters"></a>Счетчики памяти узла  
  В таблице описываются счетчики [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Память узла** .  
   
-|SQL Server, счетчики диспетчера памяти|Описание|  
+|SQL Server, счетчики диспетчера памяти|Description|  
 |----------------------------------------|-----------------|  
 |**Память узла базы данных (КБ)**|Указывает объем памяти, который используется в настоящий момент сервером на данном узле для страниц базы данных.|  
 |**Свободная память узла (КБ)**|Указывает объем памяти, который не используется сервером на данном узле.|  

@@ -21,15 +21,15 @@ helpviewer_keywords:
 - typed XML
 ms.assetid: 42b0b5a4-bdd6-4a60-b451-c87f14758d4b
 caps.latest.revision: "23"
-author: BYHAM
-ms.author: rickbyh
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Inactive
-ms.openlocfilehash: 17f11bc07868dd8f22cdf75f369de6e6ca952dc8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f58d6cbfa3c67e48890f4437a3c6ad08ee3d2797
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="define-the-serialization-of-xml-data"></a>Определение сериализации XML-данных
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] При явном или неявном приведении данных типа XML к строковому или двоичному типу данных SQL они сериализуются в соответствии с правилами, изложенными в этом разделе.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 ## <a name="serialization-encoding"></a>Кодировка сериализации  
  Если целевой тип данных — VARBINARY, результат сериализуется в UTF-16 с отметкой порядка байтов UTF-16 в начале, но без XML-декларации. Если целевой тип слишком мал, возникает ошибка.  
   
- Например:  
+ Пример:  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))  
@@ -51,7 +51,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARBINARY(MAX))
   
  Если целевой тип данных — NVARCHAR или NCHAR, результат сериализуется в UTF-16 без отметки порядка байтов UTF-16 в начале и без XML-декларации. Если целевой тип слишком мал, возникает ошибка.  
   
- Например:  
+ Пример:  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))  
@@ -65,7 +65,7 @@ select CAST(CAST(N'<Δ/>' as XML) as NVARCHAR(MAX))
   
  Если целевой тип данных — VARCHAR или NCHAR, результат сериализуется в кодировке, соответствующей кодовой странице параметров сортировки базы данных без отметки порядка байтов и XML-декларации. Если целевой тип слишком мал или значение не может быть отображено на целевую кодовую страницу параметров сортировки, возникнет ошибка.  
   
- Например:  
+ Пример:  
   
 ```  
 select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))  
@@ -93,7 +93,7 @@ select CAST(CAST(N'<Δ/>' as XML) as VARCHAR(MAX))
   
 -   Чтобы защитить текстовые узлы, не содержащие ничего кроме пробелов, один из них, обычно последний, преобразуется к сущности по числовой ссылке. Таким образом, повторный синтаксический анализ сохраняет текстовый узел с пробелами, независимо от установки параметров обработки пробелов во время синтаксического разбора.  
   
- Например:  
+ Пример:  
   
 ```  
 declare @u NVARCHAR(50)  

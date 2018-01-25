@@ -16,15 +16,15 @@ helpviewer_keywords:
 - commands [OLE DB]
 ms.assetid: de03b27e-8c5a-4060-b650-f77279be01df
 caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d4e4f86bf4b678e3946f16b63f8dc71499be1c0
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 596133acdd06a91f6235cfc0b342a562ac0eceb3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="commands"></a>Команды
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,15 +32,15 @@ ms.lasthandoff: 01/08/2018
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Поставщик OLE DB для собственного клиента предоставляет **ICommand** интерфейс и объекты команд, которые описаны в этом разделе:  
   
--   [Синтаксис команд](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
+-   [Синтаксис команды](../../relational-databases/native-client-ole-db-commands/command-syntax.md)  
   
--   [Параметры команд](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
+-   [Параметры команды](../../relational-databases/native-client-ole-db-commands/command-parameters.md)  
   
 -   [Подготовка команд](../../relational-databases/native-client-ole-db-commands/preparing-commands.md)  
   
--   [Команды, формирующие результаты с несколькими наборами строк](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
+-   [Команды, формирующие результаты, содержащие](../../relational-databases/native-client-ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
 ## <a name="see-also"></a>См. также:  
- [SQL Server Native Client (OLE DB)](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
+ [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

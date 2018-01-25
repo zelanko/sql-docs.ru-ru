@@ -15,15 +15,15 @@ apitype: DLLExport
 helpviewer_keywords: SQLColumns function
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 caps.latest.revision: "62"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f539f5202717a5eb58929a9be9ea7945687cbb4e
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 661c678e8d98d1b4d3f88c29d6d0b786b4e686d4
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/08/2018
   
  В следующей таблице перечислены столбцы, возвращаемые в результирующем наборе.  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |DATA_TYPE|Возвращает значение SQL_VARCHAR, SQL_VARBINARY или SQL_WVARCHAR для **varchar(max)** типов данных.|  
 |TYPE_NAME|Возвращает значение «varchar», «varbinary» или «nvarchar» **varchar(max)**, **varbinary(max)**, и **nvarchar(max)** типов данных.|  
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Поддержка функцией SQLColumns разреженных столбцов  
  Два [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] были добавлены указанные столбцы в результирующем наборе для SQLColumns:  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |SS_IS_SPARSE|**Smallint**|Если столбец является разреженным, то значение равно SQL_TRUE. В противном случае — SQL_FALSE.|  
 |SS_IS_COLUMN_SET|**Smallint**|Если столбец является **column_set** столбца, это значение равно SQL_TRUE; в противном случае — SQL_FALSE.|  
@@ -95,8 +95,8 @@ ms.lasthandoff: 01/08/2018
   
  Дополнительные сведения о разреженных столбцах в ODBC см. в разделе [Поддержка разреженных столбцов &#40; ODBC &#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Функция SQLColumns](http://go.microsoft.com/fwlink/?LinkId=59336)   
- [Подробные сведения о реализации API-интерфейсов ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [Сведения о реализации API-интерфейса ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

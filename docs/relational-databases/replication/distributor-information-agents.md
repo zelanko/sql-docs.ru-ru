@@ -14,15 +14,15 @@ ms.topic: article
 f1_keywords: sql13.rep.monitor.Distributor.commonjobs..f1
 ms.assetid: 5d601a64-6af0-42f9-81b1-cf0087f1c50d
 caps.latest.revision: "13"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c2b4b54ae1494a72bf86d56f50ace2da6b0a5e0
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a60816a7220a5d1c2b9f15aeeac98e1a74da21ea
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="distributor-information-agents"></a>Сведения о распространителе, агенты
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На вкладке **Агенты** приводятся сведения об агентах и заданиях обслуживания, связанных с издателем и подписчиком.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 11/17/2017
  **Ср. кол-во команд**  
  Среднее количество команд за транзакцию во время самого последнего выполнения агента.  
   
-### <a name="merge-agent"></a>Агент слияния  
+### <a name="merge-agent"></a>Агент слияния.  
  **Состояние**  
  Состояние агента. Возможные значения состояния показаны в следующем списке:  
   

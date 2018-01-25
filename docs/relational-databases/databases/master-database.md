@@ -16,14 +16,14 @@ helpviewer_keywords:
 - master database [SQL Server]
 ms.assetid: 660e909f-61eb-406b-bbce-8864dd629ba0
 caps.latest.revision: "50"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
-ms.openlocfilehash: 69ac660e66f9d997d2b7227d13f9c007dc68d7ed
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+author: stevestein
+ms.author: sstein
+manager: craigg
+ms.openlocfilehash: 179ae8ba7d0a420863397caa080f1dd98b7b4dd9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="master-database"></a>База данных master
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] База данных **master** содержит всю системную информацию о [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. в том числе общие для всего экземпляра метаданные, такие как сведения об учетных записях входа, конечных точках и связанных серверах, а также параметры конфигурации системы. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]системные объекты больше не хранятся в базе данных **master** ; они хранятся в [базе данных ресурсов](../../relational-databases/databases/resource-database.md). Кроме этого, в базе данных **master** регистрируются все остальные базы данных и хранится информация о расположении их файлов. Здесь же [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]хранит сведения об инициализации. Таким образом, если база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] master **недоступна, запустить** невозможно.  
@@ -43,34 +43,34 @@ ms.lasthandoff: 11/17/2017
   
 |Параметр базы данных|Значение по умолчанию|Можно ли изменить|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Нет|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|нет|  
 |ANSI_NULL_DEFAULT|OFF|Да|  
 |ANSI_NULLS|OFF|Да|  
 |ANSI_PADDING|OFF|Да|  
 |ANSI_WARNINGS|OFF|Да|  
 |ARITHABORT|OFF|Да|  
-|AUTO_CLOSE|OFF|Нет|  
+|AUTO_CLOSE|OFF|нет|  
 |AUTO_CREATE_STATISTICS|ON|Да|  
-|AUTO_SHRINK|OFF|Нет|  
+|AUTO_SHRINK|OFF|нет|  
 |AUTO_UPDATE_STATISTICS|ON|Да|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Да|  
-|CHANGE_TRACKING|OFF|Нет|  
+|CHANGE_TRACKING|OFF|нет|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Да|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Да|  
 |CURSOR_DEFAULT|GLOBAL|Да|  
-|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Нет<br /><br /> Нет<br /><br /> Нет|  
+|Параметры доступности базы данных|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|нет<br /><br /> нет<br /><br /> нет|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Да|  
-|DB_CHAINING|ON|Нет|  
-|ENCRYPTION|OFF|Нет|  
-|MIXED_PAGE_ALLOCATION|ON|Нет|  
+|DB_CHAINING|ON|нет|  
+|ENCRYPTION|OFF|нет|  
+|MIXED_PAGE_ALLOCATION|ON|нет|  
 |NUMERIC_ROUNDABORT|OFF|Да|  
 |PAGE_VERIFY|CHECKSUM|Да|  
 |PARAMETERIZATION|SIMPLE|Да|  
 |QUOTED_IDENTIFIER|OFF|Да|  
-|READ_COMMITTED_SNAPSHOT|OFF|Нет|  
+|READ_COMMITTED_SNAPSHOT|OFF|нет|  
 |RECOVERY|SIMPLE|Да|  
 |RECURSIVE_TRIGGERS|OFF|Да|  
-|Параметры компонента Service Broker|DISABLE_BROKER|Нет|  
+|Параметры компонента Service Broker|DISABLE_BROKER|нет|  
 |TRUSTWORTHY|OFF|Да|  
   
  Описание этих параметров баз данных см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
