@@ -8,23 +8,24 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - native data format [SQL Server]
 - data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 2815c700005b9debb5ee02a675ad37b7e4444762
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 8a691fe8063a6cfd62d8be010acf34244bd4d671
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Использование собственного формата для импорта или экспорта данных
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Собственный формат данных рекомендуется использовать при массовой передаче данных между несколькими экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] через файл данных, который не содержит символов в расширенной кодировке или символов в двухбайтовой кодировке (DBCS).  
@@ -90,7 +91,7 @@ ms.lasthandoff: 11/17/2017
 
 Собственный формат поддерживается следующими параметрами командной строки:  
 
-|Command|Параметр|Описание|  
+|Command|Параметр|Description|  
 |-------------|------------|-----------------|  
 |bcp|**-n**|Приводит к использованию служебной программой bcp собственных типов данных. *|  
 |BULK INSERT|DATAFILETYPE **="native"**|Использует собственный тип данных или расширенный собственный тип данных. Учтите, что параметр DATAFILETYPE не нужен, если типы данных указываются в файле форматирования.|  

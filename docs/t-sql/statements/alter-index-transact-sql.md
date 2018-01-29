@@ -8,13 +8,15 @@ ms.service:
 ms.component: tsql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - ALTER INDEX
 - ALTER_INDEX_TSQL
-dev_langs: t-sql
+dev_langs:
+- t-sql
 helpviewer_keywords:
 - indexes [SQL Server], reorganizing
 - ALTER INDEX statement
@@ -46,16 +48,16 @@ helpviewer_keywords:
 - index rebuild [SQL Server]
 - index reorganize [SQL Server]
 ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
-caps.latest.revision: "222"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 24c7f8121439958cd9d0d4f17254b0520cbaa857
-ms.sourcegitcommit: 4aeedbb88c60a4b035a49754eff48128714ad290
+ms.openlocfilehash: a5bf734d607c6954c1652df9b9814a31b2224740
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,7 +208,7 @@ ALTER INDEX { index_name | ALL }
  *schema_name*  
  Имя схемы, которой принадлежит таблица или представление.  
   
- *представления table_or_view_name*  
+ *table_or_view_name*  
  Имя таблицы или представления, связанного с индексом. Чтобы отобразить отчет по индексам объекта, используйте [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) представления каталога.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)]поддерживает формат трехкомпонентного имени database_name. [schema_name] .table_or_view_name, если database_name — текущая база данных или database_name — база данных tempdb и представления table_or_view_name начинается со знака #.  
@@ -307,7 +309,10 @@ REORGANIZE выполняются в сети.
 -   Для групп строк, в котором 10% или несколько строк были логически удалены SQL Server попытается объединить этой группы строк с одной или нескольких групп строк.    Например 1 группа строк сжимается с 500 000 строк и группы строк 21 сжимается более 1 048 576 строк.  Группы строк 21 имеет 60% удаляемых строк, который оставляет 409,830 строк. SQL Server поддерживает объединение этих двух групп строк для сжатия новой группы строк, у которого 909,830 строк.  
   
 РЕОРГАНИЗОВАТЬ СТРАНИЦЫ С ИСПОЛЬЗОВАНИЕМ (COMPRESS_ALL_ROW_GROUPS = {ON | **OFF** })  
- В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], COMPRESS_ALL_ROW_GROUPS позволяет принудительно разностных групп строк OPEN или CLOSED в columnstore. Этот параметр не понадобится перестроить индекс columnstore, чтобы очистить разностных групп строк.  Сочетании с других удаления и слияния дефрагментации компонентов делает его более не является необходимым для перестроения индекса в большинстве случаев.    
+
+ **Применяется к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и[!INCLUDE[ssSDS](../../includes/sssds-md.md)]
+
+COMPRESS_ALL_ROW_GROUPS позволяет принудительно разностных групп строк OPEN или CLOSED в columnstore. Этот параметр не понадобится перестроить индекс columnstore, чтобы очистить разностных групп строк.  Сочетании с других удаления и слияния дефрагментации компонентов делает его более не является необходимым для перестроения индекса в большинстве случаев.    
 
 -   ON принудительно отправить все группы строк в columnstore независимо от размера и состояние ("ЗАКРЫТ" или "ОТКРЫТЬ").  
   
@@ -642,7 +647,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  Индекс нельзя реорганизовать или перестроить, если файловая группа, в которой он находится, размещена вне сети или предназначена только для чтения. Если указывается ключевое слово ALL, а один или несколько индексов находятся в файловой группе, которая размещена вне сети или предназначена только для чтения, то выполнить инструкцию не удастся.  
   
 ## <a name="rebuilding-indexes"></a>Перестроение индексов  
- При перестроении старый индекс удаляется и создается новый. Таким образом, устраняется фрагментация, восстанавливается место на диске путем сжатия страниц с учетом указанного или существующего коэффициента заполнения, переупорядочиваются индексные строки в последовательных страницах. Если указывается ключевое слово ALL, то все индексы для таблицы удаляются и перестраиваются в одной транзакции. Ограничения FOREIGN KEY не обязательно отменять заранее. Если перестраиваются индексы с 128 или большим числом экстентов, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает процедуры освобождения страниц и связанные с ними блокировки до фиксации транзакции.  
+ При перестроении старый индекс удаляется, и создается новый. Таким образом, устраняется фрагментация, восстанавливается место на диске путем сжатия страниц с учетом указанного или существующего коэффициента заполнения, переупорядочиваются индексные строки в последовательных страницах. Если указывается ключевое слово ALL, то все индексы для таблицы удаляются и перестраиваются в одной транзакции. Ограничения FOREIGN KEY не обязательно отменять заранее. Если перестраиваются индексы с 128 или большим числом экстентов, то компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] откладывает процедуры освобождения страниц и связанные с ними блокировки до фиксации транзакции.  
   
  Перестроение или реорганизация малых индексов часто не приводит к уменьшению фрагментации. Страницы индексов малого размера хранятся в смешанных экстентах. Смешанные экстенты могут находиться в общем пользовании у восьми объектов, поэтому фрагментацию в малом индексе нельзя уменьшить путем его реорганизации или перестроения.  
   
@@ -763,7 +768,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 -   ALTER INDEX \<index >... Инструкция REBUILD PARTITION ... производит перестроение указанной секции индекса.  
 -   ALTER INDEX \<index >... Инструкция REBUILD WITH ... производит перестроение всех секций индекса.  
   
-## <a name="statistics"></a>Статистика  
+## <a name="statistics"></a>Statistics  
  При выполнении **инструкция ALTER INDEX ALL...** в таблице обновляются только статистические данные связаны с индексами. Автоматические или созданные вручную статические данные таблицы (вместо индекса) не обновляются.  
   
 ## <a name="permissions"></a>Разрешения  
@@ -880,9 +885,9 @@ ALTER INDEX cci_FactInternetSales2 ON FactInternetSales2 REORGANIZE PARTITION = 
 ```  
   
 ### <a name="c-compress-all-open-and-closed-delta-rowgroups-into-the-columnstore"></a>В. Сжатие всех ОТКРЫТЫХ и ЗАКРЫТЫ разностных групп строк в columnstore  
- Не применяется к: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
+ **Применяется к:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) и[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 
   
- Начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], можно запустить REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) для сжатия каждого ОТКРЫТИЯ и ЗАКРЫТО разностную группу строк; в качестве сжатая группа строк columnstore. Это очищает таблиц deltastore и перемещает все строки, чтобы получить сжатия в columnstore. Это полезно особенно после выполнения многих операций insert, так как эти операции хранения строк в одну или несколько deltastore.  
+ Команда REORGANIZE WITH (COMPRESS_ALL_ROW_GROUPS = ON) compreses каждого ОТКРЫТЫХ и ЗАКРЫТЫХ разностной группы строк в columnstore в сжатую группу строк. Это очищает таблиц deltastore и перемещает все строки, чтобы получить сжатия в columnstore. Это полезно особенно после выполнения многих операций insert, так как эти операции хранения строк в одну или несколько deltastore.  
   
  REORGANIZE объединяет группы строк для заполнения группы строк до максимального числа строк \<= 1,024,576. Таким образом после сжатия всех групп строк OPEN» и «ЗАКРЫТО вы не получаете большое количество сжатых группах строк, которые имеют только небольшое число строк в них. Вы хотите rowgroups как полными максимально сократить размер в сжатом виде и повысить производительность запросов.  
   
@@ -1163,7 +1168,7 @@ GO
    ALTER INDEX test_idx on test_table ABORT ;
    ``` 
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [CREATE INDEX (Transact-SQL)](../../t-sql/statements/create-index-transact-sql.md)   
  [Создание ПРОСТРАНСТВЕННОГО ИНДЕКСА &#40; Transact-SQL &#41;](../../t-sql/statements/create-spatial-index-transact-sql.md)   
  [СОЗДАТЬ XML-индекс &#40; Transact-SQL &#41;](../../t-sql/statements/create-xml-index-transact-sql.md)   

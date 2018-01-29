@@ -15,12 +15,12 @@ ms.suite: sql
 ms.tgt_pltfrm: na
 ms.topic: article
 ms.assetid: a10b2884-468e-41ef-bd59-8df894381254
-caps.latest.revision: "41"
-ms.openlocfilehash: 234c1ee3b13f3440e3f8a0377f3423ccf937acbc
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+caps.latest.revision: 
+ms.openlocfilehash: cc95a4f26970b91f2346e3edfcfa937190694b43
+ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-windows-server-update-services-wsus"></a>Настройка Windows Server Update Services (WSUS)
 Эти инструкции пошаговые инструкции по использованию мастера настройки Windows Server Update Services (WSUS) для настройки служб WSUS для Analytics Platform System. Необходимо настроить службы WSUS, перед применением обновлений программного обеспечения с устройством. На виртуальной машине VMM устройства уже установлена служба WSUS.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
     1.  В **панели мониторинга диспетчера сервера**на **средства** меню, нажмите кнопку **Windows Server Update Services**.  
   
-    2.  В левой области **Update Services** окна, разверните узел сервера управления виртуальными машинами (***appliance_domain*- VMM**) и нажмите кнопку **Параметры**.  
+    2.  В левой области **Update Services** окна, разверните узел сервера управления виртуальными машинами (***appliance_domain *-VMM**), а затем нажмите кнопку **параметры**.  
   
     3.  В **параметры** области, нажмите кнопку **мастер настройки сервера WSUS** для запуска мастера настройки.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/21/2017
   
     5.  Просмотрите **перед началом** список элементов для выполнения до завершения работы мастера.  
   
-        ![WSUS перед началом](./media/configure-windows-server-update-services-wsus/WSUS_Wiz2.png "WSUS_Wiz2")  
+        ![WSUS Before You Begin](./media/configure-windows-server-update-services-wsus/WSUS_Wiz2.png "WSUS_Wiz2")  
   
     6.  На **присоединиться к программе улучшения Microsoft Update** выберите **Да, я хочу присоединиться к программе улучшения Microsoft Update**, а затем нажмите кнопку **Далее**.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/21/2017
   
     Теперь вы увидите **Выбор вышестоящего сервера** страницы. Следующий снимок экрана является отправной точкой мастера настройки.  
   
-    ![Синхронизация с вышестоящим сервером WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+    ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
 4.  Выбор вышестоящего сервера.  
   
@@ -91,7 +91,7 @@ ms.lasthandoff: 12/21/2017
   
     1.  Если выбран для синхронизации с центром обновления Майкрософт, необходимо внести изменения в **Выбор вышестоящего сервера** страницы. Нажмите кнопку **Далее**.  
   
-        ![Синхронизация с вышестоящим сервером WSUS](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
+        ![WSUS Upstream Server Sync](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
     #### <a name="to-update-from-another-wsus-server"></a>Для обновления с другого сервера WSUS  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 12/21/2017
   
     Выберите **английского**, а затем нажмите кнопку **Далее**.  
   
-    ![Выбор языков](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
+    ![Choose languages](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseLanguages.png "SQL_Server_PDW_WSUSChooseLanguages")  
   
 8.  Выберите продукты.  
   
@@ -148,7 +148,7 @@ ms.lasthandoff: 12/21/2017
   
     Снимите флажки для всех выбранных обновлений.  
   
-    Выберите **SQL Server 2014**, **Windows Server 2012 R2**, и **System Center 2012 R2 — диспетчер виртуальных машин**, а затем нажмите кнопку **Далее**.  
+    Выберите **SQL Server 2014**, **SQL Server 2016**, **Windows Server 2012 R2**, и **System Center 2012 R2 — Virtual Machine Manager**, и Нажмите кнопку **Далее**.  
   
 9. Выберите классификации.  
   
@@ -159,13 +159,13 @@ ms.lasthandoff: 12/21/2017
   
     Выберите **критические обновления** и **обновления для системы безопасности** обновлений, которые будут синхронизированы для устройства система платформы аналитики и нажмите кнопку **Далее**.  
   
-    ![Выберите классификации](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Choose classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. Настройте расписание синхронизации.  
   
     Выберите **вручную синхронизировать**, а затем нажмите кнопку **Далее**.  
   
-    ![Задайте расписание синхронизации](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
+    ![Set sync schedule](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSyncSchedule.png "SQL_Server_PDW_WSUSSyncSchedule")  
   
 11. Запустить первоначальную синхронизацию.  
   
@@ -185,7 +185,7 @@ ms.lasthandoff: 12/21/2017
   
 1.  Откройте консоль служб WSUS, щелкните правой кнопкой мыши **все компьютеры** и нажмите кнопку **добавить группу компьютеров**.  
   
-    ![Добавьте группу компьютеров. ] (./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
+    ![Add a computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
 2.  Введите имя для группы компьютеров «APS» и нажмите кнопку **добавить**.  
   
@@ -201,7 +201,7 @@ ms.lasthandoff: 12/21/2017
   
 5.  Выберите группу компьютеров, создать, щелкнув флажок и нажмите кнопку **ОК**.  
   
-    ![Членства в группе компьютеров набор](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![Set Computer Group Membership](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Выберите новую группу компьютеров, изменить его **состояние** для **любой**и нажмите кнопку **обновление**. Теперь все компьютеры должны назначены этой группе и правой панели. Обычно безопасно продолжать, если узлы показывать предупреждения, такие как **этот узел еще не сообщил состояние**.  
   
