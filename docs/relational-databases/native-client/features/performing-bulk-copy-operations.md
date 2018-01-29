@@ -17,16 +17,16 @@ helpviewer_keywords:
 - SQL Server Native Client, bulk copy operations
 - SQLNCLI, bulk copy operations
 ms.assetid: 50d8456b-e6a1-4b25-bc7e-56946ed654a7
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2c6070899aab81b6e3cef56a7c6320934d57a21d
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ea17b70786b4b059417c8cf0f8b514fc6a6208e4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-bulk-copy-operations"></a>Выполнение операций массового копирования
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **ISupportErrorInfo**  
   
--   **Интерфейс ITransactionJoin**  
+-   **ITransactionJoin**  
   
  Чтобы отключить создание набора строк с включенным массовым копированием и вернуть сеанс поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] к обычной обработке, задайте для свойства SSPROP_ENABLEFASTLOAD значение VARIANT_FALSE.  
   
@@ -96,7 +96,7 @@ ms.lasthandoff: 01/08/2018
   
 -   **IColumnsRowset**  
   
--   **Интерфейс IConvertType**  
+-   **IConvertType**  
   
 -   **IRowsetFastLoad**  
   
@@ -104,9 +104,9 @@ ms.lasthandoff: 01/08/2018
   
 -   **ISupportErrorInfo**  
   
- Свойства SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS и SSPROP_FASTLOADKEEPIDENTITY, зависящие от поставщика, управляют режимом работы набора строк для массового копирования поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Свойства указаны в *rgProperties* членом *rgPropertySets***IOpenRowset**член параметра.  
+ Свойства SSPROP_FASTLOADOPTIONS, SSPROP_FASTLOADKEEPNULLS и SSPROP_FASTLOADKEEPIDENTITY, зависящие от поставщика, управляют режимом работы набора строк для массового копирования поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Свойства указаны в *rgProperties* членом * rgPropertySets ***IOpenRowset**член параметра.  
   
-|Идентификатор свойства|Description|  
+|Идентификатор свойства|Описание|  
 |-----------------|-----------------|  
 |SSPROP_FASTLOADKEEPIDENTITY|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: значение VARIANT_FALSE<br /><br /> Описание: Поддерживает значения идентификаторов, указанные потребителем.<br /><br /> VARIANT_FALSE: Значения для столбца идентификаторов в [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] таблицы, созданные [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Любое значение, привязанное к обрабатывает этот столбец [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] поставщика OLE DB для собственного клиента.<br /><br /> VARIANT_TRUE: Потребитель привязывает метод доступа, указав значение для [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] столбца идентификаторов. Свойство идентификатора недоступно для столбцов, допускающих значение NULL, так что потребитель предоставляет уникальное значение для каждого **IRowsetFastLoad::Insert** вызова.|  
 |SSPROP_FASTLOADKEEPNULLS|Столбец: нет<br /><br /> R Чтение и запись: чтение и запись<br /><br /> Тип: VT_BOOL<br /><br /> По умолчанию: значение VARIANT_FALSE<br /><br /> Описание: Поддерживает значение NULL для столбцов с ограничением по умолчанию. Затрагивает только столбцы [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], которые допускают значение NULL и к которым применено ограничение DEFAULT.<br /><br /> VARIANT_FALSE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вставляет значение по умолчанию для столбца при вставке потребителем поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] строки, содержащей значение NULL для столбца.<br /><br /> VARIANT_TRUE: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] вставляет значение NULL для значения столбца при вставке потребителем поставщика OLE DB для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] строки, содержащей значение NULL для столбца.|  
@@ -118,7 +118,7 @@ ms.lasthandoff: 01/08/2018
 ## <a name="sql-server-native-client-odbc-driver"></a>Драйвер ODBC для собственного клиента SQL Server  
  Драйвер ODBC для собственного клиента [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] обеспечивает такую же поддержку операций массового копирования, которые были частью предыдущих версий драйвера ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Дополнительные сведения об операциях массового копирования с помощью [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] драйвер ODBC собственного клиента в разделе [выполнение операций массового копирования &#40; ODBC &#41;](../../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Компоненты собственного клиента SQL Server](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Свойства источника данных &#40; OLE DB &#41;](../../../relational-databases/native-client-ole-db-data-source-objects/data-source-properties-ole-db.md)   
  [Массовый импорт и экспорт данных (SQL Server)](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   

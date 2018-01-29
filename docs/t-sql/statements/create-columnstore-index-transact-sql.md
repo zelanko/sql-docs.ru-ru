@@ -8,7 +8,8 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -22,23 +23,24 @@ f1_keywords:
 - CREATE COLUMNSTORE INDEX
 - CREATE_CLUSTERED_COLUMNSTORE_INDEX_TSQL
 - COLUMNSTORE
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - index creation [SQL Server], columnstore indexes
 - columnstore index, creating
 - CREATE COLUMNSTORE INDEX statement
 - CREATE INDEX statement
 ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
-caps.latest.revision: "76"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: fd51d2a902337b232f5bf9497f5ebd0bbcac9199
-ms.sourcegitcommit: 0e305dce04dcd1aa83c39328397524b352c96386
+ms.openlocfilehash: ccf03c6b2d3d7798f3bad65b340657bf2b21b751
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -123,7 +125,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
   
 Если в таблице уже есть кластеризованный индекс, можно указать то же имя, что и существующий индекс или удалить СУЩЕСТВУЮЩИЙ параметр можно использовать для указания нового имени.  
   
-ON [*имя_базы_данных*. [*schema_name* ]. | *schema_name* . ] *имя_таблицы*  
+ON [*имя_базы_данных*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Задает одно-, двух- или трехкомпонентное имя таблицы, которая должна быть сохранена как кластеризованный индекс columnstore. Если таблица является кучей или кластеризованный индекс таблицы преобразуется из rowstore в ColumnStore. Если таблица уже columnstore, эта инструкция перестраивает кластеризованный индекс.  
   
 на  
@@ -171,10 +173,10 @@ ON
    *filegroup_name*  
    Указывает файловую группу для хранения кластеризованного индекса columnstore. Если местоположение не указано и таблица не секционирована, индекс использует ту же файловую группу, что и базовая таблица или представление. Файловая группа должна существовать.  
 
-   **«**по умолчанию**»**  
+   **"**default**"**  
    Чтобы создать индекс в файловой группе по умолчанию, используйте «default» или [default].  
   
-   Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. QUOTED_IDENTIFIER по умолчанию равен ON. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+   Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. QUOTED_IDENTIFIER по умолчанию равен ON. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
 СОЗДАНИЕ ИНДЕКСА COLUMNSTORE [НЕКЛАСТЕРИЗОВАННЫЙ]  
 Создать в памяти некластеризованный индекс columnstore в таблице rowstore хранятся в виде кучи или кластеризованного индекса. Индекс может иметь отфильтрованное условие и не должны включать все столбцы базовой таблицы. Индекс columnstore требуется достаточно места для хранения копии данных. Он может обновляться и обновляется по мере изменения базовой таблицы. Некластеризованный индекс columnstore в кластеризованном индексе позволяет аналитика в реальном времени.  
@@ -186,7 +188,7 @@ ON
     Задает столбцы для хранения. Некластеризованный индекс columnstore является более 1024 столбцов.  
    Каждый столбец должен иметь поддерживаемый тип данных для индексов columnstore. В разделе [ограничения](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest) список поддерживаемых типов данных.  
 
-ON [*имя_базы_данных*. [*schema_name* ]. | *schema_name* . ] *имя_таблицы*  
+ON [*имя_базы_данных*. [*schema_name* ] . | *schema_name* . ] *table_name*  
    Указывает одно-, двух- или трехкомпонентное имя таблицы, содержащей индекс.  
 
 С ПОМОЩЬЮ ИНСТРУКЦИИ DROP_EXISTING = [OFF] | ON  
@@ -255,12 +257,12 @@ ON
 *filegroup_name*  
    Указывает имя файловой группы, в которой создается индекс. Если *filegroup_name* не указано и таблица не секционирована, индекс использует ту же файловую группу, что и базовая таблица. Файловая группа должна существовать.  
  
-**«**по умолчанию**»**  
+**"**default**"**  
 Создает заданный индекс в файловой группе, используемой по умолчанию.  
   
-Слово «default» в этом контексте не является ключевым. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, как в выражениях ON **»**по умолчанию**»** или ON **[**по умолчанию**]**. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в статье [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
+Слово «default» в этом контексте не является ключевым. Он представляет собой идентификатор файловой группы по умолчанию и должен иметь разделители, как в выражениях ON **»**по умолчанию**»** или ON **[**по умолчанию**]**. Если указано значение «default» (по умолчанию), параметр QUOTED_IDENTIFIER должен иметь значение ON для текущего сеанса. Это параметр по умолчанию. Дополнительные сведения см. в разделе [SET QUOTED_IDENTIFIER (Transact-SQL)](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Разрешения  
  Требуется разрешение ALTER на таблицу.  
   
 ##  <a name="GenRemarks"></a>Общие замечания  
@@ -275,7 +277,7 @@ ON
 - Операция INSERT, UPDATE, DELETE или MERGE изменяет данные в отфильтрованном индексе.  
 - Отфильтрованный индекс используется оптимизатором запросов для создания плана запроса.  
   
-    |Задание параметров|Обязательное значение|Значение сервера по умолчанию|Default<br /><br /> Значение OLE DB и ODBC|Default<br /><br /> Значение DB-Library|  
+    |Параметры SET|Обязательное значение|Значение сервера по умолчанию|По умолчанию<br /><br /> Значение OLE DB и ODBC|По умолчанию<br /><br /> Значение DB-Library|  
     |-----------------|--------------------|--------------------------|---------------------------------------|-----------------------------------|  
     |ANSI_NULLS|ON|ON|ON|OFF|  
     |ANSI_PADDING|ON|ON|ON|OFF|  
@@ -297,25 +299,25 @@ ON
   
  Дополнительные сведения об отфильтрованных индексах см. в разделе [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md). 
   
-##  <a name="LimitRest"></a> ограничения  
+##  <a name="LimitRest"></a> Ограничения  
 
 **Каждый столбец в индекс columnstore должен иметь одно из следующих распространенных типов данных бизнеса:** 
 -   DateTimeOffset [(  *n*  )]  
 -   datetime2 [(  *n*  )]  
--   DATETIME  
+-   datetime  
 -   smalldatetime  
--   Дата  
+-   date  
 -   время [(  *n*  )]  
 -   число с плавающей запятой [(  *n*  )]  
 -   реальные [(  *n*  )]  
 -   Decimal [( *точности* [ *, масштаб* ] **)** ]
 -   числовые [( *точности* [ *, масштаб* ] **)** ]    
 -   money  
--   SMALLMONEY  
--   BIGINT  
--   ssNoversion  
+-   smallmoney  
+-   bigint  
+-   int  
 -   smallint  
--   TINYINT  
+-   tinyint  
 -   bit  
 -   nvarchar [(  *n*  )] 
 -   nvarchar(max) (применяется к [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] и базы данных SQL Azure на premium ценовую категорию, кластеризованные индексы columnstore только)   
@@ -622,7 +624,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
  После создания некластеризованного индекса columnstore в таблице нельзя непосредственно изменять данные в этой таблице. Запрос с помощью инструкции INSERT, UPDATE, DELETE или MERGE завершается неудачей и возвращает сообщение об ошибке. Для добавления или изменения данных в таблице можно воспользоваться одним из следующих способов.  
   
--   Отключить или удалить индекс columnstore. Затем можно обновлять данные в таблице. Если отключить индекс columnstore, то можно перестроить его после окончания обновления данных. Например,  
+-   Отключить или удалить индекс columnstore. Затем можно обновлять данные в таблице. Если отключить индекс columnstore, то можно перестроить его после окончания обновления данных. Например:  
   
     ```  
     ALTER INDEX mycolumnstoreindex ON mytable DISABLE;  

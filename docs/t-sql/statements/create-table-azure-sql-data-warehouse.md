@@ -8,21 +8,23 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: t-sql|statements
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 42b3f397fa93b2134594e10476138d5d30e0015f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f6e639bf97ed132b6ace7128b4cbe9b6f3ce474e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>Создание таблицы (хранилище данных Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -109,7 +111,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
    
 ### <a name="ColumnOptions"></a>Параметры столбца
 
- `COLLATE`*Windows_collation_name*  
+ `COLLATE` *Windows_collation_name*  
  Задает параметры сортировки для выражения. Параметры сортировки должен быть одним из параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Список параметров сортировки Windows, поддерживаемых [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в разделе [имя параметров сортировки Windows (Transact-SQL)](http://msdn.microsoft.com/library/ms188046\(v=sql11\)/).  
   
  `NULL` | `NOT NULL`  
@@ -274,7 +276,7 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  16-байтовый идентификатор GUID.  
    
 <a name="Permissions"></a>  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Создание таблицы требуется разрешение в `db_ddladmin` предопределенной роли базы данных или:
  - `CREATE TABLE`разрешение в базе данных
  - `ALTER SCHEMA`разрешения на схему, которая будет содержать таблицу. 
@@ -447,7 +449,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a>Ж. Создание реплицированной таблицы  
+### <a name="Replicated"></a> G. Создание реплицированной таблицы  
  В следующем примере создается реплицированной таблицы, как в предыдущих примерах. Реплицированные таблицы копируются в полном объеме на каждом вычислительном узле. С этой копии на каждом вычислительном узле перемещения данных уменьшается для запросов. В этом примере создается с КЛАСТЕРИЗОВАННЫМ ИНДЕКСОМ, который обеспечивает более высокую степень сжатия данных, чем кучи и не может содержать достаточно строк, чтобы получить хорошее сжатие КЛАСТЕРИЗОВАННЫЙ индекс COLUMNSTORE.  
   
 ```  
@@ -467,7 +469,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>Примеры для секционированных таблиц
 
-###  <a name="PartitionedTable"></a>З. Создание секционированной таблицы  
+###  <a name="PartitionedTable"></a> H. Создание секционированной таблицы  
  В следующем примере создается той же таблицы, как показано в примере А, с добавлением секционирования RANGE LEFT для `id` столбца. Он указывает четыре граничные значения секционирования, что приводит к пять секций.  
   
 ```  
@@ -501,7 +503,7 @@ WITH
 -   Секции 4:30 < = col < 40   
 -   Секции 5:40 < = col  
   
-### <a name="OnePartition"></a>Я. Создайте секционированную таблицу с одной секцией  
+### <a name="OnePartition"></a> I. Создайте секционированную таблицу с одной секцией  
  В следующем примере создается секционированную таблицу с одной секцией. Оно не указывает все значения границ, что приводит к одной секции.  
   
 ```  
@@ -517,7 +519,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a>ДЖ. Создайте таблицу с секционированием даты  
+### <a name="DatePartition"></a> J. Создайте таблицу с секционированием даты  
  Следующий пример создает новую таблицу с именем `myTable`, с секционированием по `date` столбца. С помощью RANGE RIGHT и дат в качестве граничных значений, он помещает месяц данных в каждой секции.  
   
 ```  
