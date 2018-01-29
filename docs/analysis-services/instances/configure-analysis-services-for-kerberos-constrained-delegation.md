@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -90,7 +90,7 @@ ms.lasthandoff: 01/08/2018
   
 4.  На странице «Выбор пользователей или компьютеров» введите имя учетной записи, используемой для запуска экземпляра SQL Server, который содержит табличные шаблоны баз данных служб Analysis Services. Нажмите кнопку **ОК** , чтобы подтвердить учетную запись службы.  
   
-     Если учетную запись выбрать не удается, убедитесь, что SQL Server запущен и имеет имя участника-службы, зарегистрированное для этой учетной записи. Дополнительные сведения об именах участников-служб для базы данных см. в разделе [Register a Service Principal Name for Kerberos Connections](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
+     Если учетную запись выбрать не удается, убедитесь, что SQL Server запущен и имеет имя участника-службы, зарегистрированное для этой учетной записи. Дополнительные сведения об именах участников-служб для базы данных см. в разделе [Регистрация имя участника-службы для соединений Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).  
   
      ![SSAS_Kerberos_3_SelectUsers](../../analysis-services/instances/media/ssas-kerberos-3-selectusers.gif "SSAS_Kerberos_3_SelectUsers")  
   

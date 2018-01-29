@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.fn_get_audit_file_TSQL
 - fn_get_audit_file
 - sys.fn_get_audit_file
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.fn_get_audit_file function
 - fn_get_audit_file function
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: de090736f4ddbf1ab2191b887fe8ea034af2b5f9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4ac4372d753bdc9fde231d2ec08daa957771dc46
+ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/26/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,14 +89,14 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  В следующей таблице описано содержимое файла аудита, которое может возвращаться этой функцией.  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |event_time|**datetime2**|Дата и время срабатывания действия, доступного для аудита. Не допускает значение NULL.|  
 |sequence_number|**int**|Отслеживает последовательность записей в одной записи аудита, слишком большой, чтобы уместиться в буфере записи для аудитов. Не допускает значение NULL.|  
 |action_id|**varchar(4)**|Идентификатор действия. Не допускает значение NULL.|  
-|succeeded|**bit**|Показывает, было ли успешным действие, запустившее событие. Не допускает значение NULL. Для всех событий, отличных от событий имени входа, при этом формируются только сообщения о том, была ли проверка разрешения выполнена успешно или окончилась неудачей, а не сообщения о самой операции.<br /> 1 = успешное завершение;<br /> 0 = неуспешное завершение.|  
+|succeeded|**бит**|Показывает, было ли успешным действие, запустившее событие. Не допускает значение NULL. Для всех событий, отличных от событий имени входа, при этом формируются только сообщения о том, была ли проверка разрешения выполнена успешно или окончилась неудачей, а не сообщения о самой операции.<br /> 1 = успешное завершение;<br /> 0 = неуспешное завершение.|  
 |permission_bitmask|**varbinary(16)**|В некоторых действиях это предоставленные, запрещенные или отмененные разрешения.|  
-|is_column_permission|**bit**|Флаг, обозначающий разрешение уровня столбца. Не допускает значение NULL. Возвращает 0, если permission_bitmask = 0.<br /> 1 = true;<br /> 0 = false.|  
+|is_column_permission|**бит**|Флаг, обозначающий разрешение уровня столбца. Не допускает значение NULL. Возвращает 0, если permission_bitmask = 0.<br /> 1 = true;<br /> 0 = false.|  
 |session_id|**smallint**|Идентификатор сеанса, в котором произошло событие. Не допускает значение NULL.|  
 |server_principal_id|**int**|Идентификатор контекста имени входа, в котором выполнено действие. Не допускает значение NULL.|  
 |database_principal_id|**int**|Идентификатор контекста пользователя базы данных, в котором выполнено действие. Не допускает значение NULL. Поддерживает 0, если это неприменимо. Например, операция сервера.|  
@@ -120,7 +122,7 @@ fn_get_audit_file ( file_pattern,
 |user_defined_event_id|**smallint**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Определенный пользователем идентификатор события передается в качестве аргумента для **sp_audit_write**. **Значение NULL** системные события (по умолчанию) и ненулевое значение для определяемых пользователем событий. Дополнительные сведения см. в разделе [sp_audit_write &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md).|  
 |user_defined_information|**nvarchar(4000)**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Используется для записи любой дополнительной информации, которую пользователь хочет записи в |журнал аудита с помощью **sp_audit_write** хранимой процедуры.|  
 |audit_schema_version |**int** | |  
-|sequence_group_id |**nvarbinary** | Только SQL Server (начиная с 2016) |  
+|sequence_group_id |**varbinary** | Только SQL Server (начиная с 2016) |  
 |transaction_id |**bigint** | Только SQL Server (начиная с 2016) |  
 |client_ip |**nvarchar(128)** | Azure баз данных SQL Server и экземпляр SQL Server (начиная с 2017 г.) |  
 |application_name |**nvarchar(128)** | Azure баз данных SQL Server и экземпляр SQL Server (начиная с 2017 г.) |  
@@ -128,10 +130,10 @@ fn_get_audit_file ( file_pattern,
 |response_rows |**bigint** | Только базы данных Azure SQL |  
 |affected_rows |**bigint** | Только базы данных Azure SQL |  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если *file_pattern* аргумент, передаваемый **fn_get_audit_file** ссылается на путь или файл, который не существует, или если файл не является файлом аудита **MSG_INVALID_AUDIT_FILE**возвращается сообщение об ошибке.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  - **SQL Server**: требуется **CONTROL SERVER** разрешение.  
  - **База данных SQL Azure**: требуется **базы данных системы УПРАВЛЕНИЯ** разрешение.     
     - Администраторы серверов могут обращаться к журналам аудита всех баз данных на сервере.
@@ -178,7 +180,7 @@ fn_get_audit_file ( file_pattern,
 
 Сведения о настройке аудита базы данных SQL Azure см. в разделе [начало работы с аудитом базы данных SQL](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-auditing).
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Создание АУДИТА сервера &#40; Transact-SQL &#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40; Transact-SQL &#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
@@ -190,14 +192,14 @@ fn_get_audit_file ( file_pattern,
  [УДАЛИТЬ СПЕЦИФИКАЦИЮ АУДИТА базы данных &#40; Transact-SQL &#41;](../../t-sql/statements/drop-database-audit-specification-transact-sql.md)   
  [ALTER AUTHORIZATION &#40; Transact-SQL &#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   
  [sys.server_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audits-transact-sql.md)   
- [sys.server_file_audits &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
+ [sys.server_file_audits &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-file-audits-transact-sql.md)   
  [sys.server_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql.md)   
  [sys.server_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql.md)   
  [sys.database_audit_specifications &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql.md)   
- [sys.database_audit_specification_details &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
- [sys.dm_server_audit_status &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
- [sys.dm_audit_actions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
- [sys.dm_audit_class_type_map &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
+ [sys.database_audit_specification_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql.md)   
+ [sys.dm_server_audit_status &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql.md)   
+ [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md)   
+ [sys.dm_audit_class_type_map &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)   
  [Создание аудита сервера и спецификации аудита сервера](../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
   
