@@ -8,23 +8,24 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - columns [SQL Server], defaults
 - default values
 ms.assetid: 64514aed-b846-407b-992e-cf813f9a1a91
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0fcb6518d5655e86182203d2789b1e87c4c8ea81
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cf1826aba450948a08d695dc248ab7b35e215d41
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="specify-default-values-for-columns"></a>Указание значений по умолчанию для столбца
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -37,11 +38,11 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Задание значения по умолчанию с использованием:**  
   
@@ -61,9 +62,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Чтобы задать объект или функцию, введите имя объекта или функции без двойных кавычек.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -79,7 +80,7 @@ ms.lasthandoff: 11/17/2017
     > [!NOTE]  
     >  Чтобы задать численное значение по умолчанию, введите число. В случае объекта или функции нужно ввести его или ее имя. Чтобы задать алфавитно-цифровое значение по умолчанию, введите его, заключив в одинарные кавычки.  
   
-4.  В меню **Файл** выберите пункт **Сохранить***table name*.  
+4.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

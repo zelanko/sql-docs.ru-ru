@@ -8,23 +8,24 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - monitoring [SQL Server], database mirroring
 - database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
-caps.latest.revision: "78"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7fd9182030c2be57d0d059a0807b06d24637cbba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c0133d9255da8fd0dfe9d373b717bf813bb17767
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Наблюдение за зеркальным отображением базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В данном разделе приводятся общие сведения о мониторе зеркального отображения баз данных и системных хранимых процедурах **sp_dbmmonitor**, описывается, как работает наблюдение за зеркальным отображением базы данных (включая **задание наблюдения за зеркальным отображением баз данных**), а также описаны сведения о сеансах зеркального отображения базы данных, которые можно получить при наблюдении. Кроме того, в данном разделе описывается определение пороговых значений предупреждений для набора стандартных событий зеркального отражения базы данных и установка предупреждений на любое событие зеркального отображения базы данных.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/20/2017
   
      В следующей таблице приведены хранимые процедуры для использования мониторинга зеркального отображения и управления им независимо от монитора зеркального отображения баз данных.  
   
-    |Процедура|Описание|  
+    |Процедура|Description|  
     |---------------|-----------------|  
     |[sp_dbmmonitoraddmonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md)|Создает задание, периодически обновляющее сведения о состоянии по каждой зеркально отображаемой базе данных на экземпляре сервера.|  
     |[sp_dbmmonitorchangemonitoring](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)|Изменяет значение параметра мониторинга зеркального отображения базы данных.|  
@@ -174,7 +175,7 @@ ms.lasthandoff: 11/20/2017
   
     -   Синхронизация  
   
-    -   Синхронизировано  
+    -   синхронизировано;  
   
     -   Приостановлена  
   

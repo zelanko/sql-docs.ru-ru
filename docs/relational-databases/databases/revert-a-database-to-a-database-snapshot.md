@@ -8,36 +8,37 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - database snapshots [SQL Server], reverting to
 - reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
-caps.latest.revision: "58"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ebcff5d0d885fe580af9ac0b14d81e7b4ad2746
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a93fde67cfb08245607153afbddaffd1aca6669
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Восстановление базы данных до состояния, сохраненного в моментальном снимке
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При повреждении данных в базе данных в сети в некоторых случаях вместо восстановления базы данных из резервной копии будет уместно восстановить базу данных из моментального снимка базы данных, соответствующего времени, предшествующему повреждению. Например, с помощью возврата базы данных можно устранить такую серьезную недавнюю ошибку пользователя, как удаление таблицы. Однако все изменения данных, внесенные после создания моментального снимка, будут утеряны.  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
      [Предварительные требования](#Prerequisites)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
--   **Восстановление моментального снимка базы данных из базы данных с помощью**  [Transact-SQL](#TsqlProcedure)  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/17/2017
   
  Перед тем как выполнять возврат, нужно учитывать следующие ограничения.  
   
--   Возврат не предназначен для восстановления носителей. . Моментальный снимок базы данных — это неполная копия файлов базы данных, поэтому в случае, если база данных или ее снимок будут повреждены, вероятно, возврат к снимку станет невозможным. Кроме того, даже если возврат возможен, в случае повреждения он вряд ли устранит проблему. Таким образом, создание регулярных резервных копий и тестирование плана восстановления абсолютно необходимы для защиты базы данных. Дополнительные сведения см. в разделе [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
+-   Возврат не предназначен для восстановления носителей. , и делает это по-другому. Моментальный снимок базы данных — это неполная копия файлов базы данных, поэтому в случае, если база данных или ее снимок будут повреждены, вероятно, возврат к снимку станет невозможным. Кроме того, даже если возврат возможен, в случае повреждения он вряд ли устранит проблему. Таким образом, создание регулярных резервных копий и тестирование плана восстановления абсолютно необходимы для защиты базы данных. Дополнительные сведения см. в разделе [Back Up and Restore of SQL Server Databases](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).  
   
     > [!NOTE]  
     >  Если необходима возможность восстановления базы данных-источника на момент времени, в который был создан моментальный снимок базы данных, используйте модель полного восстановления и реализуйте политику резервного копирования, позволяющую это сделать.  
@@ -84,9 +85,9 @@ ms.lasthandoff: 11/17/2017
   
 -   Удалите все прочие моментальные снимки, существующие в базе данных. Дополнительные сведения см. в разделе [Удаление моментального снимка базы данных (Transact-SQL)](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Возвратить базу данных-источник к состоянию на момент создания моментального снимка базы данных может любой пользователь с разрешением RESTORE DATABASE.  
   
 ##  <a name="TsqlProcedure"></a> Как восстановить базу данных до моментального снимка базы данных (с использованием Transact-SQL)  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/17/2017
   
      Чтобы выполнить операцию восстановления базы данных-источника, необходимо обладать разрешением RESTORE DATABASE. Чтобы восстановить базу данных, необходимо ввести следующую инструкцию Transact-SQL.  
   
-     RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
+     RESTORE DATABASE *имя_базы_данных* FROM DATABASE_SNAPSHOT **=***имя_моментального_снимка_базы_данных*  
   
      где *database_name* — это база данных-источник, а *database_snapshot_name* — имя моментального снимка, к состоянию на момент создания которого необходимо восстановить базу данных. Обратите внимание, что в данной инструкции необходимо задавать имя моментального снимка, а не устройство резервного копирования.  
   

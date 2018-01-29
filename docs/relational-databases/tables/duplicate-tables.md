@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - duplicating tables
 - table copying [SQL Server]
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 9db762ed0d7318a87ba164b9976ff0561c4132bd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fa4c6d694e5575eba76dee5966016d3cfee18c4a
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="duplicate-tables"></a>Дублирование таблиц
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,9 +39,9 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Дублирование таблицы с помощью следующих средств:**  
   
@@ -50,9 +51,9 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требуется разрешение CREATE TABLE в целевой базе данных.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/17/2017
   
 6.  В меню **Правка** выберите **Вставить**.  
   
-7.  В меню **Файл** выберите пункт **Сохранить***table name*.  
+7.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
   
 8.  В диалоговом окне **Выбор имени** введите имя новой таблицы и нажмите кнопку **ОК**.  
   

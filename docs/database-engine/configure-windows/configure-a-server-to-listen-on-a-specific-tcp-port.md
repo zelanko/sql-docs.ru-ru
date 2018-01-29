@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - dynamic ports [SQL Server]
 - TCP/IP [SQL Server], port numbers
 ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
-caps.latest.revision: "36"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: daec5ed8b8ea3aece68c5bcde3522e8e3f9de9f4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d536334958c3f027de7d2d7dd9c78213938cbfe2
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Настройка сервера для прослушивания определенного TCP-порта
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/20/2017
   
      ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  В диалоговом окне **Свойства***n* **Свойства** в поле **Порт TCP** введите номер порта, который необходимо прослушивать по данному IP-адресу и нажмите кнопку **ОК**.  
+4.  В диалоговом окне **Свойства** **IP***n* в поле **Порт TCP** введите номер порта, который нужно прослушивать по данному IP-адресу, и нажмите кнопку **ОК**.  
   
 5.  В области консоли выберите **Службы SQL Server**.  
   

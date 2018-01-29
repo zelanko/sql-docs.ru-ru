@@ -8,7 +8,8 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -32,16 +33,16 @@ helpviewer_keywords:
 - counters [SQL Server]
 - performance counters [SQL Server], listed
 ms.assetid: bcd731b1-3c4e-4086-b58a-af7a3af904ad
-caps.latest.revision: "56"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 753dae7515c2872dd9e4287a25d37f7da39946e3
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4a11f27ebd08fc7d1e7377f7d84fb5e3f95f4e13
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="use-sql-server-objects"></a>Использование объектов SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="SQLServerAgentPOs"></a> Объекты производительности агента SQL Server  
  Следующая таблица содержит список объектов измерения производительности для агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Объект производительности|Описание|  
+|Объект производительности|Description|  
 |------------------------|-----------------|  
 |[SQLAgent:Alerts](../../relational-databases/performance-monitor/sql-server-agent-alerts-object.md)|Предоставляет сведения о предупреждениях агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |[SQLAgent:Jobs](../../relational-databases/performance-monitor/sql-server-agent-jobs-object.md)|Предоставляет сведения о заданиях агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
@@ -87,7 +88,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="ServiceBrokerPOs"></a> Объекты производительности компонента Service Broker  
  Следующая таблица содержит список объектов измерения производительности для компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-|Объект производительности|Описание|  
+|Объект производительности|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Broker Activation](../../relational-databases/performance-monitor/sql-server-broker-activation-object.md)|Предоставляет сведения об активированных задачах компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
 |[SQLServer:Broker Statistics](../../relational-databases/performance-monitor/sql-server-broker-statistics-object.md)|Предоставляет общие сведения о компоненте [!INCLUDE[ssSB](../../includes/sssb-md.md)] .|  
@@ -96,7 +97,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="SQLServerPOs"></a> Объекты производительности SQL Server  
  В следующей таблице описаны объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Объект производительности|Описание|  
+|Объект производительности|Description|  
 |------------------------|-----------------|  
 |[SQLServer:Access Methods](../../relational-databases/performance-monitor/sql-server-access-methods-object.md)|Ищет и измеряет выделения ресурсов для объектов баз данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, число поисков в индексе или число страниц, выделенных для индексов и данных).|  
 |[SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)|Предоставляет сведения об устройствах резервного копирования, использующихся в операциях резервного копирования и восстановления, например пропускную способность устройства.|  
@@ -135,7 +136,7 @@ ms.lasthandoff: 11/17/2017
 ##  <a name="SQLServerReplicationPOs"></a> Объекты производительности репликации SQL Server  
  Следующая таблица содержит список объектов измерения производительности репликации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Объект производительности|Описание|  
+|Объект производительности|Description|  
 |------------------------|-----------------|  
 |**SQLServer: агенты репликации**<br /><br /> **SQLServer: моментальный снимок репликации**<br /><br /> **SQLServer: чтение журнала репликаций**<br /><br /> **SQLServer: распространитель репликации**<br /><br /> **SQLServer: репликация слиянием**<br /><br /> Дополнительные сведения см. в статье [Monitoring Replication with System Monitor](../../relational-databases/replication/monitor/monitoring-replication-with-system-monitor.md).|Содержит сведения о действиях агента репликации.|  
   

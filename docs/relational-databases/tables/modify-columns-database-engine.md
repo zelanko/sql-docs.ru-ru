@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - column data types [SQL Server]
 - data types [SQL Server], columns
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4c39a2a76c33fdb52d55aa73970db271b1c23bd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: ecb1fc7a70ee318e88354dfaf191227e104be62e
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-columns-database-engine"></a>Изменение столбцов (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -37,9 +38,9 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Изменение типа данных столбца с помощью следующих средств:**  
   
@@ -49,9 +50,9 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -64,7 +65,7 @@ ms.lasthandoff: 11/17/2017
   
 3.  На вкладке **Свойства столбца** выберите ячейку сетки для свойства **Тип данных** и выберите новый тип данных из раскрывающегося списка.  
   
-4.  В меню **Файл** выберите пункт **Сохранить***table name*.  
+4.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
   
 > [!NOTE]  
 >  При изменении типа данных столбца конструктор таблиц применяет длину типа данных, определенную по умолчанию для выбранного типа данных, даже если была указана другая длина. Всегда устанавливайте необходимое значение длины типа данных после того, как был указан тип данных.  

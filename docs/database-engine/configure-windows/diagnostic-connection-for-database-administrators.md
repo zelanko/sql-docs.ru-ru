@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - ports [SQL Server]
 - dedicated administrator connections [SQL Server]
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
-caps.latest.revision: "65"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81d35953fbdf67c20e857b3b7e4d29e57f0c1a4b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7b2ada96d38f3653433aca10f15bfb0e87f165ed
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Диагностическое соединение для администраторов баз данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предоставляет специальное диагностическое соединение для администраторов, когда стандартное соединение с сервером невозможно. Это диагностическое соединение позволяет администратору получить доступ к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для выполнения диагностических запросов и устранения проблем, даже когда [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не отвечает на стандартные запросы на соединение.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/27/2017
   
  Только члены роли [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sysadmin могут подключаться с использованием выделенного административного соединения.  
   
- Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром (**-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подключиться, добавив префикс **admin:** к имени экземпляра следующим образом: **sqlcmd -S admin:<*имя_экземпляра*>**. Соединение DAC можно также инициировать через редактор запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключившись к **admin:\<*имя_экземпляра*>**>.  
+ Выделенное административное соединение доступно и поддерживается через программу командной строки **sqlcmd** со специальным административным параметром (**-A**). Дополнительные сведения об использовании **sqlcmd** см. в разделе [Использование программы sqlcmd с переменными скрипта](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md). Можно также подключиться, добавив префикс **admin:** к имени экземпляра следующим образом: **sqlcmd -S admin:<*имя_экземпляра*>**. Соединение DAC можно также инициировать через редактор запросов среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], подключившись к **admin:\<*имя_экземпляра*>**.  
   
 ## <a name="restrictions"></a>Ограничения  
  Так как выделенное административное соединение существует только для диагностики проблем на сервере в редких обстоятельствах, у подключения есть некоторые ограничения.  

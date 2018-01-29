@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - displaying dependences
 - viewing dependencies
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 979ef92cdeac8a39ef35239f5b3f4b526cfbf69a
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 809c461b1f9599e0d46ab7a6175d7dbd4cdb06bc
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Просмотр зависимостей таблицы
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -35,9 +36,9 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Просмотр зависимостей таблицы с помощью следующих средств:**  
   
@@ -47,9 +48,9 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо разрешение VIEW DEFINITION в базе данных и разрешение SELECT на представление sys.sql_expression_dependencies в базе данных. По умолчанию разрешение SELECT предоставляется только членам предопределенной роли базы данных db_owner. Если разрешения SELECT и VIEW DEFINITION предоставлены другому пользователю, он может просматривать все зависимости в базе данных.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/17/2017
   
 2.  Щелкните таблицу правой кнопкой мыши и выберите **Просмотр зависимостей**.  
   
-3.  В диалоговом окне **Зависимости объектов***\<имя объекта>* выберите либо **Объекты, зависящие от** *\<имя объекта>*, либо **Объекты, от которых***\<имя объекта>***зависит от**.  
+3.  В диалоговом окне **Зависимости объектов***\<имя объекта>* выберите либо **Объекты, зависящие от** *\<имя объекта>*, либо **Объекты, от которых зависит***\<имя объекта>*****.  
   
 4.  Выберите объект в сетке **Зависимости** . Тип объекта (например, "Триггер" или "Хранимая процедура") появится в поле **Тип** .  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - indexes [SQL Server], moving
 - filegroups [SQL Server], switching
 ms.assetid: 167ebe77-487d-4ca8-9452-4b2c7d5cb96e
-caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: cb9a94e422fffebc132f7ab71c15f44b1f03b804
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6acddc36534c6f2277282e6c8aed3eeafd37d88b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Перемещение существующего индекса в другую файловую группу
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +37,11 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для перемещения существующего индекса в другую файловую группу используется:**  
   
@@ -56,10 +57,10 @@ ms.lasthandoff: 11/17/2017
   
 -   В среде [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]нельзя перемещать индексы, созданные с помощью ограничения UNIQUE или PRIMARY KEY. Для перемещения этих индексов используйте инструкцию [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) с параметром (DROP_EXISTING=ON) в [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
+####  <a name="Permissions"></a> Permissions  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   

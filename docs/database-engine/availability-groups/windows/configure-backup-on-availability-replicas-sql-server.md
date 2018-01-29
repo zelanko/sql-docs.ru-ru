@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - automated backup preference
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 90bf3971e9a4c796ece178f53b7eecab4a2a59a1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 51e23d647bd96cdb540223af2ef18cd6ba996c2c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-backup-on-availability-replicas-sql-server"></a>Настройка резервного копирования в репликах доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается настройка резервной копии вторичной реплики для группы доступности AlwaysOn с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -37,11 +38,11 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Дополнительные сведения см. в статье [Активные вторичные реплики: резервное копирование во вторичных репликах (группы доступности AlwaysOn)](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Предварительные требования](#Prerequisites)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Настройка резервного копирования во вторичных репликах с помощью:**  
   
@@ -62,9 +63,9 @@ ms.lasthandoff: 11/20/2017
 ###  <a name="Prerequisites"></a> Предварительные требования  
  Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 |Задача|Разрешения|  
 |----------|-----------------|  
@@ -133,11 +134,11 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
  **Настройка резервного копирования во вторичных репликах**  
   
-1.  Установите значение по умолчанию (**cd**) равным серверу экземпляра, на котором размещена первичная реплика.  
+1.  Установите в качестве значения по умолчанию (**cd**) экземпляр сервера, на котором размещена первичная реплика.  
   
 2.  При необходимости настройте приоритет каждой реплики доступности, которую необходимо добавить или изменить. Этот приоритет используется экземпляром сервера, на котором размещается первичная реплика, при принятии решения о том, какая реплика должна обработать запрос автоматического резервного копирования для базы данных в группе доступности (выбирается реплика с максимальным приоритетом). Значением приоритета может быть любое целое число от 0 до 100 включительно. Приоритет 0 указывает, что реплика не должна считаться кандидатом на обработку запросов резервного копирования.  Значение по умолчанию — 50.  
   
-     При добавлении реплики доступности в группу доступности воспользуйтесь командлетом **New-SqlAvailabilityReplica** . При изменении существующей реплики доступности воспользуйтесь командлетом **Set-SqlAvailabilityReplica** . В любом случае укажите параметр **BackupPriority***n* , где *n* представляет собой значение от 0 до 100.  
+     При добавлении реплики доступности в группу доступности воспользуйтесь командлетом **New-SqlAvailabilityReplica** . При изменении существующей реплики доступности воспользуйтесь командлетом **Set-SqlAvailabilityReplica** . В любом случае укажите параметр **BackupPriority***n*, где *n* представляет собой значение от 0 до 100.  
   
      Например, следующая команда присваивает приоритету резервного копирования реплики доступности `MyReplica` значение **60**.  
   
@@ -183,9 +184,9 @@ ms.lasthandoff: 11/20/2017
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Получение справок по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ##  <a name="FollowUp"></a> Дальнейшие действия. После настройки резервного копирования во вторичных репликах  
  Чтобы настройка автоматического резервного копирования учитывалась для данной группы доступности на каждом экземпляре сервера, где размещена реплика доступности, приоритет резервного копирования которой больше нуля (>0), необходимо создать скрипты заданий резервного копирования для баз данных в группе доступности. Чтобы определить, является ли текущая реплика предпочитаемой репликой резервного копирования, выполните функцию [sys.fn_hadr_backup_is_preferred_replica](../../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) в скрипте резервного копирования. Если реплика доступности, размещенная на текущем экземпляре сервера, является предпочтительной для резервного копирования, эта функция возвращает значение 1. В противном случае функция возвращает значение 0. С помощью простого скрипта для каждой реплики доступности, который запрашивает эту функцию, можно определить, какая реплика должна выполнять данное задание резервного копирования. Например, типичный фрагмент скрипта задания резервного копирования выглядит следующим образом:  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - detaching databases [SQL Server]
 - attaching databases [SQL Server]
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8c8ecbdfe7010a05da5b1dbdc3a0467c0f4da3a1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ca93272f5b9bf043c3a7cb0ed9a8c0a07bc1e853
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Перенос базы данных путем отсоединения и присоединения (язык Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается перемещение отсоединенной базы данных в другое местоположение и ее повторное присоединение к тому же или другому экземпляру сервера в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Однако рекомендуется переносить базы данных с помощью процедуры запланированного переноса ALTER DATABASE, а не путем отсоединения и присоединения. Дополнительные сведения см. в статье [Move User Databases](../../relational-databases/databases/move-user-databases.md).  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/17/2017
     > [!IMPORTANT]  
     >  При работе с производственными базами данных помещайте базу данных и журналы транзакций на отдельные диски.  
   
-     При копировании файлов по сети на диск удаленного компьютера укажите имя удаленного места в формате UNC. Имя UNC имеет следующий формат: **\\\\***имя_сервера***\\***имя_общего_хранилища***\\***путь***\\***имя_файла*. Как и при записи файлов на жесткий диск локального компьютера, для записи (или считывания) файла на диск удаленного компьютера учетной запись пользователя, которая используется экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должны быть предоставлены соответствующие разрешения.  
+     При копировании файлов по сети на диск удаленного компьютера укажите имя удаленного места в формате UNC. UNC-имя имеет следующий формат: **\\\\***имя_сервера***\\***имя_общего_ресурса***\\***путь***\\***имя_файла*. Как и при записи файлов на жесткий диск локального компьютера, для записи (или считывания) файла на диск удаленного компьютера учетной запись пользователя, которая используется экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], должны быть предоставлены соответствующие разрешения.  
   
 3.  Присоедините перемещенную базу данных и, возможно, ее журнал, выполнив следующие инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] :  
   

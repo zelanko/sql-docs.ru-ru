@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - database recovery [SQL Server]
 - database restores [SQL Server], point in time
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f5369a4984aa664263911001766046a3eb2a424b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: eb43b2630d4eebe0c101f616e7da71908c031ac7
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="recover-to-a-log-sequence-number-sql-server"></a>Восстановление до номера LSN (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Этот раздел относится только к тем базам данных, которые используют модель полного восстановления или восстановления с неполным протоколированием.  
@@ -69,11 +70,11 @@ ms.lasthandoff: 11/17/2017
 ## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>Синтаксис языка Transact-SQL при восстановлении до номера LSN  
  Инструкция [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) позволяет остановить восстановление на транзакции по номеру LSN или непосредственно перед ней следующим образом:  
   
--   Используйте предложение WITH STOPATMARK **='**lsn:*<lsn_number>***'**, где lsn:*\<lsnNumber>* — это строка, указывающая, что точкой восстановления является запись в журнале, которая содержит указанный номер LSN.  
+-   Используйте предложение WITH STOPATMARK **='**lsn:*<lsn_number>***'**, где lsn:*\<lsnNumber>* — это строка, указывающая, что точкой восстановления является запись в журнале, которая содержит указанный номер LSN.  
   
      Предложение STOPATMARK выполняет накат до номера LSN, включая указанную запись журнала.  
   
--   Используйте предложение WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'**, где lsn:*\<lsnNumber>* — это строка, указывающая, что запись журнала, стоящая непосредственно перед записью журнала, содержащей номер LSN, является точкой восстановления.  
+-   Используйте предложение WITH STOPBEFOREMARK **='**lsn:*<lsn_number>***'**, где lsn:*\<lsnNumber>* — это строка, указывающая, что запись журнала, стоящая непосредственно перед записью журнала, содержащей номер LSN, является точкой восстановления.  
   
      Параметр STOPBEFOREMARK выполняет накат до номера LSN, не включая в него указанную запись журнала.  
   

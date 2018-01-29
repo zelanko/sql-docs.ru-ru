@@ -8,23 +8,24 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - planar spatial data [SQL Server], getting started
 - geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
-caps.latest.revision: "27"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: e5c41d33b04553a63265313d0f380a98e15b9c79
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: ebfebc7ff04a526bd0a6aa7854b1d005dcad5f94
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-construct-and-query-geometry-instances"></a>Создание, конструирование и запрос экземпляров geometry
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Плоский пространственный тип данных **geometry** представляет данные в евклидовой (плоской) системе координат. В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]этот тип реализован как тип данных среды CLR.  
@@ -223,7 +224,7 @@ ms.lasthandoff: 11/17/2017
   
   
 ###  <a name="empty"></a> Пустой  
- *Пустой* объект **geometry** не имеет никаких точек. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна нулю. Площадь пустых экземпляров **Polygon**, **CurvePolygon**и **MultiPolygon** равна нулю.  
+ *Пустой объект ***geometry** не имеет никаких точек. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна нулю. Площадь пустых экземпляров **Polygon**, **CurvePolygon**и **MultiPolygon** равна нулю.  
   
  **Проверка, является ли экземпляр пустым**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
@@ -278,7 +279,7 @@ SELECT @g.STBoundary().ToString();
   
   
 ###  <a name="closure"></a> Замыкание  
- *Замкнутый* объект **geometry** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
+ *Замкнутый объект ***geometry** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
   
  Кольцо — это простой замкнутый экземпляр **LineString** .  
   

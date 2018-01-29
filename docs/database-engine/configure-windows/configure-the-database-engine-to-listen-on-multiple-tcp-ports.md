@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - tabular data stream
 - multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
-caps.latest.revision: "26"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee0dc1c49fd1bb0b61729614bb4ba87d1683a60c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7cde3b735d73b7e7a53948a67e77e7f7ca07da43
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Настройка компонента Database Engine на прослушивание нескольких портов TCP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описан процесс настройки компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)] для прослушивания нескольких портов на [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью диспетчера конфигурации SQL Server. При включении TCP/IP для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] будет прослушивать входящие соединения в точке соединения по IP-адресу и номеру порта TCP. В результате выполнения следующих процедур будет создана конечная точка потока табличных данных (TDS), чтобы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] мог прослушивать соединения на дополнительном порту TCP.  

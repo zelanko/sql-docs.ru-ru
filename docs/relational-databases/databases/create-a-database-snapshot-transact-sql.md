@@ -8,21 +8,23 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: database snapshots [SQL Server], creating
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
-caps.latest.revision: "56"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1f7597f066fa8346be7f5a7c95b75b7c18648ca9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 57985ae3903c8c27b702818897e9889ecc0c01bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>создать моментальный снимок базы данных (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Единственный способ создания моментального снимка базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] состоит в использовании [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] не поддерживает создание моментальных снимков базы данных.  
@@ -91,7 +93,7 @@ AdventureWorks_snapshot_evening
   
 
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Любой пользователь, который может создать базу данных, может создать и моментальный снимок базы данных. Однако для создания моментального снимка зеркальной базы данных необходимо быть членом предопределенной роли сервера **sysadmin** .  
   
 ##  <a name="TsqlProcedure"></a> Как создать моментальный снимок базы данных (с использованием языка Transact-SQL)  
@@ -119,7 +121,7 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     где *имя_**исходной_базы_данных* — это исходная база данных, *логическое_имя_файла*— это логическое имя, используемое в SQL Server при ссылке на файл, *имя_файла_ОС* — это путь и имя файла, используемые операционной системой при создании файла, а *имя_снимка_базы данных* — это имя снимка, на основе которого требуется восстановить базу данных. Полное описание этого синтаксиса см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Здесь *имя_**исходной_базы_данных* — это исходная база данных, *логическое_имя_файла* — это логическое имя, используемое в SQL Server при ссылке на файл, *имя_файла_ОС* — это путь и имя файла, используемые операционной системой при создании файла, а *имя_снимка_базы данных* — это имя снимка, на основе которого требуется восстановить базу данных. Полное описание этого синтаксиса см. в разделе [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
     >  При создании моментального снимка базы данных файлы журнала файлы в режиме вне сети, восстанавливаемые из копии файлы и нефункционирующие файлы являются недопустимыми в инструкции CREATE DATABASE.  

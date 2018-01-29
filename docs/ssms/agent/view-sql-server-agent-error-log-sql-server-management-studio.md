@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Agent, errors
 - errors [SQL Server Agent]
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7f3587e7262a4df9d4ce45a89cd925ff74eafb44
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: e34811ab5bdff948a59bcf69a7abc1f7d5b8827c
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе содержатся сведения о просмотре журнала ошибок агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
@@ -76,7 +77,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  Щелкните правой кнопкой журнал ошибок, который необходимо просмотреть, и выберите **Просмотреть журнал агента**.  
   
-    В диалоговом окне **Просмотр файла журнала —***имя_сервера* доступны следующие параметры:  
+    В диалоговом окне **Просмотр файла журнала —***имя_сервера* доступны указанные ниже параметры.  
   
     **Загрузить журнал**  
     Открывает диалоговое окно, в котором можно указать загружаемый файл журнала.  

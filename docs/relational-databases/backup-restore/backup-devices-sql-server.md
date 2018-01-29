@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - backing up databases [SQL Server], backup devices
 - devices [SQL Server]
 ms.assetid: 35a8e100-3ff2-4844-a5da-dd088c43cba4
-caps.latest.revision: "93"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8efae7715dcb9d5b182360e074f87cc5c7b2f067
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1dbf5d00855a498782a65a3ff04e2477a2cb871d
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="backup-devices-sql-server"></a>Устройства резервного копирования (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Во время операции резервного копирования для базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] создается резервная копия данных (*резервная копия*), которая записывается на физическое устройство резервного копирования. Данное физическое устройство резервного копирования инициализируется при записи на него первой резервной копии в наборе носителей. Резервные копии на наборе из одного или нескольких устройств резервного копирования образуют отдельный набор носителей.  
@@ -71,9 +72,9 @@ ms.lasthandoff: 11/17/2017
   
  BACKUP DATABASE *database_name*  
   
- TO DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO DISK **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Например:  
+ Пример:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -85,9 +86,9 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM DISK **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM DISK **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Например:  
+ Например,  
   
 ```  
 RESTORE DATABASE AdventureWorks2012   
@@ -121,9 +122,9 @@ GO
     > **ВАЖНО!** Резервное копирование данных через сеть может быть причиной сетевых ошибок. Поэтому при использовании удаленного диска рекомендуется проверять операцию резервного копирования после ее завершения. Дополнительные сведения см. в разделе [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
 ## <a name="specify-a-universal-naming-convention-unc-name"></a>Указание имени в формате UNC  
- Чтобы указать сетевой ресурс в команде резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, следует использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\***Имя_системы***\\***Имя_общего_ресурса***\\***Путь***\\***Имя_файла*.  
+ Чтобы указать сетевой ресурс в команде резервного копирования или восстановления, для файла, расположенного на устройстве резервного копирования, следует использовать полностью заданное имя в формате UNC. Имя в формате UNC имеет форму **\\\\***имя_системы***\\***имя_общего_ресурса***\\***путь***\\***имя_файла*.  
   
- Например:  
+ Пример:  
   
 ```  
 BACKUP DATABASE AdventureWorks2012   
@@ -151,9 +152,9 @@ GO
   
  BACKUP { DATABASE | LOG } *database_name*  
   
- TO TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ TO TAPE **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
- Например:  
+ Пример:  
   
 ```  
 BACKUP LOG AdventureWorks2012   
@@ -165,7 +166,7 @@ GO
   
  RESTORE { DATABASE | LOG } *database_name*  
   
- FROM TAPE **=** { **'***physical_backup_device_name***'** | **@***physical_backup_device_name_var* }  
+ FROM TAPE **=** { **'***имя_физического_устройства_резервного_копирования***'** | **@***переменная_имени_физического_устройства_резервного_копирования* }  
   
 ###  <a name="TapeOptions"></a> Параметры BACKUP и RESTORE для ленточных устройств (Transact-SQL)  
  Чтобы упростить управление лентой, инструкция BACKUP предоставляет следующие параметры для ленточных устройств.  
@@ -183,7 +184,7 @@ GO
 ###  <a name="OpenTapes"></a> Управление открытыми магнитными лентами  
  Для просмотра списка открытых ленточных устройств и состояния запросов на подключение запросите динамическое представление управления [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) . Данное представление показывает все открытые ленты. Сюда относятся все используемые ленты, которые временно простаивают в ожидании следующей операции BACKUP или RESTORE.  
   
- Если лента была случайно оставлена открытой, то самый быстрый способ освободить ее — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=***backup_device_name*. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
+ Если лента была случайно оставлена открытой, то самый быстрый способ освободить ее — использовать следующую команду: RESTORE REWINDONLY FROM TAPE **=***имя_устройства_резервного _копирования*. Дополнительные сведения см. в разделе [RESTORE REWINDONLY (Transact-SQL)](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md).  
   
   
 ## <a name="using-the-windows-azure-blob-storage-service"></a>Использование службы хранилища BLOB-объектов Microsoft Azure  
@@ -270,7 +271,7 @@ GO
   
 -   [Удаление устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/delete-a-backup-device-sql-server.md)  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [SQL Server, объект Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md)   
  [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)   
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   

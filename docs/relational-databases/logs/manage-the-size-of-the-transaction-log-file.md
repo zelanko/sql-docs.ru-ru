@@ -8,7 +8,8 @@ ms.service:
 ms.component: logs
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-transaction-log
+ms.technology:
+- dbe-transaction-log
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - manage log size
 - log size, manage
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 23aaaed04bfb552865cf9eb95b3150d520499dd9
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 58cbe590d16bba9d74f41dc7499b563a2e0b2499
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Управление размером файла журнала транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этой статье рассказывается о мониторинге размера журнала транзакций [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], сжатии журнала транзакций, добавлении или увеличении файла журнала транзакций, оптимизации скорости роста журнала транзакций **tempdb**, а также об управлении размером файла журнала транзакций.  
@@ -105,9 +106,9 @@ ms.lasthandoff: 01/08/2018
       |Начиная с [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные — 1 МБ. Файлы журналов — 10 %.|  
       |До [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|Данные — 10 %. Файлы журналов — 10 %.|  
 
--   При небольшом шаге приращения может формироваться слишком много [виртуальных файлов журнала](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) малого размера и снижаться производительность. 
+-   При небольшом шаге приращения может формироваться слишком много [виртуальных файлов журнала](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) малого размера и снижаться производительность. Чтобы определить оптимальное распределение виртуальных файлов журнала для текущего размера журнала транзакций всех баз данных в определенном экземпляре, а также требуемые приращения для достижения нужного размера, см. следующий [скрипт](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs).
 
--   При большом шаге приращения может формироваться слишком мало крупных [виртуальных файлов журнала](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch), что также повлияет на производительность. 
+-   При большом шаге приращения может формироваться слишком мало крупных [виртуальных файлов журнала](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch), что также повлияет на производительность. Чтобы определить оптимальное распределение виртуальных файлов журнала для текущего размера журнала транзакций всех баз данных в определенном экземпляре, а также требуемые приращения для достижения нужного размера, см. следующий [скрипт](http://github.com/Microsoft/tigertoolbox/tree/master/Fixing-VLFs). 
 
 -   Даже если включено автоматическое увеличение, вы можете получить сообщение, что журнал транзакций заполнен, если его размер не может достаточно быстро увеличиваться под нужды вашего запроса. Дополнительные сведения об изменении шага приращения см. в разделе [Параметры инструкции ALTER DATABASE (Transact-SQL) для файлов и файловых групп](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)
 

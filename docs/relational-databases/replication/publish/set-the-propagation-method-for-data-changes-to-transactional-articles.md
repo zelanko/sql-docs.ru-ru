@@ -8,23 +8,24 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - transactional replication, propagation methods
 - propagating data changes [SQL Server replication]
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
-caps.latest.revision: "39"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e7caf9492f27ec49e6f3809f21204137b05ad120
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0f97ecca34a7c61305e243ce75a11dc58a5f641f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>Задание метода распространения изменений данных в транзакционные статьи
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается задание метода распространения для изменений данных в транзакционных статьях в [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -122,11 +123,11 @@ ms.lasthandoff: 11/17/2017
   
 1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **@publication**задайте имя публикации, которой принадлежит статья, в параметре **@article**— имя статьи, в параметре **@source_object**— базу данных, на которой опубликован объект, а в параметре **@schema_option** задайте битовую маску, содержащую значение **0x02** (для включения автоматического режима создания пользовательской хранимой процедуры), и хотя бы один из следующих параметров.  
   
-    -   **@ins_cmd** — укажите значение **CALL sp_MSins_*имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **@article**.  
+    -   **@ins_cmd** — укажите значение **CALL sp_MSins_*имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article**.  
   
-    -   **@del_cmd** — укажите значение **CALL sp_MSdel_*имя_статьи*** или **XCALL sp_MSdel_*имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **@article**.  
+    -   **@del_cmd** — укажите значение **CALL sp_MSdel_*имя_статьи*** или **XCALL sp_MSdel_*имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article**.  
   
-    -   **@upd_cmd** — укажите значение **SCALL sp_MSupd_*имя_статьи***, **CALL sp_MSupd_*имя_статьи***, **XCALL sp_MSupd_*имя_статьи* **или **MCALL sp_MSupd_*имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **@article**.  
+    -   **@upd_cmd** — укажите значение **SCALL sp_MSupd_*имя_статьи***, **CALL sp_MSupd_*имя_статьи***, **XCALL sp_MSupd_*имя_статьи*** или **MCALL sp_MSupd_*имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article**.  
   
     > [!NOTE]  
     >  Для каждой из приведенных выше команд в качестве параметров можно указать собственное имя хранимых процедур, создаваемых репликацией.  
@@ -142,11 +143,11 @@ ms.lasthandoff: 11/17/2017
   
 1.  Выполните процедуру [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)на издателе в базе данных публикации. В параметре **@publication**задайте имя публикации, которой принадлежит статья, в параметре **@article**— имя статьи, в параметре **@source_object**— базу данных, на которой опубликован объект, а в параметре **@schema_option** задайте битовую маску, содержащую значение **0x02** (для включения автоматического режима создания пользовательской хранимой процедуры), и хотя бы один из следующих параметров.  
   
-    -   **@ins_cmd** — укажите значение **CALL sp_MSins_*имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **@article**.  
+    -   **@ins_cmd** — укажите значение **CALL sp_MSins_*имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article**.  
   
-    -   **@del_cmd** — укажите значение **CALL sp_MSdel_*имя_статьи*** или **XCALL sp_MSdel_*имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **@article**.  
+    -   **@del_cmd** — укажите значение **CALL sp_MSdel_*имя_статьи*** или **XCALL sp_MSdel_*имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article**.  
   
-    -   **@upd_cmd** — укажите значение **SCALL sp_MSupd_*имя_статьи***, **CALL sp_MSupd_*имя_статьи***, **XCALL sp_MSupd_*имя_статьи***, **MCALL sp_MSupd_*имя_статьи***, где ***имя_статьи*** — значение, заданное в параметре **@article**.  
+    -   **@upd_cmd** — укажите значение **SCALL sp_MSupd_*имя_статьи***, **CALL sp_MSupd_*имя_статьи***, **XCALL sp_MSupd_*имя_статьи***, **MCALL sp_MSupd_*имя_статьи***, где ***имя_статьи*** — значение, заданное для **@article**.  
   
     > [!NOTE]  
     >  Для каждой из приведенных выше команд в качестве параметров можно указать собственное имя хранимых процедур, создаваемых репликацией.  

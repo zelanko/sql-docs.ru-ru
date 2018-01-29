@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: c3c6e0b6-54cd-4b7d-8efb-2cefe14fcd7f
-caps.latest.revision: "20"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 66ea2fcf5a1c2c220e90d3b6d0c1c7879c9c10fd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: b30cc7798d28ce9b13f9448f583891170f7309fd
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Урок 1. Публикация данных с помощью репликации слиянием
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На этом занятии с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создается публикация слиянием с целью публикации подмножества таблиц **Employee**, **SalesOrderHeader** и **SalesOrderDetail** в образце базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Эти таблицы фильтруются с помощью параметризованных фильтров строк, так что каждая подписка содержит уникальную секцию данных. Также в список доступа к публикации добавляется имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , используемое агентом слияния. Для работы с этим учебником требуется завершить работу с предыдущим учебником, [Подготовка сервера для репликации](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/17/2017
   
 21. Установите флажок **Создать моментальный снимок немедленно**, снимите флажок **Запланировать запуск агента моментальных снимков в следующее время**и нажмите кнопку **Далее**.  
   
-22. На странице "Безопасность агента" щелкните **Настройки безопасности**, введите \<*Имя_компьютера>***\repl_snapshot** в поле **Учетная запись процесса**, укажите пароль для учетной записи и нажмите кнопку **ОК**. Нажмите кнопку **Готово**.  
+22. На странице "Безопасность агента" щелкните **Настройки безопасности**, введите \<*имя_компьютера>***\repl_snapshot** в поле **Учетная запись процесса**, укажите пароль для учетной записи и нажмите кнопку **ОК**. Нажмите кнопку **Готово**.  
   
 23. На странице «Завершение работы мастера» введите **AdvWorksSalesOrdersMerge** в поле **Имя публикации** и нажмите кнопку **Готово**.  
   
@@ -113,9 +116,9 @@ ms.lasthandoff: 11/17/2017
   
 3.  Выберите страницу **Список доступа к публикации** и нажмите кнопку **Добавить**.  
   
-4.  В диалоговом окне "Добавление доступа к публикации" выберите *<Имя_компьютера>***\repl_merge** и нажмите кнопку **ОК**. Нажмите кнопку **ОК**.  
+4.  В диалоговом окне "Добавление доступа к публикации" выберите *<имя_компьютера>***\repl_merge** и нажмите кнопку **ОК**. Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Публикация слиянием успешно создана. Далее будет создана подписка на эту публикацию. См. [Занятие 2. Создание подписки на публикацию слиянием](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>См. также:  

@@ -1,7 +1,7 @@
 ---
 title: "Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS) | Документы Майкрософт"
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.service: 
@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: b75a964c2f4e62d477c9e195c77e81a14109bd61
-ms.sourcegitcommit: 7e117bca721d008ab106bbfede72f649d3634993
+ms.openlocfilehash: 6c59854aa8fc9f976e52f9c9f678563be0174b44
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Устранение неполадок в отчетах: отчеты-карты (построитель отчетов и службы SSRS)
   Проблемы с картами могут возникнуть при добавлении карты или слоя карты в отчет с разбиением на страницы [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , при настройке существующей карты или слоя карты в отчете, при предварительном просмотре карты в отчете или при публикации отчета с картой. Этот раздел помогает устранять эти проблемы.  
@@ -29,9 +29,9 @@ ms.lasthandoff: 01/09/2018
    ## <a name="need-more-help"></a>Требуется дополнительная помощь?  
    
   Попробуйте:  
- *  Форум MSDN по [SQL Server 2016](https://social.msdn.microsoft.com/forums/sqlserver/en-us/home?forum=sqlserver2016)  
- * [SQL Server 2016](http://stackoverflow.com/questions/tagged/sql-server-2016) на Stack Overflow  
- * Опубликуйте информацию о проблеме или предложение на [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)  
+ * [SQL Server Reporting Services](https://stackoverflow.com/questions/tagged/reporting-services) на Stack Overflow  
+ * Опубликуйте информацию о проблеме или предложение на [Microsoft SQL Server UserVoice](https://feedback.azure.com/forums/908035-sql-server).  
+
   
 ##  <a name="Embedded"></a> Проблемы размера определения отчета  
  Этот раздел нужен для решения проблем, связанных с размером определения отчета.  

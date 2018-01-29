@@ -8,7 +8,8 @@ ms.service:
 ms.component: spatial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-spatial
+ms.technology:
+- dbe-spatial
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - geodetic data type [SQL Server]
 - geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 9f981407068d6a1d526581de6c2250f71825c64b
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4df806bf334669e1faf22111db1a03e192ff80c7
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="create-construct-and-query-geography-instances"></a>Создание, проектирование и создание запросов к экземплярам типа данных geography
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)] Тип пространственных данных **geography** представляет данные в системе координат круглой земли. Этот тип реализован как тип данных среды CLR .NET в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Тип данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** хранит данные эллипсоидальной (сферической) Земли, такие как координаты широты и долготы GPS.  
@@ -179,13 +180,13 @@ ms.lasthandoff: 11/17/2017
  [STArea (тип данных geography)](../../t-sql/spatial-geography/starea-geography-data-type.md)  
   
 ###  <a name="empty"></a> Пустой  
- *Пустым* называется экземпляр объекта **geography**, не содержащий ни одной точки. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна 0. Площадь пустых экземпляров **Polygon, CurvePolygon** и **MultiPolygon** равна 0.  
+ *Пустой объект ***geography** не имеет никаких точек. Длина пустых экземпляров **LineString, CircularString**, **CompoundCurve**и **MultiLineString** равна 0. Площадь пустых экземпляров **Polygon, CurvePolygon** и **MultiPolygon** равна 0.  
   
  **Проверка, является ли экземпляр пустым**  
  [STIsEmpty (тип данных geography)](../../t-sql/spatial-geography/stisempty-geography-data-type.md)  
   
 ###  <a name="closure"></a> Замыкание  
- *Замкнутый* экземпляр **geography** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
+ *Замкнутый объект ***geography** — это фигура, начальная и конечная точки которой совпадают. Экземпляры**Polygon** считаются замкнутыми. Экземпляры**Point** не замкнуты.  
   
  Кольцо — это простой замкнутый экземпляр **LineString** .  
   

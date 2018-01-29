@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - nonclustered indexes [SQL Server], unique
 - unique indexes, design guidelines
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
-caps.latest.revision: "29"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 40c852b19c2b2ed8a1f7f8b304c30d6214bcee21
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 4459bfad325436c9de896e0ad40deb60e2a707a3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-unique-indexes"></a>Создание уникальных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Преимущества уникального индекса](#Benefits)  
   
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Создание уникального индекса для таблицы с помощью следующих средств:**  
   
@@ -97,10 +98,10 @@ ms.lasthandoff: 11/17/2017
   
 -   Уникальный некластеризованный индекс может содержать любые неключевые столбцы. Дополнительные сведения см. в статье [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
+####  <a name="Permissions"></a> Permissions  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -108,7 +109,7 @@ ms.lasthandoff: 11/17/2017
   
 1.  В обозревателе объектов разверните базу данных, содержащую таблицу, в которой необходимо создать уникальный индекс.  
   
-2.  Разверните папку **Таблицы** .  
+2.  Разверните папку **Таблицы**.  
   
 3.  Щелкните правой кнопкой мыши таблицу, в которой нужно создать уникальный индекс, и выберите **Конструктор**.  
   
@@ -132,7 +133,7 @@ ms.lasthandoff: 11/17/2017
   
 13. Щелкните **Закрыть**.  
   
-14. В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+14. В меню **Файл** выберите команду **Сохранить***имя_таблицы*.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Создание уникального индекса в обозревателе объектов  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - IFI [SQL Server]
 - database instant file initialization [SQL Server]
 ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: cf0f0006186bde39228ac9b0039e5a45b42431b7
-ms.sourcegitcommit: b4b7cd787079fa3244e77c1e9e3c68723ad30ad4
+ms.openlocfilehash: 43b4084e91c08bfe870807196261e4be9b934872
+ms.sourcegitcommit: 3206a31870f8febab7d1718fa59fe0590d4d45db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="database-file-initialization"></a>Инициализация файлов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Файлы данных и журналов инициализируются, чтобы перезаписать все существующие данные на диске, оставшиеся после удаленных файлов. Файлы данных и журналов сначала инициализируются путем обнуления (заполнения нулями) при выполнении одной из следующих операций:  
@@ -89,6 +90,10 @@ Database Instant File Initialization: disabled. For security and performance con
 
 ## <a name="security-considerations"></a>Соображения безопасности  
 При использовании мгновенной инициализации файлов (IFI), так как удаленное содержимое диска перезаписывается только по мере записи в файлы новых данных, пока в помеченную удаленной область файла данных не будут записаны другие данные, неавторизованный субъект может получить доступ к удаленному содержимому. По мере подключения файла базы данных к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] риск раскрытия информации уменьшается благодаря списку управления доступом на уровне пользователей (DACL) в файле. DACL разрешает доступ к файлу только учетной записи службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и локальному администратору. Но при отсоединении файла доступ к нему может получить пользователь или служба, которым не предоставлено разрешение *SE_MANAGE_VOLUME_NAME*. Аналогичная проблема существует при резервном копировании базы данных. Если файл резервной копии не защищен с помощью соответствующего DACL, удаленное содержимое может стать доступным неавторизованному пользователю или службе.  
+
+Следует учитывать и то, что при увеличении файла с помощью IFI администратор SQL Server потенциально может получить доступ к содержимому необработанных страниц и просматривать ранее удаленное содержимое.
+
+Если файлы базы данных размещаются в сети хранения данных, она может всегда представлять новые страницы в виде предварительно инициализированных, что может создавать излишнюю нагрузку, так как операционной системе требуется инициализировать эти страницы повторно.
  
 > [!NOTE]
 > Если сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен в защищенной физической среде, выигрыш в производительности от мгновенной инициализации файлов может перевесить риск нарушения безопасности. Именно поэтому мы приводим здесь эту рекомендацию.

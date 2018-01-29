@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - transport security
 - database mirroring [SQL Server], security
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0488b8646d4b8c92d5f34f6b3148846f62b3f47f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ff841106e99cd34bedd1d93e106fb04d452b411f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Безопасность транспорта для зеркального отображения баз данных и групп доступности AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как службы под разными учетными записями домена (одного и того же или доверенных доменов), вам нужно создать имя входа для каждой учетной записи в базе данных **master** на каждом экземпляре сервера, а затем предоставить этому имени входа разрешение CONNECT для конечной точки.  
   
--   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, вам нужно создать в базе данных*master***\\***на каждом из остальных серверов имя входа для каждой учетной записи главного компьютера (*имя_домена **имя_компьютера$** ), а затем предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
+-   Если экземпляры [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняются как учетные записи сетевой службы, вам нужно создать в базе данных**master** на каждом из остальных серверов имя входа для каждой учетной записи главного компьютера (*имя_домена***\\***имя_компьютера$*), а затем предоставить этому имени входа разрешение CONNECT для конечной точки. Это обусловлено тем, что экземпляр сервера, выполняемый под учетной записью Network Service, выполняет проверку подлинности с помощью учетной записи домена главного компьютера.  
   
 > [!NOTE]  
 >  Пример установки сеанса для зеркального отображения базы данных с помощью проверки подлинности Windows см. в разделе [Пример. Настройка зеркального отображения базы данных с помощью проверки подлинности Windows (язык Transact-SQL)](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
   
  При необходимости пользователь обладает возможностью управлять алгоритмом шифрования, который может быть использован конечной точкой, путем определения одного из следующих значений для параметра ALGORITHM в инструкции CREATE ENDPOINT или в инструкции ALTER ENDPOINT:  
   
-|Значение параметра ALGORITHM|Описание|  
+|Значение параметра ALGORITHM|Description|  
 |---------------------|-----------------|  
 |RC4|Указывает на то, что конечная точка должна использовать алгоритм RC4. Это значение по умолчанию.<br /><br /> **\*\* Предупреждение. \*\*** Алгоритм RC4 использовать не рекомендуется. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Вместо этого рекомендуется использовать алгоритм AES.|  
 |AES|Указывает на то, что конечная точка должна использовать алгоритм AES.|  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: database-mirroring
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - client connections [SQL Server], database mirroring
 - connections [SQL Server], database mirroring
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
-caps.latest.revision: "95"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6ab834afd90bb347641ba8b5584c45e3e073962d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ef24aef79874e7ade0c0ed0dc78f88faa366299c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Подключение клиентов к сеансу зеркального отображения базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы подключиться к сеансу зеркального отображения базы данных, клиент может использовать либо [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, либо поставщик данных .NET Framework для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Если эти поставщики доступа к данным настроены для использования базы данных [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , то они поддерживают зеркальное отображение базы данных. Дополнительные сведения о замечаниях по программированию при использовании зеркальной базы данных см. в разделе [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Кроме того, текущий экземпляр основного сервера должен быть доступен, и имя входа клиента должно быть создано на экземпляре сервера. Дополнительные сведения см. в статье [Диагностика пользователей, утративших связь с учетной записью (SQL Server)](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Клиентские соединения с сеансом зеркального отображения базы данных не задействуют экземпляр следящего сервера, если он существует.  
@@ -92,11 +93,11 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Атрибут Server  
  В строке соединения должен присутствовать атрибут **Server** , предоставляющий исходное имя участника, которое должно определять текущий экземпляр основного сервера.  
   
- Самый простой способ идентифицировать экземпляр сервера — это указать его имя, *<имя_сервера>*[**\\***<имя_экземпляра_SQL_Server>*]. Например:  
+ Самый простой способ идентифицировать экземпляр сервера — указать его имя: *<имя_сервера>*[**\\***<имя_экземпляра_SQL_Server>*]. Пример:  
   
  `Server=Partner_A;`  
   
- либо  
+ или диспетчер конфигурации служб  
   
  `Server=Partner_A\Instance_2;`  
   
@@ -136,7 +137,7 @@ Server=123.34.45.56,4724;
 |Драйвер ODBC|**Failover_Partner**|  
 |Объекты ADO|**Failover Partner**|  
   
- Самый простой способ идентифицировать экземпляр сервера — это указать его системное имя, *<имя_сервера>*[**\\***<имя_экземпляра_SQL_Server>*].  
+ Самый простой способ идентифицировать экземпляр сервера — указать его системное имя: *<имя_сервера>*[**\\***<имя_экземпляра_SQL_Server>*].  
   
  Можно также указать IP-адрес и порт в атрибуте **Failover Partner** . В случае неудачи первоначальной попытки подключения во время первого соединения с базой данных попытка соединения с партнером по обеспечению отработки отказа, являющимся резервным сервером, не будет более зависеть от DNS и браузера SQL Server. После того как соединение установлено, имя партнера по обеспечению отработки отказа перезаписывается именем партнера по обеспечению отработки отказа, являющегося резервным севером; таким образом, в случае сбоя перенаправленные соединения потребуют DNS и браузер SQL Server.  
   

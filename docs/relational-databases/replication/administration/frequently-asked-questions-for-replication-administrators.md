@@ -8,23 +8,24 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - administering replication, frequently asked questions
 - replication [SQL Server], administering
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
-caps.latest.revision: "59"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 89d5ee0f084b48c48a116bf983770e6dbb55bf94
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9c4514baae490912c82b2c8b8b34e7f5f780570a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Вопросы, часто задаваемые администраторам репликации
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Приведенные ниже вопросы и ответы предоставляют рекомендации по выполнению разнообразных задач администраторами реплицируемых баз данных.  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Для статей в публикациях, в которых используются моментальные снимки в текстовом режиме (используются для подписчиков, отличных от подписчиков[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , и подписчиков [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): по умолчанию владелец не указывается. Владельцем по умолчанию является владелец, указанный в учетной записи, используемой агентом распространителя или агентом слияния для соединения с подписчиком.  
   
- Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<***cтатья***>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<***статья***>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="how-can-grants-on-the-subscription-database-be-configured-to-match-grants-on-the-publication-database"></a>Как можно настроить предоставление прав в базе данных подписки для соответствия предоставлению прав в базе данных публикации?  
  По умолчанию репликация не выполняет инструкции GRANT в базе данных подписки. Если необходимо, чтобы разрешения в базе данных подписки соответствовали разрешениям в базе данных публикации, то нужно использовать один из следующих методов:  
@@ -170,7 +171,7 @@ ms.lasthandoff: 11/17/2017
  В случае репликации транзакций отслеживание и репликация массовой вставки производится аналогично другим вставкам. В случае репликации слиянием необходимо гарантировать надлежащее обновление метаданных отслеживания изменений.  
   
 ### <a name="are-there-any-replication-considerations-for-backup-and-restore"></a>Есть ли факторы, которые необходимо принимать во внимание в отношении репликации при резервном копировании и восстановлении?  
- Да. Существует несколько специальных факторов, которые необходимо принимать во внимание для баз данных, участвующих в репликации. Дополнительные сведения см. в разделе [Создание резервных копий реплицируемых баз данных и восстановление из них](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
+ Да. Существует несколько специальных факторов, которые необходимо принимать во внимание для баз данных, участвующих в репликации. Дополнительные сведения см. в разделе [Резервное копирование и восстановление реплицируемых баз данных](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>Влияет ли репликация на размер журнала транзакций?  
  Репликация слиянием и репликация моментальных снимков не влияют на размер журнала транзакций, в отличие от репликации транзакций. Если база данных содержит одну или несколько публикаций транзакций, журнал не может быть усечен, пока все транзакции, относящиеся к публикациям, не будут доставлены в базу данных распространителя. Если журнал транзакций становится слишком большим, а агент чтения журнала запускается по расписанию, необходимо рассмотреть возможность сокращения интервала между его запусками. Либо переведите его в непрерывный режим. Если он установлен в непрерывном режиме (по умолчанию), необходимо убедиться в том, что он работает. Дополнительные сведения о проверке состояния агента чтения журнала см. в статье [Просмотр сведений и выполнение задач для агентов, связанных с публикацией (монитор репликации)](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md).  

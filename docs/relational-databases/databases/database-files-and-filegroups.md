@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -34,16 +35,16 @@ helpviewer_keywords:
 - primary files [SQL Server]
 - file types [SQL Server]
 ms.assetid: 9ca11918-480d-4838-9198-cec221ef6ad0
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: e469edf82ac5c370a77d3870cd180867baf6a401
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: 8306f3c4fb55d441eef744ff1ef9a84256b9eb76
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="database-files-and-filegroups"></a>Файлы и файловые группы базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Каждая база данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имеет как минимум два рабочих системных файла: файл данных и файл журнала. Файлы данных содержат данные и объекты, такие как таблицы, индексы, хранимые процедуры и представления. Файлы журнала содержат сведения, необходимые для восстановления всех транзакций в базе данных. Файлы данных могут быть объединены в файловые группы для удобства распределения и администрирования.  
@@ -102,19 +103,29 @@ ms.lasthandoff: 01/09/2018
 ## <a name="filegroups"></a>Файловые группы  
  У каждой базы данных есть первичная файловая группа. Эта файловая группа содержит первичный файл данных и все вторичные файлы, не входящие в другие файловые группы. Пользовательские файловые группы могут создаваться для удобства администрирования, распределения и размещения данных.  
   
- Например, три файла, Data1.ndf, Data2.ndf и Data3.ndf, могут быть созданы на трех дисках соответственно и отнесены к файловой группе **fgroup1**. В этом случае можно создать таблицу на основе файловой группы **fgroup1**. Запросы данных из таблицы будут распределены по трем дискам, и это улучшит производительность. Подобного улучшения производительности можно достичь и с помощью одного файла, созданного на чередующемся наборе дискового массива RAID. Тем не менее файлы и файловые группы позволяют без труда добавлять новые файлы на новые диски.  
+ Например, три файла — `Data1.ndf`, `Data2.ndf` и `Data3.ndf` — могут быть созданы на трех дисках соответственно и отнесены к файловой группе `fgroup1`. В этом случае можно создать таблицу на основе файловой группы `fgroup1`. Запросы данных из таблицы будут распределены по трем дискам, и это улучшит производительность. Подобного улучшения производительности можно достичь и с помощью одного файла, созданного на чередующемся наборе дискового массива RAID. Тем не менее файлы и файловые группы позволяют без труда добавлять новые файлы на новые диски.  
   
  Все файлы данных хранятся в файловых группах, перечисленных в следующей таблице.  
   
 |Файловая группа|Description|  
 |---------------|-----------------|  
 |Первичная|Файловая группа, содержащая первичный файл. Все системные таблицы размещены в первичной файловой группе.|  
+|Данные, оптимизированные для памяти|В основе оптимизированной для памяти файловой группы лежит файловая группа файлового потока.|  
+|Файловый поток||    
 |Пользовательские процедуры|Любая файловая группа, созданная пользователем при создании или изменении базы данных.|  
   
-### <a name="default-filegroup"></a>Файловая группа по умолчанию  
+### <a name="default-primary-filegroup"></a>Файловая группа по умолчанию (первичная)  
  Если в базе данных создаются объекты без указания файловой группы, к которой они относятся, они назначаются файловой группе по умолчанию. В любом случае только одна файловая группа создается как файловая группа по умолчанию. Файлы в файловой группе по умолчанию должны быть достаточно большими, чтобы вмещать новые объекты, не назначенные другим файловым группам.  
   
  Файловая группа PRIMARY является группой по умолчанию, если только она не была изменена инструкцией ALTER DATABASE. Системные объекты и таблицы распределяются внутри первичной файловой группы, а не новой файловой группой по умолчанию.  
+ 
+### <a name="memory-optimized-data-filegroup"></a>Файловая группа данных, оптимизированных для памяти
+
+Дополнительные сведения об оптимизированных для памяти файловых группах см. в разделе [Оптимизированные для памяти файловые группы](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md).
+
+### <a name="filestream-filegroup"></a>Файловая группа файлового потока
+
+Дополнительные сведения о файловых группах файлового потока см. в статьях [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md#filestream-storage) и [Создание базы данных с поддержкой FILESTREAM](../../relational-databases/blob/create-a-filestream-enabled-database.md).
 
 ### <a name="file-and-filegroup-example"></a>Пример файлов и файловых групп
  В следующем примере создается база данных на основе экземпляра SQL Server. База данных содержит первичный файл данных, пользовательскую файловую группу и файл журнала. Первичный файл данных входит в состав первичной файловой группы, а пользовательская файловая группа состоит из двух вторичных файлов данных. Инструкция ALTER DATABASE придает пользовательской файловой группе статус файловой группы по умолчанию. Затем создается таблица, определяющая пользовательскую файловую группу. (В этом примере используется универсальный путь к `c:\Program Files\Microsoft SQL Server\MSSQL.1` , чтобы не указывать версию SQL Server.)
@@ -123,7 +134,7 @@ ms.lasthandoff: 01/09/2018
 USE master;
 GO
 -- Create the database with the default data
--- filegroup and a log file. Specify the
+-- filegroup, filstream filegroup and a log file. Specify the
 -- growth increment and the max size for the
 -- primary data file.
 CREATE DATABASE MyDB
@@ -146,7 +157,10 @@ FILEGROUP MyDB_FG1
        'c:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\data\MyDB_FG1_2.ndf',
     SIZE = 1MB,
     MAXSIZE=10MB,
-    FILEGROWTH=1MB)
+    FILEGROWTH=1MB),
+FILEGROUP FileStreamGroup1 CONTAINS FILESTREAM
+  ( NAME = 'MyDB_FG_FS',
+    FILENAME = 'c:\Data\filestream1')
 LOG ON
   ( NAME='MyDB_log',
     FILENAME =
@@ -166,9 +180,17 @@ CREATE TABLE MyTable
     colb char(8) )
 ON MyDB_FG1;
 GO
+
+-- Create a table in the filestream filegroup
+CREATE TABLE MyFSTable
+(
+    cola int PRIMARY KEY,
+  colb VARBINARY(MAX) FILESTREAM NULL
+)
+GO
 ```
 
-Данная иллюстрация обобщает все вышесказанное.
+Данная иллюстрация обобщает все вышесказанное (кроме данных файлового потока).
 
 ![filegroup_example](../../relational-databases/databases/media/filegroup-example.gif)
 

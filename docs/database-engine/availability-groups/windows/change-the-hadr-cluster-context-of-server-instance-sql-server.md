@@ -8,30 +8,31 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Availability Groups [SQL Server], WSFC clusters
 - Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 296d664edfdbf31110aab41c140735271920c832
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6d67df05f5cd24b3c5b1f02273708633263f1d0
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>Смена контекста кластера HADR экземпляра сервера (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается переключение контекста кластера HADR экземпляра [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] с помощью [!INCLUDE[tsql](../../../includes/tsql-md.md)] в [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] и более поздних версий. *Контекст кластера HADR* определяет кластер отказоустойчивой кластеризации Windows Server (WSFC), который управляет метаданными для реплик доступности, размещенных в экземпляре сервера.  
   
  Переключать контекст кластера HADR следует только во время миграции с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] на экземпляр [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] в новом кластере WSFC. Миграция с кластера [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] поддерживает обновление операционной системы до [!INCLUDE[win8](../../../includes/win8-md.md)] или [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] с минимальным временем простоя групп доступности. Дополнительные сведения см. в документе [Миграция между кластерами групп доступности AlwaysOn для обновления ОС](http://msdn.microsoft.com/library/jj873730.aspx).  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/20/2017
   
      [Рекомендации](#Recommendations)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Переключение контекста кластера реплики доступности с помощью:**  [Transact-SQL](#TsqlProcedure)  
   
@@ -89,9 +90,9 @@ ms.lasthandoff: 11/20/2017
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 -   **имя входа SQL Server**  
   

@@ -1,27 +1,28 @@
 ---
 title: "Резервное копирование в SQL Server по URL-адресу — рекомендации и устранение неполадок | Документация Майкрософт"
 ms.custom: 
-ms.date: 08/09/2016
+ms.date: 01/19/2018
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: 
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da150a25a4cdee2527834a3032589333c5920817
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c30075d0380879ce5923af54d653dfaab345eb20
+ms.sourcegitcommit: b09bccd6dfdba55b022355e892c29cb50aadd795
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Резервное копирование SQL Server на URL-адрес — рекомендации и устранение неполадок
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/17/2017
   
 -   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Управление резервными копиями  
  В следующем списке перечислены общие рекомендации по управлению резервным копированием.  
@@ -41,17 +42,19 @@ ms.lasthandoff: 11/17/2017
   
 -   При создании контейнера рекомендуется установить уровень доступа **private**, чтобы большие двоичные объекты в контейнере могли читать или записывать только те пользователи или учетные записи, которые предоставили необходимую информацию для проверки подлинности.  
   
--   Для баз данных SQL Server на экземпляре SQL Server, который работает на виртуальной машине Windows Azure, используйте учетную запись хранилища в том же регионе, что и виртуальная машина, чтобы избежать затрат на передачу данных между регионами. Использование одного региона также обеспечивает оптимальную производительность операций резервного копирования и восстановления.  
+-   При работе с базами данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], размещенными в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], который установлен на виртуальной машине Windows Azure, используйте учетную запись хранилища в том же регионе, где находится виртуальная машина, чтобы избежать издержек, связанных с передачей данных между регионами. Использование одного региона также обеспечивает оптимальную производительность операций резервного копирования и восстановления.  
   
 -   Сбой во время резервного копирования может привести к созданию неработоспособного файла резервной копии. Рекомендуется периодически проводить поиск неудачных резервных копий и удалять файлы больших двоичных объектов. Дополнительные сведения см. в разделе [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md).  
   
--   Использование параметра **WITH COMPRESSION** во время резервного копирования может уменьшить стоимость хранения и транзакционные издержки хранения. Также может сократиться время, необходимое для выполнения резервного копирования.  
+-   Использование параметра `WITH COMPRESSION` во время резервного копирования может уменьшить стоимость хранения и транзакционные издержки хранения. Также может сократиться время, необходимое для выполнения резервного копирования.  
+
+- Задайте аргументы `MAXTRANSFERSIZE` и `BLOCKSIZE`, как указано в разделе [Резервное копирование в SQL Server по URL-адресу](./sql-server-backup-to-url.md).
   
 ## <a name="handling-large-files"></a>Обработка больших файлов  
   
 -   Операция резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] выполняется в несколько потоков, чтобы оптимизировать передачу данных к службам хранилищ больших двоичных объектов Windows Azure.  Однако производительность зависит от различных факторов, в том числе от пропускной способности ISV и размера базы данных. Если планируется создавать резервные копии больших баз данных или файловых групп в локальной базе данных SQL Server, вначале рекомендуется проверить пропускную способность. В [соглашении об уровне обслуживания для службы хранилища Azure](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) определены максимальные значения времени обработки для больших двоичных объектов, которыми можно руководствоваться.  
   
--   При создании резервных копий больших файлов очень важно использовать параметр **WITH COMPRESSION** в соответствии с рекомендациями, приведенными в разделе **Управление резервным копированием** .  
+-   При создании резервных копий больших файлов очень важно использовать параметр `WITH COMPRESSION` в соответствии с рекомендациями, приведенными в разделе [Управление резервным копированием](##managing-backups).  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Устранение неполадок при резервном копирование или восстановлении по URL-адресу  
  Ниже приведено несколько простых способов устранения ошибок при создании резервной копии или восстановлении из службы хранилища больших двоичных объектов Windows Azure.  
@@ -60,20 +63,19 @@ ms.lasthandoff: 11/17/2017
   
  **Ошибки проверки подлинности:**  
   
--   WITH CREDENTIAL — это новый параметр, который необходимо использовать при создании резервных копий или восстановлении с помощью службы хранилища больших двоичных объектов Windows Azure. Ниже приводятся возможные ошибки, связанные с учетными данными.  
+-   `WITH CREDENTIAL` — это новый параметр, который нужно использовать при создании резервных копий или восстановлении с помощью службы хранилища больших двоичных объектов Microsoft Azure. Ниже приводятся возможные ошибки, связанные с учетными данными.  
   
      Учетные данные, заданные в команде **BACKUP** или **RESTORE** , не существуют. Чтобы избежать этой проблемы, можно включить инструкцию T-SQL для создания учетных данных, если она отсутствует в инструкции резервного копирования. Ниже приводится пример, который можно использовать.  
   
-    ```  
+    ```sql  
     IF NOT EXISTS  
     (SELECT * FROM sys.credentials   
     WHERE credential_identity = 'mycredential')  
     CREATE CREDENTIAL <credential name> WITH IDENTITY = 'mystorageaccount'  
     ,SECRET = '<storage access key> ;  
-  
     ```  
   
--   Учетные данные существуют, но учетная запись, которая используется для запуска команды резервного копирования, не имеет разрешения доступа к учетным данным. Используйте учетную запись для входа в роль **db_backupoperator** с разрешением **Изменение любых учетных данных** .  
+-   Учетные данные существуют, но учетная запись, которая используется для запуска команды резервного копирования, не имеет разрешения доступа к учетным данным. Используйте учетную запись для входа в роль **db_backupoperator** с разрешением ***Изменение любых учетных данных*** .  
   
 -   Проверьте имя учетной записи хранилища и значение ключа. Информация, которая хранится в учетных данных, должна соответствовать значениям свойств учетной записи хранилища Windows Azure, которые используются в операциях резервного копирования и восстановления.  
   
@@ -85,36 +87,32 @@ ms.lasthandoff: 11/17/2017
   
     -   Установите флаг трассировки 3051, чтобы включить ведение записей в конкретном журнале ошибок в следующем формате:  
   
-         BackupToUrl-\<имя_экземпляра>-\<имя_базы_данных>-действие-\<идентификатор процесса>.log, где\<действие> может принимать одно из следующих значений:  
+        `BackupToUrl-\<instname>-\<dbname>-action-\<PID>.log` где `\<action>` является одним из следующих:  
   
         -   **DB**  
-  
         -   **FILELISTONLY**  
-  
         -   **LABELONLY**  
-  
         -   **HEADERONLY**  
-  
         -   **VERIFYONLY**  
   
-    -   Дополнительную информацию можно найти в журнале событий Windows или в журналах приложений с именем «SQLBackupToUrl».  
+    -   Дополнительную информацию можно найти в журнале событий Windows или в журналах приложений с именем `SQLBackupToUrl`.  
   
 -   При восстановлении из сжатой резервной копии может появиться следующее сообщение об ошибке:  
   
-    -   `SqlException 3284 occurred. Severity: 16 State: 5`  
-        **Метка файла сообщения на устройстве `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` не согласована. Перезапустите инструкцию Restore с тем же размером блока, который использовался при создании резервного набора данных. Возможно, следует указать 65536.**  
+    -   `SqlException 3284 occurred. Severity: 16 State: 5  
+        Message Filemark on device 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' is not aligned.           Reissue the Restore statement with the same block size used to create the backupset: '65536' looks like a possible value.`  
   
-         Чтобы устранить эту ошибку, издайте инструкцию **BACKUP** повторно и укажите для нее значение **BLOCKSIZE = 65536** .  
+        Чтобы устранить эту ошибку, издайте инструкцию **BACKUP** повторно и укажите для нее значение **BLOCKSIZE = 65536** .  
   
 -   Ошибка во время архивации из-за больших двоичных объектов с активной арендой: сбой операции архивации может привести к появлению больших двоичных объектов с активными арендами.  
   
      Если эта инструкция резервного копирования повторяется, то операция резервного копирования может завершиться со следующей ошибкой:  
   
-     **Резервное копирование на URL-адрес получило исключение из удаленной конечной точки. Сообщение об исключении: удаленный сервер возвратил ошибку: (412) в настоящее время существует аренда для большого двоичного объекта, однако для запроса не указан идентификатор аренды**.  
+     `Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (412) There is currently a lease on the blob and no lease ID was specified in the request.`  
   
      Если инструкция восстановления выполнялись в резервном файле большого двоичного объекта с активной арендой, операция резервного копирования может завершиться со следующей ошибкой:  
   
-     **Сообщение об исключении: удаленный сервер вернул ошибку: (409) конфликт…**  
+     `Exception Message: The remote server returned an error: (409) Conflict..`  
   
      Если возникает такая ошибка, файлы больших двоичных объектов следует удалить. Дополнительные сведения об этом сценарии и устранении этой проблемы см. в разделе [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md).  
   
@@ -123,43 +121,50 @@ ms.lasthandoff: 11/17/2017
   
  **Регулирование соединений прокси-серверами.**  
   
- Прокси-серверы могут иметь параметры, ограничивающие количество соединений в минуту. Процесс резервного копирования на URL-адрес является многопоточным, в связи с чем заданное ограничение может быть превышено. В этом случае прокси-сервер разрывает соединение. Чтобы устранить эту проблему, измените параметры прокси-сервера таким образом, чтобы SQL Server его не использовал.   Далее приведено несколько примеров типов или сообщений об ошибках, которые можно встретить в журнале ошибок.  
+ Прокси-серверы могут иметь параметры, ограничивающие количество соединений в минуту. Процесс резервного копирования на URL-адрес является многопоточным, в связи с чем заданное ограничение может быть превышено. В этом случае прокси-сервер разрывает соединение. Чтобы устранить эту проблему, измените параметры прокси-сервера таким образом, чтобы SQL Server его не использовал. Далее приведено несколько примеров типов или сообщений об ошибках, которые можно встретить в журнале ошибок.  
   
--   Сбой записи в "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak". При архивации на URL-адрес получено исключение из удаленной конечной точки. Сообщение об исключении: не удалось прочитать данные из транспортного соединения. Соединение было закрыто.  
+```
+Write on "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" failed: Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
+```  
   
--   В файле "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" произошла неустранимая ошибка ввода-вывода "Не удалось получить ошибку из удаленной конечной точки".  
+```
+A nonrecoverable I/O error occurred on file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Error could not be gathered from Remote Endpoint.  
   
-     Сообщение 3013, уровень 16, состояние 1, строка 2  
+Msg 3013, Level 16, State 1, Line 2  
   
-     Процесс BACKUP DATABASE завершается аварийно.  
+BACKUP DATABASE is terminating abnormally.  
+```
+
+```
+BackupIoRequest::ReportIoError: write failure on backup device http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Operating system error Backup to URL received an exception from the remote endpoint. Exception Message: Unable to read data from the transport connection: The connection was closed.
+```  
   
--   BackupIoRequest::ReportIoError: ошибка записи в устройство резервного копирования http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak. Ошибка операционной системы. Процесс резервного копирования на URL-адрес получил исключение от удаленной конечной точки. Сообщение об исключении: не удалось прочитать данные из транспортного соединения. Соединение было закрыто.  
+Если включить подробный уровень ведения журнала с помощью флага трассировки 3051, то в журналы также может быть занесено следующее сообщение.  
   
- Если включить подробный уровень ведения журнала с помощью флага трассировки 3051, то в журналы также может быть занесено следующее сообщение.  
-  
- Код состояния HTTP 502, ошибка прокси-сервера сообщения о состоянии HTTP (количество HTTP-запросов в минуту превышает установленный предел. Обратитесь к администратору сервера ISA.  )  
+`HTTP status code 502, HTTP Status Message Proxy Error (The number of HTTP requests per minute exceeded the configured limit. Contact your ISA Server administrator.) ` 
   
  **Параметры прокси-сервера по умолчанию не используются.**  
   
- Иногда, если не выбраны параметры по умолчанию, это приводит к ошибкам аутентификации на прокси-сервере наподобие следующей: *Произошла неустранимая ошибка ввода-вывода в файле "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`". При архивации на URL-адрес получено исключение из удаленной конечной точки. Сообщение об исключении: удаленный сервер вернул ошибку: (407)* **требуется аутентификация на прокси-сервере**.  
+Иногда, если не выбраны параметры по умолчанию, это приводит к ошибкам проверки подлинности на прокси-сервере наподобие следующей:
+ 
+ `A nonrecoverable I/O error occurred on file "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:" Backup to URL received an exception from the remote endpoint. Exception Message: The remote server returned an error: (407)* **Proxy Authentication Required.`  
   
- Чтобы устранить эту проблему, создайте файл конфигурации, позволяющий процессу резервного копирования по URL-адресу использовать параметры прокси-сервера по умолчанию. Для этого выполните следующие действия.  
+Чтобы устранить эту проблему, создайте файл конфигурации, позволяющий процессу резервного копирования по URL-адресу использовать параметры прокси-сервера по умолчанию. Для этого выполните следующие действия.  
   
-1.  Создайте файл конфигурации BackuptoURL.exe.config со следующим XML-кодом:  
+1.  Создайте файл конфигурации `BackuptoURL.exe.config` со следующим XML-кодом:  
   
-    ```  
-    \<?xml version ="1.0"?>  
+    ```xml  
+    <?xml version ="1.0"?>  
     <configuration>   
-                    \<system.net>   
+                    <system.net>   
                                     <defaultProxy enabled="true" useDefaultCredentials="true">   
                                                     <proxy usesystemdefault="true" />   
                                     </defaultProxy>   
-                    \</system.net>  
+                    </system.net>  
     </configuration>  
-  
     ```  
   
-2.  Поместите файл конфигурации в папку Binn на экземпляре SQL Server. Например, если SQL Server установлен на диске C компьютера, поместите файл конфигурации сюда: *C:\Program Files\Microsoft SQL Server\MSSQL13.\<имя_экземпляра>\MSSQL\Binn*.  
+2.  Поместите файл конфигурации в папку Binn на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Например, если [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] установлен на диске C компьютера, поместите файл конфигурации в `C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn`.  
   
 ## <a name="see-also"></a>См. также:  
  [Восстановление из резервных копий в Microsoft Azure](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  

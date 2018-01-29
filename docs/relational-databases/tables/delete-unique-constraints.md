@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - deleting constraints
 - constraints [SQL Server], unique
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 832b392190bd57633438600452f29ecc86fbcaa2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 89d8fc0d3d2583f4e2fdbcedc1489b0fd191afac
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="delete-unique-constraints"></a>Удаление ограничений уникальности
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -36,9 +37,9 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Удаление ограничения уникальности с использованием:**  
   
@@ -48,9 +49,9 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -73,7 +74,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Щелкните **Удалить**.  
   
-5.  В меню **Файл** выберите пункт **Сохранить** *table name*.  
+5.  В меню **Файл** выберите пункт **Сохранить** *имя_таблицы*.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

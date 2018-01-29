@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 - failover [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4c1ec4e43ebc62a5c64477cb372ad82f9d1bf26a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7e82b63c2bbc3d3788272f065d1cdb795decc8b1
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-flexible-automatic-failover-policy"></a>Настройка гибкой политики отработки отказа для автоматического перехода на другой ресурс
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,13 +64,13 @@ ms.lasthandoff: 11/20/2017
   
 -   Необходимо подключиться к экземпляру сервера, на котором размещена первичная реплика.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
   
 |Задача|Разрешения|  
 |----------|-----------------|  
-|Настройка гибкой политики отработки отказа для новой группы доступности|Требуется членство в предопределенной роли сервера **sysadmin** и разрешение сервера CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
+|Настройка гибкой политики отработки отказа для новой группы доступности|Требуется членство в фиксированной роли сервера **sysadmin** и одно из разрешений: CREATE AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP или CONTROL SERVER.|  
 |Изменение политики существующей группы доступности|Необходимо разрешение ALTER AVAILABILITY GROUP для группы доступности, разрешение CONTROL AVAILABILITY GROUP, разрешение ALTER ANY AVAILABILITY GROUP или разрешение CONTROL SERVER.|  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
@@ -112,11 +113,11 @@ ms.lasthandoff: 11/20/2017
 ##  <a name="PowerShellProcedure"></a> Использование PowerShell  
  **Настройка гибкой политики отработки отказа**  
   
-1.  Установите значение по умолчанию (**cd**) равным серверу экземпляра, на котором размещена первичная реплика.  
+1.  Установите в качестве значения по умолчанию (**cd**) экземпляр сервера, на котором размещена первичная реплика.  
   
 2.  При добавлении реплики доступности в группу доступности воспользуйтесь командлетом **New-SqlAvailabilityGroup** . При изменении существующей реплики доступности воспользуйтесь командлетом **Set-SqlAvailabilityGroup** .  
   
-    -   Чтобы установить уровень условий отработки отказа, используйте параметр **FailureConditionLevel***level* , где *level* принимает одно из следующих значений.  
+    -   Чтобы установить уровень условий отработки отказа, используйте параметр **FailureConditionLevel***level*, где *level* принимает одно из следующих значений:  
   
         |Значение|Level|Автоматическая отработка отказа запускается при...|  
         |-----------|-----------|-------------------------------------------|  
@@ -136,7 +137,7 @@ ms.lasthandoff: 11/20/2017
         -FailureConditionLevel OnServerDown  
         ```  
   
-    -   Чтобы установить пороговое значение времени ожидания для проверки работоспособности, используйте параметр **HealthCheckTimeout***n* , где *n* является целым числом от 15000 миллисекунд (15 секунд) до 4294967295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд).  
+    -   Чтобы установить пороговое значение времени ожидания для проверки работоспособности, используйте параметр **HealthCheckTimeout***n*, где *n* является целым числом от 15 000 миллисекунд (15 секунд) до 4 294 967 295 миллисекунд. Значение по умолчанию — 30 000 миллисекунд (30 секунд).  
   
          Например, следующая команда изменяет пороговое значение времени ожидания проверки работоспособности существующей группы доступности `AG1`на значение 120 000 миллисекунд (две минуты).  
   
@@ -147,13 +148,13 @@ ms.lasthandoff: 11/20/2017
         ```  
   
 > [!NOTE]  
->  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
+>  Чтобы просмотреть синтаксис командлета, воспользуйтесь командлетом **Get-Help** в среде PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Дополнительные сведения см. в разделе [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md).  
   
  **Настройка и использование поставщика SQL Server PowerShell**  
   
--   [SQL Server PowerShell, поставщик](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
+-   [Поставщик SQL Server PowerShell](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Получение справок по SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ## <a name="see-also"></a>См. также:  
  [Обзор групп доступности AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

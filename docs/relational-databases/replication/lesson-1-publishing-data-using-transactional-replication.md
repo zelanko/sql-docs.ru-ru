@@ -8,22 +8,25 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server 2016
-helpviewer_keywords: replication [SQL Server], tutorials
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
-caps.latest.revision: "14"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b6d053d9a0e80785e375fdb1f796ddf01894d993
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 49a9b7290e5f3253995f7bef0efd1390f74de5bf
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Урок 1. Публикация данных с помощью репликации транзакций
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] На этом занятии с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] создается публикация транзакций с целью публикации фильтрованного подмножества таблицы **Product** из образца базы данных [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Также в список доступа к публикации (PAL) добавляется имя входа SQL Server, используемое агентом распространителя. Перед началом работы с этим учебником необходимо завершить работу с предыдущим учебником, [Подготовка сервера к репликации](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md).  
@@ -56,7 +59,7 @@ ms.lasthandoff: 11/17/2017
   
 10. На странице "Безопасность агента" снимите флажок **Использовать настройки безопасности агента моментальных снимков** .  
   
-11. Для агента моментальных снимков щелкните **Настройки безопасности**, введите \<*Имя_компьютера>***\repl_snapshot** в поле **Учетная запись процесса**, укажите пароль для этой учетной записи и нажмите кнопку **ОК**.  
+11. Для агента моментальных снимков щелкните **Настройки безопасности**, введите \<*имя_компьютера>***\repl_snapshot** в поле **Учетная запись процесса**, укажите пароль для этой учетной записи и нажмите кнопку **ОК**.  
   
 12. Повторите предыдущий шаг, чтобы установить repl_logreader в качестве учетной записи процесса для агента чтения журнала, а затем нажмите кнопку **Готово**.  
   
@@ -82,9 +85,9 @@ ms.lasthandoff: 11/17/2017
   
 3.  Выберите страницу **Список доступа к публикации** и нажмите кнопку **Добавить**.  
   
-4.  В диалоговом окне **Добавление доступа к публикации** выберите *<Имя_компьютера>***\repl_distribution** и нажмите кнопку **ОК**. Нажмите кнопку **ОК**.  
+4.  В диалоговом окне **Добавление доступа к публикации** выберите *<имя_компьютера>***\repl_distribution** и нажмите кнопку **ОК**. Нажмите кнопку **ОК**.  
   
-## <a name="next-steps"></a>Следующие шаги  
+## <a name="next-steps"></a>Next Steps  
 Публикация транзакций успешно создана. Далее будет создана подписка на эту публикацию. См. [Занятие 2. Создание подписки на публикацию транзакций](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>См. также:  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - attaching databases [SQL Server]
 - databases [SQL Server], moving
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
-caps.latest.revision: "98"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: df36f7e602f85000e2254b1bffa3d240ab7321a8
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7338e364e970aaccc6c24cdba04e1b43a188c8c9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Присоединение и отсоединение базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Файлы данных и журналов транзакций базы данных можно отсоединить, а затем снова присоединить к тому же или другому экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Отсоединение и присоединение базы данных полезно, если необходимо переместить базу данных на другой экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на том же компьютере либо перенести базу данных.  
@@ -95,7 +96,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Если присоединяемый первичный файл данных доступен только для чтения, компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] предполагает, что и база данных доступна только для чтения.  
   
- Когда зашифрованная база данных впервые присоединяется к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], владелец базы данных должен открыть главный ключ базы данных, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD = **'***пароль***'**. Рекомендуется включить автоматическую расшифровку главного ключа, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Дополнительные сведения см. в разделах [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
+ Когда зашифрованная база данных впервые присоединяется к экземпляру [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ее владелец должен открыть главный ключ базы данных, выполнив следующую инструкцию: OPEN MASTER KEY DECRYPTION BY PASSWORD = **'***пароль***'**. Рекомендуется включить автоматическую расшифровку главного ключа, выполнив следующую инструкцию: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Дополнительные сведения см. в разделах [CREATE MASTER KEY (Transact-SQL)](../../t-sql/statements/create-master-key-transact-sql.md) и [ALTER MASTER KEY (Transact-SQL)](../../t-sql/statements/alter-master-key-transact-sql.md).  
   
  Требования для присоединения файлов журналов частично зависят от того, доступна база данных для записи и чтения или только для чтения.  
   

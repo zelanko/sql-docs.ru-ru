@@ -8,7 +8,8 @@ ms.service:
 ms.component: import-export
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-bulk-import-export
+ms.technology:
+- dbe-bulk-import-export
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - row terminators [SQL Server]
 - terminators [SQL Server]
 ms.assetid: f68b6782-f386-4947-93c4-e89110800704
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
+caps.latest.revision: 
+author: douglaslMS
+ms.author: douglasl
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: b6239b8e7ad2f4383eac1764a211880325eedf3c
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: e2f902b7afaadf936102b90c542d97d5450c7995
+ms.sourcegitcommit: 6c54e67818ec7b0a2e3c1f6e8aca0fdf65e6625f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Определение признаков конца поля и строки (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Для символьных полей данных можно определить символы, которые являются разделителями полей и строк в файле данных, указав *признак конца поля* и *признак конца строки*. Для программ, считывающих файлы данных, это единственный способ определить, какими символами в нем разделяются строки и столбцы.  
@@ -88,7 +89,7 @@ ms.lasthandoff: 11/17/2017
         >  После интерактивного заполнения всех полей в команде **bcp** появится запрос на сохранение введенных ответов для каждого поля в файле форматирования в формате, отличном от XML. Дополнительные сведения о файлах форматирования в формате, отличном от XML, см. в разделе [Файлы формата, отличные от XML (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
 ### <a name="guidelines-for-using-terminators"></a>Рекомендации по использованию признаков конца полей и строк  
- В некоторых ситуациях для данных типа **char** или **nchar** имеет смысл использовать признаки конца поля, Например:  
+ В некоторых ситуациях для данных типа **char** или **nchar** имеет смысл использовать признаки конца поля, Пример:  
   
 -   Для столбца данных, содержащего значение NULL в файле данных, который будет импортирован в программу, не распознающую сведения о длине префикса.  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/17/2017
   
  Команда **bcp** поддерживает следующие параметры.  
   
-|Параметр|Описание|  
+|Параметр|Description|  
 |------------|-----------------|  
 |**-c**|Указывает, что поля данных должны загружаться как символьные данные.|  
 |**-t** `,`|Задает запятую (,) в качестве признака конца поля.|  
@@ -131,7 +132,7 @@ bcp AdventureWorks.HumanResources.Department out C:\myDepartment-c-t.txt -c -t, 
   
      Признаки конца в файле форматирования могут быть определены как для отдельных полей, так и для всего файла данных при помощи квалификаторов, приведенных в следующей таблице.  
   
-    |Квалификатор|Описание|  
+    |Квалификатор|Description|  
     |---------------|-----------------|  
     |FIELDTERMINATOR **='***признак_конца_поля***'**|Задает признак конца поля, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \t (символ табуляции).|  
     |ROWTERMINATOR **='***признак_конца_строки***'**|Задает признак конца строки, используемый для символьных файлов данных и файлов в кодировке Юникод.<br /><br /> Значением по умолчанию является \n (символ перевода строки).|  
@@ -172,7 +173,7 @@ bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T
 #### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>Б. Задание признаков конца в интерактивном режиме с помощью инструкции BULK INSERT  
  В следующем примере производится массовый импорт файла данных `Department-c-t.txt` инструкцией `BULK INSERT` , которая использует квалификаторы, показанные в следующей таблице.  
   
-|Параметр|Attribute|  
+|Параметр|attribute|  
 |------------|---------------|  
 |DATAFILETYPE **='**char**'**|Указывает, что поля данных должны загружаться как символьные данные.|  
 |FIELDTERMINATOR **='**`,`**'**|Задает запятую (`,`) в качестве признака конца поля.|  

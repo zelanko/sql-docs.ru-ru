@@ -8,21 +8,23 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: PolyBase
+helpviewer_keywords:
+- PolyBase
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9ff43bd1953f7f175bc8726cc617081c6173b1d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4a75f97300af0ddf7023fd95efa5e3a973ec332a
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Конфигурация подключения к PolyBase (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -49,10 +51,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ **@configname=** ] **"***имя_параметра***"**  
+ [ **@configname=** ] **'***option_name***'**  
  Имя параметра конфигурации. Аргумент*option_name* имеет тип **varchar(35)**, значение по умолчанию — NULL. Если этот параметр отсутствует, возвращается список всех параметров.  
   
- [ **@configvalue=** ] **"***значение***"**  
+ [ **@configvalue=** ] **'***value***'**  
  Новое значение параметра конфигурации. Аргумент*value* имеет тип **int**и значение по умолчанию NULL. Максимальное значение зависит от конкретного параметра.  
   
  **'hadoop connectivity'**  
@@ -110,7 +112,7 @@ RECONFIGURE
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Недопустимо использование RECONFIGURE в явной или неявной транзакции.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Все пользователи могут выполнять команду **sp_configure** без параметров или с параметром @configname .  
   
  Для изменения значения конфигурации или выполнения инструкции RECONFIGURE требуется разрешение **ALTER SETTINGS** на уровне сервера или членство в предопределенной роли сервера **sysadmin** .  
@@ -145,7 +147,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [sp_configure (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [CREATE EXTERNAL TABLE (Transact-SQL)](../../t-sql/statements/create-external-table-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT (Transact-SQL)](../../t-sql/statements/create-external-file-format-transact-sql.md)   

@@ -9,20 +9,22 @@ ms.service:
 ms.component: scale-out
 ms.reviewer: douglasl
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: haoqian
 ms.author: haoqian
 manager: craigg
-f1_keywords: sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+f1_keywords:
+- sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.workload: Inactive
-ms.openlocfilehash: 091d67122b07e8787ccfce914236a4ff9f793b27
-ms.sourcegitcommit: 4dab7c60fb66d61074057eb1cee73f9b24751a8f
+ms.openlocfilehash: 40bc7489efca9139dd83489452610f64b84a90bf
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/13/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Выполнение пакетов в SQL Server Integration Services (SSIS) Scale Out
 После развертывания пакетов на сервере служб Integration Services их можно запускать в Scale Out одним из следующих способов:
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/13/2017
 
 1.  Создайте выполнения.
 
-    Вызовите процедуру `[catalog].[create_execution]` для каждого пакета. Задайте для параметра **@runinscaleout** значение `True`. Если выполнять пакет разрешено не всем компьютерам рабочей роли Scale Out, задайте для параметра **@useanyworker** значение `False`.   
+    Вызовите процедуру `[catalog].[create_execution]` для каждого пакета. Задайте для параметра **@runinscaleout** значение `True`. Если выполнять пакет разрешено не всем компьютерам рабочей роли Scale Out, задайте для параметра **@useanyworker** значение `False`. Дополнительные сведения об этой хранимой процедуре и параметре **@useanyworker** см. в разделе [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Задайте параметры выполнения.
 

@@ -8,35 +8,37 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.swb.detachdatabase.f1
+f1_keywords:
+- sql13.swb.detachdatabase.f1
 helpviewer_keywords:
 - database detaching [SQL Server]
 - detaching databases [SQL Server]
 ms.assetid: f63d4107-13e4-4bfe-922d-5e4f712e472d
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c31efc7e44be9eec0e50300911eaf5590d5f8199
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 1a3d6dec6dcaff890cb3cd8bfd05af33556d06d3
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="detach-a-database"></a>Отсоединение базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается отсоединение базы данных в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)]. Отсоединенные файлы останутся на диске и могут быть повторно подсоединены с помощью инструкции CREATE DATABASE с параметрами FOR ATTACH или FOR ATTACH_REBUILD_LOG. Файлы можно также переместить на другой сервер и подсоединить там.  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Отсоединение базы данных с помощью следующих средств:**  
   
@@ -49,9 +51,9 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Restrictions"></a> Ограничения  
  Список ограничений см. в статье [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Необходимо членство в предопределенной роли базы данных db_owner.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  

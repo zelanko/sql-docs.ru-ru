@@ -8,7 +8,8 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - tables [SQL Server], Visual Database Tools
 - renaming tables
 ms.assetid: 2f5c922d-4d71-4694-9fca-28dd99375799
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 1a341ca5d2c39c5d7c5071d135f58fd37d6b9d73
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 66529f13e4eae406cb4e85d507a9da2d4629d895
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="rename-tables-database-engine"></a>Переименование таблиц (компонент Database Engine)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -38,11 +39,11 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Переименование таблицы с использованием:**  
   
@@ -55,9 +56,9 @@ ms.lasthandoff: 11/17/2017
 ###  <a name="Restrictions"></a> Ограничения  
  Переименование таблицы не приводит к автоматическому переименованию ссылок на эту таблицу. Необходимо вручную изменить все объекты, которые ссылаются на переименованную таблицу. Например, если переименована таблица и на эту таблицу имеется ссылка в триггере, то необходимо изменить триггер, указав новое имя таблицы. Используйте представление каталога [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) , чтобы составить список зависимостей для таблицы перед переименованием.  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -72,7 +73,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Чтобы отменить это действие, нажмите клавишу ESC перед тем, как выйти из этого поля.  
   
-5.  В меню **Файл** выберите пункт **Сохранить***table name*.  
+5.  В меню **Файл** выберите команду *Сохранить***имя_таблицы*.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

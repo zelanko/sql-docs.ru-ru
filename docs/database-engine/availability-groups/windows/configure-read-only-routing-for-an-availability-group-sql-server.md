@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], client connectivity
 - Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
-ms.openlocfilehash: c0dc198b7f7e40bb99c0e019b9172b647f8bda79
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+manager: craigg
+ms.openlocfilehash: 9df48b3e6fb769543e7b5e4248b00c5a4ec2a88c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>Настройка маршрутизации только для чтения в группе доступности (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Чтобы настроить группу доступности AlwaysOn для поддержки маршрутизации только для чтения в [!INCLUDE[ssnoversion](../../../includes/ssnoversion-md.md)], можно использовать процедуру [!INCLUDE[tsql](../../../includes/tsql-md.md)] или PowerShell. *Маршрутизация только для чтения* означает способность [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] направлять уточняющие запросы на соединение только для чтения к имеющейся [доступной для чтения вторичной реплике](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn (то есть реплике, настроенной для разрешения рабочих нагрузок только для чтения при выполнении вторичной роли). Для поддержки маршрутизации только для чтения группа доступности должна иметь [прослушиватель группы доступности](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md). Клиент, запрашивающий данные в режиме только чтения, должен направлять свои запросы к данному прослушивателю, а строки подключения клиента должны определять намерение приложения как «только для чтения». Это означает, что они должны быть *запросами на соединение с правами чтения*.  
@@ -192,7 +193,7 @@ GO
   
 2.  При добавлении реплики доступности в группу доступности воспользуйтесь командлетом **New-SqlAvailabilityReplica** . При изменении существующей реплики доступности воспользуйтесь командлетом **Set-SqlAvailabilityReplica** . Соответствующие параметры:  
   
-    -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите параметр **ReadonlyRoutingConnectionUrl"***url***"** .  
+    -   Чтобы настроить маршрутизацию только для чтения для вторичной роли, укажите параметр **ReadonlyRoutingConnectionUrl"***url***"**.  
   
          Здесь *url* — это полное доменное имя и порт, которые используются для маршрутизации к реплике соединений только для чтения. Например:  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   

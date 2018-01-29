@@ -8,7 +8,8 @@ ms.service:
 ms.component: backup-restore
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-backup-restore
+ms.technology:
+- dbe-backup-restore
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - backups [SQL Server], creating
 - database backups [SQL Server], SQL Server Management Studio
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
-caps.latest.revision: "63"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 42964f190b4eacba2e1861c7af0f86d48dcbd4b0
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 99efc19a0379e6e4e79a9913c3fd193c219c2666
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Создание полной резервной копии базы данных (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +269,7 @@ ms.lasthandoff: 01/02/2018
     |Параметр|Description|  
     |------------|-----------------|  
     |*database*|База данных для резервного копирования.|  
-    |*backup_device* [ **,**...*n* ]|Указывает список от 1 до 64 устройств резервного копирования, используемых для создания резервной копии. Можно указать как физическое устройство резервного копирования, так и соответствующее логическое устройство, если оно уже определено. Для указания физического устройства резервного копирования используйте параметр DISK или TAPE.<br /><br /> { DISK &#124; TAPE } **=***имя_физического_устройства_резервного _копирования*<br /><br /> Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |*backup_device* [ **,**...*n* ]|Указывает список от 1 до 64 устройств резервного копирования, используемых для создания резервной копии. Можно указать как физическое устройство резервного копирования, так и соответствующее логическое устройство, если оно уже определено. Для указания физического устройства резервного копирования используйте параметр DISK или TAPE.<br /><br /> { DISK &#124; TAPE } **=***имя_физического_устройства_резервного_копирования*<br /><br /> Дополнительные сведения см. в разделе [Устройства резервного копирования (SQL Server)](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
     |WITH *with_options* [ **,**...*o* ]|При необходимости можно указать один или несколько дополнительных параметров, *o*. Сведения о некоторых основных параметрах см. в пункте 2.|  
   
 2.  При необходимости укажите один или несколько параметров WITH. Здесь описываются некоторые основные параметры WITH. Сведения обо всех параметрах WITH см. в разделе [BACKUP (Transact-SQL)](../../t-sql/statements/backup-transact-sql.md).  
@@ -281,10 +282,10 @@ ms.lasthandoff: 01/02/2018
          ШИФРОВАНИЕ (АЛГОРИТМ, СЕРТИФИКАТ СЕРВЕРА |АСИММЕТРИЧНЫЙ КЛЮЧ)  
          Только для SQL Server 2014 и выше укажите используемый алгоритм шифрования, а также сертификат или асимметричный ключ для шифрования.  
   
-         DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+         DESCRIPTION **=** { **'***текст***'** | **@***текстовая_переменная* }  
          Задает произвольное текстовое описание резервного набора данных. В этой строке может содержаться до 255 символов.  
   
-         NAME **=** { *backup_set_name* | **@***backup_set_name_var* }  
+         NAME **=** { *имя_резервного_набора_данных* | **@***переменная_имени_резервного_набора_данных* }  
          Указывает имя резервного набора данных. Длина имени не может превышать 128 символов. Если параметр NAME не указан, то имя является пустым.  
   
     -   Основные параметры WITH резервного набора данных:  
@@ -293,7 +294,7 @@ ms.lasthandoff: 01/02/2018
   
          Чтобы отформатировать носитель резервной копии используется параметр FORMAT:  
   
-         FORMAT [ **,** MEDIANAME**=** { *media_name* | **@***media_name_variable* } ] [ **,** MEDIADESCRIPTION **=** { *text* | **@***text_variable* } ]  
+         FORMAT [ **,** MEDIANAME**=** { *имя_носителя* | **@***переменная_имени_носителя* } ] [ **,** MEDIADESCRIPTION **=** { *текст* | **@***текстовая_переменная* } ]  
          Используйте предложение FORMAT при первом использовании носителя или при необходимости перезаписать существующие данные. При необходимости назначьте новому носителю имя и описание.  
   
         > [!IMPORTANT]  

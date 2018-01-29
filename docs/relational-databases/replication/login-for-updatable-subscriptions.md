@@ -8,21 +8,23 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
+f1_keywords:
+- sql13.rep.newsubwizard.updatablesubscriptionslogin.f1
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
-caps.latest.revision: "18"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0ae8beff6dc6f55ea6db9ce23c9f582e1fa108be
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bd0c4bab5c8a4474a3864df385af997febf656d9
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="login-for-updatable-subscriptions"></a>Имя входа для обновляемых подписок
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Если на странице **Обновляемые подписки** этого мастера выбран вариант **Репликация**, то, чтобы выполнить немедленное обновление, требуется указать учетную запись в подписчике, с помощью которой будут устанавливаться соединения с издателем. 
@@ -54,7 +56,7 @@ ms.lasthandoff: 11/17/2017
  **Использовать уже указанный связанный или удаленный сервер**  
  Для данного параметра необходим уже определенный связанный или удаленный сервер. Дополнительные сведения см. в статьях [Linked Servers (Database Engine)](../../relational-databases/linked-servers/linked-servers-database-engine.md) (Связанные серверы (ядро СУБД)) и [Remote Servers](../../database-engine/configure-windows/remote-servers.md) (Удаленные серверы). Убедитесь в том, что имя входа, используемое для связанного сервера или удаленного сервера, имеет надежный пароль и обладает только разрешениями, описанными в данном разделе.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также раздел  
  [Создание обновляемой подписки для публикации транзакций](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
  [Просмотр и изменение параметров безопасности репликации](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Updatable Subscriptions- For Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  (Обновляемые подписки для репликации транзакций)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: replication
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -43,16 +44,16 @@ helpviewer_keywords:
 - publications [SQL Server replication], modifying
 - user-defined functions [SQL Server replication]
 ms.assetid: d986032c-3387-4de1-a435-3ec5e82185a2
-caps.latest.revision: "83"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7df7cad2ce05a9f18f9950b769e4f3b62aa7c984
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 21e6296382acf84d5ca1aa6a7ec84cd1e171c321
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="publish-data-and-database-objects"></a>Публикация данных и объектов базы данных
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] При создании публикации вы выбираете необходимые для нее таблицы и другие объекты базы данных. Используя репликацию, можно опубликовать следующие объекты базы данных.  
@@ -119,13 +120,13 @@ ms.lasthandoff: 11/17/2017
   
 -   [Article Options for Merge Replication](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)  
   
--   [Replicate Identity Columns](../../../relational-databases/replication/publish/replicate-identity-columns.md) (Репликация столбцов идентификаторов)  
+-   [Репликация столбцов идентификаторов](../../../relational-databases/replication/publish/replicate-identity-columns.md)  
   
  При публикации таблицы для репликации можно указать, какие объекты схемы должны копироваться на подписчик, например: объявленная ссылочная целостность (ограничения на первичный ключ, ссылочные ограничения, ограничения уникальности), индексы, пользовательские триггеры DML (триггеры DDL не могут быть реплицированы), расширенные свойства и параметры сортировки. Расширенные свойства реплицируются только во время начальной синхронизации между издателем и подписчиком. При добавлении или изменении расширенного свойства после начальной синхронизации эти изменения не реплицируются.  
   
  Сведения об указании параметров схемы см. в разделе [Указание параметров схемы](../../../relational-databases/replication/publish/specify-schema-options.md) или <xref:Microsoft.SqlServer.Replication.Article.SchemaOption%2A>.  
   
-### <a name="partitioned-tables-and-indexes"></a>Секционированные таблицы и индексы  
+### <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes  
  Репликация поддерживает публикацию секционированных таблиц и индексов. Уровень поддержки зависит от типа репликации, которая была использована, и параметров, заданных для публикации и статей, связанных с секционированными таблицами. Дополнительные сведения см. в статье [Replicate Partitioned Tables and Indexes](../../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md) (Репликация секционированных таблиц и индексов).  
   
 ## <a name="publishing-stored-procedures"></a>Публикация хранимых процедур  
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Для статей в публикациях, в которых используются моментальные снимки в текстовом режиме (используются для подписчиков, отличных от подписчиков[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , и подписчиков [!INCLUDE[ssEW](../../../includes/ssew-md.md)] ): по умолчанию владелец не указывается. Владельцем по умолчанию является владелец, указанный в учетной записи, используемой агентом распространителя или агентом слияния для соединения с подписчиком.  
   
- Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<***cтатья***>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ Владельца объекта можно изменить с помощью диалогового окна **Свойства статьи — \<***статья***>** и следующих хранимых процедур: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** и **sp_changemergearticle**. Дополнительные сведения см. в статье [Просмотр и изменение свойств публикации](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Определение статьи](../../../relational-databases/replication/publish/define-an-article.md) и [Просмотр и изменение свойств статьи](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### <a name="publishing-data-to-subscribers-running-previous-versions-of-sql-server"></a>Публикация данных на подписчики, использующие предыдущие версии SQL Server  
   
@@ -253,7 +254,7 @@ ms.lasthandoff: 11/17/2017
   
      Дополнительные сведения об этих параметрах см. в статье об [sp_addmergearticle (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) и [sp_addmergefilter (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md).  
   
--   Репликация транзакций и нефильтрованная репликация слиянием поддерживают публикацию таблицы в нескольких публикациях с последующей подпиской в пределах одной таблицы в базе данных подписки (такой сценарий, как правило, называется сценарием сведения). Сведение часто используется для объединения подмножеств данных из нескольких мест в одной таблице на центральном подписчике. Фильтрованные публикации слиянием не поддерживают сценарий центрального подписчика. Для репликации слиянием сведение обычно реализуется в одной публикации с помощью параметризованных фильтров строк. Дополнительные сведения см. в статье [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+-   Репликация транзакций и нефильтрованная репликация слиянием поддерживают публикацию таблицы в нескольких публикациях с последующей подпиской в пределах одной таблицы в базе данных подписки (такой сценарий, как правило, называется сценарием сведения). Сведение часто используется для объединения подмножеств данных из нескольких мест в одной таблице на центральном подписчике. Фильтрованные публикации слиянием не поддерживают сценарий центрального подписчика. Для репликации слиянием сведение обычно реализуется в одной публикации с помощью параметризованных фильтров строк. Дополнительные сведения см. в разделе [Параметризованные фильтры строк](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Добавление и удаление статей в существующих публикациях](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   

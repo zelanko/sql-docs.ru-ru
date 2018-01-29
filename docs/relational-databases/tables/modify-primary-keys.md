@@ -8,23 +8,24 @@ ms.service:
 ms.component: tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-tables
+ms.technology:
+- dbe-tables
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - modifying primary keys
 - primary keys [SQL Server], modifying
 ms.assetid: 8e2a15ba-1cd1-4408-b860-16c3ee37d635
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ee0f0825c66c10ba5412a2b5d8ffc3db23077970
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: becb37a9eb7767299706bd354e7801a255b0dc96
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="modify-primary-keys"></a>Изменение первичных ключей
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -33,9 +34,9 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Изменение первичного ключа с использованием:**  
   
@@ -45,9 +46,9 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требуется разрешение ALTER на таблицу.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -67,7 +68,7 @@ ms.lasthandoff: 11/17/2017
     |Установка коэффициента заполнения|Разверните категорию **Характеристики заполнения** и введите целое число от 0 до 100 в поле **Коэффициент заполнения** . Дополнительные сведения о коэффициентах заполнения и их использовании см. в разделе [Укажите коэффициент заполнения для индекса](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).|  
     |Изменение порядка столбцов|Выберите свойство **Столбцы**и нажмите многоточие **(...)** справа от свойства. В диалоговом окне  **Столбцы индекса** удалите столбцы из первичного ключа. Затем снова добавьте эти столбцы в необходимом порядке. Чтобы удалить столбец из ключа, просто удалите имя столбца из списка имен **Столбец** .|  
   
-4.  В меню **Файл** выберите пункт **Сохранить***table name*.  
+4.  В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
  **Изменение первичного ключа**  

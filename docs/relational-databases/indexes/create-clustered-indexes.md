@@ -8,7 +8,8 @@ ms.service:
 ms.component: indexes
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-indexes
+ms.technology:
+- dbe-indexes
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - clustered indexes, UNIQUE constraint
 - indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
+caps.latest.revision: 
+author: barbkess
+ms.author: barbkess
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: ec406af911a0ea95910eba4a7bf35b68544418cd
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9aca99e368fa95b55877b7c654be2fec55dbab2e
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="create-clustered-indexes"></a>Создание кластеризованных индексов
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,13 +37,13 @@ ms.lasthandoff: 11/17/2017
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
      [Стандартные реализации](#Implementations)  
   
      [Ограничения](#Restrictions)  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Для создания кластеризованного индекса для таблицы используется:**  
   
@@ -77,10 +78,10 @@ ms.lasthandoff: 11/17/2017
   
 -   Ключ кластеризованного индекса не может включать в себя столбцы **varchar** , для которых существуют данные в единице размещения ROW_OVERFLOW_DATA. Если кластеризованный индекс создается для столбца типа **varchar** и существующие данные располагаются в единице размещения IN_ROW_DATA, то все последующие операции вставки или обновления для данного столбца, выталкивающие данные за пределы строки, будут завершаться ошибкой. Для получения сведений о таблицах, которые могут содержать превышающие размер страницы данные строки, используется функция динамического управления [sys.dm_db_index_physical_stats (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
- Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner** .  
+####  <a name="Permissions"></a> Permissions  
+ Необходимо разрешение ALTER для таблицы или представления. Пользователь должен быть членом предопределенной роли сервера **sysadmin** или предопределенных ролей базы данных **db_ddladmin** и **db_owner**.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 11/17/2017
   
 9. Щелкните **Закрыть**.  
   
-10. В меню **Файл** выберите пункт **Сохранить***имя_таблицы*.  
+10. В меню **Файл** выберите команду **Сохранить***имя_таблицы*.  
   
 ##  <a name="TsqlProcedure"></a> Использование Transact-SQL  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: configure-windows
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -52,16 +53,16 @@ helpviewer_keywords:
 - manual startup state [SQL Server]
 - accounts [SQL Server], user
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
-caps.latest.revision: "207"
-author: BYHAM
-ms.author: BYHAM
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: MikeRayMSFT
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 665144f239aab08583a1444e48e851965262bf97
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 85893d6f71a6caf270a56910418fe8217906ed76
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Настройка учетных записей службы Windows и разрешений
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -274,7 +275,7 @@ ms.lasthandoff: 11/20/2017
   
 ###  <a name="Serv_SID"></a> Настройка служб и управление доступом
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет обеспечить изоляцию и всестороннюю защиту идентификатора безопасности каждой службы. Идентификатор безопасности службы создается на основе имени службы и является уникальным для этой службы. Например, именем идентификатора безопасности службы для службы [!INCLUDE[ssDE](../../includes/ssde-md.md)] может быть **NT Service\MSSQL$***\<InstanceName>*. Изоляция служб обеспечивает доступ к конкретным объектам без необходимости использования учетной записи с высоким уровнем привилегий или ослабления защиты этих объектов. Используя запись управления доступом, содержащую удостоверение безопасности службы, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может ограничить доступ к своим ресурсам.
+[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] позволяет обеспечить изоляцию и всестороннюю защиту идентификатора безопасности каждой службы. Идентификатор безопасности службы создается на основе имени службы и является уникальным для этой службы. Например, именем идентификатора безопасности службы для службы [!INCLUDE[ssDE](../../includes/ssde-md.md)] может быть **NT Service\MSSQL$***\<имя_экземпляра>*. Изоляция служб обеспечивает доступ к конкретным объектам без необходимости использования учетной записи с высоким уровнем привилегий или ослабления защиты этих объектов. Используя запись управления доступом, содержащую удостоверение безопасности службы, служба [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] может ограничить доступ к своим ресурсам.
   
 > [!NOTE]  
 >  В Windows 7 и [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] R2 (и более поздних версиях) удостоверением безопасности службы может быть виртуальная учетная запись, используемая этой службой.
@@ -296,7 +297,7 @@ ms.lasthandoff: 11/20/2017
 |---------------------------------------|------------------------------------------------------------|
 |**[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\MSSQLSERVER**. Именованный экземпляр: **NT SERVICE\MSSQL$**имя_экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> Разрешение на запуск модуля записи SQL Writer<br /><br /> Разрешение на чтение службы журнала событий<br /><br /> Разрешение на чтение службы удаленного вызова процедур (RPC)|  
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :** \*<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\SQLSERVERAGENT**. Именованный экземпляр: **NT Service\SQLAGENT$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Замена токена уровня процесса** (SeAssignPrimaryTokenPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)|  
-|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию: **SQLServerMSASUser$***имя_компьютера***$MSSQLSERVER**. Именованный экземпляр: **SQLServerMSASUser$***имя_компьютера***$***имя_экземпляра*. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] : **SQLServerMSASUser$***имя_компьютера***$***PowerPivot*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Только для табличного режима:<br /><br /> **Увеличение рабочего набора процесса** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Настройка квот памяти для процесса** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Блокировка страниц в памяти** (SeLockMemoryPrivilege) — это право доступа требуется только в случае полного отключения функции разбиения по страницам.<br /><br /> Только для установок отказоустойчивого кластера:<br /><br /> **Увеличение приоритета планирования** (SeIncreaseBasePriorityPrivilege)|  
+|**[!INCLUDE[ssAS](../../includes/ssas-md.md)]:**<br /><br /> (Все права предоставляются локальной группе Windows. Экземпляр по умолчанию: **SQLServerMSASUser$***имя_компьютера***$MSSQLSERVER**. Именованный экземпляр: **SQLServerMSASUser$***имя_компьютера***$***имя_экземпляра*. Экземпляр [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]: **SQLServerMSASUser$***имя_компьютера***$***PowerPivot*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Только для табличного режима:<br /><br /> **Увеличение рабочего набора процесса** (SeIncreaseWorkingSetPrivilege)<br /><br /> **Настройка квот памяти для процесса** (SeIncreaseQuotaSizePrivilege)<br /><br /> **Блокировка страниц в памяти** (SeLockMemoryPrivilege) — это право доступа требуется только в случае полного отключения функции разбиения по страницам.<br /><br /> Только для установок отказоустойчивого кластера:<br /><br /> **Увеличение приоритета планирования** (SeIncreaseBasePriorityPrivilege)|  
 |**[!INCLUDE[ssRS](../../includes/ssrs-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT SERVICE\ReportServer**. Именованный экземпляр: **NT SERVICE\\ReportServer$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)|  
 |**[!INCLUDE[ssIS](../../includes/ssis-md.md)]:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию и именованный экземпляр: **NT SERVICE\MsDtsServer130**. У служб[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] нет отдельного процесса для именованного экземпляра.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> Разрешение на запись в журнал событий приложений<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)<br /><br /> **Олицетворение клиента после проверки подлинности** (SeImpersonatePrivilege)|  
 |**Полнотекстовый поиск:**<br /><br /> (Все права предоставляются удостоверению безопасности службы. Экземпляр по умолчанию: **NT Service\MSSQLFDLauncher**. Именованный экземпляр: **NT Service\ MSSQLFDLauncher$***имя_экземпляра*.)|**Вход в систему в качестве службы** (SeServiceLogonRight)<br /><br /> **Назначение квот памяти процессам** (SeIncreaseQuotaPrivilege)<br /><br /> **Обход проходной проверки** (SeChangeNotifyPrivilege)|  
@@ -320,7 +321,7 @@ ms.lasthandoff: 11/20/2017
   
 |Учетная запись службы для|Файлы и папки|Доступ|  
 |-------------------------|-----------------------|------------|  
-|MSSQLSERVER|Instid\MSSQL\backup|Полный доступ|  
+|MSSQLServer|Instid\MSSQL\backup|Полный доступ|  
 ||Instid\MSSQL\binn|Чтение и выполнение|  
 ||Instid\MSSQL\data|Полный доступ|  
 ||Instid\MSSQL\FTData|Полный доступ|  
@@ -380,14 +381,14 @@ ms.lasthandoff: 11/20/2017
 ||Microsoft SQL Server\130\Setup Bootstrap|Чтение и выполнение|  
 |Контроллер распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |\<ToolsDir>\DReplayController\Log\ (пустой каталог)|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\DReplayController.exe|Чтение и выполнение, список содержимого папки|  
-||\<ToolsDir>\DReplayController\resources\|Чтение и выполнение, список содержимого папки|  
+||\<ToolsDir>\DReplayController\resources\|Чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayController\\{все DLL-библиотеки}|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\DReplayController.config|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\IRTemplate.tdf|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayController\IRDefinition.xml|Чтение и выполнение, список содержимого папки|  
-|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |\<ToolsDir>\DReplayClient\Log\|Чтение и выполнение, список содержимого папки|  
+|Клиент распределенного воспроизведения[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |\<ToolsDir>\DReplayClient\Log\|Чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.exe|Чтение и выполнение, список содержимого папки|  
-||\<ToolsDir>\DReplayClient\resources\|Чтение и выполнение, список содержимого папки|  
+||\<ToolsDir>\DReplayClient\resources\|Чтение, выполнение, просмотр содержимого папки|  
 ||\<ToolsDir>\DReplayClient\ (все DLL-библиотеки)|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayClient\DReplayClient.config|Чтение и выполнение, список содержимого папки|  
 ||\<ToolsDir>\DReplayClient\IRTemplate.tdf|Чтение и выполнение, список содержимого папки|  
@@ -406,13 +407,13 @@ ms.lasthandoff: 11/20/2017
   
 |Запрашивающий компонент|Учетная запись|Ресурс|Разрешения|  
 |--------------------------|-------------|--------------|-----------------|  
-|MSSQLSERVER|Пользователи журнала производительности|Instid\MSSQL\binn|Просмотр содержимого папки|  
+|MSSQLServer|Пользователи журнала производительности|Instid\MSSQL\binn|Просмотр содержимого папки|  
 ||Пользователи системного монитора|Instid\MSSQL\binn|Просмотр содержимого папки|  
 ||Пользователи журнала производительности, пользователи системного монитора|\WINNT\system32\sqlctr130.dll|Чтение и выполнение|  
 ||Только администратор|\\\\.\root\Microsoft\SqlServer\ServerEvents\\<имя_экземпляра_SQL>*|Полный доступ|  
 ||Администраторы, система|\tools\binn\schemas\sqlserver\2004\07\showplan|Полный доступ|  
 ||Пользователи|\tools\binn\schemas\sqlserver\2004\07\showplan|Чтение и выполнение|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\LogFiles|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\LogFiles|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Удостоверение пула приложений диспетчера отчетов, учетная запись [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , все|*\<папка установки>*\Reporting Services\ReportManager, *\<папка установки>*\Reporting Services\ReportManager\Pages\\\*.\*, *\<папка установки>*\Reporting Services\ReportManager\Styles\\\*.\*, *\<папка установки>*\Reporting Services\ReportManager\webctrl_client\1_0\\*.\*|Чтение|  
 ||Удостоверение пула приложений диспетчера отчетов|*\<установка>*\Reporting Services\ReportManager\Pages\\*.\*|Чтение|  
 ||\<Учетная запись веб-службы сервера отчетов>|*\<установка>*\Reporting Services\ReportServer|Чтение|  
@@ -420,7 +421,7 @@ ms.lasthandoff: 11/20/2017
 ||Все|*\<установка>*\Reporting Services\ReportServer\global.asax|READ_CONTROL<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_READ_ATTRIBUTES|  
 ||СЕТЕВАЯ СЛУЖБА|*\<установка>*\Reporting Services\ReportServer\ReportService.asmx|Полное|  
 ||Все|*\<установка>*\Reporting Services\ReportServer\ReportService.asmx|READ_CONTROL<br /><br /> SYNCHRONIZE FILE_GENERIC_READ<br /><br /> FILE_GENERIC_EXECUTE<br /><br /> FILE_READ_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_EXECUTE<br /><br /> FILE_READ_ATTRIBUTES|  
-||Учетная запись службы Windows для сервера отчетов|*\<установка>*\Reporting Services\ReportServer\RSReportServer.config|DELETE<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
+||Учетная запись службы Windows для сервера отчетов|*\<установка>*\Reporting Services\ReportServer\RSReportServer.config|Delete<br /><br /> READ_CONTROL<br /><br /> SYNCHRONIZE<br /><br /> FILE_GENERIC_READ<br /><br /> FILE_GENERIC_WRITE<br /><br /> FILE_READ_DATA<br /><br /> FILE_WRITE_DATA<br /><br /> FILE_APPEND_DATA<br /><br /> FILE_READ_EA<br /><br /> FILE_WRITE_EA<br /><br /> FILE_READ_ATTRIBUTES<br /><br /> FILE_WRITE_ATTRIBUTES|  
 ||Все|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> Управление чтением|  
 ||Пользователь служб терминала|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  
 ||Опытные пользователи|Разделы реестра сервера отчетов (куст Instid)|Запрос значения<br /><br /> Установка значения<br /><br /> Создание подраздела<br /><br /> Перечисление подразделов<br /><br /> Уведомление<br /><br /> DELETE<br /><br /> Управление чтением|  

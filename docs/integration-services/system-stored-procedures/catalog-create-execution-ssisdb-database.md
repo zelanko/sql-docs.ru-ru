@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 45d0c2f6-1f38-445f-ac06-e2a01f6ac600
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.workload: On Demand
-ms.openlocfilehash: 883d6283f191827caf4de79e3f148f4680ccfe8a
-ms.sourcegitcommit: 34d3497039141d043429eed15d82973b18ad90f2
+ms.openlocfilehash: 5c557108a98a0063cb0dad14e0d40f10deb03698
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -65,9 +66,9 @@ catalog.create_execution [@folder_name = folder_name
 [@useanyworker =] *useanyworker*  
 Указывает, разрешено ли выполнение с помощью любой рабочей роли Scale Out.
 
--   Используйте значение 1 для выполнения пакета с помощью любой рабочей роли Scale Out. При задании `@useanyworker` значения "Истина" любая рабочая роль, максимальное количество задач которой (как указано в файле конфигурации рабочей роли) еще не достигнуто, может запускать пакет.
+-   Используйте значение 1 для выполнения пакета с помощью любой рабочей роли Scale Out. При задании `@useanyworker` значения "Истина" любая рабочая роль, максимальное количество задач которой (как указано в файле конфигурации рабочей роли) еще не достигнуто, может запускать пакет. Сведения о файле конфигурации рабочей роли см. в разделе [Рабочая роль масштабного развертывания служб Integration Services (SSIS)](../scale-out/integration-services-ssis-scale-out-worker.md).
 
--   Значение 0 указывает, что выполнение пакета с помощью любой рабочей роли Scale Out не разрешено. При задании `@useanyworker` значения "Ложь" вам нужно будет указать рабочие роли, которым разрешен запуск пакета, с помощью диспетчера Scale Out или вызова хранимой процедуры `[catalog].[add_execution_worker]`.
+-   Значение 0 указывает, что выполнение пакета с помощью любой рабочей роли Scale Out не разрешено. При задании `@useanyworker` значения "Ложь" вам нужно будет указать рабочие роли, которым разрешен запуск пакета, с помощью диспетчера Scale Out или вызова хранимой процедуры `[catalog].[add_execution_worker]`. Если указать рабочую роль, в которой уже запущен другой пакет, она завершает выполнение текущего пакета, прежде чем запросить другое выполнение.
 
 Этот параметр является необязательным. Если параметр не задан, используется значение 1. Параметр *useanyworker* имеет тип **bit**. 
   

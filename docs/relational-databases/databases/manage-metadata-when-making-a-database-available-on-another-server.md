@@ -8,7 +8,8 @@ ms.service:
 ms.component: databases
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -36,16 +37,16 @@ helpviewer_keywords:
 - credentials [SQL Server], metadata
 - copying databases
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
-caps.latest.revision: "84"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e1385db80093f2304ac998d6c6f1834aedf3ff31
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 9d46ba6ce2dfe1af2454b95d05bd82f3d8b1ce2f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>Управление метаданными при предоставлении доступа к базе данных на другом сервере
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Информация в этом разделе применима в следующих ситуациях:  
@@ -269,7 +270,7 @@ ms.lasthandoff: 11/17/2017
 > **ПРИМЕЧАНИЕ.** Сведения о настройке имен входа для зеркально отображаемой базы данных см. в разделах [Настройка учетных записей входа для зеркального отображения баз данных или групп доступности AlwaysOn (SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) и [Управление именами входа и заданиями после переключения ролей &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
   
-##  <a name="permissions"></a> Разрешения  
+##  <a name="permissions"></a> разрешения  
  При открытии доступа к базе данных на другом экземпляре сервера могут быть применены следующие типы разрешений:  
   
 -   Разрешения GRANT, REVOKE или DENY на системные объекты.  

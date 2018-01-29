@@ -8,30 +8,32 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Policy-Based Management, view facet properties
+helpviewer_keywords:
+- Policy-Based Management, view facet properties
 ms.assetid: 022a244c-c2e7-4467-b9a2-c7a27859be22
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1fa79b708310837ef8d4b7f03e452ad459e42769
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 0ef0cb61dbfbf8e026b64db3ce97c24a3806be5b
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Просмотр свойств аспекта управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается просмотр свойств аспекта управления на основе политик в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **В этом разделе**  
   
--   **Перед началом работы выполните следующие действия.**  
+-   **Перед началом работы**  
   
-     [Безопасность](#Security)  
+     [безопасность](#Security)  
   
 -   **Просмотр свойств аспекта с помощью:**  
   
@@ -39,9 +41,9 @@ ms.lasthandoff: 11/17/2017
   
 ##  <a name="BeforeYouBegin"></a> Перед началом  
   
-###  <a name="Security"></a> Безопасность  
+###  <a name="Security"></a> безопасность  
   
-####  <a name="Permissions"></a> Разрешения  
+####  <a name="Permissions"></a> Permissions  
  Требуется членство в роли PolicyAdministratorRole базы данных msdb.  
   
 ##  <a name="SSMSProcedure"></a> Использование среды SQL Server Management Studio  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Чтобы развернуть папку **Аспекты** , щелкните знак «плюс».  
   
-5.  Щелкните правой кнопкой мыши аспект, свойства которого необходимо просмотреть, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Свойства аспекта –***имя_аспекта* см. в статье [Диалоговое окно "Свойства аспекта", вкладка "Общие"](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md), [Диалоговое окно "Свойства аспекта", вкладка "Зависимые политики"](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md)и [Диалоговое окно "Свойства аспекта", вкладка "Зависимые условия"](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Щелкните правой кнопкой мыши аспект, свойства которого необходимо просмотреть, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Свойства аспекта —***имя_аспекта*, см. в статьях [Диалоговое окно "Свойства аспекта", вкладка "Общие"](../../relational-databases/policy-based-management/facet-properties-dialog-box-general-page.md), [Диалоговое окно "Свойства аспекта", вкладка "Зависимые политики"](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-policies-page.md) и [Диалоговое окно "Свойства аспекта", вкладка "Зависимые условия"](../../relational-databases/policy-based-management/facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  После завершения нажмите кнопку **Закрыть**.  
   

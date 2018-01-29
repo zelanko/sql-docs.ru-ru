@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - disabling operators
 - operators (users) [Database Engine], changing availability with Management Studio
 ms.assetid: 10d58b92-b67b-47e2-af9c-9f9fd6968bba
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ddc03d3d6bbc890538280bed094786f37c3ee682
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 23c85593a9e89978f84271240f3898a02c40fca9
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="change-an-operator39s-availability"></a>Изменение доступности оператора
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описано, как изменить расписание оператора по приему уведомлений о предупреждениях в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] с помощью [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] или [!INCLUDE[tsql](../../includes/tsql_md.md)].  
@@ -69,7 +70,7 @@ ms.lasthandoff: 12/21/2017
   
 4.  Щелкните правой кнопкой мыши оператора, которого нужно включить или отключить, и выберите пункт **Свойства**, а затем перейдите на вкладку **Общие** .  
   
-5.  В диалоговом окне *Свойства***имя_оператора** установите или снимите флажок **Включен** .  
+5.  В диалоговом окне *Свойства***имя_оператора* установите или снимите флажок **Включен**.  
   
 6.  Нажмите кнопку **ОК**.  
   

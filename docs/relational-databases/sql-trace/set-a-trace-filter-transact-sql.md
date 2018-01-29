@@ -8,23 +8,24 @@ ms.service:
 ms.component: sql-trace
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - filters [SQL Server], traces
 - traces [SQL Server], filters
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e2c3d67f34b0863731f76a647e43949e7a7a71ff
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 320a46a056d47943c0af58d55974f67b21375074
+ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>создать фильтр трассировки (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описывается, как использовать хранимые процедуры для создания фильтра, который возвращает только данные, необходимые для трассируемого события.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/17/2017
 2.  Выполните хранимую процедуру **sp_trace_setfilter** , чтобы определить тип данных, которые необходимо получить для трассируемого события.  
   
 > [!IMPORTANT]  
->  В отличие от обычных хранимых процедур, параметры всех хранимых процедур приложения [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_*xx***) жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
+>  Параметры всех хранимых процедур [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (**sp_trace_*xx***), в отличие от обычных хранимых процедур, жестко типизированы и не поддерживают автоматическое преобразование типов данных. Если эти аргументы указываются с неправильными типами данных входных параметров, как указано в описании их аргументов, хранимая процедура возвратит ошибку.  
   
 ## <a name="see-also"></a>См. также:  
  [Фильтрация трассировки](../../relational-databases/sql-trace/filter-a-trace.md)   

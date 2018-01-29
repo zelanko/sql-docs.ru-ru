@@ -8,7 +8,8 @@ ms.service:
 ms.component: availability-groups
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-high-availability
+ms.technology:
+- dbe-high-availability
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], troubleshooting
 - Availability Groups [SQL Server], configuring
 ms.assetid: 8c222f98-7392-4faf-b7ad-5fb60ffa237e
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 51429ad63e04893c26a6bf9213809060780aebba
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fe26c36dc6b8b5c5cdcde7013764246275f5ae6f
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="troubleshoot-always-on-availability-groups-configuration-sql-server"></a>Поиск и устранение неисправностей конфигурации групп доступности AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
  **В этом разделе:**  
   
-|Раздел|Описание|  
+|Раздел|Description|  
 |-------------|-----------------|  
 |[Функция групп доступности AlwaysOn не включена](#IsHadrEnabled)|Если экземпляр [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] не включен для [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], то экземпляр не поддерживает создание групп доступности и на нем не могут размещаться реплики доступности.|  
 |[Измерение счетов](#Accounts)|Обсуждаются требования к правильной настройке учетных записей, под которыми работает [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
@@ -144,7 +145,7 @@ ms.lasthandoff: 11/20/2017
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Текущая первичная реплика|Убедитесь, что параметр READ_ONLY_ROUTING_LIST содержит только экземпляры сервера, где размещена вторичная реплика.|**Определение доступных для чтения вторичных реплик:** sys.availability_replicas (столбец**secondary_role_allow_connections_desc** )<br /><br /> **Просмотр списка маршрутизации только для чтения:** sys.availability_read_only_routing_lists<br /><br /> **Изменение списка маршрутизации только для чтения:** ALTER AVAILABILITY GROUP|[sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [sys.availability_read_only_routing_lists (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что брандмауэр Windows не блокирует порт READ_ONLY_ROUTING_URL.|—|[Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] убедитесь в следующем.<br /><br /> Удаленное соединение с SQL Server включено.<br /><br /> TCP/IP включен.<br /><br /> IP-адреса настроены правильно.|—|[Просмотр или изменение свойств сервера (SQL Server)](../../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md)<br /><br /> [Настройка сервера для прослушивания указанного TCP-порта (диспетчер конфигурации SQL Server)](../../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md)|  
-|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что параметр READ_ONLY_ROUTING_URL (TCP**://***system-address***:***port*) содержит правильное полное доменное имя (FQDN) и номер порта.|—|[Вычисление значения read_only_routing_url для AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
+|![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Каждая реплика в списке read_only_routing_list|Убедитесь, что параметр READ_ONLY_ROUTING_URL (TCP**://***системный_адрес***:***порт*) содержит правильное полное доменное имя (FQDN) и номер порта.|—|[Вычисление значения read_only_routing_url для AlwaysOn](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)<br /><br /> [sys.availability_replicas (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)<br /><br /> [ALTER AVAILABILITY GROUP (Transact-SQL)](../../../t-sql/statements/alter-availability-group-transact-sql.md)|  
 |![Флажок](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Флажок")|Система клиента|Убедитесь, что драйвер клиента поддерживает маршрутизацию только для чтения.|—|[Подключение клиента AlwaysOn (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)|  
   
 ##  <a name="RelatedTasks"></a> Связанные задачи  
@@ -153,7 +154,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Создание конечной точки зеркального отображения базы данных с проверкой подлинности Windows (Transact-SQL)](../../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Указание URL-адреса конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Укажите URL-адрес конечной точки при добавлении или изменении реплики доступности (SQL Server)](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
 -   [Подготовка базы данных-получателя для присоединения к группе доступности вручную (SQL Server)](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   

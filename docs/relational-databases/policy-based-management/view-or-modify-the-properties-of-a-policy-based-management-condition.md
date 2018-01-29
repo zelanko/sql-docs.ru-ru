@@ -8,23 +8,24 @@ ms.service:
 ms.component: performance-monitor
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Policy-Based Management, view policy conditions
 - Policy-Based Management, modify policy conditions
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
-caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: MikeRayMSFT
+ms.author: mikeray
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0e5a878a3a4ee3fc15ce4a30c9ddbdd3bea904d5
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c490adec850bc14672c9590b0bc4abe3b035320c
+ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 01/18/2018
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>Просмотр или изменение свойств условия управления на основе политик
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] В этом разделе описан просмотр и изменение свойств условия управления на основе политик в [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] с помощью среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] или [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/17/2017
   
 4.  Щелкните знак «плюс», чтобы развернуть папку **Условия** .  
   
-5.  Щелкните правой кнопкой мыши условие, свойства которого необходимо просмотреть или изменить, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Открытие условия –***имя_условия*, см. в статье [Диалоговое окно "Создание нового условия" или "Открытие условия", страница "Общие"](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md), [Диалоговое окно "Открытие условия", вкладка "Зависимые политики"](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md), [Диалоговое окно "Создание нового условия" или "Открытие условия", страница "Описание"](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md) и [Диалоговое окно "Расширенное редактирование" (условие)](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md).  
+5.  Щелкните правой кнопкой мыши условие, свойства которого необходимо просмотреть или изменить, и выберите пункт **Свойства**. Дополнительные сведения о параметрах, доступных в диалоговом окне **Открытие условия —***имя_условия*, см. в статьях [Диалоговое окно "Создание нового условия" или "Открытие условия", страница "Общее"](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md), [Диалоговое окно "Открытие условия", вкладка "Зависимые политики"](../../relational-databases/policy-based-management/open-condition-dialog-box-dependent-policies-page.md), [Диалоговое окно "Создание нового условия" или "Открытие условия", страница "Описание"](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-description-page.md) и [Диалоговое окно "Расширенное редактирование" (условие)](../../relational-databases/policy-based-management/advanced-edit-condition-dialog-box.md).  
   
 6.  После завершения нажмите кнопку **ОК**.  
   
