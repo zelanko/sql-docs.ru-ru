@@ -19,7 +19,7 @@ helpviewer_keywords:
 - creating, data alerts
 - creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/09/2018
 > [!NOTE]  
 >  Поскольку функция предупреждений данных в службах [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] доступна только при установке служб [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] в режиме интеграции с SharePoint, то отчет, на основе которого требуется создать предупреждение, должен быть сохранен, развернут или загружен в библиотеку документов SharePoint.  
 >   
->  Предупреждения об изменении данных нельзя создавать для отчетов, настроенных на использование встроенной проверки подлинности Windows или приглашений ко вводу учетных данных. В отчетах должны использоваться сохраненные учетные данные. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
+>  Предупреждения об изменении данных нельзя создавать для отчетов, настроенных на использование встроенной проверки подлинности Windows или приглашений ко вводу учетных данных. В отчетах должны использоваться сохраненные учетные данные. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
  Чтобы открыть конструктор предупреждений об изменении данных, выберите пункт **Создать предупреждение об изменении данных** в меню **Действия** на панели инструментов отчета. Если команда **Создать предупреждение об изменении данных** не видна, это означает, что отчет не настроен на использование сохраненных учетных данных. Тип учетных данных можно обновить, обновив источник данных отчета в библиотеке документов SharePoint.  
   

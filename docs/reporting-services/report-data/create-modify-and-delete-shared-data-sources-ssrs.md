@@ -20,7 +20,7 @@ helpviewer_keywords:
 - data sources [Reporting Services], modifying properties
 - deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/09/2018
 |Description|Описание, которое отображается вместе с элементом в диспетчере отчетов при просмотре содержимого папки.|  
 |Тип соединений|Модуль обработки данных, используемый с источником данных. Можно использовать только модули обработки данных, развернутые на сервере отчетов. Дополнительные сведения о модулях обработки данных, включенных в службы [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], см. в разделе [Источники данных, поддерживаемые службами Reporting Services (службы SSRS)](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).|  
 |Строка соединения|Строка соединения для базы данных. Дополнительные сведения о строках соединения и примеры их использования с часто используемыми источниками данных см. в разделе [Подключения к данным, источники данных и строки подключения (построитель отчетов и службы SSRS)](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).|  
-|Тип учетных данных|Указывает, каким образом соединение получает учетные данные и используются ли они после того, как соединение установлено. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
+|Тип учетных данных|Указывает, каким образом соединение получает учетные данные и используются ли они после того, как соединение установлено. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).|  
   
  Общий источник данных не содержит сведений о запросе для получения данных. Запрос всегда сохраняется в определении отчета.  
   

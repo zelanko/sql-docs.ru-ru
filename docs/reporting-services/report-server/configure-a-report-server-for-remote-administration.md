@@ -18,7 +18,7 @@ helpviewer_keywords:
 - report servers [Reporting Services], configuring
 - remote server administration [Reporting Services]
 ms.assetid: 8c7f145f-3ac2-4203-8cd6-2a4694395d09
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -52,7 +52,7 @@ ms.lasthandoff: 01/09/2018
 ## <a name="tasks"></a>Задания  
  Для включения возможности удаленной настройки выполняются следующие задачи.  
   
--   Включение портов в брандмауэре Windows и разрешение запросов на портах, используемых сервером отчетов и экземпляром компонента SQL Server Database Engine.  См. в разделах [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) и [Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+-   Включение портов в брандмауэре Windows и разрешение запросов на портах, используемых сервером отчетов и экземпляром компонента SQL Server Database Engine.  См. в разделах [Configure a Firewall for Report Server Access](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) и [Настройка брандмауэра Windows для доступа к компоненту Database Engine](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
 -   Включение удаленных соединений с экземпляром компонента Database Engine, хранящего базу данных сервера отчетов. Удаленное соединение необходимо для настройки подключения к базе данных сервера отчетов и управления ключами шифрования.  
   
