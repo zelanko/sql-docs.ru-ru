@@ -12,25 +12,25 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f09d7be1-bd63-43f8-b91c-bf19166b4457
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 0b69db6baee27296bf9544801b627c884d68795b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 14c64237e32d433592f44fcbd0d56bd661cc4940
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="analysis-services-features-supported-by-the-editions-of-sql-server-2016"></a>Функции служб Analysis Services, поддерживаемые различными выпусками SQL Server 2016
+# <a name="analysis-services-features-supported-by-sql-server-editions"></a>Поддерживаемые выпусками SQL Server функций служб Analysis Services
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 В этом разделе подробно описаны функции, поддерживаемые различными выпусками SQL Server 2016 Analysis Services. Возможности, поддерживаемые выпусками Evaluation и Developer Enterprise edition см.
 
 ## <a name="analysis-services-servers"></a>Службы Analysis Services (серверы)
   
-|Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Масштабируемые общие базы данных|Да||||||Да|  
 |Резервное копирование и восстановление, подключение и отключение баз данных|Да|Да|||||Да|  
@@ -40,12 +40,12 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="tabular-models"></a>Табличные модели 
   
-|Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Иерархии|Да|Да|||||Да|  
 |Ключевые показатели эффективности|Да|Да|||||Да|  
-|перспективами|Да||||||Да|  
-|Translations|Да|Да|||||Да|  
+|Перспективы|Да||||||Да|  
+|Переводы|Да|Да|||||Да|  
 |Вычисления DAX, запросы DAX, запросы многомерных выражений|Да|Да|||||Да|  
 |Безопасность на уровне строк|Да|Да|||||Да|  
 |Несколько секций|Да||||||Да|  
@@ -54,12 +54,12 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="multidimensional-models"></a>Многомерные модели 
   
-|Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Полуаддитивные меры|Да|Нет <sup>1</sup>|||||Да|  
 |Иерархии|Да|Да|||||Да|  
 |Ключевые показатели эффективности|Да|Да|||||Да|  
-|перспективами|Да||||||Да|  
+|Перспективы|Да||||||Да|  
 |Действия|Да|Да|||||Да|  
 |Логика операций со счетами|Да|Да|||||Да|  
 |логика операций со временем|Да|Да|||||Да|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 01/08/2018
 |Расширенные типы иерархии (родители-потомки, неоднородные иерархии)|Да|Да|||||Да|  
 |Расширенные измерения (ссылочные измерения, измерения "многие ко многим")|Да|Да|||||Да|  
 |Связанные меры и измерения|Да|Да  <sup>2</sup> |||||Да|  
-|Translations|Да|Да|||||Да|  
+|Переводы|Да|Да|||||Да|  
 |Aggregations|Да|Да|||||Да|  
 |Несколько секций|Да|Да, до 3|||||Да|  
 |Упреждающее кэширование|Да||||||Да|  
@@ -92,7 +92,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="power-pivot-for-sharepoint"></a>Power Pivot для SharePoint  
   
-|Компонент|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|Компонент|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Интеграция с фермой SharePoint на основе архитектуры общих служб|Да||||||Да|  
 |Отчеты об использовании|Да||||||Да|  
@@ -103,7 +103,7 @@ ms.lasthandoff: 01/08/2018
   
 ## <a name="data-mining"></a>Интеллектуальный анализ данных  
   
-|Имя функции|Enterprise|Standard|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
+|Имя функции|Enterprise|Standard Edition|Web Edition|Express с дополнительными службами|Express с инструментами|Express|Разработчик|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Стандартные алгоритмы|Да|Да|||||Да|  
 |Средства интеллектуального анализа данных (мастеры, редакторы, построители запросов)|Да|Да|||||Да|  
@@ -120,8 +120,8 @@ ms.lasthandoff: 01/08/2018
 |Прогнозирование последовательности|Да||||||Да|  
 |Множественные цели прогнозирования для упрощенного алгоритма Байеса, нейронной сети и логистической регрессии|Да||||||Да|  
   
- ## <a name="see-also"></a>См. также раздел  
+ ## <a name="see-also"></a>См. также:  
  [Спецификации SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
+ [Установка SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

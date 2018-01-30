@@ -16,7 +16,7 @@ helpviewer_keywords:
 - deploying [Reporting Services], scale-out deployment model
 - scale-out deployments [Reporting Services]
 ms.assetid: b30d0308-4d9b-4f85-9f83-dece4dcb2775
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -53,7 +53,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Инструкции по установке экземпляров сервера отчетов см. в статье [Установка SQL Server 2016 с помощью мастера установки (программа установки)](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) в электронной документации [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+-   Если планируется выполнить масштабное развертывание на NLB-кластере, следует настроить NLB-кластер перед настройкой масштабного развертывания. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 -   Просмотрите процедуры этого раздела с инструкциями по организации общего доступа к базе данных сервера отчетов и присоединению серверов отчетов к масштабному развертыванию.  
   
@@ -144,7 +144,7 @@ An error occurred within the report server database.  This may be due to a conne
   
 4.  Теперь оба экземпляра сервера отчетов можно проверить, чтобы убедиться в их рабочем состоянии. Чтобы проверить второй экземпляр, можно при помощи программы настройки служб Reporting Services подключиться к серверу отчетов и щелкнуть **URL-адрес веб-службы** или **URL-адрес диспетчера отчетов**.  
   
- Если серверы отчетов планируется запускать в кластере со сбалансированной нагрузкой, необходима дополнительная настройка. Дополнительные сведения см. в статье [Configure a Report Server on a Network Load Balancing Cluster](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+ Если серверы отчетов планируется запускать в кластере со сбалансированной нагрузкой, необходима дополнительная настройка. Дополнительные сведения см. в статье [настроить сервер отчетов в кластере с балансированием сетевой нагрузки](../../reporting-services/report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
 
 ## <a name="next-steps"></a>Следующие шаги
 

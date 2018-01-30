@@ -8,37 +8,27 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: 0b3c2fc5eb3c70f65c8453bd844a61db71464d39
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 10f572b6bb4dc81e2fb2ad87af058b3a114bd711
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Контрольный список. Использование PowerShell для проверки PowerPivot для SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Не [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] операций установки или восстановления завершена без прохождения проверочного теста, подтверждающее служб работоспособность и данных. В этой статье рассказывается о том, как выполнить эти шаги с помощью Windows PowerShell. Каждому шагу посвящен отдельный подраздел с тем, чтобы можно было перейти непосредственно к конкретным задачам. Например, выполните скрипт, приведенный в подразделе [Базы данных](#bkmk_databases) этого раздела для проверки имени приложения службы и баз данных содержимого, если необходимо запланировать их для обслуживания или резервного копирования.  
   
-|||  
-|-|-|  
-|![Содержимое, связанное с PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Содержимое, связанное с PowerShell")|Полный скрипт PowerShell приведен в конце раздела. Используйте полный скрипт в качестве отправной точки создания пользовательского скрипта для аудита полного развертывания [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)].|  
+![Содержимое, связанное с PowerShell](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "содержимое, связанное с PowerShell") полный скрипт PowerShell приведен в конце этого раздела. Используйте полный скрипт в качестве отправной точки создания пользовательского скрипта для аудита полного развертывания [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] .
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint &#2013;124; SharePoint 2010|  
-  
- **В этой статье**. Обозначенные буквами элементы в содержании соответствуют областям на схеме. На диаграмме показано:  
-  
-|||  
-|-|-|  
-|[Подготовка среды PowerShell](#bkmk_prerequisites)<br /><br /> [Симптомы и рекомендуемые действия](#bkmk_symptoms)<br /><br /> **(A)** [Службы Analysis Services для Windows](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService и PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [Приложения и прокси-серверы службы PowerPivot](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [Базы данных](#bkmk_databases)<br /><br /> [Компоненты SharePoint](#bkmk_features)<br /><br /> [Задания таймера](#bkmk_timer_jobs)<br /><br /> [Правила определения исправности](#bkmk_health_rules)<br /><br /> **(E)** [Журналы Windows и ULS](#bkmk_logs)<br /><br /> [Поставщик MSOLAP](#bkmk_msolap)<br /><br /> [Клиентская библиотека ADOMD.Net](#bkmk_adomd)<br /><br /> [Правила сбора данных об исправности](#bkmk_health_collection)<br /><br /> [Решения](#bkmk_solutions)<br /><br /> [Действия по выполнению проверки вручную](#bkmk_manual)<br /><br /> [Дополнительные ресурсы](#bkmk_more_resources)<br /><br /> [Полный скрипт PowerShell](#bkmk_full_script)|![Проверка powerpivot с PowerShell](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "проверка powerpivot с powershell")|  
   
 ##  <a name="bkmk_prerequisites"></a> Подготовка среды PowerShell  
  В этом разделе описаны действия по подготовке среды PowerShell. В зависимости от текущей конфигурации среды создания скриптов некоторые действия могут не потребоваться.  

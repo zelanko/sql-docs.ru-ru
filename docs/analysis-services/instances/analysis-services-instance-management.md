@@ -12,19 +12,20 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0455fa4f-b92d-4a8b-a8f0-f2a268a5c84e
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: cec454c2fe5dc832879a8a320b3e921c4f71ceb2
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 1540e9a5422b3a15081b1a25c813ef87ed8d6c0c
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="analysis-services-instance-management"></a>Управление экземплярами служб Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]Экземпляр служб Analysis Services является копией **msmdsrv.exe** исполняемый файл, который запускается как служба операционной системы. Каждый экземпляр полностью независим от других экземпляров на том же сервере и обладает собственной конфигурацией, разрешениями, портами, стартовыми учетными записями, областью хранения файлов и свойствами режима сервера.  
+
+  Экземпляр служб Analysis Services — это копия исполняемого файла **msmdsrv.exe** , который запускается как служба операционной системы. Каждый экземпляр полностью независим от других экземпляров на том же сервере и обладает собственной конфигурацией, разрешениями, портами, стартовыми учетными записями, областью хранения файлов и свойствами режима сервера.  
   
  В контексте безопасности определенной учетной записи входа каждый экземпляр служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] запускается как служба Windows, Msmdsrv.exe.  
   
@@ -48,19 +49,19 @@ ms.lasthandoff: 01/08/2018
 > [!NOTE]  
 >  Единственным исключением является [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint. Администрирование развернутой на сервере системы [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] всегда осуществляется в контексте фермы SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] отличается от других режимов сервера тем, что всегда существует лишь один экземпляр, который управляется либо из центра администрирования SharePoint, либо с помощью средства настройки [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Подключение [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] для SharePoint к среде SQL Server Management Studio или к среде [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]возможно, но нежелательно. Ферма SharePoint включает инфраструктуру, выполняющую синхронизацию состояния сервера и отслеживающую доступность сервера. Использование других средств может повлиять на эти операции. Дополнительные сведения об администрировании сервера [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] см. в разделе [Power Pivot для SharePoint (службы SSAS)](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
-## <a name="in-this-section"></a>в этом разделе  
+## <a name="in-this-section"></a>В этом разделе  
   
 |Ссылка|Описание задачи|  
 |----------|----------------------|  
-|[Настройка после установки (службы Analysis Services)](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Описываются обязательные и необязательные задачи, которые завершают или изменяют установку служб Analysis.|  
+|[После установки конфигурации &#40; Службы Analysis Services &#41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)|Описываются обязательные и необязательные задачи, которые завершают или изменяют установку служб Analysis.|  
 |[Подключение к службам Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)|Описывает свойства строки подключения, клиентские библиотеки, методики проверки подлинности и действия по установке или завершению соединений.|  
-|[Наблюдение за экземпляром служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Описываются средства и способы наблюдения за экземпляром сервера, в том числе сведения об использовании средства отслеживания производительности и приложения SQL Server Profiler.|  
+|[Мониторинг экземпляра служб Analysis Services](../../analysis-services/instances/monitor-an-analysis-services-instance.md)|Описываются средства и способы наблюдения за экземпляром сервера, в том числе сведения об использовании средства отслеживания производительности и приложения SQL Server Profiler.|  
 |[Высокий уровень доступности и масштабируемость](../../analysis-services/instances/high-availability-and-scalability-in-analysis-services.md)|В этой статье описаны наиболее часто используемые методы для создания высокодоступных масштабируемых баз данных для служб Analysis Services. |  
 |[Сценарии глобализации для служб Analysis Services](../../analysis-services/globalization-scenarios-for-analysis-services.md)|Описывает поддерживаемые языки и параметры сортировки, действия по изменению обоих свойств и рекомендации по настройке и тестированию поведений языка и параметров сортировки.|  
-|[Журнал операций в службах Analysis Services](../../analysis-services/instances/log-operations-in-analysis-services.md)|Описывает журналы и способы их настройки.|  
+|[Журнал операций в службы Analysis Services](../../analysis-services/instances/log-operations-in-analysis-services.md)|Описывает журналы и способы их настройки.|  
   
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Сравнение табличных и многомерных решений (службы SSAS)](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Средства настройки PowerPivot](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [Настройка и администрирование сервера Power Pivot в центре администрирования](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

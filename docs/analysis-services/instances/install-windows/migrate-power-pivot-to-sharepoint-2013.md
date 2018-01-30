@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: aee364c04f3f9531948a834d555e34f34d838a6b
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 518715f0084ac44b72f40eaabe95e21c8022e77d
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Перенос Power Pivot в SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -30,10 +30,6 @@ ms.lasthandoff: 01/08/2018
  SharePoint 2013 не поддерживает обновление на месте. Однако процедура **обновления присоединением базы данных поддерживается**. Это поведение отличается от обновления до версии SharePoint 2010, при котором клиент может выбрать между двумя базовыми подходами к обновлению: обновление на месте и обновление присоединением базы данных.  
   
  Если имеется установленная версия [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] , интегрированная с SharePoint 2010, нельзя обновить сервер SharePoint на месте. Однако можно выполнить миграцию баз данных содержимого и баз данных приложения службы из фермы SharePoint 2010 в ферму SharePoint 2013. В этом разделе описаны действия, необходимые, чтобы завершить обновление с переподключением баз данных и миграцию, связанные со службами [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
 ### <a name="migration-overview"></a>Общие сведения о переносе  
   

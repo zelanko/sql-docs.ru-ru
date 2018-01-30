@@ -12,16 +12,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 18a48995-639f-4782-8b17-6caa5769bb5f
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: cfa636d3fcf08410ecaf2062aa7cd68d1e4aeaec
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: 92dc344de6a88459a2ec718a30f893cff50b16af
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="configure-power-pivot-and-deploy-solutions-sharepoint-2016"></a>Настройка Power Pivot и развертывание решений (SharePoint 2016)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]Этом разделе описаны развертывание и настройка расширений среднего уровня [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] функции в [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] включая [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] коллекции, расписания обновления данных, панель управления и поставщиков данных. Запустите инструмент **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2016** , чтобы выполнить следующее.  
@@ -33,18 +33,6 @@ ms.lasthandoff: 01/08/2018
 -   Дополнительные сведения о серверных службах и установке сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] в режиме [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] см. в разделе [Установка служб Analysis Services в режиме Power Pivot](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md).  
   
  Дополнительные сведения об установке [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] средства настройки SharePoint 2016, в разделе [Установка или удаление надстройки Power Pivot для надстройки SharePoint (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md).  
-  
- Этот раздел состоит из следующих подразделов.  
-  
- [Запуск настройки Power Pivot для SharePoint 2016](#bkmk_run_configuration_tool)  
-  
- [Проверка конфигурации Power Pivot](#bkmk_verify_powerpivot)  
-  
- [Устранение неполадок](#bkmk_troubleshoot_issues)  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
   
 ##  <a name="bkmk_run_configuration_tool"></a> Запуск настройки Power Pivot для SharePoint 2016  
  **Примечание.** Для выполнения следующих шагов нужно быть администратором фермы. Если вы появится примерно следующее сообщение об ошибке:  

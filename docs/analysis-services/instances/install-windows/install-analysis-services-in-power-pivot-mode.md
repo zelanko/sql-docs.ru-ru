@@ -14,41 +14,19 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: On Demand
-ms.openlocfilehash: 7528721b65101ee32285d57f18f93f98eeec9dae
-ms.sourcegitcommit: 6b4aae3706247ce9b311682774b13ac067f60a79
+ms.openlocfilehash: f3b10fdee9956b28273553755365b9251d073964
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Установка служб Analysis Services в режиме Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе описываются процедуры установки одиночного сервера [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] сервера в [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] режиме для развертывания SharePoint. Эти шаги охватывают запуск мастера установки SQL Server, а также выполнение дополнительных задач по настройке с использованием центра администрирования SharePoint.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2016 &#124; SharePoint 2013|  
-  
- **В этом разделе:**  
-  
- [Историческая справка](#bkmk_background)  
-  
- [Предварительные требования](#bkmk_prereq)  
-  
- [Шаг 1. Установка Power Pivot для SharePoint](#InstallSQL)  
-  
- [Этап 2. Настройка базовой интеграции служб Analysis Services с SharePoint](#bkmk_config)  
-  
- [Этап 3. Проверка интеграции](#bkmk_verify)  
-  
- [Настройка брандмауэра Windows на разрешение доступа к службам Analysis Services](#bkmk_firewall)  
-  
- [Обновление книг и создание расписания обновления данных](#bkmk_upgrade_workbook)  
-  
- [После установки одного сервера — Power Pivot для Microsoft SharePoint](#bkmk_multiple_servers)  
   
 ##  <a name="bkmk_background"></a> Историческая справка  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint представляет собой набор служб среднего уровня и серверных служб, обеспечивающих доступ к данным [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] в ферме SharePoint 2016 или SharePoint 2013.  

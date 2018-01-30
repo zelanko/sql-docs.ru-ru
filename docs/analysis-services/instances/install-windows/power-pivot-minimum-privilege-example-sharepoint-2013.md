@@ -8,34 +8,31 @@ ms.service:
 ms.component: 
 ms.reviewer: 
 ms.suite: pro-bi
-ms.technology: setup-install
+ms.technology:
+- setup-install
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1e09e6c-52d3-48ab-8c70-818d5d775087
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
 ms.workload: Inactive
-ms.openlocfilehash: df875446bad5b208301a88e38f6fb73416ab8922
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: aa7ce279e968322d9e1ffd80d9a277d27b18c9f7
+ms.sourcegitcommit: c77a8ac1ab372927c09bf241d486e96881b61ac9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2013"></a>Power Pivot минимальными правами пример – SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]В этом разделе описывается пример [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2013 с минимальными правами доступа. В конфигурации используется отдельная учетная запись для каждого из трех компонентов и каждая учетная запись имеет минимальный уровень прав доступа.  
-  
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
 ## <a name="summary-of-accounts"></a>Сводка учетных записей  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] для SharePoint 2013 позволяет использовать учетную запись сетевой службы для учетной записи служб Analysis Services. Учетная запись сетевой службы не поддерживается в SharePoint 2010. Дополнительные сведения об учетных записях службы см. в разделе [Настройка учетных записей службы Windows и разрешений](http://msdn.microsoft.com/library/ms143504.aspx) (http://msdn.microsoft.com/library/ms143504.aspx).  
   
  В следующей таблице представлены три учетные записи, используемые в данном примере конфигурации с минимальными правами доступа.  
   
-|Область действия|Имя|  
+|Область действия|Название|  
 |-----------|----------|  
 |Учетная запись администратора SharePoint|**SPAdmin**|  
 |Учетная запись фермы SharePoint|**SPFarm**|  

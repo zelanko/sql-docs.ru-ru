@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-agent
 ms.reviewer: 
 ms.suite: sql
-ms.technology: tools-ssms
+ms.technology:
+- tools-ssms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - startup accounts [SQL Server]
 - service startup accounts [SQL Server Agent]
 ms.assetid: 46ffe818-ebb5-43a0-840b-923f219a2472
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 94f718475a3b37b71864d883479848ec4058f252
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bcd26feceb6ecd2fc0b776a5ceec80756cd2e110
+ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)] Стартовая учетная запись службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] определяет учетную запись Windows, которая запускает агент [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], а также его сетевые разрешения. Этот раздел посвящен назначению учетных записей службы агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] с помощью диспетчера конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] в [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] при помощи среды [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)].  
@@ -77,9 +78,9 @@ ms.lasthandoff: 12/21/2017
   
 5.  В диспетчере конфигурации [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] на панели консоли выберите **Службы SQL Server**.  
   
-6.  В области сведений щелкните правой кнопкой **Агент SQL Server***имя_сервера*, где *имя_сервера* — это имя экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], для которого необходимо изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
+6.  В области сведений щелкните правой кнопкой *Агент SQL Server***(имя_сервера)*, где *имя_сервера* — это имя экземпляра агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)], для которого нужно изменить стартовую учетную запись службы, и выберите пункт **Свойства**.  
   
-7.  В диалоговом окне **Свойства** **агента SQL Server***(имя_сервера)* выберите на вкладке **Вход в систему** один из следующих параметров в разделе **Использовать для входа**:  
+7.  В диалоговом окне **Свойства агента SQL Server***(имя_сервера)* **выберите** на вкладке **Вход в систему** один из следующих параметров в разделе **Использовать для входа**:  
   
     -   **Встроенная учетная запись**. Выберите этот параметр, если заданиям требуются ресурсы только с локального сервера. Дополнительные сведения о выборе типа встроенной учетной записи Windows см. в разделе [Выбор учетной записи для службы агента SQL Server.](http://msdn.microsoft.com/library/ms191543.aspx)  
   
