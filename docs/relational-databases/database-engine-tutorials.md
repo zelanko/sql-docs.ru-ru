@@ -8,11 +8,12 @@ ms.service:
 ms.component: relational-databases-misc
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-query-tuning
+ms.technology:
+- dbe-query-tuning
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/17/2017
 [Учебник. Администрирование серверов с помощью управления на основе политик](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 Этот учебник учит создавать политики, которые обеспечивают принудительное выполнение стандартов по администрированию сайта.  
   
-[Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Резервное копирование и восстановление SQL Server с помощью службы хранилища BLOB-объектов Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 В этом учебнике показано, как выполнять резервное копирование и восстановление в SQL Server для службы хранения больших двоичных объектов в Windows Azure.  
   
 [Учебник. Использование службы хранилища больших двоичных объектов Microsoft Azure с базами данных SQL Server 2016 (Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases) ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  

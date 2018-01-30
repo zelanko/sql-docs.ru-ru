@@ -16,7 +16,7 @@ f1_keywords:
 - sql13.asvs.sqlserverstudio.partitionproperties.errorconfiguration.f1
 - sql13.asvs.sqlserverstudio.dimensionproperties.errorconfiguration.f1
 ms.assetid: 3f442645-790d-4dc8-b60a-709c98022aae
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: Minewiskan
 ms.author: owend
 manager: kfile
@@ -184,7 +184,7 @@ ms.lasthandoff: 01/08/2018
 ##  <a name="bkmk_next"></a> Следующий шаг  
  Определитесь, будут ошибки прерывать обработку или же пропускаться. Помните, что пропускается только сама ошибка. Запись, приведшая к ошибке, не пропускается; она отбрасывается либо преобразуется в неизвестный элемент. Записи, нарушающие правила целостности данных, никогда не добавляются в базу данных. По умолчанию обработка прерывается при возникновении первой ошибки, но это поведение можно изменить, увеличив предельное количество ошибок. При разработке кубов может быть полезно сделать правила конфигурации ошибок менее строгими, чтобы разрешить продолжение обработки и собрать данные для тестирования.  
   
- Определитесь, следует ли изменить стандартные правила обработки значений NULL. По умолчанию значения NULL в строковом столбце обрабатываются как пустые значения, а NULL в числовом столбце — как нуль. Инструкции по установке правил обработки значений NULL для атрибута см. в разделе [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  
+ Определитесь, следует ли изменить стандартные правила обработки значений NULL. По умолчанию значения NULL в строковом столбце обрабатываются как пустые значения, а NULL в числовом столбце — как нуль. Инструкции по установке правил обработки значений NULL для атрибута см. в разделе [Определение свойств Unknown Member и Null Processing](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Свойства журнала](../../analysis-services/server-properties/log-properties.md)   
