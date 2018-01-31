@@ -22,7 +22,7 @@ f1_keywords:
 - "10536"
 - sql13.rtp.rptdesigner.maplinelayerproperties.widthrules.f1
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
@@ -123,7 +123,7 @@ ms.lasthandoff: 01/09/2018
   
  Для управления местом отображения условных обозначений используйте диалоговое окно «Свойства условных обозначений», которое позволяет указать положение условных обозначений относительно окна просмотра карты. Дополнительные сведения см. в разделе [Изменение условных обозначений карты, цветовой шкалы и связанных правил (построитель отчетов и службы SSRS)](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
- Условные обозначения автоматически расширяются, чтобы отобразить заголовок или текст условных обозначений. Чтобы форматировать текст элементов условных обозначений, используйте ключевые слова для условных обозначений карты и пользовательские форматы. Дополнительные сведения см. в разделе [To change the format of content in a legend](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
+ Условные обозначения автоматически расширяются, чтобы отобразить заголовок или текст условных обозначений. Чтобы форматировать текст элементов условных обозначений, используйте ключевые слова для условных обозначений карты и пользовательские форматы. Дополнительные сведения см. в разделе [Изменение формата содержимого в условных обозначениях](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md#ChangeFormatItems).  
   
  В следующей таблице показаны примеры различных доступных форматов.  
   

@@ -18,7 +18,7 @@ helpviewer_keywords:
 - confidential reports [Reporting Services]
 - resources [Reporting Services], security
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/09/2018
 >  В предыдущих версиях документации был включен пример создания динамического запроса в виде выражения. Этот тип запроса не рекомендуется использовать, так как он создает уязвимость для атак, осуществляемых путем инжекции SQL-кода.  
   
 ## <a name="securing-confidential-reports"></a>Защита конфиденциальных отчетов  
- Отчеты, содержащие конфиденциальные данные, следует защищать на уровне доступа к данным, требуя от пользователей, чтобы они предоставили учетные данные, дающие право на доступ к этим данным. Дополнительные сведения см. в статье [Specify Credential and Connection Information for Report Data Sources](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Кроме того, можно защитить папку, сделав ее недоступной для неавторизованных пользователей. Дополнительные сведения см. в подразделе [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md).  
+ Отчеты, содержащие конфиденциальные данные, следует защищать на уровне доступа к данным, требуя от пользователей, чтобы они предоставили учетные данные, дающие право на доступ к этим данным. Дополнительные сведения см. в статье [Задание учетных данных и сведениях о соединении для источников данных отчета](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md). Кроме того, можно защитить папку, сделав ее недоступной для неавторизованных пользователей. Дополнительные сведения см. в подразделе [Обеспечение защиты папок](../../reporting-services/security/secure-folders.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Создание назначений ролей и управление ими](../../reporting-services/security/create-and-manage-role-assignments.md)   

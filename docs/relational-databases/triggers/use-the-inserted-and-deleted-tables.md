@@ -8,7 +8,8 @@ ms.service:
 ms.component: triggers
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-dml
+ms.technology:
+- dbe-dml
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,7 +21,7 @@ helpviewer_keywords:
 - INSERT statement [SQL Server], DML triggers
 - DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
  Поскольку ограничение CHECK может содержать ссылки только на столбцы, для которых определены ограничения на уровне столбцов или таблицы, любые межтабличные ограничения (в данном случае бизнес-правила) должны быть заданы в виде триггеров.  
   
- В следующем примере создается триггер DML. Этот триггер проверяет уровень кредитоспособности поставщика при попытке добавить новый заказ на покупку в таблицу `PurchaseOrderHeader` . Чтобы получить оценку кредитоспособности поставщика, связанного с только что добавленным заказом на покупку, таблица inserted должна ссылаться на таблицу `Vendor` и быть связана с ней. В случае слишком низкой кредитоспособности выводится соответствующее сообщение и вставка не выполняется. Обратите внимание, что в этом примере не допускается изменение многострочных данных. Дополнительные сведения см. в статье [Create DML Triggers to Handle Multiple Rows of Data](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ В следующем примере создается триггер DML. Этот триггер проверяет уровень кредитоспособности поставщика при попытке добавить новый заказ на покупку в таблицу `PurchaseOrderHeader` . Чтобы получить оценку кредитоспособности поставщика, связанного с только что добавленным заказом на покупку, таблица inserted должна ссылаться на таблицу `Vendor` и быть связана с ней. В случае слишком низкой кредитоспособности выводится соответствующее сообщение и вставка не выполняется. Обратите внимание, что в этом примере не допускается изменение многострочных данных. Дополнительные сведения см. в статье [Создание триггеров DML для обработки нескольких строк данных](../../relational-databases/triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
