@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c72863715fb807cba939c997da386b93004332f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 95197ab786c24da00fc87f7788575d5847770c6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Работа со службой CDC Oracle
   В этом разделе описываются некоторые важные понятия, относящиеся к службе Oracle CDC Service. В разделе описываются следующие понятия.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 11/20/2017
   
 |Элемент|Description|  
 |----------|-----------------|  
-|timestamp|Точная отметка времени в формате UTC, когда была создана запись трассировки.|  
+|TIMESTAMP|Точная отметка времени в формате UTC, когда была создана запись трассировки.|  
 |type|Содержит одно из следующих значений:<br /><br /> ошибка<br /><br /> INFO<br /><br /> трассировка|  
 |node|Имя узла, на котором была создана запись.|  
 |status|Код состояния, который используется в таблице состояний.|  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
   
 |Элемент|Description|  
 |----------|-----------------|  
-|имя|Имя базы данных Oracle, содержащейся в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|NAME|Имя базы данных Oracle, содержащейся в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Отметка времени в формате (UTC) последнего изменения в соответствующей таблице **xdbcdc_config** базы данных CDC или отметка времени (UTC) текущей строки этой таблицы.<br /><br /> Триггер UPDATE принудительно присваивает этому элементу значение GETUTCDATE(). **config_version** сообщает службе CDC, какой экземпляр CDC следует проверить на предмет наличия изменений в конфигурации, отключить или включить.|  
 |cdc_service_name|Этот элемент определяет, какая из служб Oracle CDC Service обрабатывает выбранную базу данных Oracle.|  
 |включено|Указывает, активен (1) или отключен (0) экземпляр Oracle CDC. При запуске службы Oracle CDC Service запускаются только экземпляры, отмеченные «включить» (1).<br /><br /> **Примечание.**Экземпляр Oracle CDC может перейти в отключенное состояние из-за ошибки, не дающей возможности повторить операцию. В этом случае экземпляр следует перезапустить вручную после устранения ошибки.|  

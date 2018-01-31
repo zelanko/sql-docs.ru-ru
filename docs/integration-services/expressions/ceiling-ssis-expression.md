@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - smallest integer great than or equal to expression
 - CEILING function [SSIS]
 ms.assetid: c35bd4ee-1ab6-46ab-89a7-cf771527faa2
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 971c7038c0b144ac4073162e0d14b519e263328f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e3824c5cd07c2ba158f57056d1c746c0f04e0b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (выражение служб SSIS)
   Возвращает наименьшее целое число, большее или равное данному числовому выражению.  
@@ -43,7 +44,7 @@ CEILING(numeric_expression)
 ## <a name="result-types"></a>Типы результата  
  Тип данных числового выражения, переданного функции.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция CEILING возвращает NULL, если аргумент имеет значение NULL.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
@@ -67,7 +68,7 @@ CEILING(0.00)
   
  Возвращает значение 0,00  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [FLOOR (выражение служб SSIS)](../../integration-services/expressions/floor-ssis-expression.md)   
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   

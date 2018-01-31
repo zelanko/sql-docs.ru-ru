@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.designer.hdfsfilesrc.f1
+f1_keywords:
+- sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b51169029f95c084907d614fae60ea6b78acb502
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e2b6ce8222cb4eb1b99d2dc721dacc5f1aa3cfee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hdfs-file-source"></a>Источник "Файл HDFS"
   Компонент "Источник "Файл HDFS" позволяет пакету служб SSIS считывать данные из файла HDFS. Поддерживаются следующие форматы файлов: TEXT и AVRO. Источники данных ORC не поддерживаются.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
  После настройки этих параметров перейдите на вкладку **Столбцы** , чтобы сопоставить исходные столбцы с целевыми столбцами в потоке данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер подключений Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [Назначение «Файл HDFS»](../../integration-services/data-flow/hdfs-file-destination.md)  
   

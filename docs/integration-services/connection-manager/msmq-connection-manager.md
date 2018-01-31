@@ -8,26 +8,28 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.msmqconnectionmanager.f1
+f1_keywords:
+- sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
 - MSMQ connection manager
 - message queue connections [Integration Services]
 ms.assetid: a86900e2-450e-479f-b207-e1b02361d395
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6ae3af4dcc8937acc481e773d3af3a9ead0cf775
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: add29828603c19a3d909ebb621e99ba58bdc6052
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="msmq-connection-manager"></a>диспетчер соединений MSMQ
   Диспетчер соединений MSMQ позволяет пакетам соединяться с очередями сообщений, которые используют службу очередей сообщений (также называемую MSMQ). Задача «Очередь сообщений», содержащаяся в службах [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует диспетчер соединений MSMQ.  
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/20/2017
  **Название**  
  Задайте уникальное имя для диспетчера MSMQ-сеансов в рабочем процессе. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Описание**  
  Задайте описание диспетчера соединений. Рекомендуется описать назначение диспетчера соединений, чтобы сделать пакеты самодокументируемыми и более простыми в использовании.  
   
  **Путь**  

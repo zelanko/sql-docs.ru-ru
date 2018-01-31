@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: aed445a4a884aa07f1fa93a0f27cfe2763bfe4b4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1f3defee5da1c6cc98e985cf6f8eb6bc30479b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Шаги в мастере импорта и экспорта SQL Server
 В этом разделе описывается последовательность шагов для импорта и экспорта данных с помощью мастера импорта и экспорта SQL Server. Также здесь представлены ссылки на отдельные страницы документации, содержащие описание всех страниц диалогового окна, которые отображаются в мастере.

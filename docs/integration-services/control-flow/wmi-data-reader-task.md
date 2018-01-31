@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Data Reader task [Integration Services]
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 59c418092ff7a4c5e0f4f2365ccc5293576068fc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d0e53e73df266bd3c0ec8656d0ad98198596eba5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="wmi-data-reader-task"></a>Задача «Модуль чтения данных WMI»
   Задача «Модуль чтения данных WMI» использует для выполнения запросов язык WQL, который возвращает от инструментария WMI сведения о системе компьютера. Задача «Модуль чтения данных WMI» может быть использована в следующих целях.  
@@ -98,7 +99,7 @@ Select * FROM Win32_QuickFixEngineering
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiDataReaderTask.WmiDataReaderTask>  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
 -   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
@@ -115,7 +116,7 @@ Select * FROM Win32_QuickFixEngineering
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Модуль чтения данных WMI».  
   
 ## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>Редактор задачи «Модуль чтения данных WMI» (страница «Параметры инструментария WMI»)

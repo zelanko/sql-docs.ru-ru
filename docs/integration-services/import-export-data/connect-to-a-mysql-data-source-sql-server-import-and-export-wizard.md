@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3d7c5a38-18d3-4cc9-a241-04422cb250d3
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4fb97dd247146cd2535e4eee72c448fdd94c10de
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d011a5b39f6aded3bc305c922b5d2788026559e2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-mysql-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных MySQL (мастер импорта и экспорта SQL Server)
 В этом разделе показано, как подключаться к источникам данных **MySQL** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server. Для подключения к MySQL можно использовать ряд поставщиков данных.
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="other-data-providers-and-more-info"></a>Другие поставщики данных и дополнительные сведения
 Сведения о подключении к MySQL с помощью поставщика данных, не представленного в этом списке, см. в разделе [Строки подключения MySQL](https://www.connectionstrings.com/mysql/). Этот сторонний сайт также содержит дополнительные сведения о поставщиках данных и параметрах подключения, описанных на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

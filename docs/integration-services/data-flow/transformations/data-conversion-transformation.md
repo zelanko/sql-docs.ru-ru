@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,23 +20,23 @@ helpviewer_keywords:
 - Data Conversion transformation
 - data types [Integration Services], converting
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3f59c048aab7e69d4ca7453b622676897d1226f1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 314175a9f3a90c54a90b149cce91be885d5ef597
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-conversion-transformation"></a>преобразование «Конвертация данных»
   При преобразовании «Конвертация данных» данные во входном столбце преобразуются в другой тип, а затем копируются в новый выходной столбец. Например, пакет может извлечь данные из нескольких источников, а затем с помощью этого преобразования привести столбцы к типу данных, требуемому целевым хранилищем данных. К одному входному столбцу можно применять несколько преобразований.  
   
  С помощью этой функции пакет может выполнять следующие типы преобразований данных:  
   
--   Изменить тип данных. Дополнительные сведения см. в статье [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+-   Изменить тип данных. Дополнительные сведения см. в разделе [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
     > [!NOTE]  
     >  Если данные преобразуются в тип данных даты или даты и времени, дата в выходном столбце имеет формат ISO, хотя специфические локали могут задавать другой формат.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
  Это преобразование имеет один вход, один выход и один выход ошибок.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Свойства могут устанавливаться через конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или с помощью программных средств. Сведения об использовании преобразования "Конвертация данных" в конструкторе SSIS см. в разделе [Преобразование данных в другой тип данных с помощью преобразования "Конвертация данных"](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md). Сведения о настройке свойств этого преобразования программными средствами см. в разделах [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) и [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ## <a name="related-content"></a>См. также  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  Введите псевдоним для каждого нового столбца. Значением по умолчанию является **Copy of** , за которым следует имя входного столбца, однако можно выбрать любое уникальное описательное имя.  
   
  **Тип данных**  
- Выберите доступный тип данных из списка. Дополнительные сведения см. в статье [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Выберите доступный тип данных из списка. Дополнительные сведения см. в разделе [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  **Длина**  
  Установите ширину столбца для строковых данных.  

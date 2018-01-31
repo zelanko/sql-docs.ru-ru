@@ -8,22 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.expressionbuilder.f1
-helpviewer_keywords: Expression Builder dialog box
+f1_keywords:
+- sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords:
+- Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5d1f46b2833246dde0cd95eb8c815ae9cca69ab5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 18364f265be288c9e1cb4be8d97731086c993c4f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expression-builder"></a>Построитель выражений
   Диалоговое окно **Построитель выражений** используется для создания и редактирования выражения свойства или написания выражения, определяющего значение переменной, с помощью графического интерфейса, содержащего список переменных и встроенные ссылки на функции, приведения типов и операторы, включенные в язык выражений служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -50,7 +53,7 @@ ms.lasthandoff: 11/20/2017
 |**Рассчитанное значение**|Список результатов вычислений выражения.|  
 |**Вычислить значение выражения**|Чтобы просмотреть результаты вычислений выражения, выберите параметр **Вычислить значение выражения** .|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Страница «Выражения»](../../integration-services/expressions/expressions-page.md)   
  [Редактор выражений свойств](../../integration-services/expressions/property-expressions-editor.md)   
  [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)   

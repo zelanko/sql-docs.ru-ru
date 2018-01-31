@@ -8,21 +8,23 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5c95ce51-e0fe-4fc5-95eb-2945929f2b13
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5e4d78be29d3fd124b1a85c12c4a8ec58d3c5dcf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d8f12346caf8cee8dfbcdb6f20d4f4afa00dfd7d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-1-5---adding-and-configuring-the-flat-file-source"></a>Занятие 1–5. Добавление и настройка источника неструктурированных файлов
 В этой задаче рассматривается добавление к пакету и настройка источника неструктурированных файлов. Источник неструктурированных файлов представляет собой компонент потока данных, использующий метаданные, определенные диспетчером соединений с  неструктурированными файлами для описания формата и структуры данных, извлекаемых из неструктурированного файла в процессе преобразования. Источник неструктурированных файлов можно настроить для получения данных из единичного неструктурированного файла путем определения формата этого файла, который предоставляется диспетчером соединений с неструктурированными файлами.  

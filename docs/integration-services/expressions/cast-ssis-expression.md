@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - data types [Integration Services], expressions
 - data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: a4954ea582309732be9b911abc4a272a379a2227
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 66e8c901a01e3d8fc1fe2744891e17d4056d81a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cast-ssis-expression"></a>Приведение (выражение служб SSIS)
   Явно приводит выражение одного типа данных к другому типу. Оператор приведения может также выполнять функцию оператора усечения.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="result-types"></a>Типы результата  
  Тип данных *type_spec*. Дополнительные сведения см. в статье [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  На следующей диаграмме перечислены допустимые операторы приведения.  
   
  ![Допустимые и недопустимые приведения между типами данных](../../integration-services/expressions/media/data-conversion.gif "Допустимые и недопустимые приведения между типами данных")  
@@ -148,7 +149,7 @@ ms.lasthandoff: 11/20/2017
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)   

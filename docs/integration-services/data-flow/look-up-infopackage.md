@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c7292503d94efdfa4fb9a7788750a746434dfd9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b576561f0d49a6a3008fe59176fe2ec2c1368fa3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="look-up-infopackage"></a>Поиск InfoPackage
   Используйте диалоговое окно **Поиск InfoPackage** для поиска InfoPackage, определенного в системе SAP Netweaver BW. После открытия списка InfoPackage выберите необходимый InfoPackage, и назначение заполнит связанные параметры необходимыми значениями.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 11/20/2017
  **Исходная система**  
  Введите имя или часть имени исходной системы с символом-шаблоном звездочки (*). Также можно использовать символ-шаблон звездочки для включения всех InfoPackage независимо от исходных систем.  
   
- **Поиск**  
+ **Найти**  
  Выполните поиск соответствующих InfoPackage, определенных в системе SAP Netweaver BW.  
   
 ## <a name="lookup-results"></a>Результаты поиска  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/20/2017
 |Аттр.|Данные атрибутов.|  
 |Тексты|Тексты.|  
   
- **Description**  
+ **Описание**  
  Отображается описание InfoPackage.  
   
  **InfoSource**  
@@ -82,7 +83,7 @@ ms.lasthandoff: 11/20/2017
   
  После открытия списка InfoPackage выберите необходимый InfoPackage, и назначение заполнит связанные параметры необходимыми значениями.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор назначений SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f159ce073c8da9dae02d80e0d93728036c774182
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 4679367f544000c384e897c85e18cba1d0936a81
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>Подключение к источникам данных с помощью мастера импорта и экспорта SQL Server
 В подразделах этого раздела показано, как подключиться к нескольким наиболее распространенным источникам данных с помощью мастера экспорта и импорта SQL Server. Вы должны предоставить сведения о подключении для источников данных на страницах **Выбор источника данных** и **Выбор назначения** мастера.
@@ -61,7 +62,7 @@ ms.lasthandoff: 11/20/2017
 
 -   **Запустите мастер.** Если вы хотите запустить мастер, но на вашем компьютере не установлен [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , мастер импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] можно установить с помощью SQL Server Data Tools (SSDT). Дополнительные сведения см. в разделе [Скачивание SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

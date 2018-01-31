@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 9ccb8fc5-f65e-41a2-9511-7fa55586eb8b
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f51bdacbe57674f10f2dc7ea1c20d1ab64b0c229
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 154dc4da51c19363cb9fd41616e9e89ea3d3ded8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Параметры запроса профиля шаблона столбцов (задача «Профилирование данных»)
   Для установки параметров режима **Запрос профиля шаблона столбца** , выделенного в панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль шаблона столбцов описывает набор регулярных выражений, которые покрывают указанный процент значений в строковом столбце. Этот профиль может помочь выявить проблемы в данных, например недопустимые строки, а также предложить регулярные выражения, которые можно использовать в будущем для проверки новых данных. Например, шаблон профиля для столбца почтовых индексов США может выдавать регулярные выражения: \d{5}-\d{4}, \d{5} и \d{9}. Если имеются другие регулярные выражения, то вероятно, что данные содержат недопустимые или представленные в неверном формате значения.  
@@ -147,7 +149,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения см. в подразделе «Основные сведения об использовании таблицы тегов» выше в этом разделе.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

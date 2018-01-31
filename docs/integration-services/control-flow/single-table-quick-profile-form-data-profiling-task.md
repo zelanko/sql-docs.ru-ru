@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.quickprofile.f1
-helpviewer_keywords: Data Profiling Task Editor
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.quickprofile.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aa61ac73fbc2ec86424728393e9ff9651b502e60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: dc9d58ae7577204988fefcf0364c48a8a2695201
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Форма быстрого профиля одной таблицы (задача «Профилирование данных»)
   Воспользуйтесь **Формой быстрого профиля одной таблицы** , чтобы настроить задачу «Профилирование данных» для проведения быстрого профилирования одной таблицы или представления с параметрами по умолчанию.  
@@ -55,7 +58,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Профиль включения значений недоступен из **Формы быстрого профиля одной таблицы**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Редактор задачи "Профилирование данных" (страница "Запросы профиля")](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   

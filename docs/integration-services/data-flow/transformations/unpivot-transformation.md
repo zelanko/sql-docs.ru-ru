@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - normalized data [Integration Services]
 - datasets [Integration Services], normalized data
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 559bfa5d851d3a40d1ed691ea4023acb3d6eb731
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 667a8c77caa3d3cdbfe4601f1f8597ac7e6d5a11
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unpivot-transformation"></a>Преобразование отмены свертывания
   Преобразование «Отмена свертывания» превращает набор ненормализованных данных в более нормализованную версию за счет развертывания значений из нескольких столбцов одной записи в несколько записей с теми же значениями в одном столбце. Например, набор данных с перечнем имен клиентов имеет одну строку для каждого клиента, при этом купленные товары и их количество отображаются в столбцах строки. После нормализации с помощью преобразования отмены свертывания набор данных содержит отдельную строку по каждому продукту, приобретенному клиентом.  
@@ -97,8 +98,8 @@ ms.lasthandoff: 11/20/2017
   
  В сценарии отмены свертывания, описанном в разделе [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md), именем столбца значений ключа сведения является **Product** , оно обозначает новый столбец **Product** , в который осуществляется отмена свертывания столбцов **Ham**, **Soda**, **Milk**, **Beer**и **Chips** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
- [Преобразование "Сведение"](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
+ [Преобразование «Сведение»](../../../integration-services/data-flow/transformations/pivot-transformation.md)  
   
   

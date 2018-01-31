@@ -8,23 +8,24 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - sort attributes [Integration Services]
 - output columns [Integration Services]
 ms.assetid: 22ce3f5d-8a88-4423-92c2-60a8f82cd4fd
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 75bcc0fbc667921debf0fa27d7cc95103fa4860c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c64f31c7708a8612db85206d164cda6e75e7c848
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Сортировка данных для преобразований «Слияние» и «Соединение слиянием»
   В службах [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]для преобразований «Слияние» и «Соединение слиянием» необходимы отсортированные входные данные. Входные данные должны быть отсортированы физически, а параметры сортировки должны быть установлены на выходы и выходные столбцы источника или вышестоящего преобразования. Если параметры сортировки определяют, что данные отсортированы, но данные в действительности не отсортированы, операция слияния или соединения слиянием может дать непредвиденные результаты.  
@@ -112,7 +113,7 @@ ms.lasthandoff: 11/20/2017
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Преобразование «Слияние»](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Преобразование «Соединение слиянием»](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   

@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], creating
 - expressions [Integration Services], property expressions
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d3be6cd239d59bbed67e335ddc7f828567535c2e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b1ee8f6cfea444ee02880800908683213701af6e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-or-change-a-property-expression"></a>Добавление или изменение выражение свойства
   Пользователь может создать выражения свойств для пакетов, задач, контейнеров «цикл по каждому элементу», контейнеров «цикл по элементам», контейнеров последовательности, обработчиков событий, диспетчеров соединений на уровне пакетов и проектов и регистраторов.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Использование выражений свойств в пакетах](../../integration-services/expressions/use-property-expressions-in-packages.md)   
  [Пакеты служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-packages.md)   

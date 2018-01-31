@@ -12,7 +12,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c5b15bec-6fde-4174-bcde-d043307244dd
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -41,7 +41,7 @@ ms.lasthandoff: 01/09/2018
   
 2.  **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .** Запишите скрипт Visual Basic, который вызывает методы SOAP веб-службы сервера отчетов, чтобы копировать данные между базами данных. Используйте служебную программу **RS.exe** для запуска скрипта. Программа RS.exe устанавливается вместе c [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
-    -   [Sample Reporting Services rs.exe Script to Copy Content between Report Servers](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). Разделы содержат описание того, как использовать образец скрипта, который можно загрузить на сайте CodePlex.  
+    -   [Образец скрипта программы rs.exe служб Reporting Services для копирования содержимого между серверами отчетов](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md). Разделы содержат описание того, как использовать образец скрипта, который можно загрузить на сайте CodePlex.  
   
     -   Пример rss-скрипта на сайте CodePlex см. здесь: [Скрипт программы RS.exe служб Reporting Services, который переносит содержимое с одного сервера отчетов на другой](http://azuresql.codeplex.com/releases/view/115207)  
   

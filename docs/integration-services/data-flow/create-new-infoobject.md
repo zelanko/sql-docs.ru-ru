@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 142607d2ea3486749c0233c2d35692c682fd50e1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50f319341ba89890f67b77f698ff3411c9ab820e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-new-infoobject"></a>Создание InfoObject
   Используйте диалоговое окно **Создание нового InfoObject** для создания нового InfoObject в системе SAP Netweaver BW.  
   
- Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Диалоговое окно **Создать InfoObject** можно открыть на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в статье [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
@@ -129,7 +130,7 @@ ms.lasthandoff: 11/20/2017
  **InfoObject**  
  Просмотрите имя InfoObject.  
   
- **Description**  
+ **Описание**  
  Просмотрите описание InfoObject.  
   
  **Тип InfoObject**  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
  **Удалить**  
  Удаляет выбранный InfoObject из списка **Атрибуты** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание InfoCube для данных транзакции](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Создание InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Создание InfoSource для данных транзакции](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

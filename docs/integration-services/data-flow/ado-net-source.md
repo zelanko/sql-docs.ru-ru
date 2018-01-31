@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-caps.latest.revision: "101"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7ff6aab3608b1bebd61e9750ea8769dda0fbf2f2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 05753f3cea7979f78499dc68cb4baa784367b383
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ado-net-source"></a>Источник ADO NET
   Источник ADO NET использует данные поставщика .NET и делает данные доступными для потока данных.  
@@ -138,7 +139,7 @@ ms.lasthandoff: 11/20/2017
  **Текст команды SQL**  
  Введите текст SQL-запроса, постройте запрос, нажав кнопку **Создать запрос**, или выберите файл, содержащий текст запроса, нажав кнопку **Обзор**.  
   
- **Build query**  
+ **Создать запрос**  
  Воспользуйтесь диалоговым окном **Построитель запросов** для визуального конструирования SQL-запроса.  
   
  **Обзор**  
@@ -195,7 +196,7 @@ ms.lasthandoff: 11/20/2017
  **Усечение**  
  Укажите, что нужно сделать при усечении: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Просмотреть описание ошибки.  
   
  **Присвоить указанное значение выбранным ячейкам**  

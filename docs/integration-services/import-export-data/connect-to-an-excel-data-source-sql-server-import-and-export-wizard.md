@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 43fbaca0-36d8-4583-9056-af7010209b87
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2aeb225037970b8a77169db18c204ecf6d4c19d6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 16ace15a73d9ef727612c59f8c9329a4d4437312
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-excel-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Excel (мастер импорта и экспорта SQL Server)
 В этом разделе показано, как подключаться к источникам данных **Microsoft Excel** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server.
@@ -36,7 +37,7 @@ ms.lasthandoff: 11/20/2017
 > Параметры подключения для этого поставщика данных одинаковы независимо от того, является ли Excel источником или назначением. Таким образом, на страницах **Выбор источника данных** и **Выбор назначения** мастера отображаются одинаковые параметры.
 
 **Путь к файлу Excel**  
- Укажите полный путь и имя для файла Excel. Например:
+ Укажите полный путь и имя для файла Excel. Пример:
 -   Для файла на локальном компьютере **C:\\MyData.xlsx**.
 -   Для файла в общей сетевой папке **\\\\Sales\\Database\\Northwind.xlsx**.
 
@@ -74,11 +75,11 @@ ms.lasthandoff: 11/20/2017
 
 Если на компьютере установлена 32-разрядная версия Office, нужно установить 32-разрядную версию компонентов, а также убедиться в том, что пакет запускается в 32-разрядном режиме.
 
-Если у вас есть подписка на Office 365, нужно скачать распространяемый компонент ядра СУБД Access 2016, а не среду выполнения Microsoft Access 2016. При запуске установщика может появиться сообщение о том, что невозможно установить скачанные компоненты вместе с компонентами Office, полученными с помощью технологии "нажми и работай". Чтобы обойти это сообщение, запустите установку в тихом режиме. Для этого откройте окно командной строки и запустите скачанный EXE-файл с параметром `/quiet`. Например:
+Если у вас есть подписка на Office 365, нужно скачать распространяемый компонент ядра СУБД Access 2016, а не среду выполнения Microsoft Access 2016. При запуске установщика может появиться сообщение о том, что невозможно установить скачанные компоненты вместе с компонентами Office, полученными с помощью технологии "нажми и работай". Чтобы обойти это сообщение, запустите установку в тихом режиме. Для этого откройте окно командной строки и запустите скачанный EXE-файл с параметром `/quiet`. Пример:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

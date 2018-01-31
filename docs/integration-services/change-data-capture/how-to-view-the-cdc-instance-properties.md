@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 022b2b25d055e25dbfcc62ba494e5e6564dc4cd5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 753aa0f97ccfe8b5c63fff0e117e5f1a541bccb5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Как просмотреть свойства экземпляра CDC
   Эта процедура описывает использование консоли конструктора CDC для просмотра сведений об экземплярах, создаваемых для поддержки управления работой экземпляров.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/20/2017
      **Состояние**  
      На этой вкладке отображаются сведения о текущем состоянии отслеживания измененных данных для экземпляра. Сведения о том, что отображено на этой вкладке, приведены в пункте **Вкладки средства просмотра** раздела [Manage a CDC Instance](../../integration-services/change-data-capture/manage-a-cdc-instance.md).  
   
-     **Oracle;**  
+     **Oracle**  
      На этой вкладке отображаются общие сведения об экземпляре CDC и базе данных-источнике Oracle. Сведения о том, что отображено на этой вкладке, приведены в разделе [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md).  
   
      **Таблицы**  

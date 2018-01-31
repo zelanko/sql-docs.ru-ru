@@ -8,11 +8,14 @@ ms.service:
 ms.component: extending-packages-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-xml
+ms.technology:
+- dbe-xml
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
-dev_langs: VB
+applies_to:
+- SQL Server 2016 Preview
+dev_langs:
+- VB
 helpviewer_keywords:
 - scripts [Integration Services]
 - SSIS Script task
@@ -21,16 +24,16 @@ helpviewer_keywords:
 - scripts [Integration Services], about Script task with packages
 - SSIS Script task, about Script task
 ms.assetid: 911e6d26-a6fd-4fc3-a111-bf5f048e9bff
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 01b4147a08363be109b221771628c31ca712a1e8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 801cae05602e9c618637be57298572a9ca27aeb8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Расширение пакета с помощью задачи «Скрипт»
   Задача "Скрипт" расширяет возможности времени выполнения для пакетов служб [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] благодаря пользовательскому коду, написанному на языке [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic или [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, который компилируется и выполняется во время выполнения пакетов. Задача «Скрипт» упрощает разработку пользовательской задачи времени выполнения, если задачи, включенные в службы [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)], не полностью удовлетворяют требованиям разработчика. Задача «Скрипт» самостоятельно пишет весь инфраструктурный код, давая разработчику возможность сосредоточиться исключительно на коде, необходимом для пользовательской обработки.  
@@ -41,7 +44,7 @@ ms.lasthandoff: 11/20/2017
   
  Если создается задача, которую планируется повторно использовать в нескольких пакетах, вместо использования задачи «Скрипт» следует разработать собственную задачу. Дополнительные сведения см. в разделе [Сравнение решений со сценариями и пользовательских объектов](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
  В следующих разделах представлены дополнительные сведения о задаче «Скрипт».  
   
  [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](../../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md)  

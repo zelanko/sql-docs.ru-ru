@@ -8,22 +8,25 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.cacheconnection.f1
-helpviewer_keywords: Cache connection manager
+f1_keywords:
+- sql13.dts.designer.cacheconnection.f1
+helpviewer_keywords:
+- Cache connection manager
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: df50fb19024245379a92dbb5486d2c2ab035f851
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f645f1e81965c0b39a63f7317fc660639df5d0e5
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cache-connection-manager"></a>диспетчер соединений с кэшем
   Диспетчер соединений с кэшем считывает данные из преобразования кэша или из файла кэша (CAW) и может сохранить эти данные в файле кэша. Данные всегда будут храниться в памяти, вне зависимости от того, был ли настроен диспетчер соединений с кэшем для использования файла кэша.  
@@ -71,10 +74,10 @@ ms.lasthandoff: 11/20/2017
  Используйте вкладку **Общие** диалогового окна **Редактор диспетчера соединений с кэшем** , чтобы указать, должно ли содержимое кэша быть прочитано из файла или сохранено в файле.  
   
 #### <a name="options"></a>Параметры  
- **Имя диспетчера соединений**  
+ **Имя диспетчера подключений**  
  Предоставьте уникальное имя для соединения с кэшем в рабочем процессе. Выбранное имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Описание**  
  Опишите соединение. Рекомендуется описать цель соединения, чтобы пакеты самодокументировались и их проще было обслуживать.  
   
  **Использование файлового кэша**  
@@ -130,7 +133,7 @@ ms.lasthandoff: 11/20/2017
  **Кодовая страница**  
  Задает кодовую страницу для столбца этого типа. Параметр **Code Page**можно изменить, если он применим к типу данных.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью преобразования диспетчера подключений с кэшем](lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
   

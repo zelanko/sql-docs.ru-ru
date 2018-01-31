@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a810d72817ebdf5a1078e95315adb755a2d42891
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6d3cacac1c13700c1416b6365ec6bb03f650fa31
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="send-mail-task"></a>Задача «Отправка почты»
   Задача «Отправка почты» производит отправку сообщения электронной почты. Эта задача позволяет пакету отправлять сообщения при успешном или неуспешном завершении задач в рабочем процессе пакета либо в ответ на события, инициируемые при выполнении пакета. Например, задача может уведомить администратора базы данных об успешном или неуспешном завершении задачи резервного копирования базы данных.  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="related-content"></a>См. также  
@@ -99,7 +100,7 @@ ms.lasthandoff: 11/20/2017
   
  **Примечание.** Имена задач должны быть уникальными в пределах пакета.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Отправка почты».  
   
 ## <a name="send-mail-task-editor-mail-page"></a>Редактор задачи «Отправка почты» (страница «Почта»)

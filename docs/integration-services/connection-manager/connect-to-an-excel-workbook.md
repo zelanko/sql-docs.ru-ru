@@ -8,21 +8,23 @@ ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
 ms.custom: 
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Excel [Integration Services]
+helpviewer_keywords:
+- Excel [Integration Services]
 ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ae0acf0c57aae829f41b4af1b48018fa60eef0da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3ece6c4ef032f7b60f82f3f58ee602d0a4ac1196
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-excel-workbook"></a>Подключение к книге Excel
   Чтобы соединить пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с книгой Microsoft Office Excel, нужен диспетчер соединений Excel.  
@@ -31,13 +33,13 @@ ms.lasthandoff: 11/20/2017
  
 ## <a name="connectivity-components-for-microsoft-excel-and-access-files"></a>Компоненты подключения для файлов Microsoft Excel и Access
   
-Если компоненты подключения для файлов Microsoft Office еще не установлены, может потребоваться скачать их. Скачать последнюю версию компонентов подключения для файлов Excel и Access можно на следующей странице: [Распространяемый компонент ядра СУБД Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
+Если компоненты подключения для файлов Microsoft Office еще не установлены, может потребоваться скачать их. Скачать последнюю версию компонентов подключения для файлов Excel и Access можно на следующей странице: [Распространяемый компонент ядра СУБД Microsoft Access 2016](https://www.microsoft.com/download/details.aspx?id=54920).
   
 Последняя версия компонентов позволяет открывать файлы, созданные в более ранних версиях Excel.
 
 Если на компьютере установлена 32-разрядная версия Office, нужно установить 32-разрядную версию компонентов, а также убедиться в том, что пакет запускается в 32-разрядном режиме.
 
-Если у вас есть подписка на Office 365, нужно скачать распространяемый компонент ядра СУБД Access 2016, а не среду выполнения Microsoft Access 2016. При запуске установщика может появиться сообщение о том, что невозможно установить скачанные компоненты вместе с компонентами Office, полученными с помощью технологии "нажми и работай". Чтобы обойти это сообщение и успешно установить компоненты, запустите установку в тихом режиме. Для этого откройте окно командной строки и запустите скачанный EXE-файл с параметром `/quiet`. Например:
+Если у вас есть подписка на Office 365, нужно скачать распространяемый компонент ядра СУБД Access 2016, а не среду выполнения Microsoft Access 2016. При запуске установщика может появиться сообщение о том, что невозможно установить скачанные компоненты вместе с компонентами Office, полученными с помощью технологии "нажми и работай". Чтобы обойти это сообщение и успешно установить компоненты, запустите установку в тихом режиме. Для этого откройте окно командной строки и запустите скачанный EXE-файл с параметром `/quiet`. Пример:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
@@ -61,7 +63,7 @@ ms.lasthandoff: 11/20/2017
   
      Сведения о параметрах конфигурации для этого типа соединения см. в разделе [Excel Connection Manager Editor](../../integration-services/connection-manager/excel-connection-manager-editor.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Подключение к базе данных Access](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   

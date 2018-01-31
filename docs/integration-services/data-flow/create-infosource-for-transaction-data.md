@@ -8,25 +8,26 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab5f23e2-cd4e-4507-83d9-ac5ef721c171
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1cfb0db72c6fca86efb2e7fcdb24d602caea90eb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 140508a2b52ad86ddb7916e3ed0d5350d26aab73
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-infosource-for-transaction-data"></a>Создание InfoSource для данных транзакции
   Используйте диалоговое окно **Создание InfoSource для данных транзакции** , чтобы создать новый InfoSource для данных транзакции в системе SAP Netweaver BW.  
   
- Можно открыть диалоговое окно **Создание InfoSource для данных транзакции** на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в разделе [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
+ Можно открыть диалоговое окно **Создание InfoSource для данных транзакции** на странице **Диспетчер соединений** **Редактора назначений SAP BW**. Дополнительные сведения о назначении SAP BW см. в статье [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md).  
   
 > [!IMPORTANT]  
 >  Документация по Microsoft Connector 1.1 для SAP BW предполагает, что читатель знаком со средой SAP Netweaver BW. Дополнительные сведения о SAP Netweaver BW или сведения о настройке объектов и процессов SAP Netweaver BW см. в документации SAP.  
@@ -97,7 +98,7 @@ ms.lasthandoff: 11/20/2017
  **Поле единицы**  
  Укажите единицы, которые будут использоваться в InfoObject.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Справка F1 по соединителю с SAP BW (Microsoft)](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

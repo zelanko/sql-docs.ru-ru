@@ -1,4 +1,4 @@
-# [Обзор](power-pivot-for-sharepoint-ssas.md)  
+# [Power Pivot для SharePoint](power-pivot-for-sharepoint-ssas.md)  
 # [Настройка и администрирование сервера Power Pivot в центре администрирования](power-pivot-server-administration-and-configuration-in-central-administration.md)  
 ## [Развертывание решений PowerPivot в SharePoint](deploy-power-pivot-solutions-to-sharepoint.md)  
 ## [Создание и настройка приложения службы Power Pivot](create-and-configure-power-pivot-service-application-in-ca.md)  

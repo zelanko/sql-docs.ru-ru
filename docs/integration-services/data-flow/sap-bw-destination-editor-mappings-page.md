@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwdestination.columns.f1
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 285474f7ac773bef181487099409bc4c2e93dfc8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3019f68825fd8fd52ea85b9b1b5c0fad37b4fb2b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-mappings-page"></a>Редактор назначений SAP BW (страница «Сопоставления»)
   Страница **Сопоставления** диалогового окна **Редактор назначений SAP BW** используется для сопоставления входных столбцов с целевыми столбцами.  
@@ -83,7 +85,7 @@ ms.lasthandoff: 11/20/2017
  **Целевой столбец**  
  Позволяет просмотреть каждый из доступных целевых столбцов без учета наличия или отсутствия сопоставления.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор назначений SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Редактор назначений SAP BW (страница "Вывод ошибок")](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
  [Редактор назначений SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   

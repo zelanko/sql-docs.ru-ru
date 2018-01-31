@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.selectapackage.f1
-helpviewer_keywords: Select a Package dialog box
+f1_keywords:
+- sql13.dts.designer.selectapackage.f1
+helpviewer_keywords:
+- Select a Package dialog box
 ms.assetid: 92b47a2b-21b5-460a-885d-6cc4bb567249
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0814aa6eda28588f7dce26bf823583acc631deb5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fab572c14d87acd3776a94675063ffe372525a5a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="select-a-package"></a>Выбор пакета
   Используйте диалоговое окно **Выбор пакета** , чтобы указать пакет, из которого задача «Очередь сообщений» может получать сообщения.  
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/20/2017
  **Имя пакета**  
  Выберите пакет, хранимый на указанном сервере.  
   
- **Сервер**  
+ **Server**  
  Введите имя сервера или выберите его из списка.  
   
  **Использовать проверку подлинности Windows**  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/20/2017
  **Использовать проверку подлинности SQL Server**  
  Выберите для использования проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] введите имя пользователя, которое необходимо использовать для входа на сервер.  
   
  **Пароль**  
@@ -62,7 +65,7 @@ ms.lasthandoff: 11/20/2017
  **Имя файла**  
  Укажите путь к пакету или нажмите кнопку обзора **(…)** и определите его расположение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задача «Очередь сообщений»](../../integration-services/control-flow/message-queue-task.md)  
   
   

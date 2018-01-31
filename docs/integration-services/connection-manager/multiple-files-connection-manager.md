@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,29 +20,29 @@ helpviewer_keywords:
 - connections [Integration Services], files
 - multiple file connections
 ms.assetid: 10bdc56e-c5cd-4ddb-b2f7-375fe57fe8b2
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9d0287dd164b06ac94cadf264c35be1d2708e26d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5ff3fcef1362333dc1ac2de5774d63ce025b8557
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="multiple-files-connection-manager"></a>диспетчер соединений с несколькими файлами
   Диспетчер соединений с несколькими файлами позволяет пакету обращаться к существующим файлам и папкам или создавать файлы и папки во время выполнения.  
   
 > [!NOTE]  
->  Встроенные задачи и компоненты потока данных в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не используют диспетчер соединений с несколькими файлами. Однако можно использовать этот диспетчер соединений в задаче «Скрипт» и компоненте скрипта. Дополнительные сведения об использовании диспетчеров соединений в задаче «Скрипт» см. в разделе [Connecting to Data Sources in the Script Task](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Сведения об использовании диспетчеров соединений в компоненте скрипта см. в разделе [Connecting to Data Sources in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
+>  Встроенные задачи и компоненты потока данных в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] не используют диспетчер соединений с несколькими файлами. Однако можно использовать этот диспетчер соединений в задаче «Скрипт» и компоненте скрипта. Дополнительные сведения об использовании диспетчеров соединений в задаче «Скрипт» см. в разделе [Соединение с источниками данных в задаче «Скрипт»](../../integration-services/extending-packages-scripting/task/connecting-to-data-sources-in-the-script-task.md). Сведения об использовании диспетчеров соединений в компоненте скрипта см. в разделе [Соединение с источниками данных в компоненте скрипта](../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
   
 ## <a name="usage-types-of-the-multiple-files-connection-manager"></a>Использование диспетчера соединений с несколькими файлами  
  Свойство **FileUsageType** диспетчера соединений с несколькими файлами определяет, как используется соединение. Диспетчер соединений с несколькими файлами может создавать файлы и папки, а также использовать существующие файлы и папки.  
   
  В следующей таблице приводятся значения **FileUsageType**.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |**0**|Диспетчер соединений с несколькими файлами использует существующий файл.|  
 |**1**|Диспетчер соединений с несколькими файлами создает файл.|  

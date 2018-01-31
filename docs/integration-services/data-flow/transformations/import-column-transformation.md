@@ -8,26 +8,28 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.importcolumntrans.f1
+f1_keywords:
+- sql13.dts.designer.importcolumntrans.f1
 helpviewer_keywords:
 - Import Column transformation [Integration Services]
 - columns [Integration Services], importing
 - importing data, SSIS packages
 - inserting data
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e130dfcda0f37318acb3805c67ab640e3cfb2621
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d8884e76a081e329ec971c253443a32f93efc90
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="import-column-transformation"></a>Преобразование «Импорт столбца»
   Преобразование «Импорт столбца» считывает данные из файлов и добавляет данные в столбцы потока данных. С помощью этого преобразования пакет может добавлять в поток данных текст и изображения, хранимые в отдельных файлах. Например, поток данных, загружающий данные в таблицу сведений о продуктах, может содержать преобразование «Импорт столбца», чтобы выполнять импорт отзывов покупателей о каждом продукте из файлов и добавлять обзоры в поток данных.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Отметка порядка байтов предполагается, только если данные принадлежат к типу данных DT_NTEXT.  
   
- Столбец входа преобразования содержит имена файлов, в которых хранятся данные. Каждая строка в наборе данных может указывать на отдельный файл. Когда преобразование «Импорт столбца» обрабатывает строку, оно считывает имя файла, открывает соответствующий файл в файловой системе и загружает содержимое файла в выходной столбец. Тип данных выходного столбца должен быть DT_TEXT, DT_NTEXT или DT_IMAGE. Дополнительные сведения см. в статье [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ Столбец входа преобразования содержит имена файлов, в которых хранятся данные. Каждая строка в наборе данных может указывать на отдельный файл. Когда преобразование «Импорт столбца» обрабатывает строку, оно считывает имя файла, открывает соответствующий файл в файловой системе и загружает содержимое файла в выходной столбец. Тип данных выходного столбца должен быть DT_TEXT, DT_NTEXT или DT_IMAGE. Дополнительные сведения см. в разделе [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Это преобразование имеет один вход, один выход и один выход ошибок.  
   
@@ -54,10 +56,10 @@ ms.lasthandoff: 11/20/2017
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразование «Экспорт столбца»](../../../integration-services/data-flow/transformations/export-column-transformation.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

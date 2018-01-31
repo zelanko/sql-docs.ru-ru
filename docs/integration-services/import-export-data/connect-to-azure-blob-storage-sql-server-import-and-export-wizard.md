@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7f586df639ab239539f21f1d94155b589cd9c865
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5a31ba153a87eddb1e65daf0aebacc317e58a455
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Подключение к хранилищу BLOB-объектов (мастер импорта и экспорта SQL Server)
 В этом разделе показано, как подключаться к источникам данных **хранилища BLOB-объектов Azure** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server.
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
  **Использовать первую строку в качестве имен столбцов**  
  Укажите, содержит ли первая строка данных имена столбцов.  
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

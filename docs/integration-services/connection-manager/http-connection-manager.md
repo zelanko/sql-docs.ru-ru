@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Web server connections [Integration Services]
 - connections [Integration Services], HTTP
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d5f6c0a872ae043e8550dc541d3c0e0f706e388a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c9efb5b8d8a972cfc60ccb078363bcba055eea01
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="http-connection-manager"></a>диспетчер HTTP-соединений
   HTTP-соединение позволяет пакету получить доступ к веб-серверу через протокол HTTP, чтобы передавать или принимать файлы. Задача «Веб-служба» из состава служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] использует этот диспетчер соединений.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 11/20/2017
  **Использовать учетные данные**  
  Укажите, должен ли диспетчер HTTP-соединений использовать для проверки подлинности учетные данные безопасности пользователя.  
   
- **Имя пользователя**  
+ **User name**  
  Если диспетчер HTTP-соединений использует учетные данные, необходимо указать имя пользователя, пароль и домен.  
   
  **Пароль**  
@@ -116,7 +117,7 @@ ms.lasthandoff: 11/20/2017
  **Использовать учетные данные**  
  Укажите, должен ли диспетчер HTTP-соединений использовать учетные данные для прокси-сервера.  
   
- **Имя пользователя**  
+ **User name**  
  Если диспетчер HTTP-соединений использует учетные данные, необходимо указать имя пользователя, пароль и домен.  
   
  **Пароль**  

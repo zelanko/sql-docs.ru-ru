@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1ab8c13659f0bebb3b4da68789cfa9ebebadc7b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 38216b9ef1b8c8ccaa3ca7656747defe077ee690
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Параметры запроса профиля потенциальных ключей (задача «Профилирование данных»)
   Для установки параметров варианта **Запрос профиля потенциальных ключей** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль потенциальных ключей сообщает о том, является ли данный столбец или набор столбцов ключом либо приблизительным ключом для выделенной таблицы. Этот профиль также поможет выявить проблемы в данных, например повторяющиеся значения в потенциальном ключевом столбце.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 11/20/2017
   
 |Значение|Description|  
 |-----------|-----------------|  
-|**Нет**|Пороговое значение не задано. Стойкость ключа указывается независимо от значения.|  
+|**None**|Пороговое значение не задано. Стойкость ключа указывается независимо от значения.|  
 |**Specified**|Пороговое значение указывается свойством **KeyStrengthThreshold**. Стойкость ключа указывается лишь в том случае, если она превышает пороговое значение.|  
 |**Exact**|Пороговое значение не задано. Стойкость ключа указывается лишь в том случае, если выделенные столбцы представляют собой точный ключ.|  
   
@@ -132,7 +134,7 @@ ms.lasthandoff: 11/20/2017
  **MaxNumberOfViolations**  
  Укажите максимальное число нарушений потенциальных ключей для сообщения в выводе. Значение по умолчанию этого свойства равно 100. Этот параметр будет выключен только в случае выбора для свойства **KeyStrengthThresholdSetting** значения **Точно**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

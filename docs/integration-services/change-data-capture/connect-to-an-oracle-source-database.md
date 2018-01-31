@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: oraDb
+f1_keywords:
+- oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1c48c856677c0b840fdeb56a683c84425d77e4a4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6d8007bd54b9ee8612d9b65a0864b3271427f0b8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Соединение с базой данных-источником Oracle
   На странице «Источник Oracle» указываются сведения, необходимые для соединения с базой данных-источником Oracle. Экземпляр CDC считывает журналы повторов базы данных Oracle, с которой установлено соединение.  
@@ -70,7 +72,7 @@ ms.lasthandoff: 11/20/2017
   
  Завершив ввод данных на этой странице, нажмите кнопку **Далее** , чтобы перейти на страницу [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Как создать экземпляр изменения базы данных SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Изменение свойств экземпляра](../../integration-services/change-data-capture/edit-instance-properties.md)  
   

@@ -8,22 +8,25 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.expressionspage.f1
-helpviewer_keywords: Expressions Page dialog box
+f1_keywords:
+- sql13.dts.designer.expressionspage.f1
+helpviewer_keywords:
+- Expressions Page dialog box
 ms.assetid: c9016ec6-11c1-4ebd-b2a7-0fa6631fd9e4
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8ea1c1154819e58814a0c2f83c8f246e0588e967
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b066820ae0c67c393f8583189a0a589bda79bb24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="expressions-page"></a>Страница «Выражения»
   На странице **Выражения** можно изменить выражения свойств и открыть диалоговые окна **Редактор выражений свойств** и **Построитель выражений для свойств** .  
@@ -39,7 +42,7 @@ ms.lasthandoff: 11/20/2017
  **\<имя_свойства>**  
  Нажмите кнопку с многоточием, чтобы открыть диалоговое окно **Построитель выражений** . Дополнительные сведения см. в статье [Expression Builder](../../integration-services/expressions/expression-builder.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Переменные в службах Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md)   
  [Системные переменные](../../integration-services/system-variables.md)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)  

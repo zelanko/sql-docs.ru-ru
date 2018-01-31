@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c4c5abcb4e12074bc1f0c23d404d0e4c2d69c732
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 99f561213fafe5b70c3d0f95af247780c9247137
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-source-custom-properties"></a>Пользовательские свойства источника «ODBC»
   В следующей таблице описаны пользовательские свойства источника «ODBC». Все свойства могут быть заданы на основе выражений свойств служб SSIS.  
@@ -36,13 +37,13 @@ ms.lasthandoff: 11/20/2017
 |DefaultCodePage|Целочисленный|Кодовая страница, используемая для строковых выходных столбцов.<br /><br /> **Примечание**. Это свойство недоступно в **редакторе источника ODBC**, но может быть задано с помощью **расширенного редактора**.|  
 |ExposeCharColumnsAsUnicode|Логическое значение|Это свойство определяет, как компонент предоставляет доступ к столбцам CHAR. Значением по умолчанию является FALSE, которое указывает, что доступ к столбцам CHAR предоставляется как к многобайтовым строкам с (DT_STR). Если задано значение TRUE, к столбцам CHAR предоставляется доступ как к строкам с расширенными символами (DT_WSTR).<br /><br /> **Примечание**. Это свойство недоступно в **редакторе источника ODBC**, но может быть задано с помощью **расширенного редактора**.|  
 |FetchMethod|Integer (перечисление)|Метод, используемый для возврата данных. Возможными параметрами являются Row by row (0) и Batch (1). По умолчанию применяется значение Batch (1).<br /><br /> Дополнительные сведения об этих параметрах см. в разделе [ODBC Source](../../integration-services/data-flow/odbc-source.md).<br /><br /> **Примечание**. Это свойство недоступно в **редакторе источника ODBC**, но может быть задано с помощью **расширенного редактора**.|  
-|SqlCommand|Строковые значения|Команда SQL, которая должна быть выполнена, если для AccessMode задано значение «команда SQL».|  
+|SqlCommand|String|Команда SQL, которая должна быть выполнена, если для AccessMode задано значение «команда SQL».|  
 |StatementTimeout|Целочисленный|Количество секунд, в течение которых должно происходить ожидание выполнения инструкции SQL, прежде чем будет выполнен возврат с ошибкой в приложение. Значение по умолчанию — 120 Значение 0 указывает, что система не следит за истечением времени ожидания.|  
-|TableName|Строковые значения|Имя таблицы с данными, которая используется, если для AccessMode задано значение «Имя таблицы».|  
+|TableName|String|Имя таблицы с данными, которая используется, если для AccessMode задано значение «Имя таблицы».|  
 |LobChunckSize|Целочисленный|Распределение размера фрагментов данных для столбцов LOB.|  
 ||||  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [ODBC Source](../../integration-services/data-flow/odbc-source.md)   
  [Редактор источника ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   

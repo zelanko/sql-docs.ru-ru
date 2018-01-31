@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.designer.hdfsfiledest.f1
+f1_keywords:
+- sql13.ssis.designer.hdfsfiledest.f1
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d07d4efaa0b26a19f60ca27e465177d0ea7b797c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2624d36c31fd6ac77cce7cee61895b40a176d059
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hdfs-file-destination"></a>Назначение HDFS-файлов
   Компонент назначения HDFS-файлов позволяет записывать данные в пакете служб SSIS в HDFS-файл. Поддерживаются следующие форматы файлов: Text, Avro и ORC.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
  После настройки этих параметров перейдите на вкладку **Столбцы** , чтобы сопоставить исходные столбцы с целевыми столбцами в потоке данных.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Диспетчер подключений Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
  [Источник «Файл HDFS»](../../integration-services/data-flow/hdfs-file-source.md)  
   

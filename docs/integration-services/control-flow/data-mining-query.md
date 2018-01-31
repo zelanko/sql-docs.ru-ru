@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataminingquery.f1
+f1_keywords:
+- sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4509a3b7838e112bbd002c7efe4b6782a772f7d0
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c91306039512defe3455e8e77ef617813dee31df
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-mining-query"></a>Запрос интеллектуального анализа данных
   Панель конструктора содержит построитель прогнозирующих запросов интеллектуального анализа данных, который можно использовать для построения прогнозирующих запросов интеллектуального анализа данных. Можно строить либо прогнозирующие запросы на основании входных таблиц, либо одноэлементные прогнозирующие запросы. Переключитесь в просмотр результата, чтобы запустить запрос и просмотреть результаты. Просмотр запроса отображает запрос расширения интеллектуального анализа данных, созданный построителем прогнозирующих запросов.  
@@ -67,7 +69,7 @@ ms.lasthandoff: 11/20/2017
  **Критерий или аргумент**  
  Задайте условие или пользовательское выражение, применимое к столбцу. В ячейку можно перетаскивать столбцы из таблиц, содержащих модели интеллектуального анализа данных, а также входные столбцы.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Средства запросов интеллектуального анализа данных](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [Справочник по расширениям интеллектуального анализа данных (расширения интеллектуального анализа данных)](../../dmx/data-mining-extensions-dmx-statements.md)  
   

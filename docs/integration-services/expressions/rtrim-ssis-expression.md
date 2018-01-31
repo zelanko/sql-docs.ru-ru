@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - RTRIM function
 - trailing blanks
 ms.assetid: 529bd43e-3f8a-4682-a33e-569176aa7fc4
-caps.latest.revision: "38"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: effad67e8221be52ccad428fb151dad548a6a5cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e5d37f4383a3aae13c197b8d8e37709109140080
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="rtrim-ssis-expression"></a>RTRIM (выражение служб SSIS)
   Возвращает символьное выражение после удаления конечных пробелов.  
@@ -46,7 +47,7 @@ RTRIM(character expression)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Метод RTRIM работает только с типом данных DT_WSTR. Аргумент *character_expression* , являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции RTRIM. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
   
  Метод RTRIM возвращает значение NULL, если значением аргумента является NULL.  
@@ -70,7 +71,7 @@ RTRIM(FirstName + " " + LastName)
 RTRIM(@FirstName)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [LTRIM (выражение служб SSIS)](../../integration-services/expressions/ltrim-ssis-expression.md)   
  [TRIM (выражение служб SSIS)](../../integration-services/expressions/trim-ssis-expression.md)   
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  

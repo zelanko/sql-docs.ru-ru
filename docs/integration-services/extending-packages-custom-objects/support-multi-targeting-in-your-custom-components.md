@@ -8,21 +8,23 @@ ms.service:
 ms.component: extending-packages-custom-objects
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-applies_to: SQL Server (starting with 2016)
+applies_to:
+- SQL Server (starting with 2016)
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fea00f80ddaa43ee5bcd5d26ddcc515d2f6e849a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 49cdcb7768103ba9cfd62a58bcdcbf5399ae09a1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Поддержка многоплатформенного нацеливания в пользовательских компонентах
  Теперь можно использовать конструктор SSIS в SQL Server Data Tools (SSDT), чтобы создавать, обслуживать и выполнять пакеты, ориентированные на SQL Server 2014, SQL Server 2012 или SQL Server 2012. Процедуру получения SSDT для Visual Studio 2015 см. в разделе [Скачивание последней версии SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
@@ -40,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 -   Регистраторы
 -   Компоненты потока данных
 
-При работе с управляемыми расширениями конструктор служб SSIS загружает версию расширения для заданной целевой версии. Например:
+При работе с управляемыми расширениями конструктор служб SSIS загружает версию расширения для заданной целевой версии. Пример:
 -   Если целевая версия — SQL Server 2012, конструктор загружает расширение версии 2012.
 -   Если целевая версия — SQL Server 2016, конструктор загружает расширение версии 2016.
 

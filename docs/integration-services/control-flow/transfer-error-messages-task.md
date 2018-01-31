@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfererrormessagestask.f1
 - sql13.dts.designer.transfererrormessagestask.general.f1
 - sql13.dts.designer.transfererrormessagestask.errormessages.F1
-helpviewer_keywords: Transfer Error Messages task [Integration Services]
+helpviewer_keywords:
+- Transfer Error Messages task [Integration Services]
 ms.assetid: da702289-035a-4d14-bd74-04461fbfee1b
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 17d64ff71608c6e3bc4a260ab1c0538b7997a288
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: cfb05e7b06ceebecca2af1fd363a7d312efc954c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-error-messages-task"></a>Задача «Передача сообщений об ошибках»
   Задача "Передача сообщений об ошибках" передает одно или несколько пользовательских сообщений об ошибках [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Пользовательские сообщения имеют идентификатор, больший или равный 50000. Сообщения с идентификаторами, меньшими 50000, являются системными и не могут передаваться с помощью задачи «Передача сообщений об ошибках».  
@@ -78,7 +80,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferErrorMessagesTask.TransferErrorMessagesTask>  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
 -   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
@@ -93,7 +95,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание для задачи «Передача сообщений об ошибках».  
   
 ## <a name="transfer-error-messages-task-editor-messages-page"></a>Редактор задачи «Передача сообщений об ошибках» (страница «Сообщения»)

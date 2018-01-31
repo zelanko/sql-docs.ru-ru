@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.dataprofileviewer.f1
+f1_keywords:
+- sql13.dts.dataprofileviewer.f1
 helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], output viewer
 ms.assetid: b9043428-ce26-45bb-910c-588d07579565
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f364b536b40a68565eb1dac1c8709dc28931043e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 807c980f9c561b6c4da18597b011a98e8d9992de
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profile-viewer"></a>Средство просмотра профиля данных
   Просмотр и анализ профилей данных — следующий шаг в процессе профилирования данных. Профили можно просмотреть после запуска задачи «Профилирование данных» внутри пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] и расчета профилей данных. Дополнительные сведения о настройке и использовании задач "Профилирование данных" см. в разделе [Установка задачи "Профилирование данных"](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
@@ -77,7 +79,7 @@ ms.lasthandoff: 11/20/2017
  Дополнительные сведения об использовании средства просмотра профиля данных см. в разделе [Средство просмотра профиля данных](../../integration-services/control-flow/data-profile-viewer.md). Дополнительные сведения об использовании задачи "Профилирование данных", создающей профиль, который можно проанализировать с помощью средства просмотра профиля данных, см. в разделе [Установка задачи "Профилирование данных"](../../integration-services/control-flow/setup-of-the-data-profiling-task.md).  
   
 ### <a name="static-options"></a>Статические параметры  
- **Открытие**  
+ **Открыть**  
  Нажмите, чтобы просмотреть сохраненный файл, содержащий выход задачи «Профилирование данных»  
   
  Панель**Профили**   
@@ -171,7 +173,7 @@ ms.lasthandoff: 11/20/2017
  Отображает число строк в таблице или представлении.  
   
 ##### <a name="detailed-value-distribution-pane"></a>Панель «Подробное распределение значений»  
- **Значение**  
+ **Value**  
  Отображает уникальные значения, обнаруженные в профилируемом столбце.  
   
  **Count**  

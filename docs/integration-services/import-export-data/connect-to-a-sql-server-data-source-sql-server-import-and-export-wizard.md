@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 386cedbb-fae5-45ce-9363-c4a417f80a2f
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 79a1f98f64096d11faf25a75e681518546bbd21e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e22f388277d9ad96e4c38497789d20f3e98cfad
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-a-sql-server-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных SQL Server (мастер импорта и экспорта SQL Server)
 В этом разделе показано, как подключаться к источникам данных **Microsoft SQL Server** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server. Для подключения к SQL Server можно использовать ряд поставщиков данных.
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]
 > Параметры подключения для этого поставщика данных одинаковы независимо от того, является ли сервер SQL Server источником или назначением. Таким образом, на страницах **Выбор источника данных** и **Выбор назначения** мастера отображаются одинаковые параметры.
 
-|Необходимые сведения|Свойство "Поставщик данных .NET Framework для SQL Server"|
+|Необходимые сведения|Свойство "Поставщик данных .NET Framework для SQL Server"|
 |---|---|
 |Имя сервера|**Источник данных**|
 |Сведения для проверки подлинности (имя входа)|**Встроенная система безопасности** или **Идентификатор пользователя** и **Пароль**<br/>Чтобы открыть раскрывающийся список баз данных на сервере, сначала нужно указать действительные данные для входа.|
@@ -127,7 +128,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="other-data-providers-and-more-info"></a>Другие поставщики данных и дополнительные сведения
 Сведения о подключении к SQL Server с помощью поставщика данных, который не указан в этой статье, см. на странице [Строки подключения к SQL Server](https://www.connectionstrings.com/sql-server/). Этот сторонний сайт также содержит дополнительные сведения о поставщиках данных и параметрах подключения, описанных на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

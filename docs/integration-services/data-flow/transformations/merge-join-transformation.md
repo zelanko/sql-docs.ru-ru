@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - joining datasets [Integration Services]
 - joins [SQL Server], SSIS
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e9daf9c88882acb90097ce12495db9cab775290
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5c9532a91cf1113b91e43a35e57db6cfebf66da8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="merge-join-transformation"></a>преобразование «Соединение слиянием»
   Преобразование «Соединение слиянием» предоставляет выход, формируемый объединением двух отсортированных наборов данных при помощи соединения FULL, LEFT или INNER. Например, соединение LEFT может использоваться для объединения таблицы, содержащей данные о товарах, с таблицей, в которой перечисляются страны или регионы, в которых эти товары были произведены. Результатом является таблица, в которой перечисляются все товары и страны или регионы их происхождения.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="buffer-throttling"></a>Регулировка количества буферов  
  Настраивать значение свойства **MaxBuffersPerInput** больше не нужно, поскольку корпорация Майкрософт внесла изменения, которые уменьшили риск потребления чрезмерных ресурсов памяти при выполнении операции «Соединение слиянием». Эта проблема иногда возникает, если несколько входов операции «Соединение слиянием» производят данные с различной скоростью.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Свойства могут устанавливаться через конструктор служб [!INCLUDE[ssIS](../../../includes/ssis-md.md)] или с помощью программных средств.  
   
  Дополнительные сведения об установке свойств этого преобразования см. в следующих разделах:  

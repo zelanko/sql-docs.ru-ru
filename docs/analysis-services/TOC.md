@@ -1,12 +1,13 @@
-# [Что такое Analysis Services?](analysis-services.md)
+# [Сведения о SQL Server Analysis Services](analysis-services.md)
 
 # Обзор
 ## [Новые возможности в SQL Server Analysis Services 2016](what-s-new-in-analysis-services.md)  
 ## [Новые возможности в SQL Server Analysis Services 2017](what-s-new-in-sql-server-analysis-services-2017.md) 
 ## [Новые и обновленные Статьи](new-updated-analysis-services.md)
 ## [Средства и приложения](tools-and-applications-used-in-analysis-services.md)   
+## [Клиентские библиотеки (поставщики данных)](../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)
 ## [Сравнение табличных и многомерных решений](comparing-tabular-and-multidimensional-solutions-ssas.md)  
-## [Функции Analysis Services, поддерживаемые выпусками SQL Server 2016](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
+## [Поддержка функций Analysis Services в выпусках SQL Server](analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)   
 ## [Обратная совместимость (SQL Server 2016 Analysis Services)](analysis-services-backward-compatibility.md)  
 ## [Обратная совместимость (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)  
 ## [Глобализация и преобразование](globalization-scenarios-for-analysis-services.md)  
@@ -14,9 +15,6 @@
 ### [Преобразования](translation-support-in-analysis-services.md)  
 ### [Конвертация валюты](currency-conversions-analysis-services.md)  
 ### [Советы и рекомендации](globalization-tips-and-best-practices-analysis-services.md) 
-
-# Примеры
-## [Примеры Analysis Services](analysis-services-samples.md)
 
 # Учебники
 ## [Табличное моделирование (с уровнем совместимости 1200)](tabular-modeling-adventure-works-tutorial.md)  
@@ -112,6 +110,8 @@
 ## [Наборы строк схемы](../analysis-services/schema-rowsets/analysis-services-schema-rowsets.md)
 ## [Язык сценариев Analysis Services (ASSL для XMLA)](scripting/analysis-services-scripting-language-assl-for-xmla.md)
 
+# Примеры
+## [Примеры Analysis Services](analysis-services-samples.md)
 
 # Справочник
 ## [Выражения анализа данных (DAX) в MSDN](https://msdn.microsoft.com/library/gg413422.aspx)

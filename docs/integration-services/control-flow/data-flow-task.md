@@ -8,10 +8,12 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataflowtask.f1
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
 helpviewer_keywords:
 - data flow task [Integration Services]
 - performance [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3021aa51460aee1d74acdaa383aeca6ca4edd534
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0e16ec789222a73e6d4a73a654576f5d0295df64
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-task"></a>Задача потока данных
   В состав задачи потока данных входит подсистема обработки потока данных, перемещающая данные между источником и назначением и позволяющая пользователю преобразовывать, очищать и изменять данные в процессе перемещения. Добавление задачи потока данных в поток управления пакета позволяет пакету извлекать, преобразовывать и загружать данные.  
@@ -93,12 +95,12 @@ ms.lasthandoff: 11/20/2017
   
  Например, следующая таблица содержит сообщение «В качестве входных данных компоненту потока данных были предоставлены строки. :  : 1185 : выход источника OLE DB : 1180 : сортировка : 1181 : вход сортировки : 76", разделенное на столбцы. Сообщение записано событием **OnPipelineRowsSent** , когда строки были отправлены из источника «OLE DB» в преобразование «Сортировка».  
   
-|Столбец|Description|Значение|  
+|столбцом|Description|Значение|  
 |------------|-----------------|-----------|  
 |**PathID**|Значение свойства **ID** пути между источником «OLE DB» и преобразованием «Сортировка».|1185|  
 |**PathName**|Значение свойства **Name** пути.|Выход данных источника «OLE DB»|  
 |**ComponentID**|Значение свойства **ID** преобразования «Сортировка».|1180|  
-|**ComponentName**|Значение свойства **Name** преобразования «Сортировка».|Сортировка|  
+|**ComponentName**|Значение свойства **Name** преобразования «Сортировка».|Sort|  
 |**InputID**|Значение свойства **ID** входных данных для преобразования «Сортировка».|1181|  
 |**InputName**|Значение свойства **Name** входных данных для преобразования «Сортировка».|Вход сортировки|  
 |**RowsSent**|Количество строк, отправленных в качестве входных данных на преобразование «Сортировка».|76|  
@@ -115,7 +117,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Добавление задачи потока данных программным образом](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>См. также  

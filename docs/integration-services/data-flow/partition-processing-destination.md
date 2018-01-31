@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Partition Processing destination [Integration Services]
 - destinations [Integration Services], Partition Processing
 ms.assetid: 36c592ff-3f78-4a58-b496-31c1c8eee131
-caps.latest.revision: "44"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fc582d705e699d4c91c6bf89a51df444db00a04d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 20277b2aee209f1632100615d94a1fc3caec27d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="partition-processing-destination"></a>Назначение обработки секции
   Назначение обработки секций производит загрузку и обработку секции служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Дополнительные сведения о секциях см. в разделе [Секции (службы Analysis Services — многомерные данные)](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
@@ -57,7 +58,7 @@ ms.lasthandoff: 11/20/2017
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства назначения «Обработка секций»](../../integration-services/data-flow/partition-processing-destination-custom-properties.md)  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/20/2017
 |Значение|Description|  
 |-----------|-----------------|  
 |Добавление (дополнительное)|Выполнить дополнительную обработку секции.|  
-|Полная|Выполнить полную обработку секции.|  
+|Полное|Выполнить полную обработку секции.|  
 |Только данные|Выполнить обработку обновления секции.|  
   
 ## <a name="partition-processing-destination-editor-mappings-page"></a>Редактор назначения «Обработка секций» (страница «Сопоставления»)

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,16 +18,16 @@ f1_keywords:
 - sql13.ssis.designer.cdcsource.columns.f1
 - sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d53ac25527e482ae043adeef1c56e5024cb78eb1
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 632174b48536a4111125b24cfc85503ed6868a20
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-source"></a>CDC-источник
   Источник CDC считывает диапазон информации об изменениях из таблиц изменений [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и доставляет изменения другим нижестоящим компонентам SSIS.  
@@ -120,7 +121,7 @@ use <cdc-enabled-database-name>
   
  Дополнительные сведения о свойствах, которые можно установить в диалоговом окне **Расширенный редактор** , см. в разделе [CDC Source Custom Properties](../../integration-services/data-flow/cdc-source-custom-properties.md).  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
 -   [Пользовательские свойства источника «CDC»](../../integration-services/data-flow/cdc-source-custom-properties.md)  
   
@@ -228,7 +229,7 @@ use <cdc-enabled-database-name>
  **Усечение**  
  Выберите порядок обработки усечений в потоке источником CDC: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Не используется.  
   
  **Присвоить указанное значение выбранным ячейкам**  

@@ -8,23 +8,24 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.afpblobuptask.f1
 - sql14.dts.designer.afpblobuptask.f1
 ms.assetid: 6ea068b0-4cd8-45b5-b89d-09b8f25040c0
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f71aed6c27291eaa7c9db171bcf55789b09f2867
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 94a746cb0b4f0db66ed90fe56348e01d1870d996
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="azure-blob-upload-task"></a>Задача передачи больших двоичных объектов Azure
 **Задача передачи BLOB-объектов Azure** позволяет пакету служб SSIS передавать файлы в хранилище BLOB-объектов Azure.
@@ -37,7 +38,7 @@ ms.lasthandoff: 11/20/2017
   
 |||  
 |-|-|  
-|**Поле**|**Description**|  
+|**Поле**|**Описание**|  
 |AzureStorageConnection|Создайте новый или укажите существующий диспетчер подключений службы хранилища Azure, который ссылается на учетную запись хранения Azure, указывающую на место размещения файлов BLOB-объектов.|  
 |BlobContainer|Задает имя контейнера BLOB-объектов, который содержит загруженные файлы в виде больших двоичных объектов.|  
 |BlobDirectory|Указывает каталог больших двоичных объектов, где загруженный файл хранится в виде блочного BLOB-объекта. Каталог больших двоичных объектов — это виртуальная иерархическая структура. Если большой двоичный объект уже существует, он заменяется.|  

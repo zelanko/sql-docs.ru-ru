@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 helpviewer_keywords:
 - Integration Services, programming
 - architecture [Integration Services]
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - data flow engine [Integration Services]
 - languages [Integration Services]
 ms.assetid: 262babc6-eea5-4609-bc65-07d64cbcfee9
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 46aaef93dd2fef463dc2abcfcdb42db1ff0c59a6
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: ac7e1c7a179455d662dddb3e01af3cb2ff55bc66
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-programming-overview"></a>Общие сведения о программировании служб Integration Services
   Архитектура служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] отделяет перемещение и преобразование данных от потока управления пакета. Существует два отдельных ядра, определяющих эту архитектуру. При создании программ для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] их функции можно автоматизировать и расширить. Подсистема выполнения реализует поток управления и инфраструктуру управления пакетами, которые позволяют разработчикам контролировать поток выполнения и задавать параметры журналов, обработчиков событий и переменных. Подсистема обработки потока данных представляет собой специализированное высокопроизводительное ядро, предназначенное для извлечения, преобразования и загрузки данных. При создании программ для служб [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] необходимо использовать возможности этих двух подсистем.  

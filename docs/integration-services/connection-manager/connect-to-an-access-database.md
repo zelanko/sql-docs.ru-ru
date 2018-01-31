@@ -8,23 +8,24 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Access [Integration Services]
 - Access databases [Integration Services]
 ms.assetid: 229fbd46-ef6a-4609-a4cc-d80d52c33cf1
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: cbd98ef05bc8c6de066f72a9aded9243c1636f70
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44c04e7978ca425eb6fb625374f9404e3f286fde
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-access-database"></a>Подключение к базе данных Access
   Чтобы привязать пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] к источнику данных Microsoft Office Access, нужны диспетчер соединений OLE DB и поставщик данных. Выбор поставщика данных зависит от версии Access, в которой был создан источник данных.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 
 Если на компьютере установлена 32-разрядная версия Office, нужно установить 32-разрядную версию компонентов, а также убедиться в том, что пакет запускается в 32-разрядном режиме.
 
-Если у вас есть подписка на Office 365, нужно скачать распространяемый компонент ядра СУБД Access 2016, а не среду выполнения Microsoft Access 2016. При запуске установщика может появиться сообщение о том, что невозможно установить скачанные компоненты вместе с компонентами Office, полученными с помощью технологии "нажми и работай". Чтобы обойти это сообщение, запустите установку в тихом режиме. Для этого откройте окно командной строки и запустите скачанный EXE-файл с параметром `/quiet`. Например:
+Если у вас есть подписка на Office 365, нужно скачать распространяемый компонент ядра СУБД Access 2016, а не среду выполнения Microsoft Access 2016. При запуске установщика может появиться сообщение о том, что невозможно установить скачанные компоненты вместе с компонентами Office, полученными с помощью технологии "нажми и работай". Чтобы обойти это сообщение, запустите установку в тихом режиме. Для этого откройте окно командной строки и запустите скачанный EXE-файл с параметром `/quiet`. Пример:
 
 `C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
   
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  В диалоговом окне **Настройка диспетчера соединений OLE DB** нажмите кнопку **Создать**.  
   
-     Дополнительные сведения см. в статье [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+     Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 4.  В диалоговом окне **Диспетчер соединений** в поле **Поставщик**выберите поставщик **Microsoft Jet 4.0 OLE DB**, а затем настройте диспетчер соединений.  
   
@@ -70,7 +71,7 @@ ms.lasthandoff: 11/20/2017
   
 2.  На странице **Выбор источника данных** выберите в поле **Источник данных**значение **Microsoft Access**, а затем настройте соединение Access.  
   
-     При выборе в поле **Источник данных** значения **Microsoft Access**мастер автоматически создаст диспетчер соединений OLE DB с нужным поставщиком данных. Дополнительные сведения см. в статье [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+     При выборе в поле **Источник данных** значения **Microsoft Access**мастер автоматически создаст диспетчер соединений OLE DB с нужным поставщиком данных. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 ## <a name="connecting-to-a-data-source-in-access-2007-format"></a>Соединение с источником данных в формате Access 2007  
  Для доступа к источнику данных в формате Access 2007 диспетчеру соединений OLE DB требуется поставщик данных OLE DB для компонента Microsoft Office 12.0 Access Database Engine. Этот поставщик устанавливается автоматически вместе с системой [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 2007. Если система Office 2007 не установлена на компьютере, где работают службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , необходимо отдельно установить поставщик. Чтобы установить поставщик OLE DB для ядра СУБД Microsoft Office 12.0 Access, скачайте и установите компоненты, расположенные на веб-странице [2007 Office System Driver: Data Connectivity Components](http://go.microsoft.com/fwlink/?LinkId=98155)(Системный драйвер Office 2007: компоненты связи с данными)  
@@ -83,7 +84,7 @@ ms.lasthandoff: 11/20/2017
   
 3.  В диалоговом окне **Настройка диспетчера соединений OLE DB** нажмите кнопку **Создать**.  
   
-     Дополнительные сведения см. в статье [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+     Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 4.  В диалоговом окне **Диспетчер соединений** в поле **Поставщик**выберите поставщик **OLE DB для СУБД Microsoft Office 12.0 Access**, а затем настройте диспетчер соединений.  
   
@@ -99,9 +100,9 @@ ms.lasthandoff: 11/20/2017
     > [!NOTE]  
     >  Для соединения с источником данных, который использует Access 2007, выбирать в поле **Источник данных** значение **Поставщик Microsoft OLE DB для Jet 4.0**нельзя.  
   
-     При выборе в поле **Источник данных** значения **поставщик OLE DB для СУБД Microsoft Office 12.0 Access**мастер автоматически создаст диспетчер соединения OLE DB с нужным поставщиком данных. Дополнительные сведения см. в статье [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+     При выборе в поле **Источник данных** значения **поставщик OLE DB для СУБД Microsoft Office 12.0 Access**мастер автоматически создаст диспетчер соединения OLE DB с нужным поставщиком данных. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Подключение к книге Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
   

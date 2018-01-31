@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a5c596bcff44f87086e26bb7a263af1f421636c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: edf82eeda2fccb082e27fe5540d0ffe1b383ddba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>Параметры запроса профиля соотношения значений NULL в столбцах (задача «Профилирование данных»)
   При помощи панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос соотношения значений NULL в столбцах** , выбранного на панели запросов. Профиль «Соотношение значений NULL в столбцах» сообщает процент значений NULL в выбранном столбце. Этот профиль поможет выявить проблемы в данных, например появление непредвиденно высокого процента значений NULL в некотором столбце. Например, с помощью профиля «Соотношение значений NULL в столбцах» можно профилировать столбец «Почтовый индекс» и обнаружить неприемлемо высокий процент отсутствующих почтовых индексов.  
@@ -74,7 +76,7 @@ ms.lasthandoff: 11/20/2017
  **RequestID**  
  Введите описательное имя для этого запроса профиля. Обычно не нужно менять автоматически сформированное значение.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

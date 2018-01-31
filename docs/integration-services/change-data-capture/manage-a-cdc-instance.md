@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: manIns
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: db85e4aee5ede4a62a660c6adc5d87fde6b89bd7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b61e0362a4b29f1721a08469f8df529861e10174
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="manage-a-cdc-instance"></a>Управление экземпляром CDC
   С помощью консоли конструктора CDC можно просматривать сведения о создаваемых экземплярах и управлять работой экземпляров.  
@@ -46,7 +48,7 @@ ms.lasthandoff: 11/20/2017
   
  Нажмите кнопку **ОК** в диалоговом окне подтверждения, чтобы подтвердить, что вы хотите сбросить экземпляр CDC и удалить все изменения, занесенные в таблицы изменений.  
   
- **Delete**  
+ **Удаление**  
  Нажмите кнопку **Удалить** , чтобы окончательно удалить экземпляр CDC. Этот параметр доступен, только когда экземпляр CDC остановлен.  
   
  Нажмите кнопку **ОК** в диалоговом окне подтверждения, чтобы подтвердить, что вы хотите удалить экземпляр CDC.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения об этих свойствах и методах их изменения см. в разделе [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как создать экземпляр изменения базы данных SQL Server](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Как просмотреть свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [Как изменить свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   

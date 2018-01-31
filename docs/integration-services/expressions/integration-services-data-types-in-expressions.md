@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44b5829a581f0e0a0c2ff67eabe4a2a4fae3885e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 83b16b04dfe061c3953dc7dd593fbf328588129f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Типы данных в выражениях служб Integration Services
   Средство оценки выражений использует типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Когда данные впервые попадают в поток данных пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , подсистема обработки потока данных преобразует все данные столбцов в тип данных [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а данные столбцов, используемых выражением, уже имеют тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Выражения, используемые в преобразованиях «Условное разбиение» и «Производный столбец», могут ссылаться на столбцы, поскольку являются частью потока данных, включающего данные столбцов.  
@@ -135,7 +136,7 @@ ms.lasthandoff: 11/20/2017
   
  Результаты многих операций и функций имеют предопределенные типы данных. Это может быть тип данных аргумента или тип данных, к которому средство оценки выражений приводит результат. Например, результат логического оператора ИЛИ (||) всегда имеет тип Boolean, результат функции ABS имеет численный тип данных аргумента, результат операции умножения имеет наименьший численный тип, который может представить результат без потери точности. Дополнительные сведения о типах данных результатов см. в разделе [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  

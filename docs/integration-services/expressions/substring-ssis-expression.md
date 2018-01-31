@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - SUBSTRING function
 - part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8b829adf4536d23646eea1c4cfa1d9aa6d622e4b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8de4f380006eb9d584cdeff8e71e8df82ed3d700
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="substring-ssis-expression"></a>SUBSTRING (выражение служб SSIS)
   Возвращает часть символьного выражения, начинающегося с указанной позиции и имеющего указанную длину. Параметр *position* и параметр *length* должны иметь значение, выраженное целым числом.  
@@ -49,7 +50,7 @@ SUBSTRING(character_expression, position, length)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  SUBSTRING использует однобазовый индекс. Если параметр *position* имеет значение 1, то подстрока начинается с первого символа в значении параметра *character_expression*.  
   
  Функция SUBSTRING работает только типом данных DT_WSTR. Аргумент *character_expression* , являющийся строковым литералом или столбцом данных с типом данных DT_STR, неявно приведен к типу данных DT_WSTR до выполнения функции SUBSTRING. Прочие типы данных должны быть явно приведены к типу данных DT_WSTR. Дополнительные сведения см. в разделах [Типы данных служб Integration Services](../../integration-services/data-flow/integration-services-data-types.md) и [Приведение (выражение служб SSIS)](../../integration-services/expressions/cast-ssis-expression.md).  
@@ -97,7 +98,7 @@ SUBSTRING (@PostalCode,6,4)
 SUBSTRING ("Redmond",4,0)  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

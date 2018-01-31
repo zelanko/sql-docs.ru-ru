@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: ca94da82-a4c9-4e87-9cba-c2d85bd31f01
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 65a3a26b41981e6dc4c67219a52b76f822e78610
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 180c0ca64cf4619a8ada7a90d45fa0498e2ea87a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="value-inclusion-profile-request-options-data-profiling-task"></a>Параметры запроса профиля включения значений (задача «Профилирование данных»)
   На панели **Свойства запроса** страницы **Запросы профиля** можно задать параметры для варианта **Запрос профиля включения значений** , выбранного на панели запросов. Профиль «Включение значений» находит перекрывающиеся значения в двух столбцах или наборах столбцов. Таким образом, он также определяет, подойдет ли столбец или набор столбцов в качестве внешнего ключа для выбранных таблиц. Этот профиль также поможет выявить проблемы в данных, например наличие недопустимых значений. Так, профиль «Включение значений» можно использовать для создания профиля столбца ProductID таблицы Sales. Профиль определяет, что в столбце содержатся значения, отсутствующие в столбце ProductID таблицы Products.  
@@ -158,7 +160,7 @@ ms.lasthandoff: 11/20/2017
  **MaxNumberOfViolations**  
  Укажите максимальное число нарушений включений для сообщения о них на выходе. Значение по умолчанию этого свойства равно 100. Этот параметр будет выключен только в случае выбора для свойства **InclusionThresholdSetting** значения **Точно**.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

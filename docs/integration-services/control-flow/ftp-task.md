@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.ftptask.f1
 - sql13.dts.designer.ftptask.general.f1
 - sql13.dts.designer.ftptask.filetransfer.f1
-helpviewer_keywords: FTP task [Integration Services]
+helpviewer_keywords:
+- FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe5fd069ec931c3eee57b2ef46da35437dd81875
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3613462b45121d9d9042724a3dbf693060cc0c10
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ftp-task"></a>Задача «FTP»
   Задача «FTP» производит загрузку и передачу файлов данных, а также управляет каталогами на серверах. Например, пакет может загрузить файлы данных с удаленного сервера или из Интернета в качестве части рабочего процесса пакета служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Можно использовать задачу «FTP» для следующих целей:  
@@ -74,7 +76,7 @@ ms.lasthandoff: 11/20/2017
 |**FTPConnectingToServer**|Указывает, что задача инициализировала соединение с FTP-сервером.|  
 |**FTPOperation**|Сообщает о начале FTP-операции, выполняемой задачей, и о типе этой операции.|  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Значения свойств можно задавать с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] или программными средствами.  
   
  Дополнительные сведения о настройке этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
@@ -102,7 +104,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «FTP».  
   
 ## <a name="ftp-task-editor-file-transfer-page"></a>Редактор задачи «FTP» (страница «Передача файлов»)

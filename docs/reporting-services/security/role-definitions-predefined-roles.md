@@ -16,7 +16,7 @@ helpviewer_keywords:
 - default security
 - role-based security [Reporting Services], defaults
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: markingmyname
 ms.author: maghan
 manager: kfile
@@ -213,7 +213,7 @@ ms.lasthandoff: 01/09/2018
 |Просмотр свойств сервера отчетов|Просмотр таких свойств сервера отчетов, как имя приложения, состояние свойства «Мои отчеты», а также параметров по умолчанию для журнала отчета.<br /><br /> При удалении этой задачи из роли **System User** страница «Настройки сайта» становится недоступной. Кроме того, заголовок приложения в верхней части каждой страницы отображаться не будет. По умолчанию заголовок для диспетчера отчетов — службы[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].|  
 |Просмотр общих расписаний|Просмотр общих расписаний, по которым запускаются отчеты или их обновления.<br /><br /> Если эта задача будет удалена из роли **System User** , то пользователи не смогут выбрать общие расписания для использования с подписками и другими операциями расписания.|  
   
- Роль **System User** можно использовать в качестве дополнения к мерам безопасности по умолчанию. Можно включать эту роль в новые назначения ролей, позволяющие пользователям отчетов получить доступ к серверу отчетов. Дополнительные сведения см. в статье [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
+ Роль **System User** можно использовать в качестве дополнения к мерам безопасности по умолчанию. Можно включать эту роль в новые назначения ролей, позволяющие пользователям отчетов получить доступ к серверу отчетов. Дополнительные сведения см. в статье [Предоставление разрешений на сервер отчетов в собственном режиме](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md).  
   
 ## <a name="see-also"></a>См. также:  
  [Создание, удаление и изменение ролей (среда Management Studio)](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   

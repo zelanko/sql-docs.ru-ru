@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.historycleanuptask.f1
+f1_keywords:
+- sql13.dts.designer.historycleanuptask.f1
 helpviewer_keywords:
 - history tables [SQL Server]
 - History Cleanup task [Integration Services]
 ms.assetid: 5defc5b9-dfd3-4859-a7fe-ac8c2b5480f8
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d87dd26f1a9b65dfad644f2233d20740d4ed570b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 640b1c1d769a111ac223ee843ffc570889fe559d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="history-cleanup-task"></a>Задача «Очистка журнала»
   Задача «Очистка журнала» удаляет записи в следующих таблицах журнала в базе данных msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -63,7 +65,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задачи служб Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Поток управления](../../integration-services/control-flow/control-flow.md)  
   

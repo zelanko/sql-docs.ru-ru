@@ -8,10 +8,12 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.configureerroroutput.f1
+f1_keywords:
+- sql13.dts.designer.configureerroroutput.f1
 helpviewer_keywords:
 - truncating data
 - data conversion errors [Integration Services]
@@ -23,16 +25,16 @@ helpviewer_keywords:
 - data flow [Integration Services], errors
 - expressions [Integration Services], errors
 ms.assetid: c61667b4-25cb-4d45-a52f-a733e32863f4
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: d71c06122f09a20e384fc491f2568136e8f29ce8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 016befa8b9085029b5fdfe332fce0afa063b40bf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="error-handling-in-data"></a>Обработка ошибок в данных
   Если компонент потока данных применяет преобразование к данным столбца, выделяет данные из источников или загружает данные в назначения, то может возникнуть ошибка. Ошибки часто возникают из-за непредвиденных значений данных. Например, преобразование данных не выполняется, так как столбец вместо числа содержит строку; вставка в столбец базы данных не выполняется, потому что данные имеют тип даты, а столбец содержит числовые данные; наконец, результат выражения не может быть определен, так как значение столбца равно нулю, поэтому математическая операция недопустима.  
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/20/2017
   
  **См. также:** [Обработка ошибок в данных](../../integration-services/data-flow/error-handling-in-data.md)  
   
- **Description**  
+ **Описание**  
  Просмотрите описание операции.  
   
  **Присвоить указанное значение выбранным ячейкам**  
@@ -149,7 +151,7 @@ ms.lasthandoff: 11/20/2017
   
      Компонент сценария можно добавить в сегмент ошибок потока данных после компонентов потока данных, чьи ошибки необходимо записать. Как правило, этот компонент помещается непосредственно перед записью строк с ошибками в целевой объект. В этом случае сценарий просматривает только описание записанных строк с ошибками. Сегмент ошибок потока данных может исправить некоторые ошибки и не писать эти строки в целевой объект ошибки.  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток данных](../../integration-services/data-flow/data-flow.md)   
  [Преобразование данных с помощью преобразований](../../integration-services/data-flow/transformations/transform-data-with-transformations.md)   
  [Соединение компонентов с путями](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   

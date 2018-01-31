@@ -8,21 +8,23 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7e057c1291ec3b606341c9be26a950b93ab24709
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: a8a576339c4365a266439c4d70cf64ba49670204
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-1-8---making-the-lesson-1-package-easier-to-understand"></a>Занятие 1–8. Облегчение чтения пакета, созданного на занятии 1
 После завершения настройки пакета, созданного на занятии 1, можно приступить к приведению его макета в порядок. Если фигуры в макетах элементов управления и потока данных имеют случайные размеры или если эти элементы не упорядочены или не сгруппированы, то функциональность пакета трудно понять.  

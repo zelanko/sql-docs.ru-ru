@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - extending data flow task [Integration Services]
 - components [Integration Services], data flow
 ms.assetid: be126913-2a9a-41c9-9bf5-a7b0a0aea2f8
-caps.latest.revision: "57"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 60c5b673e22aabcd0ed3f6064e1a5d8c94a73f97
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: fa7e1d5307ff4d5f6ac6fe26d88c868b8f60cc4e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Разработка пользовательского компонента потока данных
   Задача потока данных состоит из компонентов, которые соединяются с различными источниками данных, а затем преобразуют и перенаправляют данные с высокой скоростью. Службы [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предоставляют модель расширяемых объектов, которая позволяет разработчикам создавать пользовательские источники, преобразования и назначения, которые можно использовать в среде [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] и в развернутых пакетах. В этом разделе содержатся инструкции и рекомендации по разработке пользовательских компонентов потока данных.  

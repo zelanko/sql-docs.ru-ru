@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - datasets [Integration Services], extending
 - joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72dedff881d8cefe4b2eb0ecbcfc37994cdc0143
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 00aaf46bb6b24813a79300be3a23d2a3aab28e41
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>Расширение набора данных при помощи преобразования «Соединение слиянием»
   Чтобы добавить и настроить преобразование «Соединение слиянием», пакет должен содержать по крайней мере одну задачу потока данных и два компонента потока данных, которые используются в качестве входных для преобразования «Соединение слиянием».  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/20/2017
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Merge Join Transformation](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   

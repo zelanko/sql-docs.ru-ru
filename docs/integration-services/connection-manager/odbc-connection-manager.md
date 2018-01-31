@@ -8,26 +8,28 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.odbcconnection.f1
+f1_keywords:
+- sql13.dts.designer.odbcconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], ODBC
 - ODBC connection manager
 - data sources [Integration Services], connections
 - connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 761957881888a7ab44b40c4562836d3dc11d0452
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9a5043fcf3e41fbc4c803aff097f57fc7032ae8b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="odbc-connection-manager"></a>диспетчер соединений ODBC
   Диспетчер соединений ODBC позволяет пакету подключаться к разнообразным системам управления базами данных, используя открытый интерфейс взаимодействия с базами данных (ODBC).  
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/20/2017
  **Создать**  
  Создайте новый диспетчер соединений ODBC с помощью диалогового окна **Диспетчер соединений** . При необходимости это диалоговое окно также позволяет создать новый источник данных ODBC.  
   
- **Delete**  
+ **Удаление**  
  Выберите соединение и затем удалите его, используя кнопку **Удалить** .  
 ## <a name="see-also"></a>См. также:  
  [Соединения в службах Integration Services (SSIS)](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

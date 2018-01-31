@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - containers [Integration Services], For Loop
 - For Loop containers
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: da7bf1509d8c49bfcd10b03e38b41f87ea80580c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6fb4c80904f506c28ad4a67e6df6c476a354a7cd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="for-loop-container"></a>Контейнер «цикл по элементам»
   Контейнер «цикл по элементам» определяет повторяющийся поток управления в пакете. Управление циклом аналогично структуре цикла **For** в языках программирования. В ходе каждого повтора цикла контейнер «цикл по элементам» вычисляет выражение и повторяет рабочий процесс до тех пор, пока результатом выражения не станет **False**.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 11/20/2017
   
  Контейнер «цикл по элементам» не добавляет новых функций, а только предоставляет структуру, в которой можно построить повторяемый поток управления. Чтобы контейнер заработал, необходимо включить в контейнер «цикл по элементам» как минимум одну задачу. Дополнительные сведения см. в разделе [Integration Services Tasks](../../integration-services/control-flow/integration-services-tasks.md).  
   
- Контейнер «цикл по элементам» может включать поток управления с несколькими задачами и может содержать другие контейнеры. Добавление задач и контейнеров в контейнер «цикл по элементам» сходно с добавлением их к пакету, только перетаскивание происходит в контейнер «цикл по элементам», а не в пакет. Если контейнер «цикл по элементам» содержит более одной задачи или контейнера, их можно соединить с использованием объектов управления очередностью, как и в пакете. Дополнительные сведения см. в статье [Precedence Constraints](../../integration-services/control-flow/precedence-constraints.md).  
+ Контейнер «цикл по элементам» может включать поток управления с несколькими задачами и может содержать другие контейнеры. Добавление задач и контейнеров в контейнер «цикл по элементам» сходно с добавлением их к пакету, только перетаскивание происходит в контейнер «цикл по элементам», а не в пакет. Если контейнер «цикл по элементам» содержит более одной задачи или контейнера, их можно соединить с использованием объектов управления очередностью, как и в пакете. Дополнительные сведения см. в разделах [Управление очередностью](../../integration-services/control-flow/precedence-constraints.md).  
   
 ## <a name="add-a-for-loop-container-in-a-control-flow"></a>Добавление контейнера "Цикл по элементам" в поток управления  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена объектов в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Описание контейнера «цикл по элементам».  
  
 ## <a name="use-expressions-with-the-for-loop-container"></a>Использование выражений с контейнером "Цикл по элементам"  
@@ -130,7 +131,7 @@ ms.lasthandoff: 11/20/2017
  Грамматика выражений [!INCLUDE[ssIS](../../includes/ssis-md.md)] предоставляет полный набор операторов и функций для реализации сложных выражений для вычислений, инициализации и присваивания. Дополнительные сведения см. в разделе [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md).  
   
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Поток управления](../../integration-services/control-flow/control-flow.md)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)  
   

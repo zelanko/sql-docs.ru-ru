@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6991ee669e72d3410392700f19ae57ed0cb6fca7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2fe20acb562272e719f455a5922cfe2e94e2ba1f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-connection-for-instance-creation"></a>Соединение с SQL Server для создания экземпляров
   Одним из первых шагов при создании экземпляра CDC Oracle является создание базы данных CDC на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Эта база данных CDC должна быть подготовлена к работе CDC SQL Server, для чего требуется имя входа, которое является членом предопределенной роли сервера `sysadmin` .  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
      Дополнительные сведения о диалоговом окне «Дополнительные свойства подключения» см. в разделе [Advanced Connection Properties](../../integration-services/change-data-capture/advanced-connection-properties.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание базы данных изменения SQL Server](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
  [Разрешения, необходимые конструктору CDC для соединения с SQL Server](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   

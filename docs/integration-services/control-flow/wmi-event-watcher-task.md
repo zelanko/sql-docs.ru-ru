@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
 ms.assetid: b5bb52e9-a77e-41e1-93f9-d4c3bc6b2c9a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 5fcd6a9dedff32597209c837d4aa5d9471ff6d37
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2f30858c543e21989b468c5f4e1cecebba06cc6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="wmi-event-watcher-task"></a>Задача «Отслеживание событий WMI»
   Задача «Отслеживание событий WMI» осуществляет наблюдение за событием инструментария управления Windows (WMI) при помощи запроса на языке запросов к инструментарию управления (WQL), определяющего нужные события. Задачу «Отслеживание событий WMI» можно использовать в следующих целях:  
@@ -122,7 +123,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание для задачи «Отслеживание событий WMI».  
   
 ## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Редактор задачи «Отслеживание событий WMI» (страница «Параметры WMI»)

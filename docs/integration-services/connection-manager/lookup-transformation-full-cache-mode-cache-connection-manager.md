@@ -8,21 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Lookup transformation [Integration Services]
+helpviewer_keywords:
+- Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 804b0ab72a0e52c9ddcd10f8261998e0e8847d9f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5669f4f0a0226599b717c4cce5358f5c9ddd7245
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Преобразование "Уточняющий запрос" в режиме полного кэширования — диспетчер подключений кэша
   Можно настроить преобразование «Уточняющий запрос», чтобы использовать режим полного кэширования и диспетчер соединений с кэшем. В режиме полного кэширования эталонный набор данных загружается в кэш еще до запуска преобразования «Уточняющий запрос».  
@@ -284,7 +286,7 @@ ms.lasthandoff: 11/20/2017
   
 9. Запустите пакет.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Реализация преобразования "Уточняющий запрос" в режиме полного кэширования с помощью диспетчера подключений OLE DB](../../integration-services/connection-manager/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)   
  [Реализация уточняющего запроса в режиме "Частичное кэширование" или "Без кэширования"](../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)   
  [Преобразования служб Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)  

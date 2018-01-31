@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.performingoperation.f1
+f1_keywords:
+- sql13.dts.impexpwizard.performingoperation.f1
 ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6d31607e0a2880d0a984efe20e4b11c9195cb789
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 69badf6d2ad956ba8379cb4b0b889386f6449ce0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Выполнение операции (мастер импорта и экспорта SQL Server)
 После того как вы проверите значения, выбранные в мастере, и нажмете кнопку **Готова** на странице **Завершение работы мастера** , в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выполнение операции**. На этой странице отображается ход выполнения и результат операции, настроенной на предыдущих страницах. На этой странице никакие действия не требуются.
@@ -59,7 +61,7 @@ ms.lasthandoff: 11/20/2017
 -   Если операция запускается сразу, вы можете открыть выбранное место назначения и просмотреть скопированные мастером данные.  
 -   Если вы сохранили созданный мастером пакет SSIS, его можно открыть в SQL Server Data Tools для настройки и повторного использования. Сведения о настройке сохраненного пакета и его последующем запуске см. в разделе [Сохранение пакета служб SSIS](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

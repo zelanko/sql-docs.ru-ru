@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - similar data rows [Integration Services]
 - fuzzy matches
 ms.assetid: ffcb41a6-e23d-49ea-8c32-ac980e3dc495
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b1f699ecfaa3c25d54a10e7b7b138cd56e025073
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 138dc14412f8d0b3f6ea20dbb8fb5bfa09101649
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation"></a>Определение подобных строк данных с помощью преобразования «Нечеткое группирование»
   Перед добавлением и настройкой преобразования «Нечеткое группирование» в пакете уже должен содержаться хотя бы один источник и задача потока данных.  
@@ -85,7 +86,7 @@ ms.lasthandoff: 11/20/2017
   
 20. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../../integration-services/data-flow/integration-services-paths.md)   

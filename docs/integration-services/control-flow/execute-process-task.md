@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.executeprocesstask.f1
 - sql13.dts.designer.executeprocesstask.general.f1
 - sql13.dts.designer.executeprocesstask.process.f1
-helpviewer_keywords: Execute Process task [Integration Services]
+helpviewer_keywords:
+- Execute Process task [Integration Services]
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 8beda5fb308ad93d4582bdcf947c1a1a8a9f2f71
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 76ea783edab9673a720d5b95883caffff9d9a4d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-process-task"></a>Задача «Выполнение процесса»
   Задача «Выполнение процесса» запускает приложение или пакетный файл как часть рабочего процесса пакета служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Хотя задача «Выполнение процесса» может использоваться для выполнения любого стандартного приложения, такого как [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] или [!INCLUDE[ofprword](../../includes/ofprword-md.md)], обычно она применяется для запуска бизнес-приложений или командных файлов, работающих с источником данных. Например, задачу «Выполнение процесса» можно использовать для развертывания сжатого текстового файла. Потом пакет сможет использовать текстовый файл в качестве источника данных для потока данных в пакете. Или, например, задача «Выполнение процесса» может использоваться для запуска приложения [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] , создающего ежедневный отчет о продажах. Затем можно присоединить отчет к задаче «Отправка почты» и разослать отчет по списку распространения.  
@@ -97,7 +99,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи "Выполнение процесса".  
   
 ## <a name="execute-process-task-editor-process-page"></a>Редактор задачи «Выполнение процесса» (страница «Процесс»)

@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Script task [Integration Services], about Script task
 - Script task [Integration Services]
 ms.assetid: f6cce7df-4bd6-4b75-9f89-6c37b4bb5558
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 83f4682136c01e29f034800656ee4bb27a8d62da
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 02febb9ffc5fd20842bff97edc231005a64c30dc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-task"></a>Задача «Скрипт»
   Задача "Скрипт" представляет код для выполнения функций, недоступных в задачах и преобразованиях, предоставляемых средствами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Задача «Скрипт» также позволяет объединять функции в одном скрипте вместо использования нескольких задач и преобразований. Задачу «Скрипт» следует использовать для выполнения операций над пакетом (или над каждым перечисленным объектом), а не над каждой строкой данных.  
@@ -107,7 +108,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Скрипт».  
   
 ## <a name="script-task-editor-script-page"></a>Редактор задачи «Скрипт» (страница «Скрипт»)

@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - '| (bitwise inclusive OR)'
 - bitwise inclusive OR (|)
 ms.assetid: 4dce9eb2-3680-4adc-81a3-816ea52cef49
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a6f915b520f353d08fb407889b284ec3be2a8a5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 3051e7e2debd63deb2fa26d26b8fd21cecf14247
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-bitwise-inclusive-or-ssis-expression"></a>| (битовое включающее ИЛИ) (выражение служб SSIS)
   Выполняет побитовую операцию ИЛИ для двух целочисленных значений. Она сравнивает каждый бит первого операнда с соответствующим битом второго операнда. Если какой-либо из битов равен 1, соответствующий бит результата равен 1. В противном случае соответствующий бит результата равен нулю (0).  
@@ -46,7 +47,7 @@ integer_expression1 | integer_expression2
 ## <a name="result-types"></a>Типы результата  
  Определяются типами данных обоих аргументов. Дополнительные сведения см. в разделе [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если значение любого из условий — NULL, то результат выражения тоже будет NULL.  
   
 ## <a name="expression-examples"></a>Примеры выражений  
@@ -98,7 +99,7 @@ ReorderPoint | SafetyStockLevel
   
  00000111  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#124;&#124; (логическое ИЛИ) (выражение служб SSIS)](../../integration-services/expressions/logical-or-ssis-expression.md)   
  [^ (битовое исключающее ИЛИ) (выражение служб SSIS)](../../integration-services/expressions/bitwise-exclusive-or-ssis-expression.md)   
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   

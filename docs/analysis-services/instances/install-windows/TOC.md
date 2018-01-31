@@ -13,4 +13,4 @@
 ## [Контрольный список. Использование PowerShell для проверки Power Pivot для SharePoint](checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)  
 ## [Развертывание SQL Server 2016 Power Pivot и Power View в SharePoint 2016](deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)  
 ## [Развертывание SQL Server 2016 PowerPivot и Power View в многоуровневой ферме SharePoint 2016](deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)  
-# [Установка поставщиков данных для служб Analysis Services (AMO, ADOMD.NET, MSOLAP)](install-analysis-services-data-providers-amo-adomd-net-msolap.md)  
+# [Установка клиентских библиотек (AMO, ADOMD.NET, MSOLAP)](../data-providers-used-for-analysis-services-connections.md)  

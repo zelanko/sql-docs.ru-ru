@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -27,16 +28,16 @@ helpviewer_keywords:
 - tasks [Integration Services], events
 - IDTSEvents interface
 ms.assetid: 0f00bd66-efd5-4f12-9e1c-36195f739332
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6eacc7562384189a9b70da5c548b929dabfb7ce4
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c388f9a43859ca186a728dad641ca95d90c48372
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="handling-events-programmatically"></a>Программная обработка событий
   В среде выполнения служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] имеется коллекция событий, возникающих до, во время и после проверки и выполнения пакета. Эти события можно зафиксировать двумя способами. Первый метод включает реализацию интерфейса <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents> в классе и указание класса в качестве параметра для методов **Execute** и **Validate** пакета. Второй метод включает создание объектов <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>, которые могут содержать другие объекты служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], например задачи и циклы, выполняемые при возникновении события <xref:Microsoft.SqlServer.Dts.Runtime.IDTSEvents>. В данном разделе описаны эти два метода и приведены примеры кода, иллюстрирующие их использование.  

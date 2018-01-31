@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 72eb11720fe037c3bea74d5343b8b59a39328bd8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9675d9f901f47a08cb18ea725e272f054eeb17ac
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Загрузка данных с помощью назначения ODBС
   Эта процедура показывает, как загрузить данные с использованием назначения ODBC. Чтобы можно было добавить и настроить назначение ODBC, пакет уже должен включать по крайней мере одну задачу «Поток данных» и источник.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 11/20/2017
   
 12. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор назначения ODBC (страница "Диспетчер соединений")](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
  [Редактор назначения ODBC (страница "Сопоставления")](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
  [Редактор источника ODBC (страница "Вывод ошибок")](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  

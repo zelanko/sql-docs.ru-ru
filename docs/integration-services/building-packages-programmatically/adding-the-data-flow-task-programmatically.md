@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - data flow task [Integration Services], adding
 - MainPipe object
 ms.assetid: 0ca03712-a82e-4aa7-949b-f869a8936ddf
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb4f50bd43c697c843141849905ce72047fa4b48
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: d8a9fa6024f83ce6b0923e761f21e0fbcd4202ba
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-the-data-flow-task-programmatically"></a>Добавление задачи потока данных программным образом
   Среда [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] включает задачу потока данных, представленную пространством имен <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper> в объектной модели. Задача потока данных — это специализированная высокопроизводительная задача, предназначенная для преобразования и перемещения данных во время выполнения пакета. Как и другие задачи, задача потока данных упакована в объект <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, и с точки зрения подсистемы выполнения эта задача является просто одной из задач в пакете. Однако поток данных содержит дополнительные объекты, называемые компонентами потока данных. Эти компоненты выполняют перемещение данных из источника в место назначения, иногда посредством преобразования. Эти компоненты определяют направление перемещения и способ преобразования данных. Настройка задачи потока данных включает добавление компонентов в задачу, а затем их соединение для установления потока данных и выполнения требуемого преобразования.  

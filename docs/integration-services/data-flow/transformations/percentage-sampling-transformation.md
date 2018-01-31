@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - datasets [Integration Services], sample
 - training mining models
 ms.assetid: 59767e52-f732-4b3f-8602-be50d0a64ef2
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c9c91f3b95c49d333bc9f3fc581d722577328450
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be38451e2fc359949ad71d143c5eaea6a1eaf41b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="percentage-sampling-transformation"></a>преобразование «Процентная выборка»
   Преобразование «Процентная выборка» создает образец набора данных извлечением некоторого процента входных строк преобразования. Данные выборки извлекаются случайным образом из входа преобразования. За счет этого достигается репрезентативность выборки.  

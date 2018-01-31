@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2e8bcc03027fcb965979e557e97afb186069fd51
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: fa22181293dbed40608169d402738446e34397bc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Примеры расширенных выражений служб Integration Services
   В этом разделе даются примеры расширенных выражений, объединяющих несколько операторов и функций. Если выражение использует управление очередностью или преобразование «Условное разбиение», результат его оценки должен быть логическим. Это ограничение, однако, не применяется к выражениям, используемым в выражениях свойств, переменных, преобразовании «Производный столбец» или в контейнере «цикл по элементам».  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/20/2017
     ROUND(ListPrice / StandardCost,2) * 100  
     ```  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  

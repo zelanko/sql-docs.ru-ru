@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - datasets [Integration Services], multiple outputs
 - multiple transformations
 ms.assetid: 32194784-1684-40cd-9f91-1aba4d8360d3
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7747ab82ad5a0c46c7cac4b874239b45d8902194
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 98a8ad96e83d6d9d2e1d3a7467a9b3bac6985444
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="multicast-transformation"></a>преобразование «Многоадресная доставка»
   Преобразование «Многоадресная доставка» распределяет данные на входе на один или более выходов. Это преобразование схоже с преобразованием «Условное разбиение». Оба вида преобразований направляют данные на входе на несколько выходов. Их различие состоит в том, что преобразование «Многоадресная доставка» направляет каждую строку на все выходы, а преобразование «Условное разбиение» направляет одну строку на один выход. Дополнительные сведения см. в статье [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md).  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/20/2017
   
  Сведения о свойствах, которые можно задать программно, см. в разделе [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="multicast-transformation-editor"></a>редактор преобразования «Многоадресная доставка»

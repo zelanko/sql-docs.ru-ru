@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b736aa6d-c154-44a0-be08-f25733fca1d9
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 61f7caddb59fc68399b274a71db5ee740d0f21c9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b591be99afa39117d61454b0cad2a2124d88ee2b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-destination-custom-properties"></a>Пользовательские свойства назначения «SQL Server»
   Назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обладает как пользовательскими свойствами, так и свойствами, общими для всех компонентов потока данных.  
@@ -38,8 +39,8 @@ ms.lasthandoff: 11/20/2017
 |BulkInsertKeepNulls|Логическое значение|Значение, указывающее, будут ли во время операций массовой вставки сохранены значения NULL. Это свойство имеет значение по умолчанию **False**.|  
 |BulkInsertLastRow|Целочисленный|Значение, указывающее последнюю вставляемую строку. Это свойство по умолчанию имеет значение **-1**, которое указывает на то, что никакое значение не присваивалось.|  
 |BulkInsertMaxErrors|Целочисленный|Значение, указывающее максимально допустимое число ошибок, после превышения которого происходит прекращение массовой вставки. Это свойство по умолчанию имеет значение **-1**, которое указывает на то, что никакое значение не присваивалось.|  
-|BulkInsertOrder|Строковые значения|Имена столбцов сортировки. Любой столбец можно сортировать в порядке возрастания или в порядке убывания. Если использованы несколько столбцов сортировки, имена столбцов разделяются запятыми.|  
-|BulkInsertTableName|Строковые значения|Таблица или представление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных, в которую копируются данные.|  
+|BulkInsertOrder|String|Имена столбцов сортировки. Любой столбец можно сортировать в порядке возрастания или в порядке убывания. Если использованы несколько столбцов сортировки, имена столбцов разделяются запятыми.|  
+|BulkInsertTableName|String|Таблица или представление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных, в которую копируются данные.|  
 |BulkInsertTablock|Логическое значение|Значение, которое указывает, блокируется ли таблица во время операции массовой вставки. Значение по умолчанию этого свойства равно **True**.|  
 |DefaultCodePage|Целочисленный|Кодовая страница, используемая в том случае, когда из источника данных не удалось получить информацию о кодовой странице.|  
 |MaxInsertCommitSize|Целочисленный|Значение, указывающее максимальное число строк, которые вставляются в одном пакете. Когда значение равно нулю, все строки вставляются в одном пакете.|  
@@ -49,7 +50,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения см. в статье [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+## <a name="see-also"></a>См. также:  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

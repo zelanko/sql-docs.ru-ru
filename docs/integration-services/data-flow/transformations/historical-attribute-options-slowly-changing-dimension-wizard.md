@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.loaddimwizard.histattriboption.f1
+f1_keywords:
+- sql13.dts.loaddimwizard.histattriboption.f1
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 37d6347b09e879c5a7df9d01ce5441d19f3fdcf7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c4a6e2702d214a7d5c4ab73cb4e226fb8e4c33dd
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>Параметры атрибутов с предысторией (мастер медленно изменяющихся измерений)
   Диалоговое окно **Параметры атрибутов с предысторией** используется для просмотра атрибутов с предысторией по дате начала и окончания, а также для записи атрибутов с предысторией в специально предназначенный для этого столбец.  
@@ -48,7 +50,7 @@ ms.lasthandoff: 11/20/2017
 |**Столбец, содержащий дату окончания события**|Выберите в таблице измерения столбец, в котором находится дата окончания.|  
 |**Переменная для установки значений даты**|Выберите переменную даты из списка.|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Настройка выходов при помощи мастера медленно изменяющихся измерений](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - destinations [Integration Services], Excel
 - Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ee5bd643443aca136883e94a768fca60960c869
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be3ad15259560b7b69a9a375affab2940376a22e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-destination"></a>Назначение Excel
   Назначение «Excel» загружает данные в листы или диапазоны в книгах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -90,13 +91,13 @@ ms.lasthandoff: 11/20/2017
   
  Диалоговое окно **Расширенный редактор** содержит все свойства, которые могут устанавливаться программными средствами. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в разделе [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Подключение к книге Excel](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
@@ -203,7 +204,7 @@ ms.lasthandoff: 11/20/2017
  **Усечение**  
  Укажите, что нужно сделать при усечении: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Просмотреть описание ошибки.  
   
  **Присвоить указанное значение выбранным ячейкам**  

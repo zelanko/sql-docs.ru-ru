@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwsource.erroroutput.f1
+f1_keywords:
+- sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1dea5d2c3260d3399c9016315afb42df901527bf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86a85b437421f5306f0d80b61fcfa4bf1642438f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Редактор источников SAP BW (страница «Вывод ошибок»)
   Используйте страницу **Вывод ошибок** **Редактора источников SAP BW** для выбора параметров обработки ошибок и задания свойств выходных столбцов ошибок.  
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/20/2017
  **Усечение**  
  Укажите действия компонента источника SAP BW при выполнении усечения: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Просмотреть описание ошибки.  
   
  **Присвоить указанное значение выбранным ячейкам**  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/20/2017
  **Применить**  
  Применить параметр обработки ошибок к выбранным ячейкам.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор источника SAP BW (страница "Диспетчер подключений")](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Редактор источника SAP BW (страница "Столбцы")](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
  [Редактор источника SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   

@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.createrelationships.f1
+f1_keywords:
+- sql13.dts.designer.createrelationships.f1
 ms.assetid: 6ebd305f-ffd2-4a1d-b24c-e28c151b94f5
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 651ad318f4bc55291eab79041c41167b9ee08e0d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 12abe6c422d45d197df412be0ae6922575322f62
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-relationships"></a>Создание связей
   Используйте диалоговое окно **Создание связей** , чтобы изменить сопоставления между исходными столбцами и столбцами таблицы уточняющих запросов, настроенные в редакторе преобразования «Нечеткий уточняющий запрос», в редакторах преобразования «Уточняющий запрос» и «Уточняющий запрос термина».  
@@ -53,7 +55,7 @@ ms.lasthandoff: 11/20/2017
  **Псевдоним выхода подобия**  
  Укажите имя для нового выходного столбца, который является подобным выбранному столбцу. Если оставить это значение пустым, то выходной столбец не будет создан.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Редактор преобразования "Нечеткий уточняющий запрос" (вкладка "Столбцы")](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)   
  [Редактор преобразования "Уточняющий запрос" (страница "Столбцы")](../../../integration-services/data-flow/transformations/lookup-transformation-editor-columns-page.md)   
