@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - equal operator (==)
 - == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 433cdc535f961e09a7920e5dc8c64a06c0f40d7d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d936922ff3b2978ca446d061ca8ddf3e1c4cbf30
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="-equal-ssis-expression"></a>== (равно) (выражение служб SSIS)
   Выполняет сравнение с целью определения равенства двух выражений. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных. Дополнительные сведения см. в статье [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
@@ -46,7 +47,7 @@ expression1 == expression2
 ## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если какое-нибудь выражение имеет значение NULL, то результат сравнения будет NULL. Если оба выражения имеют значение NULL, то результат будет NULL.  
   
  Наборы выражений *expression1* и *expression2*должны удовлетворять одному из следующих правил:  
@@ -108,8 +109,8 @@ ListPrice == 500
 @LPrice == 500  
 ```  
   
-## <a name="see-also"></a>См. также  
- [\!= (не равно) (выражение служб SSIS)](../../integration-services/expressions/unequal-ssis-expression.md)   
+## <a name="see-also"></a>См. также:  
+ [!= (не равно) (выражение служб SSIS)](../../integration-services/expressions/unequal-ssis-expression.md)   
  [Очередность и ассоциативность операторов](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)  
   

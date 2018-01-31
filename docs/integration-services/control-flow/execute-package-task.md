@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-caps.latest.revision: "63"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a51a1ac9bbe88d5b2d5718b4c02181cc33dd7f89
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 703f8c2dbcc954c4603ec0ff73b0928c6afaf70c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="execute-package-task"></a>Задача «Выполнение пакета»
   Задача «Выполнение пакета» расширяет возможности служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] в рамках организации, позволяя одним пакетам выполнять другие пакеты как часть рабочего процесса.  
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание для задачи «Выполнение пакета».  
   
 ###  <a name="package"></a> Задание параметров на странице «Пакет»  

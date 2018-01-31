@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 97fd9d22-03dd-4eda-8f6c-ba8b67acec68
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf33675e591fbb16417bc3b251a1a47693b59673
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5be9cd2a8687a85e4d66a323d347b59a180de5d0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogstopoperation-ssisdb-database"></a>catalog.stop_operation (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +43,9 @@ catalog.stop_operation [ @operation_id = ] operation_id
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения READ и MODIFY на проверку или экземпляр выполнения.  
@@ -62,7 +63,7 @@ catalog.stop_operation [ @operation_id = ] operation_id
   
 -   Операция уже остановлена  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Только один пользователь за раз должен останавливать операцию в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Если несколько пользователей попытаются остановить операцию, хранимая процедура возвратит код успешного завершения при первой попытке (значение `0`), но последующие попытки будут приводить к ошибкам.  
   
   

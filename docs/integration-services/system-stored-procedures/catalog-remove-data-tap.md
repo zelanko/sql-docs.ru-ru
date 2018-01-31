@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: b77db3e6-478c-441a-a838-82c4de750275
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 28339c0762182397a266fa42abf6411a3dd56ef4
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d3fffcb092595785c1b84c1b45908ba9155551f4
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogremovedatatap"></a>catalog.remove_data_tap
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +39,7 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  [ @data_tap_id = ] *data_tap_id*  
  Уникальный идентификатор отвода данных, созданного с использованием хранимой процедуры catalog.add_data_tap. Параметр *data_tap_id* имеет тип **bigint**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если пакет содержит более одной задачи потока данных с одинаковым именем, отвод данных добавляется к первой задаче потока данных с таким именем.  
   
 ## <a name="return-codes"></a>Коды возврата  
@@ -47,12 +48,12 @@ catalog.remove_data_tap [ @data_tap_id = ] data_tap_id
  В случае отказа хранимой процедуры выдается ошибка.  
   
 ## <a name="result-set"></a>Результирующий набор  
- Нет  
+ None  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы удалить отводы данных, экземпляр выполнения должен быть создан (значение 1 в столбце **status** представления [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md)).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения MODIFY на экземпляр выполнения  

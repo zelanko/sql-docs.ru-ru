@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.configureflatfiledest.f1
+f1_keywords:
+- sql13.dts.impexpwizard.configureflatfiledest.f1
 ms.assetid: 318e8da0-37d3-46cd-943a-fc5d66aad93a
-caps.latest.revision: "53"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e312251291cbf2e8850b7900793b8d32e7c3d53b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a9384b498ea78369278261a3334504e5d1b29b58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Настройка назначения «Неструктурированный файл» (мастер импорта и экспорта SQL Server)
   Если вы выбрали назначение "Неструктурированный файл", то после того как вы укажете, хотите ли вы скопировать таблицу или подать запрос, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Настройка назначения "Неструктурированный файл"**. На этой странице можно задать параметры форматирования для назначения "Неструктурированный файл". При необходимости проверьте сопоставления отдельных столбцов и просмотрите образец данных.  

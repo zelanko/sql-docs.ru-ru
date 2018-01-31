@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,16 +36,16 @@ helpviewer_keywords:
 - missing values replaced [Integration Services]
 - similarity thresholds [Integration Services]
 ms.assetid: 019db426-3de2-4ca9-8667-79fd9a47a068
-caps.latest.revision: "75"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 81427a1ae80ddf6a3d3135e8d814dc9944413e60
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 44e9a7db02aacfbccbca74377a6f0ee33fc5d02c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="fuzzy-lookup-transformation"></a>преобразование «Нечеткий уточняющий запрос»
   Преобразование «Нечеткий уточняющий запрос» выполняет задачи по очистке данных, такие как стандартизация данных, исправление данных и предоставление отсутствующих значений.  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения о настройке свойств для компонента потока данных см. в разделе [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Редактор преобразования «Нечеткий уточняющий запрос» (вкладка «Ссылочная таблица»)
@@ -152,7 +153,7 @@ ms.lasthandoff: 11/20/2017
 >  Свойства **Exhaustive** и **MaxMemoryUsage** преобразования «Нечеткий уточняющий запрос» недоступны в диалоговом окне **Редактор преобразования «Нечеткий уточняющий запрос»**, но могут быть заданы с помощью диалогового окна **Расширенный редактор**. К тому же значения параметра **MaxOutputMatchesPerInput** больше 100 могут быть заданы только в окне **Расширенный редактор**. Дополнительные сведения об этих свойствах см. в подразделе «Преобразование "Нечеткий уточняющий запрос"» раздела [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
 ### <a name="options"></a>Параметры  
- **диспетчер соединений OLE DB**  
+ **Диспетчер соединений OLE DB**  
  Выберите существующий диспетчер соединений OLE DB из списка или создайте новое подключение, выбрав пункт **Создать**.  
   
  **Создать**  

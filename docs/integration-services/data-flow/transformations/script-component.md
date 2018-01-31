@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1bbe58e6c0503a7def766dc59d5911ecb4ef61f8
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82aad5cf36717e374cdb3e45d231504efac16549
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="script-component"></a>Компонент скрипта
   Компонент скрипта размещает скрипт и позволяет пакету включать и выполнять пользовательский код скрипта. Можно использовать компонент скрипта в пакетах для следующих целей.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="configuring-the-script-component-programmatically"></a>Программная настройка компонента скрипта  
  Дополнительные сведения о свойствах, которые можно установить в окне **Свойства** или программно, см. в следующих разделах:  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -137,7 +138,7 @@ ms.lasthandoff: 11/20/2017
  **Диспетчер соединений**  
  Выберите в списке доступных диспетчеров подключений либо выберите **\<Создать соединение>**, чтобы открыть диалоговое окно **Добавление диспетчера соединений со службами SSIS**.  
   
- **Description**  
+ **Описание**  
  Введите описание для соединения.  
   
  **Добавить**  
@@ -182,7 +183,7 @@ ms.lasthandoff: 11/20/2017
  **Inputs and outputs**  
  Выберите вход или вывод слева, чтобы посмотреть его свойства в таблице справа. Свойства, доступные для редактирования, варьируются в зависимости от выбора. Многие отображаемые параметры доступны только для чтения. Дополнительные сведения об индивидуальных свойствах см. в следующих разделах:  
   
- [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
  [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -209,7 +210,7 @@ ms.lasthandoff: 11/20/2017
   
 |Значение|Description|  
 |-----------|-----------------|  
-|**Description**|Опишите преобразование «Скрипт», его назначение.|  
+|**Описание**|Опишите преобразование «Скрипт», его назначение.|  
 |**LocaleID**|Укажите локаль, предоставляющую сведения о регионе, используемые для сортировки и преобразования даты и времени.|  
 |**Название**|Введите описательное имя компонента.|  
 |**ValidateExternalMetadata**|Укажите, будет ли преобразование «Скрипт» во время разработки проверять метаданные столбца относительно источников внешних данных. Значение **false** откладывает проверку до времени выполнения.|  

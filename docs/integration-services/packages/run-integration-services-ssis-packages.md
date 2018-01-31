@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - running packages [Integration Services]
 - Integration Services, (See also Integration Services packages)
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fa8080adf06263de7a3055d790b9c5fe89633e20
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 296bd4b460f603f6293dd42d3b2ceaa1ca97da02
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="run-integration-services-ssis-packages"></a>Запуск пакетов служб Integration Services (SSIS)
   Чтобы запустить пакет служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , можно воспользоваться одним из предостовляемых средств. Выбор средства зависит от места хранения пакета. Эти средства приведены в следующей таблице.  
@@ -43,15 +44,15 @@ ms.lasthandoff: 11/20/2017
   
 |Инструмент|Пакеты, хранимые на сервере служб Integration Services|Пакеты, которые находятся в хранилище пакетов служб SSIS предыдущих версий или в базе данных msdb.|Пакеты, хранимые в файловой системе вне расположения входящего в состав хранилища пакетов SSIS.|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
-|**SQL Server Data Tools**|Нет|Нет<br /><br /> Однако существующий пакет можно добавить в проект из хранилища пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] , включающего в себя базу данных msdb. При добавлении существующего пакета в проект таким методом локальная копия пакета создается в файловой системе.|Да|  
-|**В среде SQL Server Management Studio, если установлено соединение с экземпляром ядра СУБД, где размещен сервер служб Integration Services.**<br /><br /> Дополнительные сведения см. в разделе [Execute Package Dialog Box](#execute_package_dialog).|Да|Нет<br /><br /> Однако из этих расположений пакет можно импортировать на сервер.|Нет<br /><br /> Однако пакет можно импортировать на сервер из файловой системы.|
-|**В среде SQL Server Management Studio, если установлено соединение с экземпляром ядра СУБД, где размещен сервер служб Integration Services, заданный в качестве мастера масштабирования.**<br /><br /> Дополнительные сведения см. в статье [Execute packages in Scale Out](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md) (Выполнение пакетов при масштабном развертывании).|Да|Нет|Нет|
-|**В среде SQL Server Management Studio, если установлено соединение со службами Integration Services, управляющими хранилищем пакетов служб SSIS.**|Нет|Да|Нет<br /><br /> Однако пакет можно импортировать в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] из файловой системы.|  
+|**SQL Server Data Tools**|нет|нет<br /><br /> Однако существующий пакет можно добавить в проект из хранилища пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] , включающего в себя базу данных msdb. При добавлении существующего пакета в проект таким методом локальная копия пакета создается в файловой системе.|Да|  
+|**В среде SQL Server Management Studio, если установлено соединение с экземпляром ядра СУБД, где размещен сервер служб Integration Services.**<br /><br /> Дополнительные сведения см. в разделе [Execute Package Dialog Box](#execute_package_dialog).|Да|нет<br /><br /> Однако из этих расположений пакет можно импортировать на сервер.|нет<br /><br /> Однако пакет можно импортировать на сервер из файловой системы.|
+|**В среде SQL Server Management Studio, если установлено соединение с экземпляром ядра СУБД, где размещен сервер служб Integration Services, заданный в качестве мастера масштабирования.**<br /><br /> Дополнительные сведения см. в статье [Execute packages in Scale Out](../../integration-services/scale-out/run-packages-in-integration-services-ssis-scale-out.md) (Выполнение пакетов при масштабном развертывании).|Да|нет|нет|
+|**В среде SQL Server Management Studio, если установлено соединение со службами Integration Services, управляющими хранилищем пакетов служб SSIS.**|нет|Да|нет<br /><br /> Однако пакет можно импортировать в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] из файловой системы.|  
 |**dtexec**<br /><br /> Дополнительные сведения см. в статье [dtexec Utility](../../integration-services/packages/dtexec-utility.md).|Да|Да|Да|  
-|**dtexecui**<br /><br /> Дополнительные сведения см. в разделе [Справочник по пользовательскому интерфейсу программы выполнения пакетов (DtExecUI)](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md).|Нет|Да|Да|  
+|**dtexecui**<br /><br /> Дополнительные сведения см. в разделе [Справочник по пользовательскому интерфейсу программы выполнения пакетов (DtExecUI)](../../integration-services/packages/execute-package-utility-dtexecui-ui-reference.md).|нет|Да|Да|  
 |**Агент SQL Server**<br /><br /> Чтобы запланировать запуск пакета, используйте задание агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Дополнительные сведения см. в статье [SQL Server Agent Jobs for Packages](../../integration-services/packages/sql-server-agent-jobs-for-packages.md).|Да|Да|Да|  
-|**Встроенная хранимая процедура**<br /><br /> Дополнительные сведения см. в разделе [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).|Да|Нет|Нет|  
-|**Управляемые API, использующие типы и элементы пространства имен** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Да|Нет|Нет|  
+|**Встроенная хранимая процедура**<br /><br /> Дополнительные сведения см. в разделе [catalog.start_execution (база данных SSISDB)](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md).|Да|нет|нет|  
+|**Управляемые API, использующие типы и элементы пространства имен** <xref:Microsoft.SqlServer.Management.IntegrationServices>|Да|нет|нет|  
 |**Управляемые API, использующие типы и элементы пространства имен** <xref:Microsoft.SqlServer.Dts.Runtime>|В настоящее время нет|Да|Да|  
 
 ## <a name="execution-and-logging"></a>Выполнение и ведение журнала  

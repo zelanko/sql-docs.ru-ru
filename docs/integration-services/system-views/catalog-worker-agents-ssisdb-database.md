@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0bd0d827-e2f1-44fe-aa90-6bf922d68d16
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a74c1d81b2defff8b3d5566c221e1df102c136e2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5b3d7ae2666a6adc774093a8496863685457e7e6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogworkeragents-ssisdb-database"></a>catalog.worker_agents (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +40,10 @@ ms.lasthandoff: 11/20/2017
 |UserAccount|**nvarchar(256)**|Учетная запись, под которой выполняется служба рабочей роли Scale Out.|
 |LastOnlineTime|**datetimeoffset(7)**|Время последнего подключения рабочей роли Scale Out.|
 
-## <a name="remarks"></a>Замечания
+## <a name="remarks"></a>Remarks
 В этом представлении отображается строка для каждой рабочей роли Scale Out, которая подключается к мастеру Scale Out, работающему с каталогом SSISDB.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 Это представление требует применения одного из следующих разрешений:
 
 - Членство в роли базы данных **ssis_admin**

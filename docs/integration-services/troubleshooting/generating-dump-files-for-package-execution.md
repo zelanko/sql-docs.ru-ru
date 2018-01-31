@@ -8,25 +8,26 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7402a7a3bd36dff30ac5dbfe9db9a0f8cdc86bf5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: be1121099a2ca2bed5e145e47c8720f57e6fc5d9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Создание файлов дампа для выполнения пакетов
   Службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]позволяют создавать отладочные файлы дампа с информацией о выполнении пакета. Данные, содержащиеся в этих файлах, могут помочь с устранением неполадок при выполнении пакетов.  
   
-> **ПРИМЕЧАНИЕ.** Отладочные файла дампа могут содержать конфиденциальные сведения. Чтобы защитить конфиденциальные сведения, можно ограничить доступ к этим файлам с помощью списка управления доступом (ACL) или скопировать их в папку, доступ к которой ограничен. Например, прежде чем отправлять отладочные файлы в службу технической поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] , рекомендуется удалить из них все конфиденциальные сведения.  
+> **Примечание.** Отладочные файла дампа могут содержать конфиденциальные сведения. Чтобы защитить конфиденциальные сведения, можно ограничить доступ к этим файлам с помощью списка управления доступом (ACL) или скопировать их в папку, доступ к которой ограничен. Например, прежде чем отправлять отладочные файлы в службу технической поддержки [!INCLUDE[msCoName](../../includes/msconame-md.md)] , рекомендуется удалить из них все конфиденциальные сведения.  
   
  После развертывания проекта на сервере службы [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно создать файл дампа, который предоставит сведения о выполнении пакетов, содержащихся в проекте. После завершения процесса ISServerExec.exe, создаются файлы дампа. Выбрав параметр **Дамп при ошибках** в диалоговом окне **Выполнение пакета** , вы можете указать, что файл дампа будет создаваться при возникновении ошибки во время выполнения пакета. Кроме того, вы можете использовать следующие хранимые процедуры.  
   

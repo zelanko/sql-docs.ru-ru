@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,18 +23,18 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-caps.latest.revision: "115"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae247a65d28b039210dcf8d3243ae19ffde504cc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 82f72b4696d1169055c5726d9095eff70715b523
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="execute-sql-task"></a>Задача «Выполнение SQL»
+# <a name="execute-sql-task"></a>Задача "Выполнение SQL"
   Задача «Выполнение SQL» выполняет инструкции SQL или хранимые процедуры из пакета. Задача может содержать одну инструкцию SQL или несколько инструкций, запускаемых последовательно. Задача «Выполнение SQL» может быть использована для следующих целей:  
   
 -   усечение таблицы или представления в процессе подготовки для вставки данных;  
@@ -53,11 +54,11 @@ ms.lasthandoff: 11/20/2017
   
 |Тип соединений|Диспетчер соединений|  
 |---------------------|------------------------|  
-|EXCEL|[Диспетчер соединений с Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
+|EXCEL|[Диспетчер подключений Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
 |OLE DB|[Диспетчер соединений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
-|интерфейс ODBC|[Диспетчер соединений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
-|ADO|[Диспетчер соединений ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
-|ADO.NET|[Диспетчер соединений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
+|интерфейс ODBC|[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
+|ADO|[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|  
+|ADO.NET|[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
 |SQLMOBILE|[Диспетчер подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
   
 ## <a name="create-sql-statements"></a>Создание инструкций SQL  
@@ -123,7 +124,7 @@ ms.lasthandoff: 11/20/2017
  **Название**  
  Укажите уникальное имя для задачи «Выполнение SQL» в рабочем процессе. Предоставляемое имя будет отображаться в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
- **Description**  
+ **Описание**  
  Приведите описание задачи «Выполнение SQL». Рекомендуется описать назначение задачи, чтобы сделать пакеты самодокументируемыми и более простыми в обслуживании.  
   
  **Время ожидания**  
@@ -529,7 +530,7 @@ ms.lasthandoff: 11/20/2017
 |---------------------|---------------------------|--------------------|  
 |Единственная строка|Любой тип, который совместим с типом столбца в результирующем наборе.|Неприменимо|  
 |Полный результирующий набор|**Объект**|Если задача использует собственный диспетчер соединений, в том числе диспетчеры соединений ADO, OLE DB, Excel и ODBC, возвращается объект **Recordset**ADO.<br /><br /> Если задача использует управляемый диспетчер подключений, например [!INCLUDE[vstecado](../../includes/vstecado-md.md)], то возвращается объект **System.Data.DataSet**.<br /><br /> Задачу «Скрипт» можно использовать для доступа к объекту **System.Data.DataSet** , как показано в следующем примере.<br /><br /> `Dim dt As Data.DataTable`<br /><br /> `Dim ds As Data.DataSet = CType(Dts.Variables("Recordset").Value, DataSet) dt = ds.Tables(0)`|  
-|XML|**Строковые значения**|**Строковые значения**|  
+|XML|**String**|**String**|  
 |XML|**Объект**|Если задача использует собственный диспетчер соединений, в том числе диспетчеры соединений ADO, OLE DB, Excel и ODBC, то возвращается объект **MSXML6.IXMLDOMDocument**.<br /><br /> Если задача использует управляемый диспетчер подключений, например [!INCLUDE[vstecado](../../includes/vstecado-md.md)], то возвращается объект **System.Xml.XmlDocument**.|  
   
  Переменную можно определить в области задачи «Выполнение SQL» или пакета. Если переменная определена в области пакета, результирующий набор доступен другим задачам и контейнерам внутри пакета, а так же любым пакетам, запущенным задачами «Выполнение пакета» или «Выполнение пакета служб DTS 2000».  

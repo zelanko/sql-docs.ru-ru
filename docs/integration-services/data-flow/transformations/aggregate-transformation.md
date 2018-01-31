@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c52546eab7dc5c52fb38e03616df648d3d5d67d
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7262db9da133a2aa6f82f501e8dab3228de16efb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="aggregate-transformation"></a>Преобразование «Статистическая обработка»
   Преобразование "Агрегатная обработка" применяет агрегатные функции, такие как Average, к значениям столбцов и копирует результат на выход преобразования. Кроме агрегатных функций преобразование предоставляет возможность использования предложения GROUP BY, которое можно применять для указания обрабатываемых групп.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |Операция|Description|  
 |---------------|-----------------|  
 |Group by|Разделение наборов данных на группы. Для группирования могут быть использованы столбцы любого типа данных. Дополнительные сведения см. в разделе [GROUP BY (Transact-SQL)](../../../t-sql/queries/select-group-by-transact-sql.md).|  
-|Sum|Суммирование значений в столбце. Допускается суммирование только столбцов, содержащих числовые данные. Дополнительные сведения см. в разделе [SUM (Transact-SQL)](../../../t-sql/functions/sum-transact-sql.md).|  
+|SUM|Суммирование значений в столбце. Допускается суммирование только столбцов, содержащих числовые данные. Дополнительные сведения см. в разделе [SUM (Transact-SQL)](../../../t-sql/functions/sum-transact-sql.md).|  
 |Средний|Определение среднего арифметического значения по столбцу. Допускается определение среднего значения только по столбцам, содержащим числовые данные. Дополнительные сведения см. в разделе [AVG (Transact-SQL)](../../../t-sql/functions/avg-transact-sql.md).|  
 |Count|Возвращает количество элементов в группе. Дополнительные сведения см. в разделе [COUNT (Transact-SQL)](../../../t-sql/functions/count-transact-sql.md).|  
 |Count distinct|Определение числа уникальных ненулевых значений в группе.|  
@@ -130,9 +131,9 @@ ms.lasthandoff: 11/20/2017
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Сортировка данных для преобразований «Слияние» и «Соединение слиянием»](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Статистическая обработка значений в наборе данных с помощью преобразования "Статистическая обработка"](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
 ## <a name="aggregate-transformation-editor-aggregations-tab"></a>Редактор преобразования «Статистическая обработка» (вкладка «Агрегаты»)

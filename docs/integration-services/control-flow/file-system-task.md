@@ -8,24 +8,26 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.filesystemtask.f1
 - sql13.dts.designer.filesystemtask.general.f1
-helpviewer_keywords: File System task [Integration Services]
+helpviewer_keywords:
+- File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: a72870b1591218161de2253c65bdb6f290941481
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 176f39cf7a5df57fad08a464212815f41affb1a6
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="file-system-task"></a>Задача "Файловая система"
   Задача «Файловая система» выполняет операции над файлами и каталогами файловой системы. Например, при помощи задачи «Файловая система» пакет может создавать, перемещать или удалять каталоги и файлы. Можно также использовать данную задачу для установки атрибутов файлов и каталогов. Например, задача «Файловая система« может пометить файлы как скрытые или предназначенные только для чтения.  
@@ -80,7 +82,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] содержат задачу, которая загружает и отправляет файлы данных и управляет каталогами на серверах. Дополнительные сведения см. в статье [FTP Task](../../integration-services/control-flow/ftp-task.md).  
   
 ## <a name="file-system-task-editor-general-page"></a>Редактор задачи «Файловая система» (страница «Общие»)
@@ -114,7 +116,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Файловая система».  
   
  **Операция**  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-caps.latest.revision: "56"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 11b53327292545add9678714c4901dbdad01007e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1d4c2104bf9a24def61fe2c2c77020ef6a0a4c24
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="term-lookup-transformation"></a>преобразование «Уточняющий запрос термина»
   Преобразование «Уточняющий запрос термина» сопоставляет термины, извлеченные из текста во входном столбце преобразования, с терминами, содержащимися в ссылочной таблице. Затем оно подсчитывает количество найденных терминов в таблице уточняющих запросов входного набора данных и записывает количество повторений вместе с термином из ссылочной таблицы в столбец на выходе преобразования. Это преобразование полезно для создания пользовательского списка слов на основе входного текста, дополненного статистикой повторяемости слова.  
@@ -136,7 +137,7 @@ ms.lasthandoff: 11/20/2017
  Выберите из списка существующий диспетчер соединений или создайте новое соединение, нажав кнопку **Создать**.  
   
  **Создать**  
- Позволяет создать новое соединение с помощью диалогового окна **Настройка диспетчера соединений OLE DB** .  
+ Создайте новое соединение с помощью диалогового окна **Настройка диспетчера соединений OLE DB** .  
   
  **Имя ссылочной таблицы**  
  Позволяет выбрать таблицу или представление уточняющих запросов из базы данных путем выбора элемента из списка. Таблица или представление должны содержать столбец с существующим списком терминов, с которыми можно сравнивать текст исходного столбца.  
@@ -154,7 +155,7 @@ ms.lasthandoff: 11/20/2017
  **Настройка вывода ошибок**  
  Используйте диалоговое окно [Настройка вывода ошибок](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) для указания параметров обработки ошибок для строк, вызвавших ошибку.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Справочник по сообщениям об ошибках служб Integration Services](../../../integration-services/integration-services-error-and-message-reference.md)   
  [Преобразование "Извлечение терминов"](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
   

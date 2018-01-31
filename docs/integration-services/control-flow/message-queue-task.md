@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,18 +24,18 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-caps.latest.revision: "68"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc23a330f63d67cef6a5e12df9bf3b6ca82dcff9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d58b3c497860668dee90836193ff9bd788852715
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
-# <a name="message-queue-task"></a>Задача «Очередь сообщений»
+# <a name="message-queue-task"></a>Message Queue Task
   Задача "Очередь сообщений" позволяет использовать службу очередей сообщений Майкрософт для отправки и получения сообщений между пакетами служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] или для отправления сообщений в очередь приложений, которая обрабатывается пользовательским приложением. Эти сообщения могут принимать форму простого текста, файлов или переменных и их значений.  
   
  Используя задачу «Очередь сообщений», можно координировать операции по всему предприятию. Сообщения могут быть поставлены в очередь и доставляться позже, если назначение недоступно или занято; например, задача может ставить в очередь сообщения для работающих в режиме «вне сети» переносных компьютеров торговых представителей, которые получают сообщения при подключении к сети. Можно использовать задачу очереди сообщений для следующих целей:  
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения о задании этих свойств программными средствами см. в документации по классу **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** в руководстве для разработчиков.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения о настройке свойств этих свойств в конструкторе [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
 ## <a name="message-queue-task-editor-general-page"></a>Редактор задачи «Очередь сообщений» (страница «Общие»)
@@ -115,7 +116,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Очередь сообщений».  
   
  **Use2000Format**  
@@ -223,7 +224,7 @@ ms.lasthandoff: 11/20/2017
  **См. также:** [Выбор переменных](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = Сообщение с переменными  
- **Фильтр**  
+ **Filter**  
  Укажите, следует ли применять фильтр к сообщениям. Это свойство имеет параметры, указанные в следующей таблице.  
   
 |Значение|Description|  

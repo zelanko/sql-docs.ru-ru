@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.createtablesql.f1
+f1_keywords:
+- sql13.dts.impexpwizard.createtablesql.f1
 ms.assetid: 0d6f6b3b-d023-4770-a8a9-65b2977c8d05
-caps.latest.revision: "67"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 094f418f8304742c462ff119c2e55d3d9cace1ad
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 750f5f411660a80f81522e591b28dc3956fa1eee
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-table-sql-statement-sql-server-import-and-export-wizard"></a>Инструкция SQL Create Table (мастер импорта и экспорта SQL Server)
 Если в диалоговом окне **Сопоставления столбцов** последовательно выбрать **Создать целевую таблицу** и **Изменить SQL** , в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется диалоговое окно **Инструкция SQL Create Table** . На этой странице можно просмотреть и при необходимости настроить команду **CREATE TABLE**, запускаемую мастером для создания целевой таблицы.
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="whats-next"></a>Дальнейшие действия  
  После просмотра и настройки команды CREATE TABLE и нажатия кнопки **ОК**диалоговое окно **Инструкция SQL Create Table** вернет вас в диалоговое окно **Сопоставления столбцов** . Дополнительные сведения см. в разделе [Сопоставления столбцов](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).
  
- ## <a name="see-also"></a>См. также:
+ ## <a name="see-also"></a>См. также раздел
 [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

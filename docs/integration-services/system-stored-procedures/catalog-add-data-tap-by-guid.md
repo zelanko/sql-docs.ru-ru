@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: efb6c297b776cd6246f0c6226160afba9302bcdb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 088d7eeda34d83a0bd54b0626216663725a94d5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +73,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
 'D:\demos\datafiles\DCVendorOutput.csv'  
 ```  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы добавить отводы данных, экземпляр выполнения должен быть создан (значение 1 в столбце **status** представления [catalog.operations &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-operations-ssisdb-database.md)). Значения состояния изменяются после запуска выполнения. Выполнение можно создать путем вызова [catalog.create_execution &#40;база данных SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md).  
   
  Далее приведены замечания по использованию хранимой процедуры add_data_tap_by_guid.  
@@ -91,9 +92,9 @@ exec catalog.add_data_tap_by_guid   @execution_id,
  В случае отказа хранимой процедуры выдается ошибка.  
   
 ## <a name="result-set"></a>Результирующий набор  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения MODIFY на экземпляр выполнения  

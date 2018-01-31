@@ -8,25 +8,27 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.findreplace.quickfind
 - vs.find
 - vs.findreplace.quickreplace
-helpviewer_keywords: Find and Replace dialog box
+helpviewer_keywords:
+- Find and Replace dialog box
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-caps.latest.revision: "24"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85901d1a79d1f6bffb1787a555c9ebb553f4cfe5
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: fe528cb691bfff2d46f01470477fe602ee91c410
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="find-and-replace"></a>Найти и заменить
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Диалоговое окно **Найти и заменить** позволяет найти текст в файле и при необходимости заменить его. Версии диалогового окна **Найти и заменить** могут несколько отличаться по набору параметров в зависимости от способа вызова этого окна. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрый поиск** для открытия этого диалогового окна с параметрами поиска, но без параметров замены. В меню **Правка** перейдите к пункту **Найти и заменить**, затем щелкните **Быстрая замена** для открытия этого диалогового окна с параметрами и поиска, и замены.  

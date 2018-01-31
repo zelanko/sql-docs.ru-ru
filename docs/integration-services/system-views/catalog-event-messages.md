@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c1569b4bb562d9342792e4ff9cda58ffe3714eb2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1e67ff8d521b46f0f22462b244b6b4aff41c1a6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +31,13 @@ ms.lasthandoff: 11/20/2017
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|Event_message_ID|bigint|Уникальный идентификатор сообщения о событии.|  
-|Operation_id|bigint|Тип операции.<br /><br /> Список типов операций см. в разделе [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
+|Event_message_ID|BIGINT|Уникальный идентификатор сообщения о событии.|  
+|Operation_id|BIGINT|Тип операции.<br /><br /> Список типов операций см. в разделе [catalog.operations (база данных SSISDB)](../../integration-services/system-views/catalog-operations-ssisdb-database.md).|  
 |Message_time|datetimeoffset(7)|Время создания сообщения.|  
-|Message_type|smallint|Тип отображаемого сообщения. Дополнительные сведения о типах сообщений см. в разделе [catalog.operation_messages &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
-|Message_source_type|smallint|Источник сообщения.|  
+|Message_type|SMALLINT|Тип отображаемого сообщения. Дополнительные сведения о типах сообщений см. в разделе [catalog.operation_messages &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md).|  
+|Message_source_type|SMALLINT|Источник сообщения.|  
 |message|nvarchar(max)|Текст сообщения.|  
-|Extended_info_id|bigint|Идентификатор дополнительных сведений, которые относятся к сообщению об операции и находятся в представлении [catalog.extended_operation_info &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
+|Extended_info_id|BIGINT|Идентификатор дополнительных сведений, которые относятся к сообщению об операции и находятся в представлении [catalog.extended_operation_info &#40;база данных SSISDB&#41;](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
 |Package_name|nvarchar(260)|Имя файла пакета.|  
 |Event_name|nvarchar(1024)|Событие времени выполнения, связанное с сообщением.|  
 |Message_source_name|nvarchar(4000)|Компонент пакета, являющийся источником сообщения.|  
@@ -44,10 +45,10 @@ ms.lasthandoff: 11/20/2017
 |Subcomponent_name|nvarchar(4000)|Компонент потока данных, являющийся источником сообщения.<br /><br /> Если сообщения возвращаются ядром [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], в этом столбце появляется SSIS.Pipeline.|  
 |Package_path|nvarchar(max)|Уникальный путь к компоненту внутри пакета.|  
 |Execution_path|nvarchar(max)|Полный путь от родительского пакета до точки выполнения компонента.<br /><br /> Этот путь также включает повторения компонента.|  
-|threadID|int|Идентификатор потока, который выполняется при регистрации сообщения.|  
-|Message_code|int|Код, связанный с этим сообщением.|  
+|threadID|ssNoversion|Идентификатор потока, который выполняется при регистрации сообщения.|  
+|Message_code|ssNoversion|Код, связанный с этим сообщением.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображаются следующие типы источников сообщений.  
   
 |**message_source_type**|Description|  
@@ -59,7 +60,7 @@ ms.lasthandoff: 11/20/2017
 |50|Контейнеры потока управления|  
 |60|Задача потока данных|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ по отношению к операции  

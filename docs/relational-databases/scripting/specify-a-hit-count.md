@@ -8,22 +8,25 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.breakpt.hitcount
-helpviewer_keywords: Transact-SQL debugger, breakpoint hit count
+f1_keywords:
+- vs.debug.breakpt.hitcount
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoint hit count
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-caps.latest.revision: "6"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 41b87e44d8016f565d33c7afbaf5055062b7e119
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 1430ec114f5aa14457fcff1d58a7f41e2e5bbe48
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="specify-a-hit-count"></a>Настройка счетчика числа попаданий
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] Счетчик числа попаданий в точку останова увеличивается отладчиком [!INCLUDE[tsql](../../includes/tsql-md.md)] каждый раз при достижении точки останова. Если достигнуто указанное число попаданий или удовлетворяется любое из указанных условий для точки останова, то отладчик выполняет действие, заданное для точки останова.  

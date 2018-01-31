@@ -8,20 +8,21 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: b83e544cb070ab07d943965a5a11f305e7c70a2d
-ms.sourcegitcommit: 50e9ac6ae10bfeb8ee718c96c0eeb4b95481b892
+ms.openlocfilehash: 053744fd9493aae1c4d0cb4c2235a3da5a465397
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dtexec-utility"></a>Программа dtexec
   Программа командной строки **dtexec** используется для настройки и выполнения пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Служебная программа **dtexec** обеспечивает доступ ко всем функциям настройки и выполнения пакетов, таким как параметры, подключения, свойства, переменные, средства ведения журналов и индикаторы выполнения. Служебная программа **dtexec** позволяет загружать пакеты из следующих источников: сервер [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , ISPAC-файл проекта, база данных [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , хранилище пакетов [!INCLUDE[ssIS](../../includes/ssis-md.md)] и файловая система.  
@@ -107,7 +108,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
  При выполнении пакета программа **dtexec** может вернуть код завершения. Код завершения используется для заполнения переменной ERRORLEVEL, значение которой впоследствии можно будет проверить в условных инструкциях или логике ветвления в пакетном файле. В следующей таблице перечислены значения, которые программа **dtexec** может вернуть при завершении.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
 |0|Пакет успешно выполнен.|  
 |1|Ошибка выполнения пакета.|  
@@ -153,7 +154,7 @@ dtexec /option [value] [/option [value]]...
   
 ##  <a name="parameter"></a> Параметры  
   
--   **/?** [*option_name*]: (необязательный). Отображает параметры командной строки или справку по указанному параметру *option_name* и завершает выполнение программы.  
+-   **/?** [*option_name*] (необязательный). Отображает параметры командной строки или справку по указанному параметру *option_name* и завершает выполнение программы.  
   
      При указании аргумента *option_name* программа **dtexec** запускает электронную документацию по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отображает раздел "Служебная программа dtexec".  
   
@@ -219,7 +220,7 @@ dtexec /option [value] [/option [value]]...
   
      Некоторые примеры использования параметра **/ConsoleLog** см. в разделе **Примечания** .  
   
---   **/D[ts]** *package_path*: (необязательно). Загружает пакет из хранилища пакетов служб SSIS. Пакеты, которые хранятся в хранилище пакетов служб SSIS, развертываются с помощью устаревшей модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer** . Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
+--   **/D[ts]** *package_path*: (необязательно). Загружает пакет из хранилища пакетов служб SSIS. Пакеты, которые хранятся в хранилище пакетов служб SSIS, развертываются с помощью устаревшей модели развертывания пакетов. Чтобы запустить пакеты, развернутые на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] с помощью модели развертывания проекта, используйте параметр **/ISServer**. Дополнительные сведения о моделях развертывания пакетов и проектов см. в разделе [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx).  
   
      The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
@@ -270,7 +271,7 @@ dtexec /option [value] [/option [value]]...
   
      Параметр **/File** не может использоваться одновременно с параметром **/DTS** или **/SQL** . Если указано несколько параметров, то выполнение программы **dtexec** завершится с ошибкой.  
   
--   **/H[elp]** [*option_name*]: (необязательный). Отображает справку по параметрам командной строки или справку по указанному параметру *option_name* и завершает выполнение программы.  
+-   **/H[elp]** [*option_name*] (необязательный). Отображает справку по параметрам командной строки или справку по указанному параметру *option_name* и завершает выполнение программы.  
   
      При указании аргумента *option_name* программа **dtexec** запускает электронную документацию по [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и отображает раздел "Служебная программа dtexec".  
   
@@ -358,7 +359,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Rem** *comment*(необязательный). Содержит примечания о командной строке или командных файлах. Аргумент не обязателен. Значение *comment* является строкой, которая должна либо быть заключена в кавычки, либо не содержать пробелов. Если аргумент не указан, вставляется пустая строка. Значения*comment* удаляются на стадии считывания команд.  
   
--   **/Rep[orting]** *level* [*;event_guid_or_name*[*;event_guid_or_name*[...]]: (необязательный). Определяет, какие типы сообщений включаются в отчет. Ниже приводятся доступные параметры отчета для *level* .  
+-   **/Rep[orting]** *level* [*;event_guid_or_name*[*;event_guid_or_name*[...]] (необязательный). Определяет, какие типы сообщений включаются в отчет. Ниже приводятся доступные параметры отчета для *level* .  
   
      **N** — отчет не выводится.  
   
@@ -438,7 +439,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/Va[lidate]**(необязательный). Останавливает выполнение пакета по завершении стадии проверки без фактического запуска пакета. В режиме проверки указание параметра **/WarnAsError** приводит к тому, что программа **dtexec** рассматривает предупреждения как ошибки, поэтому выполнение пакета завершается с ошибкой в случае появления предупреждения в ходе проверки.  
   
--   **/VerifyB[uild]** *major*[*;minor*[*;build*]]: (необязательный). Проверяет соответствие номера сборки пакета номерам сборки, указанным на стадии проверки в аргументах *major*, *minor*и *build* . В случае несоответствия пакет выполняться не будет.  
+-   **/VerifyB[uild]** *major*[*;minor*[*;build*]] (необязательный). Проверяет соответствие номера сборки пакета номерам сборки, указанным на стадии проверки в аргументах *major*, *minor*и *build* . В случае несоответствия пакет выполняться не будет.  
   
      Тип значений — long integer. Аргумент может иметь одну из трех форм, причем значение *major* требуется всегда:  
   

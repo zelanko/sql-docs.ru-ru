@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 82e50a6cb72d5b26810493f656eff82f3b7cdccc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 96311a68d7d003889f88ed91987f1d9a2775c72f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="cdc-flow-components"></a>Компоненты потока CDC
   Компоненты отслеживания измененных данных Attunity для служб Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] позволяют разработчикам служб SSIS работать с CDC и уменьшают сложность пакетов CDC.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/20/2017
   
  **Компоненты потока данных CDC**.  
   
- [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
+ [Источник «CDC»](../../integration-services/data-flow/cdc-source.md)  
   
  [Разделитель CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
@@ -194,13 +195,13 @@ ms.lasthandoff: 11/20/2017
   
  После успешного выполнения пакета начальной загрузки пакет обновления тонкого канала многократно выполняется по заранее определенному расписанию для обработки изменений в исходных таблицах. Каждое выполнение пакета обновления тонкого канала означает выполнение CDC.  
   
-## <a name="in-this-section"></a>В этом разделе  
+## <a name="in-this-section"></a>в этом разделе  
   
--   [CDC-источник](../../integration-services/data-flow/cdc-source.md)  
+-   [Источник «CDC»](../../integration-services/data-flow/cdc-source.md)  
   
 -   [Разделитель CDC](../../integration-services/data-flow/cdc-splitter.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Выбор направления потока CDC в соответствии с типом изменения](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
@@ -220,7 +221,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Видеоролик [CDC для баз данных Oracle, использующих службы SQL Server Integration Services 2012 (видео по SQL Server)](http://technet.microsoft.com/sqlserver/jj218898)на сайте technet.microsoft.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Задача управления CDC](../../integration-services/control-flow/cdc-control-task.md)  
   
   

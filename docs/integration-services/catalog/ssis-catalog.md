@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,16 +17,16 @@ f1_keywords:
 - sql13.ssis.ssms.iscatalogprop.general.f1
 - sql13.ssis.dbupgradewizard.f1
 ms.assetid: 24bd987e-164a-48fd-b4f2-cbe16a3cd95e
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 0a05b62e5c2ffb8c5a268ac8030e703d3a192742
-ms.sourcegitcommit: 6bbecec786b0900db86203a04afef490c8d7bfab
+ms.openlocfilehash: b8812ba8a3a96fc17ab9c9ec5083699ef5a7d03b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ssis-catalog"></a>Каталог служб SSIS
   Каталог **SSISDB** служит центральным пунктом для работы с проектами служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS), развернутыми на сервере служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)]. Например, можно задавать параметры проектов и пакетов, настраивать среды для указания значений времени выполнения для пакетов, выполнять пакеты и проводить устранение неполадок, а также управлять операциями на сервере служб [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] .  
@@ -178,7 +179,7 @@ ms.lasthandoff: 12/12/2017
 |Максимальное количество версий в проекте|MAX_PROJECT_VERSIONS|  
 |Серверное значение уровня ведения журнала по умолчанию|SERVER_LOGGING_LEVEL|  
   
-##  <a name="Permissions"></a> Разрешения  
+##  <a name="Permissions"></a> Permissions  
  Проекты, среды и пакеты содержатся в папках, которые являются защищаемыми объектами. Вы можете предоставить разрешения для папки, включая разрешение MANAGE_OBJECT_PERMISSIONS. Разрешение MANAGE_OBJECT_PERMISSIONS позволяет делегировать пользователю разрешения на администрирование содержимого папки, не предоставляя ему членства в роли ssis_admin. Вы можете также предоставлять разрешения проектам, средам и операциям. К операциям относятся инициализация [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], развертывание проектов, создание и запуск выполнений, проверка проектов и пакетов, а также настройка каталога **SSISDB** .  
   
  Дополнительные сведения о ролях баз данных см. в разделе [Роли уровня базы данных](../../relational-databases/security/authentication-access/database-level-roles.md).  

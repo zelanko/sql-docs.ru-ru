@@ -8,21 +8,23 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 593c18478ee73b66d0f8402885324615615d0fcf
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 1a63c43606d2a27da3469c4cedb83654c79c1bf1
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-5-2---enabling-and-configuring-package-configurations"></a>Занятие 5–2. Активация и настройка конфигураций пакетов
 В этой задаче вы преобразуете проект в модель развертывания пакета и включите конфигурации пакетов с помощью мастера настройки пакета. Этот мастер будет использоваться для создания файла конфигурации в формате XML, который содержит параметры конфигурации для свойства **Directory** контейнера "цикл по каждому элементу". Значение свойства Directory содержится в новой переменной уровня пакета, обновление которой можно осуществлять в процессе выполнения. Кроме того, будет заполнена новая папка с образцами данных для использования при проверке.  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 37cb3c01-f4c0-4978-8e40-a975456def5a
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d8e561e94e3dee033941c5defade34d28b1ac89c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b127fe80d88d05c3f1f56e7c355d7a24f3abd6a
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionpropertyoverridevalue"></a>catalog.set_execution_property_override_value
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +51,14 @@ catalog.set_execution_property_override_value [ @execution_id = execution_id
  [ @sensitive = ] *sensitive*  
  Если значение равно 1, свойство является конфиденциальным и шифруется при сохранении. Если значение равно 0, свойство не является конфиденциальным и его значение сохраняется в формате открытого текста. Аргумент *sensitive* имеет тип **bit**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Процедура выполняет те же действия, что и раздел **Переопределения свойств** вкладки **Расширенные** в диалоговом окне **Выполнение пакета**. Путь к свойству извлекается из свойства **Путь к пакету** задачи пакета.  
   
 ## <a name="return-code-value"></a>Значения кодов возврата  
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
 ## <a name="errors-and-warnings"></a>Ошибки и предупреждения  
  Следующий список содержит описания некоторых условий, которые могут вызвать ошибку или предупреждение.  

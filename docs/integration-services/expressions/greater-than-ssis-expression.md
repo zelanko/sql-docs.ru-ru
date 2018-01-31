@@ -8,23 +8,24 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - greater than operator (>)
 - '> (greater than operator)'
 ms.assetid: 2e22efa3-eeb1-4984-a95c-9bccdcf98892
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c584ec6710548ac0abfb065c39bafa4fb634099f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ee6069abd1363d255bd7d46b80dc38bf412ce96c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="gt-greater-than-ssis-expression"></a>&gt; (больше) (выражение служб SSIS)
   Выполняет сравнение с целью определения, является ли первое выражение больше второго. Перед проведением сравнения средство оценки выражений автоматически преобразует большинство типов данных.  
@@ -49,7 +50,7 @@ expression1 > expression2
 ## <a name="result-types"></a>Типы результата  
  DT_BOOL  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если какое-нибудь выражение имеет значение NULL, то результат сравнения будет NULL. Если оба выражения имеют значение NULL, то результат будет NULL.  
   
  Наборы выражений *expression1* и *expression2*должны удовлетворять одному из следующих правил:  
@@ -105,7 +106,7 @@ ListPrice > 500
 @LPrice > 500  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [&#60; (меньше чем) (выражение служб SSIS)](../../integration-services/expressions/less-than-ssis-expression.md)   
  [&#62;= (больше или равно) (выражение служб SSIS)](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
  [&#60;= (меньше или равно) (выражение служб SSIS)](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   

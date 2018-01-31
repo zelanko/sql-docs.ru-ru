@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - sources [Integration Services], Excel
 ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 61e28171171a822f25da6979340785bc5c114e1c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 872ac8117bb87cb9f1709afedbacc32b2d1f1413
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="excel-source"></a>Источник Excel
   Источник Excel извлекает данные из листов или диапазонов в книгах [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -91,13 +92,13 @@ ms.lasthandoff: 11/20/2017
   
  Диалоговое окно **Расширенный редактор** содержит все свойства, которые могут устанавливаться программными средствами. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства Excel](../../integration-services/data-flow/excel-custom-properties.md)  
   
  Дополнительные сведения о переходе между файлами в группе файлов Excel см. в разделе [Просмотр файлов и таблиц Excel с помощью контейнера "Цикл по каждому элементу"](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Сопоставления параметров запросов с переменными в компонентах потока данных](../../integration-services/data-flow/map-query-parameters-to-variables-in-a-data-flow-component.md)  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/20/2017
 >  Свойство **CommandTimeout** источника Excel недоступно в диалоговом окне **Редактор источника «Excel»**, но может быть задано с помощью диалогового окна **Расширенный редактор**. Дополнительные сведения о данном свойстве см. в подразделе «Источник Excel» раздела [Excel Custom Properties](../../integration-services/data-flow/excel-custom-properties.md).  
   
 ### <a name="static-options"></a>Статические параметры  
- **диспетчер соединений OLE DB**  
+ **Диспетчер соединений OLE DB**  
  Выберите из списка существующий диспетчер подключений к Excel или создайте новое соединение, нажав кнопку **Создать**.  
   
  **Создать**  
@@ -194,7 +195,7 @@ ms.lasthandoff: 11/20/2017
  **Усечение**  
  Укажите, что нужно сделать при усечении: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Просмотреть описание ошибки.  
   
  **Присвоить указанное значение выбранным ячейкам**  

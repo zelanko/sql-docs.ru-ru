@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: ef3b0325-d8e9-472b-bf11-7d3efa6312ff
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0a7cc5e2b529f503c0a4182f43e1436fc355ab4c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1c59650d75d9abc212bedbb8a147592760049674
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project — база данных SSISDB
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +51,9 @@ catalog.move_project [ @source_folder = ] source_folder
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения READ и MODIFY на перемещаемый проект и разрешение CREATE_OBJECTS на целевую папку.  
@@ -72,7 +73,7 @@ catalog.move_project [ @source_folder = ] source_folder
   
 -   Пользователь не имеет соответствующих разрешений  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При перемещении проекта из исходной папки в целевую этот проект и все соответствующие ссылки на среду удаляются из исходной папки. В целевой папке создается аналогичные проект и ссылки на среду. Относительные ссылки на среду после перемещения будут указывать на другую папку. Абсолютные ссылки на среду после перемещения будут указывать на ту же папку.  
   
 > [!NOTE]  

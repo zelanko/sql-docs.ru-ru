@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 233eed5038eb8a2f63e89cbadc5ea738398b8d8b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e3d621273b3b45b25158d494fd9bee3d7241e1d3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,19 +73,19 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
  [ @parameter_value = ] *parameter_value*  
  Значение параметра. Параметр *parameter_value* имеет тип **sql_variant**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтобы выяснить значения параметров, использованные в ходе данного выполнения, выполните запрос к представлению catalog.execution_parameter_values.  
   
  Чтобы задать диапазон информации, регистрируемой в ходе выполнения пакета, присвойте параметру *parameter_name* значение LOGGING_LEVEL, а параметру *parameter_value* — одно из указанных ниже значений.  
   
  Присвойте параметру *object_type* значение 50.  
   
-|Значение|Описание|  
+|Значение|Description|  
 |-----------|-----------------|  
-|0|Нет<br /><br /> Ведение журнала выключено. Регистрируется только состояние выполнения пакета.|  
+|0|None<br /><br /> Ведение журнала выключено. Регистрируется только состояние выполнения пакета.|  
 |1|Basic<br /><br /> Записываются все события, за исключением пользовательских и диагностических событий. Это значение по умолчанию.|  
 |2|Производительность<br /><br /> Регистрируются только статистика производительности, а также события OnError и OnWarning.|  
-|3|Подробно<br /><br /> Регистрируются все события, в том числе пользовательские и диагностические события. <br />К пользовательским относятся события, записываемые задачами служб Integration Services. Дополнительные сведения см. в разделе [Пользовательские сообщения для ведения журнала](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
+|3|Подробный<br /><br /> Регистрируются все события, в том числе пользовательские и диагностические события. <br />К пользовательским относятся события, записываемые задачами служб Integration Services. Дополнительные сведения см. в разделе [Пользовательские сообщения для ведения журнала](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
 |4|Журнал преобразований в среде выполнения<br /><br /> Собирает данные, необходимые для отслеживания журнала преобразований в потоке данных.|  
 |100|Пользовательский уровень ведения журнала<br /><br /> Укажите значения в параметре CUSTOMIZED_LOGGING_LEVEL. Дополнительные сведения о возможных значениях см. в разделе [catalog.create_customized_logging_level](../../integration-services/system-stored-procedures/catalog-create-customized-logging-level.md).<br /><br /> Дополнительные сведения о настраиваемых уровнях ведения журнала см. в разделе [Включение ведения журналов при выполнении пакета на сервере служб SSIS](../../integration-services/performance/integration-services-ssis-logging.md#server_logging).|  
   
@@ -139,9 +140,9 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   разрешения READ и MODIFY на экземпляр выполнения  

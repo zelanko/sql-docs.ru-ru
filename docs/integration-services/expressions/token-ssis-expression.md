@@ -8,20 +8,21 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 691d717b5cb5545a86fe9fbefffd0f545f77f934
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 192a91539b35a718556e50707a6f74cb15cfc5b0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="token--ssis-expression"></a>TOKEN (выражение служб SSIS)
   Возвращает токен (подстроку) из строки с учетом заданных разделителей токенов строки и номера токена, определяющего, какой токен следует возвратить.  
@@ -45,7 +46,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Типы результата  
  DT_WSTR  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта функция разделяет строку <character_expression> на набор токенов, разделенных символами, которые заданы в строке <delimiter_string>, а затем возвращает токен N, где N — это порядковый номер токена, заданный параметром \<occurrence>. Примеры использования этой функции см. в разделе «Примеры».  
   
  Следующие примечания относятся к функции TOKEN.  
@@ -105,7 +106,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Функции (выражение служб SSIS)](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

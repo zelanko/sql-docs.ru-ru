@@ -11,7 +11,8 @@ ms.suite: sql
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-applies_to: SQL Server 2016 Preview
+applies_to:
+- SQL Server 2016 Preview
 dev_langs:
 - VB
 - CSharp
@@ -24,16 +25,16 @@ helpviewer_keywords:
 - custom sources [Integration Services]
 - source components [Integration Services]
 ms.assetid: 4dc0f631-8fd6-4007-b573-ca67f58ca068
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a73c1630674189dd1f86a1aca68937a558d5149f
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: a0cd0b0e1ae14ffe7f068adb1b77482cc180d3c9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="developing-a-custom-source-component"></a>Разработка пользовательского компонента источника
   Службы [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляют разработчикам возможность создавать компоненты источника, которые могут подключаться к пользовательским источникам данных и предоставлять данные из этих источников другим компонентам в задаче потока данных. Возможность создавать пользовательские источники становится полезной, если возникает необходимость подключаться к источникам данных, доступ к которым нельзя получить с помощью одного из существующих источников служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

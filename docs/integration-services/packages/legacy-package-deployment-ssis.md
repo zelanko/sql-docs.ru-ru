@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,16 +34,16 @@ helpviewer_keywords:
 - packages [Integration Services], deploying
 - SSIS packages, deploying
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 486fa573b955848828bff349f364543e6a1e23f7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f0a4d37996a1add0c028f9481b1dc232190a19a3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="legacy-package-deployment-ssis"></a>Устаревшее развертывание пакетов (службы SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают в себя средства и мастера, которые упрощают развертывание пакетов с компьютера разработчика на рабочий сервер или другие компьютеры.  
@@ -221,7 +222,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
  В приведенной ниже таблице описаны столбцы списка конфигураций в диалоговом окне **Организатор конфигураций пакетов** .  
   
-|Столбец|Description|  
+|столбцом|Description|  
 |------------|-----------------|  
 |**Имя конфигурации**|Имя конфигурации.|  
 |**Тип конфигурации**|Тип конфигурации.|  
@@ -288,7 +289,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Добавить**  
  Добавление конфигурации с помощью мастера настройки пакета.  
   
- **Правка**  
+ **Изменить**  
  Редактирование существующей конфигурации при помощи перезапуска мастера настройки пакета.  
   
  **Удалить**  
@@ -475,7 +476,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 5.  Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
 
-## <a name="create-a-deployment-utility"></a>Создание программы развертывания
+## <a name="create-a-deployment-utility"></a>Create a Deployment Utility
   Первый шаг в развертывании пакетов — это создание программы развертывания для проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Программа развертывания — это папка, которая содержит файлы, требуемые для развертывания пакетов проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] на другом сервере. Программа развертывания создается на компьютере, где хранится проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
   
  Создание программы развертывания пакета для проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] начинается с настройки конфигурации процесса построения для его создания, и затем построения самого проекта. Когда производится построение проекта, все пакеты и их конфигурации в проекте включаются в него автоматически. Для развертывания дополнительных файлов, таких как файл Readme проекта, поместите файлы в папку **Разное** проекта служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Когда проект построен, эти файлы также автоматически включаются в проект.  
@@ -600,7 +601,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Тип**  
  Просмотр типа данных указанного свойства.  
   
- **Значение**  
+ **Value**  
  Задание значения конфигурации.  
   
  **Дальше**  
@@ -675,7 +676,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **Использовать проверку подлинности SQL Server**  
  Укажите, должен ли пакет использовать проверку подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при входе на сервер. Если используется проверка подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , необходимо ввести имя пользователя и пароль.  
   
- **Имя пользователя**  
+ **User name**  
  Укажите имя пользователя.  
   
  **Пароль**  

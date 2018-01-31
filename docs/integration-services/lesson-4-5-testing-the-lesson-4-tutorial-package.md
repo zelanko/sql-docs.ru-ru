@@ -8,21 +8,23 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5f18df92-0248-4858-836b-c8b02f0e0439
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e16aa094a76f359d65b024fc428f4a2c623700b1
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 97ea428e44a7d7efc773653837b14f20efb424f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-4-5---testing-the-lesson-4-tutorial-package"></a>Занятие 4–5. Проверка учебного пакета, созданного на занятии 4
 На стадии выполнения произойдет ошибка поиска соответствия при работе преобразования «Уточняющий запрос» для Currency Key в поврежденном файле Currency_BAD.txt. Так как вывод ошибок преобразования «Уточняющий запрос» для Currency Key настроен на перенаправление строк новому адресату «неудачные обращения», операция не завершится ошибкой, и пакет будет успешно выполнен. Все ошибочные строки будут записаны в файл ErrorOutput.txt.  

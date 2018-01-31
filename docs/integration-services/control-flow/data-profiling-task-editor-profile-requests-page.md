@@ -8,22 +8,25 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.dataprofilingtask.profilerequests.f1
-helpviewer_keywords: Data Profiling Task Editor
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 63b377a6412dc2c886f1aec2a76e6f94fa78eda5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e6883b8ec802392c0ae4d3a92a41f54433d403f8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Редактор задачи «Профилирование данных» (страница «Запросы профиля»)
   **Страница «Запросы профиля»** **редактора задачи «Профилирование данных»** используется для выбора и настройки профилей, которые необходимо вычислить. В рамках одной задачи «Профилирование данных» можно вычислить несколько профилей для нескольких столбцов или сочетаний столбцов из нескольких таблиц или представлений.  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="requests-pane-options"></a>Параметры панели запросов  
  Панель запросов имеет следующие параметры.  
   
- **Просмотр**  
+ **Вид**  
  Укажите, нужно ли просмотреть все профили, настроенные для задачи, или только один из этих профилей.  
   
  Столбцы панели запросов изменились в соответствии с выбранным вами параметром **Просмотр** . Дополнительные сведения о каждом из этих столбцов см. в следующем разделе «Столбцы панели запросов».  
@@ -150,7 +153,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Параметры запроса профиля включения значений (задача "Профилирование данных")](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

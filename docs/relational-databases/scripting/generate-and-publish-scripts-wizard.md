@@ -8,7 +8,8 @@ ms.service:
 ms.component: ssms-scripting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -44,16 +45,16 @@ helpviewer_keywords:
 - databases [SQL Server], generating scripts
 - Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
-caps.latest.revision: "45"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: MightyPen
+ms.author: genemi
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 801dba9b807d9928f7d7dcb1db83274ca11ee778
-ms.sourcegitcommit: b603dcac7326bba387befe68544619e026e6a15e
+ms.openlocfilehash: 6a9e1ba4f4afadc27174f3dfd61b03005a33ef16
+ms.sourcegitcommit: a0aa5e611a0e6ebb74ac1e2f613e8916dc7a7617
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Мастер формирования и публикации скриптов
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)] С помощью **мастера формирования и публикации скриптов** можно создавать скрипты для переноса баз данных между экземплярами [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] или [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Скрипты для базы данных вы можете создавать на экземпляре компонента ядра СУБД в локальной сети или из [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Сформированные скрипты могут выполняться на другом экземпляре компонента ядра СУБД или [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. С помощью мастера также можно публиковать содержимое базы данных непосредственно в веб-службе, созданной с помощью проекта служб Database Publishing Services. Создать скрипты можно как для всей базы данных, так и ограничить их определенными данными или объектами.  

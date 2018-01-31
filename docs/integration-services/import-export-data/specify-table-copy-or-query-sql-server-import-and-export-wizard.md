@@ -8,21 +8,23 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.impexpwizard.specifytablecopyorquery.f1
+f1_keywords:
+- sql13.dts.impexpwizard.specifytablecopyorquery.f1
 ms.assetid: 08aa7158-40e6-4ef3-84d3-1265a8ba194c
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ba4c750ecf556cdaae6fdbdfb08b6991316e544
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 56babe19727ca9ac7e0f364f64c91716508f4dfc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Выбор копирования таблицы или запроса (мастер импорта и экспорта SQL Server)
   После того как вы укажете сведения о назначении и о том, как к нему подключиться, в мастере импорта и экспорта [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] откроется страница **Выбор копирования таблицы или запроса**. На этой странице можно выбрать один из следующих вариантов действий.
@@ -83,7 +85,7 @@ ms.lasthandoff: 11/20/2017
     
 -   Если выбран параметр **Написать запрос, указывающий данные для передачи**, откроется страница **Определение исходного запроса**. На этой странице выполняется написание и тестирование инструкции SQL, которая выбирает данные для копирования из источника данных в место назначения. (Затем после определения запроса откроется страница **Выбор исходных таблиц и представлений**.) Дополнительные сведения см. в разделе [Определение исходного запроса](../../integration-services/import-export-data/provide-a-source-query-sql-server-import-and-export-wizard.md).
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Приступая к работе с простым примером мастера импорта и экспорта](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

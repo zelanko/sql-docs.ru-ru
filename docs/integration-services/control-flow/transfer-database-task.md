@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,18 +18,19 @@ f1_keywords:
 - sql13.dts.designer.transferdatabasetask.database.f1
 - sql13.dts.designer.transferdatabasetask.sourcedbfiles.f1
 - sql13.dts.designer.transferdatabasetask.destdbfiles.f1
-helpviewer_keywords: Transfer Database task [Integration Services]
+helpviewer_keywords:
+- Transfer Database task [Integration Services]
 ms.assetid: b9a2e460-cdbc-458f-8df8-06b8b2de3d67
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 026736a98fc4be0786cda2c993585d0d4165866b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 83ba4c606ccf7779f01219fcf69e90d2b3b6dea9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-database-task"></a>Задача «Передача базы данных»
   Задача «Передача базы данных» передает базу данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] между двумя экземплярами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. В отличие от других задач, передающих объекты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] только путем копирования, задача «Передача базы данных» может копировать или перемещать базу данных. Эту задачу можно также использовать для копирования базы данных в пределах того же сервера.  
@@ -101,7 +103,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи передачи базы данных.  
   
 ## <a name="transfer-database-task-editor-databases-page"></a>Редактор задачи «Передача базы данных» (страница «Базы данных»)

@@ -8,20 +8,21 @@ ms.service:
 ms.component: import-export-data
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b0bd1f5a-34dd-4be3-9ac8-f9f87727781b
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2a93e5d4c038db3620e78a4141ca8235d703263
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 50fdbc0168430a4119da86582258c5dff333a1f0
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connect-to-an-oracle-data-source-sql-server-import-and-export-wizard"></a>Подключение к источнику данных Oracle (мастер импорта и экспорта SQL Server)
 В этом разделе показано, как подключаться к источникам данных **Oracle** со страницы **Выбор источника данных** или **Выбор назначения** в мастере импорта и экспорта SQL Server. Для подключения к Oracle можно использовать ряд поставщиков данных.
@@ -89,14 +90,14 @@ ms.lasthandoff: 11/20/2017
 
 `SELECT host_name FROM v$instance`
 
-либо
+или диспетчер конфигурации служб
 
 `SELECT sys_context('USERENV','SERVER_HOST') FROM dual`
 
 ## <a name="other-data-providers-and-more-info"></a>Другие поставщики данных и дополнительные сведения
 Сведения о подключении к Oracle с помощью поставщика данных, не представленного в этом списке, см. в разделе [Строки подключения Oracle](https://www.connectionstrings.com/oracle/). Этот сторонний сайт также содержит дополнительные сведения о поставщиках данных и параметрах подключения, описанных на этой странице.
 
-## <a name="see-also"></a>См. также:
+## <a name="see-also"></a>См. также раздел
 [Выбор источника данных](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  
 [Выбор назначения](../../integration-services/import-export-data/choose-a-destination-sql-server-import-and-export-wizard.md)
 

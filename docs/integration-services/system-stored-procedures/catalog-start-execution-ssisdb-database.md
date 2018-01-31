@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: f8663ff3-aa98-4dd8-b850-b21efada0b87
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a09c765e61b71586802d31b31917644a0f336f0c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 33f50d558073a82985ef225288471489d220e2c8
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry
  [@retry_count =] *retry_count*  
  Число повторных попыток при сбое выполнения. Применяется только при выполнении в Scale Out. Этот параметр является необязательным. Если параметр не задан, используется значение 0. Параметр *retry_count* имеет тип **int**.
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Выполнение применяется для задания значений параметров, которые используются пакетом в течение одного экземпляра выполнения пакета. После создания экземпляра исполнения и до его начала соответствующий проект должен быть повторно развернут. В этом случае экземпляр исполнения ссылается на устаревший проект. Эта недопустимая ссылка приводит к сбою хранимой процедуры.  
   
 > [!NOTE]  
@@ -68,9 +69,9 @@ GO
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения READ и MODIFY на экземпляр выполнения, разрешения READ и EXECUTE на проект и, при необходимости, разрешения READ на среду, указанную в ссылке  

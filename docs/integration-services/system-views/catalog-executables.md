@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: bae22d0c-e190-426f-a074-c1d1170e8dd8
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 490f6ae4a2c849baa8da2ca799b39beac1a4ebda
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: ce33ed9dbdd02100ce97bc94d5ecaac3c63b4025
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogexecutables"></a>catalog.executables
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +31,7 @@ ms.lasthandoff: 11/20/2017
   
  Исполняемый объект ― это задача или контейнер, добавленный в поток управления пакетом.  
   
-|Имя столбца|**Тип данных**|Description|  
+|Имя столбца|**Data type**|Description|  
 |-----------------|-------------------|-----------------|  
 |executable_id|**bigint**|Уникальный идентификатор исполняемого объекта.|  
 |execution_id|**bigint**|Уникальный идентификатор для экземпляра выполнения.|  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/20/2017
 |package_name|**nvarchar(260)**|Имя пакета.|  
 |путь к пакету|**nvarchar(max)**|Путь к пакету.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ на экземпляр выполнения  
@@ -51,5 +52,5 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Наличие разрешения на выполнение операции на сервере подразумевает наличие разрешения на просмотр сведений об этой операции. Действует защита на уровне строки. Отображаются только строки, на которые у вас имеется разрешение.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   

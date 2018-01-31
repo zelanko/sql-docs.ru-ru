@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: f87cc5f6-b078-40f3-9d87-7a65e13e4c86
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 669c3d72bd6287d0e534dd34f874978a8157da21
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e659322d66c01081c664850366a6cc4abf190d16
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-source"></a>Источник OLE DB
   Источник OLE DB извлекает сведения из множества поддерживающих технологию OLE DB реляционных баз данных с помощью таблицы базы данных, представления или команды SQL. Например, источник OLE DB может извлекать данные из таблиц [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access или [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/20/2017
   
  При использовании параметризированного запроса можно сопоставить переменные с параметрами, чтобы задать значения для отдельных параметров в инструкциях SQL.  
   
- Данный источник для подключения к источнику данных использует диспетчер соединений OLE DB, в котором задается используемый поставщик OLE DB. Дополнительные сведения см. в статье [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Данный источник для подключения к источнику данных использует диспетчер соединений OLE DB, в котором задается используемый поставщик OLE DB. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также предоставляет объект источника данных, из которого можно создать диспетчер соединений OLE DB, делая источники данных и представления источников данных доступными для источника OLE DB.  
   
@@ -102,11 +103,11 @@ ms.lasthandoff: 11/20/2017
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Извлечение данных с помощью источника OLE DB](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
--   [Сортировка данных для преобразований «Слияние» и «Соединение слиянием»](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+-   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>См. также  
  Статья Wiki [Соединители служб SSIS с Oracle](http://go.microsoft.com/fwlink/?LinkId=220670)на сайте social.technet.microsoft.com.  
@@ -139,7 +140,7 @@ ms.lasthandoff: 11/20/2017
 3.  Щелкните **Диспетчер соединений**.  
   
 ### <a name="static-options"></a>Статические параметры  
- **диспетчер соединений OLE DB**  
+ **Диспетчер соединений OLE DB**  
  Выберите из списка существующий диспетчер соединений или создайте новое соединение, нажав кнопку **Создать**.  
   
  **Создать**  
@@ -222,7 +223,7 @@ ms.lasthandoff: 11/20/2017
  **Усечение**  
  Укажите, что нужно сделать при усечении: пропустить ошибку, перенаправить строку или вызвать сбой компонента.  
   
- **Description**  
+ **Описание**  
  Просмотреть описание ошибки.  
   
  **Присвоить указанное значение выбранным ячейкам**  

@@ -8,13 +8,15 @@ ms.service:
 ms.component: t-sql|functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - SWITCHTZ
 - SWITCHTZ_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - dates [SQL Server], functions
 - functions [SQL Server], time
@@ -24,7 +26,7 @@ helpviewer_keywords:
 - date and time [SQL Server], SWITCHOFFSET
 - time zones [SQL Server]
 ms.assetid: 32a48e36-0aa4-4260-9fe9-cae9197d16c5
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
@@ -52,16 +54,16 @@ SWITCHOFFSET ( DATETIMEOFFSET, time_zone )
   
 ## <a name="arguments"></a>Аргументы  
  *DATETIMEOFFSET*  
- Выражение, которое разрешается к **datetimeoffset(n)** значение.  
+ Выражение, которое разрешается к **datetimeoffset(n)**.  
   
  *time_zone*  
- Символьная строка в формате [+|-]TZH:TZM или целочисленное значение со знаком (или минуты), представляющие смещение часового пояса. Предполагается, что оно настроено и учитывает переход на летнее время.  
+ Символьная строка в формате [+|-]TZH:TZM или целочисленное значение со знаком (в минутах), представляющие смещение часового пояса, с учетом перехода на летнее время.  
   
 ## <a name="return-type"></a>Тип возвращаемых данных  
  **DateTimeOffset** с точностью в долях *DATETIMEOFFSET* аргумент.  
   
 ## <a name="remarks"></a>Замечания  
- Switchoffset используется для выбора **datetimeoffset** значение смещения часового пояса, которое отличается от смещения часового пояса, которое было изначально сохранено. SWITCHOFFSET не обновляет хранимое *time_zone* значение.  
+ SWITCHOFFSET используется для приведения **datetimeoffset** к значению смещения часового пояса, отличного от изначального. SWITCHOFFSET не обновляет хранимое *time_zone* значение.  
   
  SWITCHOFFSET может использоваться для обновления **datetimeoffset** столбца.  
   

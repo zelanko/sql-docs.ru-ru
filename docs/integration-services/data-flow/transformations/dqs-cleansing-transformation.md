@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - data correction
 - correct data
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba39190db7b5cfefbb7a4624ca20d71673404093
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8cf75ff26033b7f6d2dd29af0d226b6b0172c094
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="dqs-cleansing-transformation"></a>Преобразование «Очистка DQS»
   Преобразование «Очистка DQS» используется службы Data Quality Services (DQS) для исправления данных из подключенного источника данных путем применения утвержденных правил, созданных для подключенного или аналогичного источника данных. Дополнительные сведения о правилах исправления данных см. в разделе [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). Дополнительные сведения о службах DQS см. в разделе [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  
@@ -47,7 +48,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="data-quality-projects-and-values"></a>Проекты и значения служб DQS  
  При обработке данных с помощью преобразования «Очистка DQS» на сервере DQS создается проект очистки. Для управления проектом используется клиент DQS. Кроме того, можно использовать клиент DQS для импорта значений проекта в домен базы знаний служб DQS. Можно импортировать значения только в домен (или связанный домен), использование которого было настроено в преобразовании «Очистка DQS».  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Открытие проектов служб Integration Services в клиенте DQS](../../../data-quality-services/open-integration-services-projects-in-data-quality-client.md)  
   

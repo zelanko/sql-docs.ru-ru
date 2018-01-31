@@ -8,10 +8,12 @@ ms.service:
 ms.component: security
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.dtsserver.packageroles.f1
+f1_keywords:
+- sql13.dts.dtsserver.packageroles.f1
 helpviewer_keywords:
 - security [Integration Services], roles
 - db_ssisoperator role
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - roles [Integration Services]
 - db_ssisltduser role
 ms.assetid: 9702e90c-fada-4978-a473-1b1423017d80
-caps.latest.revision: "50"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3e618908333f48e0a86fa7974ce82f0a48293c5c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7353125066cfcfe8d1d244bd04d98b51eedc884c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-roles-ssis-service"></a>Роли служб Integration Services (службы SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет конкретные предопределенные роли уровня базы данных для обеспечения безопасного доступа к пакетам, которые хранятся в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Доступные роли зависят от того, где хранятся пакеты: в базе данных каталога служб SSIS (SSISDB) или в базе данных msdb.  
@@ -50,11 +52,11 @@ ms.lasthandoff: 11/20/2017
 ### <a name="read-and-write-actions"></a>Действия чтения и записи  
  В следующей таблице приводятся операции чтения и записи Windows и предопределенных ролей уровня базы данных в службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   
-|Роль|Операция чтения|Операция записи|  
+|Role|Операция чтения|Операция записи|  
 |----------|-----------------|------------------|  
-|**msdb**<br /><br /> либо<br /><br /> **sysadmin**|Перечислить свои пакеты.<br /><br /> Перечислить все пакеты.<br /><br /> Посмотреть свои пакеты.<br /><br /> Посмотреть все пакеты.<br /><br /> Выполнить свои пакеты.<br /><br /> Выполнить все пакеты.<br /><br /> Экспортировать свои пакеты.<br /><br /> Экспортировать все пакеты.<br /><br /> Выполнить все пакеты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Импортировать пакеты.<br /><br /> Удалить свои пакеты.<br /><br /> Удалить все пакеты.<br /><br /> Изменить роли своих пакетов.<br /><br /> Изменить роли всех пакетов.<br /><br /> <br /><br /> **\*\* Предупреждение. \*\***Члены роли db_ssisadmin и роли dc_admin могут повышать свои права доступа до sysadmin. Такое повышение права доступа может произойти, так как эти роли могут изменять пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а пакеты [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут выполняться [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи контекста безопасности sysadmin агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы предотвратить такое повышение прав при выполнении планов обслуживания, наборов сбора данных и других пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , настройте задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запускающие пакеты, на использование учетной записи-посредника с ограниченными правами или добавьте членов sysadmin в роли db_ssisadmin и dc_admin.|  
+|**msdb**<br /><br /> или диспетчер конфигурации служб<br /><br /> **sysadmin**|Перечислить свои пакеты.<br /><br /> Перечислить все пакеты.<br /><br /> Посмотреть свои пакеты.<br /><br /> Посмотреть все пакеты.<br /><br /> Выполнить свои пакеты.<br /><br /> Выполнить все пакеты.<br /><br /> Экспортировать свои пакеты.<br /><br /> Экспортировать все пакеты.<br /><br /> Выполнить все пакеты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Импортировать пакеты.<br /><br /> Удалить свои пакеты.<br /><br /> Удалить все пакеты.<br /><br /> Изменить роли своих пакетов.<br /><br /> Изменить роли всех пакетов.<br /><br /> <br /><br /> **\*\* Предупреждение. \*\***Члены роли db_ssisadmin и роли dc_admin могут повышать свои права доступа до sysadmin. Такое повышение права доступа может произойти, так как эти роли могут изменять пакеты служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , а пакеты [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут выполняться [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] при помощи контекста безопасности sysadmin агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Чтобы предотвратить такое повышение прав при выполнении планов обслуживания, наборов сбора данных и других пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , настройте задания агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , запускающие пакеты, на использование учетной записи-посредника с ограниченными правами или добавьте членов sysadmin в роли db_ssisadmin и dc_admin.|  
 |**db_ssisadmin**|Перечислить свои пакеты.<br /><br /> Перечислить все пакеты.<br /><br /> Посмотреть свои пакеты.<br /><br /> Выполнить свои пакеты.<br /><br /> Экспортировать свои пакеты.|Импортировать пакеты.<br /><br /> Удалить свои пакеты.<br /><br /> Изменить роли своих пакетов.|  
-|**db_ssisltduser**|Перечислить все пакеты.<br /><br /> Посмотреть все пакеты.<br /><br /> Выполнить все пакеты.<br /><br /> Экспортировать все пакеты.<br /><br /> Выполнить все пакеты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Нет|  
+|**db_ssisltduser**|Перечислить все пакеты.<br /><br /> Посмотреть все пакеты.<br /><br /> Выполнить все пакеты.<br /><br /> Экспортировать все пакеты.<br /><br /> Выполнить все пакеты агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|None|  
 |**Администраторы Windows**|Просмотреть подробности выполнения всех запущенных пакетов.|Остановить все выполняемые пакеты.|  
   
 ### <a name="sysssispackages-table"></a>Таблица Sysssispackages  
@@ -68,7 +70,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Столбец **ownersid** содержит уникальный идентификатор безопасности пользователя, создавшего пакет. Этот столбец определяет владельца пакета.  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Разрешения  
  По умолчанию разрешения предопределенных ролей уровня базы данных **db_ssisadmin** и **db_ssisoperator** и уникальный идентификатор безопасности пользователя, создавшего пакет, применяются к роли модуля чтения пакета, а разрешение роли **db_ssisadmin** и уникальный идентификатор безопасности пользователя, создавшего пакет, применяются к роли модуля записи пакета. Пользователь должен быть членом роли **db_ssisadmin**, **db_ssisltduser**или **db_ssisoperator** , чтобы получить доступ на чтение пакета. Пользователь должен быть членом роли **db_ssisadmin** , чтобы получить доступ для записи.  
   
 ### <a name="access-to-packages"></a>Доступ к пакетам  

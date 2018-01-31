@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - operations view [Integration Services]
 - catalog.operations view [Integration Services]
 ms.assetid: 9455c5b1-60ff-45fc-8599-cc3abbd6daf5
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: da7c2512b5163153aaa4da37e946bd9a7e550e85
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a738859dc30fc1a845b15903a8b3691b431f3d1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperations-ssisdb-database"></a>catalog.operations (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +51,7 @@ ms.lasthandoff: 11/20/2017
 |server_name|**nvarchar(128)**|Сведения об экземпляре и сервере Windows для указанного экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |machine_name|**nvarchar(128)**|Имя компьютера, на котором запущен экземпляр сервера.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображается одна строка для каждой операции в каталоге служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Это позволяет администратору перечислить все логические операции, выполняемые на сервере, например развертывание проекта или выполнение пакета.  
   
  Это представление содержит следующие типы операций, перечисленные в столбце **operation_type**:  
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/20/2017
 |`301`|**validate_package**<br /><br /> (Хранимая процедура)|Идентификатор проекта|Имя пакета|  
 |`1000`|**configure_catalog**<br /><br /> (Хранимая процедура)|**NULL**|**NULL**||  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ по отношению к операции  

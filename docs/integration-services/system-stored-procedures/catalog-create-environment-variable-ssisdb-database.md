@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e020fef5d484af024ef822cf6fcc654e547b7b68
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: e7bd491ec0bc33dbcc35a309208b37cf3893d062
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +67,9 @@ catalog.create_environment_variable [@folder_name =] folder_name
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения READ и MODIFY для среды  
@@ -86,7 +87,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 -   Пользователь не имеет соответствующих разрешений  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Переменная среды — это удобный способ присвоения значения параметру проекта или параметру пакета для использования во время выполнения пакета. Переменные среды позволяют организовать значения параметров. Имена переменных должны быть уникальными в пределах среды.  
   
  Хранимая процедура проверяет тип данных переменной, чтобы убедиться в том, что каталог служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] его поддерживает.  
@@ -106,7 +107,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
 |**Один**|Точное числовое значение: **decimal**, **numeric**; приблизительное числовое значение: **float**, **real**|  
-|**Строковые значения**|**varchar**, **nvarchar**, **char**|  
+|**String**|**varchar**, **nvarchar**, **char**|  
 |**UInt32**|**int** (**int** — это наиболее близкое доступное сопоставление с **Uint32**.)|  
 |**UInt64**|**bigint** (**int** — это наиболее близкое доступное сопоставление с **Uint64**.)|  
   

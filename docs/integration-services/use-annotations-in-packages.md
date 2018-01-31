@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - adding annotations
 - annotations [Integration Services]
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4d8e14bc3f81769d437e3d916f74128f96fe0bec
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 55c87d73f66244d00a7ea8599b20565e5bac8eed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="use-annotations-in-packages"></a>Использование заметок в пакетах
   Конструктор служб [!INCLUDE[ssIS](../includes/ssis-md.md)] предоставляет заметки, которые можно использовать для обеспечения самодокументируемости пакетов, упрощения их понимания и поддержки. Заметки вы можете добавлять в области конструктора потока управления, потока данных и обработчика событий конструктора [!INCLUDE[ssIS](../includes/ssis-md.md)] . Заметки могут содержать разные типы текста; они полезны при добавлении меток, примечаний и других описательных сведений в пакет. Создание заметок возможно только во время проектирования. Например, они не записываются в журналы.  

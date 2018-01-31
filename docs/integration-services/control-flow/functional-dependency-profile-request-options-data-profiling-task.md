@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 6eb853aa-8016-490c-be4f-06ab8d7f5021
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0958bc22c6ed4a6790145a430fefbe68312cd634
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f9307c5f2dfb263453c2d61c024092955d05974b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functional-dependency-profile-request-options-data-profiling-task"></a>Параметры запроса для профиля функциональной зависимости (задача «Профилирование данных»)
   Для установки параметров варианта **Запрос профиля функциональной зависимости** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль функциональной зависимости показывает, в какой степени значения в одном столбце (зависимом) зависят от значений в другом столбце или наборе столбцов (определяющем). Этот профиль также поможет выявить проблемы в данных, например наличие недопустимых значений. Например, выполняется профилирование зависимости между столбцом почтовых индексов США и столбцом штатов США. В этом профиле один и тот же почтовый индекс всегда должен соответствовать одному и тому же штату, но профиль обнаруживает нарушения этой зависимости.  
@@ -124,7 +126,7 @@ ms.lasthandoff: 11/20/2017
  **MaxNumberOfViolations**  
  Укажите максимальное число нарушений функциональных зависимостей для сообщения в выводе. Значение по умолчанию этого свойства равно 100. Этот параметр будет выключен только в случае выбора для свойства **ThresholdSetting** значения **Точно**.  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -23,16 +24,16 @@ helpviewer_keywords:
 - containers [Integration Services], events
 - events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f467fe7abac22aff8b9f832e879d9b7b229b768c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: bf61c56b66a6a64f6e2156c5f458c8e09fe976e9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Обработчики событий в службах Integration Services (SSIS)
   Во время выполнения исполняемых объектов (пакетов, контейнеров «цикл по каждому элементу», «цикл по элементам», последовательности и узлы задач) возникают события. Например, в случае ошибки возникает событие OnError. Можно создать пользовательские обработчики событий для этих событий, чтобы расширить функциональность пакетов и упростить управление пакетами во время их выполнения. Обработчики событий могут выполнять следующие задачи:  

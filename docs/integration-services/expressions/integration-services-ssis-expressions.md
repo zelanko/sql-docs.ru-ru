@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-caps.latest.revision: "51"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 14b6c80d59f3f302e2beef26a03d95b2bf6f8294
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 7dedaa6d36fb0618b6124b1d2b1014c32fb2f44c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-expressions"></a>Выражения служб Integration Services (SSIS)
   Выражение — это сочетание символов (идентификаторов, литералов, функций и операторов), которое дает одно значение данных. Простые выражения могут включать одну константу, переменную или функцию. Чаще встречаются сложные выражения, включающие несколько операторов и функций и ссылающиеся на несколько столбцов и переменных. В службах [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]выражения могут использоваться для определения условий в инструкциях CASE, создания и обновления значений в столбцах данных, присвоения значений переменным, обновления или заполнения свойств во время выполнения, определения ограничений в управлении очередностью и указания выражений, используемых контейнером «цикл по элементам».  
@@ -68,13 +69,13 @@ ms.lasthandoff: 11/20/2017
   
  У переменных есть область действия, и папка **Переменные** в списке построителя выражений содержит только те переменные, которые находятся в данной области и доступны для использования. Дополнительные сведения см. в разделе [Переменные служб Integration Services (SSIS)](../../integration-services/integration-services-ssis-variables.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Использование выражения в компоненте потока данных](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
 ## <a name="related-content"></a>См. также  
  Техническая статья [Примеры выражений служб SSIS](http://go.microsoft.com/fwlink/?LinkId=220761)на сайте social.technet.microsoft.com  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [службы SQL Server Integration Services](../../integration-services/sql-server-integration-services.md)  
   
   

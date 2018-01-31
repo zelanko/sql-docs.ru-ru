@@ -8,21 +8,23 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1fb3ec5c108f74e6ae0b53f6bd27a4cad70e7313
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: d823eff897577569b99736b152d289353bdc1507
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-4-3---adding-error-flow-redirection"></a>Занятие 4-3. Добавление перенаправления потока ошибок
 Как было рассмотрено в предыдущей задаче, преобразование «Поиск ключа валюты» при попытке обработать поврежденный образец неструктурированного файла не может сформировать соответствие. Вместо этого формируется ошибка. Поскольку преобразование использует установки по умолчанию для вывода ошибки, любая возникшая ошибка приводит к неудачному завершению преобразования. При неудачном завершении преобразования выполнение пакета также завершается с ошибкой.  

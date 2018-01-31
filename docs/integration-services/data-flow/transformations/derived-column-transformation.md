@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,16 +22,16 @@ helpviewer_keywords:
 - columns [Integration Services], derivations
 - Derived Column transformation
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: edd73fe8a391928eb895ba7feb9dc55e8472fb4e
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 66e45a47fd340aa62b852193ec75aac7c1cde8ed
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="derived-column-transformation"></a>Преобразование «Производный столбец»
   Преобразованием «Производный столбец» создаются новые значения столбцов путем применения выражений к входным столбцам преобразования. Выражения могут содержать любые сочетания переменных, функций, операторов и столбцов из входа преобразования. Результат добавляется в новый столбец или вставляется в существующий как замещающее значение. При преобразовании «Производный столбец» может быть определено несколько производных столбцов, и любая переменная или входные столбцы могут присутствовать в нескольких выражениях.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 11/20/2017
   
 -   [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Получение значений столбцов с помощью преобразования "Производный столбец"](../../../integration-services/data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
@@ -103,7 +104,7 @@ ms.lasthandoff: 11/20/2017
  **См. также**: [Выражения служб Integration Services (SSIS)](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Операторы (выражение служб SSIS)](../../../integration-services/expressions/operators-ssis-expression.md) и [Функции (выражение служб SSIS)](../../../integration-services/expressions/functions-ssis-expression.md).  
   
  **Тип данных**  
- При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает соответствующий тип данных. Значение этого столбца доступно только для чтения. Дополнительные сведения см. в статье [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
+ При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает соответствующий тип данных. Значение этого столбца доступно только для чтения. Дополнительные сведения см. в разделе [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  **Длина**  
  При добавлении данных в новый столбец диалоговое окно **Редактор преобразования "Производный столбец"** автоматически оценивает выражение и задает длину столбца для строковых данных. Значение этого столбца доступно только для чтения.  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1598f40bb947a98b8fccc8ae47ba1dd7b9447b0a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 508d0f2774033dee83ba600036ab09efd39eaa58
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow-performance-features"></a>Data Flow Performance Features
   В этом разделе приведены советы по проектированию пакетов служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , помогающие избежать общих проблем с производительностью. Кроме того, в этом разделе содержатся сведения по функциям и средствам, позволяющим устранить неполадки с производительностью пакетов.  
@@ -158,7 +159,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="destinations"></a>Назначения  
  Чтобы добиться максимальной производительности при работе с назначениями, рассмотрите возможность использовать назначения [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и проверьте их производительность.  
   
-#### <a name="sql-server-destination"></a>Назначение SQL Server  
+#### <a name="sql-server-destination"></a>назначение «SQL Server»  
  Когда пакет загружает данные в экземпляр [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] на этом же компьютере, используйте назначение [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Это назначение оптимизировано для высокоскоростной массовой загрузки.  
   
 #### <a name="testing-the-performance-of-destinations"></a>Тестирование производительности назначений  
@@ -169,7 +170,7 @@ ms.lasthandoff: 11/20/2017
   
  Чтобы включить или отключить отображение сообщений на вкладке **Выполнение** , установите или снимите флажок **Отчет о ходе отладки** в меню **Службы SSIS** . Отключение отчетов о состоянии способствует повышению производительности выполнения сложных пакетов в среде [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
   
 -   [Сортировка данных для преобразований "Слияние" и "Соединение слиянием"](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
@@ -206,7 +207,7 @@ ms.lasthandoff: 11/20/2017
   
 -   Видеоматериал [Balanced Data Distributor](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)на сайте technet.microsoft.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Инструменты устранения неполадок при разработке пакета](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Инструменты устранения неполадок с выполнением пакетов](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

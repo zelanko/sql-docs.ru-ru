@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - validate_package stored procedure [Integration Services]
 - catalog.validate_package stored procedure [Integration Services]
 ms.assetid: 0dc03df1-b793-408f-af4c-c11188729abf
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7e4bfde2a35b234e5a48f96d1d5632316a3b2af9
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 597b0642825c7009ad79fbf2722944857ea66c38
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +70,9 @@ catalog.validate_package [ @folder_name = ] folder_name
  0 (успешное завершение)  
   
 ## <a name="result-sets"></a>Результирующие наборы  
- Нет  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   Разрешения READ на проект, а также, если применимо, разрешения READ на среды, указанные в ссылках  
@@ -97,7 +98,7 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 -   Параметры пакета ссылаются на переменные, но в проверку не включены ссылочные среды  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Проверка помогает выявить проблемы, которые могут помешать пакету правильно выполняться. Используйте представления [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) или [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) для контроля состояния проверки.  
   
   

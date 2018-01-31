@@ -8,7 +8,8 @@ ms.service:
 ms.component: non-specific
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: ae63f120997ba5018b131f8a946b0f9ae9e384d0
-ms.sourcegitcommit: 7673ad0e84a6de69420e19247a59e39ca751a8aa
+ms.openlocfilehash: 141b245a49e1d2fa6f83b886c70c159ab089c2fa
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-variables"></a>Переменные в службах Integration Services (SSIS)
   Переменные хранят значения, которые могут использоваться пакетом служб [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , а также его контейнерами, задачами и обработчиками событий во время выполнения. Скрипты в задаче «Скрипт» и компоненте скрипта также могут использовать переменные. Управления очередностью, которые упорядочивают задачи и контейнеры в рабочий процесс, могут использовать переменные, если связанные с ними определения ограничений включают в себя выражения.  

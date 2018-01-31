@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -17,16 +18,16 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d4b24dfbb66204f7506cac9612f46e04836f70e5
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6b43c3a8b3d438bb211570921e06bb2085c0d022
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Пакеты служб из заданий агента SQL Server
   Выполнение пакетов служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] можно автоматизировать и запланировать в расписании при помощи агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Можно задать расписание выполнения пакетов, равернутых на сервере служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , хранимых в [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], в хранилище пакетов служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] , или в файловой системе.  
@@ -190,7 +191,7 @@ ms.lasthandoff: 11/20/2017
     > [!TIP]  
     >  При задании имени расписания используйте уникальное и описательное имя, чтобы было легче отличить это расписание от других расписаний агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Запуск проектов и пакетов](deploy-integration-services-ssis-projects-and-packages.md)  
 
 ## <a name="external-resources"></a>Внешние ресурсы  

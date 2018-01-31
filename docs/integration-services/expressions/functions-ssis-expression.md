@@ -8,7 +8,8 @@ ms.service:
 ms.component: expressions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - SQL Server Integration Services, functions
 - SSIS, functions
 ms.assetid: e9a41a31-94f4-46a4-b737-c707dd59ce48
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 57635218bc2e657b5d6f08076a572fa5caf2a2b3
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 836ecde7ff2cb458b2f93aeb239d0ab83c51cb6b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="functions-ssis-expression"></a>Функции (выражение служб SSIS)
   Язык выражений включает набор функций, которые можно использовать в выражениях. Выражение может использовать только одну функцию, но обычно в выражении используется комбинация операторов и нескольких функций.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 11/20/2017
   
  Язык выражений содержит следующие математические функции.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[ABS (выражение служб SSIS)](../../integration-services/expressions/abs-ssis-expression.md)|Возвращает абсолютное положительное значение числового выражения.|  
 |[EXP (выражение служб SSIS)](../../integration-services/expressions/exp-ssis-expression.md)|Возвращает число «е» в степени, определяемой данным выражением.|  
@@ -53,14 +54,14 @@ ms.lasthandoff: 11/20/2017
 |[LN (выражение служб SSIS)](../../integration-services/expressions/ln-ssis-expression.md)|Возвращает натуральный логарифм числового выражения.|  
 |[LOG (выражение служб SSIS)](../../integration-services/expressions/log-ssis-expression.md)|Возвращает десятичный логарифм числового выражения.|  
 |[POWER (выражение служб SSIS)](../../integration-services/expressions/power-ssis-expression.md)|Возвращает результат возведения числового выражения в степень.|  
-|[ROUND (выражение служб SSIS)](../../integration-services/expressions/round-ssis-expression.md)|Возвращает числовое выражение, округленное до указанной длины или точности. .|  
+|[ROUND (выражение служб SSIS)](../../integration-services/expressions/round-ssis-expression.md)|Возвращает числовое выражение, округленное до указанной длины или точности. , и делает это по-другому.|  
 |[SIGN (выражение служб SSIS)](../../integration-services/expressions/sign-ssis-expression.md)|Возвращает знак выражения: плюс (+), минус (-) или нуль (0).|  
 |[SQUARE (выражение служб SSIS)](../../integration-services/expressions/square-ssis-expression.md)|Возвращает квадрат числового выражения.|  
 |[SQRT (выражение служб SSIS)](../../integration-services/expressions/sqrt-ssis-expression.md)|Возвращает квадратный корень числового выражения.|  
   
  Средство оценки выражений содержит следующие строковые функции.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[CODEPOINT (выражение служб SSIS)](../../integration-services/expressions/codepoint-ssis-expression.md)|Возвращает значение кода Юникод самого первого символа в символьном выражении.|  
 |[FINDSTRING (выражение служб SSIS)](../../integration-services/expressions/findstring-ssis-expression.md)|Возвращает однократный индекс указанного вхождения символьной строки в выражение.|  
@@ -93,14 +94,14 @@ ms.lasthandoff: 11/20/2017
   
  Средство оценки выражений содержит следующие функции для значения NULL.  
   
-|Функция|Description|  
+|Компонент|Description|  
 |--------------|-----------------|  
 |[ISNULL (выражение служб SSIS)](../../integration-services/expressions/isnull-ssis-expression.md)|Возвращает результат в виде логического выражения, в зависимости от того, имеет ли выражение значение NULL.|  
 |[NULL (выражение служб SSIS)](../../integration-services/expressions/null-ssis-expression.md)|Возвращает значение NULL запрошенного типа данных.|  
   
  Названия выражений указаны в верхнем регистре, но эти имена обрабатываются без учета регистра. Например, значение «null» равносильно использованию значения «NULL».  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Операторы (выражение служб SSIS)](../../integration-services/expressions/operators-ssis-expression.md)   
  [Примеры расширенных выражений служб Integration Services](../../integration-services/expressions/examples-of-advanced-integration-services-expressions.md)   
  [Выражения служб Integration Services (SSIS)](../../integration-services/expressions/integration-services-ssis-expressions.md)  

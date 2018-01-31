@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-caps.latest.revision: "98"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: d255bfaa20012bce9104aad8e56611163d1c462a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 2b27cb51a9b5090fc8495de50c597579eb100f6f
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-data-types"></a>Типы данных служб Integration Services
   Когда данные входят в поток данных в пакете, источник, извлекающий данные, преобразовывает их в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Числовым данным назначается числовой тип данных, строковым — символьный тип данных, а датам — тип даты. Другим данным, таким как идентификатор GUID и BLOB (Binary Large Object Blocks), также назначаются соответствующие типы данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Если данные имеют тип, не преобразуемый в тип данных служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , возникает ошибка.  
@@ -228,26 +229,26 @@ ms.lasthandoff: 11/20/2017
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|Измерение валют||||  
+|DT_CY|smallmoney, money|smallmoney, money|CURRENCY||||  
 |DT_DATE|||||||  
-|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||date|date|date|  
-|DT_DBTIME||||timestamp|time|time|  
+|DT_DBDATE|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)|[date &#40;Transact-SQL&#41;](../../t-sql/data-types/date-transact-sql.md)||Дата|Дата|Дата|  
+|DT_DBTIME||||TIMESTAMP|time|time|  
 |DT_DBTIME2|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md)(p)|[time &#40;Transact-SQL&#41;](../../t-sql/data-types/time-transact-sql.md) (p)|||||  
 |DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|[datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md), [smalldatetime &#40;Transact-SQL&#41;](../../t-sql/data-types/smalldatetime-transact-sql.md)|DateTime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
-|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||timestamp|timestamp|timestamp|  
+|DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)|[datetime2 &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime2-transact-sql.md)||TIMESTAMP|TIMESTAMP|TIMESTAMP|  
 |DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)(p)|[datetimeoffset &#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
-|DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
+|DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||smallint|smallint|  
-|DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
+|DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
+|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
-|DT_R4|real|real|Один||real|real|  
-|DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_R4|REAL|REAL|Один||real|real|  
+|DT_R8|float|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
-|DT_UI1|tinyint|tinyint|Byte||||  
+|DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
 |DT_UI8|||||||  
@@ -261,7 +262,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="related-content"></a>См. также  
  Запись в блоге [Сравнение производительности между способами преобразования типов данных в службах SSIS 2008](http://go.microsoft.com/fwlink/?LinkId=220823)на сайте blogs.msdn.com.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Данные потоков данных](../../integration-services/data-flow/data-in-data-flows.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: packages
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-caps.latest.revision: "54"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c12ab9b92aa37b0e60f699fbec07e13c97cdbddc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 5630458cf4f925ad1cce7cfab27cedbcf66bf3eb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Перезапуск пакетов с помощью контрольных точек
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] могут перезапустить пакеты, при выполнении которых произошел сбой, начиная с момента этого сбоя вместо перезапуска всего пакета. Если настройка пакета предполагает использование контрольных точек, сведения о выполнении пакета записываются в файл контрольных точек. Файл контрольных точек используется при перезапуске давшего сбой пакета для осуществления повторного запуска пакета с момента сбоя. В случае успешного выполнения пакета файл контрольных точек удаляется, а затем при следующем выполнении пакета создается повторно.  

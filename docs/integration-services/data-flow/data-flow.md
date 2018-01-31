@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,16 @@ helpviewer_keywords:
 - data flow [Integration Services]
 - errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-caps.latest.revision: "70"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 53f945d9efbcc714bbcf3e6498a3d0a984ef95dc
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 0ddc6281b1f0332c4a62af8b6fb787c508d49ba3
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="data-flow"></a>Поток данных
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] предоставляет три различных типа компонентов потока данных: источники, преобразования и назначения. Источники извлекают данные из хранилищ, таких как таблицы и представления реляционных баз данных, файлы и базы данных служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Преобразования изменяют, объединяют и очищают данные. Целевые объекты загружают данные в хранилища или создают наборы данных в памяти.  
@@ -105,7 +106,7 @@ ms.lasthandoff: 11/20/2017
   
 |Source|Description|  
 |------------|-----------------|  
-|Источник Oracle|Источник Oracle — это компонент-источник соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384) (Соединители Майкрософт для Oracle и Teradata от компании Attunity).|  
+|Источник Oracle|Источник Oracle — это компонент-источник соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Oracle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384)(Соединители Майкрософт для Oracle и Teradata от компании Attunity).|  
 |Источник SAP BI|Источник SAP BI — это компонент-источник соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ). Кроме того, в состав соединителя для SAP BI ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft SQL Server Feature Pack](http://go.microsoft.com/fwlink/?LinkID=746297)(Пакет дополнительных компонентов Microsoft SQL Server).|  
 |Источник Teradata|Источник Teradata — это компонент-источник соединителя для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity. Кроме того, в состав соединителя для Teradata ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) от компании Attunity входят диспетчер подключений и назначение. Дополнительные сведения см. на странице скачивания [Microsoft Connectors for Oracle and Teradata by Attunity](http://go.microsoft.com/fwlink/?LinkId=789384) (Соединители Майкрософт для Oracle и Teradata от компании Attunity).|  
   
@@ -215,7 +216,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения о настройке свойств с помощью конструктора [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в разделе [Установление свойств компонента потока данных](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Добавление или удаление компонента в потоке данных](../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
  [Соединение компонентов в потоке данных](../../integration-services/data-flow/connect-components-in-a-data-flow.md)  

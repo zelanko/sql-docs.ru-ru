@@ -8,21 +8,23 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sapbwdestination.connection.f1
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.connection.f1
 ms.assetid: 04ae38f8-5287-45a3-826a-8aac5dd15a91
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8c63ac10d6cb4726817d8481be70533df8e2014c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 8b97acdf1b5621100c9fcfce5d5072126ff794d7
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Редактор назначений SAP BW (страница «Диспетчер соединений»)
   Используйте страницу **Диспетчер соединений** диалогового окна **Редактор назначений SAP BW** для выбора диспетчера соединений SAP BW, который будет использоваться назначением SAP BW. На этой странице можно также выбрать параметры для загрузки данных в систему SAP Netweaver BW.  
@@ -76,7 +78,7 @@ ms.lasthandoff: 11/20/2017
  **Логическая система**  
  Введите имя логической системы, связанной с InfoPackage.  
   
- **Поиск**  
+ **Найти**  
  Выполните поиск InfoPackage с помощью диалогового окна **Поиск InfoPackage** . Дополнительные сведения об этом диалоговом окне см. в разделе [Look Up InfoPackage](../../integration-services/data-flow/look-up-infopackage.md).  
   
 ### <a name="rfc-destination-options"></a>Параметры назначения RFC  
@@ -91,7 +93,7 @@ ms.lasthandoff: 11/20/2017
  **ID программы**  
  Введите идентификатор программы, связанный с назначением RFC.  
   
- **Поиск**  
+ **Найти**  
  Выполните поиск назначения RFC с помощью диалогового окна **Поиск назначения RFC** . Дополнительные сведения об этом диалоговом окне см. в разделе [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md).  
   
 ### <a name="create-sap-bw-objects-options"></a>Параметры создания объектов SAP BW  
@@ -116,7 +118,7 @@ ms.lasthandoff: 11/20/2017
 |**InfoSource**|Создайте новый InfoSource с помощью диалогового окна **Создание InfoSource** , а затем используйте для этого диалоговое окно **Создание InfoSource для данных транзакции** или **Создание InfoSource для основных данных** . Дополнительные сведения об этих диалоговых окнах см. в разделах [Create InfoSource](../../integration-services/data-flow/create-infosource.md), [Create InfoSource for Transaction Data](../../integration-services/data-flow/create-infosource-for-transaction-data.md) и [Create InfoSource for Master Data](../../integration-services/data-flow/create-infosource-for-master-data.md).|  
 |**InfoPackage**|Создайте новый InfoPackage, используя диалоговое окно **Создание InfoPackage** . Дополнительные сведения об этом диалоговом окне см. в разделе [Create InfoPackage](../../integration-services/data-flow/create-infopackage.md).|  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор назначений SAP BW (страница "Сопоставления")](../../integration-services/data-flow/sap-bw-destination-editor-mappings-page.md)   
  [Редактор назначений SAP BW (страница "Вывод ошибок")](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
  [Редактор назначений SAP BW (страница "Дополнительно")](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   

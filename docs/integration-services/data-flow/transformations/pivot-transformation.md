@@ -8,10 +8,12 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.pivottrans.f1
+f1_keywords:
+- sql13.dts.designer.pivottrans.f1
 helpviewer_keywords:
 - Pivot transformation
 - normalized data [Integration Services]
@@ -19,16 +21,16 @@ helpviewer_keywords:
 - datasets [Integration Services], normalized data
 - less normalized data set [Integration Services]
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
-caps.latest.revision: "55"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 304f81b9440295e12a05df8955c1b232cd445aa2
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 41e027c10bfdb1e9309c6ee1226694c1c9601837
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="pivot-transformation"></a>преобразование «Сведение»
   Преобразование «Сведение» делает нормализованный набор данных менее нормализованным, но более компактным, выполняя сведение входных данных по значению столбца. Например, нормализованный набор данных **Orders** , содержащий имя клиента, продукт и количество приобретенных единиц продукта, обычно содержит множество строк для клиента, купившего несколько наименований продуктов. Каждая строка содержит подробности о различных продуктах. Выполнив сведение набора данных по столбцу продукта, можно получить набор данных, который содержит по одной строке для каждого клиента. Каждая строка будет содержать все покупки одного клиента, причем наименования продуктов будут именами столбцов, а количество приобретенных единиц каждого продукта будет значением соответствующих столбцов. Так как не каждый клиент приобретает все виды продукции, многие столбцы могут содержать значения NULL.  
@@ -131,14 +133,14 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** , см. в следующих разделах:  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Пользовательские свойства преобразований](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
 ## <a name="related-content"></a>См. также  
  Дополнительные сведения о настройке свойств компонента см. в разделе [Установление свойств компонента потока данных](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Преобразование отмены свертывания](../../../integration-services/data-flow/transformations/unpivot-transformation.md)   
  [Поток данных](../../../integration-services/data-flow/data-flow.md)   
  [Преобразования служб Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-caps.latest.revision: "79"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 3ead74161f0527901680d4495e0feb4056c17011
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 32e0ce09ff9c804a3d7beac5e1ba251a5bc8105e
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="ole-db-destination"></a>Назначение «OLE DB»
   Назначение «OLE DB» загружает данные в различные OLE DB-совместимые базы данных при помощи таблицы базы данных или представления, или команды SQL. Например, источник OLE DB может загрузить данные в таблицы [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access и базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -65,7 +66,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  В зависимости от типа назначения может потребоваться изменить инструкцию CREATE TABLE, которую формирует диалоговое окно **Редактор назначения "OLE DB"** . Например, некоторые целевые объекты не поддерживают типы данных, которые использует инструкция CREATE TABLE.  
   
- Это назначение использует диспетчер соединений OLE DB для подключения к источнику данных, и диспетчер соединений определяет используемый поставщик OLE DB. Дополнительные сведения см. в статье [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Это назначение использует диспетчер соединений OLE DB для подключения к источнику данных, и диспетчер соединений определяет используемый поставщик OLE DB. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Проект служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] также содержит объект источника данных, из которого можно создать диспетчер соединений OLE DB, чтобы источники данных и представления источников данных стали доступными для целевой OLE DB.  
   
@@ -113,9 +114,9 @@ ms.lasthandoff: 11/20/2017
   
  Диалоговое окно **Расширенный редактор** содержит свойства, которые можно установить с помощью программных средств. Дополнительные сведения о свойствах, которые вы можете задать в диалоговом окне **Расширенный редактор** или программными средствами, см. в следующих разделах.  
   
--   [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+-   [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
--   [Пользовательские свойства OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
+-   [Пользовательские свойства OLE DB](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
  Дополнительные сведения о настройке свойств см. в следующих разделах.  
   
@@ -133,7 +134,7 @@ ms.lasthandoff: 11/20/2017
 >  Свойство **CommandTimeout** назначения «OLE DB» недоступно в **Редакторе назначения «OLE DB»**, однако может быть задано в **Расширенном редакторе**. Кроме того, некоторые параметры быстрой загрузки доступны только в **Расширенном редакторе**. Дополнительные сведения об этих свойствах см. в подразделе «Назначение "OLE DB"» раздела [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
   
 ### <a name="static-options"></a>Статические параметры  
- **диспетчер соединений OLE DB**  
+ **Диспетчер соединений OLE DB**  
  Выберите из списка существующий диспетчер соединений или создайте новое соединение, нажав кнопку **Создать**.  
   
  **Создать**  
@@ -250,7 +251,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Назначение «OLE DB» не поддерживает параметры. Если необходимо выполнить параметризованную инструкцию INSERT, лучше воспользоваться преобразованием «Команда OLE DB». Дополнительные сведения см. в разделе [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- **Build query**  
+ **Создать запрос**  
  Воспользуйтесь диалоговым окном **Построитель запросов** для визуального конструирования SQL-запроса.  
   
  **Обзор**  
@@ -293,7 +294,7 @@ ms.lasthandoff: 11/20/2017
  **Усечение**  
  Не используется.  
   
- **Description**  
+ **Описание**  
  Просмотрите описание операции.  
   
  **Присвоить указанное значение выбранным ячейкам**  

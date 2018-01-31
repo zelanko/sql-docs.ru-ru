@@ -8,23 +8,24 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 666d7014adb8feaa77e72f5856838051d992c8df
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: a095bff8fd8feec5a278ed8dc7de648babaa7c2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (база данных SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/20/2017
 |message|**nvarchar(max)**|Текст сообщения.|  
 |extended_info_id|**bigint**|Идентификатор дополнительных сведений, которые относятся к сообщению об операции и находятся в представлении [extended_operation_info](../../integration-services/system-views/catalog-extended-operation-info-ssisdb-database.md).|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В этом представлении отображается по одной строке для каждого из сообщений, которые внесены в журнал во время выполнения операции в каталоге. Сообщения могут формироваться сервером, процессом выполнения пакета или подсистемой выполнения.  
   
  В этом представлении отображаются следующие типы сообщений:  
@@ -77,7 +78,7 @@ ms.lasthandoff: 11/20/2017
 |50|Контейнеры потока управления|  
 |60|Задача потока данных|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ по отношению к операции  

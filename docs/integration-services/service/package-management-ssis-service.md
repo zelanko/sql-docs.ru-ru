@@ -8,7 +8,8 @@ ms.service:
 ms.component: service
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -29,16 +30,16 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f3438dedb23fe7a168599e06b4847654853aa57b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 454bdfb2ce829153943ebef0c32f7ef80c2a2b2c
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="package-management-ssis-service"></a>Управление пакетами (службы SSIS)
   Управление пакетами включает в себя операции мониторинга, управления, импорта и экспорта пакетов.  
@@ -190,7 +191,7 @@ ms.lasthandoff: 11/20/2017
   
          Нажмите кнопку обзора **(…)**, разверните папку **Пакеты служб SSIS** и выберите папку, в которую нужно сохранить пакет. Если нужно изменить имя пакета, введите новое имя в текстовое поле **Имя пакета** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Чтобы обновить уровень защиты пакета, нажмите кнопку обзора **(…)** и выберите иной уровень защиты с помощью диалогового окна **Уровень защиты пакета** . При выборе параметра **Шифровать конфиденциальные данные паролем** или **Шифровать все данные паролем** введите и подтвердите пароль.  
+7.  Чтобы обновить уровень защиты пакета, нажмите кнопку обзора **(…)** и выберите иной уровень защиты с помощью диалогового окна **Уровень защиты пакета**. При выборе параметра **Шифровать конфиденциальные данные паролем** или **Шифровать все данные паролем** введите и подтвердите пароль.  
   
 8.  Чтобы завершить экспорт, нажмите кнопку **ОК** .  
 
@@ -219,7 +220,7 @@ ms.lasthandoff: 11/20/2017
  **Тип проверки подлинности**  
  Выберите тип проверки подлинности.  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] укажите имя пользователя.  
   
  **Пароль**  
@@ -259,7 +260,7 @@ ms.lasthandoff: 11/20/2017
  **Тип проверки подлинности**  
  Выберите тип проверки подлинности.  
   
- **Имя пользователя**  
+ **User name**  
  При использовании проверки подлинности [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] укажите имя пользователя.  
   
  **Пароль**  

@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6cf0f550930ac73199276dc403763f49ce45b5e7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 31e8aba7f3ac9913189278c6c6ccc482ec3e3020
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ catalog.cleanup_server_log
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- Отсутствуют.  
+ Нет.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 — успех; 1 — ошибка.  
@@ -43,7 +44,7 @@ catalog.cleanup_server_log
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Эта хранимая процедура требует применения одного из следующих разрешений:  
   
 -   разрешения READ и EXECUTE для проекта, а также, если применимо, разрешение READ для среды, указанной в ссылке.  
@@ -59,7 +60,7 @@ catalog.cleanup_server_log
   
 -   База данных SSISDB не находится в однопользовательском режиме.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В SQL Server 2012 с пакетом обновления 2 (SP2) в таблицу **internal.catalog_properties** добавлено свойство SERVER_OPERATION_ENCRYPTION_LEVEL. Оно имеет два возможных значения.  
   
 -   **PER_EXECUTION (1)** — сертификат и симметричный ключ, используемые для защиты важных параметров выполнения и журналов выполнения, создаются для каждого выполнения. Из-за создания сертификата и ключей для каждого выполнения в рабочей среде могут возникнуть проблемы с производительностью (взаимоблокировки, сбои заданий обслуживания и т. д.). Однако это значение обеспечивает более высокий уровень безопасности, чем другое (2).  

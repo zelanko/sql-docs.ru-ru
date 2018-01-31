@@ -8,21 +8,23 @@ ms.service:
 ms.component: tutorial
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-applies_to: SQL Server 2016
+applies_to:
+- SQL Server 2016
 ms.assetid: 56105f3f-e500-4669-8c8e-acf434527727
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f2842c71f7af2d569cd6455aa437fbf4f8397e5c
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: 30ac8ecc9fb9b5b18b5dea5d0112a2d9fd045865
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="lesson-3-2---adding-and-configuring-logging"></a>Занятие 3–2. Добавление и настройка ведения журнала
 В этой задаче будет включена запись в журнал потоков данных для пакета «Урок 3.dtsx». Затем предстоит настроить регистратор для текстовых файлов, чтобы записать в журнал события PipelineExecutionPlan и PipelineExecuteTrees. Регистратор текстовых файлов создает журналы, которые легко просматривать и пересылать. Простота этих файлов журнала делает их особенно полезными во время базового тестирования пакета. Для просмотра журнала приложений можно использовать окно «Регистрация событий» конструктора служб [!INCLUDE[ssIS](../includes/ssis-md.md)] .  

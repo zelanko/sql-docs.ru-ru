@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,16 @@ helpviewer_keywords:
 - destinations [Integration Services], paths
 - sources [Integration Services], paths
 ms.assetid: 6c4629a9-2ede-4011-9101-3b342249640e
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 388a88d1f9a7ad6b18b2f04a702d2198c644e4fe
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 86d567d804c64c769823b33cc50ff231d310a760
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-paths"></a>Пути служб Integration Services
   Путь связывает два компонента в потоке данных при помощи соединения выхода одного компонента потока данных с входом другого. У пути есть источник и целевой объект. Например, если путь соединяет источник OLE DB и преобразование «Сортировка», то источник OLE DB является источником пути, а целевым объектом пути будет преобразование «Сортировка». Источником является начало пути, а целевым объектом — его конец.  
@@ -72,12 +73,12 @@ ms.lasthandoff: 11/20/2017
  Введите уникальное имя пути.  
   
  **Идентификатор**  
- Идентификатор истории данных пути. Это свойство предназначено только для чтения.  
+ Идентификатор истории данных пути. Это свойство доступно только для чтения.  
   
  **IdentificationString**  
  Строка, идентифицирующая путь. Автоматически образуется из имени, введенного выше.  
   
- **Description**  
+ **Описание**  
  Введите описание пути.  
   
  **PathAnnotation**  
@@ -142,7 +143,7 @@ ms.lasthandoff: 11/20/2017
  **Добавить**  
  Выберите этот пункт для добавления средства просмотра данных с использованием диалогового окна **Настройка средства просмотра данных** .  
   
- **Delete**  
+ **Удаление**  
  Выберите этот пункт для удаления выбранного средства просмотра данных.  
   
  **Настройка**  

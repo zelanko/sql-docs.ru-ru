@@ -8,20 +8,21 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb3d3f706bba3e6c0c6cbf88b5c2145e73fdaaeb
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 593931ad7aa343229cfac934cd2ce2648bdddb99
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,17 +31,17 @@ ms.lasthandoff: 11/20/2017
   
 |Имя столбца|Тип данных|Description|  
 |-----------------|---------------|-----------------|  
-|Context_id|bigint|Уникальный идентификатор контекста ошибки.|  
-|Event_message_id|bigint|Уникальный идентификатор сообщения, к которому относится контекст.|  
-|Context_depth|int|При увеличении глубины контекст оказывается дальше от ошибки. При возникновении ошибки глубина контекста начинается с 1. Значение 0 указывает состояние пакета да начала выполнения.|  
+|Context_id|BIGINT|Уникальный идентификатор контекста ошибки.|  
+|Event_message_id|BIGINT|Уникальный идентификатор сообщения, к которому относится контекст.|  
+|Context_depth|ssNoversion|При увеличении глубины контекст оказывается дальше от ошибки. При возникновении ошибки глубина контекста начинается с 1. Значение 0 указывает состояние пакета да начала выполнения.|  
 |Package_path|Nvarchar(max)|Путь к пакету для источника контекста.|  
-|Context_type|smallint|Тип объекта, который является источником для контекста. Список типов контекста см. в разделе **Примечания**.|  
+|Context_type|SMALLINT|Тип объекта, который является источником для контекста. Список типов контекста см. в разделе **Примечания**.|  
 |Context_source_name|Nvarchar(4000)|Имя объекта, который является источником для контекста.|  
 |Context_source_id|Nvarchar(38)|Уникальный идентификатор объекта, который является источником для контекста.|  
 |Property_name|Nvarchar(4000)|Имя свойства, связанного с источником контекста.|  
 |Property_value|Sql_variant|Значение свойства, связанного с источником контекста.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  В следующей таблице перечислены типы контекстов.  
   
 ||||  
@@ -55,7 +56,7 @@ ms.lasthandoff: 11/20/2017
 |70|Переменная|Значение переменной|  
 |80|Диспетчер соединений|Свойства диспетчера соединений.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление требует применения одного из следующих разрешений:  
   
 -   Разрешение READ по отношению к операции  

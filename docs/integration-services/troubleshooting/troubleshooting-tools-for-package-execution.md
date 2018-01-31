@@ -8,7 +8,8 @@ ms.service:
 ms.component: troubleshooting
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 44b2f3e043a672fd5c258c5dd5c73c3e4f00fa5a
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: c38f451a062f7280413950e89aa482cea2d23125
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Устранение неполадок инструментов с помощью отчетов
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] включают функции и инструменты, которые можно использовать для устранения неполадок пакетов после их завершения и развертывания.  
@@ -111,7 +112,7 @@ ms.lasthandoff: 11/20/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>Устранение неполадок, когда ошибка выдается без описания  
  Если ошибка служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] выдается без описания, это описание можно найти в [Справочнике по сообщениям об ошибках служб Integration Services](../../integration-services/integration-services-error-and-message-reference.md) , выполнив поиск по номеру ошибки. Этот список сейчас не включает сведения об устранении неполадок.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Отладка потока данных](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>См. также  

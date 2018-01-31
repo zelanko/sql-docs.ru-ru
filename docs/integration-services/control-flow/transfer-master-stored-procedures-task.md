@@ -8,25 +8,27 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
 - sql13.dts.designer.transferstoredprocedurestask.general.f1
 - sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1
-helpviewer_keywords: Transfer Master Stored Procedures task [Integration Services]
+helpviewer_keywords:
+- Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3028cc454a6957672a0c0fd9f34ce5582849dd1f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 9fd702ba3b0b498a8ede7e0ed32632b53ba27770
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Задача «Передача главных хранимых процедур»
   Задача "Передача главных хранимых процедур" перемещает одну или несколько пользовательских хранимых процедур между базами данных **master** в экземплярах [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Чтобы переместить хранимую процедуру из базы данных **master** , владелец процедуры должен быть dbo.  
@@ -79,7 +81,7 @@ ms.lasthandoff: 11/20/2017
   
 ### <a name="configuring-the-transfer-master-stored-procedures-task-programmatically"></a>Программная настройка задачи «Передача главных хранимых процедур»  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения об установке этих свойств в конструкторе служб [!INCLUDE[ssIS](../../includes/ssis-md.md)] см. в следующем разделе:  
   
 -   [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
@@ -97,7 +99,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание для задачи «Передача главных хранимых процедур».  
   
 ## <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>Редактор задачи «Передача главных хранимых процедур» (страница «Хранимые процедуры»)
