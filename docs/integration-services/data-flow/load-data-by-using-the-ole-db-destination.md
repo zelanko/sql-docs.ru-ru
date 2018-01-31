@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,16 +17,16 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e97279231fbdefb263d071d6b6f0a2d975104247
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 692bc6f90cee09f2bff680fe3e19ed3c433f8707
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Загрузка данных с помощью назначения «OLE DB»
   Чтобы добавить и настроить назначение «OLE DB», в пакет уже должны быть включены хотя бы одна задача потока данных и один источник данных.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/20/2017
   
 5.  Дважды щелкните целевой объект OLE DB.  
   
-6.  В диалоговом окне **Редактор назначения «OLE DB»** на странице **Диспетчер соединений** выберите уже существующий диспетчер соединений OLE DB или щелкните **Создать** , чтобы создать новый. Дополнительные сведения см. в статье [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+6.  В диалоговом окне **Редактор назначения «OLE DB»** на странице **Диспетчер соединений** выберите уже существующий диспетчер соединений OLE DB или щелкните **Создать** , чтобы создать новый. Дополнительные сведения см. в разделе [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
 7.  Выберите метод доступа к данным.  
   
@@ -67,8 +68,8 @@ ms.lasthandoff: 11/20/2017
   
 11. Чтобы сохранить обновленный пакет, выберите пункт **Сохранить выбранные элементы** в меню **Файл** .  
   
-## <a name="see-also"></a>См. также  
- [Назначение «OLE DB»](../../integration-services/data-flow/ole-db-destination.md)   
+## <a name="see-also"></a>См. также:  
+ [Назначение OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Преобразования служб Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Пути служб Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
  [Задача потока данных](../../integration-services/control-flow/data-flow-task.md)  

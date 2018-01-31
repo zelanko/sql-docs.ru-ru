@@ -8,19 +8,20 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.openlocfilehash: 3821b2849ef266437fb65c45004415727746d80f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+manager: craigg
+ms.openlocfilehash: 93a8df11a73ebb9abc21e94147c5ba2fbc0abd87
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="error-handling"></a>Обработка ошибок
   Экземпляр Oracle CDC извлекает изменения из одной базы данных-источника Oracle (кластер Oracle RAC считается одной базой данных) и записывает зафиксированные изменения в таблицы изменений в базе данных CDC на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -117,7 +118,7 @@ ms.lasthandoff: 11/20/2017
 ### <a name="handling-unexpected-oracle-cdc-instance-failures"></a>Обработка неожиданных сбоев экземпляра Oracle CDC  
  Служба Oracle CDC Service отслеживает подпроцессы свих экземпляров CDC. Если выполнение подпроцесса экземпляра CDC прерывается, служба CDC Service отключает его в таблице MSXDBCDC.dbo.xdbcdc_databases и меняет его состояние в таблице cdc.xdbcdc_state на ABORTED. В этом случае можно использовать стандартное диалоговое окно отчета об ошибках Windows, чтобы передать сообщение об этой ошибке для анализа в дальнейшем.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Конструктор системы отслеживания измененных данных для Oracle компании Attunity](../../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity.md)   
  [Экземпляр CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-instance.md)  
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,16 +26,16 @@ helpviewer_keywords:
 - connections [Integration Services]
 - SQL Server Integration Services packages, connections
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
-caps.latest.revision: "92"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: c5d4d5a7a4e0e6adf52d430d6d32352b531dd03f
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 1fb279220f0ec15cc81613d2dfcc3c0bb68a3b1b
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="integration-services-ssis-connections"></a>Соединения в службах Integration Services (SSIS)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] используют соединения для выполнения различных задач и реализации функций служб [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -87,25 +88,25 @@ ms.lasthandoff: 11/20/2017
   
 |Тип|Description|Раздел|  
 |----------|-----------------|-----------|  
-|ADO|Подключается к объектам данных ActiveX (ADO).|[Диспетчер соединений ADO](../../integration-services/connection-manager/ado-connection-manager.md)|  
-|ADO.NET|Подключается к источнику данных при помощи поставщика .NET.|[Диспетчер соединений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
+|ADO|Подключается к объектам данных ActiveX (ADO).|[Диспетчер подключений объектов данных ActiveX](../../integration-services/connection-manager/ado-connection-manager.md)|  
+|ADO.NET|Подключается к источнику данных при помощи поставщика .NET.|[Диспетчер подключений ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md)|  
 |CACHE|Считывает данные из потока данных или из файла кэша (CAW) и может сохранять данные в файле кэша.|[Диспетчер подключений с кэшем](../../integration-services/connection-manager/cache-connection-manager.md)|  
 |DQS|Подключается к серверу служб качества данных и базе данных служб Data Quality Services на сервере.|[Диспетчер подключений "Очистка DQS"](../../integration-services/connection-manager/dqs-cleansing-connection-manager.md)|  
 |EXCEL|Подключается к файлу книги Excel.|[Диспетчер соединений с Excel](../../integration-services/connection-manager/excel-connection-manager.md)|  
-|FILE|Подключается к файлу или папке.|[Диспетчер соединения файлов](../../integration-services/connection-manager/file-connection-manager.md)|  
-|FLATFILE|Подключается к данным в отдельном неструктурированном файле.|[Диспетчер соединений с неструктурированными файлами](../../integration-services/connection-manager/flat-file-connection-manager.md)|  
-|FTP|Подключается к FTP-серверу.|[Диспетчер FTP-соединений](../../integration-services/connection-manager/ftp-connection-manager.md)|  
+|FILE|Подключается к файлу или папке.|[Диспетчер подключений файлов](../../integration-services/connection-manager/file-connection-manager.md)|  
+|FLATFILE|Подключается к данным в отдельном неструктурированном файле.|[Диспетчер подключений неструктурированных файлов](../../integration-services/connection-manager/flat-file-connection-manager.md)|  
+|FTP|Подключается к FTP-серверу.|[Диспетчер FTP-подключений](../../integration-services/connection-manager/ftp-connection-manager.md)|  
 |HTTP|Подключается к веб-серверу.|[Диспетчер HTTP-соединений](../../integration-services/connection-manager/http-connection-manager.md)|  
-|MSMQ|Подключается к очереди сообщений.|[Диспетчер соединений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|  
-|MSOLAP100|Подключается к экземпляру служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Диспетчер соединений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
-|MULTIFILE|Подключается к нескольким файлам и папкам.|[Диспетчер соединений с несколькими файлами](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
-|MULTIFLATFILE|Подключается к нескольким файлам данных и папкам.|[Диспетчер соединения с несколькими неструктурированными файлами](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
-|OLEDB|Подключается к источнику данных при помощи поставщика OLE DB.|[Диспетчер соединений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
-|интерфейс ODBC|Подключается к источнику данных через ODBC.|[Диспетчер соединений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
+|MSMQ|Подключается к очереди сообщений.|[Диспетчер подключений MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md)|  
+|MSOLAP100|Подключается к экземпляру служб [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] или проекту служб [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|[Диспетчер подключений служб Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)|  
+|MULTIFILE|Подключается к нескольким файлам и папкам.|[Диспетчер подключений нескольких файлов](../../integration-services/connection-manager/multiple-files-connection-manager.md)|  
+|MULTIFLATFILE|Подключается к нескольким файлам данных и папкам.|[Диспетчер подключений нескольких неструктурированных файлов](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)|  
+|OLEDB|Подключается к источнику данных при помощи поставщика OLE DB.|[Диспетчер подключений OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)|  
+|интерфейс ODBC|Подключается к источнику данных через ODBC.|[Диспетчер подключений ODBC](../../integration-services/connection-manager/odbc-connection-manager.md)|  
 |SMOServer|Подключается к серверу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).|[Диспетчер соединений SMO](../../integration-services/connection-manager/smo-connection-manager.md)|  
 |SMTP|Подключается к почтовому серверу SMTP.|[Диспетчер соединений SMTP](../../integration-services/connection-manager/smtp-connection-manager.md)|  
-|SQLMOBILE|Подключается к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.|[Диспетчер соединений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
-|WMI|Подключается к серверу и определяет на нем область инструментария управления Windows (WMI).|[Диспетчер WMI-соединений](../../integration-services/connection-manager/wmi-connection-manager.md)|  
+|SQLMOBILE|Подключается к базе данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact.|[Диспетчер подключений SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)|  
+|WMI|Подключается к серверу и определяет на нем область инструментария управления Windows (WMI).|[Диспетчер WMI-подключений](../../integration-services/connection-manager/wmi-connection-manager.md)|  
   
 ### <a name="connection-managers-available-for-download"></a>Диспетчеры соединений, доступные для загрузки  
  В следующей таблице перечислены дополнительные типы диспетчеров соединений, которые вы можете загрузить с веб-сайта [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  

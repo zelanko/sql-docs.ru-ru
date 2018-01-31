@@ -8,25 +8,27 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.wmiconnection.f1
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
 - WMI connection manager [Integration Services]
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a3043e761402ae70369990d281bedede9c7bc39b
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: d432432905afd9a1ef2355e16540cc5caa64e0a2
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="wmi-connection-manager"></a>Диспетчер WMI-соединений
   Диспетчер WMI-соединений позволяет использовать в пакетах службу инструментария управления Windows (WMI) для управления данными в корпоративной среде. Задача «Веб-служба», которую включают в себя службы [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , использует диспетчер WMI-соединений.  
@@ -57,7 +59,7 @@ ms.lasthandoff: 11/20/2017
  **Название**  
  Задает уникальное имя диспетчера соединений.  
   
- **Description**  
+ **Описание**  
  Задайте описание диспетчера соединений. Рекомендуется описать назначение диспетчера соединений, чтобы сделать пакеты самодокументируемыми и более простыми в использовании.  
   
  **Имя сервера**  
@@ -69,7 +71,7 @@ ms.lasthandoff: 11/20/2017
  **Использовать проверку подлинности Windows**  
  Выберите этот режим для проверки подлинности Windows. При использовании проверки подлинности Windows не будет необходимости ввода имени пользователя и пароля для установки соединения.  
   
- **Имя пользователя**  
+ **User name**  
  Если проверка подлинности Windows не используется, необходимо ввести имя пользователя для данного соединения.  
   
  **Пароль**  

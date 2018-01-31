@@ -8,20 +8,21 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e81f7e1-fac0-4b57-b145-8f1b9e4720bf
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e347cdfd00f6e9e06ab8de49a4db3a382ae4eba7
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: b007bc2aa2f8e8a2b7f9b7d3dfbfbbeece4730cf
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="raw-file-custom-properties"></a>Пользовательские свойства необработанного файла
   **Пользовательские свойства источника**  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/20/2017
 |Имя свойства|Тип данных|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Режим, используемый для доступа к необработанным данным. Допустимые значения: **File name** (0) и **File name from variable** (1). Значение по умолчанию — **File name** (0).|  
-|FileName|Строковые значения|Полный путь и имя исходного файла.|  
+|FileName|String|Полный путь и имя исходного файла.|  
   
  Вывод и выходные столбцы источника «Необработанный файл» не имеют пользовательских свойств.  
   
@@ -48,7 +49,7 @@ ms.lasthandoff: 11/20/2017
 |Имя свойства|Тип данных|Description|  
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer (перечисление)|Значение, указывающее, содержит ли свойство FileName имя файла, или указывающее переменную, которая содержит имя файла. Возможные варианты: **File name** (0) и **File name from variable** (1).|  
-|FileName|Строковые значения|Имя файла, в который назначение «Необработанный файл» осуществляет запись.|  
+|FileName|String|Имя файла, в который назначение «Необработанный файл» осуществляет запись.|  
 |WriteOption|Integer (перечисление)|Значение, указывающее, следует ли назначению «Необработанный файл» удалять существующий файл с таким же именем. Возможные варианты: **Create Always** (0), **Create Once** (1), **Truncate and Append** (3) и **Append** (2). По умолчанию для этого свойства используется значение **Create Always** (0).|  
   
 > [!NOTE]  
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения см. в статье [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md).  
   
-## <a name="see-also"></a>См. также  
- [Общие свойства](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+## <a name="see-also"></a>См. также:  
+ [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

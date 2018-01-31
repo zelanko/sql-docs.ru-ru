@@ -8,7 +8,8 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,16 +21,16 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-caps.latest.revision: "61"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 5e0fb65fba9e0a9d600af89fd6b77c1a38030e08
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: f0cf4aaff6e1108572000af08ad233038adf29b9
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="bulk-insert-task"></a>задача «Массовая вставка»
   Задача «Массовая вставка» обеспечивает наиболее эффективный способ копирования больших объемов данных в таблицу или представление [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Предположим, что компания хранит список продуктов объемом в миллион строк в головном компьютере, но система электронной коммерции компании использует для заполнения веб-страниц сервер [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Необходимо обновлять таблицу продуктов [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] по ночам в соответствии с главным списком продуктов, хранящимся в головном компьютере. Для обновления таблицы список продуктов сохраняется в формате с символами табуляции в качестве разделителей и используется задача «Массовая вставка» для копирования данных напрямую в таблицу [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -109,7 +110,7 @@ ms.lasthandoff: 11/20/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.BulkInsertTask.BulkInsertTask>  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
 ## <a name="related-content"></a>См. также  
@@ -177,7 +178,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Имена задач в пределах пакета должны быть уникальными.  
   
- **Description**  
+ **Описание**  
  Введите описание задачи «Массовая вставка».  
  
 ## <a name="bulk-insert-task-editor-options-page"></a>Редактор задачи «Массовая вставка» (страница «Параметры»)

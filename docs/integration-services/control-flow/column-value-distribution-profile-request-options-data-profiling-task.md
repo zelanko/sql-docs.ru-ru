@@ -8,21 +8,23 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Data Profiling Task Editor
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c1e5f5de-04f5-4d00-a9f0-55817186bdf9
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 261a970e305400a70f784057a700b5e262618896
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 861b01ee4002bb592f5fc85978a5afd08994f606
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Параметры запроса профиля распределения значений в столбцах (задача «Профилирование данных»)
   Для установки параметров **запроса профиля распределения значений столбцов** , выделенного на панели запросов, используется панель **Свойства запроса** страницы **Запросы профиля** . Профиль распределения значений столбцов описывает все различные значения в выделенном столбце и указывает выраженную в процентах долю строк таблицы, представляемых каждым значением. Этот профиль может также указывать значения, превышающие указанную процентную долю строк в таблице. Этот профиль поможет выявить проблемы в данных, например неверное число уникальных значений в столбце. Например, при профилировании столбца штатов США можно обнаружить более 50 различных значений.  
@@ -106,7 +108,7 @@ ms.lasthandoff: 11/20/2017
  **FrequentValueThreshold**  
  Укажите пороговое значение (между 0 и 1), при превышении которого необходимо сообщать о значении столбца. Этот параметр отключен, если в качестве значения **ValueDistributionOption** выбрано **AllValues**. Значение этого параметра по умолчанию равно 0,001.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Редактор задачи "Профилирование данных" (страница "Общие")](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [Форма быстрого профиля одной таблицы (задача "Профилирование данных")](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   

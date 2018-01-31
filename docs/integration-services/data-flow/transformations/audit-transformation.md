@@ -8,7 +8,8 @@ ms.service:
 ms.component: data-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,16 +19,16 @@ helpviewer_keywords:
 - environment data in packages [Integration Services]
 - Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa1ed88a75603d7a943dfb05089c0a79092507ef
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 6a3e8e346a8b71c3bd11fad1847dc33fa4b47145
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="audit-transformation"></a>преобразование «Аудит»
   Преобразование «Аудит» позволяет включать поток данных в пакет для передачи данных о среде, в которой запускается этот пакет. Например, в поток данных можно добавлять имя пакета, компьютера и оператора. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] предусмотрены системные переменные, предоставляющие эти сведения.  
@@ -80,7 +81,7 @@ ms.lasthandoff: 11/20/2017
 |**Идентификатор версии**|Укажите идентификатор GUID, который уникально идентифицирует версию пакета.|  
 |**Время начала выполнения**|Укажите время, когда было начато выполнение пакета.|  
 |**Имя компьютера**|Укажите имя компьютера, на котором был запущен пакет.|  
-|**Имя пользователя**|Укажите имя входа пользователя, который запустил пакет.|  
+|**User name**|Укажите имя входа пользователя, который запустил пакет.|  
 |**Имя задачи**|Укажите имя задачи потока данных, с которой связано преобразование «Аудит».|  
 |**Идентификатор задачи**|Укажите идентификатор GUID, который уникально идентифицирует задачу потока данных, с которой связано преобразование «Аудит».|  
   

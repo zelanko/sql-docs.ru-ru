@@ -8,28 +8,30 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: createSrv
+f1_keywords:
+- createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: de6ad94c01126dbdf32fefe75761f3aa2774446c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: df020f2a63ece4d45fdd1b4eb944ca3c87dae530
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Создание и изменение службы CDC Oracle
   Новые службы Windows для Oracle CDC создаются и изменяются из консоли конфигурации службы CDC.  
   
  Чтобы создать новую службу Windows для Oracle CDC, на панели слева выберите **Локальные службы CDC** , а затем щелкните **Создать службу** на панели **Действия** . Можно также щелкнуть правой кнопкой **Локальные службы CDC** и выбрать **Создать службу**. Откроется диалоговое окно создания службы Windows для Oracle CDC.  
   
- **или**  
+ **OR**  
   
  Для изменения свойств службы CDC выберите нужную службу и щелкните **Свойства** на панели **Действия** . Можно также щелкнуть правой кнопкой мыши нужную службу и выбрать пункт **Свойства**. Откроется диалоговое окно «Свойства службы CDC».  
   
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 > Этот параметр недоступен при изменении свойств службы. Невозможно изменить имя службы Windows, которая уже существует.  
   
- **Description**  
+ **Описание**  
  Введите описание службы, чтобы упростить ее идентификацию.  
   
  **Учетная запись службы**  
@@ -92,7 +94,7 @@ ms.lasthandoff: 11/20/2017
   
  Тот же главный пароль будет использоваться при настройке других экземпляров той же службы на других узлах кластера конфигурации с высокой доступностью. При потере или изменении главного пароля все пароли для интеллектуального анализа журнала, хранящиеся в базах данных экземпляра Oracle CDC, следует ввести заново с помощью консоли конструктора CDC.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Создание и изменение службы CDC](../../integration-services/change-data-capture/how-to-create-and-edit-a-cdc-service.md)  
   
   

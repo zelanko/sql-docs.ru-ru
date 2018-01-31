@@ -8,21 +8,23 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: addTabs
+f1_keywords:
+- addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7181d4abc4a8a395ad0b34c3d015f4c2ee4810cf
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 056098406b1d7e49612ef5c75f2afd3d7dd1cfdc
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>Добавление таблиц в экземпляр CDC
   Диалоговое окно «Выбор таблицы» используется для добавления дополнительных таблиц из источника Oracle в экземпляр CDC. Выбранные таблицы добавляются в список на вкладке **Таблицы** редактора свойств.  
@@ -52,7 +54,7 @@ ms.lasthandoff: 11/20/2017
 > [!NOTE]  
 >  Список таблиц можно просматривать в средстве просмотра. При использовании средства просмотра отображаемые в нем данные доступны только для чтения. В средстве просмотра отображается также список отслеживаемых столбцов из таблицы. Дополнительные сведения о доступе к средству просмотра см. в разделе [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Как изменить свойства экземпляра CDC](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Как управлять экземпляром CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Выбор таблиц Oracle для отслеживания изменений](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  

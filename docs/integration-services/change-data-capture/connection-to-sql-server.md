@@ -8,23 +8,24 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ec5be00d83b0630754456bc3cde7a20678959496
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 407f460db78042ace1a13052b561fb678f451f86
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="connection-to-sql-server"></a>Соединение с SQL Server
-  Если имя входа, не имеющее роли с правами записи в базе данных MSXDBCDC (например, **db_owner** ), пытается создать экземпляр Oracle CDC, появляется диалоговое окно "Подключение к SQL Server".  
+  Если имя входа, не имеющее роли с правами записи в базе данных MSXDBCDC (например, **db_owner**), пытается создать экземпляр Oracle CDC, появляется диалоговое окно "Подключение к SQL Server".  
   
  Чтобы создать новый экземпляр Oracle CDC, нужно ввести в этом окне учетные данные имени входа, имеющего права записи в базу данных MSXDBCDC, например члена роли базы данных **db_owner** .  
   
@@ -51,7 +52,7 @@ ms.lasthandoff: 11/20/2017
   
 -   **Дополнительно**: нажмите кнопку **Дополнительно** и при необходимости введите любые дополнительные свойства подключения в диалоговом окне "Дополнительные свойства подключения".  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также:  
  [Разрешения, необходимые службе CDC для соединения с SQL Server](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-service.md)  
   
   

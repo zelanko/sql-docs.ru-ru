@@ -8,30 +8,32 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.adonetconnection.f1
+f1_keywords:
+- sql13.dts.designer.adonetconnection.f1
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
 - connections [Integration Services], ADO.NET
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
-caps.latest.revision: "59"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 0435f770c60ce939071ed7811956babf6644591c
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 28781838c83ca2c0865803c275070ae919968d26
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adonet-connection-manager"></a>Диспетчер соединений ADO.NET
   Диспетчер соединений [!INCLUDE[vstecado](../../includes/vstecado-md.md)] позволяет пакету обращаться к источникам данных с помощью поставщика .NET. Чаще всего этот диспетчер используется для доступа к таким источникам данных, как [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], а также к источникам данных, предоставляемым посредством OLE DB и XML в пользовательских задачах, написанных на управляемом коде, например коде языка C#.  
   
- Если добавить к пакету диспетчер соединений служб [!INCLUDE[vstecado](../../includes/vstecado-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] со службами [!INCLUDE[vstecado](../../includes/vstecado-md.md)], устанавливает свойства диспетчера соединений и добавляет диспетчер соединений в коллекцию **Соединения** пакета.  
+ Если добавить к пакету диспетчер соединений служб [!INCLUDE[vstecado](../../includes/vstecado-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] creates a connection manager that is resolved as an [!INCLUDE[vstecado](../../includes/vstecado-md.md)] connection at run time, sets the connection manager properties, and adds the connection manager to the **Connections** collection on the package.  
   
  Свойству **ConnectionManagerType** диспетчера соединений присваивается значение **ADO.NET**. Значение **ConnectionManagerType** уточняется: в него включается имя поставщика .NET, используемого диспетчером соединений.  
   
@@ -84,7 +86,7 @@ ms.lasthandoff: 11/20/2017
  **Создать**  
  Создание подключения к данным ADO.NET с помощью диалогового окна **Диспетчер соединений** .  
   
- **Delete**  
+ **Удаление**  
  Выберите соединение и затем удалите его, используя кнопку **Удалить** .  
   
 ## <a name="see-also"></a>См. также:  

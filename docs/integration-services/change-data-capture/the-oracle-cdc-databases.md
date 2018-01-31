@@ -8,20 +8,21 @@ ms.service:
 ms.component: change-data-capture
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cdce8273a2a1ed7cfa725f1933ab99de40cfe3f6
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 54eb41670979c83b200060128da8564b765bcd5d
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-oracle-cdc-databases"></a>Базы данных CDC Oracle
   Экземпляр CDC Oracle связан с базой данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] тем же именем на целевом экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Эта база данных называется базой данных Oracle (или базой данных CDC).  
@@ -113,7 +114,7 @@ ms.lasthandoff: 11/20/2017
   
  В следующей таблице содержится описание доступных параметров.  
   
-|Название|По умолчанию|Min|Max|Статические|Description|  
+|Имя|Default|Min|Max|Статические|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |трассировка|False|-|-|False|Возможные значения:<br /><br /> True<br /><br /> False<br /><br /> on<br /><br /> off|  
 |cdc_update_state_interval|10|1|120|False|Размер (в килобайтах) фрагментов памяти, выделяемых для транзакции (транзакции может быть выделено несколько фрагментов). См. столбец memory_limit в таблице [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  
@@ -150,7 +151,7 @@ ms.lasthandoff: 11/20/2017
 |active|Логическое значение, которое может быть.<br /><br /> **0**: процесс экземпляра CDC Oracle неактивен.<br /><br /> **1**: процесс экземпляра CDC Oracle активен.|  
 |ошибка|Логическое значение, которое может быть.<br /><br /> **0**: процесс экземпляра CDC Oracle находится не в состоянии ошибки.<br /><br /> **1**: процесс экземпляра CDC Oracle находится в состоянии ошибки.|  
 |status_message|Строка, содержащая описание ошибки или состояния.|  
-|timestamp|Отметка времени в формате (UTC), когда состояние отслеживания обновлялось в последний раз.|  
+|TIMESTAMP|Отметка времени в формате (UTC), когда состояние отслеживания обновлялось в последний раз.|  
 |active_capture_node|Имя компьютера (это может быть узел кластера), на котором в данный момент работает служба CDC Oracle и экземпляр CDC Oracle (обрабатывающий журналы транзакций Oracle).|  
 |last_transaction_timestamp|Отметка времени в формате (UTC), когда в таблицы изменений была записана последняя транзакция.|  
 |last_change_timestamp|Отметка времени в формате (UTC), когда последняя запись об изменении была считана из исходного журнала транзакций Oracle. Эта отметка времени помогает определить текущую задержку процесса CDC.|  
@@ -170,7 +171,7 @@ ms.lasthandoff: 11/20/2017
   
 |Элемент|Description|  
 |----------|-----------------|  
-|timestamp|Точная отметка времени в формате UTC, когда была создана запись трассировки.|  
+|TIMESTAMP|Точная отметка времени в формате UTC, когда была создана запись трассировки.|  
 |type|Содержит одно из следующих значений:<br /><br /> ошибка<br /><br /> INFO<br /><br /> трассировка|  
 |node|Имя узла, на котором была создана запись.|  
 |status|Код состояния, который используется в таблице состояний.|  

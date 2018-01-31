@@ -8,26 +8,28 @@ ms.service:
 ms.component: control-flow
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.dts.designer.sequencecontainer.f1
+f1_keywords:
+- sql13.dts.designer.sequencecontainer.f1
 helpviewer_keywords:
 - Sequence container
 - grouping control flows
 - containers [Integration Services], Sequence
 - subset control flow [Integration Services]
 ms.assetid: 7731f91e-b8b3-4d96-a0d9-73f568547cb3
-caps.latest.revision: "48"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 529a335cc1ba9452757ececd7cb68b94ea1e6c95
-ms.sourcegitcommit: 7f8aebc72e7d0c8cff3990865c9f1316996a67d5
+ms.openlocfilehash: 04231fc1297aa855111c48975f6bb7ad4b03d099
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="sequence-container"></a>контейнер последовательности
   Контейнер последовательности определяет поток управления, являющийся подмножеством потока управления пакета. Контейнер последовательности группирует пакет в несколько отдельных потоков управления, каждый из которых содержит одну или более задач и контейнеров, выполняющихся в общем потоке управления.  
@@ -57,10 +59,10 @@ ms.lasthandoff: 11/20/2017
   
  Дополнительные сведения о задании этих свойств программными средствами см. в документации по классу **T:Microsoft.SqlServer.Dts.Runtime.Sequence** в руководстве для разработчиков.  
   
-## <a name="related-tasks"></a>Связанные задачи  
+## <a name="related-tasks"></a>Related Tasks  
  Дополнительные сведения о настройке свойств этого компонента [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]см. в разделе [Задание свойств задач или контейнеров](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также:  
  [Добавление задачи или контейнера в поток управления или удалить их из него](../../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
  [Соединение задач и контейнеров с помощью элементов управления очередностью по умолчанию](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)   
  [Контейнеры служб Integration Services](../../integration-services/control-flow/integration-services-containers.md)  

@@ -8,21 +8,23 @@ ms.service:
 ms.component: connection-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: integration-services
+ms.technology:
+- integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: sql13.ssis.designer.hadoopconn.f1
+f1_keywords:
+- sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a86643971e12007cd14d902a63ac4bbcd30ba685
-ms.sourcegitcommit: b2d8a2d95ffbb6f2f98692d7760cc5523151f99d
+ms.openlocfilehash: b15f49c309ed828952c5888b624426ee76ab77fb
+ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="hadoop-connection-manager"></a>Диспетчер подключений Hadoop
   Диспетчер подключений Hadoop позволяет пакету служб SQL Server Integration Services (SSIS) подключаться к кластеру Hadoop с помощью значений, задаваемых для свойств.  
@@ -207,7 +209,7 @@ ms.lasthandoff: 12/05/2017
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>См. также раздел  
  [Задача Hadoop Hive](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Задача Pig для Hadoop](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Задача файловой системы Hadoop](../../integration-services/control-flow/hadoop-file-system-task.md)  
