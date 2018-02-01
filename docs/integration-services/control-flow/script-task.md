@@ -99,7 +99,7 @@ ms.lasthandoff: 01/25/2018
 ## <a name="script-task-editor-general-page"></a>Редактор задачи «Скрипт» (страница «Общие»)
   Страница **Общие** диалогового окна **Редактор задачи «Скрипт»** позволяет дать имя и описание задаче «Скрипт».  
   
- Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](../../integration-services/control-flow/script-task.md) и [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](../../integration-services/control-flow/script-task.md) и [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Параметры  
  **Название**  
@@ -117,7 +117,7 @@ ms.lasthandoff: 01/25/2018
 > [!NOTE]  
 >  В [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] и более поздних версиях все скрипты предварительно скомпилированы. В предыдущих версиях для предварительной компиляции необходимо было установить свойство **PrecompileScriptIntoBinaryCode** .  
   
- Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](../../integration-services/control-flow/script-task.md) и [Configuring the Script Task in the Script Task Editor](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
+ Дополнительные сведения о задаче «Скрипт» см. в разделах [Script Task](../../integration-services/control-flow/script-task.md) и [Настройка задачи «Скрипт» в редакторе задачи «Скрипт»](../../integration-services/extending-packages-scripting/task/configuring-the-script-task-in-the-script-task-editor.md). Дополнительные сведения о программировании задачи «Скрипт» см. в разделе [Extending the Package with the Script Task](../../integration-services/extending-packages-scripting/task/extending-the-package-with-the-script-task.md).  
   
 ### <a name="options"></a>Параметры  
  **ScriptLanguage**  
@@ -149,6 +149,6 @@ ms.lasthandoff: 01/25/2018
   
 ## <a name="related-content"></a>См. также  
   
--   Техническая статья [How to send email with delivery notification in C#](http://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
+-   Техническая статья [oтправка электронной почты с уведомлением доставки в C#](http://go.microsoft.com/fwlink/?LinkId=237625)на сайте shareourideas.com  
   
   
