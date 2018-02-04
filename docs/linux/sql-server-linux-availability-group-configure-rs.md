@@ -3,7 +3,7 @@ title: "Настройка группы доступности SQL Server для
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 01/24/2018
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 
 ms.workload: Inactive
-ms.openlocfilehash: 1b7705c33b252dc7cb032976b15c7c0efe28de8d
-ms.sourcegitcommit: 0a9c29c7576765f3b5774b2e087852af42ef4c2d
+ms.openlocfilehash: e2ce8a7cd87e188fce0f1b0f62bde148324373a5
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Настройка группы доступности SQL Server для чтения шкалы в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Можно настроить SQL Server всегда в группе доступности (AG) для рабочих нагрузок чтения масштабирования на платформе Linux. Существует два типа архитектур для групп доступности. Архитектура высокого уровня доступности использует диспетчер кластеров для обеспечения Улучшенная непрерывность бизнеса. Эта архитектура также могут включать шкалы чтения реплик. Создание архитектуры высокого уровня доступности — [настройки SQL Server группы доступности AlwaysOn для обеспечения высокой доступности в Linux](sql-server-linux-availability-group-configure-ha.md). Другие архитектура поддерживает только чтение шкалы рабочих нагрузок. В этой статье описывается создание группы Доступности без диспетчер кластеров для рабочих нагрузок чтения шкалы. Эта архитектура предоставляет чтения масштабирования только. Он не обеспечивает высокий уровень доступности.
 

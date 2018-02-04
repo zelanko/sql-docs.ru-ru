@@ -1,9 +1,9 @@
 ---
 title: "Управление SQL Server в Linux с помощью PowerShell | Документы Microsoft"
 description: "Этот раздел предоставляет сведения об использовании PowerShell в Windows с помощью SQL Server в Linux."
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.workload: Inactive
-ms.openlocfilehash: 91a86656cdcf54ec4d7951316d82936ed9e738fc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 0952e8ff950e6b440e963f3867ce74477334e74f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Использование PowerShell в Windows для управления SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этом разделе описываются [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) и будет выполнено несколько примеров о том, как использовать его с 2017 г. SQL Server в Linux. Поддержка PowerShell для SQL Server в настоящее время доступен в Windows, поэтому можно использовать, если используется компьютер Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
 
@@ -127,5 +127,5 @@ $credential = Get-Credential
 Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Yesterday | Out-GridView
 # done
 ```
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

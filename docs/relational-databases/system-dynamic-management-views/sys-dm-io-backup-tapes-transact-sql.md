@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - dm_io_backup_tapes_TSQL
 - sys.dm_io_backup_tapes_TSQL
 - dm_io_backup_tapes
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_io_backup_tapes dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_io_backup_tapes dynamic management view
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0d2a6365411d66238512fddf23e7f71848acf5de
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80f1fdab524409956921aa9087177b2ef9d8ae7f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает список ленточных устройств и сведения о состоянии запросов на подключение для резервных копий.   
  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|Имя физического устройства, на которое может выполняться резервное копирование. Не допускает значение NULL.|  
 |**logical_device_name**|**nvarchar(256)**|Указанное пользователем имя для диска (из **sys.backup_devices**). NULL, если пользовательское имя не задано. Допускает значение NULL.|  
@@ -44,7 +47,7 @@ ms.lasthandoff: 11/17/2017
 |**mount_request_time**|**datetime**|Время запроса на подключение. Значение NULL, если не ожидается монтирование (**состояние! = 2**). Допускает значение NULL.|  
 |**mount_expiration_time**|**datetime**|Время действия запроса на подключение (тайм-аут). Значение NULL, если не ожидается монтирование (**состояние! = 2**). Допускает значение NULL.|  
 |**database_name**|**nvarchar(256)**|База данных, резервная копия которой будет размещена на этом устройстве. Допускает значение NULL.|  
-|**Идентификатор SPID**|**int**|Идентификатор сеанса. Определяет пользователя ленты. Допускает значение NULL.|  
+|**spid**|**int**|Идентификатор сеанса. Определяет пользователя ленты. Допускает значение NULL.|  
 |**команда**|**int**|Команда, с помощью которой выполняется резервное копирование. Допускает значение NULL.|  
 |**command_desc**|**nvarchar(120)**|Описание команды. Допускает значение NULL.|  
 |**media_family_id**|**int**|Индекс семейства носителей (1... *n* ),  *n*  число семейств носителей в наборе носителей. Допускает значение NULL.|  
@@ -56,10 +59,10 @@ ms.lasthandoff: 11/17/2017
 |**mount_request_type**|**int**|Тип запроса на подключение:<br /><br /> 1 = конкретная лента. Лента, определяемая **media_\***  полей не требуется.<br /><br /> 2 = следующее семейство носителей. Требуется следующее семейство носителей для восстановления. Используется при восстановлении данных с использованием меньшего, чем количества устройств, доступных семейств носителей.<br /><br /> 3 = дополнительная лента. Семейство носителей расширяется и запрашивается дополнительная лента.<br /><br /> Допускает значение NULL.|  
 |**mount_request_type_desc**|**nvarchar(120)**|Тип запроса на подключение:<br /><br /> конкретная лента;<br /><br /> следующее семейство носителей;<br /><br /> том для продолжения.<br /><br /> Допускает значение NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение VIEW SERVER STATE на этом сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Я O связанные динамические административные представления и функции &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)  
   

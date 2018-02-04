@@ -8,28 +8,30 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c342ad591c790e4c0d8167ab78f73436e81610b0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 49511281ee8ce420186ad72b112a319dff8a55ce
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Содержит сведения о всех запросов в настоящее время или недавно активны в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Он содержит одну строку для каждого запроса или запрос.  
   
-|Имя столбца|Тип данных|Description|Диапазон|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Ключ для этого представления. Уникальный числовой идентификатор, связанный с запросом.|Уникален в пределах всех запросов в системе.|  
 |session_id|**nvarchar(32)**|Уникальный числовой идентификатор, связанный с сеансом, в котором был запущен этот запрос. В разделе [sys.dm_pdw_exec_sessions &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
   
  Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе «Минимальное и максимальное значения» в [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW SERVER STATE.  
   
 ## <a name="security"></a>безопасность  
@@ -56,7 +58,7 @@ ms.lasthandoff: 11/17/2017
 > [!WARNING]  
 >  Злоумышленник может использовать sys.dm_pdw_exec_requests для получения сведений о конкретных объектов базы данных с простого наличия разрешения VIEW SERVER STATE, не имеющий разрешения конкретной базе данных.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранилище данных SQL и динамические административные представления хранилища параллельных данных &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

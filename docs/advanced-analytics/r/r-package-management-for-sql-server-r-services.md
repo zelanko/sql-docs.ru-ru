@@ -10,24 +10,25 @@ ms.component: r
 ms.technology: 
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: R
+dev_langs:
+- R
 ms.assetid: 98c14b05-750e-44f9-8531-1298bf51e8d2
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: On Demand
-ms.openlocfilehash: 576178e53a28f877ac91d99f14ce9ba6a44e506d
-ms.sourcegitcommit: 60d0c9415630094a49d4ca9e4e18c3faa694f034
+ms.openlocfilehash: cebafeabd73260f166244e963754a2bd740bfe0f
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="r-package-management-for-sql-server"></a>Управление пакетами R для SQL Server
 
 В этой статье описываются функции для управления пакетов R в SQL Server 2017 г. и в SQL Server 2016.
 
-+ Рекомендуемые методы для управления пакетами R (и пакеты Python)
++ Рекомендуемые методы для управления пакетами R 
 + Изменения в пакете управления между SQL Server 2016 и 2017 г.
 
 **Применяется к:** служб R SQL Server 2016, SQL Server 2017 г машинного обучения служб

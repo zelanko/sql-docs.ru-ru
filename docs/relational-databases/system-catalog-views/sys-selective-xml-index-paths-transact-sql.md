@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - xml_schema_attributes
 - sys.xml_schema_attributes_TSQL
 - sys.xml_schema_attributes
-dev_langs: TSQL
-helpviewer_keywords: sys.xml_schema_attributes catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.xml_schema_attributes catalog view
 ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6c2f8156f9821bb6d4d0f70ae1af200a33ce3cb9
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 6f71e46667c56b628965eab154af0c3e15c421f8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +50,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  Появятся две новые строки в представлении sys.selective_xml_index_paths, соответствующие индексу sxi1.  
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор таблицы со столбцом XML.|  
 |**index_id**|**int**|Уникальный идентификатор избирательного индекса xml.|  
@@ -58,22 +61,22 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**path_type_desc**|**sysname**|На основе **path_type** значение «XQUERY» или «SQL».|  
 |**xml_component_id**|**int**|Уникальный идентификатор компонента схемы XML в базе данных.|  
 |**xquery_type_description**|**nvarchar(4000)**|Имя указанного типа xsd.|  
-|**is_xquery_type_inferred**|**bit**|1 = тип является выведенным.|  
+|**is_xquery_type_inferred**|**бит**|1 = тип является выведенным.|  
 |**xquery_max_length**|**smallint**|Максимальная длина (типа xsd в символах).|  
-|**is_xquery_max_length_inferred**|**bit**|1 = максимальная длина является выведенной.|  
-|**is_node**|**bit**|0 = указание node() отсутствует.<br /><br /> 1 = применено указание оптимизации node().|  
+|**is_xquery_max_length_inferred**|**бит**|1 = максимальная длина является выведенной.|  
+|**is_node**|**бит**|0 = указание node() отсутствует.<br /><br /> 1 = применено указание оптимизации node().|  
 |**system_type_id**|**tinyint**|Идентификатор системного типа столбца.|  
 |**user_type_id**|**tinyint**|Идентификатор столбца пользовательского типа.|  
 |**max_length**|**smallint**|Максимальная длина типа (в байтах).<br /><br /> -1 = типом данных столбца является varchar(max), nvarchar(max), varbinary(max) или xml.|  
-|**точность**|**tinyint**|Максимальная точность типа, если это цифровой тип. В противном случае 0.|  
-|**Масштаб**|**tinyint**|Максимальный масштаб типа, если это цифровой тип. В противном случае флагу присваивается значение 0.|  
+|**precision**|**tinyint**|Максимальная точность типа, если это цифровой тип. В противном случае 0.|  
+|**масштаб**|**tinyint**|Максимальный масштаб типа, если это цифровой тип. В противном случае флагу присваивается значение 0.|  
 |**collation_name**|**sysname**|Имя параметров сортировки типа, если это символьный тип. В противном случае — значение NULL.|  
-|**is_singleton**|**bit**|0 = указание SINGLETON отсутствует.<br /><br /> 1 = применено указание оптимизации SINGLETON.|  
+|**is_singleton**|**бит**|0 = указание SINGLETON отсутствует.<br /><br /> 1 = применено указание оптимизации SINGLETON.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [XML-схем &#40; Система типов XML &#41; Представления каталога &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   

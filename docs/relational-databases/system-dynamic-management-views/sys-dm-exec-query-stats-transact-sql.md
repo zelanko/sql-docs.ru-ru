@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_exec_query_stats
 - sys.dm_exec_query_stats
 - sys.dm_exec_query_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_stats dynamic management view
 ms.assetid: eb7b58b8-3508-4114-97c2-d877bcb12964
-caps.latest.revision: "64"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 26cc8e4ea520560452b59b9a08da198882ba96cd
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
+ms.openlocfilehash: 8874b5ba3eca2f3e9d72874af7440934fc2ec20f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,17 +79,17 @@ ms.lasthandoff: 01/12/2018
 |**min_elapsed_time**|**bigint**|Минимальное время, когда-либо затраченное на выполнение плана, в микросекундах (но с точностью до миллисекунды).|  
 |**max_elapsed_time**|**bigint**|Максимальное время, когда-либо затраченное на выполнение плана, в микросекундах (но с точностью до миллисекунды).|  
 |**query_hash**|**Binary(8)**|Двоичное хэш-значение рассчитывается для запроса и используется для идентификации запросов с аналогичной логикой. Можно использовать хэш запроса для определения использования статистических ресурсов для запросов, которые отличаются только своими литеральными значениями.|  
-|**фиксировать**|**binary(8)**|Двоичное хэш-значение рассчитывается для плана выполнения запроса и используется для идентификации аналогичных планов выполнения запросов. Можно использовать хэш плана запроса для нахождения совокупной стоимости запросов со схожими планами выполнения.<br /><br /> Значение всегда равно 0x000, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
+|**query_plan_hash**|**binary(8)**|Двоичное хэш-значение рассчитывается для плана выполнения запроса и используется для идентификации аналогичных планов выполнения запросов. Можно использовать хэш плана запроса для нахождения совокупной стоимости запросов со схожими планами выполнения.<br /><br /> Значение всегда равно 0x000, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
 |**total_rows**|**bigint**|Общее число строк, возвращаемых запросом. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
 |**last_rows**|**bigint**|Число строк, возвращенных последним выполнением запроса. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
 |**min_rows**|**bigint**|Минимальное количество строк, когда-либо возвращенных по запросу во время выполнения один. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
-|**Max_Rows**|**bigint**|Максимальное число строк, когда-либо возвращенных по запросу во время выполнения один. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
+|**max_rows**|**bigint**|Максимальное число строк, когда-либо возвращенных по запросу во время выполнения один. Не может иметь значение null.<br /><br /> Значение всегда равно 0, если скомпилированная в собственном коде хранимая процедура запрашивает оптимизированную для памяти таблицу.|  
 |**statement_sql_handle**|**varbinary(64)**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Заполненным значениями, отличных от NULL только в том случае, если хранилище запросов включено и сбор статистики для данного конкретного запроса.|  
 |**statement_context_id**|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Заполненным значениями, отличных от NULL только в том случае, если хранилище запросов включено и сбор статистики для данного конкретного запроса.|  
 |**total_dop**|**bigint**|Общую сумму по степени параллелизма плана используется с момента его компиляции. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**last_dop**|**bigint**|Степень параллелизма, если время последнего выполнения плана. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_dop**|**bigint**|Минимальная степень параллелизма этот план когда-либо используется во время одного выполнения. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**MAX_DOP**|**bigint**|Максимальная степень параллелизма этот план когда-либо используется во время одного выполнения. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**max_dop**|**bigint**|Максимальная степень параллелизма этот план когда-либо используется во время одного выполнения. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**total_grant_kb**|**bigint**|Общий объем зарезервированной памяти в КБ предоставить этот план, полученных с момента его компиляции. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**last_grant_kb**|**bigint**|Объем зарезервированной памяти предоставляет в КБ, когда время последнего выполнения плана. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**min_grant_kb**|**bigint**|Минимальный объем зарезервированной памяти в КБ предоставить никогда не получено в ходе одного выполнения плана. Он всегда будет равно 0 для запроса к таблице, оптимизированной для памяти.<br /><br /> **Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
@@ -119,7 +122,7 @@ ms.lasthandoff: 01/12/2018
 |**last_spills**|**bigint**|Количество страниц, сброшенных последнее время выполнения запроса.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Минимальное количество страниц, которые этот запрос, когда-либо сброшенных за одно выполнение.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Максимальное число страниц, которые этот запрос, когда-либо сброшенных за одно выполнение.<br /><br /> **Применяется к**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**int**|Идентификатор для узла, это распределение.<br /><br /> **Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
+|**pdw_node_id**|**int**|Идентификатор для узла, это распределение.<br /><br /> **Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
 
 > [!NOTE]
 > <sup>1</sup> для скомпилированных в собственном коде хранимых процедур при включении сбора статистики времени рабочей роли собираются в миллисекундах. Если запрос выполняется за время меньше одной миллисекунды, значение будет равно 0.  
@@ -175,11 +178,11 @@ ORDER BY qs.execution_count DESC;
   
 ## <a name="see-also"></a>См. также:  
 [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
-[sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
-[sys.dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
+[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
 [sys.dm_exec_procedure_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
-[sys.dm_exec_trigger_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
-[sys.dm_exec_cached_plans &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
+[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
+[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
 
 

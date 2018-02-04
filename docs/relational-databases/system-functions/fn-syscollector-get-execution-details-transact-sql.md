@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_syscollector_get_execution_details_TSQL
 - fn_syscollector_get_execution_details
-dev_langs: TSQL
-helpviewer_keywords: fn_syscollector_get_execution_details function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- fn_syscollector_get_execution_details function
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd44ed098f4dbf15e529df6cbe4026d065dfa2a5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dc7d5c47c294bb553f76fc9ee22e75cf9a350308
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +66,10 @@ fn_syscollector_get_execution_details ( log_id )
 |databytes|**image**|Массив байтов, который указывает на возвращаемое значение.|  
 |message|**nvarchar**|Описание события и сведения, связанные с событием.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение SELECT для **dc_operator**.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Включение средств ведения журналов в SQL Server Data Tools](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)  
   

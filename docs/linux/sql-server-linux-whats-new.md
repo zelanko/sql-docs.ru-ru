@@ -3,7 +3,7 @@ title: "Новые возможности для SQL Server 2017 г. для Linu
 description: "В этом разделе представлены новые возможности для 2017 г. SQL Server в Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 11/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.workload: On Demand
-ms.openlocfilehash: 3e4a3e19fd9d03d3f6e4dd4a68a5a15b922f348d
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 768d939d0014ca1818f8195627f57e0110d149fb
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>Новые возможности для 2017 г. SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этой статье описываются основные функции и службы, доступные для ОС Linux 2017 г. SQL Server.
 
@@ -41,13 +41,12 @@ ms.lasthandoff: 12/01/2017
 - [Функции групп доступности](sql-server-linux-availability-group-overview.md) для обеспечения высокой доступности.
 - [Компонент Full-text Search](sql-server-linux-setup-full-text-search.md) поддержки.
 
-## <a name="sql-server-agent"></a>Агент SQL Server
-
+## <a name="sql-server-agent"></a>SQL Server, агент
 
 - Включить [агента SQL Server](sql-server-linux-setup-sql-agent.md) поддержки для выполнения следующих задач:
   - [Задания Transact-SQL](sql-server-linux-run-sql-server-agent-job.md)
   - [DB mail](sql-server-linux-db-mail-sql-agent.md)
-  - [доставка журналов;](sql-server-linux-use-log-shipping.md)
+  - [Доставка журналов](sql-server-linux-use-log-shipping.md)
 
 ## <a name="sql-server-integration-services-ssis"></a>Службы SQL Server Integration Services
 

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - dm_repl_articles
 - dm_repl_articles_TSQL
 - sys.dm_repl_articles
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_repl_articles dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_repl_articles dynamic management function
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-caps.latest.revision: "16"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28b7a4e6b49427fff970bbc0a793f2fcc30d6dd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 99ec6ab0d4feb697092002fb0c7354625dd9da83
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Возвращает информацию об объектах базы данных, опубликованных как статьи в текущей топологии репликации.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**artcache_db_address**|**varbinary(8)**|Адрес кэшируемой структуры базы данных в памяти для базы данных публикации.|  
 |**artcache_table_address**|**varbinary(8)**|Адрес кэшируемой структуры таблицы в памяти для статьи публикуемой таблицы.|  
@@ -46,15 +49,15 @@ ms.lasthandoff: 11/17/2017
 |**artobjid**|**bigint**|Идентификатор публикуемого объекта.|  
 |**artpubid**|**bigint**|Идентификатор публикации, к которой принадлежит статья.|  
 |**artstatus**|**tinyint**|Битовая маска параметров и состояния статьи, которая может быть результатом побитовой логической операции ИЛИ над одним или несколькими из этих значений:<br /><br /> **1** = статья активна.<br /><br /> **8** = включить имя столбца в инструкции INSERT.<br /><br /> **16** = использовать параметризованные инструкции.<br /><br /> **24** = оба включить имя столбца в операторы INSERT и использовать параметризованные инструкции.<br /><br /> Например, для активной статьи, в которой используются параметризованные инструкции, значение данного столбца должно быть равно 17. Значение 0 указывает, что статья неактивна и никакие дополнительные свойства не определены.|  
-|**arttype**|**tinyint**|Тип статьи:<br /><br /> **1** = статья на основе журнала.<br /><br /> **3** = на основе журнала статья с фильтрацией вручную.<br /><br /> **5** = на основе журнала статья с представлением вручную.<br /><br /> **7** = на основе журнала статья с фильтрацией вручную и представлением вручную.<br /><br /> **8** = выполнение хранимой процедуры.<br /><br /> **24** = Выполнение сериализуемой хранимой процедуры.<br /><br /> **32** = хранимая процедура (только схема).<br /><br /> **64** = представление (только схема).<br /><br /> **128** = функция (только схема).|  
+|**arttype**|**tinyint**|Тип статьи:<br /><br /> **1** = статья на основе журнала.<br /><br /> **3** = на основе журнала статья с фильтрацией вручную.<br /><br /> **5** = на основе журнала статья с представлением вручную.<br /><br /> **7** = на основе журнала статья с фильтрацией вручную и представлением вручную.<br /><br /> **8** = выполнение хранимой процедуры.<br /><br /> **24** = Выполнение сериализуемой хранимой процедуры.<br /><br /> **32** = хранимая процедура (только схема).<br /><br /> **64** = View (schema only).<br /><br /> **128** = функция (только схема).|  
 |**wszArtdesttable**|**nvarchar(514)**|Имя публикуемого объекта на целевом сервере.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Владелец публикуемого объекта на целевом сервере.|  
 |**wszArtinscmd**|**nvarchar(510)**|Команда или хранимая процедура, используемая для вставок.|  
-|**cmdTypeIns**|**int**|Синтаксис вызова хранимой процедуры вставки. Может принимать следующие значения:<br /><br /> **1** = ВЫЗОВА<br /><br /> **2** = SQL<br /><br /> **3** = НЕТ<br /><br /> **7** = НЕИЗВЕСТНО|  
+|**cmdTypeIns**|**int**|Синтаксис вызова хранимой процедуры вставки. Может принимать следующие значения:<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = НЕТ<br /><br /> **7** = UNKNOWN|  
 |**wszArtdelcmd**|**nvarchar(510)**|Команда или хранимая процедура, используемая для удалений.|  
-|**cmdTypeDel**|**int**|Синтаксис вызова хранимой процедуры удаления. Может принимать следующие значения:<br /><br /> **0** = ФУНКЦИИ XCALL.<br /><br /> **1** = ВЫЗОВА<br /><br /> **2** = SQL<br /><br /> **3** = НЕТ<br /><br /> **7** = НЕИЗВЕСТНО|  
+|**cmdTypeDel**|**int**|Синтаксис вызова хранимой процедуры удаления. Может принимать следующие значения:<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = НЕТ<br /><br /> **7** = UNKNOWN|  
 |**wszArtupdcmd**|**nvarchar(510)**|Команда или хранимая процедура, используемая для обновлений.|  
-|**cmdTypeUpd**|**int**|Синтаксис вызова хранимой процедуры обновления. Может принимать следующие значения:<br /><br /> **0** = ФУНКЦИИ XCALL.<br /><br /> **1** = ВЫЗОВА<br /><br /> **2** = SQL<br /><br /> **3** = НЕТ<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = НЕИЗВЕСТНО|  
+|**cmdTypeUpd**|**int**|Синтаксис вызова хранимой процедуры обновления. Может принимать следующие значения:<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = НЕТ<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = UNKNOWN|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Команда или хранимая процедура, используемая для частичных обновлений.|  
 |**cmdTypePartialUpd**|**int**|Синтаксис вызова хранимой процедуры частичного обновления. Может принимать следующие значения:<br /><br /> **2** = SQL|  
 |**numcol**|**int**|Количество столбцов в секции для статьи с вертикальным фильтром.|  
@@ -70,13 +73,13 @@ ms.lasthandoff: 11/17/2017
 |**fPubAllowUpdate**|**tinyint**|Определяет, позволяет ли публикация обновляемые подписки.|  
 |**intPublicationOptions**|**bigint**|Битовая карта, указывающая дополнительные параметры публикации, со следующими необязательными значениями битов:<br /><br /> **0x1** — разрешена для однорангового узла одноранговой репликации.<br /><br /> **0x2** — публиковать только локальные изменения.<br /><br /> **0x4** — разрешена для подписчиков, отличных от подписчиков SQL Server.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение VIEW DATABASE STATE в базе данных публикации на вызов **dm_repl_articles**.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возвращаются сведения только по реплицируемым объектам базы данных, которые загружены в кэш статей репликации.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления &#40; связанные с репликацией Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   

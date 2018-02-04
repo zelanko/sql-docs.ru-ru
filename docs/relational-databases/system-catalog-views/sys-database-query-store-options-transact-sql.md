@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,30 +17,31 @@ f1_keywords:
 - DATABASE_QUERY_STORE_OPTIONS
 - SYS.DATABASE_QUERY_STORE_OPTIONS_TSQL
 - SYS.DATABASE_QUERY_STORE_OPTIONS
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - database_query_store_options catalog view
 - sys.database_query_store_options catalog view
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: edmacauley
 ms.author: edmaca
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 6a48af2e0a4bef456091385b047685c074097200
-ms.sourcegitcommit: 45e4efb7aa828578fe9eb7743a1a3526da719555
+ms.openlocfilehash: 46710eb543ae038d22052cd55b356df9458201e3
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdatabasequerystoreoptions-transact-sql"></a>sys.database_query_store_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Возвращает параметры хранилища запросов для этой базы данных.  
   
-**Применяется к**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] по [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**desired_state**|**smallint**|Указывает нужный режим работы хранилища запросов, явно устанавливается пользователем.<br /> 0 = выключен. <br /> 1 = READ_ONLY<br /> 2 = READ_WRITE|  
 |**desired_state_desc**|**nvarchar(64)**|Текстовое описание нужный режим работы хранилища запросов:<br />OFF<br />READ_ONLY<br />READ_WRITE|  
@@ -56,23 +58,23 @@ ms.lasthandoff: 11/21/2017
 |**query_capture_mode_desc**|**nvarchar(60)**|Текстовое описание режим фактические записи хранилища запросов:<br /><br /> ВСЕ (по умолчанию для [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])<br /><br /> AUTO (по умолчанию для [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)])<br /><br /> None|  
 |**size_based_cleanup_mode**|**smallint**|Определяет, будет ли очистка автоматически активирована когда общий объем данных приблизится к максимальный размер:<br /><br /> 1 = OFF — не будет автоматически активирована Очистка на основе размера.<br /><br /> 2 = AUTO - очистки на основе активируется автоматически при размер на диске достигает 90% от размера **max_storage_size_mb**. Это конфигурация по умолчанию.<br /><br />На основе размера очистки удаляет запросы бы дорогостоящий и старые сначала. Он останавливается на 80% max_storage_size_mb.|  
 |**size_based_cleanup_mode_desc**|**smallint**|Текстовое описание режима фактическое очистки на основе размер хранилища запросов:<br /><br /> OFF <br /><br /> AUTO (по умолчанию)|  
-|**wait_stats_capture_mode**|**smallint**|Элементы управления, является ли хранилище запросов выполняет сбор статистики ожидания. <br /><br /> 0 = выключен. <br /><br /> 1 = включен;|
-|**wait_stats_mode_capture_desc**|**nvarchar(60)**|Текстовое описание режим записи фактического ожидания статистики: <br /><br /> OFF <br /><br /> (По умолчанию)| 
+|**wait_stats_capture_mode**|**smallint**|Элементы управления, является ли хранилище запросов выполняет сбор статистики ожидания. <br /><br /> 0 = выключен. <br /><br /> 1 = включен;<br /> **Область применения**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|
+|**wait_stats_mode_capture_desc**|**nvarchar(60)**|Текстовое описание режим записи фактического ожидания статистики: <br /><br /> OFF <br /><br /> (По умолчанию)<br /> **Область применения**: начиная с [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **VIEW DATABASE STATE** разрешение.  
   
-## <a name="see-also"></a>См. также:  
- [sys.query_context_settings &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
  [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
- [sys.query_store_runtime_stats_interval &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+ [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Мониторинг производительности с использованием хранилища запросов](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [sys.fn_stmt_sql_handle_from_sql_stmt &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
+ [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)   
  [Хранимые процедуры &#40; в хранилище запросов Transact-SQL &#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - fn_check_object_signatures_TSQL
 - fn_check_object_signatures
 - sys.fn_check_object_signatures
-dev_langs: TSQL
-helpviewer_keywords: sys.fn_check_object_signatures function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fn_check_object_signatures function
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b4f237723380c7220086f4b6642609f6e9177315
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: edc1fde552b2ce71fa6f58b69b7c0a6e878385fd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -63,17 +66,17 @@ fn_ check_object_signatures (
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  В следующей таблице перечислены столбцы, **fn_check_object_signatures** возвращает.  
   
-|Столбец|Тип|Description|  
+|Столбец|Тип|Описание|  
 |------------|----------|-----------------|  
-|Тип|**nvarchar(120)**|Возвращает описание типа или сборки.|  
+|type|**nvarchar(120)**|Возвращает описание типа или сборки.|  
 |entity_id|**int**|Возвращает идентификатор оцениваемого объекта.|  
 |is_signed|**int**|Возвращает значение 0, если объект не был подписан с помощью предоставленного отпечатка. Возвращает значение 1, если объект подписан с помощью предоставленного отпечатка.|  
 |is_signature_valid|**int**|Если значение is_signed равно 1, возвращает значение 0, если подпись не является допустимой. Возвращает значение 1, если подпись является допустимой.<br /><br /> Если значение is_signed равно 0, всегда возвращает 0.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Используйте **fn_check_object_signatures** для подтверждения того, что пользователи-злоумышленники не изменены с объектами.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DEFINITION на сертификат или асимметричный ключ.  
   
 ## <a name="examples"></a>Примеры  
@@ -94,7 +97,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [IS_OBJECTSIGNED &#40; Transact-SQL &#41;](../../t-sql/functions/is-objectsigned-transact-sql.md)  
   
   

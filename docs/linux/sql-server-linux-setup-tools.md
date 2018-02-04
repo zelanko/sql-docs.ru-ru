@@ -3,7 +3,7 @@ title: "Установка средств командной строки SQL Se
 description: "В этом разделе описывается установка средства SQL Server в Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ms.workload: Active
-ms.openlocfilehash: fa96adb2d8a3cf5430ca09b636007887b7863df1
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: 16a2366541809237609c88f8458a3930a5569c3a
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Установите sqlcmd и bcp средства командной строки SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Следующие шаги установки программы командной строки, драйверы Microsoft ODBC и их зависимости. **Mssql средства** пакет содержит:
 
@@ -206,7 +206,7 @@ brew install --no-sandbox mssql-tools
 
 В следующей таблице приведены расположение для последних пакетов средств:
 
-| Пакет средств | Version | Загрузить |
+| Пакет средств | Версия | Загрузить |
 |-----|-----|-----|
 | Пакет средств Red Hat об/мин | 14.0.5.0-1 | [пакет средств MSSQL об/мин](https://packages.microsoft.com/rhel/7.3/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
 | Пакет средств SLES об/мин | 14.0.5.0-1 | [пакет средств MSSQL об/мин](https://packages.microsoft.com/sles/12/prod/mssql-tools-14.0.5.0-1.x86_64.rpm) | 
@@ -215,7 +215,7 @@ brew install --no-sandbox mssql-tools
 
 Эти пакеты зависят от **msodbcsql**, который необходимо сначала установить. **Msodbcsql** пакет также имеет зависимость от либо **unixODBC devel** (RPM) или **unixodbc-dev** (Debian). Расположение **msodbcsql** пакетов, перечислены в следующей таблице:
 
-| пакет msodbcsql | Version | Загрузить |
+| пакет msodbcsql | Версия | Загрузить |
 |-----|-----|-----|
 | Пакет msodbcsql Red Hat RPM | 13.1.6.0-1 | [пакет RPM msodbcsql](https://packages.microsoft.com/rhel/7.3/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 
 | Пакет SLES RPM msodbcsql | 13.1.6.0-1 | [пакет RPM msodbcsql](https://packages.microsoft.com/sles/12/prod/msodbcsql-13.1.6.0-1.x86_64.rpm) | 

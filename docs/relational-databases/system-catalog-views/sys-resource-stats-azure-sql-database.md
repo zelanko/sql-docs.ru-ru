@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.resource_stats
 - sys.resource_stats_TSQL
 - resource_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.resource_stats
 - resource_stats
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: CarlRabeler
 ms.author: carlrab
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: dad039b91c30e4c8d89168dd90d549ec6507c750
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 72b0dc0c526198dc49047f44be0cce47ea7f3455
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,7 +43,7 @@ ms.lasthandoff: 11/17/2017
   
  В следующей таблице описываются столбцы, доступные на сервере v12.  
   
-|Столбцы (сервер v12)|Тип данных|Description|  
+|Столбцы (сервер v12)|Тип данных|Описание|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|Время в формате UTC, указывающее начало 5-минутного отчетного интервала.|  
 |end_time|**datetime**|Время в формате UTC, указывающее окончание 5-минутного периода составления отчетов.|  
@@ -51,8 +53,8 @@ ms.lasthandoff: 11/17/2017
 |avg_cpu_percent|**numeric**|Средний уровень использования вычислительных мощностей в процентах от предела для уровня службы.|  
 |avg_data_io_percent|**numeric**|Средний уровень использования операций ввода-вывода в процентах от предела для уровня службы.|  
 |avg_log_write_percent|**numeric**|Средний уровень использования ресурсов записи в процентах от предела для уровня службы.|  
-|max_worker_percent|**Decimal(5,2)**|Максимальная одновременных рабочих процессов (запросов) в процентах от предела для уровня службы базы данных.<br /><br /> В настоящее время максимальное рассчитывается для 5-минутный интервал, на основании 15 второй выборки, количества параллельных рабочих.|  
-|max_session_percent|**Decimal(5,2)**|Максимальное число одновременных сеансов в процентах от предела для уровня службы базы данных.<br /><br /> В настоящее время максимальное рассчитывается для 5-минутный интервал, на основании 15 второй выборки, количества одновременных сеансов.|  
+|max_worker_percent|**decimal(5,2)**|Максимальная одновременных рабочих процессов (запросов) в процентах от предела для уровня службы базы данных.<br /><br /> В настоящее время максимальное рассчитывается для 5-минутный интервал, на основании 15 второй выборки, количества параллельных рабочих.|  
+|max_session_percent|**decimal(5,2)**|Максимальное число одновременных сеансов в процентах от предела для уровня службы базы данных.<br /><br /> В настоящее время максимальное рассчитывается для 5-минутный интервал, на основании 15 второй выборки, количества одновременных сеансов.|  
 |dtu_limit|**int**|Max настройки текущей базы данных DTU для этой базы данных в течение этого интервала.|  
   
 > [!TIP]  
@@ -60,7 +62,7 @@ ms.lasthandoff: 11/17/2017
   
  В следующей таблице описываются столбцы, доступные на сервере v11.  
   
-|Столбцы (сервер v11)|Тип данных|Description|  
+|Столбцы (сервер v11)|Тип данных|Описание|  
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|Время в формате UTC, указывающее начало 5-минутного отчетного интервала.|  
 |end_time|**datetime**|Время в формате UTC, указывающее окончание 5-минутного периода составления отчетов.|  
@@ -78,10 +80,10 @@ ms.lasthandoff: 11/17/2017
 |avg_physical_data_read_percent|**decimal**|Средний уровень использования операций ввода-вывода в процентах от предела для уровня службы.|  
 |avg_log_write_percent|**decimal**|Средний уровень использования ресурсов записи в процентах от предела для уровня службы.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Это представление доступно для всех ролей пользователей с разрешениями на подключение к виртуальной **master** базы данных.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Данные, возвращенные **sys.resource_stats** выражается в процентах от максимально разрешенных ограничений DTU для уровня производительности или уровня службы, которые выполняются для баз данных Basic, Standard и Premium.  Для уровней Web и Business эти числа указывают проценты в условиях уровня производительности Standard S2.  Например, если при выполнении в базе данных Web значение avg_cpu_percent возвращает 70 %, это означает 70 % лимита уровня S2. Кроме того, для уровней Web и Business проценты могут отражать количество сверх 100 %, что также основывается на ограничении уровня S2.  
   
  Когда база данных является членом эластичного пула, Статистика ресурсов, представленный в виде процента значений выражаются в виде процентов максимальные значения DTU для баз данных, как указано в конфигурации пула эластичных БД.  
@@ -115,7 +117,7 @@ ORDER BY end_time DESC;
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Уровни обслуживания](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
  [Возможности уровня службы и ограничения](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   

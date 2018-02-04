@@ -2,9 +2,9 @@
 title: "Проверка подлинности Active Directory с SQL Server для Linux | Документы Microsoft"
 description: "Этот учебник шаги конфигурации используется для проверки подлинности AAD для SQL Server в Linux."
 author: meet-bhagdev
-ms.date: 10/09/2017
+ms.date: 01/30/2018
 ms.author: meetb
-manager: jhubbard
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -13,17 +13,18 @@ ms.component: sql-linux
 ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
-helpviewer_keywords: Linux, AAD authentication
+helpviewer_keywords:
+- Linux, AAD authentication
 ms.workload: On Demand
-ms.openlocfilehash: d412eec0c27fac301f2ac6d319666f40004da409
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 7de515aa08ec73ff6c7b90e9a630e59ca6f71252
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Проверка подлинности Active Directory с SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Этот учебник описывается настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux для поддержки проверки подлинности Active Directory (AD), также известный как встроенную проверку подлинности. Проверка подлинности AD позволяет присоединенных к домену клиенты под управлением Windows или Linux, для проверки подлинности [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с помощью учетных данных домена, а протокол Kerberos.
 
@@ -43,12 +44,12 @@ ms.lasthandoff: 12/01/2017
 > * Создать имена входа на основе AD в Transact-SQL
 > * Подключиться к [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] с использованием проверки подлинности AD
 
-## <a name="prerequisites"></a>Предварительные требования
+## <a name="prerequisites"></a>предварительные требования
 
 Перед настройкой проверки подлинности AD, необходимо:
 
 * Настроить контроллер домена AD (Windows), в сети  
-* Установка[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* Установить [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
   * [Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
@@ -56,7 +57,7 @@ ms.lasthandoff: 12/01/2017
 > [!IMPORTANT]
 > Ограничения:
 > - В настоящее время единственного способа проверки подлинности поддерживается для конечной точки зеркального отображения базы данных является СЕРТИФИКАТ. Метод проверки подлинности WINDOWS будет включена в будущем выпуске.
-> - инструменты сторонних AD как Centrify, Powerbroker и Vintela не поддерживаются. 
+> - AD сторонние средства, такие как Centrify Powerbroker, и Vintela не поддерживаются. 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>Присоединение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла к домену AD
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 12/01/2017
       ```
 
       > [!NOTE]
-      > Сетевой интерфейс (eth0) могут отличаться для differnet машин. Чтобы узнать, какой из них используется, запустите ifconfig и скопируйте интерфейс, который имеет IP-адрес и отправленных и полученных байт.
+      > Сетевой интерфейс (eth0) может отличаться для разных компьютерах. Чтобы узнать, какой из них используется, запустите ifconfig и скопируйте интерфейс, который имеет IP-адрес и отправленных и полученных байт.
 
       После изменения этого файла, перезапустите сетевую службу:
 
@@ -104,7 +105,7 @@ ms.lasthandoff: 12/01/2017
       sudo ifdown eth0 && sudo ifup eth0
       ```
 
-      Убедитесь, что теперь ваш `/etc/resolv.conf` файл содержит строку следующего вида:  
+      Убедитесь, что теперь ваш `/etc/resolv.conf` файл содержит строку, как в следующем примере:  
 
       ```Code
       nameserver **<AD domain controller IP address>**
@@ -126,7 +127,7 @@ ms.lasthandoff: 12/01/2017
      sudo systemctl restart network
      ```
 
-     Убедитесь, что теперь ваш `/etc/resolv.conf` файл содержит строку следующего вида:  
+     Убедитесь, что теперь ваш `/etc/resolv.conf` файл содержит строку, как в следующем примере:  
 
      ```Code
      nameserver **<AD domain controller IP address>**
@@ -134,9 +135,9 @@ ms.lasthandoff: 12/01/2017
 
 1. Присоединение к домену.
 
-   После подтверждения что ваша служба DNS настроена правильно, присоединиться к домену, выполнив следующую команду. Необходимо выполнить проверку подлинности с помощью учетной записи AD, которая имеет достаточные права в AD, чтобы присоединить новую машину к домену.
+   После подтверждения что ваша служба DNS настроена правильно, присоединиться к домену, выполнив следующую команду. Необходимо проверить подлинность с помощью учетной записи AD, которая имеет достаточные права в AD, чтобы присоединить новую машину к домену.
 
-   В частности, эта команда будет создавать новую учетную запись компьютера в AD, `/etc/krb5.keytab` размещения файла keytab и Настройка домена в `/etc/sssd/sssd.conf`:
+   В частности, эта команда создает новую учетную запись компьютера в AD, создайте `/etc/krb5.keytab` размещения файла keytab и Настройка домена в `/etc/sssd/sssd.conf`:
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
@@ -147,9 +148,9 @@ ms.lasthandoff: 12/01/2017
    > [!NOTE]
    > Если появится сообщение об ошибке, «не установлены необходимые пакеты», то следует установить эти пакеты с помощью диспетчера пакетов дистрибутив Linux, перед запуском `realm join` еще раз.
    >
-   > Если появляется сообщение об ошибке «Недостаточно разрешений на присоединение к домену» будет необходимо проконсультироваться с администратором домена, что разрешения достаточны для присоединения к домену компьютеры Linux.
+   > Если появляется сообщение об ошибке «Недостаточно разрешений на присоединение к домену» затем необходимо проконсультироваться с администратором домена, что разрешения достаточны для присоединения к домену компьютеры Linux.
    
-   > SQL Server использует SSSD и NSS для сопоставления идентификаторов безопасности (SID) учетных записей пользователей и групп. SSSD должна быть настроена и запущена в порядке для SQL Server для создания имен входа AD успешно. Realmd обычно это необходимо сделать автоматически в рамках присоединения к домену, но в некоторых случаях необходимо сделать это отдельно.
+   > SQL Server использует SSSD и NSS для сопоставления идентификаторов безопасности (SID) учетных записей пользователей и групп. SSSD должна быть настроена и запущена в порядке для SQL Server для создания имен входа AD успешно. Realmd обычно выполняется автоматически в процессе присоединения к домену, но в некоторых случаях это необходимо сделать отдельно.
    >
    > См. ниже, чтобы настроить [SSSD вручную](https://access.redhat.com/articles/3023951), и [Настройка NSS для работы с SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)
 
@@ -181,7 +182,7 @@ ms.lasthandoff: 12/01/2017
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>Создайте пользователя AD для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задать имя участника-службы
 
   > [!NOTE]
-  > В следующих шагах мы будем использовать ваш [полного доменного имени](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы работаете с **Azure**, необходимо будет  **[создать](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  перед продолжением.
+  > В следующих шагах мы будем использовать ваш [полного доменного имени](https://en.wikipedia.org/wiki/Fully_qualified_domain_name). Если вы работаете с **Azure**, необходимо  **[создать](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  перед продолжением работы.
 
 1. На контроллере домена запустите [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) команду PowerShell, чтобы создать нового пользователя AD с помощью пароля, срок действия не ограничен. В этом примере имена учетной записи «mssql», но имя учетной записи может быть любое. Вам будет предложено ввести новый пароль для учетной записи:
 
@@ -203,13 +204,13 @@ ms.lasthandoff: 12/01/2017
    > [!NOTE]
    > Если появляется сообщение об ошибке «Недостаточно прав,» затем необходимо проконсультироваться с администратором домена, что разрешения достаточны для задания имени участника-службы для этой учетной записи.
    >
-   > Если в дальнейшем изменить TCP-порт, будет необходимо снова запустить команду setspn с новым номером порта. Также необходимо будет добавить новое имя участника-службы keytab службы SQL Server, приведенные в следующем разделе.
+   > Если в дальнейшем изменить TCP-порт, необходимо снова запустить команду setspn с новым номером порта. Необходимо также добавить новое имя участника-службы keytab службы SQL Server, приведенные в следующем разделе.
 
 3. Дополнительные сведения см. в разделе [Регистрация имени участника-службы для соединений Kerberos](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md).
 
 ## <a name="configure-includessnoversionincludesssnoversion-mdmd-service-keytab"></a>Настройка [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keytab службы
 
-1. Проверьте номер версии ключа (kvno) для учетной записи AD, созданной на предыдущем шаге. Обычно будет равен 2, но это может быть другое целое число, при изменении пароля для учетной записи несколько раз. На [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хост-компьютера, выполните следующую команду:
+1. Проверьте номер версии ключа (kvno) для учетной записи AD, созданной на предыдущем шаге. Обычно он равен 2, но это может быть другое целое число, при изменении пароля для учетной записи несколько раз. На [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] хост-компьютера, выполните следующую команду:
 
    ```bash
    kinit user@CONTOSO.COM
@@ -294,7 +295,7 @@ ms.lasthandoff: 12/01/2017
   
 ## <a name="next-steps"></a>Следующие шаги
 
-В этом учебнике мы прошли пошаговые инструкции для настройки проверки подлинности Active Directory с помощью SQL Server в Linux. Узнать, как для:
+В этом учебнике мы прошли по настройке проверки подлинности Active Directory с SQL Server в Linux. Узнать, как для:
 > [!div class="checklist"]
 > * Присоединение [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] узла к домену AD
 > * Создайте пользователя AD для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] и задать имя участника-службы

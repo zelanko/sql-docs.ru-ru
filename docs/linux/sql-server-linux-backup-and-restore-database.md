@@ -3,7 +3,7 @@ title: "Резервное копирование и восстановлени�
 description: "Узнайте, как резервное копирование и восстановление баз данных SQL Server в Linux."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 11/14/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
 ms.workload: On Demand
-ms.openlocfilehash: 0b12200da9b4e0967c8057d807d19919fb07f331
-ms.sourcegitcommit: dcac30038f2223990cc21775c84cbd4e7bacdc73
+ms.openlocfilehash: 9a0a1243ede149ada6a1042a246006929370a4b2
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Резервное копирование и восстановление баз данных SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Резервные копии баз данных может занять от 2017 г. SQL Server в Linux с помощью тех же средств, как другие платформы. На сервере Linux, можно использовать **sqlcmd** для подключения к SQL Server и создания резервных копий. В операционной системе Windows можно подключиться к SQL Server в Linux и резервных копий с помощью пользовательского интерфейса. Функциональные возможности резервного копирования является одинаковым для платформы. Например, можно сделать резервную копию баз данных локально, чтобы удаленные диски, а также к [службы хранилища больших двоичных объектов Microsoft Azure](../relational-databases/backup-restore/sql-server-backup-to-url.md).
 

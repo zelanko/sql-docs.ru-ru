@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - trace_columns
 - trace_columns_TSQL
 - sys.trace_columns_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.trace_columns catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.trace_columns catalog view
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7405b51d9071238a237a11ef7c0ceef78e2e7119
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 382cafec0dd9ad1bb9451408277b4dd8ebb6f05d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +43,20 @@ ms.lasthandoff: 11/27/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Вместо этого используйте представления каталога расширенных событий.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|Уникальный идентификатор этого столбца.|  
 |**name**|**nvarchar(128)**|Уникальное имя этого столбца. Этот аргумент не локализуется.|  
-|**Функция TYPE_NAME**|**nvarchar(128)**|Имя типа данных этого столбца.|  
+|**type_name**|**nvarchar(128)**|Имя типа данных этого столбца.|  
 |**max_size**|**int**|Максимальный размер данных этого столбца, в байтах.|  
-|**is_filterable**|**bit**|Указывает на то, может ли столбец использоваться в спецификации фильтра.<br /><br /> 0 = false.<br /><br /> 1 = true;|  
-|**is_repeatable**|**bit**|Указывает на то, может ли на столбец выполняться ссылка в данных «повторяемых столбцов».<br /><br /> 0 = false.<br /><br /> 1 = true;|  
-|**is_repeated_base**|**bit**|Указывает на то, используется ли этот столбец как уникальный ключ для ссылки на повторяемые данные.<br /><br /> 0 = false.<br /><br /> 1 = true;|  
+|**is_filterable**|**бит**|Указывает на то, может ли столбец использоваться в спецификации фильтра.<br /><br /> 0 = false.<br /><br /> 1 = true;|  
+|**is_repeatable**|**бит**|Указывает на то, может ли на столбец выполняться ссылка в данных «повторяемых столбцов».<br /><br /> 0 = false.<br /><br /> 1 = true;|  
+|**is_repeated_base**|**бит**|Указывает на то, используется ли этот столбец как уникальный ключ для ссылки на повторяемые данные.<br /><br /> 0 = false.<br /><br /> 1 = true;|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога объектов &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.traces &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [sys.trace_categories &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   

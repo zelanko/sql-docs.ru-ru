@@ -2,9 +2,9 @@
 title: "Шифрование соединений с SQL Server в Linux | Документы Microsoft"
 description: "В этом разделе описывается шифрование соединений с SQL Server в Linux."
 author: tmullaney
-ms.date: 10/02/2017
-ms.author: meetb;rickbyh
-manager: jhubbard
+ms.date: 01/30/2018
+ms.author: meetb
+manager: craigg
 ms.topic: article
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
@@ -14,33 +14,34 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.assetid: 
-helpviewer_keywords: Linux, encrypted connections
+helpviewer_keywords:
+- Linux, encrypted connections
 ms.workload: Inactive
-ms.openlocfilehash: 57fe1aac60bdb888ccbc47ebee33687dd309c8b7
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: c8d57e65d060ff6958f07fbb57ab97806d99402c
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Шифрование соединений с SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]в Linux используется Transport Layer Security (TLS) для шифрования данных, передаваемых по сети между клиентским приложением и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]поддерживает такие же протоколы TLS в Windows и Linux: TLS 1.0, 1.1 и 1.2. Тем не менее, действия по настройке TLS относятся к операционной системе, на котором [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущена.  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] в Linux используется Transport Layer Security (TLS) для шифрования данных, передаваемых по сети между клиентским приложением и экземпляром [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]поддерживает такие же протоколы TLS в Windows и Linux: TLS 1.0, 1.1 и 1.2. Тем не менее, действия по настройке TLS относятся к операционной системе, на котором [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] запущена.  
 
 ## <a name="requirements-for-certificates"></a>Требования к сертификатам 
-Прежде чем начать, необходимо убедитесь, что ваши сертификаты соответствовать следующим требованиям:
+Перед началом работы необходимо убедитесь, что ваши сертификаты соответствовать следующим требованиям:
 - Текущее системное время должен быть после действителен свойства сертификата и перед допустимо для свойства сертификата.
 - Сертификат должен быть предназначен для проверки подлинности сервера. Для этого необходимо свойство расширенного использования ключа сертификата, чтобы использовать проверку подлинности сервера (1.3.6.1.5.5.7.3.1).
-- Сертификат должен создаваться с помощью параметра KeySpec AT_KEYEXCHANGE. Как правило свойство использования ключа сертификата (KEY_USAGE) также будет содержать шифрование ключей (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
+- Сертификат должен создаваться с помощью параметра KeySpec AT_KEYEXCHANGE. Как правило свойство использования ключа сертификата (KEY_USAGE) также включает шифрование ключей (CERT_KEY_ENCIPHERMENT_KEY_USAGE).
 - Свойство субъекта сертификата необходимо указать, что общее имя (CN) совпадает имя узла или полное доменное имя (FQDN) сервера. Примечание: поддерживаются знаки подстановки сертификаты. 
 
 ## <a name="overview"></a>Обзор
-TLS используется для шифрования подключения из клиентского приложения для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При правильной настройке TLS обеспечивает конфиденциальность и целостность данных для обмена данными между клиентом и сервером.  TLS-подключения может быть клиент initited intiated или сервера. 
+TLS используется для шифрования подключения из клиентского приложения для [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. При правильной настройке TLS обеспечивает конфиденциальность и целостность данных для обмена данными между клиентом и сервером.  TLS-подключения может быть инициируется клиентом или инициация сервером. 
 
 
 ## <a name="client-initiated-encryption"></a>Шифрование, инициированное клиентом 
-- **Создание сертификата** (/ CN должен соответствовать полное доменное имя узла сервера SQL)
+- **Создание сертификата** (/ CN должен соответствовать вашей полное доменное имя узла SQL Server)
 
 > [!NOTE]
 > В этом примере, что мы используем самозаверяющего сертификата это не будет использовать для рабочих сценариев. Следует использовать сертификаты ЦС. 
@@ -63,10 +64,10 @@ TLS используется для шифрования подключения 
 - **Регистрация сертификата на клиентском компьютере (Windows, Linux или macOS)**
 
     -   При использовании сертификата, подписанного ЦС, вам необходимо скопировать сертификат центра сертификации (ЦС) вместо сертификата пользователя на клиентском компьютере. 
-    -   Если используется самозаверяющий сертификат, просто скопируйте PEM-файл следующие папки, соответствующей для распространения и выполнять команды для их включения 
-        - **Ubuntu** : копирование сертификатов ```/usr/share/ca-certificates/``` расширение переименования .crt используйте сертификаты ЦС dpkg reconfigure для его включения как системный ЦС сертификат. 
-        - **RHEL** : копирование сертификатов ```/etc/pki/ca-trust/source/anchors/``` использовать ```update-ca-trust``` включить, то в качестве системы ЦС сертификата.
-        - **SUSE** : копирование сертификатов ```/usr/share/pki/trust/anchors/``` использовать ```update-ca-certificates``` для включения его как системный ЦС сертификат.
+    -   Если вы используете самозаверяющий сертификат, копировать PEM-файл в следующие папки, соответствующей для распространения и выполнять команды для их включения 
+        - **Ubuntu**: копирование сертификатов ```/usr/share/ca-certificates/``` расширение переименования .crt используйте сертификаты ЦС dpkg reconfigure для его включения как системный ЦС сертификат. 
+        - **RHEL**: копирование сертификатов ```/etc/pki/ca-trust/source/anchors/``` использовать ```update-ca-trust``` включить, то в качестве системы ЦС сертификата.
+        - **SUSE**: копирование сертификатов ```/usr/share/pki/trust/anchors/``` использовать ```update-ca-certificates``` включить, то в качестве системы ЦС сертификата.
         - **Windows**: Импорт PEM-файл в качестве сертификата в папке current user "->" Доверенные корневые центры сертификации -> сертификаты
         - **macOS**: 
            - Скопируйте сертификат для```/usr/local/etc/openssl/certs```
@@ -78,7 +79,7 @@ TLS используется для шифрования подключения 
     - **[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]**   
   ![Диалоговое окно соединения SSMS](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "диалогового окна соединения в среде SSMS")  
   
-    - **ПРОГРАММА SQLCMD** 
+    - **SQLCMD** 
 
             sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>' 
     - **ADO.NET** 
@@ -112,7 +113,7 @@ TLS используется для шифрования подключения 
         
 -   **Примеры строк подключения** 
 
-    - **ПРОГРАММА SQLCMD**
+    - **SQLCMD**
 
             sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>' 
     - **ADO.NET** 

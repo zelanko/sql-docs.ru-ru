@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - fulltext_document_types
 - fulltext_document_types_TSQL
 - sys.fulltext_document_types
-dev_langs: TSQL
-helpviewer_keywords: sys.fulltext_document_types catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.fulltext_document_types catalog view
 ms.assetid: 156fcfa4-7304-4a5c-b96f-1c3e061e5df0
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3cda70f0c9ada37d6c805eefc7209a1ac7e0ca11
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 26a1729aac9094d0b0f150d64772229d7f89c20a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfulltextdocumenttypes-transact-sql"></a>sys.fulltext_document_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +39,7 @@ ms.lasthandoff: 11/17/2017
   Возвращает строку для каждого типа документа, который является доступным для операций полнотекстового индексирования. Каждая строка представляет интерфейс IFilter, который зарегистрирован в экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**document_type**|**sysname**|Расширение файла поддерживаемого типа документа.<br /><br /> Это значение может использоваться для определения фильтра, который будет использоваться во время полнотекстового индексирования столбцов типа **varbinary(max)** или **изображения**.|  
 |**class_id**|**uniqueidentifier**|Идентификатор GUID класса IFilter, который поддерживает расширение файла.|  
@@ -44,10 +47,10 @@ ms.lasthandoff: 11/17/2017
 |**version**|**sysname**|Версия IFilter DLL.|  
 |**Изготовитель**|**sysname**|Название производителя IFilter.<br /><br /> Примечание: Только документы с производителем как [!INCLUDE[msCoName](../../includes/msconame-md.md)] поддерживаются в [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

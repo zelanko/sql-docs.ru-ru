@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_broker_queue_monitors_TSQL
 - dm_broker_queue_monitors_TSQL
 - sys.dm_broker_queue_monitors
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_broker_queue_monitors dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_broker_queue_monitors dynamic management view
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
-caps.latest.revision: "29"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ba34525fb597bd4b65199aa43bcd82c3972ba20b
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 9bc93ac489094fcf9dfba593acd670bc4babbaa6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +39,16 @@ ms.lasthandoff: 11/17/2017
   Возвращает по одной строке для каждого монитора очереди в экземпляре. Монитор очереди управляет активацией очереди.  
   
 
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор объекта для базы данных, содержащей очередь, за которой следит монитор. Допускает значение NULL.|  
 |**queue_id**|**int**|Идентификатор объекта для очереди, за которой следит монитор. Допускает значение NULL.|  
-|**состояние**|**nvarchar(32)**|Состояние монитора. Допускает значение NULL. Возможны следующие варианты.<br /><br /> **НЕАКТИВНЫЕ**<br /><br /> **УВЕДОМЛЕНИЕ**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|Состояние монитора. Допускает значение NULL. Возможны следующие варианты.<br /><br /> **НЕАКТИВНЫЕ**<br /><br /> **УВЕДОМЛЕНИЕ**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Последний раз, когда инструкция RECEIVE из очереди возвратила пустой результат. Допускает значение NULL.|  
 |**last_activated_time**|**datetime**|Последний раз, когда монитор очереди активировал хранимую процедуру. Допускает значение NULL.|  
 |**tasks_waiting**|**int**|Количество сеансов, ожидающих в инструкции RECEIVE для этой очереди. Допускает значение NULL.<br /><br /> Примечание: Это число включает все сеансы, выполняющие инструкцию receive, независимо от того, является ли монитор очереди сеанс был. Это происходит, если вместе с RECEIVE используется инструкция WAITFOR. В основном, эти задачи ожидают прибытия сообщений в очередь.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
 ## <a name="examples"></a>Примеры  
@@ -79,9 +82,9 @@ ON ( t2.object_id = t4.queue_id  AND t4.database_id = DB_ID() )
 INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Динамические административные представления, связанные с компонентом Service Broker (Transact-SQL)](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Компонент Service Broker, связанные с динамическим административным представлениям &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

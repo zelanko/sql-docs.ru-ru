@@ -8,35 +8,37 @@ ms.service: sql-data-warehouse
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0a284d18-3c46-4ffa-bcc9-689e660ee8b4
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a1b24d8da86c779a9964d41921aa614bcd2d8d4f
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: aac00b2fd1ba5a5922c2618ccfadad6fc2d2b8ac
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Содержит сведения о всех работников, выполнив действия DMS.  
   
-|Имя столбца|Тип данных|Description|Диапазон|  
+|Имя столбца|Тип данных|Описание|Диапазон|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Запрос, который входит в состав этого исполнителя DMS.<br /><br /> идентификатор_запроса step_index и dms_step_index формируют ключ для этого представления.|В разделе request_id в [sys.dm_pdw_exec_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Запрос шаг, который входит в состав этого исполнителя DMS.<br /><br /> идентификатор_запроса step_index и dms_step_index формируют ключ для этого представления.|В разделе step_index в [sys.dm_pdw_request_steps &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Шаг в плане DMS, на котором выполняется этот рабочий процесс.<br /><br /> идентификатор_запроса step_index и dms_step_index формируют ключ для этого представления.||  
 |pdw_node_id|**int**|Узел, на котором выполняется рабочий процесс, на.|В разделе node_id в [sys.dm_pdw_nodes &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Распределение, которое исполнитель выполняется, если таковые имеются.|В разделе distribution_id в [sys.pdw_distributions &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|Тип|**nvarchar(32)**|Тип DMS рабочий поток, который представляет эта запись.|«DIRECT_CONVERTER», «DIRECT_READER», «FILE_READER», «HASH_CONVERTER», «HASH_READER», «ROUNDROBIN_CONVERTER», «EXPORT_READER», «EXTERNAL_READER», «EXTERNAL_WRITER», «PARALLEL_COPY_READER», «REJECT_WRITER», «ЗАПИСИ»|  
+|type|**nvarchar(32)**|Тип DMS рабочий поток, который представляет эта запись.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', 'REJECT_WRITER', 'WRITER'|  
 |status|**nvarchar(32)**|Состояние рабочего процесса DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Чтение или запись пропускной способности в течение последней секунды.|Больше или равно 0. Имеет значение NULL, если запрос был отменен или не удалось выполнить, прежде чем выполнить рабочий процесс.|  
 |bytes_processed|**bigint**|Общее количество байт, обработанных этим исполнителем.|Больше или равно 0. Имеет значение NULL, если запрос был отменен или не удалось выполнить, прежде чем выполнить рабочий процесс.|  
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  Сведения о максимальное число строк, сохраняемых в этом представлении см. в разделе [максимальные значения представление системы](http://msdn.microsoft.com/en-us/5243f018-2713-45e3-9b61-39b2a57401b9).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранилище данных SQL и динамические административные представления хранилища параллельных данных &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

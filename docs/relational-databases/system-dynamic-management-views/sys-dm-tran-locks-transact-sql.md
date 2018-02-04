@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_tran_locks
 - sys.dm_tran_locks_TSQL
 - dm_tran_locks_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_tran_locks dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_tran_locks dynamic management view
 ms.assetid: f0d3b95a-8a00-471b-9da4-14cb8f5b045f
-caps.latest.revision: "61"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 9ef513e5c0442b465f7a7bc65739bb811058eca3
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 77f18549714e52e2d5681084b0b2246c838b5467
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_tran_locks**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**resource_type**|**nvarchar(60)**|Представляет тип ресурса. Значение может быть одним из следующих: базы данных, файла, ОБЪЕКТА, страницы, ключ, ЭКСТЕНТ, RID, приложения, МЕТАДАННЫЕ, HOBT или ALLOCATION_UNIT.|  
 |**resource_subtype**|**nvarchar(60)**|Представляет подтип типа **resource_type**. Технически возможно получить блокировку подтипа без удерживания блокировки родительского типа, не разбитого на подтипы. Различные подтипы не конфликтуют между собой или с родительским типом, не разбитым на подтипы. Не у всех типов ресурсов имеются подтипы.|  
@@ -61,15 +64,15 @@ ms.lasthandoff: 11/17/2017
 |**request_owner_guid**|**uniqueidentifier**|Идентификатор GUID определенного владельца запроса. Это значение используется только распределенной транзакцией, для которой оно является идентификатором GUID координатора MS DTC.|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Это значение представляет идентификатор заблокированного пространства запрашивающего объекта. Идентификатор заблокированного пространства определяет, совместимы ли друг с другом два запрашивающих объекта и можно ли им предоставить блокировки в режимах, которые в противном случае привели бы к конфликту.|  
 |**lock_owner_address**|**varbinary(8)**|Адрес внутренней структуры данных в памяти, используемый для отслеживания этого запроса. Этот столбец может быть соединен с **resource_address** столбца в **sys.dm_os_waiting_tasks**.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> <br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.  
  
 
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Состояние предоставленного запроса показывает, что блокировка ресурса была предоставлена запрашивающему объекту. Ожидающий запрос обозначает, что запрос еще не был предоставлен. Возвращаются следующие типы ожидающих запросов **request_status** столбца:  
   
 -   Состояние преобразованного запроса означает, что запрашивающий объект получил запрос ресурса и в настоящий момент ожидает, пока будет предоставлено обновление исходного запроса.  
@@ -199,13 +202,13 @@ ms.lasthandoff: 11/17/2017
   
  В следующей таблице приведены формат **resource_description** столбец для каждого типа ресурсов.  
   
-|Ресурс|Формат|Description|  
+|Ресурс|Формат|Описание|  
 |--------------|------------|-----------------|  
 |DATABASE|Неприменимо|Идентификатор базы данных уже доступен в **resource_database_id** столбца.|  
-|FILE|< file_id >|Идентификатор файла, представляемого данным ресурсом.|  
+|FILE|<file_id>|Идентификатор файла, представляемого данным ресурсом.|  
 |OBJECT|< object_id >|Идентификатор объекта, представляемого данным ресурсом. Этот объект может быть любой объект из списка **sys.objects**, не только таблица.|  
 |PAGE|<file_id>:<page_in_file>|Представляет файл и идентификатор страницы, представляемые данным ресурсом.|  
-|KEY|< hash_value >|Представляет хэш ключевых столбцов из строки, представляемой данным ресурсом.|  
+|KEY|<hash_value>|Представляет хэш ключевых столбцов из строки, представляемой данным ресурсом.|  
 |EXTENT|<file_id>:<page_in_files>|Представляет файл и идентификатор экстента, представляемые данным ресурсом. Идентификатор экстента совпадает с идентификатором первой страницы этого экстента.|  
 |RID|<file_id>:<page_in_file>:<row_on_page>|Представляет идентификатор страницы и идентификатор строки, представленной данным ресурсом. Обратите внимание на то, что, если идентификатор связанного объекта имеет значение 99, этот ресурс представляет одну из восьми областей памяти смешанных страниц первой IAM-страницы в цепочке IAM.|  
 |APPLICATION|\<DbPrincipalId >:\<до 32 символов > :(< hash_value >)|Представляет идентификатор участника базы данных, используемого для определения области действия ресурса блокировки этого приложения. Также включает до 32 символов из строки ресурса, соответствующего ресурсу блокировок для этого приложения. В некоторых случаях из полной строки, больше не являющейся доступной, могут отображаться только 2 символа. Это происходит только во время восстановления базы данных для блокировок приложений, которые вызываются заново как часть процесса восстановления. Это хэш-значение представляет собой хэш-код полной строки ресурса, соответствующего ресурсу блокировки данного приложения.|  
@@ -386,8 +389,8 @@ SELECT STasks.session_id, SThreads.os_thread_id
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sys.dm_tran_database_transactions &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sys.dm_tran_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Динамические административные представления и функции, связанные с транзакциями (Transact-SQL)](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

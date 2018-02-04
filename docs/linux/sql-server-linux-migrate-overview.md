@@ -3,7 +3,7 @@ title: "Перенос баз данных в SQL Server для Linux | Доку
 description: "В этом разделе описываются различные варианты миграции баз данных и данных в SQL Server в Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 03/17/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: 
 ms.workload: Inactive
-ms.openlocfilehash: d07112eab83a88b4d76f6cd2c6487778abda9d80
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 26092d270b8852976376b365f2756628fa3c3413
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Перенос баз данных и структурированных данных в SQL Server в Linux 
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Можно перенести базы данных и данных для SQL Server 2017 г., выполняемым на платформе Linux. Метод, который вы решили использовать зависит от источника данных и конкретного сценария. В следующих разделах содержатся советы и рекомендации для различных сценариев миграции.
 

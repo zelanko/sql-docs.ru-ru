@@ -3,7 +3,7 @@ title: "Управление SQL Server в Linux с помощью SSMS | Док
 description: "Этого учебника показано, как использовать SQL Server Management Studio в Windows для подключения к SQL Server под управлением Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.workload: On Demand
-ms.openlocfilehash: 784c2c01365eba64fb8e19925c176033af9a1339
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 98fdce174be9f7a3dc67d910a84f8558ede1b317
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Использование SQL Server Management Studio (SSMS) в Windows для управления SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этом разделе показано, как использовать [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) для подключения к 2017 г. SQL Server в Linux. SSMS — это приложение Windows, поэтому SSMS следует использовать при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/01/2017
 
 2. В **соединение с сервером** окно, введите следующие сведения (если SSMS уже запущен, щелкните **Connect > Database Engine** для открытия **соединение с сервером** окна):
 
-   | Настройка | Description |
+   | Настройка | Описание |
    |-----|-----|
    | **Тип сервера** | Значение по умолчанию — компонент database engine; не изменяйте это значение. |
    | **Имя сервера** | Введите имя целевом компьютере Linux SQL Server или его IP-адрес. |

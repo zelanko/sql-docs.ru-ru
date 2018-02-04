@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - sys.dm_filestream_file_io_handles
 - dm_filestream_file_io_handles_TSQL
 - sys.dm_filestream_file_io_handles_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_filestream_file_io_handle catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_filestream_file_io_handle catalog view
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 46b8bd6e5696cf9a2e1b3d1f460e5f1885ed2009
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5a683718e8e87aa44ac4049684b5095fe2a47abb
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Показывает дескрипторы файлов, известные владельцу пространства имен (NSO). Дескрипторов FileStream, полученный с помощью клиента **OpenSqlFilestream** отображаются в данном представлении.  
   
-|Столбец|Тип|Description|  
+|Столбец|Тип|Описание|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|Показывает адрес внутренней структуры NSO, связанной с дескриптором клиента. Допускает значение NULL.|  
 |**creation_request_id**|**int**|Показывает поле из запроса ввода-вывода REQ_PRE_CREATE, используемого для создания этого дескриптора. Не допускает значение NULL.|  
@@ -48,10 +51,10 @@ ms.lasthandoff: 11/17/2017
 |**logical_path**|**nvarchar(256)**|Показывает логический путь к файлу, который открыт этим дескриптором. Это же путь, который возвращается методом **. PathName** метод **varbinary**(**max**) filestream. Допускает значение NULL.|  
 |**physical_path**|**nvarchar(256)**|Показывает фактический путь к файлу в системе NTFS. Это путь возвращается методом **. PhysicalPathName** метод **varbinary**(**max**) filestream. Он включается флагом трассировки 5556. Допускает значение NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [FileStream и динамические административные представления FileTable &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)  
   
   

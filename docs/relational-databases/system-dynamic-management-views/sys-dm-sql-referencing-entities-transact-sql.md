@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referencing_entities_TSQL
 - sys.dm_sql_referencing_entities_TSQL
 - dm_sql_referencing_entities
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referencing_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referencing_entities dynamic management function
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
-caps.latest.revision: "33"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 26d13446ff128a00b31677c78d7e205ba40b0e94
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 35e2f1be36365c2b1f5c8801a9e0d7749c70de7d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +66,7 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- *schema_name.referenced*_*имя_сущности*  
+ *schema_name.referenced*_*entity_name*  
  Имя упоминаемой сущности.  
   
  *schema_name* требуется только в том случае, если упоминаемый класс относится к классу PARTITION_FUNCTION.  
@@ -77,14 +80,14 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|Схема, которой принадлежит ссылающаяся сущность. Допускает значение NULL.<br /><br /> Значение NULL для триггеров DDL уровня базы данных или сервера.|  
 |referencing_entity_name|**sysname**|Имя ссылающейся сущности. Не допускает значение NULL.|  
 |referencing_id|**int**|Идентификатор ссылающейся сущности. Не допускает значение NULL.|  
 |referencing_class|**tinyint**|Класс ссылающейся сущности. Не допускает значение NULL.<br /><br /> 1 = объект<br /><br /> 12 = триггер DDL уровня базы данных<br /><br /> 13 = триггер DDL уровня сервера|  
 |referencing_class_desc|**nvarchar(60)**|Описание класса ссылающейся сущности.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
-|is_caller_dependent|**bit**|Указывает разрешение идентификатора упоминаемой сущности, полученного во время выполнения (так как он зависит от схемы вызывающего объекта).<br /><br /> Значение 1 означает, что ссылающаяся сущность может ссылаться на данный объект. При этом разрешение упоминаемой сущности зависит от вызывающего объекта и не может быть определено. Данная ситуация возможна только при вызове в инструкции EXECUTE не связанной со схемой ссылки на хранимую процедуру, расширенную хранимую процедуру или определяемую пользователем функцию.<br /><br /> Значение 0 означает, что упоминаемая сущность не зависит от вызывающего объекта.|  
+|is_caller_dependent|**бит**|Указывает разрешение идентификатора упоминаемой сущности, полученного во время выполнения (так как он зависит от схемы вызывающего объекта).<br /><br /> Значение 1 означает, что ссылающаяся сущность может ссылаться на данный объект. При этом разрешение упоминаемой сущности зависит от вызывающего объекта и не может быть определено. Данная ситуация возможна только при вызове в инструкции EXECUTE не связанной со схемой ссылки на хранимую процедуру, расширенную хранимую процедуру или определяемую пользователем функцию.<br /><br /> Значение 0 означает, что упоминаемая сущность не зависит от вызывающего объекта.|  
   
 ## <a name="exceptions"></a>Исключения  
  Возвращает пустой результирующий набор, если выполняется любое из следующих условий.  
@@ -104,16 +107,16 @@ sys.dm_sql_referencing_entities (
   
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
-|Table|Да*|Да|  
+|Таблица|Да*|Да|  
 |Просмотр|Да|Да|  
-|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] Хранимая процедура **|Да|Да|  
 |Хранимая процедура CLR|нет|Да|  
-|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] определяемая пользователем функция|Да|Да|  
 |Определяемая пользователем функция CLR|нет|Да|  
 |Триггер CLR (DML и DDL)|нет|нет|  
-|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|нет|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DML|Да|нет|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DDL уровня базы данных|Да|нет|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DDL уровня сервера|Да|нет|  
 |Расширенные хранимые процедуры|нет|Да|  
 |Очередь|нет|Да|  
 |Синоним|нет|Да|  
@@ -177,7 +180,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.dm_sql_referenced_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

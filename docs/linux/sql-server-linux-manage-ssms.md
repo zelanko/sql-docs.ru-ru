@@ -1,9 +1,9 @@
 ---
 title: "Использование среды SSMS для управления SQL Server для Linux | Документы Microsoft"
 description: 
-author: sanagama
-ms.author: sanagama
-manager: jhubbard
+author: rothja
+ms.author: jroth
+manager: craigg
 ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: 
 ms.workload: On Demand
-ms.openlocfilehash: f7999536135bed5a06d54b2e54e5d965df966c09
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: ae79f5e7a2f526b5ef1d153f333adab5c9a8c8a1
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Использование среды SQL Server Management Studio в Windows для управления SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этом разделе описываются [SQL Server Management Studio (SSMS)](../ssms/sql-server-management-studio-ssms.md) и будет выполнено несколько типичных задач. SSMS — это приложение Windows, поэтому SSMS следует использовать при наличии компьютером Windows, можно подключиться к удаленному экземпляру SQL Server в Linux.
 
@@ -92,9 +92,9 @@ ms.lasthandoff: 12/01/2017
 
 При разворачивании панели монитор активности выполняет запрос к экземпляру сведения. При свертывании панели выполнение всех операций запроса для этой панели приостанавливается. Вы можете развернуть одну или несколько областей, в то же время для просмотра различных типов активности в экземпляре.
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также:
 - [Использование среды SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/ms174173.aspx)
 - [Экспорт и импорт базы данных с помощью SSMS](sql-server-linux-migrate-ssms.md)
 - [Руководство: SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
 - [Учебник. Составление инструкций Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Мониторинг производительности и действий сервера](../relational-databases/performance/server-performance-and-activity-monitoring.md)
+- [Производительность сервера и мониторинг активности](../relational-databases/performance/server-performance-and-activity-monitoring.md)

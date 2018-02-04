@@ -3,7 +3,7 @@ title: "Настройка отказоустойчивого кластера �
 description: 
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: Inactive
-ms.openlocfilehash: 9d4ab14772f78370563c6117553ea9e45203a8b9
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 9720eb3b4254f2592e3c237bc2af16bc5360d2ad
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Настройка экземпляра отказоустойчивого кластера — iSCSI - SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 В этой статье описывается настройка хранения iSCSI для экземпляра отказоустойчивого кластера (FCI) в Linux. 
 
@@ -358,7 +358,7 @@ ms.lasthandoff: 12/01/2017
 
     \<ListOfVGsNotUsedByPacemaker > — список групп томов из выходных данных шага 20, не будет использоваться FCI. Поместите каждый из них в кавычки и отдельные с помощью символа запятой. Пример показан ниже.
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. При запуске Linux, он будет подключения файловой системы. Чтобы убедиться, что только Pacemaker можно подключить диск iSCSI, перестройте изображение корневой файловой системы. 

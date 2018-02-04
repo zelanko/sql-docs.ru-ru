@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_wait_stats
 - sys.dm_os_wait_stats
 - sys.dm_os_wait_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_wait_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_wait_stats dynamic management view
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
-caps.latest.revision: "111"
+caps.latest.revision: 
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: Active
-ms.openlocfilehash: 355aefa1b0cb4d8acbc215a3afc72709d8b811e9
-ms.sourcegitcommit: cb2f9d4db45bef37c04064a9493ac2c1d60f2c22
-ms.translationtype: MT
+ms.openlocfilehash: c7e4859e69328535a89d0c2abc3122340176eaec
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +48,7 @@ ms.lasthandoff: 01/12/2018
 |wait_time_ms|**bigint**|Общее время ожидания данного типа в миллисекундах. Это время включает в себя время signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Максимальное время ожидания данного типа.|  
 |signal_wait_time_ms|**bigint**|Разница между временем сигнализации ожидающего потока и временем начала его выполнения.|  
-|pdw_node_id|**int**|Идентификатор для узла, это распределение. <br/> **Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|Идентификатор для узла, это распределение. <br/> **Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Разрешения  
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
@@ -127,7 +130,7 @@ GO
 |BROKER_FORWARDER |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_INIT |Происходит при инициализации компонента Service Broker в каждой активной базе данных. Это не должно происходить часто.| 
 |BROKER_MASTERSTART |Происходит, когда задача ожидает запуска первичного обработчика событий компонента Service Broker для запуска. Это должно длиться очень короткое время.| 
-|BROKER_RECEIVE_WAITFOR |Имеет место при ожидании RECEIVE WAITFOR. Это стандартная ситуация, если нет готовых к получению сообщений.| 
+|BROKER_RECEIVE_WAITFOR |Имеет место при ожидании RECEIVE WAITFOR. Это может означать, что сообщения не готовы к получению в очереди или конфликтов блокировок не позволяет получать сообщения из очереди.| 
 |BROKER_REGISTERALLENDPOINTS |Имеет место в процессе инициализации конечной точки соединения компонента Service Broker. Это должно длиться очень короткое время.| 
 |BROKER_SERVICE |Происходит, когда обновляется или повторно приоритеты компонента Service Broker целевой список, связанный с целевой службой.| 
 |BROKER_SHUTDOWN |Имеет место при запланированном завершении работы компонента Service Broker. Это ожидание обычно длится короткое время, если вообще имеет место.| 
@@ -169,7 +172,7 @@ GO
 |CONNECTION_ENDPOINT_LOCK |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |COUNTRECOVERYMGR |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |CREATE_DATINISERVICE |TBD <br /> **Область применения**: начиная с [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|CXCONSUMER |Происходит с планами параллельных запросов, когда поток-потребитель ожидает является наличие потока производителя для отправки строк. Это является обычной частью параллельного выполнения запросов. <br /> **Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
+|CXCONSUMER |Происходит с планами параллельных запросов, когда поток-потребитель ожидает является наличие потока производителя для отправки строк. Это является обычной частью параллельного выполнения запросов. <br /> **Применяется к**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|
 |CXPACKET |При синхронизации итератора обмена обработчика запросов, а также при создании и использовании строк, происходит с планами параллельных запросов. Если ожидание избыточно и не может быть уменьшено путем настройки запросов (например, добавлением индексов), рассмотрите возможность настройки параметра cost threshold for parallelism или уменьшите степень параллелизма.<br /> **Примечание:** в [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 и [!INCLUDE[ssSDS](../../includes/sssds-md.md)], CXPACKET относится только к синхронизации итератора обмена обработчика запросов и создания строк для потребителя потоков. Потоки потребителя в тип ожидания CXCONSUMER отслеживаются отдельно.| 
 |CXROWSET_SYNC |Имеет место при параллельном просмотре диапазона.| 
 |DAC_INIT |Имеет место при инициализации выделенного административного соединения.| 
@@ -1024,7 +1027,7 @@ GO
 ## <a name="see-also"></a>См. также:  
     
  [Относящиеся к операционной системе SQL Server динамические административные представления &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_session_wait_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
+ [sys.dm_exec_session_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md)   
  [sys.dm_db_wait_stats &#40; База данных Azure SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-wait-stats-azure-sql-database.md)  
   
   

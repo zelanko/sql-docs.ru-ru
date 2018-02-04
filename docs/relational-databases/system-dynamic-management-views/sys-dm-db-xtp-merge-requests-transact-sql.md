@@ -14,16 +14,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c1224e88-af74-4c99-ae32-d5d2c552a1f5
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b068552f48544b8dc3a7f11dd8981008cb080bad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 4e08d9df86f8b389e3a2811c4b63a35ab0945dd0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpmergerequests-transact-sql"></a>sys.dm_db_xtp_merge_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.lasthandoff: 11/17/2017
 
 ## <a name="columns-in-the-report"></a>Столбцы в отчете
 
-| Имя столбца | Тип данных | Description |
+| Имя столбца | Тип данных | Описание |
 | :-- | :-- | :-- |
 | request_state | tinyint | Состояние запроса на слияние:<br/>0 = запрошен<br/>1 = ожидание<br/>2 = установлен<br/>3 = оставлен |
 | request_state_desc | nvarchar(60) | Значения для текущего состояния запроса:<br/><br/>Запрошенный - запрос на слияние существует.<br/>Отложить - слияние обрабатывается.<br/>Установить - слияния будет завершена.<br/>Прервана - слияния не удалось завершить, возможно из-за отсутствия пространства хранения. |
@@ -49,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 | checkpoint_tsn | bigint | Время запуска контрольной точки.<br/><br/>Все операции удаления, выполняемые транзакциями, с меткой времени ниже этой учитываются в новом файле данных. Остальные операции удаления перемещаются в целевой разностный файл. |
 | sourcenumber_file_id | GUID | До 16 внутренних идентификаторов файлов, уникальным образом определяющих исходные файлы при слиянии. |
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 
 Необходимо разрешение VIEW DATABASE STATE на текущую базу данных.
 

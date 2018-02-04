@@ -8,10 +8,12 @@ ms.service:
 ms.component: t-sql|database-console-commands
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - trace flags [SQL Server], about trace flags
 - trace flags [SQL Server]
@@ -21,16 +23,16 @@ helpviewer_keywords:
 - performance [SQL Server], trace
 - debugging [SQL Server], trace flags
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
-caps.latest.revision: "171"
+caps.latest.revision: 
 author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 6011c66716e96347b295325ab020739e41c04370
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 396216c00fc4c474164d98e47d0185f479e61b48
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - флаги трассировки (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -143,6 +145,7 @@ ms.lasthandoff: 01/25/2018
 |**9567**|Включает сжатие потока данных для группы доступности AlwaysOn во время автоматического заполнения. Сжатие может значительно сократить время передачи во время автоматического заполнения и приведет к увеличению нагрузки на процессор. Дополнительные сведения см. в разделе [Автоматическая инициализация группы доступности Always On](../../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md) и [Настройка сжатия для группы доступности](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md).<br /><br />**Область**: глобальные или сеанса|
 |**9591**|Отключает сжатие блока журнала в группы доступности AlwaysOn. Сжатие блока журнала — поведение по умолчанию, используемое с синхронные и асинхронные реплики в [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] и [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], сжатие используется только с асинхронной реплики. <br /><br />**Область**: глобальные или сеанса|
 |**9592**|Включает сжатие журнала потока для групп доступности синхронной. Эта функция отключена по умолчанию для группы доступности синхронной, поскольку сжатие приводит к увеличению задержки. Дополнительные сведения см. в разделе [Tune compression for availability group](../../database-engine/availability-groups/windows/tune-compression-for-availability-group.md)(Настройка сжатия для группы доступности).<br /><br />**Область**: глобальные или сеанса| 
+|**9929**|Файлы контрольных точек в памяти сокращает до 1 МБ. Дополнительные сведения см. в этой [статья службы поддержки Майкрософт](http://support.microsoft.com/kb/3147012).<br /><br />**Область**: глобальные только|  
 |**9939**|Включает параллельные планы и параллельное сканирование оптимизированной для памяти таблицы и табличные переменные в операции DML, которые ссылаются на оптимизированные для памяти таблиц или табличных переменных, при условии, что они не являются целевой объект операции DML в [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Дополнительные сведения см. в этой [статья службы поддержки Майкрософт](http://support.microsoft.com/kb/4013877).<br /><br />**Примечание:** флаг трассировки 9939 не требуется, если флаг трассировки 4199 явным образом включен.<br /><br />**Область**: глобальные или сеанса, или запроса|   
 |**10204**|Отключает слияния и повторного сжатия во время реорганизации индекса columnstore. В [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]при реорганизации индекса columnstore есть новые функции для автоматического слияния небольших сжатые группы строк в больших сжатые группы строк, а также как сжатия все группы строк, имеющих большое количество удаленных строк.<br /><br />**Примечание:** флаг трассировки 10204 не применяется к индексам columnstore, которые создаются в таблицах, оптимизированных для памяти.<br /><br />**Область**: глобальные или сеанса|   
 |**10316**|Включает создание дополнительных индексов на [внутренней памяти оптимизированная промежуточной таблица](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md), рядом с по умолчанию. Если у вас есть шаблон конкретного запроса, который включает в себя столбцы, которые не затрагиваются в индекс по умолчанию можно добавлять дополнительные задания.<br /><br />**Примечание:** с системным управлением версиями временных таблиц для таблиц, оптимизированных для памяти призваны обеспечить высокую скорость обработки транзакций. Имейте в виду, что создание дополнительных индексов может вызвать издержки для операций DML, которые обновляют или удаляют строки в текущей таблице. Дополнительные индексы должны сможет найти правильный баланс между производительностью темпоральные запросы и дополнительные издержки DML.<br /><br />**Область**: глобальные или сеанса|

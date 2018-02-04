@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_can_tlog_be_applied_TSQL
 - sp_can_tlog_be_applied
-dev_langs: TSQL
-helpviewer_keywords: sp_can_tlog_be_applied
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_can_tlog_be_applied
 ms.assetid: 9c143b6c-27ac-4ab7-98d1-3b7b265f3963
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 398ba10c5674218e2c2008c395d3f55910f25ced
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 0a29fc1b86e56707d45439a87ec4a88594a1917d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spcantlogbeapplied-transact-sql"></a>sp_can_tlog_be_applied (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@backup_file_name=** ] **"***backup_file_name***"**  
+ [ **@backup_file_name=** ] **'***backup_file_name***'**  
  Имя файла резервной копии. *backup_file_name* — **nvarchar(128)**.  
   
- [  **@database_name=** ] **"***имя_базы_данных***"**  
+ [ **@database_name=** ] **'***database_name***'**  
  Имя базы данных. *database_name* — **sysname**.  
   
- [  **@result=** ] *результат* **выходных данных**  
+ [ **@result=** ] *result* **OUTPUT**  
  Указывает, может ли журнал транзакций быть применен к базе данных. *результат* — **бит**.  
   
  1 = журнал может быть применен;  
@@ -61,7 +64,7 @@ sp_can_tlog_be_applied [ @backup_file_name = ] 'backup_file_name'
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_can_tlog_be_applied**.  
   
 ## <a name="examples"></a>Примеры  
@@ -79,7 +82,7 @@ N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Adventu
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

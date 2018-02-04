@@ -3,7 +3,7 @@ title: "Развертывание кластера Pacemaker для SQL Server 
 description: "Этот учебник показывает, как для развертывания кластера Pacemaker для SQL Server в Linux."
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jhubbard
+manager: craigg
 ms.date: 12/11/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -14,15 +14,15 @@ ms.suite: sql
 ms.custom: 
 ms.technology: database-engine
 ms.workload: On Demand
-ms.openlocfilehash: 4a014c0b7eedb96375f027674d9eb2374f38c85e
-ms.sourcegitcommit: cc71f1027884462c359effb898390c8d97eaa414
+ms.openlocfilehash: dd9d35a7fa6e8a8a0e826d584a4f78ca2581d9bc
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>Развертывание кластера Pacemaker для SQL Server в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Руководстве документируются задач, необходимых для развертывания кластера Linux Pacemaker для [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] всегда группы доступности (AG) или экземпляра отказоустойчивого кластера (FCI). В отличие от тесно связанные Windows Server или[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] стека, Pacemaker создания кластера, а также доступности (AG) группа конфигурации в Linux можно сделать до или после установки [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. После настройки кластера выполняется интеграция и настраивать ресурсы для части Pacemaker развертывания группы Доступности или экземпляр отказоустойчивого Кластера.
 > [!IMPORTANT]

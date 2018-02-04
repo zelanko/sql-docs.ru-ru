@@ -8,28 +8,30 @@ ms.reviewer:
 ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: eb9462ad5ab281d6178ccf33270e759b569825b1
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 7199f2d29c59d93c28ce5c5dca81a7a0b812f1b6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Содержит по одной строке для каждой секции всех таблиц и большинства типов индексов в [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] базы данных. Все таблицы и индексы содержат хотя бы одна секция ли явным образом секционированы.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |partition_id|`bigint`|Идентификатор секции. Уникален в базе данных.|  
 |object_id|`int`|Идентификатор объекта, к которому принадлежит данная секция. Каждая таблица или представление содержит как минимум одну секцию.|  
@@ -41,20 +43,20 @@ ms.lasthandoff: 11/17/2017
 |data_compression_desc|`nvarchar(60)`|Указывает состояние сжатия для каждой секции. Возможными значениями являются NONE, ROW и PAGE.|  
 |pdw_node_id|`int`|Уникальный идентификатор [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] узла.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение CONTROL SERVER.  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Пример а. Отображение строки в каждой секции в пределах каждого распределения 
 
-Применяется к: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+Применяется к: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
  
 Чтобы отобразить число строк в каждой секции в пределах каждого распределения, используйте [PDW_SHOWPARTITIONSTATS DBCC (SQL Server PDW)](../../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md) .
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Пример б. Использование системных представлений для просмотра строк в каждой секции каждой распределения таблицы
 
-Область применения:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+Применимо для следующих объектов: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 Этот запрос возвращает количество строк в каждой секции каждой распределения таблицы `myTable`.  
  
@@ -74,7 +76,7 @@ WHERE o.name = 'myTable'
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

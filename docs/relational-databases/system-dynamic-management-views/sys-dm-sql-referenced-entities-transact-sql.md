@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities
 - sys.dm_sql_referenced_entities_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_sql_referenced_entities dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_sql_referenced_entities dynamic management function
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
-caps.latest.revision: "46"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ba6329fb017dd398e9ff17586c8bbbab8f3ba455
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8af92c77cf5ab1f1c43f5c4cb529fe97b7de787a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>Функция динамического управления sys.dm_sql_referenced_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,14 +76,14 @@ sys.dm_sql_referenced_entities (
   
  *schema_name.referencing_entity_name* — **nvarchar(517)**.  
   
- *< Referencing_class >* :: = {ОБЪЕКТА | DATABASE_DDL_TRIGGER | SERVER_DDL_TRIGGER}  
+ *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
  Класс заданной ссылающейся сущности. В одной инструкции может быть указан только один класс.  
   
  *< referencing_class >* — **nvarchar(60)**.  
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|Идентификатор столбца, если ссылающаяся сущность является столбцом; в противном случае — 0. Не допускает значение NULL.|  
 |referenced_server_name|**sysname**|Имя сервера упоминаемой сущности.<br /><br /> Этот столбец заполняется для межсерверных зависимостей, которые создаются путем задания допустимого четырехкомпонентного имени. Сведения о многокомпонентных именах см. в разделе [синтаксические обозначения Transact-SQL &#40; Transact-SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> Имеет значение NULL для не привязанных к схеме зависимостей, в которых сущность упоминается без указания четырехкомпонентного имени.<br /><br /> Имеет значение NULL для привязанных к схеме сущностей, поскольку они должны находиться в той же базе данных и таким образом могут быть определены только с помощью двух частей (*схема.объект*) имя.|  
@@ -92,14 +95,14 @@ sys.dm_sql_referenced_entities (
 |referenced_minor_id|**int**|Идентификатор столбца, если упоминаемая сущность является столбцом. В противном случае — 0. Например, параметр referenced_minor_id будет иметь значение 0 в строке, которая содержит саму упоминаемую сущность.<br /><br /> При наличии не привязанных к схеме ссылок список зависимостей уровня столбцов может быть выведен только в случае ограниченности всех упоминаемых сущностей. Если какая-либо из упоминаемых сущностей не может быть привязана, в списке не отображается ни одной зависимости уровня столбца, а параметру referenced_minor_id присваивается значение 0. См. пример Г.|  
 |referenced_class|**tinyint**|Класс упоминаемой сущности.<br /><br /> 1 = Объект или столбец<br /><br /> 6 = Тип<br /><br /> 10 = коллекция схем XML<br /><br /> 21 = функция секционирования|  
 |referenced_class_desc|**nvarchar(60)**|Описание класса упоминаемой сущности.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
-|is_caller_dependent|**bit**|Отображает привязку к схеме для упоминаемой сущности, полученную во время выполнения (так как идентификатор сущности зависит от схемы вызывающего объекта). Данная ситуация возможна только для хранимой процедуры, расширенной хранимой процедуры или определяемой пользователем функции, выполняемых в инструкции EXECUTE.<br /><br /> 1 = упоминаемая сущность зависит от вызывающего объекта и определяется во время выполнения. В этом случае параметр referenced_id принимает значение NULL.<br /><br /> 0 = идентификатор упоминаемой сущности не зависит от вызывающего объекта. Всегда имеет значение 0 для привязанных к схеме ссылок, а также для межбазовых и межсерверных ссылок, которые явно указывают имя схемы. Например, ссылка на сущность в формате `EXEC MyDatabase.MySchema.MyProc` не зависит от вызывающего объекта. При этом ссылка в формате `EXEC MyDatabase..MyProc` зависит от вызывающего объекта.|  
-|is_ambiguous|**bit**|Указывает ссылка является неоднозначной и разрешается во время выполнения определяемой пользователем функции, определяемых пользователем типов (UDT) или ссылке xquery на столбец типа **xml**. Например, предположим, что инструкция `SELECT Sales.GetOrder() FROM Sales.MySales` определяется в хранимой процедуре. До выполнения хранимой процедуры неизвестно, является ли `Sales.GetOrder()` определяемой пользователем функцией в схеме `Sales` или столбцом `Sales` определяемого пользователем типа с методом `GetOrder()`.<br /><br /> 1 = ссылка на определяемую пользователем функцию или на метод определяемого пользователем типа (UDT) столбца неоднозначна.<br /><br /> 0 = ссылка определена однозначно, либо сущность при вызове функции может быть привязана.<br /><br /> Для привязанных к схеме ссылок всегда принимает значение 0.|  
-|is_selected|**bit**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец выбран.|  
-|is_updated|**bit**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец изменен.|  
-|is_select_all|**bit**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в предложении SELECT* (только на уровне объектов).|  
-|is_all_columns_found|**bit**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = все зависимости столбца для объекта удалось обнаружить.<br /><br /> 0 = зависимости столбца для объекта не удалось обнаружить.|
-|is_insert_all|**bit**|**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в инструкции INSERT без списка столбцов (только на уровне объектов).|  
-|is_incomplete|**bit**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец имеет ошибки привязки и не была завершена.|
+|is_caller_dependent|**бит**|Отображает привязку к схеме для упоминаемой сущности, полученную во время выполнения (так как идентификатор сущности зависит от схемы вызывающего объекта). Данная ситуация возможна только для хранимой процедуры, расширенной хранимой процедуры или определяемой пользователем функции, выполняемых в инструкции EXECUTE.<br /><br /> 1 = упоминаемая сущность зависит от вызывающего объекта и определяется во время выполнения. В этом случае параметр referenced_id принимает значение NULL.<br /><br /> 0 = идентификатор упоминаемой сущности не зависит от вызывающего объекта. Всегда имеет значение 0 для привязанных к схеме ссылок, а также для межбазовых и межсерверных ссылок, которые явно указывают имя схемы. Например, ссылка на сущность в формате `EXEC MyDatabase.MySchema.MyProc` не зависит от вызывающего объекта. При этом ссылка в формате `EXEC MyDatabase..MyProc` зависит от вызывающего объекта.|  
+|is_ambiguous|**бит**|Указывает ссылка является неоднозначной и разрешается во время выполнения определяемой пользователем функции, определяемых пользователем типов (UDT) или ссылке xquery на столбец типа **xml**. Например, предположим, что инструкция `SELECT Sales.GetOrder() FROM Sales.MySales` определяется в хранимой процедуре. До выполнения хранимой процедуры неизвестно, является ли `Sales.GetOrder()` определяемой пользователем функцией в схеме `Sales` или столбцом `Sales` определяемого пользователем типа с методом `GetOrder()`.<br /><br /> 1 = ссылка на определяемую пользователем функцию или на метод определяемого пользователем типа (UDT) столбца неоднозначна.<br /><br /> 0 = ссылка определена однозначно, либо сущность при вызове функции может быть привязана.<br /><br /> Для привязанных к схеме ссылок всегда принимает значение 0.|  
+|is_selected|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец выбран.|  
+|is_updated|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец изменен.|  
+|is_select_all|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в предложении SELECT* (только на уровне объектов).|  
+|is_all_columns_found|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = все зависимости столбца для объекта удалось обнаружить.<br /><br /> 0 = зависимости столбца для объекта не удалось обнаружить.|
+|is_insert_all|**бит**|**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект используется в инструкции INSERT без списка столбцов (только на уровне объектов).|  
+|is_incomplete|**бит**|**Применяется к**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = объект или столбец имеет ошибки привязки и не была завершена.|
   
 ## <a name="exceptions"></a>Исключения  
  Возвращает пустой результирующий набор, если выполняется любое из следующих условий.  
@@ -123,16 +126,16 @@ sys.dm_sql_referenced_entities (
   
 |Тип сущности|Ссылающаяся сущность|Упоминаемая сущность|  
 |-----------------|------------------------|-----------------------|  
-|Table|Да*|Да|  
+|Таблица|Да*|Да|  
 |Просмотр|Да|Да|  
-|Хранимая процедура [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Да|Да|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] Хранимая процедура **|Да|Да|  
 |Хранимая процедура CLR|нет|Да|  
-|Определяемая пользователем функция [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|Да|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] определяемая пользователем функция|Да|Да|  
 |Определяемая пользователем функция CLR|нет|Да|  
 |Триггер CLR (DML и DDL)|нет|нет|  
-|Триггер DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Да|нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня базы данных|Да|нет|  
-|Триггер DDL [!INCLUDE[tsql](../../includes/tsql-md.md)] уровня сервера|Да|нет|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DML|Да|нет|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DDL уровня базы данных|Да|нет|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] триггер DDL уровня сервера|Да|нет|  
 |Расширенные хранимые процедуры|нет|Да|  
 |Очередь|нет|Да|  
 |Синоним|нет|Да|  
@@ -292,7 +295,7 @@ FROM sys.dm_sql_referenced_entities ('HumanResources.uspUpdateEmployeePersonalIn
  Employee      Gender              0           1          0
  ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.dm_sql_referencing_entities (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [Представление каталога sys.sql_expression_dependencies (Transact-SQL)](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

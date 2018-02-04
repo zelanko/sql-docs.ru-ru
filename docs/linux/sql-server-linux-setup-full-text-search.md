@@ -3,7 +3,7 @@ title: "Установка SQL Server Full-Text Search в Linux | Докумен
 description: "В этом разделе описывается установка SQL Server Full-Text Search в Linux."
 author: rothja
 ms.author: jroth
-manager: jhubbard
+manager: craigg
 ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-non-specified
@@ -15,15 +15,15 @@ ms.custom:
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.workload: Inactive
-ms.openlocfilehash: 68704db01975a26b028d2ebc5b7f0d166793d6bc
-ms.sourcegitcommit: 531d0245f4b2730fad623a7aa61df1422c255edc
+ms.openlocfilehash: 8b1f14ca454582ee85506cd68b07a38f17ada1b4
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Установка SQL Server Full-Text Search в Linux
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Следующие шаги установки [SQL Server Full-Text Search](https://msdn.microsoft.com/library/ms142571.aspx) (**mssql-server-fts**) в Linux. Компонент Full-Text Search позволяет выполнять полнотекстовые запросы к символьным данным в таблицах SQL Server. Известные проблемы в этом выпуске см. в разделе [заметки о выпуске](sql-server-linux-release-notes.md).
 
@@ -96,7 +96,7 @@ sudo zypper update mssql-server-fts
 |---|---|
 | Нейтральный | 0 |
 | Арабский | 1025 |
-| Бенгальский (Индия) | 1093 |
+| Bengali (India) | 1093 |
 | Букмол | 1044 |
 | Бразильский | 1046 |
 | British English | 2057 |
@@ -112,7 +112,7 @@ sudo zypper update mssql-server-fts
 | Английский | 1033 |
 | Французский | 1036 |
 | Немецкий | 1031 |
-| Греческий | 1032 |
+| Greek | 1032 |
 | Гуджарати | 1095 |
 | Hebrew | 1037 |
 | Hindi | 1081 |
@@ -124,7 +124,7 @@ sudo zypper update mssql-server-fts
 | Корейский | 1042 |
 | Латышский | 1062 |
 | Литовский | 1063 |
-| Малайский (Малайзия) | 1086 |
+| Malay - Malaysia | 1086 |
 | Малайялам | 1100 |
 | Маратхи | 1102 |
 | Польский | 1045 |
@@ -133,7 +133,7 @@ sudo zypper update mssql-server-fts
 | Румынский | 1048 |
 | Русский | 1049 |
 | Сербский (кириллица) | 3098 |
-| Сербский (латиница) | 2074 |
+| Serbian (Latin) | 2074 |
 | Китайский (упрощенный) | 2052 |
 | Словацкий | 1051 |
 | Словенский | 1060 |
@@ -154,7 +154,7 @@ sudo zypper update mssql-server-fts
 
 Можно просмотреть список установленных фильтров, вызвав **sp_help_fulltext_system_components «фильтр»**. Для SQL Server 2017 г устанавливаются следующие фильтры:
 
-| Название компонента | Идентификатор класса | Version |
+| Название компонента | Идентификатор класса | Версия |
 |---|---|---|
 |площадь | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ANS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

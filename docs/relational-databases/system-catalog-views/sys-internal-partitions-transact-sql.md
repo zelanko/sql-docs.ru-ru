@@ -8,31 +8,33 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 applies_to:
 - Azure SQL Database
 - SQL Server 2016 Preview
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83cb1a2bc846f21a12b3d83b0499edf70b404656
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: a3280403d6194bd3f5370985d31e672752ed8c25
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Возвращает по одной строке для каждого набора строк, который отслеживает внутренние данные для индексов columnstore для таблиц на диске. Эти наборы строк являются внутренними для индексов columnstore и отслеживания удалены строки, сопоставления группы строк и изменений хранения групп строк. Они позволяют отслеживать данные для каждого для каждой секции таблицы; Каждая таблица имеет по крайней мере одну секцию. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]повторное создание наборов строк при каждом перестраивает индекс columnstore.   
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|Идентификатор секции для этой секции. Является уникальным в пределах базы данных.|  
 |object_id|**int**|Идентификатор объекта для таблицы, содержащей секцию.|  
@@ -46,11 +48,11 @@ ms.lasthandoff: 11/17/2017
 |data_compression|**tinyint**|Состояние сжатия для набора строк:<br /><br /> 0 = нет<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|Состояние сжатия для каждой секции. Возможные значения для таблиц rowstore: NONE, ROW и PAGE. Возможные значения для таблиц columnstore: COLUMNSTORE и COLUMNSTORE_ARCHIVE.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо быть членом роли **public** . Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Общие замечания  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]повторно создает новые индексы внутренней columnstore каждый раз, он создает или перестраивает индекс columnstore.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] повторно создает новые индексы внутренней columnstore каждый раз, он создает или перестраивает индекс columnstore.  
   
 ## <a name="examples"></a>Примеры  
   
@@ -65,7 +67,7 @@ on i.object_id = p.object_id
 WHERE p.object_id = OBJECT_ID ( '<table name' ) ;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога объектов &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Часто задаваемые вопросы о запросах к системному каталогу SQL Server](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  

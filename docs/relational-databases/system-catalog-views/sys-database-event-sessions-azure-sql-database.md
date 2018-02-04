@@ -8,20 +8,21 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: system-catalog-views
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 ms.assetid: 02c2cd71-d35e-4d4c-b844-92b240f768f4
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3f27efef3db486246e1a7efe162c427a94f30243
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: bcfbd264a3ec5d1cd4561fa298ead76a7d66d3b7
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaseeventsessions-azure-sql-database"></a>sys.database_event_sessions (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,7 +36,7 @@ ms.lasthandoff: 11/17/2017
 |-|  
 |**Применяется к**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]и любые более поздним версиям.|  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Уникальный идентификатор сеанса событий. Не допускает значение NULL.|  
 |имя|**sysname**|Определяемое пользователем имя, идентифицирующее сеанс событий. имя является уникальным. Не допускает значение NULL.|  
@@ -46,10 +47,10 @@ ms.lasthandoff: 11/17/2017
 |max_event_size|**int**|Объем памяти, выделенной для событий, которые не могут уместиться в буферах сеанса событий. Если значение max_event_size превышает расчетный размер буфера, два дополнительных буфера размера max_event_size выделяются для сеанса событий. Допускает значение NULL.|  
 |memory_partition_mode|**nchar(1)**|Местоположение в памяти, в котором созданы буферы событий. Режим раздела памяти по умолчанию — G. Не допускает значения NULL. memory_partition_mode является одним из следующих:<br /><br /> G — NONE;<br /><br /> C — PER_CPU;<br /><br /> N — PER_NODE.|  
 |memory_partition_mode_desc|**sysname**|По умолчанию значение установлено в NONE. Не допускает значение NULL. Принимает одно из следующих значений.<br /><br /> NONE. Внутри экземпляра SQL Server создается один набор буферов.<br /><br /> PER_CPU. Набор буферов создается для каждого ЦП.<br /><br /> PER_NODE. Набор буферов создается для каждого узла неоднородного доступа к памяти (NUMA).|  
-|track_causality|**bit**|Включает или отключает отслеживание причинности. Если установлено значение 1 (ВКЛ.), то отслеживание включено и можно установить соответствие между связанными событиями в различных серверных соединениях. Значение по умолчанию — 0 (ВЫКЛ.). Не допускает значение NULL.|  
-|startup_state|**bit**|Значение определяет, запускается ли сеанс автоматически при запуске сервера. Значение по умолчанию равно 0. Не допускает значение NULL. Может принимать одно из следующих значений:<br /><br /> 0 (ВЫКЛ.). Сеанс не запускается автоматически при запуске сервера.<br /><br /> 1 (ВКЛ.). Сеанс событий запускается при запуске сервера.|  
+|track_causality|**бит**|Включает или отключает отслеживание причинности. Если установлено значение 1 (ВКЛ.), то отслеживание включено и можно установить соответствие между связанными событиями в различных серверных соединениях. Значение по умолчанию — 0 (ВЫКЛ.). Не допускает значение NULL.|  
+|startup_state|**бит**|Значение определяет, запускается ли сеанс автоматически при запуске сервера. Значение по умолчанию равно 0. Не допускает значение NULL. Может принимать одно из следующих значений:<br /><br /> 0 (ВЫКЛ.). Сеанс не запускается автоматически при запуске сервера.<br /><br /> 1 (ВКЛ.). Сеанс событий запускается при запуске сервера.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
   

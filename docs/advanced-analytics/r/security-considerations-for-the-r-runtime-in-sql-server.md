@@ -1,6 +1,6 @@
 ---
 title: "Вопросы безопасности для машинного обучения в SQL Server | Документы Microsoft"
-ms.date: 11/16/2017
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: sql
 ms.prod: machine-learning-services
@@ -10,16 +10,16 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d5065197-69e6-4fce-9654-00acaecc148b
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: jeannt
 ms.author: jeannt
 manager: cgronlund
 ms.workload: Inactive
-ms.openlocfilehash: 67beebd9c35ddddbfbc56f606ec1b7df3671ae64
-ms.sourcegitcommit: f486d12078a45c87b0fcf52270b904ca7b0c7fc8
+ms.openlocfilehash: c7262b804c1712e7ea962feefd88f3b2f64146a9
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="security-considerations-for-machine-learning-in-sql-server"></a>Вопросы безопасности для машинного обучения в SQL Server
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 01/08/2018
 
 ## <a name="authentication-methods-supported-for-remote-compute-contexts"></a>Методы проверки подлинности, поддерживаемые для контекстах удаленных вычислений
 
-[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]поддерживает встроенную проверку подлинности Windows и SQL учетных записей при создании подключений между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и удаленным данным клиента обработки и анализа.
+[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] поддерживает встроенную проверку подлинности Windows и SQL учетных записей при создании подключений между [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и удаленным данным клиента обработки и анализа.
 
 Например предположим, разработке решения R на вашем ноутбуке и требуется выполнять вычисления на сервере SQL Server. Необходимо создать источник данных SQL Server в R, с помощью **rx** функций и определения строки подключения с учетом учетные данные Windows.
 
@@ -50,9 +50,9 @@ ms.lasthandoff: 01/08/2018
  В общем случае [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] запускает среду выполнения внешнего сценария и выполняет скрипты в собственную учетную запись. Тем не менее, если среда выполнения внешних отправляет вызов ODBC [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] олицетворяет учетные данные пользователя, отправившего командой, чтобы убедиться, что вызов ODBC не завершается ошибкой. Это называется *неявной проверкой подлинности*.
  
  > [!IMPORTANT]
- > Чтобы неявная проверка подлинности не завершилась ошибкой, группа пользователей Windows, содержащая рабочие учетные записи (по умолчанию **SQLRUser**), должна также содержать учетную запись для экземпляра в базе данных master и этой учетной записи должны быть предоставлены разрешения на подключение к экземпляру.
+ > Для неявной проверки подлинности для успешного выполнения группу пользователей Windows, которая содержит учетные записи работника (по умолчанию **SQLRUserGroup**) должен иметь учетную запись в базе данных master для экземпляра и этой учетной записи необходимо предоставить разрешения для Подключитесь к экземпляру.
  > 
- > Группы **SQLRUser** также используется, когда выполнение сценариев Python. 
+ > Группы **SQLRUserGroup** также используется, когда выполнение сценариев Python. 
 
 Как правило рекомендуется, можно заранее перенести большие наборы данных в SQL Server, а не предпринята попытка считать данные с помощью RODBC или другой библиотеке. Кроме того используйте SQL Server-запрос или представление как первичный источник данных, для повышения производительности. 
 

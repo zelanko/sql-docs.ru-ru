@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - database_recovery_status
 - sys.database_recovery_status
 - sys.database_recovery_status_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.database_recovery_status catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.database_recovery_status catalog view
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-caps.latest.revision: "31"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cc080e2f9a7dd102dcd9fa760ffc6267430fb30f
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 644f73be666aa21a13cd745e5c50ed4552d87b19
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Разрешение CREATE DATABASE **master** базы данных.    
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных, уникальный внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**database_guid**|**uniqueidentifier**|Используется для связывания всех файлов базы данных. Чтобы база данных запускалась как ожидается, все ее файлы должны содержать этот идентификатор GUID в заголовочной странице. Только одна база данных должна иметь этот идентификатор GUID, но при копировании и прикреплении баз данных могут быть созданы копии. Инструкция RESTORE всегда формирует новый идентификатор GUID при восстановлении базы данных, которая еще не существует.<br /><br /> NULL = база данных находится в режиме вне сети либо не запущена.|  
@@ -53,10 +56,10 @@ ms.lasthandoff: 11/17/2017
 |**first_recovery_fork_guid**|**uniqueidentifier**|Идентификатор начальной вилки восстановления.<br /><br /> NULL = база данных находится в режиме вне сети либо не запущена.|  
 |**fork_point_lsn**|**numeric(25,0)**|Если **first_recovery_fork_guid** не равно (! =) для **recovery_fork_guid**, **fork_point_lsn** является номером LSN текущей вилки. В противном случае значение равно NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Представления каталогов баз данных и файлов (Transact-SQL)](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
  [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   

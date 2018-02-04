@@ -4,7 +4,7 @@ description: "Отображение фрагментов обновленное
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: craigg
 editor: rothja
 ms.service: na
 ms.topic: updart-autogen
@@ -15,21 +15,21 @@ ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 12/02/2017
 ms.author: genemi
-ms.openlocfilehash: 030f30580b0ddb02da2a67990d0c58acf15236c9
-ms.sourcegitcommit: 73043fe1ac5d60b67e33b44053c0a7733b98bc3d
+ms.openlocfilehash: d477af0c4c7027892d4ade8e586c9a9b908a05ea
+ms.sourcegitcommit: b4fd145c27bc60a94e9ee6cf749ce75420562e6b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="new-and-recently-updated-sql-server-on-linux-docs"></a>Обновление новых и недавно: SQL Server в Linux документы
 
 
 
-Почти каждый день корпорация Майкрософт вносит изменения в свои статьи на веб-сайте документации [Docs.Microsoft.com](http://docs.microsoft.com/). В этой статье приводятся отрывки из обновленных недавно статей, а также ссылки на новые статьи.
+Почти каждый день Корпорация Майкрософт обновляет некоторые из его существующих статей на его [Docs.Microsoft.com](http://docs.microsoft.com/) документации веб-сайта. В этой статье отображает выдержки из недавно обновлены статьи. Ссылки на новые статьи также может быть указан.
 
-Статья создается программой и периодически обновляется. Отрывки из измененных статей могут иметь неидеальный формат или разметку исходной статьи. Картинки здесь не отображаются.
+В этой статье создается программой, которая периодически запускается повторно. Иногда фрагмент могут отображаться идеально подходит форматирования или как разметки из статьи источника. Образы никогда не отображается.
 
-Последние обновления соответствуют следующему периоду времени и предметной области:
+Следующий диапазон дат и темы отображаются последние обновления:
 
 
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 12/23/2017
 
 &nbsp;
 
-## <a name="new-articles-created-recently"></a>Недавно созданные статьи
+## <a name="new-articles-created-recently"></a>Недавно созданные новые статьи
 
 Приведенные ниже ссылки указывают на новые статьи, которые добавлены недавно.
 
@@ -61,13 +61,13 @@ ms.lasthandoff: 12/23/2017
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>Обновленные статьи с отрывками
+## <a name="updated-articles-with-excerpts"></a>Обновлены статьи с отрывки
 
 В этом разделе приводятся отрывки из статей, в которые недавно внесены значительные изменения.
 
-Отрывки отображаются отдельно от соответствующего семантического контекста. Кроме того, иногда фрагмент отделяется от синтаксиса разметки, окружающей саму статью. Таким образом, эти отрывки приводятся только для общего сведения. Они позволяют понять, стоит ли вам перейти по ссылке и прочитать всю статью полностью.
+Из семантической контексту отрывки, показанные здесь отображаются раздельно. Кроме того иногда фрагмент отделяется от синтаксис важные разметки окружающего в реальной статьи. Поэтому эти отрывки являются только общие рекомендации. Только отрывки позволяют знаете ли потребностей гарантирует времени, нажмите кнопку и посетите реальной статьи.
 
-По этой и другим причинам не копируйте код из этих отрывков и не воспринимайте содержание этих отрывков как однозначно верное. Вместо этого пройдите по ссылке и ознакомьтесь с фактическим текстом статьи.
+Для этих и других причин не копировать из этих отрывки кода и не выполняют как точное истинности любой фрагмент текста. Вместо этого посетите реальной статьи.
 
 
 
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/23/2017
 
 <a name="compactupdatedlist"/>
 
-### <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список недавно обновленных статей
+### <a name="compact-list-of-articles-updated-recently"></a>Сокращенный список статей, недавно обновлены
 
 В этом сокращенном списке приводятся ссылки на все обновленные статьи, перечисленные в разделе "Отрывки".
 
@@ -557,7 +557,7 @@ docker rm sql1
 
 
 
-## <a name="similar-articles"></a>Похожие статьи
+## <a name="similar-articles"></a>Аналогичные статей
 
 <!--  HOW TO:
     Refresh this file's line items with the latest 'Count-in-Similars*' content.
@@ -567,10 +567,10 @@ docker rm sql1
 
 Этот раздел содержит статьи, очень близкие к недавно измененным статьям из других предметных областей в общедоступном репозитории GitHub.com: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/).
 
-#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметные области, содержащие новые или недавно обновленные статьи
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>Предметных областей, которые имеют новые или недавно обновленные статьи
 
 - [Новые + обновленные (3+14): **Углубленная аналитика для SQL**](../advanced-analytics/new-updated-advanced-analytics.md)
-- [Новые + обновленные (1+0): **Analysis Services для SQL**](../analysis-services/new-updated-analysis-services.md)
+- [Новый + обновленные (1 + 0): **служб Analysis Services для SQL** документы](../analysis-services/new-updated-analysis-services.md)
 - [Новые + обновленные (87+0): **Analytics Platform System для SQL**](../analytics-platform-system/new-updated-analytics-platform-system.md)
 - [Новые + обновленные (5+4): **Подключение к SQL**](../connect/new-updated-connect.md)
 - [Новые + обновленные (0+1): **Ядро СУБД для SQL**](../database-engine/new-updated-database-engine.md)
@@ -581,22 +581,22 @@ docker rm sql1
 - [Новые + обновленные (0+1): **примеры для SQL**](../sample/new-updated-sample.md)
 - [Новые + обновленные (21+0): **SQL Operations Studio**](../sql-operations-studio/new-updated-sql-operations-studio.md)
 - [Новые + обновленные(5+1): **Microsoft SQL Server**](../sql-server/new-updated-sql-server.md)
-- [Новые + обновленные (0+1): **SQL Server Data Tools (SSDT)**](../ssdt/new-updated-ssdt.md)
+- [Новый + обновленные (0 + 1): **SQL Server Data Tools (SSDT)** документы](../ssdt/new-updated-ssdt.md)
 - [Новые + обновленные (1+0): **Помощник по миграции SQL Server (SSMA)**](../ssma/new-updated-ssma.md)
-- [Новые + обновленные (0+1): **SQL Server Management Studio (SSMS)**](../ssms/new-updated-ssms.md)
+- [Новый + обновленные (0 + 1): **SQL Server Management Studio (SSMS)** документы](../ssms/new-updated-ssms.md)
 - [Новые + обновленные (0+2): **Transact-SQL**](../t-sql/new-updated-t-sql.md)
 
-#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметные области, не содержащие новые или недавно обновленные статьи
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>Предметных областей, в которых нет новых или недавно обновленных статей
 
 - [Новые + обновленные (0+0): **Data Migration Assistant (DMA) для SQL**](../dma/new-updated-dma.md)
-- [Новые + обновленные (0+0): **объекты данных ActiveX (ADO) для SQL**](../ado/new-updated-ado.md)
-- [Новые + обновленные (0+0): **Data Quality Services для SQL**](../data-quality-services/new-updated-data-quality-services.md)
-- [Новые + обновленные (0+0): **расширения интеллектуального анализа данных (DMX) для SQL**](../dmx/new-updated-dmx.md)
+- [Новый + обновленные (0 + 0): **объектов данных ActiveX (ADO) для SQL** документы](../ado/new-updated-ado.md)
+- [Новый + обновленные (0 + 0): **Data Quality Services для SQL** документы](../data-quality-services/new-updated-data-quality-services.md)
+- [Новый + обновленные (0 + 0): **расширений интеллектуального анализа (DMX) для SQL** документы](../dmx/new-updated-dmx.md)
 - [Новые + обновленные (0+0): документация **Master Data Services (MDS) для SQL**](../master-data-services/new-updated-master-data-services.md)
-- [Новые + обновленные (0+0): **многомерные выражения (MDX) для SQL**](../mdx/new-updated-mdx.md)
-- [Новые + обновленные (0+0): **ODBC (Open Database Connectivity) для SQL**](../odbc/new-updated-odbc.md)
-- [Новые + обновленные (0+0): **PowerShell для SQL**](../powershell/new-updated-powershell.md)
+- [Новый + обновленные (0 + 0): **многомерных выражений (MDX) для SQL** документы](../mdx/new-updated-mdx.md)
+- [Новый + обновленные (0 + 0): **ODBC (Open Database Connectivity) для SQL** документы](../odbc/new-updated-odbc.md)
+- [Новый + обновленные (0 + 0): **PowerShell для SQL** документы](../powershell/new-updated-powershell.md)
 - [Новые + обновленные (0+0): **Инструменты для SQL**](../tools/new-updated-tools.md)
-- [Новые + обновленные (0+0): **XQuery для SQL**](../xquery/new-updated-xquery.md)
+- [Новый + обновленные (0 + 0): **XQuery для SQL** документы](../xquery/new-updated-xquery.md)
 
 

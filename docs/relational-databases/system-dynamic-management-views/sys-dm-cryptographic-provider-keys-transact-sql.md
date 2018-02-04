@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_cryptographic_provider_keys_TSQL
 - dm_cryptographic_provider_keys
 - sys.dm_cryptographic_provider_keys
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_cryptographic_provider_keys dynamic management function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_cryptographic_provider_keys dynamic management function
 ms.assetid: 5a8c1421-c56b-44b5-96e5-4f01782a0c7c
-caps.latest.revision: "11"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9b16cf946a2e963ac0421fe91ac11df6e9021ed1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84149c495867b1479e09edcd24e32c2191608fc8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmcryptographicproviderkeys-transact-sql"></a>sys.dm_cryptographic_provider_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,17 +53,17 @@ dm_cryptographic_provider_keys ( provider_id )
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Идентификатор key_ID**|**int**|Идентификатор ключа на поставщике.|  
+|**key_id**|**int**|Идентификатор ключа на поставщике.|  
 |**key_name**|**nvarchar(512)**|Имя ключа на поставщике.|  
 |**key_thumbprint**|**varbinary(32)**|Отпечаток с поставщика ключа.|  
 |**algorithm_id**|**int**|Идентификатор алгоритма на поставщике.|  
 |**algorithm_tag**|**int**|Тег алгоритма на поставщике.|  
 |**key_type**|**nchar(256)**|Тип ключа на поставщике.|  
-|**длина_ключа**|**int**|Длина ключа на поставщике.|  
+|**key_length**|**int**|Длина ключа на поставщике.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  При запросе к этому представлению выполняется проверка подлинности контекста пользователя на поставщике расширенного управления ключами и перечисление всех ключей, видимых для пользователя.  
   
  Если проверку подлинности пользователя на поставщике расширенного управления ключами выполнить не удалось, данные ключей не возвращаются.  
@@ -73,7 +76,7 @@ SELECT * FROM sys.dm_cryptographic_provider_keys(1234567);
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Расширенное управление ключами &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
   
