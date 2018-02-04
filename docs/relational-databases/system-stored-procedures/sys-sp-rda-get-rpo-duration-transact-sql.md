@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_get_rpo_duration
 - sys.sp_rda_get_rpo_duration_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_get_rpo_duration stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_get_rpo_duration stored procedure
 ms.assetid: 35882067-3072-47ff-9024-ca453c0f49a7
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4a36d1b1e04e53098710a1cacc8c463653f82710
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: a2a8877f7e101241399db2132b02d6e5a41b31b5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssprdagetrpoduration-transact-sql"></a>sys.sp_rda_get_rpo_duration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +52,14 @@ sp_rda_get_rpo_duration @durationinhours output
  *@durationinhours*    
   Число часов (ненулевое целочисленное значение) SQL Server сохраняет в текущей базе данных с включенным Stretch перенесенных данных.    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Разрешения    
  Требуются права db_owner.    
     
-## <a name="remarks"></a>Замечания    
+## <a name="remarks"></a>Remarks    
  Измените значение, запустив [sys.sp_rda_set_rpo_duration &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md).    
     
-## <a name="see-also"></a>См. также:    
- [sys.sp_rda_set_rpo_duration &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
+## <a name="see-also"></a>См. также    
+ [sys.sp_rda_set_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-rpo-duration-transact-sql.md)     
  [Восстановление баз данных с поддержкой Stretch (база данных Stretch)](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)    
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     

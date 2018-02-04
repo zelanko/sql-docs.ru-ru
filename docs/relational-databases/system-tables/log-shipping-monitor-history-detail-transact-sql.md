@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_monitor_history_detail_TSQL
 - log_shipping_monitor_history_detail
-dev_langs: TSQL
-helpviewer_keywords: log_shipping_monitor_history_detail system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- log_shipping_monitor_history_detail system table
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9dc17ec0e0b558d6927da84e77233b5e75e264d5
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b44a87a77f22a9815e7dc645e85478315fe8959a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="logshippingmonitorhistorydetail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +38,7 @@ ms.lasthandoff: 11/17/2017
   
  Таблицы, связанные с ведением журналов и мониторингом, также используются на сервере-источнике и серверах-получателях.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|Первичный идентификатор для резервирования или вторичный идентификатор для копирования или восстановления.|  
 |**agent_type**|**tinyint**|Тип задания доставки журналов:<br /><br /> 0 = резервирование;<br /><br /> 1 = копирование;<br /><br /> 2 = восстановление.|  
@@ -44,20 +47,20 @@ ms.lasthandoff: 11/17/2017
 |**session_status**|**tinyint**|Состояние сеанса.<br /><br /> 0 = начало.<br /><br /> 1 = запуск.<br /><br /> 2 = успешно.<br /><br /> 3 = ошибка.<br /><br /> 4 = предупреждение.|  
 |**log_time**|**datetime**|Дата и время создания записи.|  
 |**log_time_utc**|**datetime**|Дата и время создания записи по Гринвичу.|  
-|**Сообщение**|**nvarchar(max)**|Текст сообщения.|  
+|**message**|**nvarchar(max)**|Текст сообщения.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта таблица содержит подробное описание агентов доставки журналов. Чтобы идентифицировать сеанс агента, используйте столбцы **agent_id**, **agent_type**, и **session_id**. Чтобы просмотреть подробные данные журнала для сеанса агента, отсортируйте их по **log_time**.  
   
  Помимо хранения на удаленном сервере мониторинга, хранятся сведения, связанные с сервера-источника на сервере-источнике в его **log_shipping_monitor_history_detail** таблицы и сведения, относящиеся к получателю сервер также хранится на сервере-получателе в его **log_shipping_monitor_history_detail** таблицы.  
   
-## <a name="see-also"></a>См. также:  
- [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [О доставке журналов &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_delete_log_shipping_primary_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-database-transact-sql.md)   
  [sp_cleanup_log_shipping_history &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)   
- [sp_refresh_log_shipping_monitor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
+ [sp_refresh_log_shipping_monitor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   
  [Системные таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)   
- [log_shipping_monitor_error_detail &#40; Transact-SQL &#41;](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
+ [log_shipping_monitor_error_detail &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql.md)  
   
   

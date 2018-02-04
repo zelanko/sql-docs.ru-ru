@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobs_in_schedule_TSQL
 - sp_help_jobs_in_schedule
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobs_in_schedule
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobs_in_schedule
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ff12f4e1ee3f994a74360969cacd51d9e479a70e
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: aac7c4d1cb1199f17e060c9c9d0d4437d8a3220c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +48,10 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@schedule_id =** ] *schedule_id*  
+ [ **@schedule_id =** ] *schedule_id*  
  Идентификатор расписания, о котором необходимо вывести сведения. *schedule_id* — **int**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
   
- [  **@schedule_name =** ] **"***schedule_name***"**  
+ [ **@schedule_name =** ] **'***schedule_name***'**  
  Имя расписания, о котором необходимо вывести сведения. *schedule_name* — **sysname**, не имеет значения по умолчанию. Либо *schedule_id* или *schedule_name* может быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -57,9 +60,9 @@ sp_help_jobs_in_schedule
 ## <a name="result-sets"></a>Результирующие наборы  
  Возвращает следующий результирующий набор.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**Аргумент job_id**|**uniqueidentifier**|Уникальный идентификатор задания.|  
+|**job_id**|**uniqueidentifier**|Уникальный идентификатор задания.|  
 |**originating_server**|**nvarchar(30)**|Имя сервера, от которого поступило задание.|  
 |**name**|**sysname**|Имя задания.|  
 |**включен**|**tinyint**|Показывает, разрешено ли задание к выполнению.|  
@@ -90,12 +93,12 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Число шагов в задании.|  
 |**has_schedule**|**int**|Число назначенных запусков задания в расписании.|  
 |**has_target**|**int**|Число целевых серверов в задании.|  
-|**type**|**int**|Тип задания:<br /><br /> **1** = локальное задание.<br /><br /> **2** = многосерверное задание.<br /><br /> **0** = задание не имеет целевых серверов.|  
+|**type**|**int**|Тип задания:<br /><br /> **1** = локальное задание.<br /><br /> **2** = Multiserver job.<br /><br /> **0** = задание не имеет целевых серверов.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта процедура заносит в список сведения о заданиях, присоединенных к указанному расписанию.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -120,7 +123,7 @@ EXEC sp_help_jobs_in_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агент SQL Server хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
  [sp_attach_schedule &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   

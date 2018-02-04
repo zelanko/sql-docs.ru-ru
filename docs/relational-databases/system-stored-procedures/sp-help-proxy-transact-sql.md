@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_proxy
 - sp_help_proxy_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_proxy
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_proxy
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
-caps.latest.revision: "38"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bf5dd28e001919a43d39685e2e50eaeb03e877af
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 19f4df348037b923ac5e7daf643b5ed114256324
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +50,18 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@proxy_id**  =] *идентификатор*  
+ [ **@proxy_id** = ] *id*  
  Идентификационный номер учетной записи-посредника, для которой необходимо вывести список сведений. *Proxy_id* — **int**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
   
- [  **@proxy_name**  =] **"***proxy_name***"**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  Имя учетной записи-посредника, для которой необходимо вывести список сведений. *Proxy_name* — **sysname**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
   
- [  **@subsystem_name**  =] '*subsystem_name*"  
+ [ **@subsystem_name** = ] '*subsystem_name*'  
  Имя подсистемы, для которой будут выводиться учетные записи-посредники. *Subsystem_name* — **sysname**, значение по умолчанию NULL. Когда *subsystem_name* указано, *имя* также должен быть указан.  
   
  В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
@@ -80,7 +83,7 @@ sp_help_proxy
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**name**|**sysname**|Имя учетной записи-посредника.|  
@@ -91,12 +94,12 @@ sp_help_proxy
 |**credential_id**|**int**|Идентификатор учетных данных, связанных с учетной записью-посредником.|  
 |**credential_identity_exists**|**int**|Указывает, существует ли столбец credential_identity. { 0 = не существует, 1 = существует }|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если параметры не указаны, **sp_help_proxy** выводятся сведения обо всех прокси-серверов в экземпляре.  
   
  Чтобы определить, какие учетные записи-посредники определенное имя входа можно использовать для данной подсистемы, укажите *имя* и *subsystem_name*. Если эти аргументы определены, **sp_help_proxy** перечислены учетные записи-посредники, которым указанное имя входа может доступа, которые могут использоваться для указанной подсистемы.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена предопределенная роль базы данных **SQLAgentOperatorRole** в базе данных **msdb** .  
   
  Дополнительные сведения о **SQLAgentOperatorRole**, в разделе [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
@@ -129,7 +132,7 @@ EXEC dbo.sp_help_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агент SQL Server хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Хранимая процедура sp_add_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  

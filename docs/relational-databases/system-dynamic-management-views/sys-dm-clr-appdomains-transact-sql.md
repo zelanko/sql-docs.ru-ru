@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_clr_appdomains
 - dm_clr_appdomains_TSQL
 - sys.dm_clr_appdomains_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_clr_appdomains dynamic management dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_clr_appdomains dynamic management dynamic management view
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3dfe70d96c7b85d596c3819273acf264ba59e34b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 16f729bc78a42984716d2f30fc2bf30badc1ade5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,37 +42,37 @@ ms.lasthandoff: 11/27/2017
   
  Дополнительные сведения см. в разделе [домены приложений](http://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|Адрес **AppDomain**. Все управляемые базы данных, объекты, принадлежащие пользователю, всегда загружаются в одном **AppDomain**. Этот столбец можно использовать для поиска всех сборок, загруженных в данный момент в этом **AppDomain** в **sys.dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|Идентификатор **AppDomain**. Каждый **AppDomain** имеет уникальный идентификатор.|  
 |**appdomain_name**|**varchar(386)**|Имя **AppDomain** , назначенный [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**creation_time**|**datetime**|Время, когда **AppDomain** был создан. Поскольку **доменов приложений** кэшируются и используются повторно для повышения производительности, **creation_time** не обязательно является время выполнения кода.|  
-|**DB_ID**|**int**|Идентификатор базы данных, в котором **AppDomain** был создан. Код, хранимый в двух разных базах данных не могут совместно использовать один **AppDomain**.|  
-|**функция USER_ID**|**int**|Идентификатор пользователя, объекты которого могут выполняться в этом **AppDomain**.|  
-|**состояние**|**nvarchar(128)**|Дескриптор для текущего состояния **AppDomain**. Домен приложения может быть в различных состояниях — от создания до удаления. Дополнительные сведения см. в подразделе «Примечания».|  
+|**db_id**|**int**|Идентификатор базы данных, в котором **AppDomain** был создан. Код, хранимый в двух разных базах данных не могут совместно использовать один **AppDomain**.|  
+|**user_id**|**int**|Идентификатор пользователя, объекты которого могут выполняться в этом **AppDomain**.|  
+|**state**|**nvarchar(128)**|Дескриптор для текущего состояния **AppDomain**. Домен приложения может быть в различных состояниях — от создания до удаления. Дополнительные сведения см. в подразделе «Примечания».|  
 |**strong_refcount**|**int**|Количество жестких ссылок на **AppDomain**. Это отражает количество выполняющихся пакетов, использующих этот **AppDomain**. Обратите внимание, что выполнение этого представления создаст **счетчик жестких ссылок**, даже если нет кода в данный момент, **strong_refcount** будет иметь значение 1.|  
 |**weak_refcount**|**int**|Количество слабых ссылок на это **AppDomain**. Это указывает, сколько объектов внутри **AppDomain** кэшируются. При выполнении управляемого объекта базы данных, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] кэширует его в **AppDomain** для повторного использования в будущем. Это улучшает производительность.|  
-|**стоимость**|**int**|Стоимость в сумме **AppDomain**. Чем выше стоимость, тем выше вероятность это **AppDomain** будет выгружен при недостатке свободной памяти. Стоимость обычно зависит от объема памяти, необходимые для повторного создания данного **AppDomain**.|  
-|**значение**|**int**|Значение **AppDomain**. Чем меньше значение, тем выше вероятность это **AppDomain** будет выгружен при недостатке свободной памяти. Значение обычно зависит от количества соединений или пакетов, использующих этот **AppDomain**.|  
+|**cost**|**int**|Стоимость в сумме **AppDomain**. Чем выше стоимость, тем выше вероятность это **AppDomain** будет выгружен при недостатке свободной памяти. Стоимость обычно зависит от объема памяти, необходимые для повторного создания данного **AppDomain**.|  
+|**value**|**int**|Значение **AppDomain**. Чем меньше значение, тем выше вероятность это **AppDomain** будет выгружен при недостатке свободной памяти. Значение обычно зависит от количества соединений или пакетов, использующих этот **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Суммарное время процессора в миллисекундах, использованное всеми потоками при выполнении в текущем домене приложения с момента запуска процесса. Это эквивалентно **System.AppDomain.MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Общий размер (в килобайтах) всей выделенной памяти, которая была выделена в домене приложения с момента его создания (без вычета освобожденной и собранной памяти). Это эквивалентно **System.AppDomain.MonitoringTotalAllocatedMemorySize**.|  
 |**survived_memory_kb**|**bigint**|Количество килобайт, сохранившихся после последней полной, блокирующей сборки мусора, на которые заведомо существуют ссылки из текущего домена приложения. Это эквивалентно **System.AppDomain.MonitoringSurvivedMemorySize**.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Имеется отношение "один ко многим" между **dm_clr_appdomains.appdomain_address** и **dm_clr_loaded_assemblies.appdomain_address**.  
   
  В следующих таблицах список возможных **состояние** значения, их описания и в случае, если **AppDomain** жизненного цикла. Эти сведения можно использовать, чтобы отслеживать жизненный цикл **AppDomain** , контролировать подозрительную или повторяющуюся **AppDomain** экземпляров домена приложений без необходимости анализировать журнал событий Windows.  
   
 ## <a name="appdomain-initialization"></a>Инициализация домена приложений  
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|**AppDomain** находится в процессе создания.|  
   
 ## <a name="appdomain-usage"></a>Использование домена приложений  
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|Среда выполнения **AppDomain** готов для использования несколькими пользователями.|  
 |E_APPDOMAIN_SINGLEUSER|**AppDomain** готов для использования в операциях DDL. Это отличается от E_APPDOMAIN_SHARED, в котором используется общий домен приложения для выполнения интеграции CLR в качестве противопоставления операциям DDL. Такие домены приложения изолированы от остальных текущих операций.|  
@@ -77,15 +80,15 @@ ms.lasthandoff: 11/27/2017
   
 ## <a name="appdomain-cleanup"></a>Очистка домена приложений  
   
-|Состояние|Description|  
+|Состояние|Описание|  
 |-----------|-----------------|  
-|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]был запрошен, среда CLR выгружала **AppDomain**, как правило, так как сборка, содержащая управляемые объекты базы данных была изменена или удалена.|  
+|E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] был запрошен, среда CLR выгружала **AppDomain**, как правило, так как сборка, содержащая управляемые объекты базы данных была изменена или удалена.|  
 |E_APPDOMAIN_UNLOADED|Среда CLR выгрузила **AppDomain**. Это обычно является результатом процедуры из-за **ThreadAbort**, **OutOfMemory**, или необработанное исключение в пользовательском коде.|  
 |E_APPDOMAIN_ENQUEUE_DESTROY|**AppDomain** выгружен в среде CLR и задать будет уничтожен [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |E_APPDOMAIN_DESTROY|**AppDomain** в процессе удаления [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |E_APPDOMAIN_ZOMBIE|**AppDomain** Ликвидировано [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], однако не все ссылки на **AppDomain** были очищены.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требует разрешения VIEW SERVER STATE на базу данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -113,8 +116,8 @@ from sys.dm_clr_appdomains
 where appdomain_id = 15);  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sys.dm_clr_loaded_assemblies &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)   
  [Общеязыковая среда выполнения, связанные с динамическим административным представлениям &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

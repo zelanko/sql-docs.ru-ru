@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_requests
 - dm_exec_requests_TSQL
 - dm_exec_requests
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_requests dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-caps.latest.revision: "67"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 6295b01227c2da62599dd594530624f2672d4bdc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: c66516230609677ae4f7598dc81fb8df4758e84e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Чтобы выполнить код, внешний по отношению к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (например, расширенную хранимую процедуру или распределенный запрос), поток должен выйти из-под управления планировщика, работающего в режиме без вытеснения. Для этого исполнитель переходит в режим с вытеснением. Значения времени, возвращаемые этим динамическим административным представлением, не включают время, затраченное в режиме с вытеснением.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Идентификатор сеанса, к которому относится данный запрос. Не допускает значение NULL.|  
 |request_id|**int**|Идентификатор запроса. Уникален в контексте сеанса. Не допускает значение NULL.|  
@@ -74,14 +77,14 @@ ms.lasthandoff: 11/17/2017
 |language|**nvarchar(128)**|Установка языка для данного запроса. Допускает значение NULL.|  
 |date_format|**nvarchar(3)**|Установка параметра DATEFORMAT для данного запроса. Допускает значение NULL.|  
 |date_first|**smallint**|Установка параметра DATEFIRST для данного запроса. Не допускает значение NULL.|  
-|quoted_identifier|**bit**|1 = Параметр QUOTED_IDENTIFIER для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|arithabort|**bit**|1 = Параметр ARITHABORT для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_null_dflt_on|**bit**|1 = Параметр ANSI_NULL_DFLT_ON для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_defaults|**bit**|1 = Параметр ANSI_DEFAULTS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_warnings|**bit**|1 = Параметр ANSI_WARNINGS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_padding|**bit**|1 = Параметр ANSI_PADDING для запроса включен (ON).<br /><br /> В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|ansi_nulls|**bit**|1 = Параметр ANSI_NULLS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
-|concat_null_yields_null|**bit**|1 = Параметр CONCAT_NULL_YIELDS_NULL для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|quoted_identifier|**бит**|1 = Параметр QUOTED_IDENTIFIER для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|arithabort|**бит**|1 = Параметр ARITHABORT для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_null_dflt_on|**бит**|1 = Параметр ANSI_NULL_DFLT_ON для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_defaults|**бит**|1 = Параметр ANSI_DEFAULTS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_warnings|**бит**|1 = Параметр ANSI_WARNINGS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_padding|**бит**|1 = Параметр ANSI_PADDING для запроса включен (ON).<br /><br /> В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|ansi_nulls|**бит**|1 = Параметр ANSI_NULLS для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
+|concat_null_yields_null|**бит**|1 = Параметр CONCAT_NULL_YIELDS_NULL для запроса включен (ON). В противном случае — 0.<br /><br /> Не допускает значение NULL.|  
 |transaction_isolation_level|**smallint**|Уровень изоляции, с которым создана транзакция для данного запроса. Не допускает значение NULL.<br /><br /> 0 = не указан;<br /><br /> 1 = читать незафиксированные;<br /><br /> 2 = читать зафиксированные;<br /><br /> 3 = повторяемые результаты;<br /><br /> 4 = сериализуемые;<br /><br /> 5 = моментальный снимок.|  
 |lock_timeout|**int**|Время ожидания блокировки для данного запроса (в миллисекундах). Не допускает значение NULL.|  
 |deadlock_priority|**int**|Значение параметра DEADLOCK_PRIORITY для данного запроса. Не допускает значение NULL.|  
@@ -89,7 +92,7 @@ ms.lasthandoff: 11/17/2017
 |prev_error|**int**|Последняя ошибка, происшедшая при выполнении запроса. Не допускает значение NULL.|  
 |nest_level|**int**|Текущий уровень вложенности кода, выполняемого для данного запроса. Не допускает значение NULL.|  
 |granted_query_memory|**int**|Число страниц, выделенных для выполнения поступившего запроса. Не допускает значение NULL.|  
-|executing_managed_code|**bit**|Указывает, выполняет ли данный запрос в настоящее время код объекта среды CLR (например, процедуры, типа или триггера). Этот флаг установлен в течение всего времени, когда объект среды CLR находится в стеке, даже когда из среды вызывается код [!INCLUDE[tsql](../../includes/tsql-md.md)]. Не допускает значение NULL.|  
+|executing_managed_code|**бит**|Указывает, выполняет ли данный запрос в настоящее время код объекта среды CLR (например, процедуры, типа или триггера). Этот флаг установлен в течение всего времени, когда объект среды CLR находится в стеке, даже когда из среды вызывается код [!INCLUDE[tsql](../../includes/tsql-md.md)]. Не допускает значение NULL.|  
 |group_id|**int**|Идентификатор группы рабочей нагрузки, которой принадлежит этот запрос. Не допускает значение NULL.|  
 |query_hash|**binary(8)**|Двоичное хэш-значение рассчитывается для запроса и используется для идентификации запросов с аналогичной логикой. Можно использовать хэш запроса для определения использования статистических ресурсов для запросов, которые отличаются только своими литеральными значениями.|  
 |query_plan_hash|**binary(8)**|Двоичное хэш-значение рассчитывается для плана выполнения запроса и используется для идентификации аналогичных планов выполнения запросов. Можно использовать хэш плана запроса для нахождения совокупной стоимости запросов со схожими планами выполнения.|  
@@ -98,9 +101,9 @@ ms.lasthandoff: 11/17/2017
 |dop |**int** |**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Степень параллелизма запроса. |  
 |parallel_worker_count |**int** |**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Количество зарезервированных параллельных рабочих процессов в случае параллельных запросов.  |  
 |external_script_request_id |**uniqueidentifier** |**Область применения**: начиная с [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Идентификатор запроса внешних скриптов, связанные с текущим запросом. |  
-|is_resumable |**bit** |**Область применения**: начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли запрос возобновляемые индекса. |  
+|is_resumable |**бит** |**Область применения**: начиная с [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает, является ли запрос возобновляемые индекса. |  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Если у пользователя есть `VIEW SERVER STATE` разрешение на сервере, пользователь увидит все выполняющиеся сеансы на экземпляре [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; в противном случае пользователь увидит только текущий сеанс. `VIEW SERVER STATE`не может быть предоставлено в [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] , `sys.dm_exec_requests` всегда ограничен до текущего соединения. 
   
 ## <a name="examples"></a>Примеры  
@@ -149,11 +152,11 @@ WHERE status = N'suspended';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_os_memory_clerks &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
+ [sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)   
  [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
- [sys.dm_exec_query_memory_grants &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_query_plan &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [sys.dm_exec_sql_text &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+ [sys.dm_exec_query_memory_grants &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
+ [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

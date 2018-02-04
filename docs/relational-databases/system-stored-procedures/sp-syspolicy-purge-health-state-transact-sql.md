@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syspolicy_purge_health_state_TSQL
 - sp_syspolicy_purge_health_state
-dev_langs: TSQL
-helpviewer_keywords: sp_syspolicy_purge_health_state
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_syspolicy_purge_health_state
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
-caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d476953862783efa0de9b0c7eaa461041f434df9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9ae3d46c7a50cc8b7f5a56e3807cb44eb4edd922
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@target_tree_root_with_id =** ] **"***target_tree_root_with_id***"**  
+ [ **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
  Представляет узел в обозревателе объектов, для которого очищается состояние работоспособности. *target_tree_root_with_id* — **nvarchar(400)**, значение по умолчанию NULL.  
   
  Можно указывать значения из столбца target_query_expression_with_id системного представления msdb.dbo.syspolicy_system_health_state.  
@@ -51,12 +54,12 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Процедура sp_syspolicy_purge_health_state должна выполняться в контексте системной базы данных msdb.  
   
  Если запустить эту хранимую процедуру, не указывая параметров, то состояние работоспособности системы будет удалено для всех узлов в обозревателе объектов.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в предопределенной роли базы данных PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
@@ -71,7 +74,7 @@ EXEC msdb.dbo.sp_syspolicy_purge_health_state @target_tree_root_with_id = 'Serve
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Управление на основе политик хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)  
   
   

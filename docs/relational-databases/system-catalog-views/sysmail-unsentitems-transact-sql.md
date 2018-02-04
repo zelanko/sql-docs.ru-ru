@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_unsentitems_TSQL
 - sysmail_unsentitems
-dev_langs: TSQL
-helpviewer_keywords: sysmail_unsentitems database mail view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_unsentitems database mail view
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-caps.latest.revision: "15"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 85b7db39b03913b735ebde53571675fd9235a7e8
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: d3a05add3c6c490a0b45e664389e6a49c59959d1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,28 +48,28 @@ ms.lasthandoff: 11/27/2017
   
  Для просмотра всех сообщений, обработанных компонентом Database Mail, используйте [sysmail_allitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md). Для просмотра только сообщений в состоянии сбоя, используйте [sysmail_faileditems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md). Чтобы просмотреть только те сообщения, которые были отправлены, используйте [sysmail_sentitems &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Идентификатор почтового отправления в очереди почты.|  
 |**profile_id**|**int**|Идентификатор профиля, использованного для передачи сообщения.|  
-|**Получатели**|**varchar(max)**|Электронные адреса получателей сообщения.|  
+|**recipients**|**varchar(max)**|Электронные адреса получателей сообщения.|  
 |**copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения.|  
-|**Аргумент blind_copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения, чьи имена не будут отображаться в заголовке сообщения.|  
-|**Тема**|**nvarchar(510)**|Строка темы сообщения.|  
+|**blind_copy_recipients**|**varchar(max)**|Электронные адреса получателей копий сообщения, чьи имена не будут отображаться в заголовке сообщения.|  
+|**subject**|**nvarchar(510)**|Строка темы сообщения.|  
 |**текст**|**varchar(max)**|Тело сообщения.|  
 |**body_format**|**varchar(20)**|Формат тела сообщения. Возможными значениями являются **текст** и **HTML**.|  
-|**важность**|**varchar(6)**|**Важность** параметр сообщения.|  
+|**importance**|**varchar(6)**|**Важность** параметр сообщения.|  
 |**чувствительность**|**varchar(12)**|**Чувствительности** параметр сообщения.|  
 |**file_attachments**|**varchar(max)**|Список имен файлов, разделенных точкой с запятой, который прикреплен к сообщению электронной почты.|  
 |**attachment_encoding**|**varchar(20)**|Тип вложения.|  
-|**запрос**|**varchar(max)**|Запрос, выполненный почтовой программой.|  
+|**query**|**varchar(max)**|Запрос, выполненный почтовой программой.|  
 |**execute_query_database**|**sysname**|Контекст базы данных, в котором почтовая программа выполнила запрос.|  
-|**attach_query_result_as_file**|**bit**|Если значение равно 0, результаты запроса были включены в тело сообщения после его содержимого. Если значение равно 1, результаты были возвращены в виде вложения.|  
-|**query_result_header**|**bit**|Если значение равно 1, результаты запроса содержали заголовки столбцов. Если значение равно 0, результаты запроса не включали заголовков столбцов.|  
+|**attach_query_result_as_file**|**бит**|Если значение равно 0, результаты запроса были включены в тело сообщения после его содержимого. Если значение равно 1, результаты были возвращены в виде вложения.|  
+|**query_result_header**|**бит**|Если значение равно 1, результаты запроса содержали заголовки столбцов. Если значение равно 0, результаты запроса не включали заголовков столбцов.|  
 |**query_result_width**|**int**|**Query_result_width** параметр сообщения.|  
 |**query_result_separator**|**char(1)**|Символ, используемый для разделения столбцов в выходных данных запроса.|  
-|**exclude_query_output**|**bit**|**Exclude_query_output** параметр сообщения. Дополнительные сведения см. в разделе [sp_send_dbmail &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
-|**append_query_error**|**bit**|**Append_query_error** параметр сообщения. 0 означает, что компонент Database Mail не отсылает электронное сообщение, если в запросе содержится ошибка.|  
+|**exclude_query_output**|**бит**|**Exclude_query_output** параметр сообщения. Дополнительные сведения см. в разделе [sp_send_dbmail &#40; Transact-SQL &#41; ](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md).|  
+|**append_query_error**|**бит**|**Append_query_error** параметр сообщения. 0 означает, что компонент Database Mail не отсылает электронное сообщение, если в запросе содержится ошибка.|  
 |**send_request_date**|**datetime**|Дата и время помещения сообщения в очередь почты.|  
 |**send_request_user**|**sysname**|Пользователь, отправивший сообщение. Это пользовательский контекст почтовой процедуры базы данных, не **из** сообщения.|  
 |**sent_account_id**|**int**|Идентификатор учетной записи компонента Database Mail, используемой для отсылки этого сообщения. Всегда NULL для этого представления.|  
@@ -75,10 +78,10 @@ ms.lasthandoff: 11/27/2017
 |**last_mod_date**|**datetime**|Дата и время последнего изменения строки.|  
 |**last_mod_user**|**sysname**|Пользователь, внесший последнее изменение в строку.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При поиске и устранении неполадок в компоненте Database Mail это представление может помочь установить природу проблемы путем отображения числа ожидающих отправки сообщений и продолжительности их ожидания. Если в данный момент сообщения не отправляются, компонент Database Mail может быть не запущен или могут быть проблемы с сетью, что не позволяет компоненту связаться с SMTP-серверами. Если большинство неотправленных сообщений имеют такое же **profile_id**, может быть проблема с SMTP-сервера. Попробуйте добавить дополнительные учетные записи в профиль. Если сообщения отправляются, но на ожидание в очереди тратится много времени, возможно, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется больше ресурсов для обработки необходимого объема сообщений.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Предоставленные **sysadmin** предопределенной роли сервера и **DatabaseMailUserRole** роли базы данных. При выполнении членом **sysadmin** предопределенной роли сервера, в этом представлении отображаются все **неотправленные** или **повтором** сообщений. Все остальные пользователи видят только **неотправленные** или **повтором** сообщения, отправленные ими.  
   
   

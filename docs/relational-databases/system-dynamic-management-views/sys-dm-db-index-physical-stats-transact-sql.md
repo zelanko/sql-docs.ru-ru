@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - sys.dm_db_index_physical_stats_TSQL
 - sys.dm_db_index_physical_stats
 - dm_db_index_physical_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_index_physical_stats dynamic management function
 - fragmentation [SQL Server]
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
-caps.latest.revision: "95"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: f04fd96c367fc01225b57db6d04831748a618ed2
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1bdad59aebb96a2afd2f11172c6068d54213c095
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +92,7 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Идентификатор базы данных таблицы или представления.|  
 |object_id|**int**|Идентификатор объекта таблицы или представления, для которых создан индекс.|  
@@ -114,11 +116,11 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|Средний размер записи в байтах.<br /><br /> Для индекса средний размер записи применяется к текущему уровню сбалансированного дерева в единице распределения IN_ROW_DATA.<br /><br /> Для кучи — средний размер записи в единице распределения IN_ROW_DATA.<br /><br /> Для единиц распределения LOB_DATA или ROW_OVERFLOW_DATA — средний размер записи во всей единице распределения.<br /><br /> Значение NULL, если *режим* = LIMITED.|  
 |forwarded_record_count|**bigint**|Количество записей в куче, содержащих указатели на данные в других местах. (Такое состояние возникает во время обновления, когда не хватает места для сохранения новой строки в исходном расположении.)<br /><br /> NULL для любой единицы распределения, отличающейся от единиц распределения IN_ROW_DATA для кучи.<br /><br /> Значение NULL для куч, если указан *режим* = LIMITED.|  
 |compressed_page_count|**bigint**|Количество сжатых страниц.<br /><br /> Вновь выделенные для куч страницы не сжаты с использованием сжатия PAGE. Куча — это СТРАНИЦА, сжимаемая при наступлении двух особых условий: при массовом импорте данных или при перестройке кучи. Типичные операции DML, которые вызывают выделение страниц, не связаны со сжатием PAGE. Перестройте кучу, если значение compressed_page_count увеличивается сверх желательного порога.<br /><br /> Для таблиц с кластеризованным индексом значение compressed_page_count указывает эффективность сжатия страниц.|  
-|hobt_id|bigint|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Применительно к индексам columnstore только это идентификатор набора строк, который отслеживает внутренние columnstore данные для секции. Наборы строк не хранимые как для кучи данных или двоичного дерева. Они имеют одинаковые Идентификаторы индекса как родительский индекс columnstore. Дополнительные сведения см. в разделе [sys.internal_partitions &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> Значение NULL, если|  
-|column_store_delete_buffer_state|tinyint|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ЗАПИСЬ НА ДИСК<br /><br /> 4 = СНЯТИЯ С УЧЕТА<br /><br /> 5 = ГОТОВНОСТЬ|  
-|column_store_delete_buff_state_desc||**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (от[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE — родительский индекс не является индексом columnstore.<br /><br /> OPEN — методов Deleter и сканеры используйте его.<br /><br /> СТОК — методов Deleter расходуя, но сканеры по-прежнему использовать.<br /><br /> ОЧИСТКА — буфер закрыт и строк в буфере, записываются в точечном рисунке delete.<br /><br /> Снятия с УЧЕТА — строк в буфере закрытых delete были записаны в точечном рисунке delete, но буфер не был усечен, поскольку сканеры используют ее. Новый сканеры нет необходимости использовать приходят буфера, поскольку достаточно открыть буфера.<br /><br /> ГОТОВ – это буфера удаления готов к использованию.|  
+|hobt_id|bigint|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Применительно к индексам columnstore только это идентификатор набора строк, который отслеживает внутренние columnstore данные для секции. Наборы строк не хранимые как для кучи данных или двоичного дерева. Они имеют одинаковые Идентификаторы индекса как родительский индекс columnstore. Дополнительные сведения см. в разделе [sys.internal_partitions &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md).<br /><br /> Значение NULL, если|  
+|column_store_delete_buffer_state|tinyint|**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN;<br /><br /> 2 = СТОК<br /><br /> 3 = ЗАПИСЬ НА ДИСК<br /><br /> 4 = СНЯТИЯ С УЧЕТА<br /><br /> 5 = ГОТОВНОСТЬ|  
+|column_store_delete_buff_state_desc||**Область применения**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (начиная с[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] до [текущей версии](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> NOT_APPLICABLE — родительский индекс не является индексом columnstore.<br /><br /> OPEN — методов Deleter и сканеры используйте его.<br /><br /> СТОК — методов Deleter расходуя, но сканеры по-прежнему использовать.<br /><br /> ОЧИСТКА — буфер закрыт и строк в буфере, записываются в точечном рисунке delete.<br /><br /> Снятия с УЧЕТА — строк в буфере закрытых delete были записаны в точечном рисунке delete, но буфер не был усечен, поскольку сканеры используют ее. Новый сканеры нет необходимости использовать приходят буфера, поскольку достаточно открыть буфера.<br /><br /> ГОТОВ – это буфера удаления готов к использованию.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция динамического управления sys.dm_db_index_physical_stats заменяет инструкцию DBCC SHOWCONTIG.  
   
 ## <a name="scanning-modes"></a>Режимы просмотра  
@@ -198,7 +200,7 @@ GO
   
 -   Использование инструкции ALTER INDEX REORGANIZE, заменившей DBCC INDEXDEFRAG, для переупорядочения страниц индекса конечного уровня в логическом порядке. Так как эта операция выполняется в режиме «в сети», во время выполнения инструкции индекс доступен. Кроме того, операция может быть прервана без потери уже выполненной работы. Недостатком этого метода является то, что он не так хорошо выполняет реорганизацию данных, как операция перестроения индекса, и не обновляет статистику.  
   
--   Использование инструкции ALTER INDEX REBUILD, заменившей DBCC DBREINDEX, для перестроения индекса, как «в сети», так и в режиме «вне сети». Дополнительные сведения см. в разделе [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
+-   Использование инструкции ALTER INDEX REBUILD, заменившей DBCC DBREINDEX, для перестроения индекса, как «в сети», так и в режиме «вне сети». Дополнительные сведения см. в статье [ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md).  
   
  Фрагментация сама по себе не является достаточной причиной реорганизации или перестроения индекса. Основной эффект фрагментации заключается в том, что она замедляет упреждающее чтение во время просмотра индекса. В результате этого увеличивается время ответа. Если запрос к фрагментированным таблице или индексу не предусматривает просмотра, потому что в основном выполняются единичные уточняющие запросы, устранение фрагментации может не дать никакого эффекта. Дополнительные сведения см. в этой [веб-сайте Майкрософт](http://go.microsoft.com/fwlink/?linkid=31012).  
   
@@ -225,7 +227,7 @@ GO
 ## <a name="limitations-and-restrictions"></a>Ограничения  
  Не возвращает данные для кластеризованных индексов columnstore.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимы следующие разрешения:  
   
 -   разрешение CONTROL на указанный объект в базе данных;  
@@ -427,12 +429,12 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Индекс динамические административные представления и функции &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_db_index_operational_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
- [sys.dm_db_partition_stats &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
+ [Динамические административные представления и функции, связанные с индексами &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [Системные представления &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   

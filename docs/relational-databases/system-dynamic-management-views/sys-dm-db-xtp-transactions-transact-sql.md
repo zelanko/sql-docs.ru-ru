@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_db_xtp_transactions_TSQL
 - dm_db_xtp_transactions
 - dm_db_xtp_transactions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_transactions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_transactions dynamic management view
 ms.assetid: 5c1a0a7a-e851-4b6f-8dfd-c9655fbf5a51
-caps.latest.revision: "20"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cf60a655ecd15b438281ccf4cff2fb20c4096c72
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b9f584e03b7e16458409a6710bcab18625651b76
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
     
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |xtp_transaction_id|**bigint**|Внутренний идентификатор для этой транзакции в диспетчере транзакций XTP.|  
 |transaction_id|**bigint**|Идентификатор транзакции. Соединения с идентификатором транзакции в других, связанных с ней динамических административных представлениях, например sys.dm_tran_active_transactions.<br /><br /> Значение 0 для транзакций XTP, таких как транзакции, запущенные скомпилированными в собственном коде хранимыми процедурами.|  
@@ -49,9 +52,9 @@ ms.lasthandoff: 11/17/2017
 |набор по|**int**|Результат транзакции. Допустимы следующие значения:<br /><br /> 0 — ВЫПОЛНЯЕТСЯ<br /><br /> 1 — УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> 2 — ОШИБКА<br /><br /> 3 — ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> 4 — ПРОВЕРКА ЗАВЕРШЕНА С ОШИБКОЙ (RR)<br /><br /> 5 — ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> 6 — ОТКАТ|  
 |result_desc|**nvarchar**|Результат транзакции. Допустимы следующие значения:<br /><br /> ВЫПОЛНЯЕТСЯ<br /><br /> УСПЕШНОЕ ЗАВЕРШЕНИЕ<br /><br /> ERROR<br /><br /> ЗАВИСИМОСТЬ ФИКСАЦИИ<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (RR)<br /><br /> ПРОВЕРКА НЕ ПРОЙДЕНА (SR)<br /><br /> ROLLBACK|  
 |last_error|**int**|Только для внутреннего применения|  
-|is_speculative|**bit**|Только для внутреннего применения|  
-|is_prepared|**bit**|Только для внутреннего применения|  
-|is_delayed_durability|**bit**|Только для внутреннего применения|  
+|is_speculative|**бит**|Только для внутреннего применения|  
+|is_prepared|**бит**|Только для внутреннего применения|  
+|is_delayed_durability|**бит**|Только для внутреннего применения|  
 |memory_address|**varbinary**|Только для внутреннего применения|  
 |database_address|**varbinary**|Только для внутреннего применения|  
 |thread_id|**int**|Только для внутреннего применения|  
@@ -77,10 +80,10 @@ ms.lasthandoff: 11/17/2017
 |dependent_7_address|**varbinary(8)**|Только для внутреннего применения|  
 |dependent_8_address|**varbinary(8)**|Только для внутреннего применения|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на сервере.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления таблиц, оптимизированных для памяти &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

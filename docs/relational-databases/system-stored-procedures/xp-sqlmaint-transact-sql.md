@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - xp_sqlmaint
 - xp_sqlmaint_TSQL
-dev_langs: TSQL
-helpviewer_keywords: xp_sqlmaint
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- xp_sqlmaint
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b32c6c32d3af26713713d513fa3c8255cfd3ef9d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: b39c93aa08d46dd31b2a063631ce567593319df4
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ xp_sqlmaint 'switch_string'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- **"** *switch_string* **"**  
+ **'** *switch_string* **'**  
  Строка, содержащая **sqlmaint** ключи программы. Ключи и их значения должны разделяться пробелами.  
   
  **-?** параметр не действует для **xp_sqlmaint**.  
@@ -54,10 +57,10 @@ xp_sqlmaint 'switch_string'
 ## <a name="return-code-values"></a>Значения кода возврата  
  Нет. Возвращает сообщение об ошибке, если **sqlmaint** программа завершается с ошибкой.  
   
-## <a name="remarks"></a>Замечания  
- Если эта процедура вызывается пользователем, в систему с использованием проверки подлинности SQL Server, **- U "***login_id***»** и **-P"**  *пароль***»** добавляются к *switch_string* перед выполнением. Если пользователь вошел в систему с проверкой подлинности Windows, *switch_string* передаются без изменения **sqlmaint**.  
+## <a name="remarks"></a>Remarks  
+ Если эта процедура вызывается пользователем, в систему с использованием проверки подлинности SQL Server, **- U "***login_id***»** и **-P"***пароль***»** коммутаторов добавляются к *switch_string* перед выполнением. Если пользователь вошел в систему с проверкой подлинности Windows, *switch_string* передаются без изменения **sqlmaint**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо членство в предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
@@ -74,7 +77,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Программа sqlmaint](../../tools/sqlmaint-utility.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

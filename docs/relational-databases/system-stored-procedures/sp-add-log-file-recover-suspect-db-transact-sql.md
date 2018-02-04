@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_log_file_recover_suspect_db_TSQL
 - sp_add_log_file_recover_suspect_db
-dev_langs: TSQL
-helpviewer_keywords: sp_add_log_file_recover_suspect_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_log_file_recover_suspect_db
 ms.assetid: b41ca3a5-7222-4c22-a012-e66a577a82f6
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 44d4e79680160bc294e002bd663578e955f54f41
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 1623d485132881e7d4df61926dc425257e3113b3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spaddlogfilerecoversuspectdb-transact-sql"></a>sp_add_log_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,21 +54,21 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
  [  **@dbName =** ] **"***базы данных***"**  
  Имя базы данных. *База данных* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@name=** ] **"***логическое_имя_файла***"**  
+ [ **@name=** ] **'***logical_file_name***'**  
  Имя, используемое компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ссылки на файл. Имя должно быть уникальным в пределах сервера. *логическое_имя_файла* — **nvarchar(260)**, не имеет значения по умолчанию.  
   
- [  **@filename =** ] **"***имя_файла_ос***"**  
+ [ **@filename =** ] **'***os_file_name***'**  
  Путь и имя файла, используемые операционной системой. Файл должен находиться на сервере, на котором установлен компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *имя_файла_ос* — **nvarchar(260)**, не имеет значения по умолчанию.  
   
- [  **@size=** ] **"***размер* **"**  
+ [ **@size=** ] **'***size* **'**  
  Задает начальный размер файла. *размер* — **nvarchar(20)**, значение по умолчанию NULL. Укажите целое число (без дробной части). Для указания единицы измерения размера файла (мегабайт или килобайт) можно использовать суффиксы МБ и КБ. По умолчанию — MБ. Минимальное значение размера файла — 512 КБ. Если *размер* не указан, значение по умолчанию — 1 МБ.  
   
- [  **@maxsize=** ] **"***max_size* **"**  
+ [ **@maxsize=** ] **'***max_size* **'**  
  Максимальный размер, до которого может увеличиться размер файла. *max_size* — **nvarchar(20)**, значение по умолчанию NULL. Укажите целое число (без дробной части). Для указания единицы измерения размера файла (мегабайт или килобайт) можно использовать суффиксы МБ и КБ. По умолчанию — MБ.  
   
  Если *max_size* не указан, файл будет увеличиваться до заполнения диска. Журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows предупреждает администратора, если диск заполнен почти полностью.  
   
- [  **@filegrowth=** ] **"***growth_increment* **"**  
+ [  **@filegrowth=** ] **"*** growth_increment* **"**  
  Объем пространства, добавляемого к файлу каждый раз, когда требуется новое пространство. *growth_increment* — **nvarchar(20)**, значение по умолчанию NULL. Значение 0 обозначает отсутствие прироста. Укажите целое число (без дробной части). Значение может быть задано в мегабайтах (МБ), килобайтах (КБ) или процентах (%). Если значение задано в процентах, шаг роста рассчитывается в процентах от размера файла в тот момент, когда потребовалось приращение. Если указано число без суффикса MB, KB или %, то по умолчанию используется MB.  
   
  Если *growth_increment* имеет значение NULL, значение по умолчанию — 10%, а минимальный размер составляет 64 КБ. Указанный размер округляется до ближайших 64 КБ.  
@@ -76,7 +79,7 @@ sp_add_log_file_recover_suspect_db [ @dbName= ] 'database' ,
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию разрешения для членов выполнение **sysadmin** предопределенной роли сервера. Эти разрешения не могут передаваться другим пользователям.  
   
 ## <a name="examples"></a>Примеры  
@@ -91,9 +94,9 @@ EXEC sp_add_log_file_recover_suspect_db db1, logfile2,
     '1MB';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_add_data_file_recover_suspect_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-data-file-recover-suspect-db-transact-sql.md)   
+ [sp_add_data_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-data-file-recover-suspect-db-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_xtp_system_memory_consumers_TSQL
 - sys.dm_xtp_system_memory_consumers
 - dm_xtp_system_memory_consumers_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_xtp_system_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_xtp_system_memory_consumers dynamic management view
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e48ffede3b2aea0ff69c9dce9fc7abd2fe4bc4f9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a7b5e11f35e5ae6665d32355da60fb7e1e2b5f6d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +45,11 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Имя столбца|Тип|Description|  
+|Имя столбца|Тип|Описание|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|Внутренний идентификатор потребителя памяти.|  
 |memory_consumer_type|**int**|Целое число, представляющее тип потребителя памяти с помощью одного из следующих значений:<br /><br /> 0 — он не должен отображаться. Суммирует использование памяти для двух или более потребителей.<br /><br /> 1 — АССОЦИАТИВНОГО: Отслеживает потребление памяти для резервного блока памяти системы.<br /><br /> 2 - VARHEAP: Отслеживает потребление памяти для кучи переменной длины.<br /><br /> 4 - пул страниц ввода-ВЫВОДА: отслеживает потребление памяти для системного пула страниц, используемых для операций ввода-ВЫВОДА.|  
-|memory_consumer_type_desc|**nvarchar(16) в формате**|Описание типа потребителя памяти.<br /><br /> 0 — он не должен отображаться.<br /><br /> 1 — LOOKASIDE<br /><br /> 2 — VARHEAP<br /><br /> 4 — PGPOOL|  
+|memory_consumer_type_desc|**nvarchar(16)**|Описание типа потребителя памяти.<br /><br /> 0 — он не должен отображаться.<br /><br /> 1 — LOOKASIDE<br /><br /> 2 — VARHEAP<br /><br /> 4 — PGPOOL|  
 |memory_consumer_desc|**nvarchar(64)**|Описание экземпляра потребителя памяти.<br /><br /> VARHEAP: <br />Системная куча. Общее назначение. В настоящее время используется только для выделения рабочих элементов сборки мусора.<br />-ИЛИ-<br />Куча резервного блока памяти. Используется резервными блоками памяти, когда количество элементов в списке достигает определенного предела (обычно около 5000 элементов).<br /><br /> PGPOOL: Для системы ввода-ВЫВОДА пулы существует — три разного размера пула страниц системы 4 КБ, 64K системного пула страниц и пул страниц 256 КБ.|  
 |lookaside_id|**bigint**|Идентификатор поставщика конкретных потоков локальной памяти резервного блока.|  
 |pagepool_id|**bigint**|Идентификатор поставщика памяти пула страниц локального потока.|  
@@ -59,7 +62,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |max_sizeclass|**int**|Только для внутреннего применения.|  
 |memory_consumer_address|**varbinary**|Внутренний адрес потребителя памяти.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимы разрешения VIEW SERVER STATE на сервере.  
   
 ## <a name="user-scenario"></a>Пользовательский сценарий  
@@ -109,7 +112,7 @@ total_allocated_MB   total_used_MB
 2                    2  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления таблиц, оптимизированных для памяти &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

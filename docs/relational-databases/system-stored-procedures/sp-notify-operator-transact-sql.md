@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_notify_operator_TSQL
 - sp_notify_operator
-dev_langs: TSQL
-helpviewer_keywords: sp_notify_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_notify_operator
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2ff7b50b5eef5d5ff753039bf4dd7ab501160eda
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7683e0150c41810c14981e0c6b6364c59ae19ae3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,38 +54,38 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@profile_name=** ] **"***profilename***"**  
+ [ **@profile_name=** ] **'***profilename***'**  
  Имя профиля Database Mail, используемого для отправки сообщения. *ProfileName* — **nvarchar(128)**. Если *profilename* не указан, используется профиль компонента Database Mail по умолчанию.  
   
- [  **@id=** ] *идентификатор*  
+ [ **@id=** ] *id*  
  Идентификатор оператора, которому отправляется сообщение. *Идентификатор* — **int**, значение по умолчанию NULL. Один из *идентификатор* или *имя* должен быть указан.  
   
- [  **@name=** ] **"***имя***"**  
+ [ **@name=** ] **'***name***'**  
  Имя оператора, которому отправляется сообщение. *имя* — **nvarchar(128)**, значение по умолчанию NULL. Один из *идентификатор* или *имя* должен быть указан.  
   
 > **Примечание:** адрес электронной почты должен быть определен для оператора, прежде чем они смогут получать сообщения.  
   
- [  **@subject=** ] **"***субъекта***"**  
+ [ **@subject=** ] **'***subject***'**  
  Тема сообщения электронной почты. *Тема* — **nvarchar(256)** без значения по умолчанию.  
   
- [  **@body=** ] **"***сообщение***"**  
+ [ **@body=** ] **'***message***'**  
  Текст сообщения электронной почты. *сообщение* — **nvarchar(max)** без значения по умолчанию.  
   
  [  **@file_attachments=** ] **"***вложения***"**  
  Имя файла, прилагаемого к сообщению электронной почты. *вложение* — **nvarchar(512)**, не имеет значения по умолчанию.  
   
- [  **@mail_database=** ] **"***mail_host_database***"**  
+ [ **@mail_database=** ] **'***mail_host_database***'**  
  Указывает имя базы данных обслуживания почты. *mail_host_database* — **nvarchar(128)**. Если не *mail_host_database* указано, **msdb** базы данных используется по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Отправляет данное сообщение на адрес электронной почты указанного оператора. Если оператор не имеет настроенного адреса электронной почты, возвращается ошибка.  
   
  Компонент Database Mail и базы данных обслуживания почты должны быть сконфигурированы до отправки уведомления оператору.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -112,6 +115,6 @@ GO
  [Агент SQL Server хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
  [Хранимая процедура sp_help_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
- [sp_delete_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)  
   
   

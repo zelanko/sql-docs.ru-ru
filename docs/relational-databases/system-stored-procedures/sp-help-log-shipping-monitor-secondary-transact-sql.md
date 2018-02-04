@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_monitor_secondary
 - sp_help_log_shipping_monitor_secondary_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_monitor_secondary
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_monitor_secondary
 ms.assetid: 3ac091ea-c9a8-4c05-a0b6-1ccf4e001339
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 612571cd299a0474b1d405d8d9885487eba70a16
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 80c3f736037a763b1cda3ee37c92b443ecd07e87
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingmonitorsecondary-transact-sql"></a>sp_help_log_shipping_monitor_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +49,7 @@ sp_help_log_shipping_monitor_secondary
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@secondary_server =** ] "*сервер_получатель*"  
+ [ **@secondary_server =** ] '*secondary_server*'  
  Имя сервера-получателя. *сервер_получатель* — **sysname**, не имеет значения по умолчанию.  
   
  [  **@secondary_database =** ] "*secondary_database*"  
@@ -57,9 +60,9 @@ sp_help_log_shipping_monitor_secondary
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Столбец|Description|  
+|Столбец|Описание|  
 |------------|-----------------|  
-|**сервер_получатель**|Имя экземпляра-получателя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов.|  
+|**secondary_server**|Имя экземпляра-получателя [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журналов.|  
 |**secondary_database**|Имя базы данных-получателя в конфигурации доставки журналов.|  
 |**secondary_id**|Идентификатор сервера-получателя в конфигурации доставки журналов.|  
 |**primary_server**|Имя первичного экземпляра компонента [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] в конфигурации доставки журнала.|  
@@ -75,14 +78,14 @@ sp_help_log_shipping_monitor_secondary
 |**last_restored_date_utc**|Дата и время последней операции восстановления в базу данных-получатель по времени в формате UTC.|  
 |**history_retention_period**|Время (в минутах) хранения истории доставки журналов для конкретной базы данных-получателя; по истечении этого времени записи удаляются.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_help_log_shipping_monitor_secondary** должна запускаться из **master** базы данных на сервере мониторинга.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
   
 ## <a name="see-also"></a>См. также:  
- [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [О доставке журналов &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

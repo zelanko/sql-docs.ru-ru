@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,26 +17,28 @@ f1_keywords:
 - conversation_endpoints
 - sys.conversation_endpoints
 - sys.conversation_endpoints_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.conversation_endpoints catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.conversation_endpoints catalog view
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: c748d55f2de1ddfdda1edbf1465e4874faec5a73
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 5cbfc13a807b2ec7c61ab2f12ec6f6cfe9f4ae82
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Каждая сторона диалога компонента [!INCLUDE[ssSB](../../includes/sssb-md.md)] представляется конечной точкой диалога. Это представление каталога содержит одну запись на каждую конечную точку диалога в базе данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |conversation_handle|**uniqueidentifier**|Идентификатор данной конечной точки диалога. Не допускает значения NULL.|  
 |conversation_id|**uniqueidentifier**|Идентификатор диалога. , совместно используемый обеими сторонами диалога. В паре с содержимым столбца is_initiator уникален в рамках одной этой базы данных. Не допускает значения NULL.|  
@@ -63,10 +66,10 @@ ms.lasthandoff: 11/17/2017
 |first_out_of_order_sequence|**bigint**|Порядковый номер первого ошибочного сообщения для этого диалога. Не допускает значения NULL.|  
 |last_out_of_order_sequence|**bigint**|Порядковый номер последнего ошибочного сообщения для этого диалога. Не допускает значения NULL.|  
 |last_out_of_order_frag|**int**|Порядковый номер последнего ошибочного фрагмента сообщения для этого диалога. Не допускает значения NULL.|  
-|is_system|**bit**|1, если это системный диалог. Не допускает значения NULL.|  
+|is_system|**бит**|1, если это системный диалог. Не допускает значения NULL.|  
 |priority|**tinyint**|Приоритет диалога, назначенный для этой конечной точки диалога. Не допускает значения NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
   

@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sp_add_trusted_assembly
 - sys.sp_add_trusted_assembly_TSQL
 - sys.sp_add_trusted_assembly
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_add_trusted_assembly
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_add_trusted_assembly
 ms.assetid: 
 caps.latest.revision: 
 author: tmullaney
 ms.author: thmullan;rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 91cedb6c140b9f969d1d33e4878788fa8b9dba92
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7b44f4253a295d91c7011c0aa51d943848188784
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +48,7 @@ sp_add_trusted_assembly
     [ , [ @description = ] 'description' ]
 ```  
 
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
 
 Эта процедура добавляет сборку [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md).
 
@@ -57,7 +60,7 @@ sp_add_trusted_assembly
 [ @description =] '*описание*"  
 Необязательное пользовательское описание сборки. Корпорация Майкрософт рекомендует использовать каноническое имя, кодирующая простое имя, номер версии, язык и региональные параметры, открытый ключ и архитектуру сборки для доверия. Это значение уникально идентифицирует сборку среды выполнения (CLR) стороны выполнения и совпадает со значением clr_name значение sys.assemblies. 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Разрешения
 
 Требуется членство в `sysadmin` предопределенной роли сервера или `CONTROL SERVER` разрешение.
 
@@ -70,7 +73,7 @@ EXEC sp_add_trusted_assembly 0x8893AD6D78D14EE43DF482E2EAD44123E3A0B684A8873C3F7
 N'pointudt, version=0.0.0.0, culture=neutral, publickeytoken=null, processorarchitecture=msil';
 ```  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   [sys.sp_drop_trusted_assembly](sys-sp-drop-trusted-assembly-transact-sql.md)  
   [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)  
   [CREATE ASSEMBLY (Transact-SQL)](../../t-sql/statements/create-assembly-transact-sql.md)  

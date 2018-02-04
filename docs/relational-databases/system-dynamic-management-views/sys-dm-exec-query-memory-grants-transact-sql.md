@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_exec_query_memory_grants
 - sys.dm_exec_query_memory_grants_TSQL
 - dm_exec_query_memory_grants
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_exec_query_memory_grants dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_exec_query_memory_grants dynamic management view
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 2e10e979e962c7f0e2f98a8fbabff47995dc7e86
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 92b11100a0a037374871dc38844fecc8b69b0c72
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,12 +43,12 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|Идентификатор (SPID) сеанса, в котором выполняется данный запрос.|  
-|**идентификатор_запроса**|**int**|Идентификатор запроса. Уникален в контексте сеанса.|  
+|**request_id**|**int**|Идентификатор запроса. Уникален в контексте сеанса.|  
 |**scheduler_id**|**int**|Идентификатор планировщика, который планирует данный запрос.|  
-|**DoP**|**smallint**|Степень параллелизма данного запроса.|  
+|**dop**|**smallint**|Степень параллелизма данного запроса.|  
 |**request_time**|**datetime**|Дата и время обращения запроса за предоставлением памяти.|  
 |**grant_time**|**datetime**|Дата и время, когда запросу была предоставлена память. Возвращает значение NULL, если память еще не была предоставлена.|  
 |**requested_memory_kb**|**bigint**|Общий объем запрошенной памяти в килобайтах.|  
@@ -58,21 +61,21 @@ ms.lasthandoff: 11/17/2017
 |**resource_semaphore_id**|**smallint**|Неуникальный идентификатор семафора ресурса, которого ожидает данный запрос.<br /><br /> **Примечание:** этот идентификатор уникален в версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ранее [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Данное изменение может повлиять на устранение проблем в запросах. Дополнительные сведения см. в подразделе «Замечания» далее в этом разделе.|  
 |**queue_id**|**smallint**|Идентификатор ожидающей очереди, в которой данный запрос ожидает предоставления памяти. Значение NULL, если память уже предоставлена.|  
 |**wait_order**|**int**|Последовательный порядок ожидающих запросов в указанной **queue_id**. Это значение может изменяться для заданного запроса, если другие запросы отказываются от предоставления памяти или получают ее. Значение NULL, если память уже предоставлена.|  
-|**is_next_candidate**|**bit**|Является следующим кандидатом на предоставление памяти.<br /><br /> 1 = да<br /><br /> 0 = нет<br /><br /> NULL = память уже предоставлена.|  
+|**is_next_candidate**|**бит**|Является следующим кандидатом на предоставление памяти.<br /><br /> 1 = да<br /><br /> 0 = нет<br /><br /> NULL = память уже предоставлена.|  
 |**wait_time_ms**|**bigint**|Время ожидания в миллисекундах. Значение NULL, если память уже предоставлена.|  
 |**plan_handle**|**varbinary(64)**|Идентификатор для данного плана запроса. Используйте **sys.dm_exec_query_plan** чтобы извлечь фактический план XML.|  
 |**sql_handle**|**varbinary(64)**|Идентификатор текста [!INCLUDE[tsql](../../includes/tsql-md.md)] для данного запроса. Используйте **sys.dm_exec_sql_text** Чтобы получить фактический [!INCLUDE[tsql](../../includes/tsql-md.md)] текста.|  
-|**идентификатор_группы**|**int**|Идентификатор группы рабочей нагрузки, в которой выполняется данный запрос.|  
+|**group_id**|**int**|Идентификатор группы рабочей нагрузки, в которой выполняется данный запрос.|  
 |**pool_id**|**int**|Идентификатор пула ресурсов, к которому принадлежит данная группа рабочей нагрузки.|  
 |**is_small**|**tinyint**|Значение 1 означает, что для данной операции предоставления памяти используется малый семафор ресурса. Значение 0 означает использование обычного семафора.|  
 |**ideal_memory_kb**|**bigint**|Объем, в килобайтах (КБ), предоставленной памяти, необходимый для размещения всех данных в физической памяти. Основывается на оценке количества элементов.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Обычный сценарий отладки для времени ожидания запроса может выглядеть следующим образом:  
   
 -   Проверьте общую системной памяти состояния с помощью [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md), [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)и различных счетчиков производительности.  
@@ -116,8 +119,8 @@ ms.lasthandoff: 11/17/2017
   
  Регулятор ресурсов позволяет администратору базы данных распределять ресурсы сервера между пулами ресурсов, используя до 64 пулов. Начиная с версии [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], каждый пул ведет себя как небольшой независимый экземпляр сервера и требует двух семафоров. Число строк, возвращаемых из **sys.dm_exec_query_resource_semaphores** может быть до 20 раз, чем количество строк, возвращаемых в [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
-## <a name="see-also"></a>См. также:  
- [sys.dm_exec_query_resource_semaphores &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sys.dm_exec_query_resource_semaphores &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql.md)   
  [&#40; динамические административные представления и функции, связанные с выполнением Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

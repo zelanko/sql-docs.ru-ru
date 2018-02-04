@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - fn_listextendedproperty
 - fn_listextendedproperty_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_listextendedproperty function
 - displaying extended properties
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - extended properties [SQL Server], columns
 - table extended properties [SQL Server]
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 24cf6367e6326500a8dc76d91125d4e648956ff0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 8402b831a4f74aebd67df3dcf7050663a2d0c3fa
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +66,7 @@ fn_listextendedproperty (
  {по умолчанию | "*property_name*" | NULL}  
  Имя свойства. *property_name* — **sysname**. Допустимыми входными значениями являются default, NULL или имя свойства.  
   
- {по умолчанию | "*level0_object_type*" | NULL}  
+ { default | '*level0_object_type*' | NULL}  
  Пользователь или тип, определяемый пользователем. *level0_object_type* — **varchar(128)**, значение по умолчанию NULL. Допустимые входные значения: ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER и значение NULL.  
   
 > [!IMPORTANT]  
@@ -100,7 +102,7 @@ fn_listextendedproperty (
   
  Возвращение пустой таблицы означает отсутствие у объекта расширенных свойств или отсутствие у пользователя разрешений на просмотр этих свойств. При возвращении расширенных свойств самой базы данных столбцы objtype и objname принимают значения NULL.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если значение для *property_name* имеет значение NULL или по умолчанию, функция fn_listextendedproperty возвращает все свойства для указанного объекта.  
   
  Если указан тип объекта, а значение, соответствующее имени объекта, равно NULL или значению по умолчанию, функция fn_listextendedproperty возвращает все расширенные свойства всех объектов заданного типа.  
@@ -119,7 +121,7 @@ LEFT JOIN sys.fn_listextendedproperty(N'MS_Description', N'user',N'HumanResource
 WHERE o.name = 'Employee';  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешения на просмотр расширенных свойств объектов зависят от типов объектов.  
   
 ## <a name="examples"></a>Примеры  
@@ -181,7 +183,7 @@ FROM fn_listextendedproperty (NULL, 'schema', 'Sales', 'table', default, NULL, N
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_addextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   

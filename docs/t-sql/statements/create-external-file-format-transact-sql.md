@@ -8,28 +8,30 @@ ms.service:
 ms.component: t-sql|statements
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CREATE EXTERNAL FILE FORMAT
 - CREATE_EXTERNAL_FILE_FORMAT
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - External
 - External, file format
 - PolyBase, external file format
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
 manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: ab389a5c811f915ff497057a5daf12374f1cedb7
-ms.sourcegitcommit: 9e6a029456f4a8daddb396bc45d7874a43a47b45
+ms.openlocfilehash: 8fd2fa33a8a9107c86cfda7e0a628ab282efa534
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="create-external-file-format-transact-sql"></a>СОЗДАЙТЕ ФОРМАТ ВНЕШНЕГО файла (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -106,22 +108,22 @@ WITH (
  *file_format_name*  
  Указывает имя формата внешнего файла.
   
- FORMAT_TYPE формат внешних данных.
+ FORMAT_TYPE = [PARQUET | ORC | RCFILE | PARQUET] указывает формат внешних данных.
   
- PARQUET формат Parquet.
+   -   PARQUET формат Parquet.
   
- ORC  
- Указывает формат оптимизирован строк по столбцам (ORC.). Этот параметр требует версию 0.11 или более поздней версии на внешних кластера Hadoop Hive. В Hadoop формат файлов ORC обеспечивает повышения сжатия и производительность по сравнению с RCFILE формат файла.
-  
- RCFILE (в сочетании с SERDE_METHOD = *SERDE_method*) задает формат столбцов записи файла (RcFile). Этот параметр, необходимо указать сериализатор Hive и метод десериализатор (SerDe). Это требование одинаково при использовании Hive или HiveQL в Hadoop для запроса RC-файлы. Обратите внимание, что "метод serde" с учетом регистра.
-  
- Примеры указания RCFile с двумя SerDe методами, которые поддерживает PolyBase.
-  
--   FORMAT_TYPE = RCFILE SERDE_METHOD = «org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe»
-  
--   FORMAT_TYPE = RCFILE SERDE_METHOD = «org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe»
-  
- DELIMITEDTEXT указывает в текстовом формате с разделителями столбец также называется признаки конца поля.
+   -   ORC  
+   Указывает формат оптимизирован строк по столбцам (ORC.). Этот параметр требует версию 0.11 или более поздней версии на внешних кластера Hadoop Hive. В Hadoop формат файлов ORC обеспечивает повышения сжатия и производительность по сравнению с RCFILE формат файла.
+
+   -   RCFILE (в сочетании с SERDE_METHOD = *SERDE_method*) задает формат столбцов записи файла (RcFile). Этот параметр, необходимо указать сериализатор Hive и метод десериализатор (SerDe). Это требование одинаково при использовании Hive или HiveQL в Hadoop для запроса RC-файлы. Обратите внимание, что "метод serde" с учетом регистра.
+
+   Примеры указания RCFile с двумя SerDe методами, которые поддерживает PolyBase.
+
+    -   FORMAT_TYPE = RCFILE SERDE_METHOD = «org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe»
+
+    -   FORMAT_TYPE = RCFILE SERDE_METHOD = «org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe»
+
+   -   DELIMITEDTEXT указывает в текстовом формате с разделителями столбец также называется признаки конца поля.
   
  Признак_конца_поля = *признак_конца_поля* применяется только для текстовых файлов с разделителями. Признак конца поля указывает один или несколько символов, отмечающий конец каждого поля (столбца) в файле с разделителями текста. Значение по умолчанию — ꞌ символ вертикальной черты | ꞌ. Для гарантированного поддержки рекомендуется использовать один или несколько символов ascii.
   
@@ -152,7 +154,7 @@ WITH (
   
 -   STRING_DELIMITER = «0x7E0x7E»--два тильдой (например, ~ ~)
   
- Дата\_ФОРМАТ = *datetime_format* задает пользовательский формат для всех данных даты и времени, которые могут отображаться в текстовом файле с разделителями. Если исходный файл использует стандартные форматы даты и времени, этот параметр необязателен. Файл разрешен только один пользовательского формата datetime. Нельзя указать несколько форматов пользовательских даты и времени каждого файла. Тем не менее можно использовать несколько форматов даты и времени, если каждый из них является форматом по умолчанию для его типа данных в определении внешней таблицы.
+Дата\_ФОРМАТ = *datetime_format* задает пользовательский формат для всех данных даты и времени, которые могут отображаться в текстовом файле с разделителями. Если исходный файл использует стандартные форматы даты и времени, этот параметр необязателен. Файл разрешен только один пользовательского формата datetime. Нельзя указать несколько форматов пользовательских даты и времени каждого файла. Тем не менее можно использовать несколько форматов даты и времени, если каждый из них является форматом по умолчанию для его типа данных в определении внешней таблицы.
 
 PolyBase использует только пользовательский формат для импорта данных. Он не использует пользовательский формат для записи данных во внешний файл.
 

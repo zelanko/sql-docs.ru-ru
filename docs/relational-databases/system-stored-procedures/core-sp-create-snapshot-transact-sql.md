@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_create_snapshot
 - sp_create_snapshot_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - management data warehouse, data collector stored procedures
 - data collector [SQL Server], stored procedures
 - core.sp_create_snapshot stored procedure
 - sp_create_snapshot
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 674968b7b981755ea0f67f8657116537d2a5791c
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 559eed3c2ae0a5bada1453e21347fee791625eb5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +54,10 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_uid =] '*аргумент collection_set_uid*"  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
  Имеет значение GUID для набора элементов сбора. *Аргумент collection_set_uid* — **uniqueidentifier** без значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collection_sets в базе данных msdb.  
   
- [ @collector_type_uid =] '*аргумент collector_type_uid*"  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  Идентификатор GUID для типа сборщика. *Аргумент collector_type_uid* — **uniqueidentifier** без значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collector_types в базе данных msdb.  
   
  [ @machine_name=] '*имя_компьютера*"  
@@ -64,16 +66,16 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  [ @named_instance=] '*именованный_экземпляр*"  
  Имя экземпляра набора элементов сбора. *именованный_экземпляр* — **sysname**, и не имеет значения по умолчанию.  
   
- [ @log_id =] *log_id*  
+ [ @log_id = ] *log_id*  
  Уникальный идентификатор, соответствующий журналу событий набора элементов сбора на сервере, который собирал данные. *log_id* — **bigint** без значения по умолчанию. Для получения значения для *log_id*, запросите представление dbo.syscollector_execution_log в базе данных msdb.  
   
- [ @snapshot_id =] *snapshot_id*  
+ [ @snapshot_id = ] *snapshot_id*  
  Уникальный идентификатор для строки, вставляемой в представление core.snapshots. *snapshot_id* — **int** и возвращается как OUTPUT.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Каждый раз, когда пакет передачи начинает загружать данные в хранилище управляющих данных, исполняемый компонент сборщика данных вызывает функцию core.sp_create_snapshot.  
   
  Эта процедура проверяет следующее:  
@@ -84,7 +86,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
   
  Если хотя бы одно из вышеперечисленных условий не выполняется, процедура возвращает ошибку.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **mdw_writer** (с разрешением EXECUTE) предопределенной роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -102,7 +104,7 @@ EXEC core.sp_create_snapshot
     @snapshot_id = @snapshot_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Хранилище данных управления](../../relational-databases/data-collection/management-data-warehouse.md)  

@@ -8,49 +8,52 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysdac_history_internal
 - sysdac_history_internal_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysdac_history_internal
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdac_history_internal
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-caps.latest.revision: "10"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: ae5fd7a9f447d8658deb520964e192e29ab67a49
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: b8b8d735800315011eea29b123c8dc3e1652732a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Таблицы приложения уровня данных — sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Содержит сведения о действиях, предпринятых для управления приложениями уровня данных (DAC). Эта таблица хранится в **dbo** схему **msdb** базы данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**action_id**|**int**|Идентификатор действия|  
 |**sequence_id**|**int**|Идентифицирует шаг действия.|  
 |**instance_id**|**uniqueidentifier**|Идентификатор экземпляра DAC. Этот столбец может быть соединен **instance_id** столбца в [dbo.sysdac_instances &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
-|**action_type**|**tinyint**|Идентификатор типа действия:<br /><br /> **0** = развернуть<br /><br /> **1** = создать<br /><br /> **2** = переименовать<br /><br /> **3** = отсоединить<br /><br /> **4** = удаление|  
-|**action_type_name**|**varchar(19)**|Имя типа действия:<br /><br /> **развертывание**<br /><br /> **Создание**<br /><br /> **Переименование**<br /><br /> **отсоединение**<br /><br /> **удалить**|  
+|**action_type**|**tinyint**|Идентификатор типа действия:<br /><br /> **0** = развернуть<br /><br /> **1** = создать<br /><br /> **2** = переименовать<br /><br /> **3** = отсоединить<br /><br /> **4** = delete|  
+|**action_type_name**|**varchar(19)**|Имя типа действия:<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Идентификатор типа объекта, на который влияет действие:<br /><br /> **0** = dacpac<br /><br /> **1** = имя входа<br /><br /> **2** = база данных|  
-|**dac_object_type_name**|**varchar(8)**|Имя типа объекта, на который влияет действие:<br /><br /> **DACPAC** = экземпляр приложения уровня данных<br /><br /> **Имя входа**<br /><br /> **базой данных**|  
+|**dac_object_type_name**|**varchar(8)**|Имя типа объекта, на который влияет действие:<br /><br /> **DACPAC** = экземпляр приложения уровня данных<br /><br /> **login**<br /><br /> **базой данных**|  
 |**action_status**|**tinyint**|Код, отображающий текущее состояние действия:<br /><br /> **0** = ожидает согласования<br /><br /> **1** = успешное завершение<br /><br /> **2** = ошибка|  
-|**action_status_name**|**varchar(11)**|Текущее состояние действия:<br /><br /> **Ожидание**<br /><br /> **Успех**<br /><br /> **Сбой**|  
-|**Обязательно**|**bit**|Используется компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] при откате операции DAC.|  
+|**action_status_name**|**varchar(11)**|Текущее состояние действия:<br /><br /> **Ожидание**<br /><br /> **Успех**<br /><br /> **fail**|  
+|**Обязательное**|**бит**|Используется компонент [!INCLUDE[ssDE](../../includes/ssde-md.md)] при откате операции DAC.|  
 |**dac_object_name_pretran**|**sysname**|Имя объекта до транзакции, содержащей действие, выделено. Используется только для баз данных и имен входа.|  
 |**dac_object_name_posttran**|**sysname**|Имя объекта после транзакции, содержащей действие, выделено. Используется только для баз данных и имен входа.|  
-|**в sqlscript**|**nvarchar(max)**|Скрипт [!INCLUDE[tsql](../../includes/tsql-md.md)], выполняющий действие над базой данных или именем входа.|  
-|**полезные данные**|**varbinary(max)**|Определение пакета DAC, сохраненное в строке, закодированной двоичным кодом.|  
+|**sqlscript**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] сценарий, который реализует действие на базу данных или имя входа.|  
+|**payload**|**varbinary(max)**|Определение пакета DAC, сохраненное в строке, закодированной двоичным кодом.|  
 |**Комментарии**|**varchar(max)**|Записывает имя входа пользователя, который подтвердил свое согласие с возможной потерей данных при обновлении DAC.|  
-|**ERROR_STRING**|**nvarchar(max)**|Если действие выполняется с ошибкой, выдается сообщение.|  
+|**error_string**|**nvarchar(max)**|Если действие выполняется с ошибкой, выдается сообщение.|  
 |**created_by**|**sysname**|Имя входа, запустившее действие, создавшее данную запись.|  
 |**date_created**|**datetime**|Дата и время создания записи.|  
 |**date_modified**|**datetime**|Дата и время последнего изменения записи.|  
@@ -63,8 +66,8 @@ ms.lasthandoff: 01/02/2018
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|создание|пакет DAC|  
 |12|1|создание|login|  
-|12|2|создание|База данных|  
-|12|3|переименовать|База данных|  
+|12|2|создание|базой данных|  
+|12|3|переименовать|базой данных|  
   
  Операции приложения уровня данных, такие как delete, не удаляют строки из **sysdac_history_internal**. Можно выполнить следующий запрос, чтобы вручную удалить строки для тех DAC, которые больше не развернуты в экземпляре компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   
@@ -83,7 +86,7 @@ WHERE instance_id NOT IN
 ## <a name="permissions"></a>Разрешения  
  Требует членства в предопределенной роли сервера sysadmin. Доступ только для чтения к этому представлению доступен всем пользователям с разрешениями на подключение к базе данных master.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Приложения уровня данных](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [dbo.sysdac_instances &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)   
  [sysdac_instances_internal &#40; Transact-SQL &#41;](../../relational-databases/system-tables/data-tier-application-tables-sysdac-instances-internal.md)  

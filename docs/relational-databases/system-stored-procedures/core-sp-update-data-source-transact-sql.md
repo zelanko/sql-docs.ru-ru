@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_data_source
 - sp_update_data_source_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_update_data_source
 - management data warehouse, data collector stored procedures
 - core.sp_update_data_source stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 959c9cc843480a3f1d5d4b5ca414b67ac27807d4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 913701521f913542356ea11bc916e6af3a971fe8
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +53,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [ @collection_set_uid =] '*аргумент collection_set_uid*"  
+ [ @collection_set_uid = ] '*collection_set_uid*'  
  Имеет значение GUID для набора элементов сбора. *Аргумент collection_set_uid* — **uniqueidentifier**, и не имеет значения по умолчанию. Чтобы получить идентификатор GUID, запросите представление dbo.syscollector_collection_sets в базе данных msdb.  
   
  [ @machine_name =] '*имя_компьютера*"  
@@ -63,23 +65,23 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 > [!NOTE]  
 >  *именованный_экземпляр* должно быть имя полного имени экземпляра, состоящее из имени компьютера и имя экземпляра в виде *computername*\\*instancename*.  
   
- [ @days_until_expiration =] *days_until_expiration*  
+ [ @days_until_expiration = ] *days_until_expiration*  
  Количество дней, остающихся до окончания срока хранения данных в моментальном снимке. *days_until_expiration* — **smallint**.  
   
- [ @source_id =] *source_id*  
+ [ @source_id = ] *source_id*  
  Уникальный идентификатор для источника обновления. *source_id* — **int** и возвращается как OUTPUT.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Каждый раз, когда пакет передачи начинает загружать данные в хранилище данных управления, исполняемый компонент сборщика данных вызывает функцию core.sp_update_data_source. Таблица core.source_info_internal обновляется, если со времени последней передачи данных произошло одно из следующих изменений.  
   
 -   Был добавлен новый набор элементов сбора.  
   
 -   Изменилось значение days_until_expiration.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **mdw_writer** (с разрешением EXECUTE) предопределенной роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -97,7 +99,7 @@ EXEC core.sp_update_data_source
 @source_id = @source_id OUTPUT;  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Хранилище данных управления](../../relational-databases/data-collection/management-data-warehouse.md)  

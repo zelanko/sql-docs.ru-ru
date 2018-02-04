@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_log_shipping_primary_database_TSQL
 - sp_help_log_shipping_primary_database
-dev_langs: TSQL
-helpviewer_keywords: sp_help_log_shipping_primary_database
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_log_shipping_primary_database
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 05d791104a470dd73502dfae21e0bedac82482c1
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 56de87e340bc9bd6006208754451c54c145fbdba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +59,7 @@ sp_help_log_shipping_primary_database
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Description|  
+|Имя столбца|Описание|  
 |-----------------|-----------------|  
 |**primary_id**|Идентификатор базы данных-источника в конфигурации доставки журналов.|  
 |**primary_database**|Имя базы данных-источника в конфигурации доставки журналов.|  
@@ -70,15 +73,15 @@ sp_help_log_shipping_primary_database
 |**backup_threshold**|Максимальное время ожидания (в минутах) между операциями резервного копирования перед созданием предупреждения.|  
 |**threshold_alert**|Предупреждение, создаваемое при превышении порогового значения.|  
 |**threshold_alert_enabled**|Определяет, включены ли пороговые предупреждения резервного копирования.<br /><br /> **1** = включен.<br /><br /> **0** = отключено.|  
-|**столбцах last_backup_file**|Абсолютный путь последней резервной копии журнала транзакций.|  
+|**last_backup_file**|Абсолютный путь последней резервной копии журнала транзакций.|  
 |**last_backup_date**|Дата и время создания последней резервной копии журнала.|  
 |**last_backup_date_utc**|Время и дата создания последней резервной копии журнала транзакций в базе данных-источнике, выраженные в формате UTC.|  
 |**history_retention_period**|Промежуток времени в минутах, после которого записи истории доставки журнала данной базы данных-источника будут удалены.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_help_log_shipping_primary_database** должна запускаться из **master** базы данных на сервере-источнике.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
   
 ## <a name="examples"></a>Примеры  
@@ -89,8 +92,8 @@ EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [О доставке журналов &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

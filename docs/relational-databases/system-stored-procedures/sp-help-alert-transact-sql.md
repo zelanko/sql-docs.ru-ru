@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_alert
 - sp_help_alert_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_alert
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_alert
 ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: d574d40ff9c65f9a677fd0a4946428598b91476d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7f1dc2217a34afadc5a105709ac294325ac9e80a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpalert-transact-sql"></a>sp_help_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,19 +50,19 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@alert_name =**] **"***alert_name***"**  
+ [ **@alert_name =**] **'***alert_name***'**  
  Имя предупреждения. *alert_name* — **nvarchar(128)**. Если *alert_name* — не указан, возвращаются сведения обо всех предупреждениях.  
   
- [  **@order_by =**] **"***order_by***"**  
+ [ **@order_by =**] **'***order_by***'**  
  Порядок сортировки, в котором выдаются результаты. *order_by*— **sysname**, значение по умолчанию N '*имя*".  
   
- [  **@alert_id =**] *alert_id*  
+ [ **@alert_id =**] *alert_id*  
  Идентификационный номер предупреждения, о котором запрашиваются сведения. *alert_id*— **int**, значение по умолчанию NULL.  
   
  [  **@category_name =**] **"***категории***"**  
  Категория предупреждения. *Категория* — **sysname**, значение по умолчанию NULL.  
   
- [  **@legacy_format** =] *legacy_format*  
+ [ **@legacy_format**=] *legacy_format*  
  Указывает, следует ли выдавать результирующий набор в старом формате. *legacy_format* — **бит**, значение по умолчанию **0**. Когда *legacy_format* — **1**, **sp_help_alert** возвращает результирующий набор, возвращенный **sp_help_alert** в Microsoft SQL Server 2000.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -76,7 +79,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Код ошибки сообщения, который определен для предупреждения (Обычно соответствует номеру ошибки в **sysmessages** таблицы). Если уровень важности используется для определения предупреждения, **message_id** — **0** или иметь значение NULL.|  
-|**Серьезность**|**int**|Уровень серьезности (от **9** через **25**, **110**, **120**, **130**, или **140**) определяющий оповещение.|  
+|**severity**|**int**|Уровень серьезности (от **9** через **25**, **110**, **120**, **130**, или **140**) определяющий оповещение.|  
 |**включен**|**tinyint**|Состояние ли в настоящее время включено предупреждение (**1**) или нет (**0**). Отправка отключенных предупреждений не производится.|  
 |**delay_between_responses**|**int**|Время ожидания (в секундах) между ответами на предупреждение.|  
 |**last_occurrence_date**|**int**|Дата последнего возникновения предупреждения.|  
@@ -90,12 +93,12 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**occurrence_count**|**int**|Количество раз возникновения предупреждения.|  
 |**count_reset_date**|**int**|Дата **occurrence_count** последнего сброса.|  
 |**count_reset_time**|**int**|Время **occurrence_count** последнего сброса.|  
-|**Аргумент job_id**|**uniqueidentifier**|Идентификационный номер задания, выполняющегося при срабатывании данного предупреждения.|  
+|**job_id**|**uniqueidentifier**|Идентификационный номер задания, выполняющегося при срабатывании данного предупреждения.|  
 |**job_name**|**sysname**|Имя задания, выполняющегося при срабатывании данного предупреждения.|  
 |**has_notification**|**int**|Ненулевое значение, если один или более операторов уведомлены данным предупреждением. Результат логической операции OR одного или нескольких следующих значений:<br /><br /> **1**= уведомлен по электронной почте<br /><br /> **2**= уведомлен по пейджеру<br /><br /> **4**= имеет **net send** уведомления.|  
-|**флаги**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**performance_condition**|**nvarchar(512)**|Если **тип** — **2**, этом столбце содержится определение условий производительности; в противном случае столбец содержит значение NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] версии 7.0 всегда будет иметь значение «[Без категорий]».|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Всегда будет «[без категорий]» для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**wmi_namespace**|**sysname**|Если **тип** — **3**, в этом столбце указывается пространство имен WMI-события.|  
 |**wmi_query**|**nvarchar(512)**|Если **тип** — **3**, в этом столбце отображается запрос WMI-события.|  
 |**type**|**int**|Тип события:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о событии<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
@@ -110,7 +113,7 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Код ошибки сообщения, который определен для предупреждения (Обычно соответствует номеру ошибки в **sysmessages** таблицы). Если уровень важности используется для определения предупреждения, **message_id** — **0** или иметь значение NULL.|  
-|**Серьезность**|**int**|Уровень серьезности (от **9** через **25**, **110**, **120**, **130**, или 1**40**) определяющий оповещение.|  
+|**severity**|**int**|Уровень серьезности (от **9** через **25**, **110**, **120**, **130**, или 1**40**) определяющий оповещение.|  
 |**включен**|**tinyint**|Состояние ли в настоящее время включено предупреждение (**1**) или нет (**0**). Отправка отключенных предупреждений не производится.|  
 |**delay_between_responses**|**int**|Время ожидания (в секундах) между ответами на предупреждение.|  
 |**last_occurrence_date**|**int**|Дата последнего возникновения предупреждения.|  
@@ -124,18 +127,18 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**occurrence_count**|**int**|Количество раз возникновения предупреждения.|  
 |**count_reset_date**|**int**|Дата **occurrence_count** последнего сброса.|  
 |**count_reset_time**|**int**|Время **occurrence_count** последнего сброса.|  
-|**Аргумент job_id**|**uniqueidentifier**|Идентификатор задания.|  
+|**job_id**|**uniqueidentifier**|Идентификатор задания.|  
 |**job_name**|**sysname**|Задание по требованию, выполняющееся в ответ на данное предупреждение.|  
 |**has_notification**|**int**|Ненулевое значение, если один или более операторов уведомлены данным предупреждением. Значение является результатом логической операции OR над одним или несколькими следующими значениями:<br /><br /> **1**= уведомлен по электронной почте<br /><br /> **2**= уведомлен по пейджеру<br /><br /> **4**= имеет **net send** уведомления.|  
-|**флаги**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
 |**performance_condition**|**nvarchar(512)**|Если **тип** — **2**, в этом столбце указывается определение условия производительности. Если **тип** — **3**, в этом столбце отображается запрос WMI-события. В противном случае столбец содержит значение NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Всегда будет "**[Некатегоризированные]**" для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Всегда будет "**[Некатегоризированные]**" для [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.|  
 |**type**|**int**|Тип предупреждения:<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] предупреждение о событии<br /><br /> **2**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] оповещение о производительности<br /><br /> **3** = предупреждение о событии WMI|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_help_alert** должна запускаться из **msdb** базы данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена предопределенная роль базы данных **SQLAgentOperatorRole** в базе данных **msdb** .  
   
  Дополнительные сведения о **SQLAgentOperatorRole**, в разделе [SQL Server Agent Fixed Database Roles](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79).  
@@ -151,7 +154,7 @@ EXEC sp_help_alert @alert_name = 'Demo: Sev. 25 Errors';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_alert (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [Хранимая процедура sp_update_alert &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

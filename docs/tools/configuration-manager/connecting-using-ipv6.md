@@ -8,7 +8,8 @@ ms.service:
 ms.component: configuration-manager
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,19 +17,20 @@ helpviewer_keywords:
 - IPv4
 - IPv6
 ms.assetid: 2669098c-f5f1-43da-aec6-e91003ac89f6
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: stevestein
 ms.author: sstein
 manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f66c4dde6dbf2b14709f8bcac291a81cd7136b90
-ms.sourcegitcommit: b6116b434d737d661c09b78d0f798c652cf149f3
+ms.openlocfilehash: 3270ffb9899b8d8e4663c7e0d1b4dc52b8d89049
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="connecting-using-ipv6"></a>Соединение с использованием IPv6
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client полностью поддерживают протокол IP версии 4 (IPv4) и протокол IP версии 6 (IPv6). Если в Windows настроен протокол IPv6, то компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]автоматически обнаруживают наличие IPv6. Дополнительно настраивать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]и [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client полностью поддерживают протокол IP версии 4 (IPv4) и протокол IP версии 6 (IPv6). Если в Windows настроен протокол IPv6, то компоненты [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]автоматически обнаруживают наличие IPv6. Дополнительно настраивать [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] не требуется.  
   
  Поддержка включает в себя в том числе следующее.  
   

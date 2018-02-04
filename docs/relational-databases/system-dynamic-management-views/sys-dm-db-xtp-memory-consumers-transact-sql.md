@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_db_xtp_memory_consumers
 - dm_db_xtp_memory_consumers_TSQL
 - sys.dm_db_xtp_memory_consumers_stats_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_db_xtp_memory_consumers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_db_xtp_memory_consumers dynamic management view
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29a4fae7f62f76dc6d7f1256eed6e681fe0ff9e4
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3b34320f2a94ce971bae2cd4406078b9b60669a3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
  Дополнительные сведения см. в разделе [In-Memory OLTP (оптимизация в памяти)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|Идентификатор (внутренний) потребителя памяти.|  
 |memory_consumer_type|**int**|Тип потребителя памяти:<br /><br /> 0 = агрегатная функция. (Суммирует использование памяти для двух или более потребителей. Не должен отображаться.)<br /><br /> 2 = VARHEAP (Отслеживает потребление памяти для кучи переменной длины.)<br /><br /> 3 = HASH (Отслеживает потребление памяти для индекса.)<br /><br /> 5 = пул страниц БД (Отслеживает потребление памяти для пула страниц базы данных, используемого для операций времени выполнения. Например, переменных таблиц и некоторых сериализуемых сканирований. Для одной базы данных существует только один потребитель памяти этого типа.)|  
@@ -56,10 +59,10 @@ ms.lasthandoff: 11/17/2017
 |memory_consumer_address|**varbinary**|Внутренний адрес потребителя памяти. Только для внутреннего применения.|  
 |xtp_object_id|**bigint**|Идентификатор объекта в памяти OLTP, соответствует таблице, оптимизированной для памяти.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  На выходе выделения пространства на уровнях базы данных представляют собой пользовательские таблицы, индексы и системные таблицы. VARHEAP с object_id = NULL относится к памяти, выделенной для таблицы со столбцами переменной длины.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Если имеется разрешение VIEW DATABASE STATE в текущей базе данных, возвращаются все строки. В противном случае возвращается пустой набор строк.  
   
  Если разрешения VIEW DATABASE нет, возвращаются все столбцы для строк в таблицах, для которых включено разрешение SELECT.  
@@ -126,7 +129,7 @@ total_allocated_MB   total_used_MB
 1358                 1191  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления таблиц, оптимизированных для памяти &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

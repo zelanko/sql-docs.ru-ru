@@ -8,7 +8,8 @@ ms.reviewer:
 ms.service: sql-database
 ms.component: dmv's
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,21 +17,22 @@ f1_keywords:
 - dm_db_wait_stats
 - sys.dm_db_wait_stats
 - sys.dm_db_wait_stats_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_db_wait_stats dynamic management view
 - dm_db_wait_stats
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
-caps.latest.revision: "15"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 465c768c9f5636463e4d124d224f9184ebc2dac8
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d4d15404469382da4d8ab135e0619f4d6a9360d0
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (база данных SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   
  Значения времени конкретных типов ожиданий в процессе выполнения запроса могут указывать на узкие места или точки простоя в запросе. Подобным образом высокие значения времени ожидания или числа ожиданий по всему серверу могут указывать на узкие места или пробки во взаимодействии запросов на экземпляре сервера. Например, ожидания, связанные с блокировкой, указывают на состязание запросов на данные; ожидания, связанные с кратковременными блокировками ввода-вывода страниц, — на медленные значения времени ответа ввода-вывода; ожидания, связанные с кратковременными блокировками обновления страниц, указывают на неверную файловую структуру.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Имя типа ожидания. Дополнительные сведения см. в разделе [типы случаев ожидания](#WaitTypes)далее в этом разделе.|  
 |waiting_tasks_count|**bigint**|Число ожиданий данного типа. Этот счетчик наращивается каждый раз при начале ожидания.|  
@@ -47,7 +49,7 @@ ms.lasthandoff: 11/17/2017
 |max_wait_time_ms|**bigint**|Максимальное время ожидания данного типа.|  
 |signal_wait_time_ms|**bigint**|Разница между временем сигнализации ожидающего потока и временем начала его выполнения.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
   
 -   В этом динамическом административном представлении отображаются данные только для текущей базы данных.  
   
@@ -65,7 +67,7 @@ ms.lasthandoff: 11/17/2017
   
 -   Данная статистика не сохраняется при отработке отказа базы данных SQL, а все данные накапливаются с момента последнего сброса статистики.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Необходимо разрешение VIEW DATABASE STATE на сервере.  
   
 ##  <a name="WaitTypes"></a>Типы ожиданий  
@@ -84,7 +86,7 @@ ms.lasthandoff: 11/17/2017
   
  В следующей таблице перечислены типы ожиданий, с которыми могут сталкиваться задачи.  
   
-|Тип ожидания|Description|  
+|Тип ожидания|Описание|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Имеет место при монопольном доступе к загрузке сборки.|  
@@ -261,7 +263,7 @@ ms.lasthandoff: 11/17/2017
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|PRINT_ROLLBACK_PROGRESS|Применяется при ожидании завершения пользовательских процессов в базе данных, измененной с помощью заключительного предложения ALTER DATABASE. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
+|PRINT_ROLLBACK_PROGRESS|Применяется при ожидании завершения пользовательских процессов в базе данных, измененной с помощью заключительного предложения ALTER DATABASE. Дополнительные сведения см. в статье [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Возникает, когда фоновая задача ожидает завершения фоновой задачи, которая получает уведомления WSFC (путем опроса).  Только для внутреннего применения.|  
 |PWAIT_HADR_CLUSTER_INTEGRATION|Операция добавления, замены или удаления ожидает получения блокировки записи на всегда на внутренний список (например, список сетей, сетевых адресов или прослушивателей группы доступности).  Только для внутреннего применения.|  
 |PWAIT_HADR_OFFLINE_COMPLETED|Always On операция удаления группы доступности ожидает целевая группа доступности в автономный режим перед удалением объектов отказоустойчивой кластеризации Windows Server.|  

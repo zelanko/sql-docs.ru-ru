@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_data_TSQL
 - sp_purge_data
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_purge_data
 - management data warehouse, data collector stored procedures
 - core.sp_purge_data stored procedure
 - data collector [SQL Server], stored procedures
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b03e5ef5984431f3fe2867e2dc303ca2ba710435
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fb74c4993f7a7d013e56061e3a572052c2939a99
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +56,12 @@ core.sp_purge_data
  [@retention_days =] *retention_days*  
  Число дней хранения данных в таблицах хранилища данных управления. Данные с отметкой времени старше, чем *retention_days* удаляется. *retention_days* — **smallint**, значение по умолчанию NULL. Указываемое значение должно быть положительным числом. Если задано значение NULL, то значение в столбце valid_through представления core.snapshots определяет строки, подлежащие удалению.  
   
- [@instance_name =] '*имя_экземпляра*"  
+ [@instance_name = ] '*instance_name*'  
  Имя экземпляра набора элементов сбора. *имя_экземпляра* — **sysname**, значение по умолчанию NULL.  
   
  *имя_экземпляра* должно быть имя полного имени экземпляра, состоящее из имени компьютера и имя экземпляра в виде *computername*\\*instancename*. Если параметр имеет значение NULL, то используется экземпляр по умолчанию на локальном сервере.  
   
- [@collection_set_uid =] '*аргумент collection_set_uid*"  
+ [@collection_set_uid = ] '*collection_set_uid*'  
  Имеет значение GUID для набора элементов сбора. *Аргумент collection_set_uid* — **uniqueidentifier**, значение по умолчанию NULL. Если он имеет значение NULL, то удаляются уточняющие строки из всех наборов элемента сбора. Чтобы получить это значение, выполните запрос к представлению каталога syscollector_collection_sets.  
   
  [@duration =] *длительность*  
@@ -68,14 +70,14 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта процедура выбирает строки в представлении core.snapshots, которые подлежат удалению в соответствии со сроком хранения. Все такие строки удаляются из таблицы core.snapshots_internal. Удаление устаревших строк приводит к каскадному удалению строк во всех таблицах хранилища данных управления. Указанная процедура выполняется с помощью предложения ON DELETE CASCADE, которое определено для всех таблиц, в которых хранятся собранные данные.  
   
  Каждый моментальный снимок и связанные с ним данные удаляются в пределах явной транзакции, а затем транзакция фиксируется. Таким образом Если операция по очистке остановлена вручную или значение, указанное для @duration превышается, только незафиксированные данные останутся. Эти данные могут быть удалены во время следующего запуска задания.  
   
  Эта процедура должна выполняться в контексте базы данных хранилища данных управления.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **mdw_admin** (с разрешением EXECUTE) предопределенной роли базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -112,7 +114,7 @@ EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = 
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Хранимые процедуры сборщика данных (Transact-SQL)](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

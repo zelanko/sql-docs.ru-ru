@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_targetserver
 - sp_delete_targetserver_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_targetserver
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_targetserver
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
-caps.latest.revision: "22"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 9fbe2a49724fd45ac8c635fc758323b5d34b8eb9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5f95d6489635c40a7ba478e4100cb672dc6938c2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +48,13 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@server_name=** ] **"***сервера***"**  
+ [ **@server_name=** ] **'***server***'**  
  Имя сервера, который необходимо удалить в качестве доступного целевого сервера. *сервер* — **nvarchar(30)**, не имеет значения по умолчанию.  
   
- [  **@clear_downloadlist=** ] *clear_downloadlist*  
+ [ **@clear_downloadlist=** ] *clear_downloadlist*  
  Указывает, очистить ли список загрузки для целевого сервера. *clear_downloadlist* — тип **бит**, значение по умолчанию **1**. Когда *clear_downloadlist* — **1**, процедура очищает список загрузки для сервера перед удалением сервера. Когда *clear_downloadlist* — **0**, список загрузки не очищается.  
   
- [  **@post_defection=** ] *post_defection*  
+ [ **@post_defection=** ] *post_defection*  
  Указывает, следует ли отправлять инструкцию отключения на целевой сервер. *post_defection* — тип **бит**, значение по умолчанию 1. Когда *post_defection* — **1**, процедура посылает инструкцию отключения на целевой сервер перед удалением сервера. Когда *post_defection* — **0**, процедура не отправлять инструкцию отключения на целевой сервер.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -60,10 +63,10 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Обычным способом удаления целевого сервера является вызов **sp_msx_defect** на целевом сервере. Используйте **sp_delete_targetserver** только при необходимости ручное исключение.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения этой хранимой процедуры пользователь должен обладать **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -79,7 +82,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>См. также:  
- [sp_help_targetserver &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [sp_msx_defect &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

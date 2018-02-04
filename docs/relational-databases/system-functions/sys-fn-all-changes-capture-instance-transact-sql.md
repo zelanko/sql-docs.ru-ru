@@ -8,30 +8,33 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server (starting with 2008)
+applies_to:
+- SQL Server (starting with 2008)
 f1_keywords:
 - fn_all_changes
 - sys.fn_all_changes
 - fn_all_changes_TSQL
 - sys.fn_all_changes_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - fn_all_changes_<capture_instance>
 - sys.fn_all_changes_<capture_instance>
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 29f9560f7308fef45468c7ce67a6f8a15e120a3b
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 381609e65ed354ee61d059da2e92d8fe3b7c114b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,15 +92,15 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип столбца|Description|  
+|Имя столбца|Тип столбца|Описание|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|Номер LSN-фиксации транзакции, связанный с этим изменением. Все изменения, зафиксированные в одной транзакции, имеют общий номер LSN-фиксации.|  
 |__CDC_SEQVAL|**binary(10)**|Значение последовательности, используемое для упорядочивания изменений строк в пределах транзакции.|  
 |\<столбцы из @column_list>|**зависит от**|Столбцы, которые определены в *column_list* функции sp_cdc_generate_wrapper_function при ее вызове для формирования скрипта, создающего функцию-оболочку.|  
-|__CDC_OPERATION|**nvarchar(2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Он будет различаются в зависимости от значения аргумента *row_filter_option* в вызове:<br /><br /> *row_filter_option* = «все»<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> *row_filter_option* = «all update old»<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> «UO» — старые значения операции обновления|  
-|\<столбцы из @update_flag_list>|**bit**|Битовый флаг, имя которого образуется добавлением «_uflag» к имени столбца. Флаг всегда имеет значение NULL, если \__CDC_OPERATION равно d ", «I» или «uo». Когда \__CDC_OPERATION является 'UN', он имеет значение 1, если обновление изменило соответствующий столбец. В противном случае флагу присваивается значение 0.|  
+|__CDC_OPERATION|**nvarchar(2)**|Код операции, указывающий операцию, необходимую для применения строки к целевой среде. Он будет различаются в зависимости от значения аргумента *row_filter_option* в вызове:<br /><br /> *row_filter_option* = 'all'<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> *row_filter_option* = «all update old»<br /><br /> «D» — операция удаления<br /><br /> «I» — операция вставки<br /><br /> «UN» — новые значения операции обновления<br /><br /> «UO» — старые значения операции обновления|  
+|\<столбцы из @update_flag_list>|**бит**|Битовый флаг, имя которого образуется добавлением «_uflag» к имени столбца. Флаг всегда имеет значение NULL, если \__CDC_OPERATION равно d ", «I» или «uo». Когда \__CDC_OPERATION является 'UN', он имеет значение 1, если обновление изменило соответствующий столбец. В противном случае флагу присваивается значение 0.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция fn_all_changes_<экземпляр_отслеживания> служит оболочкой для функции запроса cdc.fn_cdc_get_all_changes_<экземпляр_отслеживания>. Хранимая процедура sys.sp_cdc_generate_wrapper формирует скрипт для создания оболочки.  
   
  Функции-оболочки не создаются автоматически. Чтобы создать функции-оболочки, нужно выполнить две операции:  
@@ -116,8 +119,8 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Шаблон конфигурации «Instantiate CDC Wrapper TVFs for Schema» для системы отслеживания измененных данных показывает, как использовать хранимую процедуру sp_cdc_generate_wrapper_function, чтобы получить скрипты CREATE для всех функций-оболочек для функций запросов, определенных в схеме. Затем шаблон создает эти скрипты. Дополнительные сведения о шаблонах см. в разделе [обозреватель шаблонов](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8).  
   
-## <a name="see-also"></a>См. также:  
- [sys.sp_cdc_generate_wrapper_function &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [CDC.fn_cdc_get_all_changes_ &#60; capture_instance &#62;  &#40; Transact-SQL &#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - semanticsimilaritytable
 - semanticsimilaritytable_TSQL
-dev_langs: TSQL
-helpviewer_keywords: semanticsimilaritytable function
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- semanticsimilaritytable function
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2944708e70d9cc71cddcad33ff060df8a223530d
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 8ba25daf71db106e5ecd8877e83edda6e43a5286
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +66,7 @@ SEMANTICSIMILARITYTABLE
  **\***  
  Указывает на то, что используются все столбцы, у которых включено семантическое индексирование.  
   
- **параметр source_key**  
+ **source_key**  
  Уникальный ключ строки для запроса результатов по определенной строке.  
   
  По возможности ключ неявно преобразуется в тип полнотекстового уникального ключа в исходной таблице. Ключ может быть задан в виде константы или переменной, но не может быть выражением или результатом скалярного вложенного запроса.  
@@ -73,12 +76,12 @@ SEMANTICSIMILARITYTABLE
   
  Если результаты запрашиваются из нескольких столбцов, то совпадающие документы возвращаются для каждого столбца отдельно.  
   
-|Column_name|Тип|Description|  
+|Column_name|Тип|Описание|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|Идентификатор столбца, в котором исходный документ использовался при поиске подобных документов.<br /><br /> Способы извлечения имени столбца по идентификатору столбца и идентификатора столбца по имени см. в описании функций COL_NAME и COLUMNPROPERTY.|  
 |**matched_column_id**|**int**|Идентификатор столбца, в котором был найден сходный документ.<br /><br /> Способы извлечения имени столбца по идентификатору столбца и идентификатора столбца по имени см. в описании функций COL_NAME и COLUMNPROPERTY.|  
 |**matched_document_key**|**\***<br /><br /> Этот ключ соответствует типу уникального ключа в исходной таблице.|Значение уникального ключа полнотекстового и семантического извлечения для документа или строки, которые оказались подобными документу, указанному в запросе.|  
-|**Оценка**|**REAL**|Относительное значение подобия этого документа по отношению ко всем другим подобным документам.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где чем выше показатель, тем больше соответствие, а 1.0 — идеальный показатель.|  
+|**score**|**REAL**|Относительное значение подобия этого документа по отношению ко всем другим подобным документам.<br /><br /> Это дробное десятичное значение в диапазоне [0.0, 1.0], где чем выше показатель, тем больше соответствие, а 1.0 — идеальный показатель.|  
   
 ## <a name="general-remarks"></a>Общие замечания  
  Дополнительные сведения см. в разделе [поиск похожих и связанных документов с использованием семантического поиска](../../relational-databases/search/find-similar-and-related-documents-with-semantic-search.md).  

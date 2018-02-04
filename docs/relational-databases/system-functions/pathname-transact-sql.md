@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - PathName_TSQL
 - PathName
-dev_langs: TSQL
-helpviewer_keywords: PathName FILESTREAM [SQL Server]
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- PathName FILESTREAM [SQL Server]
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f37b03f60063643472b325c4c3f61e87078794f8
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 38687ee01f37cd3e7e8d15a4137dbdbb2c7ee82f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +54,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  Целое число [выражение](../../t-sql/language-elements/expressions-transact-sql.md) , определяющий способ форматирования серверных компонентов пути. *@option*может принимать одно из следующих значений. Значение по умолчанию равно 0.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |0|Пример возвращает имя сервера, преобразовать в BIOS форматирование.`\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Возвращает имя сервера без преобразования, например:`\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -64,7 +67,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Если база данных принадлежит доступности Always On группы, затем значение *use_replica_computer_name* приведет к следующим последствиям на выходе **PathName** функции:  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |Не указано.|Функция возвращает в пути имя виртуальной сети.|  
 |0|Функция возвращает в пути имя виртуальной сети.|  
@@ -151,8 +154,8 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [Большой двоичный объект &#40;BLOB-объект&#41;Данные&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [Данные большого двоичного объекта (SQL Server)](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40; Transact-SQL &#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [Доступ к данным FILESTREAM с OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

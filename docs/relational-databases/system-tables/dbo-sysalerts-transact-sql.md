@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sysalerts_TSQL
 - dbo.sysalerts_TSQL
 - sysalerts
-dev_langs: TSQL
-helpviewer_keywords: sysalerts system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysalerts system table
 ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
-caps.latest.revision: "25"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: a28a1152ec3dd85c8bee11c4ef9b73ed3928db27
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 7565ee20e5fdec3a94c413b8204629ce6ee2f48d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**event_category_id**|**int**|Зарезервировано для последующего использования.|  
 |**event_id**|**int**|Зарезервировано для последующего использования.|  
 |**message_id**|**int**|Определяемые пользователем идентификатор сообщения или ссылка на **sysmessages** сообщение, вызвавшее это предупреждение.|  
-|**Серьезность**|**int**|Серьезность события, вызвавшего это предупреждение.|  
+|**severity**|**int**|Серьезность события, вызвавшего это предупреждение.|  
 |**включен**|**tinyint**|Состояние предупреждения:<br /><br /> **0** = отключено.<br /><br /> **1** = включен.|  
 |**delay_between_responses**|**int**|Время ожидания между отправкой уведомлений для этого предупреждения (в секундах).|  
 |**last_occurrence_date**|**int**|Дата последнего возникновения предупреждения.|  
@@ -57,23 +60,23 @@ ms.lasthandoff: 11/17/2017
 |**occurrence_count**|**int**|Количество раз, когда возникало этого предупреждение.|  
 |**count_reset_date**|**int**|Число дней (date) будут сброшены **0**.|  
 |**count_reset_time**|**int**|Время суток количество будут сброшены **0**.|  
-|**Аргумент job_id**|**uniqueidentifier**|Идентификатор задачи, выполняемой, когда происходит предупреждение.|  
+|**job_id**|**uniqueidentifier**|Идентификатор задачи, выполняемой, когда происходит предупреждение.|  
 |**has_notification**|**int**|Количество операторов, получающих при возникновении предупреждения уведомление по электронной почте.|  
-|**флаги**|**int**|Зарезервировано.|  
+|**flags**|**int**|Зарезервировано.|  
 |**performance_condition**|**nvarchar(512)**|Зарезервировано.|  
 |**category_id**|**int**|Зарезервировано.|  
   
- ## <a name="remarks"></a>Замечания
+ ## <a name="remarks"></a>Remarks
 
 В следующей таблице показаны значения битовой маски include_event_description. Десятичное значение возвращается dbo.sysalerts. 
 
-|decimal | binary | Значение |
+|Decimal | BINARY | Значение |
 |------|------|------|
 |0 |0000 |сообщение не |
 |1 |0001 |Отправить по электронной почте |
 |2 |0010 |пейджер |
 |3 |0011 |пейджера и адрес электронной почты |
-|4 |0100 |Команда Net send |
+|4 |0100 |Net send |
 |5 |0101 |Net send и электронной почты |
 |6 |0110 |Команды net send и на пейджер |
 |7 |0111 |Команды net send, пейджер и электронной почты |

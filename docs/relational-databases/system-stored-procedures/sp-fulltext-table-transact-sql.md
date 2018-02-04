@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_fulltext_table_TSQL
 - sp_fulltext_table
-dev_langs: TSQL
-helpviewer_keywords: sp_fulltext_table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_fulltext_table
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: b6ca014dd3d76c57402fe8a3af7bb8bb33fa4fce
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 1827d90dab1dc4be8acbc3cf3e00bfe97d4b1bae
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -34,7 +37,7 @@ ms.lasthandoff: 11/27/2017
   Отмечает таблицу для полнотекстового индексирования или снимает эту отметку.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Используйте [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), и [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) вместо него.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Используйте [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md), и [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) вместо него.  
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -52,13 +55,13 @@ sp_fulltext_table
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@tabname=**] **"***таблицы не собирались***"**  
+ [ **@tabname=**] **'***qualified_table_name***'**  
  Имя таблицы, состоящее из одной или двух частей. Таблица должна существовать в текущей базе данных. *таблицы не собирались* — **nvarchar(517)**, не имеет значения по умолчанию.  
   
- [  **@action=**] **"***действия***"**  
+ [ **@action=**] **'***action***'**  
  Действие, которое должно быть выполнено. *Действие* — **nvarchar(50)**, без значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |**Создание**|Создает метаданные для полнотекстового индекса для таблицы, указанной параметром *таблицы не собирались* и указывает, что данные полнотекстового индекса для этой таблицы должны находиться в *fulltext_catalog_name*. Это действие также определяет использование *unique_index_name* в качестве полнотекстового ключевого столбца. Этот уникальный индекс уже должен существовать и быть определенным для одного из столбцов таблицы.<br /><br /> Полнотекстовый поиск по этой таблице не будет выполняться, пока полнотекстовый каталог не будет заполнен.|  
 |**Drop**|Удаляет метаданные для полнотекстового индекса для *таблицы не собирались*. Если при этом производится полнотекстовое индексирование, оно автоматически прекращается перед удалением метаданных. Перед удалением полнотекстового индекса необязательно удалять столбцы.|  
@@ -73,10 +76,10 @@ sp_fulltext_table
 |**start_incremental**|Начинает добавочное заполнение полнотекстового индекса.|  
 |**Остановить**|Прекращает добавочное заполнение.|  
   
- [  **@ftcat=**] **"***fulltext_catalog_name***"**  
+ [ **@ftcat=**] **'***fulltext_catalog_name***'**  
  — Это имя допустимым, существующий полнотекстовый каталог для **создания** действия. Для всех других действий этот параметр должен быть равен NULL. *fulltext_catalog_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@keyname=**] **"***unique_index_name***"**  
+ [ **@keyname=**] **'***unique_index_name***'**  
  Является допустимым значения NULL один ключевой столбец, уникальным индексом *таблицы не собирались* для **создания** действия. Для всех других действий этот параметр должен быть равен NULL. *unique_index_name* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -85,7 +88,7 @@ sp_fulltext_table
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  После деактивации полнотекстового индекса для конкретной таблицы существующий полнотекстовый индекс остается до следующего полного заполнения; Тем не менее, этот индекс не используется из-за [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] блокирует запросы к деактивированным таблицам.  
   
  Если таблица активирована вновь, но индекс не заполняется снова, старый индекс доступен для запросов к остававшимся, но не новым столбцам, для которых включено полнотекстовое индексирование. Данные из удаленных столбцов используются в запросах поиска по всем столбцам полнотекстового индекса.  
@@ -94,7 +97,7 @@ sp_fulltext_table
   
  Полнотекстовый ключевой столбец должен содержать значения размером не более 900 байт. Из соображений производительности рекомендуется делать размер ключевого столбца как можно меньшим.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера **db_owner** и **db_ddladmin** фиксированной роли базы данных или пользователь с разрешениями ссылки на полнотекстовый каталог могут выполнение **sp_fulltext_table**.  
   
 ## <a name="examples"></a>Примеры  
@@ -134,10 +137,10 @@ EXEC sp_fulltext_table 'Production.Document', 'drop';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [INDEXPROPERTY (Transact-SQL)](../../t-sql/functions/indexproperty-transact-sql.md)   
  [OBJECTPROPERTY (Transact-SQL)](../../t-sql/functions/objectproperty-transact-sql.md)   
- [sp_help_fulltext_tables &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
+ [sp_help_fulltext_tables &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-transact-sql.md)   
  [sp_help_fulltext_tables_cursor &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-tables-cursor-transact-sql.md)   
  [sp_helpindex &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

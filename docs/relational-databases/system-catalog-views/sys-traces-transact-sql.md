@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.traces_TSQL
 - sys.traces
 - traces_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.traces catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.traces catalog view
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 3a105a7fbfcac2213f422144b431574cdd543426
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a846bac5a610bac22c9b00712df5ea04c2779df1
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +51,10 @@ ms.lasthandoff: 11/27/2017
 |**max_size**|**bigint**|Верхний предел размера файла трассировки в мегабайтах (МБ). Значение NULL, если трассировка является трассировкой наборов строк.|  
 |**stop_time**|**datetime**|Время окончания выполняющейся трассировки.|  
 |**max_files**|**int**|Максимальное количество файлов продолжения. Значение NULL, если максимальное количество файлов не установлено.|  
-|**is_rowset**|**bit**|1 = трассировка набора строк.|  
-|**is_rollover**|**bit**|1 = параметр продолжения включен.|  
-|**is_shutdown**|**bit**|1 = параметр завершения включен.|  
-|**is_default**|**bit**|1 = трассировка по умолчанию.|  
+|**is_rowset**|**бит**|1 = трассировка набора строк.|  
+|**is_rollover**|**бит**|1 = параметр продолжения включен.|  
+|**is_shutdown**|**бит**|1 = параметр завершения включен.|  
+|**is_default**|**бит**|1 = трассировка по умолчанию.|  
 |**buffer_count**|**int**|Количество внутренних буферов памяти, используемых трассировкой.|  
 |**buffer_size**|**int**|Размер каждого буфера (КБ).|  
 |**file_position**|**bigint**|Положение последнего файла трассировки. Значение NULL, если трассировка является трассировкой наборов строк.|  
@@ -61,10 +64,10 @@ ms.lasthandoff: 11/27/2017
 |**event_count**|**bigint**|Общее количество произошедших событий.|  
 |**dropped_event_count**|**int**|Общее количество удаленных событий.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога объектов &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.trace_categories &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   
  [sys.trace_columns &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-trace-columns-transact-sql.md)   

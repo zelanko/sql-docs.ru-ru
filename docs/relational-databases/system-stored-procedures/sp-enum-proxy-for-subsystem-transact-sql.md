@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_enum_proxy_for_subsystem_TSQL
 - sp_enum_proxy_for_subsystem
-dev_langs: TSQL
-helpviewer_keywords: sp_enum_proxy_for_subsystems
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_enum_proxy_for_subsystems
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
-caps.latest.revision: "27"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 0b708d467cf246a221d14802abb839c96de85ffe
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: bf94c94aed1f43e747703d5f82a7b842252dafef
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +50,16 @@ sp_enum_proxy_for_subsystem
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@proxy_id**  =] *proxy_id*  
+ [ **@proxy_id** = ] *proxy_id*  
  Идентификационный номер учетной записи-посредника, о которой необходимо вывести сведения. *Proxy_id* — **int**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
   
- [  **@proxy_name**  =] **"***proxy_name***"**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  Имя учетной записи-посредника, для которой необходимо вывести список сведений. *Proxy_name* — **sysname**, значение по умолчанию NULL. Либо *идентификатор* или *proxy_name* может быть указан.  
   
- [  **@subsystem_id**  =] *subsystem_id*  
+ [ **@subsystem_id** = ] *subsystem_id*  
  Идентификационный номер подсистемы, о которой необходимо вывести сведения. *Subsystem_id* — **int**, значение по умолчанию NULL. Либо *subsystem_id* или *subsystem_name* может быть указан.  
   
- [  **@subsystem_name**  =] **"***subsystem_name***"**  
+ [ **@subsystem_name** = ] **'***subsystem_name***'**  
  Имя подсистемы, о которой необходимо вывести сведения. *Subsystem_name* — **sysname**, значение по умолчанию NULL. Либо *subsystem_id* или *subsystem_name* может быть указан.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -64,14 +67,14 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="result-sets"></a>Результирующие наборы  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|Идентификационный номер подсистемы.|  
 |**subsystem_name**|**sysname**|Имя подсистемы.|  
 |**proxy_id**|**int**|Идентификационный номер учетной записи-посредника.|  
 |**proxy_name**|**sysname**|Имя учетной записи-посредника.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если параметры не указаны, **sp_enum_proxy_for_subsystem** выводит сведения о всех прокси-серверы для всех подсистем экземпляра.  
   
  Если предоставлен идентификатор или имя прокси-сервера, **sp_enum_proxy_for_subsystem** выдает список подсистем, прокси-сервер имеет доступ к. Если предоставлен идентификатор или имя подсистемы, **sp_enum_proxy_for_subsystem** список учетных записей-посредников, имеющих доступ к данной подсистеме.  
@@ -80,7 +83,7 @@ sp_enum_proxy_for_subsystem
   
  Эта хранимая процедура находится в **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешения на выполнение для этой процедуры по умолчанию членам **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -109,7 +112,7 @@ EXEC dbo.sp_enum_proxy_for_subsystem
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sp_grant_proxy_to_subsystem &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+## <a name="see-also"></a>См. также  
+ [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

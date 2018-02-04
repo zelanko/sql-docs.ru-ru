@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_category_TSQL
 - sp_delete_category
-dev_langs: TSQL
-helpviewer_keywords: sp_delete_category
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_delete_category
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
-caps.latest.revision: "23"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 2cc7a85623daf6a21c65750b9e15a3d6886f67ad
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d2ce1cd0406cbb69b6dd280bc8c36fdbd31c5d2e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +47,16 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@class =**] **"***класса***"**  
+ [ **@class =**] **'***class***'**  
  Класс категории. *Класс* — **varchar(8)**, не по умолчанию и должен иметь одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
-|**ЗАДАНИЕ**|Удаляет категорию задания.|  
+|**JOB**|Удаляет категорию задания.|  
 |**ПРЕДУПРЕЖДЕНИЯ**|Удаляет категорию предупреждения.|  
 |**ОПЕРАТОР**|Удаляет категорию оператора.|  
   
- [  **@name =**] **"***имя***"**  
+ [ **@name =**] **'***name***'**  
  Имя удаляемой категории. *имя* — **sysname**, не имеет значения по умолчанию.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -62,12 +65,12 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_delete_category** должна запускаться из **msdb** базы данных.  
   
  Удаление категории относит задания, предупреждения или операторы данной категории в категорию по умолчанию для объектов этих классов.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
   
 ## <a name="examples"></a>Примеры  

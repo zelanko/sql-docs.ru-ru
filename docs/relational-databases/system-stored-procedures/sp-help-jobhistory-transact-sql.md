@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_jobhistory_TSQL
 - sp_help_jobhistory
-dev_langs: TSQL
-helpviewer_keywords: sp_help_jobhistory
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_jobhistory
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 1c927767e00429c9ccdbe3143ade99cbe363950d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: de1836ee52354e96341386db5dfd33297f2d9be6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,37 +60,37 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Идентификационный номер задания. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@job_name=** ] **"***job_name***"**  
+ [ **@job_name=** ] **'***job_name***'**  
  Имя задания. *job_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@step_id=** ] *step_id*  
+ [ **@step_id=** ] *step_id*  
  Идентификационный номер этапа. *step_id* — **int**, значение по умолчанию NULL.  
   
- [  **@sql_message_id=** ] *sql_message_id*  
+ [ **@sql_message_id=** ] *sql_message_id*  
  Идентификационный номер сообщения об ошибке, возвращаемый Microsoft SQL Server при запуске задания. *sql_message_id* — **int**, значение по умолчанию NULL.  
   
- [  **@sql_severity=** ] *sql_severity*  
+ [ **@sql_severity=** ] *sql_severity*  
  Уровень серьезности сообщения об ошибке, возвращаемого SQL Server при запуске задания. *sql_severity* — **int**, значение по умолчанию NULL.  
   
- [  **@start_run_date=** ] *start_run_date*  
+ [ **@start_run_date=** ] *start_run_date*  
  Дата запуска задания. *start_run_date*— **int**, значение по умолчанию NULL. *start_run_date* должен быть задан в формате ГГГГММДД, где гггг — четырехзначное число года, мм — двухзначное число месяца, а дд — двухзначное число дня.  
   
- [  **@end_run_date=** ] *end_run_date*  
+ [ **@end_run_date=** ] *end_run_date*  
  Дата завершения задания. *end_run_date* — **int**, значение по умолчанию NULL. *end_run_date*должен быть задан в формате ГГГГММДД, где гггг — четырехзначное число года, мм — двухзначное число месяца, а дд — двухзначное число дня.  
   
- [  **@start_run_time=** ] *start_run_time*  
+ [ **@start_run_time=** ] *start_run_time*  
  Время запуска задания. *start_run_time* — **int**, значение по умолчанию NULL. *start_run_time*должен быть задан в формате ЧЧММСС, где ЧЧ — двухзначное число часов, мм — двухзначное число минут, а СС — двухзначное число дня.  
   
- [  **@end_run_time=** ] *end_run_time*  
+ [ **@end_run_time=** ] *end_run_time*  
  Время завершения выполнения задания. *end_run_time* — **int**, значение по умолчанию NULL. *end_run_time*должен быть задан в формате ЧЧММСС, где ЧЧ — двухзначное число часов, мм — двухзначное число минут, а СС — двухзначное число дня.  
   
- [  **@minimum_run_duration=** ] *minimum_run_duration*  
+ [ **@minimum_run_duration=** ] *minimum_run_duration*  
  Минимальное время для выполнения задания. *minimum_run_duration* — **int**, значение по умолчанию NULL. *minimum_run_duration*должен быть задан в формате ЧЧММСС, где ЧЧ — двухзначное число часов, мм — двухзначное число минут, а СС — двухзначное число дня.  
   
- [  **@run_status=** ] *run_status*  
+ [ **@run_status=** ] *run_status*  
  Состояние выполнения задания. *run_status* — **int**, значение по умолчанию NULL и может принимать одно из следующих значений.  
   
 |Значение|Описание|  
@@ -99,16 +102,16 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**4**|Сообщение о проценте выполнения|  
 |**5**|Неизвестно|  
   
- [  **@minimum_retries=** ] *minimum_retries*  
+ [ **@minimum_retries=** ] *minimum_retries*  
  Минимальное число повторных попыток выполнить задание. *minimum_retries* — **int**, значение по умолчанию NULL.  
   
- [  **@oldest_first=** ] *oldest_first*  
+ [ **@oldest_first=** ] *oldest_first*  
  Показывать ли результаты, начиная со старейшего задания. *oldest_first* — **int**, значение по умолчанию **0**, которое представляет новых заданий. **1** первыми старейшего задания.  
   
- [  **@server=** ] **"***сервера***"**  
+ [ **@server=** ] **'***server***'**  
  Имя сервера, на котором было выполнено задание. *сервер* — **nvarchar(30)**, значение по умолчанию NULL.  
   
- [  **@mode=** ] **"***режим***"**  
+ [ **@mode=** ] **'***mode***'**  
  Выводит ли SQL Server все столбцы в результирующем наборе (**полного**) или только краткую сводку столбцов. *режим* — **varchar(7)**, значение по умолчанию **Сводка**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -117,16 +120,16 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>Результирующие наборы  
  Реальный набор столбцов зависит от значения *режим*. Самый полный список столбцов показан ниже и возвращается, когда *режим* установлен в FULL.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Идентификационный номер записи журнала.|  
-|**Аргумент job_id**|**uniqueidentifier**|Идентификатор задания.|  
+|**job_id**|**uniqueidentifier**|Идентификатор задания.|  
 |**job_name**|**sysname**|Имя задания.|  
 |**step_id**|**int**|Идентификационный номер этапа (будет **0** для журнала заданий).|  
 |**step_name**|**sysname**|Имя этапа (NULL для журнала заданий).|  
 |**sql_message_id**|**int**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] — самый последний номер ошибки [!INCLUDE[tsql](../../includes/tsql-md.md)], обнаруженный при выполнении команды.|  
 |**sql_severity**|**int**|Для шага [!INCLUDE[tsql](../../includes/tsql-md.md)] — самая высокая степень серьезности ошибки [!INCLUDE[tsql](../../includes/tsql-md.md)], обнаруженная при выполнении команды.|  
-|**Сообщение**|**nvarchar(1024)**|Запись в журнале о задании или этапе.|  
+|**message**|**nvarchar(1024)**|Запись в журнале о задании или этапе.|  
 |**run_status**|**int**|Результат задания или этапа.|  
 |**run_date**|**int**|Дата начала выполнения задания или этапа.|  
 |**run_time**|**int**|Дата начала выполнения задания или этапа.|  
@@ -135,12 +138,12 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar(20)**|Оператор, которому было отправлено сетевое сообщение относительно этого задания (NULL для журнала этапов).|  
 |**operator_paged**|**nvarchar(20)**|Оператор, которому было отправлено сообщение на пейджер относительно этого задания (NULL для журнала этапов).|  
 |**retries_attempted**|**int**|Количество повторных попыток запуска этапа (всегда 0 для журнала заданий).|  
-|**сервер**|**nvarchar(30)**|Сервер, на котором выполняется задание или этап. Всегда (**локального**).|  
+|**server**|**nvarchar(30)**|Сервер, на котором выполняется задание или этап. Всегда (**локального**).|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_help_jobhistory** возвращает отчет по журналу для указанных запланированных заданий. Если не указаны параметры, отчет содержит журнал всех заданий в расписании.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -182,7 +185,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_purge_jobhistory (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

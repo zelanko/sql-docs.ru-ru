@@ -8,29 +8,31 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_maintenance_plan_db_TSQL
 - sp_delete_maintenance_plan_db
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_delete_maintenance_plan_db
 - maintenance plans [SQL Server], deleting
 - removing maintenance plan
 - disassociating maintenance plan
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-caps.latest.revision: "24"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bb49c5f6dfd09d81c804ac01b1658adc4f2b0ac1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 69f523fbdb044d889cc3ee961d38ae6e6681136c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>Хранимая процедура sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,23 +55,23 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@plan_id =**] **"***plan_id***"**  
+ [ **@plan_id =**] **'***plan_id***'**  
  Указывает идентификатор плана обслуживания. *plan_id* — **uniqueidentifier**.  
   
- [  **@db_name =**] **"***имя_базы_данных***"**  
+ [ **@db_name =**] **'***database_name***'**  
  Указывает имя базы данных, которая должна быть удалена из плана обслуживания. *database_name* — **sysname**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Хранимая процедура sp_delete_maintenance_plan_db** должна запускаться из **msdb** базы данных.  
   
  **Sp_delete_maintenance_plan_db** хранимая процедура удаляет взаимосвязь между планом обслуживания и указанной базы данных, удаляет и не разрушает базу данных.  
   
  Когда **sp_delete_maintenance_plan_db** Удаляет последнюю базу данных из плана обслуживания, эта хранимая процедура также удаляет план обслуживания.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_delete_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Примеры  
@@ -79,7 +81,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 EXECUTE   sp_delete_maintenance_plan_db N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Планы обслуживания](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [План обслуживания базы данных хранимой процедуры &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   

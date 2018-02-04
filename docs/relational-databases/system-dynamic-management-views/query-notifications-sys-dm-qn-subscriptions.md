@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_qn_subscriptions_TSQL
 - sys.dm_qn_subscriptions
 - sys.dm_qn_subscriptions_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_qn_subscriptions dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_qn_subscriptions dynamic management view
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-caps.latest.revision: "26"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: bd318140e5c3eed17a5440ebf1a3135e7e01dc90
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2fdc34ae033de8baf0173bc7c86bd0fe05c7668f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Запрос уведомления - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +42,10 @@ ms.lasthandoff: 11/17/2017
 |-----------------|---------------|-----------------|  
 |**идентификатор**|**int**|Идентификатор подписки.|  
 |**database_id**|**int**|Идентификатор базы данных, для которой был выполнен запрос уведомлений. Эта база данных хранит информацию, относящуюся к данной подписке.|  
-|**ИД безопасности**|**varbinary(85)**|Идентификатор безопасности участника [системы безопасности] на уровне сервера, который создал подписку и которому она принадлежит.|  
+|**sid**|**varbinary(85)**|Идентификатор безопасности участника [системы безопасности] на уровне сервера, который создал подписку и которому она принадлежит.|  
 |**object_id**|**int**|Идентификатор внутренней таблицы, в которой хранятся данные о параметрах подписки.|  
-|**создан**|**datetime**|Дата и время создания подписки.|  
-|**время ожидания**|**int**|Время ожидания для подписки в секундах. Уведомление будет снабжено меткой, указывающей на то, что оно должно сработать по истечении этого времени.<br /><br /> Примечание: Время срабатывание может быть больше заданного времени ожидания. Однако, если изменение, делающее подписку недействительной, произойдет после указанного времени ожидания, но до срабатывания подписки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечит срабатывание в то время, когда будет производиться это изменение.|  
+|**created**|**datetime**|Дата и время создания подписки.|  
+|**timeout**|**int**|Время ожидания для подписки в секундах. Уведомление будет снабжено меткой, указывающей на то, что оно должно сработать по истечении этого времени.<br /><br /> Примечание: Время срабатывание может быть больше заданного времени ожидания. Однако, если изменение, делающее подписку недействительной, произойдет после указанного времени ожидания, но до срабатывания подписки, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] обеспечит срабатывание в то время, когда будет производиться это изменение.|  
 |**status**|**int**|Отображает состояние подписки. См. список кодов в таблице под примечаниями.|  
   
 ## <a name="relationship-cardinalities"></a>Количество элементов связей  
@@ -52,7 +55,7 @@ ms.lasthandoff: 11/17/2017
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|«многие к одному»|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|«многие к одному»|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Код состояния 0 обозначает неопределенное состояние.  
   
  Следующие коды состояний обозначают, что подписка сработала из-за изменения.  
@@ -60,7 +63,7 @@ ms.lasthandoff: 11/17/2017
 |код|Дополнительное состояние|Сведения|  
 |----------|------------------|----------|  
 |65798|Подписка сработала из-за изменения данных|Подписка сработала из-за операции вставки|  
-|65799|Подписка сработала из-за изменения данных|DELETE|  
+|65799|Подписка сработала из-за изменения данных|Delete|  
 |65800|Подписка сработала из-за изменения данных|Update|  
 |65801|Подписка сработала из-за изменения данных|Объединить|  
 |65802|Подписка сработала из-за изменения данных|Усечение таблицы|  
@@ -95,7 +98,7 @@ ms.lasthandoff: 11/17/2017
 |199168|Подписка активна|Неопределенный режим INFO|  
 |199424|Подписка инициализирована, но пока неактивна|Неопределенный режим INFO|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется разрешение VIEW SERVER STATE для сервера.  
   
 > [!NOTE]  
@@ -135,7 +138,7 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Уведомления о запросах, связанные с динамическим административным представлениям &#40; Transact-SQL &#41;](http://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40; Transact-SQL &#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  

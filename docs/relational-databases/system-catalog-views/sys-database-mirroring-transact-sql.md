@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - database_mirroring
 - sys.database_mirroring_TSQL
 - database_mirroring_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.database_mirroring catalog view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.database_mirroring catalog view
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
-caps.latest.revision: "53"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 11de321255637eb43aa0c074ba940b4c2e019ae7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: c17cf0f7b1ad2a5fd45dcd356546f5e91c4b610b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +43,7 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Если база данных не участвует в зеркальном отображении, то все столбцы, обладающие префиксом «mirroring_», имеют значение NULL.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Идентификатор базы данных. Он уникален внутри экземпляра [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**mirroring_guid**|**uniqueidentifier**|Идентификатор участника зеркального отображения.<br /><br /> NULL = база данных недоступна или не подвергнута зеркальному отображению.<br /><br /> Примечание: Если базы данных не участвует в зеркальном отображении, все столбцы с префиксом «mirroring_» имеют значение NULL.|  
@@ -64,10 +67,10 @@ ms.lasthandoff: 11/17/2017
 |**mirroring_end_of_log_lsn**|**numeric(25,0)**|Локальный конец журнала, записанный на диск. Это можно сравнить с фиксированным номером LSN от зеркального сервера (в разделе **mirroring_failover_lsn** столбца).|  
 |**mirroring_replication_lsn**|**numeric(25,0)**|Максимальный номер LSN, отправляемый репликацией.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Дополнительные сведения см. в разделе [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Представления каталога (Transact-SQL)](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.database_mirroring_witnesses &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)   

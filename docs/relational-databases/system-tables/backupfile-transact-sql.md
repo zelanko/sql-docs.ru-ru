@@ -8,36 +8,38 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupfile
 - backupfile_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - file backups [SQL Server], backupfile system table
 - backupfile system table
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: f51eff63650e1cf3572b7b2e8ea77a89eb4a8265
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 84b26ca09b8cd537ed40f0af8844f3f0c7627c86
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Содержит по одной строке для всех данных или файла журнала базы данных. Столбцы описывают конфигурацию файла, существовавшую во время создания резервной копии. Включен ли файл резервной копии определяется **is_present** столбца. Эта таблица хранится в **msdb** базы данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Уникальный идентификационный номер файла, содержащего набор данных с резервной копией. Ссылки на **backupset(backup_set_id)**.|  
+|**backup_set_id**|**int**|Уникальный идентификационный номер файла, содержащего набор данных с резервной копией. References **backupset(backup_set_id)**.|  
 |**first_family_number**|**tinyint**|Семейный номер первого носителя, содержащего данный файл резервной копии. Может иметь значение NULL.|  
 |**first_media_number**|**smallint**|Номер носителя для первого носителя, содержащего данный файл резервной копии. Может иметь значение NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Имя файловой группы, содержащей резервную копию файла базы данных. Может иметь значение NULL.|  
@@ -50,7 +52,7 @@ ms.lasthandoff: 11/17/2017
 |**logical_name**|**nvarchar(128)**|Логическое имя файла, резервная копия которого создана. Может иметь значение NULL.|  
 |**physical_drive**|**nvarchar(260)**|Имя физического диска или секции. Может иметь значение NULL.|  
 |**physical_name**|**nvarchar(260)**|Остаток имени физического файла (операционная система). Может иметь значение NULL.|  
-|**состояние**|**tinyint**|Одно из следующих состояний файла.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = УДАЛЕНЫ<br /><br /> Примечание: Значение 5 пропущено, так что эти значения соответствуют значениям для состояний базы данных.|  
+|**state**|**tinyint**|Одно из следующих состояний файла.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = УДАЛЕНЫ<br /><br /> Примечание: Значение 5 пропущено, так что эти значения соответствуют значениям для состояний базы данных.|  
 |**state_desc**|**nvarchar(64)**|Одно из следующих описаний состояния файла.<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Регистрационный номер в журнале, под которым был создан файл.|  
 |**drop_lsn**|**numeric(25,0)**|Регистрационный номер в журнале, под которым файл был удален. Может иметь значение NULL.<br /><br /> Если файл не удален, установлено значение NULL.|  
@@ -61,15 +63,15 @@ ms.lasthandoff: 11/17/2017
 |**differential_base_guid**|**uniqueidentifier**|Для разностных резервных копий уникальный идентификатор самой последней резервной копии формирует базовую копию файлов для разностного копирования; если установлено значение NULL, то файл был включен в разностные резервные копии, но добавлен после создания базы.<br /><br /> Для других типов резервных копий установлено значение NULL.|  
 |**backup_size**|**numeric(20,0)**|Размер резервной копии этого файла в байтах.|  
 |**filegroup_guid**|**uniqueidentifier**|Идентификатор файловой группы. Чтобы найти информацию о файловой группе в таблице backupfilegroup, используйте **filegroup_guid** с **backup_set_id**.|  
-|**is_readonly**|**bit**|1 = файл только для чтения.|  
-|**is_present**|**bit**|1 = файл содержится в резервном наборе данных.|  
+|**is_readonly**|**бит**|1 = файл только для чтения.|  
+|**is_present**|**бит**|1 = файл содержится в резервном наборе данных.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция RESTORE VERIFYONLY FROM *устройство_резервного_копирования* WITH LOADHISTORY заполняет столбцы **backupmediaset** таблицу с соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить число строк в данной таблице, а также в других таблицах резервной копии и журнал, выполните [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) хранимой процедуры.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервное копирование и восстановление таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediafamily (Transact-SQL)](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)   

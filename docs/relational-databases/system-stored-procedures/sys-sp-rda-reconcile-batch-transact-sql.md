@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: dbe-stretch
+ms.technology:
+- dbe-stretch
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sys.sp_rda_reconcile_batch
 - sys.sp_rda_reconcile_batch_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sys.sp_rda_reconcile_batch stored procedure
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.sp_rda_reconcile_batch stored procedure
 ms.assetid: 6d21eac3-7b6c-4fe0-8bc4-bf503f3948a6
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 8aa52f107c3ba3c7332ea207ad0f3fc07e0dd03b
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: 1df76c9b3107b5fbd45eb8a99eab1ec5baf5f4ee
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syssprdareconcilebatch-transact-sql"></a>sys.sp_rda_reconcile_batch (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +66,7 @@ sp_rda_reconcile_batch @objname = '@objname'
   
 3.  Удаление тех же данных из удаленной таблицы Azure при выполнении определенной команды DELETE с указанием REMOTE_ONLY.  
   
-4.  Запустите **sp_rda_reconcile_batch**.  
+4.  Run **sp_rda_reconcile_batch**.  
   
 5.  Возобновление переноса данных. Дополнительные сведения см. в разделе [Приостановка и возобновление переноса данных &#40; База данных Stretch &#41; ](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).  
   

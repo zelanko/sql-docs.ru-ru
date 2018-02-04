@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_refresh_log_shipping_monitor
 - sp_refresh_log_shipping_monitor_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_refresh_log_shipping_monitor
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_refresh_log_shipping_monitor
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 1a2533d1ecd4617fe1aea38e08be16f2b293b386
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7731ce78547a36284e95a43d80464c8e84ceccba
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +50,10 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@agent_id=** ] **"***agent_id***"**  
+ [ **@agent_id=** ] **'***agent_id***'**  
  Первичный идентификатор для резервирования или вторичный идентификатор для копирования или восстановления. *agent_id* — **uniqueidentifier** и не может иметь значение NULL.  
   
- [  **@agent_type=** ] **"***agent_type***"**  
+ [ **@agent_type=** ] **'***agent_type***'**  
  Тип задания доставки журналов:  
   
  0 = резервирование;  
@@ -77,16 +80,16 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет.  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_refresh_log_shipping_monitor** обновляет **log_shipping_monitor_primary**, **log_shipping_monitor_secondary**, **log_shipping_monitor_history_ Подробности**, и **log_shipping_monitor_error_detail** таблиц данными сеанса, который уже не были перенесены. Это позволяет синхронизировать сервер мониторинга с сервером-источником или сервером-получателем, если в течение некоторого времени синхронизация не выполнялась. В дополнение к этому в случае необходимости разрешается очистка контрольных данных на сервере мониторинга.  
   
  **sp_refresh_log_shipping_monitor** должна запускаться из **master** базы данных на сервере первичной или вторичной.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять эту процедуру.  
   
-## <a name="see-also"></a>См. также:  
- [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [О доставке журналов &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

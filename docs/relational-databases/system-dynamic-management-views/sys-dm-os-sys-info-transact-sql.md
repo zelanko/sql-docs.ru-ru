@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - dm_os_sys_info
 - dm_os_sys_info_TSQL
 - sys.dm_os_sys_info
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sys.dm_os_sys_info dynamic management view
 - time [SQL Server], instance started
 - starting time
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-caps.latest.revision: "57"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 7cc99a6d0f31d19909d41bde4dcd354d1e045215
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 21fe61d34a9b8823af499b64aef0eaef95c1a92e
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -84,12 +86,12 @@ ms.lasthandoff: 11/17/2017
 |**cores_per_socket** |**int** | **Применяется к: начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Указывает число процессоров на сокетов, доступных в системе. |  
 |**numa_node_count** |**int** | **Применяется к: начиная с версии [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].**.<br /><br />Указывает количество узлов numa, доступных в системе. Этот столбец содержит физической архитектуры NUMA, а также программная архитектура numa-узлов. |  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  На [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] требуется `VIEW SERVER STATE` разрешение на сервере.  
   
  На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS](../../includes/sssds-md.md)] уровней Standard и Basic требуется [!INCLUDE[ssSDS](../../includes/sssds-md.md)] учетная запись администратора.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления и функции (Transact-SQL)](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Относящиеся к операционной системе SQL Server динамические административные представления &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

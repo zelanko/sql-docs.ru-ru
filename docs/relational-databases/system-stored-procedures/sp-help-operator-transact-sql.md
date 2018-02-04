@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_operator
 - sp_help_operator_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_operator
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_operator
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 392586d2f3ea34b6914cb7bf34757d0481e890a9
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: fc89c5f6689b64aea7be0410850f373d75d876e6
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpoperator-transact-sql"></a>Хранимая процедура sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +49,10 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@operator_name=** ] **"***operator_name***"**  
+ [ **@operator_name=** ] **'***operator_name***'**  
  Имя оператора. *operator_name* — **sysname**. Если *operator_name* — не указано, возвращаются сведения обо всех операторах.  
   
- [  **@operator_id=** ] *operator_id*  
+ [ **@operator_id=** ] *operator_id*  
  Идентификатор оператора, о котором запрашиваются сведения. *operator_id*— **int**, значение по умолчанию NULL.  
   
 > [!NOTE]  
@@ -83,10 +86,10 @@ sp_help_operator
 |**last_netsend_time**|**int**|Время, когда оператор получил последнее всплывающее сетевое уведомление.|  
 |**category_name**|**sysname**|Имя категории операторов, к которой принадлежит этот оператор.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **Хранимая процедура sp_help_operator** должна запускаться из **msdb** базы данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -111,7 +114,7 @@ GO
   
 ## <a name="see-also"></a>См. также:  
  [sp_add_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-operator-transact-sql.md)   
- [sp_delete_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
+ [sp_delete_operator &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_update_operator &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -8,13 +8,15 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - CONTAINSTABLE
 - CONTAINSTABLE_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - precise or fuzzy (less precise) matches [full-text search]
 - fuzzy (less precise) word or phrase search [full-text search]
@@ -33,16 +35,16 @@ helpviewer_keywords:
 - rankings [full-text search]
 - less precise (fuzzy) searches [full-text search]
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
-caps.latest.revision: "69"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: be9da8f4e10f299844f5ea6895f189c5c4fe4c3c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: a9f4ab666351984b62e47d664d17d9e2769337cd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -131,10 +133,10 @@ CONTAINSTABLE
  \*  
  Указывает, что все полнотекстовых индексированных столбцов в *таблицы* следует использовать для поиска по заданному условию. Если не *language_term* указан, язык всех столбцов таблицы должны быть одинаковыми.  
   
- Язык *language_term*  
+ LANGUAGE *language_term*  
  Язык, ресурсы которого будут использоваться для разбиение по словам, морфологический поиск и тезауруса и пропускаемых слов (или [стоп-слово](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)) удаление, так как часть запроса. Этот аргумент не является обязательным и может быть строкой, целым числом или шестнадцатеричным значением, соответствующим идентификатору локали (LCID). Если *language_term* указан, то соответствующий язык будет применяться ко всем элементам условия поиска. Если значение не указано, то используется язык полнотекстового поиска, заданный для столбца.  
   
- Если в одном столбце хранятся документы на различных языках в виде больших двоичных объектов, то идентификатор локали заданного документа определяет, какой язык должен использоваться для индексирования его содержимого. При запросе такой столбец, указав *язык**language_term* может повысить вероятность хорошего соответствия.  
+ Если в одном столбце хранятся документы на различных языках в виде больших двоичных объектов, то идентификатор локали заданного документа определяет, какой язык должен использоваться для индексирования его содержимого. При запросе такой столбец, указав *языка ** language_term* может повысить вероятность хорошего соответствия.  
   
  Если указан как строка, *language_term* соответствует **псевдоним** значение столбца в [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) Просмотр в режиме совместимости.  Строка должна быть заключена в одинарные кавычки, например "*language_term*". Если указано как целое число, *language_term* фактический код, определяющий язык. Если указан как шестнадцатеричное значение *language_term* 0 x следуют шестнадцатеричное значение кода языка. Шестнадцатеричное значение не может иметь более восьми знаков, включая начальные нули.  
   
@@ -148,7 +150,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  Задает текст для поиска в *column_name* и условия соответствия. Сведения об условиях поиска см. в разделе [CONTAINS &#40; Transact-SQL &#41; ](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Полнотекстовые предикаты и функции работают в одной таблице, что следует из наличия предиката FROM. Для поиска в нескольких таблицах используйте в предложении FROM соединенную таблицу, чтобы выполнять поиск в результирующем наборе, который получен в результате соединения нескольких таблиц.  
   
  Возвращаемая таблица содержит столбец с именем **ключ** , содержащий значения полнотекстовых ключей. Каждая полнотекстового индексированного таблица имеет столбец, значения которого гарантированно уникальными и значения, возвращаемые в **ключ** столбцов являются значениями полнотекстового ключа строки, которые соответствуют критерию выбора, задаваемому в содержит поиска условие. **TableFulltextKeyColumn** свойства, возвращаемое функцией OBJECTPROPERTYEX, содержит удостоверение уникальный ключевой столбец. Чтобы получить идентификатор столбца, связанного с полнотекстовым ключом полнотекстового индекса, используйте **sys.fulltext_indexes**. Дополнительные сведения см. в разделе [sys.fulltext_indexes &#40; Transact-SQL &#41; ](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
@@ -168,7 +170,7 @@ FROM table AS FT_TBL INNER JOIN
   
 -   В списке выборки для определения ранжирующего значения каждой строки.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Функцию могут выполнять только пользователи, обладающие правами доступа SELECT к соответствующей таблице или столбцам, к которым обращается функция.  
   
 ## <a name="examples"></a>Примеры  
@@ -284,7 +286,7 @@ GO
 > [!NOTE]  
 >  Язык *language_term* argumentis не требуется для использования *top_n_by_rank.*  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Ограничение количества результатов поиска с использованием функции RANK](../../relational-databases/search/limit-search-results-with-rank.md)   
  [Запрос с Full-Text Search](../../relational-databases/search/query-with-full-text-search.md)   
  [Создание запросов полнотекстового поиска (визуальные инструменты для баз данных)](http://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   

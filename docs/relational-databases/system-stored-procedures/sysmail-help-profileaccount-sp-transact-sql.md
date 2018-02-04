@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_profileaccount_sp_TSQL
 - sysmail_help_profileaccount_sp
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_profileaccount_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_profileaccount_sp
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-caps.latest.revision: "43"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 30af309db029d4d969fe39eb87e15503b590dfae
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dfe0115ca0e641ca0b6397cd624d093f7d94acff
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +50,16 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@profile_id**  =] *profile_id*  
+ [ **@profile_id** = ] *profile_id*  
  Идентификатор перечисляемого профиля. *profile_id* — **int**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
- [  **@profile_name**  =] **"***profile_name***"**  
+ [ **@profile_name** = ] **'***profile_name***'**  
  Имя профиля, который следует включить в список. *profile_name* — **sysname**, значение по умолчанию NULL. Либо *profile_id* или *profile_name* должен быть указан.  
   
- [  **@account_id**  =] *account_id*  
+ [ **@account_id** = ] *account_id*  
  Идентификатор учетной записи, который следует включить в список. *account_id* — **int**, значение по умолчанию NULL. Когда *account_id* и *account_name* имеют значение NULL, приводится список всех учетных записей в профиле.  
   
- [  **@account_name**  =] **"***account_name***"**  
+ [ **@account_name** = ] **'***account_name***'**  
  Имя учетной записи, которую следует включить в список. *account_name* — **sysname**, значение по умолчанию NULL. Когда *account_id* и *account_name* имеют значение NULL, приводится список всех учетных записей в профиле.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -67,19 +70,19 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |**profile_id**|**int**|Идентификатор профиля.|  
-|**Имя_профиля**|**sysname**|Имя профиля.|  
+|**profile_name**|**sysname**|Имя профиля.|  
 |**account_id**|**int**|Идентификатор учетной записи.|  
 |**account_name**|**sysname**|Имя учетной записи.|  
 |**sequence_number**|**int**|Порядковый номер учетной записи в профиле.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Если аргумент *profile_id* или *profile_name* указан, эта хранимая процедура возвращает данные для каждого профиля в экземпляре.  
   
  Хранимая процедура **sysmail_help_profileaccount_sp** в **msdb** базы данных и принадлежит **dbo** схемы. Процедуру следует выполнять с трехкомпонентным именем, если текущая база данных не является **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Разрешения для этой процедуры по умолчанию членам выполнение **sysadmin** предопределенной роли сервера.  
   
 ## <a name="examples"></a>Примеры  
@@ -137,7 +140,7 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)   
  [Создайте учетную запись электронной почты базы данных](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [Объекты конфигурации компонента Database Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   

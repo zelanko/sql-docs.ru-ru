@@ -8,7 +8,8 @@ ms.service:
 ms.component: system-functions
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,22 +17,23 @@ f1_keywords:
 - fn_xe_file_target_read_file
 - sys.fn_xe_file_target_read_file_TSQL
 - sys.fn_xe_file_target_read_file
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - extended events [SQL Server], functions
 - fn_xe_file_target_read_file function
 - sys.fn_xe_file_target_read_file function
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 603253fffd3d3ea6d5a42b37f9d7f4fc8a3edccd
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: b21b45c9d4932ca82de404fcb3b984ef2149034a
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
   Читает файлы, создаваемые асинхронным целевым файловым объектом расширенных событий. Возвращается одно событие в каждой строке в формате XML.  
   
 > [!WARNING]  
->  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] принимают результаты трассировки, сформированные в формате XEL и XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Расширенные события поддерживают только результаты трассировки в формате XEL. Для чтения результатов трассировки в формате XEL рекомендуется использовать SQL Server Management Studio.    
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] и [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] принимают результаты трассировки, сформированные в формате XEL и XEM. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Расширенные события поддерживают только результаты трассировки в формате XEL. Для чтения результатов трассировки в формате XEL рекомендуется использовать SQL Server Management Studio.    
   
  ![Значок ссылки на раздел](../../database-engine/configure-windows/media/topic-link.gif "Значок ссылки на раздел") [Синтаксические обозначения в Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -58,7 +60,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
  Путь к файлу метаданных, соответствующий файлу или файлам, указанным *путь* аргумент. *mdpath* — **nvarchar(260)**. Значение по умолчанию отсутствует. Начиная с SQL Server 2016, этот параметр может быть задан как null.
   
 > [!NOTE]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]не требует *mdpath* параметра. Однако он используется для поддержки обратной совместимости фалов журналов, сформированных в предыдущих версиях SQL Server.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] не требует *mdpath* параметра. Однако он используется для поддержки обратной совместимости фалов журналов, сформированных в предыдущих версиях SQL Server.  
   
  *initial_file_name*  
  Первый файл, из которого выполняется чтение *путь*. *initial_file_name* — **nvarchar(260)**. Значение по умолчанию отсутствует. Если **null** указывается как аргумент, всех файлов, найденных в *путь* доступны для чтения.  
@@ -71,7 +73,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>Возвращаемая таблица  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|Идентификатор GUID модуля событий. Не допускает значение NULL.|  
 |package_guid|**uniqueidentifier**|Идентификатор GUID пакета событий. Не допускает значение NULL.|  
@@ -82,10 +84,10 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**Применяется к**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] через [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] и [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Дата и время события (по Гринвичу). Не допускает значение NULL.|  
 
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Чтение больших результирующих наборов, выполнив **sys.fn_xe_file_target_read_file** в [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] может привести к возникновению ошибки. Используйте **результаты в файл** режим (**Ctrl + Shift + F**) для экспорта больших результирующих наборов в файл и вместо этого прочитать файл с помощью другого средства.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  необходимо разрешение VIEW SERVER STATE на сервере.  
   
 ## <a name="examples"></a>Примеры  
@@ -97,7 +99,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\metafile.xem', null, null);  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Динамические административные представления расширенных событий](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
  [Представления каталога расширенных событий (Transact-SQL)](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Расширенные события](../../relational-databases/extended-events/extended-events.md)  

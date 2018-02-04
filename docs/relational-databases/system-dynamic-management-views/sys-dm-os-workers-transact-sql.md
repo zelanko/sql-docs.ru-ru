@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - sys.dm_os_workers_TSQL
 - dm_os_workers
 - sys.dm_os_workers
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_workers dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_workers dynamic management view
 ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
-caps.latest.revision: "47"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 4451ba929c34137f285aadb615a1b286fd38e28e
-ms.sourcegitcommit: 2208a909ab09af3b79c62e04d3360d4d9ed970a7
+ms.openlocfilehash: fb27268dbfb21cf2fed3b1b7b728cd9eeb4ee495
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,17 +41,17 @@ ms.lasthandoff: 01/02/2018
 > [!NOTE]  
 >  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_workers**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8)**|Адрес памяти исполнителя.|  
 |status|**int**|Только для внутреннего применения.|  
-|is_preemptive|**bit**|1 = исполнитель работает по расписанию с вытеснением. Любой исполнитель, запускающий внешний код, работает по расписанию с вытеснением.|  
-|is_fiber|**bit**|1 = исполнитель работает с использованием упрощенных пулов. Дополнительные сведения см. в подразделе [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
-|is_sick|**bit**|1 = работа исполнителя приостановлена при попытке получить спин-блокировку. Такое значение этого параметра может указывать на проблему конфликта в связи с объектом, к которому часто запрашивается доступ.|  
-|is_in_cc_exception|**bit**|1 = исполнитель обрабатывает исключение, не являющееся исключением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|is_fatal_exception|**bit**|Указывает на получение этим исполнителем неустранимого исключения.|  
-|is_inside_catch|**bit**|1 = исполнитель в настоящий момент обрабатывает исключение.|  
-|is_in_polling_io_completion_routine|**bit**|1 = исполнитель в настоящий момент выполняет подпрограмму завершения для незавершенного ввода-вывода. Дополнительные сведения см. в разделе [sys.dm_io_pending_io_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
+|is_preemptive|**бит**|1 = исполнитель работает по расписанию с вытеснением. Любой исполнитель, запускающий внешний код, работает по расписанию с вытеснением.|  
+|is_fiber|**бит**|1 = исполнитель работает с использованием упрощенных пулов. Дополнительные сведения см. в подразделе [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
+|is_sick|**бит**|1 = работа исполнителя приостановлена при попытке получить спин-блокировку. Такое значение этого параметра может указывать на проблему конфликта в связи с объектом, к которому часто запрашивается доступ.|  
+|is_in_cc_exception|**бит**|1 = исполнитель обрабатывает исключение, не являющееся исключением [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|is_fatal_exception|**бит**|Указывает на получение этим исполнителем неустранимого исключения.|  
+|is_inside_catch|**бит**|1 = исполнитель в настоящий момент обрабатывает исключение.|  
+|is_in_polling_io_completion_routine|**бит**|1 = исполнитель в настоящий момент выполняет подпрограмму завершения для незавершенного ввода-вывода. Дополнительные сведения см. в разделе [sys.dm_io_pending_io_requests &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
 |context_switch_count|**int**|Количество переключений контекста планировщика, выполненных этим исполнителем.|  
 |pending_io_count|**int**|Количество физических операций ввода-вывода, выполненных этим исполнителем.|  
 |pending_io_byte_count|**bigint**|Общее число байтов для всех незавершенных физических вводов-выводов для этого исполнителя.|  
@@ -77,7 +80,7 @@ ms.lasthandoff: 01/02/2018
 |signal_worker_address|**varbinary(8)**|Адрес памяти исполнителя, который последним подавал сигнал этому объекту. Дополнительные сведения см. в разделе [sys.dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md).|  
 |scheduler_address|**varbinary(8)**|Адрес памяти планировщика. Дополнительные сведения см. в разделе [sys.dm_os_schedulers &#40; Transact-SQL &#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |processor_group|**smallint**|Сохраняет идентификатор группы процессоров, назначенный данному потоку.|  
-|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
   
 ## <a name="remarks"></a>Remarks  
  Если значением состояния исполнителя является RUNNING, и исполнитель выполняется в режиме без приоритетного прерывания, адрес исполнителя совпадает со значением active_worker_address в sys.dm_os_schedulers.  
@@ -138,7 +141,7 @@ SELECT
 
  На выходе, если переменные `w_runnable` и `w_suspended` равны, они представляют время, которое исполнитель находится в состоянии SUSPENDED. Иначе переменная `w_runnable` представляет время, проведенное исполнителем в состоянии RUNNABLE. На выходе, сеанс `52` находится в состоянии `SUSPENDED` в течение `35,094` миллисекунд.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Относящиеся к операционной системе SQL Server динамические административные представления &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

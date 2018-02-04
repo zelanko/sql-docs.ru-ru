@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_latch_stats_TSQL
 - dm_os_latch_stats
 - sys.dm_os_latch_stats
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_latch_stats dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_latch_stats dynamic management view
 ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: cd053285f1e410acd474d78768c29e4b70f84389
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 2c86a18dffb4e981145d47d5f8bc1b0a488dec52
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,19 +41,19 @@ ms.lasthandoff: 11/17/2017
 > [!NOTE]  
 >  Вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_latch_stats**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |latch_class|**nvarchar(120)**|Имя класса кратковременных блокировок.|  
 |waiting_requests_count|**bigint**|Число ожиданий кратковременных блокировок в данном классе. Этот счетчик увеличивается в начале ожидания кратковременной блокировки.|  
 |wait_time_ms|**bigint**|Общее время ожидания кратковременных блокировок в данном классе в миллисекундах.<br /><br /> **Примечание:** этот столбец обновляется каждые пять минут в течение периода ожидания кратковременной блокировки и в конце ожидания кратковременной блокировки.|  
 |max_wait_time_ms|**bigint**|Максимальный период времени ожидания данной кратковременной блокировки объектом памяти. Если данное значение неестественно велико, это может указывать на взаимоблокировку.|  
-|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|pdw_node_id|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.    
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Представление динамического управления sys.dm_os_latch_stats может быть использовано для выявления источника состязания между кратковременными блокировками путем исследования относительного числа ожиданий и времени ожидания для различных классов кратковременных блокировок. В некоторых ситуациях возможно устранение состязания между кратковременными блокировками или снижение его остроты. Тем не менее, может возникнуть ситуация, когда будет необходимо обратиться в службу [!INCLUDE[msCoName](../../includes/msconame-md.md)] в службу поддержки пользователей.  
   
  Очистить содержимое представления sys.dm_os_latch_stats с помощью инструкции `DBCC SQLPERF` можно следующим образом.  
@@ -77,7 +80,7 @@ GO
   
  В следующей таблице содержатся краткие описания различных классов кратковременных блокировок.  
   
-|Класс кратковременных блокировок|Description|  
+|Класс кратковременных блокировок|Описание|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Используется внутренними механизмами [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для инициализации синхронизации процесса создания кольцевого буфера размещения.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Используется для инициализации синхронизации кэшей свободного внутреннего пространства для куч.|  
@@ -198,7 +201,7 @@ GO
 |VERSIONING_STATE_CHANGE|Только для внутреннего применения.|  
 |KTM_VIRTUAL_CLOCK|Только для внутреннего применения.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  
  [DBCC SQLPERF (Transact-SQL)](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  

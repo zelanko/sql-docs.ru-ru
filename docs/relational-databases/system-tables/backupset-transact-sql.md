@@ -8,28 +8,30 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - backupset
 - backupset_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - backupset system table
 - backup media [SQL Server], backupset system table
 - backup sets [SQL Server]
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
-caps.latest.revision: "70"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: fe7e9f7e942a2c7dcf39b61d7d162123f191a1b7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: dd98b3e7e120e186901d8120243a35d620411ba2
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -39,7 +41,7 @@ ms.lasthandoff: 11/17/2017
  Эта таблица хранится в **msdb** базы данных.  
 
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Уникальный идентификационный номер резервного набора, который определяет резервный набор. Удостоверение, первичный ключ.|  
 |**backup_set_uuid**|**uniqueidentifier**|Уникальный идентификационный номер резервного набора, который определяет резервный набор.|  
@@ -50,17 +52,17 @@ ms.lasthandoff: 11/17/2017
 |**last_media_number**|**smallint**|Номер носителя, которым заканчивается резервный набор данных. Может иметь значение NULL.|  
 |**catalog_family_number**|**tinyint**|Номер семейства носителя, содержащего начало каталога резервного набора данных. Может иметь значение NULL.|  
 |**catalog_media_number**|**smallint**|Номер носителя, содержащего начало каталога резервного набора данных. Может иметь значение NULL.|  
-|**положение**|**int**|Позиция резервного набора данных, используемая в операции восстановления для поиска соответствующего резервного набора данных и файлов. Может иметь значение NULL. Дополнительные сведения см. в разделе файла в [резервного КОПИРОВАНИЯ &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Позиция резервного набора данных, используемая в операции восстановления для поиска соответствующего резервного набора данных и файлов. Может иметь значение NULL. Дополнительные сведения см. в разделе файла в [резервного КОПИРОВАНИЯ &#40; Transact-SQL &#41; ](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Дата и время окончания срока действия для резервного набора. Может иметь значение NULL.|  
 |**software_vendor_id**|**int**|Идентификационный номер поставщика программного обеспечения, выполняющего запись заголовка резервного носителя. Может иметь значение NULL.|  
 |**name**|**nvarchar(128)**|Имя резервного набора. Может иметь значение NULL.|  
 |**Описание**|**nvarchar(255)**|Описание резервного набора данных. Может иметь значение NULL.|  
-|**имя_пользователя**|**nvarchar(128)**|Имя пользователя, выполняющего операцию резервного копирования. Может иметь значение NULL.|  
-|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] основной номер версии. Может иметь значение NULL.|  
-|**software_minor_version**|**tinyint**|Дополнительный номер версии [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
-|**software_build_version**|**smallint**|Номер сборки [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
+|**user_name**|**nvarchar(128)**|Имя пользователя, выполняющего операцию резервного копирования. Может иметь значение NULL.|  
+|**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]основной номер версии. Может иметь значение NULL.|  
+|**software_minor_version**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Дополнительный номер версии. Может иметь значение NULL.|  
+|**software_build_version**|**smallint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Номер сборки. Может иметь значение NULL.|  
 |**time_zone**|**smallint**|Разница между местным временем (в месте осуществления операции резервного копирования) и временем в формате UTC в 15-минутных интервалах. Может принимать значения от -48 до +48 включительно. Значение 127 соответствует неизвестному значению. Например, -20 — время на восточном побережье США (Eastern Standard Time, EST), отстоящее на пять часов вперед от UTC. Может иметь значение NULL.|  
-|**mtf_minor_version**|**tinyint**|Дополнительный номер версии [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format. Может иметь значение NULL.|  
+|**mtf_minor_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Номер вспомогательной версии формата ленты. Может иметь значение NULL.|  
 |**first_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале для первой или самой ранней записи журнала в резервном наборе данных. Может иметь значение NULL.|  
 |**last_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале для следующей записи журнала после резервного набора данных. Может иметь значение NULL.|  
 |**checkpoint_lsn**|**numeric(25,0)**|Регистрационный номер транзакции в журнале для записи, с которой должна начинаться операция повтора. Может иметь значение NULL.|  
@@ -75,24 +77,24 @@ ms.lasthandoff: 11/17/2017
 |**database_version**|**int**|Номер версии базы данных. Может иметь значение NULL.|  
 |**backup_size**|**numeric(20,0)**|Размер резервного набора данных в байтах. Может иметь значение NULL. Для резервных копий VSS backup_size является оценочного значения.|  
 |**database_name**|**nvarchar(128)**|Имя базы данных, участвовавшей в операции резервного копирования. Может иметь значение NULL.|  
-|**имя_сервера**|**nvarchar(128)**|Имя сервера, выполняющего операцию резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
-|**Machine_Name**|**nvarchar(128)**|Имя компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
-|**флаги**|**int**|В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **флаги** столбец является устаревшим и заменяется следующими битовыми столбцами:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Может иметь значение NULL.<br /><br /> В резервных наборах данных, созданных в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], биты-флаги означают:<br />1 = резервная копия содержит минимум записанных в журнал данных; <br />2 = использовано предложение WITH SNAPSHOT; <br />4 = база данных во время резервного копирования была доступна только для чтения.<br />8 = база данных во время резервного копирования находилась в однопользовательском режиме.|  
+|**server_name**|**nvarchar(128)**|Имя сервера, выполняющего операцию резервного копирования [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
+|**machine_name**|**nvarchar(128)**|Имя компьютера, на котором выполняется [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Может иметь значение NULL.|  
+|**flags**|**int**|В [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **флаги** столбец является устаревшим и заменяется следующими битовыми столбцами:<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Может иметь значение NULL.<br /><br /> В резервных наборах данных, созданных в предыдущих версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], биты-флаги означают:<br />1 = резервная копия содержит минимум записанных в журнал данных; <br />2 = использовано предложение WITH SNAPSHOT; <br />4 = база данных во время резервного копирования была доступна только для чтения.<br />8 = база данных во время резервного копирования находилась в однопользовательском режиме.|  
 |**unicode_locale**|**int**|Локаль Юникод. Может иметь значение NULL.|  
 |**unicode_compare_style**|**int**|Стиль сравнения Юникод. Может иметь значение NULL.|  
 |**collation_name**|**nvarchar(128)**|Имя параметров сортировки. Может иметь значение NULL.|  
-|**Is_password_protected**|**bit**|Определяет, защищен ли резервный набор данных<br /><br /> паролем:<br /><br /> 0 = не защищен<br /><br /> 1 = защищен|  
+|**Is_password_protected**|**бит**|Определяет, защищен ли резервный набор данных<br /><br /> паролем:<br /><br /> 0 = не защищен<br /><br /> 1 = защищен|  
 |**recovery_model**|**nvarchar(60)**|Модель восстановления базы данных:<br /><br /> ПОЛНОЕ<br /><br /> BULK-LOGGED;<br /><br /> SIMPLE|  
-|**has_bulk_logged_data**|**bit**|1 = резервная копия содержит данные неполного журнала и массовых изменений.|  
-|**is_snapshot**|**bit**|1 = резервная копия была создана с использованием параметра SNAPSHOT.|  
-|**is_readonly**|**bit**|1 = база данных во время резервного копирования была доступна только для чтения.|  
-|**is_single_user**|**bit**|1 = база данных во время резервного копирования находилась в однопользовательском режиме.|  
-|**has_backup_checksums**|**bit**|1 = резервная копия содержит контрольные суммы резервных копий.|  
-|**is_damaged**|**bit**|1 = при создании резервной копии было обнаружено повреждение базы данных. Было указано продолжать операцию резервного копирования, несмотря на ошибки.|  
-|**begins_log_chain**|**bit**|1 = это первая резервная копия журналов в непрерывной цепочке. Цепочка журналов начинается с первой резервной копии журналов, выполненной после создания базы данных или переключения от простой модели восстановления к полной или модели восстановления с неполным протоколированием.|  
-|**has_incomplete_metadata**|**bit**|1 = резервная копия заключительного фрагмента журнала с неполными метаданными. Дополнительные сведения см. в статье [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).|  
-|**is_force_offline**|**bit**|1 = база данных была переведена в режим вне сети посредством параметра NORECOVERY при создании резервной копии.|  
-|**is_copy_only**|**bit**|1 = резервная копия только для копирования. Дополнительные сведения см. в разделе [Резервные копии только для копирования (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
+|**has_bulk_logged_data**|**бит**|1 = резервная копия содержит данные неполного журнала и массовых изменений.|  
+|**is_snapshot**|**бит**|1 = резервная копия была создана с использованием параметра SNAPSHOT.|  
+|**is_readonly**|**бит**|1 = база данных во время резервного копирования была доступна только для чтения.|  
+|**is_single_user**|**бит**|1 = база данных во время резервного копирования находилась в однопользовательском режиме.|  
+|**has_backup_checksums**|**бит**|1 = резервная копия содержит контрольные суммы резервных копий.|  
+|**is_damaged**|**бит**|1 = при создании резервной копии было обнаружено повреждение базы данных. Было указано продолжать операцию резервного копирования, несмотря на ошибки.|  
+|**begins_log_chain**|**бит**|1 = это первая резервная копия журналов в непрерывной цепочке. Цепочка журналов начинается с первой резервной копии журналов, выполненной после создания базы данных или переключения от простой модели восстановления к полной или модели восстановления с неполным протоколированием.|  
+|**has_incomplete_metadata**|**бит**|1 = резервная копия заключительного фрагмента журнала с неполными метаданными. Дополнительные сведения см. в статье [Резервные копии заключительного фрагмента журнала (SQL Server)](../../relational-databases/backup-restore/tail-log-backups-sql-server.md).|  
+|**is_force_offline**|**бит**|1 = база данных была переведена в режим вне сети посредством параметра NORECOVERY при создании резервной копии.|  
+|**is_copy_only**|**бит**|1 = резервная копия только для копирования. Дополнительные сведения см. в разделе [Резервные копии только для копирования (SQL Server)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md).|  
 |**first_recovery_fork_guid**|**uniqueidentifier**|Идентификатор начальной вилки восстановления. Это соответствует **FirstRecoveryForkID** инструкции RESTORE HEADERONLY.<br /><br /> Для резервных копий данных **first_recovery_fork_guid** равняется **last_recovery_fork_guid**.|  
 |**last_recovery_fork_guid**|**uniqueidentifier**|Идентификатор конечной вилки восстановления. Это соответствует **RecoveryForkID** инструкции RESTORE HEADERONLY.<br /><br /> Для резервных копий данных **first_recovery_fork_guid** равняется **last_recovery_fork_guid**.|  
 |**fork_point_lsn**|**numeric(25,0)**|Если **first_recovery_fork_guid** не равно **last_recovery_fork_guid**, это регистрационный номер вилки. В противном случае значение равно NULL.|  
@@ -105,12 +107,12 @@ ms.lasthandoff: 11/17/2017
 |**encryptor_thumbprint**|**varbinary(20)**|Отпечаток шифратора, который будет использоваться для поиска сертификата или асимметричного ключа в базе данных. Если резервная копия не была зашифрована, это значение равно NULL.|  
 |**encryptor_type**|**nvarchar(32)**|Тип используемого шифратора: сертификат или асимметричный ключ. . Если резервная копия не была зашифрована, это значение равно NULL.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Инструкция RESTORE VERIFYONLY FROM *устройство_резервного_копирования* WITH LOADHISTORY заполняет столбец **backupmediaset** таблицу с соответствующими значениями из заголовка набора носителей.  
   
  Чтобы уменьшить число строк в данной таблице, а также в других таблицах резервной копии и журнал, выполните [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) хранимой процедуры.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Резервное копирование и восстановление таблицы &#40; Transact-SQL &#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile (Transact-SQL)](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup (Transact-SQL)](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   

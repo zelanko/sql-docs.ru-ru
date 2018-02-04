@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_fulltext_components_TSQL
 - sp_help_fulltext_components
-dev_langs: TSQL
-helpviewer_keywords: sp_help_fulltext_system_components
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_fulltext_system_components
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
-caps.latest.revision: "52"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 54f529fcb0130479ef30af742fe58fd05b4bc4d1
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 8bb8278204aa3b710875d3bab91a41abfe43a553
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,10 +51,10 @@ sp_help_fulltext_system_components
  'all'  
  Возвращает сведения для всех полнотекстовых компонентов.  
   
- [  **@component_type=** ] *component_type*  
+ [ **@component_type=** ] *component_type*  
  Указывает тип компонента. *component_type* может принимать одно из следующих действий:  
   
--   **средство разбиения по словам**  
+-   **wordbreaker**  
   
 -   **фильтр**  
   
@@ -70,26 +73,26 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Результирующие наборы  
  Следующий результирующий набор возвращается для системных компонентов.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Тип компонента. Это может быть:<br /><br /> фильтр<br /><br /> обработчик протокола<br /><br /> разделитель слов|  
 |**componentname**|**sysname**|Имя компонента.|  
-|**Идентификатор CLSID**|**uniqueidentifier**|Идентификатор класса компонента.|  
+|**clsid**|**uniqueidentifier**|Идентификатор класса компонента.|  
 |**FullPath**|**nvarchar(256)**|Путь к расположению компонента.<br /><br /> NULL = вызывающая сторона не является членом **serveradmin** предопределенной роли сервера.|  
 |**version**|**nvarchar(30)**|Версия компонента.|  
 |**Изготовитель**|**sysname**|Имя производителя компонента.|  
   
  Следующий результирующий набор возвращается только в том случае, если один или более одного полнотекстового каталога, использующий *component_type*.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
-|**DBID**|**int**|Идентификатор базы данных.|  
+|**dbid**|**int**|Идентификатор базы данных.|  
 |**ftcatid**|**int**|Идентификатор полнотекстового каталога.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **открытый** роли; тем не менее, пользователи могут видеть только сведения о полнотекстовых каталогах, для которых у них есть разрешение VIEW DEFINITION. Значения столбца **fullpath** могут просматривать только члены предопределенной роли сервера **serveradmin** .  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Этот метод очень важен при подготовке к обновлению. Запустите хранимую процедуру в определенной базе данных и используйте результаты, чтобы определить, будет ли определенный каталог затронут обновлением.  
   
 ## <a name="examples"></a>Примеры  
@@ -140,7 +143,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Просмотр или изменение зарегистрированных фильтры и средства разбиения по словам](../../relational-databases/search/view-or-change-registered-filters-and-word-breakers.md)   
  [Настройка и управление средством разбиения на слова и парадигматические модули для поиска](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Настройка поисковых фильтров и управление ими](../../relational-databases/search/configure-and-manage-filters-for-search.md)   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_revoke_login_from_subsystem
 - sp_revoke_login_from_subsystem_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_revoke_proxy_from_subsystem
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_revoke_proxy_from_subsystem
 ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
-caps.latest.revision: "37"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 475b036aae17e29f2ebac4333198671cdd42e675
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 3408c3ddee13886edaaa410341379ee50d4f9cb3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +50,13 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@proxy_id**  =] *идентификатор*  
+ [ **@proxy_id** = ] *id*  
  Идентификатор учетной записи-посредника, для которой необходимо запретить доступ. *Proxy_id* — **int**, значение по умолчанию NULL. Либо *proxy_id* или *proxy_name* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@proxy_name**  =] **"***proxy_name***"**  
+ [ **@proxy_name** = ] **'***proxy_name***'**  
  Имя учетной записи-посредника, у которой отменяется право на доступ. *Proxy_name* — **sysname**, значение по умолчанию NULL. Либо *proxy_id* или *proxy_name* должен быть указан, но не оба аргумента одновременно.  
   
- [  **@subsystem_id**  =] *идентификатор*  
+ [ **@subsystem_id** = ] *id*  
  Идентификатор подсистемы, у которой отменяется право на доступ. *Subsystem_id* — **int**, значение по умолчанию NULL. Либо *subsystem_id* или *subsystem_name* должен быть указан, но не оба аргумента одновременно. В следующей таблице показаны значения для каждой подсистемы.  
   
 |Значение|Описание|  
@@ -70,10 +73,10 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] выполнение пакетов служб|  
 |**12**|Скрипт PowerShell|  
   
- [  **@subsystem_name** =] **"***subsystem_name***"**  
+ [ **@subsystem_name**= ] **'***subsystem_name***'**  
  Имя подсистемы, у которой отменяется право на доступ. *Subsystem_name* — **sysname**, значение по умолчанию NULL. Либо *subsystem_id* или *subsystem_name* должен быть указан, но не оба аргумента одновременно. В следующей таблице показаны значения для каждой подсистемы.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-скрипт|  
 |CmdExec|Операционная система (CmdExec)|  
@@ -87,13 +90,13 @@ sp_revoke_proxy_from_subsystem
 |Dts|[!INCLUDE[ssIS](../../includes/ssis-md.md)] выполнение пакетов служб|  
 |PowerShell|Скрипт PowerShell|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При отмене доступа к подсистеме разрешения для участника, указанного в учетной записи-посреднике, не изменяются.  
   
 > [!NOTE]  
 >  Чтобы определить, какие шаги задания ссылаются на учетную запись-посредник, щелкните правой кнопкой мыши **учетные записи-посредники** узле **агента SQL Server** в Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]и нажмите кнопку **свойства**. В **свойства учетной записи-посредника** выберите **ссылки** страницу для просмотра всех шагов задания, которые ссылаются на этот прокси-сервер.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Только члены **sysadmin** предопределенной роли сервера могут выполнять **sp_revoke_proxy_from_subsystem**.  
   
 ## <a name="examples"></a>Примеры  
@@ -108,9 +111,9 @@ EXEC dbo.sp_revoke_proxy_from_subsystem
     @subsystem_name = N'Dts';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Агент SQL Server хранимых процедур &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [Обеспечение безопасности агента SQL Server](http://msdn.microsoft.com/library/d770d35c-c8de-4e00-9a85-7d03f45a0f0d)   
- [sp_grant_proxy_to_subsystem &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
+ [sp_grant_proxy_to_subsystem &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-proxy-to-subsystem-transact-sql.md)  
   
   

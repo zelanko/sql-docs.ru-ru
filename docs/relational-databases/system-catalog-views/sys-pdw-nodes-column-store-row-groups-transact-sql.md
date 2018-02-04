@@ -8,35 +8,37 @@ ms.service: sql-data-warehouse
 ms.component: system-catalog-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 31eb71e09e041f6d23c0c88e1ca1423f3693faa7
-ms.sourcegitcommit: 44cd5c651488b5296fb679f6d43f50d068339a27
+ms.openlocfilehash: 75e4229fde3cae66cdd2172c0f2bea0cbf63bf10
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Предоставляет сведения об индексе кластеризованный индекс columnstore по отдельным сегментам, что позволяет администратору принимать решения о сопровождении в системе [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys.pdw_nodes_column_store_row_groups** столбца общего количества физически хранимых строк (включая отмеченные как удаленные) и столбцов для числа строк, помечаются как удаленные. Используйте **sys.pdw_nodes_column_store_row_groups** определить, какая строка группы имеют высокий процент удаленных строк и должен быть перестроен.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Идентификатор базовой таблицы. Это физическую таблицу на вычислительном узле, а не object_id для логической таблицы на узел элемента управления. Например object_id не совпадает с object_id в sys.tables.<br /><br /> Для соединения с sys.tables, используйте sys.pdw_index_mappings.|  
 |**index_id**|**int**|Идентификатор кластеризованный индекс columnstore на *object_id* таблицы.|  
 |**partition_number**|**int**|Идентификатор секции таблицы, содержащий группы строк *row_group_id*. Можно использовать *partition_number* для соединения этого динамического административного Представления с представлением sys.partitions.|  
 |**row_group_id**|**int**|Идентификатор этой группы строк. Он уникален внутри секции.|  
 |**dellta_store_hobt_id**|**bigint**|Hobt_id для разностных групп строк или значение NULL, если тип группы строк не является разностным. Разностная группа строк — это группа строк для чтения и записи, которая принимает новые записи. Разностная группа строк имеет **ОТКРОЙТЕ** состояния. Разностная группа строк остается в формате rowstore и не сжимается в формат columnstore.|  
-|**состояние**|**tinyint**|Идентификатор, связанный с параметром state_description.<br /><br /> 1 = OPEN;<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state**|**tinyint**|Идентификатор, связанный с параметром state_description.<br /><br /> 1 = OPEN;<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|Описание сохраняемого состояния группы строк:<br /><br /> OPEN — группа строк для чтения и записи, которая принимает новые записи. Открытая группа строк остается в формате rowstore и не сжимается в формат columnstore.<br /><br /> CLOSED — группа строк, которая была заполнена, но еще не сжата процессом перемещения кортежей.<br /><br /> COMPRESSED — группа строк, которая заполнена и сжата.|  
 |**total_rows**|**bigint**|Общее число строк, которые физически хранятся в группе строк. Некоторые из строк могли быть удалены, но хранятся и дальше. Максимальное количество строк в группе — 1 048 576 (FFFFF в шестнадцатеричном формате).|  
 |**deleted_rows**|**bigint**|Число строк, физически хранятся в группе строк, помеченных для удаления.<br /><br /> Всегда 0 для РАЗНОСТНЫЕ группы строк.|  
@@ -44,7 +46,7 @@ ms.lasthandoff: 11/17/2017
 |**pdw_node_id**|**int**|Уникальный идентификатор [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] узла.|  
 |**distribution_id**|**int**|Уникальный идентификатор распределения.|
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Возвращает одну строку для каждой группы строк columnstore для каждой таблицы с кластеризованным или некластеризованным индексом columnstore.  
   
  Используйте **sys.pdw_nodes_column_store_row_groups** для определения числа строк, включенных в группу строк и размер группы строк.  
@@ -55,7 +57,7 @@ ms.lasthandoff: 11/17/2017
   
  Когда группа строк columnstore заполняется, она сжимаются и прекращает принимать новые строки. Когда строки удаляются из сжатой группы, они сохраняются в ней, но отмечаются как удаленные. Обновления сжатой группы реализуются как удаление из сжатой группы и вставка в открытую группу.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **VIEW SERVER STATE** разрешение.  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Примеры: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] и[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
@@ -109,10 +111,10 @@ GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Хранилище данных SQL и представления каталога хранилища параллельных данных](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [СОЗДАТЬ индекс COLUMNSTORE &#40; Transact-SQL &#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_segments &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
+ [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

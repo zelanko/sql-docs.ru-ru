@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setevent_TSQL
 - sp_trace_setevent
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setevent
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setevent
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
-caps.latest.revision: "49"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: f47656c08b4cdf835a9f7d6dc7e9ae0b84dbdca9
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: f4d36c6512a23d69371767e75d179fbdbf5d695d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetevent-transact-sql"></a>Хранимая процедура sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,15 +52,15 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  Идентификатор изменяемой трассировки. *trace_id* — **int**, не имеет значения по умолчанию. Пользователь применяет это *trace_id* значение для определения, изменения и управления трассировкой.  
   
- [  **@eventid=** ] *event_id*  
+ [ **@eventid=** ] *event_id*  
  Идентификатор включаемого события. *event_id* — **int**, не имеет значения по умолчанию.  
   
  Эта таблица содержит список событий, которые можно добавить или удалить из трассировки.  
   
-|Номер события|Имя события|Description|  
+|Номер события|Имя события|Описание|  
 |------------------|----------------|-----------------|  
 |0-9|Зарезервировано|Зарезервировано|  
 |10|RPC:Completed|Возникает при завершении удаленного вызова процедуры (RPC).|  
@@ -81,7 +84,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |28|Degree of Parallelism Event (используется с версии 7.0)|Возникает перед выполнением инструкций SELECT, INSERT и UPDATE.|  
 |29-31|Зарезервировано|Вместо него используется событие 28.|  
 |32|Зарезервировано|Зарезервировано|  
-|33|Exception|Указывает, что в сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]произошло исключение.|  
+|33|Исключение|Указывает, что в сервере [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]произошло исключение.|  
 |34|SP:CacheMiss|Указывает, что хранимая процедура не найдена в процедурном кэше.|  
 |35|SP:CacheInsert|Указывает, что элемент вставлен в процедурный кэш.|  
 |36|SP:CacheRemove|Указывает, что элемент удален из процедурного кэша.|  
@@ -124,7 +127,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |78|CursorClose|Закрыт курсор, предварительно открытый в инструкции [!INCLUDE[tsql](../../includes/tsql-md.md)] с помощью API-функций ODBC, OLE DB или DB-Library.|  
 |79|Missing Column Statistics|Недоступны статистические данные столбцов, которые были бы полезны оптимизатору.|  
 |80|Missing Join Predicate|Выполняется запрос, не имеющий предиката соединения. Это может привести к длительному выполнению запроса.|  
-|81|Server Memory Change|Объем памяти, используемый [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], увеличился или уменьшился на 1 мегабайт (МБ) либо на 5% от максимального объема памяти, в зависимости от того, какая величина больше.|  
+|81|Server Memory Change|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Использование памяти увеличивается или уменьшается на 1 мегабайт (МБ) или 5% от максимального объема памяти, какая величина больше.|  
 |82-91|User Configurable (0-9)|Данные событий, определяемые пользователем.|  
 |92|Data File Auto Grow|Указывает, что сервер автоматически увеличил файл данных.|  
 |93|Log File Auto Grow|Указывает, что сервер автоматически расширил файл журнала.|  
@@ -242,24 +245,24 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Указывает, что SQL Server не удалось создать план выполнения для запроса или пакета, в котором содержится структура плана. SQL Server выполнил попытку создать план выполнения для этого запроса или пакета без применения структуры плана. Эту проблему могла вызвать недопустимая структура плана. Структуры планов можно проверить при помощи системной функции sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  Идентификатор столбца, добавляемого к событию. *Идентификатор column_id* — **int**, не имеет значения по умолчанию.  
   
  В следующей таблице приводится список столбцов, которые могут добавляться для события.  
   
-|Номер столбца|Имя столбца|Description|  
+|Номер столбца|Имя столбца|Описание|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Текстовое значение, зависящее от класса событий, фиксируемых при трассировке.|  
 |2|**BinaryData**|Значение типа Binary, зависящее от класса событий, фиксируемых при трассировке.|  
 |3|**DatabaseID**|Идентификатор базы данных, заданный инструкцией USE *базы данных* инструкции или базы данных по умолчанию, если инструкция USE *базы данных* выполнена инструкция для данного соединения.<br /><br /> Значение для базы данных можно определить с помощью функции DB_ID.|  
 |4|**TransactionID**|Назначенный системой идентификатор транзакции.|  
 |5|**LineNumber**|Содержит номер строки, в которой имеется ошибка. Для событий, в которых задействованы инструкции языка [!INCLUDE[tsql](../../includes/tsql-md.md)] , например **SP:StmtStarting**, столбец **LineNumber** содержит номер строки инструкции в хранимой процедуре или пакете.|  
-|6|**NTUserName**|Имя пользователя [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
+|6|**NTUserName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Имя пользователя Windows.|  
 |7|**NTDomainName**|Домен Windows, к которому принадлежит пользователь.|  
 |8|**HostName**|Имя клиентского компьютера, отправившего запрос.|  
 |9|**ClientProcessID**|Идентификатор, присвоенный клиентским компьютером процессу, в котором работает клиентское приложение.|  
 |10|**ApplicationName**|Имя клиентского приложения, установившего соединение с экземпляром [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Этот столбец заполняется значениями, передаваемыми приложением, а не отображаемым именем программы.|  
-|11|**LoginName**|Имя входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для клиента.|  
+|11|**LoginName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Имя входа клиента.|  
 |12|**SPID**|Идентификатор процесса сервера, который [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] присвоил процессу, связанному с клиентом.|  
 |13|**Длительность**|Длительность события (в микросекундах). Этот столбец данных не заполняется событием Hash Warning.|  
 |14|**StartTime**|Время начала события, если оно доступно.|  
@@ -288,7 +291,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |37|**OwnerName**|Имя владельца для объекта ссылки.|  
 |38|**RoleName**|Имя базы данных или роли сервера, к которым получает доступ инструкция.|  
 |39|**TargetUserName**|Пользовательское имя цели некоторой операции.|  
-|40|**DBUserName**|Имя пользовательской базы данных [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для клиента.|  
+|40|**DBUserName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] имя пользователя базы данных клиента.|  
 |41|**LoginSid**|Идентификатор безопасности вошедшего в систему пользователя.|  
 |42|**TargetLoginName**|Имя входа цели некоторой операции.|  
 |43|**TargetLoginSid**|Идентификатор SID имени входа, которое является целью некоторой операции.|  
@@ -314,7 +317,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|64-разрядная версия хэша, основанная на тексте нерегламентированного запроса или базы данных и на идентификаторе объекта SQL. Это значение можно передать в функцию **sys.dm_exec_sql_text()** , чтобы получить связанный текст SQL.|  
 |64|**SessionLoginName**|Имя входа пользователя, который инициировал сеанс. Например, при подключении к [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] под именем **Имя_входа1** и при выполнении инструкции под именем **Имя_входа2**поле **SessionLoginName** будет содержать **Имя_входа1**, а поле **LoginName** — **Имя_входа2**. В данном столбце отображаются имена входа [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] и Windows.|  
   
- **[ @on=]** *на*  
+ **[ @on=]** *on*  
  Указывает, следует ли привести событие в состояние ON (1) или OFF (0). *на* — **бит**, не имеет значения по умолчанию.  
   
  Если *на* равно **1**, и *column_id* имеет значение NULL, то событие имеет значение ON, и все столбцы очищены. Если *column_id* не равно null, то столбец установлен в ON для этого события.  
@@ -333,7 +336,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Значения кода возврата  
  В следующей таблице описаны значения кодов, которые могут быть возвращены пользователю при завершении хранимой процедуры.  
   
-|Код возврата|Description|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |0|Нет ошибки.|  
 |1|Неизвестная ошибка.|  
@@ -345,7 +348,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |16|Недопустимая функция для данной трассировки.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_trace_setevent** выполняет многие действия, ранее выполнявшиеся расширенными хранимыми процедурами в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте **sp_trace_setevent** вместо следующих:  
   
 -   **xp_trace_addnewqueue**  
@@ -360,13 +363,13 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Пример использования хранимых процедур трассировки см. в разделе [Создание трассировки (Transact-SQL)](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение ALTER TRACE.  
   
-## <a name="see-also"></a>См. также:  
- [sys.fn_trace_geteventinfo &#40; Transact-SQL &#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
- [Хранимая процедура sp_trace_generateevent &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [Руководство по классам событий SQL Server](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  
   

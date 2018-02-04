@@ -8,33 +8,37 @@ ms.service:
 ms.component: system-views
 ms.reviewer: 
 ms.suite: sql
-ms.technology: replication
+ms.technology:
+- replication
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-applies_to: SQL Server
+applies_to:
+- SQL Server
 f1_keywords:
 - sysdatatypemappings
 - sysdatatypemappings_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysdatatypemappings view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysdatatypemappings view
 ms.assetid: 5dfafb70-3e3d-4465-b293-1acff1f855b6
-caps.latest.revision: "12"
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 60e850e319c4c31c2208448fe29a28acf13a8d45
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 00c57554fbf2cc60a91d1b0a3ae13377630fe099
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdatatypemappings-transact-sql"></a>sysdatatypemappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sysdatatypemappings** представление используется для отображения сопоставления типов данных SQL Server и типы данных системы управления базами данных (СУБД) SQL Server. Это представление хранится в **msdb** базы данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**mapping_id**|**int**|Идентификатор сопоставления типа данных.|  
 |**source_dbms**|**sysname**|Указывается имя СУБД, из которой сопоставляются типы данных. Это имя может иметь одно из следующих значений.<br /><br /> **MSSQLSERVER** = источником является база данных SQL Server.<br /><br /> **ORACLE** = источником является база данных Oracle.|  
@@ -46,7 +50,7 @@ ms.lasthandoff: 11/17/2017
 |**source_precision_max**|**bigint**|Максимальная точность типа данных в СУБД-источнике; причем значение NULL указывает, что точность не используется.|  
 |**source_scale_min**|**int**|Минимальный масштаб типа данных в СУБД-источнике; причем значение NULL указывает, что масштаб не используется.|  
 |**source_scale_max**|**int**|Максимальный масштаб типа данных в СУБД-источнике; причем значение NULL указывает, что масштаб не используется.|  
-|**source_nullable**|**bit**|Указывается, что тип данных назначения поддерживает значения NULL.|  
+|**source_nullable**|**бит**|Указывается, что тип данных назначения поддерживает значения NULL.|  
 |**source_createparams**|**int**|Только для внутреннего применения.|  
 |**destination_dbms**|**sysname**|Указывается имя целевой СУБД. Это имя может принимать одно из следующих значений.<br /><br /> **MSSQLSERVER** = назначением является база данных SQL Server.<br /><br /> **ORACLE** = целевой является база данных Oracle.<br /><br /> **DB2** = целевой является база данных IBM DB2.<br /><br /> **SYBASE** = назначением является база данных Sybase.|  
 |**destination_version**|**sysname**|Версия продукта целевой СУБД.|  
@@ -54,12 +58,12 @@ ms.lasthandoff: 11/17/2017
 |**destination_length**|**bigint**|Длина типа данных в целевой СУБД.|  
 |**destination_precision**|**bigint**|Точность типа данных в целевой СУБД.|  
 |**destination_scale**|**int**|Масштаб типа данных в целевой СУБД.|  
-|**destination_nullable**|**bit**|Указывает, поддерживает ли тип данных в целевой СУБД значения NULL.|  
+|**destination_nullable**|**бит**|Указывает, поддерживает ли тип данных в целевой СУБД значения NULL.|  
 |**destination_createparams**|**int**|Только для внутреннего применения.|  
-|**dataloss**|**bit**|Указывает, возникают ли потери данных при сопоставлении типов данных СУБД источника и адресата.|  
-|**is_default**|**bit**|Указывает, используется ли сопоставление типов данных по умолчанию.|  
+|**dataloss**|**бит**|Указывает, возникают ли потери данных при сопоставлении типов данных СУБД источника и адресата.|  
+|**is_default**|**бит**|Указывает, используется ли сопоставление типов данных по умолчанию.|  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Разнородная репликация базы данных](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Таблицы репликации &#40; Transact-SQL &#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Представления репликации &#40; Transact-SQL &#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

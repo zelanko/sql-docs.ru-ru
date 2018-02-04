@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_purge_jobhistory_TSQL
 - sp_purge_jobhistory
-dev_langs: TSQL
-helpviewer_keywords: sp_purge_jobhistory
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_purge_jobhistory
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
-caps.latest.revision: "33"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: e147f4061914314c4ec4c63e5a1808cff4c5608d
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 7f50228e089d71a6cf3a8d74225e1e26f42844fd
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,16 +49,16 @@ sp_purge_jobhistory
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_name=** ] **"***job_name***"**  
+ [ **@job_name=** ] **'***job_name***'**  
  Имя задания, для которого удаляются записи журнала. *job_name*— **sysname**, значение по умолчанию NULL. Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно.  
   
 > [!NOTE]  
 >  Члены **sysadmin** предопределенной роли сервера или члены **SQLAgentOperatorRole** предопределенной роли базы данных могут выполнять **sp_purge_jobhistory** без указания *job_name* или *job_id*. Когда **sysadmin** пользователи не указывают эти аргументы, журнал заданий для всех локальных и многосерверных заданий удаляются в диапазоне времени, заданного параметром *oldest_date*. Когда **SQLAgentOperatorRole** пользователи не указывают эти аргументы, в журнале заданий для всех локальных заданий удаляются в диапазоне времени, заданного параметром *oldest_date*.  
   
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Идентификатор задания, для которого удаляются записи. *Аргумент job_id*— **uniqueidentifier**, значение по умолчанию NULL. Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно. См. Примечание в описании  **@job_name**  сведения о том, как **sysadmin** или **SQLAgentOperatorRole** пользователи могут использовать этот аргумент.  
   
- [  **@oldest_date**  =] *oldest_date*  
+ [ **@oldest_date** = ] *oldest_date*  
  Самая ранняя запись журнала, которую необходимо сохранить. *oldest_date* — **datetime**, значение по умолчанию NULL. Когда *oldest_date* указано, **sp_purge_jobhistory** удаляет только записи, которые являются более старыми, чем указано.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -64,10 +67,10 @@ sp_purge_jobhistory
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Когда **sp_purge_jobhistory** завершается успешно, возвращается сообщение.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию только члены **sysadmin** предопределенной роли сервера или **SQLAgentOperatorRole** предопределенной роли базы данных может выполнить эту хранимую процедуру. Члены **sysadmin** можно удалять из журнала заданий для всех локальных и многосерверных заданий. Члены **SQLAgentOperatorRole** можно удалять из журнала заданий только любые локальные задания.  
   
  Другим пользователям, в том числе членов **SQLAgentUserRole** и члены **SQLAgentReaderRole**, необходимо явно предоставить разрешение EXECUTE на **sp_purge_jobhistory**. После предоставления разрешения EXECUTE на эту хранимую процедуру данные пользователи могут удалять из журнала заданий только те задания, владельцами которых они являются.  
@@ -103,8 +106,8 @@ EXEC dbo.sp_purge_jobhistory ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_help_jobhistory &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-jobhistory-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Предоставление разрешений для объекта &#40; Transact-SQL &#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)  

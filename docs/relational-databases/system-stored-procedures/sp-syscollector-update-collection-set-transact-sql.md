@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_syscollector_update_collection_set_TSQL
 - sp_syscollector_update_collection_set
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_syscollector_update_collection_set
 - data collector [SQL Server], stored procedures
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
-caps.latest.revision: "28"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 90f034f59bc7430e059fb276ec0111a4af2f807c
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 9863651eca95bcd4eafd263b205ddeef5ba4e438
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +62,13 @@ sp_syscollector_update_collection_set
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@collection_set_id =** ] *collection_set_id, чтобы выделить*  
+ [ **@collection_set_id =** ] *collection_set_id*  
  Уникальный локальный идентификатор набора элементов сбора. *collection_set_id, чтобы выделить* — **int** и должен иметь значение, если *имя* имеет значение NULL.  
   
  [  **@name =** ] "*имя*"  
  Имя набора элементов сбора. *имя* — **sysname** и должен иметь значение, если *collection_set_id, чтобы выделить* имеет значение NULL.  
   
- [  **@new_name =** ] "*новое_имя*"  
+ [ **@new_name =** ] '*new_name*'  
  Новое имя для набора элементов сбора. *новое_имя* — **sysname**, и при использовании не может быть пустой строкой. *новое_имя* должно быть уникальным. Чтобы получить список имен текущего набора сбора, выполните запрос системного представления syscollector_collection_sets.  
   
  [  **@target =** ] "*целевой*"  
@@ -81,26 +83,26 @@ sp_syscollector_update_collection_set
   
  Если изменение с некэшированного на кэшированный (0), необходимо также указать либо *schedule_uid* или *schedule_name*.  
   
- [  **@days_until_expiration=** ] *days_until_expiration*  
+ [ **@days_until_expiration=** ] *days_until_expiration*  
  Число дней, в течение которых собранные данные хранятся в хранилище данных управления. *days_until_expiration* — **smallint**. *days_until_expiration* должно быть 0 или положительным целым числом.  
   
- [  **@proxy_id =** ] *proxy_id*  
+ [ **@proxy_id =** ] *proxy_id*  
  Уникальный идентификатор учетной записи-посредника агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* — **int**.  
   
  [  **@proxy_name =** ] "*proxy_name*"  
  Имя учетной записи-посредника. *proxy_name* — **sysname** и допускает значения NULL.  
   
- [  **@schedule_uid**  =] '*schedule_uid*"  
+ [ **@schedule_uid** = ] '*schedule_uid*'  
  Идентификатор GUID, указывающий на расписание. *schedule_uid* — **uniqueidentifier**.  
   
  Для получения *schedule_uid*, запрос системной таблицы sysschedules.  
   
  Когда *collection_mode* имеет значение 0, *schedule_uid* или *schedule_name* должен быть указан. Когда *collection_mode* имеет значение 1, *schedule_uid* или *schedule_name* учитывается, если указан.  
   
- [  **@schedule_name =** ] "*schedule_name*"  
+ [ **@schedule_name =** ] '*schedule_name*'  
  Имя расписания. *schedule_name* — **sysname** и допускает значения NULL. Если указано, *schedule_uid* должен иметь значение NULL. Для получения *schedule_name*, запрос системной таблицы sysschedules.  
   
- [  **@logging_level =** ] *logging_level*  
+ [ **@logging_level =** ] *logging_level*  
  Уровень ведения журнала. *LOGGING_LEVEL* — **smallint** с одним из следующих значений:  
   
  0 - Регистрировать сведения о выполнении и события служб [!INCLUDE[ssIS](../../includes/ssis-md.md)], которые отслеживают:  
@@ -117,7 +119,7 @@ sp_syscollector_update_collection_set
   
 -   Ход непрерывно работающего сбора.  
   
--   Предупреждающие события от служб [!INCLUDE[ssIS](../../includes/ssis-md.md)].  
+-   Предупреждающие события от [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
  2 - Ведениe журнала на уровне 1, а также запись подробных сведений о событиях служб [!INCLUDE[ssIS](../../includes/ssis-md.md)]  
   
@@ -129,14 +131,14 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Функция sp_syscollector_update_collection_set должна выполняться в контексте системной базы данных msdb.  
   
  Либо *collection_set_id, чтобы выделить* или *имя* должен иметь значение, и не может иметь значение NULL. Чтобы получить эти значения, выполните запрос системного представления syscollector_collection_sets.  
   
  Если набор сбора выполняется, можно обновить только *schedule_uid* и *описание*. Чтобы остановить набор сбора, используйте [sp_syscollector_stop_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения этой процедуры требуется членство в предопределенной роли базы данных dc_admin или dc_operator (с разрешением EXECUTE). Хотя члены роли dc_operator могут выполнять эту хранимую процедуру, они могут менять не все свойства. Следующие свойства могут изменить только члены роли dc_admin:  
   
 -   @new_name  
@@ -195,7 +197,7 @@ EXEC dbo.sp_syscollector_update_collection_set
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Сбор данных](../../relational-databases/data-collection/data-collection.md)   
  [syscollector_collection_sets &#40; Transact-SQL &#41;](../../relational-databases/system-catalog-views/syscollector-collection-sets-transact-sql.md)   

@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_update_job
 - sp_update_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_update_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_update_job
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
-caps.latest.revision: "39"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 772cfb0f8f4a05c2db42e650601f837d12ffeb81
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 03171bfdee98063c9bf460b9555c1a7c5d02568d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +63,15 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_id =**] *job_id*  
+ [ **@job_id =**] *job_id*  
  Идентификатор обновляемого задания. *Аргумент job_id*— **uniqueidentifier**.  
   
- [  **@job_name =**] **"***job_name***"**  
+ [ **@job_name =**] **'***job_name***'**  
  Имя задания. *job_name*— **nvarchar(128)**.  
   
 > **Примечание:** либо *job_id* или *job_name* должно быть указано, но не оба аргумента одновременно.  
   
- [  **@new_name =**] **"***новое_имя***"**  
+ [ **@new_name =**] **'***new_name***'**  
  Новое имя задания. *новое_имя*— **nvarchar(128)**.  
   
  [  **@enabled =**] *включена*  
@@ -77,16 +80,16 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
  [  **@description =**] **"***описание***"**  
  Описание задания. *Описание* — **nvarchar(512)**.  
   
- [  **@start_step_id =**] *step_id*  
+ [ **@start_step_id =**] *step_id*  
  Идентификатор первого этапа, выполняемого в ходе задания. *step_id*— **int**.  
   
  [  **@category_name =**] **"***категории***"**  
  Категория задания. *Категория*— **nvarchar(128)**.  
   
- [  **@owner_login_name =**] **"***входа***"**  
+ [ **@owner_login_name =**] **'***login***'**  
  Имя входа, которое владеет заданием. *Имя входа*— **nvarchar(128)** только члены **sysadmin** предопределенной роли сервера могут менять владельца задания.  
   
- [  **@notify_level_eventlog =**] *eventlog_level*  
+ [ **@notify_level_eventlog =**] *eventlog_level*  
  Указывает, следует ли помещать запись в журнал приложений Microsoft Windows для данного задания. *eventlog_level*— **int**, и может принимать одно из следующих значений.  
   
 |Значение|Описание (действие)|  
@@ -96,39 +99,39 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 |**2**|При сбое|  
 |**3**|Всегда|  
   
- [  **@notify_level_email =**] *email_level*  
+ [ **@notify_level_email =**] *email_level*  
  Указывает, нужно ли отправить сообщение электронной почты по завершении этого задания. *email_level*— **int**. *email_level*использует те же значения, как *eventlog_level*.  
   
- [  **@notify_level_netsend =**] *netsend_level*  
+ [ **@notify_level_netsend =**] *netsend_level*  
  Указывает, нужно ли отправить сетевое сообщение по завершении этого задания. *netsend_level*— **int**. *netsend_level*использует те же значения, как *eventlog_level*.  
   
- [  **@notify_level_page =**] *page_level*  
+ [ **@notify_level_page =**] *page_level*  
  Указывает, необходимо ли отправить страницу по завершении этого задания. *page_level*— **int**. *page_level*использует те же значения, как *eventlog_level*.  
   
- [  **@notify_email_operator_name =**] **"***operator_name***"**  
+ [ **@notify_email_operator_name =**] **'***operator_name***'**  
  Имя оператора, которому отправляется сообщение электронной почты при *email_level* достигается. *имя_электронной_почты* — **nvarchar(128)**.  
   
- [  **@notify_netsend_operator_name =**] **"***netsend_operator***"**  
+ [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
  Имя оператора, которому отправляется сетевое сообщение. *netsend_operator* — **nvarchar(128)**.  
   
- [  **@notify_page_operator_name =**] **"***page_operator***"**  
+ [ **@notify_page_operator_name =**] **'***page_operator***'**  
  Имя оператора, которому отправляется страница. *page_operator* — **nvarchar(128)**.  
   
- [  **@delete_level =**] *delete_level*  
+ [ **@delete_level =**] *delete_level*  
  Указывает, когда необходимо удалить задание. *delete_value*— **int**. *delete_level*использует те же значения, как *eventlog_level*.  
   
- [  **@automatic_post =**] *automatic_post*  
+ [ **@automatic_post =**] *automatic_post*  
  Зарезервировано.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  **0** (успешное завершение) или **1** (неуспешное завершение)  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_update_job** должна запускаться из **msdb** базы данных.  
   
  **sp_update_job** изменяет только те параметры, для которых параметр заданы значения. Если параметр пропущен, сохраняется текущая настройка.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -156,10 +159,10 @@ EXEC dbo.sp_update_job
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_job (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

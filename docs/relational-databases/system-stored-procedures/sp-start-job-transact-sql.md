@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_start_job
 - sp_start_job_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_start_job
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_start_job
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Active
-ms.openlocfilehash: 115e4738a6cca1b0578bf2edb86859f2e7b2a7d5
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 5939e906cee691c2b6f13ff10677eb4f4129622f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,22 +52,22 @@ sp_start_job
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@job_name=** ] **"***job_name***"**  
+ [ **@job_name=** ] **'***job_name***'**  
  Имя запускаемого задания. Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно. *job_name* — **sysname**, значение по умолчанию NULL.  
   
- [  **@job_id=** ] *job_id*  
+ [ **@job_id=** ] *job_id*  
  Идентификационный номер запускаемого задания. Либо *job_id* или *job_name* должен быть указан, но не оба аргумента одновременно. *Аргумент job_id* — **uniqueidentifier**, значение по умолчанию NULL.  
   
- [  **@error_flag=** ] *error_flag*  
+ [ **@error_flag=** ] *error_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@server_name=** ] **"***имя_сервера***"**  
+ [ **@server_name=** ] **'***server_name***'**  
  Имя целевого сервера, на котором запускается задание. *имя_сервера* — **nvarchar(128)**, значение по умолчанию NULL. *имя_сервера* должен быть один из целевых серверов, к которым в настоящее время нацелено задания.  
   
- [  **@step_name=** ] **"***step_name***"**  
+ [ **@step_name=** ] **'***step_name***'**  
  Имя этапа, с которого начинается выполнение задания. Применяется только к локальным заданиям. *step_name* — **sysname**, значение по умолчанию NULL  
   
- [  **@output_flag=** ] *output_flag*  
+ [ **@output_flag=** ] *output_flag*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -73,10 +76,10 @@ sp_start_job
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта хранимая процедура находится в **msdb** базы данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию эту хранимую процедуру могут выполнять только члены предопределенной роли сервера **sysadmin** . Другим пользователям должна быть предоставлена одна из следующих предопределенных ролей базы данных агента [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] в базе данных **msdb** :  
   
 -   **SQLAgentUserRole**  
@@ -100,11 +103,11 @@ EXEC dbo.sp_start_job N'Weekly Sales Data Backup' ;
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
- [sp_delete_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+## <a name="see-also"></a>См. также  
+ [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_stop_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

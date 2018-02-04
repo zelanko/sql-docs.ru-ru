@@ -26,13 +26,13 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 caps.latest.revision: 
 author: BYHAM
 ms.author: rickbyh
-manager: jhubbard
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 4ac4372d753bdc9fde231d2ec08daa957771dc46
-ms.sourcegitcommit: e851f3cab09f8f09a9a4cc0673b513a1c4303d2d
+ms.openlocfilehash: efaffab66cba6d95d76d7c5371e43db1aca9f744
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/26/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ fn_get_audit_file ( file_pattern,
  Указывает известное местоположение с файлом, указанным для initial_file_name. Когда используется этот аргумент, функция начнет чтение с первой записи буфера, следующей немедленно после указанного смещения.  
   
 > [!NOTE]  
->  *Audit_record_offset* аргумент должен содержать допустимые записи или должен содержать либо значение по умолчанию | Значение NULL. Тип — **bitint**.  
+>  *Audit_record_offset* аргумент должен содержать допустимые записи или должен содержать либо значение по умолчанию | Значение NULL. Тип — **bigint**.  
   
 ## <a name="tables-returned"></a>Возвращаемые таблицы  
  В следующей таблице описано содержимое файла аудита, которое может возвращаться этой функцией.  

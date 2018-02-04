@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_trace_setfilter
 - sp_trace_setfilter_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_trace_setfilter
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_trace_setfilter
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
-caps.latest.revision: "35"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: 659544a47bc142ed430ac6406e2bfde0f60f6845
-ms.sourcegitcommit: 9fbe5403e902eb996bab0b1285cdade281c1cb16
+ms.openlocfilehash: 82c7d580f8ff94e0d7fb4452d1608f93b776fe3b
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +53,16 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@traceid=** ] *trace_id*  
+ [ **@traceid=** ] *trace_id*  
  Идентификатор трассировки, для которой устанавливается фильтр. *trace_id* — **int**, не имеет значения по умолчанию. Пользователь применяет это *trace_id* значение для определения, изменения и управления трассировкой.  
   
- [  **@columnid=** ] *column_id*  
+ [ **@columnid=** ] *column_id*  
  Является идентификатором столбца, к которому применяется фильтр. *Идентификатор column_id* — **int**, не имеет значения по умолчанию. Если *column_id* имеет значение NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] удаляет все фильтры для указанной трассировки.  
   
- [  **@logical_operator**  =] *logical_operator*  
+ [ **@logical_operator** = ] *logical_operator*  
  Указывает, является ли AND (**0**) или OR (**1**) применяется оператор. *logical_operator* — **int**, не имеет значения по умолчанию.  
   
- [  **@comparison_operator=** ] *оператор_сравнения*  
+ [ **@comparison_operator=** ] *comparison_operator*  
  Задает тип сравнения, которое будет выполнено. *оператор_сравнения* — **int**, не имеет значения по умолчанию. В таблице содержатся операторы сравнения и представляющие их значения.  
   
 |Значение|Оператор сравнения|  
@@ -73,7 +76,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**6**|LIKE|  
 |**7**|Не похоже|  
   
- [  **@value=** ] *значение*  
+ [ **@value=** ] *value*  
  Определяет значение, с помощью которого будет выполняться фильтрация. Тип данных *значение* должен соответствовать типу данных столбца для фильтрации. Например, если фильтр применен к столбцу Object ID, **int** тип данных *значение* должно быть **int**. Если *значение* — **nvarchar** или **varbinary**, он может иметь длину не больше 8000.  
   
  Когда оператором сравнения является LIKE или NOT LIKE, то логический оператор может содержать «%» или другой фильтр, подходящий для операции LIKE.  
@@ -87,7 +90,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Значения кода возврата  
  В следующей таблице описаны значения кодов, которые могут быть возвращены пользователю при завершении хранимой процедуры.  
   
-|Код возврата|Description|  
+|Код возврата|Описание|  
 |-----------------|-----------------|  
 |0|Нет ошибки.|  
 |1|Неизвестная ошибка.|  
@@ -100,14 +103,14 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|Нехватка памяти. Возвращается, когда для выполнения указанного действия недостаточно памяти.|  
 |16|Недопустимая функция для данной трассировки.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  **sp_trace_setfilter** — [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] хранимую процедуру, которая выполняет многие действия, ранее выполнявшиеся расширенными хранимыми процедурами в более ранних версиях [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Используйте **sp_trace_setfilter** вместо **xp_trace_set\*фильтра** расширенные хранимые процедуры для создания, применения, удаления или управлять фильтров в трассировках. Дополнительные сведения см. в разделе [фильтра трассировки](../../relational-databases/sql-trace/filter-a-trace.md).  
   
  Все фильтры для определенного столбца должны быть одновременно разрешены однократным выполнением **sp_trace_setfilter**. Например, если пользователь собирается применить два фильтра к столбцу имен приложений и один фильтр к столбцу имен пользователей, то ему потребуется указать фильтры для имен приложений последовательно. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] возвращает ошибку, когда пользователь пытается указать фильтр по имени приложения в пределах одного хранимого вызова процедуры, за которым указывается фильтр по имени пользователя, после чего — второй фильтр по имени приложения.  
   
  Параметры всех трассировки SQL хранимые процедуры (**sp_trace_xx**) жестко типизированы. Если эти параметры не вызываются вместе с правильными типами данных входных параметров, как указано в описании аргумента, хранимая процедура возвращает ошибку.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Пользователь должен иметь разрешение ALTER TRACE.  
   
 ## <a name="examples"></a>Примеры  
@@ -119,7 +122,7 @@ sp_trace_setfilter  1, 10, 0, 6, N'MS%';
 sp_trace_setfilter  1, 11, 0, 0, N'joe';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sys.fn_trace_getfilterinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sys.fn_trace_getinfo (Transact-SQL)](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [Трассировка SQL](../../relational-databases/sql-trace/sql-trace.md)  

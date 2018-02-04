@@ -8,7 +8,8 @@ ms.service:
 ms.component: dmv's
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
@@ -16,19 +17,21 @@ f1_keywords:
 - dm_os_memory_cache_counters_TSQL
 - sys.dm_os_memory_cache_counters
 - dm_os_memory_cache_counters
-dev_langs: TSQL
-helpviewer_keywords: sys.dm_os_memory_cache_counters dynamic management view
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sys.dm_os_memory_cache_counters dynamic management view
 ms.assetid: ca7bd036-d661-4c17-b00a-e1a975bd8932
-caps.latest.revision: "36"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 83c359c8c376c237dcc83a1cfc1c34290c532811
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: d75cd1785aedd1f2cebe9b14849c6e1eae779988
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysdmosmemorycachecounters-transact-sql"></a>sys.dm_os_memory_cache_counters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +40,7 @@ ms.lasthandoff: 11/17/2017
   
 > **Примечание:** вызов его из [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] или [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], используйте имя **sys.dm_pdw_nodes_os_memory_cache_counters**.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|Указывает адрес (первичный ключ) счетчиков, связанных с указанным кэшем. Не допускает значение NULL.|  
 |**name**|**nvarchar(256)**|Указывает имя кэша. Не допускает значение NULL.|  
@@ -48,15 +51,15 @@ ms.lasthandoff: 11/17/2017
 |**pages_in_use_kb**|**bigint**|**Область применения**: начиная с [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] до [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Указывает объем (в килобайтах) памяти, выделенной и используемой в кэше. Допускает значение NULL.  Значения для объектов типа `USERSTORE_<*>` не отслеживаются.  Для них выводится значение NULL.|  
 |**single_pages_in_use_kb**|**bigint**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Размер используемой одностраничной памяти в килобайтах. Допускает значение NULL. Эти сведения не отслеживаются для объектов типа USERSTORE_\<* > эти значения будут равны NULL.|  
 |**multi_pages_in_use_kb**|**bigint**|**Область применения**: начиная с [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] до [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Размер используемой многостраничной памяти в килобайтах. Допускает значение NULL. Эти сведения не отслеживаются для объектов типа USERSTORE_\<* >, и эти значения будут равны NULL.|  
-|**счетчики**|**bigint**|Указывает количество записей в кэше. Не допускает значение NULL.|  
+|**entries_count**|**bigint**|Указывает количество записей в кэше. Не допускает значение NULL.|  
 |**entries_in_use_count**|**bigint**|Указывает количество записей в используемом кэше. Не допускает значение NULL.|  
-|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
+|**pdw_node_id**|**int**|**Применяется к**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Идентификатор для узла, это распределение.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
 На [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], требуется `VIEW SERVER STATE` разрешение.   
 На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Premium необходимо `VIEW DATABASE STATE` разрешений в базе данных. На [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] уровней Standard и Basic, требует **администратор сервера** или **администратора Azure Active Directory** учетной записи.  
 
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
   [Относящиеся к операционной системе SQL Server динамические административные представления &#40; Transact-SQL &#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   
   

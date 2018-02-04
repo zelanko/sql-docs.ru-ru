@@ -8,21 +8,23 @@ ms.service: sql-data-warehouse
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: TSQL
+dev_langs:
+- TSQL
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: barbkess
 ms.author: barbkess
-manager: jhubbard
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 7b1a964e2d026f93ec26a34b2cb7ba5e114886ec
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 87034c1db40e5762441871cc347eaf37d2c56ea3
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sppdwaddnetworkcredentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (хранилище данных SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,25 +42,25 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- "*имя_сервера_назначения*"  
+ '*target_server_name*'  
  Указывает имя целевого сервера узла или IP-адрес. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]будет доступ к этому серверу с помощью учетных данных имени пользователя и пароля, передаваемых этой хранимой процедуры.  
   
  Для подключения по сети InfiniBand, используйте InfiniBand IP-адрес целевого сервера.  
   
  *имя_сервера_назначения* определяется как nvarchar(337).  
   
- "*имя_пользователя*"  
+ '*user_name*'  
  Указывает, функция user_name, имеющую разрешения на доступ к целевой сервер. Если учетные данные уже существуют для целевого сервера, они обновляются новыми учетными данными.  
   
  *имя_пользователя* определяется как nvarchar (513).  
   
- "*пароль*ꞌ  
+ '*password*ꞌ  
  Указывает пароль для *имя_пользователя*.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
  0 (успешное завершение) или 1 (неуспешное завершение)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется **ALTER SERVER STATE** разрешение.  
   
 ## <a name="error-handling"></a>Обработка ошибок  
@@ -81,7 +83,7 @@ EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********'
 > [!NOTE]  
 >  Создание резервной копии базы данных через InfiniBand, обязательно используйте InfiniBand IP-адрес резервного сервера.  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_pdw_remove_network_credentials &#40; Хранилище данных SQL &#41;](../../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
   

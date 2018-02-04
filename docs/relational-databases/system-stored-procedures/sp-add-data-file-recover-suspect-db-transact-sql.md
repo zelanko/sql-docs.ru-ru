@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_add_data_file_recover_suspect_db
 - sp_add_data_file_recover_suspect_db_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_add_data_file_recover_suspect_db
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_add_data_file_recover_suspect_db
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
-caps.latest.revision: "51"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: aca68c9bbbe8d8b16b80411dc2543699297737ba
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: cb770c0580af43309daa81a2aad56e327864bc4f
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,27 +52,27 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@dbName=** ] **"***базы данных* **"**  
+ [  **@dbName=** ] **"*** базы данных* **"**  
  Имя базы данных. *База данных* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@filegroup=** ] **"***имя_файловой_группы* **"**  
+ [ **@filegroup=** ] **'***filegroup_name* **'**  
  Файловая группа, в которую будет добавлен файл. *filegroup_name* — **nvarchar(260)**, и значение по умолчанию NULL, которое указывает первичный файл.  
   
- [  **@name=** ] **"***логическое_имя_файла* **"**  
+ [ **@name=** ] **'***logical_file_name* **'**  
  Имя, используемое компонентом [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] для ссылки на файл. Имя должно быть уникальным в пределах сервера. *логическое_имя_файла* — **nvarchar(260)**, не имеет значения по умолчанию.  
   
- [  **@filename=** ] **"***имя_файла_ос* **"**  
+ [ **@filename=** ] **'***os_file_name* **'**  
  Путь и имя файла, используемые операционной системой. Файл должен находиться на сервере, на котором установлен экземпляр компонента [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *имя_файла_ос* — **nvarchar(260)**, не имеет значения по умолчанию.  
   
- [  **@size=** ] **"***размер* **"**  
+ [ **@size=** ] **'***size* **'**  
  Задает начальный размер файла. *размер* — **nvarchar(20)**, значение по умолчанию NULL. Укажите целое число (без дробной части). Для указания единицы измерения размера файла (мегабайт или килобайт) можно использовать суффиксы МБ и КБ. По умолчанию — MБ. Минимальное значение размера файла — 512 КБ. Если *размер* не указан, значение по умолчанию — 1 МБ.  
   
- [  **@maxsize=** ] **"***max_size* **"**  
+ [ **@maxsize=** ] **'***max_size* **'**  
  Максимальный размер, до которого может увеличиться размер файла. *max_size* — **nvarchar(20)**, значение по умолчанию NULL. Укажите целое число (без дробной части). Для указания единицы измерения размера файла (мегабайт или килобайт) можно использовать суффиксы МБ и КБ. По умолчанию — MБ.  
   
  Если *max_size* не указан, файл будет увеличиваться до заполнения диска. Журнал приложений [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows предупреждает администратора, если диск заполнен почти полностью.  
   
- [  **@filegrowth=** ] **"***growth_increment* **"**  
+ [  **@filegrowth=** ] **"*** growth_increment* **"**  
  Объем пространства, добавляемого к файлу каждый раз, когда требуется новое пространство. *growth_increment* — **nvarchar(20)**, значение по умолчанию NULL. Значение 0 обозначает отсутствие прироста. Укажите целое число (без дробной части). Значение может быть задано в мегабайтах (МБ), килобайтах (КБ) или процентах (%). Если значение задано в процентах, шаг роста рассчитывается в процентах от размера файла в тот момент, когда потребовалось приращение. Если указано число без суффикса MB, KB или %, то по умолчанию используется MB.  
   
  Если *growth_increment* имеет значение NULL, значение по умолчанию — 10% и минимальное значение — 64 КБ. Указанный размер округляется до ближайших 64 КБ.  
@@ -80,7 +83,7 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию разрешения для членов выполнение **sysadmin** предопределенной роли сервера. Эти разрешения не могут передаваться другим пользователям.  
   
 ## <a name="examples"></a>Примеры  
@@ -93,9 +96,9 @@ EXEC sp_add_data_file_recover_suspect_db db1, fg1, file2,
     'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data\db1_file2.mdf', '1MB';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_add_log_file_recover_suspect_db &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
+ [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
  [Системные хранимые процедуры (Transact-SQL)](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

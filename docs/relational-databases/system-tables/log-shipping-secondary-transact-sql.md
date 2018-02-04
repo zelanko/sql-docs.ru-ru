@@ -8,32 +8,35 @@ ms.service:
 ms.component: system-tables
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - log_shipping_secondary
 - log_shipping_secondary_TSQL
-dev_langs: TSQL
-helpviewer_keywords: log_shipping_secondary system table
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- log_shipping_secondary system table
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
-caps.latest.revision: "21"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: fa03018420d1c5e23ff41981fd6190407a6a41bc
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: f66609b64ef7066fe7edf1ca8459d68cda597f9d
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="logshippingsecondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Хранит одну запись для каждого вторичного идентификатора. Эта таблица хранится в **msdb** базы данных.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**secondary_id**|**uniqueidentifier**|Идентификатор сервера-получателя в конфигурации доставки журналов.|  
 |**primary_server**|**sysname**|Имя экземпляра компонента SQL Server Database Engine — источника в конфигурации доставки журналов.|  
@@ -44,15 +47,15 @@ ms.lasthandoff: 11/17/2017
 |**copy_job_id**|**uniqueidentifier**|Идентификатор, назначенный заданию копирования на сервере-получателе.|  
 |**restore_job_id**|**uniqueidentifier**|Идентификатор, назначенный заданию восстановления на сервере-получателе.|  
 |**monitor_server**|**sysname**|Имя экземпляра [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , используемого в качестве сервера мониторинга в конфигурации доставки журналов.|  
-|**monitor_server_security_mode**|**bit**|Режим безопасности, используемый для подключения к серверу мониторинга:<br /><br /> 1 = проверка подлинности Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.|  
+|**monitor_server_security_mode**|**бит**|Режим безопасности, используемый для подключения к серверу мониторинга:<br /><br /> 1 = проверка подлинности Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] проверки подлинности.|  
 |**last_copied_file**|**nvarchar(500)**|Имя последнего файла резервной копии, скопированного на сервер-получатель.|  
 |**last_copied_date**|**datetime**|Дата и время последней операции копирования на сервер-получатель.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Несколько баз данных-получателей на же сервере-получателе для заданной базы данных-источника используются общие настройки в **log_shipping_secondary** таблицы. Если общий параметр изменяется для одной из них, он изменяется и для всех остальных таких же баз данных.  
   
-## <a name="see-also"></a>См. также:  
- [Сведения о доставке журналов (SQL Server)](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>См. также  
+ [О доставке журналов &#40; SQL Server &#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [sp_add_log_shipping_secondary_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)   
  [sp_change_log_shipping_secondary_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-change-log-shipping-secondary-database-transact-sql.md)   
  [sp_delete_log_shipping_secondary_database &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)   

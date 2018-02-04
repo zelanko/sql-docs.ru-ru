@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_help_notification
 - sp_help_notification_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sp_help_notification
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sp_help_notification
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
-caps.latest.revision: "34"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: e54750ac4174f054d87c5a1994f40bd3b5cfeec0
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 542ffbb8b2bf6c51b31da93dc654a3a71b3fa401
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,16 +51,16 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@object_type =**] **"***object_type***"**  
+ [ **@object_type =**] **'***object_type***'**  
  Возвращаемый тип информации. *object_type*— **char(9)**, не имеет значения по умолчанию. *object_type* может принимать значение ALERTS, перечисляя предупреждения, назначенные указанному имени оператора*,* или OPERATORS, перечисляя операторов, ответственных за указанное имя предупреждения*.*  
   
- [  **@name =**] **"***имя***"**  
+ [ **@name =**]  **'***name***'**  
  Имя оператора (если *object_type* имеет значение OPERATORS) или имя предупреждения (если *object_type* имеет значение ALERTS). *имя* — **sysname**, не имеет значения по умолчанию.  
   
- [  **@enum_type =**] **"***enum_type***"**  
+ [ **@enum_type =**] **'***enum_type***'**  
  *Object_type*сведений, возвращаемых. *enum_type* — ФАКТИЧЕСКИ в большинстве случаев. *enum_type*— **char(10)**, без значения по умолчанию и может принимать одно из следующих значений.  
   
-|Значение|Description|  
+|Значение|Описание|  
 |-----------|-----------------|  
 |ACTUAL|Перечисляет только *object_types* связанных с *имя*.|  
 |ALL|Перечисляет все*object_types* включая те, которые не связаны с *имя*.|  
@@ -73,7 +76,7 @@ sp_help_notification
 |**4**|NetSend: возвращает только **use_netsend** столбца.|  
 |**7**|Все: возвращает все столбцы.|  
   
- [  **@target_name =**] **"***target_name***"**  
+ [ **@target_name =**] **'***target_name***'**  
  Имя искомого предупреждения (если *object_type* имеет значение ALERTS) или имя искомого оператора (если *object_type* имеет значение OPERATORS). *target_name* требуется только в том случае, если *enum_type* является целевым ОБЪЕКТОМ. *target_name* — **sysname**, значение по умолчанию NULL.  
   
 ## <a name="return-code-valves"></a>Значения кодов возврата  
@@ -82,7 +85,7 @@ sp_help_notification
 ## <a name="result-sets"></a>Результирующие наборы  
  Если *object_type* — **ОПОВЕЩЕНИЯ**, в результирующем наборе перечислены все предупреждения для данного оператора.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|Идентификатор предупреждения.|  
 |**alert_name**|**sysname**|Имя предупреждения.|  
@@ -95,7 +98,7 @@ sp_help_notification
   
  Если **object_type** — **ОПЕРАТОРЫ**, в результирующем наборе перечислены все операторы для данного предупреждения.  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|Идентификационный номер оператора.|  
 |**operator_name**|**sysname**|Имя оператора.|  
@@ -106,10 +109,10 @@ sp_help_notification
 |**has_pager**|**int**|У оператора есть адрес пейджера.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
 |**has_netsend**|**int**|Оператор имеет настроенное уведомление net send.<br /><br /> **1** = Да<br /><br /> **0** = нет|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  Эта хранимая процедура должна запускаться из **msdb** базы данных.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Для выполнения этой хранимой процедуры пользователь должен быть членом предопределенной роли сервера **sysadmin** .  
   
 ## <a name="examples"></a>Примеры  
@@ -144,7 +147,7 @@ EXEC sp_help_notification
 GO  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [sp_add_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_update_notification &#40; Transact-SQL &#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

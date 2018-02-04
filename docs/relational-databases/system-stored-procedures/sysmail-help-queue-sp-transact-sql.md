@@ -8,25 +8,28 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sysmail_help_queue_sp
 - sysmail_help_queue_sp_TSQL
-dev_langs: TSQL
-helpviewer_keywords: sysmail_help_queue_sp
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- sysmail_help_queue_sp
 ms.assetid: 94840482-112c-4654-b480-9b456c4c2bca
-caps.latest.revision: "17"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: Inactive
-ms.openlocfilehash: 233187d223f7d22c5a950fcb2d29063f37be7c7d
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 5e83aba8601f4329a496229eca329035a95b283c
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="sysmailhelpqueuesp-transact-sql"></a>sysmail_help_queue_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +46,7 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@queue_type**  =] **"***queue_type***"**  
+ [ **@queue_type** = ] **'***queue_type***'**  
  Дополнительный аргумент удаляет сообщения электронной почты, тип, указанный как *queue_type*. *queue_type* — **nvarchar(6)** без значения по умолчанию. Допустимыми значениями являются **mail** и **состояние**.  
   
 ## <a name="return-code-values"></a>Значения кода возврата  
@@ -51,18 +54,18 @@ sysmail_help_queue_sp  [ @queue_type = ] 'queue_type'
   
 ## <a name="result-set"></a>Результирующий набор  
   
-|Имя столбца|Тип данных|Description|  
+|Имя столбца|Тип данных|Описание|  
 |-----------------|---------------|-----------------|  
 |**queue_type**|**nvarchar(6)**|Тип очереди. Возможными значениями являются **mail** и **состояние**.|  
-|**Длина**|**int**|Номер почтового сообщения в указанной очереди.|  
-|**состояние**|**nvarchar(64)**|Состояние монитора. Возможными значениями являются **НЕАКТИВНО** (очередь неактивна), **NOTIFIED** (очередь уведомление запроса), и **RECEIVES_OCCURRING** (очередь получения).|  
+|**длина**|**int**|Номер почтового сообщения в указанной очереди.|  
+|**state**|**nvarchar(64)**|Состояние монитора. Возможными значениями являются **НЕАКТИВНО** (очередь неактивна), **NOTIFIED** (очередь уведомление запроса), и **RECEIVES_OCCURRING** (очередь получения).|  
 |**last_empty_rowset_time**|**ДАТЫ И ВРЕМЕНИ**|Дата и время, когда очередь в последний раз была пуста. Указывается в военном формате времени относительно часового пояса GMT.|  
 |**last_activated_time**|**ДАТЫ И ВРЕМЕНИ**|Дата и время, когда очередь в последний раз была активирована. Указывается в военном формате времени относительно часового пояса GMT.|  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При устранении неполадок компонента Database Mail, используйте **sysmail_help_queue_sp** для просмотра, количество элементов в очереди, состояние очереди и во время ее последнего активирован.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  По умолчанию только члены **sysadmin** предопределенной роли сервера можно получить доступ к этой процедуре.  
   
 ## <a name="examples"></a>Примеры  
@@ -85,7 +88,7 @@ status     0        INACTIVE           2005-10-07 21:04:47.003 2005-10-10 21:04:
   
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [Database Mail](../../relational-databases/database-mail/database-mail.md)  
   
   

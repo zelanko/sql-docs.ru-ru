@@ -8,27 +8,29 @@ ms.service:
 ms.component: system-stored-procedures
 ms.reviewer: 
 ms.suite: sql
-ms.technology: database-engine
+ms.technology:
+- database-engine
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - sp_detach_db
 - sp_detach_db_TSQL
-dev_langs: TSQL
+dev_langs:
+- TSQL
 helpviewer_keywords:
 - sp_detach_db
 - detaching databases [SQL Server]
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
-caps.latest.revision: "86"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+caps.latest.revision: 
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.workload: On Demand
-ms.openlocfilehash: c50a0b30d69e88047ea614052cebc0105ed7c4a7
-ms.sourcegitcommit: 66bef6981f613b454db465e190b489031c4fb8d3
+ms.openlocfilehash: 09fd806b6ca491507fd748c3e2f9751b27c1eda5
+ms.sourcegitcommit: c556eaf60a49af7025db35b7aa14beb76a8158c5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +52,15 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Аргументы  
- [  **@dbname =** ] **"***имя_базы_данных***"**  
+ [ **@dbname =** ] **'***database_name***'**  
  Имя отсоединяемой базы данных. *database_name* — **sysname** значение со значением по умолчанию NULL.  
   
- [  **@skipchecks =** ] **"***параметром skipchecks***"**  
+ [ **@skipchecks =** ] **'***skipchecks***'**  
  Указывает, выполнять или нет инструкцию UPDATE STATISTIC. *параметром skipchecks* — **nvarchar(10)** значение со значением по умолчанию NULL. Чтобы пропустить инструкции UPDATE STATISTICS, укажите **true**. Чтобы явно запустить инструкцию UPDATE STATISTICS, укажите **false**.  
   
  По умолчанию инструкция UPDATE STATISTICS запускается для обновления информации о данных в таблицах и индексах. Выполнение UPDATE STATISTICS имеет смысл для тех баз данных, которые планируется переместить на постоянные носители информации.  
   
- [  **@keepfulltextindexfile=** ] **"***Значение аргумента KeepFulltextIndexFile***"**  
+ [ **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
  Указывает, что файл полнотекстового индекса, связанный с отсоединяемой базой данных, не будет удален во время операции отсоединения базы данных. *Значение аргумента KeepFulltextIndexFile* — **nvarchar(10)** значение по умолчанию **true**. Если *значение аргумента KeepFulltextIndexFile* — **false**, все файлы полнотекстового индекса, связанный с базой данных и метаданные полнотекстового индекса удаляются, если она доступна только для чтения. Если значение равно NULL или **true**, связанного с полнотекстовым поиском хранятся метаданные.  
   
 > [!IMPORTANT]  
@@ -70,7 +72,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="result-sets"></a>Результирующие наборы  
  Нет  
   
-## <a name="remarks"></a>Замечания  
+## <a name="remarks"></a>Remarks  
  При отсоединении базы данных все метаданные удаляются. Если база данных была база данных по умолчанию для учетной записи входа, **master** становится базой данных по умолчанию.  
   
 > [!NOTE]  
@@ -118,12 +120,12 @@ GO
 ```  
   
 > [!NOTE]  
->  Чтобы принудительно отключить текущих пользователей от базы данных немедленно или через указанное число секунд, также используйте параметр ROLLBACK: ALTER DATABASE *имя_базы_данных* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Дополнительные сведения см. в разделе [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
+>  Чтобы принудительно отключить текущих пользователей от базы данных немедленно или через указанное число секунд, также используйте параметр ROLLBACK: ALTER DATABASE *имя_базы_данных* SET SINGLE_USER WITH ROLLBACK *rollback_option*. Дополнительные сведения см. в статье [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md).  
   
 ## <a name="reattaching-a-database"></a>Повторное присоединение базы данных  
  Отсоединенные файлы останутся на диске и могут быть повторно подсоединены с помощью вызова CREATE DATABASE (с параметрами FOR ATTACH или FOR ATTACH_REBUILD_LOG). Файлы можно также переместить на другой сервер и подсоединить там.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Разрешения  
  Требуется членство в **sysadmin** предопределенной роли сервера или членство в **db_owner** роль базы данных.  
   
 ## <a name="examples"></a>Примеры  
@@ -140,7 +142,7 @@ exec sp_detach_db @dbname='AdventureWorks2012'
     , @keepfulltextindexfile='true';  
 ```  
   
-## <a name="see-also"></a>См. также:  
+## <a name="see-also"></a>См. также  
  [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)   
  [Присоединение и отсоединение базы данных (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [CREATE DATABASE (SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
